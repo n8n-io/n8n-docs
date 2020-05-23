@@ -1,7 +1,17 @@
 const dirTree = require('directory-tree');
 const path = require('path');
 
-function getChildren(folder) {
+function getChildrenFiles(folder) {
+	return dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
+		.filter(page => {
+			return page.type === 'file';
+		})
+		.map(page => {
+			return `/${folder}/${page.name}`;
+		});
+}
+
+function getChildrenFolders(folder) {
 	return dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
 		.filter(page => {
 			return page.type === 'directory' && !!page.children.find(child => child.name === 'README.md');
@@ -51,16 +61,26 @@ module.exports = {
 		sidebar: [
 			['/', 'Home'],
 			{
+				title: 'Advanced',
+				sidebarDepth: 2,
+				children: getChildrenFiles('advanced'),
+			},
+			{
 				title: 'Credentials',
 				path: '/credentials/',
 				sidebarDepth: 2,
-				children: getChildren('credentials'),
+				children: getChildrenFolders('credentials'),
 			},
 			{
 				title: 'Nodes',
 				path: '/nodes/',
 				sidebarDepth: 2,
-				children: getChildren('nodes'),
+				children: getChildrenFolders('nodes'),
+			},
+			{
+				title: 'Other',
+				sidebarDepth: 2,
+				children: getChildrenFiles('other'),
 			},
 		],
 	},

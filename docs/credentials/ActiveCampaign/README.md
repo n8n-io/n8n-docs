@@ -1,13 +1,12 @@
 # Active Campaign
-
-n8n integration: https://n8n.io/integrations/n8n-nodes-base.activeCampaign
-Github: https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/ActiveCampaign
+[n8n integration](https://n8n.io/integrations/n8n-nodes-base.activeCampaign)
+[Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/ActiveCampaign)
 
 # Authentication
 
 # Pre-requisites
 
-ActiveCampaign account
+Create [ActiveCampaign](https://www.activecampaign.com/) account.
 
 # Steps
 

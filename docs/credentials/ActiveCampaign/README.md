@@ -16,6 +16,6 @@ Create [ActiveCampaign](https://www.activecampaign.com/) account.
 5. Use this key with your ActiveCampaign node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/ZqVMCqX.gif) 
+![Alt Text](https://i.imgur.com/kecCOfr.gif) 
 
 

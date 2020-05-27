@@ -1,20 +1,21 @@
 # Active Campaign
-[n8n integration](https://n8n.io/integrations/n8n-nodes-base.activeCampaign)
-
-[Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/ActiveCampaign)
+You can find information about the operations supported by the ActiveCampaign node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.activeCampaign) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/ActiveCampaign)
 
 # Authentication
 
-# Pre-requisites
+## Pre-requisites
 
 Create [ActiveCampaign](https://www.activecampaign.com/) account.
 
-# Steps
+## Steps
 
-1. Access your ActiveCampaign dashboard.
-2. Open the Settings screen via the button in the bottom left.
-3. Access the Developer panel.
-   ![Alt Text](https://i.imgur.com/1LTdyS0.gif) 
-4. Copy the "Key". 
+1. Open your ActiveCampaign dashboard.
+2. Click on the gears icon on the bottom left to open the Settings.
+3. Click on the Developer option under the Settings panel. 
+4. In the Developer Settings, copy the ‘Key’ under the ‘API Access’ panel.
 5. Use this key with your ActiveCampaign node credentials in n8n.
+
+
+![Alt Text](https://i.imgur.com/oBBns6W.gif) 
+
 

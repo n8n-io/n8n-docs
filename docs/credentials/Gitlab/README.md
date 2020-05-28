@@ -1,5 +1,5 @@
 # Gitlab
-You can find information about the operations supported by the BannerBear node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.gitlab) page. You can also browse the source code of the node on [Gitlab](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Gitlab).
+You can find information about the operations supported by the Gitlab node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.gitlab) page. You can also browse the source code of the node on [Gitlab](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Gitlab).
 
 # Authentication
 

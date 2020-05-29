@@ -15,7 +15,7 @@ Create a [Coda](https://www.coda.com/) account.
 2. Click on your profile in the top right.
 3. Click on the 3 dots and then Account settings..
 4. Scroll down and click on "Generate" under API.
-5. Use selected API key in your Coda node credentials in n8n.
+5. Use selected API access token in your Coda node credentials in n8n.
 
 
 ![Alt Text](https://i.imgur.com/zyGV9ME.gif) 

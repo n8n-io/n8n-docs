@@ -9,7 +9,7 @@ Create a [Discord](https://www.discord.com/) account.
 
 ## Steps
 
-### OAuth2
+### OAuth2 NOT SUPPORTED YET
 
 1. Access this [Discord Developer Portal](https://discord.com/developers/applications).
 2. Click on "New Application".

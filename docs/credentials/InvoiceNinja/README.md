@@ -15,7 +15,7 @@ Create a [InvoiceNinja](https://www.invoiceninja.com/) account.
 2. Click on Settings in the bottom left.
 3. Scroll down to API keys.
 4. Add new token.
-5. Use the key with InvoiceNinja node credentials in n8n.
+5. Use the key and your instance URL with InvoiceNinja node credentials in n8n.
 ![Alt Text](https://i.imgur.com/KieU3At.gif) 
 
 

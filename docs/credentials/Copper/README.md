@@ -15,7 +15,7 @@ Create a [Copper](https://www.copper.com/) account.
 2. Click on Settings.
 3. Click on Integrations, API Keys.
 4. Generate API key.
-5. Use selected API key in your Copper node credentials in n8n.
+5. Use selected API key and your registered email in your Copper node credentials in n8n.
 
 
 ![Alt Text](https://i.imgur.com/2Dl2Gt7.gif) 

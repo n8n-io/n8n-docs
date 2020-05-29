@@ -5,11 +5,13 @@ You can find information about the operations supported by the Google node on th
 
 ## Pre-requisites
 
-Create a [Google](https://github.com/) account.
+Create a [Google Cloud](https://cloud.google.com/) account and access the console.
+
+## Google Calendar (OAuth2 Only)
 
 ## Steps
 
-### API Key
+<!-- ### API Key
 
 1. Access your Google dashboard.
 2. Click on your user icon on the top left.
@@ -18,7 +20,7 @@ Create a [Google](https://github.com/) account.
 5. Click on Create Credentials.
 6. Click on API Key.
 7. Use provided API Key with your Google node credentials in n8n.
-![Alt Text](https://i.imgur.com/r9KX5Gh.gif) 
+![Alt Text](https://i.imgur.com/r9KX5Gh.gif)  -->
 
 ### OAuth2
 
@@ -32,6 +34,31 @@ Create a [Google](https://github.com/) account.
 8. Fill out information for your application credentials.
 9. Use provided Client Secret and Client ID with your Google node credentials in n8n.
 ![Alt Text](https://i.imgur.com/NVmFY1u.gif) 
+
+
+## Google Drive / Sheets API (Service Account only)
+
+## Steps
+
+### Service Account - RSA Key Pair
+
+1. Access your Google dashboard.
+2. Click on your user icon on the top left.
+3. Click on API & Services.
+4. Click on Credentials.
+5. Click on Create Credentials.
+6. Click on Service Account.
+7. Choose your preferences.
+8. Fill out information for your service account.
+9. You will receive a .json file with your credentials.
+
+It will appear something like this in a text editor:
+
+![Alt Text](https://i.imgur.com/zYNRAyd.png)
+
+10. Use the values of client_email and private_key for your Google Credentials in the n8n node.
+![Alt Text](https://i.imgur.com/Q9eFy7B.gif) 
+
 
 
 

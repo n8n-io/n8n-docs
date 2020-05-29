@@ -9,7 +9,7 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 
 ## Steps
 
-### API Key / OAuth
+### API Key
 
 1. Access this [Dropbox application creation site](https://www.dropbox.com/developers/apps/create).
 2. Fill out the application information.

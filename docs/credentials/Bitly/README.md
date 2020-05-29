@@ -9,7 +9,8 @@ Create a [Bitly](https://www.bitly.com/) account.
 
 ## Steps
 
-### OAuth2
+
+### OAuth2 NOT SUPPORTED YET
 
 1. Open your Bitly dashboard.
 2. Click on your account button in the top right.

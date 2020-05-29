@@ -11,12 +11,12 @@ Create a [Harvest](https://www.getharvest.com/) account.
 
 ### Access Token / OAuth2
 
-1. Access your Harvest dashboard.
-2. Click on Settings on the top.
-3. Scroll down and click on Authorized OAuth Clients.
-4. Fill out the information and create a new client.
-5. Use Client Secret and Client ID with Harvest node credentials in n8n.
-![Alt Text](https://i.imgur.com/7H0NEJu.gif) 
+1. Open the Harvest [Developers portal](https://id.getharvest.com/developers).
+2. Click "Create New Personal Access Token".
+3. Enter token name.
+4. You will then receive your token and Account ID.
+5. Use the token and Account ID with Harvest node credentials in n8n.
+![Alt Text](https://i.imgur.com/LZW8CNX.gif) 
 
 
 

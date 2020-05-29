@@ -13,7 +13,7 @@ Create [AgileCRM](https://www.agilecrm.com/) account.
 2. Click on your user icon in the top right of the window.
 3. Click on the Admin Settings button. 
 4. Click on the Development & Api button in the bottom left.
-5. Use the REST API key with your AgileCRM node credentials in n8n.
+5. Use the REST API key, your registered email and your AgileCRM subdomain (i.e n8n) with your AgileCRM node credentials in n8n.
 
 
 ![Alt Text](https://i.imgur.com/SNDyA6L.gif) 

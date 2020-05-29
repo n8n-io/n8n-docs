@@ -16,10 +16,10 @@ Create a [Intercom](https://www.intercom.com/) account.
 3. Use the Access Token with the Intercom node credentials in n8n.
 
 
-### OAuth
+<!-- ### OAuth
 
 1. Click "Use OAuth" in Authentication page.
 2. Fill out required information.
 3. Use Client Secret and Client ID in your Intercom node credentials in n8n.
-
+ -->
 

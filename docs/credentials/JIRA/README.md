@@ -17,7 +17,7 @@ Create a [JIRA](https://www.JIRA.com/) account.
 4. Click on Security tab.
 5. Click on Manage API Tokens.
 6. Create API token.
-7. Use the key with JIRA node credentials in n8n.
+7. Use the API token with JIRA node credentials in n8n. Your email and the domain under which the JIRA account is under must also be included.
 
 
 

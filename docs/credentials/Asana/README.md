@@ -12,7 +12,7 @@ Create an [Asana](https://www.Asana.com/) account.
 
 ## Steps
 
-### OAuth2
+### OAuth2 NOT SUPPORTED YET
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right of the window.

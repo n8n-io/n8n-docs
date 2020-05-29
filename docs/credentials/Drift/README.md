@@ -9,7 +9,7 @@ Create a [Drift](https://www.drift.com/) account.
 
 ## Steps
 
-### OAuth2
+### OAuth2 NOT SUPPORTED YET
 
 1. Access [your Drift apps](https://dev.drift.com/apps).
 2. Select your App (Or Create a new one).

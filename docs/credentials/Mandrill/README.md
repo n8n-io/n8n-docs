@@ -1,0 +1,1 @@
+Mandrill is a Mailchimp add-on. Please refer to the MailChimp credential docs!

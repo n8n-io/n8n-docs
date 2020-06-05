@@ -103,22 +103,22 @@ module.exports = {
 						{
 							title: 'Core Nodes',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes library/coreNodes'),
+							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 						{
 							title: 'Nodes',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes library/nodes'),
+							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{
 							title: 'Trigger Nodes',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes library/trigger nodes'),
+							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 						{
 							title: 'Credentials',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes library/credentials'),
+							children: getChildrenFolders('nodes/nodes-library/credentials'),
 						},
 					],
 				},
@@ -137,25 +137,23 @@ module.exports = {
 				},
 			],
 
-			'/': 
-			[	
+			'/': [
 				{
 					title: 'Introduction',
 					collapsable: false,
 					path: '/',
 					sidebarDepth: 0,
-					
 				},
 				'getting-started/overview.md',
 				'getting-started/node-basics.md',
 				'getting-started/workflow.md',
 				'getting-started/start-workflows-via-cli.md',
-			]
+			],
 			// [
 				// {
 				// 	title: 'Introduction',
 				// 	sidebarDepth: 2,
-				// 	children: [	
+				// 	children: [
 				// 		'getting-started/overview.md',
 				// 		'getting-started/node-basics.md',
 				// 		'getting-started/workflow.md',

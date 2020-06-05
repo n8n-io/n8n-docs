@@ -1,14 +1,25 @@
 const dirTree = require('directory-tree');
 const path = require('path');
 
-function getChildrenFiles(folder) {
-	return dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
+function getChildrenFiles(folder, topItem) {
+	const returnFiles = dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
 		.filter(page => {
-			return page.type === 'file';
+			return page.type === 'file' && page.name !== 'README.md';
 		})
 		.map(page => {
 			return `/${folder}/${page.name}`;
 		});
+
+	if (topItem !== undefined) {
+		const topItemPath = `/${folder}/${topItem}`;
+		const index = returnFiles.indexOf(topItemPath);
+		if (index !== -1) {
+			returnFiles.splice(index, 1);
+			returnFiles.unshift(topItemPath);
+		}
+	}
+
+	return returnFiles;
 }
 
 function getChildrenFolders(folder) {
@@ -50,38 +61,108 @@ module.exports = {
 		logo: '/assets/img/n8n-logo.png',
 		nav: [
 			{
-				text: 'Home',
+				text: 'Getting Started',
 				link: '/',
+			},
+			{
+				text: 'Guides',
+				link: '/guides/guides.md'
+			},
+			{
+				text: 'Nodes',
+				link: '/nodes/nodes.md'
+			},
+			{
+				text: 'Reference',
+				link: '/reference/reference.md'
 			},
 			{
 				text: 'Community',
 				link: 'https://community.n8n.io',
 			},
 		],
-		sidebar: [
-			['/', 'Home'],
-			{
-				title: 'Advanced',
-				sidebarDepth: 2,
-				children: getChildrenFiles('advanced'),
-			},
-			{
-				title: 'Credentials',
-				path: '/credentials/',
-				sidebarDepth: 2,
-				children: getChildrenFolders('credentials'),
-			},
-			{
-				title: 'Nodes',
-				path: '/nodes/',
-				sidebarDepth: 2,
-				children: getChildrenFolders('nodes'),
-			},
-			{
-				title: 'Other',
-				sidebarDepth: 2,
-				children: getChildrenFiles('other'),
-			},
-		],
+		sidebar: {
+			'/guides/': [
+				{
+					title: 'Guides',
+					sidebarDepth: 2,
+					children: getChildrenFiles('guides', 'guides.md'),
+				},
+			],
+
+			'/nodes/': [
+				{
+					title: 'Nodes',
+					sidebarDepth: 2,
+					children: getChildrenFiles('nodes', 'nodes.md'),
+				},
+				{
+					title: 'Nodes Library',
+					sidebarDepth: 10,
+					children: [
+						{
+							title: 'Core Nodes',
+							sidebarDepth: 2,
+							children: getChildrenFolders('nodes/nodes library/coreNodes'),
+						},
+						{
+							title: 'Nodes',
+							sidebarDepth: 2,
+							children: getChildrenFolders('nodes/nodes library/nodes'),
+						},
+						{
+							title: 'Trigger Nodes',
+							sidebarDepth: 2,
+							children: getChildrenFolders('nodes/nodes library/trigger nodes'),
+						},
+						{
+							title: 'Credentials',
+							sidebarDepth: 2,
+							children: getChildrenFolders('nodes/nodes library/credentials'),
+						},
+					],
+				},
+			],
+
+			'/reference/': [
+				{
+					title: 'Reference',
+					sidebarDepth: 2,
+					children: getChildrenFiles('reference', 'reference.md'),
+				},
+				{
+					title: 'Data',
+					sidebarDepth: 2,
+					children: getChildrenFiles('reference/data'),
+				},
+			],
+
+			'/': 
+			[	
+				{
+					title: 'Introduction',
+					collapsable: false,
+					path: '/',
+					sidebarDepth: 0,
+					
+				},
+				'getting-started/overview.md',
+				'getting-started/node-basics.md',
+				'getting-started/workflow.md',
+				'getting-started/start-workflows-via-cli.md',
+			]
+			// [
+				// {
+				// 	title: 'Introduction',
+				// 	sidebarDepth: 2,
+				// 	children: [	
+				// 		'getting-started/overview.md',
+				// 		'getting-started/node-basics.md',
+				// 		'getting-started/workflow.md',
+				// 		'getting-started/start-workflows-via-cli.md',
+				// 	],
+				// },
+			// ]
+		}
 	},
 }

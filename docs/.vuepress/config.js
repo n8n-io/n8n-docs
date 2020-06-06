@@ -57,6 +57,7 @@ module.exports = {
 		editLinkText: 'Help us improve this page!',
 		smoothScroll: true,
 		lastUpdated: true,
+		sidebarDepth: 2,
 		searchPlaceholder: 'Search...',
 		logo: '/assets/img/n8n-logo.png',
 		nav: [
@@ -144,7 +145,6 @@ module.exports = {
 					path: '/',
 					sidebarDepth: 0,
 				},
-				'getting-started/overview.md',
 				'getting-started/node-basics.md',
 				'getting-started/workflow.md',
 				'getting-started/start-workflows-via-cli.md',

@@ -85,7 +85,7 @@ module.exports = {
 		sidebar: {
 			'/guides/': [
 				{
-					title: 'Guides',
+					title: 'Guide Overview',
 					sidebarDepth: 2,
 					children: getChildrenFiles('guides', 'guides.md'),
 				},
@@ -93,18 +93,23 @@ module.exports = {
 
 			'/nodes/': [
 				{
-					title: 'Nodes',
+					title: 'Node Overview',
 					sidebarDepth: 2,
 					children: getChildrenFiles('nodes', 'nodes.md'),
 				},
 				{
+					title: 'Creating Nodes',
+					sidebarDepth: 2,
+					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
+				},
+				{
 					title: 'Nodes Library',
-					sidebarDepth: 10,
+					sidebarDepth: 3,
 					children: [
 						{
-							title: 'Core Nodes',
+							title: 'Trigger Nodes',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
+							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 						{
 							title: 'Nodes',
@@ -112,9 +117,9 @@ module.exports = {
 							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{
-							title: 'Trigger Nodes',
+							title: 'Core Nodes',
 							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
+							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 						{
 							title: 'Credentials',
@@ -127,7 +132,7 @@ module.exports = {
 
 			'/reference/': [
 				{
-					title: 'Reference',
+					title: 'Reference Overview',
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference', 'reference.md'),
 				},
@@ -145,7 +150,7 @@ module.exports = {
 					path: '/',
 					sidebarDepth: 0,
 				},
-				'getting-started/node-basics.md',
+				'getting-started/quickstart.md',
 				'getting-started/workflow.md',
 				'getting-started/start-workflows-via-cli.md',
 			],

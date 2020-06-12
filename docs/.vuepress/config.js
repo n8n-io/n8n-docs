@@ -121,12 +121,12 @@ module.exports = {
 							sidebarDepth: 2,
 							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
-						{
-							title: 'Credentials',
-							sidebarDepth: 2,
-							children: getChildrenFolders('nodes/nodes-library/credentials'),
-						},
 					],
+				},
+				{
+					title: '🔑 Credentials',
+					sidebarDepth: 2,
+					children: getChildrenFolders('nodes/credentials'),
 				},
 			],
 

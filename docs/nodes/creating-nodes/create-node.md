@@ -1,4 +1,4 @@
-# Create Node
+# Creating a Node
 
 It is quite easy to create your own nodes in n8n. Mainly three things have to be defined:
 

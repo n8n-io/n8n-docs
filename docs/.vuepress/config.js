@@ -65,17 +65,17 @@ module.exports = {
 				text: 'Getting Started',
 				link: '/',
 			},
-			{
-				text: 'Guides',
-				link: '/guides/guides.md'
-			},
+			// {
+			// 	text: 'Guides',
+			// 	link: '/guides/guides.md'
+			// },
 			{
 				text: 'Nodes',
-				link: '/nodes/nodes.md'
+				link: '/nodes/nodes.md',
 			},
 			{
 				text: 'Reference',
-				link: '/reference/reference.md'
+				link: '/reference/reference.md',
 			},
 			{
 				text: 'Community',
@@ -83,27 +83,27 @@ module.exports = {
 			},
 		],
 		sidebar: {
-			'/guides/': [
-				{
-					title: 'Guide Overview',
-					sidebarDepth: 2,
-					children: getChildrenFiles('guides', 'guides.md'),
-				},
-			],
+			// '/guides/': [
+			// 	{
+			// 		title: 'Guide Overview',
+			// 		sidebarDepth: 2,
+			// 		children: getChildrenFiles('guides', 'guides.md'),
+			// 	},
+			// ],
 
 			'/nodes/': [
 				{
-					title: 'Node Overview',
+					title: '🧬 Overview',
 					sidebarDepth: 2,
 					children: getChildrenFiles('nodes', 'nodes.md'),
 				},
 				{
-					title: 'Creating Nodes',
+					title: '🔬 Creating Nodes',
 					sidebarDepth: 2,
 					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
 				},
 				{
-					title: 'Nodes Library',
+					title: '🧠 Nodes Library',
 					sidebarDepth: 3,
 					children: [
 						{
@@ -132,27 +132,87 @@ module.exports = {
 
 			'/reference/': [
 				{
-					title: 'Reference Overview',
-					sidebarDepth: 2,
-					children: getChildrenFiles('reference', 'reference.md'),
+					title: '📚 Overview',
+					path: 'reference.md',
 				},
 				{
-					title: 'Data',
+					title: '🧐 Changelog',
+					path: 'changelog.md',
+				},
+				{
+					title: '🎯 Workflow',
+					path: 'workflow.md',
+				},
+				{
+					title: '⚙️ Configuration',
+					path: 'configuration.md',
+				},
+				{
+					title: '🚔 Security',
+					path: 'security.md',
+				},
+				{
+					title: '📦 Docker',
+					path: 'docker.md',
+				},
+				{
+					title: '🖥 Server Setup',
+					path: 'server-setup.md',
+				},
+				{
+					title: '👾 Start Workflow via CLI',
+					path: 'start-workflows-via-cli.md',
+				},
+				{
+					title: '👀 Troubleshooting',
+					path: 'troubleshooting.md',
+				},
+				{
+					title: '💾 Data',
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference/data'),
+				},
+				{
+					title: '💻 Development',
+					path: 'development.md',
+				},
+				{
+					title: '⌨️ Keyboard Shortcuts',
+					path: 'keyboard-shortcuts.md',
+				},
+				{
+					title: '🎫 License',
+					path: 'license.md',
+				},
+				{
+					title: '❓ FAQ',
+					path: 'faq.md',
 				},
 			],
 
 			'/': [
 				{
-					title: 'Introduction',
+					title: '👋 Introduction',
 					collapsable: false,
 					path: '/',
 					sidebarDepth: 0,
 				},
-				'getting-started/quickstart.md',
-				'getting-started/workflow.md',
-				'getting-started/start-workflows-via-cli.md',
+				{
+					title: '🚀 Quickstart',
+					path: 'getting-started/quickstart.md',
+				},
+				{
+					title: '🍄 Key Components',
+					path: 'getting-started/key-components.md',
+				},
+				{
+					title: '💪 Creating Your First Workflow',
+					path: 'getting-started/creating-your-first-workflow.md',
+				},
+				{
+					title: '🤔 What\'s Next?',
+					path: 'getting-started/whats-next.md',
+				},
 			],
 			// [
 				// {

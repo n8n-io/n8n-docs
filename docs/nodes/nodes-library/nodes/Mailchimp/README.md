@@ -11,7 +11,7 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 
 ## Example Usage
 
-This workflow demonstrates creating a new member for a list. You can also [find Mailchimp workflows on this website](https://n8n.io/integrations/n8n-nodes-base.mailchimp). This example usage workflow would use the following two nodes.
+This workflow demonstrates creating a new member for a list. You can also [find Mailchimp workflows on this website](https://n8n.io/integrations/n8n-nodes-base.mailchimp). This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start)
 - Mailchimp
@@ -24,7 +24,7 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### Mailchimp Node
+### 2. Mailchimp Node
 
 1. First, ensure that you have entered authentication credentials through [this tutorial](../../../credentials/MailChimp).
 2. To create a member, select the Member option under the *Resource* field.

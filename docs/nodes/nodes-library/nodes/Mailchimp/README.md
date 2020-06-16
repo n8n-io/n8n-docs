@@ -1,6 +1,6 @@
 # Mailchimp
 
-Mailchimp is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
+[Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 The instructions for authenticating with Mailchimp are [here](../../../credentials/MailChimp).
 
@@ -11,9 +11,10 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 
 ## Example Usage
 
-This workflow demonstrates creating a new member for a list. You can also find Mailchimp [workflows](https://n8n.io/integrations/n8n-nodes-base.mailchimp) on this website. This example usage workflow would use the following two nodes.
-- [Start]()
-- [Mailchimp]()
+This workflow demonstrates creating a new member for a list. You can also [find Mailchimp workflows on this website](https://n8n.io/integrations/n8n-nodes-base.mailchimp). This example usage workflow would use the following two nodes.
+
+- [Start](../../core-nodes/Start)
+- Mailchimp
 
 The final workflow should look like the following image.
 
@@ -31,5 +32,5 @@ The start node exists by default when you create a new workflow.
 4. Choose the list you want to add to under the *List* field.
 5. Enter the email address of the user to the *Email* field.
 6. Choose their status in the *Status* field.
-7. If you want to enter optional fields such as the user's lat/long location or their Name and Birthday as JSON data, then select the JSON parameters. Otherwise, enter in this data through the dropdowns below.
+7. If you want to enter optional fields such as the user's lat/long location or their Name and Birthday as JSON data, then select the JSON parameters. Otherwise, optionally enter in this data through the dropdowns below.
 8. Other operations involve a similar workflow, but let us know if anything is unclear!

@@ -7,7 +7,7 @@ This workflow would use the following nodes.
 - [OpenWeatherMap]() - Get weather details for a particular city
 - [IF]() - Conditional logic to decide the flow of the workflow
 - [Twilio](../nodes/nodes-library/nodes/Twilio/README.md) - Send an SMS
-- [NoOp]() - Do nothing
+- [NoOp]() - Do nothing (optional)
 
 The final workflow should look like the following image.
 
@@ -61,7 +61,7 @@ Add the Twilio node by clicking on the + button and selecting the *Twilio* node.
 
 Double click on the node and create credentials for the node by clicking on the *Select Credentials* dropdown list and selecting *Create New*. 
 
-You'll need to enter an *Account SID* and *Auth Token* for the Twilio API. You can find instructions on how to obtain that [here](../nodes/credentials/Twilio/README.md). Now, enter the phone number from which you'll be sending the message in the *From* field (you'll have to create a Trial Number for yourself in the Twilio [console](https://www.twilio.com/console)). Enter the phone number to which you'll be sending the message in the *To* field (this will probably have to be your the phone number you verified your Twilio account with, if you are using a trial account).
+You'll need to enter an *Account SID* and *Auth Token* for the Twilio API. You can find instructions on how to obtain that [here](../nodes/credentials/Twilio/README.md). Now, enter the phone number from which you'll be sending the message in the *From* field (you'll have to create a Trial Number for yourself in the Twilio [console](https://www.twilio.com/console)). Enter the phone number to which you'll be sending the message in the *To* field (this will have to be the phone number you verified your Twilio account with, if you are using a trial account).
 
 You can now add the message that you want to send yourself if the temperature is lower than 18°C. This is what I added in the *Message* field (you can click on *Add Expressions* and paste this):
 
@@ -76,7 +76,7 @@ Here's a GIF of me following the steps mentioned above.
 
 ## 5. NoOp node
 
-If the temperature is greater than 18°C, we don't want the workflow to do anything. We'll use the NoOp node for that. Add the NoOp node by clicking on the + button and selecting the *NoOp* node. Connect this node with the *false* output of the *IF* node.
+If the temperature is greater than 18°C, we don't want the workflow to do anything. We'll use the NoOp node for that. Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow. Add the NoOp node by clicking on the + button and selecting the *NoOp* node. Connect this node with the *false* output of the *IF* node.
 
 To test the workflow, click on the *Execute Workflow* button at the bottom of the *Editor UI*. I didn't get an SMS in my case since it was 24°C in Berlin at the time of writing this article, and the workflow ended at the NoOp node.
 

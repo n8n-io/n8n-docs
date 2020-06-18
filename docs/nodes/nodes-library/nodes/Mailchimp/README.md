@@ -6,13 +6,13 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 
 ## Basic Operations
 
-* Member
+- Member
 	- Create a new member on the list.
 	- Delete a member on the list.
 	- Get a member on the list.
 	- Get all members on a list.
 	- Update a new member on the list.
-* Member Tag
+- Member Tag
 	- Add tags from a list member.
 	- Remove tags from a list member.
 
@@ -21,11 +21,11 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 This workflow demonstrates creating a new member for a list. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start)
-- Mailchimp
+- [Mailchimp]()
 
 The final workflow should look like the following image.
 
-![A workflow with the Mailchimp node](https://i.imgur.com/N5GENUn.png)
+![A workflow with the Mailchimp node](./workflow.png)
 
 ### 1. Start node
 

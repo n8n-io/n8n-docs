@@ -1,6 +1,8 @@
 # Server Setup
 
-!> ***Important***: Make sure that you secure your n8n instance as described under [Security](security.md).
+::: warning
+Make sure that you secure your n8n instance as described under [Security](security.md).
+:::
 
 
 ## Example setup with docker-compose

@@ -1,6 +1,6 @@
 # Creating a Node
 
-It is quite easy to create your own nodes in n8n. Mainly three things have to be defined:
+To create your own nodes in n8n, mainly three things have to be defined:
 
  1. Generic information like name, description, image/icon
  1. The parameters to display via which the user can interact with it
@@ -31,7 +31,7 @@ If you want to create multiple custom nodes which are either:
   - Require many or large dependencies
 
 It is best to create your own `n8n-nodes-module` which can be installed separately.
-That is a simple npm package that contains the nodes and is set up in a way
+That is an npm package that contains the nodes and is set up in a way
 that n8n can automatically find and load them on startup.
 
 When creating such a module the following rules have to be followed that n8n
@@ -49,7 +49,7 @@ the above can be found here:
 
 ### Setup to use n8n-nodes-module
 
-To use a custom `n8n-nodes-module`, it simply has to be installed alongside n8n.
+To use a custom `n8n-nodes-module`, it needs to be installed alongside n8n.
 For example like this:
 
 ```bash
@@ -116,18 +116,18 @@ All code of n8n is written in TypeScript and hence, the nodes should also be wri
 
 ### Use the built in request library
 
-Some third-party services have their own libraries on npm which make it easier to create an integration. It can be quite tempting to use them. The problem with those is that you add another dependency and not just one you add but also all the dependencies of the dependencies. This means more and more code gets added, has to get loaded, can introduce security vulnerabilities, bugs and so on. So please use the built-in module which can be used like this:
+Some third-party services have their own libraries on npm which make it easier to create an integration. It can be quite tempting to use them. The problem with those is that you add another dependency and not only one, you add but also all the dependencies of the dependencies. This means more and more code gets added, has to get loaded, can introduce security vulnerabilities, bugs, and so on. So please use the built-in module which can be used like this:
 
 ```typescript
 const response = await this.helpers.request(options);
 ```
 
-That is simply using the npm package [`request-promise-native`](https://github.com/request/request-promise-native) which is the basic npm `request` module but with promises. For a full set of `options` consider looking at [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
+That is using the npm package [`request-promise-native`](https://github.com/request/request-promise-native) which is the basic npm `request` module but with promises. For a full set of `options` consider looking at [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
 
 
 ### Reuse parameter names
 
-When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId" simply call them "id". n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
+When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId", call them "id". n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
 
 
 ### Create an "Options" parameter

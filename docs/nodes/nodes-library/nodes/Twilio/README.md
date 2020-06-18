@@ -30,4 +30,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the phone number to which you'll be sending the message in the *To* field.
 4. In case you want to send a Whatsapp message, toggle the *To Whatsapp* button.
 5. Enter you message in the *Message* field.
-6. Click on *Exceute Node* to run the workflow.
+6. Click on *Execute Node* to run the workflow.

@@ -113,7 +113,7 @@ module.exports = {
 						},
 						{
 							title: 'Nodes',
-							sidebarDepth: 2,
+							sidebarDepth: 1,
 							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{

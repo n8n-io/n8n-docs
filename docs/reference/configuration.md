@@ -154,7 +154,7 @@ export N8N_SSL_CERT=/data/certs/server.pem
 
 The timezone is set by default to "America/New_York". For instance, it is used by the
 Cron node to know at what time the workflow should be started. To set a different
-default timezone simply set `GENERIC_TIMEZONE` to the appropriate value. For example,
+default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example,
 if you want to set the timezone to Berlin (Germany):
 
 ```bash

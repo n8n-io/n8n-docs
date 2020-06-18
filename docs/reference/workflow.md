@@ -68,17 +68,17 @@ An "Error Workflow" can be set in the Workflow Settings which can be accessed by
 
 ## Share Workflows
 
-All workflows are JSON and can be shared very easily.
+All workflows are JSON and can be shared with others.
 
 There are multiple ways to download a workflow as JSON to then share it with other people via Email, Slack, Skype, Dropbox, …
 
   1. Press the "Download" button under the Workflow menu in the sidebar on the left. It then downloads the workflow as a JSON file.
   1. Select the nodes in the editor which should be exported and then copy them (Ctrl + c). The nodes then get saved as JSON in the clipboard and can be pasted wherever desired (Ctrl + v).
 
-Importing that JSON representation again into n8n is as easy and can also be done in different ways:
+Importing that JSON representation again into n8n can also be done in different ways:
 
   1. Press "Import from File" or "Import from URL" under the Workflow menu in the sidebar on the left.
-  1. Copy the JSON workflow to the clipboard (Ctrl + c) and then simply pasting it directly into the editor (Ctrl + v).
+  1. Copy the JSON workflow to the clipboard (Ctrl + c) and then pasting it directly into the editor (Ctrl + v).
 
 
 ## Workflow Settings

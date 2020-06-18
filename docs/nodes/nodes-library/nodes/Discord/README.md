@@ -12,11 +12,11 @@ The Discord Node does not require Authentication, but you must have access to a 
 
 This workflow allows you to send a message to a Discord channel using webhooks. You can also find the [workflow](https://n8n.io/workflows/410) on this website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start)
-- Discord
+- [Discord]()
 
 The final workflow should look like the following image.
 
-![A workflow with the Discord node](https://i.imgur.com/y1nqTI2.png)
+![A workflow with the Discord node](./workflow.png)
 
 ### 1. Start node
 
@@ -31,4 +31,4 @@ The start node exists by default when you create a new workflow.
 5. Enter your message in the *Text* field.
 6. Click on *Execute Node* to run the workflow. :tada:
 
-![GIF of Webhooks](https://media.giphy.com/media/WtI5wgNkgw0YoNqhfu/giphy.gif)
+![GIF of Webhooks in Discord](./gif-of-webhooks-in-discord.gif)

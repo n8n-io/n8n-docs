@@ -84,7 +84,7 @@ Don't forget to save the workflow and then click on the Activate button on the t
 
 ![Creating the NoOp node](./images/creating-your-first-workflow/creating-the-noop-node.gif)
 
-I raised the value of *Value 2* in the *IF* node from 18 to 27 just to see what the SMS would look like. This is how the finished workflow and the SMS looked like. 
+I raised the value of *Value 2* in the *IF* node from 18 to 27 to see what the SMS would look like. This is how the finished workflow and the SMS looked like. 
 
 ![Workflow running with true output from the IF node](./images/creating-your-first-workflow/workflow-running-with-true-output-from-the-if-node.png) 
 

@@ -6,12 +6,19 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 
 ## Basic Operations
 
-- Create, delete, update, and get users on your marketing lists.
-- Add and delete user tags on your marketing list.
+* Member
+	- Create a new member on the list.
+	- Delete a member on the list.
+	- Get a member on the list.
+	- Get all members on a list.
+	- Update a new member on the list.
+* Member Tag
+	- Add tags from a list member.
+	- Remove tags from a list member.
 
 ## Example Usage
 
-This workflow demonstrates creating a new member for a list. You can also [find Mailchimp workflows on this website](https://n8n.io/integrations/n8n-nodes-base.mailchimp). This example usage workflow uses the following two nodes.
+This workflow demonstrates creating a new member for a list. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start)
 - Mailchimp
@@ -33,4 +40,4 @@ The start node exists by default when you create a new workflow.
 5. Enter the email address of the user to the *Email* field.
 6. Choose their status in the *Status* field.
 7. If you want to enter optional fields such as the user's lat/long location or their Name and Birthday as JSON data, then select the JSON parameters. Otherwise, optionally enter in this data through the dropdowns below.
-8. Other operations involve a similar workflow, but let us know if anything is unclear!
+8. Click on *Execute Node* to run the workflow.

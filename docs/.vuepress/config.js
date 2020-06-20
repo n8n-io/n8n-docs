@@ -51,6 +51,7 @@ module.exports = {
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',
+		base: '/n8n-docs/',
 		docsRepo: 'n8n-io/n8n-docs',
 		docsDir: 'docs',
 		editLinks: true,

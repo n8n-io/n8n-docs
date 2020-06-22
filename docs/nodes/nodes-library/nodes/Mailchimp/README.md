@@ -7,14 +7,14 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 ## Basic Operations
 
 - Member
-	- Create a new member on the list.
-	- Delete a member on the list.
-	- Get a member on the list.
-	- Get all members on a list.
-	- Update a new member on the list.
+	- Create a new member on the list
+	- Delete a member on the list
+	- Get a member on the list
+	- Get all members on a list
+	- Update a new member on the list
 - Member Tag
-	- Add tags from a list member.
-	- Remove tags from a list member.
+	- Add tags from a list member
+	- Remove tags from a list member
 
 ## Example Usage
 

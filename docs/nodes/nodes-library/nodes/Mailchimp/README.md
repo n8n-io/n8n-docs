@@ -1,3 +1,7 @@
+---
+permalink: /nodes/n8n-nodes-base.mailchimp
+---
+
 # Mailchimp
 
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.

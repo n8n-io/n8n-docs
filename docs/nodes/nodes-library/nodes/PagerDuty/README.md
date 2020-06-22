@@ -1,3 +1,7 @@
+---
+permalink: /nodes/n8n-nodes-base.pagerDuty
+---
+
 # PagerDuty
 
 [PagerDuty](https://www.pagerduty.com/) is a cloud computing company that produces a SaaS incident response platform for IT departments.

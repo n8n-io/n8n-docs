@@ -1,3 +1,7 @@
+---
+permalink: /nodes/n8n-nodes-base.activeCampaign
+---
+
 # ActiveCampaign
 
 [ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.

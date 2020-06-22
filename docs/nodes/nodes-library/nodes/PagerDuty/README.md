@@ -42,3 +42,8 @@ The start node exists by default when you create a new workflow.
 3. Select the *Service ID* from the dropdown list.
 4. Enter your email in the *Email* field.
 5. Click on *Execute Node* to run the workflow.
+
+
+## Further Reading
+
+- [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)

@@ -34,7 +34,7 @@ function getChildrenFolders(folder) {
 
 module.exports = {
 	description: 'Documentation for n8n',
-	title: 'n8n Documentation',
+	title: 'Documentation',
 	plugins: [
 		'vuepress-plugin-reading-time',
 		'@vuepress/last-updated',

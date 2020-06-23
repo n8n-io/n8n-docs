@@ -20,7 +20,7 @@ Create a [Slack](https://slack.com/) account.
 7. Scroll down and you will see your authentication information.
 8. Use your verification token with your Slack node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/exAniUj.gif)
+![Getting Slack credentials](https://i.imgur.com/exAniUj.gif)
 
 
 

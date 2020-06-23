@@ -18,6 +18,6 @@ Create a [PagerDuty](https://pagerduty.com/) account.
 4. Create a new API key.
 5. Use this API key with your PagerDuty node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/KFpDDFP.gif)
+![Getting PagerDuty credentials](https://i.imgur.com/KFpDDFP.gif)
 
 

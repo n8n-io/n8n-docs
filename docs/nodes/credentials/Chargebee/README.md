@@ -19,7 +19,7 @@ Create a [Chargebee](https://www.chargebee.com/) account.
 5. Use selected API key and Account name in your Chargebee node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/23poWqD.gif)
+![Getting Chargebee credentials](https://i.imgur.com/23poWqD.gif)
 
 
 

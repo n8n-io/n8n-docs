@@ -22,7 +22,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 8. Use Client ID and client Secret key in your Clickup node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/zl2GDAo.gif)
+![Getting Clickup credentials](https://i.imgur.com/zl2GDAo.gif)
 
 
 
@@ -36,7 +36,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 5. Use selected API key in your Clickup node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/K1GbV8f.gif)
+![Getting Clickup credentials](https://i.imgur.com/K1GbV8f.gif)
 
 
 

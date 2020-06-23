@@ -18,7 +18,7 @@ Create a [MailChimp](https://www.mailchimp.com/) account.
 4. Create on the Extras drop down menu and then API Keys.
 5. Scroll down and create a new key.
 6. Use the API key with MailChimp node credentials in n8n.
-![Alt Text](https://i.imgur.com/87GYcWV.gif)
+![Getting MailChimp credentials](https://i.imgur.com/87GYcWV.gif)
 
 
 

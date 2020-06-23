@@ -18,7 +18,7 @@ Create a [JotForm](https://www.jotform.com/) account.
 4. Click on the API tab on the left.
 5. Create new key.
 6. Use the key with JotForm node credentials in n8n.
-![Alt Text](https://i.imgur.com/9WJXuiW.gif)
+![Getting JotForm credentials](https://i.imgur.com/9WJXuiW.gif)
 
 
 

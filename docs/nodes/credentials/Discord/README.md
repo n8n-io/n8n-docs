@@ -14,7 +14,7 @@ Create a [Discord](https://www.discord.com/) account.
 4. Use Client Secret and Client ID in your Discord node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/5GR5o8Z.gif)
+![Getting Discord credentials](https://i.imgur.com/5GR5o8Z.gif)
 
 
 

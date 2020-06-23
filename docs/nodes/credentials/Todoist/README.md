@@ -17,7 +17,7 @@ Create a [Todoist](https://toggl.com/) account.
 4. Scroll down to see your API token.
 5. Use the API token with your Todoist node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/WLUyBAZ.gif)
+![Getting Todoist credentials](https://i.imgur.com/WLUyBAZ.gif)
 
 
 

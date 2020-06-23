@@ -19,7 +19,7 @@ Create a [Cockpit](https://www.getcockpit.com/) account.
 5. Use selected API key and your Cockpit URL in your Cockpit node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/HoQMkwg.gif)
+![Getting Cockpit credentials](https://i.imgur.com/HoQMkwg.gif)
 
 
 

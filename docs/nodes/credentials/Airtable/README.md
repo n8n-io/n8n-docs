@@ -18,7 +18,7 @@ Create [Airtable](https://airtable.com/) account.
 5. Use this API key with your Airtable node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/w4a7lf8.gif)
+![Getting Airtable credentials](https://i.imgur.com/w4a7lf8.gif)
 
 
 

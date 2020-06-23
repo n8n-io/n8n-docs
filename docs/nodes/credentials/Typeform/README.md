@@ -19,7 +19,7 @@ Create a [Typeform](https://typeform.com/) account.
 5. Enter app details.
 6. Use the client secret with your Typeform node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/ENo6vvK.gif)
+![Getting TypeForm credentials](https://i.imgur.com/ENo6vvK.gif)
 
 
 

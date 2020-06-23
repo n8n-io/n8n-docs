@@ -17,7 +17,7 @@ Create a [LinkFish](https://www.linkfish.com/) account.
 3. Click on API Dashboard.
 4. Create new API key.
 5. Use your email and the API key with LinkFish node credentials in n8n.
-![Alt Text](https://i.imgur.com/glLRnFW.gif)
+![Getting LinkFish credentials](https://i.imgur.com/glLRnFW.gif)
 
 
 

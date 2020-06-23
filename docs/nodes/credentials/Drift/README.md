@@ -17,7 +17,7 @@ Create a [Drift](https://www.drift.com/) account.
 3. Click on "Manage".
 4. Click on "App Credentials".
 5. Use Client Secret and Client ID with your Drift Node credentials in n8n.
-![Alt Text](https://i.imgur.com/TbhL3y2.gif)
+![Getting Drift credentials](https://i.imgur.com/TbhL3y2.gif)
 
 ## Using Access Token
 
@@ -26,4 +26,4 @@ Create a [Drift](https://www.drift.com/) account.
 3. Click on "Manage".
 4. Click on "Installing to Drift".
 5. Use token with your Drift Node credentials in n8n.
-![Alt Text](https://i.imgur.com/6lrsBM5.gif)
+![Getting Drift credentials](https://i.imgur.com/6lrsBM5.gif)

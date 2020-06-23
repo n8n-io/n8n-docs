@@ -20,7 +20,7 @@ Create a [Github](https://github.com/) account.
 5. Choose OAuth apps.
 6. Register a new application.
 7. Use provided Client Secret and Client ID with your Github node credentials in n8n.
-![Alt Text](https://i.imgur.com/rzrqAr7.gif)
+![Getting Github credentials](https://i.imgur.com/rzrqAr7.gif)
 
 
 ## Using Access Token
@@ -31,5 +31,5 @@ Create a [Github](https://github.com/) account.
 4. Click on Developer Settings.
 5. Choose personal access token.
 6. Use provided credentials with your Freshdesk node credentials in n8n.
-![Alt Text](https://i.imgur.com/2N30uIy.gif)
+![Getting Github credentials](https://i.imgur.com/2N30uIy.gif)
 

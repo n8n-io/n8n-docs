@@ -16,7 +16,7 @@ Create a [Mattermost](https://www.mattermost.com/) account.
 3. Go to Integration Management.
 4. Use the access token and Base URL with Mattermost node credentials in n8n.
 5.
-![Alt Text](missing)
+![Getting Mattermost credentials](missing)
 
 
 

@@ -16,7 +16,7 @@ Create a [Sms77](https://sms77.io/) account.
 3. Click on the HTTP API tab.
 4. Use the API key provided with your Sms77 node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/GMld2c8.gif)
+![Getting Sms77 credentials](https://i.imgur.com/GMld2c8.gif)
 
 
 

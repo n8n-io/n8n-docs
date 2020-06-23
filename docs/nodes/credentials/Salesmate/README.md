@@ -19,7 +19,7 @@ Create a [Salesmate](https://salesmate.io/) account.
 5. Copy the session key.
 6. Use session key and domain name for your Salesmate node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/Gsf0PLR.gif)
+![Getting Salesmate credentials](https://i.imgur.com/Gsf0PLR.gif)
 
 
 

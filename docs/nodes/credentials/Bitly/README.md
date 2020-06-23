@@ -20,7 +20,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 6. Use Client Secret and Client ID in your Bitly node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/zNZVMYZ.gif)
+![Getting Bitly credentials](https://i.imgur.com/zNZVMYZ.gif)
 
 ## Using Access Token
 
@@ -32,7 +32,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 6. Use the access token in your Bitly node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/sE4kUSa.gif)
+![Getting Bitly credentials](https://i.imgur.com/sE4kUSa.gif)
 
 
 

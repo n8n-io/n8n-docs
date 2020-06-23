@@ -19,6 +19,6 @@ Create [Affinity](https://www.affinity.com/) account.
 6. Use the API key with your Affinity node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/Yy4W0Wa.gif)
+![Getting Affinity credentials](https://i.imgur.com/Yy4W0Wa.gif)
 
 

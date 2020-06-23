@@ -17,7 +17,7 @@ Create a [Zendesk](https://zendesk.com/) account.
 4. Click the plus icon under Token Access.
 5. Use your Zendesk email, URL and the API token in your Zendesk credentials.
 
-![Alt Text](https://i.imgur.com/Bl2I0tn.gif)
+![Getting Zendesk credentials](https://i.imgur.com/Bl2I0tn.gif)
 
 
 

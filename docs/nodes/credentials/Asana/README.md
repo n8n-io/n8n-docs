@@ -25,7 +25,7 @@ Create an [Asana](https://www.Asana.com/) account.
 9. In the redirect URL enter the provided n8n redirect URL found in the Asana's node credentials creation settings.
 
 
-![Alt Text](https://i.imgur.com/dZq1UbE.gif)
+![Getting Asana credentials](https://i.imgur.com/dZq1UbE.gif)
 
 ## Using Access Token
 
@@ -38,6 +38,6 @@ Create an [Asana](https://www.Asana.com/) account.
 7. Use this token with your Asana node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/KBIHsyd.gif)
+![Getting Asana credentials](https://i.imgur.com/KBIHsyd.gif)
 
 

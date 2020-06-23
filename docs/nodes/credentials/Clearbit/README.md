@@ -19,7 +19,7 @@ Create a [Clearbit](https://www.clearbit.com/) account.
 4. Use selected API key in your Clearbit node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/mgYkrHT.gif)
+![Getting Clearbit credentials](https://i.imgur.com/mgYkrHT.gif)
 
 
 

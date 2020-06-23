@@ -16,7 +16,7 @@ Create a [Stripe](https://stripe.com/) account.
 3. Click on API keys.
 4. Use the secret key with your Stripe node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/l17Q1XA.gif)
+![Getting Stripe credentials](https://i.imgur.com/l17Q1XA.gif)
 
 
 

@@ -19,7 +19,7 @@ Create a [PayPal](https://paypal.com/) account.
 5. Your client ID and secret will be shown.
 6. Use the client ID and secret with your PayPal node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/qe5ihua.gif)
+![Getting PayPal credentials](https://i.imgur.com/qe5ihua.gif)
 
 
 

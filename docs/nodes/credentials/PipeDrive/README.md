@@ -19,7 +19,7 @@ Create a [PipeDrive](https://pipedrive.com/) account.
 5. Generate new token.
 6. Use the token with your PipeDrive node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/iB9AEwf.gif)
+![Getting PipeDrive credentials](https://i.imgur.com/iB9AEwf.gif)
 
 
 

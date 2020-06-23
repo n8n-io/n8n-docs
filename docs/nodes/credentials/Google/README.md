@@ -22,7 +22,7 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 5. Click on Create Credentials.
 6. Click on API Key.
 7. Use provided API Key with your Google node credentials in n8n.
-![Alt Text](https://i.imgur.com/r9KX5Gh.gif)  -->
+![Getting Google credentials](https://i.imgur.com/r9KX5Gh.gif)  -->
 
 ## Using OAuth
 
@@ -35,7 +35,7 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 7. Choose your preferences.
 8. Fill out information for your application credentials.
 9. Use provided Client Secret and Client ID with your Google node credentials in n8n.
-![Alt Text](https://i.imgur.com/NVmFY1u.gif)
+![Getting Google credentials](https://i.imgur.com/NVmFY1u.gif)
 
 
 ## Google Drive / Sheets API
@@ -54,10 +54,10 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 
 It will appear something like this in a text editor:
 
-![Alt Text](https://i.imgur.com/zYNRAyd.png)
+![Getting Google credentials](https://i.imgur.com/zYNRAyd.png)
 
 10. Use the values of client_email and private_key for your Google Credentials in the n8n node.
-![Alt Text](https://i.imgur.com/Q9eFy7B.gif)
+![Getting Google credentials](https://i.imgur.com/Q9eFy7B.gif)
 
 
 

@@ -20,7 +20,7 @@ You can find information about the operations supported by the Shopify node on t
 4. Upon app creation, scroll down and you will see your API key, secret.
 5. Use your password, API key, secret and shop subdomain with your Shopify node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/vDUwWJt.gif)
+![Getting Shopify credentials](https://i.imgur.com/vDUwWJt.gif)
 
 
 

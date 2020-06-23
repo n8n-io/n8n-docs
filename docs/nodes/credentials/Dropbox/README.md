@@ -16,7 +16,7 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 2. Fill out the application information.
 3. Click on "Create App".
 4. Use provided credentials with your Dropbox node credentials in n8n.
-![Alt Text](https://i.imgur.com/muD0yHx.gif)
+![Getting Dropbox credentials](https://i.imgur.com/muD0yHx.gif)
 
 
 

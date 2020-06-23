@@ -17,7 +17,7 @@ Create a [Mondaycom](https://monday.com/) account.
 4. Click on API and generate an API V2 Token.
 5. Use the token in your Mondaycom node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/QgWcHSB.gif)
+![Getting Mondaycom credentials](https://i.imgur.com/QgWcHSB.gif)
 
 
 

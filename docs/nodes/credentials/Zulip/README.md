@@ -1,11 +1,15 @@
+---
+permalink: /credentials/zulipApi
+---
+
 # Zulip
 You can find information about the operations supported by the Shopify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zulip) page. You can also browse the source code of the node on [Zulip](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zulip).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Zulip](https://zulip.com/) account.
+
+## Using Access Token
 
 1. Access your Zulip dashboard.
 2. Click on the gear icon on the top right.

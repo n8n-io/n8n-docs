@@ -1,11 +1,15 @@
+---
+permalink: /credentials/slackApi
+---
+
 # Slack
 You can find information about the operations supported by the Shopify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.slack) page. You can also browse the source code of the node on [Shopify](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Slack).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Slack](https://slack.com/) account.
+
+## Using Access Token
 
 1. Access your Slack dashboard.
 2. Click on your username in the top left.

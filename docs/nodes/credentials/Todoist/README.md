@@ -1,11 +1,15 @@
+---
+permalink: /credentials/todoistApi
+---
+
 # Todoist
 You can find information about the operations supported by the Shopify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.todoist) page. You can also browse the source code of the node on [Todoist](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Todoist).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Todoist](https://toggl.com/) account.
+
+## Using Access Token
 
 1. Access your Todoist dashboard.
 2. Click on the gear icon in the top right.

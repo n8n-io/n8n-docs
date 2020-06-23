@@ -1,15 +1,16 @@
+---
+permalink: /credentials/clickupApi
+---
+
+
 # Clickup
 You can find information about the operations supported by the Clickup node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.clickup) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Clickup).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Clickup](https://www.clickup.com/) account.
 
-## Steps
-
-### OAuth2
+## Using OAuth
 
 1. Open your Clickup dashboard.
 2. Click on your profile icon in the bottom left.
@@ -21,7 +22,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 8. Use Client ID and client Secret key in your Clickup node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/zl2GDAo.gif) 
+![Alt Text](https://i.imgur.com/zl2GDAo.gif)
 
 
 
@@ -35,7 +36,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 5. Use selected API key in your Clickup node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/K1GbV8f.gif) 
+![Alt Text](https://i.imgur.com/K1GbV8f.gif)
 
 
 

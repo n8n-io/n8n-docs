@@ -1,15 +1,16 @@
+---
+permalink: /credentials/clockifyApi
+---
+
+
 # Clockify
 You can find information about the operations supported by the Clockify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.clockifyTrigger) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Clockify).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Clockify](https://www.clockify.com/) account.
 
-## Steps
-
-### API KEY
+### Using Access Token
 
 1. Open your Clockify dashboard.
 2. Click on your profile.
@@ -18,7 +19,7 @@ Create a [Clockify](https://www.clockify.com/) account.
 5. Use selected API key in your Clockify node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/xSyUNut.gif) 
+![Alt Text](https://i.imgur.com/xSyUNut.gif)
 
 
 

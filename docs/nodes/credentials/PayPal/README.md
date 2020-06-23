@@ -1,11 +1,16 @@
+---
+permalink: /credentials/payPalOAuth2Api
+---
+
+
 # PayPal
 You can find information about the operations supported by the PayPal node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.payPal) page. You can also browse the source code of the node on [PayPal](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/PayPal).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [PayPal](https://paypal.com/) account.
+
+## Using OAuth
 
 1. Access your [PayPal dashboard](https://developer.paypal.com/developer/applications/).
 2. Click on My Apps & Credentials on the left panel.

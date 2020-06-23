@@ -6,7 +6,9 @@ permalink: /nodes/n8n-nodes-base.discord
 
 [Discord](https://discord.com/) is a voice, video, and text communications platform for groups. Discord allows users to programatically send messages using webhooks.
 
+::: tip 🔑 Credentials
 The Discord Node does not require Authentication, but you must have access to a channel's settings to use webhooks.
+:::
 
 ## Basic Operations
 

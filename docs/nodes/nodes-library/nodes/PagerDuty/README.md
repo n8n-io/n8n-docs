@@ -6,7 +6,9 @@ permalink: /nodes/n8n-nodes-base.pagerDuty
 
 [PagerDuty](https://www.pagerduty.com/) is a cloud computing company that produces a SaaS incident response platform for IT departments.
 
+::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/PagerDuty/README.md).
+:::
 
 ## Basic Operations
 

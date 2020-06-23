@@ -21,7 +21,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 7. Enter n8n provided redirect URL. ![Redirect URL Explanation here](../README.md)
 
 
-![Getting Bitly credentials](https://i.imgur.com/zNZVMYZ.gif)
+![Getting Bitly credentials](./using-oauth.gif)
 
 ## Using Access Token
 
@@ -33,7 +33,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 6. Use the access token in your Bitly node credentials in n8n.
 
 
-![Getting Bitly credentials](https://i.imgur.com/sE4kUSa.gif)
+![Getting Bitly credentials](./using-access-token.gif)
 
 
 

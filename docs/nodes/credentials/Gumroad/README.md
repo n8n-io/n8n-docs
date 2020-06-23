@@ -18,7 +18,7 @@ Create a [Gumroad](https://gumroad.com/) account.
 5. Scroll down and fill out the required fields and create a new application..
 6. From here, you have access the ability to generate an access token.
 7. Use provided access token with your Gumroad node credentials in n8n.
-![Getting Gumroad credentials](https://i.imgur.com/4vqOroB.gif)
+![Getting Gumroad credentials](./using-access-token.gif)
 
 
 

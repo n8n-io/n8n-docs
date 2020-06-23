@@ -15,7 +15,7 @@ Create a [Discord](https://www.discord.com/) account.
 5. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
 
-![Getting Discord credentials](https://i.imgur.com/5GR5o8Z.gif)
+![Getting Discord credentials](./using-oauth.gif)
 
 
 

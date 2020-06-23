@@ -18,7 +18,7 @@ Create a [Facebook](https://www.facebook.com/) account.
 4. Click Settings, Advanced.
 5. Scroll down and note Client Token.
 6. Use provided access token with your Facebook node credentials in n8n.
-![Getting Facebook credentials](https://i.imgur.com/zbfMBxB.gif)
+![Getting Facebook credentials](./using-access-token.gif)
 
 
 

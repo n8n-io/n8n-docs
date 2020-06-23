@@ -16,7 +16,7 @@ Create a [Harvest](https://www.getharvest.com/) account.
 3. Enter token name.
 4. You will then receive your token and Account ID.
 5. Use the token and Account ID with Harvest node credentials in n8n.
-![Getting Harvest credentials](https://i.imgur.com/LZW8CNX.gif)
+![Getting Harvest credentials](./using-access-token.gif)
 
 
 

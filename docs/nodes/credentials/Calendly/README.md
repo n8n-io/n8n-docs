@@ -16,7 +16,7 @@ Create a [Calendly](https://www.calendly.com/) account.
 3. Use API key in your Calendly node credentials in n8n.
 
 
-![Getting Calendly credentials](https://i.imgur.com/eqDS6Z8.gif)
+![Getting Calendly credentials](./using-access-token.gif)
 
 
 

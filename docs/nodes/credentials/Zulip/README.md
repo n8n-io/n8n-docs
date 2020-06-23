@@ -18,7 +18,7 @@ Create a [Zulip](https://zulip.com/) account.
 5. Use your Zulip email, URL and the API token in your Zulip credentials.
 
 
-![Getting Zulip credentials](https://i.imgur.com/9HJL4b0.gif)
+![Getting Zulip credentials](./using-access-token.gif)
 
 
 

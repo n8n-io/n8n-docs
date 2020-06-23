@@ -23,12 +23,10 @@ Create a [Clickup](https://www.clickup.com/) account.
 9. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
 
-![Getting Clickup credentials](https://i.imgur.com/zl2GDAo.gif)
+![Getting Clickup credentials](./using-oauth.gif)
 
 
-
-
-### API KEY
+### Using Access Token
 
 1. Open your Clickup dashboard.
 2. Click on your profile icon in the bottom left.
@@ -37,7 +35,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 5. Use selected API key in your Clickup node credentials in n8n.
 
 
-![Getting Clickup credentials](https://i.imgur.com/K1GbV8f.gif)
+![Getting Clickup credentials](./using-access-token.gif)
 
 
 

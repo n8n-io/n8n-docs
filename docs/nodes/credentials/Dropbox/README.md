@@ -10,13 +10,13 @@ You can find information about the operations supported by the Dropbox node on t
 
 Create a [Dropbox](https://www.dropbox.com/) account.
 
-## Using Access Token
+## Using OAuth
 
 1. Access this [Dropbox application creation site](https://www.dropbox.com/developers/apps/create).
 2. Fill out the application information.
 3. Click on "Create App".
 4. Use provided credentials with your Dropbox node credentials in n8n.
-![Getting Dropbox credentials](https://i.imgur.com/muD0yHx.gif)
+![Getting Dropbox credentials](./using-oauth.gif)
 
 
 

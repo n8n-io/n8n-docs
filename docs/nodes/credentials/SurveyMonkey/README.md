@@ -21,7 +21,7 @@ Create a [SurveyMonkey](https://surveymonkey.com/) account.
 7. Once created, go to settings.
 8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in n8n.
 
-![Getting SurveyMonkey credentials](https://i.imgur.com/RF0mcwM.gif)
+![Getting SurveyMonkey credentials](./using-access-token.gif)
 
 
 

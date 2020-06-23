@@ -20,7 +20,7 @@ Create a [PayPal](https://paypal.com/) account.
 6. Use the client ID and secret with your PayPal node credentials in n8n.
 7. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
-![Getting PayPal credentials](https://i.imgur.com/qe5ihua.gif)
+![Getting PayPal credentials](./using-oauth.gif)
 
 
 

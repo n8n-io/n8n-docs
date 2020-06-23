@@ -17,7 +17,7 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 4. Click on Developer links, API keys.
 5. Generate a key.
 6. Use provided key with your Eventbrite node credentials in n8n.
-![Getting Eventbrite credentials](https://i.imgur.com/SevnSa3.gif)
+![Getting Eventbrite credentials](./using-access-token.gif)
 
 
 

@@ -16,7 +16,7 @@ Create a [Vero](https://getvero.com/) account.
 3. Scroll down to see your Auth token.
 4. Use the auth token with your Vero node credentials in n8n.
 
-![Getting Vero credentials](https://i.imgur.com/A2FUJRG.gif)
+![Getting Vero credentials](./using-access-token.gif)
 
 
 

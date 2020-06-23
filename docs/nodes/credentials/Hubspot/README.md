@@ -17,7 +17,7 @@ Create a [Hubspot](https://www.hubspot.com/) account.
 3. Click on Integrations, API key.
 1. Create Key.
 2. Use the key with Hubspot node credentials in n8n.
-![Getting Hubspot credentials](https://i.imgur.com/D8I8G7C.gif)
+![Getting Hubspot credentials](./using-access-token.gif)
 
 
 

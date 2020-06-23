@@ -17,7 +17,7 @@ Create a [Twilio](https://twilio.com/) account.
 4. You will find your Account SID and Auth token on this page.
 5. Use the Auth token and account SID with your Twilio node credentials in n8n.
 
-![Getting Twilio credentials](https://i.imgur.com/YVzcFgE.gif)
+![Getting Twilio credentials](./using-access-token.gif)
 
 
 

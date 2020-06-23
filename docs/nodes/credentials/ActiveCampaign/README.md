@@ -18,6 +18,6 @@ Create [ActiveCampaign](https://www.activecampaign.com/) account.
 5. Use these credentials with your ActiveCampaign node credentials in n8n.
 
 
-![Getting ActiveCampaign credentials](https://i.imgur.com/kecCOfr.gif)
+![Getting ActiveCampaign credentials](./using-access-token.gif)
 
 

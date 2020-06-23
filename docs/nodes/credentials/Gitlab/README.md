@@ -17,4 +17,4 @@ Create a [Gitlab](https://gitlab.com/) account.
 4. Click on Access tokens.
 5. Fill out the required information to receive access token.
 6. Use provided credentials with your Gitlab node credentials in n8n.
-![Getting Gitlab credentials](https://i.imgur.com/o6g7I8y.gif)
+![Getting Gitlab credentials](./using-access-token.gif)

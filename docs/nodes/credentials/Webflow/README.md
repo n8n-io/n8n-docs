@@ -19,7 +19,7 @@ Create a [Webflow](https://webflow.com/) account.
 6. Scroll down and click generate API token.
 7. Use the api token with your Webflow node credentials in n8n.
 
-![Getting Webflow credentials](https://i.imgur.com/t5sraIO.gif)
+![Getting Webflow credentials](./using-access-token.gif)
 
 
 

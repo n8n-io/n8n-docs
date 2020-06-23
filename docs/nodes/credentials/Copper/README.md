@@ -18,7 +18,7 @@ Create a [Copper](https://www.copper.com/) account.
 5. Use selected API key and your registered email in your Copper node credentials in n8n.
 
 
-![Getting Copper credentials](https://i.imgur.com/2Dl2Gt7.gif)
+![Getting Copper credentials](./using-access-token.gif)
 
 
 

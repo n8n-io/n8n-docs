@@ -20,7 +20,7 @@ Create a [RocketChat](https://rocket.chat/) account.
 6. Enter Application Name.
 7. Use Client ID and client secret for your RocketChat node credentials in n8n.
 
-![Getting RocketChat credentials](https://i.imgur.com/2T15WOu.gif)
+![Getting RocketChat credentials](./using-access-token.gif)
 
 
 

@@ -35,7 +35,7 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 7. Choose your preferences.
 8. Fill out information for your application credentials.
 9. Use provided Client Secret and Client ID with your Google node credentials in n8n.
-![Getting Google credentials](https://i.imgur.com/NVmFY1u.gif)
+![Getting Google credentials](./using-oauth-calendar.gif)
 
 
 ## Google Drive / Sheets API

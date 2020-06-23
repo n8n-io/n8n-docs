@@ -15,7 +15,7 @@ Create a [Mocean](https://moceanapi.com/) account.
 2. Your API key and secret will be visible.
 3. Use the API key and secret in your Mocean node credentials in n8n.
 
-![Getting Mocean credentials](https://i.imgur.com/Qss05of.gif)
+![Getting Mocean credentials](./using-access-token.gif)
 
 
 

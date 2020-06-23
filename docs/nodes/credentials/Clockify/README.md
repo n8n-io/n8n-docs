@@ -19,7 +19,7 @@ Create a [Clockify](https://www.clockify.com/) account.
 5. Use selected API key in your Clockify node credentials in n8n.
 
 
-![Getting Clockify credentials](https://i.imgur.com/xSyUNut.gif)
+![Getting Clockify credentials](./using-access-token.gif)
 
 
 

@@ -19,7 +19,7 @@ Create a [Coda](https://www.coda.com/) account.
 5. Use selected API access token in your Coda node credentials in n8n.
 
 
-![Getting Coda credentials](https://i.imgur.com/zyGV9ME.gif)
+![Getting Coda credentials](./using-access-token.gif)
 
 
 

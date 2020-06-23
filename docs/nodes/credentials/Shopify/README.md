@@ -10,7 +10,7 @@ You can find information about the operations supported by the Shopify node on t
 - Create a [Shopify](https://shopify.com/) account.
 - Create a [Shoppify Partner Account](https://developers.shopify.com/) and connect your main Shopify account by signing in.
 
-## Using Access Token
+## Using OAuth
 
 1. Access your Shopify Partners Dashboard.
 2. Click on Apps on the left panel.
@@ -18,7 +18,7 @@ You can find information about the operations supported by the Shopify node on t
 4. Upon app creation, scroll down and you will see your API key, secret.
 5. Use your password, API key, secret and shop subdomain with your Shopify node credentials in n8n.
 
-![Getting Shopify credentials](https://i.imgur.com/vDUwWJt.gif)
+![Getting Shopify credentials](./using-oauth.gif)
 
 
 

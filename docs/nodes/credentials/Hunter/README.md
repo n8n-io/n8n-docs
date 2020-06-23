@@ -16,7 +16,7 @@ Create a [Hunter](https://www.hunter.io/) account.
 2. Click on your profile icon on the top right.
 3. Click on API.
 4. Use the key with Hunter node credentials in n8n.
-![Getting Hunter credentials](https://i.imgur.com/7KYbPRM.gif)
+![Getting Hunter credentials](./using-access-token.gif)
 
 
 

@@ -12,8 +12,6 @@ You can find information about the operations supported by the Shopify node on t
 
 ## Using Access Token
 
-
-
 1. Access your Shopify Partners Dashboard.
 2. Click on Apps on the left panel.
 3. Create a new app by entering necessary settings.

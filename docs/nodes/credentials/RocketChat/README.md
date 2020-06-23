@@ -12,7 +12,6 @@ Create a [RocketChat](https://rocket.chat/) account.
 
 ## Using Access Token
 
-
 1. Access your RocketChat Dashboard.
 2. Click on the context menu in the top left.
 3. Click on Administration.

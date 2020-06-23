@@ -18,6 +18,7 @@ Create a [PayPal](https://paypal.com/) account.
 4. Enter app name and create app.
 5. Your client ID and secret will be shown.
 6. Use the client ID and secret with your PayPal node credentials in n8n.
+7. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
 ![Getting PayPal credentials](https://i.imgur.com/qe5ihua.gif)
 

@@ -22,7 +22,7 @@ Create an [Asana](https://www.Asana.com/) account.
 6. Click on "New App".
 7. Enter name and Create app.
 8. Copy the Client ID and Client Secret to be used in your n8n Asana node credentials.
-9. In the redirect URL enter the provided n8n redirect URL found in the Asana's node credentials creation settings.
+9. In the redirect URL enter the provided n8n redirect URL found in the Asana's node credentials creation settings. ![Redirect URL Explanation here](../README.md)
 
 
 ![Getting Asana credentials](https://i.imgur.com/dZq1UbE.gif)

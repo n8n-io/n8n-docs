@@ -12,6 +12,7 @@ Create a [Discord](https://www.discord.com/) account.
 2. Click on "New Application".
 3. Enter name and click "Create".
 4. Use Client Secret and Client ID in your Discord node credentials in n8n.
+5. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
 
 ![Getting Discord credentials](https://i.imgur.com/5GR5o8Z.gif)

@@ -10,7 +10,7 @@ You can find information about the operations supported by the Harvest node on t
 
 Create a [Harvest](https://www.getharvest.com/) account.
 
-## Using OAuth / Using Access Token
+## Using Access Token
 1. Open the Harvest [Developers portal](https://id.getharvest.com/developers).
 2. Click "Create New Personal Access Token".
 3. Enter token name.

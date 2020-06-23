@@ -20,6 +20,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 6. Click on Create app.
 7. Enter in App name and redirect URL(s).
 8. Use Client ID and client Secret key in your Clickup node credentials in n8n.
+9. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 
 
 ![Getting Clickup credentials](https://i.imgur.com/zl2GDAo.gif)

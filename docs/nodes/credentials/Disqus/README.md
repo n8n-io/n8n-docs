@@ -18,4 +18,5 @@ Create a [Disqus](https://www.disqus.com/) account.
 ![Getting Disqus credentials](https://i.imgur.com/TbhL3y2.gif)
 
 4. Visit [Disques applications site](https://disqus.com/api/applications/) and use the provided keys with your Disqus credentials in n8n.
+5. Enter n8n provided redirect URL in configuration settings. ![Redirect URL Explanation here](../README.md).
 

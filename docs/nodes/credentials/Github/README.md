@@ -20,6 +20,7 @@ Create a [Github](https://github.com/) account.
 5. Choose OAuth apps.
 6. Register a new application.
 7. Use provided Client Secret and Client ID with your Github node credentials in n8n.
+8. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 ![Getting Github credentials](https://i.imgur.com/rzrqAr7.gif)
 
 

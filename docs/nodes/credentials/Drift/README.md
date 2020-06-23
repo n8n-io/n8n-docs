@@ -17,6 +17,7 @@ Create a [Drift](https://www.drift.com/) account.
 3. Click on "Manage".
 4. Click on "App Credentials".
 5. Use Client Secret and Client ID with your Drift Node credentials in n8n.
+6. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
 ![Getting Drift credentials](https://i.imgur.com/TbhL3y2.gif)
 
 ## Using Access Token

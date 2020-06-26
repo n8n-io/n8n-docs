@@ -1,9 +1,5 @@
----
-permalink: /credentials/googleApi
----
-
-
 # Google
+
 You can find information about the operations supported by the Google node on the [integrations](https://n8n.io/integrations) page. You can also browse the source code of the node on [Google](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google).
 
 
@@ -35,6 +31,7 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 7. Choose your preferences.
 8. Fill out information for your application credentials.
 9. Use provided Client Secret and Client ID with your Google node credentials in n8n.
+
 ![Getting Google credentials](./using-oauth-calendar.gif)
 
 
@@ -57,8 +54,5 @@ It will appear something like this in a text editor:
 ![Getting Google credentials](https://i.imgur.com/zYNRAyd.png)
 
 10. Use the values of client_email and private_key for your Google Credentials in the n8n node.
+
 ![Getting Google credentials](https://i.imgur.com/Q9eFy7B.gif)
-
-
-
-

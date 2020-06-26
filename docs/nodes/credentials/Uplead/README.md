@@ -1,8 +1,5 @@
----
-permalink: /credentials/upleadApi
----
-
 # Uplead
+
 You can find information about the operations supported by the Uplead node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.uplead) page. You can also browse the source code of the node on [Uplead](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Uplead).
 
 ## Pre-requisites
@@ -18,13 +15,3 @@ Create a [Uplead](https://uplead.com/) account.
 5. Use the API Key with your Uplead node credentials in n8n.
 
 ![Getting Uplead credentials](./using-access-token.gif)
-
-
-
-
-
-
-
-
-
-

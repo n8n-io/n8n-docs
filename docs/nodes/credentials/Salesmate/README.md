@@ -1,9 +1,5 @@
----
-permalink: /credentials/salesmateApi
----
-
-
 # Salesmate
+
 You can find information about the operations supported by the Salesmate node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.salesmate) page. You can also browse the source code of the node on [Salesmate](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Salesmate).
 
 ## Pre-requisites
@@ -20,8 +16,3 @@ Create a [Salesmate](https://salesmate.io/) account.
 6. Use session key and domain name for your Salesmate node credentials in n8n.
 
 ![Getting Salesmate credentials](./using-access-token.gif)
-
-
-
-
-

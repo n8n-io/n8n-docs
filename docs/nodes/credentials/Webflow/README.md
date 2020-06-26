@@ -1,8 +1,5 @@
----
-permalink: /credentials/webflowApi
----
-
 # Webflow
+
 You can find information about the operations supported by the Webflow node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.webflowTrigger) page. You can also browse the source code of the node on [Webflow](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Webflow).
 
 ## Pre-requisites
@@ -20,13 +17,3 @@ Create a [Webflow](https://webflow.com/) account.
 7. Use the api token with your Webflow node credentials in n8n.
 
 ![Getting Webflow credentials](./using-access-token.gif)
-
-
-
-
-
-
-
-
-
-

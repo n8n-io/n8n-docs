@@ -1,8 +1,5 @@
----
-permalink: /credentials/typeformApi
----
-
 # Typeform
+
 You can find information about the operations supported by the Typeform node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.typeformTrigger) page. You can also browse the source code of the node on [Typeform](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Typeform).
 
 
@@ -20,13 +17,3 @@ Create a [Typeform](https://typeform.com/) account.
 6. Use the client secret with your Typeform node credentials in n8n.
 
 ![Getting TypeForm credentials](./using-access-token.gif)
-
-
-
-
-
-
-
-
-
-

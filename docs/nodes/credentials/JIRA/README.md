@@ -1,9 +1,5 @@
----
-permalink: /credentials/jiraApi
----
-
-
 # JIRA
+
 You can find information about the operations supported by the JIRA node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.jira) page. You can also browse the source code of the node on [JIRA](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Jira).
 
 ## Pre-requisites
@@ -19,8 +15,3 @@ Create a [JIRA](https://www.JIRA.com/) account.
 5. Click on Manage API Tokens.
 6. Create API token.
 7. Use the API token with JIRA node credentials in n8n. Your email and the domain under which the JIRA account is under must also be included.
-
-
-
-
-

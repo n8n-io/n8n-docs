@@ -1,8 +1,5 @@
----
-permalink: /credentials/trelloApi
----
-
 # Trello
+
 You can find information about the operations supported by the Trello node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.trello) page. You can also browse the source code of the node on [Trello](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Trello).
 
 ## Pre-requisites
@@ -17,13 +14,3 @@ Create a [Trello](https://trello.com/) account.
 4. To get your API token, observe this ![text](https://i.imgur.com/rjj7QHk.png)
 5. Click on "generate a Token" where you will find your token.
 6. Use the API token, OAuth secret and API key with your node credentials in n8n.
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
----
-permalink: /credentials/surveyMonkeyApi
----
-
 # SurveyMonkey
+
 You can find information about the operations supported by the SurveyMonkey node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.surveyMonkeyTrigger) page. You can also browse the source code of the node on [SurveyMonkey](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SurveyMonkey).
 
 
@@ -22,8 +19,3 @@ Create a [SurveyMonkey](https://surveymonkey.com/) account.
 8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in n8n.
 
 ![Getting SurveyMonkey credentials](./using-access-token.gif)
-
-
-
-
-

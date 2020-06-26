@@ -16,6 +16,3 @@ Create a [Discord](https://www.discord.com/) account.
 
 
 ![Getting Discord credentials](./using-oauth.gif)
-
-
-

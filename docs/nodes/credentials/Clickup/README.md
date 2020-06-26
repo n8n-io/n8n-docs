@@ -1,9 +1,5 @@
----
-permalink: /credentials/clickupApi
----
-
-
 # Clickup
+
 You can find information about the operations supported by the Clickup node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.clickup) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Clickup).
 
 ## Pre-requisites
@@ -26,7 +22,7 @@ Create a [Clickup](https://www.clickup.com/) account.
 ![Getting Clickup credentials](./using-oauth.gif)
 
 
-### Using Access Token
+## Using Access Token
 
 1. Open your Clickup dashboard.
 2. Click on your profile icon in the bottom left.
@@ -36,6 +32,3 @@ Create a [Clickup](https://www.clickup.com/) account.
 
 
 ![Getting Clickup credentials](./using-access-token.gif)
-
-
-

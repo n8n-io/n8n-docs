@@ -1,8 +1,5 @@
----
-permalink: /credentials/slackApi
----
-
 # Slack
+
 You can find information about the operations supported by the Slack node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.slack) page. You can also browse the source code of the node on [Slack](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Slack).
 
 ## Pre-requisites
@@ -21,8 +18,3 @@ Create a [Slack](https://slack.com/) account.
 8. Use your verification token with your Slack node credentials in n8n.
 
 ![Getting Slack credentials](./using-access-token.gif)
-
-
-
-
-

@@ -1,8 +1,5 @@
----
-permalink: /credentials/sms77Api
----
-
 # Sms77
+
 You can find information about the operations supported by the Sms77 node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.sms77) page. You can also browse the source code of the node on [Sms77](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Sms77).
 
 ## Pre-requisites
@@ -17,8 +14,3 @@ Create a [Sms77](https://sms77.io/) account.
 4. Use the API key provided with your Sms77 node credentials in n8n.
 
 ![Getting Sms77 credentials](using-access-token.gif)
-
-
-
-
-

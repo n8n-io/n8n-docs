@@ -1,8 +1,5 @@
----
-permalink: /credentials/shopifyApi
----
-
 # Shopify
+
 You can find information about the operations supported by the Shopify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.shopify) page. You can also browse the source code of the node on [Shopify](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Shopify).
 
 ## Pre-requisites
@@ -19,8 +16,3 @@ You can find information about the operations supported by the Shopify node on t
 5. Use your password, API key, secret and shop subdomain with your Shopify node credentials in n8n.
 
 ![Getting Shopify credentials](./using-oauth.gif)
-
-
-
-
-

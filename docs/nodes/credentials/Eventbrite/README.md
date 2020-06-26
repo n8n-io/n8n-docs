@@ -1,8 +1,5 @@
----
-permalink: /credentials/eventbriteApi
----
-
 # Eventbrite
+
 You can find information about the operations supported by the Eventbrite node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.eventbrite) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Eventbrite).
 
 ## Pre-requisites
@@ -17,7 +14,5 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 4. Click on Developer links, API keys.
 5. Generate a key.
 6. Use provided key with your Eventbrite node credentials in n8n.
+
 ![Getting Eventbrite credentials](./using-access-token.gif)
-
-
-

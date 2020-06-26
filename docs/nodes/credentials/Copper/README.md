@@ -1,8 +1,5 @@
----
-permalink: /credentials/copperApi
----
-
 # Copper
+
 You can find information about the operations supported by the Copper node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.copperTrigger) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Copper).
 
 ## Pre-requisites
@@ -19,6 +16,3 @@ Create a [Copper](https://www.copper.com/) account.
 
 
 ![Getting Copper credentials](./using-access-token.gif)
-
-
-

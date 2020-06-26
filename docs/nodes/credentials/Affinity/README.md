@@ -1,8 +1,5 @@
----
-permalink: /credentials/affinityApi
----
-
 # Affinity
+
 You can find information about the operations supported by the Affinity node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.affinity) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Affinity).
 
 ## Pre-requisites
@@ -20,5 +17,3 @@ Create [Affinity](https://www.affinity.com/) account.
 
 
 ![Getting Affinity credentials](./using-access-token.gif)
-
-

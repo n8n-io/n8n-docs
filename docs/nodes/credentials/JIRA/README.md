@@ -10,7 +10,7 @@ You can find information about the operations supported by the JIRA node on the 
 
 Create a [JIRA](https://www.JIRA.com/) account.
 
-### Using Access Token
+## Using Access Token
 
 1. Access your JIRA dashboard.
 2. Click on your user icon in the top right.

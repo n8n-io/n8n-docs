@@ -10,7 +10,7 @@ You can find information about the operations supported by the InvoiceNinja node
 
 Create a [InvoiceNinja](https://www.invoiceninja.com/) account.
 
-### Using Access Token
+## Using Access Token
 
 1. Access your InvoiceNinja dashboard.
 2. Click on Settings in the bottom left.

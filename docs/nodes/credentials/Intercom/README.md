@@ -10,7 +10,7 @@ You can find information about the operations supported by the Intercom node on 
 
 Create a [Intercom](https://www.intercom.com/) account.
 
-### Using OAuth
+## Using OAuth
 
 1. Click "Use OAuth" in Authentication page.
 2. Fill out required information.

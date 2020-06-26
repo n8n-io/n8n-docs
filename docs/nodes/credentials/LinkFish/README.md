@@ -8,7 +8,7 @@ You can find information about the operations supported by the LinkFish node on 
 
 ## Pre-requisites
 
-Create a [LinkFish](https://www.linkfish.com/) account.
+Create a [LinkFish](https://link.fish/) account.
 
 ## Using Access Token
 

@@ -8,4 +8,6 @@ You can find information about the operations supported by the Bitbucket node on
 
 Create an [Bitbucket](https://www.Bitbucket.com/) account.
 
+## Using Username and Password
+
 Use username and application password.

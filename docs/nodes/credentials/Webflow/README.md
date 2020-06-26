@@ -1,11 +1,15 @@
-# Webflow
-You can find information about the operations supported by the Shopify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.webflowTrigger) page. You can also browse the source code of the node on [Webflow](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Webflow).
+---
+permalink: /credentials/webflowApi
+---
 
-# Authentication
+# Webflow
+You can find information about the operations supported by the Webflow node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.webflowTrigger) page. You can also browse the source code of the node on [Webflow](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Webflow).
 
 ## Pre-requisites
 
 Create a [Webflow](https://webflow.com/) account.
+
+## Using Access Token
 
 1. Access your Webflow dashboard.
 2. Click on your desired project.
@@ -15,7 +19,7 @@ Create a [Webflow](https://webflow.com/) account.
 6. Scroll down and click generate API token.
 7. Use the api token with your Webflow node credentials in n8n.
 
-![Alt Text](https://i.imgur.com/t5sraIO.gif)
+![Getting Webflow credentials](./using-access-token.gif)
 
 
 

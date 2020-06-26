@@ -1,15 +1,15 @@
+---
+permalink: /credentials/bannerbearApi
+---
+
 # Bannerbear
 You can find information about the operations supported by the BannerBear node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.bannerbear) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/BannerBear).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [BannerBear](https://www.BannerBear.com/) account.
 
-## Steps
-
-### API KEY
+## Using Access Token
 
 1. Open your BannerBear dashboard.
 2. Click on "Create New Project".
@@ -19,7 +19,7 @@ Create a [BannerBear](https://www.BannerBear.com/) account.
 6. Use API key in your Bannerbear node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/tPmWakx.gif) 
+![Getting Bannerbear credentials](./using-access-token.gif)
 
 
 

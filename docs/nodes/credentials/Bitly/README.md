@@ -1,16 +1,16 @@
+---
+permalink: /credentials/bitlyApi
+---
+
+
 # Bitly
 You can find information about the operations supported by the Bitly node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.bitly) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Bitly).
-
-# Authentication
 
 ## Pre-requisites
 
 Create a [Bitly](https://www.bitly.com/) account.
 
-## Steps
-
-
-### OAuth2 NOT SUPPORTED YET
+## Using OAuth
 
 1. Open your Bitly dashboard.
 2. Click on your account button in the top right.
@@ -18,11 +18,12 @@ Create a [Bitly](https://www.bitly.com/) account.
 4. Click on "Registered OAuth Applications".
 5. Click on "GET REGISTRATION CODE".
 6. Use Client Secret and Client ID in your Bitly node credentials in n8n.
+7. Enter n8n provided redirect URL. ![Redirect URL Explanation here](../README.md)
 
 
-![Alt Text](https://i.imgur.com/zNZVMYZ.gif) 
+![Getting Bitly credentials](./using-oauth.gif)
 
-### Access Token
+## Using Access Token
 
 1. Open your Bitly dashboard.
 2. Click on your account button in the top right.
@@ -32,7 +33,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 6. Use the access token in your Bitly node credentials in n8n.
 
 
-![Alt Text](https://i.imgur.com/sE4kUSa.gif) 
+![Getting Bitly credentials](./using-access-token.gif)
 
 
 

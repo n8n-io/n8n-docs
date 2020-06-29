@@ -9,7 +9,7 @@ npm run build
 # navigate into the build output directory
 cd docs/.vuepress/dist
 
-echo 'docs-staging.n8n.io' > CNAME
+echo 'docs.n8n.io' > CNAME
 
 git init
 git add -A

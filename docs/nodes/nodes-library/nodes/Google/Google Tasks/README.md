@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.googleTasks
 
 # Google Tasks
 
-[Google Tasks](https://www.google.com/tasks/) a task management service developed by Google.
+[Google Tasks](https://www.google.com/tasks/) is a task management service developed by Google.It keeps track of your daily tasks, organize multiple lists, and track important deadlines.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).
@@ -13,10 +13,10 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Task
-    - Add a task to the tasklist
+    - Add a task to tasklist
     - Delete a task
-    - Get a task
-	- Retrieve all the tasks from the specified task list
+    - Retrieve a task
+	- Retrieve all  tasks from a task list
     - Update a task
 
 ## Example Usage
@@ -36,8 +36,5 @@ The start node exists by default when you create a new workflow.
 ### 2. Google Tasks node
 
 1. First of all, you'll have to enter credentials for the Google Tasks node. You can find out how to do that [here](../../../credentials/Google/README.md).
-2. To add a new task to the tsklist, select *Task* under the *Resource* field.
-3. Select the *Create* option in the *Operation* field.
-4. Select the *TaskList* from the dropdown list of the user's task-lists.
-8. If you want to enter optional fields such as the attendees or location, etc as JSON data, then add those JSON parameters under the *Additional fields* field.
-9. Click on *Execute Node* to run the workflow.
+2. Select the *TaskList* from the dropdown list of the user's task-lists where a new task needs to be added.
+3. Click on *Execute Node* to run the workflow.

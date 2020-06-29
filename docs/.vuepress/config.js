@@ -42,12 +42,12 @@ module.exports = {
 			'vuepress-plugin-code-copy',
 			true,
 		],
-		// [
-		// 	'@vuepress/google-analytics',
-		// 	{
-		// 		'ga': '', // UA-00000000-0
-		// 	},
-		// ],
+		[
+			'@vuepress/google-analytics',
+			{
+				'ga': 'UA-146470481-3',
+			},
+		],
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',

@@ -16,7 +16,7 @@ You can find authentication information for this node [here](../../../credential
 	- Create a batch payout
 	- Get payout details
 - Payout item
-	- Canel an unpaid payout item
+	- Cancel an unpaid payout item
 	- Get payout item details
 
 ## Example Usage

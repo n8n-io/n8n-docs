@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.googleTasks
 
 # Google Tasks
 
-[Google Tasks](https://www.google.com/tasks/) is a task management service developed by Google.It keeps track of your daily tasks, organize multiple lists, and track important deadlines.
+[Google Tasks](https://www.google.com/tasks/) is a task management service developed by Google. It keeps track of your daily tasks, organize multiple lists, and track important deadlines.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).

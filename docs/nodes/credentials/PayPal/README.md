@@ -8,12 +8,12 @@ Create a [PayPal](https://paypal.com/) account.
 
 ## Using OAuth
 
-1. Access your [PayPal dashboard](https://developer.paypal.com/developer/applications/).
-2. Click on My Apps & Credentials on the left panel.
-3. Create a new app.
-4. Enter app name and create app.
+1. Access your [PayPal dashboard](https://developer.paypal.com/developer/applications/)
+2. Click on Log in to Dashboard and enter your PayPal account credentials.
+3. Click on create app.
+4. Name your app and click on Create App.
 5. Your client ID and secret will be shown.
-6. Use the client ID and secret with your PayPal node credentials in n8n.
-7. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
+6. Return to n8n and enter your client ID and secret.
+7. Choose the environment: sandbox or live.
 
 ![Getting PayPal credentials](./using-oauth.gif)

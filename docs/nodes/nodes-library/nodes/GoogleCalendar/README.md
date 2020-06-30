@@ -16,7 +16,7 @@ You can find authentication information for this node [here](../../../credential
     - Add a event to the calendar
     - Delete an event
     - Retrieve an event
-	- Retrieve all events from a calendar
+    - Retrieve all events from a calendar
     - Update an event
 
 ## Example Usage

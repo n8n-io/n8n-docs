@@ -9,6 +9,5 @@ Create a [SIGNL4](https://www.signl4.com/) account.
 ## Using Team Secret
 
 1. Open the '✅ Sign up complete' email you received when you signed up for SIGNL4.
-2. Your team secret is the last part of the webhook URL.  
-If your webhook URL is `https://connect.signl4.com/webhook/helloworld`, your team secret would be `helloworld`.
+2. Your team secret is the last part of the webhook URL. If your webhook URL is `https://connect.signl4.com/webhook/helloworld`, your team secret would be `helloworld`.
 

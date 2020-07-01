@@ -2,9 +2,9 @@
 permalink: /nodes/n8n-nodes-base.signl4
 ---
 
-# Derdack SIGNL4
+# SIGNL4
 
-[SIGNL4](https://www.signl4.com/) is a plug-and-play cloud solution produced by [Derdack](https://www.derdack.com/). It automatically notifies teams on their mobile devices in case of critical events.
+[SIGNL4](https://www.signl4.com/) is a plug-and-play cloud solution produced by Derdack. It automatically notifies teams on their mobile devices in case of critical events.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/SIGNL4/README.md).
@@ -31,8 +31,8 @@ The start node exists by default when you create a new workflow.
 
 ### 2. SIGNL4 node
 
-1. First of all, you'll have to enter credentials for the PagerDuty node. You can find out how to do that [here](../../../credentials/SIGNL4/README.md).
-2. Select 'Alert' as the *Resource*.
-3. Select 'Send' as the *Operation*.
-4. Enter a message in the message field.
-5. Click on *Execute Node* to run the workflow.
+1. First of all, you'll have to enter credentials for the SIGNL node. You can find out how to do that [here](../../../credentials/SIGNL4/README.md).
+2. Enter a message in the message field.
+3. Add a title by adding a *Title* field under the 'Additional Fields:' section.
+4. Click on *Execute Node* to run the workflow.
+

@@ -37,4 +37,5 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Google Tasks node. You can find out how to do that [here](../../../credentials/Google/README.md).
 2. Select the *TaskList* from the dropdown list of the user's task-lists where a new task needs to be added.
-3. Click on *Execute Node* to run the workflow.
+3. Enter title for the task.
+4. Click on *Execute Node* to run the workflow.

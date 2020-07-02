@@ -19,10 +19,10 @@ You can find authentication information for this node [here](../../../credential
 	- Move a file
 	- Upload a file
 - Folder
-	- Copy a file
-	- Create a file
-	- Delete a file
-	- List files and folders in the folder
+	- Copy a folder
+	- Create a folder
+	- Delete a folder
+	- Return the files and folders in a given folder
 	- Move a folder
 
 ## Example Usage
@@ -41,8 +41,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Dropbox node
 
-1. Click on the plus button, search for "Dropbox", select it and double-click on the new node.
-2. Select "Create new" in the *Dropbox API* field.
-3. Create a credential as shown in [this tutorial](../../../credentials/Dropbox/).
-4. Enter the name of the new folder *Folder* field.
-5. Click on *Execute Node* to run the workflow.
+1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](../../../credentials/Dropbox/).
+2. Enter the name of the new folder in the *Folder* field.
+3. Click on *Execute Node* to run the workflow.
+

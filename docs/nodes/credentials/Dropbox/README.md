@@ -9,11 +9,14 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 ## Using OAuth
 
 1. Access the [Dropbox app creation page](https://www.dropbox.com/developers/apps/create).
-2. Select Dropbox API and scoped access.
-3. Select access type, enter the app name and accept the terms and conditions.
-4. Click on Create App.
-5. In the Dropbox app dashboard, navigate to Settings, scroll down to OAuth2 and click Generate under Access token.
-6. In the Dropbox app dashboard, navigate to Permissions, and select the permissions your workflow will need.
-7. Return to n8n and enter the access token in your n8n Dropbox credentials.
+2. In Choose an API, select Dropbox API.
+3. In Choose your app's permissions model, select Scoped access.
+4. In Choose the type of access you need, select App folder.
+5. In Name your app, enter your app name.
+6. Accept the terms and conditions.
+7. Click on Create app.
+8. In the Dropbox app dashboard, navigate to Settings, scroll down to OAuth2 and click on the Generate button under Generated access token.
+9. In the Dropbox app dashboard, navigate to Permissions, select the permissions your workflow will need and click on the Submit button.
+10. Return to n8n and enter the Access Token in your Dropbox API credentials.
 
 ![Getting Dropbox credentials](./using-oauth.gif)

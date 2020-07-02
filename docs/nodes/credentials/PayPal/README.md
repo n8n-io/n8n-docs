@@ -8,7 +8,7 @@ Create a [PayPal](https://paypal.com/) account.
 
 ## Using OAuth
 
-1. Access your [PayPal dashboard](https://developer.paypal.com/developer/applications/)
+1. Access your [PayPal dashboard](https://developer.paypal.com/developer/applications/).
 2. Click on *Log in to Dashboard*.
 3. Enter your PayPal account credentials.
 4. In the section 'REST API apps', click on *Create app*.

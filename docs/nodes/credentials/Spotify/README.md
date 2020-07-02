@@ -5,7 +5,7 @@ You can find information about the operations supported by Spotify node on the [
 
 ## Pre-requisites
 
-Create [Spotify Developer](https://developer.spotify.com/dashboard/login) account.
+Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) account.
 
 ## Steps
 

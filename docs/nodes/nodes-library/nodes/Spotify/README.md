@@ -11,37 +11,37 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Album
-    - Get
-    - Get Tracks
+    - Get an Album
+    - Get an Album's Tracks
 - Artist
-    - Get
-    - Get Albums
-    - Get Related Artists
-    - Get Top Tracks
+    - Get an Artist
+    - Get an Artist's Albums
+    - Get an Artist's Related Artists
+    - Get an Artists's Top Tracks
 - Player
     - Add Song to Queue
-    - Currently Playing
-    - Next Song
-    - Pause
-    - Previous Song
-    - Recently Played
-   - Start Music
+    - Get the Currently Playing Song
+    - Go to the Next Song
+    - Pause Your Music
+    - Go to the Previous Song
+    - Get the Recently Played Song
+    - Start Your Music
 - Playlist
-    - Add an Item
-    - Get
-    - Get Track
-   - Get User's Playlist
-    - Remove an Item
+    - Add an Item to a Playlist
+    - Get a Playlist
+    - Get a Playlist's Tracks
+    - Get a User's Playlists
+    - Remove an Item from a Playlist
 - Track
-    - Get
-    - Get Audio Features
+    - Get a Track
+    - Get a Track's Audio Features
 
 
 ## Example Usage
 
 This workflow allows you to add a song to your queue in Spotify. You can also find the [workflow](https://n8n.io/workflows/440) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
-- Spotify
+- [Spotify]()
 
 The final workflow should look like the following image.
 

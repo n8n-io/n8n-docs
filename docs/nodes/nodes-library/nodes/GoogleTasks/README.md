@@ -16,7 +16,7 @@ You can find authentication information for this node [here](../../../credential
     - Add a task to tasklist
     - Delete a task
     - Retrieve a task
-	- Retrieve all  tasks from a task list
+    - Retrieve all  tasks from a task list
     - Update a task
 
 ## Example Usage

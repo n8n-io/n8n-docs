@@ -14,10 +14,10 @@ You can find authentication information for this node [here](../../../credential
 
 - Payout
 	- Create a batch payout
-	- Get payout details
+	- Show batch payout details
 - Payout item
 	- Cancel an unpaid payout item
-	- Get payout item details
+	- Show payout item details
 
 ## Example Usage
 
@@ -35,8 +35,6 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. PayPal node
 
-1. Click on the plus button, search for "PayPal", select it and double-click on the new node.
-2. Select "Create new" in the *PayPal API* field.
-3. Create a credential as shown in [this tutorial](../../../credentials/PayPal/).
-4. Enter an ID in the *Sender Batch ID* field.
-5. Click on *Execute Node* to run the workflow.
+1. First of all, you'll have to enter credentials for the PayPal node. You can find out how to do that [here](../../../credentials/PayPal/).
+2. Enter an ID in the *Sender Batch ID* field.
+3. Click on *Execute Node* to run the workflow.

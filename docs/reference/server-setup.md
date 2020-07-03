@@ -182,3 +182,8 @@ n8n will now be reachable via the above defined subdomain + domain combination.
 The above example would result in: https://n8n.example.com
 
 n8n will only be reachable via https and not via http.
+
+
+## other options
+
+- https://github.com/sarveshwarge/n8n-heroku

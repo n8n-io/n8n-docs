@@ -23,7 +23,7 @@ You can find authentication information for this node [here](../../../credential
 	- Soft delete a post, by marking the post as deleted in the database
 	- Post a message into a channel
 - User
-	- Deactivates the  user and revokes all it's sessions by archiving its user object
+	- Deactivates the user and revokes all its sessions by archiving its user object
 	- Retrieve all users
 	- Get a user by email
 	- Get a user by id	
@@ -45,9 +45,8 @@ The start node exists by default when you create a new workflow.
 ### 2. Mattermost node
 
 1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
-2. Select 'Message' from the *Resource* dropdown.
-3. Select 'Post' from the *Operation* dropdown.
-4. Select the channel you would like to post to in the *Channel ID* dropdown.
-5. Type the message you want to post in the *Message* field.
-6. Click on *Execute Node* to run the workflow.
+2. Select the channel you would like to post to in the *Channel ID* dropdown.
+3. Type the message you want to post in the *Message* field.
+4. Click on *Execute Node* to run the workflow.
+
 

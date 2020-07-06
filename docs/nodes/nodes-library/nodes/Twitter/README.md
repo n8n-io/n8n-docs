@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.twitter
 
 # Twitter
 
-[Twitter](https://twitter.com/) is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+[Twitter](https://twitter.com/) is a microblogging and social networking service on which users post and interact with messages known as "tweets".
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Twitter/README.md).
@@ -33,7 +33,7 @@ The start node exists by default when you create a new workflow.
 ### 2. Twitter node
 
 1. First of all, you'll have to enter credentials for the Twitter node. You can find out how to do that [here](../../../credentials/Twitter/README.md).
-2. Select 'Create' from the *Operation* dropdown.
-3. Type the message you want to tweet in the *text* field.
-4. Click on *Execute Node* to run the workflow.
+2. Type the message you want to tweet in the *Text* field.
+3. Click on *Execute Node* to run the workflow.
+
 

@@ -36,8 +36,9 @@ The start node exists by default when you create a new workflow.
 ### 2. Freshdesk node
 
 1. First of all, you'll have to enter credentials for the Freshdesk node. You can find out how to do that [here](../../../credentials/Freshdesk/README.md).
-2. Select 'Create' from the *Operation* dropdown.
 2. Select 'Email' from the *Requester Identification* dropdown.
-4. Enter the requester email in the *Value* field.
-3. Select 'Open' from the *Status* Dropdown.
+3. Enter the requester email in the *Value* field.
+4. Select 'Open' from the *Status* Dropdown.
 5. Click on *Execute Node* to run the workflow.
+
+

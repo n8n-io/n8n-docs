@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a ticket on Freshdesk. You can also find the [workflow](https://n8n.io/workflows/) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to create a ticket on Freshdesk. You can also find the [workflow](https://n8n.io/workflows/448) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Freshdesk]()
 

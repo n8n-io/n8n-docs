@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.pagerDuty
+permalink: /nodes/n8n-nodes-base.freshdesk
 ---
 
 # Freshdesk

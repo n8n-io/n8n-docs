@@ -1,7 +1,5 @@
 # Introduction
 
-### Welcome to n8n!
-
 First off, thank you for considering contributing to n8n. It's people like you that make n8n such a great tool.
 
 ### Why these guidelines are important
@@ -40,7 +38,7 @@ You can also check out [First Timers Only](https://www.firsttimersonly.com/) for
 2. Do the changes in your fork
 3. If you like the change and think the project could use it:
     * Be sure you have followed the code style for the project.
-    * Send a pull request.
+    * Squash your commits and send a pull request.
     * Sign the Contributor License Agreement (CLA), with the CLA assistant.
 
 ### Small and/or "obvious" fixes

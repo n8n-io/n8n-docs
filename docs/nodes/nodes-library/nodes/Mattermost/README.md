@@ -15,9 +15,9 @@ You can find authentication information for this node [here](../../../credential
 - Channel
     - Add a user to a channel
     - Create a new channel
-    - Soft-delete a channel
+    - Soft delete a channel
     - Get a page of members for a channel
-    - Restores a soft-deleted channel
+    - Restores a soft deleted channel
     - Get statistics for a channel
 - Message
 	- Soft delete a post, by marking the post as deleted in the database

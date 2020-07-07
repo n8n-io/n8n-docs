@@ -34,7 +34,7 @@ You can find authentication information for this node [here](../../../credential
 ## Example Usage
 
 This workflow shows you how to send a message to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/451) on this website. This example usage workflow uses the following two nodes.
-- [Start](../../core-nodes/Start)
+- [Start](../../core-nodes/Start/README.md)
 - [Telegram]()
 
 The final workflow should look like the following image.
@@ -48,8 +48,8 @@ The Start node exists by default when you create a new workflow.
 ### 2. Telegram node
 
 1. Create a credential as shown [here](../../../credentials/Telegram/).
-4. Select *Message* in the *Resource* field.
-5. Select *Send Message* in the *Operation* field.
-6. Enter the target channel name prefixed by "@" in *Chat ID*. Example: `@n8ntest`
-7. Write the content of your message in *Text*.
-8. Click on *Execute Node* to run the workflow.
+2. Select *Message* in the *Resource* field.
+3. Select *Send Message* in the *Operation* field.
+4. Enter the target channel name prefixed by "@" in *Chat ID*. Example: `@n8ntest`.
+5. Write the content of your message in *Text*.
+6. Click on *Execute Node* to run the workflow.

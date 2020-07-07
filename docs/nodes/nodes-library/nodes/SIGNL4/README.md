@@ -36,4 +36,3 @@ The start node exists by default when you create a new workflow.
 3. Click on the *Add Field* button and select 'Title'.
 4. Enter a title in the *Title* field.
 5. Click on *Execute Node* to run the workflow.
-

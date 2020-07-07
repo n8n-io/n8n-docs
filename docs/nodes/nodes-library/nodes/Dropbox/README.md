@@ -44,4 +44,3 @@ The Start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](../../../credentials/Dropbox/).
 2. Enter the name of the new folder in the *Folder* field.
 3. Click on *Execute Node* to run the workflow.
-

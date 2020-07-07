@@ -40,5 +40,3 @@ The start node exists by default when you create a new workflow.
 3. Enter the requester email in the *Value* field.
 4. Select 'Open' from the *Status* Dropdown.
 5. Click on *Execute Node* to run the workflow.
-
-

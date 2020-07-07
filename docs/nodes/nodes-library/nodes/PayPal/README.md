@@ -38,4 +38,3 @@ The Start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the PayPal node. You can find out how to do that [here](../../../credentials/PayPal/).
 2. Enter an ID in the *Sender Batch ID* field.
 3. Click on *Execute Node* to run the workflow.
-

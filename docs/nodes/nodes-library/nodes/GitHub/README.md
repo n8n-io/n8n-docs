@@ -27,11 +27,11 @@ You can find authentication information for this node [here](../../../credential
 
 - Repository
 	- Get the data of a single repository
-	- Return the contents of the repository's license file, if one detected
+	- Return the contents of the repository's license file, if one is detected
 	- Returns issues of a repository
-	- Get community profile of a repository with metrics , health score, description, license
+	- Get community profile of a repository with metrics , health score, description, license...
 	- Get the top 10 popular content paths over the last 14 days
-	- Get the top 10 popular referrering domains over the last 14 days
+	- Get the top 10 referrering domains over the last 14 days
 
 - Release
 	- Creates a new release
@@ -56,8 +56,8 @@ The start node exists by default when you create a new workflow.
 ### 2. GitHub node
 
 1. First of all, you'll have to enter credentials for the GitHub node. You can find out how to do that [here](../../../credentials/Github/README.md).
-2. Select the *Repository* option under the *Resource* field.
-3. Select the *Get Profile* option under the *Operation* field.
+2. Select the 'Repository' option under the *Resource* field.
+3. Select the 'Get Profile' option under the *Operation* field.
 4. Enter the repository owner in the *Repository Owner* field.
 5. Enter the repository name in the *Repository Name* field.
 6. Click on *Execute Node* to run the workflow.

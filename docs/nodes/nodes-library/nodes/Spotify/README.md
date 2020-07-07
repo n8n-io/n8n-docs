@@ -13,30 +13,30 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Album
-    - Get an album
-    - Get an album's tracks
+    - Get
+    - Get Tracks
 - Artist
-    - Get an artist
-    - Get an artist's albums
-    - Get an artist's related artists
-    - Get an artists's top tracks
+    - Get
+    - Get Albums
+    - Get Related Artists
+    - Get Top Tracks
 - Player
-    - Add song to queue
-    - Get the currently playing song
-    - Go to the next song
-    - Pause your music
-    - Go to the previous song
-    - Get the recently played song
-    - Start your music
+    - Add Song to Queue
+    - Currently Playing
+    - Next Song
+    - Pause
+    - Previous Song
+    - Recently Played
+   - Start Music
 - Playlist
-    - Add an item to a playlist
-    - Get a playlist
-    - Get a playlist's tracks
-    - Get a user's playlists
-    - Remove an item from a playlist
+    - Add an Item
+    - Get
+    - Get Track
+   - Get User's Playlist
+    - Remove an Item
 - Track
-    - Get a track
-    - Get a track's audio features
+    - Get
+    - Get Audio Features
 
 ## Example Usage
 
@@ -55,9 +55,7 @@ The start node exists by default when you create a new workflow.
 ### 2. Spotify node
 
 1. First of all, you'll have to enter credentials for the Spotify node. You can find out how to do that [here](../../../credentials/Spotify/README.md).
-2. Select the *Player* Resource.
-3. Select the *Add Song to Queue* Operation.
-4. Enter the song's URI (or ID) to the *Track ID* field. The following GIF shows you how to find the Track ID on Spotify's UI.
-5. Click on *Execute Node* to run the workflow.
+2. Enter the song's URI (or ID) to the *Track ID* field. The following GIF shows you how to find the Track ID on Spotify's UI.
+3. Click on *Execute Node* to run the workflow.
 
 ![Spotify URI](./spotifyURI.gif)

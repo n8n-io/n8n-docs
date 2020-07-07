@@ -59,3 +59,4 @@ The start node exists by default when you create a new workflow.
 3. Click on *Execute Node* to run the workflow.
 
 ![Spotify URI](./spotifyURI.gif)
+

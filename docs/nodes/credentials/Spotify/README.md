@@ -15,3 +15,4 @@ Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) acco
 4. Open the app settings and add the n8n provided redirect URL to the app's redirect URI list. Redirect URL Explanation [here](../README.md).
 
 ![The Spotify App Dashboard](./dashboard.gif)
+

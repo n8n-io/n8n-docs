@@ -13,30 +13,30 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Album
-    - Get an album by URI or ID.
-    - Get an album's tracks by URI or ID.
+    - Get an album by URI or ID
+    - Get an album's tracks by URI or ID
 - Artist
-    - Get an artist by URI or ID.
-    - Get an artist's albums by URI or ID.
-    - Get an artist's related artists by URI or ID.
-    - Get an artist's top tracks by URI or ID.
+    - Get an artist by URI or ID
+    - Get an artist's albums by URI or ID
+    - Get an artist's related artists by URI or ID
+    - Get an artist's top tracks by URI or ID
 - Player
-    - Add a song to your queue.
-    - Get your currently playing track.
-    - Skip to your next track.
-    - Pause your music.
-    - Skip to your previous song.
-    - Get your recently played tracks.
-    - Start playing a playlist, artist, or album.
+    - Add a song to your queue
+    - Get your currently playing track
+    - Skip to your next track
+    - Pause your music
+    - Skip to your previous song
+    - Get your recently played tracks
+    - Start playing a playlist, artist, or album
 - Playlist
-    - Add tracks from a playlist by track and playlist URI or ID.
-    - Get a playlist by URI or ID.
-    - Get a playlist's tracks by URI or ID.
-    - Get a user's playlists.
-    - Remove tracks from a playlist by track and playlist URI or ID.
+    - Add tracks from a playlist by track and playlist URI or ID
+    - Get a playlist by URI or ID
+    - Get a playlist's tracks by URI or ID
+    - Get a user's playlists
+    - Remove tracks from a playlist by track and playlist URI or ID
 - Track
-    - Get a track by its URI or ID.
-    - Get audio features for a track by URI or ID.
+    - Get a track by its URI or ID
+    - Get audio features for a track by URI or ID
 
 ## Example Usage
 

@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.bitly
 [Bitly](https://bitly.com/) is URL shortening service and a link management platform that allows users to shorten, create and share trusted, powerful links for businesses.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/Bitly).
+You can find authentication information for this node [here](../../../credentials/Bitly/README.md).
 :::
 
 ## Basic Operations

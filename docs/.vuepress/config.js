@@ -109,7 +109,7 @@ module.exports = {
 					children: [
 						{
 							title: 'Trigger Nodes',
-							sidebarDepth: 2,
+							sidebarDepth: 1,
 							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 						{
@@ -119,7 +119,7 @@ module.exports = {
 						},
 						{
 							title: 'Core Nodes',
-							sidebarDepth: 2,
+							sidebarDepth: 1,
 							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 					],

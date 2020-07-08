@@ -21,7 +21,6 @@ You can find authentication information for this node [here](../../../credential
 ## Example Usage
 
 This workflow shows you how to create a new link. You can also find the [workflow](https://n8n.io/workflows/442) on the website. This example usage workflow uses the following two nodes.
-
 - [Start](../../core-nodes/Start/README.md)
 - [Bitly]()
 
@@ -38,4 +37,3 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/Bitly/README.md).
 2. Enter the URL in the *Long URL* field.
 3. Click on *Execute Node* to run the workflow.
-

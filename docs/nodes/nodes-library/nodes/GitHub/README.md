@@ -17,14 +17,12 @@ You can find authentication information for this node [here](../../../credential
     - Delete a file in repository
     - Edit a file in repository
     - Get the data of a single issue
-
 - Issue
 	- Create a new issue
 	- Create a new comment on an issue
 	- Edit an issue
 	- Get the data of a single issue
 	- Lock an issue
-
 - Repository
 	- Get the data of a single repository
 	- Return the contents of the repository's license file, if one is detected
@@ -32,10 +30,8 @@ You can find authentication information for this node [here](../../../credential
 	- Get the community profile of a repository with metrics, health score, description, license, ...
 	- Get the top 10 popular content paths over the last 14 days
 	- Get the top 10 referrering domains over the last 14 days
-
 - Release
 	- Creates a new release
-
 - User
 	- Returns the repositories of a user
 
@@ -61,5 +57,3 @@ The start node exists by default when you create a new workflow.
 4. Enter the repository owner in the *Repository Owner* field.
 5. Enter the repository name in the *Repository Name* field.
 6. Click on *Execute Node* to run the workflow.
-
-

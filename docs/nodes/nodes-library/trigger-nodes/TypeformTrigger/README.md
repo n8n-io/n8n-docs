@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to get the answers from a form submission in Typeform. You can also find the [workflow](https://n8n.io/workflows/412) on the website. This example usage workflow would use the following node.
+This workflow allows you to get the answers from a form submission in Typeform. You can also find the [workflow](https://n8n.io/workflows/457) on the website. This example usage workflow would use the following node.
 - [Typeform Trigger]()
 
 The final workflow should look like the following image.

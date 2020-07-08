@@ -4,7 +4,7 @@ You can find information about the operations supported by the Twitter node on t
 
 ## Pre-requisites
 
-Create a [Twitter](https://developer.twitter.com/) developer account.
+Create a [Twitter developer account](https://developer.twitter.com/).
 
 ## Using OAuth
 

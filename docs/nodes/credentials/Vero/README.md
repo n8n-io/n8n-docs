@@ -1,8 +1,8 @@
 # Vero
 
-You can find information about the operations supported by the Vero node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.vero) page. You can also browse the source code of the node on [Vero](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Vero).
+You can find information about the operations supported by the Vero node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.vero) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Vero).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Vero](https://getvero.com/) account.
 

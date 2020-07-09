@@ -1,8 +1,8 @@
 # Zoom
 
-You can find information about the operations supported by the Zoom node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zoom) page. You can also browse the source code of the node on [Zoom](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zoom).
+You can find information about the operations supported by the Zoom node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zoom) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zoom).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Zoom](https://zoom.us/) account.
 

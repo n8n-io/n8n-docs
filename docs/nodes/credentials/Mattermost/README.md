@@ -1,8 +1,8 @@
 # Mattermost
 
-You can find information about the operations supported by the Mattermost node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mattermost) page. You can also browse the source code of the node on [Mattermost](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost).
+You can find information about the operations supported by the Mattermost node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mattermost) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Mattermost](https://www.mattermost.com/) account.
 

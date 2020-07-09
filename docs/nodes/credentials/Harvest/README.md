@@ -1,8 +1,8 @@
 # Harvest
 
-You can find information about the operations supported by the Harvest node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.harvest) page. You can also browse the source code of the node on [Harvest](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Harvest).
+You can find information about the operations supported by the Harvest node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.harvest) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Harvest).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Harvest](https://www.getharvest.com/) account.
 

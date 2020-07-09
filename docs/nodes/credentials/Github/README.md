@@ -3,7 +3,7 @@
 You can find information about the operations supported by the GitHub node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.github) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Github).
 
 
-## Pre-requisites
+## Prerequisites
 
 Create a [GitHub](https://github.com/) account.
 
@@ -16,7 +16,7 @@ Create a [GitHub](https://github.com/) account.
 5. Choose OAuth apps.
 6. Register a new application.
 7. Use provided Client Secret and Client ID with your GitHub node credentials in n8n.
-8. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
+8. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](../README.md).
 
 ![Getting GitHub credentials](./using-oauth.gif)
 

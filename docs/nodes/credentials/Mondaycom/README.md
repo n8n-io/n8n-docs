@@ -1,8 +1,8 @@
 # Monday.com
 
-You can find information about the operations supported by the Monday.com node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mondayCom) page. You can also browse the source code of the node on [Monday.com](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/MondayCom).
+You can find information about the operations supported by the Monday.com node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mondayCom) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/MondayCom).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Monday.com](https://monday.com/) account.
 

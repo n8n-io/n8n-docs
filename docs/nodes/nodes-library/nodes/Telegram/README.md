@@ -48,6 +48,17 @@ The Start node exists by default when you create a new workflow.
 ### 2. Telegram node
 
 1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](../../../credentials/Telegram/README.md). Use the bot access token.
-2. Enter the target channel ID in *Chat ID*. To find it, access the target channel in the Telegram app and tap on the channel. In the "Info" section, in the *Invite Link* field, copy the string after `t.me/`, prefix it with "@" and enter it in the *Chat ID* field. For example, if the link is `t.me/n8ntest`, the Chat ID will be `@n8ntest`.
-3. Write the content of your message in *Text*.
-4. Click on *Execute Node* to run the workflow.
+2. Add the your newly created bot to the target channel. You can find instructions on how to add a bot to a Telegram channel in the FAQs below.
+3. Enter the target channel ID in *Chat ID*. To find it, access the target channel in the Telegram app and tap on the channel. In the "Info" section, in the *Invite Link* field, copy the string after `t.me/`, prefix it with "@" and enter it in the *Chat ID* field. For example, if the link is `t.me/n8ntest`, the Chat ID will be `@n8ntest`.
+4. Write the content of your message in *Text*.
+5. Click on *Execute Node* to run the workflow.
+
+## FAQs
+
+### How do I add a bot to a Telegram channel?
+
+1. In the Telegram app, access the target channel and tap on the channel name.
+2. Make sure that the channel name is labeled as "public channel".
+3. Tap on *Administrators* and then on *Add Admin*.
+4. Search for the username of the bot and select it.
+5. Tap on the checkmark on the top-right corner to add the bot to the channel.

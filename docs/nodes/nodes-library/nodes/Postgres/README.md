@@ -12,9 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Execute an SQL query <!-- Changes needed on code repo -->
+- Execute an SQL query
 - Insert rows in database
-- Update rows in database <!-- Changes needed on code repo -->
+- Update rows in database
 
 
 ## Example Usage
@@ -38,9 +38,6 @@ The start node exists by default when you create a new workflow.
 3. Enter your SQL query in the *Query* field.
 4. Click on *Execute Node* to run the workflow.
 
+## Further Reading
 
-<!-- ## Further Reading
-
-Maybe include a simple SQL Guide here? 
-- [W3Schools SQL](https://www.w3schools.com/sql/)
--->
+- [Database Monitoring and Alerting with n8n 📡](https://medium.com/n8n-io/database-monitoring-and-alerting-with-n8n-f5082df7bdb2)

@@ -66,7 +66,7 @@ The Start node exists by default when you create a new workflow.
 ### How do I find the Chat ID?
 
 1. In the Telegram app, access the target channel and tap on the channel.
-2. In the "Info" section, in the *Invite Link* field, copy the string after `t.me/`.
+2. In the *Invite Link* field, copy the string after `t.me/`.
 3. Prefix the string with "@" and enter it in the *Chat ID* field.
 
 **Example:** If the link is `t.me/n8ntest`, the Chat ID will be `@n8ntest`.

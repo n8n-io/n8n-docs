@@ -48,7 +48,7 @@ The Start node exists by default when you create a new workflow.
 ### 2. Telegram node
 
 1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](../../../credentials/Telegram/README.md). Use the bot access token.
-2. Add your newly created bot to the target channel. You can find instructions on how to add a bot to a Telegram channel in the FAQs below.
+2. Add your bot to the target channel. You can find instructions on how to add a bot to a Telegram channel in the FAQs below.
 3. Enter the target channel ID in *Chat ID*. You can find instructions on how to find the Chat ID in the FAQs below.
 4. Write the content of your message in *Text*.
 5. Click on *Execute Node* to run the workflow.

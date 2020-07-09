@@ -47,7 +47,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Telegram node
 
-1. Create a credential as shown [here](../../../credentials/Telegram/).
+1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](../../../credentials/Telegram/README.md). Use the bot access token.
 2. Select *Message* in the *Resource* field.
 3. Select *Send Message* in the *Operation* field.
 4. Enter the target channel name prefixed by "@" in *Chat ID*. Example: `@n8ntest`.

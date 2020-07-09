@@ -1,8 +1,8 @@
 # Mocean
 
-You can find information about the operations supported by the Mocean node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mocean) page. You can also browse the source code of the node on [Mocean](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mocean).
+You can find information about the operations supported by the Mocean node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mocean) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mocean).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Mocean](https://moceanapi.com/) account.
 

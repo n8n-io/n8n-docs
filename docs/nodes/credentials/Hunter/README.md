@@ -1,8 +1,8 @@
 # Hunter
 
-You can find information about the operations supported by the Hunter node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.hunter) page. You can also browse the source code of the node on [Hunter](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Hunter).
+You can find information about the operations supported by the Hunter node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.hunter) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Hunter).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Hunter](https://www.hunter.io/) account.
 

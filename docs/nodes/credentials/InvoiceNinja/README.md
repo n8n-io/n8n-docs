@@ -1,10 +1,10 @@
 # InvoiceNinja
 
-You can find information about the operations supported by the InvoiceNinja node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.invoiceNinja) page. You can also browse the source code of the node on [InvoiceNinja](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/InvoiceNinja).
+You can find information about the operations supported by the InvoiceNinja node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.invoiceNinja) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/InvoiceNinja).
 
-## Pre-requisites
+## Prerequisites
 
-Create a [InvoiceNinja](https://www.invoiceninja.com/) account.
+Create an [InvoiceNinja](https://www.invoiceninja.com/) account.
 
 ## Using Access Token
 

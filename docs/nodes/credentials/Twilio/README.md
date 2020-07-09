@@ -1,8 +1,8 @@
 # Twilio
 
-You can find information about the operations supported by the Twilio node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.twilio) page. You can also browse the source code of the node on [Twilio](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Twilio).
+You can find information about the operations supported by the Twilio node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.twilio) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Twilio).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Twilio](https://twilio.com/) account.
 

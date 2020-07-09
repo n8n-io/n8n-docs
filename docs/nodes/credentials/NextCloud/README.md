@@ -1,8 +1,8 @@
 # NextCloud
 
-You can find information about the operations supported by the NextCloud node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.nextCloud) page. You can also browse the source code of the node on [NextCloud](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/NextCloud).
+You can find information about the operations supported by the NextCloud node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.nextCloud) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/NextCloud).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [NextCloud](https://nextcloud.com/) account.
 

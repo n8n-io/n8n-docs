@@ -1,8 +1,8 @@
 # Bannerbear
 
-You can find information about the operations supported by the BannerBear node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.bannerbear) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/BannerBear).
+You can find information about the operations supported by the BannerBear node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.bannerbear) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/BannerBear).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [BannerBear](https://www.BannerBear.com/) account.
 

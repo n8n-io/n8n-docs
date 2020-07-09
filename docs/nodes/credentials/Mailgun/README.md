@@ -1,8 +1,8 @@
 # Mailgun
 
-You can find information about the operations supported by the Mailgun node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mailgun) page. You can also browse the source code of the node on [Mailgun](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mailgun).
+You can find information about the operations supported by the Mailgun node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mailgun) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mailgun).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Mailgun](https://www.mailgun.com/) account.
 

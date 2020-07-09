@@ -1,10 +1,10 @@
 # Uplead
 
-You can find information about the operations supported by the Uplead node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.uplead) page. You can also browse the source code of the node on [Uplead](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Uplead).
+You can find information about the operations supported by the Uplead node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.uplead) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Uplead).
 
-## Pre-requisites
+## Prerequisites
 
-Create a [Uplead](https://uplead.com/) account.
+Create an [Uplead](https://uplead.com/) account.
 
 ## Using Access Token
 

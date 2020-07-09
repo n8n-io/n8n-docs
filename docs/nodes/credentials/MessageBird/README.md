@@ -1,8 +1,8 @@
 # MessageBird
 
-You can find information about the operations supported by the MessageBird node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.messageBird) page. You can also browse the source code of the node on [MessageBird](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/MessageBird).
+You can find information about the operations supported by the MessageBird node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.messageBird) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/MessageBird).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [MessageBird](https://www.messagebird.com/en/) account. 
 

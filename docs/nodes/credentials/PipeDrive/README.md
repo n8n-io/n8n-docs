@@ -1,8 +1,8 @@
 # PipeDrive
 
-You can find information about the operations supported by the PipeDrive node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.pipedrive) page. You can also browse the source code of the node on [PipeDrive](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Pipedrive).
+You can find information about the operations supported by the PipeDrive node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.pipedrive) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Pipedrive).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [PipeDrive](https://pipedrive.com/) account.
 

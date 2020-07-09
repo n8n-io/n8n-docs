@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Chat
-	- Get up-to-date information about a chat
+	- Get up to date information about a chat
 	- Leave a group, supergroup or channel
 	- Get the member of a chat
 	- Set the description of a chat

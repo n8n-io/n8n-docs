@@ -19,6 +19,7 @@ You can find information about the operations supported by the Telegram node on 
 2. Enter `/newbot` and reply with your new bot's display name and username.
 3. Copy the bot token and use it in the Telegram node credentials in n8n.
 4. On the Telegram app, access the target channel and tap on the channel name.
-5. Tap on *Administrators* and then on *Add Admin*.
-6. Search for the username of the newly created bot and select it.
-7. Tap on the checkmark on the top-right corner to add the bot to the channel.
+5. Make sure that the channel name is labeled as "public channel".
+6. Tap on *Administrators* and then on *Add Admin*.
+7. Search for the username of the newly created bot and select it.
+8. Tap on the checkmark on the top-right corner to add the bot to the channel.

@@ -1,6 +1,6 @@
 # GitHub
 
-You can find information about the operations supported by the GitHub node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.github) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/GitHub).
+You can find information about the operations supported by the GitHub node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.github) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Github).
 
 
 ## Pre-requisites

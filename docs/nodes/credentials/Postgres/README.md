@@ -4,7 +4,7 @@ You can find information about the operations supported by the Postgres node on 
 
 ## Pre-requisites
 
-Create a user account on a Postgres server.
+Create a user account on a Postgres server. 
 
 ## Using Database Connection
 

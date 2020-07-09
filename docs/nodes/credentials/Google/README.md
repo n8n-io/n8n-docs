@@ -76,7 +76,7 @@ It will appear something like this in a text editor:
 8. Click on *Add URI* in the 'Authorized redirect URIs' section.
 9. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste it in your Google cloud console.
 10. Click on *Create* in your Google cloud console.
-11. Copy the provided Client Secret and Client ID and paste them in the 'Create New Credentials' screen in n8n.
+11. Copy the provided Client ID and Client Secret and paste them in the 'Create New Credentials' screen in n8n.
 12. Click on the *Connect OAuth Credentials* button in the 'OAuth' section in n8n.
 13. If a popup alert shows 'This app isn't verified', click on *Advanced* and then click on *Go to [project]*.
 14. Click on *Allow* for every permission request and finally on *Allow* at the confirmation screen.

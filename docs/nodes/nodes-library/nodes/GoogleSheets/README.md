@@ -22,7 +22,7 @@ You can find authentication information for this node [here](../../../credential
 ## Example Usage
 
 This workflow shows you how to read from from a Google Sheets spreadsheet. You can also find the [workflow](https://n8n.io/workflows/449) on this website. This example usage workflow uses the following two nodes.
-- [Start](../../core-nodes/Start)
+- [Start](../../core-nodes/Start/README.md)
 - [GoogleSheets]()
 
 The final workflow should look like the following image.

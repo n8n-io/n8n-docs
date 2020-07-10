@@ -36,7 +36,7 @@ The Start node exists by default when you create a new workflow.
 ### 2. Google Sheets node
 
 1. First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to do that [here](../../../credentials/Google/README.md), in the section 'Google Drive / Sheets API'.
-2. Select *Read* in the *Operation* field.
+2. Select *OAuth2* in the *Authentication* field.
 3. Copy the string of characters located between `/d/` and `/edit` in your spreadsheet URL. Paste that string in the *Sheet ID* field.
 4. In the *Range* field, enter the range of columns to be read from your spreadsheet.
 5. In the *Data Start Row* field, enter the number of the first row that contains data, excluding the header row.

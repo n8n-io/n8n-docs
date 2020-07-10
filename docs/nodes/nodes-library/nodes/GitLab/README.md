@@ -18,13 +18,11 @@ You can find authentication information for this node [here](../../../credential
 	- Edit an issue
 	- Get the data of a single issue
 	- Lock an issue
-
 - Repository
 	- Get the data of a single repository
-	- Returns issues of a repository
-
+	- Return issues of a repository
 - Release
-	- Creates a new release
+	- Create a new release
 - User
 	- Returns the repositories of a user
 
@@ -44,9 +42,10 @@ The start node exists by default when you create a new workflow.
 
 ### 2. GitLab node
 
-1. First of all, you'll have to enter credentials for the GitLab node. You can find out how to do that [here](../../../credentials/GitLab/README.md).
-2. Select the 'Repository' option under the *Resource* field.
+1. First of all, you'll have to enter credentials for the GitLab node. You can find out how to do that [here](../../../credentials/Gitlab/README.md).
+2. Select the 'Repository' option from the *Resource* dropdown list.
 3. Select the 'Get' option under the *Operation* field.
-4. Enter the 'Project Owner' in the *Project Owner* field.
-5. Enter the 'Project Name' in the *Project Name* field.
+4. Enter the project owner in the *Project Owner* field.
+5. Enter the project name in the *Project Name* field.
 6. Click on *Execute Node* to run the workflow.
+

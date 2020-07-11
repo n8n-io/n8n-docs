@@ -18,29 +18,28 @@ You can find authentication information for this node [here](../../../credential
 	- Get a contact
 	- Get all contacts
 	- Get recently created/updated contacts
-
 - Company
-	- Create/Update a company
+	- Create a company
     - Delete a company
 	- Get a company
 	- Get all companies
-	- Get recently created/updated company
-
+	- Get recently created companies
+	- Get recently modified companies
+	- Search companies by domain
+	- Update a company
 - Deal
-	- Create/Update a deal
+	- Create a deal
     - Delete a deal
 	- Get a deal
 	- Get all deals
 	- Get recently created deals
 	- Get recently modified deals
 	- Update a deal
-
 - Form
 	- Get all fields from a form
 	- Submit data to a form
-
 - Ticket
-	- Create/Update a ticket
+	- Create a ticket
     - Delete a ticket
 	- Get a ticket
 	- Get all tickets
@@ -65,5 +64,5 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the HubSpot node. You can find out how to do that [here](../../../credentials/Hubspot/README.md).
 2. Select the 'Contact' option under the *Resource* field.
 3. Select the 'Get' option under the *Operation* field.
-4. Enter the 'Contact ID' under the *Contact ID* field.
+4. Enter the contact ID under the *Contact ID* field.
 3. Click on *Execute Node* to run the workflow.

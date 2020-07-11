@@ -63,3 +63,25 @@ It will appear something like this in a text editor:
 11. Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
 
 ![Getting Google credentials](https://i.imgur.com/Q9eFy7B.gif)
+
+## Using OAuth
+
+1. Access your [Google cloud console](https://console.cloud.google.com).
+2. Click on the hamburger menu button on the top left.
+3. Click on *API & Services*.
+4. Click on *Credentials*.
+5. Click on *Create Credentials*.
+6. Select *OAuth client ID*.
+7. Select *Web application* in the 'Application type' section.
+8. Click on *Add URI* in the 'Authorized redirect URIs' section.
+9. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste it in your Google cloud console.
+10. Click on *Create* in your Google cloud console.
+11. Copy the provided Client ID and Client Secret and paste them in the 'Create New Credentials' screen in n8n.
+12. Click on the *Connect OAuth Credentials* button in the 'OAuth' section in n8n.
+13. If a popup alert shows 'This app isn't verified', click on *Advanced* and then click on *Go to [project]*.
+14. Click on *Allow* for every permission request and finally on *Allow* at the confirmation screen.
+14. Once the credential has connected, click on *Create* in the 'Create New Credentials' screen in n8n.
+13. Return to your Google cloud console and click on *Library* in the menu on the left.
+14. Search for 'Sheets', and click on *Google Sheets API*.
+15. Click on *Enable*.
+

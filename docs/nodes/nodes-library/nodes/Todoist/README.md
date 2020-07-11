@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.todoist
 
 # Todoist
 
-[Todoist](https://todoist.com/)  is a task management software that can be used for small teams, individuals and professionals to manage anything from a shopping list to major projects at work.
+[Todoist](https://todoist.com/) is a task management software that can be used for small teams, individuals and professionals to manage anything from a shopping list to major projects at work.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Todoist/README.md).

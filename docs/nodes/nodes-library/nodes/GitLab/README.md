@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.gitlab
 
 # GitLab
 
-[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and continuous integration/continuous deployment pipeline features, using an open-source license, developed by GitLab Inc.
+[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous deployment pipeline features.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Gitlab/README.md).

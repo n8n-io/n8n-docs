@@ -25,5 +25,5 @@ The final workflow should look like the following image.
 
 1. First of all, you'll have to enter credentials for the ClickUp Trigger node. You can find out how to do that [here](../../../credentials/ClickUp/README.md).
 2. Select your team from the *Team* dropdown list.
-2. Select the `*` option in the *Events* field to receive updates for all the events.
-3. Click on *Execute Node* to run the workflow.
+3. Select the `*` option in the *Events* field to receive updates for all the events.
+4. Click on *Execute Node* to run the workflow.

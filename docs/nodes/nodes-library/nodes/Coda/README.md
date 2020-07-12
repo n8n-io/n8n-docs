@@ -64,5 +64,5 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Coda node. You can find out how to do that [here](../../../credentials/Coda/README.md).
 2. Select the name of your document from the *Doc* dropdown list.
-w. Select the name of your table from the *Table* dropdown list.
+3. Select the name of your table from the *Table* dropdown list.
 4. Click on *Execute Node* to run the workflow.

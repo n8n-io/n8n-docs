@@ -6,6 +6,13 @@ function getChildrenFiles(folder, topItem) {
 		.filter(page => {
 			return page.type === 'file' && page.name !== 'README.md';
 		})
+		.sort((a, b) => {
+			const aName = a.name.toLowerCase();
+			const bName = b.name.toLowerCase();
+			if (aName < bName) { return -1; }
+			if (aName > bName) { return 1; }
+			return 0;
+		})
 		.map(page => {
 			return `/${folder}/${page.name}`;
 		});
@@ -26,6 +33,13 @@ function getChildrenFolders(folder) {
 	return dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
 		.filter(page => {
 			return page.type === 'directory' && !!page.children.find(child => child.name === 'README.md');
+		})
+		.sort((a, b) => {
+			const aName = a.name.toLowerCase();
+			const bName = b.name.toLowerCase();
+			if (aName < bName) { return -1; }
+			if (aName > bName) { return 1; }
+			return 0;
 		})
 		.map(page => {
 			return `/${folder}/${page.name}/`;

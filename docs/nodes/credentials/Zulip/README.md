@@ -11,7 +11,7 @@ Create a [Zulip](https://zulip.com/) account.
 1. Access your Zulip dashboard.
 2. Click on the gear icon on the top right.
 3. Click on Settings.
-4. Click on "Show/Change API Key".
+4. Click on the *Show/change your API key* button under the API Key section.
 5. Use your Zulip email, URL and the API token in your Zulip credentials.
 
 ![Getting Zulip credentials](./using-access-token.gif)

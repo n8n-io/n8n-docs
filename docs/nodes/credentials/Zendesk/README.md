@@ -10,7 +10,7 @@ Create a [Zendesk](https://zendesk.com/) account.
 
 1. Access your Zendesk dashboard.
 2. Click on the gear icon on the left.
-3. Click on the API tab on the left.
+3. Click on API under the *Channels* section.
 4. Click the plus icon under Token Access.
 5. Use your Zendesk email, URL and the API token in your Zendesk credentials.
 

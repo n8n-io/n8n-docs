@@ -1,18 +1,18 @@
-# AgileCRM
+# Agile CRM
 
-You can find information about the operations supported by the AgileCRM node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.agileCrm) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/AgileCrm).
+You can find information about the operations supported by the Agile CRM node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.agileCrm) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/AgileCrm).
 
-## Pre-requisites
+## Prerequisites
 
-Create [AgileCRM](https://www.agilecrm.com/) account.
+Create an [Agile CRM](https://www.agilecrm.com/) account.
 
 ## Using Access Token
 
-1. Open your AgileCRM dashboard.
+1. Open your Agile CRM dashboard.
 2. Click on your user icon in the top right of the window.
 3. Click on the Admin Settings button.
 4. Click on the 'Developers & Api' button in the bottom left.
-5. Use the REST API key, your registered email and your AgileCRM subdomain (for instance, n8n) with your AgileCRM node credentials in n8n.
+5. Use the REST API key, your registered email and your Agile CRM subdomain (for instance, n8n) with your Agile CRM node credentials in n8n.
 
 
 ![Getting AgileCrm credentials](./using-access-token.gif)

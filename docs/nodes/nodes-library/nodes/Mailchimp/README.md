@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mailchimp
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailchimp are [here](../../../credentials/MailChimp).
+The instructions for authenticating with Mailchimp are [here](../../../credentials/MailChimp/README.md).
 :::
 
 ## Basic Operations
@@ -39,7 +39,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Mailchimp Node
 
-1. First, ensure that you have entered authentication credentials through [this tutorial](../../../credentials/MailChimp).
+1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/MailChimp/README.md).
 2. To create a member, select the Member option under the *Resource* field.
 3. Select the Create option in the *Operation* field.
 4. Choose the list you want to add to under the *List* field.

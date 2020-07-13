@@ -1,8 +1,8 @@
 # Hubspot
 
-You can find information about the operations supported by the Hubspot node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.hubspot) page. You can also browse the source code of the node on [Hubspot](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Hubspot).
+You can find information about the operations supported by the Hubspot node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.hubspot) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Hubspot).
 
-## Pre-requisites
+## Prerequisites
 
 Create a [Hubspot](https://www.hubspot.com/) account.
 

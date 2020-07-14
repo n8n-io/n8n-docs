@@ -34,5 +34,5 @@ The start node exists by default when you create a new workflow.
 2. Enter a subject for your email in the *Subject* field.
 3. Enter your message in the *Body* field.
 4. Enter the email address from which you want to send the email in the *From Email* field.
-5. Click on the 'Add To Email' button and add your recipient email addresses.
+5. Click on the *Add To Email* button and add your recipient email addresses.
 6. Click on *Execute Node* to run the workflow.

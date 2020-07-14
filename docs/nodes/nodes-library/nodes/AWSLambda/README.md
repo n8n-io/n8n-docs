@@ -31,5 +31,5 @@ The start node exists by default when you create a new workflow.
 ### 2. AWS Lambda node
 
 1. First of all, you'll have to enter credentials for the AWS Lambda node. You can find out how to do that [here](../../../credentials/AWS/README.md).
-2. Select the function you want to invoke from the *Function* dropdown list.
+2. Select the function that you want to invoke from the *Function* dropdown list.
 3. Click on *Execute Node* to run the workflow.

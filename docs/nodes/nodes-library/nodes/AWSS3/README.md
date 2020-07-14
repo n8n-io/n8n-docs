@@ -13,9 +13,9 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Bucket
-	- Create a bucket <!-- Typo PR needed -->
+	- Create a bucket
 	- Get all buckets
-	- Search within a bucket <!-- Typo PR needed -->
+	- Search within a bucket
 - File
 	- Copy a file
 	- Delete a file

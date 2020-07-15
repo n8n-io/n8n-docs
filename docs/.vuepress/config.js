@@ -139,7 +139,7 @@ module.exports = {
 					],
 				},
 				{
-					title: '🔑 Credentials',
+					title: '🔑 Credentials Library',
 					sidebarDepth: 2,
 					children: getChildrenFolders('nodes/credentials'),
 				},

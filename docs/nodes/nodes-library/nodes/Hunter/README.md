@@ -13,8 +13,8 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Get every email address found on the internet using a given domain name, with sources
-- Generates or retrieves the most likely email address from a domain name, a first name and a last name
-- Allows you to verify the deliverability of an email address
+- Generate or retrieve the most likely email address from a domain name, a first name and a last name
+- Verify the deliverability of an email address
 
 
 ## Example Usage
@@ -35,5 +35,5 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Hunter node. You can find out how to do that [here](../../../credentials/Hunter/README.md).
 2. Select 'Email Verifier' from the *Operation* dropdown list.
-3. Enter your email in the *Email* field.
+3. Enter the email in the *Email* field.
 4. Click on *Execute Node* to run the workflow.

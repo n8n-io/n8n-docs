@@ -19,12 +19,12 @@ You can find authentication information for this node [here](../../../credential
 - Form
     - Store submission of a form
 - Singleton
-    - Gets a singleton
+    - Get a singleton
 
 
 ## Example Usage
 
-This workflow allows you to get entries from a collection on Cockpit. You can also find the [workflow](https://n8n.io/workflows/518) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to get entries from a collection in Cockpit. You can also find the [workflow](https://n8n.io/workflows/518) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Cockpit]()
 

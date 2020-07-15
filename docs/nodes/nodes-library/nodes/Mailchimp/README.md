@@ -24,7 +24,7 @@ The instructions for authenticating with Mailchimp are [here](../../../credentia
 
 ## Example Usage
 
-This workflow allows you to create a new member in a list in Mailchimp. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
+This workflow allows you to add a new member to a list in Mailchimp. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start)
 - [Mailchimp]()

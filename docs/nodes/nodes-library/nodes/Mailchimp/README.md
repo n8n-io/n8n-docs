@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mailchimp
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailchimp are [here](../../../credentials/Mailchimp/README.md).
+You can find authentication information for this node [here](../../../credentials/Mailchimp/README.md).
 :::
 
 ## Basic Operations
@@ -37,7 +37,7 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. Mailchimp Node
+### 2. Mailchimp node
 
 1. First of all, you'll have to enter credentials for the Mailchimp node. You can find out how to do that [here](../../../credentials/Mailchimp/README.md).
 4. Select the Mailchimp list from the *List* dropdown list.

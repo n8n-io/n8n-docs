@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mailjet
 [Mailjet](https://www.mailjet.com/) is a cloud-based email sending and tracking system. The platform allows professionals to send both marketing emails and transactional emails. It includes tools for designing emails, sending massive volumes and tracking these messages.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailjet are [here](../../../credentials/Mailjet/README.md).
+You can find authentication information for this node [here](../../../credentials/Mailjet/README.md).
 :::
 
 ## Basic Operations
@@ -33,7 +33,7 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. Mailjet Node
+### 2. Mailjet node
 
 1. First of all, you'll have to enter credentials for the Mailjet node. You can find out how to do that [here](../../../credentials/Mailjet/README.md).
 2. Enter the email address from which you want to send the email in the *From Email* field.

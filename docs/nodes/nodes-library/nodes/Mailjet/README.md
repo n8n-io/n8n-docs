@@ -16,7 +16,7 @@ The instructions for authenticating with Mailjet are [here](../../../credentials
 	- Send an email
 	- Send an email template
 - SMS
-	- Send a SMS
+	- Send an SMS
 
 ## Example Usage
 
@@ -36,9 +36,8 @@ The start node exists by default when you create a new workflow.
 ### 2. Mailjet Node
 
 1. First of all, you'll have to enter credentials for the Mailjet node. You can find out how to do that [here](../../../credentials/Mailjet/README.md).
-2. Enter your email address in the *From Email* field.
+2. Enter the email address from which you want to send the email in the *From Email* field.
 3. Enter the recipient email address in the *To Email* field.
-4. Enter the email address in the *Email* field.
-5. Enter a subject for the email in the *Subject* field.
-6. Enter your message in the *Text* field.
-8. Click on *Execute Node* to run the workflow.
+4. Enter the subject for the email in the *Subject* field.
+5. Enter the content of the email in the *Text* field.
+6. Click on *Execute Node* to run the workflow.

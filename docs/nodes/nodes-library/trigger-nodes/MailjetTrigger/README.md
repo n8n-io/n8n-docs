@@ -23,18 +23,6 @@ The final workflow should look like the following image.
 
 ### 1. Mailjet Trigger node
 
-1. First of all, you'll have to add the webhook URL in Mailjet. You can find instructions on how to do that in the FAQs below.
-2. Select the `email.sent` option in the *Event* field to receive updates when an email is sent.
+1. First of all, you'll have to enter credentials for the Mailjet Trigger node. You can find out how to do that [here](../../../credentials/Mailjet/README.md).
+2. Select the `email.sent` option from the *Event* dropdown list to receive updates when an email is sent.
 3. Click on *Execute Node* to run the workflow.
-
-
-## FAQs
-
-### How do I add my webhook URL in Mailjet?
-1. Open your Mailjet dashboard.
-2. Click on your user icon in the top right.
-3. Click on 'Account Settings'.
-4. Under REST API, click on 'Event notifications (webhooks)'.
-5. Paste your n8n webhook URL in the *Endpoint URL* field.
-6. Select the events you plan on using by clicking on the appropriate checkboxes.
-7. Click on the *Save* button.

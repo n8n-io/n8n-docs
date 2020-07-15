@@ -16,7 +16,7 @@ You can find authentication information for this node [here](../../../credential
 	- Copy a file
 	- Delete a file
 	- Download a file
-	- Returns files and folders
+	- Return files and folders
 	- Upload a file
 - Folder
 	- Create a folder
@@ -24,7 +24,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow shows you how to download a file from Google Drive. You can also find the [workflow](https://n8n.io/workflows/515) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to download a file from Google Drive. You can also find the [workflow](https://n8n.io/workflows/515) on the website. This example usage workflow uses the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Google Drive]()
 

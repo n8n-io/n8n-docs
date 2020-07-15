@@ -2,12 +2,12 @@
 permalink: /nodes/n8n-nodes-base.mailchimpTrigger
 ---
 
-# MailChimp Trigger
+# Mailchimp Trigger
 
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailchimp are [here](../../../credentials/MailChimp/README.md).
+The instructions for authenticating with Mailchimp are [here](../../../credentials/Mailchimp/README.md).
 :::
 
 
@@ -23,8 +23,8 @@ The final workflow should look like the following image.
 
 ### 1. Mailchimp Trigger node
 
-1. First of all, you'll have to enter credentials for the Mailchimp Trigger node. You can find out how to do that [here](../../../credentials/MailChimp/README.md).
-2. Select the list you want to listen for in the *List* dropdown list.
-3. Select 'Subscribe' in the *Events* dropdown list.
-4. Select 'API', 'Admin', and 'User' in the *Sources* dropdown list.
+1. First of all, you'll have to enter credentials for the Mailchimp Trigger node. You can find out how to do that [here](../../../credentials/Mailchimp/README.md).
+2. Select the list you want to listen to from the *List* dropdown list.
+3. Select 'Subscribe' from the *Events* dropdown list.
+4. Select 'API', 'Admin', and 'User' from the *Sources* dropdown list.
 5. Click on *Execute Node* to run the workflow.

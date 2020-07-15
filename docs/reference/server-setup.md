@@ -68,6 +68,7 @@ version: "3"
 services:
   traefik:
     image: "traefik"
+    restart: always
     command:
       - "--api=true"
       - "--api.insecure=true"
@@ -85,6 +86,7 @@ services:
 
   n8n:
     image: n8nio/n8n
+    restart: always
     ports:
       - "127.0.0.1:5678:5678"
     labels:

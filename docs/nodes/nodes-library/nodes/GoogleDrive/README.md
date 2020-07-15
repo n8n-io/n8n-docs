@@ -47,4 +47,4 @@ The Start node exists by default when you create a new workflow.
 ### 3. Write Binary File node
 
 1. Enter the destination file path in the *File Name* field.
-5. Click on *Execute Node* to run the workflow.
+2. Click on *Execute Node* to run the workflow.

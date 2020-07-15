@@ -22,7 +22,7 @@ You can find authentication information for this node [here](../../../credential
 
 This workflow allows you to insert a document into a MongoDB collection. You can also find the [workflow](https://n8n.io/workflows/503) on the website. This example usage workflow would use the following three nodes.
 - [Start](../../core-nodes/Start/README.md)
-- Set<!-- (../../core-nodes/Set/README.md) -->
+- [Set](../../core-nodes/Set/README.md)
 - [MongoDB]()
 
 The final workflow should look like the following image.

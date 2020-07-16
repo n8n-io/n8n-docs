@@ -3,11 +3,11 @@
 Let's create your first workflow in n8n. We'll create a workflow which will run every morning at 8 AM and will send an SMS if you should take a sweater with you. You can also find the [workflow](https://n8n.io/workflows/409) on the website.
 
 This workflow would use the following nodes.
-- [Cron]() - Specify when the workflow should start (be triggered)
-- [OpenWeatherMap]() - Get weather details for a particular city
-- [IF]() - Conditional logic to decide the flow of the workflow
+- [Cron](../nodes/nodes-library/core-nodes/Cron/README.md) - Specify when the workflow should start (be triggered)
+- [OpenWeatherMap](../nodes/nodes-library/nodes/OpenWeatherMap/README.md) - Get weather details for a particular city
+- [IF](../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
 - [Twilio](../nodes/nodes-library/nodes/Twilio/README.md) - Send an SMS
-- [NoOp]() - Do nothing (optional)
+- [NoOp](../nodes/nodes-library/core-nodes/NoOp/README.md) - Do nothing (optional)
 
 The final workflow should look like the following image.
 

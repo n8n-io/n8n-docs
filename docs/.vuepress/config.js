@@ -122,9 +122,9 @@ module.exports = {
 					sidebarDepth: 3,
 					children: [
 						{
-							title: 'Trigger Nodes',
+							title: 'Core Nodes',
 							sidebarDepth: 1,
-							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
+							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 						{
 							title: 'Nodes',
@@ -132,9 +132,9 @@ module.exports = {
 							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{
-							title: 'Core Nodes',
+							title: 'Trigger Nodes',
 							sidebarDepth: 1,
-							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
+							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 					],
 				},

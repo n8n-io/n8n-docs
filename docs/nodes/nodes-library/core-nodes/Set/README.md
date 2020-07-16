@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.set
 
 # Set
 
-The Set node is used to assign values to variables. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
+The Set node allows you to set workflow data. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
 
 ## Example Usage
@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### Keep Only Set
 
-There's also an option to toggle the *Keep Only Set* field. Setting this to true ensures that only the values set on this node should be kept and all others (for example, from the previous nodes) removed.
+There's an option to toggle the *Keep Only Set* field. Setting this to true ensures that only the values set on this node should be kept and all others (for example, from the previous nodes) removed.
 
 ### Dot Notation
 

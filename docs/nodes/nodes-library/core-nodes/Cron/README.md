@@ -1,3 +1,7 @@
+---
+permalink: /nodes/n8n-nodes-base.cron
+---
+
 # Cron
 
 The Cron node is useful to schedule the workflows to run periodically at fixed dates, times, or intervals. This works in a similar way to the [cron](https://en.wikipedia.org/wiki/Cron) software utility in Unix-like systems. This core node is a Trigger node.

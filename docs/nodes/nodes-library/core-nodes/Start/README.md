@@ -1,3 +1,7 @@
+---
+permalink: /nodes/n8n-nodes-base.start
+---
+
 # Start
 
 The start node is the first node in a workflow. It exists by default when you create a new workflow and looks like the following image.

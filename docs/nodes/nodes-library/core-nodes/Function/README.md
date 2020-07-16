@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.function
 The Function node is used to add custom snippets to JavaScript code to transform data from the other nodes or if you want to implement some custom functionality that n8n doesn’t support yet. 
 
 ::: tip 💡 Keep in mind
-Please note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Check out [this]() page to learn about the difference between the Function and Function Item nodes.
+Please note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Check out [this](../../../../reference/function-nodes.md) page to learn about the difference between the Function and Function Item nodes.
 :::
 
 The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.

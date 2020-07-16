@@ -179,6 +179,10 @@ module.exports = {
 					path: 'start-workflows-via-cli.md',
 				},
 				{
+					title: '💡 Function and Function Item Nodes',
+					path: 'function-nodes.md',
+				},
+				{
 					title: '👀 Troubleshooting',
 					path: 'troubleshooting.md',
 				},

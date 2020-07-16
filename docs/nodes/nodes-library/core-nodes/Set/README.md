@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### Keep Only Set
 
-There's an option to toggle the *Keep Only Set* field. Setting this to true ensures that only the values set on this node should be kept and all others (for example, from the previous nodes) removed.
+There's an option to toggle the *Keep Only Set* field. Setting this to true ensures that only the values set on this node should be kept, and the values from all the previous nodes are removed.
 
 ### Dot Notation
 

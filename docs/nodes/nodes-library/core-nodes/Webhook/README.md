@@ -9,7 +9,7 @@ The Webhook node is one of the most powerful nodes in n8n. It allows you to crea
 While building or testing a workflow, we recommend that you use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the Editor UI, which is useful for debugging. Make sure that you click on the *Execute Node* button to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
 ::: tip 💡 Keep in mind
-1. When using the Webhook node, always ensure that n8n is running with the [tunnel](../../../../getting-started/quickstart.md#start-with-tunnel) mode.
+1. When using the Webhook node on the localhost, ensure that n8n is running with the [tunnel](../../../../getting-started/quickstart.md#start-with-tunnel) mode ().
 2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don’t forget that the data flowing through the webhook won’t be visible in the Editor UI with the Production webhook.
 :::
 
@@ -27,7 +27,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 3. **HTTP Method:** You can define whether the request will use the GET or the POST HTTP method.
 
-4. **Path:** You can enter a path for your webhook. This is the path that the webhook will listen to. You don't need to change this if you are not sure about it.
+4. **Path:** You can enter a custom path for your webhook. This is the path that the webhook will listen to. Please make sure that this is a unique path per method (GET, POST) across your workflows. You don't need to change this if you are unsure about it.
 
 5. **Response Code:** Here you can specify the HTTP response code to return. You’ll probably want to keep it set at 200.
 
@@ -35,7 +35,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
     
     - **On Received:** This option sends the defined response code back as soon as it receives data from the webhook.
 
-    - **Last Node:** This option returns the data of the node that was executed before the Webhook node. If the Webhook node is the only node (or the first node) in the workflow, this option would just return its own data as it itself would be the node that was last executed.
+    - **Last Node:** This option returns the data of the last node executed. If the Webhook node is the only node (or the first node) in the workflow, this option would just return its own data as it itself would be the node that was last executed.
 
 7. **Response Data:** This option becomes visible if you selected the Last Node for the Response Mode. Here you have three configuration options:
 

@@ -22,7 +22,7 @@ You can configure the node by clicking on the *Add Cron Time* button under the *
     - Every X
     - Custom
 
-The 'Every X' option allows you to specify the workflow to be triggered every x minutes or hours. You can sopecify x by entering a number in the *Value* field. The 'Custom' option allows you to enter a custom [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) in the *Cron Expression* field.
+The 'Every X' option allows you to specify the workflow to be triggered every x minutes or hours. You can specify x by entering a number in the *Value* field. The 'Custom' option allows you to enter a custom [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) in the *Cron Expression* field.
 
 You can find the example usage of the Cron node in the [Creating Your First Workflow](../../../../getting-started/creating-your-first-workflow.md) guide.
 

@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mailchimpTrigger
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailchimp are [here](../../../credentials/Mailchimp/README.md).
+You can find authentication information for this node [here](../../../credentials/Mailchimp/README.md).
 :::
 
 

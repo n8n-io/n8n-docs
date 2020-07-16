@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mailjetTrigger
 [Mailjet](https://www.mailjet.com/) is a cloud-based email sending and tracking system. The platform allows professionals to send both marketing emails and transactional emails. It includes tools for designing emails, sending massive volumes and tracking these messages.
 
 ::: tip 🔑 Credentials
-The instructions for authenticating with Mailjet are [here](../../../credentials/Mailjet/README.md).
+You can find authentication information for this node [here](../../../credentials/Mailjet/README.md).
 :::
 
 

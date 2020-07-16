@@ -4,7 +4,7 @@ You can find information about the operations supported by the QuestDB node on t
 
 ## Prerequisites
 
-Create an user account on a QuestDB server. 
+An available instance of QuestDB. 
 
 ## Using Database Connection
 

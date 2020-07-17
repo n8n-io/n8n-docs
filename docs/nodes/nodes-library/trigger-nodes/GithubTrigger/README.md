@@ -14,17 +14,17 @@ You can find authentication information for this node [here](../../../credential
 ## Example Usage
 
 This workflow allows you to receive updates for GitHub events. You can also find the [workflow](https://n8n.io/workflows/527) on the website. This example usage workflow would use the following node.
-- [Github Trigger]()
+- [GitHub Trigger]()
 
 The final workflow should look like the following image.
 
-![A workflow with the Github Trigger node](./workflow.png)
+![A workflow with the GitHub Trigger node](./workflow.png)
 
 
 ### 1. GitHub Trigger node
 
-1. First of all, you'll have to enter credentials for the Github Trigger node. You can find out how to do that [here](../../../credentials/Github/README.md).
+1. First of all, you'll have to enter credentials for the GitHub Trigger node. You can find out how to do that [here](../../../credentials/Github/README.md).
 2. Enter the repository owner in the *Repository Owner* field.
 3. Enter the repository name in the *Repository Name* field.
-4. Select the events you want to receive updates for from the *Events* dropdown list.
+4. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 5. Click on *Execute Node* to run the workflow.

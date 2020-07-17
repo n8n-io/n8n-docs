@@ -49,7 +49,7 @@ You can find authentication information for this node [here](../../../credential
 
 This workflow allows you to get multiple clients' data from Invoice Ninja. You can also find the [workflow](https://n8n.io/workflows/534) on this website. This example usage workflow uses the following two nodes.
 
-- [Start](../../core-nodes/Start)
+- [Start](../../core-nodes/Start/README.md)
 - [Invoice Ninja]()
 
 The final workflow should look like the following image.

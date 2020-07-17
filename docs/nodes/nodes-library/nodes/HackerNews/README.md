@@ -22,7 +22,7 @@ The Hacker News node does not require authentication.
 ## Example Usage
 
 This workflow allows you to get articles from Hacker News. You can also find the [workflow](https://n8n.io/workflows/525) on this website. This example usage workflow would use the following two nodes.
-- [Start](../../core-nodes/Start)
+- [Start](../../core-nodes/Start/README.md)
 - [Hacker News]()
 
 The final workflow should look like the following image.
@@ -35,5 +35,5 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Hacker News node
 
-1. Select the 'All' option in the *Resource* dropdown list.
+1. Select the 'All' option from the *Resource* dropdown list.
 2. Click on *Execute Node* to run the workflow.

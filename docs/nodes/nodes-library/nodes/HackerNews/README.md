@@ -4,10 +4,10 @@ permalink: /nodes/n8n-nodes-base.hackerNews
 
 # Hacker News
 
-[Hacker News](https://news.ycombinator.com/) is a social news website focusing on computer science and entrepreneurship. It is run by investment fund and startup incubator, Y Combinator.
+[Hacker News](https://news.ycombinator.com/) is a social news website focusing on computer science and entrepreneurship.
 
 ::: tip 🔑 Credentials
-The Hacker News node does not require Authentication.
+The Hacker News node does not require authentication.
 :::
 
 ## Basic Operations
@@ -35,5 +35,5 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Hacker News node
 
-1. Select 'All' in the *Resource* dropdown list.
+1. Select the 'All' option in the *Resource* dropdown list.
 2. Click on *Execute Node* to run the workflow.

@@ -21,7 +21,7 @@ The final workflow should look like the following image.
 ![A workflow with the GitLab Trigger node](./workflow.png)
 
 
-### 1. Gitlab Trigger node
+### 1. GitLab Trigger node
 
 1. First of all, you'll have to enter credentials for the GitLab Trigger node. You can find out how to do that [here](../../../credentials/Gitlab/README.md).
 2. Enter the repository owner in the *Repository Owner* field.

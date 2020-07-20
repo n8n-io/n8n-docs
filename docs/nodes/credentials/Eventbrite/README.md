@@ -6,15 +6,6 @@ You can find information about the operations supported by the Eventbrite Trigge
 
 Create a [Eventbrite](https://www.eventbrite.com/) account.
 
-## Using Access Token
-
-1. Log in to your Eventbrite account.
-2. Visit [your API keys page](https://www.eventbrite.com/platform/api-keys).
-3. Copy your private token.
-4. Use provided key with your Eventbrite node credentials in n8n.
-
-![Getting Eventbrite credentials](./using-access-token.gif)
-
 ## Using OAuth
 
 1. Log in to your Eventbrite account.
@@ -30,3 +21,12 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 11. Click the *Save* button to save your credentials.
 
 ![Getting Eventbrite OAuth credentials](./using-oauth.gif)
+
+## Using Access Token
+
+1. Log in to your Eventbrite account.
+2. Visit [your API keys page](https://www.eventbrite.com/platform/api-keys).
+3. Copy your private token.
+4. Use provided key with your Eventbrite node credentials in n8n.
+
+![Getting Eventbrite credentials](./using-access-token.gif)

@@ -4,7 +4,7 @@ You can find information about the operations supported by the Calendly node on 
 
 ## Prerequisites
 
-Create a [Calendly](https://www.calendly.com/) account.
+Create a [Calendly](https://www.calendly.com/) premium account.
 
 ## Using Access Token
 

@@ -34,7 +34,16 @@ The start node exists by default when you create a new workflow.
 ### 2. Rundeck node
 
 1. First of all, you'll have to enter credentials for the Rundeck node. You can find out how to do that [here](../../../credentials/Rundeck/README.md).
-2. In your Rundeck jobs page, click on the job you want to execute in n8n.
-3. Copy your Rundeck job ID, mentioned right below the job name.
-4. Enter your Rundeck job ID in the *Job Id* field.
-5. Click on *Execute Node* to run the workflow.
+2. Enter your Rundeck job ID in the *Job Id* field. You can find instructions on how to obtain the job ID in the FAQs below.
+3. Click on *Execute Node* to run the workflow.
+
+## FAQs
+
+### How do I find the Job ID?
+
+1. Access your Rundeck dashboard.
+2. Open the project that contains the job you want to use with n8n.
+3. In the sidebar, click on 'JOBS'.
+4. Under 'All Jobs', click on the name of the job you want to use with n8n.
+5. In the top left corner, under the name of the job, copy the string that is displayed in smaller font below the job name. This is your job ID.
+6. Paste this job ID in the `Job Id` field in n8n. 

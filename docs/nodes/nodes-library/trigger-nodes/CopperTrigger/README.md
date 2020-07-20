@@ -24,6 +24,6 @@ The final workflow should look like the following image.
 ### 1. Copper Trigger node
 
 1. First of all, you'll have to enter credentials for the Copper Trigger node. You can find out how to do that [here](../../../credentials/Copper/README.md).
-2. Select the category for which you want to receive updates for from the *Resource* dropdown list.
-3. Select the event for which you want to receive updates for from the *Event* dropdown list.
-3. Click on *Execute Node* to run the workflow.
+2. Select 'Project' from the *Resource* dropdown list.
+3. Select 'New' from the *Event* dropdown list.
+4. Click on *Execute Node* to run the workflow.

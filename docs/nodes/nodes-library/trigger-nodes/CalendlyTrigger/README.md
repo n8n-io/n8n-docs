@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.calendlyTrigger
 
 # Calendly Trigger
 
-[Calendly](https://calendly.com/) is automated scheduling software that is designed to make the process of finding meeting times easy.
+[Calendly](https://calendly.com/) is an automated scheduling software that is designed to make the process of finding meeting times easy.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Calendly/README.md).

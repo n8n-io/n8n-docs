@@ -36,3 +36,4 @@ The following is a list of common errors that you can use to check your own work
 - [ ] Ensure that branding is correct. For example, "GitHub", not "Github".
 - [ ] Ensure that GIFs capture every step of the process at a uniform pace.
 - [ ] Ensure all documentation files end with an empty newline.
+

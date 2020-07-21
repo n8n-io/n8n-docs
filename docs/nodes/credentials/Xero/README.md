@@ -15,3 +15,5 @@ Create a [Xero](https://www.xero.com/) account.
 5. Click on *Generate a secret* and use the 'Client id' and the 'Client secret' with your Xero OAuth API credentials in n8n.
 6. Click on the circle button in the OAuth section to connect a Xero account to n8n.
 7. Click the *Save* button to save your credentials.
+
+![Getting Xero Oauth Credentials](./using-oauth.gif)

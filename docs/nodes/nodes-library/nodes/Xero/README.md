@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.xero
 
 # Xero
 
-Xero is a company that offers an online cloud-based SaaS accounting software platform for small and medium-sized businesses.
+Xero offers an online cloud-based SaaS accounting software platform for small and medium-sized businesses.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Xero/README.md).

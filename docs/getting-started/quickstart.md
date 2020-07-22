@@ -14,9 +14,9 @@ It will download everything that is needed to start n8n.
 You can then access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
 
-## Run with docker
+## Run with Docker
 
-To play around with n8n, you can also start it using docker:
+To play around with n8n, you can also start it using Docker:
 
 ```bash
 docker run -it --rm \
@@ -25,7 +25,7 @@ docker run -it --rm \
   n8nio/n8n
 ```
 
-Be aware that all the data will be lost once the docker container gets removed. To
+Be aware that all the data will be lost once the Docker container gets removed. To
 persist the data mount the `~/.n8n` folder:
 
 ```bash
@@ -35,6 +35,8 @@ docker run -it --rm \
   -v ~/.n8n:/root/.n8n \
   n8nio/n8n
 ```
+
+n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 
 More information about the Docker setup can be found in the README file of the
 [Docker Image](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/README.md).

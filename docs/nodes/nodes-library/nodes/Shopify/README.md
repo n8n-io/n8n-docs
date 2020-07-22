@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/548) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/548) on the website. This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start/README.md)
 - [Shopify]()

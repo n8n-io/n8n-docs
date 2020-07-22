@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.mautic
 
 # Mautic
 
-[Mautic](https://www.mautic.org/) is an open source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, marketing campaigns, etc.
+[Mautic](https://www.mautic.org/) is an open source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Mautic/README.md).
@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/549) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/549) on the website. This example usage workflow uses the following two nodes.
 
 - [Start](../../core-nodes/Start/README.md)
 - [Mautic]()

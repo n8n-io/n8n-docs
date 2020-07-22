@@ -38,13 +38,13 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Bannerbear node. You can find out how to do that [here](../../../credentials/Bannerbear/README.md).
 2. Select 'Welcome Template' from the *Template ID* dropdown list.
-3. Click on the *Add Field* dropdown and select 'Wait for Image' and make sure the slider is set to 'on'.
+3. Click on the *Add Field* dropdown, select 'Wait for Image', and set the slider is set to 'on'.
 4. Click on the *Add Modification* button and select 'message' from the *Name* dropdown list.
-5. Enter some text in the *Text* field.
+5. Enter the text in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
 
 
 ## Further Reading
 
-- [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
+- [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)

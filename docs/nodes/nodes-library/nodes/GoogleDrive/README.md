@@ -16,7 +16,7 @@ You can find authentication information for this node [here](../../../credential
 	- Copy a file
 	- Delete a file
 	- Download a file
-	- Return files and folders
+	- List files and folders
 	- Upload a file
 - Folder
 	- Create a folder

@@ -24,7 +24,7 @@ You can find authentication information for this node [here](../../../credential
     - Get all columns
     - Get all the rows
     - Get a column
-    - Get row
+    - Get a row
     - Pushes a button
 - View
     - Delete view row

@@ -15,9 +15,9 @@ You can find authentication information for this node [here](../../../credential
 - Collection
     - Create a collection entry
     - Get all collection entries
-    - Update a collection entries
+    - Update a collection entry
 - Form
-    - Store submission of a form
+    - Store data from a form submission
 - Singleton
     - Get a singleton
 

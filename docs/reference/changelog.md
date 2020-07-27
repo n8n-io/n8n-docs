@@ -2,6 +2,20 @@
 
 [[toc]]
 
+## n8n@0.75.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.74.0...n8n@0.75.0) for this version.
+
+- New nodes
+    - Box
+    - Box Trigger
+    - CrateDB
+    - Jira Trigger
+- Enhanced nodes
+    - Pipedrive
+    - GitLab
+    - NextCloud
+- Production/Test Webhooks now support OPTIONS request
+
 ## n8n@0.74.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.1...n8n@0.74.0) for this version.
 

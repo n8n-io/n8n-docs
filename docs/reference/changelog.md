@@ -11,10 +11,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - CrateDB
     - Jira Trigger
 - Enhanced nodes
+	- GitLab
+	- NextCloud
     - Pipedrive
-    - GitLab
-    - NextCloud
-- Production/Test Webhooks now support OPTIONS request
+	- QuestDB
+- Webhooks now support OPTIONS request
 
 ## n8n@0.74.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.1...n8n@0.74.0) for this version.

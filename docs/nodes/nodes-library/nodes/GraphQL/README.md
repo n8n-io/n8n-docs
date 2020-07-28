@@ -6,13 +6,10 @@ permalink: /nodes/n8n-nodes-base.graphql
 
 [GraphQL](https://graphql.org/) is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
 
-<!-- ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/GraphQL/README.md).
-::: -->
 
 ## Basic Operations
 
-- Query a GraphQL API
+- Query a GraphQL endpoint
 
 ## Example Usage
 

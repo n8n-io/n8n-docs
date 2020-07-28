@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.redis
 
 # Redis
 
-[Redis](https://redis.io/) is an open source, in-memory data structure store, used as a database, cache and message broker.
+[Redis](https://redis.io/) is an open-source, in-memory data structure store, used as a database, cache and message broker.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Redis/README.md).
@@ -13,9 +13,9 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 - Delete a key
-- Returns the value of a key
-- Returns generic information about the Redis instance
-- Returns all the keys matching a pattern
+- Return the value of a key
+- Return generic information about the Redis instance
+- Return all the keys matching a pattern
 - Set the value of a key in Redis
 
 

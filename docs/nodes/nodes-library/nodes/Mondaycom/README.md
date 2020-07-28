@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.mondayCom
 
 # monday.com
 
-[monday.com](https://monday.com/) is a work operating system (Work OS) that enables organizations to manage tasks, projects, and team work.
+[monday.com](https://monday.com/) is a work operating system that enables organizations to manage tasks, projects, and team work.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Mondaycom/README.md).
@@ -23,7 +23,7 @@ You can find authentication information for this node [here](../../../credential
 - Board Group
 	- Delete a group in a board
 	- Create a group in a board
-	- Get board's groups
+	- Get boards' groups
 - Board Item
 	- Add an update to an item
 	- Change a column value for a board item 

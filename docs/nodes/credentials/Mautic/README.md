@@ -14,7 +14,7 @@ Create an account on a [Mautic](https://www.mautic.org/) instance.
 4. Click on the 'New' button.
 5. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
 6. Copy the 'OAuth Callback URL' provided in the Mautic OAuth2 API credentials in n8n and paste it in the 'Redirect URI' field in the Mautic credential page.
-7. Fill out any other information that is necessary and click 'Apply'.
+7. Fill out any other necessary information and click 'Apply'.
 8. Click the *Save & Close* button to save your credentials in Mautic.
 9. Use the displayed 'Client ID' and the 'Client Secret' with your Mautic OAuth API credentials in n8n.
 10. Click on the circle button in the OAuth section to connect a Mautic account to n8n.
@@ -24,4 +24,4 @@ Create an account on a [Mautic](https://www.mautic.org/) instance.
 
 ## Using Credentials
 
-Use your Mautic username and password with your Mautic API node credentials in n8n.
+Use your Mautic username and password as the Mautic API node credentials in n8n.

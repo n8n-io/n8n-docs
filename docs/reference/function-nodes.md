@@ -3,6 +3,8 @@
 These are the most powerful nodes in n8n. With these, almost everything can be done if you know how to
 write JavaScript code. Both nodes work very similarly. They give you access to the incoming data
 and you can manipulate it.
+- [Function](../nodes/nodes-library/core-nodes/Function/README.md)
+- [Function Item](../nodes/nodes-library/core-nodes/FunctionItem/README.md)
 
 
 ### Difference between both nodes

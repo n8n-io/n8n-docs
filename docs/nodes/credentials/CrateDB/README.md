@@ -4,7 +4,7 @@ You can find information about the operations supported by the CrateDB node on t
 
 ## Prerequisites
 
-Create an user account on a CrateDB server. 
+An available instance of CrateDB. 
 
 ## Using Database Connection
 

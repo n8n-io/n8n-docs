@@ -7,14 +7,14 @@ permalink: /nodes/n8n-nodes-base.readPDF
 The Read PDF node is used to read data from PDF documents and extract its content as text.
 
 ::: tip 💡 Keep in mind
-1. You will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the image file as a data property to the Read PDF node.
+You will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the image file as a data property to the Read PDF node.
 :::
 
 ## Node Reference
 
 The Read PDF node has one property:
 
-1. *Binary Property* field: This is a text field used to specify the name of the data property used to read the PDF file in n8n.
+1. *Binary Property* field: This field specifies the name of the data property used to read the PDF file in n8n.
 
 ## Example Usage
 

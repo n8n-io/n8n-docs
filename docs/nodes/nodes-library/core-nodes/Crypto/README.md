@@ -8,18 +8,16 @@ The Crypto node is used to encrypt data in workflows.
 
 ## Node Reference
 
+You can configure further options for each action by selecting the type of encryption and encoding to be used, in the *Type* and *Encoding* fields respectively.
+
 - Action
 	- Hash a text in a specified format
 	- Hmac a text in a specified format
 	- Sign a string using a private key
-
-You can configure further options for each action by selecting the type of encryption and encoding to be used, in the _Type_ and _Encoding_ fields respectively.
-
 - Type
     - MD5
     - SHA256
     - SHA512
-
 - Encoding
 	- BASE64
 	- HEX

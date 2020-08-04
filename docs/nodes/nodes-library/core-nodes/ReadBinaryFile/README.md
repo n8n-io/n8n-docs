@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.readBinaryFile
 
 # Read Binary File
 
-The Read Binary File node is used to read a single file from the host machine that runs n8n.
+The Read Binary File node is used to read a file from the host machine that runs n8n.
 
 ::: tip 💡 Keep in mind
 1. If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
@@ -13,8 +13,8 @@ The Read Binary File node is used to read a single file from the host machine th
 
 ## Node Reference
 
-1. **File Path**: This is a text field that is used to specify the path to the file to be read.
-2. **Property Name**: Name of the property that the binary file will be stored in n8n.
+1. *File Path* field: This field specifies the path to the file.
+2. *Property Name* field: Name of the binary property to which to write the data of the read file.
 
 ## Example Usage
 

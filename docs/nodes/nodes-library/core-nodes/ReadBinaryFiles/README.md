@@ -13,8 +13,8 @@ The Read Binary Files node is used to read multiple files from the host machine 
 
 ## Node Reference
 
-1. **File Selector**: This is a text field that is used to specify the type of files to be read.
-2. **Property Name**: Name of the property that the binary file will be stored in n8n.
+1. **File Selector**: This is a field that is used to specify the type of files to be read. For example, `*.jpg`.
+2. **Property Name**: Name of the binary property to which to write the data of the read files.
 
 It is also possible to select files from a certain directory, by specifying the path in the *File Selector* field. For example, `/data/folder/*.jpg`.
 

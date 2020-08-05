@@ -6,7 +6,7 @@ permalink: /nodes/n8n-nodes-base.renameKeys
 The Rename Keys node is used to rename the keys of a key-value pair in n8n.
 
 ::: tip 💡 Keep in mind
-1. The Rename Keys node does not create a new key if a specified key does not exist. Make sure to create or use existing keys in the sequence before the Rename Keys node.
+The Rename Keys node does not create a new key if a specified key does not exist. Make sure to create or use existing keys in the sequence before the Rename Keys node.
 :::
 
 ## Node Reference
@@ -15,8 +15,8 @@ You can rename one or multiple keys using the Rename Keys node. Click on the *Ad
 
 There are two properties in the Rename Keys node.
 
-- **Current Key Name:** The current name of the key that you would like to rename.
-- **New Key Name:** The new name that you would like to assign to the key.
+- ***Current Key Name*** field: The current name of the key that you would like to rename.
+- ***New Key Name*** field: The new name that you would like to assign to the key.
 
 
 ## Example Usage
@@ -37,12 +37,12 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Set node
 
-1. Click on the *Add Value* button and select the 'String' option from the dropdown list.
-2. Enter a name for the key in the *Name* field and enter a value in the *Value* field.
+1. Click on the ***Add Value*** button and select the 'String' option from the dropdown list.
+2. Enter a name for the key in the ***Name*** field and enter a value in the ***Value*** field.
 
 ### 3. Rename Keys node
 
-1. Click on the *Add new key* button.
-2. Enter the name of the key you created in the previous step in the *Current Key Name* field.
-3. Enter the new name that you would like to give the key in the *New Key Name* field.
-4. Click on *Execute Node* to run the workflow.
+1. Click on the ***Add new key*** button.
+2. Enter the name of the key you created in the previous step in the ***Current Key Name*** field.
+3. Enter the new name that you would like to give the key in the ***New Key Name*** field.
+4. Click on ***Execute Node*** to run the workflow.

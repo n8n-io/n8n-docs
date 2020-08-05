@@ -15,7 +15,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
     - CrateDB
     - Move Binary Data
-- Nodes will now display a link to any associated documentation
+- Nodes will now display a link to associated documentation
 
 ## n8n@0.75.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.74.0...n8n@0.75.0) for this version.

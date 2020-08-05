@@ -16,26 +16,21 @@ You can find authentication information for this node [here](../../../credential
 
 ## Node Reference
 
-- **Mailbox Name:** The mailbox from which you want to receive emails.
-- **Action:** Used to specify whether or not an email should be marked as read when n8n receives it.
-- **Download Attachment** *toggle*: Used to specify whether or not you want to download any attachments received with the emails.
+- ***Mailbox Name*** field: The mailbox from which you want to receive emails.
+- ***Action*** field: Used to specify whether or not an email should be marked as read when n8n receives it.
+- ***Download Attachment*** field: Used to specify whether or not you want to download any attachments received with the emails.
 
 ## Example Usage
 
 This workflow allows you to receive an email using the IMAP Email node. You can also find the [workflow](https://n8n.io/workflows/587) on the website. This example usage workflow would use the following two nodes.
-- [Start](../../core-nodes/Start/README.md)
 - [IMAP Email]()
 
 The final workflow should look like the following image.
 
 ![A workflow with the IMAP Email node](./workflow.png)
 
-### 1. Start node
+### 1. IMAP Email node
 
-The start node exists by default when you create a new workflow.
-
-### 2. IMAP Email node
-
-1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](../../../credentials/IMAPEmail/README.md).
-2. Enter the name of the mailbox from which you want to receive emails in the *Mailbox Name* field.
-3. Click on *Execute Node* to run the workflow.
+1. First of all, you'll have to enter credentials for the IMAP Email node. You can find out how to do that [here](../../../credentials/IMAPEmail/README.md).
+2. Enter the name of the mailbox from which you want to receive emails in the ***Mailbox Name*** field.
+3. Click on ***Execute Node*** to run the workflow.

@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.spreadsheetFile
 The Spreadsheet File node is used to access data from spreadsheet files.
 
 ::: tip 💡 Keep in mind
-1. You will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the image file as a data property to the Spreadsheet File node.
+You will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the image file as a data property to the Spreadsheet File node.
 :::
 
 ## Basic Operations
@@ -17,9 +17,7 @@ The Spreadsheet File node is used to access data from spreadsheet files.
 
 ## Node Reference
 
-- **Binary Property:** This is a text field used to specify the name of the data property used to read the spreadsheet file in n8n.
-
-When writing to a spreadsheet file, the additional *File Format* property is available.
+When writing to a spreadsheet file, the *File Format* field can be used to specify the format of the file to save the data as.
 
 - File Format
 	- CSV (Comma-separated values)
@@ -29,11 +27,13 @@ When writing to a spreadsheet file, the additional *File Format* property is ava
 	- XLS (Excel)
 	- XLSX (Excel)
 
-**Options**
-- **Sheet Name:** This is a text field used to specify the name of the sheet from which the data should be read or written to.
-- **Read As String:** This is a toggle that enables you to parse all input data as strings.
-- **RAW Data:** This is a toggle that enables you to skip the parsing of data.
-- **File Name:** This is a text field used to specify a custom file name when writing a spreadsheet file to disk.
+- ***Binary Property*** field: Name of the binary property in which to save the binary data of the spreadsheet file.
+
+- Options
+	- ***Sheet Name*** field: This field specifies the name of the sheet from which the data should be read or written to.
+	- ***Read As String*** field: This toggle enables you to parse all input data as strings.
+	- ***RAW Data*** field: This toggle enables you to skip the parsing of data.
+	- ***File Name*** field: This field can be used to specify a custom file name when writing a spreadsheet file to disk.
 
 ## Example Usage
 

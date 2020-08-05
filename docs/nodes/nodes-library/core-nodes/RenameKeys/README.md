@@ -5,9 +5,6 @@ permalink: /nodes/n8n-nodes-base.renameKeys
 # Rename Keys
 The Rename Keys node is used to rename the keys of a key-value pair in n8n.
 
-::: tip 💡 Keep in mind
-The Rename Keys node does not create a new key if a specified key does not exist. Make sure to create or use existing keys in the sequence before the Rename Keys node.
-:::
 
 ## Node Reference
 

@@ -6,6 +6,26 @@ permalink: /nodes/n8n-nodes-base.crypto
 
 The Crypto node is used to encrypt data in workflows.
 
+While sending sensitive information over the internet, like a RESTful API for example, you can use the Crypto node to encrypt your data.
+
+- Hash your data when you want to protect the integrity of the message by encoding it.
+- Hmac your data when you want to protect the message by encoding and encrypting it with a shared key
+- Sign your data when you want to protect the message with asymmetric keys
+
+Here is a quick table to help you choose the correct cryptographic method:
+
+```
+Cryptographic primitive | Hash |    MAC    | Digital
+Security Goal           |      |           | signature
+------------------------+------+-----------+-------------
+Integrity               |  Yes |    Yes    |   Yes
+Authentication          |  No  |    Yes    |   Yes
+Non-repudiation         |  No  |    No     |   Yes
+------------------------+------+-----------+-------------
+Kind of keys            | none | symmetric | asymmetric
+                        |      |    keys   |    keys
+```
+
 ## Node Reference
 
 - Action

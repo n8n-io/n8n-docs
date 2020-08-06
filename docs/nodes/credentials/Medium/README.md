@@ -1,11 +1,12 @@
 # Medium
 
-You can find information about the operations supported by the Mautic node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.medium) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Medium).
+You can find information about the operations supported by the Medium node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.medium) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Medium).
 
 ## Prerequisites
 
-Create an account on a [Medium](https://www.medium.com/) instance.
-Request access by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com)
+Create an account on a [Medium](https://www.medium.com/).
+
+Request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com)
 
 
 ## Using OAuth

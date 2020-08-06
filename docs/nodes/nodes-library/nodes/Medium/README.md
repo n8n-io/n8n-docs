@@ -2,7 +2,7 @@
 permalink: /nodes/n8n-nodes-base.medium
 ---
 
-# Mautic
+# Medium
 
 [Medium](https://www.medium.com/) is an online publishing platform.
 
@@ -26,7 +26,7 @@ This workflow allows you to get all publications from Medium. You can also find 
 
 The final workflow should look like the following image.
 
-![A workflow with the Mautic node](./workflow.png)
+![A workflow with the Medium node](./workflow.png)
 
 ### 1. Start node
 

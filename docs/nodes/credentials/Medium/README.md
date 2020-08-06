@@ -12,10 +12,10 @@ Request access by emailing [yourfriends@medium.com](mailto:yourfriends@medium.co
 
 1. Log in to your Medium account.
 2. Click on the avatar on the top right corner.
-3. Select '[Settings](https://medium.com/me/settings)' in the drop down menu.
+3. Select '[Settings](https://medium.com/me/settings)' in the drop-down menu.
 4. Select 'Developers' from the menu on the left.
-5. Click on 'Manage applications' button.
-6. Click on 'New application' button.
+5. Click on the 'Manage applications' button.
+6. Click on the 'New application' button.
 7. Give your application a Name, and provide a Description.
 8. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
 9. Copy the 'OAuth Callback URL' provided in the Medium OAuth2 API credentials in n8n and paste it in the 'Callback URLs' field in the Medium application page.
@@ -30,10 +30,10 @@ Request access by emailing [yourfriends@medium.com](mailto:yourfriends@medium.co
 
 1. Log in to your Medium account.
 2. Click on the avatar on the top right corner.
-3. Select '[Settings](https://medium.com/me/settings)' in the drop down menu.
+3. Select '[Settings](https://medium.com/me/settings)' in the drop-down menu.
 4. Select 'Integration tokens' from the menu on the left.
-5. Enter description for your token in the field.
-6. Click on 'Get integration token' button.
+5. Enter a description for your token in the field.
+6. Click on the 'Get integration token' button.
 7. Copy and paste *Token* in the Medium API credentials in n8n.
 8. Click the *Save* button to save your credentials in n8n.
 

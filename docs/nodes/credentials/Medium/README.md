@@ -4,9 +4,8 @@ You can find information about the operations supported by the Medium node on th
 
 ## Prerequisites
 
-Create an account on a [Medium](https://www.medium.com/).
-
-Request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com)
+- Create an account on [Medium](https://www.medium.com/).
+- Request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com).
 
 
 ## Using OAuth
@@ -38,4 +37,4 @@ Request access to credentials by emailing [yourfriends@medium.com](mailto:yourfr
 7. Copy and paste *Token* in the Medium API credentials in n8n.
 8. Click the *Save* button to save your credentials in n8n.
 
-![Getting Medium Access Token](./using-token.gif)
+![Getting Medium Access Token](./using-access-token.gif)

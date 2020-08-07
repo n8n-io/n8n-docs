@@ -73,6 +73,10 @@ module.exports = {
 		smoothScroll: true,
 		lastUpdated: true,
 		sidebarDepth: 2,
+		algolia: {
+			apiKey: '36968f1949f14fc25079286688915dc9',
+			indexName: 'n8n_io',
+		},
 		searchPlaceholder: 'Search...',
 		logo: '/assets/img/n8n-logo.png',
 		nav: [

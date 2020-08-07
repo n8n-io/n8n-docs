@@ -36,8 +36,8 @@ The start node exists by default when you create a new workflow.
 ### 2. Medium node
 
 1. First of all, you'll have to enter credentials for the Medium node. You can find out how to do that [here](../../../credentials/Medium/README.md).
-2. Select the publication from the *Publication ID* dropdown list.
-3. Enter the title in the *Title* field.
-4. Select format from the *Content Format* dropdown list.
-6. Enter the post content in the *Content* field.
-5. Click on *Execute Node* to run the workflow.
+2. Select the publication from the ***Publication ID*** dropdown list.
+3. Enter the title in the ***Title*** field.
+4. Select format from the ***Content Format*** dropdown list.
+6. Enter the post content in the ***Content*** field.
+5. Click on ***Execute Node*** to run the workflow.

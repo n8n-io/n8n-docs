@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to send a message to a channel on Twake. You can also find the [workflow](https://n8n.io/workflows/595) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to send a message to a channel on Twake. You can also find the [workflow](https://n8n.io/workflows/595) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Twake]()
 
@@ -37,4 +37,3 @@ The start node exists by default when you create a new workflow.
 3. Enter the content in the ***Content*** field.
 4. Click on ***Execute Node*** to run the node.
 
-![Sending a message to a channel on Twake](./workflow.png)

@@ -37,8 +37,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the QuestDB node. You can find out how to do that [here](../../../credentials/QuestDB/README.md).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name STRING);`.
-4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.
-5. Click on ***Execute Node*** to run the node.
+4. Click on ***Execute Node*** to run the node.
 
 ![Using the QuestDB node to create a table](./QuestDB_node.png)
 
@@ -50,7 +49,8 @@ The start node exists by default when you create a new workflow.
 3. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 4. Enter `name` in the ***Name*** field.
 5. Enter the value for the name in the ***Value*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.
+7. Click on ***Execute Node*** to run the node.
 
 ![Using the Set node to set data to be inserted by the QuestDB node](./Set_node.png)
 

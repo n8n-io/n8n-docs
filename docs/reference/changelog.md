@@ -2,8 +2,10 @@
 
 [[toc]]
 
-## n8n@0.76.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.
+## n8n@0.76.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.<br />
+**Release date:** 2020-08-05
+
 
 - New nodes
     - Customer.io Trigger
@@ -18,7 +20,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Nodes will now display a link to associated documentation
 
 ## n8n@0.75.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.74.0...n8n@0.75.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.74.0...n8n@0.75.0) for this version.<br />
+**Release date:** 2020-07-26
 
 - New nodes
     - Box
@@ -33,7 +36,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Webhooks now support OPTIONS request
 
 ## n8n@0.74.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.1...n8n@0.74.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.1...n8n@0.74.0) for this version.<br />
+**Release date:** 2020-07-15
 
 - New nodes
     - Hacker News
@@ -52,14 +56,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 ## n8n@0.73.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.0...n8n@0.73.1) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.0...n8n@0.73.1) for this version.<br />
+**Release date:** 2020-07-08
 
 - Enhanced nodes
     - Microsoft SQL
 
 
 ## n8n@0.73.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.72.0...n8n@0.73.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.72.0...n8n@0.73.0) for this version.<br />
+**Release date:** 2020-07-08
 
 - New nodes
     - CircleCI
@@ -72,7 +78,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 ## n8n@0.72.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.71.0...n8n@0.72.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.71.0...n8n@0.72.0) for this version.<br />
+**Release date:** 2020-07-02
 
 - Enhanced nodes
     - Drift
@@ -83,7 +90,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 ## n8n@0.71.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.70.0...n8n@0.71.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.70.0...n8n@0.71.0) for this version.<br />
+**Release date:** 2020-06-25
 
 - New nodes
     - Google Tasks
@@ -100,7 +108,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 ## n8n@0.70.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.69.1...n8n@0.70.0) for this version.
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.69.1...n8n@0.70.0) for this version.<br />
+**Release date:** 2020-06-13
 
 - Enhanced nodes
     - GitHub

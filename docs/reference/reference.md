@@ -14,7 +14,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Start Workflow via CLI](start-workflows-via-cli.md)
 - [Troubleshooting](troubleshooting.md)
 - [Data](data/data-structure.md)
-- [Development](development.md)
+- [Contributing](contributing.md)
 - [Keyboard Shortcuts](keyboard-shortcuts.md)
 - [License](license.md)
 - [FAQ](faq.md)

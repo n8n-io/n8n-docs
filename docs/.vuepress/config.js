@@ -196,8 +196,8 @@ module.exports = {
 					children: getChildrenFiles('reference/data'),
 				},
 				{
-					title: '💻 Development',
-					path: 'development.md',
+					title: '🙌 Contributing',
+					path: 'contributing.md',
 				},
 				{
 					title: '⌨️ Keyboard Shortcuts',

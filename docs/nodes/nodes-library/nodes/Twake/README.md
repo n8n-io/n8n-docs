@@ -36,3 +36,5 @@ The start node exists by default when you create a new workflow.
 2. Select the channel from the ***Channel ID*** dropdown list.
 3. Enter the content of the message in the ***Content*** field.
 4. Click on ***Execute Node*** to run the node.
+
+![Using the Twake node to send a message](./Twake_node.png)

@@ -34,6 +34,5 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Twake node. You can find out how to do that [here](../../../credentials/Twake/README.md).
 2. Select the channel from the ***Channel ID*** dropdown list.
-3. Enter the content in the ***Content*** field.
+3. Enter the content of the message in the ***Content*** field.
 4. Click on ***Execute Node*** to run the node.
-

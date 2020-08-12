@@ -8,23 +8,24 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 
 ## Node Reference
 
-- **Authentication:** In this dropdown list, we have several authentication options to use with HTTP requests.
+- **Authentication:** In this dropdown list, there are several authentication options to use with HTTP requests.
 	- Basic Auth
 	- Digest Auth
 	- Header Auth
 	- OAuth1
 	- OAuth2
 	- None
-- **Request Method:** In this dropdown list, we have several methods that can be used to send different type of HTTP requests.
+- **Request Method:** In this dropdown list, there are several methods that can be used to send different type of HTTP requests.
 	- DELETE
 	- GET
 	- HEAD
 	- PATCH
 	- POST
 	- PUT
-- **URL:** This is a text field where the HTTP endpoint address has to be entered.
+- **URL:** This field is where the URL to request has to be entered.
+- **Ignore SSL Issues:** This option can be used to download the response even if SSL validation is not possible.
 - **Response Format:** Select the format in which the data gets returned from the URL. You can choose between File, JSON, and String.
-- **JSON/RAW Parameters:** This defines whether or not you will use n8n's interface to send a payload to the URL or use a json.
+- **JSON/RAW Parameters:** This option can be used to specify whether the body/query parameter should be set via the value-key pair UI or JSON/RAW.
 - **Options**
 	- **Full Response:** This option can be used to retrieve the full response instead of only the body from the URL.
 	- **Follow Redirect:** This option can be used to follow any redirections with a status code 3xx.
@@ -33,6 +34,8 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 	- **Timeout:** The maximum time (in ms) to wait for a response header from the server before aborting the request.
 	- **Headers:** This section is used to specify any optional HTTP request headers you may want to include with your request.
 	- **Query Parameters:** This section is used to specify any HTTP query parameters you may want to include with your request.
+	- **Headers:** This section is used to specify HTTP request headers you may want to include with your request.
+	- **Query Parameters:** This section is used to specify HTTP query parameters you may want to include with your request.
 
 ## Example Usage
 
@@ -48,12 +51,14 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
+
 ### 2. HTTP Request node (GET)
 
 1. Enter `https://reqres.in/api/users` in the ***URL*** field.
 2. Click on ***Execute Node*** to run the workflow.
 
 ![Get a list of sample users using the HTTP Request node](./GET-list-of-users_node.png)
+
 
 ### 3. HTTP Request node (POST)
 
@@ -69,6 +74,7 @@ The start node exists by default when you create a new workflow.
 
 ![Create a user using the HTTP Request node](./Add-Neo-to-Matrix_node.png)
 
+
 ### 4. HTTP Request node (PATCH)
 
 1. Select 'PATCH' from the ***Request Method*** dropdown list.
@@ -82,6 +88,7 @@ The start node exists by default when you create a new workflow.
 9. Click on ***Execute Node*** to run the workflow.
 
 ![Update a user using the HTTP Request node](./Update-Neo_node.png)
+
 
 ## Further Reading
 

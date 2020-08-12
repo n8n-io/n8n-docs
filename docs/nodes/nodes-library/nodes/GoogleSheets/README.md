@@ -60,7 +60,7 @@ The Start node exists by default when you create a new workflow.
 ![Using the Google Sheets node to insert data into a Google Sheets spreadsheet](./GoogleSheets_node.png)
 
 
-### 4. Google Sheets node (Read)
+### 4. Google Sheets1 node (Read)
 
 1. Select the credentials that you entered in the previous Google Sheets node.
 2. Select 'OAuth2' in the ***Authentication*** field.

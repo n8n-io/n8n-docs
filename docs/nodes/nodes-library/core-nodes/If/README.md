@@ -96,7 +96,7 @@ return [
 ![Using the Set node to set a value when the condition is true](./Set_node.png)
 
 
-### 4. Set node (for 'false' condition)
+### 4. Set1 node (for 'false' condition)
 
 1. Create a *Set* node connected to the 'false' output of the IF node.
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.

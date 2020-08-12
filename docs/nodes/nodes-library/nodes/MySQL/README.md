@@ -53,7 +53,7 @@ The start node exists by default when you create a new workflow.
 
 ![Using the Set node to set data to be inserted by the MySQL node](./Set_node.png)
 
-### 4. MySQL node (Insert)
+### 4. MySQL1 node (Insert)
 
 1. Select the credentials that you entered in the previous MySQL node.
 2. Enter `test` in the ***Table*** field.

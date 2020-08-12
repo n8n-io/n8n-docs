@@ -59,9 +59,9 @@ The start node exists by default when you create a new workflow.
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Incident ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Output Data > JSON > id. You can also add the following expression: `{{$node["PagerDuty"].json["id"]}}`.
+4. Select the following in the ***Variable Selector*** section: Nodes > PagerDuty > Output Data > JSON > id. You can also add the following expression: `{{$node["PagerDuty"].json["id"]}}`.
 5. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
-6. Select the following in the ***Variable Selector*** section: Nodes > Parameters > email. You can also add the following expression: `{{$node["PagerDuty"].parameter["email"]}}`.
+6. Select the following in the ***Variable Selector*** section: Nodes > PagerDuty > Parameters > email. You can also add the following expression: `{{$node["PagerDuty"].parameter["email"]}}`.
 7. Click on the ***Add Field*** button and click on ***Title***.
 8. Enter the name of the updated title in the ***Title*** field.
 9. Click on ***Execute Node*** to run the node.
@@ -76,7 +76,7 @@ The start node exists by default when you create a new workflow.
 1. Select the credentials that you entered in the previous node.
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Incident ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Output Data > JSON > id. You can also add the following expression: `{{$node["PagerDuty"].json["id"]}}`.
+4. Select the following in the ***Variable Selector*** section: Nodes > PagerDuty > Output Data > JSON > id. You can also add the following expression: `{{$node["PagerDuty"].json["id"]}}`.
 5. Click on ***Execute Node*** to run the node.
 :::
 

@@ -14,4 +14,4 @@ Create a [Trello](https://trello.com/) account.
 4. Click on "generate a Token" where you will find your token.
 5. Use the API token, OAuth secret and API key with your node credentials in n8n.
 
-![Getting Trelo credentials](./using-access-token.gif)
+![Getting Trello credentials](./using-access-token.gif)

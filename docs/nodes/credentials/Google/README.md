@@ -78,9 +78,9 @@ Create a [Google Cloud](https://cloud.google.com/) account and access the consol
 
 It will appear something like this in a text editor:
 
-![Getting Google credentials](https://i.imgur.com/zYNRAyd.png)
+![Getting Google credentials](./using-service-account.gif)
 
-10. Use the values of client_email and private_key for your Google Credentials in the n8n node.
-11. Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
+1.  Use the values of client_email and private_key for your Google Credentials in the n8n node.
+2.  Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
 
-![Getting Google credentials](https://i.imgur.com/Q9eFy7B.gif)
+![Getting Google credentials](./using-oauth-calendar.gif)

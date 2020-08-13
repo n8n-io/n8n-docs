@@ -36,7 +36,7 @@ You can also specify a file format using the *Format* field in the *Add Option* 
 
 ## Example Usage
 
-This workflow allows you to add text to an image downloaded from the internet using the Edit Image node. You can also find the [workflow](https://n8n.io/workflows/591) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to add text to an image downloaded from the internet using the Edit Image node. You can also find the [workflow](https://n8n.io/workflows/591) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Edit Image]()

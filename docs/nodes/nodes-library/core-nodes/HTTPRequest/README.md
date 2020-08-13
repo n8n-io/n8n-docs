@@ -39,7 +39,7 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 
 ## Example Usage
 
-This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HTTP Request]()
 

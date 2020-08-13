@@ -19,8 +19,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to run an SQL query on a Postgres instance. You can also find the [workflow](https://n8n.io/workflows/458) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to run an SQL query on a Postgres instance. You can also find the [workflow](https://n8n.io/workflows/599) on the website. This example usage workflow would use the following three nodes.
 - [Start](../../core-nodes/Start/README.md)
+- [Set](../../core-nodes/Set/README.md)
 - [Postgres]()
 
 The final workflow should look like the following image.
@@ -31,12 +32,35 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. Postgres node
+### 2. Postgres node (Execute Query)
 
 1. First of all, you'll have to enter credentials for the Postgres node. You can find out how to do that [here](../../../credentials/Postgres/README.md).
-2. Select 'Execute Query' from the *Operation* dropdown list.
-3. Enter your SQL query in the *Query* field.
-4. Click on *Execute Node* to run the workflow.
+2. Select 'Execute Query' from the ***Operation*** dropdown list.
+3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
+4. Click on the Node tab and toggle Always Output Data to true.
+5. Click on ***Execute Node*** to run the node.
+
+![Using the Postgres node to create a table](./Postgres_node.png)
+
+### 3. Set node
+
+1. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
+2. Enter `id` in the ***Name*** field.
+3. Click on the ***Add Value*** button and select 'String' from the dropdown list.
+4. Enter `name` in the ***Name*** field.
+5. Enter the value for the name in the ***Value*** field.
+6. Click on ***Execute Node*** to run the node.
+
+![Using the Set node to set data to be inserted by the Postgres node](./Set_node.png)
+
+### 4. Postgres1 node (Insert)
+
+1. Select the credentials that you entered in the previous MySQL node.
+2. Enter `test` in the ***Table*** field.
+3. Enter `id, name` in the ***Columns*** field.
+4. Click on ***Execute Node*** to run the node.
+
+![Using the Postgres node to insert data into a table](./Postgres1_node.png)
 
 ## Further Reading
 

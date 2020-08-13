@@ -11,6 +11,8 @@ The Execute Command node is used to run shell commands on the host machine that 
 2. This node will execute the command in the default shell of the host machine. For example, this will be PowerShell on Windows and zsh on macOS.
 :::
 
+## Node Reference
+
 The Execute Command node has two properties:
 1. *Execute Once* toggle: This is a boolean field that is used to specify whether you want the node to execute only once, or once for every item it receives an input.
 2. *Command* field: This is a text field that is used to specify the command that will be executed on the host machine.

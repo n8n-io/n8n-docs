@@ -19,7 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to run an SQL query on a Postgres instance. You can also find the [workflow](https://n8n.io/workflows/599) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to run an SQL query on a Postgres instance. You can also find the [workflow](https://n8n.io/workflows/599) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [Postgres]()
@@ -37,7 +37,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Postgres node. You can find out how to do that [here](../../../credentials/Postgres/README.md).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
-4. Click on the Node tab and toggle Always Output Data to true.
+4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Postgres node to create a table](./Postgres_node.png)
@@ -55,7 +55,7 @@ The start node exists by default when you create a new workflow.
 
 ### 4. Postgres1 node (Insert)
 
-1. Select the credentials that you entered in the previous MySQL node.
+1. Select the credentials that you entered in the previous Postgres node.
 2. Enter `test` in the ***Table*** field.
 3. Enter `id, name` in the ***Columns*** field.
 4. Click on ***Execute Node*** to run the node.

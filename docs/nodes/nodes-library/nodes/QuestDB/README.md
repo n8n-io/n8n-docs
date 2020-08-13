@@ -18,7 +18,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a table and insert data into it in QuestDB. You can also find the [workflow](https://n8n.io/workflows/592) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to create a table and insert data into it in QuestDB. You can also find the [workflow](https://n8n.io/workflows/592) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [QuestDB]()

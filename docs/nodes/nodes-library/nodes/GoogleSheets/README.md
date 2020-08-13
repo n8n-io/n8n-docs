@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow shows you how to add to and read from a Google Sheets spreadsheet. You can also find the [workflow](https://n8n.io/workflows/600) on this website. This example usage workflow uses the following three nodes.
+This workflow shows you how to add to and read from a Google Sheets spreadsheet. You can also find the [workflow](https://n8n.io/workflows/600) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [Google Sheets]()

@@ -60,7 +60,7 @@ The start node exists by default when you create a new workflow.
 ![Get a list of sample users using the HTTP Request node](./HTTPRequest_node.png)
 
 
-### 3. HTTP Request node (POST)
+### 3. HTTP Request1 node (POST)
 
 1. Select 'POST' from the ***Request Method*** dropdown list.
 2. Enter `https://reqres.in/api/users` in the ***URL*** field.
@@ -75,7 +75,7 @@ The start node exists by default when you create a new workflow.
 ![Create a user using the HTTP Request node](./HTTPRequest1_node.png)
 
 
-### 4. HTTP Request node (PATCH)
+### 4. HTTP Request2 node (PATCH)
 
 1. Select 'PATCH' from the ***Request Method*** dropdown list.
 2. Enter `https://reqres.in/api/users/2` in the ***URL*** field.

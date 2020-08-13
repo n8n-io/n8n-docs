@@ -57,7 +57,7 @@ The start node exists by default when you create a new workflow.
 1. Enter `https://reqres.in/api/users` in the ***URL*** field.
 2. Click on ***Execute Node*** to run the workflow.
 
-![Get a list of sample users using the HTTP Request node](./GET-list-of-users_node.png)
+![Get a list of sample users using the HTTP Request node](./HTTPRequest_node.png)
 
 
 ### 3. HTTP Request node (POST)
@@ -72,7 +72,7 @@ The start node exists by default when you create a new workflow.
 8. Enter `Programmer` in the ***Value*** field.
 9. Click on ***Execute Node*** to run the workflow.
 
-![Create a user using the HTTP Request node](./Add-Neo-to-Matrix_node.png)
+![Create a user using the HTTP Request node](./HTTPRequest1_node.png)
 
 
 ### 4. HTTP Request node (PATCH)
@@ -87,7 +87,7 @@ The start node exists by default when you create a new workflow.
 8. Enter `The Chosen One` in the ***Value*** field.
 9. Click on ***Execute Node*** to run the workflow.
 
-![Update a user using the HTTP Request node](./Update-Neo_node.png)
+![Update a user using the HTTP Request node](./HTTPRequest2_node.png)
 
 
 ## Further Reading

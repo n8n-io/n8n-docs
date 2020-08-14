@@ -55,7 +55,7 @@ The start node exists by default when you create a new workflow.
 ![Using the Set node to set data to be inserted by the QuestDB node](./Set_node.png)
 
 
-### 4. QuestDB node (Insert)
+### 4. QuestDB1 node (Insert)
 
 1. Select the credentials that you entered in the previous QuestDB node.
 2. Enter `test` in the ***Table*** field.

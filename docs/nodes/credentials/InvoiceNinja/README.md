@@ -1,3 +1,7 @@
+---
+permalink: /credentials/invoiceNinjaApi
+---
+
 # Invoice Ninja
 
 You can find information about the operations supported by the Invoice Ninja node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.invoiceNinja) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/InvoiceNinja).

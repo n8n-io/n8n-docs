@@ -1,3 +1,7 @@
+---
+permalink: /credentials/zohoOAuth2Api
+---
+
 # Zoho
 
 You can find information about the operations supported by the Zoho CRM node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zohoCrm) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zoho).

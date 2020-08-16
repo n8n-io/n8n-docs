@@ -1,3 +1,7 @@
+---
+permalink: /credentials/sms77Api
+---
+
 # sms77
 
 You can find information about the operations supported by the sms77 node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.sms77) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Sms77).

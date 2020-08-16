@@ -1,3 +1,7 @@
+---
+permalink: /credentials/aws
+---
+
 # AWS
 
 AWS credentials work with several different nodes. You can find a list of nodes and their supported operations in the integrations page linked below. You can also browse the source code of the node on GitHub.

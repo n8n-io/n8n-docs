@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/bannerbearApi
+permalink: /credentials/bannerbear
 ---
 
 # Bannerbear

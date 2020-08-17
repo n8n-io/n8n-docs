@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/xeroOAuth2Api
+permalink: /credentials/xero
 ---
 
 # Xero

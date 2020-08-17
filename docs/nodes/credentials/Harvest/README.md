@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/harvestApi
+permalink: /credentials/harvest
 ---
 
 # Harvest

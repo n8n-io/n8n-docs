@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/keapOAuth2Api
+permalink: /credentials/keap
 ---
 
 # Keap

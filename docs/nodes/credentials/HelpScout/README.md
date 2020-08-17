@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/helpScoutOAuth2Api
+permalink: /credentials/helpScout
 ---
 
 # Help Scout

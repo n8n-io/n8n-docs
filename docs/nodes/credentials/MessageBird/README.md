@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/messageBirdApi
+permalink: /credentials/messageBird
 ---
 
 # MessageBird

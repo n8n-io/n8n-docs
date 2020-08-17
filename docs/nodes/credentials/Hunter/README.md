@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/hunterApi
+permalink: /credentials/hunter
 ---
 
 # Hunter

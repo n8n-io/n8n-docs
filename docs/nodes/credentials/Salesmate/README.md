@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/salesmateApi
+permalink: /credentials/salesmate
 ---
 
 # Salesmate

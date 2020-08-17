@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/trelloApi
+permalink: /credentials/trello
 ---
 
 # Trello

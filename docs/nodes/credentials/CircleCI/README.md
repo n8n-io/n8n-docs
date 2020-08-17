@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/circleCiApi
+permalink: /credentials/circleCi
 ---
 
 # CircleCI

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/bitbucketApi
+permalink: /credentials/bitbucket
 ---
 
 # Bitbucket

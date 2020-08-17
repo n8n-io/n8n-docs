@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/cockpitApi
+permalink: /credentials/cockpit
 ---
 
 # Cockpit

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/zulipApi
+permalink: /credentials/zulip
 ---
 
 # Zulip

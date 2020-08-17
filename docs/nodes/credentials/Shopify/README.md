@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/shopifyApi
+permalink: /credentials/shopify
 ---
 
 # Shopify

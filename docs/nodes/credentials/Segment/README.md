@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/segmentApi
+permalink: /credentials/segment
 ---
 
 # Segment

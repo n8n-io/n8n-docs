@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/mailgunApi
+permalink: /credentials/mailgun
 ---
 
 # Mailgun

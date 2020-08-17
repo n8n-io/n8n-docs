@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/copperApi
+permalink: /credentials/copper
 ---
 
 # Copper

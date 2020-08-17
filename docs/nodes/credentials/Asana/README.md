@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/asanaApi
+permalink: /credentials/asana
 ---
 
 # Asana

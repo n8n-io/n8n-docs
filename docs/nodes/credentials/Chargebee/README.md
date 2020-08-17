@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/chargebeeApi
+permalink: /credentials/chargebee
 ---
 
 # Chargebee

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/facebookGraphApi
+permalink: /credentials/facebookGraph
 ---
 
 # Facebook

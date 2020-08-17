@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/clickUpApi
+permalink: /credentials/clickUp
 ---
 
 # ClickUp

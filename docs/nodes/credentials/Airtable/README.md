@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/airtableApi
+permalink: /credentials/airtable
 ---
 
 # Airtable

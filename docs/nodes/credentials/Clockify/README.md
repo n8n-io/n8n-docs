@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/clockifyApi
+permalink: /credentials/clockify
 ---
 
 # Clockify

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/calendlyApi
+permalink: /credentials/calendly
 ---
 
 # Calendly

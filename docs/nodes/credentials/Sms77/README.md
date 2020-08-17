@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/sms77Api
+permalink: /credentials/sms77
 ---
 
 # sms77

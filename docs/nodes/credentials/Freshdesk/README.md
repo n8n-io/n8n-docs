@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/freshdeskApi
+permalink: /credentials/freshdesk
 ---
 
 # Freshdesk

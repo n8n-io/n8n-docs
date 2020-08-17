@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/rundeckApi
+permalink: /credentials/rundeck
 ---
 
 # Rundeck

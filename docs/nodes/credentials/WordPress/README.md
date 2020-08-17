@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/wordpressApi
+permalink: /credentials/wordpress
 ---
 
 # WordPress

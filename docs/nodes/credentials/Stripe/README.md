@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/stripeApi
+permalink: /credentials/stripe
 ---
 
 # Stripe

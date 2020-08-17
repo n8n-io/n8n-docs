@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/rocketchatApi
+permalink: /credentials/rocketchat
 ---
 
 # Rocket.Chat

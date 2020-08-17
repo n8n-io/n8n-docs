@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/mandrillApi
+permalink: /credentials/mandrill
 ---
 
 # Mandrill

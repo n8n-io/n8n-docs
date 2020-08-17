@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/signl4Api
+permalink: /credentials/signl4
 ---
 
 # SIGNL4

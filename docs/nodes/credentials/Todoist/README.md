@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/todoistApi
+permalink: /credentials/todoist
 ---
 
 # Todoist

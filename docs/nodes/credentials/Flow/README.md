@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/flowApi
+permalink: /credentials/flow
 ---
 
 # Flow

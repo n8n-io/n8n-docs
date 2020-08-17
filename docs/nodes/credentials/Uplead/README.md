@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/upleadApi
+permalink: /credentials/uplead
 ---
 
 # UpLead

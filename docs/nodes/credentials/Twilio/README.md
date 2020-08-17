@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/twilioApi
+permalink: /credentials/twilio
 ---
 
 # Twilio

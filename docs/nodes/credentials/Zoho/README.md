@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/zohoOAuth2Api
+permalink: /credentials/zoho
 ---
 
 # Zoho

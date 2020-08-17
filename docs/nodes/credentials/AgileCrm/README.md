@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/agileCrmApi
+permalink: /credentials/agileCrm
 ---
 
 # Agile CRM

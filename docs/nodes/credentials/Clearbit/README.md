@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/clearbitApi
+permalink: /credentials/clearbit
 ---
 
 # Clearbit

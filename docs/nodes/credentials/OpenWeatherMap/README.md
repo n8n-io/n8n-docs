@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/openWeatherMapApi
+permalink: /credentials/openWeatherMap
 ---
 
 # OpenWeatherMap

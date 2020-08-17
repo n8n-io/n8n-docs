@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/payPalApi
+permalink: /credentials/payPal
 ---
 
 # PayPal

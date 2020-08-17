@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/telegramApi
+permalink: /credentials/telegram
 ---
 
 # Telegram

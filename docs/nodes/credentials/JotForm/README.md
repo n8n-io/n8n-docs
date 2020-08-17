@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/jotFormApi
+permalink: /credentials/jotForm
 ---
 
 # JotForm

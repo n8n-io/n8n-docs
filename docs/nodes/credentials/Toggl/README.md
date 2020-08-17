@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/togglApi
+permalink: /credentials/toggl
 ---
 
 # Toggl

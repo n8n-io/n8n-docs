@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/mattermostApi
+permalink: /credentials/mattermost
 ---
 
 # Mattermost

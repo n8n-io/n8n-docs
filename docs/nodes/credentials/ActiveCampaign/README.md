@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/activeCampaignApi
+permalink: /credentials/activeCampaign
 ---
 
 # ActiveCampaign

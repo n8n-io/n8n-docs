@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/gumroadApi
+permalink: /credentials/gumroad
 ---
 
 # Gumroad

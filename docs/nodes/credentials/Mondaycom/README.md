@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/mondayComApi
+permalink: /credentials/mondayCom
 ---
 
 # monday.com

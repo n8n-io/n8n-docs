@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/intercomApi
+permalink: /credentials/intercom
 ---
 
 # Intercom

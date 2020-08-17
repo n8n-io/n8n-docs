@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/invoiceNinjaApi
+permalink: /credentials/invoiceNinja
 ---
 
 # Invoice Ninja

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/affinityApi
+permalink: /credentials/affinity
 ---
 
 # Affinity

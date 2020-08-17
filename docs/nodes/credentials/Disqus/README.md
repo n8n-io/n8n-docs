@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/disqusApi
+permalink: /credentials/disqus
 ---
 
 # Disqus

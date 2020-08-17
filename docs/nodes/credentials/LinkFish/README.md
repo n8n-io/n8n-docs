@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/linkFishApi
+permalink: /credentials/linkFish
 ---
 
 # LinkFish

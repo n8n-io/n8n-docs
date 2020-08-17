@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/twitterOAuth1Api
+permalink: /credentials/twitter
 ---
 
 # Twitter

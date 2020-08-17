@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/msg91Api
+permalink: /credentials/msg91
 ---
 
 # MSG91

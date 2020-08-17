@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/boxOAuth2Api
+permalink: /credentials/box
 ---
 
 # Box

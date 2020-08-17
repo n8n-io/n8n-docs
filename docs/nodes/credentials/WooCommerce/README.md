@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/wooCommerceApi
+permalink: /credentials/wooCommerce
 ---
 
 # WooCommerce

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/spotifyOAuth2Api
+permalink: /credentials/spotify
 ---
 
 # Spotify

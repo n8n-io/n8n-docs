@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/veroApi
+permalink: /credentials/vero
 ---
 
 # Vero

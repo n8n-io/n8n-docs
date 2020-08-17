@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/codaApi
+permalink: /credentials/coda
 ---
 
 # Coda

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/moceanApi
+permalink: /credentials/mocean
 ---
 
 # Mocean

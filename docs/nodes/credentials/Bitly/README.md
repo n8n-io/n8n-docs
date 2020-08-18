@@ -18,7 +18,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 4. Click on "Registered OAuth Applications".
 5. Click on "GET REGISTRATION CODE".
 6. Use Client Secret and Client ID in your Bitly node credentials in n8n.
-7. Enter n8n provided redirect URL. ![Redirect URL Explanation here](../README.md)
+7. Enter n8n provided redirect URL. Redirect URL Explanation [here](../README.md).
 
 
 ![Getting Bitly credentials](./using-oauth.gif)

@@ -53,11 +53,11 @@ Here's a GIF of me following the steps mentioned above.
 
 Add the *IF* node by clicking on the + button and selecting the *IF* node. This is a conditional logic node that allows us to alter the flow of the workflow depending on the data that we get from the previous node(s).
 
-Double click on the node, click on the ***Add Condition*** button, and select ***Number*** from the menu. Since the ***Value 1*** (temperature) would be a dynamic piece of information, click on the gears icon next to the field, and select ***Add Expressions***.
+Double click on the node, click on the ***Add Condition*** button, and select ***Number*** from the menu. Since the ***Value 1*** (temperature) would be a dynamic piece of information, click on the gears icon next to the field, and select ***Add Expression***.
 
 This will open up the ***Variable Selector***. Delete the `0` in the ***Expression*** field on the right. From the left panel, select the following variable:
 
-`Nodes > Output Data > JSON > main > feels_like`
+`Nodes > OpenWeatherMap > Output Data > JSON > main > feels_like`
 
 For the ***Operation*** field, we'll let it be set to 'Smaller'. For the ***Value 2***, I entered `18`. This will ensure that the *IF* node returns true only if the weather is lower than 18°C. Feel free to change this to some other value. 
 
@@ -76,7 +76,7 @@ In the ***From*** field, enter the Twilio phone number you obtained [earlier](#p
 
 In the ***To*** field, enter the mobile phone number you registered when you signed up for your Twilio account. (Twilio trial accounts can only send messages to registered phone numbers. To send messages to other numbers, upgrade to a regular account.) Use E.164 format for this number as well.
 
-You can now add the message that you want to send yourself if the temperature is lower than 18°C. This is what I added in the ***Message*** field (you can click on ***Add Expressions*** and paste this):
+You can now add the message that you want to send yourself if the temperature is lower than 18°C. This is what I added in the ***Message*** field (you can click on ***Add Expression*** and paste this):
 
 ```
 Wear a sweater today, it is {{$node["OpenWeatherMap"].json["main"]["feels_like"]}}°C outside right now.

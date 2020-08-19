@@ -15,12 +15,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - AMQP
     - AMQP Trigger
     - Bitly
-    - FunctionItem
+    - Function Item
     - Google Sheets
     - Shopify
     - Todoist
-- Enhanced support for JWT based authentication
-- Added an option to execute a node only using the data of the first item
+- Enhanced support for [JWT based authentication](security.md#jwt)
+- Added an option to execute a node once, using data of only the first item
 
 ## n8n@0.76.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.<br />

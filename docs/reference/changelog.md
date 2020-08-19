@@ -2,10 +2,29 @@
 
 [[toc]]
 
+## n8n@0.78.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.76.0...n8n@0.78.0) for this version.<br />
+**Release date:** 2020-08-18
+
+- New nodes
+    - Gmail
+    - Google Contacts
+    - Unleashed Software
+    - YouTube
+- Enhanced nodes
+    - AMQP
+    - AMQP Trigger
+    - Bitly
+    - Function Item
+    - Google Sheets
+    - Shopify
+    - Todoist
+- Enhanced support for [JWT based authentication](security.md#jwt)
+- Added an option to execute a node once, using data of only the first item
+
 ## n8n@0.76.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.<br />
 **Release date:** 2020-08-05
-
 
 - New nodes
     - Customer.io Trigger

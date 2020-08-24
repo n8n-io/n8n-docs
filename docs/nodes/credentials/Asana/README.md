@@ -13,7 +13,7 @@ The following is a summary based off Asana's own [documentation](https://develop
 
 Create an [Asana](https://www.Asana.com/) account.
 
-## Using OAuth
+<!-- ## Using OAuth
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right of the window.
@@ -26,16 +26,16 @@ Create an [Asana](https://www.Asana.com/) account.
 9. In the redirect URL enter the provided n8n redirect URL found in the Asana's node credentials creation settings. ![Redirect URL Explanation here](../README.md)
 
 
-![Getting Asana credentials](./using-oauth.gif)
+![Getting Asana credentials](./using-oauth.gif) -->
 
 ## Using Access Token
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right of the window.
-3. Click on "My Profile Settings".
+3. Click on 'My Profile Settings'.
 4. Click on the Apps tab.
-5. Click on "Manage Developer Apps".
-6. Click on "New Access Token" and then generate.
+5. Click on 'Manage Developer Apps'.
+6. Click on 'New Access Token' and then generate.
 7. Use this token with your Asana node credentials in n8n.
 
 

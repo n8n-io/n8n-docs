@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a folder in Nextcloud, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/620) on the website. This example usage workflow would use the following nodes.
+This workflow allows you to create a folder in Nextcloud, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/620) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Nextcloud]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
@@ -40,12 +40,12 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. NextCloud node (create: folder)
+### 2. Nextcloud node (create: folder)
 
 1. First of all, you'll have to enter credentials for the Nextcloud node. You can find out how to do that [here](../../../credentials/Nextcloud/README.md).
-2. Select the 'Folder' option from the *Resource* dropdown list.
-3. Enter a folder name in the *Folder* field.
-4. Click on *Execute Node* to run the workflow.
+2. Select the 'Folder' option from the ***Resource*** dropdown list.
+3. Enter a folder name in the ***Folder*** field.
+4. Click on ***Execute Node*** to run the node.
 
 ![Create a folder in Nextcloud using the Nextcloud node](./Nextcloud_node.png)
 
@@ -53,11 +53,11 @@ The start node exists by default when you create a new workflow.
 
 1. Enter `https://n8n.io/n8n-logo.png` in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
-3. Click on ***Execute Node*** to run the workflow.
+3. Click on ***Execute Node*** to run the node.
 
 ![Get a file to upload in Nextcloud using the HTTP Request node](./HTTPRequest_node.png)
 
-### 4. NextCloud1 node (upload: file)
+### 4. Nextcloud1 node (upload: file)
 
 1. Select the credentials that you entered in the Nextcloud node.
 2. Enter the path of the Nextcloud folder you created in the previous steps along with a file name in the ***File Path*** field.
@@ -66,7 +66,7 @@ The start node exists by default when you create a new workflow.
 
 ![Upload a file in Nextcloud using the Nextcloud node](./Nextcloud1_node.png)
 
-### 5. NextCloud2 node (list: folder)
+### 5. Nextcloud2 node (list: folder)
 
 1. Select the credentials that you entered in the Nextcloud node.
 2. Select 'Folder' from the ***Resource*** dropdown list.

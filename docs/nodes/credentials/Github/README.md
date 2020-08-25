@@ -15,23 +15,30 @@ Create a [GitHub](https://github.com/) account.
 
 1. Access your GitHub dashboard.
 2. Click on your user icon in the top right.
-3. Click on Settings.
-4. Click on Developer Settings.
-5. Choose OAuth apps.
-6. Register a new application.
-7. Use provided Client Secret and Client ID with your GitHub node credentials in n8n.
-8. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](../README.md).
+3. Click on ***Settings***.
+4. Click on ***Developer settings***.
+5. Select ***OAuth Apps***.
+6. Click on the ***Register a new application*** button.
+7. Enter the ***Application name*** and ***Homepage URL***.
+8. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***Authorization callback URL*** field.
+9. Use the provided ***Client ID*** and ***Client Secret*** with your GitHub node credentials in n8n.
+10. Click on the circle button in the OAuth section to connect a GitHub account to n8n.
+11. Click the ***Save*** button to save your credentials in n8n.
 
-![Getting GitHub credentials](./using-oauth.gif)
+![Getting GitHub OAuth credentials](./using-oauth.gif)
 
 
 ## Using Access Token
 
 1. Access your GitHub dashboard.
 2. Click on your user icon in the top right.
-3. Click on Settings.
-4. Click on Developer Settings.
-5. Choose personal access token.
-6. Use provided credentials with your Freshdesk node credentials in n8n.
+3. Click on ***Settings***.
+4. Click on ***Developer settings***.
+5. Select ***Personal access tokens***.
+6. Click on ***Generate new token***.
+7. Select the relevant scopes from the ***Select scopes*** section.
+8. Click on the ***Generate token*** button.
+8. Use the ***Personal access token*** with your GitHub node credentials in n8n.
+9. Click the ***Save*** button to save your credentials in n8n.
 
-![Getting GitHub credentials](./using-access-token.gif)
+![Getting GitHub Access Token](./using-access-token.gif)

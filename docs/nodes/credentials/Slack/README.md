@@ -14,7 +14,7 @@ Create a [Slack](https://slack.com/) account.
 
 1. Access your Slack dashboard.
 2. Click on your workspace name in the top left.
-3. Click the 'Settings & Administration' option, and then 'Manage apps'.
+3. Click the 'Settings & administration' option, and then 'Manage apps'.
 4. Click on 'Build' in the top right.
 5. Click on 'Create New App' button.
 6. Enter app name and select your desired workspace.
@@ -29,7 +29,7 @@ Create a [Slack](https://slack.com/) account.
 
 1. Access your Slack dashboard.
 2. Click on your username in the top left.
-3. Click the 'Settings & Administration' option, and then 'Manage apps'.
+3. Click the 'Settings & administration' option, and then 'Manage apps'.
 4. Click on 'Build' in the top right.
 5. Click on 'Start Building'.
 6. Enter app name and select your desired workspace.

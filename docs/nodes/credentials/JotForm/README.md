@@ -4,7 +4,7 @@ permalink: /credentials/jotForm
 
 # JotForm
 
-You can find information about the operations supported by the JotForm node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.invoiceNinja) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/JotForm).
+You can find information about the operations supported by the JotForm Trigger node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.jotFormTrigger) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/JotForm).
 
 ## Prerequisites
 

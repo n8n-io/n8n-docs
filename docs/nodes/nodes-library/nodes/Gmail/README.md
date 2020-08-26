@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.gmail
 
 # Gmail
 
-[Gmail](https://www.gmail.com) is an email service developed by Google.
+[Gmail](https://www.gmail.com) is an email service developed by Google. Users can access Gmail on the web and using third-party programs that synchronize email content through POP or IMAP protocols.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).
@@ -50,12 +50,12 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Gmail node. You can find out how to do that [here](../../../credentials/Google/README.md).
 2. Select 'Message' from the ***Resource*** dropdown list.
-2. Select 'Get All' from the ***Operation*** dropdown list.
-3. Click on ***Add Field*** button and select 'Format' from the dropdown list.
-4. Select 'Full' from ***Format*** dropdown menu.
-5. Click on ***Add Field*** button and select 'Label IDs' from the dropdown list.
-6. Select the label from ***Label IDs*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+3. Select 'Get All' from the ***Operation*** dropdown list.
+4. Click on ***Add Field*** button and select 'Format' from the dropdown list.
+5. Select 'Full' from ***Format*** dropdown menu.
+6. Click on ***Add Field*** button and select 'Label IDs' from the dropdown list.
+7. Select the label from ***Label IDs*** dropdown list.
+8. Click on ***Execute Node*** to run the node.
 
 ![Using the Gmail node to get all messages](./Gmail_node.png)
 
@@ -63,11 +63,11 @@ The start node exists by default when you create a new workflow.
 
 1. Select the credentials that you entered in the previous Gmail node.
 2. Select 'Message Label' from the ***Resource*** dropdown list.
-2. Select 'Remove' from the ***Operation*** dropdown list.
-3. Open the ***Edit Expression Editor*** for ***Message ID***.
-4. Under the ***Variable Selector*** section, select `Current Node > Input Data > JSON > id`.
-5. Select the label from ***Label IDs*** dropdown list.
-6. Click on ***Execute Node*** to run the node.
+3. Select 'Remove' from the ***Operation*** dropdown list.
+4. Click on the gears icon next to the ***Message ID*** field and click on ***Add Expression***.
+5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`
+6. Select the label from ***Label IDs*** dropdown list.
+7. Click on ***Execute Node*** to run the node.
 
 ![Using the Gmail node to remove remove label from messages](./Gmail1_node.png)
 
@@ -75,10 +75,10 @@ The start node exists by default when you create a new workflow.
 
 1. Select the credentials that you entered in the previous Gmail node.
 2. Select 'Message Label' from the ***Resource*** dropdown list.
-2. Select 'Add' from the ***Operation*** dropdown list.
-3. Open the ***Edit Expression Editor*** for ***Message ID***.
-4. Under the ***Variable Selector*** section, select `Current Node > Input Data > JSON > id`.
-5. Select the label from ***Label IDs*** dropdown list.
-6. Click on ***Execute Node*** to run the node.
+3. Select 'Add' from the ***Operation*** dropdown list.
+4. Click on the gears icon next to the ***Message ID*** field and click on ***Add Expression***.
+5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`
+6. Select the label from ***Label IDs*** dropdown list.
+7. Click on ***Execute Node*** to run the node.
 
 ![Using the Gmail node to add label to messages](./Gmail2_node.png)

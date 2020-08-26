@@ -34,7 +34,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to get all messages with a certain label, remove the label from the messages and add a new label to the messages. You can also find the [workflow](https://n8n.io/workflows/621) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to get all messages with a certain label, remove the label from the messages and add a new label to the messages. You can also find the [workflow](https://n8n.io/workflows/621) on the n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Gmail]()
 
@@ -59,26 +59,30 @@ The start node exists by default when you create a new workflow.
 
 ![Using the Gmail node to get all messages](./Gmail_node.png)
 
+::: v-pre
 ### 3. Gmail1 node (remove: messageLabel)
 
 1. Select the credentials that you entered in the previous Gmail node.
 2. Select 'Message Label' from the ***Resource*** dropdown list.
 3. Select 'Remove' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Message ID*** field and click on ***Add Expression***.
-5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`
+5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`.
 6. Select the label from ***Label IDs*** dropdown list.
 7. Click on ***Execute Node*** to run the node.
+:::
 
-![Using the Gmail node to remove remove label from messages](./Gmail1_node.png)
+![Using the Gmail node to remove the label from messages](./Gmail1_node.png)
 
+::: v-pre
 ### 4. Gmail2 node (add: messageLabel)
 
 1. Select the credentials that you entered in the previous Gmail node.
 2. Select 'Message Label' from the ***Resource*** dropdown list.
 3. Select 'Add' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Message ID*** field and click on ***Add Expression***.
-5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`
+5. Select the following in the ***Variable Selector*** section: Nodes > Gmail > Output Data > JSON > id. You can also add the following expression: `{{$node["Gmail"].json["id"]}}`.
 6. Select the label from ***Label IDs*** dropdown list.
 7. Click on ***Execute Node*** to run the node.
+:::
 
-![Using the Gmail node to add label to messages](./Gmail2_node.png)
+![Using the Gmail node to add the label to messages](./Gmail2_node.png)

@@ -10,7 +10,7 @@ You can find information about the operations supported by the ClickUp node on t
 
 Create a [ClickUp](https://www.clickup.com/) account.
 
-## Using OAuth
+<!-- ## Using OAuth
 
 1. Open your ClickUp dashboard.
 2. Click on your profile icon in the bottom left.
@@ -23,16 +23,13 @@ Create a [ClickUp](https://www.clickup.com/) account.
 9. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](../README.md).
 
 
-![Getting ClickUp credentials](./using-oauth.gif)
-
+![Getting ClickUp credentials](./using-oauth.gif) -->
 
 ## Using Access Token
 
 1. Open your ClickUp dashboard.
-2. Click on your profile icon in the bottom left.
-3. Click on "Apps".
-4. Click on "Generate" under API token.
-5. Use selected API key in your ClickUp node credentials in n8n.
-
+2. Click on your profile icon in the bottom left and click on ***Apps***.
+3. Click on ***Generate*** under API Token.
+4. Use the API Token with your ClickUp node credentials in n8n.
 
 ![Getting ClickUp credentials](./using-access-token.gif)

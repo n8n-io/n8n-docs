@@ -20,9 +20,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Postgres
     - Salesforce
     - SIGNL4
-    - Trello
     - Todoist
+    - Trello
     - YouTube
+- The Todoist node has [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0790)
 - Added dynamic titles on workflow execution
 - Nodes will now display a link to associated credential documentation
 

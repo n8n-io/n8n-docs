@@ -10,13 +10,12 @@ You can find information about the operations supported by the Intercom node on 
 
 Create a [Intercom](https://www.intercom.com/) account.
 
-## Using OAuth
+<!-- ## Using OAuth
 
 1. Click "Use OAuth" in Authentication page.
 2. Fill out required information.
 3. Use Client Secret and Client ID in your Intercom node credentials in n8n.
-4. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](../README.md).
-
+4. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](../README.md). -->
 
 ## Using Access Token
 

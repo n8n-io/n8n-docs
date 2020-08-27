@@ -28,10 +28,8 @@ Create a [ClickUp](https://www.clickup.com/) account.
 ## Using Access Token
 
 1. Open your ClickUp dashboard.
-2. Click on your profile icon in the bottom left.
-3. Click on "Apps".
-4. Click on "Generate" under API token.
-5. Use selected API key in your ClickUp node credentials in n8n.
-
+2. Click on your profile icon in the bottom left and click on ***Apps***.
+3. Click on ***Generate*** under API Token.
+4. Use the API Token with your ClickUp node credentials in n8n.
 
 ![Getting ClickUp credentials](./using-access-token.gif)

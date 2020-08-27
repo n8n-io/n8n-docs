@@ -10,13 +10,23 @@ You can find information about the operations supported by the Discord node on t
 
 Create a [Discord](https://www.discord.com/) account.
 
-## Using OAuth
+## Create a webhook in Discord
+
+1. To create a webhook in Discord that sends content to your channel, go to the settings of your channel.
+2. Select 'Webhooks' from the sidebar.
+3. Click on 'Create Webhook'.
+4. Name your bot, copy the 'Webhook URL', and click on the ***Save*** button.
+4. Back in n8n, use the Webhook URL in your Discord Node.
+
+![How to create a webhook in Discord](./gif-of-webhooks-in-discord.gif)
+
+<!-- ## Using OAuth
 
 1. Access this [Discord Developer Portal](https://discord.com/developers/applications).
 2. Click on "New Application".
-3. Enter name and click "Create".
+3. Enter the name and click "Create".
 4. Use Client Secret and Client ID in your Discord node credentials in n8n.
-5. Enter n8n provided redirect URL in configuration. ![Redirect URL Explanation here](../README.md).
+5. Enter n8n provided redirect URL in the configuration. ![Redirect URL Explanation here](../README.md).
 
 
-![Getting Discord credentials](./using-oauth.gif)
+![Getting Discord credentials](./using-oauth.gif) -->

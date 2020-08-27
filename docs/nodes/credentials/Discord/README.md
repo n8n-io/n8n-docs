@@ -10,11 +10,12 @@ You can find information about the operations supported by the Discord node on t
 
 Create a [Discord](https://www.discord.com/) account.
 
-## How to get create a Discord Webhook
+## Create a webhook in Discord
 
-1. To create a Discord webhook that sends content to your channel, go to the settings of your channel.
+1. To create a webhook in Discord that sends content to your channel, go to the settings of your channel.
 2. Select 'Webhooks' from the sidebar.
-3. Click on 'Create Webhook', name your bot, and copy the 'Webhook URL'.
+3. Click on 'Create Webhook'.
+4. Name your bot, copy the 'Webhook URL', and click on the ***Save*** button.
 4. Back in n8n, use the Webhook URL in your Discord Node.
 
 ![How to create a webhook in Discord](./gif-of-webhooks-in-discord.gif)

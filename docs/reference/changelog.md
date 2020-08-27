@@ -2,30 +2,6 @@
 
 [[toc]]
 
-## n8n@0.79.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.78.0...n8n@0.79.0) for this version.<br />
-**Release date:** 2020-08-27
-
-- New nodes
-    - Contentful
-    - Convertkit
-    - Convertkit Trigger
-    - Paddle
-- Enhanced nodes
-    - Airtable
-    - Coda
-    - Gmail
-    - HubSpot
-    - IMAP Email
-    - Postgres
-    - Salesforce
-    - SIGNL4
-    - Trello
-    - Todoist
-    - YouTube
-- Added Dyanmic titles on workflow execution
-- Nodes will now display a link to associated credential documentation
-
 ## n8n@0.78.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.76.0...n8n@0.78.0) for this version.<br />
 **Release date:** 2020-08-18

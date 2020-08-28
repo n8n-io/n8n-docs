@@ -28,6 +28,19 @@ These are a set of guidelines to contribute to this repository, helping ensure c
 * Make sure to include commit messages in [this](https://gist.github.com/parmentf/035de27d6ed1dce0b36a) format.
 
 
+## Screenshot guidelines
+
+Please make sure that the screenshots match the following criteria. 
+
+- Please ensure that only the Editor UI appears in the screenshot. Anything else like the browser frame, tabs, and so on should be omitted.
+- After zooming in once, the Editor UI should be 23 boxes wide and 9 boxes tall.
+- The nodes should have a distance of two boxes between them.
+- The nodes should fit inside the boxes (as much as they can).
+- Please make sure that the workflow is centered in the Editor canvas.
+- If the workflow uses a Trigger node, please ensure that the Start node doesn't appear in the Editor canvas.
+- When recording GIFs, please ensure that the cursor movements in the GIF are slow and easy to follow. A good rule of thumb is that the speed should be about 75% of your regular speed.
+
+
 ## General checklist
 
 The following is a list of common errors that you can use to check your work locally before submitting a PR:

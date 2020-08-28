@@ -233,6 +233,10 @@ module.exports = {
 					path: 'getting-started/creating-your-first-workflow.md',
 				},
 				{
+					title: '🤘 Tutorials',
+					path: 'getting-started/tutorials.md',
+				},
+				{
 					title: '🤔 What\'s Next?',
 					path: 'getting-started/whats-next.md',
 				},

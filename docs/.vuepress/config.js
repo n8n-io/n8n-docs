@@ -114,7 +114,23 @@ module.exports = {
 				{
 					title: '🧬 Overview',
 					sidebarDepth: 2,
-					children: getChildrenFiles('nodes', 'nodes.md'),
+					children: [
+						{
+							title: 'Node Overview',
+							sidebarDepth: 2,
+							path: 'nodes.md',
+						},
+						{
+							title: 'Node Basics',
+							sidebarDepth: 2,
+							path: 'node-basics.md',
+						},
+						{
+							title: 'Expressions',
+							sidebarDepth: 2,
+							path: 'expressions.md',
+						},
+					]
 				},
 				{
 					title: '🔬 Creating Nodes',

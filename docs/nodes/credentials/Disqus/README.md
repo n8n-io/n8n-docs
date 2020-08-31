@@ -10,13 +10,10 @@ You can find information about the operations supported by the Disqus node on th
 
 Create a [Disqus](https://www.disqus.com/) account.
 
-## Using OAuth
+## Using Access Token
 
-1. Access this [Disqus Application Registration Site](https://disqus.com/api/applications/register/).
-2. Fill out the application information.
-3. Click on "Register my Application".
+1. Access the [Disqus Application Registration Page](https://disqus.com/api/applications/register/).
+2. Fill out the application information and click on ***Register my application***.
+3. Click on ***Details*** at the top and use the provided 'API Key' with your Disqus node credentials in n8n.
 
-![Getting Disqus credentials](./using-oauth.gif)
-
-4. Visit [Disqus applications site](https://disqus.com/api/applications/) and use the provided keys with your Disqus credentials in n8n.
-5. Enter n8n provided redirect URL in configuration settings. Redirect URL explanation [here](../README.md).
+![Getting Disqus credentials](./using-access-token.gif)

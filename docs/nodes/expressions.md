@@ -22,17 +22,34 @@ the value would be: "My name is: Jim"
 
 The following special variables are available:
 
- - **$items**: Incoming data from an input node
- - **$evaluateExpression**: Evaluates a string as expression
- - **$node**: Data of other nodes (binary, context, json, parameter, runIndex)
- - **$runIndex**: The current run index (first time node gets executed it is 0, second time 1, ...)
- - **$workflow**: Returns workflow metadata like: active, id, name
  - **$binary**: Incoming binary data of a node
  - **$env**: Environment variables
+ - **$evaluateExpression**: Evaluates a string as expression
+ - **$items**: Incoming data from an input node
  - **$json**: Incoming JSON data of a node
+ - **$node**: Data of other nodes (binary, context, json, parameter, runIndex)
  - **$parameters**: Parameters of the current node
+ - **$runIndex**: The current run index (first time node gets executed it is 0, second time 1, ...)
+ - **$workflow**: Returns workflow metadata like: active, id, name
+
 
 Normally it is not needed to write the JavaScript variables manually as they can be selected with the help of the Expression Editor.
+
+
+## Method: $evaluateExpression(expression: string, itemIndex: number)
+
+Evaluates a given string as expression.
+If no `itemIndex` is provided it uses by default in the Function-Node the data of item 0 and
+in the Function Item-Node the data of the current item.
+
+Example:
+
+```javascript
+items[0].json.variable1 = $evaluateExpression('{{1+2}}');
+items[0].json.variable2 = $evaluateExpression($node["Set"].json["myExpression"], 1);
+
+return items;
+```
 
 
 ## Method: $items(nodeName?: string, outputIndex?: number, runIndex?: number)
@@ -60,22 +77,6 @@ const allItems = $items("IF", 1, 0);
 ```
 
 
-## Method: $evaluateExpression(expression: string, itemIndex: number)
-
-Evaluates a given string as expression.
-If no `itemIndex` is provided it uses by default in the Function-Node the data of item 0 and
-in the Function Item-Node the data of the current item.
-
-Example:
-
-```javascript
-items[0].json.variable1 = $evaluateExpression('{{1+2}}');
-items[0].json.variable2 = $evaluateExpression($node["Set"].json["myExpression"], 1);
-
-return items;
-```
-
-
 ## Variable: $node
 
 Works exactly like `$item` with the difference that it will always return the data of the first item and
@@ -98,6 +99,12 @@ const channel = $node["Slack"].parameter["channel"];
 const runIndex = $node["HTTP Request"].runIndex}}
 ```
 
+## Parameters
+
+Parameters can be set for most nodes in n8n. The values that get set define what exactly a node does.
+
+Parameter values are static by default and are always the same no matter what kind of data the node processes. However, it is possible to set the values dynamically with the help of an Expression. Using Expressions, it is possible to make the parameter value dependent on other factors like the data of flow or parameters of other nodes.
+
 
 ## Variable: $runIndex
 
@@ -118,10 +125,3 @@ const isActive = $workflow.active;
 const workflowId = $workflow.id;
 const workflowName = $workflow.name;
 ```
-
-
-## Parameters
-
-Parameters can be set for most nodes in n8n. The values that get set define what exactly a node does.
-
-Parameter values are static by default and are always the same no matter what kind of data the node processes. However, it is possible to set the values dynamically with the help of an Expression. Using Expressions, it is possible to make the parameter value dependent on other factors like the data of flow or parameters of other nodes.

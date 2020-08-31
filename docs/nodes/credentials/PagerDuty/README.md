@@ -13,11 +13,11 @@ Create a [PagerDuty](https://pagerduty.com/) account.
 ## Using OAuth
 
 1. Access your PagerDuty dashboard.
-2. Select 'Developer Mode' from the add apps icon in the top right.
+2. Select 'Developer Mode' from the number pad icon in the top right.
 3. Click on the ***Create New App*** button.
 4. Enter a name in the ***App Name*** field, and a description in the ***Brief Description*** field.
 5. Select 'Infrastructure Automation' from the ***Category*** dropdown list.
-6. Ensure that you do not choose to publish the app to all users and click 'Save'.
+6. Choose the appropriate option for the publication of your app and click on the ***Save*** button.
 7. Click on the ***Add*** button in the 'OAuth 2.0' section.
 8. Copy the 'OAuth Callback URL' provided in the 'PagerDuty OAuth2 API' credentials in n8n and paste it in the ***Redirect URL*** field in the PagerDuty app creation page.
 9. Use the provided ***Client ID*** and ***Client Secret*** with your PagerDuty OAuth2 API credentials in n8n.

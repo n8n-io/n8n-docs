@@ -1,7 +1,7 @@
 # Server Setup
 
-::: warning
-Make sure that you secure your n8n instance as described under [Security](security.md).
+::: warning 💡 Keep in mind
+If you haven't followed this guide to setup your n8n instance on a server, please make sure that you secure your n8n instance as described under [Security](security.md).
 :::
 
 

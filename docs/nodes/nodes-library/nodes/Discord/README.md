@@ -34,3 +34,5 @@ The start node exists by default when you create a new workflow.
 2. Paste your webhook into the ***Webhook URL*** field.
 5. Enter your message in the ***Text*** field.
 6. Click on ***Execute Node*** to run the workflow.
+
+![Sending a message to a Discord channel using the Discord node](./Discord_node.png)

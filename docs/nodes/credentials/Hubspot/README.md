@@ -13,16 +13,17 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 ## Using OAuth
 
 1. Access your [HubSpot Developer Home](https://developers.hubspot.com/).
-2. Click on the ***Create app*** button.
-3. Specify an app name in the ***Public app name*** field.
-4. Click on the 'Auth' tab.
-5. Use the provided ***Client ID*** and the ***Client secret*** with your HubSpot OAuth2 API credentials in n8n. 
-6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Redirect URL*** section.
-7. In the Scopes section, make sure that the 'Basic OAuth functionality' scope is selected from the ***Add a required scope*** dropdown list.
-8. Select any other Scopes you plan to use with n8n.
-9. Click on the ***Save*** button to save your settings in HubSpot.
-10. Back in n8n, click on the circle button in the OAuth section to connect your HubSpot account to n8n.
-11. Click the ***Save*** button to save your credentials.
+2. Click on the ***Manage apps*** button.
+3. Click on the ***Create app*** button in the top right.
+4. Specify an app name in the ***Public app name*** field.
+5. Click on the 'Auth' tab.
+6. Use the provided ***Client ID*** and the ***Client secret*** with your HubSpot OAuth2 API credentials in n8n. 
+7. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Redirect URL*** section.
+8. In the Scopes section, make sure that the 'Basic OAuth functionality' scope is selected from the ***Add a required scope*** dropdown list.
+9. Select any other Scopes you plan to use with n8n.
+10. Click on the ***Save*** button to save your settings in HubSpot.
+11. Back in n8n, click on the circle button in the OAuth section to connect your HubSpot account to n8n.
+12. Click the ***Save*** button to save your credentials.
 
 ![Getting HubSpot OAuth credentials](./using-oauth.gif)
 
@@ -39,6 +40,9 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 ## Using Developer API Key (for HubSpot Trigger node)
 
 1. Access your [HubSpot Developer Home](https://developers.hubspot.com/).
-2. Click on the ***Get HubSpot API key*** button.
-3. Click on the ***Show key*** button.
-4. Use the displayed Developer API key with your HubSpot Trigger node credentials in n8n.
+2. Click on 'Apps' in the top bar.
+3. Click on the ***Get HubSpot API key*** button.
+4. Click on the ***Show key*** button.
+5. Use the displayed Developer API key with your HubSpot Trigger node credentials in n8n.
+
+![Getting HubSpot Developer API key](./using-developer-api-key.gif)

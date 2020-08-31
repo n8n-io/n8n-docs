@@ -24,5 +24,5 @@ The final workflow should look like the following image.
 ### 1. HubSpot Trigger node
 
 1. First of all, you'll have to enter credentials for the HubSpot Trigger node. You can find out how to do that [here](../../../credentials/Hubspot/README.md).
-2. Enter the HubSpot App ID in the ***App ID*** field.
+2. Enter the HubSpot App ID in the ***App ID*** field. You can find out how to obtain the ***App ID*** in the link above.
 3. Click on ***Execute Node*** to run the workflow.

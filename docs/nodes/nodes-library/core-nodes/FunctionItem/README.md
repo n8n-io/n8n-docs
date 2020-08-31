@@ -15,6 +15,8 @@ The Function Item node supports promises. So instead of returning the items dire
 
 ## Node Reference
 
+You can also use the methods and variables mentioned in the [Expressions](../../../expressions.md) page in the Function Item node.
+
 ### Variable: item
 
 It contains the "json" data of the currently processed item.

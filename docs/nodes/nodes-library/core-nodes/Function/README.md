@@ -45,6 +45,8 @@ return items;
 
 ## Node Reference
 
+You can also use the methods and variables mentioned in the [Expressions](../../../expressions.md) page in the Function node.
+
 ### Variable: items
 
 It contains all the items that the node has received as an input.

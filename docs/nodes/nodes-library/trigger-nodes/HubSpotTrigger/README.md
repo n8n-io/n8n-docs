@@ -7,9 +7,7 @@ permalink: /nodes/n8n-nodes-base.hubspotTrigger
 [HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/Hubspot/README.md).
-
-Note that for this node, you will have to retrieve the App ID and Client Secret using the OAuth instructions in addition to the Developer API Key.
+For this node, you will have to retrieve the App ID and Client secret from the 'Using OAuth' section as well as the Developer API Key from the 'Using Developer API Key' section. You can find authentication information for this node [here](../../../credentials/Hubspot/README.md).
 :::
 
 

@@ -1,6 +1,6 @@
 # n8n Docs
 
-This repository hosts the documentation for n8n, an extendable workflow automation tool which enables you to connect anything to everything via its open, [fair-code](https://faircode.io/) model. The documentation is live at [docs.n8n.io](https://docs.n8n.io/).
+This repository hosts the documentation for [n8n](https://n8n.io/), an extendable workflow automation tool which enables you to connect anything to everything via its open, [fair-code](https://faircode.io/) model. The documentation is live at [docs.n8n.io](https://docs.n8n.io/).
 
 
 ## Building the documentation
@@ -30,9 +30,7 @@ You can find the contribution guidelines in the [CONTRIBUTING.md](CONTRIBUTING.m
 
 ## Support
 
-If you have problems or questions, head to our forum, and we will try to help you as soon as possible:
-
-https://community.n8n.io
+If you have problems or questions, head to our forum, and we will try to help you as soon as possible: https://community.n8n.io
 
 
 ## License

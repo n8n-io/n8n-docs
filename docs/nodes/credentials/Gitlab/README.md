@@ -31,8 +31,11 @@ Create a [GitLab](https://gitlab.com/) account.
 1. Access your GitLab dashboard.
 2. Click on your user icon in the top right.
 3. Click on 'Settings'.
-4. Click on 'Access Tokens'.
-5. Fill out the required information to receive the access token.
-6. Use the provided credentials with your GitLab node credentials in n8n.
+4. Click on 'Access Tokens' in the sidebar.
+5. Enter a name in the ***Name*** field.
+6. Fill out the required information to receive the access token.
+7. Select any scopes you plan to use and then click on ***Create personal access token***.
+8. Use the generated access token with your GitLab node credentials in n8n.
+9. Click on the ***Save*** button to save your credentials.
 
 ![Getting GitLab access token](./using-access-token.gif)

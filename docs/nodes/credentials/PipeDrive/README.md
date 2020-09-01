@@ -15,9 +15,9 @@ Create a [Pipedrive](https://pipedrive.com/) account.
 1. Create a [Developer Sandbox Account](https://pipedrive.readme.io/docs/developer-sandbox-account).
 2. Access your Pipedrive Dashboard.
 3. Click on your user profile in the top right and select 'Tools and apps' from the dropdown list.
-4. From the sidebar under the ***Tools*** section, select 'Marketplace Manager'.
+4. From the sidebar under the ***Tools*** section, select 'Marketplace manager'.
 5. Click on the ***Create new app*** button.
-6. Select 'No' when asked if you would like to publish your app on the Pipedrive marketplace.
+6. Select either 'Yes' or 'No' when asked if you would like to publish your app on the Pipedrive marketplace.
 7. Click on the ***Next*** button.
 8. Enter a name in the ***App name*** field.
 9. Copy the 'OAuth Callback URL' provided in the 'Pipedrive OAuth2 API' credentials in n8n.
@@ -26,7 +26,7 @@ Create a [Pipedrive](https://pipedrive.com/) account.
 12. Select your app from the 'Marketplace Manager'
 13. Scroll down to ***OAuth & Access scopes*** section and copy the ***Client ID*** and ***Client Secret***.
 14. Use these credentials with your Pipedrive node credentials in n8n.
-15. Click on the circle button in the OAuth section of n8n to connect a Pipedrive account to n8n.
+15. Click on the circle button in the OAuth section to connect a Pipedrive account to n8n.
 16. Click on the ***Save*** button to save your credentials.
 
 ![Getting Pipedrive OAuth credentials](./using-oauth.gif)

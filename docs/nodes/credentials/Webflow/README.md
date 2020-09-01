@@ -10,6 +10,25 @@ You can find information about the operations supported by the Webflow node on t
 
 Create a [Webflow](https://webflow.com/) account.
 
+## Using OAuth
+
+1. Access your Webflow dashboard.
+2. Click on 'Account' on the top right corner.
+3. Select 'Account Settings' from the dropdown list.
+4. Click on the 'Integrations' tab.
+5. Click on the ***+ Register New Application*** button in the 'My Applications' section.
+6. Enter the name of your application in the ***Application Name*** field.
+7. Enter the description of your application in the ***Application Description*** field.
+8. Copy the 'OAuth Callback URL' provided in the 'Webflow OAuth2 API' credentials in n8n and paste it in the ***Redirect URI*** field on the Webflow integrations page.
+9. Enter the homepage url of your application in the ***Application Homepage*** field.
+10. Click on 'Create'.
+11. Click on the ***View Details*** button to get the ***Client ID*** and ***Client Secret***.
+12. Use these credentials in the 'Webflow OAuth2 API' credentials in n8n.
+13. Click on the circle button in the OAuth section of n8n to connect a Webflow account to n8n.
+14. Click on the ***Save*** button to save your credentials.
+
+![Getting Webflow OAuth credentials](./using-oauth.gif)
+
 ## Using Access Token
 
 1. Access your Webflow dashboard.

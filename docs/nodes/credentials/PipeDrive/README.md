@@ -14,10 +14,10 @@ Create a [Pipedrive](https://pipedrive.com/) account.
 
 1. Create a [Developer Sandbox Account](https://pipedrive.readme.io/docs/developer-sandbox-account).
 2. Access your Pipedrive Dashboard.
-3. Select 'Tools and apps' from the dropdown list.
-4. Select 'Marketplace Manager' from the 'Tools' section.
+3. Click on your user profile in the top right and select 'Tools and apps' from the dropdown list.
+4. From the sidebar under the ***Tools*** section, select 'Marketplace Manager'.
 5. Click on the ***Create new app*** button.
-6. For the question 'Intent to publish app on Pipedrive's marketplace', select the appropriate option for your app.
+6. Select 'No' when asked if you would like to publish your app on the Pipedrive marketplace.
 7. Click on the ***Next*** button.
 8. Enter a name in the ***App name*** field.
 9. Copy the 'OAuth Callback URL' provided in the 'Pipedrive OAuth2 API' credentials in n8n.

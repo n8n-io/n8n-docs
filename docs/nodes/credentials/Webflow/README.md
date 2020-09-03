@@ -19,11 +19,11 @@ Create a [Webflow](https://webflow.com/) account.
 5. Click on the ***+ Register New Application*** button in the 'My Applications' section.
 6. Enter the name of your application in the ***Application Name*** field.
 7. Enter the description of your application in the ***Application Description*** field.
-8. Copy the 'OAuth Callback URL' provided in the 'Webflow OAuth2 API' credentials in n8n and paste it in the ***Redirect URI*** field on the Webflow integrations page.
+8. Copy the 'OAuth Callback URL' provided in the 'Webflow OAuth2 API' credentials in n8n and paste it in the ***Redirect URI*** field in the Webflow integrations page.
 9. Enter the homepage url of your application in the ***Application Homepage*** field.
-10. Click on 'Create'.
+10. Click on the ***Create*** button.
 11. Click on the ***View Details*** button to get the ***Client ID*** and ***Client Secret***.
-12. Use these credentials in the 'Webflow OAuth2 API' credentials in n8n.
+12. Use these credentials with your 'Webflow OAuth2 API' credentials in n8n.
 13. Click on the circle button in the OAuth section of n8n to connect a Webflow account to n8n.
 14. Click on the ***Save*** button to save your credentials.
 

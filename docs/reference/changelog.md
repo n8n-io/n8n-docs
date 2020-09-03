@@ -2,8 +2,49 @@
 
 [[toc]]
 
+## n8n@0.80.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.80.0) for this version.<br />
+**Release date:** 2020-09-02
+
+- New nodes
+    - Customer.io
+    - MQTT Trigger
+    - S3
+- Enhanced nodes
+    - Acuity Scheduling
+    - AWS S3
+    - ClickUp
+    - FTP
+    - Telegram Trigger
+    - Zendesk
+
+## n8n@0.79.3 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
+**Release date:** 2020-08-30
+
+- The bug that caused the workflows to not get activated correctly has been fixed
+
+## n8n@0.79.2 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.1...n8n@0.79.2) for this version.<br />
+**Release date:** 2020-08-28
+
+- Added missing rawBody for "application/x-www-form-urlencoded" 
+
+## n8n@0.79.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.79.1) for this version.<br />
+**Release date:** 2020-08-28
+
+- Enhanced nodes
+    - Contentful
+    - HTTP Request
+    - Postgres
+    - Webhook
+- Removed Test-Webhook also in case checkExists fails 
+- HTTP Request node does not overwrite accept header if it's already set
+- Add rawBody to every request so that n8n does not give an error if body is missing
+
 ## n8n@0.79.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.78.0...n8n@0.79.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 
 - New nodes

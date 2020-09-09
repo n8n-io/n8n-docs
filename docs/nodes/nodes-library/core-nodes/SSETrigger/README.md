@@ -4,17 +4,16 @@ permalink: /nodes/n8n-nodes-base.sseTrigger
 
 # SSE Trigger
 
-The SSE Trigger node is used to receive the server-sent event. This is a trigger node.
+Server-Sent Events (SSE) is a server push technology enabling a client to receive automatic updates from a server via HTTP connection. The SSE Trigger node is used to receive server-sent events and is a trigger node.
 
 ## Node Reference
 
-1. ***URL***: This field specifies the URL to receive the server-sent event from.
+***URL***: This field specifies the URL from which to receive the server-sent events.
 
 ## Example Usage
 
-This workflow allows you to receive a server-sent event. You can also find the [workflow](https://n8n.io/workflows/639) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive server-sent events using the SSE Trigger node. You can also find the [workflow](https://n8n.io/workflows/639) on n8n.io. This example usage workflow would use the following node.
 - [SSE Trigger]()
-
 
 The final workflow should look like the following image.
 

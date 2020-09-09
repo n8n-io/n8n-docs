@@ -8,9 +8,24 @@ The HTML Extract node is useful to extract the HTML content of a webpage.
 
 ## Node Reference
 
-- **Source Data:** In this dropdown list, there are two options to use.
+- **Source Data:** If HTML should be read from binary or JSON data. In this dropdown list, there are two options.
 	- Binary
 	- JSON
+- ***JSON Property:*** The name of the JSON property in which the HTML to extract the data from can be found. This field is displayed when 'JSON' is selected in the ***Source Data*** dropdown list. 
+- ***Binary Property:*** The name of the binary property in which the HTML to extract the data from can be found. This field is displayed when 'Binary' is selected in the ***Source Data*** dropdown list. 
+The property can either contain a string or an array of strings.
+- ***Extraction Values:***
+	- ***Key:*** The key under which the extracted value should be saved.
+	- ***CSS Selector:*** The CSS selector to use.
+	- ***Return Value:*** The kind of data that should be returned. In this dropdown list there are four options.
+		- ***Attribute:*** Get an attribute value like 'class' from an element.
+			- ***Attribute:*** The name of the attribute to return the value off.
+		- ***HTML:*** Get the HTML the element contains.
+		- ***Text:*** Get only the text content of the element.
+		- ***Value:*** Get value of an input, select or textarea.
+	- ***Return Array:*** Returns the values as an array so if multiple ones get found they also get returned separately. If not set, all values will be returned as a single string.
+- ***Options:***
+	- ***Trim Values:*** Removes automatically all spaces and newlines from the beginning and end of the values.
 
 
 ## Example Usage

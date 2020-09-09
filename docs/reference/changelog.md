@@ -2,6 +2,22 @@
 
 [[toc]]
 
+## n8n@0.81.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.80.0...n8n@0.81.0) for this version.<br />
+**Release date:** 2020-09-09
+
+- New nodes
+    - Sentry.io
+- Enhanced nodes
+    - Asana
+    - ClickUp
+    - Clockify
+    - Google Contacts
+    - Salesforce
+    - Segment
+    - Telegram
+    - Telegram Trigger
+
 ## n8n@0.80.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.80.0) for this version.<br />
 **Release date:** 2020-09-02

@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/philipshue
+permalink: /credentials/philipsHue
 ---
 
 # Philips Hue

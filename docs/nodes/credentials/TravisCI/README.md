@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/travisci
+permalink: /credentials/travisCi
 ---
 
 # Travis CI
@@ -8,15 +8,15 @@ You can find information about the operations supported by the Travis CI node on
 
 ## Prerequisites
 
-Create a [Travis CI](https://www.affinity.com/) account.
+Create a [Travis CI](https://travis-ci.org/) account.
 
 ## Using Access Token
 
 1. Open your Travis CI dashboard.
 2. Click on the user icon in the top right.
 3. Click on 'Settings' in the dropdown list.
-4. Click on the 'Settings' tab on the page.
-5. Copy the displayed ***Token*** in the 'API authentication' section.
-6. Use the API key with your Travis API credentials in n8n.
+4. Click on the ***Settings*** tab on the page.
+5. Copy the ***Token*** in the ***API authentication*** section.
+6. Use the ***Token*** with your Travis API credentials in n8n.
 
 ![Getting Travis CI credentials](./using-access-token.gif)

@@ -10,8 +10,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Sentry.io
 - Enhanced nodes
     - Asana
-    - Clockify
     - ClickUp
+    - Clockify
     - Google Contacts
     - Salesforce
     - Segment

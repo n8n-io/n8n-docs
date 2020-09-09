@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.contentful
 
 # Contentful
 
-[Contentful](https://www.contentful.com/) provides a content infrastructure for digital teams to power content in websites, apps, and devices. It offers a central hub for structured content, powerful management and delivery APIs, and a customizable web app that enable developers and content creators to ship digital products faster.
+[Contentful](https://www.contentful.com/) provides a content infrastructure for digital teams to power content in websites, apps, and devices. It offers a central hub for structured content, powerful management and delivery APIs, and a customizable web app.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Contentful/README.md).
@@ -21,14 +21,14 @@ You can find authentication information for this node [here](../../../credential
     - Get an entry
     - Get all entires
 - Locale
-    - Get all
+    - Get all locale
 - Space
-    - Get
+    - Get space details
 
 
 ## Example Usage
 
-This workflow allows you to get all the entries of the delivery API of Contentful. You can also find the [workflow](https://n8n.io/workflows/640) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to get all the entries using the delivery API of Contentful. You can also find the [workflow](https://n8n.io/workflows/640) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Contentful]()
 
@@ -40,7 +40,7 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. Contentful node (Execute Query)
+### 2. Contentful node
 
 1. First of all, you'll have to enter credentials for the Contentful node. You can find out how to do that [here](../../../credentials/Contentful/README.md).
 2. Select 'Get All' from the ***Operation*** dropdown list.

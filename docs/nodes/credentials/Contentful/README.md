@@ -10,7 +10,7 @@ You can find information about the operations supported by the Contentful node o
 
 Create a [Contentful](https://www.contentful.com/) account.
 
-## Using API Key
+## Using Access Token
 
 1. Open your Contentful dashboard.
 2. Open the 'Settings' dropdown list on the top bar.
@@ -18,5 +18,6 @@ Create a [Contentful](https://www.contentful.com/) account.
 4. Click on the ***Add API key*** button in the top right.
 5. Enter a name for the API key in the ***Name*** field and click ***Save***.
 6. Use the displayed ***Space ID***, ***Content Delivery API - access token***, and ***Content Preview API - access token*** with your Contentful node API credentials in n8n.
+7. Click on the ***Save*** button to save your credentials.
 
 ![Getting Contentful credentials](./using-api-key.gif)

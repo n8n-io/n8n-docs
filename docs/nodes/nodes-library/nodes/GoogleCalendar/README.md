@@ -40,3 +40,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the start date of your event in the *Start* field.
 4. Enter the end date of your event in the *End* field.
 5. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+- [Tracking Time Spent in Meetings With Google Calendar, Twilio, and n8n 🗓](https://medium.com/n8n-io/tracking-time-spent-in-meetings-with-google-calendar-twilio-and-n8n-a5d00f77da8c)

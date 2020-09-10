@@ -61,3 +61,7 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the CrateDB node to insert data into a table](./CrateDB1_node.png)
+
+## Further Reading
+
+- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

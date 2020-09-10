@@ -26,3 +26,7 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the AMQP Trigger node. You can find out how to do that [here](../../../credentials/AMQP/README.md).
 2. Enter the name of the queue or topic in the *Queue / Topic* field.
 3. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

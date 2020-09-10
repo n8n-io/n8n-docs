@@ -107,3 +107,7 @@ return [
 **Note:** Notice that only the id with the value 1 made its way to this *Set* node.
 
 ![Using the Set node to set a value when the condition is false](./Set1_node.png)
+
+## Further Reading
+
+- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

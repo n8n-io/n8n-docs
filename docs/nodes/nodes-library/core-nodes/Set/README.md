@@ -55,3 +55,8 @@ You can deactivate this behaviour by clicking on the *Add Option* button and set
 ```json
 { "number.one": 20 }
 ```
+
+## Further Reading
+
+- [Effortless video collaboration with Whereby, Mattermost, and n8n 📹](https://medium.com/n8n-io/effortless-video-collaboration-with-whereby-mattermost-and-n8n-8fc397feb9cb)
+- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

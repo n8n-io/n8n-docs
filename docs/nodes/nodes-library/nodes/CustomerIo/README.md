@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Customer.io node. You can find out how to do that [here](../../../credentials/CustomerIo/README.md).
 2. Enter a customer id in the ***ID*** field.
-3. Select 'Custom Properties' from the ***Add Field*** dropdown list.
+3. Click on the ***Add Field*** button and select 'Custom Properties' from the dropdown list.
 4. Click on the ***Choose Option to Add***.
 5. Enter `name` in the ***Key*** field.
 6. Enter the name of the customer in the ***Value*** field.

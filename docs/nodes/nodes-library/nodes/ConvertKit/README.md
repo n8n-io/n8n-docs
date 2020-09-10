@@ -35,7 +35,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to add a subscriber to a form, create a tag and add the subscriber to the tag.You can also find the [workflow](https://n8n.io/workflows/642) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to add a subscriber to a form, create a tag and add the subscriber to the tag using the ConvertKit node. You can also find the [workflow](https://n8n.io/workflows/642) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [ConvertKit]()
 
@@ -62,9 +62,8 @@ The start node exists by default when you create a new workflow.
 
 1. Select the credentials that you entered in the previous ConvertKit node.
 2. Select 'Tag' from the ***Resource*** dropdown list.
-3. Select 'Create' from the ***Operation*** dropdown list.
-4. Enter the tag name in the ***Name*** field.
-5. Click on ***Execute Node*** to run the node.
+3. Enter the tag name in the ***Name*** field.
+4. Click on ***Execute Node*** to run the node.
 :::
 
 ![Using the ConvertKit node to create a tag](./ConvertKit1_node.png)

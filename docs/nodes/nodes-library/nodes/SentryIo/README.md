@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.sentryIo
 [Sentry.io](https://sentry.io) is a service that helps you monitor and fix crashes in realtime. Sentry’s platform helps every developer diagnose, fix, and optimize the performance of their code.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/Sentry.io/README.md).
+You can find authentication information for this node [here](../../../credentials/SentryIo/README.md).
 :::
 
 ## Basic Operations
@@ -44,7 +44,7 @@ This workflow allows you to create a release and get all releases using the Sent
 
 The final workflow should look like the following image.
 
-![A workflow with the Gmail node](./workflow.png)
+![A workflow with the Sentry.io node](./workflow.png)
 
 ### 1. Start node
 
@@ -52,7 +52,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Sentry.io node (create: release)
 
-1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](../../../credentials/Sentry.io/README.md).
+1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](../../../credentials/SentryIo/README.md).
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.
@@ -75,4 +75,4 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the node.
 :::
 
-![Using the Sentry node to get all releases](./Sentry.io1_node.png)
+![Using the Sentry.io node to get all releases](./Sentry.io1_node.png)

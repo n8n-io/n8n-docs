@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/SentryIo
+permalink: /credentials/sentryIo
 ---
 
 # Sentry.io

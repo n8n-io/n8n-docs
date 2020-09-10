@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/convertkit
+permalink: /credentials/convertKit
 ---
 
 # ConvertKit

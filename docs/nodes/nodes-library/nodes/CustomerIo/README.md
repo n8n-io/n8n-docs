@@ -29,7 +29,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to update a customer's information and add them to the segment in Customer.io. You can also find the [workflow](https://n8n.io/workflows/646) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create a customer and add them to a segment in Customer.io. You can also find the [workflow](https://n8n.io/workflows/646) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Customer.io]()
 
@@ -44,21 +44,21 @@ The start node exists by default when you create a new workflow.
 ### 2. CustomerIo node (upsert: customer)
 
 1. First of all, you'll have to enter credentials for the Customer.io node. You can find out how to do that [here](../../../credentials/CustomerIo/README.md).
-2. Enter the customer id in the ***ID*** field.
-4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.
-5. Select 'Custom Properties' from the ***Add Field*** dropdown list.
-6. Click on the ***Choose Option to Add***.
-7. Enter `name` in the ***Key*** field.
-8. Enter the name of the customer in the ***Value*** field.
-9. Click on ***Execute Node*** to run the node.
+2. Enter a customer id in the ***ID*** field.
+3. Select 'Custom Properties' from the ***Add Field*** dropdown list.
+4. Click on the ***Choose Option to Add***.
+5. Enter `name` in the ***Key*** field.
+6. Enter the name of the customer in the ***Value*** field.
+7. Click on ***Execute Node*** to run the node.
 
-![Using the Customer.io node to update a customer's information](./CustomerIo_node.png)
+![Using the Customer.io node to create a new customer](./CustomerIo_node.png)
 
 ### 3. CustomerIo node (add: segment)
 
 1. Select the credentials that you entered in the previous Customer.io node.
 2. Select 'Segment' from the ***Resource*** field.
-3. Enter the customer id in the ***Customer IDs*** field.
+3. Click on the gears icon next to the ***Customer IDs*** field and click on ***Add Expression***.
+4. Select the following in the ***Variable Selector*** section: Nodes > CustomerIo > Output Data > JSON > id. You can also add the following expression: `{{$node["CustomerIo"].json["id"]}}`.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the Customer.io node to add the customer to a segment](./CustomerIo1_node.png)

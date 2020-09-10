@@ -50,11 +50,9 @@ The start node exists by default when you create a new workflow.
 ### 2. ConvertKit node (addSubscriber: form)
 
 1. First of all, you'll have to enter credentials for the ConvertKit node. You can find out how to do that [here](../../../credentials/ConvertKit/README.md).
-2. Select 'Form' from the ***Resource*** dropdown list.
-3. Select 'Add Subscriber' from the ***Operation*** dropdown list.
-4. Select the form from the ***Form ID*** dropdown list.
-5. Enter the email address in the ***Email*** field.
-6. Click on ***Execute Node*** to run the node.
+2. Select the form from the ***Form ID*** dropdown list.
+3. Enter the email address in the ***Email*** field.
+4. Click on ***Execute Node*** to run the node.
 
 ![Using the ConvertKit node to add a subscriber to a form](./ConvertKit_node.png)
 
@@ -79,10 +77,9 @@ The start node exists by default when you create a new workflow.
 2. Select 'Tag Subscriber' from the ***Resource*** dropdown list.
 3. Select 'Add' from the ***Operation*** dropdown list.
 4. Select the tag from the ***Tag ID*** dropdown list.
-5. Enter the tag name in the ***Name*** field.
-6. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
-7. Select the following in the ***Variable Selector*** section: Nodes > ConvertKit > Output Data > JSON > subscriber > email_address. You can also add the following expression: `{{$node["ConvertKit"].json["subscriber"]["email_address"]}}`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
+6. Select the following in the ***Variable Selector*** section: Nodes > ConvertKit > Output Data > JSON > subscriber > email_address. You can also add the following expression: `{{$node["ConvertKit"].json["subscriber"]["email_address"]}}`.
+7. Click on ***Execute Node*** to run the node.
 :::
 
 ![Using the ConvertKit node to add the subscriber to the tag](./ConvertKit2_node.png)

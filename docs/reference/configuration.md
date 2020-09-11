@@ -37,53 +37,7 @@ export VUE_APP_URL_BASE_API="https://n8n.example.com/"
 
 ## Security
 
-### Basic Authentication
-
-You can set basic authentication for n8n to login to your instance with a username and a password.
-
-```bash
-# Activate basic auth for editor and REST-API
-export N8N_BASIC_AUTH_ACTIVE=true
-
-# The name of the basic auth user
-export N8N_BASIC_AUTH_USER=user
-
-# The password of the basic auth user
-export N8N_BASIC_AUTH_PASSWORD=some-secure-passowrd
-
-# If password for basic auth is hashed
-export N8N_BASIC_AUTH_HASH=true
-```
-
-# Authentication with JWT 
-
-You can set authentication with JWT for n8n to access the editor and the REST-API.
-
-```bash
-# Activate jwt auth for editor and REST-API
-export N8N_JWT_AUTH_ACTIVE=true
-
-# The request header containing a signed JWT
-export N8N_JWT_AUTH_HEADER=signed-jwt
-
-# The request header value prefix to strip (optional)
-export N8N_JWT_AUTH_HEADER_VALUE_PREFIX=jwt-header-prefix
-
-# The URI to fetch JWK Set for JWT authentication
-export N8N_JWKS_URI=jwk-uri
-
-# JWT issuer to expect (optional)
-export N8N_JWT_ISSUER=jwt-issuer
-
-# JWT namespace to expect (optional)
-export N8N_JWT_NAMESPACE=jwt-namespace
-
-# JWT tenant key name to inspect within JWT namespace (optional)
-export N8N_JWT_ALLOWED_TENANT_KEY=jwt-tenant-key
-
-# JWT tenant to allow (optional)
-export N8N_JWT_ALLOWED_TENANT=jwt-tenant
-```
+You can find information about securing your n8n instance [here](security.md).
 
 
 ## Execution Data Manual Runs
@@ -147,7 +101,7 @@ export EXECUTIONS_PROCESS=main
 
 ## Execution Timeout
 
-A Workflow times out and gets canceled after this time (in seconds). If the workflow is executed in the main process a soft timeout is executed (takes effect after the current node finishes). If a workflow is running in its own process, a soft timeout is tried first The process is killed after waiting for an additional fifth of the given timeout duration.
+A workflow times out and gets canceled after this time (in seconds). If the workflow is executed in the main process, a soft timeout is executed (takes effect after the current node finishes). If a workflow is running in its own process, a soft timeout is tried first. The process is killed after waiting for an additional fifth of the given timeout duration.
 
 By default `EXECUTIONS_TIMEOUT` is set to `-1`. For example, if you want to set the timeout to one hour:
 
@@ -164,7 +118,7 @@ export EXECUTIONS_TIMEOUT_MAX=7200
 
 ## Prune Data
 
-It is possible to prune the execution data. This prevents from not exceeding the database's capacity and keep its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
+It is possible to prune the execution data. This prevents exceeding the database's capacity and keeping its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
 
 ```bash
 export EXECUTIONS_DATA_PRUNE=true
@@ -284,44 +238,14 @@ export WEBHOOK_TUNNEL_URL="https://n8n.example.com/"
 ```
 
 
-## Types of Database
+## Overwrites for credentials
 
-In n8n, the default database is SQLite. To set a different default database, set `DB_TYPE` to the appropriate value. For example, if you want to set the database to MongoDB:
-
-```bash
-export DB_TYPE=mongodb
-```
-Possible values are:
-- ***sqlite***: This is the default database
-- ***mongodb***: To use MongoDB as the databse
-- ***mariadb***: To use MariaDB as the database
-- ***mysqldb***: To use MySQL as the database
-- ***postgresdb***: To use Postgres database
-
-
-## Overwrites for Credentials
-
-It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials use the following format.
+It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials, use the following format.
 
 ```bash
 export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
-
-## Endpoints
-
-It is possible to configure the path for REST endpoint, Webhook enpoint and the test-webhook enpoint.
-
-```bash
-# Path for rest endpoint
-export N8N_ENDPOINT_REST='restEndpoint'
-
-# Path for webhook endpoint
-export N8N_ENDPOINT_WEBHOOK='webhookEndpoint'
-
-# Path for test-webhook endpoint
-export N8N_ENDPOINT_WEBHOOK_TEST='testWebhookEndpoint'
-```
 
 ## Configuration via file
 

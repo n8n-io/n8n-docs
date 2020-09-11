@@ -308,6 +308,21 @@ export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
 
+## Endpoints
+
+It is possible to configure the path for REST endpoint, Webhook enpoint and the test-webhook enpoint.
+
+```bash
+# Path for rest endpoint
+export N8N_ENDPOINT_REST='restEndpoint'
+
+# Path for webhook endpoint
+export N8N_ENDPOINT_WEBHOOK='webhookEndpoint'
+
+# Path for test-webhook endpoint
+export N8N_ENDPOINT_WEBHOOK_TEST='testWebhookEndpoint'
+```
+
 ## Configuration via file
 
 It is also possible to configure n8n using a configuration file.

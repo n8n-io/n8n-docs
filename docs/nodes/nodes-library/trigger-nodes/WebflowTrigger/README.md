@@ -21,6 +21,6 @@ The final workflow should look like the following image.
 
 ### 1. Webflow Trigger node
 
-1. First of all, you'll have to enter credentials for the Gumroad Trigger node. You can find out how to do that [here](../../../credentials/Webflow/README.md).
+1. First of all, you'll have to enter credentials for the Webflow Trigger node. You can find out how to do that [here](../../../credentials/Webflow/README.md).
 2. Select your website from the ***Site*** dropdown list.
 3. Click on ***Execute Node*** to run the node.

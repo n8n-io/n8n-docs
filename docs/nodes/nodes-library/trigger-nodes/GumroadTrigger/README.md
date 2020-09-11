@@ -22,5 +22,5 @@ The final workflow should look like the following image.
 ### 1. Gumroad Trigger node
 
 1. First of all, you'll have to enter credentials for the Gumroad Trigger node. You can find out how to do that [here](../../../credentials/Gumroad/README.md).
-2. Select 'Sale' from the ***Event*** dropdown list.
+2. Select 'Sale' from the ***Resource*** dropdown list.
 3. Click on ***Execute Node*** to run the node.

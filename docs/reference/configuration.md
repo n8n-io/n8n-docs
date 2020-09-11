@@ -20,6 +20,9 @@ N8N_PORT=5678
 # important in the future.
 N8N_PROTOCOL=https
 N8N_HOST=n8n.example.com
+
+# The IP address n8n should listen on
+N8N_LISTEN_ADDRESS=1.1.1.1
 ```
 
 
@@ -30,6 +33,11 @@ Tells the frontend how to reach the REST API of the backend.
 ```bash
 export VUE_APP_URL_BASE_API="https://n8n.example.com/"
 ```
+
+
+## Security
+
+You can find information about securing your n8n instance [here](security.md).
 
 
 ## Execution Data Manual Runs
@@ -88,6 +96,44 @@ all directly in the main-process with this setting.
 
 ```bash
 export EXECUTIONS_PROCESS=main
+```
+
+
+## Execution Timeout
+
+A workflow times out and gets canceled after this time (in seconds). If the workflow is executed in the main process, a soft timeout is executed (takes effect after the current node finishes). If a workflow is running in its own process, a soft timeout is tried first. The process is killed after waiting for an additional fifth of the given timeout duration.
+
+By default `EXECUTIONS_TIMEOUT` is set to `-1`. For example, if you want to set the timeout to one hour:
+
+```bash
+export EXECUTIONS_TIMEOUT=3600
+```
+
+You can also set maximum execution time (in seconds) for each workflow individually. For example, if you want to set maximum execution time to two hours:
+
+```bash
+export EXECUTIONS_TIMEOUT_MAX=7200
+```
+
+
+## Prune Data
+
+It is possible to prune the execution data. This prevents exceeding the database's capacity and keeping its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
+
+```bash
+export EXECUTIONS_DATA_PRUNE=true
+```
+
+You can also set how old (in hours) the execution data has to be to get deleted.
+
+```bash
+export EXECUTIONS_DATA_MAX_AGE=672
+```
+
+You can also set the timeout (in seconds) after execution data has been pruned.
+
+```bash
+export EXECUTIONS_DATA_PRUNE_TIMEOUT=7200
 ```
 
 
@@ -189,6 +235,15 @@ webhook URLs get registred with the external services.
 
 ```bash
 export WEBHOOK_TUNNEL_URL="https://n8n.example.com/"
+```
+
+
+## Overwrites for credentials
+
+It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials, use the following format.
+
+```bash
+export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
 

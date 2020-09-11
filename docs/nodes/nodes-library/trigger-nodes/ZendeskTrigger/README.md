@@ -22,4 +22,6 @@ The final workflow should look like the following image.
 ### 1. Zendesk Trigger node
 
 1. First of all, you'll have to enter credentials for the Zendesk Trigger node. You can find out how to do that [here](../../../credentials/Zendesk/README.md).
-2. Click on ***Execute Node*** to run the node.
+2. Click on the ***Add Condition*** button and select 'All' from the dropdown list.
+3. Select 'Open' from the ***Value*** dropdown list.
+4. Click on ***Execute Node*** to run the node.

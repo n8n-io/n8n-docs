@@ -20,6 +20,9 @@ N8N_PORT=5678
 # important in the future.
 N8N_PROTOCOL=https
 N8N_HOST=n8n.example.com
+
+# The IP address n8n should listen on
+N8N_LISTEN_ADDRESS=1.1.1.1
 ```
 
 
@@ -29,6 +32,57 @@ Tells the frontend how to reach the REST API of the backend.
 
 ```bash
 export VUE_APP_URL_BASE_API="https://n8n.example.com/"
+```
+
+
+## Security
+
+### Basic Authentication
+
+You can set basic authentication for n8n to login to your instance with a username and a password.
+
+```bash
+# Activate basic auth for editor and REST-API
+export N8N_BASIC_AUTH_ACTIVE=true
+
+# The name of the basic auth user
+export N8N_BASIC_AUTH_USER=user
+
+# The password of the basic auth user
+export N8N_BASIC_AUTH_PASSWORD=some-secure-passowrd
+
+# If password for basic auth is hashed
+export N8N_BASIC_AUTH_HASH=true
+```
+
+# Authentication with JWT 
+
+You can set authentication with JWT for n8n to access the editor and the REST-API.
+
+```bash
+# Activate jwt auth for editor and REST-API
+export N8N_JWT_AUTH_ACTIVE=true
+
+# The request header containing a signed JWT
+export N8N_JWT_AUTH_HEADER=signed-jwt
+
+# The request header value prefix to strip (optional)
+export N8N_JWT_AUTH_HEADER_VALUE_PREFIX=jwt-header-prefix
+
+# The URI to fetch JWK Set for JWT authentication
+export N8N_JWKS_URI=jwk-uri
+
+# JWT issuer to expect (optional)
+export N8N_JWT_ISSUER=jwt-issuer
+
+# JWT namespace to expect (optional)
+export N8N_JWT_NAMESPACE=jwt-namespace
+
+# JWT tenant key name to inspect within JWT namespace (optional)
+export N8N_JWT_ALLOWED_TENANT_KEY=jwt-tenant-key
+
+# JWT tenant to allow (optional)
+export N8N_JWT_ALLOWED_TENANT=jwt-tenant
 ```
 
 
@@ -88,6 +142,44 @@ all directly in the main-process with this setting.
 
 ```bash
 export EXECUTIONS_PROCESS=main
+```
+
+
+## Execution Timeout
+
+A Workflow times out and gets canceled after this time (in seconds). If the workflow is executed in the main process a soft timeout is executed (takes effect after the current node finishes). If a workflow is running in its own process, a soft timeout is tried first The process is killed after waiting for an additional fifth of the given timeout duration.
+
+By default `EXECUTIONS_TIMEOUT` is set to `-1`. For example, if you want to set the timeout to one hour:
+
+```bash
+export EXECUTIONS_TIMEOUT=3600
+```
+
+You can also set maximum execution time (in seconds) for each workflow individually. For example, if you want to set maximum execution time to two hours:
+
+```bash
+export EXECUTIONS_TIMEOUT_MAX=7200
+```
+
+
+## Prune Data
+
+It is possible to prune the execution data. This prevents from not exceeding the database's capacity and keep its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
+
+```bash
+export EXECUTIONS_DATA_PRUNE=true
+```
+
+You can also set how old (in hours) the execution data has to be to get deleted.
+
+```bash
+export EXECUTIONS_DATA_MAX_AGE=672
+```
+
+You can also set the timeout (in seconds) after execution data has been pruned.
+
+```bash
+export EXECUTIONS_DATA_PRUNE_TIMEOUT=7200
 ```
 
 
@@ -189,6 +281,30 @@ webhook URLs get registred with the external services.
 
 ```bash
 export WEBHOOK_TUNNEL_URL="https://n8n.example.com/"
+```
+
+
+## Types of Database
+
+In n8n, the default database is SQLite. To set a different default database, set `DB_TYPE` to the appropriate value. For example, if you want to set the database to MongoDB:
+
+```bash
+export DB_TYPE=mongodb
+```
+Possible values are:
+- ***sqlite***: This is the default database
+- ***mongodb***: To use MongoDB as the databse
+- ***mariadb***: To use MariaDB as the database
+- ***mysqldb***: To use MySQL as the database
+- ***postgresdb***: To use Postgres database
+
+
+## Overwrites for Credentials
+
+It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials use the following format.
+
+```bash
+export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
 

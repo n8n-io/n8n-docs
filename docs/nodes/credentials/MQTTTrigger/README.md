@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/mqttTrigger
+permalink: /credentials/mqtt
 ---
 
 # MQTT Trigger

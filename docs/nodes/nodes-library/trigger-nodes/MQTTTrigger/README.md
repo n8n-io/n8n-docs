@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive messages for a [MQTT] queue via MQTT Trigger. You can also find the [workflow](https://n8n.io/workflows/657) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive messages from a queue using the MQTT Trigger node. You can also find the [workflow](https://n8n.io/workflows/657) on the website. This example usage workflow would use the following node.
 - [MQTT Trigger]()
 
 The final workflow should look like the following image.

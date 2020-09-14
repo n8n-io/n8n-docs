@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.payPalTrigger
 
 # PayPal Trigger
 
-[PayPal](https://paypal.com) is a digital payment service that supports online funds transfers and that customers can use when shopping online.
+[PayPal](https://paypal.com) is a digital payment service that supports online fund transfers that customers can use when shopping online.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/PayPal/README.md).

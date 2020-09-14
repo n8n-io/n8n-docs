@@ -35,10 +35,10 @@ The Merge node is useful to merge data of multiple streams, once data of both st
 
 ## Example Usage
 
-This workflow allows you to extract titles and URLs of all the articles from the  [Hackernoon](https://hackernoon.com/) homepage using the HTML Extract node. You can also find the [workflow](https://n8n.io/workflows/434) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to merge greetings with the users based on the language using the Merge node. You can also find the [workflow](https://n8n.io/workflows/655) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
-- [HTTP Request](../../core-nodes/HTTPRequest/README.md)
-- [HTML Extract]()
+- [Funtion](../../core-nodes/Function/README.md)
+- [Merge]()
 
 The final workflow should look like the following image.
 
@@ -49,43 +49,67 @@ The final workflow should look like the following image.
 The start node exists by default when you create a new workflow.
 
 
-### 2. HTTP Request node (GET)
+### 2. Function node
 
-1. Enter `https://hackernoon.com` in the ***URL*** field.
-2. Select 'String' from the ***Response Format*** dropdown list.
+1. Paste the following JavaScript code snippet in the ***Function*** field.
+```js
+return [
+  {
+    json: {
+      name: 'Stefan',
+      language: 'de',
+    }
+  },
+  {
+    json: {
+      name: 'Jim',
+      language: 'en',
+    }
+  },
+  {
+    json: {
+      name: 'Hans',
+      language: 'de',
+    }
+  }
+];
+```
 2. Click on ***Execute Node*** to run the node.
 
-![Get the articles from Hackernoon using the HTTP Request node](./HTTPRequest_node.png)
+![Generate users information using the Function node](./Function_node.png)
 
+::: v-pre
+### 3. Function1 node
 
-### 3. HTML Extract node (json: data)
+1. Paste the following JavaScript code snippet in the ***Function*** field.
+```js
+return [
+  {
+    json: {
+      greeting: 'Hallo',
+      language: 'de',
+    }
+  },
+  {
+    json: {
+      greeting: 'Hello',
+      language: 'en',
+    }
+  }
+];
+```
+2. Click on ***Execute Node*** to run the node.
+:::
 
-1. Click on the ***Add Value*** button.
-2. Enter `item` in the ***Key*** field.
-3. Enter `h2` in the ***CSS Selector*** field.
-4. Select 'HTML' from the ***Return Value*** dropdown list.
-5. Toggle ***Return Array*** to true.
-6. Click on ***Execute Node*** to run the node.
+![Generate greetings information using the Function node](./Function1_node.png)
 
-![Extract title of the articles using the HTML Extract node](./HTMLExtract_node.png)
+::: v-pre
+### 4. Merge node (mergeByKey)
 
+1. Select 'Merge By Key' from the ***Mode*** dropdown list.
+2. Enter `language` in the ***Property Input 1*** field.
+3. Enter `language` in the ***Property Input 2*** field.
+4. Click on ***Execute Node*** to run the node.
+:::
 
-### 4. HTML Extract1 node (json: item)
-
-1. Enter `item` in the ***JSON Property*** field.
-2. Click on the ***Add Value*** button.
-3. Enter `title` in the ***Key*** field.
-4. Enter `a` in the ***CSS Selector*** field.
-5. Click on the ***Add Value*** button.
-6. Enter `url` in the ***Key*** field.
-7. Enter `a` in the ***CSS Selector*** field.
-8. Select 'Attribute' from the ***Return Value*** dropdown list.
-9. Enter `href` in the ***Attribute*** field.
-10. Click on ***Execute Node*** to run the node.
-
-![Extract title and link of the articles using the HTML Extract node](./HTMLExtract1_node.png)
-
-
-## Further Reading
-
-- [HTTP Request Node — The Swiss Army Knife](https://medium.com/n8n-io/http-request-node-the-swiss-army-knife-b14e22283383)
+![Merge user information and greetings information using the Merge node](./Merge_node.png)

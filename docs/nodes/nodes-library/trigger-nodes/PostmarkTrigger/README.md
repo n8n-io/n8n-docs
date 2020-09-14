@@ -4,10 +4,10 @@ permalink: /nodes/n8n-nodes-base.postmarkTrigger
 
 # Postmark Trigger
 
-[Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and spam complaints.
+[Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/Poatmark/README.md).
+You can find authentication information for this node [here](../../../credentials/Postmark/README.md).
 :::
 
 ## Example Usage

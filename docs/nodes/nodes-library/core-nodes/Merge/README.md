@@ -4,12 +4,12 @@ permalink: /nodes/n8n-nodes-base.merge
 
 # Merge
 
-The Merge node is useful to merge data of multiple streams, once data of both streams are available.
+The Merge node is useful to merge data of multiple streams, once data of both streams is available.
 
 ## Node Reference
 
 - **Mode:** You can specify how data of branches should be merged. The following are the options.
-    - ***Append:*** Combines data of both inputs. The output will contain items of input 1 and input 2.
+  - ***Append:*** Combines data of both inputs. The output will contain items of input 1 and input 2.
 	- ***Keep Key Matches:*** Keeps data of input 1 if it finds a match with data of input 2.
 	- ***Merge By Index:*** Merges data of both the inputs. The output will contain the data of input 1 merged with the data of input 2. The merge occurs based on the index of the items. For example, the first item of input 1 will be merged with the first item of input 2.
     - ***Merge By Key:*** Merges data of both the inputs. The output will contain the data of input 1 merged with the data of input 2. The merge occurs depending on a defined key.
@@ -35,7 +35,7 @@ The Merge node is useful to merge data of multiple streams, once data of both st
 
 ## Example Usage
 
-This workflow allows you to merge greetings with the users based on the language using the Merge node. You can also find the [workflow](https://n8n.io/workflows/655) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to merge greetings for the users based on their associated language using the Merge node. You can also find the [workflow](https://n8n.io/workflows/655) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Funtion](../../core-nodes/Function/README.md)
 - [Merge]()

@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
     - Get all coupons
     - Update a coupon
 - Payment
-    - Get all payment
+    - Get all payments
     - Reschedule payment
 - Plan
     - Get a plan

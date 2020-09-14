@@ -20,7 +20,7 @@ This workflow would use the following nodes.
 - [OpenWeatherMap](../nodes/nodes-library/nodes/OpenWeatherMap/README.md) - Get weather details for a particular city
 - [IF](../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
 - [Twilio](../nodes/nodes-library/nodes/Twilio/README.md) - Send an SMS
-- [NoOp](../nodes/nodes-library/core-nodes/NoOp/README.md) - Do nothing (optional)
+- [NoOp](../nodes/nodes-library/core-nodes/NoOperationDoNothing/README.md) - Do nothing (optional)
 
 The final workflow should look like the following image.
 

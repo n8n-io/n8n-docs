@@ -4,16 +4,16 @@ permalink: /nodes/n8n-nodes-base.errorTrigger
 
 # Error Trigger
 
-The Error Trigger node triggers the workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the error workflow gets triggered.
+The Error Trigger node triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors. This triggers the error workflow.
 
 ::: tip 💡 Keep in mind
 1. If a workflow is using the Error Trigger node, you don't have to activate the workflow.
-2. If you want to receive error updates for a workflow, make sure that you select the 'Error Workflow' in the ***Workflow Settings***.
+2. If you want to receive error messages for a workflow, make sure that you select the 'Error Workflow' in the ***Workflow Settings***.
 :::
 
 ## Example Usage
 
-This workflow allows you to send an SMS when a workflow fails, using the Error Trigger node. You can also find the [workflow](https://n8n.io/workflows/665) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to send an SMS when a workflow fails. You can also find the [workflow](https://n8n.io/workflows/665) on n8n.io. This example usage workflow would use the following nodes.
 - [Error Trigger]()
 - [Twilio](../../../nodes-library/nodes/Twilio/README.md)
 
@@ -33,7 +33,7 @@ This node will execute when an error occurs.
 4. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 ::: v-pre
 5. Enter `Your workflow with ID: {{$node["Error Trigger"].json["workflow"]["id"]}} and name: {{$node["Error Trigger"].json["workflow"]["name"]}} failed to execute.` in the ***Expression*** field.
-6. Click on ***Execute Node*** to run the node.
+6. The node will execute when the Error Trigger node is triggered.
 :::
 
 
@@ -41,7 +41,7 @@ This node will execute when an error occurs.
 
 ### Can we send a custom error message?
 
-The Error Trigger node sends the actual error message thrown by the workflow. You can use this information, just like we did in the [Example Usage](#example-usage) above, or you can ignore it. However, you can not send your custom error message to the Error Trigger node.
+The Error Trigger node sends the actual error message thrown by the workflow. You can use this information as shown in the [Example Usage](#example-usage) section as well as send a custom error message like in the Twilio node. However, you cannot send a custom error message to the Error Trigger node.
 
 ### How do we call the Error Workflow manually?
 

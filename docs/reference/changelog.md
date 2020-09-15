@@ -12,8 +12,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Freshdesk
     - HTTP Request
 - Bug Fixes
-    - Postmark Trigger
-    - Philips Hue
+    - Philips Hue : Add appid to Philips Hue credentials
+    - Postmark Trigger: Fix parameters
 
 
 ## n8n@0.81.0 

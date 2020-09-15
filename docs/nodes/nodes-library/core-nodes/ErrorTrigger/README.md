@@ -39,9 +39,9 @@ This node will execute when an error occurs.
 
 ## FAQs
 
-### How to add an error workflow to a workflow?
+### How to set an error workflow for an n8n workflow?
 
-Let's say, that there's an Error Trigger node in **Workflow A** and we want to check errors for **Workflow B**.
+Let's say, that there's an Error Trigger node in **Workflow A** and we want to check for errors in **Workflow B**. To set **Workflow A** as the error workflow follow the steps mentioned below.
 - Open the ***Workflow Settings*** for **Workflow B**.
 - Select **Workflow A** from the ***Error Workflow*** dropdown list.
 - Click on ***Save***.

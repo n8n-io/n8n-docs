@@ -33,7 +33,7 @@ The final workflow should look like the following image.
 The start node exists by default when you create a new workflow.
 
 
-### 2. Mocean node (create: incident)
+### 2. Mocean node
 
 1. First of all, you'll have to enter credentials for the Mocean node. You can find out how to do that [here](../../../credentials/Mocean/README.md).
 2. Enter the sender ID in the ***From*** field.

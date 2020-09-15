@@ -14,8 +14,8 @@ You can find authentication information for this node [here](../../../credential
 
 - Light
     - Delete a light
-    - Get a light
-    - Get all lights
+    - Retrieve a light
+    - Retrieve all lights
     - Update a light
 
 
@@ -33,11 +33,10 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-
 ### 2. Philips Hue node (update: light)
 
 1. First of all, you'll have to enter credentials for the Philips Hue node. You can find out how to do that [here](../../../credentials/PhilipsHue/README.md).
 2. Enter the light id in the ***Light ID*** field.
 3. Click on ***Add Field*** and select 'Brightness' from the dropdown list.
-4. Set the brightness value in the ***Brightness*** field.
+4. Enter a value between 1 and 254 for the brightness in the ***Brightness*** field.
 5. Click on ***Execute Node*** to run the node.

@@ -25,14 +25,14 @@ You can find authentication information for this node [here](../../../credential
     - Delete an attachment
     - Get an attachment
     - Get all attachments
-    - Get an overview of attachments
+    - Get an overview of attachments metadata
     - Update an attachment
 - Case
     - Add a comment to a case
     - Create a case
     - Get a case
     - Get all cases
-    - Get an overview of cases
+    - Get an overview of cases metadata
     - Delete a case
     - Update a case
 - Contact
@@ -41,7 +41,7 @@ You can find authentication information for this node [here](../../../credential
     - Create a contact
     - Delete a contact
     - Get a contact
-    - Get overview of contacts
+    - Get overview of contacts metadata
     - Get all contacts
     - Update a contact
 - Lead
@@ -51,7 +51,7 @@ You can find authentication information for this node [here](../../../credential
     - Delete a lead
     - Get a lead
     - Get all leads
-    - Get summary of leads
+    - Get summary of leads metadata
     - Update a lead
 - Opportunity
     - Add note to an opportunity
@@ -59,14 +59,14 @@ You can find authentication information for this node [here](../../../credential
     - Delete an opportunity
     - Get an opportunity
     - Get all opportunities
-    - Get an overview of opportunities
+    - Get an overview of opportunities metadata
     - Update an opportunity
 - Task
     - Create a task
     - Delete a task
     - Get a task
     - Get all tasks
-    - Get an overview of tasks
+    - Get an overview of tasks metadata
     - Update a task
 - User
     - Get a user
@@ -75,7 +75,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a new lead in Salesforce. You can also find the [workflow](https://n8n.io/workflows/664) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to create a new lead in Salesforce. You can also find the [workflow](https://n8n.io/workflows/664) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Salesforce]()
 

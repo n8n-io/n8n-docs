@@ -70,7 +70,7 @@ return [
 ![Using the Function node to send data to the IF node](./Function_node.png)
 
 
-### 2. IF node
+### 3. IF node
 
 :::v-pre
 1. Click on the ***Add Condition*** button and select 'Number' from the dropdown list.
@@ -83,7 +83,7 @@ return [
 ![Using the IF node to conditionally execute based on the input](./IF_node.png)
 
 
-### 3. Set node (for 'true' condition)
+### 4. Set node (for 'true' condition)
 
 1. Create a *Set* node connected to the 'true' output of the IF node.
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.
@@ -96,7 +96,7 @@ return [
 ![Using the Set node to set a value when the condition is true](./Set_node.png)
 
 
-### 4. Set1 node (for 'false' condition)
+### 5. Set1 node (for 'false' condition)
 
 1. Create a *Set* node connected to the 'false' output of the IF node.
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.

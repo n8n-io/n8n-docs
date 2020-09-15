@@ -39,6 +39,13 @@ This node will execute when an error occurs.
 
 ## FAQs
 
+### How to add an error workflow to a workflow?
+
+Let's say, that there's an Error Trigger node in **Workflow A** and we want to check errors for **Workflow B**.
+- Open the ***Workflow Settings*** for **Workflow B**.
+- Select **Workflow A** from the ***Error Workflow*** dropdown list.
+- Click on ***Save***.
+
 ### Can we send a custom error message?
 
 The Error Trigger node sends the actual error message thrown by the workflow. You can use this information as shown in the [Example Usage](#example-usage) section as well as send a custom error message like in the Twilio node. However, you cannot send a custom error message to the Error Trigger node.

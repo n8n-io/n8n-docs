@@ -94,17 +94,33 @@ The start node exists by default when you create a new workflow.
 3. Enter the last name of the contact person in the ***Last Name*** field.
 4. Click on ***Execute Node*** to run the workflow.
 
-![A workflow with the Salesforce node](./Salesforce_node.png)
+![Create a lead with the Salesforce node](./Salesforce_node.png)
 
+::: v-pre
 ### 3. Salesforce1 node (update: lead)
 
 1. Select the credentials that you entered in the previous node.
-2. Select 'Update' from the Operation dropdown list.
-3. Click on the gears icon next to the 'Lead ID' field and click on Add Expression.
+2. Select 'Update' from the ***Operation*** dropdown list.
+3. Click on the gears icon next to the ***Lead ID*** field and click on ***Add Expression***.
 4. Select the following in the Variable Selector section: Nodes > Salesforce > Output Data > JSON > id.  
 You can also add the following expression: `{{$node["Salesforce"].json["id"]}}`
-5. Click on the ***Add Field*** button and click on ***Status***.
-6. Choose a status from the ***Status*** dropdown list.
+5. Click on the ***Add Field*** button and click on ***City***.
+6. Enter a city in the ***City*** field.
 7. Click on ***Execute Node*** to run the node.
 
-![A workflow with the Salesforce node](./Salesforce1_node.png)
+![Update a lead with the Salesforce node](./Salesforce1_node.png)
+:::
+
+::: v-pre
+### 3. Salesforce2 node (addNote: lead)
+
+1. Select the credentials that you entered in the previous node.
+2. Select ***Add Note*** from the ***Operation*** dropdown list.
+3. Click on the gears icon next to the ***Lead ID*** field and click on ***Add Expression***.
+4. Select the following in the Variable Selector section: Nodes > Salesforce > Output Data > JSON > id.  
+You can also add the following expression: `{{$node["Salesforce"].json["id"]}}`
+5. Enter your message in the ***Title*** field.
+6. Click on ***Execute Node*** to run the node.
+
+![Add a note to a lead with the Salesforce node](./Salesforce2_node.png)
+:::

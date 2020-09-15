@@ -4,14 +4,10 @@ permalink: /nodes/n8n-nodes-base.ftp
 
 # FTP
 
-The FTP node is used to access files on an FTP server.
+The FTP node is useful to access and upload files to an FTP server.
 
 ::: tip 🔑 Credential
 You can find authentication information for this node [here](../../../credentials/FTP/README.md).
-:::
-
-::: tip 💡 Keep in mind
-To attach a file for upload, you will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass a file as a data property.
 :::
 
 ## Basic Operations
@@ -20,15 +16,17 @@ To attach a file for upload, you will need to use an additional node such as the
 - List contents of a folder
 - Upload a file
 
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the file as a data property.
+
 ## Node Reference
 
 - ***Protocol:*** A dropdown list to choose between the FTP or SFTP protocol.
 - ***Path:*** A field used to specify the remote path that you would like to connect to.
-- ***Recursive:*** A toggle that can be used to include all subdirectories and files .
+- ***Recursive:*** A toggle that can be used to include all subdirectories and files.
 
 ## Example Usage
 
-This workflow allows you to download a file from an FTP server using the FTP node. You can also find the [workflow](https://n8n.io/workflows/663) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to download a file from an FTP server using the FTP node. You can also find the [workflow](https://n8n.io/workflows/663) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [FTP]()
 

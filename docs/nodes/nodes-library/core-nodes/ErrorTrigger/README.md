@@ -8,7 +8,7 @@ The Error Trigger node triggers a workflow when another workflow has an error. O
 
 ::: tip 💡 Keep in mind
 1. If a workflow is using the Error Trigger node, you don't have to activate the workflow.
-2. If you want to receive error messages for a workflow, make sure that you select the 'Error Workflow' in the ***Workflow Settings***.
+2. If you want to receive error messages for a workflow, make sure that you select the 'Error Workflow' in the ***Workflow Settings*** for the workflow.
 :::
 
 ## Example Usage
@@ -41,10 +41,9 @@ This node will execute when an error occurs.
 
 ### How to set an error workflow for an n8n workflow?
 
-Let's say, that we have a workflow, **Workflow A**. We want to get a notification when this workflow fails. We create a new workflow, **Workflow B**, that has the Error Trigger node. **Workflow B** will execute when an error occurs. 
-To set **Workflow B** as the error workflow, follow the steps mentioned below.
+Let's say we want to get a notification every time **Workflow A** fails. Create a new workflow, **Workflow B**. Add an Error Trigger node and set **Workflow B** as the error workflow for **Workflow A** by following these steps.
 - Open **Workflow A**.
-- Click on ***Workflows*** and select 'Settings' from the dropdown list.
+- Click on ***Workflows*** in the left menu and select 'Settings' from the dropdown list.
 - Select **Workflow B** from the ***Error Workflow*** dropdown list.
 - Click on the ***Save*** button.
 

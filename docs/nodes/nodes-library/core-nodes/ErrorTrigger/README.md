@@ -39,6 +39,15 @@ This node will execute when an error occurs.
 
 ## FAQs
 
+### How to set an error workflow for an n8n workflow?
+
+Let's say, that we have a workflow, **Workflow A**. We want to get a notification when this workflow fails. We create a new workflow, **Workflow B**, that has the Error Trigger node. **Workflow B** will execute when an error occurs. 
+To set **Workflow B** as the error workflow, follow the steps mentioned below.
+- Open **Workflow A**.
+- Click on ***Workflows*** and select 'Settings' from the dropdown list.
+- Select **Workflow B** from the ***Error Workflow*** dropdown list.
+- Click on the ***Save*** button.
+
 ### Can we send a custom error message?
 
 The Error Trigger node sends the actual error message thrown by the workflow. You can use this information as shown in the [Example Usage](#example-usage) section as well as send a custom error message like in the Twilio node. However, you cannot send a custom error message to the Error Trigger node.

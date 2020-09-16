@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.asanaTrigger
+permalink: /nodes/n8n-nodes-base.helpScoutTrigger
 ---
 
 # HelpScout Trigger
@@ -12,7 +12,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when an event occurs in HelpScout. You can also find the [workflow](https://n8n.io/workflows/654) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a customer is created in HelpScout. You can also find the [workflow](https://n8n.io/workflows/669) on n8n.io. This example usage workflow would use the following node.
 - [HelpScout Trigger]()
 
 The final workflow should look like the following image.
@@ -21,7 +21,6 @@ The final workflow should look like the following image.
 
 ### 1. HelpScout Trigger node
 
-1. First of all, you'll have to enter credentials for the HelpScout Trigger node. You can find out how to do that [here](../../../credentials/Asana/README.md).
-2. Enter the name of the resource in the ***Resource*** field.
-3. Enter the name of the workspace in the ***Workspace*** field.
-4. Click on ***Execute Node*** to run the node.
+1. First of all, you'll have to enter credentials for the HelpScout Trigger node. You can find out how to do that [here](../../../credentials/helpScout/README.md).
+2. Select 'Customer - Created' from the ***Events*** dropdown list.
+3. Click on ***Execute Node*** to run the node.

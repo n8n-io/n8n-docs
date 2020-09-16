@@ -9,11 +9,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - New nodes
     - Microsoft Teams
 - Enhanced nodes
-    - Freshdesk
-    - HTTP Request
+    - Freshdesk: Add Freshdesk contacts resource
+    - HTTP Request: Run parallel requests in HTTP Request Node
+    - Google Sheets: 
 - Bug Fixes
-    - Philips Hue : Add appid to Philips Hue credentials
-    - Postmark Trigger: Fix parameters
+    - Philips Hue : Added `APP ID` to Philips Hue credentials
+    - Postmark Trigger: Fixed parameters for the node.
+- The default space between nodes are now increased.
+- Expression support is added to credentials.
+- Passwords for your n8n instance can now be hashed.
+
+I am working on documenting the changelog and I had a few questions regarding some commits.
+1. Can you please tell what is happening in the [Add hooks Oauth-Authentication](https://github.com/n8n-io/n8n/commit/013a7b8cf9fc5ed2ceb10ef5caca405161d0a946) commit. I have an idea that we have updated the way way it was being handled, but I am curious how does this affect the users.
+2. I am also wondering what is happening in the [Apply also credential overwrites of parent and fix bug](https://github.com/n8n-io/n8n/commit/99f7eb2eca56cb4df99f690df421bb067f5f141b) commit. Is this allowing the users to overwrite their already saved credentials?
+3. One last commit that I wanted to know more about is [Fix bug that nodes without input data did run if "alwaysOutputData"](https://github.com/n8n-io/n8n/commit/542e772e0c1810173184627d02e36d97f65d899b). 
 
 
 ## n8n@0.81.0 

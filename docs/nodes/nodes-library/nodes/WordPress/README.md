@@ -25,7 +25,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a post and update the post in WordPress. You can also find the [workflow](https://n8n.io/workflows/668) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to create and update a post in WordPress. You can also find the [workflow](https://n8n.io/workflows/668) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [WordPress]()
 

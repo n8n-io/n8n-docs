@@ -8,7 +8,7 @@ You can find information about the operations supported by the Affinity node on 
 
 ## Prerequisites
 
-Create an [Affinity](https://www.affinity.com/) account.
+Create an [Affinity](https://www.affinity.co/) account.
 
 ## Using Access Token
 

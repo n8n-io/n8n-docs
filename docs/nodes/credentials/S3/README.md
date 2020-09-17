@@ -12,14 +12,6 @@ Create an account on S3 compatible server.
 
 ## Using Access Token
 
-1. Access your [Twake](https://web.twake.app) workspace.
-2. Click on ***Main*** in the top left corner.
-3. Select 'Workspace settings' from the dropdown list.
-4. Select ***Applications and connectors***.
-5. Click on the ***Search applications...*** button.
-6. Search for `n8n` and click on the ***Display*** button.
-7. Click on ***Install*** and select ***Confirm***.
-8. Click on ***Configure*** and copy the Workspace Key.
-9. Use the Workspace Key with your Twake node credentials in n8n.
-
-![Getting Twake workspace key](./using-workspace-key.gif)
+1. Retrieve your S3 endpoint, access key ID, and secret access key from your S3 compatible server.
+2. Use the S3 endpoint, access key ID, and the secret access key in your S3 node credentials in n8n.
+3. Click on the ***Save*** button to save your credentials.

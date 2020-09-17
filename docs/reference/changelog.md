@@ -12,10 +12,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Freshdesk: Added Freshdesk contact resource
     - HTTP Request: Run parallel requests in HTTP Request Node
 - Bug Fixes
-    - Philips Hue : Added `APP ID` to Philips Hue node credentials
+    - Philips Hue: Added `APP ID` to Philips Hue node credentials
     - Postmark Trigger: Fixed parameters for the node
-- The default space between nodes are now increased
-- Expression support is added to credentials
+- The default space between nodes has been increased to two units
+- Expression support has been added to the credentials
 - Passwords for your n8n instance can now be hashed
 
 ## n8n@0.81.0 

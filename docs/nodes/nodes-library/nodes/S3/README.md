@@ -30,7 +30,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to upload a file to a S3 compatible server. You can also find the [workflow](https://n8n.io/workflows/592) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to upload a file to an S3 compatible server. You can also find the [workflow](https://n8n.io/workflows/673) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Read Binary File](../../core-nodes/ReadBinaryFile/README.md)
 - [S3]()

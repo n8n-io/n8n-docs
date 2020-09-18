@@ -23,6 +23,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
     - Asana Trigger: Webhook validation has been deactivated
     - Paddle: Fixed `returnData` format and coupon description
+- The ActiveCampaign node has [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0830)
 - Fixed issues with test-webhook registration
 
 ## n8n@0.82.1

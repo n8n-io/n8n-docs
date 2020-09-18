@@ -17,23 +17,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - ClickUp: Added OAuth2 support
     - Google Drive: Added share operation
     - IMAP Email: Added support for custom rules when checking emails
-    - S3: Added documentation URL
-    - Sentry.io: Added self hosted support
-    - Twitter: Added retweet, reply and like operations
-    - WordPress: Added author field to post resource
+    - Sentry.io: Added support for self-hosted version
+    - Twitter: Added retweet, reply, and like operations
+    - WordPress: Added author field to the post resource
 - Bug Fixes
-    - Asana Trigger: Webhook validation deactivated
-    - Fixed test-webhook registration issues
-    - Paddle: Fixed returnData format and coupon description
-- n8n is now licensed under Apache 2.0 with commons clause
+    - Asana Trigger: Webhook validation has been deactivated
+    - Paddle: Fixed `returnData` format and coupon description
+- Fixed issues with test-webhook registration
 
 ## n8n@0.82.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.0...n8n@0.82.1) for this version.<br />
 **Release date:** 2020-09-14
 
-- Enhanced nodes
-    - MQTT Trigger: Added documentation URL
-- Basic Authentication with hashed password speed has been improved
+- Speed for basic authentication with hashed password has been improved
 
 ## n8n@0.82.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.81.0...n8n@0.82.0) for this version.<br />

@@ -20,7 +20,7 @@ You can find authentication information for this node [here](../../../credential
 This workflow allows you to download an image and post it on LinkedIn. You can also find the [workflow](https://n8n.io/workflows/681) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
-- [LinkedIn]
+- [LinkedIn]()
 
 The final workflow should look like the following image.
 

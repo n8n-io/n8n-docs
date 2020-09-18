@@ -17,7 +17,7 @@ Create an [Asana](https://www.Asana.com/) account.
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right.
-3. Click on ***My Profile Settings...***.
+3. Click on **_My Profile Settings..._**
 4. Click on the ***Apps*** tab.
 5. Click on ***Manage Developer Apps***.
 6. Click on ***New App***.

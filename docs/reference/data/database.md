@@ -16,7 +16,7 @@ The following environment variables get used by all databases:
 ::: danger
 Use PostgresDB, if possible! MongoDB has problems saving large
 amounts of data in a document, among other issues. So, support
-may be dropped in the future.
+will be dropped in the future.
 :::
 
 To use MongoDB as the database, you can provide the following environment variables like

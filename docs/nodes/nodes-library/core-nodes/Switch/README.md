@@ -4,13 +4,13 @@ permalink: /nodes/n8n-nodes-base.switch
 
 # Switch
 
-The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](../../core-nodes/If/README.md) node, but supports up to four conditions.
+The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](../../core-nodes/If/README.md) node, but supports up to four conditional routes.
 
 ## Node Reference
 
-- ***Mode***: A dropdown used to select whether the conditions will be defined as rules in the node, or as an expression, programmatically.
+***Mode***: This dropdown is used to select whether the conditions will be defined as rules in the node, or as an expression, programmatically.
 
-You can add comparison conditions using the ***Add Routing Rule*** dropdown. Conditions can be created based on the data type, the available comparison operations vary for each data type.
+You can add comparison conditions using the ***Add Routing Rule*** dropdown. Conditions can be created based on the data type. The available comparison operations vary for each data type.
 
 - Boolean
 	- Equal
@@ -34,7 +34,7 @@ You can route a workflow when none of the specified conditions are met using ***
 
 ## Example Usage
 
-This workflow executes four different nodes based on the output given by a ***Switch*** node. You can also find the [workflow](https://n8n.io/workflows/688) on n8n.io. This example usage workflow would use the following nodes.
+This workflow executes four different Set nodes based on the output given by a Switch node. You can also find the [workflow](https://n8n.io/workflows/688) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Function](../../core-nodes/Function/README.md)
 - [Switch]()
@@ -93,7 +93,7 @@ return [
 10. From the ***Operation*** dropdown list, select 'Equal'.
 11. Enter '2' in the ***Value 2*** and the ***Output*** fields.
 12. Select '3' from the ***Fallback Output*** dropdown list.
-13. Click on ***Execute Node*** to run the workflow.
+13. Click on ***Execute Node*** to run the node.
 :::
 
 ![Using the Switch node to conditionally execute based on the input](./Switch_node.png)
@@ -105,7 +105,7 @@ return [
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 3. Enter `name` in the ***Name*** field.
 4. Enter `n8n` in the ***Value*** field.
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Execute Node*** to run the node.
 
 **Note:** Notice that only the id with the value 0 made its way to this ***Set*** node.
 
@@ -118,7 +118,7 @@ return [
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 3. Enter `name` in the ***Name*** field.
 4. Enter `nodemation` in the ***Value*** field.
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Execute Node*** to run the node.
 
 **Note:** Notice that only the id with the value 1 made its way to this ***Set*** node.
 
@@ -130,7 +130,7 @@ return [
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 3. Enter `name` in the ***Name*** field.
 4. Enter `nathan` in the ***Value*** field.
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Execute Node*** to run the node.
 
 **Note:** Notice that only the id with the value 2 made its way to this ***Set*** node.
 
@@ -139,8 +139,8 @@ return [
 ### 7. NoOp node (for '3' route)
 
 1. Create a ***NoOp*** node connected to the '3' output of the Switch node.
-2. Click on ***Execute Node*** to run the workflow.
+2. Click on ***Execute Node*** to run the node.
 
-**Note:** Notice that only the id's without the values 0 or 1 or 2  made its way to this node.
+**Note:** Notice that none of the ids made their way to this node since the values of the all the ids were either 0, 1, or 2.
 
 ![Using the NoOp node for route 3](./NoOp_node.png)

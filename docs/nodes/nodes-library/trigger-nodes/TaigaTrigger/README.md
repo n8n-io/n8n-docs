@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.taigaTrigger
 
 # Taiga Trigger
 
-[Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups and agile developers & designers.
+[Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Taiga/README.md).
@@ -22,5 +22,5 @@ The final workflow should look like the following image.
 ### 1. Taiga Trigger node
 
 1. First of all, you'll have to enter credentials for the Taiga Trigger node. You can find out how to do that [here](../../../credentials/Taiga/README.md).
-2. Select the project id from the ***Project ID*** dropdown list.
+2. Select the project ID from the ***Project ID*** dropdown list.
 2. Click on ***Execute Node*** to run the node.

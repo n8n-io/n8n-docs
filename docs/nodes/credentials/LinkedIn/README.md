@@ -18,12 +18,12 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 4. Add a logo by clicking on the ***Upload a logo*** button.
 5. Agree to the terms and conditions in the ***Legal agreement*** section and click the ***Create app*** button at the bottom of the page.
 6. Verify your application. You can find instructions on how to verify your LinkedIn application in the FAQs below.
-10. Enable APIs for your application. You can find instructions on how to enable APIs for your LinkedIn application in the FAQs below.
-10. Back in the LinkedIn application creation page, click on the ***Auth*** tab.
-11. Copy the 'OAuth Callback URL' provided in the LinkedIn OAuth2 API credentials in n8n and add it in the 'Authorized redirect URLs for your app' section in the LinkedIn application creation page.
-12. Use the displayed 'Client ID' and the 'Client Secret' with your LinkedIn OAuth API credentials in n8n.
-10. Click on the circle button in the OAuth section to connect a LinkedIn account to n8n.
-11. Click the *Save* button to save your credentials in n8n.
+7. Enable APIs for your application. You can find instructions on how and which APIs to enable for your LinkedIn application in the FAQs below.
+8. Back in the LinkedIn application creation page, click on the ***Auth*** tab.
+9. Copy the 'OAuth Callback URL' provided in the LinkedIn OAuth2 API credentials in n8n and add it in the 'Authorized redirect URLs for your app' section in the LinkedIn application creation page.
+10. Use the displayed ***Client ID*** and the ***Client Secret*** with your LinkedIn OAuth API credentials in n8n.
+11. Click on the circle button in the OAuth section to connect a LinkedIn account to n8n.
+12. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting LinkedIn credentials](./using-oauth.gif)
 

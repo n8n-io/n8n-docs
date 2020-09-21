@@ -39,7 +39,7 @@ The start node exists by default when you create a new workflow.
 ### 2. Microsoft Teams node (create: channel)
 
 1. First of all, you'll have to enter credentials for the Microsoft Teams node. You can find out how to do that [here](../../../credentials/Microsoft/README.md).
-2. Select the team you want to use from the ***Team ID*** dropdown list.
+2. Select the team that you want to use from the ***Team ID*** dropdown list.
 3. Enter a name for the channel in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.
 
@@ -55,7 +55,7 @@ The start node exists by default when you create a new workflow.
 5. Click on the gears icon next to the ***Channel ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Microsoft Teams > Output > JSON > id. You can also add the following expression: `{{$node["Microsoft Teams"].json["id"]}}`
 7. Click on the ***Add Field*** button and select 'Name' from the dropdown list.
-8. Enter a channel name in the ***Name*** field.
+8. Enter a new channel name in the ***Name*** field.
 9. Click on ***Execute Node*** to run the node.
 
 ![Update a Channel with the Microsoft Teams node](./MicrosoftTeams1_node.png)

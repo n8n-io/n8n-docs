@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to download an image and post it on LinkedIn. You can also find the [workflow](https://n8n.io/workflows/681) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to get an image from a URL and post it on LinkedIn. You can also find the [workflow](https://n8n.io/workflows/681) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [LinkedIn]()

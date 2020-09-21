@@ -10,6 +10,7 @@ Microsoft credentials work with several different nodes. You can find a list of 
 |--------------------	|----------------------	|-------------	|
 | [Microsoft Excel](../../nodes-library/nodes/MicrosoftExcel/README.md)    	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftExcel)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Excel)      	|
 | [Microsoft OneDrive](../../nodes-library/nodes/MicrosoftOneDrive/README.md) 	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftOneDrive)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/OneDrive)      	|
+| [Microsoft Teams](../../nodes-library/nodes/MicrosoftTeams/README.md) 	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftTeams)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Teams)      	|
 
 ## Prerequisites
 

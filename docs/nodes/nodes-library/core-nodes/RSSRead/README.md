@@ -8,9 +8,9 @@ The RSS Read node is used to read data from RSS feeds published on the internet.
 
 ## Node Reference
 
-The RSS Read node has one property:
+The RSS Read node has only one property:
 
-1. *URL* field: This field is used to specify the web address of the RSS publication.
+- *URL* field: This field is used to specify the web address of the RSS publication.
 
 ## Example Usage
 

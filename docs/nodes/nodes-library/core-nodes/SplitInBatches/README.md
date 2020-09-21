@@ -9,16 +9,16 @@ The Split In Batches node saves the original incoming data, and with each iterat
 ## Node Reference
 
 - **Batch Size:** The number of items to return with each call.
-- ***Options:***
-    - ***Reset:*** If set to true the node will reset.
+- ***Options***
+    - ***Reset:*** If set to true, the node will reset.
 
 ## Example Usage
 
-This workflow allows you to read RSS feed from two different sources using the Split In Batches node. You can also find the [workflow](https://n8n.io/workflows/687) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Function](../../core-nodes/Function/README.md)
 - [Split In Batches]()
-- [RSS Feed Read](../../core-nodes/RSSRead/README.md)
+- [RSS Read](../../core-nodes/RSSRead/README.md)
 
 The final workflow should look like the following image.
 
@@ -65,14 +65,8 @@ return [
 ### 4. RSS Read node
 
 1. Click on the gears icon next to the ***URL*** field and click on ***Add Expression***.
-2. Select the following in the ***Variable Selector*** section: Nodes > SplitInBatches > Output Data > JSON > url. You can also add the following expression: `{{$node["SplitInBatches"].json["url"]}}`
+2. Select the following in the ***Variable Selector*** section: Nodes > SplitInBatches > Output Data > JSON > url. You can also add the following expression: `{{$node["SplitInBatches"].json["url"]}}`.
 3. Click on ***Execute Node*** to run the workflow.
 :::
 
 ![Using the RSS Read node to read data from RSS feed](./RSSFeedRead_node.png)
-
-## FAQ
-
-### Can the Split In Batches node receive data multiple times during the execution of the workflow?
-
-The Split In Batches node uses the data that it receives the first time. It then splits this data into the batches and returns it until nothing is left.

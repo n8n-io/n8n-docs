@@ -22,5 +22,5 @@ The final workflow should look like the following image.
 ### 1. Taiga Trigger node
 
 1. First of all, you'll have to enter credentials for the Taiga Trigger node. You can find out how to do that [here](../../../credentials/Taiga/README.md).
-2. Select the project from the ***Project ID*** dropdown list.
+2. Select the project id from the ***Project ID*** dropdown list.
 2. Click on ***Execute Node*** to run the node.

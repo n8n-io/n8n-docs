@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.taiga
 
 # Taiga
 
-[Taiga](https://www.taiga.io/) is a project management platform for startups and agile developers & designers who want a simple, beautiful tool that makes work truly enjoyable.
+[Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups and agile developers & designers.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Taiga/README.md).

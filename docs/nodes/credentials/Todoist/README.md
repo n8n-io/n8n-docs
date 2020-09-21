@@ -8,7 +8,19 @@ You can find information about the operations supported by the Todoist node on t
 
 ## Prerequisites
 
-Create a [Todoist](https://toggl.com/) account.
+Create a [Todoist](https://todoist.com/) account.
+
+## Using OAuth
+
+1. Access your Todoist [App Management Console](https://developer.todoist.com/appconsole.html)
+2. Enter a name in the ***App display name*** field and click on the ***Create app** button.
+3. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***OAuth redirect URL*** field.
+4. Click on the ***Save settings*** button.
+5. Use the provided ***Client ID*** and ***Client secret*** with your Todoist OAuth2 API credentials in n8n.
+6. Click on the circle button in the OAuth section to connect a Todoist account to n8n.
+7. Click the ***Save*** button to save your credentials in n8n.
+
+![Getting Todoist OAuth credentials](./using-oauth.gif)
 
 ## Using Access Token
 

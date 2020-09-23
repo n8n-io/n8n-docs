@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.emailReadImap
 The IMAP Email node is used to receive emails via an IMAP email server. This node is a trigger node.
 
 ::: tip 🔑 Credential
-You can find authentication information for this node [here](../../../credentials/IMAPEmail/README.md).
+You can find authentication information for this node [here](../../../credentials/IMAP/README.md).
 :::
 
 ## Basic Operations

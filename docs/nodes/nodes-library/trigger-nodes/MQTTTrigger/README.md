@@ -7,7 +7,7 @@ permalink: /nodes/n8n-nodes-base.mqttTrigger
 [MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/MQTTTrigger/README.md).
+You can find authentication information for this node [here](../../../credentials/MQTT/README.md).
 :::
 
 

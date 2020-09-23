@@ -2,7 +2,7 @@
 permalink: /credentials/imap
 ---
 
-# IMAP Email
+# IMAP
 
 You can use these credentials to authenticate the following nodes with IMAP.
 - [IMAP Email](../../nodes-library/core-nodes/IMAPEmail/README.md)

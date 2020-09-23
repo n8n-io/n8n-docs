@@ -4,7 +4,13 @@ permalink: /credentials/google
 
 # Google
 
-You can find information about the operations supported by the Google node on the [integrations](https://n8n.io/integrations) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google).
+You can use these credentials to authenticate the following nodes with Google.
+- [Gmail](../../nodes-library/nodes/Gmail/README.md)
+- [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md)
+- [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)
+- [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md)
+- [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md)
+- [YouTube](../../nodes-library/nodes/YouTube/README.md)
 
 
 ## Prerequisites

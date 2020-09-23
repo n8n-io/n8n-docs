@@ -108,6 +108,8 @@ I raised the value of ***Value 2*** in the *IF* node from 18 to 27 to see what t
 
 Congratulations on creating your first workflow with n8n 🥳 
 
-As a next step, you can get updates on whether you should carry an umbrella or maybe sunglasses. n8n enables you to connect anything to everything and create powerful workflows in the process. Did you extend the workflow in this example with additional functionalities or nodes? Don't forget to submit them on the [website](https://n8n.io/workflows) to share them with the community.
-
 Did you run into any troubles while working on your first workflow? Don't be shy to ask questions or share the challenges you are facing in the community [forum](https://community.n8n.io/), we are all learners here 🙌
+
+::: tip 🤝 Next Steps
+Check out our tutorial on [Tracking Time Spent in Meetings With Google Calendar, Twilio, and n8n 🗓](https://medium.com/n8n-io/tracking-time-spent-in-meetings-with-google-calendar-twilio-and-n8n-a5d00f77da8c) to learn about automating the process of calculating your meeting time every week to give you a better idea of how your week is spent.
+:::

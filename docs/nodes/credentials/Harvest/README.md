@@ -4,13 +4,19 @@ permalink: /credentials/harvest
 
 # Harvest
 
-You can find information about the operations supported by the Harvest node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.harvest) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Harvest).
+You can use these credentials to authenticate the following nodes with Harvest.
+- [Harvest](../../nodes-library/nodes/Harvest/README.md)
 
 ## Prerequisites
 
 Create a [Harvest](https://www.getharvest.com/) account.
 
 ## Using Access Token
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Harvest account to n8n.
+:::
+
 1. Open the Harvest [Developers portal](https://id.getharvest.com/developers).
 2. Click "Create New Personal Access Token".
 3. Enter token name.

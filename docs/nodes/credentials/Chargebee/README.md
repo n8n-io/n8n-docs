@@ -4,7 +4,9 @@ permalink: /credentials/chargebee
 
 # Chargebee
 
-You can find information about the operations supported by the Chargebee node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.chargebee) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Chargebee).
+You can use these credentials to authenticate the following nodes with Chargebee.
+- [Chargebee](../../nodes-library/nodes/Chargebee/README.md)
+- [Chargebee Trigger](../../nodes-library/trigger-nodes/ChargebeeTrigger/README.md)
 
 ## Prerequisites
 

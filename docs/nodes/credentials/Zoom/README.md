@@ -4,22 +4,12 @@ permalink: /credentials/zoom
 
 # Zoom
 
-You can find information about the operations supported by the Zoom node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zoom) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zoom).
+You can use these credentials to authenticate the following nodes with Zoom.
+- [Zoom](../../nodes-library/nodes/Zoom/README.md)
 
 ## Prerequisites
 
 Create a [Zoom](https://zoom.us/) account.
-
-## Using Access Token
-
-1. Visit the [Zoom App Marketplace](https://marketplace.zoom.us/) and select the 'Build App' option in the *Develop* dropdown on the top-right corner.
-2. Create a new JWT app and enter any necessary information.
-3. Go to the 'App Credentials' tab.
-4. Click on *View JWT Token* and copy the given token. <!-- Typo in code repo, needs PR -->
-5. Go to the 'Activation' tab and click on the *Activate your app* button.
-6. Use the JWT token you copied with your Zoom API credentials in n8n.
-
-![Getting Zoom JWT credentials](./using-access-token.gif)
 
 ## Using OAuth
 
@@ -37,3 +27,14 @@ Create a [Zoom](https://zoom.us/) account.
 12. Click the *Save* button to save your credentials.
 
 ![Getting Zoom OAuth credentials](./using-oauth.gif)
+
+## Using Access Token
+
+1. Visit the [Zoom App Marketplace](https://marketplace.zoom.us/) and select the 'Build App' option in the *Develop* dropdown on the top-right corner.
+2. Create a new JWT app and enter any necessary information.
+3. Go to the 'App Credentials' tab.
+4. Click on *View JWT Token* and copy the given token. <!-- Typo in code repo, needs PR -->
+5. Go to the 'Activation' tab and click on the *Activate your app* button.
+6. Use the JWT token you copied with your Zoom API credentials in n8n.
+
+![Getting Zoom JWT credentials](./using-access-token.gif)

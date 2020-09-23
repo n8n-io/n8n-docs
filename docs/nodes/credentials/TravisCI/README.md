@@ -4,7 +4,8 @@ permalink: /credentials/travisCi
 
 # Travis CI
 
-You can find information about the operations supported by the Travis CI node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.travisCi) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/TravisCi).
+You can use these credentials to authenticate the following nodes with Travis CI.
+- [Travis CI](../../nodes-library/nodes/TravisCI/README.md)
 
 ## Prerequisites
 

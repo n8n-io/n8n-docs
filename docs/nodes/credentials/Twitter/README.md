@@ -4,7 +4,8 @@ permalink: /credentials/twitter
 
 # Twitter
 
-You can find information about the operations supported by the Twitter node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.twitter) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Twitter).
+You can use these credentials to authenticate the following nodes with Twitter.
+- [Twitter](../../nodes-library/nodes/Twitter/README.md)
 
 ## Prerequisites
 

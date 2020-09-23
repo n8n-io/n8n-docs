@@ -4,7 +4,9 @@ permalink: /credentials/trello
 
 # Trello
 
-You can find information about the operations supported by the Trello node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.trello) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Trello).
+You can use these credentials to authenticate the following nodes with Trello.
+- [Trello](../../nodes-library/nodes/Trello/README.md)
+- [Trello Trigger](../../nodes-library/trigger-nodes/TrelloTrigger/README.md)
 
 ## Prerequisites
 

@@ -4,7 +4,8 @@ permalink: /credentials/spotify
 
 # Spotify
 
-You can find information about the operations supported by the Spotify node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.spotify) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Spotify).
+You can use these credentials to authenticate the following nodes with Spotify.
+- [Spotify](../../nodes-library/nodes/Spotify/README.md)
 
 
 ## Prerequisites
@@ -19,4 +20,3 @@ Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) acco
 4. Open the app settings and add the n8n provided redirect URL to the app's redirect URI list. Redirect URL Explanation [here](../README.md).
 
 ![The Spotify App Dashboard](./dashboard.gif)
-

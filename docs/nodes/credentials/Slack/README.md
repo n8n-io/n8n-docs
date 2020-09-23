@@ -4,13 +4,18 @@ permalink: /credentials/slack
 
 # Slack
 
-You can find information about the operations supported by the Slack node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.slack) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Slack).
+You can use these credentials to authenticate the following nodes with Slack.
+- [Slack](../../nodes-library/nodes/Slack/README.md)
 
 ## Prerequisites
 
 Create a [Slack](https://slack.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
+:::
 
 1. Access your Slack dashboard.
 2. Click on your workspace name in the top left.

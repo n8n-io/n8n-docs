@@ -4,8 +4,9 @@ permalink: /credentials/wooCommerce
 
 # WooCommerce
 
-You can find information about the operations supported by the WooCommerce node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.wooCommerce) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/WooCommerce).
-
+You can use these credentials to authenticate the following nodes with WooCommerce.
+- [WooCommerce](../../nodes-library/nodes/WooCommerce/README.md)
+- [WooCommerce Trigger](../../nodes-library/trigger-nodes/WooCommerceTrigger/README.md)
 
 ## Prerequisites
 

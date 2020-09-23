@@ -4,7 +4,9 @@ permalink: /credentials/telegram
 
 # Telegram
 
-You can find information about the operations supported by the Telegram node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.telegram) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Telegram).
+You can use these credentials to authenticate the following nodes with Telegram.
+- [Telegram](../../nodes-library/nodes/Telegram/README.md)
+- [Telegram Trigger](../../nodes-library/trigger-nodes/TelegramTrigger/README.md)
 
 ## Prerequisites
 

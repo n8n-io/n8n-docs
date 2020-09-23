@@ -4,8 +4,9 @@ permalink: /credentials/taiga
 
 # Taiga
 
-You can find information about the operations supported by the Taiga node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.taiga) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Taiga).
-
+You can use these credentials to authenticate the following nodes with Taiga.
+- [Taiga](../../nodes-library/nodes/Taiga/README.md)
+- [Taiga Trigger](../../nodes-library/trigger-nodes/TaigaTrigger/README.md)
 
 ## Prerequisites
 

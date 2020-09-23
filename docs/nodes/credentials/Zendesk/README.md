@@ -4,13 +4,19 @@ permalink: /credentials/zendesk
 
 # Zendesk
 
-You can find information about the operations supported by the Zendesk node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.zendesk) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Zendesk).
+You can use these credentials to authenticate the following nodes with Zendesk.
+- [Zendesk](../../nodes-library/nodes/Zendesk/README.md)
+- [Zendesk Trigger](../../nodes-library/trigger-nodes/ZendeskTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Zendesk](https://zendesk.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Zendesk account to n8n.
+:::
 
 1. Access your Zendesk dashboard.
 2. Click on the gear icon on the left.

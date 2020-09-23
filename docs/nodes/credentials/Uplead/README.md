@@ -4,7 +4,8 @@ permalink: /credentials/uplead
 
 # UpLead
 
-You can find information about the operations supported by the UpLead node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.uplead) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Uplead).
+You can use these credentials to authenticate the following nodes with UpLead.
+- [UpLead](../../nodes-library/nodes/UpLead/README.md)
 
 ## Prerequisites
 

@@ -4,14 +4,18 @@ permalink: /credentials/typeform
 
 # Typeform
 
-You can find information about the operations supported by the Typeform node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.typeformTrigger) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Typeform).
-
+You can use these credentials to authenticate the following nodes with Typeform.
+- [Typeform Trigger](../../nodes-library/trigger-nodes/TypeformTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Typeform](https://typeform.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Typeform account to n8n.
+:::
 
 1. Access your Typeform dashboard.
 2. Go to your user profile in the top right.

@@ -4,13 +4,19 @@ permalink: /credentials/gitlab
 
 # GitLab
 
-You can find information about the operations supported by the GitLab node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.gitlab) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Gitlab).
+You can use these credentials to authenticate the following nodes with GitLab.
+- [GitLab](../../nodes-library/nodes/GitLab/README.md)
+- [GitLab Trigger](../../nodes-library/trigger-nodes/GitLabTrigger/README.md)
 
 ## Prerequisites
 
 Create a [GitLab](https://gitlab.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitLab account to n8n.
+:::
 
 1. Access your GitLab dashboard.
 2. Click on your user icon in the top right.

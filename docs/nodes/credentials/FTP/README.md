@@ -4,7 +4,8 @@ permalink: /credentials/ftp
 
 # FTP
 
-You can find information about the operations supported by the FTP node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.ftp) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Ftp.node.ts).
+You can use these credentials to authenticate the following nodes with FTP.
+- [FTP](../../nodes-library/core-nodes/FTP/README.md)
 
 ## Prerequisites
 

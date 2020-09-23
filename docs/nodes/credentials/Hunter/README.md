@@ -4,7 +4,8 @@ permalink: /credentials/hunter
 
 # Hunter
 
-You can find information about the operations supported by the Hunter node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.hunter) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Hunter).
+You can use these credentials to authenticate the following nodes with Hunter.
+- [Hunter](../../nodes-library/nodes/Hunter/README.md)
 
 ## Prerequisites
 

@@ -2,9 +2,10 @@
 permalink: /credentials/mqtt
 ---
 
-# MQTT Trigger
+# MQTT
 
-[MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
+You can use these credentials to authenticate the following nodes with MQTT.
+- [MQTT Trigger](../../nodes-library/trigger-nodes/MQTTTrigger/README.md)
 
 ## Prerequisites
 

@@ -4,19 +4,21 @@ permalink: /credentials/microsoft
 
 # Microsoft
 
-Microsoft credentials work with several different nodes. You can find a list of nodes and their supported operations in the integrations page linked below. You can also browse the source code of the node on GitHub.
+You can use these credentials to authenticate the following nodes with Microsoft.
+- [Microsoft Excel](../../nodes-library/nodes/MicrosoftExcel/README.md)
+- [Microsoft OneDrive](../../nodes-library/nodes/MicrosoftOneDrive/README.md)
+- [Microsoft Teams](../../nodes-library/nodes/MicrosoftTeams/README.md)
 
-| Node Name          	| Supported Operations 	| Source Code 	|
-|--------------------	|----------------------	|-------------	|
-| [Microsoft Excel](../../nodes-library/nodes/MicrosoftExcel/README.md)    	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftExcel)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Excel)      	|
-| [Microsoft OneDrive](../../nodes-library/nodes/MicrosoftOneDrive/README.md) 	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftOneDrive)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/OneDrive)      	|
-| [Microsoft Teams](../../nodes-library/nodes/MicrosoftTeams/README.md) 	| [Integrations Page](https://n8n.io/integrations/n8n-nodes-base.microsoftTeams)    	| [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Teams)      	|
 
 ## Prerequisites
 
 Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Microsoft account to n8n.
+:::
 
 1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations).
 2. In the top left, click on *New registration*.

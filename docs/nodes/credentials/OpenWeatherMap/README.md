@@ -4,7 +4,8 @@ permalink: /credentials/openWeatherMap
 
 # OpenWeatherMap
 
-You can find information about the operations supported by the OpenWeatherMap node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.openWeatherMap) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/OpenWeatherMap.node.ts).
+You can use these credentials to authenticate the following nodes with OpenWeatherMap.
+- [OpenWeatherMap](../../nodes-library/nodes/OpenWeatherMap/README.md)
 
 ## Prerequisites
 

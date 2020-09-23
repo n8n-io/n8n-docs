@@ -4,7 +4,8 @@ permalink: /credentials/medium
 
 # Medium
 
-You can find information about the operations supported by the Medium node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.medium) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Medium).
+You can use these credentials to authenticate the following nodes with Medium.
+- [Medium](../../nodes-library/nodes/Medium/README.md)
 
 ## Prerequisites
 

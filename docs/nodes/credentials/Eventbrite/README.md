@@ -4,13 +4,18 @@ permalink: /credentials/eventbrite
 
 # Eventbrite
 
-You can find information about the operations supported by the Eventbrite Trigger node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.eventbriteTrigger) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Eventbrite).
+You can use these credentials to authenticate the following nodes with Eventbrite.
+- [Eventbrite Trigger](../../nodes-library/trigger-nodes/EventbriteTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Eventbrite](https://www.eventbrite.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
+:::
 
 1. Log in to your Eventbrite account.
 2. Click on the user icon in the top right.

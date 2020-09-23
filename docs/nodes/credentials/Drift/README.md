@@ -4,13 +4,18 @@ permalink: /credentials/drift
 
 # Drift
 
-You can find information about the operations supported by the Drift node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.drift) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Drift).
+You can use these credentials to authenticate the following nodes with Drift.
+- [Drift](../../nodes-library/nodes/Drift/README.md)
 
 ## Prerequisites
 
 Create a [Drift](https://www.drift.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
+:::
 
 1. Access your [Drift apps](https://dev.drift.com/apps) page.
 2. Click on the ***Build Your App*** button. You can also select an existing app if you already have one.

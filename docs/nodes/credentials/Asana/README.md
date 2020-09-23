@@ -4,7 +4,9 @@ permalink: /credentials/asana
 
 # Asana
 
-You can find information about the operations supported by the Asana node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.asana) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Asana).
+You can use these credentials to authenticate the following nodes with Asana.
+- [Asana](../../nodes-library/nodes/Asana/README.md)
+- [Asana Trigger](../../nodes-library/trigger-nodes/AsanaTrigger/README.md)
 
 The following is a summary based off Asana's own [documentation](https://developers.asana.com/docs/authentication-basics) regarding authentication.
 
@@ -14,6 +16,10 @@ The following is a summary based off Asana's own [documentation](https://develop
 Create an [Asana](https://www.Asana.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Asana account to n8n.
+:::
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right.

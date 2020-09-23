@@ -4,7 +4,11 @@ permalink: /credentials/affinity
 
 # Affinity
 
-You can find information about the operations supported by the Affinity node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.affinity) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Affinity).
+You can use these credentials to authenticate the following nodes with Affinity.
+- [Affinity](../../nodes-library/nodes/Affinity/README.md)
+- [Affinity Trigger](../../nodes-library/trigger-nodes/AffinityTrigger/README.md)
+
+
 
 ## Prerequisites
 

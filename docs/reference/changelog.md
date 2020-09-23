@@ -1,6 +1,12 @@
 # Changelog
 
 [[toc]]
+## n8n@0.84.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.0...n8n@0.84.1) for this version.<br />
+**Release date:** 2020-09-23
+
+- Additional endpoints can be excluded from authorization checks. Use colon (":") to separate multiple endpoints.
+
 
 ## n8n@0.84.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.83.0...n8n@0.84.0) for this version.<br />

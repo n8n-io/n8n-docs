@@ -4,7 +4,9 @@ permalink: /credentials/github
 
 # GitHub
 
-You can find information about the operations supported by the GitHub node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.github) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Github).
+You can use these credentials to authenticate the following nodes with GitHub.
+- [GitHub](../../nodes-library/nodes/GitHub/README.md)
+- [GitHub Trigger](../../nodes-library/trigger-nodes/GitHubTrigger/README.md)
 
 
 ## Prerequisites

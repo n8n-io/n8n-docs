@@ -14,6 +14,10 @@ Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) acco
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Spotify account to n8n.
+:::
+
 1. Access your [Spotify for Developers](https://developer.spotify.com/dashboard/login) dashboard.
 2. Click the *Create an App* button at the top of your dashboard. Enter in the app's name and description and click *Create*.
 3. Use provided Client Secret and Client ID with your Spotify node credentials in n8n.

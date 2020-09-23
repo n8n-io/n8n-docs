@@ -13,6 +13,10 @@ Create a [Sentry.io](https://sentry.io/) account.
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Sentry.io account to n8n.
+:::
+
 1. Access your [Sentry.io Applications Page](https://sentry.io/settings/account/api/applications/).
 2. Click on the ***Create New Application*** button in the top right.
 3. Enter a name in the ***Name*** field.

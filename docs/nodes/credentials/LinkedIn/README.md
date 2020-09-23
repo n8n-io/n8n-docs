@@ -13,6 +13,10 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your LinkedIn account to n8n.
+:::
+
 1. Access the [LinkedIn app creation page](https://www.linkedin.com/developers/apps/new).
 2. Enter a name in the ***App name*** field.
 3. Enter your LinkedIn Page/Profile in the ***LinkedIn Page*** field.

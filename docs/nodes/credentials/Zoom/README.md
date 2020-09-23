@@ -13,6 +13,10 @@ Create a [Zoom](https://zoom.us/) account.
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Zoom account to n8n.
+:::
+
 1. Visit the [Zoom App Marketplace](https://marketplace.zoom.us/) and select the 'Build App' option in the *Develop* dropdown on the top-right corner.
 2. Create a new OAuth app.
 3. Select 'User-managed app'.

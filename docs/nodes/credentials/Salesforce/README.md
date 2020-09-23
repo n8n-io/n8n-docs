@@ -13,6 +13,10 @@ Create a [Salesforce](https://www.salesforce.com/) account.
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Salesforce account to n8n.
+:::
+
 1. Access your Salesforce Dashboard.
 2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.
 3. In the ***Platform Tools*** category of the sidebar, select ***App Manager*** under the ***Apps*** section.

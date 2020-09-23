@@ -13,6 +13,10 @@ Create a [Todoist](https://todoist.com/) account.
 
 ## Using OAuth
 
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Todoist account to n8n.
+:::
+
 1. Access your Todoist [App Management Console](https://developer.todoist.com/appconsole.html)
 2. Enter a name in the ***App display name*** field and click on the ***Create app*** button.
 3. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***OAuth redirect URL*** field.

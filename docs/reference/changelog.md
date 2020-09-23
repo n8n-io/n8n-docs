@@ -5,7 +5,7 @@
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.0...n8n@0.84.1) for this version.<br />
 **Release date:** 2020-09-23
 
-- Additional endpoints can be excluded from authorization checks. Use colon (":") to separate multiple endpoints.
+- Additional endpoints can be excluded from authentication checks. Multiple endpoints can be separated using a colon(":")
 
 
 ## n8n@0.84.0 
@@ -15,9 +15,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
     - Twitter: Added support for auto mention of users in reply tweets.
 - Bug Fixes
-    - Google Sheets: Fixed issue with non-Latin Sheet names.
-    - HubSpot: Fixed credentials name
-- Fixed issues with renaming credentials for active workflows.
+    - Google Sheets: Fixed issue with non-Latin sheet names
+    - HubSpot: Fixed naming of credentials
+    - Microsoft: Fixed naming of credentials
+    - Mandrill: Fixed attachments with JSON parameters
+- Fixed issues with renaming credentials for active workflows
 
 ## n8n@0.83.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />

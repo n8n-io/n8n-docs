@@ -4,24 +4,19 @@ permalink: /credentials/mailchimp
 
 # Mailchimp
 
-You can find information about the operations supported by the Mailchimp node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.mailchimp) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mailchimp).
+You can use these credentials to authenticate the following nodes with Mailchimp.
+- [Mailchimp](../../nodes-library/nodes/Mailchimp/README.md)
+- [Mailchimp Trigger](../../nodes-library/trigger-nodes/MailchimpTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Mailchimp](https://www.mailchimp.com/) account.
 
-## Using Access Token
-
-1. Access your Mailchimp dashboard.
-2. Click on your user icon on the top right.
-3. Click on 'Account' in the dropdown list.
-4. Click on the *Extras* dropdown list and then select 'API Keys'.
-5. Scroll down and create a new key by clicking on 'Create a Key' under the 'Your API keys' section.
-6. Use the API key with your Mailchimp node credentials in n8n.
-
-![Getting Mailchimp credentials](./using-access-token.gif)
-
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
+:::
 
 1. Access your Mailchimp dashboard.
 2. Click on your user icon on the top right.
@@ -35,3 +30,14 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 10. Click the *Save* button to save your credentials.
 
 ![Getting Mailchimp credentials](./using-oauth.gif)
+
+## Using Access Token
+
+1. Access your Mailchimp dashboard.
+2. Click on your user icon on the top right.
+3. Click on 'Account' in the dropdown list.
+4. Click on the *Extras* dropdown list and then select 'API Keys'.
+5. Scroll down and create a new key by clicking on 'Create a Key' under the 'Your API keys' section.
+6. Use the API key with your Mailchimp node credentials in n8n.
+
+![Getting Mailchimp credentials](./using-access-token.gif)

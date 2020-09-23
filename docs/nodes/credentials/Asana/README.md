@@ -8,8 +8,6 @@ You can use these credentials to authenticate the following nodes with Asana.
 - [Asana](../../nodes-library/nodes/Asana/README.md)
 - [Asana Trigger](../../nodes-library/trigger-nodes/AsanaTrigger/README.md)
 
-The following is a summary based off Asana's own [documentation](https://developers.asana.com/docs/authentication-basics) regarding authentication.
-
 
 ## Prerequisites
 

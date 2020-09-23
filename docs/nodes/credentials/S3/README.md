@@ -4,7 +4,8 @@ permalink: /credentials/s3
 
 # S3
 
-You can find information about the operations supported by the S3 node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.s3) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/S3).
+You can use these credentials to authenticate the following nodes with S3.
+- [S3](../../nodes-library/nodes/S3/README.md)
 
 ## Prerequisites
 

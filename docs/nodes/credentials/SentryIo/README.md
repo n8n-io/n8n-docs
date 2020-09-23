@@ -4,7 +4,8 @@ permalink: /credentials/sentryIo
 
 # Sentry.io
 
-You can find information about the operations supported by the Sentry.io node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.sentryIo) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SentryIo).
+You can use these credentials to authenticate the following nodes with Sentry.io.
+- [Sentry.io](../../nodes-library/nodes/SentryIo/README.md)
 
 ## Prerequisites
 

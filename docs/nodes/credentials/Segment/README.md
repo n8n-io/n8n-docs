@@ -4,7 +4,8 @@ permalink: /credentials/segment
 
 # Segment
 
-You can find information about the operations supported by the Segment node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.segment) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Segment).
+You can use these credentials to authenticate the following nodes with Segment.
+- [Segment](../../nodes-library/nodes/Segment/README.md)
 
 ## Prerequisites
 

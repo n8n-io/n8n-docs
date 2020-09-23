@@ -4,7 +4,8 @@ permalink: /credentials/postgres
 
 # Postgres
 
-You can find information about the operations supported by the Postgres node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.postgres) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres).
+You can use these credentials to authenticate the following nodes with Postgres.
+- [Postgres](../../nodes-library/nodes/Postgres/README.md)
 
 ## Prerequisites
 

@@ -4,7 +4,8 @@ permalink: /credentials/salesmate
 
 # Salesmate
 
-You can find information about the operations supported by the Salesmate node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.salesmate) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Salesmate).
+You can use these credentials to authenticate the following nodes with Salesmate.
+- [Salesmate](../../nodes-library/nodes/Salesmate/README.md)
 
 ## Prerequisites
 

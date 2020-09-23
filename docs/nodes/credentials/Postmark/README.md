@@ -4,7 +4,8 @@ permalink: /credentials/postmark
 
 # Postmark
 
-You can find information about the operations supported by the Postmark Trigger node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.postmarkTrigger) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postmark).
+You can use these credentials to authenticate the following nodes with Postmark.
+- [Postmark Trigger](../../nodes-library/trigger-nodes/PostmarkTrigger/README.md)
 
 ## Prerequisites
 

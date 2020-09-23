@@ -4,13 +4,19 @@ permalink: /credentials/pipedrive
 
 # Pipedrive
 
-You can find information about the operations supported by the Pipedrive node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.pipedrive) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Pipedrive).
+You can use these credentials to authenticate the following nodes with Pipedrive.
+- [Pipedrive](../../nodes-library/nodes/Pipedrive/README.md)
+- [Pipedrive Trigger](../../nodes-library/trigger-nodes/PipedriveTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Pipedrive](https://pipedrive.com/) account.
 
 ## Using OAuth
+
+::: tip ⛅️ Note for n8n.cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Pipedrive account to n8n.
+:::
 
 1. Create a [Developer Sandbox Account](https://pipedrive.readme.io/docs/developer-sandbox-account).
 2. Access your Pipedrive Dashboard.

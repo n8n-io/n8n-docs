@@ -4,7 +4,9 @@ permalink: /credentials/payPal
 
 # PayPal
 
-You can find information about the operations supported by the PayPal node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.payPal) page. You can also browse the source code of the node on [GitHub](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/PayPal).
+You can use these credentials to authenticate the following nodes with PayPal.
+- [PayPal](../../nodes-library/nodes/PayPal/README.md)
+- [PayPal Trigger](../../nodes-library/trigger-nodes/PayPalTrigger/README.md)
 
 ## Prerequisites
 

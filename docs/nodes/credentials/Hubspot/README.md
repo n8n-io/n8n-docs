@@ -15,7 +15,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 ## Using OAuth
 
 ::: tip ⛅️ Note for n8n.cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Hubspot account to n8n.
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your HubSpot account to n8n.
 :::
 
 1. Access your [HubSpot Developer Home](https://developers.hubspot.com/).

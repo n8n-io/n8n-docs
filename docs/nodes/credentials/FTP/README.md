@@ -5,7 +5,7 @@ permalink: /credentials/ftp
 # FTP
 
 You can use these credentials to authenticate the following nodes with FTP.
-- [FTP](../../nodes-library/nodes/ftp/README.md)
+- [FTP](../../nodes-library/core-nodes/FTP/README.md)
 
 ## Prerequisites
 

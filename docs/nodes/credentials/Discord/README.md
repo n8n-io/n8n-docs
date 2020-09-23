@@ -3,7 +3,7 @@ permalink: /credentials/discord
 ---
 
 # Discord
-You can use these credentials to authenticate the following nodes with Discord.
+You can follow these instructions to create a webhook in Discord to use with the following nodes.
 - [Discord](../../nodes-library/nodes/Discord/README.md)
 
 

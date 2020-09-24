@@ -1,6 +1,25 @@
 # Changelog
 
 [[toc]]
+## n8n@0.84.4 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.3...n8n@0.84.4) for this version.<br />
+**Release date:** 2020-09-23
+
+- Bug Fixes
+    - Google Sheets: Fixed issues with the update and append operations
+
+## n8n@0.84.3 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.2...n8n@0.84.3) for this version.<br />
+**Release date:** 2020-09-23
+
+- Fixed an issue with the build by setting `jwks-rsa` to an older version
+
+## n8n@0.84.2 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.1...n8n@0.84.2) for this version.<br />
+**Release date:** 2020-09-23
+
+- Fixed an issue with the OAuth window. The OAuth window now closes after authentication is complete
+
 ## n8n@0.84.1 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.0...n8n@0.84.1) for this version.<br />
 **Release date:** 2020-09-23

@@ -1,6 +1,13 @@
 # Changelog
 
 [[toc]]
+## n8n@0.84.4 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.3...n8n@0.84.4) for this version.<br />
+**Release date:** 2020-09-23
+
+- Bug Fixes
+    - Google Sheets: Fixed issue with the update operation
+
 ## n8n@0.84.3 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.2...n8n@0.84.3) for this version.<br />
 **Release date:** 2020-09-23

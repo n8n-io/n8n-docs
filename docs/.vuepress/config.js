@@ -1,12 +1,12 @@
-const dirTree = require("directory-tree");
-const path = require("path");
+const dirTree = require('directory-tree');
+const path = require('path');
 
 function getChildrenFiles(folder, topItem) {
 	const returnFiles = dirTree(path.join(__dirname, `../${folder}`), {
 		extensions: /\.md/
 	})
 		.children.filter(page => {
-			return page.type === "file" && page.name !== "README.md";
+			return page.type === 'file' && page.name !== 'README.md';
 		})
 		.sort((a, b) => {
 			const aName = a.name.toLowerCase();
@@ -39,8 +39,8 @@ function getChildrenFolders(folder) {
 	return dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ })
 		.children.filter(page => {
 			return (
-				page.type === "directory" &&
-				!!page.children.find(child => child.name === "README.md")
+				page.type === 'directory' &&
+				!!page.children.find(child => child.name === 'README.md')
 			);
 		})
 		.sort((a, b) => {
@@ -60,79 +60,79 @@ function getChildrenFolders(folder) {
 }
 
 module.exports = {
-	description: "Documentation for n8n",
-	title: "n8n Docs",
+	description: 'Documentation for n8n',
+	title: 'n8n Docs',
 	plugins: [
-		"vuepress-plugin-reading-time",
-		"@vuepress/last-updated",
-		["vuepress-plugin-code-copy", true],
+		'vuepress-plugin-reading-time',
+		'@vuepress/last-updated',
+		['vuepress-plugin-code-copy', true],
 		[
-			"@vuepress/google-analytics",
+			'@vuepress/google-analytics',
 			{
-				ga: "UA-146470481-3"
+				ga: 'UA-146470481-3'
 			}
 		],
 		[
-			"seo",
+			'seo',
 			{
 				description: $page => $page.frontmatter.description,
-				type: () => "articles",
+				type: () => 'articles',
 				title: ($page, $site) => `${$page.title} | ${$site.title}`,
 				image: ($page, $site) =>
 					$page.frontmatter.image &&
 					(($site.themeConfig.domain &&
-						!$page.frontmatter.image.startsWith("http")) ||
-						"") + $page.frontmatter.image,
+						!$page.frontmatter.image.startsWith('http')) ||
+						'') + $page.frontmatter.image,
 				modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-				url: (_, $site, path) => ($site.themeConfig.domain || "") + path
+				url: (_, $site, path) => ($site.themeConfig.domain || '') + path
 			}
 		],
 		[
-			"vuepress-plugin-container",
+			'vuepress-plugin-container',
 			{
-				type: "faq",
+				type: 'faq',
 				before: info =>
 					`<details class='custom-block details'><summary class='question'><h4>${info}</h4></summary>`,
-				after: "</details>"
+				after: '</details>'
 			}
 		]
 	],
 	themeConfig: {
-		repo: "n8n-io/n8n",
-		base: "/n8n-docs/",
-		docsRepo: "n8n-io/n8n-docs",
-		docsDir: "docs",
+		repo: 'n8n-io/n8n',
+		base: '/n8n-docs/',
+		docsRepo: 'n8n-io/n8n-docs',
+		docsDir: 'docs',
 		editLinks: true,
-		editLinkText: "Help us improve this page!",
+		editLinkText: 'Help us improve this page!',
 		smoothScroll: true,
 		lastUpdated: true,
 		sidebarDepth: 2,
 		algolia: {
-			apiKey: "36968f1949f14fc25079286688915dc9",
-			indexName: "n8n_io"
+			apiKey: '36968f1949f14fc25079286688915dc9',
+			indexName: 'n8n_io'
 		},
-		searchPlaceholder: "Search...",
-		logo: "/assets/img/n8n-logo.png",
+		searchPlaceholder: 'Search...',
+		logo: '/assets/img/n8n-logo.png',
 		nav: [
 			{
-				text: "Getting Started",
-				link: "/"
+				text: 'Getting Started',
+				link: '/'
 			},
 			// {
 			// 	text: 'Guides',
 			// 	link: '/guides/guides.md'
 			// },
 			{
-				text: "Nodes",
-				link: "/nodes/nodes.md"
+				text: 'Nodes',
+				link: '/nodes/nodes.md'
 			},
 			{
-				text: "Reference",
-				link: "/reference/reference.md"
+				text: 'Reference',
+				link: '/reference/reference.md'
 			},
 			{
-				text: "Community",
-				link: "https://community.n8n.io"
+				text: 'Community',
+				link: 'https://community.n8n.io'
 			}
 		],
 		sidebar: {
@@ -144,151 +144,151 @@ module.exports = {
 			// 	},
 			// ],
 
-			"/nodes/": [
+			'/nodes/': [
 				{
-					title: "🧬 Overview",
+					title: '🧬 Overview',
 					sidebarDepth: 2,
 					children: [
 						{
-							title: "Node Overview",
+							title: 'Node Overview',
 							sidebarDepth: 2,
-							path: "nodes.md"
+							path: 'nodes.md'
 						},
 						{
-							title: "Node Basics",
+							title: 'Node Basics',
 							sidebarDepth: 2,
-							path: "node-basics.md"
+							path: 'node-basics.md'
 						},
 						{
-							title: "Expressions",
+							title: 'Expressions',
 							sidebarDepth: 2,
-							path: "expressions.md"
+							path: 'expressions.md'
 						}
 					]
 				},
 				{
-					title: "🔬 Creating Nodes",
+					title: '🔬 Creating Nodes',
 					sidebarDepth: 2,
-					children: getChildrenFiles("nodes/creating-nodes", "create-node.md")
+					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md')
 				},
 				{
-					title: "🧠 Nodes Library",
+					title: '🧠 Nodes Library',
 					sidebarDepth: 3,
 					children: [
 						{
-							title: "Core Nodes",
+							title: 'Core Nodes',
 							sidebarDepth: 1,
-							children: getChildrenFolders("nodes/nodes-library/core-nodes")
+							children: getChildrenFolders('nodes/nodes-library/core-nodes')
 						},
 						{
-							title: "Nodes",
+							title: 'Nodes',
 							sidebarDepth: 1,
-							children: getChildrenFolders("nodes/nodes-library/nodes")
+							children: getChildrenFolders('nodes/nodes-library/nodes')
 						},
 						{
-							title: "Trigger Nodes",
+							title: 'Trigger Nodes',
 							sidebarDepth: 1,
-							children: getChildrenFolders("nodes/nodes-library/trigger-nodes")
+							children: getChildrenFolders('nodes/nodes-library/trigger-nodes')
 						}
 					]
 				},
 				{
-					title: "🔑 Credentials Library",
+					title: '🔑 Credentials Library',
 					sidebarDepth: 2,
-					children: getChildrenFolders("nodes/credentials")
+					children: getChildrenFolders('nodes/credentials')
 				}
 			],
 
-			"/reference/": [
+			'/reference/': [
 				{
-					title: "📚 Overview",
-					path: "reference.md"
+					title: '📚 Overview',
+					path: 'reference.md'
 				},
 				{
-					title: "🧐 Changelog",
-					path: "changelog.md"
+					title: '🧐 Changelog',
+					path: 'changelog.md'
 				},
 				{
-					title: "🎯 Workflow",
-					path: "workflow.md"
+					title: '🎯 Workflow',
+					path: 'workflow.md'
 				},
 				{
-					title: "⚙️ Configuration",
-					path: "configuration.md"
+					title: '⚙️ Configuration',
+					path: 'configuration.md'
 				},
 				{
-					title: "🚔 Security",
-					path: "security.md"
+					title: '🚔 Security',
+					path: 'security.md'
 				},
 				{
-					title: "📦 Docker",
-					path: "docker.md"
+					title: '📦 Docker',
+					path: 'docker.md'
 				},
 				{
-					title: "🖥 Server Setup",
-					path: "server-setup.md"
+					title: '🖥 Server Setup',
+					path: 'server-setup.md'
 				},
 				{
-					title: "👾 Start Workflow via CLI",
-					path: "start-workflows-via-cli.md"
+					title: '👾 Start Workflow via CLI',
+					path: 'start-workflows-via-cli.md'
 				},
 				{
-					title: "💡 Function and Function Item Nodes",
-					path: "function-nodes.md"
+					title: '💡 Function and Function Item Nodes',
+					path: 'function-nodes.md'
 				},
 				{
-					title: "👀 Troubleshooting",
-					path: "troubleshooting.md"
+					title: '👀 Troubleshooting',
+					path: 'troubleshooting.md'
 				},
 				{
-					title: "💾 Data",
+					title: '💾 Data',
 					sidebarDepth: 2,
-					children: getChildrenFiles("reference/data")
+					children: getChildrenFiles('reference/data')
 				},
 				{
-					title: "🙌 Contributing",
-					path: "contributing.md"
+					title: '🙌 Contributing',
+					path: 'contributing.md'
 				},
 				{
-					title: "⌨️ Keyboard Shortcuts",
-					path: "keyboard-shortcuts.md"
+					title: '⌨️ Keyboard Shortcuts',
+					path: 'keyboard-shortcuts.md'
 				},
 				{
-					title: "🎫 License",
-					path: "license.md"
+					title: '🎫 License',
+					path: 'license.md'
 				},
 				{
-					title: "❓ FAQ",
-					path: "faq.md"
+					title: '❓ FAQ',
+					path: 'faq.md'
 				}
 			],
 
-			"/": [
+			'/': [
 				{
-					title: "👋 Introduction",
+					title: '👋 Introduction',
 					collapsable: false,
-					path: "/",
+					path: '/',
 					sidebarDepth: 0
 				},
 				{
-					title: "🚀 Quickstart",
-					path: "getting-started/quickstart.md"
+					title: '🚀 Quickstart',
+					path: 'getting-started/quickstart.md'
 				},
 				{
-					title: "🍄 Key Components",
-					path: "getting-started/key-components.md"
+					title: '🍄 Key Components',
+					path: 'getting-started/key-components.md'
 				},
 				{
-					title: "💪 Creating Your First Workflow",
-					path: "getting-started/creating-your-first-workflow.md"
+					title: '💪 Creating Your First Workflow',
+					path: 'getting-started/creating-your-first-workflow.md'
 				},
 				{
-					title: "🤘 Tutorials",
-					path: "getting-started/tutorials.md"
+					title: '🤘 Tutorials',
+					path: 'getting-started/tutorials.md'
 				},
 				{
-					title: "🤔 What's Next?",
-					path: "getting-started/whats-next.md"
+					title: '🤔 What\'s Next?',
+					path: 'getting-started/whats-next.md'
 				}
 			]
 			// [

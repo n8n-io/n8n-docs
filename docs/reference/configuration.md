@@ -40,7 +40,7 @@ export VUE_APP_URL_BASE_API="https://n8n.example.com/"
 You can find information about securing your n8n instance [here](security.md).
 
 
-## Execution Data Manual Runs
+## Encryption Key
 
 n8n creates a random encryption key automatically on the first launch and saves
 it in the `~/.n8n` folder. That key is used to encrypt the credentials before

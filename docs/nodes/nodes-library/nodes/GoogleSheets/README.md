@@ -1,5 +1,7 @@
 ---
 permalink: /nodes/n8n-nodes-base.googleSheets
+description: Learn how to use Google Sheets in n8n
+image: './workflow.png'
 ---
 
 # Google Sheets
@@ -70,3 +72,24 @@ The Start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the workflow.
 
 ![Using the Google Sheets node to read data from a Google Sheets spreadsheet](./GoogleSheets1_node.png)
+
+## FAQ
+
+::: faq How to read the data in the format they were entered in Google Sheets?
+
+By default, the unformatted values are read. For example, if your sheets have a column which contains dates (2020-09-24) the node will read them as numbers, perform the mathematical operation (subtraction for this example), and will give you the output (output for the example of the date: 1987).
+
+If you want the formatted values, click on ***Add Option*** and select 'Formatted Value'. This will return the values as they are. For example, the dates will be returned in the format they were entered (2020-09-24).
+
+If you want to return the formula used in the cells, click on ***Add Option*** and select 'Formula'.
+:::
+
+::: faq How to append an array in the Google Sheets?
+
+To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Funtion node](../../core-nodes/Function/README.md) to convert the array into JSON format.
+:::
+
+::: faq How to return all the values with the Lookup operation?
+
+By default, the Lookup operation returns only the first value that it matches. To return all the values that match, click on ***Add Option*** and select 'Return All Matches'. Toggle ***Return All Matches*** to true.
+:::

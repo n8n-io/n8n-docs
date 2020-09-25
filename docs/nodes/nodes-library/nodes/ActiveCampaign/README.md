@@ -1,5 +1,7 @@
 ---
 permalink: /nodes/n8n-nodes-base.activeCampaign
+description: Learn how to use ActiveCampaign in n8n
+image: './workflow.png'
 ---
 
 # ActiveCampaign
@@ -12,41 +14,47 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Contact
-    - Create a contact
-    - Delete a contact
-    - Get data of a contact
-    - Get data of all contacts
-    - Update a contact
-- Deal
-    - Create a deal
-    - Delete a deal
-    - Get data of a deal
-    - Get data of all deals
-    - Update a deal
-- Connection
-    - Create a connection
-    - Delete a connection
-    - Get data of a connection
-    - Get data of all connections
-    - Update a connection
-- E-commerce Order
-    - Create an order
-    - Delete an order
-    - Get data of an order
-    - Get data of all orders
-    - Update an order
-- E-commerce Customer
-    - Create an e-commerce customer
-    - Delete an e-commerce customer
-    - Get data of an e-commerce customer
-    - Get data of all e-commerce customers
-    - Update an e-commerce customer
-- E-commerce Order Products
-    - Get data of all order products
-    - Get data of an ordered product
-    - Get data of an order's product
+::: details Contact
+- Create a contact
+- Delete a contact
+- Get data of a contact
+- Get data of all contacts
+- Update a contact
 
+:::
+::: details Deal
+- Create a deal
+- Delete a deal
+- Get data of a deal
+- Get data of all deals
+- Update a deal
+:::
+::: details Connection
+- Create a connection
+- Delete a connection
+- Get data of a connection
+- Get data of all connections
+- Update a connection
+:::
+::: details E-commerce Order
+- Create an order
+- Delete an order
+- Get data of an order
+- Get data of all orders
+- Update an order
+:::
+::: details E-commerce Customer
+- Create an e-commerce customer
+- Delete an e-commerce customer
+- Get data of an e-commerce customer
+- Get data of all e-commerce customers
+- Update an e-commerce customer
+:::
+::: details E-commerce Order Products
+- Get data of all order products
+- Get data of an ordered product
+- Get data of an order's product
+:::
 
 ## Example Usage
 

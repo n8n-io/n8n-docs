@@ -20,6 +20,8 @@
     "directory-tree": "^2.2.4",
     "vuepress": "^1.5.0",
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-reading-time": "^0.1.1"
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "vuepress-plugin-seo": "^0.1.4"
   }
 }

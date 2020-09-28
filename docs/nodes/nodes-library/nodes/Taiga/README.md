@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Issue
-    - Create an issue
-    - Delete an issue
-    - Get an issue
-    - Get all issues
-    - Update an issue
+::: details Issue
+- Create an issue
+- Delete an issue
+- Get an issue
+- Get all issues
+- Update an issue
+:::
 
 
 ## Example Usage

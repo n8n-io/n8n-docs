@@ -12,13 +12,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Lead
-    - Create a new lead
-    - Delete a lead
-    - Get data of a lead
-    - Get data of all leads
-    - Get the fields' metadata
-    - Update a lead
+::: details Lead
+- Create a new lead
+- Delete a lead
+- Get data of a lead
+- Get data of all leads
+- Get the fields' metadata
+- Update a lead
+:::
 
 ## Example Usage
 

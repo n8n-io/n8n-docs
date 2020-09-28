@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Meeting
-    - Create a meeting
-    - Delete a meeting
-    - Retrieve a meeting
-    - Retrieve all meetings
-    - Update a meeting
+::: details Meeting
+- Create a meeting
+- Delete a meeting
+- Retrieve a meeting
+- Retrieve all meetings
+- Update a meeting
+:::
 
 ## Example Usage
 

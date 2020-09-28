@@ -12,16 +12,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Contact
-    - Create a contact
-    - Get a contact
-    - Get all contacts
-    - Update a contact
-- Invoice
-    - Create an invoice
-    - Get an invoice
-    - Get all invoices
-    - Update an invoice
+::: details Contact
+- Create a contact
+- Get a contact
+- Get all contacts
+- Update a contact
+:::
+
+::: details Invoice
+- Create an invoice
+- Get an invoice
+- Get all invoices
+- Update an invoice
+:::
 
 ## Example Usage
 

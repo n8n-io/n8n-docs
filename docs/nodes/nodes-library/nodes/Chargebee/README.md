@@ -12,15 +12,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Customer
-    - Create a customer
-- Invoice
-    - Return the invoices
-    - Get URL for the invoice PDF 
-- Subscription
-    - Cancel a subscription
-    - Delete a subscription
+::: details Customer
+- Create a customer
+:::
 
+::: details Invoice
+- Return the invoices
+- Get URL for the invoice PDF
+:::
+
+::: details Subscription
+- Cancel a subscription
+- Delete a subscription
+:::
 
 ## Example Usage
 

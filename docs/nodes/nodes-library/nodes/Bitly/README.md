@@ -12,11 +12,11 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Link
-	- Create a link
-	- Get a link
-	- Update a link
-
+::: details Link
+- Create a link
+- Get a link
+- Update a link
+:::
 
 ## Example Usage
 

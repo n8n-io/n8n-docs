@@ -12,13 +12,15 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Image
-    - Create an image
-    - Get an image
-- User
-    - Get a template
-    - Get all templates
+::: details Image
+- Create an image
+- Get an image
+:::
 
+::: details User
+- Get a template
+- Get all templates
+:::
 
 ## Example Usage
 

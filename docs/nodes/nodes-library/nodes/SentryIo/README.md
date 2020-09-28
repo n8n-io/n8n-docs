@@ -12,29 +12,40 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Event
-    - Get event by ID
-    - Get all events
-- Issue
-    - Delete an issue
-    - Get issue by ID
-    - Get all issues
-    - Update an issue
-- Project
-    - Get project by ID
-    - Get all projects
-- Release
-    - Create a release
-    - Get release by a version identifier
-    - Get all releases
-- Organization
-    - Create an organization
-    - Get an organization by slug
-    - Get all organizations
-- Team
-    - Create a new team
-    - Get team by slug
-    - Get all teams
+::: details Event
+- Get event by ID
+- Get all events
+:::
+
+::: details Issue
+- Delete an issue
+- Get issue by ID
+- Get all issues
+- Update an issue
+:::
+
+::: details Project
+- Get project by ID
+- Get all projects
+:::
+
+::: details Release
+- Create a release
+- Get release by a version identifier
+- Get all releases
+:::
+
+::: details Organization
+- Create an organization
+- Get an organization by slug
+- Get all organizations
+:::
+
+::: details Team
+- Create a new team
+- Get team by slug
+- Get all teams
+:::
 
 ## Example Usage
 

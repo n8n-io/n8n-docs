@@ -12,66 +12,80 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Account
-    - Add note to an account
-    - Create an account
-    - Get an account
-    - Get all accounts
-    - Get an overview of accounts
-    - Delete an account
-    - Update an account
-- Attachment
-    - Create an attachment
-    - Delete an attachment
-    - Get an attachment
-    - Get all attachments
-    - Get an overview of attachments metadata
-    - Update an attachment
-- Case
-    - Add a comment to a case
-    - Create a case
-    - Get a case
-    - Get all cases
-    - Get an overview of cases metadata
-    - Delete a case
-    - Update a case
-- Contact
-    - Add lead to a campaign
-    - Add note to a contact
-    - Create a contact
-    - Delete a contact
-    - Get a contact
-    - Get overview of contacts metadata
-    - Get all contacts
-    - Update a contact
-- Lead
-    - Add lead to a campaign
-    - Add note to a lead
-    - Create a lead
-    - Delete a lead
-    - Get a lead
-    - Get all leads
-    - Get summary of leads metadata
-    - Update a lead
-- Opportunity
-    - Add note to an opportunity
-    - Create an opportunity
-    - Delete an opportunity
-    - Get an opportunity
-    - Get all opportunities
-    - Get an overview of opportunities metadata
-    - Update an opportunity
-- Task
-    - Create a task
-    - Delete a task
-    - Get a task
-    - Get all tasks
-    - Get an overview of tasks metadata
-    - Update a task
-- User
-    - Get a user
-    - Get all users
+::: details Account
+- Add note to an account
+- Create an account
+- Get an account
+- Get all accounts
+- Get an overview of accounts
+- Delete an account
+- Update an account
+:::
 
+::: details Attachment
+- Create an attachment
+- Delete an attachment
+- Get an attachment
+- Get all attachments
+- Get an overview of attachments metadata
+- Update an attachment
+:::
+
+::: details Case
+- Add a comment to a case
+- Create a case
+- Get a case
+- Get all cases
+- Get an overview of cases metadata
+- Delete a case
+- Update a case
+:::
+
+::: details Contact
+- Add lead to a campaign
+- Add note to a contact
+- Create a contact
+- Delete a contact
+- Get a contact
+- Get overview of contacts metadata
+- Get all contacts
+- Update a contact
+:::
+
+::: details Lead
+- Add lead to a campaign
+- Add note to a lead
+- Create a lead
+- Delete a lead
+- Get a lead
+- Get all leads
+- Get summary of leads metadata
+- Update a lead
+:::
+
+::: details Opportunity
+- Add note to an opportunity
+- Create an opportunity
+- Delete an opportunity
+- Get an opportunity
+- Get all opportunities
+- Get an overview of opportunities metadata
+- Update an opportunity
+:::
+
+::: details Task
+- Create a task
+- Delete a task
+- Get a task
+- Get all tasks
+- Get an overview of tasks metadata
+- Update a task
+:::
+
+::: details User
+- Get a user
+- Get all users
+:::
 
 ## Example Usage
 

@@ -12,20 +12,29 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Coupon
-    - Create a coupon
-    - Get all coupons
-    - Update a coupon
-- Payment
-    - Get all payments
-    - Reschedule payment
-- Plan
-    - Get a plan
-    - Get all plans
-- Product
-    - Get all products
-- User
-    - Get all users
+::: details Coupon
+- Create a coupon
+- Get all coupons
+- Update a coupon
+:::
+
+::: details Payment
+- Get all payments
+- Reschedule payment
+:::
+
+::: details Plan
+- Get a plan
+- Get all plans
+:::
+
+::: details Product
+- Get all products
+:::
+
+::: details User
+- Get all users
+:::
 
 
 ## Example Usage

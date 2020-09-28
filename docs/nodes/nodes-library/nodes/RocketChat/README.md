@@ -12,8 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Chat
-    - Post a message to a channel or a direct message
+::: details Chat
+- Post a message to a channel or a direct message
+:::
 
 ## Example Usage
 

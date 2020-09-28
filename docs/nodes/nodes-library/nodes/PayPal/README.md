@@ -12,12 +12,15 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Payout
-	- Create a batch payout
-	- Show batch payout details
-- Payout item
-	- Cancel an unpaid payout item
-	- Show payout item details
+::: details Payout
+- Create a batch payout
+- Show batch payout details
+:::
+
+::: details Payout item
+- Cancel an unpaid payout item
+- Show payout item details
+:::
 
 ## Example Usage
 

@@ -12,11 +12,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Email
-	- Send an email
-	- Send an email template
-- SMS
-	- Send an SMS
+::: details Email
+- Send an email
+- Send an email template
+:::
+
+::: details SMS
+- Send an SMS
+:::
 
 ## Example Usage
 

@@ -12,21 +12,26 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Channel
-    - Add a user to a channel
-    - Create a new channel
-    - Soft delete a channel
-    - Get a page of members for a channel
-    - Restores a soft deleted channel
-    - Get statistics for a channel
-- Message
-	- Soft delete a post, by marking the post as deleted in the database
-	- Post a message into a channel
-- User
-	- Deactivates the user and revokes all its sessions by archiving its user object
-	- Retrieve all users
-	- Get a user by email
-	- Get a user by id	
+::: details Channel
+- Add a user to a channel
+- Create a new channel
+- Soft delete a channel
+- Get a page of members for a channel
+- Restores a soft deleted channel
+- Get statistics for a channel
+:::
+
+::: details Message
+- Soft delete a post, by marking the post as deleted in the database
+- Post a message into a channel
+:::
+
+::: details User
+- Deactivates the user and revokes all its sessions by archiving its user object
+- Retrieve all users
+- Get a user by email
+- Get a user by id
+:::	
 
 ## Example Usage
 

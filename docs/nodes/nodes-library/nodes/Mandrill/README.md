@@ -12,9 +12,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Message
-	- Send message based on a template
-	- Send message based on HTML
+::: details Message
+- Send message based on a template
+- Send message based on HTML
+:::
 
 ## Example Usage
 

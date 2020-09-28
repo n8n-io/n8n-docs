@@ -12,10 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- SMS
-    - Send an SMS
-- Voice
-    - Send a voice message
+::: details SMS
+- Send an SMS
+:::
+
+::: details Voice
+- Send a voice message
+:::
 
 
 ## Example Usage

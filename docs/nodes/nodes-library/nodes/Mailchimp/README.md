@@ -12,15 +12,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Member
-	- Add a new member on list
-	- Delete a member on list
-	- Get a member on list
-	- Get all members on list
-	- Update a new member on list
-- Member Tag
-	- Add tags from a list member
-	- Remove tags from a list member
+::: details Member
+- Add a new member on list
+- Delete a member on list
+- Get a member on list
+- Get all members on list
+- Update a new member on list
+:::
+
+::: details Member Tag
+- Add tags from a list member
+- Remove tags from a list member
+:::
 
 ## Example Usage
 

@@ -12,20 +12,25 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Bucket
-	- Create a bucket
-	- Get all buckets
-	- Search within a bucket
-- File
-	- Copy a file
-	- Delete a file
-	- Download a file
-	- Get all files
-	- Upload a file
-- Folder
-	- Create a folder
-	- Delete a folder
-	- Get all folders
+::: details Bucket
+- Create a bucket
+- Get all buckets
+- Search within a bucket
+:::
+
+::: details File
+- Copy a file
+- Delete a file
+- Download a file
+- Get all files
+- Upload a file
+:::
+
+::: details Folder
+- Create a folder
+- Delete a folder
+- Get all folders
+:::
 
 ## Example Usage
 

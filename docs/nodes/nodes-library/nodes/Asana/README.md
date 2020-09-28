@@ -12,15 +12,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Task
-    - Create a task
-    - Delete a task
-    - Get data of a task
-    - Update a task
-    - Search for tasks
-- User
-    - Get data of all users
-    - Get data of a user
+::: details Task
+- Create a task
+- Delete a task
+- Get data of a task
+- Update a task
+- Search for tasks
+:::
+
+::: details User
+- Get data of all users
+- Get data of a user
+:::
 
 
 ## Example Usage

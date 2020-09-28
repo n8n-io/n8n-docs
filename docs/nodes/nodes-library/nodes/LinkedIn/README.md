@@ -12,8 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Post
-    - Create a new post
+::: details Post
+- Create a new post
+:::
 
 ## Example Usage
 

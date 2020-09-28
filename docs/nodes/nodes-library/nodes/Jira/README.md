@@ -12,15 +12,16 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Issue
-    - Create a new issue
-    - Update an issue
-    - Get an issue
-    - Get all issues
-    - Get issue changelog
-    - Create an email notification for an issue and add it to the mail queue
-    - Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status
-    - Delete an issue
+::: details Issue
+- Create a new issue
+- Update an issue
+- Get an issue
+- Get all issues
+- Get issue changelog
+- Create an email notification for an issue and add it to the mail queue
+- Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status
+- Delete an issue
+:::
 
 ## Example Usage
 

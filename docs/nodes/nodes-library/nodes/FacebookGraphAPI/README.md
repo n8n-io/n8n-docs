@@ -12,15 +12,17 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Default
-	- GET
-	- POST
-	- DELETE
-- Video Uploads
-	- GET
-	- POST
-	- DELETE
+::: details Default
+- GET
+- POST
+- DELETE
+:::
 
+::: details Video Uploads
+- GET
+- POST
+- DELETE
+:::
 
 ## Example Usage
 

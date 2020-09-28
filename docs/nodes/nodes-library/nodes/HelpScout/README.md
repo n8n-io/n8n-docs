@@ -12,23 +12,30 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Conversation
-    - Create a new conversation
-    - Delete a conversation
-    - Get a conversation
-    - Get all conversations
-- Customer
-	- Create a new customer
-	- Get a customer
-	- Get all customers
-	- Get customer property definitions
-	- Update a customer
-- Mailbox
-	- Get data of a mailbox
-	- Get all mailboxes
-- Thread
-	- Create a new chat thread
-	- Get all chat threads
+::: details Conversation
+- Create a new conversation
+- Delete a conversation
+- Get a conversation
+- Get all conversations
+:::
+
+::: details Customer
+- Create a new customer
+- Get a customer
+- Get all customers
+- Get customer property definitions
+- Update a customer
+:::
+
+::: details Mailbox
+- Get data of a mailbox
+- Get all mailboxes
+:::
+
+::: details Thread
+- Create a new chat thread
+- Get all chat threads
+:::
 
 ## Example Usage
 

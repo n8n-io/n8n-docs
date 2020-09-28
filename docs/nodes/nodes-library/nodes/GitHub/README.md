@@ -12,28 +12,37 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- File
-    - Create a new file in repository
-    - Delete a file in repository
-    - Edit a file in repository
-    - Get the data of a single issue
-- Issue
-	- Create a new issue
-	- Create a new comment on an issue
-	- Edit an issue
-	- Get the data of a single issue
-	- Lock an issue
-- Repository
-	- Get the data of a single repository
-	- Return the contents of the repository's license file, if one is detected
-	- Returns issues of a repository
-	- Get the community profile of a repository with metrics, health score, description, license, ...
-	- Get the top 10 popular content paths over the last 14 days
-	- Get the top 10 referrering domains over the last 14 days
-- Release
-	- Creates a new release
-- User
-	- Returns the repositories of a user
+::: details File
+- Create a new file in repository
+- Delete a file in repository
+- Edit a file in repository
+- Get the data of a single issue
+:::
+
+::: details Issue
+- Create a new issue
+- Create a new comment on an issue
+- Edit an issue
+- Get the data of a single issue
+- Lock an issue
+:::
+
+::: details Repository
+- Get the data of a single repository
+- Return the contents of the repository's license file, if one is detected
+- Returns issues of a repository
+- Get the community profile of a repository with metrics, health score, description, license, ...
+- Get the top 10 popular content paths over the last 14 days
+- Get the top 10 referrering domains over the last 14 days
+:::
+
+::: details Release
+- Creates a new release
+:::
+
+::: details User
+- Returns the repositories of a user
+:::
 
 ## Example Usage
 

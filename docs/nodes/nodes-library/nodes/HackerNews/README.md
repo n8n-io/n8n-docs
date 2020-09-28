@@ -12,12 +12,17 @@ The Hacker News node does not require authentication.
 
 ## Basic Operations
 
-- All
-	- Get all items
-- Article
-	- Get a Hacker News article
-- User
-	- Get a Hacker News user
+::: details All
+- Get all items
+:::
+
+::: details Article
+- Get a Hacker News article
+:::
+
+::: details User
+- Get a Hacker News user
+:::
 
 ## Example Usage
 

@@ -12,19 +12,26 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Issue
-	- Create a new issue
-	- Create a new comment on an issue
-	- Edit an issue
-	- Get the data of a single issue
-	- Lock an issue
-- Repository
-	- Get the data of a single repository
-	- Return issues of a repository
-- Release
-	- Create a new release
-- User
-	- Returns the repositories of a user
+::: details Issue
+- Create a new issue
+- Create a new comment on an issue
+- Edit an issue
+- Get the data of a single issue
+- Lock an issue
+:::
+
+::: details Repository
+- Get the data of a single repository
+- Return issues of a repository
+:::
+
+::: details Release
+- Create a new release
+:::
+
+::: details User
+- Returns the repositories of a user
+:::
 
 ## Example Usage
 

@@ -12,25 +12,30 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Message
-    - Delete a message
-    - Get a message
-    - Send a private message
-    - Send a message to stream
-    - Update a message
-    - Upload a file
-- Stream
-	- Create a stream
-	- Delete a stream
-    - Get all streams
-    - Get subscribed streams
-    - Update a stream
-- User
-	- Create a user
-	- Deactivate a user
-	- Get a user
-	- Get all users
-    - Update a user
+::: details Message
+- Delete a message
+- Get a message
+- Send a private message
+- Send a message to stream
+- Update a message
+- Upload a file
+:::
+
+::: details Stream
+- Create a stream
+- Delete a stream
+- Get all streams
+- Get subscribed streams
+- Update a stream
+:::
+
+::: details User
+- Create a user
+- Deactivate a user
+- Get a user
+- Get all users
+- Update a user
+:::
 
 ## Example Usage
 

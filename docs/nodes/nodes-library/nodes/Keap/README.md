@@ -12,42 +12,57 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Company
-	- Create a company
-	- Retrieve all companies
-- Contact
-	- Create/update a contact
-	- Delete a contact
-	- Retrieve a contact
-	- Retrieve all contacts
-- Contact Note
-	- Create a note
-	- Delete a note
-	- Retrieve a note
-	- Retrieve all notes
-	- Update a note
-- Contact Tag
-	- Add a list of tags to a contact
-	- Delete a contact's tag
-	- Retrieve all contact's tags
-- Ecommerce Order
-	- Create an ecommerce order
-	- Get an ecommerce order
-	- Delete an ecommerce order
-	- Retrieve all ecommerce orders
-- Ecommerce Product
-	- Create an ecommerce product
-	- Delete an ecommerce product
-	- Get an ecommerce product
-	- Retrieve all ecommerce products
-- Email
-	- Create a record of an email sent to a contact
-	- Retrieve all sent emails
-	- Send email
-- File
-	- Delete a file
-	- Retrieve all files
-	- Upload a file
+::: details Company
+- Create a company
+- Retrieve all companies
+:::
+
+::: details Contact
+- Create/update a contact
+- Delete a contact
+- Retrieve a contact
+- Retrieve all contacts
+:::
+
+::: details Contact Note
+- Create a note
+- Delete a note
+- Retrieve a note
+- Retrieve all notes
+- Update a note
+:::
+
+::: details Contact Tag
+- Add a list of tags to a contact
+- Delete a contact's tag
+- Retrieve all contact's tags
+:::
+
+::: details Ecommerce Order
+- Create an ecommerce order
+- Get an ecommerce order
+- Delete an ecommerce order
+- Retrieve all ecommerce orders
+:::
+
+::: details Ecommerce Product
+- Create an ecommerce product
+- Delete an ecommerce product
+- Get an ecommerce product
+- Retrieve all ecommerce products
+:::
+
+::: details Email
+- Create a record of an email sent to a contact
+- Retrieve all sent emails
+- Send email
+:::
+
+::: details File
+- Delete a file
+- Retrieve all files
+- Upload a file
+:::
 
 ## Example Usage
 

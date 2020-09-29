@@ -12,34 +12,41 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Channel
-	- Archive a conversation
-	- Close a direct message or multi-person direct message
-	- Create a public or private channel-based conversation
-	- Get information about a channel
-	- Get all channels in a Slack team
-	- Get a conversation's history of messages and events
-	- Invite a user to a channel
-	- Join an existing conversation
-	- Kick a user from a channel
-	- Leave a conversation
-	- Open or resume a direct message or multi-person direct message
-	- Rename a conversation
-	- Get a thread of replies posted to a channel
-	- Set the purpose for a conversation
-	- Set the topic for a conversation
-	- Unarchive a conversation
-- File
-	- Get a file's information
-	- Get and filter a team's files
-	- Upload an existing file or create a new one
-- Message
-	- Post a message in a channel
-	- Update a message
-- Star
-	- Add a star to an item
-	- Delete a star from an item
-	- Get all the stars of an authenticated user
+::: details Channel
+- Archive a conversation
+- Close a direct message or multi-person direct message
+- Create a public or private channel-based conversation
+- Get information about a channel
+- Get all channels in a Slack team
+- Get a conversation's history of messages and events
+- Invite a user to a channel
+- Join an existing conversation
+- Kick a user from a channel
+- Leave a conversation
+- Open or resume a direct message or multi-person direct message
+- Rename a conversation
+- Get a thread of replies posted to a channel
+- Set the purpose for a conversation
+- Set the topic for a conversation
+- Unarchive a conversation
+:::
+
+::: details File
+- Get a file's information
+- Get and filter a team's files
+- Upload an existing file or create a new one
+:::
+
+::: details Message
+- Post a message in a channel
+- Update a message
+:::
+
+::: details Star
+- Add a star to an item
+- Delete a star from an item
+- Get all the stars of an authenticated user
+:::
 
 ## Example Usage
 

@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Build
-    - Cancel a build
-    - Get a build
-    - Get all builds
-    - Restart a build
-    - Trigger a build
+::: details Build
+- Cancel a build
+- Get a build
+- Get all builds
+- Restart a build
+- Trigger a build
+:::
 
 ## Example Usage
 

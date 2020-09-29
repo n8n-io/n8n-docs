@@ -12,10 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Company
-    - Get information about a company
-- Person
-    - Get information about a person
+::: details Company
+- Get information about a company
+:::
+
+::: details Person
+- Get information about a person
+:::
 
 
 ## Example Usage

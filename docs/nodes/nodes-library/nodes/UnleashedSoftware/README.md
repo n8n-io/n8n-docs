@@ -12,11 +12,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Sales Order
-    - Get all sales orders
-- Stock On Hand
-    - Get a stock on hand
-    - Get all stocks on hand
+::: details Sales Order
+- Get all sales orders
+:::
+
+::: details Stock On Hand
+- Get a stock on hand
+- Get all stocks on hand
+:::
 
 ## Example Usage
 

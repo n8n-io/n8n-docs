@@ -12,8 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Alert
-    - Send an alert
+::: details Alert
+- Send an alert
+:::
 
 ## Example Usage
 

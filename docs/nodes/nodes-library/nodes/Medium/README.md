@@ -12,10 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Post
-	- Create a post
-- Publication
-	- Get all publications
+::: details Post
+- Create a post
+:::
+
+::: details Publication
+- Get all publications
+:::
 
 
 ## Example Usage

@@ -12,16 +12,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- User
-    - Create or update a user profile
-    - Change a users identifier
-    - Unsubscribe a user
-    - Resubscribe a user
-    - Delete a user
-    - Add a tag to a users profile
-    - Remove a tag from a users profile
-- Track
-    - Track an event for a specific customer
+::: details User
+- Create or update a user profile
+- Change a users identifier
+- Unsubscribe a user
+- Resubscribe a user
+- Delete a user
+- Add a tag to a users profile
+- Remove a tag from a users profile
+:::
+
+::: details Track
+- Track an event for a specific customer
+:::
 
 
 ## Example Usage

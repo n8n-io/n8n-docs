@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Contact
-	- Create a new contact
-	- Update a contact
-	- Get data of a contact
-	- Get data of all contacts
-	- Delete a contact
+::: details Contact
+- Create a new contact
+- Update a contact
+- Get data of a contact
+- Get data of all contacts
+- Delete a contact
+:::
 
 ## Example Usage
 

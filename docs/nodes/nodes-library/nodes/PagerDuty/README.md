@@ -12,19 +12,26 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Incident
-    - Create an incident
-    - Get an incident
-    - Get all incidents
-    - Update an incident
-- Incident Note
-    - Create an incident note
-    - Get all incident's notes
-- Log Entry
-    - Get a log entry
-    - Get all log entries
-- User
-    - Get a user
+::: details Incident
+- Create an incident
+- Get an incident
+- Get all incidents
+- Update an incident
+:::
+
+::: details Incident Note
+- Create an incident note
+- Get all incident's notes
+:::
+
+::: details Log Entry
+- Get a log entry
+- Get all log entries
+:::
+
+::: details User
+- Get a user
+:::
 
 
 ## Example Usage

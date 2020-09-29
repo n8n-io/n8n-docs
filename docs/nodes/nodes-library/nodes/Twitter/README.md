@@ -12,9 +12,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Tweet
-    - Create a new tweet
-    - Search tweets
+::: details Tweet
+- Create a new tweet
+- Search tweets
+:::
 
 ## Example Usage
 

@@ -12,15 +12,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Collection
-    - Create a collection entry
-    - Get all collection entries
-    - Update a collection entry
-- Form
-    - Store data from a form submission
-- Singleton
-    - Get a singleton
+::: details Collection
+- Create a collection entry
+- Get all collection entries
+- Update a collection entry
+:::
 
+::: details Form
+- Store data from a form submission
+:::
+
+::: details Singleton
+- Get a singleton
+:::
 
 ## Example Usage
 

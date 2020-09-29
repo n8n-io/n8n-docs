@@ -12,18 +12,21 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Organization
-    - Create an organization
-    - Delete an organization
-    - Get an organization
-    - Get all organizations
-    - Update an organization
-- Person
-    - Create a person
-    - Delete a person
-    - Get a person
-    - Get all persons
-    - Update a person
+::: details Organization
+- Create an organization
+- Delete an organization
+- Get an organization
+- Get all organizations
+- Update an organization
+:::
+
+::: details Person
+- Create a person
+- Delete a person
+- Get a person
+- Get all persons
+- Update a person
+:::
 
 
 ## Example Usage

@@ -12,24 +12,29 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Chat
-	- Get up to date information about a chat
-	- Leave a group, supergroup or channel
-	- Get the member of a chat
-	- Set the description of a chat
-	- Set the title of a chat
-- Callback
-	- Send an answer to a callback query sent from the inline keyboard
-- Message
-	- Edit a text message
-	- Send an audio file
-	- Send a chat action
-	- Send a document
-	- Send a text message
-	- Send a group of photos or videos to an album
-	- Send a photo
-	- Send a sticker
-	- Send a video
+::: details Chat
+- Get up to date information about a chat
+- Leave a group, supergroup or channel
+- Get the member of a chat
+- Set the description of a chat
+- Set the title of a chat
+:::
+
+::: details Callback
+- Send an answer to a callback query sent from the inline keyboard
+:::
+
+::: details Message
+- Edit a text message
+- Send an audio file
+- Send a chat action
+- Send a document
+- Send a text message
+- Send a group of photos or videos to an album
+- Send a photo
+- Send a sticker
+- Send a video
+:::
 
 ## Example Usage
 

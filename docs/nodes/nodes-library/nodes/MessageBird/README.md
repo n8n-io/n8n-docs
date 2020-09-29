@@ -12,8 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- SMS
-    - Send text messages (SMS)
+::: details SMS
+- Send text messages (SMS)
+:::
 
 ## Example Usage
 

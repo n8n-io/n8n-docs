@@ -12,24 +12,29 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Activity
-    - Create an activity
-    - Delete an activity
-    - Get an activity
-    - Get all activities
-    - Update an activity
-- Company
-    - Create a company
-    - Delete a company
-    - Get a company
-    - Get all companies
-    - Update a company
-- Deal
-    - Create a deal
-    - Delete a deal
-    - Get a deal
-    - Get all deals
-    - Update a deal
+::: details Activity
+- Create an activity
+- Delete an activity
+- Get an activity
+- Get all activities
+- Update an activity
+:::
+
+::: details Company
+- Create a company
+- Delete a company
+- Get a company
+- Get all companies
+- Update a company
+:::
+
+::: details Deal
+- Create a deal
+- Delete a deal
+- Get a deal
+- Get all deals
+- Update a deal
+:::
 
 
 ## Example Usage

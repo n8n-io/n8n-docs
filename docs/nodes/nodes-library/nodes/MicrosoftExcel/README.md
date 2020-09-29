@@ -12,17 +12,22 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Table
-	- Add rows to the end of the table
-	- Retrieve a list of table columns
-	- Retrieve a list of table rows
-	- Look for a specific column value and return the matching row
-- Workbook
-	- Add a new worksheet to a workbook
-	- Get data of all workbooks
-- Worksheet
-	- Get all worksheets
-	- Get worksheet content
+::: details Table
+- Add rows to the end of the table
+- Retrieve a list of table columns
+- Retrieve a list of table rows
+- Look for a specific column value and return the matching row
+:::
+
+::: details Workbook
+- Add a new worksheet to a workbook
+- Get data of all workbooks
+:::
+
+::: details Worksheet
+- Get all worksheets
+- Get worksheet content
+:::
 
 ## Example Usage
 

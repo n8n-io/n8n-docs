@@ -12,11 +12,12 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Light
-    - Delete a light
-    - Retrieve a light
-    - Retrieve all lights
-    - Update a light
+::: details Light
+- Delete a light
+- Retrieve a light
+- Retrieve all lights
+- Update a light
+:::
 
 
 ## Example Usage

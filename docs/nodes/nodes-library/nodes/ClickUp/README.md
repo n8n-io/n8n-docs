@@ -12,57 +12,76 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Checklist
-    - Create a checklist
-    - Delete a checklist
-    - Update a checklist
-- Checklist item
-    - Create a checklist item
-    - Delete a checklist item
-    - Update a checklist item
-- Comment
-    - Create a comment
-    - Delete a comment
-    - Get all comments
-    - Update a comment
-- Folder
-    - Create a folder
-    - Delete a folder
-    - Get a folder
-    - Get all folders
-    - Update a folder
-- Goal
-    - Create a goal
-    - Delete a goal
-    - Get a goal
-    - Get all goals
-    - Update a goal
-- Goal Key Result
-    - Create a key result
-    - Delete a key result
-    - Update a key result
-- List
-    - Create a list
-    - Retrieve list's custom fields
-    - Delete a list
-    - Get a list
-    - Get all lists
-    - Update a list
-- Task
-    - Create a task
-    - Delete a task
-    - Get a task
-    - Get all tasks
-    - Set a custom field
-    - Update a task
-- Task Dependency
-    - Create a task dependency
-    - Delete a task dependency
-- Time Tracking
-    - Log time on task
-    - Delete a logged time
-    - Get all logging times on task
-    - Update a logged time
+::: details Checklist
+- Create a checklist
+- Delete a checklist
+- Update a checklist
+:::
+
+::: details Checklist item
+- Create a checklist item
+- Delete a checklist item
+- Update a checklist item
+:::
+
+::: details Comment
+- Create a comment
+- Delete a comment
+- Get all comments
+- Update a comment
+:::
+
+::: details Folder
+- Create a folder
+- Delete a folder
+- Get a folder
+- Get all folders
+- Update a folder
+:::
+
+::: details Goal
+- Create a goal
+- Delete a goal
+- Get a goal
+- Get all goals
+- Update a goal
+:::
+
+::: details Goal Key Result
+- Create a key result
+- Delete a key result
+- Update a key result
+:::
+
+::: details List
+- Create a list
+- Retrieve list's custom fields
+- Delete a list
+- Get a list
+- Get all lists
+- Update a list
+:::
+
+::: details Task
+- Create a task
+- Delete a task
+- Get a task
+- Get all tasks
+- Set a custom field
+- Update a task
+:::
+
+::: details Task Dependency
+- Create a task dependency
+- Delete a task dependency
+:::
+
+::: details Time Tracking
+- Log time on task
+- Delete a logged time
+- Get all logging times on task
+- Update a logged time
+:::
 
 ## Example Usage
 

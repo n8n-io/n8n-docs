@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Order
-	- Create an order
-	- Delete an order
-	- Get an order
-	- Get all orders
-	- Update an order
+::: details Order
+- Create an order
+- Delete an order
+- Get an order
+- Get all orders
+- Update an order
+:::
 
 ## Example Usage
 

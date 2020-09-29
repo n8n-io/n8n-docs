@@ -12,9 +12,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Job
-	- Execute a job
-	- Get metadata of a job
+::: details Job
+- Execute a job
+- Get metadata of a job
+:::
 
 ## Example Usage
 

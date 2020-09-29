@@ -12,12 +12,13 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Ticket
-    - Create a new ticket
-    - Delete a ticket
-    - Get a ticket
-    - Get all tickets
-    - Update a ticket
+::: details Ticket
+- Create a new ticket
+- Delete a ticket
+- Get a ticket
+- Get all tickets
+- Update a ticket
+:::
 
 ## Example Usage
 

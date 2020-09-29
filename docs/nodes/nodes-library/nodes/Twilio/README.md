@@ -12,9 +12,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- SMS
-    - Send SMS
-    - Send Whatsapp message
+::: details SMS
+- Send SMS
+- Send Whatsapp message
+:::
 
 ## Example Usage
 

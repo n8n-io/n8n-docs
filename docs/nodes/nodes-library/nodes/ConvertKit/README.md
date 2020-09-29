@@ -12,26 +12,35 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Custom Field
-    - Create a field
-    - Delete a field
-    - Get all fields
-    - Update a field
-- Form
-    - Add a subscriber
-    - Get all forms
-    - List subscriptions to a form including subscriber data
-- Sequence
-    - Add a subscriber
-    - Get all sequences
-    - Get all subscriptions to a sequence including subscriber data
-- Tag
-    - Create a tag
-    - Get all tags
-- Tag Subscriber
-    - Add a tag to a subscriber
-    - List subscriptions to a tag including subscriber data
-    - Delete a tag from a subscriber
+::: details Custom Field
+- Create a field
+- Delete a field
+- Get all fields
+- Update a field
+:::
+
+::: details Form
+- Add a subscriber
+- Get all forms
+- List subscriptions to a form including subscriber data
+:::
+
+::: details Sequence
+- Add a subscriber
+- Get all sequences
+- Get all subscriptions to a sequence including subscriber data
+:::
+
+::: details Tag
+- Create a tag
+- Get all tags
+:::
+
+::: details Tag Subscriber
+- Add a tag to a subscriber
+- List subscriptions to a tag including subscriber data
+- Delete a tag from a subscriber
+:::
 
 ## Example Usage
 

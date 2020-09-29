@@ -12,8 +12,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Publish
-    - Publish a message to a topic
+::: details Publish
+- Publish a message to a topic
+:::
 
 ## Example Usage
 

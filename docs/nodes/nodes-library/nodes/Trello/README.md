@@ -12,43 +12,54 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Attachment
-    - Create a new attachment for a card
-    - Delete an attachment
-    - Get the data of an attachment
-    - Returns all attachments for the card
-- Board
-    - Create a new board
-    - Delete a board
-    - Get the data of a board
-    - Update a board
-- Card
-    - Create a new card
-    - Delete a card
-    - Get the data of a card
-    - Update a card
-- Checklist
-    - Create a new checklist
-    - Delete a checklist
-    - Delete a checklist item
-    - Get the data of a checklist
-    - Returns all checklists for the card
-    - Get a specific checklist on a card
-    - Get the completed checklist items on a card
-    - Update an item in a checklist on a card
-- Label
-    - Add a label to a card
-    - Create a new label
-    - Delete a label
-    - Get the data of a label
-    - Returns all labels for the board
-    - Remove a label from a card
-    - Update a label
-- List
-    - Archive/Unarchive a list
-    - Create a new list
-    - Get the data of a list
-    - Update a list
+::: details Attachment
+- Create a new attachment for a card
+- Delete an attachment
+- Get the data of an attachment
+- Returns all attachments for the card
+:::
+
+::: details Board
+- Create a new board
+- Delete a board
+- Get the data of a board
+- Update a board
+:::
+
+::: details Card
+- Create a new card
+- Delete a card
+- Get the data of a card
+- Update a card
+:::
+
+::: details Checklist
+- Create a new checklist
+- Delete a checklist
+- Delete a checklist item
+- Get the data of a checklist
+- Returns all checklists for the card
+- Get a specific checklist on a card
+- Get the completed checklist items on a card
+- Update an item in a checklist on a card
+:::
+
+::: details Label
+- Add a label to a card
+- Create a new label
+- Delete a label
+- Get the data of a label
+- Returns all labels for the board
+- Remove a label from a card
+- Update a label
+:::
+
+::: details List
+- Archive/Unarchive a list
+- Create a new list
+- Get the data of a list
+- Update a list
+:::
 
 ## Example Usage
 

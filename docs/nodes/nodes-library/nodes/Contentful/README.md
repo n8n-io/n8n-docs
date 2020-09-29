@@ -12,18 +12,27 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Asset
-    - Get an asset
-    - Get all assets
-- Content Type
-    - Get the content type
-- Entry
-    - Get an entry
-    - Get all entires
-- Locale
-    - Get all locale
-- Space
-    - Get space details
+::: details Asset
+- Get an asset
+- Get all assets
+:::
+
+::: details Content Type
+- Get the content type
+:::
+
+::: details Entry
+- Get an entry
+- Get all entires
+:::
+
+::: details Locale
+- Get all locale
+:::
+
+::: details Space
+- Get space details
+:::
 
 
 ## Example Usage

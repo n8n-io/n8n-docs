@@ -12,19 +12,26 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Customer
-    - Create/Update a customer
-    - Delete a customer
-- Event
-    - Track a customer event
-    - Track an anonymous event
-- Campaign
-    - Get a campaign
-    - Get all campaigns
-    - Get metrics
-- Segment
-    - Add a customer
-    - Remove a customer
+::: details Customer
+- Create/Update a customer
+- Delete a customer
+:::
+
+::: details Event
+- Track a customer event
+- Track an anonymous event
+:::
+
+::: details Campaign
+- Get a campaign
+- Get all campaigns
+- Get metrics
+:::
+
+::: details Segment
+- Add a customer
+- Remove a customer
+:::
 
 
 ## Example Usage

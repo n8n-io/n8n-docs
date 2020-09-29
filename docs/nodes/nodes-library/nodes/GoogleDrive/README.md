@@ -12,15 +12,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- File
-	- Copy a file
-	- Delete a file
-	- Download a file
-	- List files and folders
-	- Upload a file
-- Folder
-	- Create a folder
-	- Delete a folder
+::: details File
+- Copy a file
+- Delete a file
+- Download a file
+- List files and folders
+- Upload a file
+:::
+
+::: details Folder
+- Create a folder
+- Delete a folder
+:::
 
 ## Example Usage
 

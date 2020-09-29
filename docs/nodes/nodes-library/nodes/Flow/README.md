@@ -12,12 +12,12 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Task
-    - Create a new task
-    - Update a task
-    - Get a task
-    - Get all the tasks
-
+::: details Task
+- Create a new task
+- Update a task
+- Get a task
+- Get all the tasks
+:::
 
 ## Example Usage
 

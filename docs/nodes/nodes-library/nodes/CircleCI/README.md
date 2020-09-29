@@ -12,10 +12,11 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Pipeline
-    - Get a pipeline
-    - Get all pipelines
-    - Trigger a pipeline
+::: details Pipeline
+- Get a pipeline
+- Get all pipelines
+- Trigger a pipeline
+:::
 
 ## Example Usage
 

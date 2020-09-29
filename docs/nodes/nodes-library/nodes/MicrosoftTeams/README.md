@@ -12,15 +12,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Channel
-    - Create a channel
-    - Delete a channel
-    - Get a channel
-    - Get all channels
-    - Update a channel
-- Channel Message (Beta)
-    - Create a message
-    - Get all messages
+::: details Channel
+- Create a channel
+- Delete a channel
+- Get a channel
+- Get all channels
+- Update a channel
+:::
+
+::: details Channel Message (Beta)
+- Create a message
+- Get all messages
+:::
 
 ## Example Usage
 

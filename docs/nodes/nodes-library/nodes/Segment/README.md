@@ -12,11 +12,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Identify
-    - Create an identity
-- Track
-    - Record the actions performed by the users
-    - Record page views on the website along with optional extra information
+::: details Identify
+- Create an identity
+:::
+
+::: details Track
+- Record the actions performed by the users
+- Record page views on the website along with optional extra information
+:::
 
 
 ## Example Usage

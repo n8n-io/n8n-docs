@@ -12,16 +12,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Post
-    - Create a post
-    - Get a post
-    - Get all posts
-    - Update a post
-- User
-	- Create a user
-	- Get a user
-	- Get all users
-	- Update a user
+::: details Post
+- Create a post
+- Get a post
+- Get all posts
+- Update a post
+:::
+
+::: details User
+- Create a user
+- Get a user
+- Get all users
+- Update a user
+:::
 
 ## Example Usage
 

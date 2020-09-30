@@ -46,6 +46,20 @@ function getChildrenFolders(folder) {
 		});
 }
 
+function getDescription(frontmatterDescription, permalink) {
+	var description = 'n8n is an extendable workflow automation tool that enables you to connect anything to everything via its open, fair-code model.';
+	var nodePath = /\/nodes\/n8n-nodes-base/;
+	var credentialPath = /\/credentials\//;
+	if (frontmatterDescription) {
+		if (nodePath.test(permalink) || credentialPath.test(permalink)) {
+			description = `${frontmatterDescription}, an extendable workflow automation tool that enables you to connect anything to everything via its open, fair-code model.`;
+		} else {
+			description = frontmatterDescription;
+		}
+	}
+	return description;
+}
+
 module.exports = {
 	description: 'Documentation for n8n',
 	title: 'Docs',
@@ -55,6 +69,16 @@ module.exports = {
 		[
 			'vuepress-plugin-code-copy',
 			true,
+		],
+		[
+			'seo',
+			{
+				description: $page => getDescription($page.frontmatter.description, $page.frontmatter.permalink),
+				title: ($page, $site) => `${$page.title} | n8n ${$site.title}`,
+				image: () => 'https://n8n.io/n8n-logo.png',
+				modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+				url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+			}
 		],
 		[
 			'@vuepress/google-analytics',
@@ -258,16 +282,16 @@ module.exports = {
 				},
 			],
 			// [
-				// {
-				// 	title: 'Introduction',
-				// 	sidebarDepth: 2,
-				// 	children: [
-				// 		'getting-started/overview.md',
-				// 		'getting-started/node-basics.md',
-				// 		'getting-started/workflow.md',
-				// 		'getting-started/start-workflows-via-cli.md',
-				// 	],
-				// },
+			// {
+			// 	title: 'Introduction',
+			// 	sidebarDepth: 2,
+			// 	children: [
+			// 		'getting-started/overview.md',
+			// 		'getting-started/node-basics.md',
+			// 		'getting-started/workflow.md',
+			// 		'getting-started/start-workflows-via-cli.md',
+			// 	],
+			// },
 			// ]
 		}
 	},

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.gitlab
+description: Learn how to use the GitLab node in n8n
 ---
 
 # GitLab

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/openWeatherMap
+description: Learn to configure credentials for the OpenWeatherMap node in n8n
 ---
 
 # OpenWeatherMap

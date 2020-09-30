@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.postmarkTrigger
+description: Learn how to use the Postmark Trigger node in n8n
 ---
 
 # Postmark Trigger

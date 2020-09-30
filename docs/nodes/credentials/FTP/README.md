@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/ftp
+description: Learn to configure credentials for the FTP node in n8n
 ---
 
 # FTP

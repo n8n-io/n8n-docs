@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/gitlab
+description: Learn to configure credentials for the GitLab node in n8n
 ---
 
 # GitLab

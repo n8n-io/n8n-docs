@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/linkFish
+description: Learn to configure credentials for the LinkFish node in n8n
 ---
 
 # LinkFish

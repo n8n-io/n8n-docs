@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/zoho
+description: Learn to configure credentials for the Zoho node in n8n
 ---
 
 # Zoho

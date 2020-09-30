@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.hubspot
+description: Learn how to use the HubSpot node in n8n
 ---
 
 # HubSpot

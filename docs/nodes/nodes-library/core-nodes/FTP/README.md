@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.ftp
+description: Learn how to use the FTP node in n8n
 ---
 
 # FTP

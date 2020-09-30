@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/gumroad
+description: Learn to configure credentials for the Gumroad node in n8n
 ---
 
 # Gumroad

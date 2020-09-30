@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.trello
+description: Learn how to use the Trello node in n8n
 ---
 
 # Trello

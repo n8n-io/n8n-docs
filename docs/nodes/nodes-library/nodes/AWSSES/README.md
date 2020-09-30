@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.awsSes
+description: Learn how to use the AWS SES node in n8n
 ---
 
 # AWS SES

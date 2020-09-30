@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/nextCloud
+description: Learn to configure credentials for the Nextcloud node in n8n
 ---
 
 # Nextcloud

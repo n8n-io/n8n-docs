@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.sentryIo
+description: Learn how to use the Sentry.io node in n8n
 ---
 
 # Sentry.io

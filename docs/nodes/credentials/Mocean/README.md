@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/mocean
+description: Learn to configure credentials for the Mocean node in n8n
 ---
 
 # Mocean

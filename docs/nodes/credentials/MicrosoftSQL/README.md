@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/microsoftSql
+description: Learn to configure credentials for the Microsoft SQL node in n8n
 ---
 
 # Microsoft SQL

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.postgres
+description: Learn how to use the Postgres node in n8n
 ---
 
 # Postgres

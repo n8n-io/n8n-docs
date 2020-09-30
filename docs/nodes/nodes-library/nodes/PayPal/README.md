@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.payPal
+description: Learn how to use the PayPal node in n8n
 ---
 
 # PayPal

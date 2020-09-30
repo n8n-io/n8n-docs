@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/discord
+description: Learn to configure credentials for the Discord node in n8n
 ---
 
 # Discord

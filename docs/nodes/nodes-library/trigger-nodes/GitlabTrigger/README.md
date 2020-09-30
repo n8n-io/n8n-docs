@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.gitlabTrigger
+description: Learn how to use the GitLab Trigger node in n8n
 ---
 
 # GitLab Trigger

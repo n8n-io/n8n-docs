@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mocean
+description: Learn how to use the Mocean node in n8n
 ---
 
 # Mocean

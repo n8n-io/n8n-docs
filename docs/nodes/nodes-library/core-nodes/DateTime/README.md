@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.dateTime
+description: Learn how to use the Date & Time node in n8n
 ---
 
 # Date & Time

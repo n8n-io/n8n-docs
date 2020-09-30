@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.uplead
+description: Learn how to use the UpLead node in n8n
 ---
 
 # UpLead

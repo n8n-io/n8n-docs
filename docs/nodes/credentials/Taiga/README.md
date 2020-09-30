@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/taiga
+description: Learn to configure credentials for the Taiga node in n8n
 ---
 
 # Taiga

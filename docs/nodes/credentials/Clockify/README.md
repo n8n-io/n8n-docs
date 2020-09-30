@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/clockify
+description: Learn to configure credentials for the Clockify node in n8n
 ---
 
 # Clockify

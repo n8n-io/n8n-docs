@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/messageBird
+description: Learn to configure credentials for the MessageBird node in n8n
 ---
 
 # MessageBird

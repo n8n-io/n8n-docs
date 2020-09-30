@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.rundeck
+description: Learn how to use the Rundeck node in n8n
 ---
 
 # Rundeck

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.googleTasks
+description: Learn how to use the Google Tasks node in n8n
 ---
 
 # Google Tasks

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.gumroadTrigger
+description: Learn how to use the Gumroad Trigger node in n8n
 ---
 
 # Gumroad Trigger

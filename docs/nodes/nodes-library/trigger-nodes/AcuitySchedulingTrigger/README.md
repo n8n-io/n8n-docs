@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.acuitySchedulingTrigger
+description: Learn how to use the Acuity Scheduling Trigger node in n8n
 ---
 
 # Acuity Scheduling Trigger

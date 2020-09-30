@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/uplead
+description: Learn to configure credentials for the UpLead node in n8n
 ---
 
 # UpLead

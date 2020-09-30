@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.googleDrive
+description: Learn how to use the Google Drive node in n8n
 ---
 
 # Google Drive

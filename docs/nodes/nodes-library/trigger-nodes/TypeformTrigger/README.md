@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.typeformTrigger
+description: Learn how to use the Typeform Trigger node in n8n
 ---
 
 # Typeform Trigger

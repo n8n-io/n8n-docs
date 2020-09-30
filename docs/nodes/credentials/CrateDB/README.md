@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/crateDb
+description: Learn to configure credentials for the CrateDB node in n8n
 ---
 
 # CrateDB

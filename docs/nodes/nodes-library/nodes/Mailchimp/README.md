@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mailchimp
+description: Learn how to use the Mailchimp node in n8n
 ---
 
 # Mailchimp

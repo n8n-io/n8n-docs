@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.agileCrm
+description: Learn how to use the Agile CRM node in n8n
 ---
 
 # Agile CRM

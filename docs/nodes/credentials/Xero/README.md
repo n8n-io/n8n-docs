@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/xero
+description: Learn to configure credentials for the Xero node in n8n
 ---
 
 # Xero

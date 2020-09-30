@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/airtable
+description: Learn to configure credentials for the Airtable node in n8n
 ---
 
 # Airtable

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.signl4
+description: Learn how to use the SIGNL4 node in n8n
 ---
 
 # SIGNL4

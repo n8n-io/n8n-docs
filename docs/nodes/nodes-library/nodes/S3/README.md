@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.s3
+description: Learn how to use the S3 node in n8n
 ---
 
 # S3

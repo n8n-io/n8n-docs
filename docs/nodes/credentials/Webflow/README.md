@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/webflow
+description: Learn to configure credentials for the Webflow node in n8n
 ---
 
 # Webflow

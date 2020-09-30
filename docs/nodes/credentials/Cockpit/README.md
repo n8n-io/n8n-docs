@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/cockpit
+description: Learn to configure credentials for the Cockpit node in n8n
 ---
 
 # Cockpit

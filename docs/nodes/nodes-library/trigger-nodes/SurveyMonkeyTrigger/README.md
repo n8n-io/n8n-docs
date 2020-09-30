@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.surveyMonkeyTrigger
+description: Learn how to use the SurveyMonkey Trigger node in n8n
 ---
 
 # SurveyMonkey Trigger

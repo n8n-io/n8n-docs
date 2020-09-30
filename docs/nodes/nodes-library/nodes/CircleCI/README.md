@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.circleCi
+description: Learn how to use the CircleCI node in n8n
 ---
 
 # CircleCI

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/trello
+description: Learn to configure credentials for the Trello node in n8n
 ---
 
 # Trello

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.twilio
+description: Learn how to use the Twilio node in n8n
 ---
 
 # Twilio

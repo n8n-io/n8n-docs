@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.affinity
+description: Learn how to use the Affinity node in n8n
 ---
 
 # Affinity

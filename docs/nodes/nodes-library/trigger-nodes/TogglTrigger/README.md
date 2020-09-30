@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.togglTrigger
+description: Learn how to use the Toggl Trigger node in n8n
 ---
 
 # Toggl Trigger

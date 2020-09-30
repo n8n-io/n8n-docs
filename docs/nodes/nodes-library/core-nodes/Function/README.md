@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.function
+description: Learn how to use the Function node in n8n
 ---
 
 # Function

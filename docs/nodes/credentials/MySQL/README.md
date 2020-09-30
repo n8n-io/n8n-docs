@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/mySql
+description: Learn to configure credentials for the MySQL node in n8n
 ---
 
 # MySQL

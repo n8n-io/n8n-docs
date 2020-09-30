@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.sms77
+description: Learn how to use the sms77 node in n8n
 ---
 
 # sms77

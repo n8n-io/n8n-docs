@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/disqus
+description: Learn to configure credentials for the Disqus node in n8n
 ---
 
 # Disqus

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/intercom
+description: Learn to configure credentials for the Intercom node in n8n
 ---
 
 # Intercom

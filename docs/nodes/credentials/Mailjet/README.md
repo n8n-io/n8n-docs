@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/mailjet
+description: Learn to configure credentials for the Mailjet node in n8n
 ---
 
 # Mailjet

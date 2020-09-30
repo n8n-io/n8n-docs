@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.flowTrigger
+description: Learn how to use the Flow Trigger node in n8n
 ---
 
 # Flow Trigger

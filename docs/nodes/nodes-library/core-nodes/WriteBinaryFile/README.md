@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.writeBinaryFile
+description: Learn how to use the Write Binary File node in n8n
 ---
 
 # Write Binary File

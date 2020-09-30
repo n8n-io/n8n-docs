@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/bannerbear
+description: Learn to configure credentials for the Bannerbear node in n8n
 ---
 
 # Bannerbear

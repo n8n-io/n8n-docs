@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.hubspotTrigger
+description: Learn how to use the HubSpot Trigger node in n8n
 ---
 
 # Hubspot Trigger

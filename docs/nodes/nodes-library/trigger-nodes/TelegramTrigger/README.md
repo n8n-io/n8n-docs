@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.telegramTrigger
+description: Learn how to use the Telegram Trigger node in n8n
 ---
 
 # Telegram Trigger

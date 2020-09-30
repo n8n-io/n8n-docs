@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.payPalTrigger
+description: Learn how to use the PayPal Trigger node in n8n
 ---
 
 # PayPal Trigger

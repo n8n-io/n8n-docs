@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.helpScout
+description: Learn how to use the Help Scout node in n8n
 ---
 
 # Help Scout

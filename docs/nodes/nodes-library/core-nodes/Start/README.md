@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.start
+description: Learn how to use the Start node in n8n
 ---
 
 # Start

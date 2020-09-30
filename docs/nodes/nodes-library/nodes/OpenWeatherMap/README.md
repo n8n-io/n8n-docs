@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.openWeatherMap
+description: Learn how to use the OpenWeatherMap node in n8n
 ---
 
 # OpenWeatherMap

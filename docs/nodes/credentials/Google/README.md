@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/google
+description: Learn to configure credentials for the nodes based on Google services in n8n
 ---
 
 # Google

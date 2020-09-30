@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/salesmate
+description: Learn to configure credentials for the Salesmate node in n8n
 ---
 
 # Salesmate

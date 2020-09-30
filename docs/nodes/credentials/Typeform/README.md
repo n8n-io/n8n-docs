@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/typeform
+description: Learn to configure credentials for the Typeform node in n8n
 ---
 
 # Typeform

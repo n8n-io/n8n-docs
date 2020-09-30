@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.asanaTrigger
+description: Learn how to use the Asana Trigger node in n8n
 ---
 
 # Asana Trigger

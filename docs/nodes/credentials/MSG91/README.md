@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/msg91
+description: Learn to configure credentials for the MSG91 node in n8n
 ---
 
 # MSG91

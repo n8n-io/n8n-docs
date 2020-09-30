@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.shopifyTrigger
+description: Learn how to use the Shopify Trigger node in n8n
 ---
 
 # Shopify Trigger

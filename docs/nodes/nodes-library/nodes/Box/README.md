@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.box
+description: Learn how to use the Box node in n8n
 ---
 
 # Box

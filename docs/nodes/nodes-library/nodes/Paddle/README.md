@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.paddle
+description: Learn how to use the Paddle node in n8n
 ---
 
 # Paddle

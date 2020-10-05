@@ -38,7 +38,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a project, tag, and time entry, and update the time entry in Clockify. You can also find the [workflow](https://n8n.io/workflows/701) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create a project, tag, and time entry in Clockify. It also allows to update the time entry in Clockify. You can also find the [workflow](https://n8n.io/workflows/701) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Clockify]()
 
@@ -53,7 +53,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Clockify node (create: project)
 
-This node will create a private project with a custom color and note in Clockify.
+This node will create a private project with a custom color and note for the project in Clockify.
 
 1. First of all, you'll have to enter credentials for the Clockify node. You can find out how to do that [here](../../../credentials/Clockify/README.md).
 2. Select the ***Workspace ID*** from the dropdown list.
@@ -66,7 +66,7 @@ This node will create a private project with a custom color and note in Clockify
 9. Enter the note in the ***Note*** field.
 10. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you may notice that the node creates a new private project with a custom color and note in Clockify.
+In the screenshot below, you will notice that the node creates a new private project, n8n. This project has a custom color `#0000FF` and a note `For n8n docs`.
 
 ![Using the Clockify node to create project](./Clockify_node.png)
 
@@ -79,11 +79,11 @@ This node will create a new tag in Clockify.
 1. Select the credentials that you entered in the previous node.
 2. Select 'Tag' from the ***Resource*** dropdown list.
 3. Select the ***Workspace ID*** from the dropdown list.
-4. Enter the name of the tag in the ***Name*** field.
+4. Enter the name of a tag in the ***Name*** field.
 5. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you may see that the node creates a new tag in the n8n workspace in Clockify.
+In the screenshot below, you will notice that the node creates a new tag `docs` in the n8n workspace in Clockify.
 
 ![Using the Clockify node to create a tag](./Clockify1_node.png)
 
@@ -91,27 +91,29 @@ In the screenshot below, you may see that the node creates a new tag in the n8n 
 ::: v-pre
 ### 4. Clockify2 node (create: timeEntry)
 
-This node creates a new time entry in Clockify with a description and a tag.
+This node creates a new time entry in Clockify with a description and adds the tag to the time entry.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Time Entry' from the ***Resource*** dropdown list.
 3. Select the ***Workspace ID*** from the dropdown list.
-4. Select the start date and time in the ***Start*** field.
+4. Select a start date and time in the ***Start*** field.
 5. Click on ***Add Field*** and select 'Description' from the dropdown list.
-6. Enter the description in the ***Description*** field.
+6. Enter a description in the ***Description*** field.
 7. Click on ***Add Field*** and select 'End' from the dropdown list.
-8. Select the end date and time in the ***End*** field.
+8. Select a end date and time in the ***End*** field.
 9. Click on ***Add Field*** and select 'Tag IDs' from the dropdown list.
 10. Select the ***Tag IDs*** from the dropdown list.
 11. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you may notice that the node creates a new time entry with a description and a tag in the n8n workspace in Clockify.
+In the screenshot below, you will notice that the node creates a new time entry with a description and adds the tag that was created in the previous node.
 
 ![Using the Clockify node to create a time entry](./Clockify2_node.png)
 
 ::: v-pre
 ### 5. Clockify3 node (update: timeEntry)
+
+This node will add the project to the time entry created in the previous node.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Time Entry' from the ***Resource*** dropdown list.
@@ -125,6 +127,6 @@ In the screenshot below, you may notice that the node creates a new time entry w
 10. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you may notice that the node updates the time entry by adding the project we created in the previous node.
+In the screenshot below, you will notice that the node updates the time entry by adding the project ID we created in the previous node.
 
 ![Using the Clockify node to update the time entry](./Clockify3_node.png)

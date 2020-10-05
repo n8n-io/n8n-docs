@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to append, lookup, update, and read data from a Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [Google Sheets]()
@@ -41,55 +41,55 @@ This example workflow uses the Set node to generate data that we want to add to 
 ::: v-pre
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
-3. Enter the name of the house in the ***Value*** field.
+3. Enter the name for a house in the ***Value*** field.
 4. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 5. Enter `Rent` in the ***Name*** field.
-6. Enter the rent of the house along with the currency in the ***Value*** field. For example, $1000.
+6. Enter the rent of the house along with the currency in the ***Value*** field. For example, `$1000`.
 7. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 8. Enter `City` in the ***Name*** field.
 9. Enter the name of the city in the ***Value*** field.
 10. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
 11. Enter `ID` in the ***Name*** field.
-12. Click on the gears icon next to the ***Value*** field click on ***Add Expression***.
+12. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 13. Paste the following expression: `{{Math.floor(Math.random()*1000)}}`. This expression will generate a three-digit random number.
 14. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you may notice that the Set node has created data that will be passed to the next nodes in the workflow. Also, the output shows a random three-digit number as the ID, created with the expression.
+In the screenshot below, you will notice that the Set node has created data that will be passed to the next nodes in the workflow. Also, the output shows a random three-digit number as the ID, created by the expression.
 
 ![Using the Set node to set data to be inserted in the Google Sheets node](./Set_node.png)
 
   
 ### 3. Google Sheets node (Append)
 
-#### Creating the Google Sheets
+#### Creating a Google Sheets spreadsheet
 
-1. Create a new [Google Sheets](https://sheet.new).
+1. Create a new [Google Sheets](https://sheet.new) spreadsheet.
 2. In your spreadsheet, enter `ID`, `Name`, `Rent`, and `City` in the cells A1, B1, C1, and D1, respectively.
-3. Copy the string of characters located between `/d/` and `/edit` in your spreadsheet URL. This string is the Sheet ID.
+3. Copy the string of characters located between `/d/` and `/edit` in your spreadsheet URL. This string is the Sheet ID, which we will use in the Google Sheets node.
 
 #### Configure the Google Sheets node
 
-This Google Sheets node will add the data from the previous Set node in a new row to the Google Sheets we specify using the Sheet ID. 
+This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Sheet ID. 
 
-1. First of all, you'll have to enter credentials for the Google Sheets node. Select 'OAuth2' in the ***Authentication*** field. 
-2. You can find out how to enter credentials for the Google Sheets node [here](../../../credentials/Google/README.md).
+1. Select 'OAuth2' from the ***Authentication*** dropdown list. 
+2.  First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
 3. Select 'Append' from the ***Operation*** dropdown list.
 4. Paste the Sheet ID you copied in the previous step, in the ***Sheet ID*** field.
-5. In the ***Range*** field, enter the range of columns to append the data to, in your spreadsheet. Make sure that your range includes enough columns for all the data in the Set node. For this workflow, enter `A:D` in the ***Range*** field.
+5. In the ***Range*** field, enter the range of columns to append the data to your spreadsheet. Make sure that your range includes enough columns for all the data in the Set node. For this workflow, enter `A:D` in the ***Range*** field.
 6. Click on the ***Add Option*** button and select 'Value Input Mode' from the dropdown list.
-7. Select 'User Entered' from the ***Value Input Mode*** dropdown list. Refer to the [FAQs](#how-to-enter-values-with-a-proper-format) for more information.
+7. Select 'User Entered' from the ***Value Input Mode*** dropdown list. Refer to the [FAQs](#how-to-enter-values-with-a-proper-format) for more information on why we used this option.
 8. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you may observe that the node adds the data from the Set node to the Google Sheets. You may also notice that the values get added in the format they are set.
+In the screenshot below, you will observe that the node adds the data from the Set node to the Google Sheets. You will also notice that the values get added in the format they are set.
 
 ![Using the Google Sheets node to insert data into a Google Sheets spreadsheet](./GoogleSheets_node.png)
 
 ### 4. Google Sheets1 node (Lookup)
 
-This node will return the entries from the Google Sheets that have `Berlin` as the City.
+This node will return the entries from the Google Sheets that have `Berlin` as the City. Feel free to change the city name to something else but make sure you have at least one record with the city name you look for in your Google Sheets spreadsheet.
 
-1. Select 'OAuth2' in the ***Authentication*** field.
+1. Select 'OAuth2' from the ***Authentication*** dropdown list.
 2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Lookup' from the ***Operation*** dropdown list.
 4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
@@ -97,17 +97,17 @@ This node will return the entries from the Google Sheets that have `Berlin` as t
 6. Enter `Berlin` in the ***Lookup Value*** field.
 7. Click on the ***Add Option*** button and select 'Return All Matches' from the dropdown list.
 8. Toggle ***Return All Matches*** to true. This option returns all the entries that contain `Berlin` as the City. Refer to the [FAQs](#how-to-return-all-the-values-with-the-lookup-operation) for more information.
-9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information. 
+9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option. 
 10. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you may notice that the node returns all the entries that contain Berlin as the City. The output is unformatted. This output is passed to the next nodes in the workflow.
+In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted. This output is passed on to the next nodes in the workflow.
 
 ![Using the Google Sheets node to lookup for data in the Google Sheets spreadsheet](./GoogleSheets1_node.png)
 
 ::: v-pre
 ### 5. Set1 node
 
-This node will use the data from the previous node. We will use the expression to get that data and increase the rent by $100 for the houses in Berlin.
+We will use expressions to get the data from the previous node and increase the rent by $100 for the houses in Berlin.
 
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
@@ -119,7 +119,7 @@ This node will use the data from the previous node. We will use the expression t
 8. Select the following in the ***Variable Selector*** section: Nodes > Google Sheets1 > Output Data > JSON > City. You can also add the following expression: `{{$node["Google Sheets1"].json["City"]}}`.
 9. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
 10. Click on the gears icon next to the ***Value*** field click on ***Add Expression***.
-11. Paste the following expression: `{{$node["Google Sheets1"].json["Rent"]+100}}`. This expression will increment the rent by $100.
+11. Paste the following expression: `{{$node["Google Sheets1"].json["Rent"]+100}}`. This expression will increase the rent by $100.
 12. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
 13. Enter `ID` in the ***Name*** field.
 14. Click on the gears icon next to the ***Value*** field click on ***Add Expression***.
@@ -127,7 +127,7 @@ This node will use the data from the previous node. We will use the expression t
 16. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you may notice that the node uses an expression to get the data from the previous node and increases the house rent by $100. This new data will be passed to the next nodes in the workflow.
+In the screenshot below, you will notice that the node uses an expression to get the data from the previous node and increases the rent of the houses by $100. This new data will be passed to the next nodes in the workflow.
 
 ![Using the Set node to increase the rent](./Set1_node.png)
 
@@ -135,34 +135,34 @@ In the screenshot below, you may notice that the node uses an expression to get 
 
 This node will update the rent for the houses in Berlin with the new rent set in the previous node.
 
-1. Select the credentials that you entered in the previous Google Sheets node.
-2. Select 'OAuth2' in the ***Authentication*** field.
+1. Select 'OAuth2' in the ***Authentication*** field.
+2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Update' from the ***Operation*** dropdown list.
 4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
 5. In the ***Range*** field, enter the same range used in the previous Google Sheets node.
 6. Enter `ID` in the ***Key*** field.
 7. Click on the ***Add Option*** button and select 'Value Input Mode' from the dropdown list.
-8. Select 'User Entered' from the ***Value Input Mode*** dropdown list. Refer to the [FAQs](#how-to-enter-values-with-a-proper-format) for more information)
+8. Select 'User Entered' from the ***Value Input Mode*** dropdown list. Refer to the [FAQs](#how-to-enter-values-with-a-proper-format) for more information on why we used this option.
 9. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you may notice that this node updates the values based on the ID in the Google Sheets. You may also see that the updated values are in the proper format.
+In the screenshot below, you will notice that this node updates the rent values of the houses in Berlin based on the ID in the Google Sheets. You will also see that the updated values are in the correct format.
 
 ![Using the Google Sheets node to update the data to the Google Sheets spreadsheet](./GoogleSheets2_node.png)
 
 ### 7. Google Sheets3 node (Read)
 
-This node will read the data from the Google Sheets.
+This node will read the data from Google Sheets.
 
-1. Select the credentials that you entered in the previous Google Sheets node.
-2. Select 'OAuth2' in the ***Authentication*** field.
+1. Select 'OAuth2' in the ***Authentication*** field.
+2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Read' from the ***Operation*** dropdown list.
 4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
 5. In the ***Range*** field, enter the same range used in the previous Google Sheets node.
 6. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list.
-7. Select 'Formatted Value' from the ***Value Render Mode*** dropdown list. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information.
+7. Select 'Formatted Value' from the ***Value Render Mode*** dropdown list. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option.
 8. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you may notice that this node returns all the values from the Google Sheets with the appropriate format.
+In the screenshot below, you will notice that this node returns all the values from the Google Sheets in the appropriate format.
 
 ![Using the Google Sheets node to read data from the Google Sheets spreadsheet](./GoogleSheets3_node.png)
 
@@ -172,18 +172,18 @@ In the screenshot below, you may notice that this node returns all the values fr
 
 There are three different formats to read the data from the Google Sheets.
 
-- Unformatted Value: In this mode, the node calculates the values, but doesn't format them. For example, if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then values returned will be of the format number. For cell A1 and A2, the values returned will be 1.23.
-- Formula: In this mode, the node will return the formula. The node does not calculate the values. For example,  if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then the value returned will be of the format number. The value returned for cell A2 will be =A1.
-- Formatted Value: In this mode, the node calculates the values and returns the values with the cells' format. For example, if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then the values returned will be $1.23.
+- **Unformatted Value:** In this mode, the node calculates the values, but doesn't format them. For example, if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then values returned will be of the format number. For cell A1 and A2, the values returned will be 1.23.
+- **Formula:** In this mode, the node will return the formula. The node does not calculate the values. For example,  if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then the value returned will be of the format number. The value returned for cell A2 will be =A1.
+- **Formatted Value:** In this mode, the node calculates the values and returns the values with the cells' format. For example, if cell A1 is 1.23, and cell A2 is =A1, and the format of these cells is currency, then the values returned will be $1.23.
 
-To change the format, click on ***Add Option*** and select 'Value Render Mode' from the dropdown list. Select the appropriate option you want your output to be returned to, from the ***Value Render Mode*** dropdown list.
+To change the format, click on ***Add Option*** and select 'Value Render Mode' from the dropdown list. Select the appropriate option you want your output to be returned to from the ***Value Render Mode*** dropdown list.
 
-### How to enter values with a proper format?
+### How to enter values in the correct format?
 
 There are two different formats you can use to add/update data in Google Sheets.
 
-- Raw: This is the default format. In this format, the values are stored as-is and not parsed. For example, the node stores the text 2020-10-01 as a string in the Google Sheets.
-- User Entered: In this format, the node parse the values. It follows the rules that are applied when entering text into the cell via the Google Sheet UI. For example, the node stores the text 2020-10-01 as a date in the Google Sheets. 
+- **Raw:** This is the default format. In this format, the values are stored as-is and not parsed. For example, the node stores the text 2020-10-01 as a string in the Google Sheets.
+- **User Entered:** In this format, the node parse the values. It follows the rules that are applied when entering text into the cell via the Google Sheet UI. For example, the node stores the text 2020-10-01 as a date in the Google Sheets. 
 
 To change the format, click on ***Add Option*** and select 'Value Input Mode' from the dropdown list. Select the appropriate option you want your data to be stored in, from the ***Value Input Mode*** dropdown list.
 

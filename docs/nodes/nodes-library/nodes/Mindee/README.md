@@ -30,7 +30,7 @@ This workflow allows you to extract information from an image of a receipt using
 
 The final workflow should look like the following image.
 
-![A workflow with the Google Sheets node](./workflow.png)
+![A workflow with the Mindee node](./workflow.png)
 
 ### 1. Start node
 

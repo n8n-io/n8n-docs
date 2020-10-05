@@ -13,7 +13,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Wufoo Trigger
 - Enhanced nodes
     - Slack: Added User Profile resource
-    - Mattermost: Added create and invite operation for User resource
+    - Mattermost: Added create and invite operations for User resource
 - Bug Fixes
     - S3: Fixed issue with uploading files
 - WebhookID gets refreshed on node duplication

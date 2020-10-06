@@ -1,6 +1,12 @@
 # Changelog
 
-[[toc]]
+## n8n@0.86.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.0...n8n@0.86.1) for this version.<br />
+**Release date:** 2020-10-06
+
+- Enhanced nodes
+    - CoinGecko: Small fixes to the CoinGecko node
+
 ## n8n@0.86.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.85.0...n8n@0.86.0) for this version.<br />
 **Release date:** 2020-10-05

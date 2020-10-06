@@ -39,26 +39,26 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request (GET)
 
-This example workflow uses the HTTP Request node to make a GET request to get the image of the receipt. You can also use other nodes, for example, the [Box](../../nodes/Box/README.md) node, to get the image of the receipt you want to use.
+This example workflow uses the HTTP Request node to make a GET request to download the image of a receipt. You can also use other nodes, for example, the [Box](../../nodes/Box/README.md) node, to get the images of the receipts you want to use.
 ::: v-pre
-1. Enter a URL of a file in the ***URL*** field.
+1. Enter the URL of the image in the ***URL*** field. For example, `https://miro.medium.com/max/1400/0*1T9GkAb93w5NSMsf`.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the HTTP Request node gets the file from the URL. We will pass this data to the Mindee node.
+In the screenshot below, you will notice that the HTTP Request node downloads the image from the URL. This image (binary data) can now be used by the other nodes in the workflow.
 
 ![Using the HTTP Request node to get the file](./HTTPRequest_node.png)
 
   
 ### 3. Mindee node (predict: receipt)
 
-This node will get the image of the receipt from the HTTP Request node and extract the information from it.
+This node will get the image of the receipt (binary data) from the HTTP Request node and extract the information from it.
 1. Select 'Receipt' from the ***Resource*** dropdown list. 
-2.  First of all, you'll have to enter credentials for the Mindee node. You can find out how to enter credentials for this node [here](../../../credentials/Mindee/README.md).
+2. You'll have to enter credentials for the Mindee node. You can find out how to do that  [here](../../../credentials/Mindee/README.md).
 3. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will observe that the node extracts the information from the image it got from the HTTP Request node.
+In the screenshot below, you will notice that the node extracts the information from the image that it got from the HTTP Request node.
 
 ![Using the Mindee node to extract information from receipt](./Mindee_node.png)
 

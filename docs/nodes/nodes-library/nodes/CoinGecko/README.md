@@ -44,10 +44,10 @@ The final workflow should look like the following image.
 
 ### 1. Cron node
 
-The Cron node will trigger the workflow every hour.
+The Cron node will trigger the workflow every minute.
 
 1. Click on ***Add Cron Time***.
-2. Select 'Every Hour' from the ***Mode*** dropdown list.
+2. Select 'Every Minute' from the ***Mode*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
 ![Using the Cron node to trigger the workflow](./Cron_node.png)
@@ -103,6 +103,8 @@ In the screenshot below, you will notice that the node sends an SMS with the pri
 
 ::: v-pre
 ### 5. NoOp node
+
+Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.
 2. Click on ***Execute Node*** to run the node.

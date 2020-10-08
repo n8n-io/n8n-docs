@@ -13,11 +13,11 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Receipt
+::: details Invoice
 - Predict
 :::
 
-::: details Invoice
+::: details Receipt
 - Predict
 :::
 

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/pagerDuty
+description: Learn to configure credentials for the PagerDuty node in n8n
 ---
 
 # PagerDuty

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/chargebee
+description: Learn to configure credentials for the Chargebee node in n8n
 ---
 
 # Chargebee

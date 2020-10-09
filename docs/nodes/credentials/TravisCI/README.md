@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/travisCi
+description: Learn to configure credentials for the Travis CI node in n8n
 ---
 
 # Travis CI

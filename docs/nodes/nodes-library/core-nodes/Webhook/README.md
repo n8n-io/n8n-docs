@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.webhook
+description: Learn how to use the Webhook node in n8n
 ---
 
 # Webhook

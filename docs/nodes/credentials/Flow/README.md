@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/flow
+description: Learn to configure credentials for the Flow node in n8n
 ---
 
 # Flow

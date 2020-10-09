@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.discord
+description: Learn how to use the Discord node in n8n
 ---
 
 # Discord

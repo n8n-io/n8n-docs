@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/mailgun
+description: Learn to configure credentials for the Mailgun node in n8n
 ---
 
 # Mailgun

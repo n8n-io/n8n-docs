@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.nextCloud
+description: Learn how to use the Nextcloud node in n8n
 ---
 
 # Nextcloud

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.crypto
+description: Learn how to use the Crypto node in n8n
 ---
 
 # Crypto

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.executeWorkflow
+description: Learn how to use the Execute Workflow node in n8n
 ---
 
 # Execute Workflow

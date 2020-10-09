@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/agileCrm
+description: Learn to configure credentials for the Agile CRM node in n8n
 ---
 
 # Agile CRM

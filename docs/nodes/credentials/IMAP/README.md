@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/imap
+description: Learn to configure credentials for the IMAP node in n8n
 ---
 
 # IMAP

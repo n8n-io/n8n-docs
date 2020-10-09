@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mySql
+description: Learn how to use the MySQL node in n8n
 ---
 
 # MySQL

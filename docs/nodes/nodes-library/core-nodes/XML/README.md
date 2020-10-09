@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.xml
+description: Learn how to use the XML node in n8n
 ---
 
 # XML

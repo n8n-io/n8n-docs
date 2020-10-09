@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/wooCommerce
+description: Learn to configure credentials for the WooCommerce node in n8n
 ---
 
 # WooCommerce

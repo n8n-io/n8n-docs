@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.merge
+description: Learn how to use the Merge node in n8n
 ---
 
 # Merge

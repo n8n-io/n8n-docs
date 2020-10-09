@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.editImage
+description: Learn how to use the Edit Image node in n8n
 ---
 
 # Edit Image

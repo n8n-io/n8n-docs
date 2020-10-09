@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.microsoftOneDrive
+description: Learn how to use the Microsoft OneDrive node in n8n
 ---
 
 # Microsoft OneDrive

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.pagerDuty
+description: Learn how to use the PagerDuty node in n8n
 ---
 
 # PagerDuty

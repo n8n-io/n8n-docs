@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.chargebee
+description: Learn how to use the Chargebee node in n8n
 ---
 
 # Chargebee

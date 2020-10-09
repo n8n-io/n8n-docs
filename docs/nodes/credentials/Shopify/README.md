@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/shopify
+description: Learn to configure credentials for the Shopify node in n8n
 ---
 
 # Shopify

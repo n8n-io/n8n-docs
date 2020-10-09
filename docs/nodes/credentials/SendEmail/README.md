@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/smtp
+description: Learn to configure credentials for the Send Email node in n8n
 ---
 
 # Send Email

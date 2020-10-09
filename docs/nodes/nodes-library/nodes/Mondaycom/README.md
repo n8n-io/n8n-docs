@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mondayCom
+description: Learn how to use the monday.com node in n8n
 ---
 
 # monday.com

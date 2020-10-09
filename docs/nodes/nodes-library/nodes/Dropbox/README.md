@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.dropbox
+description: Learn how to use the Dropbox node in n8n
 ---
 
 # Dropbox

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.htmlExtract
+description: Learn how to use the HTML Extract node in n8n
 ---
 
 # HTML Extract

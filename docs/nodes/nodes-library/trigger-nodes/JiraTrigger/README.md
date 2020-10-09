@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.jiraTrigger
+description: Learn how to use the Jira Trigger node in n8n
 ---
 
 # Jira Trigger

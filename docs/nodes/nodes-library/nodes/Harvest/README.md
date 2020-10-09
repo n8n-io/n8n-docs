@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.harvest
+description: Learn how to use the Harvest node in n8n
 ---
 
 # Harvest

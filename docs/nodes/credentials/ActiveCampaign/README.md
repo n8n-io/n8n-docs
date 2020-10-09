@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/activeCampaign
+description: Learn to configure credentials for the ActiveCampaign node in n8n
 ---
 
 # ActiveCampaign

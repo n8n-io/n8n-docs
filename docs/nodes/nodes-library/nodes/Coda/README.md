@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.coda
+description: Learn how to use the Coda node in n8n
 ---
 
 # Coda

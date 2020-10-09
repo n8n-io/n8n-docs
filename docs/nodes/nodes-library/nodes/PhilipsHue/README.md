@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.philipsHue
+description: Learn how to use the Philips Hue node in n8n
 ---
 
 # Philips Hue

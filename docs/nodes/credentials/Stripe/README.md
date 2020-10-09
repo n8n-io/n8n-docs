@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/stripe
+description: Learn to configure credentials for the Stripe node in n8n
 ---
 
 # Stripe

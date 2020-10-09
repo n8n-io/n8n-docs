@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/aws
+description: Learn to configure credentials for the AWS nodes in n8n
 ---
 
 # AWS

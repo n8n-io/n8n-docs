@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.zendesk
+description: Learn how to use the Zendesk node in n8n
 ---
 
 # Zendesk

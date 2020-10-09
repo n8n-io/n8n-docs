@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.crateDb
+description: Learn how to use the CrateDB node in n8n
 ---
 
 # CrateDB

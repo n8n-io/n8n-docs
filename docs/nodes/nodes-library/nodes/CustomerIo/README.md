@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.customerIo
+description: Learn how to use the Customer.io node in n8n
 ---
 
 # Customer.io

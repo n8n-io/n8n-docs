@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/fileMaker
+description: Learn to configure credentials for the FileMaker node in n8n
 ---
 
 # FileMaker

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/questDb
+description: Learn to configure credentials for the QuestDB node in n8n
 ---
 
 # QuestDB

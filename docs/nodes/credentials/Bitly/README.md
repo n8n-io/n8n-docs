@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/bitly
+description: Learn to configure credentials for the Bitly node in n8n
 ---
 
 # Bitly

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.jotFormTrigger
+description: Learn how to use the JotForm Trigger node in n8n
 ---
 
 # JotForm Trigger

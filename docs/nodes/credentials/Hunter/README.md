@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/hunter
+description: Learn to configure credentials for the Hunter node in n8n
 ---
 
 # Hunter

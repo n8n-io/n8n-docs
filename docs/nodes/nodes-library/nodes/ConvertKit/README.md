@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.convertKit
+description: Learn how to use the ConvertKit node in n8n
 ---
 
 # ConvertKit

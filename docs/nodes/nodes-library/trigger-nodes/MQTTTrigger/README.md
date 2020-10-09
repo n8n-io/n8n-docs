@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mqttTrigger
+description: Learn how to use the MQTT Trigger node in n8n
 ---
 
 # MQTT Trigger

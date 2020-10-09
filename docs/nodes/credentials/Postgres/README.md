@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/postgres
+description: Learn to configure credentials for the Postgres node in n8n
 ---
 
 # Postgres

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.chargebeeTrigger
+description: Learn how to use the Chargebee Trigger node in n8n
 ---
 
 # Chargebee Trigger

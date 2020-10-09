@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.intercom
+description: Learn how to use the Intercom node in n8n
 ---
 
 # Intercom

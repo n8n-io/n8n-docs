@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.facebookGraphApi
+description: Learn how to use the Facebook Graph API node in n8n
 ---
 
 # Facebook Graph API

@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.emailReadImap
+description: Learn how to use the IMAP node in n8n
 ---
 
 # IMAP Email

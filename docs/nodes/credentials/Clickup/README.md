@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/clickUp
+description: Learn to configure credentials for the ClickUp node in n8n
 ---
 
 # ClickUp

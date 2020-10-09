@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/todoist
+description: Learn to configure credentials for the Todoist node in n8n
 ---
 
 # Todoist

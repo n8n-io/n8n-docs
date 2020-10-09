@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/circleCi
+description: Learn to configure credentials for the CircleCI node in n8n
 ---
 
 # CircleCI

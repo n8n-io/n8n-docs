@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.microsoftExcel
+description: Learn how to use the Microsoft Excel node in n8n
 ---
 
 # Microsoft Excel

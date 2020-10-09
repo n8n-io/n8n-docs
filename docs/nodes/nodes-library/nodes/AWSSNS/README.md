@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.awsSns
+description: Learn how to use the AWS SNS node in n8n
 ---
 
 # AWS SNS

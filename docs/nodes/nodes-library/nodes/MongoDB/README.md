@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mongoDb
+description: Learn how to use the MongoDB node in n8n
 ---
 
 # MongoDB

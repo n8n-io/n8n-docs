@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.executeCommand
+description: Learn how to use the Execute Command node in n8n
 ---
 
 # Execute Command

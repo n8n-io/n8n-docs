@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.sseTrigger
+description: Learn how to use the SSE Trigger node in n8n
 ---
 
 # SSE Trigger

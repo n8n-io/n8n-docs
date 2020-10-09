@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.mautic
+description: Learn how to use the Mautic node in n8n
 ---
 
 # Mautic

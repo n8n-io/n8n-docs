@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.httpRequest
+description: Learn how to use the HTTP Request node in n8n
 ---
 
 # HTTP Request

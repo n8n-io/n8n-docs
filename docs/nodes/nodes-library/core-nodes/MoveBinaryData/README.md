@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.moveBinaryData
+description: Learn how to use the Move Binary Data node in n8n
 ---
 
 # Move Binary Data

@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/sentryIo
+description: Learn to configure credentials for the Sentry.io node in n8n
 ---
 
 # Sentry.io

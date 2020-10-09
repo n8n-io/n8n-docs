@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.linkedIn
+description: Learn how to use the LinkedIn node in n8n
 ---
 
 # LinkedIn

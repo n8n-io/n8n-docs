@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.cockpit
+description: Learn how to use the Cockpit node in n8n
 ---
 
 # Cockpit

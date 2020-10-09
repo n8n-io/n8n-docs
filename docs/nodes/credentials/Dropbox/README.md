@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/dropbox
+description: Learn to configure credentials for the Dropbox node in n8n
 ---
 
 # Dropbox

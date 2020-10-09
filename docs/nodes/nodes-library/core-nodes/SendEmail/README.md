@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.emailSend
+description: Learn how to use the Send Email node in n8n
 ---
 
 # Send Email

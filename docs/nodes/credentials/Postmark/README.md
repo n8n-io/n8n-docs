@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/postmark
+description: Learn to configure credentials for the Postmark node in n8n
 ---
 
 # Postmark

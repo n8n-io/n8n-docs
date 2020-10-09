@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/linkedIn
+description: Learn to configure credentials for the LinkedIn node in n8n
 ---
 
 # LinkedIn

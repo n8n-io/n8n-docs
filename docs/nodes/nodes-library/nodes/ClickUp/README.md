@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.clickUp
+description: Learn how to use the ClickUp node in n8n
 ---
 
 # ClickUp

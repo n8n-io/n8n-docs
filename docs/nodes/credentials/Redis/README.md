@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/redis
+description: Learn to configure credentials for the Redis node in n8n
 ---
 
 # Redis

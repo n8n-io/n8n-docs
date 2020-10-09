@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.disqus
+description: Learn how to use the Disqus node in n8n
 ---
 
 # Disqus

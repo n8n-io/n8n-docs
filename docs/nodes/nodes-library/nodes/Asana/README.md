@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.asana
+description: Learn how to use the Asana node in n8n
 ---
 
 # Asana

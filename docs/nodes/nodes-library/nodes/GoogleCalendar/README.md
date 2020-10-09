@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.googleCalendar
+description: Learn how to use the Google Calendar node in n8n
 ---
 
 # Google Calendar

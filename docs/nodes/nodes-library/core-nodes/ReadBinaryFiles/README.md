@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.readBinaryFiles
+description: Learn how to use the Read Binary Files node in n8n
 ---
 
 # Read Binary Files

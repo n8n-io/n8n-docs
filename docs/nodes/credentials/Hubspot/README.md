@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/hubspot
+description: Learn to configure credentials for the HubSpot node in n8n
 ---
 
 # HubSpot

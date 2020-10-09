@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.questDb
+description: Learn how to use the QuestDB node in n8n
 ---
 
 # QuestDB

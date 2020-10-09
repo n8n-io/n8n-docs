@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.taiga
+description: Learn how to use the Taiga node in n8n
 ---
 
 # Taiga

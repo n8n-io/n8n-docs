@@ -1,5 +1,6 @@
 ---
 permalink: /credentials/segment
+description: Learn to configure credentials for the Segment node in n8n
 ---
 
 # Segment

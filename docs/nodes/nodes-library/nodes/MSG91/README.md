@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.msg91
+description: Learn how to use the MSG91 node in n8n
 ---
 
 # MSG91

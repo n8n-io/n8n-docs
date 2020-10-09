@@ -1,5 +1,6 @@
 ---
 permalink: /nodes/n8n-nodes-base.zohoCrm
+description: Learn how to use the Zoho CRM node in n8n
 ---
 
 # Zoho CRM

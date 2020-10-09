@@ -203,6 +203,10 @@ module.exports = {
 					path: 'function-nodes.md',
 				},
 				{
+					title: '💪 JavaScript Cheatsheet',
+					path: 'javascript-cheatsheet.md',
+				},
+				{
 					title: '👀 Troubleshooting',
 					path: 'troubleshooting.md',
 				},

@@ -51,8 +51,6 @@ To install n8n globally:
 npm install n8n -g
 ```
 
-### Start
-
 After the installation n8n can be started by typing in:
 
 ```bash
@@ -62,7 +60,7 @@ n8n start
 ```
 
 
-### Start with tunnel
+## Starting n8n with tunnel
 
 ::: danger
 This is only meant for local development and testing. It should not be used in production!
@@ -70,10 +68,21 @@ This is only meant for local development and testing. It should not be used in p
 
 To be able to use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. To make that easy, n8n has a special tunnel service, which redirects requests from our servers to your local n8n instance (uses this code: [https://github.com/localtunnel/localtunnel](https://github.com/localtunnel/localtunnel)).
 
-To use it, start n8n with `--tunnel`
+If you've installed n8n using npm, start n8n with `--tunnel`
 
 ```bash
 n8n start --tunnel
+```
+
+If you're running n8n with Docker, start n8n with `--tunnel`
+
+```bash
+docker run -it --rm \
+	--name n8n \
+	-p 5678:5678 \
+	-v ~/.n8n:/root/.n8n \
+	n8nio/n8n \
+	n8n start --tunnel
 ```
 
 In case you run into issues, check out the [troubleshooting](../reference/troubleshooting.md) page or ask for help in the community [forum](https://community.n8n.io/).

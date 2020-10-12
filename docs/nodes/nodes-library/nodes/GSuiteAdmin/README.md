@@ -5,7 +5,7 @@ description: Learn how to use the G Suite Admin node in n8n
 
 # G Suite Admin
 
-[G Suite Admin](https://developers.google.com/admin-sdk) administers domain resources, creates reports, and manages subscriptions and alerts.
+[G Suite Admin](https://developers.google.com/admin-sdk) helps you administer domain and app resources, create reports, and manage subscriptions and alerts for your G Suite organization.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).
@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 - Create a user
 - Delete a user
 - Get a user
-- Ge all users
+- Get all users
 - Update a user
 :::
 
@@ -39,15 +39,15 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a user in G Suite with the following information:  first name, last name, password, domain, and username.
 
-1. First of all, you'll have to enter credentials for the G Suite Admin node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
-3. Enter the first name of a user in the ***First Name*** field.
+1. First of all, you'll have to enter credentials for the G Suite Admin node. You can find out how to do that [here](../../../credentials/Google/README.md).
+3. Enter the first name of the user in the ***First Name*** field.
 4. Enter the last name of the user in the ***Last Name*** field.
 5. Enter a password for the user in the ***Password*** field.
-6. Enter the domain of the website in the ***Domain*** field.
+6. Select the domain from the ***Domain*** dropdown list.
 7. Enter the username for the user in the ***Username*** field.
 8. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will observe that the node creates a new user with the first name `Nathan`, last name `Nat`, domain `n8n.io`, username `nat`, and a password, in G Suite.
+In the screenshot below, you will observe that the node has created a new user with the first name `Nathan`, last name `Nat`, domain `n8n.io`, username `nat`, and a password, in G Suite.
 
 ![Using the G Suite Admin node to create a user](./GSuiteAdmin_node.png)
 
@@ -65,14 +65,14 @@ This node will get the User ID from the previous node and update the user's last
 7. Click on ***Execute Node*** to run the workflow.
 :::
 
-In the screenshot below, you will notice that the node updates the last name of the user we created in the previous node. 
+In the screenshot below, you will notice that the node has updated the last name of the user that we created in the previous node. 
 
 ![Using the G Suite Admin node to update the last name of the user](./GSuiteAdmin1_node.png)
 
 ::: v-pre
 ### 4. G Suite Admin2 (get: user)
 
-This node will get the information of the user we created in the previous node.
+This node will get the information of the user we created in the G Suite Admin node.
 
 1. Select the credentials that you entered in the previous G Suite Admin node.
 2. Select 'Get' from the ***Operation*** dropdown list.
@@ -81,31 +81,20 @@ This node will get the information of the user we created in the previous node.
 5. Click on ***Execute Node*** to run the workflow.
 :::
 
-In the screenshot below, you will notice that the node returns the information of the user we created in the previous node. 
+In the screenshot below, you will notice that the node returns the information of the user we created in the G Suite Admin node. 
 
 ![Using the G Suite Admin node to get the information of the user](./GSuiteAdmin2_node.png)
 
 ## FAQs
 
-### How to add a phone number for a user?
-
-If you are creating a new user, you can add the phone number by following these steps:
-1. Click on the ***Add Field*** button and select 'Phones' from the dropdown list.
-2. Click on the ***Add Phone*** button.
-3. Select the type of phone number from the ***Type*** dropdown list.
-4. Enter the phone number in the ***Phone Number*** field.
-5. If it is the primary phone number, toggle ***Primary*** to true.
-
-You can also add the phone number to existing users in G Suite by following the steps mentioned above.
-
 ### What are the different ways to project a user's information?
 
-There are three different ways to project a user's information. They are:
+There are three different ways to project a user's information:
 - ***Basic:*** Does not include any custom fields.
 - ***Custom:*** Includes the custom fields from schemas in customField.
 - ***Full:*** Include all the fields associated with the user.
 
 You can include custom fields by following the steps mentioned below.
 1. Select 'Custom' from the ***Projection*** dropdown list.
-2. Click on the ***Add options*** button and select 'Custom Schemas' from the dropdown list.
-3. Select the custom fields you want to include from the ***Custom Schemas*** dropdown list.
+2. Click on the ***Add Options*** button and select 'Custom Schemas' from the dropdown list.
+3. Select the schema names you want to include from the ***Custom Schemas*** dropdown list.

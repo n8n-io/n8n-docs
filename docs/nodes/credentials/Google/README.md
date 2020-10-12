@@ -6,6 +6,7 @@ description: Learn to configure credentials for the nodes based on Google servic
 # Google
 
 You can use these credentials to authenticate the following nodes with Google.
+- [G Suite Admin](../../nodes-library/nodes/GSuiteAdmin/README.md)
 - [Gmail](../../nodes-library/nodes/Gmail/README.md)
 - [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md)
 - [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)

@@ -38,3 +38,42 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the command that you want to execute in the *Command* field.
 2. Click on *Execute Node* to run the workflow.
+
+## FAQs
+
+### How to run multiple commands in the Execute Command node?
+You can combine multiple commands using `&&`. For example, you can combine the change directory(cd) command with the list(ls) command using `&&`.
+```bash
+cd bin && ls
+```
+### How to run ssh commands in the Execute Command node?
+You will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the OpenSSH package.
+1. Create a file named Dockerfile.
+2. Add the below code snippet to the Dockerfile.
+```
+FROM n8nio/n8n
+RUN apk --update add openssh
+```
+3. In the same folder, execute the command below command to build the Docker image.
+```
+docker build -t n8n-ssh
+```
+4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-ssh`.
+5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
+
+An alternate solution is to use the n8n-ubuntu image. To use the n8n-ubuntu image replace `n8nio/n8n` with `n8nio/n8n:<N8N_VERSION>-ubuntu`.
+
+### How to run the curl command in the Execute Command node?
+You will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
+1. Create a file named Dockerfile.
+2. Add the below code snippet to the Dockerfile.
+```
+FROM n8nio/n8n
+RUN apk --update add curl
+```
+3. In the same folder, execute the command below command to build the Docker image.
+```
+docker build -t n8n-curl
+```
+4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-curl`.
+5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.

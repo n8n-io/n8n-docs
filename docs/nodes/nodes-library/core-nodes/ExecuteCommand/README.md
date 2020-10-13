@@ -21,7 +21,7 @@ The Execute Command node has two properties:
 
 ## Example Usage
 
-This workflow allows you to execute a command that gives the hard disk memory used on the host machine using the Execute Command node. If the percentage of memory used exceeds 80%, the workflow will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on the website. This example usage workflow would use the following nodes.
+This workflow allows you to execute a command that returns the percentage of the memory used by the hard disk of the host machine using the Execute Command node. If the percentage of memory used exceeds 80%, the workflow will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on the website. This example usage workflow would use the following nodes.
 - [Cron](../../core-nodes/Cron/README.md)
 - [Execute Command]()
 - [IF](../../core-nodes/If/README.md)
@@ -35,13 +35,15 @@ The final workflow should look like the following image.
 
 ### 1. Cron node
 
-The Cron node will trigger the workflow every week on Friday at 1800 hours.
+The Cron node will trigger the workflow twice a day.
 
 1. Click on ***Add Cron Time***.
-2. Select 'Every Week' from the ***Mode*** dropdown list.
-3. Set the hours in the ***Hour*** field.
-4. Select 'Friday' from the ***Weekday*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+2. Select 'Every Day' from the ***Mode*** dropdown list.
+3. Set hours to 9 in the ***Hour*** field.
+4. Click on ***Add Cron Time***.
+5. Select 'Every Day' from the ***Mode*** dropdown list.
+6. Set hours to 16 in the ***Hour*** field.
+7. Click on ***Execute Node*** to run the node.
 
 ![Using the Cron node to trigger the workflow](./Cron_node.png)
 
@@ -108,7 +110,7 @@ You can combine multiple commands using `&&`. For example, you can combine the c
 cd bin && ls
 ```
 
-To run multiple commands, you can also write the commands on a new line. For example, you can write the list(ls) command on a new line after the change directory(cd) command.
+To run multiple commands, you can also write the commands on separate lines. For example, you can write the list(ls) command on a new line after the change directory(cd) command.
 ```bash
 cd bin
 ls
@@ -118,7 +120,7 @@ ls
 
 You should use the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to make a CURL request.
 
-To run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
+If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
 1. Create a file named Dockerfile.
 2. Add the below code snippet to the Dockerfile.
 ```

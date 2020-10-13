@@ -15,13 +15,13 @@ The Execute Command node is used to run shell commands on the host machine that 
 ## Node Reference
 
 The Execute Command node has two properties:
-1. *Execute Once* toggle: This is a boolean field that is used to specify whether you want the node to execute only once, or once for every item it receives an input.
-2. *Command* field: This is a text field that is used to specify the command that will be executed on the host machine.
+1. ***Execute Once*** toggle: This is a boolean field that is used to specify whether you want the node to execute only once, or once for every item it receives an input.
+2. ***Command*** field: This is a text field that is used to specify the command that will be executed on the host machine.
 
 
 ## Example Usage
 
-This workflow allows you to execute a command that returns the percentage of the memory used by the hard disk of the host machine using the Execute Command node. If the percentage of memory used exceeds 80%, the workflow will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on the website. This example usage workflow would use the following nodes.
+This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow is triggered twice a day, and if the memory usage exceeds 80%, it will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
 - [Cron](../../core-nodes/Cron/README.md)
 - [Execute Command]()
 - [IF](../../core-nodes/If/README.md)
@@ -35,14 +35,14 @@ The final workflow should look like the following image.
 
 ### 1. Cron node
 
-The Cron node will trigger the workflow twice a day.
+The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 
 1. Click on ***Add Cron Time***.
 2. Select 'Every Day' from the ***Mode*** dropdown list.
-3. Set hours to 9 in the ***Hour*** field.
+3. Enter `9` in the ***Hour*** field.
 4. Click on ***Add Cron Time***.
 5. Select 'Every Day' from the ***Mode*** dropdown list.
-6. Set hours to 16 in the ***Hour*** field.
+6. Enter `16` in the ***Hour*** field.
 7. Click on ***Execute Node*** to run the node.
 
 ![Using the Cron node to trigger the workflow](./Cron_node.png)
@@ -50,20 +50,20 @@ The Cron node will trigger the workflow twice a day.
 ::: v-pre
 ### 2. Execute Command node
 
-The Execute Command node will execute the command and return the hard disk space used on the host machine.
+The Execute Command node will execute the command and return the percentage of hard disk space used on the host machine.
 
-1. Enter the command `df -k / | tail -1 | awk '{print $5}'` in the ***Command*** field.
+1. Enter `df -k / | tail -1 | awk '{print $5}'` in the ***Command*** field.
 2. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node executes the command and returns the amount of hard disk memory used by the host machine.
+In the screenshot below, you will notice that the node executes the command and returns the percentage of the hard disk that is full.
 
 ![Using the Execute Command node to get the percentage of memory used on the host machine](./ExecuteCommand_node.png)
 
 ::: v-pre
 ### 3. IF node
 
-This node will compare the percentage of the hard disk space used we got from the Execute Command node. If the percentage of the memory used exceeds 80%, it will return true otherwise false.
+This node will compare the percentage of the hard disk space used we got from the Execute Command node. If the usage of the memory exceeds 80%, it will return true otherwise false.
 
 1. Click on ***Add Condition*** and select 'Number' from the dropdown list.
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.
@@ -79,18 +79,19 @@ In the screenshot below, you will notice that the node returns an output when th
 
 ### 4. Twilio node (send: sms)
 
-This node sends an SMS to a number when the percentage of hard disk space used exceeds 80%.
+This node sends an SMS to the specified phone number when the usage of hard disk space  exceeds 80%.
 
-1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/Twilio/README.md).
-2. Enter the Twilio phone number in the ***From*** field.
-3. Enter the receiver's phone number in the ***To*** field.
-4. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
+1. Create a Twilio node connected to the 'true' output of the IF node.
+2. You'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/Twilio/README.md).
+3. Enter the Twilio phone number in the ***From*** field.
+4. Enter the receiver's phone number in the ***To*** field.
+5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 ::: v-pre
-5. Enter `Your hard disk space is filling up fast! Your hard disk is {{$node["Execute Command"].json["stdout"]}} filled.` in the ***Expression*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Enter `Your hard disk space is filling up fast! Your hard disk is {{$node["Execute Command"].json["stdout"]}} full.` in the ***Expression*** field.
+7. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends an SMS with the percentage of the hard disk space used we got from the Execute Command node.
+In the screenshot below, you will notice that the node sends an SMS with the percentage of the hard disk space used that we got from the Execute Command node.
 
 ![Using the Twilio node to send an SMS](./Twilio_node.png)
 
@@ -105,12 +106,12 @@ Adding this node here is optional, as the absence of this node won't make a diff
 ## FAQs
 
 ### How to run multiple commands in the Execute Command node?
-You can combine multiple commands using `&&`. For example, you can combine the change directory(cd) command with the list(ls) command using `&&`.
+You can combine multiple commands using `&&`. For example, you can combine the change directory (cd) command with the list (ls) command using `&&`.
 ```bash
 cd bin && ls
 ```
 
-To run multiple commands, you can also write the commands on separate lines. For example, you can write the list(ls) command on a new line after the change directory(cd) command.
+To run multiple commands, you can also write the commands on separate lines. For example, you can write the list (ls) command on a new line after the change directory (cd) command.
 ```bash
 cd bin
 ls
@@ -118,7 +119,7 @@ ls
 
 ### How to run the curl command in the Execute Command node?
 
-You should use the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to make a CURL request.
+You can also use the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
 1. Create a file named Dockerfile.

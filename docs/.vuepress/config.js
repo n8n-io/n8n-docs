@@ -223,12 +223,12 @@ module.exports = {
 					path: 'start-workflows-via-cli.md',
 				},
 				{
-					title: '💡 Function and Function Item Nodes',
-					path: 'function-nodes.md',
+					title: '💪 JavaScript Code Snippets',
+					path: 'javascript-code-snippets.md',
 				},
 				{
-					title: '💪 JavaScript Cheatsheet',
-					path: 'javascript-cheatsheet.md',
+					title: '💡 Function and Function Item Nodes',
+					path: 'function-nodes.md',
 				},
 				{
 					title: '👀 Troubleshooting',

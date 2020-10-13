@@ -45,7 +45,7 @@ The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 6. Enter `16` in the ***Hour*** field.
 7. Click on ***Execute Node*** to run the node.
 
-![Using the Cron node to trigger the workflow](./Cron_node.png)
+![Using the Cron node to trigger the workflow twice a day](./Cron_node.png)
 
 ::: v-pre
 ### 2. Execute Command node
@@ -58,7 +58,7 @@ The Execute Command node will execute the command and return the percentage of h
 
 In the screenshot below, you will notice that the node executes the command and returns the percentage of the hard disk that is full.
 
-![Using the Execute Command node to get the percentage of memory used on the host machine](./ExecuteCommand_node.png)
+![Using the Execute Command node to get the percentage of hard disk used on the host machine](./ExecuteCommand_node.png)
 
 ::: v-pre
 ### 3. IF node
@@ -75,7 +75,7 @@ This node will compare the percentage of the hard disk space used we got from th
 
 In the screenshot below, you will notice that the node returns an output when the percentage of hard disk space used exceeds 80%.
 
-![Using the IF node to check if the percentage of hard disk space used](./IF_node.png)
+![Using the IF node to check if the percentage of hard disk space used is greater than eighty percent](./IF_node.png)
 
 ### 4. Twilio node (send: sms)
 

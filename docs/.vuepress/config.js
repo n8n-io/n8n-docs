@@ -223,6 +223,10 @@ module.exports = {
 					path: 'start-workflows-via-cli.md',
 				},
 				{
+					title: '💪 JavaScript Code Snippets',
+					path: 'javascript-code-snippets.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},

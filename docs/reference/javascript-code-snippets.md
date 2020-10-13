@@ -3,11 +3,10 @@
 In n8n, you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node. You can also use code snippets to modify the data structure of the data returned by a node.
 
 ::: tip 💡 Keep in mind
-1. We are using Set node for illustrating expressions here. However, you can use the code snippets as an expression in any node. To do that, click on the gears icon next to a field and click on ***Add Expression***.
-2. If you're using a code snippet in an expression in a node, use curly brackets.
+We are using Set node for illustrating expressions here. However, you can use the code snippets as an expression in any node. To do that, click on the gears icon next to a field and click on ***Add Expression***.
 :::
 
-For each section, we'll share code snippets that can be used in the function node as well as expressions.
+For each section, we'll share code snippets that can be used in the function node as well as the expressions. You can read more about [Expressions](../nodes/expressions.md) and adding code snippets to the [Function](../nodes/nodes-library/core-nodes/Function/README.md) node in our documentation.
 
 
 ## Date and Time
@@ -42,7 +41,7 @@ The output will be similar to the following.
 ]
 ```
 
-#### Set node
+#### Expression editor
 
 ```js
 {{new Date()}}
@@ -77,7 +76,7 @@ The output will be similar to the following.
 ]
 ```
 
-#### Set node
+#### Expression editor
 
 ```js
 {{new Date().getDate()}}
@@ -112,7 +111,7 @@ The output will be similar to the following.
 ]
 ```
 
-#### Set node
+#### Expression editor
 
 ```js
 {{new Date().getMonth()+1}}
@@ -154,7 +153,7 @@ The output will be similar to the following.
 ]
 ```
 
-#### Set node
+#### Expression editor
 
 First day of the last month
 

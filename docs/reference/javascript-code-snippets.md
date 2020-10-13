@@ -13,7 +13,7 @@ For each section, we'll share code snippets that can be used in the function nod
 
 The JavaScript [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object is a built-in object that stores the date and time. It provides several methods for managing and formatting the date. 
 
-It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local time zone and offset. For example, `new Date()` would show the time in UTC but `new Date().getHours()` would show the time in your local time zone.
+It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local time zone and offset. For example, `new Date().toISOString()` would show the time in UTC but `new Date().getHours()` would show the time in your local time zone.
 
 **Note:** The outputs below either show the date and time when this documentation was created or are relative to it. The date and time will be different for you.
 

@@ -54,8 +54,8 @@ You can find authentication information for this node [here](../../../credential
 :::
 
 ::: details Flow
+- Get all flows
 - Invoke a flow
-- List flows
 :::
 
 ::: details Lead

@@ -53,6 +53,11 @@ You can find authentication information for this node [here](../../../credential
 - Update a contact
 :::
 
+::: details Flow
+- Get all flows
+- Invoke a flow
+:::
+
 ::: details Lead
 - Add lead to a campaign
 - Add note to a lead

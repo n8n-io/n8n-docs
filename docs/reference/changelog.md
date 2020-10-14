@@ -12,8 +12,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Vonage
     - Wekan
 - Enhanced nodes
-    - AWS SES: Added Send Template operation for the Email resource and added Template resource
-    - ClickUp: Added Time Entry and Time Entry Tag resource, and removed the Time Tracking resource
+    - AWS SES: Added Send Template operation for the Email resource and added the Template resource
+    - ClickUp: Added Time Entry and Time Entry Tag resources
     - Function: The Function field is now called the JavaScript Code field
     - Mailchimp: Added Campaign resource
     - Mindee: Added currency to the simplified response
@@ -25,7 +25,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
     - ClickUp Trigger: Fixed issue with creating credentials
     - Pipedrive Trigger: Fixed issue with adding multiple webhooks to Pipedrive
-- The link.fish Scrape node has [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870)
+- The link.fish Scrape node has been removed from n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
 
 ## n8n@0.86.1 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.0...n8n@0.86.1) for this version.<br />

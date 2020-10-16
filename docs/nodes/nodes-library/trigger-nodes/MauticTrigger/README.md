@@ -48,7 +48,7 @@ In the screenshot below, you will notice that the node returns the data submitte
 
 ### 2. Twilio node (send: sms)
 
-This node sends a confirmation SMS to a number we get from the Mautic Trigger node.
+This node sends a registration confirmation SMS to the users who filled out the Mautic form. We get the phone number of the user from the previous node.
 
 1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/Twilio/README.md).
 ::: v-pre
@@ -65,6 +65,6 @@ See you there!
 8. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends an SMS to the phone number we got from the Mautic Trigger node.
+In the screenshot below, you will notice that the node sends an SMS to the user whose name and the phone number is returned by the Mautic Trigger node.
 
 ![Using the Twilio node to send an SMS](./Twilio_node.png)

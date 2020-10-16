@@ -5,7 +5,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2020-10-16
 
 - Bug Fixes
-    - HTTP Request: Fixed an issue with the multipart-form-data/raw parameter
+    - HTTP Request: Fixed an issue with the Form-Data Mutipart and the RAW/Custom Body Content Types
 
 ## n8n@0.88.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />

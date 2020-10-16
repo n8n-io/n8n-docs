@@ -11,22 +11,9 @@ description: Learn how to use the Mautic Trigger node in n8n
 You can find authentication information for this node [here](../../../credentials/Mautic/README.md).
 :::
 
-## Events
-
-- Contact Channel Subscription Change Event
-- Contact Deleted Event
-- Contact Identified Event
-- Contact Points Changed Event
-- Contact Updated Event
-- Email Open Event
-- Email Send Event
-- Form Submit Event
-- Page Hit Event
-- Text Send Event
-
 ## Example Usage
 
-This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send a confirmation SMS to the user. You can also find the [workflow](https://n8n.io/workflows/721) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on n8n.io. This example usage workflow would use the following node.
 - [Mautic Trigger]()
 - [Twilio](../../nodes/Twilio/README.md)
 
@@ -36,19 +23,19 @@ The final workflow should look like the following image.
 
 ### 1. Mautic Trigger node
 
-The Mautic Trigger node will trigger the workflow when a form is submitted.
+The Mautic Trigger node will trigger the workflow when a Mautic form is submitted.
 
 1. First of all, you'll have to enter credentials for the Mautic Trigger node. You can find out how to do that [here](../../../credentials/Mautic/README.md).
 2. Select 'Form Submit Event' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns the data submitted to a Mautic form. This output is passed on to the next node in the workflow.
+In the screenshot below, you will notice that the node returns the data that was submitted to the Mautic form. This output is passed on to the next nodes in the workflow.
 
 ![Using the Mautic Trigger node to trigger the workflow](./MauticTrigger_node.png)
 
 ### 2. Twilio node (send: sms)
 
-This node sends a registration confirmation SMS to the users who filled out the Mautic form. We get the phone number of the user from the previous node.
+This node sends a registration confirmation SMS to the users who filled out the Mautic form. We get the phone number of the submitter from the previous node.
 
 1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](../../../credentials/Twilio/README.md).
 ::: v-pre
@@ -65,6 +52,6 @@ See you there!
 8. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends an SMS to the user whose name and the phone number is returned by the Mautic Trigger node.
+In the screenshot below, you will notice that the node sends an SMS to the submitter whose name and phone number are returned by the Mautic Trigger node.
 
 ![Using the Twilio node to send an SMS](./Twilio_node.png)

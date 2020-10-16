@@ -1,5 +1,22 @@
 # Changelog
 
+## n8n@0.87.2 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.1...n8n@0.87.2) for this version.<br />
+**Release date:** 2020-10-15
+
+- Bug Fixes
+    - Google Sheets: Fixed an issue with spaces in sheet names
+    - Automizy: Fixed an issue with the default resource
+
+## n8n@0.87.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.0...n8n@0.87.1) for this version.<br />
+**Release date:** 2020-10-15
+
+- Bug Fixes
+    - Gmail: Fixed an issue with the Message ID
+    - HTTP Request: Fixed an issue with the GET Request
+- Added `HMAC-SHA512` signature method for OAuth 1.0
+
 ## n8n@0.87.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
 **Release date:** 2020-10-14

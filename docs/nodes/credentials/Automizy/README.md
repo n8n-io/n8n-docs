@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/atuomizy
+permalink: /credentials/automizy
 description: Learn to configure credentials for the Automizy node in n8n
 ---
 
@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes with Automizy.
 
 Create an [Automizy](https://automizy.com/) account.
 
-## Using API Key
+## Using API Token
 
 1. Access the [Automizy dashboard](https://app.automizy.com/dashboard).
 2. Click on ***Settings*** on the bottom left corner and select 'API Token' from the dropdown list.

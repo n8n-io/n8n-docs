@@ -7,6 +7,7 @@ description: Learn to configure credentials for the Mautic node in n8n
 
 You can use these credentials to authenticate the following nodes with Mautic.
 - [Mautic](../../nodes-library/nodes/Mautic/README.md)
+- [Mautic Trigger](../../nodes-library/trigger-nodes/MauticTrigger/README.md)
 
 ## Prerequisites
 
@@ -16,7 +17,7 @@ Create an account on a [Mautic](https://www.mautic.org/) instance.
 
 1. Log in to your Mautic account.
 2. Click on the gear icon in the top right.
-3. Select 'API Credentials' in the drop down menu.
+3. Select 'API Credentials' in the dropdown menu.
 4. Click on the 'New' button.
 5. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
 6. Copy the 'OAuth Callback URL' provided in the Mautic OAuth2 API credentials in n8n and paste it in the 'Redirect URI' field in the Mautic credential page.

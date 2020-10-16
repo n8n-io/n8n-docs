@@ -5,7 +5,7 @@ description: Learn how to use the Automizy node in n8n
 
 # Automizy
 
-[Automizy](https://automizy.com/) is an Email Marketing Automation software that offers AI-powered Subject Line Tester, AB testing, Resend, and Email Automation.
+[Automizy](https://automizy.com/) is an email marketing automation software that offers AI-powered Subject Line Tester, AB testing, and email automation.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Automizy/README.md).
@@ -31,7 +31,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a new list, add a new contact to the list, update the contact, and get all contacts in the list using the Automizy node. You can also find the [workflow](https://n8n.io/workflows/720) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a new list, add a new contact to that list, update the contact, and get all contacts in the list using the Automizy node. You can also find the [workflow](https://n8n.io/workflows/720) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Automizy]()
 
@@ -44,7 +44,7 @@ The final workflow should look like the following image.
 The Start node exists by default when you create a new workflow.
 
 
-### 2. Automizy (create: list)
+### 2. Automizy node (create: list)
 
 This node will create a new list called `n8n-docs` in Automizy.
 
@@ -73,9 +73,9 @@ In the screenshot below, you will notice that the node creates a new contact wit
 
 ![Using the Automizy node to create a new contact and add it to the list](./Automizy1_node.png)
 
-#### 4. Automizy2 node (update: contact)
+### 4. Automizy2 node (update: contact)
 
-This node updates the contact we created in the previous node by adding the tag `reviewer` to it.
+This node updates the contact that we created in the previous node by adding the tag `reviewer` to it.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.
@@ -89,7 +89,7 @@ In the screenshot below, you will notice that the node updates the contact creat
 
 ![Using the Automizy node to update the contact by adding a tag](./Automizy2_node.png)
 
-#### 5. Automizy3 node (getAll: contact)
+### 5. Automizy3 node (getAll: contact)
 
 This node returns all the contacts of the `n8n-docs` list that we created using the Automizy node.
 ::: v-pre

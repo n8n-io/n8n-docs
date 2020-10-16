@@ -76,6 +76,9 @@ In the screenshot below, you will notice that the node creates a new contact wit
 ### 4. Automizy2 node (update: contact)
 
 This node updates the contact that we created in the previous node by adding the tag `reviewer` to it.
+
+***Note:*** Make sure you create a tag in Automizy.
+
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.

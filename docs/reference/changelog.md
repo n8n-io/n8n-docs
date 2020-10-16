@@ -1,5 +1,16 @@
 # Changelog
 
+## n8n@0.88.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />
+**Release date:** 2020-10-16
+
+- Enhanced Fixes
+    - Matrix: Added support for specifying a Matrix Homeserver URL
+    - Salesforce: Added Custom Object resource and Custom Fields and Sort options
+- Bug Fixes
+    - AWS SES: Fixed an issue with the Send Template operation for the Email resource
+    - AWS SNS Trigger: Fixed an issue with the Subscriptions topic
+
 ## n8n@0.87.2 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.1...n8n@0.87.2) for this version.<br />
 **Release date:** 2020-10-15

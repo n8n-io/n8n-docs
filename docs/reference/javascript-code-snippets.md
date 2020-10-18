@@ -124,7 +124,7 @@ The expression would resolve to something similar to the following.
 ```
 
 
-### 4. First and last days of the last month
+### 4. Get first and last days of the last month
 
 Use the following snippet to get the first and last days of the last month.
 
@@ -142,6 +142,7 @@ items[0].json.first_day_last_month = first_day_last_month;
 items[0].json.last_day_last_month = last_day_last_month;
 return items;
 ```
+
 The output will be similar to the following.
 
 ```js
@@ -175,4 +176,134 @@ The expression would resolve to something similar to the following.
 
 // Last day of the last month
 2020-09-30T22:00:00.000Z
+```
+
+## Workflow Data
+
+You can use the `$workflow` variable to get information about the current workflow in n8n. Please note that you'll have to save your workflow to obtain its name and ID.
+
+### 1. Get workflow ID
+
+#### Function node
+
+```js
+const workflowId = $workflow.id;
+
+items[0].json.workflowId = workflowId;
+return items;
+```
+
+The output will be similar to the following.
+
+```js
+[
+  {
+    "workflowId": "225"
+  }
+]
+```
+
+In case you haven't saved your workflow, this will be the output.
+
+```js
+[
+  {
+  }
+]
+```
+
+#### Expression editor
+
+```js
+{{$workflow.id}}
+```
+
+The expression would resolve to something similar to the following.
+
+```js
+225
+```
+
+In case you haven't saved your workflow, this would resolve to something similar to the following.
+
+```js
+[not found]
+```
+
+### 2. Get workflow name
+
+#### Function node
+
+```js
+const workflowName = $workflow.name;
+
+items[0].json.workflowName = workflowName;
+return items;
+```
+
+The output will be similar to the following.
+
+```js
+[
+  {
+    "workflowName": "A name for my workflow"
+  }
+]
+```
+
+In case you haven't saved your workflow, this will be the output.
+
+```js
+[
+  {
+    "workflowName": ""
+  }
+]
+```
+
+#### Expression editor
+
+```js
+{{$workflow.name}}
+```
+
+The expression would resolve to something similar to the following.
+
+```js
+A name for my workflow
+```
+
+In case you haven't saved your workflow, this wouldn't resolve to anything.
+
+### 3. Get workflow status
+
+#### Function node
+
+```js
+const isActive = $workflow.active;
+
+items[0].json.isActive = isActive;
+return items;
+```
+
+The output will be similar to the following.
+
+```js
+[
+  {
+    "isActive": false
+  }
+]
+```
+
+#### Expression editor
+
+```js
+{{$workflow.active}}
+```
+
+The expression would resolve to something similar to the following.
+
+```js
+false
 ```

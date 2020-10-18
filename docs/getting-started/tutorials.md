@@ -31,3 +31,4 @@
 - [n8n basics 2/3 - Simple Workflow](https://www.youtube.com/watch?v=ovlxledZfM4)
 - [n8n basics 3/3 - Transforming JSON](https://www.youtube.com/watch?v=wGAEAcfwV8w)
 - [n8n nodes - Using Google Sheets and Google API](https://www.youtube.com/watch?v=KFqx8OmkqVE)
+- [Raspberry Pi as a local server for self-hosting applications like n8n](https://cri.dev/posts/2020-09-12-Raspberry-Pi-as-a-local-server-for-self-hosting-applications/)	

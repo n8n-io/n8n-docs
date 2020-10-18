@@ -277,6 +277,8 @@ In case you haven't saved your workflow, this wouldn't resolve to anything.
 
 ### 3. Get workflow status
 
+`$workflow.active` returns a boolean value. You can convert it to a string by using the `toString()` method.
+
 #### Function node
 
 ```js

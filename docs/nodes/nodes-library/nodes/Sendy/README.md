@@ -27,9 +27,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to extract information from an image of a receipt using the Sendy node. You can also find the [workflow](https://n8n.io/workflows/702) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to add a subscriber to a list and create and send a campaign using the Sendy node. You can also find the [workflow](https://n8n.io/workflows/727) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
-- [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Sendy]()
 
 The final workflow should look like the following image.
@@ -41,31 +40,38 @@ The final workflow should look like the following image.
 The Start node exists by default when you create a new workflow.
 
 
-### 2. HTTP Request (GET)
+### 2. Sendy node (add: subscriber)
 
-This example workflow uses the HTTP Request node to make a GET request to download the image of a receipt. You can also use other nodes, for example, the [Box](../../nodes/Box/README.md) node, to get the images of the receipts you want to use.
-::: v-pre
-1. Enter the URL of the image in the ***URL*** field. For example, `https://miro.medium.com/max/1400/0*1T9GkAb93w5NSMsf`.
-2. Select 'File' from the ***Response Format*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
-:::
+This node will add a subscriber to a list in Sendy.
 
-In the screenshot below, you will notice that the HTTP Request node downloads the image from the URL. This image (binary data) can now be used by the other nodes in the workflow.
+1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](../../../credentials/Sendy/README.md).
+2. Enter the subscriber's email address in the ***Email*** field.
+3. Enter the list id in the ***List ID*** field.
+4. Click on the ***Add Field*** button and select 'Name'.
+5. Enter the name of the subscriber in the ***Name*** field.
+6. Click on ***Execute Node*** to run the node.
 
-![Using the HTTP Request node to get the file](./HTTPRequest_node.png)
+In the screenshot below, you will notice that the node adds a subscriber with their name to the list we specify.
 
-  
-### 3. Sendy node (predict: receipt)
+![Using the Sendy node to add a subscriber to a list](./Sendy_node.png)
 
-This node will get the image of the receipt (binary data) from the HTTP Request node and extract the information from it.
-1. Select 'Receipt' from the ***Resource*** dropdown list. 
-2. You'll have to enter credentials for the Sendy node. You can find out how to do that  [here](../../../credentials/Sendy/README.md).
-3. Click on ***Execute Node*** to run the workflow.
+### 3. Sendy1 node (create: campaign)
 
-In the screenshot below, you will notice that the node extracts the information from the image that it got from the HTTP Request node.
+This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list we specify. 
 
-![Using the Sendy node to extract information from receipt](./Sendy_node.png)
+1. Select the credentials that you entered in the previous node.
+2. Select 'Campaign' from the ***Resource*** dropdown list.
+3. Enter the name of the sender in the ***From Name*** field.
+4. Enter the email address of the sender in the ***From Email*** field.
+5. Enter the email address where the subscribers can reply to in the ***Reply To*** field.
+6. Enter the title of the campaign in the ***Title*** field.
+7. Enter the subject of the email in the ***Subject*** field.
+8. Enter the HTML snippet of the email campaign in the ***HTML Text*** field.
+9. Toggle ***Send Campaign*** to true.
+10. Click on the ***Add Field*** button and select 'List IDs'.
+11. Enter the list id in the ***List IDs*** field.
+12. Click on ***Execute Node*** to run the workflow.
 
-## Further Reading
+In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list we specify.
 
-- [Automatically Adding Expense Receipts to Google Sheets with Telegram, Sendy, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-Sendy-twilio-and-n8n-c47eb2f8d7a5)
+![Using the Sendy node to create and send a campaign to a list](./Sendy1_node.png)

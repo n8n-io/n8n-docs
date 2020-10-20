@@ -60,10 +60,11 @@ The Start node exists by default when you create a new workflow.
 ### 2. Matrix (create: room)
 
 This node will create a new room called `n8n` on the Matrix server.
-::: v-pre
+
 1. First of all, you'll have to enter credentials for the Matrix node. You can find out how to do that [here](../../../credentials/Matrix/README.md).
+::: v-pre
 2. Select 'Room' from the ***Resource*** dropdown list.
-3. Enter a name for the room you want to create in the ***Room Name*** field.
+3. Enter `n8n` in the ***Room Name*** field. You can enter a different name for the room.
 4. Enter an alias for the room in the ***Room Alias*** field.
 5. Click on ***Execute Node*** to run the node.
 :::
@@ -74,11 +75,11 @@ In the screenshot below, you will notice that the node creates a room `n8n` with
 ### 3. Matrix1 node (me: account)
 
 This node will get your account information from the Matrix server.
-
+::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Account' from the ***Resource*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
-
+:::
 In the screenshot below, you will notice that the node returns the user id.
 
 ![Using the Matrix node to get your account information](./Matrix1_node.png)
@@ -86,12 +87,12 @@ In the screenshot below, you will notice that the node returns the user id.
 ### 3. Matrix2 node (getAll: roomMember)
 
 This node will return the information of all the members in a room. The output of this node will be passed on to the next nodes in the workflow.
-
+::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Room Member' from the ***Resource*** dropdown list.
 3. Select a room from the ***Room ID*** dropdown list. We will send invites to the members of this room.
 4. Click on ***Execute Node*** to run the node.
-
+:::
 In the screenshot below, you will notice that the node returns the information of all the members in the room we specified. The output of this node will be passed on to the next nodes in the workflow.
 
 ![Using the Matrix node to get the information of the members in a room](./Matrix2_node.png)
@@ -99,7 +100,7 @@ In the screenshot below, you will notice that the node returns the information o
 ### 4. IF node
 
 This node will compare the user's id with your user id. If the user ids are not equal, the output will be true, otherwise false.
-
+::: v-pre
 1. Click on ***Add Condition*** and select 'String'.
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Matrix1 > Output Data > JSON > user_id. You can also add the following expression: `{{$node["Matrix1"].json["user_id"]}}`.
@@ -107,7 +108,7 @@ This node will compare the user's id with your user id. If the user ids are not 
 5. Click on the gears icon next to the ***Value 2*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Matrix2 > Output Data > JSON > user_id. You can also add the following expression: `{{$node["Matrix2"].json["user_id"]}}`.
 7. Click on ***Execute Node*** to run the node.
-
+:::
 In the screenshot below, you will notice that the node returns the information of all the members of the room except your information.
 
 ![Using the IF node to compare your user id with the user id of the members in a room](./IF_node.png)
@@ -115,7 +116,7 @@ In the screenshot below, you will notice that the node returns the information o
 ### 4. Matrix3 node (invite: room)
 
 This node will send an invitation to the members returned by the previous node to join the room we created using the Matrix node.
-
+::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Room' from the ***Resource*** dropdown list.
 3. Select 'Invite' from the ***Operation*** dropdown list.
@@ -124,29 +125,29 @@ This node will send an invitation to the members returned by the previous node t
 6. Click on the gears icon next to the ***User ID*** field and click on ***Add Expression***.
 7. Select the following in the ***Variable Selector*** section: Nodes > IF > Output Data > JSON > user_id. You can also add the following expression: `{{$node["IF"].json["user_id"]}}`.
 8. Click on ***Execute Node*** to run the node.
-
-In the screenshot below, you will notice that the node sends an invite to join the room we created to the members of another room.
+:::
+In the screenshot below, you will notice that the node sends an invite to join the `n8n` room to the members of another room.
 
 ![Using the Matrix node to send an invite to join the room](./Matrix3_node.png)
 
 ### 5. Matrix4 node (create: message)
 
 This node will send a message to the new room we created using the Matrix node.
-
+::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Click on the gears icon next to the ***Room ID*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Matrix > Output Data > JSON > room_id. You can also add the following expression: `{{$node["Matrix"].json["room_id"]}}`.
 4. Enter a message in the ***Text*** field.
 5. Click on ***Execute Node*** to run the node.
-
+:::
 In the screenshot below, you will notice that the node sends a `Welcome to n8n!` message to the `n8n` room we created with the Matrix node.
 
 ![Using the Matrix node to send a message to the room we created](./Matrix4_node.png)
 
 ### 6. NoOp node
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
-
+::: v-pre
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.
 2. Click on ***Execute Node*** to run the node.
-
+:::
 ![Using the NoOp node](./NoOp_node.png)

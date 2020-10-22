@@ -1,0 +1,164 @@
+---
+permalink: /nodes/n8n-nodes-base.wekan
+description: Learn how to use the Wekan node in n8n
+---
+
+# Wekan
+
+[Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.
+
+::: tip 🔑 Credentials
+You can find authentication information for this node [here](../../../credentials/Wekan/README.md).
+:::
+
+## Basic Operations
+
+::: details Board
+- Create a new board
+- Delete a board
+- Get the data of a board
+- Get all user boards
+:::
+
+::: details Card
+- Create a new card
+- Delete a card
+- Get a card
+- Update a card
+:::
+
+::: details Card Comment
+- Create a comment on a card
+- Delete a comment from a card
+- Get a card comment
+- Get all card comments
+:::
+
+::: details Checklist
+- Create a new checklist
+- Delete a checklist
+- Get the data of a checklist
+- Returns all checklists for the card
+:::
+
+::: details Checklist Item
+- Delete a checklist item
+- Get a checklist item
+- Update a checklist item
+:::
+
+::: details List
+- Create a new list
+- Delete a list
+- Get the data of a list
+- Get all board lists
+:::
+
+## Example Usage
+
+This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. The workflow also allows you to create a card and update the list id of the card and move it from the `To Do` list to the `Done` list using the Wekan node. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
+- [Start](../../core-nodes/Start/README.md)
+- [Wekan]()
+
+The final workflow should look like the following image.
+
+![A workflow with the Wekan node](./workflow.png) 
+
+::: v-pre
+### 1. Start node
+
+The start node exists by default when you create a new workflow.
+:::
+
+### 2. Wekan node (create: board)
+
+This node will create a board called `Documentation` in Wekan. To create a board with a different name, you can enter the name of your board instead.
+
+1. First of all, you'll have to enter credentials for the Wekan node. You can find out how to do that [here](../../../credentials/Wekan/README.md).
+::: v-pre
+2. Select 'Board' from the ***Resource*** dropdown list.
+3. Enter `Documentation` in the ***Title*** field.
+4. Select the owner of the board from the ***Owner*** dropdown list.
+5. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node creates a board with the title `Documentation`.
+:::
+
+![Using the Wekan node to create a board](./Wekan_node.png)
+
+::: v-pre
+### 3. Wekan1 node (create: list)
+
+This node will create a list with the title `To Do` in the board `Documentation`, created using the previous node.
+
+1. Select the credentials that you entered in the previous node.
+2. Select 'List' from the ***Resource*** dropdown list.
+3. Click on the gears icon next to the ***Board ID*** field and click on ***Add Expression***.
+4. Select the following in the ***Variable Selector*** section: Nodes > Wekan > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan"].json["_id"]}}`.
+5. Enter `To Do` in the ***Title*** field.
+6. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node creates a new list `To Do` in the board `Documentation` created using the previous node.
+:::
+
+![Using the Wekan node to create a list with the title To Do](./Wekan1_node.png)
+
+::: v-pre
+### 4. Wekan2 node (create: list)
+
+This node will create a list with the title `Done` in the board `Documentation`, created using the Wekan node.
+
+1. Select the credentials that you entered in the previous node.
+2. Select 'List' from the ***Resource*** dropdown list.
+3. Click on the gears icon next to the ***Board ID*** field and click on ***Add Expression***.
+4. Select the following in the ***Variable Selector*** section: Nodes > Wekan > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan"].json["_id"]}}`.
+5. Enter `Done` in the ***Title*** field.
+6. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node creates a new list `Done` in the board `Documentation` created using the Wekan node.
+:::
+
+![Using the Wekan node to create a list with the title Done](./Wekan2_node.png)
+
+::: v-pre
+### 5. Wekan3 node (create: card)
+
+This node will create a card in the board `Documentation` created using the Wekan node and add it to the list titled `To Do` created using the Wekan1 node.
+
+1. Select the credentials that you entered in the previous node.
+2. Click on the gears icon next to the ***Board ID*** field and click on ***Add Expression***.
+3. Select the following in the ***Variable Selector*** section: Nodes > Wekan > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan"].json["_id"]}}`.
+4. Click on the gears icon next to the ***List ID*** field and click on ***Add Expression***.
+5. Select the following in the ***Variable Selector*** section: Nodes > Wekan1 > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan1"].json["_id"]}}`.
+6. Enter `Document Wekan node` in the ***Title*** field.
+7. Select 'Default' from the ***Swimlane ID*** dropdown list.
+8. Select an author from the ***Author ID*** dropdown list.
+9. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node creates a new card with the title `Document Wekan node` in the `To Do` list of the board `Documentation` created using the Wekan node.
+:::
+
+![Using the Wekan node to create a card in the To Do list](./Wekan3_node.png)
+
+::: v-pre
+### 6. Wekan4 node (update: card)
+
+This node will update the list id of the card created by the previous node and move it from `To Do` to list `Done`.
+
+1. Select the credentials that you entered in the previous node.
+2. Select 'Update' from the ***Operation*** dropdown list.
+3. Click on the gears icon next to the ***Board ID*** field and click on ***Add Expression***.
+4. Select the following in the ***Variable Selector*** section: Nodes > Wekan > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan"].json["_id"]}}`.
+5. Click on the gears icon next to the ***List ID*** field and click on ***Add Expression***.
+6. Select the following in the ***Variable Selector*** section: Nodes > Wekan1 > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan1"].json["_id"]}}`.
+7. Click on the gears icon next to the ***Card ID*** field and click on ***Add Expression***.
+8. Select the following in the ***Variable Selector*** section: Nodes > Wekan3 > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan3"].json["_id"]}}`.
+9. Click on the ***Add Field*** button and select 'List ID'.
+10. Click on the gears icon next to the ***List ID*** field and click on ***Add Expression***.
+11. Select the following in the ***Variable Selector*** section: Nodes > Wekan2 > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan2"].json["_id"]}}`.
+12. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node updates the list id of the card we created in the previous node from `To Do` to `Done`.
+:::
+
+![Using the Wekan node to update the card](./Wekan4_node.png)

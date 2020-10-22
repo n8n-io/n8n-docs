@@ -56,7 +56,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. The workflow also allows you to create a card and update the list id of the card and move it from the `To Do` list to the `Done` list using the Wekan node. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. It also allows you to create a card and update the list ID of the card, enabling you to move it from the `To Do` list to the `Done` list. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Wekan]()
 
@@ -81,7 +81,7 @@ This node will create a board called `Documentation` in Wekan. To create a board
 4. Select the owner of the board from the ***Owner*** dropdown list.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a board with the title `Documentation`.
+In the screenshot below, you will notice that the node creates a new board with the title `Documentation`.
 :::
 
 ![Using the Wekan node to create a board](./Wekan_node.png)
@@ -89,7 +89,7 @@ In the screenshot below, you will notice that the node creates a board with the 
 ::: v-pre
 ### 3. Wekan1 node (create: list)
 
-This node will create a list with the title `To Do` in the board `Documentation`, created using the previous node.
+This node will create a list with the title `To Do` in the `Documentation` board, which was created using the previous node.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'List' from the ***Resource*** dropdown list.
@@ -98,7 +98,7 @@ This node will create a list with the title `To Do` in the board `Documentation`
 5. Enter `To Do` in the ***Title*** field.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new list `To Do` in the board `Documentation` created using the previous node.
+In the screenshot below, you will notice that the node creates a new list called `To Do` in the `Documentation` board.
 :::
 
 ![Using the Wekan node to create a list with the title To Do](./Wekan1_node.png)
@@ -106,7 +106,7 @@ In the screenshot below, you will notice that the node creates a new list `To Do
 ::: v-pre
 ### 4. Wekan2 node (create: list)
 
-This node will create a list with the title `Done` in the board `Documentation`, created using the Wekan node.
+This node will create a list with the title `Done` in the `Documentation` board, which was created using the Wekan node.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'List' from the ***Resource*** dropdown list.
@@ -115,7 +115,7 @@ This node will create a list with the title `Done` in the board `Documentation`,
 5. Enter `Done` in the ***Title*** field.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new list `Done` in the board `Documentation` created using the Wekan node.
+In the screenshot below, you will notice that the node creates a new list called `Done` in the `Documentation` board.
 :::
 
 ![Using the Wekan node to create a list with the title Done](./Wekan2_node.png)
@@ -123,7 +123,7 @@ In the screenshot below, you will notice that the node creates a new list `Done`
 ::: v-pre
 ### 5. Wekan3 node (create: card)
 
-This node will create a card in the board `Documentation` created using the Wekan node and add it to the list titled `To Do` created using the Wekan1 node.
+This node will create a card in the `Documentation` board under the list titled `To Do`, which was created using the Wekan1 node.
 
 1. Select the credentials that you entered in the previous node.
 2. Click on the gears icon next to the ***Board ID*** field and click on ***Add Expression***.
@@ -135,7 +135,7 @@ This node will create a card in the board `Documentation` created using the Weka
 8. Select an author from the ***Author ID*** dropdown list.
 9. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new card with the title `Document Wekan node` in the `To Do` list of the board `Documentation` created using the Wekan node.
+In the screenshot below, you will notice that the node creates a new card with the title `Document Wekan node` in the `To Do` list of the `Documentation` board.
 :::
 
 ![Using the Wekan node to create a card in the To Do list](./Wekan3_node.png)
@@ -143,7 +143,7 @@ In the screenshot below, you will notice that the node creates a new card with t
 ::: v-pre
 ### 6. Wekan4 node (update: card)
 
-This node will update the list id of the card created by the previous node and move it from `To Do` to list `Done`.
+This node will update the list ID of the card created by the previous node and move it from the `To Do` list to the `Done` list.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.
@@ -158,7 +158,7 @@ This node will update the list id of the card created by the previous node and m
 11. Select the following in the ***Variable Selector*** section: Nodes > Wekan2 > Output Data > JSON > _id. You can also add the following expression: `{{$node["Wekan2"].json["_id"]}}`.
 12. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node updates the list id of the card we created in the previous node from `To Do` to `Done`.
+In the screenshot below, you will notice that the node updates the list id of the card that we created in the previous node and moves it from the `To Do` list to the `Done` list.
 :::
 
 ![Using the Wekan node to update the card](./Wekan4_node.png)

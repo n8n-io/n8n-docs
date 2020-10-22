@@ -56,7 +56,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a board, lists, and a card using the Wekan node. The workflow also allows you to update the card using the Wekan node. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. The workflow also allows you to create a card and update the list id of the card and move it from the `To Do` list to the `Done` list using the Wekan node. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Wekan]()
 
@@ -72,7 +72,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Wekan node (create: board)
 
-This node will create a board `Documentation` in Wekan. To create a board with a different name, you can enter the name of your board instead.
+This node will create a board called `Documentation` in Wekan. To create a board with a different name, you can enter the name of your board instead.
 
 1. First of all, you'll have to enter credentials for the Wekan node. You can find out how to do that [here](../../../credentials/Wekan/README.md).
 ::: v-pre
@@ -101,7 +101,7 @@ This node will create a list with the title `To Do` in the board `Documentation`
 In the screenshot below, you will notice that the node creates a new list `To Do` in the board `Documentation` created using the previous node.
 :::
 
-![Using the Wekan node to create a list with the title To Do](./Wekan2_node.png)
+![Using the Wekan node to create a list with the title To Do](./Wekan1_node.png)
 
 ::: v-pre
 ### 4. Wekan2 node (create: list)
@@ -143,7 +143,7 @@ In the screenshot below, you will notice that the node creates a new card with t
 ::: v-pre
 ### 6. Wekan4 node (update: card)
 
-This node will update the list id of the card created by the previous node.
+This node will update the list id of the card created by the previous node and move it from `To Do` to list `Done`.
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.

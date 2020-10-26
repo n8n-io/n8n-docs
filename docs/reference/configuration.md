@@ -178,7 +178,7 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto
 # Allows usage of only crypto and fs
 export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 
-# Allow usage of external npm modules. Wildcard matching is not supported.
+# Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
 

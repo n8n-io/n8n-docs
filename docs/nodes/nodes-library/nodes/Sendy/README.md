@@ -46,7 +46,7 @@ This node will add a subscriber to a list in Sendy. If you don't have a list in 
 
 1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](../../../credentials/Sendy/README.md).
 2. Enter the subscriber's email address in the ***Email*** field.
-3. Copy and paste the list id from Sendy in the ***List ID*** field in n8n.
+3. On your Sendy dashboard, click on 'View all lists' and copy the list ID of the list you want to add the subscriber to. Paste this list ID in the ***List ID*** field in n8n.
 4. Click on the ***Add Field*** button and select 'Name'.
 5. Enter the name of the subscriber in the ***Name*** field.
 6. Click on ***Execute Node*** to run the node.

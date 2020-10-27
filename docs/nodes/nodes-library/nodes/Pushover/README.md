@@ -54,10 +54,10 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 ### 3. Pushover node (push: message)
 
-This node will send a notification with the weather update, which was sent by the previous node.
+This node will send a push notification with the weather update, which was sent by the previous node.
 
 1. First of all, you'll have to enter credentials for the Pushover node. You can find out how to do that [here](../../../credentials/Pushover/README.md).
-2. Enter a user key in the ***User Key*** field. You can find your user key from the [Pushover Dashboard](https://www.pushover.net/).
+2. Enter a user key in the ***User Key*** field. You can obtain your user key from the [Pushover Dashboard](https://www.pushover.net/).
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 ::: v-pre
 5. Enter the following message in the ***Expression*** field: `Hey! The temperature outside is {{$node["OpenWeatherMap"].json["main"]["temp"]}}°C.`.
@@ -67,6 +67,6 @@ This node will send a notification with the weather update, which was sent by th
 9. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends a notification to a device with the weather update, which was sent by the previous node.
+In the screenshot below, you will notice that the node sends a notification to a device with the weather update.
 
 ![Using the Pushover node to send weather updates via SMS](./Pushover_node.png)

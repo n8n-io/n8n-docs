@@ -5,7 +5,7 @@ description: Learn how to use the Strava node in n8n
 
 # Strava
 
-[Strava](https://www.strava.com/) is an online service for tracking fitness activities.
+[Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Strava/README.md).
@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create, update, and get activity in Strava. You can also find the [workflow](https://n8n.io/workflows/744) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get an activity in Strava. You can also find the [workflow](https://n8n.io/workflows/744) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Strava]()
 
@@ -88,6 +88,6 @@ This node returns the information of the activity that we created using the Stra
 5. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node returns the information of the activity that we created using the Strava node.
+In the screenshot below, you will notice that the node returns the information of the activity that we specified in this node.
 
 ![Using the Strava node to get an issue](./Strava2_node.png)

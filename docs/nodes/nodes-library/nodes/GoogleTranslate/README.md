@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 ::: details Language
-- Translate data
+- Translate
 :::
 
 ## Example Usage
@@ -33,14 +33,14 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Google Translate node (translate:language)
 
-This node will translate the text `Hello from n8n!` into German. You can enter a different text as well as select another language to translate the text.
+This node will translate the text `Hello from n8n!` to German. You can enter a different text as well as select another language to translate the text to.
 
 1. Select 'OAuth2' from the ***Authentication*** dropdown list. 
-2.  First of all, you'll have to enter credentials for the Google Translate node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
+2. Next, you'll have to enter credentials for the Google Translate node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
 3. Enter the text `Hello from n8n!` in the ***Text*** field.
-4. Select 'DE' from the ***Translate To*** dropdown list. DE is the language code for German. You can refer [Language Support](https://cloud.google.com/translate/docs/languages) to view the lists of all the language codes.
+4. Select 'DE' from the ***Translate To*** dropdown list. DE is the language code for German. You can refer to [Language Support](https://cloud.google.com/translate/docs/languages) to view the list of all supported languages and their corresponding language codes.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node translates the text `Hello from n8n!` into German.
+In the screenshot below, you will notice that the node translates the text `Hello from n8n!` to German.
 
 ![Using the Google Translate node to translate text in German](./GoogleTranslate_node.png)

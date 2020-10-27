@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 ::: details Language
-- Translate
+- Translate data
 :::
 
 ## Example Usage

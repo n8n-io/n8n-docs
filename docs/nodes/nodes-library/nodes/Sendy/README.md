@@ -42,7 +42,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Sendy node (add: subscriber)
 
-This node will add a subscriber to a list in Sendy. If you don't have a list in Sendy, make sure to create one.
+This node will add a subscriber to a list in Sendy. If you don't already have a list in Sendy, make sure to create one.
 
 1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](../../../credentials/Sendy/README.md).
 2. Enter the subscriber's email address in the ***Email*** field.
@@ -51,13 +51,13 @@ This node will add a subscriber to a list in Sendy. If you don't have a list in 
 5. Enter the name of the subscriber in the ***Name*** field.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node adds a subscriber with their name to the list we specify.
+In the screenshot below, you will notice that the node adds a subscriber with their name to the list that we specify.
 
 ![Using the Sendy node to add a subscriber to a list](./Sendy_node.png)
 
 ### 3. Sendy1 node (create: campaign)
 
-This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list we specify. 
+This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list that we specify. 
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Campaign' from the ***Resource*** dropdown list.
@@ -73,6 +73,6 @@ This node will create a campaign with the title 'Welcome to n8n' and send it to 
 12. Select the following in the ***Variable Selector*** section: Nodes > Sendy > Parameters > listId. You can also add the following expression: `{{$node["Sendy"].parameter["listId"]}}`.
 13. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list we specify.
+In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list that we specify.
 
 ![Using the Sendy node to create and send a campaign to a list](./Sendy1_node.png)

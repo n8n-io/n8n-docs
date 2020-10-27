@@ -1,5 +1,57 @@
 # Changelog
 
+## n8n@0.90.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
+**Release date:** 2020-10-23
+
+- Bug Fixes
+    - Google Translate: Fixed an issue with the rendering of the image in n8n.io
+
+## n8n@0.89.2 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.1...n8n@0.89.2) for this version.<br />
+**Release date:** 2020-10-22
+
+- Bug Fixes
+    - Strava Trigger: Fixed a typo in the node name
+
+## n8n@0.89.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.0...n8n@0.89.1) for this version.<br />
+**Release date:** 2020-10-22
+
+- Removed debug messages
+
+## n8n@0.89.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.1...n8n@0.89.0) for this version.<br />
+**Release date:** 2020-10-22
+
+- New Nodes
+    - Pushover
+    - Strava
+    - Strava Trigger
+    - Google Translate
+- Bug Fixes
+    - HTTP Request: Fixed an issue with the POST request method for the 'File' response format
+- Fixed issue with displaying non-active workflows as active
+- Fixed an issue related to multiple-webhooks
+
+## n8n@0.88.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.0...n8n@0.88.1) for this version.<br />
+**Release date:** 2020-10-16
+
+- Bug Fixes
+    - HTTP Request: Fixed an issue with the Form-Data Mutipart and the RAW/Custom Body Content Types
+
+## n8n@0.88.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />
+**Release date:** 2020-10-16
+
+- Enhanced Fixes
+    - Matrix: Added support for specifying a Matrix Homeserver URL
+    - Salesforce: Added Custom Object resource and Custom Fields and Sort options
+- Bug Fixes
+    - AWS SES: Fixed an issue with the Send Template operation for the Email resource
+    - AWS SNS Trigger: Fixed an issue with the Subscriptions topic
+
 ## n8n@0.87.2 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.1...n8n@0.87.2) for this version.<br />
 **Release date:** 2020-10-15

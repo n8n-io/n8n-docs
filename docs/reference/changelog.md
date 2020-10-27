@@ -1,5 +1,25 @@
 # Changelog
 
+## n8n@0.90.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
+**Release date:** 2020-10-23
+
+- Bug Fixes
+    - Google Translate: Fixed an issue with the image
+
+## n8n@0.89.2 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.1...n8n@0.89.2) for this version.<br />
+**Release date:** 2020-10-22
+
+- Bug Fixes
+    - Strava Trigger: Fixed a typing error
+
+## n8n@0.89.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.0...n8n@0.89.1) for this version.<br />
+**Release date:** 2020-10-22
+
+- Removed debug messages
+
 ## n8n@0.89.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.1...n8n@0.89.0) for this version.<br />
 **Release date:** 2020-10-22

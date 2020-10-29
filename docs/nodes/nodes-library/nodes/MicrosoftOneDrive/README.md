@@ -19,6 +19,7 @@ You can find authentication information for this node [here](../../../credential
 - Download a file
 - Get a file
 - Search a file
+- Share a file
 - Upload a file
 :::
 
@@ -26,6 +27,7 @@ You can find authentication information for this node [here](../../../credential
 - Create a folder
 - Get items inside a folder
 - Search a folder
+- Share a folder
 :::
 
 ## Example Usage

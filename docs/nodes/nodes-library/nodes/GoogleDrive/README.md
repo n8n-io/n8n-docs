@@ -18,12 +18,14 @@ You can find authentication information for this node [here](../../../credential
 - Delete a file
 - Download a file
 - List files and folders
+- Share a file
 - Upload a file
 :::
 
 ::: details Folder
 - Create a folder
 - Delete a folder
+- Share a folder
 :::
 
 ## Example Usage

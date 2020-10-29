@@ -19,7 +19,7 @@ Create a [Strava](https://Strava.com) account.
 2. Enter the application name in the ***Application Name*** field.
 3. Enter the website URL in the ***Website*** field.
 4. Copy the string of characters between `https://` (or `http://`) and `/oauth2/callback` (or `/rest/oauth2-credential/callback`) from 'OAuth Callback URL' in n8n. Paste it in the ***Authorization Callback Domain*** in Strava.
-5. Read 'Strava's API Agreement' and if you agree check the checkbox.
+5. Read 'Strava's API Agreement', and if you agree, check the checkbox.
 6. Click on the ***Create*** button.
 7. Click on ***App Icon*** and select an image from the browser window.
 8. Click on the ***Save*** button.

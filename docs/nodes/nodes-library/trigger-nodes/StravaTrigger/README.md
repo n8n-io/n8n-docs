@@ -5,7 +5,7 @@ description: Learn how to use the Strava Trigger node in n8n
 
 # Strava Trigger
 
-[Strava](https://www.strava.com/) is an online service for tracking fitness activities.
+[Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Strava/README.md).
@@ -36,7 +36,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a new activity gets created in Strava using the Strava Trigger node. The workflow also allows you to tweet about the activity that was created in Strava using the Twitter node. You can also find the [workflow](https://n8n.io/workflows/745) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a new activity gets created in Strava using the Strava Trigger node. It also allows you to tweet about the activity that was created in Strava using the Twitter node. You can also find the [workflow](https://n8n.io/workflows/745) on n8n.io. This example usage workflow would use the following node.
 - [Strava Trigger]()
 - [Twitter](../../nodes/Twitter/README.md)
 
@@ -67,6 +67,6 @@ This node will tweet about the activity that gets created in Strava.
 3. Enter the following text in the ***Expression*** field: `I ran {{$node["Strava Trigger"].json["object_data"]["distance"]}} meters and completed my {{$node["Strava Trigger"].json["object_data"]["name"]}}!`
 4. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node gets the information of the activity from the previous node and tweets it.
+In the screenshot below, you will notice that this node gets the information of the activity in Strava from the previous node and tweets about it.
 
 ![Using the Twitter node to tweet about the activity](./Twitter_node.png)

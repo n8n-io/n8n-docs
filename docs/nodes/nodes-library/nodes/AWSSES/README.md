@@ -13,7 +13,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Email
 - Send Email
+- Send Template
+:::
+
+::: details Template
+- Create a template
+- Delete a template
+- Get a template
+- Get all templates
+- Update a template
+:::
 
 ## Example Usage
 

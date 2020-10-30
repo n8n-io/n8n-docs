@@ -21,4 +21,6 @@ Create a [Shopify](https://shopify.com/) account.
 4. Upon app creation, scroll down, and you will see your API key, Password, and Shared Secret.
 5. Use your password, API key, secret, and shop subdomain with your Shopify node credentials in n8n.
 
+**Note:** Use the subdomain without `.myshopify.com` in n8n.
+
 ![Getting Shopify credentials](./using-oauth.gif)

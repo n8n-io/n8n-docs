@@ -13,6 +13,19 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Campaign
+- Delete a campaign
+- Get a campaign
+- Get all campaigns
+- Replicate a campaign
+- Create a resend to non-openers version of this campaign
+- Send a campaign
+:::
+
+::: details List Group
+- Get all groups
+:::
+
 ::: details Member
 - Add a new member on list
 - Delete a member on list

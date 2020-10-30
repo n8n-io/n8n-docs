@@ -14,8 +14,10 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 ::: details Tweet
-- Create a new tweet
+- Create or reply to a tweet
 - Search tweets
+- Like a tweet
+- Retweet a tweet
 :::
 
 ## Example Usage

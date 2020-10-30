@@ -11,6 +11,10 @@ description: Learn how to use the Kafka node in n8n
 You can find authentication information for this node [here](../../../credentials/Kafka/README.md).
 :::
 
+## Basic Operations
+
+- Send message
+
 ## Example Usage
 
 This workflow allows you to send updates about the position of the ISS every minute to a topic in Kafka using the Kafka node. You can also find the [workflow](https://n8n.io/workflows/750) on n8n.io. This example usage workflow uses the following nodes.

@@ -22,7 +22,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create, update and get a subscriber using the MailerLite node. You can also find the [workflow](https://n8n.io/workflows/724) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a subscriber using the MailerLite node. You can also find the [workflow](https://n8n.io/workflows/751) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [MailerLite]()
 

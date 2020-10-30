@@ -49,6 +49,11 @@ You can find authentication information for this node [here](../../../credential
 - Get all the stars of an authenticated user
 :::
 
+::: details User Profile
+- Get your user profile
+- Update user's profile
+:::
+
 ## Example Usage
 
 This workflow shows you how to post a message in a Slack channel. You can also find the [workflow](https://n8n.io/workflows/416) on this website. This example usage workflow uses the following two nodes.

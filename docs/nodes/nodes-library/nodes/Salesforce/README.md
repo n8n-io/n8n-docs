@@ -53,6 +53,14 @@ You can find authentication information for this node [here](../../../credential
 - Update a contact
 :::
 
+::: details Custom Object
+- Create a custom object record
+- Delete a custom object record
+- Get a custom object record
+- Get all custom object records
+- Update a custom object record
+:::
+
 ::: details Flow
 - Get all flows
 - Invoke a flow

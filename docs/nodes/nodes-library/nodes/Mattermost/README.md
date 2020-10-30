@@ -28,10 +28,12 @@ You can find authentication information for this node [here](../../../credential
 :::
 
 ::: details User
+- Create a new user
 - Deactivates the user and revokes all its sessions by archiving its user object
 - Retrieve all users
 - Get a user by email
 - Get a user by id
+- Invite a user to a team
 :::	
 
 ## Example Usage

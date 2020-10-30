@@ -12,7 +12,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
     - Airtable: Added Ignore Fields option for the Update operation
     - AMQP Sender: Added Azure Service Bus support
-    - Google Calendar: Added Calendar resource and added an option to add a conference link
+    - Google Calendar: Added Calendar resource and an option to add a conference link
     - G Suite Admin: Added Group resource
     - HTTP Request: Added Batch Size and Batch Interval option
     - Mautic: Added Company resource
@@ -25,7 +25,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added an option to get the full execution data from the server
 - The Editor UI gives an alert if you redirect without saving a workflow
 - The Editor UI now indicates if a workflow is saved or not
-- Added a check for the Node.js version on startup
+- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Improved support for touch devices
 - Node properties now load on demand
 - Updated the Node.js version for the Docker images

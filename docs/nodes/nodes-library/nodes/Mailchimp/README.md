@@ -18,7 +18,7 @@ You can find authentication information for this node [here](../../../credential
 - Get a campaign
 - Get all campaigns
 - Replicate a campaign
-- Resend
+- Create a resend to non-openers version of this campaign
 - Send a campaign
 :::
 

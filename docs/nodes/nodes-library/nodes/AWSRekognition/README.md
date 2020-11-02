@@ -1,0 +1,59 @@
+---
+permalink: /nodes/n8n-nodes-base.awsRekognition
+description: Learn how to use the AWS Rekognition node in n8n
+---
+
+# AWS Rekognition
+
+[AWS Rekognition](https://aws.amazon.com/rekognition/) allows you to add image and video analysis to your applications. With AWS Rekognition, you can identify faces, labels, and celebrities in images.
+
+::: tip 🔑 Credentials
+You can find authentication information for this node [here](../../../credentials/AWS/README.md).
+:::
+
+## Basic Operations
+
+::: details Image
+- Analyze
+:::
+
+## Example Usage
+
+This workflow allows you to detect a face from an image using the AWS Rekognition node. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
+- [Start](../../core-nodes/Start/README.md)
+- [HTTP Request](../../core-nodes/HTTPRequest/README.md)
+- [AWS Rekognition]()
+
+The final workflow should look like the following image.
+
+![A workflow with the AWS Rekognition node](./workflow.png)
+
+### 1. Start node
+
+The Start node exists by default when you create a new workflow.
+
+
+### 2. HTTP Request node
+
+This example workflow uses the HTTP Request node to fetch an image from a URL. You can use the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node to read an image file from the path you specify.
+
+1. Enter the URL of the image in the ***URL*** field.
+2. Select 'File' from the ***Response Format*** dropdown list.
+3. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the HTTP Request node fetches the image from the URL. This image gets passed on to the next node in the workflow.
+
+![Using the HTTP Request node to fetch an image from a URL](./HTTPRequest_node.png)
+
+  
+### 3. AWS Rekognition node (analyze: image)
+
+This node will detect a face in the image that we fetched in the previous node. You can also use this node to analyze an image stored in your AWS Bucket.
+
+1. First of all, you'll have to enter credentials for the AWS Rekognition node. You can find out how to enter credentials for this node [here](../../../credentials/AWS/README.md).
+2. Set ***Binary Data*** to `true`.
+3. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will observe that the node detects the face in the image that we got from the HTTP Request node.
+
+![Using the AWS Rekognition node to detect faces in an image](./AWSRekognition_node.png)

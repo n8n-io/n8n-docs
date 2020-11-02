@@ -5,7 +5,7 @@ description: Learn how to use the MailerLite node in n8n
 
 # MailerLite
 
-[MailerLite](https://www.mailerlite.com/) is an email marketing solution for all types of businesses. It provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
+[MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/MailerLite/README.md).
@@ -36,7 +36,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. MailerLite node (create: subscriber)
 
-This node will create a new subscriber in MailerLite. We will also add the name of the subscriber along with their email.
+This node will create a new subscriber in MailerLite. We will add the name of the subscriber along with their email.
 
 1. First of all, you'll have to enter credentials for the MailerLite node. You can find out how to do that [here](../../../credentials/MailerLite/README.md).
 ::: v-pre
@@ -45,7 +45,7 @@ This node will create a new subscriber in MailerLite. We will also add the name 
 4. Enter the name of the subscriber in the ***Name*** field.
 5. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node creates a new subscriber with their name.
+In the screenshot below, you will notice that the node creates a new subscriber with their name and email.
 
 ![Using the MailerLite node to create a room](./MailerLite_node.png)
   
@@ -65,7 +65,7 @@ This node will update the information of the subscriber that we created in the p
 9. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node updates the information of the subscriber that we created in the previous node. The node adds information about the city of the subscriber.
+In the screenshot below, you will notice that the node updates the information of the subscriber that we created in the previous node. Here, the node has added information about the city of the subscriber.
 
 ![Using the MailerLite node to update the subscriber](./MailerLite1_node.png)
 

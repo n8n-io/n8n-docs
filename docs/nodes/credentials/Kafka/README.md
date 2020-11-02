@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes with Kafka.
 
 ## Prerequisites
 
-You need to have a Kafka broker. Learn to get started following the documentation [here](https://kafka.apache.org/documentation/#quickstart).
+To get started with Kafka, refer to the official documentation [here](https://kafka.apache.org/quickstart).
 
 ## Using Kafka
 

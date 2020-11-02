@@ -315,7 +315,7 @@ false
 You can convert an array into an array of objects using the Function node. 
 
 ```js
-return items[0].json.json.map(message => {
+return items[0].json.map(message => {
   return {
     json: {
       item

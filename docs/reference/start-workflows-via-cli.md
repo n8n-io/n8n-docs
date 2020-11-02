@@ -2,7 +2,7 @@
 
 ## Start a workflow
 
-Workflows cannot be only started by triggers, webhooks or manually via the Editor. It is also possible to start them directly via the CLI.
+Workflows can not only be started by triggers, webhooks, or manually via the Editor. It is also possible to start them directly via the CLI.
 
 Execute a saved workflow by its ID:
 
@@ -17,7 +17,7 @@ n8n execute --file <WORKFLOW_FILE>
 
 ## Change the active status of a workflow
 
-You can change the active status of a workflow via the CLI.
+You can also change the active status of a workflow via the CLI.
 
 Set the active status of a workflow by its ID to false: 
 

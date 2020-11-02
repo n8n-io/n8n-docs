@@ -219,7 +219,7 @@ module.exports = {
 					path: 'server-setup.md',
 				},
 				{
-					title: '👾 Start Workflow via CLI',
+					title: '👾 Use n8n via CLI',
 					path: 'start-workflows-via-cli.md',
 				},
 				{

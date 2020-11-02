@@ -309,3 +309,33 @@ The expression would resolve to something similar to the following.
 ```js
 false
 ```
+
+## Create an array of objects
+
+You can convert an array into an array of objects using the Function node. 
+
+```js
+return items[0].json.json.map(message => {
+  return {
+    json: {
+      item
+    },
+  }
+});
+```
+
+The output will be similar to the following.
+
+```js
+[
+  {
+    "item": <VALUE-1>
+  },
+  {
+    "item": <VALUE-2>
+  },
+  {
+    "item": <VALUE-3>
+  }
+]
+```

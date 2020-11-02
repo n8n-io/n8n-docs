@@ -11,7 +11,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Security](security.md)
 - [Docker](docker.md)
 - [Server Setup](server-setup.md)
-- [Start Workflow via CLI](start-workflows-via-cli.md)
+- [Use n8n via CLI](start-workflows-via-cli.md)
 - [Troubleshooting](troubleshooting.md)
 - [Data](data/data-structure.md)
 - [Contributing](contributing.md)

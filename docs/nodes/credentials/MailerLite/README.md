@@ -7,6 +7,7 @@ description: Learn to configure credentials for the MailerLite node in n8n
 
 You can use these credentials to authenticate the following nodes with MailerLite.
 - [MailerLite](../../nodes-library/nodes/MailerLite/README.md)
+- [MailerLite Trigger](../../nodes-library/trigger-nodes/MailerLiteTrigger/README.md)
 
 ## Prerequisites
 

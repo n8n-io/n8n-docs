@@ -41,7 +41,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 ### 2. HTTP Request node (GET)
 
-This node will make a GET request to `https://api.wheretheiss.at/v1/satellites/25544/positions` to fetch the position of the ISS. This information gets passed on to the next node in the workflow.
+This node will make a GET request to the API `https://api.wheretheiss.at/v1/satellites/25544/positions` to fetch the position of the ISS. This information gets passed on to the next node in the workflow.
 ::: v-pre
 1. Enter `https://api.wheretheiss.at/v1/satellites/25544/positions` in the ***URL*** field. 
 2. Click on the ***Add Parameter*** button in the ***Query Parameters*** section.
@@ -56,7 +56,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 ### 3. Set node
 
-We will use the Set node to set the data coming from the previous node. This data gets passed on to the next node in the workflow.
+We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow.
 ::: v-pre
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
@@ -74,7 +74,7 @@ We will use the Set node to set the data coming from the previous node. This dat
 14. Enter `Timestamp` in the ***Name*** field.
 15. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 16. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > 0 > timpestamp. You can also add the following expression: `{{$node["HTTP Request"].json["0"]["timestamp"]}}`.
-17. Toggle ***Keep Only Set*** to `true`.
+17. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
 18. Click on ***Execute Node*** to run the node.
 :::
 In the screenshot below, you will notice that the node uses the data from the previous node and returns the data that we set for the workflow.

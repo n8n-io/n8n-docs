@@ -27,10 +27,6 @@ The final workflow should look like the following image.
 
 ![A workflow with the Kafka node](./workflow.png)
 
-::: tip 💡 Activate Workflow for Production
-This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
-:::
-
 ### 1. Cron node
 
 The Cron node will trigger the workflow every minute.
@@ -96,3 +92,7 @@ This node will send the data from the previous node to the `iss-position` topic 
 In the screenshot below, you will notice that the node sends the data from the previous node to the `iss-position` topic in Kafka.
 
 ![Using the Kafka node to send the data to a topic](./Kafka_node.png)
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::

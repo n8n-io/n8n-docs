@@ -94,6 +94,12 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 ![Using the AMQP Sender node to send the data to a queue](./AMQPSender_node.png)
 
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::
+
+
+
 ## Further Reading
 
 - [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

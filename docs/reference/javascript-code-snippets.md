@@ -8,6 +8,8 @@ We are using Set node for illustrating expressions here. However, you can use th
 
 For each section, we'll share code snippets that can be used in the function node as well as the expressions. You can read more about [Expressions](../nodes/expressions.md) and adding code snippets to the [Function](../nodes/nodes-library/core-nodes/Function/README.md) node in our documentation.
 
+[[toc]]
+
 
 ## Date and Time
 
@@ -310,12 +312,25 @@ The expression would resolve to something similar to the following.
 false
 ```
 
-## Create an array of objects
+## Modify data Structure
 
-You can convert an array into an array of objects using the Function node. 
+You might want to convert the incoming data from an array to an array of objects, or you might want to convert an array of objects into an array. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data.
+
+### 1. Create an array of objects
+
+For example, if the data structure of the incoming data is similar to the following.
 
 ```js
-return items[0].json.map(message => {
+[
+  "item-1",
+  "item-2",
+  "item-3"
+]
+```
+You can use the following code snippet to convert the array to an array of objects.
+
+```js
+return items[0].json.map(item => {
   return {
     json: {
       item
@@ -329,13 +344,53 @@ The output will be similar to the following.
 ```js
 [
   {
-    "item": <VALUE-1>
+    "item": "item-1"
   },
   {
-    "item": <VALUE-2>
+    "item": "item-2"
   },
   {
-    "item": <VALUE-3>
+    "item": "item-3"
   }
+]
+```
+
+### 2. Create an array from an array of objects
+
+For example, if the data structure of the incoming data is similar to the following.
+
+```js
+[
+  {
+    "item": "item-1"
+  },
+  {
+    "item": "item-2"
+  },
+  {
+    "item": "item-3"
+  }
+]
+```
+
+You can use the following code snippet to convert the array of objects to an array.
+
+```js
+return [
+  {
+    json: $items().map(item => item.json.item)
+  }
+]
+```
+
+The output will be similar to the following.
+
+```js
+[
+  [
+    "item-1",
+    "item-2",
+    "item-3"
+  ]
 ]
 ```

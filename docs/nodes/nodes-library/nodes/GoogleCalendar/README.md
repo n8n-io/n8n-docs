@@ -13,6 +13,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Calendar
+- If a time-slot is available in a calendar
+:::
+
 ::: details Event
 - Add a event to calendar
 - Delete an event

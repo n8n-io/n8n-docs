@@ -67,6 +67,6 @@ This node will send a push notification with the weather update to the default d
 5. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends a notification the default device with the weather update.
+In the screenshot below, you will notice that the node sends a push notification to the default device with the weather update.
 
-![Using the Pushbullet node to send weather updates via SMS](./Pushbullet_node.png)
+![Using the Pushbullet node to send weather updates via a push notification](./Pushbullet_node.png)

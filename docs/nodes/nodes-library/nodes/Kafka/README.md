@@ -27,6 +27,10 @@ The final workflow should look like the following image.
 
 ![A workflow with the Kafka node](./workflow.png)
 
+::: tip 💡 Production
+This example workflow uses the Cron node. To run it in production, save the workflow, and set ***Active*** to true.
+:::
+
 ### 1. Cron node
 
 The Cron node will trigger the workflow every minute.

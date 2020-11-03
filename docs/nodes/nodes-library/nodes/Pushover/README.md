@@ -67,6 +67,6 @@ This node will send a push notification with the weather update, which was sent 
 9. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node sends a notification to a device with the weather update.
+In the screenshot below, you will notice that the node sends a push notification to a device with the weather update.
 
-![Using the Pushover node to send weather updates via SMS](./Pushover_node.png)
+![Using the Pushover node to send weather updates via a push notification](./Pushover_node.png)

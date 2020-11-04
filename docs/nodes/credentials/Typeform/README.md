@@ -14,10 +14,6 @@ Create a [Typeform](https://typeform.com/) account.
 
 ## Using OAuth
 
-::: tip ⛅️ Note for n8n.cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Typeform account to n8n.
-:::
-
 1. Access your Typeform dashboard.
 2. Go to your user profile in the top right.
 3. Click on 'Settings' and then click on 'Developer apps' in the sidebar.

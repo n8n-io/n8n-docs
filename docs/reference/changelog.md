@@ -1,5 +1,22 @@
 # Changelog
 
+## n8n@0.92.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.91.0...n8n@0.92.0) for this version.<br />
+**Release date:** 2020-11-04
+
+- New nodes
+    - Facebook Trigger
+    - Google Books
+    - Orbit
+    - Storyblok
+- Enhanced nodes
+    - Google Drive: Removed duplicate parameters
+    - Twitter: Added Direct Message resource
+    - 
+- Bug Fixes
+    - Gmail: Fixed an issue with the encoding for the subject field
+- Improved the Editor UI for the save workflow functionality.
+
 ## n8n@0.91.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.90.0...n8n@0.91.0) for this version.<br />
 **Release date:** 2020-10-23

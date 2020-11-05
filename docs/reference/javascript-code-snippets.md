@@ -314,27 +314,34 @@ false
 
 ## Modify data Structure
 
-You might want to convert the incoming data from an array to an array of objects, or you might want to convert an array of objects into an array. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data.
+You might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer the [Data Structure documentation](./data/data-structure.md). 
 
-### 1. Create an array of objects
+### 1. Create multiple JSON items from an array
 
-For example, if the data structure of the incoming data is similar to the following.
+If the data structure of the incoming data is similar to the below code snippet. 
 
 ```js
 [
-  "item-1",
-  "item-2",
-  "item-3"
+  [
+    {
+      "data": "item-1",
+    },
+    {
+      "data": "item-2",
+    },
+    {
+      "data": "item-3",
+    }
+  ]
 ]
 ```
-You can use the following code snippet to convert the array to an array of objects.
+You can use the following code snippet to convert the array to multiple JSON items.
 
 ```js
 return items[0].json.map(item => {
   return {
-    json: {
-      item
-    },
+    json: item
+    }
   }
 });
 ```
@@ -344,20 +351,22 @@ The output will be similar to the following.
 ```js
 [
   {
-    "item": "item-1"
+    "data": "item-1"
   },
   {
-    "item": "item-2"
+    "data": "item-2"
   },
   {
-    "item": "item-3"
+    "data": "item-3"
   }
 ]
 ```
 
-### 2. Create an array from an array of objects
+You can also use this [example workflow](https://n8n.io/workflows/766).
 
-For example, if the data structure of the incoming data is similar to the following.
+### 2. Create an array of objects
+
+If the data structure of the incoming data is similar to the below code snippet.
 
 ```js
 [
@@ -373,12 +382,14 @@ For example, if the data structure of the incoming data is similar to the follow
 ]
 ```
 
-You can use the following code snippet to convert the array of objects to an array.
+You can use the following code snippet to create an array of objects.
 
 ```js
-return [
+ return [
   {
-    json: $items().map(item => item.json.item)
+    json: {
+      data_object: $items().map(item => item.json)
+    }
   }
 ]
 ```
@@ -387,10 +398,21 @@ The output will be similar to the following.
 
 ```js
 [
-  [
-    "item-1",
-    "item-2",
-    "item-3"
-  ]
+  {
+    data_object: [
+      {
+        "item": "item-1"
+      },
+      {
+        "item": "item-2"
+      },
+      {
+        "item": "item-3"
+      }
+    ]
+  }
 ]
 ```
+You can also use this [example workflow](https://n8n.io/workflows/767).
+
+

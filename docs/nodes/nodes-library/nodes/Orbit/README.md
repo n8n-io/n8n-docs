@@ -41,7 +41,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a new member and update their information in Orbit using the Orbit node. This workflow also allows you to create a note and a post for the new member using the Orbit node. You can also find the [workflow](https://n8n.io/workflows/727) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a new member and update their information in Orbit using the Orbit node. This workflow also allows you to create a note and a post for the new member using the Orbit node. You can also find the [workflow](https://n8n.io/workflows/765) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Orbit]()
 

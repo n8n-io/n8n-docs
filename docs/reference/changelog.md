@@ -6,6 +6,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - New nodes
     - Facebook Trigger
+    - Google Books
     - Orbit
     - Storyblok
 - Enhanced nodes

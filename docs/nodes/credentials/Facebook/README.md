@@ -7,12 +7,15 @@ description: Learn to configure credentials for the Facebook node in n8n
 
 You can use these credentials to authenticate the following nodes with Facebook.
 - [Facebook Graph API](../../nodes-library/nodes/FacebookGraphApi/README.md)
+- [Facebook Trigger](../../nodes-library/trigger-nodes/FacebookTrigger/README.md)
 
 ## Prerequisites
 
 Create a [Facebook](https://www.facebook.com/) account.
 
 ## Using Access Token
+
+***Note:*** If you are using the [Facebook Trigger]() node add the ***Webhooks*** product from the ***Add a Product*** section on the dashboard.
 
 1. Access [Facebook for Developers portal](https://developers.facebook.com/).
 2. Click on "My Apps".

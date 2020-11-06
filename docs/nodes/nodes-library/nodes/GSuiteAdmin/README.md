@@ -13,6 +13,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Group
+- Create a group
+- Delete a group
+- Get a group
+- Get all groups
+- Update a group
+:::
+
 ::: details User
 - Create a user
 - Delete a user

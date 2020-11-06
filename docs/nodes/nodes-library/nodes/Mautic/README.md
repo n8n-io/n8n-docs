@@ -5,7 +5,7 @@ description: Learn how to use the Mautic node in n8n
 
 # Mautic
 
-[Mautic](https://www.mautic.org/) is an open source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
+[Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Mautic/README.md).
@@ -13,12 +13,24 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Company
+- Create a new company
+- Delete a company
+- Get data of a company
+- Get data of all companies
+- Update a company
+:::
 ::: details Contact
 - Create a new contact
 - Update a contact
 - Get data of a contact
 - Get data of all contacts
 - Delete a contact
+:::
+
+::: details Contact <> Company
+- Add a contact to a company
+- Remove a contact from a company
 :::
 
 ## Example Usage

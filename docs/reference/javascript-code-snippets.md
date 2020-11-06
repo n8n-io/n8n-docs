@@ -415,4 +415,17 @@ The output will be similar to the following.
 ```
 You can also use this [example workflow](https://n8n.io/workflows/767).
 
+### 3. Split binary data into individual items
 
+If you receive multiple binary files from a node, you can split the binary data into individual items using the following code snippet.
+
+```js
+return Object.keys(items[0].binary).map(key => {
+  return {
+    json: {},
+    binary: {
+      data: items[0].binary[key],
+    }
+  }
+});
+```

@@ -195,3 +195,8 @@ To insert the data in Google Sheets, you have to first convert the data in a val
 ### How to return all the values with the Lookup operation?
 
 By default, the Lookup operation returns only the first value that it matches. To return all the values that match, click on ***Add Option*** and select 'Return All Matches'. Toggle ***Return All Matches*** to true.
+
+
+## Further Reading
+
+- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)

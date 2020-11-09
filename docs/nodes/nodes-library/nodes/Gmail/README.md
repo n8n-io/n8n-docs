@@ -95,3 +95,8 @@ The start node exists by default when you create a new workflow.
 :::
 
 ![Using the Gmail node to add a label to the messages](./Gmail2_node.png)
+
+
+## Further Reading
+
+- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)

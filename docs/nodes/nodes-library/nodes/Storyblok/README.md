@@ -5,7 +5,7 @@ description: Learn how to use the Storyblok node in n8n
 
 # Storyblok
 
-[Storyblok](https://www.storyblok.com/) is a headless Content Management System with a visual composer.
+[Storyblok](https://www.storyblok.com/) is a headless content management system with a visual editor. It provides developers with all the flexibility they need to build reliable and fast websites, while giving content creators with no coding skills the ability to edit content independently of the developer.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Storyblok/README.md).
@@ -44,7 +44,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Storyblok node (getAll: story)
 
-This node will get all the stories that have the slug starting with `release`. 
+This node will get all the stories that have a slug starting with `release`. 
 
 1. Select 'Management API' from the ***Source*** dropdown list.
 2. You'll have to enter credentials for the Storyblok node. You can find out how to do that [here](../../../credentials/Storyblok/README.md).
@@ -54,7 +54,7 @@ This node will get all the stories that have the slug starting with `release`.
 6. Enter `release` in the ***Starts With*** field.
 7. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns all the stories that have the slug starting with `release`.
+In the screenshot below, you will notice that the node returns all the stories that have a slug starting with `release`.
 
 ![Using the Storyblok node to get filtered stories](./Storyblok_node.png)
 

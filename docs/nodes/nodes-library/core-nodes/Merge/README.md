@@ -114,3 +114,8 @@ return [
 :::
 
 ![Merge user information and greetings information using the Merge node](./Merge_node.png)
+
+
+## Further Reading
+
+- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)

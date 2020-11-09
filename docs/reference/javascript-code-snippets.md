@@ -314,11 +314,11 @@ false
 
 ## Modify data Structure
 
-You might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer the [Data Structure documentation](./data/data-structure.md). 
+Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page. 
 
 ### 1. Create multiple JSON items from an array
 
-If the data structure of the incoming data is similar to the below code snippet. 
+If the data structure of the incoming data is similar to the following. 
 
 ```js
 [
@@ -345,7 +345,7 @@ return items[0].json.map(item => {
 });
 ```
 
-The output will be similar to the following.
+The output will then be similar to the following.
 
 ```js
 [
@@ -361,11 +361,11 @@ The output will be similar to the following.
 ]
 ```
 
-You can also use this [example workflow](https://n8n.io/workflows/766).
+You can also use this example [workflow](https://n8n.io/workflows/766).
 
 ### 2. Create an array of objects
 
-If the data structure of the incoming data is similar to the below code snippet.
+If the data structure of the incoming data is similar to the following.
 
 ```js
 [
@@ -393,7 +393,7 @@ You can use the following code snippet to create an array of objects.
 ]
 ```
 
-The output will be similar to the following.
+The output will then be similar to the following.
 
 ```js
 [
@@ -412,7 +412,7 @@ The output will be similar to the following.
   }
 ]
 ```
-You can also use this [example workflow](https://n8n.io/workflows/767).
+You can also use this example [workflow](https://n8n.io/workflows/767).
 
 ### 3. Split binary data into individual items
 

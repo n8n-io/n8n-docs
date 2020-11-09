@@ -341,7 +341,6 @@ You can use the following code snippet to convert the array to multiple JSON ite
 return items[0].json.map(item => {
   return {
     json: item
-    }
   }
 });
 ```

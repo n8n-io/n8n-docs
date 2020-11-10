@@ -40,8 +40,8 @@ A specific type of node that starts a workflow when it receives data from a sour
 
 See also:
 - [Credentials](#Credentials)
-- Password
-- Token
+- [Password](#Password)
+- [Token](#Token)
 # Variable
 
 # Workflow

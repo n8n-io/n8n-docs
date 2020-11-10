@@ -14,6 +14,7 @@ An acronym for *Application Programming Interface*, it is a framework for sharin
 See also:
 - [URL](#URL)
 # CLI
+An acronym for *Command Line Interface*, it is a text-based form of processing computer commands entered traditionally via a keyboard.
 
 # Connection
 A link between two or more nodes that allows data to flow from one node to another.
@@ -22,8 +23,10 @@ A link between two or more nodes that allows data to flow from one node to anoth
 Unique pieces of information that identifies a user or a service. A common form of credentials is a username and password pair.
 
 # Docker
+A system to build, run and share applications with all of the services bundled to support the application in one package.
 
 # Editor UI
+In n8n, this is the web interface used to create workflows. It is accessed through a web browser at a designated website address.
 
 # Encryption Key
 

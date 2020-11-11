@@ -51,6 +51,8 @@ In n8n, this is the web interface used to create workflows. It is accessed throu
 # Node
 The basic building block for n8n. Each node is designed with a specific purpose of receiving, processing or outputting data.
 
+# NodeJS
+
 # npm
 
 # npx

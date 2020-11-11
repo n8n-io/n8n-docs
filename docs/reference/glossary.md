@@ -13,6 +13,13 @@ An acronym for *Application Programming Interface*, it is a framework for sharin
 
 See also:
 - [URL](#URL)
+# Certificate
+A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
+
+See also:
+- [Encryption Key](#Encryption_Key)
+- [SSL](#SSL)
+
 # CLI
 An acronym for *Command Line Interface*, it is a text-based form of processing computer commands entered traditionally via a keyboard.
 
@@ -29,7 +36,11 @@ A system to build, run and share applications with all of the services bundled t
 In n8n, this is the web interface used to create workflows. It is accessed through a web browser at a designated website address.
 
 # Encryption Key
+A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.
 
+See also:
+- [SSL](#SSL)
+- [Certificate](#Certificate)
 # Executions
 
 # Expression

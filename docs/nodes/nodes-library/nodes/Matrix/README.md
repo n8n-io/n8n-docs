@@ -149,7 +149,9 @@ This node will send a message to the new room that we created using the Matrix n
 2. Click on the gears icon next to the ***Room ID*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Matrix > Output Data > JSON > room_id. You can also add the following expression: `{{$node["Matrix"].json["room_id"]}}`.
 4. Enter a message in the ***Text*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Select a ***Message type***: Choose `Notice` to send a message in bot-style.
+6. Select a ***Message format***: Choose `Plain text` for a regular message.
+7. Click on ***Execute Node*** to run the node.
 :::
 
 In the screenshot below, you will notice that the node sends a message to the room that we created with the Matrix node.

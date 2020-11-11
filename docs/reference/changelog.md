@@ -9,7 +9,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Gotify
     - Line
     - Strapi
-
 - Enhanced nodes
     - AMQP: Connection is now closed after a message is send
     - AMQP Trigger: Added Message per Cycle option to retrieve the specified number of messages from the bus for every cycle
@@ -19,7 +18,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Microsoft SQL: Added TLS parameter for the credentials
     - Pipedrive Trigger: Added OAuth authentication method
     - Segment: Added Custom Traits option for the Traits field
-
 - Bug Fixes
     - Shopify Trigger: Fixed an issue with activating the workflow
 - For custom nodes, you can now set custom documentation URLs

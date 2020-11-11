@@ -3,21 +3,24 @@ A special file which contains configuration information in the form of environme
 
 See also:
 - [Variables](#Variables)
+
 # Account
 Service which allows a user to connect to a computer system or network. User's identity is confirmed through shared credentials.
 
 See also:
 - [Credentials](#Credentials)
+
 # API
 An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted URL to retrieve desired information.
 
 See also:
 - [URL](#URL)
+
 # Certificate
 A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
 
 See also:
-- [Encryption Key](#Encryption_Key)
+- [Encryption Key](#Encryption-Key)
 - [SSL](#SSL)
 
 # CLI
@@ -41,19 +44,27 @@ A piece of data, either string or binary, which is used to encode information so
 See also:
 - [SSL](#SSL)
 - [Certificate](#Certificate)
-# Executions
+
+# Execution
+A completed run of a workflow from start to finish.
 
 # Expression
+A string of characters and symbols in a programming language that represents a value depending upon its input.
 
 # Fair-code
+A programming language license very similar to open source which allows developers to receive remuneration for use in a for profit product.
 
 # Function
+In programming, a set of reusable commands designed to be run together and launched by other commands in the code. It may or may not receive input from the command that launches it.
 
 # IP Address
+A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.
 
 # JavaScript
+A modern programming language popular with web platforms used to create interactive web interfaces.
 
 # JSON
+An open standard file and data format commonly used with [JavaScript](#JavaScript). It is easy for humans to read and for computers to parse.
 
 # Header
 

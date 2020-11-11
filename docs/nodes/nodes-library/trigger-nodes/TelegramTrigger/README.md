@@ -11,6 +11,18 @@ description: Learn how to use the Telegram Trigger node in n8n
 You can find authentication information for this node [here](../../../credentials/Telegram/README.md).
 :::
 
+## Updates
+
+- `*`: All updates
+- message: Trigger on a new incoming message of any kind- text, photo, sticker, etc
+- edited_message: Trigger on a new version of a channel post that is known to the bot and was edited
+- channel_post: Trigger on a new incoming channel post of any kind - text, photo, sticker, etc
+- edited_channel_post: Trigger on a new version of a channel post that is known to the bot and was edited
+- inline_query: Trigger on a new incoming inline query
+- callback_query: Trigger on a new incoming callback query
+- shipping_query: Trigger on a new incoming shipping query. Only for invoices with flexible price
+- pre_checkout_query: Trigger on a new incoming pre-checkout query. Contains full information about checkout
+- poll: Trigger on a new poll state. Bots receive only updates about stopped polls and polls which are sent by the bot
 
 ## Example Usage
 

@@ -61,21 +61,28 @@ The Start node exists by default when you create a new workflow.
 
 ## FAQs
 
+### How can I send more than 30 messages per second?
+
+The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users) to send only 30 messages per second. However, you can do the following
+- [Split In Batches]() node: Use the Split in Batches node to get at most 30 chat IDs.
+- [Function]() node: Use the Function node to wait for a few seconds before sending a message to the next batch of chat IDs.
+
+You can also use this [workflow](https://n8n.io/workflows/772).
+
 ### How do I add a bot to a Telegram channel?
 
 1. In the Telegram app, access the target channel and tap on the channel name.
 2. Make sure that the channel name is labeled as "public channel".
-3. Tap on *Administrators* and then on *Add Admin*.
+3. Tap on ***Administrators*** and then on ***Add Admin***.
 4. Search for the username of the bot and select it.
 5. Tap on the checkmark on the top-right corner to add the bot to the channel.
 
-### How do I find the Chat ID?
+### How do I get a Chat ID?
 
-1. In the Telegram app, access the target channel and tap on the channel.
-2. In the *Invite Link* field, copy the string after `https://t.me/`.
-3. Prefix the string with "@" and enter it in the *Chat ID* field.
+There are two ways to get the Chat ID in Telegram. 
 
-**Example:** If the link is `https://t.me/n8ntest`, the Chat ID will be `@n8ntest`.
+- Using the [Telegram Trigger]() node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
+- Use the `@RawDataBot`: The `@RawDataBot` returns the raw data of the chat with a Chat ID. Invite the `@RawDataBot` to your channel/group, and upon joining, it will output a Chat ID along with other information. Be sure to remove the `@RawDataBot` from your group/channel afterward.
 
 ## Further Reading
 

@@ -10,19 +10,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Line
     - Strapi
 - Enhanced nodes
-    - AMQP: Connection is now closed after a message is send
+    - AMQP: Connection is now closed after a message is sent
     - AMQP Trigger: Added Message per Cycle option to retrieve the specified number of messages from the bus for every cycle
-    - Hubspot: Added Custom Properties for the deal resource as additional fields
-    - Jira: The node now retrieves all the projects
+    - Hubspot: Added Custom Properties for the Deal resource as Additional Fields
+    - Jira: The node retrieves all the projects for the Project field instead of just 50
     - Mattermost: Improved the channel selection
     - Microsoft SQL: Added TLS parameter for the credentials
-    - Pipedrive Trigger: Added OAuth authentication method
+    - Pipedrive Trigger: Added OAuth authentication method. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0930) page
     - Segment: Added Custom Traits option for the Traits field
 - Bug Fixes
     - Shopify Trigger: Fixed an issue with activating the workflow
 - For custom nodes, you can now set custom documentation URLs
 
-## n8n@0.92.0 
+## n8n@0.92.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.91.0...n8n@0.92.0) for this version.<br />
 **Release date:** 2020-11-04
 
@@ -38,7 +38,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Gmail: Fixed an issue with the encoding for the subject field
 - Improved the Editor UI for the save workflow functionality
 
-## n8n@0.91.0 
+## n8n@0.91.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.90.0...n8n@0.91.0) for this version.<br />
 **Release date:** 2020-10-23
 
@@ -69,14 +69,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Updated the Node.js version for the Docker images
 
 
-## n8n@0.90.0 
+## n8n@0.90.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
 **Release date:** 2020-10-23
 
 - Bug Fixes
     - Google Translate: Fixed an issue with the rendering of the image in n8n.io
 
-## n8n@0.89.2 
+## n8n@0.89.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.1...n8n@0.89.2) for this version.<br />
 **Release date:** 2020-10-22
 
@@ -89,7 +89,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Removed debug messages
 
-## n8n@0.89.0 
+## n8n@0.89.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.1...n8n@0.89.0) for this version.<br />
 **Release date:** 2020-10-22
 
@@ -103,14 +103,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed issue with displaying non-active workflows as active
 - Fixed an issue related to multiple-webhooks
 
-## n8n@0.88.1 
+## n8n@0.88.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.0...n8n@0.88.1) for this version.<br />
 **Release date:** 2020-10-16
 
 - Bug Fixes
     - HTTP Request: Fixed an issue with the Form-Data Mutipart and the RAW/Custom Body Content Types
 
-## n8n@0.88.0 
+## n8n@0.88.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />
 **Release date:** 2020-10-16
 
@@ -121,7 +121,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - AWS SES: Fixed an issue with the Send Template operation for the Email resource
     - AWS SNS Trigger: Fixed an issue with the Subscriptions topic
 
-## n8n@0.87.2 
+## n8n@0.87.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.1...n8n@0.87.2) for this version.<br />
 **Release date:** 2020-10-15
 
@@ -129,7 +129,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Google Sheets: Fixed an issue with spaces in sheet names
     - Automizy: Fixed an issue with the default resource
 
-## n8n@0.87.1 
+## n8n@0.87.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.0...n8n@0.87.1) for this version.<br />
 **Release date:** 2020-10-15
 
@@ -138,7 +138,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - HTTP Request: Fixed an issue with the GET Request
 - Added `HMAC-SHA512` signature method for OAuth 1.0
 
-## n8n@0.87.0 
+## n8n@0.87.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
 **Release date:** 2020-10-14
 
@@ -165,14 +165,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Pipedrive Trigger: Fixed issue with adding multiple webhooks to Pipedrive
 - The link.fish Scrape node has been removed from n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
 
-## n8n@0.86.1 
+## n8n@0.86.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.0...n8n@0.86.1) for this version.<br />
 **Release date:** 2020-10-06
 
 - Enhanced nodes
     - CoinGecko: Small fixes to the CoinGecko node
 
-## n8n@0.86.0 
+## n8n@0.86.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.85.0...n8n@0.86.0) for this version.<br />
 **Release date:** 2020-10-05
 
@@ -197,36 +197,36 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Postgres: Added Schema parameter for the Update operation
 - Bug Fixes
     - Jira: Fixed a bug with the Issue Type field
-    - Pipedrive Trigger: Fixed issues with the credentials  
+    - Pipedrive Trigger: Fixed issues with the credentials
 - Changed the bcrypt library to `bcrypt.js` to make it compatible with Windows
 - The OAuth callback URLs are now generated in the backend
 
-## n8n@0.84.4 
+## n8n@0.84.4
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.3...n8n@0.84.4) for this version.<br />
 **Release date:** 2020-09-23
 
 - Bug Fixes
     - Google Sheets: Fixed issues with the update and append operations
 
-## n8n@0.84.3 
+## n8n@0.84.3
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.2...n8n@0.84.3) for this version.<br />
 **Release date:** 2020-09-23
 
 - Fixed an issue with the build by setting `jwks-rsa` to an older version
 
-## n8n@0.84.2 
+## n8n@0.84.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.1...n8n@0.84.2) for this version.<br />
 **Release date:** 2020-09-23
 
 - Fixed an issue with the OAuth window. The OAuth window now closes after authentication is complete
 
-## n8n@0.84.1 
+## n8n@0.84.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.0...n8n@0.84.1) for this version.<br />
 **Release date:** 2020-09-23
 
 - Additional endpoints can be excluded from authentication checks. Multiple endpoints can be added separated by colons
 
-## n8n@0.84.0 
+## n8n@0.84.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.83.0...n8n@0.84.0) for this version.<br />
 **Release date:** 2020-09-23
 
@@ -240,7 +240,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expressions now use short variables when selecting input data for the current node
 - Fixed issue with renaming credentials for active workflows
 
-## n8n@0.83.0 
+## n8n@0.83.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />
 **Release date:** 2020-09-18
 
@@ -270,7 +270,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Speed for basic authentication with hashed password has been improved
 
-## n8n@0.82.0 
+## n8n@0.82.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.81.0...n8n@0.82.0) for this version.<br />
 **Release date:** 2020-09-14
 
@@ -286,7 +286,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expression support has been added to the credentials
 - Passwords for your n8n instance can now be hashed
 
-## n8n@0.81.0 
+## n8n@0.81.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.80.0...n8n@0.81.0) for this version.<br />
 **Release date:** 2020-09-09
 
@@ -302,7 +302,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Telegram
     - Telegram Trigger
 
-## n8n@0.80.0 
+## n8n@0.80.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.80.0) for this version.<br />
 **Release date:** 2020-09-02
 
@@ -318,19 +318,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Telegram Trigger
     - Zendesk
 
-## n8n@0.79.3 
+## n8n@0.79.3
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-30
 
 - The bug that caused the workflows to not get activated correctly has been fixed
 
-## n8n@0.79.2 
+## n8n@0.79.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.1...n8n@0.79.2) for this version.<br />
 **Release date:** 2020-08-28
 
-- Added missing rawBody for "application/x-www-form-urlencoded" 
+- Added missing rawBody for "application/x-www-form-urlencoded"
 
-## n8n@0.79.1 
+## n8n@0.79.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.79.1) for this version.<br />
 **Release date:** 2020-08-28
 
@@ -339,11 +339,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - HTTP Request
     - Postgres
     - Webhook
-- Removed Test-Webhook also in case checkExists fails 
+- Removed Test-Webhook also in case checkExists fails
 - HTTP Request node does not overwrite accept header if it's already set
 - Add rawBody to every request so that n8n does not give an error if body is missing
 
-## n8n@0.79.0 
+## n8n@0.79.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 
@@ -368,7 +368,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added dynamic titles on workflow execution
 - Nodes will now display a link to associated credential documentation
 
-## n8n@0.78.0 
+## n8n@0.78.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.76.0...n8n@0.78.0) for this version.<br />
 **Release date:** 2020-08-18
 
@@ -388,7 +388,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced support for [JWT based authentication](security.md#jwt)
 - Added an option to execute a node once, using data of only the first item
 
-## n8n@0.76.0 
+## n8n@0.76.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.<br />
 **Release date:** 2020-08-05
 
@@ -436,7 +436,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Pipedrive
     - Postgres
     - Uplead
-    - Webhook    
+    - Webhook
 - Webhook URLs are now handled independently of the workflow ID by `https://{hostname}/webhook/{path}` instead of the older `https://{hostname}/webhook/{workflow_id}/{node_name}/{path}`.
 
 
@@ -483,7 +483,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - SIGNL4
     - Spotify
 - Enhanced nodes
-    - Hubspot 
+    - Hubspot
     - Mailchimp
     - Typeform
     - Webflow

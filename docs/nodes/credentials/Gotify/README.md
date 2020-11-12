@@ -14,7 +14,7 @@ Install [Gotify](https://gotify.net/docs/install) on your server.
 
 ## Using API Token
 
-***Note:*** To create a message, the App API Token is required. To delete or retrieve all messages, you need the Client API Token.
+***Note:*** To create a message, the ***App API Token*** is required. To delete or retrieve all messages, you need the ***Client API Token***.
 
 1. Access your Gotify dashboard.
 2. Click on ***APPS*** in the navigation menu.
@@ -25,7 +25,7 @@ Install [Gotify](https://gotify.net/docs/install) on your server.
 7. Click on the ***CREATE CLIENT*** button.
 8. Enter a name for the client in the ***Name*** field.
 9. Click on the ***CREATE*** button.
-10. Use this app token, client token, and the host URL with your Gotify API credentials in n8n.
+10. Use the App Token, Client Token, and the Host URL with your Gotify API credentials in n8n.
 11. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Gotify credentials](./using-api.gif)

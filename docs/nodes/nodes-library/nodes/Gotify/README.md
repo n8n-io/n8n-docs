@@ -46,7 +46,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](../../../credentials/OpenWeatherMap/README.md). 
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](../../../credentials/OpenWeatherMap/README.md).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -56,7 +56,7 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 ### 3. Gotify node (create: message)
 
-This node will send a message with the weather update. 
+This node will send a message with the weather update.
 
 1. First of all, you'll have to enter credentials for the Gotify node. You can find out how to do that [here](../../../credentials/Gotify/README.md).
 2. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
@@ -70,3 +70,7 @@ This node will send a message with the weather update.
 In the screenshot below, you will notice that the node sends a message with the weather update.
 
 ![Using the Gotify node to send weather updates via a message](./Gotify_node.png)
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::

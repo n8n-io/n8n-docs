@@ -1,5 +1,27 @@
 # Changelog
 
+## n8n@0.93.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.92.0...n8n@0.93.0) for this version.<br />
+**Release date:** 2020-11-11
+
+- New nodes
+    - GetResponse
+    - Gotify
+    - Line
+    - Strapi
+- Enhanced nodes
+    - AMQP: Connection is now closed after a message is send
+    - AMQP Trigger: Added Message per Cycle option to retrieve the specified number of messages from the bus for every cycle
+    - Hubspot: Added Custom Properties for the deal resource as additional fields
+    - Jira: The node now retrieves all the projects
+    - Mattermost: Improved the channel selection
+    - Microsoft SQL: Added TLS parameter for the credentials
+    - Pipedrive Trigger: Added OAuth authentication method
+    - Segment: Added Custom Traits option for the Traits field
+- Bug Fixes
+    - Shopify Trigger: Fixed an issue with activating the workflow
+- For custom nodes, you can now set custom documentation URLs
+
 ## n8n@0.92.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.91.0...n8n@0.92.0) for this version.<br />
 **Release date:** 2020-11-04
@@ -12,7 +34,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
     - Google Drive: Removed duplicate parameters
     - Twitter: Added Direct Message resource
-    - 
 - Bug Fixes
     - Gmail: Fixed an issue with the encoding for the subject field
 - Improved the Editor UI for the save workflow functionality

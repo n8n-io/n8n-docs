@@ -43,17 +43,17 @@ The final workflow should look like the following image.
 ### 1. Start node
 
 The Start node exists by default when you create a new workflow.
-  
+
 ### 2. Google Books node (get: volume)
 
 This node will retrieve a volume from Google Books.
 
-1. Select 'OAuth2' from the ***Authentication*** dropdown list. 
-2.  First of all, you'll have to enter credentials for the Google Books node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
-3. Enter an ID of a volume in the ***Volume ID*** field.
+1. Select 'OAuth2' from the ***Authentication*** dropdown list.
+2. Enter credentials for the Google Books node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
+3. Enter the ID of a volume in the ***Volume ID*** field.
 4. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will observe that the node retrieves the information of a volume that we specify.
+In the screenshot below, you will observe that the node retrieves the information of the volume that we specify.
 
 ![Using the Google Books node to retrieve information of a volume](./GoogleBooks_node.png)
 
@@ -70,7 +70,7 @@ This node will add the volume that we got from the previous node to a bookshelf 
 7. Select the following in the ***Variable Selector*** section: Nodes > Google Books > Output Data > JSON > id. You can also add the following expression: `{{$node["Google Books"].json["id"]}}`.
 8. Click on ***Execute Node*** to run the workflow.
 :::
-In the screenshot below, you will notice that this node adds the volume that we got the previous node to a bookshelf that we specify.
+In the screenshot below, you will notice that this node adds the volume that we got from the previous node to a bookshelf that we specified.
 
 ![Using the Google Books node to add a volume to a bookshelf volume](./GoogleBooks1_node.png)
 
@@ -87,6 +87,6 @@ This node will return all the volumes in a bookshelf.
 7. Select the following in the ***Variable Selector*** section: Nodes > Google Books1 > Parameters > shelfId. You can also add the following expression: `{{$node["Google Books1"].parameter["shelfId"]}}`.
 8. Click on ***Execute Node*** to run the workflow.
 :::
-In the screenshot below, you will notice that this node returns all the volumes in a specific bookshelf.
+In the screenshot below, you will notice that this node returns all the volumes in the bookshelf that we specified.
 
 ![Using the Google Books node to get all the volumes in a bookshelf](./GoogleBooks2_node.png)

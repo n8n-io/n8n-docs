@@ -8,7 +8,7 @@ description: Learn how to use the Facebook Trigger node in n8n
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/Facebook/README.md).
+You can find authentication information for this node [here](../../../credentials/FacebookApp/README.md).
 :::
 
 ## Object
@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to update the user information in Airtable. You can also find the [workflow](https://n8n.io/workflows/769) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to update the user information in Airtable. You can also find the [workflow](https://n8n.io/workflows/769) on n8n.io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
 - [Airtable](../../nodes/Airtable/README.md)
 - [Set](../../core-nodes/Set/README.md)
@@ -40,7 +40,7 @@ The final workflow should look like the following image.
 
  The Facebook Trigger node will trigger the workflow when a user updates their profile on Facebook.
 
-1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](../../../credentials/Facebook/README.md).
+1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](../../../credentials/FacebookApp/README.md).
 2. Select 'User' from the ***Object*** dropdown list.
 3. Enter your app ID in the ***App ID*** field.
 3. Click on ***Execute Node*** to run the node.

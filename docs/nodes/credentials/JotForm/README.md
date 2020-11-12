@@ -17,7 +17,7 @@ Create a [JotForm](https://www.jotform.com/) account.
 1. Access your [JotForm account](https://www.jotform.com/myaccount/).
 2. Click on the ***API*** tab on the left.
 3. Click on the ***Create New Key*** button.
-4. Change the permissions to 'Full Access'.
+4. Change the Permissions to 'Full Access'.
 5. Use the key with JotForm node credentials in n8n.
 
 ![Getting JotForm credentials](./using-access-token.gif)

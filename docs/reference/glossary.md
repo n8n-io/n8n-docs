@@ -14,6 +14,7 @@ See also:
 An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted URL to retrieve desired information.
 
 See also:
+- [Header](#Header)
 - [URL](#URL)
 
 # Certificate
@@ -31,6 +32,11 @@ A link between two or more nodes that allows data to flow from one node to anoth
 
 # Credentials
 Unique pieces of information that identifies a user or a service. A common form of credentials is a username and password pair.
+
+See also:
+- [Username](#Username)
+- [Password](#Password)
+- [Token](#Token)
 
 # Docker
 A system to build, run and share applications with all of the services bundled to support the application in one package.
@@ -67,6 +73,10 @@ A modern programming language popular with web platforms used to create interact
 An open standard file and data format commonly used with [JavaScript](#JavaScript). It is easy for humans to read and for computers to parse.
 
 # Header
+Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.
+
+See also:
+- [API](#API)
 
 # Method
 
@@ -84,7 +94,6 @@ The basic building block for n8n. Each node is designed with a specific purpose 
 # Parameter
 
 # REST API
-
 See [API](#API)
 
 # Root User
@@ -108,6 +117,7 @@ See also:
 - [Credentials](#Credentials)
 - [Password](#Password)
 - [Token](#Token)
+
 # Variable
 
 # Webhook

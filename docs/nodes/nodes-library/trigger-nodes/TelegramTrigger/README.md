@@ -26,7 +26,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates from Telegram and send an image of a cocktail. You can also find the [workflow](https://n8n.io/workflows/456) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive updates from Telegram and send an image of a cocktail. You can also find the [workflow](https://n8n.io/workflows/782) on n8n.io. This example usage workflow would use the following nodes.
 - [Telegram Trigger]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Telegram](../../nodes/Telegram/README.md)

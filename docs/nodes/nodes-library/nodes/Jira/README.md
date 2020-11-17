@@ -50,15 +50,15 @@ The start node exists by default when you create a new workflow.
 
 ### How to fetch issues for a specific project?
 
-The 'Get All' operation returns all the issues from Jira. To fetch issues of a particualr project you need to use JQL (Jira Query Language).
+The 'Get All' operation returns all the issues from Jira. To fetch issues of a particular project, you need to use JQL (Jira Query Language).
 
-For example, if you want to receive all the issues of a project named `n8n`, follow the steps metioned below
+For example, if you want to receive all the issues of a project named `n8n`, follow the steps mentioned below
 - Select 'Get All' from the ***Operation*** dropdown list.
-- Toggle ***Return All*** to ture.
+- Toggle ***Return All*** to true.
 - Click on ***Add Option*** and select 'JQL'. 
 - Enter `project=n8n` in the ***JQL*** field. This query will fetch all the issues in the project named `n8n`. Enter your project name instead of `n8n` to fetch all the issues for your project.
 
-You can refer the [official documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) on JQL to learn more about queries.
+You can refer to the [official documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) on JQL to learn more about queries.
 
 ## Further Reading
 

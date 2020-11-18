@@ -78,18 +78,47 @@ Section of an HTTP request message that defines allows extra information to be p
 See also:
 - [API](#API)
 
-# Method
-
 # Node
 The basic building block for n8n. Each node is designed with a specific purpose of receiving, processing or outputting data.
 
 # NodeJS
+A package of [JavaScript](#JavaScript) file used to provide everything needed to run [JavaScript](#JavaScript) code without a web browser.
+
+See also:
+- [JavaScript](#JavaScript)
+- [TypeScript](#TypeScript)
 
 # npm
+A program that installs, updates and removes [JavaScript](#JavaScript) [Packages](#Package)
+
+See also:
+- [JavaScript](#JavaScript)
+- [npx](#npx)
+- [Package](#Package)
 
 # npx
+A program that will download, run, then delete a [JavaScript](#JavaScript) [Packages](#Package). Often used for quickly testing what a package will do without completely installing it.
+
+See also:
+- [JavaScript](#JavaScript)
+- [npm](#npm)
+- [Package](#Package)
 
 # Password
+A secret string of characters provided to prove one's identity. Often used to gain access to restricted applications and systems.
+
+See also:
+- [Credentials](#Credentials)
+- [Username](#Username)
+- [Token](#Token)
+
+# Package
+A group of [JavaScript](#JavaScript) files which are designed to work together for a specific purpose.
+
+See also:
+- [JavaScript](#JavaScript)
+- [npm](#npm)
+- [npx](#npx)
 
 # Parameter
 

@@ -28,6 +28,6 @@ Create an email account on a service with IMAP support.
 5. After setting up 2-Step verification you can now create an App password. Create one.
 6. Set up the node using the hostname, port and settings described above in the first step and the password generated on the previous step
 
-Node should be working fine now.
+Important note: You have to set up Ignore SSL issues in the node settings inside options to true as Gmail certificate is self signed.
 
 If you are using a Google Suite account, instead of heading to https://accounts.google.com you have to access the admin panel located at https://admin.google.com. Steps are fairly similar but administrator must have Less secure apps enabled on your corporation for this to work.

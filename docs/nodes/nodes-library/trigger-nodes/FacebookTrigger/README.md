@@ -27,10 +27,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to update the user information in Airtable. You can also find the [workflow](https://n8n.io/workflows/769) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to send a message in Mattermost about the update. You can also find the [workflow](https://n8n.io/workflows/769) on n8n.io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
-- [Airtable](../../nodes/Airtable/README.md)
 - [Set](../../core-nodes/Set/README.md)
+- [Mattermost](../../nodes/Mattermost/README.md)
 
 The final workflow should look like the following image.
 
@@ -38,7 +38,7 @@ The final workflow should look like the following image.
 
 ### 1. Facebook Trigger node
 
- The Facebook Trigger node will trigger the workflow when a user updates their profile on Facebook.
+The Facebook Trigger node will trigger the workflow when a user updates their profile on Facebook.
 
 1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](../../../credentials/FacebookApp/README.md).
 2. Select 'User' from the ***Object*** dropdown list.
@@ -49,25 +49,7 @@ In the screenshot below, you will notice that the node returns the updated infor
 
 ![Using the Facebook Trigger node to trigger the workflow](./FacebookTrigger_node.png)
 
-### 2. Airtable node (List)
-
-This node will return the information of the user from Airtable.
-
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](../../../credentials/Airtable/README.md).
-:::v-pre
-2. Select 'List' from the ***Operation*** dropdown list.
-3. Enter the application ID in the ***Application ID*** field. For obtaining the Application ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Application ID under the Introduction section.
-4. Enter the table name in the ***Table*** field.
-5. Click on ***Add Option*** and select 'Filter By Formula' from the dropdown list.
-6. Click on the gears icon next to the ***Filter By Formula*** field and click on ***Add Expression***.
-7. Enter the following expression: `FIND({{$node["Set"].json["uid"]}},uid,0)`. This expression will only return the information of the user whose information is updated on Facebook.
-8. Click on ***Execute Node*** to run the node.
-:::
-In the screenshot below, you will notice that the node returns the information from Airtable of a user whose hometown information was updated on Facebook.
-
-![Using the Airtable node to list the information of a user](./Airtable_node.png)
-
-### 3. Set node
+### 2. Set node
 
 We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow.
 ::: v-pre
@@ -91,24 +73,16 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 ![Using the Set node to set the data](./Set_node.png)
 
-### 4. Airtable1 node (Update)
+### 3. Mattermost node (post: message)
 
-This node will update the data coming from the previous node in a table in Airtable.
+This node will send a message of the updated information in the channel `Information Updated` in Mattermost. If you have a different channel, use that instead.
 ::: v-pre
-1. Select the credentials that you entered in the previous node.
-2. Select 'Update' from the ***Operation*** dropdown list.
-3. Click on the gears icon next to the ***Application ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Airtable > Parameters > application. You can also add the following expression: `{{$node["Airtable"].parameter["application"]}}`.
-5. Click on the gears icon next to the ***Table*** field and click on ***Add Expression***.
-6. Select the following in the ***Variable Selector*** section: Nodes > Airtable > Parameters > table. You can also add the following expression: `{{$node["Airtable"].parameter["table"]}}`.
-7. Click on the gears icon next to the ***Id*** field and click on ***Add Expression***.
-8. Select the following in the ***Variable Selector*** section: Nodes > Airtable > Output Data > JSON > id. You can also add the following expression: `{{$node["Airtable"].json["id"]}}`.
-9. Toggle the ***Update All Fields*** to false.
-10. Click on the ***Add Field*** button.
-11. Click on the gears icon next to the field and click on ***Add Expression***.
-8. Select the following in the ***Variable Selector*** section: Nodes > Set > Output Data > JSON > field. You can also add the following expression: `{{$node["Set"].json["field"]}}`.
-6. Click on ***Execute Node*** to run the node.
+1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
+2. Select a channel from the ***Channel ID*** dropdown list.
+3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
+4. Enter the following message in the ***Expression*** field: `The user with uid {{$node["Facebook Trigger"].json["uid"]}} changed their {{$node["Facebook Trigger"].json["changes"][0]["field"]}} to {{$node["Facebook Trigger"].json["changes"][0]["value"]["page"]}}.`.
+5. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node updates the hometown of the user in a table in Airtable.
+In the screenshot below, you will notice that the node sends a message of the updated information to the `Information Updated` channel in Mattermost.
 
-![Using the Airtable node to update the information of a user](./Airtable1_node.png)
+![Using the Mattermost node to send a message of the updated information](./Mattermost_node.png)

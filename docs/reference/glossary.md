@@ -1,7 +1,7 @@
 # .env File
 A special file which contains configuration information in the form of environment variables.
 
-n8n uses the .env file to
+n8n uses the .env file to control how n8n works. See the [n8n docs](https://docs.n8n.io/reference/server-setup.html#_6-create-env-file) for more details.
 
 **See also:**
 - [Variables](#Variables)

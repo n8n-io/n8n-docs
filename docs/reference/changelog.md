@@ -2,24 +2,24 @@
 
 ## n8n@0.94.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
-**Release date:** 2020-11-11
+**Release date:** 2020-11-19
 
 - New nodes
     - Google Cloud Natural Language
+	- Google Firebase Cloud Firestore
     - Google Firebase Realtime Database
-    - Google Firebase Cloud Firestore
     - Humantic AI
 - Enhanced nodes
-    - ActiveCampaign - Added Contact List and List resource
-    - Edit Image: Added support for drawing, font selection, creating a new image and added the Composite resource
+    - ActiveCampaign: Added Contact List and List resource
+    - Edit Image: Added support for drawing, font selection, creating a new image, and added the Composite resource
     - FTP: Added Private Key and Passphrase fields to the SFTP credentials and made the directory creation more robust
     - IMAP: Increased the timeout
     - Matrix: Added option to send notice, emote, and HTML messages
-    - Segment: Made changes to the properties `traits` and `properties`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0940) page  
+    - Segment: Made changes to the properties `traits` and `properties`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0940) page
 - Bug Fixes
-    - GraphQL - Fixed an issue with the variables
+    - GraphQL: Fixed an issue with the variables
     - Mailchimp: Fixed an issue with the OAuth credentials. The credentials are now sent with the body instead of the header
-    - YouTube - Fixed a typo for the Unlisted option
+    - YouTube: Fixed a typo for the Unlisted option
 - Added horizontal scrolling
 
 ## n8n@0.93.0

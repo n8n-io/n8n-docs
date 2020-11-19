@@ -111,7 +111,7 @@ You can also use this [workflow](https://n8n.io/workflows/772).
 4. Search for the username of the bot and select it.
 5. Tap on the checkmark on the top-right corner to add the bot to the channel.
 
-### How do I get a Chat ID?
+### How do I get the Chat ID?
 
 There are two ways to get the Chat ID in Telegram. 
 
@@ -120,5 +120,6 @@ There are two ways to get the Chat ID in Telegram.
 
 ## Further Reading
 
-- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
 - [Automatically Adding Expense Receipts to Google Sheets with Telegram, Mindee, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-mindee-twilio-and-n8n-c47eb2f8d7a5)
+- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
+

@@ -26,7 +26,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates from Telegram and send an image of a cocktail. You can also find the [workflow](https://n8n.io/workflows/782) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive messages using the Telegram Trigger node and send an image of a cocktail when a message is received. You can also find the [workflow](https://n8n.io/workflows/782) on n8n.io. This example usage workflow would use the following nodes.
 - [Telegram Trigger]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Telegram](../../nodes/Telegram/README.md)
@@ -54,7 +54,7 @@ This node will make a GET request to the API `https://www.thecocktaildb.com/api/
 1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
 2. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node makes a GET request to the API and returns information of a random cocktail.
+In the screenshot below, you will notice that the node makes a GET request to the API and returns information about a random cocktail.
 
 ![Using the HTTP Request node to get the information about a random cocktail](./HTTPRequest_node.png)
 
@@ -65,9 +65,9 @@ This node will send a reply to the message with the name and image of the cockta
 1. Select the credentials that you entered in the Telegram Trigger node.
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Chat ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Telegram Trigger > Output Data > JSON > message > chat > id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["chat"]["id"]}}`. 
+4. Select the following in the ***Variable Selector*** section: Nodes > Telegram Trigger > Output Data > JSON > message > chat > id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["chat"]["id"]}}`.
 5. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
-6. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strDrinkThumb. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strDrinkThumb"]}}`. 
+6. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strDrinkThumb. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strDrinkThumb"]}}`.
 7. Click on ***Add Field*** and select 'Caption' from the dropdown list.
 8. Click on the gears icon next to the ***Caption*** field and click on ***Add Expression***.
 9. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strDrink. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strDrink"]}}`.
@@ -82,5 +82,5 @@ In the screenshot below, you will notice that the node sends a reply to the mess
 
 ## Further Reading
 
-- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
 - [Automatically Adding Expense Receipts to Google Sheets with Telegram, Mindee, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-mindee-twilio-and-n8n-c47eb2f8d7a5)
+- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)

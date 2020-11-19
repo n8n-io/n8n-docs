@@ -58,7 +58,7 @@ In the screenshot below, you will notice that node sets the value for title, con
 
 ### 2. Strapi node (create: entry)
 
-This node will create an entry for the content type `Post`. If you have a different content type, use that content type instead.
+This node will create an entry for the content type `posts`. If you have a different content type, use that content type instead.
 
 1. First of all, you'll have to enter credentials for the Strapi node. You can find out how to do that [here](../../../credentials/Strapi/README.md).
 2. Select 'Create' from the ***Operation*** dropdown list.
@@ -90,7 +90,7 @@ In the screenshot below, you will notice that the node sets the values of `id` a
 
 ### 4. Strapi1 node (update: entry)
 
-This node will update the entry that we created using the Strapi node. We will update the slug for the new entry.
+This node will update the slug for the entry that we created using the Strapi node.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.
@@ -107,7 +107,7 @@ In the screenshot below, you will notice that the node adds a slug to the entry 
 
 ### 5. Strapi2 node (get: entry)
 
-This node returns the information of the entry that we created using the Strapi node.
+This node returns information about the entry that we created using the Strapi node.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Click on the gears icon next to the ***Content Type*** field and click on ***Add Expression***.
@@ -117,6 +117,6 @@ This node returns the information of the entry that we created using the Strapi 
 6. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node returns the information of the entry that we specified.
+In the screenshot below, you will notice that the node returns information about the entry that we specified.
 
 ![Using the Strapi node to get information of an entry](./Strapi2_node.png)

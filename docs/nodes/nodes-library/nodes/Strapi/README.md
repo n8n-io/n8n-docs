@@ -39,7 +39,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Set node
 
-We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow. We will set the title, content, and description for an entry of the content type `Post`. If you have a different content type in Strapi, set the values accordingly.
+We will use the Set node to set the title, content, and description for an entry of the content type `Post`. If you have a different content type in Strapi, set the values accordingly.
 
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `Title` in the ***Name*** field.

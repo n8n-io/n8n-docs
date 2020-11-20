@@ -23,8 +23,8 @@ You can find authentication information for this node [here](../../../credential
 
 This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/784) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
-- [Humantic AI]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
+- [Humantic AI]()
 
 The final workflow should look like the following image.
 
@@ -36,10 +36,10 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Humantic AI node (create: profile)
 
-This node will create a new profile in Humantic AI. We will create a new profile using the LinkedIn URL of a candidate.
+This node will create a new profile for a candidate in Humantic AI. We will create a new profile using the LinkedIn URL of a candidate.
 
 1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](../../../credentials/HumanticAi/README.md).
-2. Enter the LinkedIn URL of a candidate in the ***User ID*** field.
+2. Enter the LinkedIn URL of the candidate in the ***User ID*** field.
 3. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new profile using the LinkedIn URL of the candidate.
@@ -54,10 +54,10 @@ This node will fetch the resume of the candidate from a URL that we specify. We 
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node fetches the resume of the candidate from the URL you specified.
+In the screenshot below, you will notice that the node fetches the resume of the candidate from the URL we specified.
 
 ![Using the HTTP Request node to fetch a resume](./HTTPRequest_node.png)
-  
+
 ### 4. Humantic AI1 node (update: profile)
 
 This node will update the information of the candidate that we created using the Humantic AI node. We will add the candidate's resume that we fetched in the previous node.
@@ -77,7 +77,7 @@ In the screenshot below, you will notice that the node updates the information o
 
 ### 5. Humantic AI2 node (get: profile)
 
-This node will return the `Hiring` persona for the candidate that we created using the Humantic AI node. 
+This node will return the `Hiring` persona for the candidate that we created using the Humantic AI node.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Click on the gears icon next to the ***User ID*** field and click on ***Add Expression***.

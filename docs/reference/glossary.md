@@ -138,17 +138,17 @@ n8n uses SSL certificated to secure the n8n [UI](#UI) so that any information th
 # Token
 A unique identifier, typically a long string of characters, used to increase the security of systems that request or transmit data. It is usually a shared secret between the sender and the receiver to allow either system to determine if they should be requesting/transmitting data. Tokens can also sometimes be used as encryption keys to make the data which is transmitted illegible to thoses without the token.
 
-n8n uses tokens often when requesting or sending data using [APIs](#API) or [webhooks][#Webhook].
+n8n uses tokens often when requesting or sending data using [APIs](#API) or [webhooks](#Webhook).
 
 # Trigger
 A specific type of node that starts a workflow when it receives data from a source outside of the workflow itself.
 
-A good example of a trigger node in n8n is a [webhook][#Webhook]. It listens for data coming into it and then starts a workflow when it sees data.
+A good example of a trigger node in n8n is a [webhook](#Webhook). It listens for data coming into it and then starts a workflow when it sees data.
 
 # Tunnel
 An encrypted session between two systems used to secure data transmission.
 
-n8n uses a tunnel to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks][#Webhook].
+n8n uses a tunnel to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook).
 
 # TypeScript
 An open source programming language that extends the [JavaScript](#JavaScript) programming language.

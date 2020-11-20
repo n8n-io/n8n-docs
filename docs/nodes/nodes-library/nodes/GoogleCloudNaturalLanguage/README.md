@@ -19,7 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to analyze the sentiment of feedback and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/786) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/786) on n8n.io. This example usage workflow uses the following nodes.
 - [Typeform Trigger](../../trigger-nodes/TypeformTrigger/README.md)
 - [Google Cloud Natural Language]()
 - [IF](../../core-nodes/If/README.md)
@@ -52,14 +52,14 @@ This node will analyze the sentiment of the feedback that we got from the previo
 3. Select the following in the ***Variable Selector*** section: Nodes > Typeform Trigger > Output Data > JSON > What did you think about the event? You can also add the following expression: `{{$node["Typeform Trigger"].json["What did you think about the event?"]}}`. If you want to analyze the sentiment for a different question, select that question instead.
 4. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node analyzes the sentiment of the feedback and gives a score.
+In the screenshot below, you will notice that the node analyzes the sentiment of the feedback and gives a score based on that.
 
 ![Using the Google Cloud Natural Language node to analyze the sentiment](./GoogleCloudNaturalLanguage_node.png)
 
-  
+
 ### 3. IF node
 
-This node will check if the score we got from the previous node is smaller than `0` or not. If the score is smaller than `0`, it will return true otherwise false.
+This node will check if the score we got from the previous node is smaller than `0`. If the score is smaller than `0`, it will return true otherwise false.
 ::: v-pre
 1. Click on ***Add Condition*** and select 'Number'.
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.
@@ -67,7 +67,7 @@ This node will check if the score we got from the previous node is smaller than 
 4. Select 'Smaller' from the ***Operation*** dropdown list.
 5. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node checks if the score we got from the previous node is smaller than `0` or not.
+In the screenshot below, you will notice that the node checks if the score that we received from the previous node is smaller than `0`.
 
 ![Using the IF node to check if the score is smaller than `0` or not](./IF_node.png)
 

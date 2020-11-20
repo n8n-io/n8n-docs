@@ -27,9 +27,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to send a message to Mattermost about the update. You can also find the [workflow](https://n8n.io/workflows/785) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive a Mattermost message when a user updates their profile on Facebook. You can also find the [workflow](https://n8n.io/workflows/785) on n8n.io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
-- [Set](../../core-nodes/Set/README.md)
 - [Mattermost](../../nodes/Mattermost/README.md)
 
 The final workflow should look like the following image.
@@ -49,31 +48,7 @@ In the screenshot below, you will notice that the node returns the updated infor
 
 ![Using the Facebook Trigger node to trigger the workflow](./FacebookTrigger_node.png)
 
-### 2. Set node
-
-We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow.
-::: v-pre
-1. Click on ***Add Value*** and select 'String' from the dropdown list.
-2. Enter `field` in the ***Name*** field.
-3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Facebook Trigger > Output Data > JSON > changes > [Item: 0] > field. You can also add the following expression: `{{$node["Facebook Trigger"].json["changes"][0]["field"]}}`.
-5. Click on ***Add Value*** and select 'String' from the dropdown list.
-6. Click on the gears icon next to the ***Name*** field and click on ***Add Expression***.
-7. Select the following in the ***Variable Selector*** section: Nodes > Facebook Trigger > Output Data > JSON > changes > [Item: 0] > field. You can also add the following expression: `{{$node["Facebook Trigger"].json["changes"][0]["field"]}}`.
-8. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-9. Select the following in the ***Variable Selector*** section: Nodes > Facebook Trigger > Output Data > JSON > changes > [Item: 0] > value > page. You can also add the following expression: `{{$node["Facebook Trigger"].json["changes"][0]["value"]["page"]}}`.
-10. Click on ***Add Value*** and select 'String' from the dropdown list.
-11. Enter `uid` in the ***Name*** field.
-12. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-13. Select the following in the ***Variable Selector*** section: Nodes > Facebook Trigger > Output Data > JSON > uid. You can also add the following expression: `{{$node["Facebook Trigger"].json["uid"]}}`.
-14. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
-15. Click on ***Execute Node*** to run the node.
-:::
-In the screenshot below, you will notice that the node uses the data from the previous node and returns the data that we set for the workflow.
-
-![Using the Set node to set the data](./Set_node.png)
-
-### 3. Mattermost node (post: message)
+### 2. Mattermost node (post: message)
 
 This node will send a message of the updated information in the channel `Information Updated` in Mattermost. If you have a different channel, use that instead.
 ::: v-pre

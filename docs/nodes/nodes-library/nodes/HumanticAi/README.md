@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/751) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/784) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Humantic AI]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
@@ -86,7 +86,6 @@ This node will return the `Hiring` persona for the candidate that we created usi
 5. Select 'Hiring' from the ***Persona*** dropdown list.
 6. Click on ***Execute Node*** to run the node.
 :::
-
 In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node.
 
 ![Using the Humantic AI node to get the information of the candidate](./HumanticAi2_node.png)

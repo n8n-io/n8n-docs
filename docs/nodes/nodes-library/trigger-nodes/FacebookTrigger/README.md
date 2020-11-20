@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to send a message in Mattermost about the update. You can also find the [workflow](https://n8n.io/workflows/769) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive updates when a user updates their profile on Facebook using the Facebook Trigger node. It also allows you to send a message to Mattermost about the update. You can also find the [workflow](https://n8n.io/workflows/785) on n8n.io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
 - [Set](../../core-nodes/Set/README.md)
 - [Mattermost](../../nodes/Mattermost/README.md)

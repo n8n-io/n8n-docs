@@ -86,6 +86,6 @@ This node will return the `Hiring` persona for the candidate that we created usi
 5. Select 'Hiring' from the ***Persona*** dropdown list.
 6. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node (column headers are not visible in the image since we've scrolled down to show the data).
+In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node (column headers are not visible in the screenshot since we've scrolled down to show the data).
 
 ![Using the Humantic AI node to get the information of the candidate](./HumanticAi2_node.png)

@@ -8,6 +8,8 @@ description: Learn to configure credentials for the Facebook node in n8n
 You can use these credentials to authenticate the following nodes with Facebook.
 - [Facebook Graph API](../../nodes-library/nodes/FacebookGraphApi/README.md)
 
+**Note:** If you want to create credentials for the [Facebook Trigger](../../nodes-library/trigger-nodes/FacebookTrigger/README.md) node, follow the instructions mentioned in the [Facebook App](../FacebookApp/README.md) credentials documentation.
+
 ## Prerequisites
 
 Create a [Facebook](https://www.facebook.com/) account.

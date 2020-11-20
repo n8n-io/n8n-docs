@@ -5,7 +5,7 @@ description: Learn how to use the Google Cloud Natural Language node in n8n
 
 # Google Cloud Natural Language
 
-[Google Cloud Natural Language](https://www.google.com/Cloud Natural Language) is a web-based spreadsheet program that is part of Google's office software  suite within its Google Drive service.
+[Google Cloud Natural Language](https://cloud.google.com/natural-language/) uses machine learning to reveal the structure and meaning of text. You can extract information about people, places, and events, and better understand social media sentiment and customer conversations.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).

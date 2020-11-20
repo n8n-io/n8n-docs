@@ -3,7 +3,7 @@ permalink: /credentials/facebookGraph
 description: Learn to configure credentials for the Facebook node in n8n
 ---
 
-# Facebook
+# Facebook Graph API
 
 You can use these credentials to authenticate the following nodes with Facebook.
 - [Facebook Graph API](../../nodes-library/nodes/FacebookGraphApi/README.md)

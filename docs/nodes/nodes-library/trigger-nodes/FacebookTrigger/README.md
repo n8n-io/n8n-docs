@@ -51,13 +51,14 @@ In the screenshot below, you will notice that the node returns the updated infor
 ### 2. Mattermost node (post: message)
 
 This node will send a message of the updated information in the channel `Information Updated` in Mattermost. If you have a different channel, use that instead.
+
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
 ::: v-pre
-1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 4. Enter the following message in the ***Expression*** field: `The user with uid {{$node["Facebook Trigger"].json["uid"]}} changed their {{$node["Facebook Trigger"].json["changes"][0]["field"]}} to {{$node["Facebook Trigger"].json["changes"][0]["value"]["page"]}}.`.
 5. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node sends a message of the updated information to the `Information Updated` channel in Mattermost.
+In the screenshot below, you will notice that the node sends a message about the updated information to the `Information Updated` channel in Mattermost.
 
 ![Using the Mattermost node to send a message of the updated information](./Mattermost_node.png)

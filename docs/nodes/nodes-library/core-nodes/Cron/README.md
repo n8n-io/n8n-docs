@@ -30,6 +30,11 @@ You can configure the node by clicking on the *Add Cron Time* button under the *
 
 The 'Every X' option allows you to specify the workflow to be triggered every x minutes or hours. You can specify x by entering a number in the *Value* field. The 'Custom' option allows you to enter a custom [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression) in the *Cron Expression* field.
 
+## FAQs
+
+#### 1. How to generate a Cron expression?
+
+To generate a Cron expression you can use the online tool [crontab guru](https://crontab.guru). Copy and paste the Cron expression you generated using crontab guru in the ***Cron Expression*** field in n8n.
 
 ## Further Reading
 

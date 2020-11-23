@@ -273,8 +273,9 @@ module.exports = {
 					path: 'getting-started/key-components.md',
 				},
 				{
-					title: '💪 Creating Your First Workflow',
-					path: 'getting-started/creating-your-first-workflow.md',
+					title: '💪 Create Your First Workflow',
+					children: getChildrenFolders('getting-started/create-your-first-workflow'),
+
 				},
 				{
 					title: '🤘 Tutorials',

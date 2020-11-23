@@ -15,7 +15,7 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 ## Using OAuth
 
 ::: tip ⚠️ Callback URL with GetResponse
-**Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept the localhost callback  URL.
+**Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept the localhost callback URL. Refer to the [FAQs](#_1-how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
 :::
 
 1. Access your [GetResponse dashboard](https://app.getresponse.com/dashboard).
@@ -43,6 +43,20 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 
 ![Getting GetResponse API credentials](./using-api.gif)
 
+## FAQs
+
+### 1. How to configure the OAuth credentials for the local environment?
+GetResponse doesn't accept the localhost callback  URL. However, you can follow the steps mentioned below to configure the OAuth credentials for the local environment:
+1. We will use [ngrok](https://ngrok.com/) to expose the local server running on port `5678` to the internet. In your terminal, run the following command: 
+```sh
+ngrok http 5678
+``` 
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL you get in the previous step.
+```sh
+export WEBHOOK_TUNNEL_URL=<YOUR-NGROK-URL>
+```
+3. Start your n8n instance.
+4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.
 ## Further Reference
 
 - [OAuth 2.0 - Authorization Code](https://apidocs.getresponse.com/v3/case-study/oauth2-authorization-code)

@@ -1,4 +1,4 @@
-# Creating Your First Workflow
+# Automate Product Feedback with Typeform, Airtable, and Trello 📈
 
 Let's create your first workflow in n8n. We'll create a workflow that will add a new ticket in Trello when a user gives a feedback score of less than 7. You can also find the [workflow](https://n8n.io/workflows/791) on n8n.io.
 
@@ -6,36 +6,36 @@ Let's create your first workflow in n8n. We'll create a workflow that will add a
 
 You’ll need the following tools and resources to complete the tutorial:
 
-- **n8n** — You can find details on how to install n8n on the [Quickstart](quickstart.md) page.
-- **Typeform account** - You'll need to obtain the credentials for the Typeform Trigger node. You can find instructions on how to obtain that [here](../nodes/credentials/typeform/README.md). You will also need to create a form to collect feedback.
-- **Airtable account** - You'll need to obtain the API Key for the Airtable API. You can find instructions on how to obtain that [here](../nodes/credentials/Airtable/README.md). You will also need a table with the fields `Name`, `Email`, `Description`, and `Score`.
-- ***Trello account*** - You'll need to obtain the API Key, API Token, and OAuth Secret for the Trello API. You can find instructions on how to obtain that [here](../nodes/credentials/Trello/README.md). You will also need to create a new board in Trello.
+- **n8n** — You can find details on how to install n8n on the [Quickstart](../../quickstart.md) page.
+- **Typeform account** - You'll need to obtain the credentials for the Typeform Trigger node. You can find instructions on how to obtain that [here](../../../nodes/credentials/typeform/README.md). You will also need to create a form to collect feedback.
+- **Airtable account** - You'll need to obtain the API Key for the Airtable API. You can find instructions on how to obtain that [here](../../../nodes/credentials/Airtable/README.md). You will also need a table with the fields `Name`, `Email`, `Description`, and `Score`.
+- ***Trello account*** - You'll need to obtain the API Key, API Token, and OAuth Secret for the Trello API. You can find instructions on how to obtain that [here](../../../nodes/credentials/Trello/README.md). You will also need to create a new board in Trello.
 
 ## Building the Workflow
 
 This workflow would use the following nodes.
-- [Typeform Trigger](../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form is submitted
-- [Set](../nodes/nodes-library/core-nodes/Set/README.md) - Set the workflow data
-- [Airtable](../nodes/nodes-library/nodes/Airtable/README.md) - Store the data
-- [IF](../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
-- [Trello](../nodes/nodes-library/nodes/Trello/README.md) - Create a ticket
-- [NoOp](../nodes/nodes-library/core-nodes/NoOperationDoNothing/README.md) - Do nothing (optional)
+- [Typeform Trigger](../../../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form is submitted
+- [Set](../../../nodes/nodes-library/core-nodes/Set/README.md) - Set the workflow data
+- [Airtable](../../../nodes/nodes-library/nodes/Airtable/README.md) - Store the data
+- [IF](../../../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
+- [Trello](../../../nodes/nodes-library/nodes/Trello/README.md) - Create a ticket
+- [NoOp](../../../nodes/nodes-library/core-nodes/NoOperationDoNothing/README.md) - Do nothing (optional)
 
 The final workflow should look like the following image.
 
-![The final workflow](./images/get-product-feedback/final-workflow.png)
+![The final workflow](./images/final-workflow.png)
 
 ### 1. Typefrom Trigger node
 
 We'll use the *Typeform Trigger* node for starting the workflow. Add a *Typeform Trigger* node by clicking on the + button on the top right of the Editor UI. Click on the *Typeform Trigger* node under the section marked ***Trigger***.
 
-Double click on the node to enter the Node Editor. Create credentials for the node by clicking on the ***Select Credentials*** dropdown list and selecting ***Create New***. Enter the credentials that you obtained [earlier](#prerequisites). 
+Double click on the node to enter the Node Editor. Create credentials for the node by clicking on the ***Select Credentials*** dropdown list and selecting ***Create New***. Enter the credentials that you obtained [earlier](#prerequisites).
 
 Select a form from the ***Form*** dropdown list.  We'll let the different fields stay as they are. Click on the ***Execute Node*** button on the top right to get data when a new response is submitted.
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Typeform Trigger node](./images/get-product-feedback/creating-the-typeform-trigger-node.gif)
+![Creating the Typeform Trigger node](./images/creating-the-typeform-trigger-node.gif)
 
 ### 2. Set node
 
@@ -69,7 +69,7 @@ Toggle ***Keep Only Set*** to true. We set this option to true to ensure that on
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Set node](./images/get-product-feedback/creating-the-set-node.gif)
+![Creating the Set node](./images/creating-the-set-node.gif)
 
 ### 3. Airtable node
 
@@ -79,7 +79,7 @@ Select 'Append' from the ***Operation*** dropdown list. To get the Application I
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Airtable node](./images/get-product-feedback/creating-the-airtable-node.gif)
+![Creating the Airtable node](./images/creating-the-airtable-node.gif)
 
 ### 4. IF node
 
@@ -95,7 +95,7 @@ For the ***Operation*** field, we'll let it be set to 'Smaller'. For ***Value 2*
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the IF node](./images/get-product-feedback/creating-the-if-node.gif)
+![Creating the IF node](./images/creating-the-if-node.gif)
 
 ### 5. Trello node
 
@@ -103,7 +103,7 @@ Add the *Trello* node by clicking on the + button and selecting the *Trello* nod
 
 Double click on the node and create credentials for the node by clicking on the ***Select Credentials*** dropdown list and selecting ***Create New***. Enter the ***API Key***, ***API Token***, and ***OAuth Secret*** that you obtained [earlier](#prerequisites).
 
-To get the List ID, refer to the [FAQs](../nodes/nodes-library/nodes/Trello/README.md#how-do-i-find-the-list-id) section of the Trello node documentation. Copy and paste the ID in the ***List ID*** field in n8n. 
+To get the List ID, refer to the [FAQs](../../../nodes/nodes-library/nodes/Trello/README.md#how-do-i-find-the-list-id) section of the Trello node documentation. Copy and paste the ID in the ***List ID*** field in n8n.
 
 You can now add the title for the card that you want. This is what I added in the ***Title*** field (you can click on ***Add Expression*** and paste this):
 
@@ -123,9 +123,9 @@ Click on the ***Execute Node*** button on the top right to create a new ticket i
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Trello node](./images/get-product-feedback/creating-the-trello-node.gif)
+![Creating the Trello node](./images/creating-the-trello-node.gif)
 
-![Ticket created by the workflow](./images/get-product-feedback/ticket-created-by-the-workflow.png) 
+![Ticket created by the workflow](./images/ticket-created-by-the-workflow.png)
 
 ### 5. NoOp node
 
@@ -135,11 +135,11 @@ To test the workflow, click on the ***Execute Workflow*** button at the bottom o
 
 Don't forget to save the workflow and then click on the ***Activate*** toggle on the top right of the screen to set it to true and activate the workflow. Here's a GIF of me following the steps mentioned above.
 
-![Creating the NoOp node](./images/get-product-feedback/creating-the-noop-node.gif)
+![Creating the NoOp node](./images/creating-the-noop-node.gif)
 
 ## Conclusion
 
-Congratulations on creating your first workflow with n8n 🥳 
+Congratulations on creating your first workflow with n8n 🥳
 
 Did you run into any troubles while working on your first workflow? Don't be shy to ask questions or share the challenges you are facing in the community [forum](https://community.n8n.io/), we are all learners here 🙌
 

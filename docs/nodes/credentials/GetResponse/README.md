@@ -45,13 +45,13 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 
 ## FAQs
 
-### 1. How to configure the OAuth credentials for the local environment?
+### How to configure the OAuth credentials for the local environment?
 GetResponse doesn't accept the localhost callback  URL. However, you can follow the steps mentioned below to configure the OAuth credentials for the local environment:
-1. We will use [ngrok](https://ngrok.com/) to expose the local server running on port `5678` to the internet. In your terminal, run the following command: 
+1. We will use [ngrok](https://ngrok.com/) to expose the local server running on port `5678` to the internet. In your terminal, run the following command:
 ```sh
 ngrok http 5678
-``` 
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL you get in the previous step.
+```
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step.
 ```sh
 export WEBHOOK_TUNNEL_URL=<YOUR-NGROK-URL>
 ```

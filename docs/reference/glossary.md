@@ -1,27 +1,20 @@
 # .env File
 A special file which contains configuration information in the form of environment [variables](#Variable).
 
-n8n uses the .env file to control how n8n works. See the [n8n docs](https://docs.n8n.io/reference/server-setup.html#_6-create-env-file) for more details.
-
-**See also:**
-- [Variable](#Variable)
+n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](https://docs.n8n.io/reference/server-setup.html#_6-create-env-file) for more details.
 
 # Account
 Service which allows a user to connect to a computer system or network. User's identity is confirmed through shared [credentials](#Credentials).
 
 Many of the [nodes](#Node) in n8n require you to have an account with the service for which the [node](#Node) was built.
 
-**See also:**
-- [Credentials](#Credentials)
-
 # API
-An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted URL to retrieve desired information.
+An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted [URL](#URL) to retrieve desired information.
 
 APIs are a critical part of many n8n [nodes](#Node) and [workflows](#Workflow). The [nodes](#Node) talk to the API that is provided by a service on the internet and n8n [workflows](#Workflow) allow these APIs to talk to each other.
 
 **See also:**
 - [Header](#Header)
-- [URL](#URL)
 
 # Certificate
 A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
@@ -43,13 +36,11 @@ A link between two or more [nodes](#Node) that allows data to flow from one [nod
 This is a core concept in n8n.
 
 # Credentials
-Unique pieces of information that identifies a user or a service. A common form of credentials is a [username](#Username) and password pair.
+Unique pieces of information that identifies a user or a service. A common form of credentials is a [username](#Username) and [password](#Password) pair.
 
 n8n stores encrypted credentials so that it can automate tasks that require this information to run properly.
 
 **See also:**
-- [Username](#Username)
-- [Password](#Password)
 - [Token](#Token)
 
 # Docker
@@ -61,14 +52,13 @@ n8n has created a docker installation so that users who have a docker environmen
 In n8n, this is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
 
 # Encryption Key
-A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. [Encryption keys](#encryption-key) are often long string of seemingly random characters.
+A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.
 
-n8n will sometimes use [encryption keys](#encryption-key) for accessing [APIs](#API) when required.
+n8n will sometimes use encryption keys for accessing [APIs](#API) when required.
 
 **See also:**
 - [SSL](#SSL)
 - [Certificate](#Certificate)
-- [API](#API)
 
 # Execution
 A completed run of a [workflow](#Workflow) from start to finish.
@@ -112,9 +102,6 @@ Section of an HTTP request message that defines allows extra information to be p
 
 n8n has the ability to send custom header information to many [APIs](#API)
 
-**See also:**
-- [API](#API)
-
 # Node
 The basic building block for n8n. Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
 
@@ -124,7 +111,6 @@ A package of [JavaScript](#JavaScript) file used to provide everything needed to
 n8n runs on top of NodeJS and uses its libraries extensively.
 
 **See also:**
-- [JavaScript](#JavaScript)
 - [TypeScript](#TypeScript)
 
 # npm
@@ -133,9 +119,7 @@ A program that installs, updates and removes [JavaScript](#JavaScript) [Packages
 n8n is [installed](https://docs.n8n.io/getting-started/quickstart.html#install-with-npm) and updated using npm.
 
 **See also:**
-- [JavaScript](#JavaScript)
 - [npx](#npx)
-- [Package](#Package)
 
 # npx
 A program that will download, run, then delete a [JavaScript](#JavaScript) [Packages](#Package). Often used for quickly testing what a package will do without completely installing it.
@@ -143,9 +127,7 @@ A program that will download, run, then delete a [JavaScript](#JavaScript) [Pack
 You can [try out n8n without installing it](https://docs.n8n.io/getting-started/quickstart.html#give-n8n-a-spin) to your system using npx.
 
 **See also:**
-- [JavaScript](#JavaScript)
 - [npm](#npm)
-- [Package](#Package)
 
 # Package
 A group of [JavaScript](#JavaScript) files which are designed to work together for a specific purpose.
@@ -153,8 +135,6 @@ A group of [JavaScript](#JavaScript) files which are designed to work together f
 n8n is distributed as an [npm](#npm) package.
 
 **See also:**
-- [JavaScript](#JavaScript)
-- [npm](#npm)
 - [npx](#npx)
 
 # Parameter
@@ -172,7 +152,6 @@ The n8n [Editor UI](#editor-ui) can be password protected so that only authorize
 n8n also stores passwords as a part of [credentials](#Credentials) for some services.
 
 **See also:**
-- [Credentials](#Credentials)
 - [Username](#Username)
 - [Token](#Token)
 
@@ -209,9 +188,6 @@ An open source programming language that extends the [JavaScript](#JavaScript) p
 
 n8n is written in TypeScript.
 
-**See also:**
-- [JavaScript](#JavaScript)
-
 # UI
 An acronym for *User Interface", it is the method or tool a person uses to interact with a computer system and its software.
 
@@ -230,8 +206,6 @@ A character string representing an [account](#Account) on a computer system. It 
 n8n also stores usernames as a part of [credentials](#Credentials) for some services.
 
 **See also:**
-- [Credentials](#Credentials)
-- [Password](#Password)
 - [Token](#Token)
 
 # Variable

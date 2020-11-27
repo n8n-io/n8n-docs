@@ -6,6 +6,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Bug Fixes
     - Airtable Trigger: Fixed the icon of the node
+
 ## n8n@0.95.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.1...n8n@0.95.0) for this version.<br />
 **Release date:** 2020-11-25
@@ -18,17 +19,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Quick Base
     - Spontit
 - Enhanced nodes
-    - Airable: The Application ID field is rename to Base ID, and the Table ID field is rename to Table. The List operation downloads attachments automatically
+    - Airable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
     - Harvest: Added OAuth authentication method
 - Bug Fixes
     - Slack: Fixed an issue with creating channels and inviting users to a channel
-## n8n@0.94.0
+
+## n8n@0.94.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.0...n8n@0.94.1) for this version.<br />
 **Release date:** 2020-11-20
 
 - Bug Fixes
     - GraphQL: Fixed an issue with the variables
     - WooCommerce Trigger: Fixed an issue with the webhook. The node now reuses a webhook if it already exists.
+
 ## n8n@0.94.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
 **Release date:** 2020-11-19

@@ -24,7 +24,7 @@ Alternatively, you can copy [this base](https://airtable.com/shrW5dABzpdEMLohU).
 ## Building the Workflow
 
 This workflow would use the following nodes.
-- [Typeform Trigger](../../../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form receives a respose
+- [Typeform Trigger](../../../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form receives a response
 - [Set](../../../nodes/nodes-library/core-nodes/Set/README.md) - Set the workflow data
 - [Airtable](../../../nodes/nodes-library/nodes/Airtable/README.md) - Store the data
 - [IF](../../../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow

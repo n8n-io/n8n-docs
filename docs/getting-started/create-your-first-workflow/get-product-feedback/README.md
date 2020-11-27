@@ -8,21 +8,23 @@ You’ll need the following tools and resources to complete the tutorial:
 
 - **n8n** — You can find details on how to install n8n on the [Quickstart](../../quickstart.md) page. Make sure that you start [n8n with tunnel](../../quickstart.md#starting-n8n-with-tunnel).
 - **Typeform account** - You'll need to obtain the credentials for the Typeform Trigger node. You can find instructions on how to obtain them [here](../../../nodes/credentials/typeform/README.md). You will also need to create a form to collect feedback with the following questions:
-	- What is your name?
-	- What is your email address?
-	- Anything else you want to share?
-	- What score would you like to give?
+	- What is your name? *(Short Text)*
+	- What is your email address? *(Email)*
+	- Anything else you want to share? *(Long Text)*
+	- What score would you like to give? *(Rating)*
 - **Airtable account** - You'll need to obtain the API Key for the Airtable node. You can find instructions on how to obtain that [here](../../../nodes/credentials/Airtable/README.md). You will also need a table with the name 'Feedback' and the following fields:
-	- Name
-	- Email
-	- Description
-	- Score
+	- Name *(Single line text)*
+	- Email *(Email)*
+	- Description *(Long text)*
+	- Score *(Number)*
+
+Alternatively, you can copy [this base](https://airtable.com/shrW5dABzpdEMLohU). Click on the ***Copy base*** button on the top right corner to copy the base in your account.
 - **Trello account** - You'll need to obtain the API Key, API Token, and the OAuth Secret for the Trello node. You can find instructions on how to obtain them [here](../../../nodes/credentials/Trello/README.md). You will also need to create a new board in Trello.
 
 ## Building the Workflow
 
 This workflow would use the following nodes.
-- [Typeform Trigger](../../../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form is submitted
+- [Typeform Trigger](../../../nodes/nodes-library/trigger-nodes/TypeformTrigger/README.md) - Start the workflow when a form receives a respose
 - [Set](../../../nodes/nodes-library/core-nodes/Set/README.md) - Set the workflow data
 - [Airtable](../../../nodes/nodes-library/nodes/Airtable/README.md) - Store the data
 - [IF](../../../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
@@ -85,7 +87,7 @@ Here's a GIF of me following the steps mentioned above.
 
 Add the *Airtable* node by clicking on the + button and selecting the *Airtable* node. Double click on the node and create credentials for the node by clicking on the ***Select Credentials*** dropdown list and selecting ***Create New***. Enter the ***API Key*** that you obtained [earlier](#prerequisites).
 
-Select 'Append' from the ***Operation*** dropdown list. To get the Application ID, go to `https://airtable.com/api` and select the base. Copy and paste the ID in the ***Application ID*** field in n8n.
+Select 'Append' from the ***Operation*** dropdown list. To get the Base ID, go to `https://airtable.com/api` and select the base. Copy and paste the ID in the ***Base ID*** field in n8n.
 
 Enter the table name in the ***Table*** field. We'll let the other fields stay as they are. Click on the ***Execute Node*** button on the top right to append the data to your Airtable base.
 

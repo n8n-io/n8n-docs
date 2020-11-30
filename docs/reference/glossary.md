@@ -3,15 +3,21 @@ A special file which contains configuration information in the form of environme
 
 n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](https://docs.n8n.io/reference/server-setup.html#_6-create-env-file) for more details.
 
+To learn more about the *.env* file, read [Manage Environemnt Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
+
 # Account
-Service which allows a user to connect to a computer system or network. User's identity is confirmed through shared [credentials](#Credentials).
+Service which allows a user to connect to a computer system or network. User's identity is confirmed through shared [credentials](#Credentials). Also known as a *user account*.
 
 Many of the [nodes](#Node) in n8n require you to have an account with the service for which the [node](#Node) was built.
+
+For further reading, please see [User Account](https://www.techopedia.com/definition/13458/user-account) and [User (computing)](https://en.wikipedia.org/wiki/User_(computing)).
 
 # API
 An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted [URL](#URL) to retrieve desired information.
 
 APIs are a critical part of many n8n [nodes](#Node) and [workflows](#Workflow). The [nodes](#Node) talk to the API that is provided by a service on the internet and n8n [workflows](#Workflow) allow these APIs to talk to each other.
+
+For a more detailed understanding of APIs, see [What is API: Definition, Types, Specifications, Documentation](https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/).
 
 **See also:**
 - [Header](#Header)
@@ -21,6 +27,8 @@ A file or character string that is used to encrypt and decrypt information betwe
 
 n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui).
 
+For further information, see [What are certificates?](https://www.youtube.com/watch?v=LRMBZhdFjDI).
+
 **See also:**
 - [Encryption Key](#Encryption-Key)
 - [SSL](#SSL)
@@ -29,6 +37,8 @@ n8n uses certificates to keep user information safe when working in the [Editor 
 An acronym for *Command Line Interface*, it is a text-based form of processing computer commands entered traditionally via a keyboard.
 
 It is possible to [start a workflow or change its status](https://docs.n8n.io/reference/start-workflows-via-cli.html) using the CLI in n8n.
+
+To learn more, see [What is Command Line Interface (CLI)?](https://www.w3schools.com/whatis/whatis_cli.asp).
 
 # Connection
 A link between two or more [nodes](#Node) that allows data to flow from one [node](#Node) to another.
@@ -40,6 +50,8 @@ Unique pieces of information that identifies a user or a service. A common form 
 
 n8n stores encrypted credentials so that it can automate tasks that require this information to run properly.
 
+For more information, see [Credentials](https://www.techopedia.com/definition/10259/credentials).
+
 **See also:**
 - [Token](#Token)
 
@@ -48,13 +60,19 @@ A system to build, run and share applications with all of the services bundled t
 
 n8n has created a docker installation so that users who have a docker environment can quickly and easily install and run n8n.
 
+For more information, read [Docker overview](https://docs.docker.com/get-started/overview/) and [A Docker Tutorial for Beginners](https://docker-curriculum.com/).
+
 # Editor UI
 In n8n, this is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
+
+To learn more about user interfaces, see [User interface](https://en.wikipedia.org/wiki/User_interface).
 
 # Encryption Key
 A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.
 
 n8n will sometimes use encryption keys for accessing [APIs](#API) when required.
+
+For more information, see [What are encryption keys and how do they work? 🔐](https://medium.com/codeclan/what-are-encryption-keys-and-how-do-they-work-cc48c3053bd6)
 
 **See also:**
 - [SSL](#SSL)
@@ -67,10 +85,14 @@ n8n logs [workflow](#Workflow) executions and allows the user to see if the [wor
 
 n8n also has the ability to execute one [workflow](#Workflow) from another [workflow](#Workflow).
 
+To learn more, see [Execution (computing)](https://windowsreport.com/execution-computing/).
+
 # Expression
 A string of characters and symbols in a programming language that represents a value depending upon its input.
 
 n8n uses expressions extensively when a [node](#Node) is referring to another [node](#Node) for input.
+
+Find out more about *expressions* by reading [Expression](https://www.techopedia.com/definition/1808/expression-computer-science).
 
 # Fair-code
 A programming language license very similar to open source which allows developers to receive remuneration for use in a for profit product.
@@ -81,6 +103,8 @@ n8n is licensed under the fair-code model. See [https://faircode.io/](https://fa
 In programming, a set of reusable commands designed to be run together and launched by other commands in the code. It may or may not receive input from the command that launches it.
 
 Many of the nodes in n8n behave like functions, receiving specific input to generate a specific output.
+
+
 
 # IP Address
 A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.
@@ -167,6 +191,8 @@ For the protection of the system, it is generally not recommended that n8n be ru
 An acronym for *Secure Socket Layer*, it is the primary way that web based services are secured. A SSL [certificate](#Certificate) is often used on websites to encrypt the information that is travelling between a web server and a web page.
 
 n8n uses SSL [certificates](#Certificate) to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two.
+
+For further reading, see [SSL and SSL Certificates Explained For Beginners](http://www.steves-internet-guide.com/ssl-certificates-explained/).
 
 # Token
 A unique identifier, typically a long string of characters, used to increase the security of systems that request or transmit data. It is usually a shared secret between the sender and the receiver to allow either system to determine if they should be requesting/transmitting data. Tokens can also sometimes be used as [encryption keys](#encryption-key) to make the data which is transmitted illegible to thoses without the token.

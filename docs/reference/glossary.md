@@ -104,12 +104,14 @@ In programming, a set of reusable commands designed to be run together and launc
 
 Many of the nodes in n8n behave like functions, receiving specific input to generate a specific output.
 
-
+To learn more about *functions*, see [Computer Programming - Functions](https://www.tutorialspoint.com/computer_programming/computer_programming_functions.htm).
 
 # IP Address
 A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.
 
 n8n will often refer to IP addresses when accessing information on a system other than itself. This is more common when the service is on the local network rather than on the internet.
+
+If you want to learn more about *IP addresses*, see [What Is an IP Address?](https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm).
 
 # JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.

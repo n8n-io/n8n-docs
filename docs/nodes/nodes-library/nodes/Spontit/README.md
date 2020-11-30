@@ -19,7 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to send daily weather updates via a push notification using the Spontit node. You can also find the [workflow](https://n8n.io/workflows/740) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to send daily weather updates via a push notification using the Spontit node. You can also find the [workflow](https://n8n.io/workflows/796) on n8n.io. This example usage workflow uses the following nodes.
 - [Cron](../../core-nodes/Cron/README.md)
 - [OpenWeatherMap](../../nodes/OpenWeatherMap/README.md)
 - [Spontit]()

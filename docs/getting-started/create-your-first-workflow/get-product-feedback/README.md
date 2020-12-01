@@ -133,13 +133,16 @@ Email: {{$node["IF"].json["fields"]["Email"]}}
 Score: {{$node["IF"].json["fields"]["Score"]}}
 Description: {{$node["IF"].json["fields"]["Description"]}}
 ```
-Click on the ***Execute Node*** button on the top right to create a new ticket in Trello.
+
+***NOTE:*** You can set a custom title and description. Enter the text you want in the ***Expression Editor***. Select the data you want to use from the previous nodes from the ***Variable Selector*** section.
+
+Click on the ***Execute Node*** button on the top right to create a new card in Trello.
 
 Here's a GIF of me following the steps mentioned above.
 
 ![Creating the Trello node](./images/creating-the-trello-node.gif)
 
-![Ticket created by the workflow](./images/ticket-created-by-the-workflow.png)
+![Card created by the workflow](./images/ticket-created-by-the-workflow.png)
 
 ### 6. NoOp node
 

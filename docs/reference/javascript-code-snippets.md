@@ -13,7 +13,7 @@ For each section, we'll share code snippets that can be used in the function nod
 
 ## Date and Time
 
-The JavaScript [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object is a built-in object that stores the date and time. It provides several methods for managing and formatting the date. 
+The JavaScript [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object is a built-in object that stores the date and time. It provides several methods for managing and formatting the date.
 
 It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local time zone and offset. For example, `new Date().toISOString()` would show the time in UTC but `new Date().getHours()` would show the time in your local time zone.
 
@@ -38,7 +38,7 @@ The output will be similar to the following.
 ```js
 [
   {
-    "today": "2020-10-13T09:35:42.588Z" 
+    "today": "2020-10-13T09:35:42.588Z"
   }
 ]
 ```
@@ -108,7 +108,7 @@ The output will be similar to the following.
 ```js
 [
   {
-    "month": 10 
+    "month": 10
   }
 ]
 ```
@@ -151,7 +151,7 @@ The output will be similar to the following.
 [
   {
     "first_day_last_month": "2020-08-31T22:00:00.000Z",
-    "last_day_last_month": "2020-09-30T22:00:00.000Z" 
+    "last_day_last_month": "2020-09-30T22:00:00.000Z"
   }
 ]
 ```
@@ -314,11 +314,11 @@ false
 
 ## Modify data Structure
 
-Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page. 
+Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page.
 
 ### 1. Create multiple JSON items from an array
 
-If the data structure of the incoming data is similar to the following. 
+If the data structure of the incoming data is similar to the following.
 
 ```js
 [
@@ -427,4 +427,36 @@ return Object.keys(items[0].binary).map(key => {
     }
   }
 });
+```
+## Get number of items returned by the last node
+
+Depending on your use-case, you might want to get the number of items returned by the last node. Use the following snippet in the Function node.
+
+```js
+if (Object.keys(items[0].json).length === 0) {
+  return [
+     {
+       json: {
+         results: 0,
+       }
+      }
+  ]
+}
+return [
+  {
+    json: {
+      results: items.length,
+    }
+  }
+];
+```
+
+The output will then be similar to the following.
+
+```js
+[
+  {
+    "results": 8
+  }
+]
 ```

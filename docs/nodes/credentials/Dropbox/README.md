@@ -38,12 +38,11 @@ You'll only need to enter the Credentials Name and click on the circle button in
 3. Select an access type under the ***Choose the type of access you need***. You can read more about the access type [here](https://www.dropbox.com/developers/reference/developer-guide).
 4. In the ***Name your app*** section, enter a name for your app.
 5. Click on the ***Create app*** button.
-6. Click on the ***Permissions*** tab.
-7. Give all the permission under the ***Files and folders*** section.
-8. Click on the ***Submit*** button.
-9. Click on the ***Settings*** tab.
-10. Scroll down to the ***OAuth2*** section and select 'No expiration' from the ***Access token expiration*** dropdown list.
-11. Click on the ***Generate*** button.
-12. Use the displayed ***Generated access token*** with your Dropbox credentials in n8n.
+6. Click on the ***Permissions*** tab and give all the permissions under the ***Files and folders*** section.
+7. Click on the ***Submit*** button.
+8. Click on the ***Settings*** tab.
+9. Scroll down to the ***OAuth2*** section and select 'No expiration' from the ***Access token expiration*** dropdown list.
+10. Click on the ***Generate*** button.
+11. Use the displayed ***Generated access token*** with your Dropbox credentials in n8n.
 
 ![Getting Dropbox credentials](./using-access-token.gif)

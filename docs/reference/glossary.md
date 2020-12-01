@@ -118,23 +118,33 @@ A modern programming language popular with web platforms used to create interact
 
 While n8n is written in TypeScript, the final code generated is JavaScript and the [Function node](https://docs.n8n.io/nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node).
 
+To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
+
 # JSON
 An open standard file and data format commonly used with [JavaScript](#JavaScript). It is easy for humans to read and for computers to parse.
 
 The majority of data that is transferred from one [node](#Node) to another in n8n is most likely in the JSON format.
 
+For further reading, please see [Introducing JSON](https://www.json.org/json-en.html).
+
 # Header
 Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.
 
-n8n has the ability to send custom header information to many [APIs](#API)
+n8n has the ability to send custom header information to many [APIs](#API).
+
+For further information, see [Request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header).
 
 # Node
 The basic building block for n8n. Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
+
+For more information, see [Node Basics](https://docs.n8n.io/nodes/node-basics.html).
 
 # NodeJS
 A package of [JavaScript](#JavaScript) file used to provide everything needed to run [JavaScript](#JavaScript) code without a web browser.
 
 n8n runs on top of NodeJS and uses its libraries extensively.
+
+Read more at [About Node.js](https://nodejs.org/en/about/).
 
 **See also:**
 - [TypeScript](#TypeScript)
@@ -144,6 +154,8 @@ A program that installs, updates and removes [JavaScript](#JavaScript) [Packages
 
 n8n is [installed](https://docs.n8n.io/getting-started/quickstart.html#install-with-npm) and updated using npm.
 
+Find out more at [About npm](https://docs.npmjs.com/about-npm).
+
 **See also:**
 - [npx](#npx)
 
@@ -152,6 +164,8 @@ A program that will download, run, then delete a [JavaScript](#JavaScript) [Pack
 
 You can [try out n8n without installing it](https://docs.n8n.io/getting-started/quickstart.html#give-n8n-a-spin) to your system using npx.
 
+For more information about *npx*, see [npx documentation](https://docs.npmjs.com/cli/v7/commands/npx).
+
 **See also:**
 - [npm](#npm)
 
@@ -159,6 +173,8 @@ You can [try out n8n without installing it](https://docs.n8n.io/getting-started/
 A group of [JavaScript](#JavaScript) files which are designed to work together for a specific purpose.
 
 n8n is distributed as an [npm](#npm) package.
+
+For more information, see [software package](https://www.techopedia.com/definition/4360/software-package).
 
 **See also:**
 - [npx](#npx)
@@ -170,12 +186,16 @@ Many n8n [nodes](#Node) accept parameters to customize their output.
 
 The n8n [CLI](#CLI) also accepts parameters so that it knows how to properly execute.
 
+For more information, see [Functions, procedures nad modules](https://www.bbc.co.uk/bitesize/guides/z9hykqt/revision/4).
+
 # Password
 A secret string of characters provided to prove one's identity. Often used to gain access to restricted applications and systems.
 
 The n8n [Editor UI](#editor-ui) can be password protected so that only authorized users can access the interface.
 
 n8n also stores passwords as a part of [credentials](#Credentials) for some services.
+
+To read more about *passwords*, see [The Importance of passwords](https://it.uottawa.ca/security/identity-authentication-theft).
 
 **See also:**
 - [Username](#Username)
@@ -189,6 +209,8 @@ In *NIX operating system, the user [account](#Account) that has no restrictions 
 
 For the protection of the system, it is generally not recommended that n8n be run by the root user.
 
+For more information about *root*, see [root Definition](http://www.linfo.org/root.html).
+
 # SSL
 An acronym for *Secure Socket Layer*, it is the primary way that web based services are secured. A SSL [certificate](#Certificate) is often used on websites to encrypt the information that is travelling between a web server and a web page.
 
@@ -201,25 +223,35 @@ A unique identifier, typically a long string of characters, used to increase the
 
 n8n uses tokens often when requesting or sending data using [APIs](#API) or [webhooks](#Webhook).
 
+For more information, see [token](https://whatis.techtarget.com/definition/token).
+
 # Trigger
 A specific type of [node](#Node) that starts a [workflow](#Workflow) when it receives data from a source outside of the workflow itself.
 
 A good example of a trigger [node](#Node) in n8n is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
+
+For more information about *triggers*, see [Event Driven Programming](https://en.wikipedia.org/wiki/Event-driven_programming).
 
 # Tunnel
 An encrypted session between two systems used to secure data transmission.
 
 n8n uses a tunnel to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook).
 
+For further reading, see [VPN Tunnels explained: what are they and how can they keep your internet data secure](https://www.techradar.com/vpn/vpn-tunnels-explained-how-to-keep-your-internet-data-secure).
+
 # TypeScript
 An open source programming language that extends the [JavaScript](#JavaScript) programming language.
 
 n8n is written in TypeScript.
 
+Read more at [Typescrypt](https://www.typescriptlang.org/).
+
 # UI
 An acronym for *User Interface", it is the method or tool a person uses to interact with a computer system and its software.
 
 n8n has a web based UI, meaning that you program and interact with n8n using a web browser.
+
+Learn more at [user interface (UI)](https://searchapparchitecture.techtarget.com/definition/user-interface-UI).
 
 # URL
 An acronym for *Universal Resource Locator*, it is a string of characters that represents a network location. Most people's experience with URLs is in the form of a website address (e.g. https://n8n.io)
@@ -228,10 +260,14 @@ n8n's [Editor UI](#editor-ui) is accessed via an URL entered into a web browser 
 
 Some [nodes](#Node) in n8n access resources on the internet using an URL.
 
+Read more at [What is a URL?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
+
 # Username
 A character string representing an [account](#Account) on a computer system. It is often paired with a [password](#Password) to allow a person to access information and services that the person has permissions to use.
 
 n8n also stores usernames as a part of [credentials](#Credentials) for some services.
+
+Read more at [Username](https://techterms.com/definition/username).
 
 **See also:**
 - [Token](#Token)
@@ -241,6 +277,8 @@ In computer programming, a variable represents a piece of data that can be chang
 
 n8n uses variables extensively throughout its programming and nodes.
 
+Read more at [Computer Programming - Variables](https://www.tutorialspoint.com/computer_programming/computer_programming_variables.htm).
+
 **See also:**
 - [.env](#.env)
 
@@ -249,7 +287,11 @@ A service that listens for data input from an external source used to trigger an
 
 n8n has the ability to create webhooks that can be used to start workflows and receive data from systems outside of the n8n system itself.
 
+To learn more about *webhooks*, see [What's a Webhook?](https://sendgrid.com/blog/whats-webhook/).
+
 # Workflow
 A collection of [nodes](#Node) connected together to produce a specific outcome.
 
 n8n's primary form of programming uses a workflow model to represent both code and data flow.
+
+For more information, see [Workflow application](https://en.wikipedia.org/wiki/Workflow_application).

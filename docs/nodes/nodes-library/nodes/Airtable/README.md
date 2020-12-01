@@ -52,23 +52,21 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](../../../credentials/Airtable/README.md).
 2. Select the 'Append' option from the ***Operation*** dropdown list.
-3. Enter the application ID in the ***Application ID*** field. For obtaining the Application ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Application ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of the table in the ***Table*** field.
 5. Click on ***Execute Node*** to run the workflow.
 
 ![Using the Airtable node to insert data into an Airtable table](./Airtable_node.png)
 
-
 ### 4. Airtable1 node (List)
 
 1. Select the credentials that you entered in the previous node.
 2. Select the 'List' option from the ***Operation*** dropdown list.
-3. Enter the application ID used in the previous node in the ***Application ID*** field.
+3. Enter the base ID used in the previous node in the ***Base ID*** field.
 4. Enter the name of the table used in the previous node in the ***Table*** field.
 5. Click on ***Execute Node*** to run the workflow.
 
 ![Using the Airtable node to read data from an Airtable table](./Airtable1_node.png)
-
 
 ## Further Reading
 

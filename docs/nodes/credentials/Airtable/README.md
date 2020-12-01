@@ -7,7 +7,7 @@ description: Learn to configure credentials for the Airtable node in n8n
 
 You can use these credentials to authenticate the following nodes with Airtable.
 - [Airtable](../../nodes-library/nodes/Airtable/README.md)
-
+- [Airtable Trigger](../../nodes-library/trigger-nodes/AirtableTrigger/README.md)
 
 ## Prerequisites
 

@@ -15,7 +15,7 @@ Create a [Spontit](https://www.spontit.com/) account.
 ## Using API Key
 
 1. Access the [Spontit dashboard](https://www.spontit.com/).
-2. On the navigation menu, click on ***API*** and select 'Get Secret Keys' from the dropdown list.
+2. On the navigation menu, click on ***API***, and select 'Get Secret Keys' from the dropdown list.
 3. Click on ***+ Create New Key*** to generate a new API Key.
 4. Click on the ***PROFILE*** tab on the navigation menu.
 5. Copy the displayed username.

@@ -59,7 +59,7 @@ In the screenshot below, you will notice that the node returns montly financial 
 
 ### 3. Mattermost node (post: message)
 
-This node will send a message with the metrics that we get from the previous node in the channel `Monthly Metrics` in Mattermost. If you have a different channel, use that instead.
+This node will send a message with the metrics that we get from the previous node in the 'Monthly Metrics' channel in Mattermost. If you have a different channel, use that instead.
 
 1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
 ::: v-pre
@@ -78,3 +78,8 @@ Recurring Revenue: {{$node["ProfitWell"].json["recurring_revenue"]}}
 In the screenshot below, you will notice that the node sends a message with the metrics that we get from the previous node.
 
 ![Using the Mattermost node to send a message with the metrics ](./Mattermost_node.png)
+
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::

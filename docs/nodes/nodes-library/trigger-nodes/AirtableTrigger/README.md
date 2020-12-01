@@ -38,7 +38,7 @@ In the screenshot below, you will notice that the node returns the new data from
 
 ### 2. Mattermost node (post: message)
 
-This node will send a message of the new data in the channel `Information Updated` in Mattermost. If you have a different channel, use that instead.
+This node will send a message about the new data in the channel 'Information Updated' in Mattermost. If you have a different channel, use that instead.
 
 1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
 ::: v-pre

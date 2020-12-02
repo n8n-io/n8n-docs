@@ -227,6 +227,10 @@ module.exports = {
 					path: 'javascript-code-snippets.md',
 				},
 				{
+					title: '💭 Glossary',
+					path: 'glossary.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},

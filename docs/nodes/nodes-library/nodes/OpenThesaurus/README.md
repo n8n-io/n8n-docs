@@ -7,6 +7,10 @@ description: Learn how to use the OpenThesaurus node in n8n
 
 [OpenThesaurus](https://www.openthesaurus.de/) is a free German dictionary for synonyms.
 
+::: tip 🔑 Credentials
+The OpenThesaurus node does not require authentication.
+:::
+
 ## Basic Operations
 
 - Get synonyms for a German word in German

@@ -461,12 +461,13 @@ The output will then be similar to the following.
 ]
 ```
 
-##  Sorting data
-Depending on your use-case, you might want to sort the data returned by the last node. You can sort the data based on the integer values (example id, age) or string (example name).
-### 1. Sorting data based on the integer value
+##  Sort data
+Depending on your use-case, you might want to sort the data returned by the last node. You can sort the data based on the integer values (for example, id or age) or string (for example, name).
+
+### 1. Sort data based on an integer value
 You can sort the data based on a field that has numerical values using the Function node.
 
-Mock Data
+If the data structure of the incoming data is similar to the following.
 ```js
 [
   [
@@ -487,14 +488,18 @@ Mock Data
 ```
 
 #### 1. Sort the data in ascending order
-To sort the data in ascending order using the following code snippet in the Function node.
+
+To sort the data in an ascending order use the following code snippet in the Function node.
+
 ```js
 const sortedArr = items[0].json.sort((a, b) => {
     return a.id - b.id;
 })
 return [{json:sortedArr}]
 ```
+
 The output will then be similar to the following.
+
 ```js
 [
   [
@@ -516,14 +521,18 @@ The output will then be similar to the following.
 You can also use this example [workflow](https://n8n.io/workflows/801).
 
 #### 2. Sort the data in descending order
-To sort the data in descending order using the following code snippet in the Function node.
+
+To sort the data in descending order use the following code snippet in the Function node.
+
 ```js
 const sortedArr = items[0].json.sort((a, b) => {
     return b.id - a.id;
 })
 return [{json:sortedArr}]
 ```
+
 The output will then be similar to the following.
+
 ```js
  [
    [
@@ -544,10 +553,11 @@ The output will then be similar to the following.
 ```
 You can also use this example [workflow](https://n8n.io/workflows/802).
 
-### 2. Sorting data based on the string values
+### 2. Sort data based on the string values
 You can sort the data based on a field that has string values using the Function node.
 
-Mock Data
+If the data structure of the incoming data is similar to the following.
+
 ```js
 [
   [
@@ -568,7 +578,9 @@ Mock Data
 ```
 
 #### 1. Sort the data in ascending order
-To sort the data in ascending order using the following code snippet in the Function node.
+
+To sort the data in ascending order use the following code snippet in the Function node.
+
 ```js
 const sortedArr = items[0].json.sort((a, b) => {
     let a_name = a.name.toLowerCase(),
@@ -584,7 +596,9 @@ const sortedArr = items[0].json.sort((a, b) => {
 });
 return [{json:sortedArr}];
 ```
+
 The output will then be similar to the following.
+
 ```js
 [
   [
@@ -606,7 +620,9 @@ The output will then be similar to the following.
 You can also use this example [workflow](https://n8n.io/workflows/803).
 
 #### 2. Sort the data in descending order
-To sort the data in descending order using the following code snippet in the Function node.
+
+To sort the data in descending order use the following code snippet in the Function node.
+
 ```js
 const sortedArr = items[0].json.sort((a, b) => {
     let a_name = a.name.toLowerCase(),
@@ -623,7 +639,9 @@ const sortedArr = items[0].json.sort((a, b) => {
 return [{json:sortedArr}]
 
 ```
+
 The output will then be similar to the following.
+
 ```js
  [
    [
@@ -644,21 +662,24 @@ The output will then be similar to the following.
 ```
 You can also use this example [workflow](https://n8n.io/workflows/804).
 
-## Get first n items returned by the last node
+## Get the first n items returned by the last node
 
-Depending on your use-case, you might want to get the first n items returned by the last node. Use the following snippet in the Function node.
+Depending on your use-case, you might want to get only the first n items returned by the last node. Use the following snippet in the Function node.
 
 ```js
 return items.slice(0,n)
 ```
-***NOTE:*** Replace `n` in the above snippet with the number of items you want to return. For example, if you want to return the first 10 items, replace `n` with `10`.
+
+***NOTE:*** Replace `n` in the above snippet with the number of items you want to receive. For example, if you want to get the first 10 items, replace `n` with `10`.
 
 ## Remove Duplicate Values
 
 Depending on your use-case, you might want to remove the duplicate values returned by the last node.
 
 ### 1. Remove duplicate values from an array
+
 If the data structure of the incoming data is similar to the following.
+
 ```js
 [
   "n8n",
@@ -668,12 +689,16 @@ If the data structure of the incoming data is similar to the following.
   "n8n"
 ]
 ```
-You can use the following snippet to remove the duplicate values.
+
+You can use the following snippet in the Function node to remove the duplicate values.
+
 ```js
 const new_arr = [ ...new Set(items[0].json.data)];
 return new_arr.map(data => { return { json: { data } } });
 ```
+
 The output will then be similar to the following.
+
 ```js
 [
   "n8n",
@@ -683,6 +708,7 @@ The output will then be similar to the following.
 ```
 
 ### 2. Remove duplicate values from an array of objects
+
 If the data structure of the incoming data is similar to the following.
 
 ```js
@@ -717,7 +743,9 @@ If the data structure of the incoming data is similar to the following.
   }
 ]
 ```
-You can use the following snippet to remove the duplicate values.
+
+You can use the following snippet in the Function node to remove the duplicate values.
+
 ```js
 let new_arr = [];
 let new_obj = {};
@@ -731,7 +759,9 @@ for(let i in new_obj){
 }
 return [{json:new_arr}];
 ```
+
 The output will then be similar to the following.
+
 ```js
 [
   [

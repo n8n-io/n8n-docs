@@ -460,3 +460,297 @@ The output will then be similar to the following.
   }
 ]
 ```
+
+##  Sorting data
+Depending on your use-case, you might want to sort the data returned by the last node. You can sort the data based on the integer values (example id, age) or string (example name).
+### 1. Sorting data based on the integer value
+You can sort the data based on a field that has numerical values using the Function node.
+
+Mock Data
+```js
+[
+  [
+    {
+      "name": "Nathan",
+      "id": 3
+    },
+    {
+      "name": "n8n",
+      "id": 1
+    },
+    {
+      "name": "nodemation",
+      "id": 2
+    }
+  ]
+]
+```
+
+#### 1. Sort the data in ascending order
+To sort the data in ascending order using the following code snippet in the Function node.
+```js
+const sortedArr = items[0].json.sort((a, b) => {
+    return a.id - b.id;
+})
+return [{json:sortedArr}]
+```
+The output will then be similar to the following.
+```js
+[
+  [
+    {
+      "name": "n8n",
+      "id": 1
+    },
+    {
+      "name": "nodemation",
+      "id": 2
+    },
+    {
+      "name": "Nathan",
+      "id": 3
+    }
+  ]
+]
+```
+You can also use this example [workflow](https://n8n.io/workflows/801).
+
+#### 2. Sort the data in descending order
+To sort the data in descending order using the following code snippet in the Function node.
+```js
+const sortedArr = items[0].json.sort((a, b) => {
+    return b.id - a.id;
+})
+return [{json:sortedArr}]
+```
+The output will then be similar to the following.
+```js
+ [
+   [
+    {
+     "name": "Nathan",
+     "id": 3
+    },
+    {
+      "name": "nodemation",
+      "id": 2
+    },
+    {
+      "name": "n8n",
+      "id": 1
+    }
+  ]
+]
+```
+You can also use this example [workflow](https://n8n.io/workflows/802).
+
+### 2. Sorting data based on the string values
+You can sort the data based on a field that has string values using the Function node.
+
+Mock Data
+```js
+[
+  [
+    {
+      "name": "Munich",
+      "id": 3
+    },
+    {
+      "name": "Berlin",
+      "id": 1
+    },
+    {
+      "name": "Paris",
+      "id": 2
+    }
+  ]
+]
+```
+
+#### 1. Sort the data in ascending order
+To sort the data in ascending order using the following code snippet in the Function node.
+```js
+const sortedArr = items[0].json.sort((a, b) => {
+    let a_name = a.name.toLowerCase(),
+        b_name = b.name.toLowerCase();
+
+    if (a_name < b_name) {
+        return -1;
+    }
+    if (a_name > b_name) {
+        return 1;
+    }
+    return 0;
+});
+return [{json:sortedArr}];
+```
+The output will then be similar to the following.
+```js
+[
+  [
+    {
+      "name": "Berlin",
+      "id": 1
+    },
+    {
+      "name": "Munich",
+      "id": 3
+    },
+    {
+      "name": "Paris",
+      "id": 2
+    }
+  ]
+]
+```
+You can also use this example [workflow](https://n8n.io/workflows/803).
+
+#### 2. Sort the data in descending order
+To sort the data in descending order using the following code snippet in the Function node.
+```js
+const sortedArr = items[0].json.sort((a, b) => {
+    let a_name = a.name.toLowerCase(),
+        b_name = b.name.toLowerCase();
+
+    if (a_name > b_name) {
+        return -1;
+    }
+    if (a_name < b_name) {
+        return 1;
+    }
+    return 0;
+});
+return [{json:sortedArr}]
+
+```
+The output will then be similar to the following.
+```js
+ [
+   [
+    {
+     "name": "Paris",
+     "id": 2
+    },
+    {
+      "name": "Munich",
+      "id": 3
+    },
+    {
+      "name": "Berlin",
+      "id": 1
+    }
+  ]
+]
+```
+You can also use this example [workflow](https://n8n.io/workflows/804).
+
+## Get first n items returned by the last node
+
+Depending on your use-case, you might want to get the first n items returned by the last node. Use the following snippet in the Function node.
+
+```js
+return items.slice(0,n)
+```
+***NOTE:*** Replace `n` in the above snippet with the number of items you want to return. For example, if you want to return the first 10 items, replace `n` with `10`.
+
+## Remove Duplicate Values
+
+Depending on your use-case, you might want to remove the duplicate values returned by the last node.
+
+### 1. Remove duplicate values from an array
+If the data structure of the incoming data is similar to the following.
+```js
+[
+  "n8n",
+  "Nathan",
+  "nodemation",
+  "Nathan",
+  "n8n"
+]
+```
+You can use the following snippet to remove the duplicate values.
+```js
+const new_arr = [ ...new Set(items[0].json.data)];
+return new_arr.map(data => { return { json: { data } } });
+```
+The output will then be similar to the following.
+```js
+[
+  "n8n",
+  "Nathan",
+  "nodemation",
+]
+```
+
+### 2. Remove duplicate values from an array of objects
+If the data structure of the incoming data is similar to the following.
+
+```js
+[
+  {
+    "data": [
+      {
+        "name": "n8n",
+        "id": 1
+      },
+      {
+        "name": "Nathan",
+        "id": 2
+      },
+      {
+        "name": "nodemation",
+        "id": 3
+      },
+      {
+        "name": "Nathan",
+        "id": 4
+      },
+      {
+        "name": "n8n",
+        "id": 5
+      },
+      {
+        "name": "Berlin",
+        "id": 6
+      }
+    ]
+  }
+]
+```
+You can use the following snippet to remove the duplicate values.
+```js
+let new_arr = [];
+let new_obj = {};
+
+for(let i in items[0].json.data){
+  value=items[0].json.data[i].name;
+  new_obj[value] = items[0].json.data[i]
+}
+for(let i in new_obj){
+  new_arr.push(new_obj[i]);
+}
+return [{json:new_arr}];
+```
+The output will then be similar to the following.
+```js
+[
+  [
+    {
+      "name": "n8n",
+      "id": 5
+    },
+    {
+      "name": "Nathan",
+      "id": 4
+    },
+    {
+      "name": "nodemation",
+      "id": 3
+    },
+    {
+      "name": "Berlin",
+      "id": 6
+    }
+  ]
+]
+```

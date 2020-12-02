@@ -148,6 +148,14 @@ set the following:
 export NODES_EXCLUDE="[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
 ```
 
+## Include Nodes
+It is possible to include only specific nodes. For example, if you want to use only the Webhook node and the HTTP Request node, you can set the following:
+
+```bash
+export NODES_INCLUDE="[\"n8n-nodes-base.start\", \"n8n-nodes-base.webhook\",\"n8n-nodes-base.httpRequest\"]"
+```
+
+***NOTE:*** If you have workflows that do not use Trigger nodes, make sure to include the Start node.
 
 ## Custom Nodes Location
 

@@ -55,9 +55,83 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 	- **First Entry JSON** — Choose this option to return the first data entry of the last node in the workflow, as a JSON object.
     - **First Entry Binary** — Choose this option to return the binary data of the first entry of the last node in the workflow, as a binary file.
 
+## Example Usage
 
+This workflow allows you to receive the weather information of a city using the OpenWeatherMap node. You can also find the [workflow](https://n8n.io/workflows/737) on n8n.io. This example usage workflow uses the following nodes.
+- [Webhook]()
+- [OpenWeatherMap](../../nodes/OpenWeatherMap/README.md)
+- [Set](../../core-nodes/Set/README.md)
+
+The final workflow should look like the following image.
+
+![A workflow with the Webhook node](./workflow.png)
+
+### 1. Webhook node
+
+This node will trigger the workflow. We will make a GET request to the Test URL and pass on a query parameter `city`. We will use the value of this query parameter in the next node in the workflow.
+
+1. Click on ***Webhook URLs*** and select the 'Test' tab.
+2. Copy the displayed URL. We will make a GET request to this URL.
+3. Select 'Last Node' from the ***Response Mode***. This will return the data from the last executed node.
+4. Select 'All Entries' from the ***Response Data***. This will return all the entries of the last executed node.
+5. Save the workflow to register the webhook.
+6. Click on ***Execute Node*** to run the node.
+7. In a new browser tab, paste the URL you copied in the previous step and append it with `?city=Berlin`. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?city=Berlin`. We are passing a query parameter `city` and assigning it the value `Berlin`.
+8. Press the Enter (or Return) key to make a request to the Test Webhook URL.
+
+In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.
+
+![Using the Webhook node to trigger the workflow](./Webhook_node.png)
+
+### 2. OpenWeatherMap node (Current Weather)
+
+This node will return data about the current weather for the city that we received in the previous node.
+
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](../../../credentials/OpenWeatherMap/README.md).
+2. Click on the gears icon next to the ***City*** field and click on ***Add Expression***.
+::: v-pre
+3. Select the following in the ***Variable Selector*** section: Nodes > Webhook > Output Data > JSON > query > city. You can also add the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.
+4. Click on ***Execute Node*** to run the node.
+:::
+In the screenshot below, you will notice that the node returns data about the current weather in Berlin.
+
+![Using the OpenWeatherMap node to get weather updates for Berlin](./OpenWeatherMap_node.png)
+
+### 3. Set node
+
+We will use the Set node to ensure that only the data that we set in this node gets returned to the workflow. We will set the value of `tempC`, `humidity`, `windspeed`, `description` and `city` in this node.
+::: v-pre
+1. Click on ***Add Value*** and select 'String' from the dropdown list.
+2. Enter `tempC` in the ***Name*** field.
+3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
+4. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > main > temp. You can also add the following expression: `{{$node["OpenWeatherMap"].json["main"]["temp"]}}`.
+5. Click on ***Add Value*** and select 'String' from the dropdown list.
+6. Enter `humidity` in the ***Name*** field.
+7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
+8. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > main > humidity. You can also add the following expression: `{{$node["OpenWeatherMap"].json["main"]["humidity"]}}`.
+9. Click on ***Add Value*** and select 'String' from the dropdown list.
+10. Enter `windspeed` in the ***Name*** field.
+11. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
+12. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > wind > speed. You can also add the following expression: `{{$node["OpenWeatherMap"].json["wind"]["speed"]}}`.
+13. Click on ***Add Value*** and select 'String' from the dropdown list.
+14. Enter `description` in the ***Name*** field.
+15. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
+16. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
+17. Click on ***Add Value*** and select 'String' from the dropdown list.
+18. Enter `City` in the ***Name*** field.
+19. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
+20. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > name. You can also add the following expression: `{{$node["OpenWeatherMap"].json["name"]}}`.
+21. Toggle ***Keep Only Set*** to `true`.
+22. Click on ***Execute Node*** to run the node.
+:::
+In the screenshot below, you will notice that the node sets the values of `tempC`, `humidity`, `windspeed`, `description` and `city`.
+
+![Using the Set node to set the values for tempC, humidity, windspeed, description and city](./Set_node.png)
+
+Save the workflow and execute it again. This time you will receive the temperature, humidity, windspeed, description and city as the response in the browser.
 ## Further Reading
 
+- [Webhook Node — The Versatile Toolbox 🧰](https://medium.com/n8n-io/webhook-node-the-versatile-toolbox-21cb17cee862)
 - [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
 - [Cross-posting content automatically with n8n ✍️](https://medium.com/n8n-io/automating-cross-posting-blog-posts-using-n8n-%EF%B8%8F-af2a89601810)
 - [Effortless video collaboration with Whereby, Mattermost, and n8n 📹](https://medium.com/n8n-io/effortless-video-collaboration-with-whereby-mattermost-and-n8n-8fc397feb9cb)

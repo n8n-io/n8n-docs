@@ -2,7 +2,7 @@
 
 ## n8n@0.96.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.95.1...n8n@0.96.0) for this version.<br />
-**Release date:** 2020-11-25
+**Release date:** 2020-12-03
 
 - New nodes
     - Cortex
@@ -17,6 +17,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Slack: The node now loads both private and public channels
 - Bug Fixes
     - MQTT: Fixed an issue with the connection. The node now uses `mqtt@4.2.1`
+	- Fixed a bug in the Trigger-Nodes that they always required data from the first output
 - Added configuration to load only specific nodes
 
 ## n8n@0.95.1

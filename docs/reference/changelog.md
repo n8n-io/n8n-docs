@@ -17,7 +17,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Slack: The node now loads both private and public channels
 - Bug Fixes
     - MQTT: Fixed an issue with the connection. The node now uses `mqtt@4.2.1`
-	- Fixed a bug in the Trigger-Nodes that they always required data from the first output
+	- Fixed a bug which caused the Trigger-Nodes to require data from the first output
 - Added configuration to load only specific nodes
 
 ## n8n@0.95.1

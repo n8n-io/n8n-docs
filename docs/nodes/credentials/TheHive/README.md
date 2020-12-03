@@ -1,19 +1,22 @@
+---
+permalink: /credentials/theHive
+description: Learn to configure credentials for TheHive node in n8n
+---
+
 # TheHive
 
-You can find information about the operations supported by the TheHive node on the [integrations](https://n8n.io/integrations/n8n-nodes-base.thehive) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/TheHive).
+You can use these credentials to authenticate the following nodes with The Hive.
+- [TheHive](../../nodes-library/nodes/TheHive/README.md)
 
-## Pre-requisites
+## Prerequisites
 
-Have access to TheHive instance.   
-Have an org-admin account
+Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md) on your server.
 
-## Using Access Token
+## Using API
 
-1. Open your TheHive dashboard.
-2. Click on 'Organization' in the top right.
-3. Click on 'Users' Tab.
-4. Choose the right user, then click on 'Create Api Key' button.
-5. Use copied API key and your TheHive instance URL in your TheHive node credentials in n8n. Don't forget to choose the API version
+1. Access your TheHive dashboard.
+2. Click on the ***Organization*** tab in the top right.
+3. Click on the ***Create API Key*** button for the user you want to generate the API Key for.
+4. Use this ***API Key*** and your instance ***URL*** with your TheHive node credentials in n8n.
 
-
-![Getting TheHive credentials](./using-access-token.gif)
+![Getting TheHive credentials](./using-api.gif)

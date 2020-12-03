@@ -1,19 +1,21 @@
+---
+permalink: /credentials/cortex
+description: Learn to configure credentials for the Cortex node in n8n
+---
 # Cortex
 
-You can find information about the operations supported by the Cortex node on the [integrations](./integrations/n8n-nodes-base.cortex) page. You can also browse the source code of the node on [Github](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Cortex).
+You can use these credentials to authenticate the following nodes with Cortex.
+- [Cortex](../../nodes-library/nodes/Cortex/README.md)
 
-## Pre-requisites
+## Prerequisites
 
-Have access to a Cortex instance.   
-Ask admin for an API key.
+Install [Cortex](https://github.com/TheHive-Project/CortexDocs/blob/master/installation/install-guide.md) on your server.
 
-## Using Access Token
+## Using API
 
-1. Open your Cortex dashboard.
-2. Click on your user icon in the top right of the window.
-3. Click on the Settings button.
-4. Click on the 'Reveal' button at the bottom.
-5. Use the API key with your Cortex instance URL to create your Cortex node credentials in n8n.
+1. Access your Cortex dashboard.
+2. Click on your user icon on the top right corner and select 'Settings'.
+3. Scroll down to the ***API Key*** section and click on the ***Reveal*** button.
+4. Use the ***API Key*** and your ***Cortex instance URL*** with your Cortex node credentials in n8n.
 
-
-![Getting Cortex credentials](./using-access-token.gif)
+![Getting Cortex credentials](./using-api.gif)

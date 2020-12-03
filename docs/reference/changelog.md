@@ -1,5 +1,24 @@
 # Changelog
 
+## n8n@0.96.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.95.1...n8n@0.96.0) for this version.<br />
+**Release date:** 2020-11-25
+
+- New nodes
+    - Cortex
+    - Iterable
+    - Kafka Trigger
+    - TheHive
+    - TheHive Trigger
+    - Yourls
+- Enhanced nodes
+    - Hubspot: Added Contact List resource and Search operation for the Deal resource
+    - Google Calendar: You can now add multiple attendees in the Attendees field
+    - Slack: The node now loads both private and public channels
+- Bug Fixes
+    - MQTT: Fixed an issue with the connection. The node now uses `mqtt@4.2.1`
+- Added configuration to load only specific nodes
+
 ## n8n@0.95.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.95.0...n8n@0.95.1) for this version.<br />
 **Release date:** 2020-11-25

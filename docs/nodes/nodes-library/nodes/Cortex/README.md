@@ -28,7 +28,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to analyze a URL and get the job details using the Cortex node. You can also find the [workflow]() on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to analyze a URL and get the job details using the Cortex node. You can also find the [workflow](https://n8n.io/workflows/809) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Cortex]()
 

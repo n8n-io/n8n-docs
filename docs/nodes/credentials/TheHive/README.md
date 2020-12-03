@@ -7,7 +7,6 @@ description: Learn to configure credentials for TheHive node in n8n
 
 You can use these credentials to authenticate the following nodes with The Hive.
 - [TheHive](../../nodes-library/nodes/TheHive/README.md)
-- [TheHive Trigger](../../nodes-library/trigger-nodes/TheHiveTrigger/README.md)
 
 ## Prerequisites
 

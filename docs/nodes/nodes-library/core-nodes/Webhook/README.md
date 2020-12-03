@@ -57,7 +57,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 ## Example Usage
 
-This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/737) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on n8n.io. This example usage workflow uses the following nodes.
 - [Webhook]()
 - [OpenWeatherMap](../../nodes/OpenWeatherMap/README.md)
 - [Set](../../core-nodes/Set/README.md)
@@ -99,36 +99,25 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 ### 3. Set node
 
-We will use the Set node to ensure that only the data that we set in this node gets returned to the workflow. We will set the value of `tempC`, `humidity`, `windspeed`, `description` and `city` in this node.
+We will use the Set node to ensure that only the data that we set in this node gets returned to the workflow. We will set the value of `temp` and `description` in this node.
 ::: v-pre
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
-2. Enter `tempC` in the ***Name*** field.
+2. Enter `temp` in the ***Name*** field.
 3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > main > temp. You can also add the following expression: `{{$node["OpenWeatherMap"].json["main"]["temp"]}}`.
 5. Click on ***Add Value*** and select 'String' from the dropdown list.
-6. Enter `humidity` in the ***Name*** field.
+6. Enter `description` in the ***Name*** field.
 7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-8. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > main > humidity. You can also add the following expression: `{{$node["OpenWeatherMap"].json["main"]["humidity"]}}`.
+8. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
 9. Click on ***Add Value*** and select 'String' from the dropdown list.
-10. Enter `windspeed` in the ***Name*** field.
-11. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-12. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > wind > speed. You can also add the following expression: `{{$node["OpenWeatherMap"].json["wind"]["speed"]}}`.
-13. Click on ***Add Value*** and select 'String' from the dropdown list.
-14. Enter `description` in the ***Name*** field.
-15. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-16. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
-17. Click on ***Add Value*** and select 'String' from the dropdown list.
-18. Enter `city` in the ***Name*** field.
-19. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-20. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > name. You can also add the following expression: `{{$node["OpenWeatherMap"].json["name"]}}`.
-21. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
-22. Click on ***Execute Node*** to run the node.
+10. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
+11. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node sets the values of `tempC`, `humidity`, `windspeed`, `description` and `city`.
+In the screenshot below, you will notice that the node sets the values of `temp`, and `description`.
 
-![Using the Set node to set the values for tempC, humidity, windspeed, description and city](./Set_node.png)
+![Using the Set node to set the values for temp and description](./Set_node.png)
 
-Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature, humidity, windspeed, description and city as the response in the browser.
+Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature and description as the response in the browser.
 
 ::: tip 💡 Activate workflow for production
 This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.

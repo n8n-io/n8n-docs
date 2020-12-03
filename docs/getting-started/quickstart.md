@@ -6,11 +6,16 @@ There are a couple of ways to get started with n8n.
 
 ## 1. Sign-up on n8n.cloud
 
-If you aren't interested in self-hosting n8n or in running it locally, you can sign-up for a [n8n.cloud](https://www.n8n.cloud/) account.
+Sign-up for a [n8n.cloud](https://www.n8n.cloud/) account.
+
+While n8n.cloud and n8n are the same in terms of features, n8n.cloud provides certain conveniences such as:
+- Not having to set up and maintain your n8n instance
+- Managed OAuth for authentication
+- Easily upgrading to the newer n8n versions
 
 ## 2. Give it a spin using npx
 
-To spin up n8n, you can run:
+To spin up n8n using [npx](../reference/glossary.md#npx), you can run:
 
 ```bash
 npx n8n
@@ -23,7 +28,7 @@ You can then access n8n by opening:
 
 ## 3. Run with Docker
 
-To play around with n8n, you can also start it using Docker:
+To play around with n8n, you can also start it using [Docker](../reference/glossary.md#docker):
 
 ```bash
 docker run -it --rm \
@@ -52,7 +57,7 @@ In case you run into issues, check out the [troubleshooting](../reference/troubl
 
 ## 4. Install with npm
 
-To install n8n globally:
+To install n8n globally using [npm](../reference/glossary.md#npm):
 
 ```bash
 npm install n8n -g

@@ -1,7 +1,14 @@
 # Quickstart
 
+There are a couple of ways to get started with n8n.
 
-## Give n8n a spin
+[[toc]]
+
+## 1. Sign-up on n8n.cloud
+
+If you aren't interested in self-hosting n8n or in running it locally, you can sign-up for a [n8n.cloud](https://www.n8n.cloud/) account.
+
+## 2. Give it a spin using npx
 
 To spin up n8n, you can run:
 
@@ -14,7 +21,7 @@ It will download everything that is needed to start n8n.
 You can then access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
 
-## Run with Docker
+## 3. Run with Docker
 
 To play around with n8n, you can also start it using Docker:
 
@@ -43,7 +50,7 @@ More information about the Docker setup can be found in the README file of the
 
 In case you run into issues, check out the [troubleshooting](../reference/troubleshooting.md) page or ask for help in the community [forum](https://community.n8n.io/).
 
-## Install with npm
+## 4. Install with npm
 
 To install n8n globally:
 
@@ -59,12 +66,13 @@ n8n
 n8n start
 ```
 
-
-## Starting n8n with tunnel
+## 5. Post installation: Starting n8n with tunnel
 
 ::: danger
-This is only meant for local development and testing. It should not be used in production!
+This is only meant for local development and testing. It should not be used in production.
 :::
+
+**Note:** n8n.cloud users can skip this section.
 
 To be able to use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. To make that easy, n8n has a special tunnel service, which redirects requests from our servers to your local n8n instance (uses this code: [https://github.com/localtunnel/localtunnel](https://github.com/localtunnel/localtunnel)).
 

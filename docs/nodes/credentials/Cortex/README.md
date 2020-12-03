@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes with Cortex.
 
 Install [Cortex](https://github.com/TheHive-Project/CortexDocs/blob/master/installation/install-guide.md) on your server.
 
-## Using API
+## Using API Key
 
 1. Access your Cortex dashboard.
 2. Click on your user icon on the top right corner and select 'Settings'.

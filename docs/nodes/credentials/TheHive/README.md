@@ -7,12 +7,13 @@ description: Learn to configure credentials for TheHive node in n8n
 
 You can use these credentials to authenticate the following nodes with The Hive.
 - [TheHive](../../nodes-library/nodes/TheHive/README.md)
+- [TheHive Trigger](../../nodes-library/trigger-nodes/TheHiveTrigger/README.md)
 
 ## Prerequisites
 
 Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md) on your server.
 
-## Using API
+## Using API Key
 
 1. Access your TheHive dashboard.
 2. Click on the ***Organization*** tab in the top right.

@@ -4,7 +4,7 @@ permalink: /nodes/n8n-nodes-base.theHiveTrigger
 
 # TheHive Trigger
 
-[TheHive](https://thehive-project.org/) is a scalable 4-in-1 open source and free security incident response platform designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioners
+[TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/TheHive/README.md).
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 
 ###  Webhook configuration [docs](https://github.com/TheHive-Project/TheHiveDocs/blob/master/TheHive4/Administration/Webhook.md)
 
-To configure the webhook into TheHive instance you need   
+To configure the webhook into TheHive instance you need
 1. Copy the webhook URL from TheHive-Trigger node
 2. Add configuration lines to application.conf (TheHive configuration file)
     ```

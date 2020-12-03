@@ -57,7 +57,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 ## Example Usage
 
-This workflow allows you to receive the weather information of a city using the OpenWeatherMap node. You can also find the [workflow](https://n8n.io/workflows/737) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/737) on n8n.io. This example usage workflow uses the following nodes.
 - [Webhook]()
 - [OpenWeatherMap](../../nodes/OpenWeatherMap/README.md)
 - [Set](../../core-nodes/Set/README.md)
@@ -71,13 +71,13 @@ The final workflow should look like the following image.
 This node will trigger the workflow. We will make a GET request to the Test URL and pass on a query parameter `city`. We will use the value of this query parameter in the next node in the workflow.
 
 1. Click on ***Webhook URLs*** and select the 'Test' tab.
-2. Copy the displayed URL. We will make a GET request to this URL.
+2. Copy the displayed URL. We will make a GET request to this URL later on.
 3. Select 'Last Node' from the ***Response Mode***. This will return the data from the last executed node.
 4. Select 'All Entries' from the ***Response Data***. This will return all the entries of the last executed node.
 5. Save the workflow to register the webhook.
 6. Click on ***Execute Node*** to run the node.
 7. In a new browser tab, paste the URL you copied in the previous step and append it with `?city=Berlin`. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?city=Berlin`. We are passing a query parameter `city` and assigning it the value `Berlin`.
-8. Press the Enter (or Return) key to make a request to the Test Webhook URL.
+8. Press Enter (or Return) to make a request to the Test Webhook URL.
 
 In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.
 
@@ -118,17 +118,22 @@ We will use the Set node to ensure that only the data that we set in this node g
 15. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 16. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
 17. Click on ***Add Value*** and select 'String' from the dropdown list.
-18. Enter `City` in the ***Name*** field.
+18. Enter `city` in the ***Name*** field.
 19. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 20. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > name. You can also add the following expression: `{{$node["OpenWeatherMap"].json["name"]}}`.
-21. Toggle ***Keep Only Set*** to `true`.
+21. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
 22. Click on ***Execute Node*** to run the node.
 :::
 In the screenshot below, you will notice that the node sets the values of `tempC`, `humidity`, `windspeed`, `description` and `city`.
 
 ![Using the Set node to set the values for tempC, humidity, windspeed, description and city](./Set_node.png)
 
-Save the workflow and execute it again. This time you will receive the temperature, humidity, windspeed, description and city as the response in the browser.
+Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature, humidity, windspeed, description and city as the response in the browser.
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
+:::
+
 ## Further Reading
 
 - [Webhook Node — The Versatile Toolbox 🧰](https://medium.com/n8n-io/webhook-node-the-versatile-toolbox-21cb17cee862)

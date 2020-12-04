@@ -119,7 +119,7 @@ Double click on the node and create credentials for the node by clicking on the 
 
 To get the List ID, refer to the [FAQs](../../../nodes/nodes-library/nodes/Trello/README.md#how-do-i-find-the-list-id) section of the Trello node documentation. Copy and paste the ID of the list in which you want to create new cards in the ***List ID*** field in n8n.
 
-This is what I added in the ***Title*** field (you can click on ***Add Expression*** and paste this):
+This is what I added in the ***Name*** field (you can click on ***Add Expression*** and paste this):
 
 ```
 [{{$node["IF"].json["fields"]["Score"]}}] {{$node["IF"].json["fields"]["Name"]}}
@@ -134,7 +134,7 @@ Score: {{$node["IF"].json["fields"]["Score"]}}
 Description: {{$node["IF"].json["fields"]["Description"]}}
 ```
 
-***NOTE:*** You can set a custom title and description. Enter the text you want in the ***Expression Editor***. Select the data you want to use from the previous nodes from the ***Variable Selector*** section.
+***NOTE:*** You can set a custom name and description. Enter the text you want in the ***Expression Editor***. Select the data you want to use from the previous nodes from the ***Variable Selector*** section.
 
 Click on the ***Execute Node*** button on the top right to create a new card in Trello.
 

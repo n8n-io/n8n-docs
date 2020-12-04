@@ -56,7 +56,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file in the channel. You can also find the [workflow](https://n8n.io/workflows/811) on n8n.io This example usage workflow uses the following nodes.
+This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file to the channel. You can also find the [workflow](https://n8n.io/workflows/811) on n8n.io This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Slack]()
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
@@ -71,7 +71,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Slack node (create: channel)
 
-This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack.
+This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the official documentation on [Scopes and permissions](https://api.slack.com/scopes) to learn more.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
 2. You'll have to enter credentials for the Slack node. You can find out how to enter credentials for this node [here](../../../credentials/Slack/README.md).
@@ -138,7 +138,7 @@ In the screenshot below, you will notice that the HTTP Request node fetches the 
 This node will upload the file that we got from the previous node to a channel we specify.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
-2. Select the credentials that you entered in the previous node.
+2. Select the credentials that you entered in the previous Slack node.
 3. Select 'File' from ***Resource*** dropdown list.
 4. Select 'Upload' from the ***Operation*** dropdown list.
 5. Toggle ***Binary Data*** to true.

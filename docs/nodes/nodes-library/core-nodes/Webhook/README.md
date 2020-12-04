@@ -123,6 +123,73 @@ Save the workflow and execute it again by clicking on the ***Execute Workflow***
 This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 :::
 
+## FAQs
+
+### 1. Where to find the Webhook URLs?
+
+The Webhook node has two URLs - a Test URL and a Production URL.
+To get these URLs, follow the steps mentioned below.
+1. Click on ***Webhook URLs***. By default, the node displays the Production URL.
+2. If you want the Test URL, click on the ***Test*** tab.
+3. To copy the URL, click on the displayed URL.
+
+### 2. How to use cURL to trigger the Webhook node?
+
+You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.
+With cURL, you can make an HTTP request without any parameters. Moreover, you can make an HTTP request with a body parameter, header parameters, and you can even send files.
+
+**Note:** In the following commands, replace `https://your-n8n.url/webhook/path` with the your webhook URL.
+
+- #### Make an HTTP request without any parameters
+ To make a GET request without any parameters, use the following command in your terminal.
+
+```sh
+curl --request GET https://your-n8n.url/webhook/path
+```
+
+To make a POST request, use the following command.
+
+```bash
+curl --request POST https://your-n8n.url/webhook/path
+```
+
+- #### Make an HTTP request with body parameter
+
+To make an HTTP request with a body parameter, use the following command.
+
+```sh
+curl --request GET https://your-n8n.url/webhook/path --data 'key=value'
+```
+
+- #### Make an HTTP request with header parameter
+
+To make an HTTP request with a header parameter, use the following command.
+
+```sh
+curl --request GET https://your-n8n.url/webhook/path --header 'key=value'
+```
+
+- #### Make an HTTP request to send a file
+
+To send a file with the HTTP request, use the following command.
+
+```sh
+curl --request GET https://your-n8n.url/webhook/path --from 'key=@/path/to/file'
+```
+Replace `/path/to/file` with the path of the file you want to send.
+
+### 3. How to use the HTTP Request node to trigger the Webhook node?
+
+The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
+1. Create a new workflow.
+2. Add the HTTP Request node to the workflow.
+3. Select the appropriate method from the ***Request Method*** dropdown list. For example, if you have selected GET as the HTTP method in your Webhook node, select GET as the request method in the HTTP Request node.
+4. Copy the URL from the Webhook node, and paste it in the ***URL*** field in the HTTP Request node.
+5. Execute the workflow with the Webhook node if you're using the Test URL.
+6. Execute the HTTP Request node.
+
+You can refer to [this video](https://www.youtube.com/watch?v=WLIDTRJGfWw) to learn more.
+
 ## Further Reading
 
 - [Webhook Node — The Versatile Toolbox 🧰](https://medium.com/n8n-io/webhook-node-the-versatile-toolbox-21cb17cee862)

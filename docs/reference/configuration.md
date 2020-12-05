@@ -28,6 +28,13 @@ N8N_LISTEN_ADDRESS=1.1.1.1
 
 ## Base URL
 
+::: warning 💡 Keep in mind
+That variable does only get used when the `n8n-editor-ui` package gets build manually and
+does so not get used in combination with the default n8n docker image. By default `/` does
+get used, meaning it uses the root-domain.
+:::
+
+
 Tells the frontend how to reach the REST API of the backend.
 
 ```bash

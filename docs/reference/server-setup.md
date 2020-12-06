@@ -135,7 +135,7 @@ services:
       - WEBHOOK_TUNNEL_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${DATA_FOLDER}/.n8n:/root/.n8n
+      - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 
 

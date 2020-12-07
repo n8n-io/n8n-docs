@@ -109,11 +109,10 @@ We will use the Set node to ensure that only the data that we set in this node g
 6. Enter `description` in the ***Name*** field.
 7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 8. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
-9. Click on ***Add Value*** and select 'String' from the dropdown list.
-10. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
-11. Click on ***Execute Node*** to run the node.
+9. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
+10. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node sets the values of `temp`, and `description`.
+In the screenshot below, you will notice that the node sets the values of `temp` and `description`.
 
 ![Using the Set node to set the values for temp and description](./Set_node.png)
 

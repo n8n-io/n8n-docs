@@ -154,7 +154,7 @@ In the screenshot below, you will notice that the node uploads the file to the c
 
 ### 1. How to create a private channel?
 
-To create a private channel, follow the steps mention below.
+To create a private channel, follow the steps mentioned below.
 1. Select 'Channel' from the ***Resource*** dropdown list.
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Click on the ***Add Field*** button.

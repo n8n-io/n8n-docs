@@ -29,9 +29,9 @@ N8N_LISTEN_ADDRESS=1.1.1.1
 ## Base URL
 
 ::: warning 💡 Keep in mind
-That variable does only get used when the `n8n-editor-ui` package gets build manually and
-does so not get used in combination with the default n8n docker image. By default `/` does
-get used, meaning it uses the root-domain.
+This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence,
+it does not get used in combination with the default n8n docker image. By default, `/`
+gets used, meaning that it uses the root-domain.
 :::
 
 

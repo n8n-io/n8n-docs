@@ -126,13 +126,13 @@ This example workflow uses the Webhook node, which is a Trigger node. You'll nee
 
 ### 1. Where to find the Webhook URLs?
 
-The Webhook node has two URLs - a Test URL and a Production URL.
+The Webhook node has two URLs - Test URL and Production URL.
 To get these URLs, follow the steps mentioned below.
 1. Click on ***Webhook URLs***. By default, the node displays the Production URL.
 2. If you want the Test URL, click on the ***Test*** tab.
 3. To copy the URL, click on the displayed URL.
 
-Here is a GIF of demonstrating how to retrieve the production and test webhook URLs in n8n:
+Here is a GIF demonstrating how to retrieve the test and production webhook URLs in n8n.
 
 ![Retrieving the Test and Production URLs from the Webhook node](./webhook-url.gif)
 
@@ -146,7 +146,7 @@ The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests 
 5. Execute the workflow with the Webhook node if you're using the Test URL.
 6. Execute the HTTP Request node.
 
-Here is a vidoe of demonstrating how to send request to Webhook based workflows using the HTTP Request node:
+Here is a video demonstrating how to send a request to a Webhook based workflow using the HTTP Request node:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

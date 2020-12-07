@@ -71,7 +71,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Slack node (create: channel)
 
-This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the official documentation on [Scopes and permissions](https://api.slack.com/scopes) to learn more.
+This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the [FAQs](#_2-how-to-add-oauth-scopes-to-a-slack-app) to learn how to add scopes.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
 2. You'll have to enter credentials for the Slack node. You can find out how to enter credentials for this node [here](../../../credentials/Slack/README.md).
@@ -159,6 +159,19 @@ To create a private channel, follow the steps mention below.
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Click on the ***Add Field*** button.
 4. Toggle ***Is Private*** to `true`.
+
+### 2. How to add OAuth Scopes to a Slack app?
+
+Your app needs appropriate scopes and permissions to perform actions. For example, if you want to create a new channel, your app requires the `channel:manage` scope. To add scopes and permissions, follow the steps mentioned below.
+1. Navigate to the [Slack App dashboard](https://api.slack.com/apps) page and select your app.
+2. Click on 'OAuth & Permissions' under the ***Feature*** section on the left sidebar.
+3. Scroll down to the ***Scopes*** section.
+4. If you're building a bot, click on ***Add an OAuth Scope*** under the ***Bot Token Scopes***.
+5. Select the permissions you want to give to your bot from the dropdown list.
+6. If you want the app to access user data and act on behalf of users that authorize them, add scopes under the ***User Token Scopes***.
+7. When you add new scopes, Slack will ask you to reinstall the app. Click on 'reinstall your app' on the top of the page and reinstall the app.
+
+You can refer to the official documentation on [Scopes and permissions](https://api.slack.com/scopes) to learn more.
 
 ## Further Reading
 

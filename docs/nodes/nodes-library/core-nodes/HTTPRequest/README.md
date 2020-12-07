@@ -92,8 +92,6 @@ The start node exists by default when you create a new workflow.
 
 ### 1. How to fetch a binary file from a URL?
 
-To fetch a binary file with the HTTP Request node, follow the steps mentioned below.
-
 1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://n8n.io/n8n-logo.png` to fetch the n8n logo.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. (Optional) Change the binary property value in the ***Binary Property*** field. Throughout the workflow, you can refer to the binary data with the value you set in this field.
@@ -106,10 +104,7 @@ To fetch a binary file with the HTTP Request node, follow the steps mentioned be
 Depending on your use-case, you might want to send a binary file to an API endpoint. To do that, follow the steps mentioned below.
 
 1. Connect the HTTP Request node with a node that has previously fetched the binary file. This node can be an HTTP Request node, [Read Binary File](../ReadBinaryFile/README.md) node, [Google Drive](../../nodes/GoogleDrive/README.md) node or any such node.
-2. Select 'POST' from the ***Request Method*** dropdown list.
-
-**Note:** Refer to the API documentation of your API to make sure that you have selected the correct HTTP request method.
-
+2. Select 'POST' from the ***Request Method*** dropdown list (**Note:** Refer to the API documentation of your API to make sure that you have selected the correct HTTP request method).
 3. Enter the URL where you want to send the binary file in the ***URL*** field.
 4. Toggle ***JSON/RAW Parameters*** to `true`.
 5. Toggle ***Send Binary Data*** to `true`.
@@ -120,7 +115,6 @@ Depending on your use-case, you might want to send a binary file to an API endpo
 
 ### 3. How to get the HTTP status code after an execution?
 
-To get the HTTP status code, follow the steps mentioned below.
 1. Click on ***Add Option*** and select 'Full Response'.
 2. Toggle ***Full Response*** to `true`.
 
@@ -128,7 +122,6 @@ When the node gets executed, you will receive the HTTP status code, the HTTP sta
 
 ### 4. How to send XML data?
 
-To send XML data, follow the steps mentioned below.
 1. Toggle ***JSON/RAW Parameters*** to `true`.
 2. Click on ***Add Option*** and select 'Body Content Type'.
 3. Select 'RAW/Custom' from the ***Body Content Type*** field.

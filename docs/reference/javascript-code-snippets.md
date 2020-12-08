@@ -469,21 +469,19 @@ You can sort the data based on a field that has numerical values using the Funct
 
 If the data structure of the incoming data is similar to the following.
 ```js
-[
-  [
-    {
-      "name": "Nathan",
-      "id": 3
-    },
-    {
-      "name": "n8n",
-      "id": 1
-    },
-    {
-      "name": "nodemation",
-      "id": 2
-    }
-  ]
+ [
+  {
+    "name": "Stefan",
+    "id": 3
+  },
+  {
+    "name": "Jim",
+    "id": 1
+ },
+ {
+    "name": "Hans",
+    "id": 2
+ }
 ]
 ```
 
@@ -492,8 +490,8 @@ If the data structure of the incoming data is similar to the following.
 To sort the data in an ascending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    return a.id - b.id;
+const sortedArr = items.sort((a, b) => {
+    return a.json.id - b.json.id;
 })
 return [{json:sortedArr}]
 ```
@@ -504,16 +502,25 @@ The output will then be similar to the following.
 [
   [
     {
-      "name": "n8n",
-      "id": 1
+      "json":
+      {
+          "name": "Jim",
+          "id": 1
+      }
     },
     {
-      "name": "nodemation",
-      "id": 2
+      "json":
+      {
+          "name": "Hans",
+          "id": 2
+      }
     },
     {
-      "name": "Nathan",
-      "id": 3
+      "json":
+      {
+          "name": "Stefan",
+          "id": 3
+      }
     }
   ]
 ]
@@ -525,8 +532,8 @@ You can also use this example [workflow](https://n8n.io/workflows/801).
 To sort the data in descending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    return b.id - a.id;
+const sortedArr = items.sort((a, b) => {
+    return b.json.id - a.json.id;
 })
 return [{json:sortedArr}]
 ```
@@ -534,19 +541,28 @@ return [{json:sortedArr}]
 The output will then be similar to the following.
 
 ```js
- [
-   [
+[
+  [
     {
-     "name": "Nathan",
-     "id": 3
+      "json":
+      {
+          "name": "Stefan",
+          "id": 3
+      }
     },
     {
-      "name": "nodemation",
-      "id": 2
+      "json":
+      {
+          "name": "Hans",
+          "id": 2
+      }
     },
     {
-      "name": "n8n",
-      "id": 1
+      "json":
+      {
+          "name": "Jim",
+          "id": 1
+      }
     }
   ]
 ]
@@ -559,21 +575,19 @@ You can sort the data based on a field that has string values using the Function
 If the data structure of the incoming data is similar to the following.
 
 ```js
-[
-  [
-    {
-      "name": "Munich",
-      "id": 3
-    },
-    {
-      "name": "Berlin",
-      "id": 1
-    },
-    {
-      "name": "Paris",
-      "id": 2
-    }
-  ]
+ [
+  {
+    "name": "Jim",
+    "id": 3
+  },
+  {
+    "name": "Stefan",
+    "id": 1
+ },
+ {
+    "name": "Hans",
+    "id": 2
+ }
 ]
 ```
 
@@ -582,9 +596,9 @@ If the data structure of the incoming data is similar to the following.
 To sort the data in ascending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    let a_name = a.name.toLowerCase(),
-        b_name = b.name.toLowerCase();
+const sortedArr = items.sort((a, b) => {
+    let a_name = a.json.name.toLowerCase(),
+        b_name = b.json.name.toLowerCase();
 
     if (a_name < b_name) {
         return -1;
@@ -603,16 +617,25 @@ The output will then be similar to the following.
 [
   [
     {
-      "name": "Berlin",
-      "id": 1
+      "json":
+      {
+          "name": "Hans",
+          "id": 2
+      }
     },
     {
-      "name": "Munich",
-      "id": 3
+      "json":
+      {
+          "name": "Jim",
+          "id": 3
+      }
     },
     {
-      "name": "Paris",
-      "id": 2
+      "json":
+      {
+          "name": "Stefan",
+          "id": 1
+      }
     }
   ]
 ]
@@ -624,9 +647,9 @@ You can also use this example [workflow](https://n8n.io/workflows/803).
 To sort the data in descending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    let a_name = a.name.toLowerCase(),
-        b_name = b.name.toLowerCase();
+const sortedArr = items.sort((a, b) => {
+    let a_name = a.json.name.toLowerCase(),
+        b_name = b.json.name.toLowerCase();
 
     if (a_name > b_name) {
         return -1;
@@ -636,26 +659,34 @@ const sortedArr = items[0].json.sort((a, b) => {
     }
     return 0;
 });
-return [{json:sortedArr}]
-
+return [{json:sortedArr}];
 ```
 
 The output will then be similar to the following.
 
 ```js
- [
-   [
+[
+  [
     {
-     "name": "Paris",
-     "id": 2
+      "json":
+      {
+          "name": "Stefan",
+          "id": 1
+      }
     },
     {
-      "name": "Munich",
-      "id": 3
+      "json":
+      {
+          "name": "Jim",
+          "id": 3
+      }
     },
     {
-      "name": "Berlin",
-      "id": 1
+      "json":
+      {
+          "name": "Hans",
+          "id": 2
+      }
     }
   ]
 ]

@@ -12,7 +12,7 @@ The Cron node is useful to schedule the workflows to run periodically at fixed d
 2. Make sure that the timezone is set correctly for the n8n instance (or the workflow).
 :::
 
-You can find the example usage of the Cron node in the [Creating Your First Workflow](../../../../getting-started/create-your-first-workflow/create-your-first-workflow/README.md) guide.
+You can find the example usage of the Cron node in the [Create Your First Workflow](../../../../getting-started/create-your-first-workflow/create-your-first-workflow/README.md) guide.
 
 
 ## Node Reference

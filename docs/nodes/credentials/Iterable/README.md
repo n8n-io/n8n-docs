@@ -5,7 +5,7 @@ description: Learn to configure credentials for the Iterable node in n8n
 
 # Iterable
 
-You can use these credentials to authenticate the following nodes with Strava.
+You can use these credentials to authenticate the following nodes with Iterable.
 - [Iterable](../../nodes-library/nodes/Iterable/README.md)
 
 ## Prerequisites

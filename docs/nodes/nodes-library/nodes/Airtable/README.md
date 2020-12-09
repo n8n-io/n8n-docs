@@ -22,8 +22,9 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to insert and list data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/601) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to insert, update and read data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/601) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
+- [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [Airtable]()
 
@@ -35,6 +36,17 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
+### 2. HTTP Request node (GET)
+
+This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node to read an image file from the path you specify.
+
+1. Enter the URL of the image in the ***URL*** field. For example, `https://n8n.io/n8n-logo.png`.
+2. Select 'File' from the ***Response Format*** dropdown list.
+3. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the HTTP Request node fetches the image from the URL.
+
+![Using the HTTP Request node to fetch an image from a URL](./HTTPRequest_node.png)
 
 ### 2. Set node
 

@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes with IMAP.
 
 ## Prerequisites
 
-Create an email account on a service with IMAP support. 
+Create an email account on a service with IMAP support.
 
 ## Using IMAP
 
@@ -21,13 +21,30 @@ Create an email account on a service with IMAP support.
 
 ## Using Gmail
 
-1. First you have to enable IMAP on your account. You can follow the first step described here: https://support.google.com/mail/answer/7126229?hl=en
-2. Regular IMAP access is considered "Less secure access" by Google. So you have to allow this. Head to https://accounts.google.com then to Security
-3. Scroll down until you see the Less secure app access and enable it
-4. You also have to enable 2-Step verification. On the Signing in to Google section in the same page, activate 2-Step verification
-5. After setting up 2-Step verification you can now create an App password. Create one.
-6. Set up the node using the hostname, port and settings described above in the first step and the password generated on the previous step
+1. Access your [Gmail](https://mail.google.com) account.
+2. Click on the gears icon on the top and click on ***See all settings***.
+3. Click on the ***Forwarding and POP/IMAP*** tab.
+4. Under the ***IMAP access*** section, select 'Enable IMAP'.
+5. Click on the ***Save Changes*** button.
+6. Go to your [Google Account](https://myaccount.google.com) page.
+7. Click on ***Security*** on the left sidebar.
+8. Click on ***2-Step Verification*** under the ***Signing in to Google*** section.
+9. Set up your 2-Step Verification method.
+10. Click on ***App passwords*** under the ***Signing in to Google*** section.
+11. Select 'Mail' from the ***Select app*** dropdown list.
+12. Select 'Other' from the ***Select device*** dropdown list.
+13. Enter a name in the text field.
+14. Click on the ***GENERATE*** button.
+15. Copy the displayed password.
+16. In the IMAP node credentials, enter your email address in the ***User*** field. For example, `example@gmail.com`.
+17. Paste the App password you copied in **Step 15** in the ***Password*** field.
+18. Enter `imap.google.com` in the ***Host*** field.
+19. Toggle ***SSL/TLS*** to `true`.
+20. Click on ***Save*** to save your credentials.
 
-Important note: You have to set up Ignore SSL issues in the node settings inside options to true as Gmail certificate is self signed.
+**Note:** Before executing the node, set the ***Ignore SSL Issues*** option to true as the Gmail certificate is self-signed.
 
-If you are using a Google Suite account, instead of heading to https://accounts.google.com you have to access the admin panel located at https://admin.google.com. Steps are fairly similar but administrator must have Less secure apps enabled on your corporation for this to work.
+## Further Reading
+
+- [Set up IMAP](https://support.google.com/mail/answer/7126229?hl=en)
+- [Sign in with App Passwords](https://support.google.com/accounts/answer/185833?hl=en)

@@ -2,6 +2,10 @@
 
 Let's create your first workflow in n8n. We'll create a workflow that will add a new card to a  Trello board whenever a user submits a feedback score that is less than seven. You can also find the [workflow](https://n8n.io/workflows/791) on n8n.io.
 
+Here's a video that will take you through the process of creating this workflow.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NEuto0F41WY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Prerequisites
 
 You’ll need the following tools and resources to complete the tutorial:

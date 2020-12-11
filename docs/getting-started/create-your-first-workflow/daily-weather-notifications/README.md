@@ -2,6 +2,11 @@
 
 Let's create your first workflow in n8n. We'll create a workflow which will run every morning at 8 AM and will send an SMS to tell you if you should take a sweater with you. You can also find the [workflow](https://n8n.io/workflows/409) on n8n.io.
 
+Here's a video that will take you through the process of creating this workflow.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QhTsOMvqLuo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Prerequisites
 
 You’ll need the following tools and resources to complete the tutorial:

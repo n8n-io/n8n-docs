@@ -49,7 +49,7 @@ In the screenshot below, you will notice that the node creates a short URL for t
 
 ### 3. Yourls1 node (stats: url)
 
-This node will give us the statistics of the short URL that we specify. We will get the statistics of the URL that we created in the previous step.
+This node will give us the statistics of the short URL that we specify. We will get the statistics for the URL that we created in the previous step.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Stats' from the ***Operation*** dropdown list.

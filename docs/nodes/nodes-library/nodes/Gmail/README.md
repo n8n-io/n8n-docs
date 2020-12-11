@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Gmail node (getAll: message)
 
-This node will return 10 messages with the label `n8n` from Gmail. If you want to return all the messages toggle ***Return All*** to `true`.
+This node will return ten messages with the label `n8n` from Gmail. If you want to return all the messages toggle ***Return All*** to `true`.
 
 1. First of all, you'll have to enter credentials for the Gmail node. You can find out how to do that [here](../../../credentials/Google/README.md).
 2. Select 'Message' from the ***Resource*** dropdown list.
@@ -67,7 +67,7 @@ This node will return 10 messages with the label `n8n` from Gmail. If you want t
 7. Select the label from the ***Label IDs*** dropdown list.
 8. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns 10 email messages with the label `n8n`.
+In the screenshot below, you will notice that the node returns ten email messages with the label `n8n`.
 
 ![Using the Gmail node to get all messages with a particular label](./Gmail_node.png)
 
@@ -118,7 +118,7 @@ To return all the messages with a particular label, follow the steps mentioned b
 5. Enter `label:LABEL_NAME` in the ***Query*** field. Replace `LABEL_NAME` with your label name.
 6. Click on ***Execute Node*** to run the node.
 
-Refer to [Search operators you can use with Gmail](https://support.google.com/mail/answer/7190?hl=en) to learn more about how to filter your search results.
+Refer to [Search operators you can use with Gmail](https://support.google.com/mail/answer/7190?hl=en) to learn more about filtering your search results.
 
 ## Further Reading
 

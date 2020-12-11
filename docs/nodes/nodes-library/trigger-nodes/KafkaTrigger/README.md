@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive messages from a topic and send an SMS if the value of temp is greater than 50. You can also find the [workflow](https://n8n.io/workflows/814) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive messages from a topic and send an SMS if the value of the temperature is greater than 50. You can also find the [workflow](https://n8n.io/workflows/814) on n8n.io. This example usage workflow would use the following nodes.
 - [Kafka Trigger]()
 - [IF](../../core-nodes/If/README.md)
 - [Vonage](../../nodes/Vonage/README.md)
@@ -52,11 +52,11 @@ This node will compare the value of `temp` that we received in the message from 
 6. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node returns output for **true** when the temp is greater than 50.
+In the screenshot below, you will notice that the node returns output for **true** when the temperature is greater than 50.
 
 ![Using the IF node to check if the temp is larger than 50](./IF_node.png)
 
-### 4. Vonage node (send: sms)
+### 3. Vonage node (send: sms)
 
 This node sends an SMS to the specified phone number when the value of `temp` is greater than `50`.
 
@@ -78,7 +78,7 @@ In the screenshot below, you will notice that the node sends an SMS with the val
 
 ![Using the Vonage node to send an SMS](./Vonage_node.png)
 
-### 5. NoOp node
+### 4. NoOp node
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.

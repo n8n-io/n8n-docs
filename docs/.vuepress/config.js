@@ -227,6 +227,10 @@ module.exports = {
 					path: 'javascript-code-snippets.md',
 				},
 				{
+					title: '💭 Glossary',
+					path: 'glossary.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},
@@ -273,8 +277,9 @@ module.exports = {
 					path: 'getting-started/key-components.md',
 				},
 				{
-					title: '💪 Creating Your First Workflow',
-					path: 'getting-started/creating-your-first-workflow.md',
+					title: '💪 Create Your First Workflow',
+					children: getChildrenFolders('getting-started/create-your-first-workflow'),
+
 				},
 				{
 					title: '🤘 Tutorials',

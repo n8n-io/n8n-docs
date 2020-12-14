@@ -28,10 +28,17 @@ N8N_LISTEN_ADDRESS=1.1.1.1
 
 ## Base URL
 
+::: warning 💡 Keep in mind
+This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence,
+it does not get used in combination with the default n8n docker image. By default, `/`
+gets used, meaning that it uses the root-domain.
+:::
+
+
 Tells the frontend how to reach the REST API of the backend.
 
 ```bash
-export VUE_APP_URL_BASE_API="https://n8n.example.com/"
+export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
 
 
@@ -48,7 +55,7 @@ they get saved to the database. It is also possible to overwrite that key and
 set it via an environment variable.
 
 ```bash
-export N8N_ENCRYPTION_KEY="<SOME RANDOM STRING>"
+export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 
 
@@ -148,6 +155,14 @@ set the following:
 export NODES_EXCLUDE="[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
 ```
 
+## Include Nodes
+It is possible to include only specific nodes. For example, if you want to use only the Webhook node and the HTTP Request node, you can set the following:
+
+```bash
+export NODES_INCLUDE="[\"n8n-nodes-base.start\", \"n8n-nodes-base.webhook\",\"n8n-nodes-base.httpRequest\"]"
+```
+
+**Note:** If you have workflows that do not use Trigger nodes, make sure to include the Start node.
 
 ## Custom Nodes Location
 
@@ -204,7 +219,7 @@ default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example,
 if you want to set the timezone to Berlin (Germany):
 
 ```bash
-export GENERIC_TIMEZONE="Europe/Berlin"
+export GENERIC_TIMEZONE=Europe/Berlin
 ```
 
 You can find the name of your timezone here:
@@ -219,7 +234,7 @@ the ID of the tunnel (if used) gets saved by default in the subfolder
 user-folder via an environment variable.
 
 ```bash
-export N8N_USER_FOLDER="/home/jim/n8n"
+export N8N_USER_FOLDER=/home/jim/n8n
 ```
 
 
@@ -234,7 +249,7 @@ displayed correctly in the Editor UI and even more important is that the correct
 webhook URLs get registred with the external services.
 
 ```bash
-export WEBHOOK_TUNNEL_URL="https://n8n.example.com/"
+export WEBHOOK_TUNNEL_URL=https://n8n.example.com/
 ```
 
 

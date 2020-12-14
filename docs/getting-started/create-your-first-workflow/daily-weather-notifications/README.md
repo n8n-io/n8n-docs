@@ -1,14 +1,19 @@
-# Creating Your First Workflow
+# Daily Weather Notifications with OpenWeatherMap and Twilio ☀️
 
 Let's create your first workflow in n8n. We'll create a workflow which will run every morning at 8 AM and will send an SMS to tell you if you should take a sweater with you. You can also find the [workflow](https://n8n.io/workflows/409) on n8n.io.
+
+Here's a video that will take you through the process of creating this workflow.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QhTsOMvqLuo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Prerequisites
 
 You’ll need the following tools and resources to complete the tutorial:
 
-- **n8n** — You can find details on how to install n8n in the [Quickstart](quickstart.md) page.
-- **OpenWeatherMap account** - You'll need to obtain an Access Token for the OpenWeatherMap API. You can find instructions on how to obtain that [here](../nodes/credentials/OpenWeatherMap/README.md).
-- **Twilio account** - You'll need to obtain the Account SID and Auth Token for the Twilio API. You can find instructions on how to obtain that [here](../nodes/credentials/Twilio/README.md). You will also need a Twilio Phone Number. You can find information on how to obtain that [here](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account).
+- **n8n** — You can find details on how to install n8n in the [Quickstart](../../quickstart.md) page.
+- **OpenWeatherMap account** - You'll need to obtain an Access Token for the OpenWeatherMap API. You can find instructions on how to obtain that [here](../../../nodes/credentials/OpenWeatherMap/README.md).
+- **Twilio account** - You'll need to obtain the Account SID and Auth Token for the Twilio API. You can find instructions on how to obtain that [here](../../../nodes/credentials/Twilio/README.md). You will also need a Twilio Phone Number. You can find information on how to obtain that [here](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account).
 
 **Note:** It might take a few minutes for the OpenWeatherMap API Access Token to activate.
 
@@ -16,15 +21,15 @@ You’ll need the following tools and resources to complete the tutorial:
 ## Building the Workflow
 
 This workflow would use the following nodes.
-- [Cron](../nodes/nodes-library/core-nodes/Cron/README.md) - Specify when the workflow should start (be triggered)
-- [OpenWeatherMap](../nodes/nodes-library/nodes/OpenWeatherMap/README.md) - Get weather details for a particular city
-- [IF](../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
-- [Twilio](../nodes/nodes-library/nodes/Twilio/README.md) - Send an SMS
-- [NoOp](../nodes/nodes-library/core-nodes/NoOperationDoNothing/README.md) - Do nothing (optional)
+- [Cron](../../../nodes/nodes-library/core-nodes/Cron/README.md) - Specify when the workflow should start (be triggered)
+- [OpenWeatherMap](../../../nodes/nodes-library/nodes/OpenWeatherMap/README.md) - Get weather details for a particular city
+- [IF](../../../nodes/nodes-library/core-nodes/IF/README.md) - Conditional logic to decide the flow of the workflow
+- [Twilio](../../../nodes/nodes-library/nodes/Twilio/README.md) - Send an SMS
+- [NoOp](../../../nodes/nodes-library/core-nodes/NoOperationDoNothing/README.md) - Do nothing (optional)
 
 The final workflow should look like the following image.
 
-![The final workflow](./images/creating-your-first-workflow/final-workflow.png)
+![The final workflow](./images/final-workflow.png)
 
 
 ### 1. Cron node
@@ -35,7 +40,7 @@ Double click on the *Cron* node to enter the Node Editor. Click on the ***Add Cr
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Cron node](./images/creating-your-first-workflow/creating-the-cron-node.gif)
+![Creating the Cron node](./images/creating-the-cron-node.gif)
 
 
 ### 2. OpenWeatherMap node
@@ -46,7 +51,7 @@ We'll let the different fields stay as they are. I entered `berlin,de` in the **
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the OpenWeatherMap node](./images/creating-your-first-workflow/creating-the-openweathermap-node.gif)
+![Creating the OpenWeatherMap node](./images/creating-the-openweathermap-node.gif)
 
 
 ### 3. IF node
@@ -59,11 +64,11 @@ This will open up the ***Variable Selector***. Delete the `0` in the ***Expressi
 
 `Nodes > OpenWeatherMap > Output Data > JSON > main > feels_like`
 
-For the ***Operation*** field, we'll let it be set to 'Smaller'. For the ***Value 2***, I entered `18`. This will ensure that the *IF* node returns true only if the weather is lower than 18°C. Feel free to change this to some other value. 
+For the ***Operation*** field, we'll let it be set to 'Smaller'. For the ***Value 2***, I entered `18`. This will ensure that the *IF* node returns true only if the weather is lower than 18°C. Feel free to change this to some other value.
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the IF node](./images/creating-your-first-workflow/creating-the-if-node.gif)
+![Creating the IF node](./images/creating-the-if-node.gif)
 
 
 ### 4. Twilio node
@@ -84,7 +89,7 @@ Wear a sweater today, it is {{$node["OpenWeatherMap"].json["main"]["feels_like"]
 
 Here's a GIF of me following the steps mentioned above.
 
-![Creating the Twilio node](./images/creating-your-first-workflow/creating-the-twilio-node.gif)
+![Creating the Twilio node](./images/creating-the-twilio-node.gif)
 
 
 ### 5. NoOp node
@@ -95,18 +100,18 @@ To test the workflow, click on the ***Execute Workflow*** button at the bottom o
 
 Don't forget to save the workflow and then click on the ***Activate*** toggle on the top right of the screen to set it to true and activate the workflow. Here's a GIF of me following the steps mentioned above.
 
-![Creating the NoOp node](./images/creating-your-first-workflow/creating-the-noop-node.gif)
+![Creating the NoOp node](./images/creating-the-noop-node.gif)
 
-I raised the value of ***Value 2*** in the *IF* node from 18 to 27 to see what the SMS would look like. This is how the finished workflow and the SMS looked like. 
+I raised the value of ***Value 2*** in the *IF* node from 18 to 27 to see what the SMS would look like. This is how the finished workflow and the SMS looked like.
 
-![Workflow running with true output from the IF node](./images/creating-your-first-workflow/workflow-running-with-true-output-from-the-if-node.png) 
+![Workflow running with true output from the IF node](./images/workflow-running-with-true-output-from-the-if-node.png)
 
-![SMS sent by the workflow](./images/creating-your-first-workflow/sms-sent-by-the-workflow.jpeg) 
+![SMS sent by the workflow](./images/sms-sent-by-the-workflow.jpeg)
 
 
 ## Conclusion
 
-Congratulations on creating your first workflow with n8n 🥳 
+Congratulations on creating your first workflow with n8n 🥳
 
 Did you run into any troubles while working on your first workflow? Don't be shy to ask questions or share the challenges you are facing in the community [forum](https://community.n8n.io/), we are all learners here 🙌
 

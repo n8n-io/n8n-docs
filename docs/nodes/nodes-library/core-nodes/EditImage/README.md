@@ -17,10 +17,14 @@ The Edit Image node is used to manipulate and edit images.
 - Operations
 	- Add a blur to the image to reduce sharpness
 	- Add a border to the image
+	- Create a new image
 	- Crop the image
+	- Composite an image on top of another image
+	- Draw on an image
 	- Get information about the image
 	- Rotate the image
 	- Change the size of the image
+	- Shear image along the X or Y axis
 	- Add text to the image
 
 You can also specify a file format using the *Format* field in the *Add Option* dropdown list.

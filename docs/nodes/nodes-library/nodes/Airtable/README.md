@@ -52,7 +52,7 @@ In the screenshot below, you will notice that the node sets the value for `ID` a
 
 ### 3. Airtable node (Append)
 
-This node will append the data that we set in the previous node to a table. Create a table similar to [this](https://airtable.com/shrN2yLZyKEETq1xj) table in your Airtable base.
+This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrN2yLZyKEETq1xj) in your Airtable base.
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](../../../credentials/Airtable/README.md).
 2. Select 'Append' from the ***Operation*** dropdown list.

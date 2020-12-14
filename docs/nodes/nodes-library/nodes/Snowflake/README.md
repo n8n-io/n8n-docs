@@ -19,7 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a table, insert and update data in the table. You can also find the [workflow](https://n8n.io/workflows/824) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create a table, insert, and update data in a table in Snowflake. You can also find the [workflow](https://n8n.io/workflows/824) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Set](../../core-nodes/Set/README.md)
 - [Snowflake]()
@@ -35,7 +35,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Snowflake node (Execute Query)
 
-This node will create a table named `docs` with the fields `id` and `name`.
+This node will create a table named `docs` with `id` and `name` columns.
 
 1. First of all, you'll have to enter credentials for the Snowflake node. You can find out how to do that [here](../../../credentials/Snowflake/README.md).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
@@ -49,7 +49,7 @@ In the screenshot below, you will notice that the node creates a table named `do
 
 ### 3. Set node
 
-We will use the Set node to set the values for the name and id fields for a new record.
+We will use the Set node to set the values for the id and name columns for a new record.
 ::: v-pre
 1. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
 2. Enter `id` in the ***Name*** field.
@@ -96,7 +96,7 @@ In the screenshot below, you will notice that the node sets the value of `name`.
 
 ### 6. Snowflake2 node (Update)
 
-This node will update the value of the `name` field for the id `1`.
+This node will update the value of the `name` column for the id `1`.
 ::: v-pre
 1. Select the credentials that you entered in the previous Snowflake node.
 2. Select 'Update' from the ***Operation*** dropdown list.

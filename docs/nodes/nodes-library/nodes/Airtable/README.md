@@ -117,3 +117,4 @@ In the screenshot below, you will notice that the node updates the Name field.
 ## Further Reading
 
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
+- [Building an expense tracking app in 10 minutes 📱](https://medium.com/n8n-io/building-an-expense-tracking-app-in-10-minutes-74b0cececc90)

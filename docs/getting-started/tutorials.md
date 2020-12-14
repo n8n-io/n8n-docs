@@ -4,6 +4,7 @@
 
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
 - [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)
+- [Building an expense tracking app in 10 minutes 📱](https://medium.com/n8n-io/building-an-expense-tracking-app-in-10-minutes-74b0cececc90)
 - [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
 - [Creating Error Workflows in n8n 🌪](https://medium.com/n8n-io/creating-error-workflows-in-n8n-6e03c9ecbc0f)
 - [Creating scheduled text affirmations with n8n 🤟](https://medium.com/n8n-io/creating-scheduled-text-affirmations-with-n8n-1c4189efae19)
@@ -32,4 +33,4 @@
 - [n8n basics 2/3 - Simple Workflow](https://www.youtube.com/watch?v=ovlxledZfM4)
 - [n8n basics 3/3 - Transforming JSON](https://www.youtube.com/watch?v=wGAEAcfwV8w)
 - [n8n nodes - Using Google Sheets and Google API](https://www.youtube.com/watch?v=KFqx8OmkqVE)
-- [Raspberry Pi as a local server for self-hosting applications like n8n](https://cri.dev/posts/2020-09-12-Raspberry-Pi-as-a-local-server-for-self-hosting-applications/)	
+- [Raspberry Pi as a local server for self-hosting applications like n8n](https://cri.dev/posts/2020-09-12-Raspberry-Pi-as-a-local-server-for-self-hosting-applications/)

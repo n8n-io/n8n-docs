@@ -52,7 +52,7 @@ In the screenshot below, you will notice that the node sets the value for `ID` a
 
 ### 3. Airtable node (Append)
 
-This node will append the data that we set in the previous node to a table. Create a table similar to [this](https://airtable.com/shrN2yLZyKEETq1xj) table in your Airtable base.
+This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrN2yLZyKEETq1xj) in your Airtable base.
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](../../../credentials/Airtable/README.md).
 2. Select 'Append' from the ***Operation*** dropdown list.
@@ -131,3 +131,4 @@ To get the Record ID of your record, you can use the ***List*** operation of the
 ## Further Reading
 
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
+- [Building an expense tracking app in 10 minutes 📱](https://medium.com/n8n-io/building-an-expense-tracking-app-in-10-minutes-74b0cececc90)

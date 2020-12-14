@@ -79,7 +79,7 @@ In the screenshot below, you will notice that the node updates the status of the
 
 ### 4. Ghost2 node (get: post)
 
-This node returns information about the post that we created using the Ghost node. In this node, we are using the ***Admin API***. You can even use the ***Content API*** to get the information about the post.
+This node returns information about the post that we created using the Ghost node. In this node, we are using the ***Admin API***. You can also use the ***Content API*** to get the information about the post.
 ::: v-pre
 1. Select 'Admin API' from the ***Source*** dropdown list.
 2. Select the credentials that you entered in the previous node.

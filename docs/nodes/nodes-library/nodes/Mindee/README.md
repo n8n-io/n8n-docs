@@ -50,11 +50,11 @@ In the screenshot below, you will notice that the HTTP Request node downloads th
 
 ![Using the HTTP Request node to get the file](./HTTPRequest_node.png)
 
-  
+
 ### 3. Mindee node (predict: receipt)
 
 This node will get the image of the receipt (binary data) from the HTTP Request node and extract the information from it.
-1. Select 'Receipt' from the ***Resource*** dropdown list. 
+1. Select 'Receipt' from the ***Resource*** dropdown list.
 2. You'll have to enter credentials for the Mindee node. You can find out how to do that  [here](../../../credentials/Mindee/README.md).
 3. Click on ***Execute Node*** to run the workflow.
 
@@ -65,3 +65,4 @@ In the screenshot below, you will notice that the node extracts the information 
 ## Further Reading
 
 - [Automatically Adding Expense Receipts to Google Sheets with Telegram, Mindee, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-mindee-twilio-and-n8n-c47eb2f8d7a5)
+- [Building an expense tracking app in 10 minutes 📱](https://medium.com/n8n-io/building-an-expense-tracking-app-in-10-minutes-74b0cececc90)

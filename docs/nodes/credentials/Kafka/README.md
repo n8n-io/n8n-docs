@@ -7,6 +7,7 @@ description: Learn to configure credentials for the Kafka node in n8n
 
 You can use these credentials to authenticate the following nodes with Kafka.
 - [Kafka](../../nodes-library/nodes/Kafka/README.md)
+- [Kafka Trigger](../../nodes-library/trigger-nodes/KafkaTrigger/README.md)
 
 ## Prerequisites
 

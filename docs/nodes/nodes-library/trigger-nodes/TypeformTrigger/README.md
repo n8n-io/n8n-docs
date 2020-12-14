@@ -5,7 +5,7 @@ description: Learn how to use the Typeform Trigger node in n8n
 
 # Typeform Trigger
 
-[Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs. 
+[Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Typeform/README.md).
@@ -33,3 +33,4 @@ The final workflow should look like the following image.
 
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
 - [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
+- [Building an expense tracking app in 10 minutes 📱](https://medium.com/n8n-io/building-an-expense-tracking-app-in-10-minutes-74b0cececc90)

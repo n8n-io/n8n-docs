@@ -114,6 +114,20 @@ In the screenshot below, you will notice that the node updates the Name field.
 
 ![Using the Airtable node to update data of a record](./Airtable2_node.png)
 
+## FAQs
+
+### 1. How to get the Record ID?
+
+To fetch data for a particular record, you need the Record ID. There are two ways to get the Record ID.
+
+**Create a Record ID column in Airtable**
+
+To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/hc/en-us/articles/360051564873-Record-ID). You can then use this Record ID in your Airtable node.
+
+**Use the List operation**
+
+To get the Record ID of your record, you can use the ***List*** operation of the Airtable node. This operation will return the Record ID along with the fields. You can then use this Record ID in your Airtable node.
+
 ## Further Reading
 
 - [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)

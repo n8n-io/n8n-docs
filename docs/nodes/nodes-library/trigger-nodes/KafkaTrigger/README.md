@@ -27,7 +27,7 @@ The final workflow should look like the following image.
 
 ### 1. Kafka Trigger node
 
-This node will trigger the workflow when a new message is sent to the topic `test_topic`. If you're using a different topic, use that instead.
+This node will trigger the workflow when a new message is sent to the topic `test_topic`. If you're using a different topic, use that instead. We are sending the message `{ "id": 1, "temp": 100 }` to `test_topic`.
 
 1. First of all, you'll have to enter credentials for the Kafka Trigger node. You can find out how to do that [here](../../../credentials/Kafka/README.md).
 2. Enter the name of the topic in the ***Topic*** field.

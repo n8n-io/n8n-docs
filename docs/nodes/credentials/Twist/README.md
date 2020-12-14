@@ -18,7 +18,7 @@ Create a [Twist](https://twist.com/) account.
 **Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. Twist doesn't accept the localhost callback URL. Refer to the [FAQs](#_1-how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
 :::
 
-1. Access your [Twist](https://twist.com) team.
+1. Access your [Twist](https://twist.com) workspace.
 2. Click on your avatar in the top right corner.
 3. Select 'Add integrations...' from the dropdown list.
 4. Click on ***Build*** on the top.
@@ -38,7 +38,7 @@ Create a [Twist](https://twist.com/) account.
 
 ## FAQs
 
-### How to configure the OAuth credentials for the local environment?
+### 1. How to configure the OAuth credentials for the local environment?
 Twist doesn't accept the localhost callback  URL. However, you can follow the steps mentioned below to configure the OAuth credentials for the local environment:
 1. We will use [ngrok](https://ngrok.com/) to expose the local server running on port `5678` to the internet. In your terminal, run the following command:
 ```sh

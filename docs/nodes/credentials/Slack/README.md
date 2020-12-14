@@ -42,12 +42,14 @@ You'll only need to enter the Credentials Name and click on the circle button in
 1. Access your Slack workspace.
 2. Click on your username in the top left.
 3. Click the 'Settings & administration' option, and then 'Manage apps'.
-4. Click on 'Build' in the top right.
-5. Click on the 'Start Building' button if this is your first Slack app, else click on the 'Create New App' button.
+4. Click on ***Build*** in the top right.
+5. Click on the ***Start Building*** button if this is your first Slack app, else click on the ***Create an App*** button.
 6. Enter an app name and select your desired workspace.
 7. Click on the 'Permissions' button in the ***Add features and functionality*** section.
 8. Scroll down and add any scopes you plan to use under the ***User Token Scopes*** section.
 9. If you're building a bot, add the required scopes for the bot under the ***Bot Token Scopes*** section.
-10. Use your Verification Token with your Slack node credentials in n8n.
+10. Click on the ***Install to Workspace*** button in the ***OAuth Tokens & Redirect URLs*** section.
+11. Click on the ***Allow*** button to install the app in your workspace.
+12. Use the displayed Access Token with your Slack node credentials in n8n.
 
 ![Getting Slack credentials](./using-access-token.gif)

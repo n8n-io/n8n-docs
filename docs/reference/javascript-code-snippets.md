@@ -312,30 +312,35 @@ The expression would resolve to something similar to the following.
 false
 ```
 
-## Modify data Structure
+## Modify Data Structure
 
 Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page.
 
-### 1. Create multiple JSON items from an array
+### 1. Create multiple items from a single item
 
-If the data structure of the incoming data is similar to the following.
+If you receive a single item from a node, you can split the data into individual items.
+
+For example, if your incoming data is similar to the following.
 
 ```js
 [
   [
     {
-      "data": "item-1",
+      "id": 1,
+      "name": "Jim"
     },
     {
-      "data": "item-2",
+      "id": 2,
+      "name": "Stefan"
     },
     {
-      "data": "item-3",
+      "id": 3,
+      "name": "Hans"
     }
   ]
 ]
 ```
-You can use the following code snippet to convert the array to multiple JSON items.
+You can use the following code snippet to create multiple items from a single item.
 
 ```js
 return items[0].json.map(item => {
@@ -345,43 +350,51 @@ return items[0].json.map(item => {
 });
 ```
 
-The output will then be similar to the following.
+The above code snippet will create multiple items and the output will be similar to the following.
 
 ```js
 [
   {
-    "data": "item-1"
+    "id": 1,
+    "name": "Jim"
   },
   {
-    "data": "item-2"
+    "id": 2,
+    "name": "Stefan"
   },
   {
-    "data": "item-3"
+    "id": 3,
+    "name": "Hans"
   }
 ]
 ```
 
 You can also use this example [workflow](https://n8n.io/workflows/766).
 
-### 2. Create an array of objects
+### 2. Create a single item from multiple items
 
-If the data structure of the incoming data is similar to the following.
+If you receive multiple items from a node, you can create a single item.
+
+For example, if your incoming data is similar to the following.
 
 ```js
 [
   {
-    "item": "item-1"
+    "id": 1,
+    "name": "Jim"
   },
   {
-    "item": "item-2"
+    "id": 2,
+    "name": "Stefan"
   },
   {
-    "item": "item-3"
+    "id": 3,
+    "name": "Hans"
   }
 ]
 ```
 
-You can use the following code snippet to create an array of objects.
+You can use the following code snippet.
 
 ```js
  return [
@@ -393,20 +406,23 @@ You can use the following code snippet to create an array of objects.
 ]
 ```
 
-The output will then be similar to the following.
+The above code snippet will create a single item and the output will be similar to the following.
 
 ```js
 [
   {
     data_object: [
       {
-        "item": "item-1"
+        "id": 1,
+        "name": "Jim"
       },
       {
-        "item": "item-2"
+        "id": 2,
+        "name": "Stefan"
       },
       {
-        "item": "item-3"
+        "id": 3,
+        "name": "Hans"
       }
     ]
   }
@@ -461,130 +477,122 @@ The output will then be similar to the following.
 ]
 ```
 
-##  Sort data
-Depending on your use-case, you might want to sort the data returned by the last node. You can sort the data based on the integer values (for example, id or age) or string (for example, name).
+##  Sort items
+Depending on your use-case, you might want to sort the items returned by the last node. You can sort the items based on the integer values (for example, id or age) or string (for example, name).
 
-### 1. Sort data based on an integer value
-You can sort the data based on a field that has numerical values using the Function node.
+### 1. Sort items based on an integer value
+You can sort the items based on a field that has numerical values using the Function node.
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data is similar to the following.
 ```js
-[
-  [
-    {
-      "name": "Nathan",
-      "id": 3
-    },
-    {
-      "name": "n8n",
-      "id": 1
-    },
-    {
-      "name": "nodemation",
-      "id": 2
-    }
-  ]
+ [
+  {
+    "id": 3,
+    "name": "Stefan"
+  },
+  {
+    "id": 1,
+    "name": "Jim"
+ },
+ {
+    "id": 2,
+    "name": "Hans"
+ }
 ]
 ```
 
-#### 1. Sort the data in ascending order
+#### 1. Sort the items in ascending order
 
-To sort the data in an ascending order use the following code snippet in the Function node.
+To sort the items in ascending order, use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    return a.id - b.id;
+const sortedArr = items.sort((a, b) => {
+    return a.json.id - b.json.id;
 })
-return [{json:sortedArr}]
+return sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "name": "n8n",
-      "id": 1
-    },
-    {
-      "name": "nodemation",
-      "id": 2
-    },
-    {
-      "name": "Nathan",
-      "id": 3
-    }
-  ]
+  {
+      "id": 1,
+      "name": "Jim"
+  },
+  {
+      "id": 2,
+      "name": "Hans"
+  },
+  {
+      "id": 3,
+      "name": "Stefan"
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/801).
 
-#### 2. Sort the data in descending order
+#### 2. Sort the items in descending order
 
-To sort the data in descending order use the following code snippet in the Function node.
+To sort the items in descending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    return b.id - a.id;
+const sortedArr = items.sort((a, b) => {
+    return b.json.id - a.json.id;
 })
-return [{json:sortedArr}]
+return sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
- [
-   [
-    {
-     "name": "Nathan",
-     "id": 3
-    },
-    {
-      "name": "nodemation",
-      "id": 2
-    },
-    {
-      "name": "n8n",
-      "id": 1
-    }
-  ]
+[
+  {
+    "id": 3,
+    "name": "Stefan"
+  },
+  {
+    "id": 2,
+    "name": "Hans"
+  },
+  {
+    "id": 1,
+    "name": "Jim"
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/802).
 
-### 2. Sort data based on the string values
-You can sort the data based on a field that has string values using the Function node.
+### 2. Sort items based on the string values
+You can sort the items based on a field that has string values using the Function node.
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data is similar to the following.
 
 ```js
-[
-  [
-    {
-      "name": "Munich",
-      "id": 3
-    },
-    {
-      "name": "Berlin",
-      "id": 1
-    },
-    {
-      "name": "Paris",
-      "id": 2
-    }
-  ]
+ [
+  {
+    "id": 3,
+    "name": "Jim"
+  },
+  {
+    "id": 1,
+    "name": "Stefan"
+ },
+ {
+    "id": 2,
+    "name": "Hans"
+ }
 ]
 ```
 
-#### 1. Sort the data in ascending order
+#### 1. Sort the items in ascending order
 
-To sort the data in ascending order use the following code snippet in the Function node.
+To sort the items in ascending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    let a_name = a.name.toLowerCase(),
-        b_name = b.name.toLowerCase();
+const sortedArr = items.sort((a, b) => {
+    let a_name = a.json.name.toLowerCase(),
+        b_name = b.json.name.toLowerCase();
 
     if (a_name < b_name) {
         return -1;
@@ -594,39 +602,37 @@ const sortedArr = items[0].json.sort((a, b) => {
     }
     return 0;
 });
-return [{json:sortedArr}];
+return json:sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "name": "Berlin",
-      "id": 1
-    },
-    {
-      "name": "Munich",
-      "id": 3
-    },
-    {
-      "name": "Paris",
-      "id": 2
-    }
-  ]
+  {
+    "id": 2,
+    "name": "Hans"
+  },
+  {
+    "id": 3,
+    "name": "Jim"
+  },
+  {
+    "id": 1,
+    "name": "Stefan"
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/803).
 
-#### 2. Sort the data in descending order
+#### 2. Sort the items in descending order
 
-To sort the data in descending order use the following code snippet in the Function node.
+To sort the items in descending order use the following code snippet in the Function node.
 
 ```js
-const sortedArr = items[0].json.sort((a, b) => {
-    let a_name = a.name.toLowerCase(),
-        b_name = b.name.toLowerCase();
+const sortedArr = items.sort((a, b) => {
+    let a_name = a.json.name.toLowerCase(),
+        b_name = b.json.name.toLowerCase();
 
     if (a_name > b_name) {
         return -1;
@@ -636,28 +642,25 @@ const sortedArr = items[0].json.sort((a, b) => {
     }
     return 0;
 });
-return [{json:sortedArr}]
-
+return sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
- [
-   [
-    {
-     "name": "Paris",
-     "id": 2
-    },
-    {
-      "name": "Munich",
-      "id": 3
-    },
-    {
-      "name": "Berlin",
-      "id": 1
-    }
-  ]
+[
+  {
+    "id": 1,
+    "name": "Stefan"
+  },
+  {
+    "id": 3,
+    "name": "Jim"
+  },
+  {
+    "id": 2,
+    "name": "Hans"
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/804).
@@ -716,28 +719,28 @@ If the data structure of the incoming data is similar to the following.
   {
     "data": [
       {
-        "name": "n8n",
-        "id": 1
+        "id": 1,
+        "name": "n8n"
       },
       {
-        "name": "Nathan",
-        "id": 2
+        "id": 2,
+        "name": "Nathan"
       },
       {
-        "name": "nodemation",
-        "id": 3
+        "id": 3,
+        "name": "nodemation"
       },
       {
-        "name": "Nathan",
-        "id": 4
+        "id": 4,
+        "name": "Nathan"
       },
       {
-        "name": "n8n",
-        "id": 5
+        "id": 5,
+        "name": "n8n"
       },
       {
-        "name": "Berlin",
-        "id": 6
+        "id": 6,
+        "name": "Berlin"
       }
     ]
   }
@@ -766,20 +769,20 @@ The output will then be similar to the following.
 [
   [
     {
-      "name": "n8n",
-      "id": 5
+      "id": 5,
+      "name": "n8n"
     },
     {
+      "id": 4,
       "name": "Nathan",
-      "id": 4
     },
     {
+      "id": 3,
       "name": "nodemation",
-      "id": 3
     },
     {
+      "id": 6,
       "name": "Berlin",
-      "id": 6
     }
   ]
 ]

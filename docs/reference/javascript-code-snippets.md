@@ -312,7 +312,7 @@ The expression would resolve to something similar to the following.
 false
 ```
 
-## Modify data Structure
+## Modify Data Structure
 
 Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page.
 

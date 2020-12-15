@@ -326,13 +326,16 @@ For example, if your incoming data is similar to the following.
 [
   [
     {
-      "data": "item-1",
+      "id": 1,
+      "name": "Jim"
     },
     {
-      "data": "item-2",
+      "id": 2,
+      "name": "Stefan"
     },
     {
-      "data": "item-3",
+      "id": 3,
+      "name": "Hans"
     }
   ]
 ]
@@ -352,13 +355,16 @@ The above code snippet will create multiple items and the output will be similar
 ```js
 [
   {
-    "data": "item-1"
+    "id": 1,
+    "name": "Jim"
   },
   {
-    "data": "item-2"
+    "id": 2,
+    "name": "Stefan"
   },
   {
-    "data": "item-3"
+    "id": 3,
+    "name": "Hans"
   }
 ]
 ```
@@ -374,13 +380,16 @@ For example, if your incoming data is similar to the following.
 ```js
 [
   {
-    "data": "item-1"
+    "id": 1,
+    "name": "Jim"
   },
   {
-    "data": "item-2"
+    "id": 2,
+    "name": "Stefan"
   },
   {
-    "data": "item-3"
+    "id": 3,
+    "name": "Hans"
   }
 ]
 ```
@@ -404,13 +413,16 @@ The above code snippet will create a single item and the output will be similar 
   {
     data_object: [
       {
-        "data": "item-1"
+        "id": 1,
+        "name": "Jim"
       },
       {
-        "data": "item-2"
+        "id": 2,
+        "name": "Stefan"
       },
       {
-        "data": "item-3"
+        "id": 3,
+        "name": "Hans"
       }
     ]
   }
@@ -475,29 +487,29 @@ If the incoming data is similar to the following.
 ```js
  [
   {
-    "name": "Stefan",
-    "id": 3
+    "id": 3,
+    "name": "Stefan"
   },
   {
-    "name": "Jim",
-    "id": 1
+    "id": 1,
+    "name": "Jim"
  },
  {
-    "name": "Hans",
-    "id": 2
+    "id": 2,
+    "name": "Hans"
  }
 ]
 ```
 
 #### 1. Sort the items in ascending order
 
-To sort the items in an ascending order, use the following code snippet in the Function node.
+To sort the items in ascending order, use the following code snippet in the Function node.
 
 ```js
 const sortedArr = items.sort((a, b) => {
     return a.json.id - b.json.id;
 })
-return sortedArr
+return sortedArr;
 ```
 
 The output will then be similar to the following.
@@ -505,16 +517,16 @@ The output will then be similar to the following.
 ```js
 [
   {
-      "name": "Jim",
-      "id": 1
+      "id": 1,
+      "name": "Jim"
   },
   {
-      "name": "Hans",
-      "id": 2
+      "id": 2,
+      "name": "Hans"
   },
   {
-      "name": "Stefan",
-      "id": 3
+      "id": 3,
+      "name": "Stefan"
   }
 ]
 ```
@@ -528,7 +540,7 @@ To sort the items in descending order use the following code snippet in the Func
 const sortedArr = items.sort((a, b) => {
     return b.json.id - a.json.id;
 })
-return sortedArr
+return sortedArr;
 ```
 
 The output will then be similar to the following.
@@ -536,16 +548,16 @@ The output will then be similar to the following.
 ```js
 [
   {
-      "name": "Stefan",
-      "id": 3
+    "id": 3,
+    "name": "Stefan"
   },
   {
-      "name": "Hans",
-      "id": 2
+    "id": 2,
+    "name": "Hans"
   },
   {
-      "name": "Jim",
-      "id": 1
+    "id": 1,
+    "name": "Jim"
   }
 ]
 ```
@@ -559,16 +571,16 @@ If the incoming data is similar to the following.
 ```js
  [
   {
-    "name": "Jim",
-    "id": 3
+    "id": 3,
+    "name": "Jim"
   },
   {
-    "name": "Stefan",
-    "id": 1
+    "id": 1,
+    "name": "Stefan"
  },
  {
-    "name": "Hans",
-    "id": 2
+    "id": 2,
+    "name": "Hans"
  }
 ]
 ```
@@ -598,16 +610,16 @@ The output will then be similar to the following.
 ```js
 [
   {
-      "name": "Hans",
-      "id": 2
+    "id": 2,
+    "name": "Hans"
   },
   {
-      "name": "Jim",
-      "id": 3
+    "id": 3,
+    "name": "Jim"
   },
   {
-      "name": "Stefan",
-      "id": 1
+    "id": 1,
+    "name": "Stefan"
   }
 ]
 ```
@@ -638,16 +650,16 @@ The output will then be similar to the following.
 ```js
 [
   {
-      "name": "Stefan",
-      "id": 1
+    "id": 1,
+    "name": "Stefan"
   },
   {
-      "name": "Jim",
-      "id": 3
+    "id": 3,
+    "name": "Jim"
   },
   {
-      "name": "Hans",
-      "id": 2
+    "id": 2,
+    "name": "Hans"
   }
 ]
 ```
@@ -707,28 +719,28 @@ If the data structure of the incoming data is similar to the following.
   {
     "data": [
       {
-        "name": "n8n",
-        "id": 1
+        "id": 1,
+        "name": "n8n"
       },
       {
-        "name": "Nathan",
-        "id": 2
+        "id": 2,
+        "name": "Nathan"
       },
       {
-        "name": "nodemation",
-        "id": 3
+        "id": 3,
+        "name": "nodemation"
       },
       {
-        "name": "Nathan",
-        "id": 4
+        "id": 4,
+        "name": "Nathan"
       },
       {
-        "name": "n8n",
-        "id": 5
+        "id": 5,
+        "name": "n8n"
       },
       {
-        "name": "Berlin",
-        "id": 6
+        "id": 6,
+        "name": "Berlin"
       }
     ]
   }
@@ -757,20 +769,20 @@ The output will then be similar to the following.
 [
   [
     {
-      "name": "n8n",
-      "id": 5
+      "id": 5,
+      "name": "n8n"
     },
     {
+      "id": 4,
       "name": "Nathan",
-      "id": 4
     },
     {
+      "id": 3,
       "name": "nodemation",
-      "id": 3
     },
     {
+      "id": 6,
       "name": "Berlin",
-      "id": 6
     }
   ]
 ]

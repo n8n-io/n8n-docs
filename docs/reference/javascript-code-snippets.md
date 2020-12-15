@@ -316,9 +316,9 @@ false
 
 Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](./data/data-structure.md) page.
 
-### 1. Create multiple JSON items from an array
+### 1. Create multiple items from a single item
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data consists of a single item , similar to the following.
 
 ```js
 [
@@ -335,7 +335,7 @@ If the data structure of the incoming data is similar to the following.
   ]
 ]
 ```
-You can use the following code snippet to convert the array to multiple JSON items.
+You can use the following code snippet to create multiple items from a single item.
 
 ```js
 return items[0].json.map(item => {
@@ -345,7 +345,7 @@ return items[0].json.map(item => {
 });
 ```
 
-The output will then be similar to the following.
+The above code snippet will create multiple items and the output will then be similar to the following.
 
 ```js
 [
@@ -363,9 +363,9 @@ The output will then be similar to the following.
 
 You can also use this example [workflow](https://n8n.io/workflows/766).
 
-### 2. Create an array of objects
+### 2. Create a single item from multiple items
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data consists of multiple items, similar to the following.
 
 ```js
 [
@@ -381,7 +381,7 @@ If the data structure of the incoming data is similar to the following.
 ]
 ```
 
-You can use the following code snippet to create an array of objects.
+You can use the following code snippet to create a single item from these multiple items.
 
 ```js
  return [
@@ -393,7 +393,7 @@ You can use the following code snippet to create an array of objects.
 ]
 ```
 
-The output will then be similar to the following.
+The above code snippet will create a single item and the output will be similar to the following.
 
 ```js
 [

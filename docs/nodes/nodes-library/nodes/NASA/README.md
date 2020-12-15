@@ -127,3 +127,7 @@ This node will send the picture that we receive from the previous node to a chan
 In the screenshot below, you will notice that the node sends the image with a caption to the channel that we specifiy.
 
 ![Using the Telegram node to send the Astronomy Picture of the Day](./Telegram_node.png)
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::

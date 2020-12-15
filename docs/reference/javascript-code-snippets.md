@@ -318,7 +318,9 @@ Depending on your use-case, you might want to convert the structure of the incom
 
 ### 1. Create multiple items from a single item
 
-If the incoming data consists of a single item , similar to the following.
+If you receive a single item from a node, you can split the data into individual items.
+
+For example, if your incoming data is similar to the following.
 
 ```js
 [
@@ -345,7 +347,7 @@ return items[0].json.map(item => {
 });
 ```
 
-The above code snippet will create multiple items and the output will then be similar to the following.
+The above code snippet will create multiple items and the output will be similar to the following.
 
 ```js
 [
@@ -365,23 +367,25 @@ You can also use this example [workflow](https://n8n.io/workflows/766).
 
 ### 2. Create a single item from multiple items
 
-If the incoming data consists of multiple items, similar to the following.
+If you receive multiple items from a node, you can create a single item.
+
+For example, if your incoming data is similar to the following.
 
 ```js
 [
   {
-    "item": "item-1"
+    "data": "item-1"
   },
   {
-    "item": "item-2"
+    "data": "item-2"
   },
   {
-    "item": "item-3"
+    "data": "item-3"
   }
 ]
 ```
 
-You can use the following code snippet to create a single item from these multiple items.
+You can use the following code snippet.
 
 ```js
  return [
@@ -400,13 +404,13 @@ The above code snippet will create a single item and the output will be similar 
   {
     data_object: [
       {
-        "item": "item-1"
+        "data": "item-1"
       },
       {
-        "item": "item-2"
+        "data": "item-2"
       },
       {
-        "item": "item-3"
+        "data": "item-3"
       }
     ]
   }
@@ -461,13 +465,13 @@ The output will then be similar to the following.
 ]
 ```
 
-##  Sort data
-Depending on your use-case, you might want to sort the data returned by the last node. You can sort the data based on the integer values (for example, id or age) or string (for example, name).
+##  Sort items
+Depending on your use-case, you might want to sort the items returned by the last node. You can sort the items based on the integer values (for example, id or age) or string (for example, name).
 
-### 1. Sort data based on an integer value
-You can sort the data based on a field that has numerical values using the Function node.
+### 1. Sort items based on an integer value
+You can sort the items based on a field that has numerical values using the Function node.
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data is similar to the following.
 ```js
  [
   {
@@ -485,94 +489,72 @@ If the data structure of the incoming data is similar to the following.
 ]
 ```
 
-#### 1. Sort the data in ascending order
+#### 1. Sort the items in ascending order
 
-To sort the data in an ascending order use the following code snippet in the Function node.
+To sort the items in an ascending order, use the following code snippet in the Function node.
 
 ```js
 const sortedArr = items.sort((a, b) => {
     return a.json.id - b.json.id;
 })
-return [{json:sortedArr}]
+return sortedArr
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "json":
-      {
-          "name": "Jim",
-          "id": 1
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Hans",
-          "id": 2
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Stefan",
-          "id": 3
-      }
-    }
-  ]
+  {
+      "name": "Jim",
+      "id": 1
+  },
+  {
+      "name": "Hans",
+      "id": 2
+  },
+  {
+      "name": "Stefan",
+      "id": 3
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/801).
 
-#### 2. Sort the data in descending order
+#### 2. Sort the items in descending order
 
-To sort the data in descending order use the following code snippet in the Function node.
+To sort the items in descending order use the following code snippet in the Function node.
 
 ```js
 const sortedArr = items.sort((a, b) => {
     return b.json.id - a.json.id;
 })
-return [{json:sortedArr}]
+return sortedArr
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "json":
-      {
-          "name": "Stefan",
-          "id": 3
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Hans",
-          "id": 2
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Jim",
-          "id": 1
-      }
-    }
-  ]
+  {
+      "name": "Stefan",
+      "id": 3
+  },
+  {
+      "name": "Hans",
+      "id": 2
+  },
+  {
+      "name": "Jim",
+      "id": 1
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/802).
 
-### 2. Sort data based on the string values
-You can sort the data based on a field that has string values using the Function node.
+### 2. Sort items based on the string values
+You can sort the items based on a field that has string values using the Function node.
 
-If the data structure of the incoming data is similar to the following.
+If the incoming data is similar to the following.
 
 ```js
  [
@@ -591,9 +573,9 @@ If the data structure of the incoming data is similar to the following.
 ]
 ```
 
-#### 1. Sort the data in ascending order
+#### 1. Sort the items in ascending order
 
-To sort the data in ascending order use the following code snippet in the Function node.
+To sort the items in ascending order use the following code snippet in the Function node.
 
 ```js
 const sortedArr = items.sort((a, b) => {
@@ -608,43 +590,32 @@ const sortedArr = items.sort((a, b) => {
     }
     return 0;
 });
-return [{json:sortedArr}];
+return json:sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "json":
-      {
-          "name": "Hans",
-          "id": 2
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Jim",
-          "id": 3
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Stefan",
-          "id": 1
-      }
-    }
-  ]
+  {
+      "name": "Hans",
+      "id": 2
+  },
+  {
+      "name": "Jim",
+      "id": 3
+  },
+  {
+      "name": "Stefan",
+      "id": 1
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/803).
 
-#### 2. Sort the data in descending order
+#### 2. Sort the items in descending order
 
-To sort the data in descending order use the following code snippet in the Function node.
+To sort the items in descending order use the following code snippet in the Function node.
 
 ```js
 const sortedArr = items.sort((a, b) => {
@@ -659,36 +630,25 @@ const sortedArr = items.sort((a, b) => {
     }
     return 0;
 });
-return [{json:sortedArr}];
+return sortedArr;
 ```
 
 The output will then be similar to the following.
 
 ```js
 [
-  [
-    {
-      "json":
-      {
-          "name": "Stefan",
-          "id": 1
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Jim",
-          "id": 3
-      }
-    },
-    {
-      "json":
-      {
-          "name": "Hans",
-          "id": 2
-      }
-    }
-  ]
+  {
+      "name": "Stefan",
+      "id": 1
+  },
+  {
+      "name": "Jim",
+      "id": 3
+  },
+  {
+      "name": "Hans",
+      "id": 2
+  }
 ]
 ```
 You can also use this example [workflow](https://n8n.io/workflows/804).

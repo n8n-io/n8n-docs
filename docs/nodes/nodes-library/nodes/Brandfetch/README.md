@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.brandfetch
+permalink: /nodes/n8n-nodes-base.Brandfetch
 description: Learn how to use the Brandfetch node in n8n
 ---
 
@@ -22,9 +22,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/778) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/835) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Brandfetch]()
+- [Set](../../core-nodes/Set/README.md)
 - [Airtable](../../nodes/Airtable/README.md)
 
 The final workflow should look like the following image.

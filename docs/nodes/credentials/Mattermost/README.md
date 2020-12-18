@@ -11,21 +11,40 @@ You can use these credentials to authenticate the following nodes with Mattermos
 ## Prerequisites
 
 - Create a [Mattermost](https://www.mattermost.com/) account.
-- Have the rights to generate personal access tokens (needs to be enabled by the system administrator of the Mattermost server).
+
+**Note:** A system administrator has to grant permission to the user to generate an access token. Refer to the [FAQs](#_1-how-to-grant-permissions-to-the-users-to-generate-access-tokens) to learn how a system administrator can grant this permission.
 
 ## Using Access Token
-1. Access your System Console.
-2. Access Integrations.
+
+1. Click on your username on the top left corner and select 'Account Settings' from the dropdown list.
+2. Click on the ***Security*** tab.
+3. Click on ***Edit*** in the ***Personal Access Tokens*** section.
+4. Click on the ***Create Token*** button.
+5. Enter a description in the ***Token Description*** field.
+6. Click on the ***Save*** button.
+7. Click on the ***Yes, Create*** button.
+8. Use this ***Acess Token*** with your Mattermost node credentials in n8n.
+
+![Generating Access Token](./using-access-token.gif)
+
+## FAQs
+
+### 1. How to grant permissions to the users to generate access tokens?
+
+A system admin has to grant permissions to the users for the user to create access tokens. If you're a system admin, follow the steps mentioned below.
+
+1. Click on your username on the top left corner and select 'System Console' from the dropdown list.
+2. Click on ***Integration Management*** under the ***INTEGRATIONS*** section on the left sidebar.
 3. Go to Integration Management.
-4. Scroll down and enable personal access tokens.
+4. Scroll down to the ***Enable Personal Access Tokens*** and enable personal access tokens.
+5. Click on the ***Save*** button.
+6. Click on ***Users*** under the ***USER MANAGEMENT*** section on the left sidebar.
+7. Personal access tokens are generated for individual users, so they must be enabled for each user. Click on ***Member*** next to the user you want to grant permission to, and select 'Manage Roles' from the dropdown list.
+8. Check the ***Allow this account to generate personal access tokens*** checkbox.
+9. Select any additional permissions you want to grant the user and click on the ***Save*** button.
 
-![Enabling access token](./enabling-access-token.gif)
+**Note:** You may also create a bot account and apply the same for it.
 
-5. Personal access tokens are generated for individual users, so they must be enabled for each user. To accomplish this, go to Users under User Management. *You may also create a bot account and apply the same to this.*
-6. Select the user you wish to enable them for. Click on "Manage Roles" under the dropdown menu.
-7. Tick the "Allow this account to generate personal access tokens" radio button.
-8. Now the user can generate a personal access token by going to account settings.
-9. Click on the security tab.
-10. Click edit on the personal access token item and click generate token.
+The user can now generate a personal access token by going to  their account settings and following the steps mentioned [above](#using-access-token).
 
-![Generating Personal Access Token](./generating-personal-access-token.gif)
+![Granting permission to user](./granting-permission.gif)

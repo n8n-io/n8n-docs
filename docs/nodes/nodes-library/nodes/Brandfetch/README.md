@@ -38,19 +38,19 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Brandfetch node (logo)
 
-This node will fetch the URL of the logo and icon of n8n. If you want the logo and icon of a different company, enter the domain of that company instead.
+This node will fetch the URL of the logo and icon of n8n. If you want the logo and icon of a different company, enter the domain name of that company instead.
 
 1. First of all, you'll have to enter credentials for the Brandfetch node. You can find out how to do that [here](../../../credentials/Brandfetch/README.md).
 2. Enter `n8n.io` in the ***Domain*** field.
 3. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node retrieves the URL of the logo and icon of n8n.
+In the screenshot below, you will notice that the node retrieves the URL of n8n's logo and icon.
 
 ![Using the Brandfetch node to retrieve the URL of the logo and icon of a comapny](./Brandfetch_node.png)
 
 ### 3. Brandfetch1 node (company)
 
-This node will fetch the company data of n8n.
+This node will fetch company data about n8n.
 ::: v-pre
 1. Select the credentials that you entered in the previous Brandfetch node.
 2. Select 'Company' from the ***Operation*** dropdown list.
@@ -58,7 +58,7 @@ This node will fetch the company data of n8n.
 4. Select the following in the ***Variable Selector*** section: Nodes > Brandfetch > Parameters > domain. You can also add the following expression: `{{$node["Brandfetch"].parameter["domain"]}}`.
 5. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node returns the company data of n8n.
+In the screenshot below, you will notice that the node returns company data about n8n.
 
 ![Using the Brandfetch node to retrieve the company data](./Brandfetch1_node.png)
 

@@ -48,3 +48,7 @@ A system admin has to grant permissions to the users for the user to create acce
 The user can now generate a personal access token by going to  their account settings and following the steps mentioned [above](#using-access-token).
 
 ![Granting permission to user](./granting-permission.gif)
+
+## Further Reading
+
+- [Personal Access Tokens](https://docs.mattermost.com/developer/personal-access-tokens.html)

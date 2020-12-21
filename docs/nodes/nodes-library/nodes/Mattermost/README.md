@@ -99,7 +99,15 @@ In the screenshot below, you will notice that the node posts a message to the ch
 
 ### 1. How do I resolve the error for the ***Channel ID*** field?
 
-If you're not the System Administrator, you might get an error `there was a problem loading the parameter options from server: "Mattermost error response: You do not have the appropriate permissions."` next to the ***Channel ID*** field. If the system administrator has granted you the required permissions, you will be able to execute the node successfully.
+If you're not the System Administrator, you might get an error `there was a problem loading the parameter options from server: "Mattermost error response: You do not have the appropriate permissions."` next to the ***Channel ID*** field. If the system administrator has granted you the `post:channel` permissions, you will be able to execute the node successfully even with the error.
+
+### 2. How do I find a channel ID?
+
+To find a channel ID in Mattermost, follow the steps mentioned below.
+
+1. Select the channel from the left sidebar.
+2. Click on the channel name on the top and select 'View Info' from the dropdown list.
+3. Use the displayed ***ID*** in n8n.
 
 ## Further Reading
 

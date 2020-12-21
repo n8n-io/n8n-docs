@@ -11,22 +11,29 @@ The IF node is used to split a workflow conditionally based on comparison operat
 
 You can add comparison conditions using the ***Add Condition*** dropdown. Conditions can be created based on the data type, the available comparison operations vary for each data type.
 
-- Boolean
-	- Equal
-	- Not Equal
-- Number
-	- Smaller
-	- Smaller Equal
-	- Equal
-	- Not Equal
-	- Larger
-	- Larger Equal
-- String
-	- Contains
-	- Equal
-	- Not Contains
-	- Not Equal
-	- Regex
+:::details Boolean
+- Equal
+- Not Equal
+:::
+
+:::details Number
+- Smaller
+- Smaller Equal
+- Equal
+- Not Equal
+- Larger
+- Larger Equal
+- Is Empty
+:::
+
+:::details String
+- Contains
+- Equal
+- Not Contains
+- Not Equal
+- Regex
+- Is Empty
+:::
 
 You can choose to split a workflow when any of the specified conditions are met, or only when all the specified conditions are met using the options in the ***Combine*** dropdown list.
 

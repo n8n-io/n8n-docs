@@ -24,6 +24,7 @@ You can find authentication information for this node [here](../../../credential
 - Join an existing conversation
 - Remove a user from a channel
 - Leave a conversation
+- List members of a conversation
 - Open or resume a direct message or multi-person direct message
 - Rename a conversation
 - Get a thread of replies posted to a channel
@@ -43,10 +44,21 @@ You can find authentication information for this node [here](../../../credential
 - Update a message
 :::
 
+::: details Reaction
+- Add a reaction to a message
+- Get the reactions of a message
+- Remove a reaction of a message
+:::
+
 ::: details Star
 - Add a star to an item
 - Delete a star from an item
 - Get all the stars of an authenticated user
+:::
+
+::: User
+- Get information about a user
+- Get online status of a user
 :::
 
 ::: details User Profile

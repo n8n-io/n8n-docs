@@ -13,13 +13,18 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Spreadsheet
+- Create a spreadsheet
+:::
+
+::: details Sheet
 - Append data to a sheet
 - Clear data from a sheet
 - Delete columns and rows from a sheet
 - Look up a specific column value and return the matching row
 - Read data from a sheet
 - Update rows in a sheet
-
+:::
 ## Example Usage
 
 This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
@@ -60,7 +65,7 @@ In the screenshot below, you will notice that the Set node has created data that
 
 ![Using the Set node to set data to be inserted in the Google Sheets node](./Set_node.png)
 
-  
+
 ### 3. Google Sheets node (Append)
 
 #### Creating a Google Sheets spreadsheet
@@ -71,9 +76,9 @@ In the screenshot below, you will notice that the Set node has created data that
 
 #### Configure the Google Sheets node
 
-This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Sheet ID. 
+This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Sheet ID.
 
-1. Select 'OAuth2' from the ***Authentication*** dropdown list. 
+1. Select 'OAuth2' from the ***Authentication*** dropdown list.
 2.  First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
 3. Select 'Append' from the ***Operation*** dropdown list.
 4. Paste the Sheet ID you copied in the previous step, in the ***Sheet ID*** field.
@@ -98,7 +103,7 @@ This node will return the entries from the Google Sheets that have `Berlin` as t
 6. Enter `Berlin` in the ***Lookup Value*** field.
 7. Click on the ***Add Option*** button and select 'Return All Matches' from the dropdown list.
 8. Toggle ***Return All Matches*** to true. This option returns all the entries that contain `Berlin` as the City. Refer to the [FAQs](#how-to-return-all-the-values-with-the-lookup-operation) for more information.
-9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option. 
+9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option.
 10. Click on ***Execute Node*** to run the workflow.
 
 In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted. This output is passed on to the next nodes in the workflow.
@@ -184,7 +189,7 @@ To change the format, click on ***Add Option*** and select 'Value Render Mode' f
 There are two different formats you can use to add/update data in Google Sheets.
 
 - **Raw:** This is the default format. In this format, the values are stored as-is and not parsed. For example, the node stores the text 2020-10-01 as a string in the Google Sheets.
-- **User Entered:** In this format, the node parse the values. It follows the rules that are applied when entering text into the cell via the Google Sheet UI. For example, the node stores the text 2020-10-01 as a date in the Google Sheets. 
+- **User Entered:** In this format, the node parse the values. It follows the rules that are applied when entering text into the cell via the Google Sheet UI. For example, the node stores the text 2020-10-01 as a date in the Google Sheets.
 
 To change the format, click on ***Add Option*** and select 'Value Input Mode' from the dropdown list. Select the appropriate option you want your data to be stored in, from the ***Value Input Mode*** dropdown list.
 

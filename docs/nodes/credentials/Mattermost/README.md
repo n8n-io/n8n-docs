@@ -29,7 +29,7 @@ You can use these credentials to authenticate the following nodes with Mattermos
 
 ## FAQs
 
-### 1. How to grant permissions to the users to generate access tokens?
+### How to grant permissions to the users to generate access tokens?
 
 A system admin has to grant permissions to the users for the user to create access tokens. If you're a system admin, follow the steps mentioned below.
 

@@ -86,6 +86,12 @@ module.exports = {
 				'ga': 'UA-146470481-3',
 			},
 		],
+		[
+			'sitemap',
+			{
+				hostname: 'https://docs.n8n.io'
+			},
+		]
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',

@@ -73,7 +73,9 @@ n8n start
 
 A note on TLS certificates — you can choose between these configurations:
 
-- 
+- not declaring (default) — in which case you'll connect with SSL=off
+- declaring only the CA + unauthorized flag — in which case you'll connect with SSL=on and verify the server's signature
+- declaring `_{CERT,KEY}` as well as the above — in which case you'll use the cert and key for client TLS authentication
 
 ## MySQL / MariaDB
 

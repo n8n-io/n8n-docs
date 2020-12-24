@@ -23,6 +23,11 @@ You can find authentication information for this node [here](../../../credential
 - Get a user
 :::
 
+::: details User List
+- Add user to a list
+- Remove a user from a list
+:::
+
 ## Example Usage
 
 This workflow allows you to create, update, and get a user from Iterable. You can also find the [workflow](https://n8n.io/workflows/813) on n8n.io. This example usage workflow would use the following nodes.

@@ -5,10 +5,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2020-12-24
 
 - New nodes
-    - Egoi node
+    - e-goi
     - RabbitMQ
     - RabbitMQ Trigger
-	- uProc node
+	- uProc
 - Enhanced nodes
     - ActiveCampaign: Added the functionality to load the tags for a user
     - FTP: Added Delete and Rename operation

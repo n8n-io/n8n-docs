@@ -10,6 +10,7 @@ You can use these credentials to authenticate the following nodes with Google.
 - [Gmail](../../nodes-library/nodes/Gmail/README.md)
 - [Google Books](../../nodes-library/nodes/GoogleBooks/README.md)
 - [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md)
+- [Google Cloud Firestore](../../nodes-library/nodes/GoogleCloudFirestore/README.md)
 - [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md)
 - [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md)
 - [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)

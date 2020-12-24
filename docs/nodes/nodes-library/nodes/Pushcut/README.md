@@ -70,3 +70,7 @@ This node will send a push notification with the weather update, which was sent 
 In the screenshot below, you will notice that the node sends a push notification to your device with the weather update.
 
 ![Using the Pushcut node to send weather updates via a push notification](./Pushcut_node.png)
+
+::: tip 💡 Activate workflow for production
+This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+:::

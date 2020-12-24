@@ -13,6 +13,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Balance
+- Get the balance
+:::
+
 ::: details SMS
 - Send text messages (SMS)
 :::

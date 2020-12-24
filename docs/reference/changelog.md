@@ -1,5 +1,27 @@
 # Changelog
 
+## n8n@0.99.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.98.0...n8n@0.99.0) for this version.<br />
+**Release date:** 2020-12-24
+
+- New nodes
+    - e-goi
+    - RabbitMQ
+    - RabbitMQ Trigger
+	- uProc
+- Enhanced nodes
+    - ActiveCampaign: Added the functionality to load the tags for a user
+    - FTP: Added Delete and Rename operation
+    - Google Cloud Firestore: The node now gives the Collection ID in response
+    - Iterable: Added User List resource
+    - MessageBird: Added Balance resource
+    - TheHive Trigger: Added support for the TheHive3 webhook events, and added Log Updated and Log Deleted events
+- Bug fixes
+    - Dropbox: Fixed an issue with the OAuth credentials
+	- Google Sheets: Fixed an issue with the parameters getting hidden for other operations
+- Added functionality to easily copy the data and the path from the output
+- Fixed an issue with the node getting selected after it was duplicated
+
 ## n8n@0.98.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.97.0...n8n@0.98.0) for this version.<br />
 **Release date:** 2020-12-16
@@ -17,7 +39,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
 	- GitLab: Fixed an issue with GitLab OAuth credentials. You can now specify your GitLab server to configure the credentials
     - Mautic: Fixed an issue with the OAuth credentials
-- If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow.
+- If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow
 - Fixed a bug that caused the Editor UI to display an incorrect (save) state upon activating or deactivating a workflow
 ## n8n@0.97.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.96.0...n8n@0.97.0) for this version.<br />

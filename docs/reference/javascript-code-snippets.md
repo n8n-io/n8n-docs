@@ -400,7 +400,7 @@ You can use the following code snippet.
  return [
   {
     json: {
-      data_object: $items().map(item => item.json)
+      data_object: items.map(item => item.json)
     }
   }
 ]

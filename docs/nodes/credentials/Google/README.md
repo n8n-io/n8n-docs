@@ -11,6 +11,7 @@ You can use these credentials to authenticate the following nodes with Google.
 - [Google Books](../../nodes-library/nodes/GoogleBooks/README.md)
 - [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md)
 - [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md)
+- [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md)
 - [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)
 - [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md)
 - [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md)

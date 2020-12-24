@@ -13,8 +13,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+- Delete a file
 - Download a file
 - List contents of a folder
+- Rename/move content from old path to new path
 - Upload a file
 
 **Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](../../core-nodes/ReadBinaryFile/README.md) node or the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to pass the file as a data property.

@@ -28,7 +28,7 @@ You'll only need to enter the Credentials Name and click on the circle button in
 8. Click on the ***Settings*** tab.
 9. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Redirect URIs*** field under the ***OAuth 2*** section.
 10. Click on the ***Add*** button.
-11. Use the provided ***App key*** and the ***App secret*** with your Dropbox OAuth2 API credentials in n8n.
+11. Enter the provided ***App key*** and the ***App secret*** in the ***Client ID*** and ***Client Secret*** field, respectively, in your Dropbox OAuth2 API credentials in n8n.
 12. Click on the circle button in the OAuth section to connect your Dropbox account to n8n.
 13. Click on the ***Save*** button to save your credentials.
 

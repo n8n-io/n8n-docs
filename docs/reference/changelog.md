@@ -22,7 +22,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - S3: Fixed an issue with uploading files
     - Stripe Trigger: Fixed an issue with the existing webhooks
 	- Telegram: Fixed an issue with the Send Audio operation
-- Fixed an issue with deleting a node by setting `jsplumb` to version `2.15.4`
 - Binary data stays visible if a node gets re-executed
 
 ## n8n@0.99.0

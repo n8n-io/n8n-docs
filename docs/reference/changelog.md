@@ -21,7 +21,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - HTTP Request: Fixed an issue with the binary data getting used by multiple nodes
     - S3: Fixed an issue with uploading files
     - Stripe Trigger: Fixed an issue with the existing webhooks
-	- Telegram: Fixed an issue with the Send Audio operation
+    - Telegram: Fixed an issue with the Send Audio operation
 - Binary data stays visible if a node gets re-executed
 
 ## n8n@0.99.0

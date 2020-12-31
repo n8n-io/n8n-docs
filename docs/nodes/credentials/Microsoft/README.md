@@ -8,6 +8,7 @@ description: Learn to configure credentials for the nodes based on Microsoft ser
 You can use these credentials to authenticate the following nodes with Microsoft.
 - [Microsoft Excel](../../nodes-library/nodes/MicrosoftExcel/README.md)
 - [Microsoft OneDrive](../../nodes-library/nodes/MicrosoftOneDrive/README.md)
+- [Microsoft Outlook](../../nodes-library/nodes/MicrosoftOutlook/README.md)
 - [Microsoft Teams](../../nodes-library/nodes/MicrosoftTeams/README.md)
 
 
@@ -32,4 +33,3 @@ You'll only need to enter the Credentials Name and click on the circle button in
 9. Click the *Save* button to save your credentials.
 
 ![Getting Microsoft credentials](./using-oauth.gif)
-

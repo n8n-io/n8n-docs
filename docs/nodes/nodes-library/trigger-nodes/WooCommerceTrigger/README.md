@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 ### 2. Mattermost (post: message)
 
-This node will send a message to a Mattermost channel sharing the details of the order.
+This node will send a message to a Mattermost channel sharing the details of the order that was created in WooCommerce.
 
 1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](../../../credentials/Mattermost/README.md).
 2. Select the channel from the ***Channel ID*** dropdown list.
@@ -61,6 +61,6 @@ This node will send a message to a Mattermost channel sharing the details of the
 ```
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node sends a message to the `Sales` channel on Mattermost with the information about the order.
+In the screenshot below, you will notice that the node sends a message to the `Sales` channel on Mattermost about the order that was created in WooCommerce.
 
 ![Using the Mattermost node to send the information of the order to a channel](./Mattermost_node.png)

@@ -48,7 +48,10 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_USER` (default: 'root')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
-
+ - `DB_POSTGRESDB_SSL_CA` (default: undefined) — a path to the server's CA certificate to use to validate the connection (opportunistic encryption is not supported)
+ - `DB_POSTGRESDB_SSL_CERT` (default: undefined) — a path to the client's TLS certificate to authenticate with
+ - `DB_POSTGRESDB_SSL_KEY` (default: undefined) — a path to the client's private key corresponding to the its certificate
+ - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true) — if TLS connections that fail validation should be rejected
 
 ```bash
 export DB_TYPE=postgresdb
@@ -59,8 +62,20 @@ export DB_POSTGRESDB_USER=n8n
 export DB_POSTGRESDB_PASSWORD=n8n
 export DB_POSTGRESDB_SCHEMA=n8n
 
+# optional:
+export DB_POSTGRESDB_SSL_CA=$(pwd)/ca.crt
+export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
+
 n8n start
 ```
+
+### TLS
+
+A note on TLS certificates — you can choose between these configurations:
+
+- not declaring (default) — in which case you'll connect with SSL=off
+- declaring only the CA + unauthorized flag — in which case you'll connect with SSL=on and verify the server's signature
+- declaring `_{CERT,KEY}` as well as the above — in which case you'll use the cert and key for client TLS authentication
 
 ## MySQL / MariaDB
 

@@ -9,7 +9,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
     - ActiveCampaign: The node loads more options for the fields
     - Asana: Added Subtask resource and Get All operation for the Task resource
-    - Edit Image: Added Multi Step option
+    - Edit Image: Added Multi Step operation
     - HTTP Request: Added Use Querystring option
     - IF: Added Ends With and Starts With operations
     - Jira: Added Issue Comment resource
@@ -23,6 +23,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Stripe Trigger: Fixed an issue with the existing webhooks
     - Telegram: Fixed an issue with the Send Audio operation
 - Binary data stays visible if a node gets re-executed
+
+## n8n@0.99.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.0...n8n@0.99.1) for this version.<br />
+**Release date:** 2020-12-24
+
+- Fixed a bug that caused HTML to render in JSON view
 
 ## n8n@0.99.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.98.0...n8n@0.99.0) for this version.<br />

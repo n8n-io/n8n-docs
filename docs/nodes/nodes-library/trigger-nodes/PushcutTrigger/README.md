@@ -3,7 +3,7 @@ permalink: /nodes/n8n-nodes-base.pushcutTrigger
 description: Learn how to use the Pushcut Trigger node in n8n
 ---
 
-# Pushcut
+# Pushcut Trigger
 
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 

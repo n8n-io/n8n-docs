@@ -3,7 +3,7 @@ permalink: /nodes/n8n-nodes-base.egoi
 description: Learn how to use the e-goi node in n8n
 ---
 
-# e-goi
+# E-goi
 
 [E-goi](https://www.e-goi.com/) is an omnichannel marketing automation platform.
 

@@ -415,41 +415,41 @@ You can find authentication information for this node [here](../../../credential
 - Check if the supplied values form a valid list of elements
 - Check if the number of words in a sentence is between two determined quantities
 - Check if the number of words in a sentence equals a certain amount
- - Check if the number of words in a sentence is greater than a certain amount
- - Check if the number of words in a sentence is greater than
- - Check if the word count is lower
- - Check if the number of words present in a sentence is less than or equal to a quantity
- - Convert a string to Base64 encoded value
- - Discover banned English words in an email body or subject
- - Get field names by analyzing the field value provided
- - Format a string using a format pattern
- - Generate random string using a regular expression as a pattern
- - Return the largest item in a list
- - Return the smallest item in a list
- - Convert to lowercase
- - Convert a string to MD5 encoded value
- - Merge two strings
- - Normalize a string depending on the field name
- - Analyze string and return all emails, phones, zip codes, and links
- - Convert a string to an SHA encoded value
- - Analyze an English text with emojis and detect sentiment
- - Returns an ascending sorted list
- - Split a value into two parts and join them using a separator from the original string
- - Split a value into two parts using a separator from the original string
- - Get the length of a string
- - Lookup string between multiple values by fuzzy logic and regex patterns
- - Clean abuse words from a string
- - Replace the first value found in a string with another
- - Replace all values found in a string with another
- - Translate a text into any language
- - Return a single list with no repeating elements
- - Convert all letters to uppercase
- - Count total words in a text
+- Check if the number of words in a sentence is greater than a certain amount
+- Check if the number of words in a sentence is greater than
+- Check if the word count is lower
+- Check if the number of words present in a sentence is less than or equal to a quantity
+- Convert a string to Base64 encoded value
+- Discover banned English words in an email body or subject
+- Get field names by analyzing the field value provided
+- Format a string using a format pattern
+- Generate random string using a regular expression as a pattern
+- Return the largest item in a list
+- Return the smallest item in a list
+- Convert to lowercase
+- Convert a string to MD5 encoded value
+- Merge two strings
+- Normalize a string depending on the field name
+- Analyze string and return all emails, phones, zip codes, and links
+- Convert a string to an SHA encoded value
+- Analyze an English text with emojis and detect sentiment
+- Returns an ascending sorted list
+- Split a value into two parts and join them using a separator from the original string
+- Split a value into two parts using a separator from the original string
+- Get the length of a string
+- Lookup string between multiple values by fuzzy logic and regex patterns
+- Clean abuse words from a string
+- Replace the first value found in a string with another
+- Replace all values found in a string with another
+- Translate a text into any language
+- Return a single list with no repeating elements
+- Convert all letters to uppercase
+- Count total words in a text
 :::
 
 ## Example Usage
 
-This workflow allows you to create a screenshot of a website and send it to a telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [uProc]()
 - [Telegram](../../nodes/Telegram/README.md)
@@ -486,7 +486,7 @@ This node will send the screenshot that we received from the previous node.
 
 1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](../../../credentials/Telegram/README.md).
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Enter a chat ID in the ***Chat ID*** field.
+3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](../../nodes/Telegram/README.md#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
 4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
 ::: v-pre
 5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.

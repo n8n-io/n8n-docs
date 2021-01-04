@@ -11,13 +11,18 @@ You can use these credentials to authenticate the following nodes with WooCommer
 
 ## Prerequisites
 
-Create a [WooCommerce](https://woocommerce.com/) account.
+Install the [WooCommerce](https://woocommerce.com/) plugin on your WordPress website.
 
 ## Using Access Token
 
-1. Access your WooCommerce dashboard.
-2. Go to Settings, advanced and then REST API.
-3. Click Add Key.
-4. Enter necessary details.
-5. Once key is granted, you will receive a consumer key & secret.
-6. Use your Woocommerce URL, consumer key & secret with your n8n credentials.
+1. Access your WordPress dashboard.
+2. Select 'Settings' from the ***WooCommerce*** dropdown list.
+3. Click on the ***Advanced*** tab.
+4. Click on ***REST API***.
+5. Click on the ***Create an API Key*** button.
+6. Enter the necessary details.
+7. Select 'Read/Write' from the ***Permissions*** dropdown list.
+8. Click on the ***Generate API Key*** button.
+9. Use your WooCommerce website URL, Consumer key & Consumer secret with your WooCommerce node credentials in n8n.
+
+![Getting WooCommerce credentials](./using-access-token.gif)

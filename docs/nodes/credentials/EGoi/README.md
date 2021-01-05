@@ -1,6 +1,6 @@
 ---
 permalink: /credentials/egoi
-description: Learn to configure credentials for the e-goi node in n8n
+description: Learn to configure credentials for the E-goi node in n8n
 ---
 
 # E-goi

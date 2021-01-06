@@ -56,7 +56,7 @@ You can find authentication information for this node [here](../../../credential
 - Get all the stars of an authenticated user
 :::
 
-::: User
+::: details User
 - Get information about a user
 - Get online status of a user
 :::

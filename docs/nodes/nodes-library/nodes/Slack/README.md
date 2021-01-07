@@ -83,7 +83,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Slack node (create: channel)
 
-This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the [FAQs](#_2-how-to-add-oauth-scopes-to-a-slack-app) to learn how to add scopes.
+This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the [FAQs](#how-to-add-oauth-scopes-to-a-slack-app) to learn how to add scopes.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
 2. You'll have to enter credentials for the Slack node. You can find out how to enter credentials for this node [here](../../../credentials/Slack/README.md).
@@ -164,7 +164,7 @@ In the screenshot below, you will notice that the node uploads the file to the c
 
 ## FAQs
 
-### 1. How to create a private channel?
+### How to create a private channel?
 
 To create a private channel, follow the steps mentioned below.
 1. Select 'Channel' from the ***Resource*** dropdown list.
@@ -172,7 +172,7 @@ To create a private channel, follow the steps mentioned below.
 3. Click on the ***Add Field*** button.
 4. Toggle ***Is Private*** to `true`.
 
-### 2. How to add OAuth Scopes to a Slack app?
+### How to add OAuth Scopes to a Slack app?
 
 Your app needs appropriate scopes and permissions to perform actions. For example, if you want to create a new channel, your app requires the `channel:manage` scope. To add scopes and permissions, follow the steps mentioned below.
 1. Navigate to the [Slack App dashboard](https://api.slack.com/apps) page and select your app.

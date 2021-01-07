@@ -19,13 +19,13 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow whenever a new event occurs in TheHive. To trigger the workflow for a specific event, select that event instead.
 
-1. First of all, you'll have to add the webhook URL in TheHive instance configuration. Refer to the [FAQs](#_1-how-to-configure-a-webhook-in-thehive) to learn how to configure a webhook in TheHive.
+1. First of all, you'll have to add the webhook URL in TheHive instance configuration. Refer to the [FAQs](#how-to-configure-a-webhook-in-thehive) to learn how to configure a webhook in TheHive.
 2. Select the `*` from the ***Events*** dropdown list. This will trigger the workflow for all the events.
 3. Click on ***Execute Node*** to run the node.
 
 ## FAQs
 
-### 1. How to configure a Webhook in TheHive?
+### How to configure a Webhook in TheHive?
 
 To configure the webhook for your TheHive instance follow the steps mentioned below.
 1. Copy the webhook URL from TheHive Trigger node.

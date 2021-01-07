@@ -42,7 +42,7 @@ When a workflow is set to active, its executions are stored in the `execution_en
 | workflowData | TEXT | Stores the workflow data with the [static data](../../nodes/nodes-library/core-nodes/Function/README.md#method-getworkflowstaticdata-type) (if any) |
 | workflowId | VARCHAR | Stores the ID of the workflow that got executed |
 
-Below is an example of how n8n stores the execution information in the `execution_entity` table in the SQLite database. The example below shows the execution data stored in the table for the [Monitor changes in Google Sheets every 45 mins](https://n8n.io/workflows/864) workflow.
+Below is an example of how n8n stores the execution information in the `execution_entity` table in the SQLite database. The example below shows the execution data stored in the table for the [Receive updates of the position of the ISS every minute](https://n8n.io/workflows/880) workflow.
 
 The ***data*** field contains the data returned by the nodes after the execution of the workflow. The ***finished*** field contains the value `1`, indicating that the execution got completed successfully. The example workflow uses a Trigger node to start the workflow. This information gets stored in the ***mode*** field. The ***workflowData*** field stores information about the workflow and static data. The ***workflowId*** field refers to the workflow that got executed.
 

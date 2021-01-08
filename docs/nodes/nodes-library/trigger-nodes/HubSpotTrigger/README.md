@@ -3,7 +3,7 @@ permalink: /nodes/n8n-nodes-base.hubspotTrigger
 description: Learn how to use the HubSpot Trigger node in n8n
 ---
 
-# Hubspot Trigger
+# HubSpot Trigger
 
 [HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 

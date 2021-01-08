@@ -1,6 +1,6 @@
 # Changelog
 
-## n8n@0.100.0
+## n8n@0.101.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.100.0...n8n@0.101.0) for this version.<br />
 **Release date:** 2021-01-07
 
@@ -18,7 +18,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Edit Image: Fixed an issue with the Border operation
     - HTTP Request: Fixed batch sizing to work when `batchSize = 1`
     - PayPal: Fixed a typo in the Environment field
-    - SplitInBatches: Fixed a typo in the description
+    - Split In Batches: Fixed a typo in the description
     - Telegram: Fixed an issue with the Send Audio operation
 - Based on your settings, vacuum runs on SQLite on startup
 - Updated axios to version `0.21.1`

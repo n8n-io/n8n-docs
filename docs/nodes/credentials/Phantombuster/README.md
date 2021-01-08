@@ -14,7 +14,7 @@ Create a [Phantombuster](https://www.phantombuster.com/) account.
 
 ## Using API
 
-1. Access [Phantombuster](https://phantombuster.com/).
+1. Access your [Phantombuster](https://phantombuster.com/) dashboard.
 2. Click on your name on the top right and select 'Org settings'.
 3. Scroll down to the ***Third party API keys*** section.
 4. Click on the ***+ Add third party API key*** button.

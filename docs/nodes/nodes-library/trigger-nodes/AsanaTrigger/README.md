@@ -26,3 +26,7 @@ The final workflow should look like the following image.
 2. Enter the name of the resource in the ***Resource*** field.
 3. Enter the name of the workspace in the ***Workspace*** field.
 4. Click on ***Execute Node*** to run the node.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Asana Trigger node.
+:::

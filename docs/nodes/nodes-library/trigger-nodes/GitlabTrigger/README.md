@@ -29,3 +29,7 @@ The final workflow should look like the following image.
 3. Enter the repository name in the *Repository Name* field.
 4. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 5. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the GitLab Trigger node.
+:::

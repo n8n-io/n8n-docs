@@ -22,9 +22,13 @@ The final workflow should look like the following image.
 ![A workflow with the ClickUp Trigger node](./workflow.png)
 
 
-### 1. Telegram Trigger node
+### 1. ClickUp Trigger node
 
 1. First of all, you'll have to enter credentials for the ClickUp Trigger node. You can find out how to do that [here](../../../credentials/ClickUp/README.md).
 2. Select your team from the *Team* dropdown list.
 3. Select the `*` option in the *Events* field to receive updates for all the events.
 4. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ClickUp Trigger node.
+:::

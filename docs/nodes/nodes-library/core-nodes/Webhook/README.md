@@ -124,7 +124,7 @@ This example workflow uses the Webhook node, which is a Trigger node. You'll nee
 
 ## FAQs
 
-### 1. Where to find the Webhook URLs?
+### Where to find the Webhook URLs?
 
 The Webhook node has two URLs - Test URL and Production URL.
 To get these URLs, follow the steps mentioned below.
@@ -136,7 +136,7 @@ Here is a GIF demonstrating how to retrieve the test and production webhook URLs
 
 ![Retrieving the Test and Production URLs from the Webhook node](./webhook-url.gif)
 
-### 2. How to use the HTTP Request node to trigger the Webhook node?
+### How to use the HTTP Request node to trigger the Webhook node?
 
 The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
 1. Create a new workflow.
@@ -150,7 +150,7 @@ Here is a video demonstrating how to send a request to a Webhook based workflow 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 3. How to use cURL to trigger the Webhook node?
+### How to use cURL to trigger the Webhook node?
 
 You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.
 Based on your use-case, you can make an HTTP request with or without any parameters. You can also send files with the HTTP request using cURL.

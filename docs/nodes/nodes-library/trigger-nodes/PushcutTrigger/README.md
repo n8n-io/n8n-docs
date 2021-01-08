@@ -25,7 +25,7 @@ The final workflow should look like the following image.
 
 Whenever you leave your house, Pushcut will send you a notification with an action `Leaving Home`. The Pushcut Trigger node will trigger the workflow when this action is selected.
 
-To create an action in the Pushcut app, follow the instructions mentioned in [FAQs](#_1-how-to-configure-a-pushcut-action).
+To create an action in the Pushcut app, follow the instructions mentioned in [FAQs](#how-to-configure-a-pushcut-action).
 
 1. First of all, you'll have to enter credentials for the Pushcut Trigger node. You can find out how to do that [here](../../../credentials/Pushcut/README.md).
 2. Enter an action name in the ***Action Name*** field.
@@ -54,7 +54,7 @@ In the screenshot below, you will notice that the node sends an SMS with the inp
 
 ## FAQs
 
-### 1. How to configure a Pushcut action?
+### How to configure a Pushcut action?
 
 Follow the steps mentioned below to configure your Pushcut Trigger node with your Pushcut app.
 
@@ -67,3 +67,7 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 7. In n8n, enter a name for the action and click on ***Execute Node***.
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pushcut Trigger node.
+:::

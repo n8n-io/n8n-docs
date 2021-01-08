@@ -3,7 +3,7 @@ permalink: /nodes/n8n-nodes-base.hubspotTrigger
 description: Learn how to use the HubSpot Trigger node in n8n
 ---
 
-# Hubspot Trigger
+# HubSpot Trigger
 
 [HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 
@@ -27,3 +27,7 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the HubSpot Trigger node. You can find out how to do that [here](../../../credentials/Hubspot/README.md).
 2. Enter the HubSpot App ID in the ***App ID*** field. You can find out how to obtain the ***App ID*** in the link above.
 3. Click on ***Execute Node*** to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the HubSpot Trigger node.
+:::

@@ -28,3 +28,7 @@ The final workflow should look like the following image.
 2. Select 'Project' from the *Resource* dropdown list.
 3. Select 'New' from the *Event* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Copper Trigger node.
+:::

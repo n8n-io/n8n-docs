@@ -17,10 +17,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - E-goi: Fixed the name of the node
     - Edit Image: Fixed an issue with the Border operation
     - HTTP Request: Fixed batch sizing to work when `batchSize = 1`
-    - PayPal: Fixed a typo for a credential field
+    - PayPal: Fixed a typo in the Environment field
     - SplitInBatches: Fixed a typo in the description
     - Telegram: Fixed an issue with the Send Audio operation
-- Based on settings vacuum runs on SQLite on startup
+- Based on your settings, vacuum runs on SQLite on startup
 - Updated axios to version `0.21.1`
 
 ## n8n@0.100.0

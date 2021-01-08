@@ -23,6 +23,10 @@ This node will trigger the workflow whenever a new event occurs in TheHive. To t
 2. Select the `*` from the ***Events*** dropdown list. This will trigger the workflow for all the events.
 3. Click on ***Execute Node*** to run the node.
 
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the TheHive Trigger node.
+:::
+
 ## FAQs
 
 ### 1. How to configure a Webhook in TheHive?

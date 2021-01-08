@@ -64,3 +64,7 @@ This node will send a message to a Mattermost channel sharing the details of the
 In the screenshot below, you will notice that the node sends a message to the `Sales` channel on Mattermost about the order that was created in WooCommerce.
 
 ![Using the Mattermost node to send the information of the order to a channel](./Mattermost_node.png)
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the WooCommerce Trigger node.
+:::

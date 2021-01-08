@@ -67,3 +67,7 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 7. In n8n, enter a name for the action and click on ***Execute Node***.
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pushcut Trigger node.
+:::

@@ -80,6 +80,10 @@ In the screenshot below, you will notice that the node sends a reply to the mess
 
 ![Using the Telegram node to send a message with an image and instruction of a cocktail](./Telegram_node.png)
 
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Telegram Trigger node.
+:::
+
 ## Further Reading
 
 - [Automatically Adding Expense Receipts to Google Sheets with Telegram, Mindee, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-mindee-twilio-and-n8n-c47eb2f8d7a5)

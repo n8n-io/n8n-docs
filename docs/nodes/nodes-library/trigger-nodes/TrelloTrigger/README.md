@@ -5,7 +5,7 @@ description: Learn how to use the Trello Trigger node in n8n
 
 # Trello Trigger
 
-[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them. 
+[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Trello/README.md).
@@ -27,6 +27,10 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the Trello Trigger node. You can find out how to do that [here](../../../credentials/Trello/README.md).
 2. Enter the ID of the list in the *Model ID* field. You can find instructions on how to do that in the FAQs below.
 3. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Trello Trigger node.
+:::
 
 
 ## FAQs

@@ -86,7 +86,7 @@ Hey [Harshil](twist-mention://475370)!
 You have been added to the {{$node["Twist"].json["name"]}} channel.
 Click on the button below to quickly navigate to the documentation website.
 ```
-The above message mentions the user `Harshil`. To mention a user in your workspace you need to use their User ID. Refer to the [FAQs](#_1-where-can-i-get-the-user-id) to learn how to get a User ID.
+The above message mentions the user `Harshil`. To mention a user in your workspace you need to use their User ID. Refer to the [FAQs](#where-can-i-get-the-user-id) to learn how to get a User ID.
 
 6. Click on ***Add options*** and select 'Actions' from the dropdown list.
 7. Click on the ***Add Action*** button.
@@ -102,7 +102,7 @@ In the screenshot below, you will notice that the node sends a message to the Ge
 
 ## FAQs
 
-### 1. Where can I get the User ID?
+### Where can I get the User ID?
 
 To get the User ID for a user follow the steps mentioned below
 1. Click on the ***Team*** tab.

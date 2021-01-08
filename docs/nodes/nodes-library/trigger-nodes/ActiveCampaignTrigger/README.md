@@ -28,3 +28,7 @@ The final workflow should look like the following image.
 2. Select 'account_add' from the *Events* dropdown list.
 3. Select 'Admin' from the *Source* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ActiveCampaign Trigger node.
+:::

@@ -5,7 +5,7 @@ description: Learn how to use the Chargebee Trigger node in n8n
 
 # Chargebee Trigger
 
-[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management. 
+[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Chargebee/README.md).
@@ -28,6 +28,9 @@ The final workflow should look like the following image.
 2. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 3. Click on *Execute Node* to run the workflow.
 
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Chargebee Trigger node.
+:::
 
 ## FAQs
 
@@ -36,6 +39,6 @@ The final workflow should look like the following image.
 2. Click on "Settings".
 3. Click on "Configure Chargebee".
 4. Scroll down and click on "Webhooks".
-5. Click on the *Add Webhook* button. 
+5. Click on the *Add Webhook* button.
 6. Enter the Webhook Name and the Webhook URL.
 7. Click on the *Create* button.

@@ -81,3 +81,7 @@ This node will store the data coming from the previous node in a table in Airtab
 In the screenshot below, you will notice that the node adds the information of the subscriber from the previous node in a table in Airtable.
 
 ![Using the Airtable node to append the information of a subscriber](./Airtable_node.png)
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the MailerLite Trigger node.
+:::

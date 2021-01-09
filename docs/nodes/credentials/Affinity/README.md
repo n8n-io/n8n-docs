@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/affinity
 description: Learn to configure credentials for the Affinity node in n8n
 ---
 

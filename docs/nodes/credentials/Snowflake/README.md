@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/snowflake
 description: Learn to configure credentials for the Snowflake node in n8n
 ---
 

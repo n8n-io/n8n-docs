@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/quickbase
 description: Learn to configure credentials for the Quick Base node in n8n
 ---
 

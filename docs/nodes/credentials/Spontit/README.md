@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/spontit
 description: Learn to configure credentials for the Spontit node in n8n
 ---
 

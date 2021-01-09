@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/postgres
 description: Learn to configure credentials for the Postgres node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with Postgres.
 
 ## Prerequisites
 
-Create an user account on a Postgres server. 
+Create an user account on a Postgres server.
 
 ## Using Database Connection
 

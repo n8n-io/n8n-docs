@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mySql
 description: Learn to configure credentials for the MySQL node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with MySQL.
 
 ## Prerequisites
 
-Create an user account on a MySQL server. 
+Create an user account on a MySQL server.
 
 ## Using Database Connection
 

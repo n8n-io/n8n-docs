@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/questDb
 description: Learn to configure credentials for the QuestDB node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with QuestDB.
 
 ## Prerequisites
 
-An available instance of QuestDB. 
+An available instance of QuestDB.
 
 ## Using Database Connection
 

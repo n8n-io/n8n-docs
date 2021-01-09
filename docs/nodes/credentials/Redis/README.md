@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/redis
 description: Learn to configure credentials for the Redis node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with Redis.
 
 ## Prerequisites
 
-Create an user account on a Redis server. 
+Create an user account on a Redis server.
 
 ## Using Database Connection
 

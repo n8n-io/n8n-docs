@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/paddle
 description: Learn to configure credentials for the Paddle node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/ftp
 description: Learn to configure credentials for the FTP node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with FTP.
 
 ## Prerequisites
 
-Create an account on an FTP server. 
+Create an account on an FTP server.
 
 ## Using FTP/SFTP
 

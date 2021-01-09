@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/kafka
 description: Learn to configure credentials for the Kafka node in n8n
 ---
 

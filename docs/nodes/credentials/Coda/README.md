@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/coda
 description: Learn to configure credentials for the Coda node in n8n
 ---
 

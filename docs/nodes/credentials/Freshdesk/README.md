@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/freshdesk
 description: Learn to configure credentials for the Freshdesk node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/spotify
 description: Learn to configure credentials for the Spotify node in n8n
 ---
 

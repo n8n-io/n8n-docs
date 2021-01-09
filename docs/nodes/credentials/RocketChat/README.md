@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/rocketchat
 description: Learn to configure credentials for the Rocket.Chat node in n8n
 ---
 

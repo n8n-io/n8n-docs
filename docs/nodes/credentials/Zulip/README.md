@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/zulip
 description: Learn to configure credentials for the Zulip node in n8n
 ---
 

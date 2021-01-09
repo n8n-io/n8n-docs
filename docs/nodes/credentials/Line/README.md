@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/line
 description: Learn to configure credentials for the Line node in n8n
 ---
 

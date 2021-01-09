@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/signl4
 description: Learn to configure credentials for the SIGNL4 node in n8n
 ---
 

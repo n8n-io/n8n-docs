@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/jira
 description: Learn to configure credentials for the Jira node in n8n
 ---
 

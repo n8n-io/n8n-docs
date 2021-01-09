@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/pipedrive
 description: Learn to configure credentials for the Pipedrive node in n8n
 ---
 

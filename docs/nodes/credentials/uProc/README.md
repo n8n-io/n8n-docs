@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/uProc
 description: Learn to configure credentials for the uProc node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/amqp
 description: Learn to configure credentials for the AMQP node in n8n
 ---
 

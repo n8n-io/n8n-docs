@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/wufoo
 description: Learn to configure credentials for the Wufoo Trigger node in n8n
 ---
 

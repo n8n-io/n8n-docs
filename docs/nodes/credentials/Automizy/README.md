@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/automizy
 description: Learn to configure credentials for the Automizy node in n8n
 ---
 

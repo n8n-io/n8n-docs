@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/github
 description: Learn to configure credentials for the GitHub node in n8n
 ---
 

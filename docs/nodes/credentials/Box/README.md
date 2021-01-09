@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/box
 description: Learn to configure credentials for the Box node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/calendly
 description: Learn to configure credentials for the Calendly node in n8n
 ---
 

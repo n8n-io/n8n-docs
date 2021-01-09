@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/messageBird
 description: Learn to configure credentials for the MessageBird node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with MessageBi
 
 ## Prerequisites
 
-Create a [MessageBird](https://www.messagebird.com/en/) account. 
+Create a [MessageBird](https://www.messagebird.com/en/) account.
 
 ## Using Access Token
 

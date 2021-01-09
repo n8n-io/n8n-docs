@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/facebookGraph
 description: Learn to configure credentials for the Facebook node in n8n
 ---
 

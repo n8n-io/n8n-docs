@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/rabbitmq
 description: Learn to configure credentials for the RabbitMQ node in n8n
 ---
 

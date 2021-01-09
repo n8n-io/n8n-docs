@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mondayCom
 description: Learn to configure credentials for the monday.com node in n8n
 ---
 

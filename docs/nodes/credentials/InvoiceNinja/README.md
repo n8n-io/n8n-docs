@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/invoiceNinja
 description: Learn to configure credentials for the Invoice Ninja node in n8n
 ---
 

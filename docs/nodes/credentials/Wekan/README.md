@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/wekan
 description: Learn to configure credentials for the Wekan node in n8n
 ---
 

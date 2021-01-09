@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/pushcut
 description: Learn to configure credentials for the Pushcut node in n8n
 ---
 

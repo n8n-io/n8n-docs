@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/vonage
 description: Learn to configure credentials for the Vonage node in n8n
 ---
 

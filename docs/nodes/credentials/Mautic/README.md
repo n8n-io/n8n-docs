@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mautic
 description: Learn to configure credentials for the Mautic node in n8n
 ---
 

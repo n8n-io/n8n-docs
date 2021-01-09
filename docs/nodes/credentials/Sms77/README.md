@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/sms77
 description: Learn to configure credentials for the sms77 node in n8n
 ---
 

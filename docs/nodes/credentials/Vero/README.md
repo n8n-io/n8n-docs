@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/vero
 description: Learn to configure credentials for the Vero node in n8n
 ---
 

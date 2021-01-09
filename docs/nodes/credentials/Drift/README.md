@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/drift
 description: Learn to configure credentials for the Drift node in n8n
 ---
 

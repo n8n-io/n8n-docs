@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/crateDb
 description: Learn to configure credentials for the CrateDB node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with CrateDB.
 
 ## Prerequisites
 
-An available instance of CrateDB. 
+An available instance of CrateDB.
 
 ## Using Database Connection
 

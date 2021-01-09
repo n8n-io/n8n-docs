@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/harvest
 description: Learn to configure credentials for the Harvest node in n8n
 ---
 

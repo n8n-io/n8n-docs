@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mindee
 description: Learn to configure credentials for the Mindee node in n8n
 ---
 

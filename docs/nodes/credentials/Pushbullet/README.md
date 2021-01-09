@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/pushbullet
 description: Learn to configure credentials for the Pushbullet node in n8n
 ---
 

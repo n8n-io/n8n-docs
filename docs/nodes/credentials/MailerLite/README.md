@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mailerLite
 description: Learn to configure credentials for the MailerLite node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/smtp
 description: Learn to configure credentials for the Send Email node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with SMTP.
 
 ## Prerequisites
 
-Create an email account on a service with SMTP support. 
+Create an email account on a service with SMTP support.
 
 ## Using SMTP
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/wordpress
 description: Learn to configure credentials for the WordPress node in n8n
 ---
 

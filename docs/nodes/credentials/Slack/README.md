@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/slack
 description: Learn to configure credentials for the Slack node in n8n
 ---
 

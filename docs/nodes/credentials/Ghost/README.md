@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/ghost
 description: Learn to configure credentials for the Ghost node in n8n
 ---
 

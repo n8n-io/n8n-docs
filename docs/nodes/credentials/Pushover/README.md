@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/pushover
 description: Learn to configure credentials for the Pushover node in n8n
 ---
 

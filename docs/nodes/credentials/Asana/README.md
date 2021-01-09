@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/asana
 description: Learn to configure credentials for the Asana node in n8n
 ---
 

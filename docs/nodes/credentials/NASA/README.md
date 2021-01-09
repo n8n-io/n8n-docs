@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/nasa
 description: Learn to configure credentials for the NASA node in n8n
 ---
 

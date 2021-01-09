@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/zendesk
 description: Learn to configure credentials for the Zendesk node in n8n
 ---
 

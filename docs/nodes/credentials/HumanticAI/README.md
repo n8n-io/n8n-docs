@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/humanticAi
 description: Learn to configure credentials for the Humantic AI node in n8n
 ---
 

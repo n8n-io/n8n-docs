@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/customerIo
 description: Learn to configure credentials for the Customer.io node in n8n
 ---
 

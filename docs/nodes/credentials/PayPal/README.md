@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/payPal
 description: Learn to configure credentials for the PayPal node in n8n
 ---
 

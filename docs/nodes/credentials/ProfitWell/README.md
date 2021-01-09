@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/profitWell
 description: Learn to configure credentials for the ProfitWell node in n8n
 ---
 

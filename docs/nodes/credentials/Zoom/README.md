@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/zoom
 description: Learn to configure credentials for the Zoom node in n8n
 ---
 

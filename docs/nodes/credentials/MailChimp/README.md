@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mailchimp
 description: Learn to configure credentials for the Mailchimp node in n8n
 ---
 

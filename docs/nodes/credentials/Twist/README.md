@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/twist
 description: Learn to configure credentials for the Twist node in n8n
 ---
 

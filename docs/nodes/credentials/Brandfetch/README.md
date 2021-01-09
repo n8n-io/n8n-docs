@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/brandfetch
 description: Learn to configure credentials for the Brandfetch node in n8n
 ---
 

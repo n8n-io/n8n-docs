@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/iterable
 description: Learn to configure credentials for the Iterable node in n8n
 ---
 

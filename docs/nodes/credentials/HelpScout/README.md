@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/helpScout
 description: Learn to configure credentials for the Help Scout node in n8n
 ---
 

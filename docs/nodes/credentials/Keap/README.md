@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/keap
 description: Learn to configure credentials for the Keap node in n8n
 ---
 

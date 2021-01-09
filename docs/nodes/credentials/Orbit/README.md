@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/orbit
 description: Learn to configure credentials for the Orbite node in n8n
 ---
 

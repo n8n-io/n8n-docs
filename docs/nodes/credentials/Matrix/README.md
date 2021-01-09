@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/matrix
 description: Learn to configure credentials for the Matrix node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/openWeatherMap
 description: Learn to configure credentials for the OpenWeatherMap node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with OpenWeath
 
 ## Prerequisites
 
-Create a [OpenWeatherMap](https://openweathermap.org/) account. 
+Create a [OpenWeatherMap](https://openweathermap.org/) account.
 
 ## Using Access Token
 

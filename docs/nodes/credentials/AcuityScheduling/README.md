@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/acuityScheduling
 description: Learn to configure credentials for the AcuityScheduling node in n8n
 ---
 

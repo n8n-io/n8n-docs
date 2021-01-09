@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/medium
 description: Learn to configure credentials for the Medium node in n8n
 ---
 

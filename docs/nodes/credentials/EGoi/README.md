@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/egoi
 description: Learn to configure credentials for the E-goi node in n8n
 ---
 

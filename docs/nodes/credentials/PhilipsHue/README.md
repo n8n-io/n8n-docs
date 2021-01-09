@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/philipsHue
 description: Learn to configure credentials for the Philips Hue node in n8n
 ---
 

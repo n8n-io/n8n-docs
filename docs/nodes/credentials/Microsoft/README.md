@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/microsoft
 description: Learn to configure credentials for the nodes based on Microsoft services in n8n
 ---
 

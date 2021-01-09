@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/unleashedSoftware
 description: Learn to configure credentials for the Unleashed Software node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/storyblok
 description: Learn to configure credentials for the Storyblok node in n8n
 ---
 

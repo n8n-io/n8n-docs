@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/yourls
 description: Learn to configure credentials for the Yourls node in n8n
 ---
 

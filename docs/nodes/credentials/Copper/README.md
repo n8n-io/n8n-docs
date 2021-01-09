@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/copper
 description: Learn to configure credentials for the Copper node in n8n
 ---
 

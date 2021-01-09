@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/s3
 description: Learn to configure credentials for the S3 node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/facebookGraphApp
 description: Learn to configure credentials for the Facebook Trigger node in n8n
 ---
 

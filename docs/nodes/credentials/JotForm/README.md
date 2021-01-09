@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/jotForm
 description: Learn to configure credentials for the JotForm node in n8n
 ---
 

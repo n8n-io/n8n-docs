@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/telegram
 description: Learn to configure credentials for the Telegram node in n8n
 ---
 

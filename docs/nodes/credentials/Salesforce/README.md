@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/salesforce
 description: Learn to configure credentials for the Salesforce node in n8n
 ---
 

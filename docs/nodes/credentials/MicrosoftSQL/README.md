@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/microsoftSql
 description: Learn to configure credentials for the Microsoft SQL node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with Microsoft
 
 ## Prerequisites
 
-Create an user account on a Microsoft SQL server. 
+Create an user account on a Microsoft SQL server.
 
 ## Using Database Connection
 

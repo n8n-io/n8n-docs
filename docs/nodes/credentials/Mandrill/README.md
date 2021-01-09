@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mandrill
 description: Learn to configure credentials for the Mandrill node in n8n
 ---
 

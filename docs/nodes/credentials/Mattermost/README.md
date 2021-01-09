@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mattermost
 description: Learn to configure credentials for the Mattermost node in n8n
 ---
 

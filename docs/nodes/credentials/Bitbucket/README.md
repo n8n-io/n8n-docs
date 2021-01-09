@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/bitbucket
 description: Learn to configure credentials for the Bitbucket node in n8n
 ---
 

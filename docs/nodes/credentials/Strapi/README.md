@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/strapi
 description: Learn to configure credentials for the Strapi node in n8n
 ---
 

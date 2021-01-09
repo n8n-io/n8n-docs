@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/contentful
 description: Learn to configure credentials for the Contentful node in n8n
 ---
 

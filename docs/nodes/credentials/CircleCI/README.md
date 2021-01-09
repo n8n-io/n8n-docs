@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/circleCi
 description: Learn to configure credentials for the CircleCI node in n8n
 ---
 
@@ -11,7 +10,7 @@ You can use these credentials to authenticate the following nodes with CircleCI.
 
 ## Prerequisites
 
-Create a [CircleCI](https://circleci.com/) account. 
+Create a [CircleCI](https://circleci.com/) account.
 
 ## Using Access Token
 

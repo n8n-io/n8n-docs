@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/twilio
 description: Learn to configure credentials for the Twilio node in n8n
 ---
 

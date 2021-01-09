@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/eventbrite
 description: Learn to configure credentials for the Eventbrite node in n8n
 ---
 

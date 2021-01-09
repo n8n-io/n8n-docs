@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mongoDb
 description: Learn to configure credentials for the MongoDB node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/rundeck
 description: Learn to configure credentials for the Rundeck node in n8n
 ---
 

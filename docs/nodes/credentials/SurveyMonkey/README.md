@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/surveyMonkey
 description: Learn to configure credentials for the SurveyMonkey node in n8n
 ---
 

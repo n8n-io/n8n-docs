@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/fileMaker
 description: Learn to configure credentials for the FileMaker node in n8n
 ---
 
@@ -10,7 +9,7 @@ You can use these credentials to authenticate the following nodes with FileMaker
 
 ## Prerequisites
 
-Create an user account on a FileMaker server. 
+Create an user account on a FileMaker server.
 
 ## Using Database Connection
 

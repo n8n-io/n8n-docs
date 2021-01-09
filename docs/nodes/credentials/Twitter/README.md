@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/twitter
 description: Learn to configure credentials for the Twitter node in n8n
 ---
 

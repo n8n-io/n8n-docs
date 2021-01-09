@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/lingvaNex
 description: Learn to configure credentials for the LingvaNex node in n8n
 ---
 

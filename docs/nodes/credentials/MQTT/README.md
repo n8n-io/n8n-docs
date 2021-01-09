@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/mqtt
 description: Learn to configure credentials for the MQTT node in n8n
 ---
 

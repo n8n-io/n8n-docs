@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/theHive
 description: Learn to configure credentials for TheHive node in n8n
 ---
 

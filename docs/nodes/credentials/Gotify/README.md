@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/gotify
 description: Learn to configure credentials for the Gotify node in n8n
 ---
 

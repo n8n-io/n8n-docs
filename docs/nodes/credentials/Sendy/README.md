@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/sendy
 description: Learn to configure credentials for the Sendy node in n8n
 ---
 

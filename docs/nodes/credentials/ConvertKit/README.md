@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/convertKit
 description: Learn to configure credentials for the ConvertKit node in n8n
 ---
 

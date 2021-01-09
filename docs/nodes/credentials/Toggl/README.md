@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/toggl
 description: Learn to configure credentials for the Toggl node in n8n
 ---
 

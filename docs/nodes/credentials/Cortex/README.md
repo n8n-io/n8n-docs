@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/cortex
 description: Learn to configure credentials for the Cortex node in n8n
 ---
 # Cortex

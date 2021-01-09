@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/twake
 description: Learn to configure credentials for the Twake node in n8n
 ---
 

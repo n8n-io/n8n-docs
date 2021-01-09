@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/clearbit
 description: Learn to configure credentials for the Clearbit node in n8n
 ---
 

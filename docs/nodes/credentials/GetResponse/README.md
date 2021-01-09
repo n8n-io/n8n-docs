@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/getResponse
 description: Learn to configure credentials for the GetResponse node in n8n
 ---
 

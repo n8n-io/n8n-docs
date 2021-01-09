@@ -1,5 +1,4 @@
 ---
-permalink: /credentials/strava
 description: Learn to configure credentials for the Strava node and the Strava Trigger node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.github
 description: Learn how to use the GitHub node in n8n
 ---
 

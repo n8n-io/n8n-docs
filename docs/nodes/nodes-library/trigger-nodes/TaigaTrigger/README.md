@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.taigaTrigger
 description: Learn how to use the Taiga Trigger node in n8n
 ---
 

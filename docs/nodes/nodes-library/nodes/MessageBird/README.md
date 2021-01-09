@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.messageBird
 description: Learn how to use the MessageBird node in n8n
 ---
 

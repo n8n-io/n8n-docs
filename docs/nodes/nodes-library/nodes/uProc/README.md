@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.uproc
 description: Learn how to use the uProc node in n8n
 ---
 

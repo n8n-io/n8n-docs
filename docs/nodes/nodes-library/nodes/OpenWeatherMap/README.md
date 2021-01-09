@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.openWeatherMap
 description: Learn how to use the OpenWeatherMap node in n8n
 ---
 
 # OpenWeatherMap
 
-[OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data. 
+[OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/OpenWeatherMap/README.md).

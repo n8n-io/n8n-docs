@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.theHive
 description: Learn how to use the TheHive node in n8n
 ---
 

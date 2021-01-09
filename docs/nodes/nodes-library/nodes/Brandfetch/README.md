@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.Brandfetch
 description: Learn how to use the Brandfetch node in n8n
 ---
 

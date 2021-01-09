@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.travisCi
 description: Learn how to use the Travis CI node in n8n
 ---
 

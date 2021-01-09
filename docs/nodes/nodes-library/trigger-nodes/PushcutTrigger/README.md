@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.pushcutTrigger
 description: Learn how to use the Pushcut Trigger node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.stravaTrigger
 description: Learn how to use the Strava Trigger node in n8n
 ---
 

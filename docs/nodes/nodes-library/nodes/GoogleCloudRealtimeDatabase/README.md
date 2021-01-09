@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase
 description: Learn how to use the Google Cloud Realtime Database node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.zendeskTrigger
 description: Learn how to use the Zendesk Trigger node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.awsS3
 description: Learn how to use the AWS S3 node in n8n
 ---
 

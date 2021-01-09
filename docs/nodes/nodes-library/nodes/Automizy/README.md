@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.automizy
 description: Learn how to use the Automizy node in n8n
 ---
 
@@ -48,7 +47,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new list called `n8n-docs` in Automizy.
 
-1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](../../../credentials/Automizy/README.md). 
+1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](../../../credentials/Automizy/README.md).
 2. Select 'List' from the ***Resource*** dropdown list.
 3. Enter `n8n-docs` in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.

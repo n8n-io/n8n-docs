@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.keapTrigger
 description: Learn how to use the Keap Trigger node in n8n
 ---
 

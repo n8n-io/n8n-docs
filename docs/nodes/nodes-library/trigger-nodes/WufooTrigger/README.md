@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.wufooTrigger
 description: Learn how to use the Wufoo Trigger node in n8n
 ---
 

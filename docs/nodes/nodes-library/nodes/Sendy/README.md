@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.sendy
 description: Learn how to use the Sendy node in n8n
 ---
 
@@ -57,7 +56,7 @@ In the screenshot below, you will notice that the node adds a subscriber with th
 
 ### 3. Sendy1 node (create: campaign)
 
-This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list that we specify. 
+This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list that we specify.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Campaign' from the ***Resource*** dropdown list.

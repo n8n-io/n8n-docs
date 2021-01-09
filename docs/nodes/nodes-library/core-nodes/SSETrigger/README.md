@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.sseTrigger
 description: Learn how to use the SSE Trigger node in n8n
 ---
 
@@ -23,5 +22,5 @@ The final workflow should look like the following image.
 
 ### 1. SSE Trigger node
 
-1. Enter the URL in the ***URL*** field. 
+1. Enter the URL in the ***URL*** field.
 2. Click on ***Execute Node*** to run the node.

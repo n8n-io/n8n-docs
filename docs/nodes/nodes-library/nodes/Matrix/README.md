@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.matrix
 description: Learn how to use the Matrix node in n8n
 ---
 
 # Matrix
 
-[Matrix](https://matrix.org) is an open standard for interoperable, decentralized, real-time communication over IP. 
+[Matrix](https://matrix.org) is an open standard for interoperable, decentralized, real-time communication over IP.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Matrix/README.md).
@@ -72,7 +71,7 @@ This node will create a new room called `n8n` on the Matrix server.
 In the screenshot below, you will notice that the node creates a room `n8n` with an alias `#discussion-n8n:matrix.org`.
 
 ![Using the Matrix node to create a room](./Matrix_node.png)
-  
+
 ### 3. Matrix1 node (me: account)
 
 This node will get your account information from the Matrix server. We are doing this because Matrix will send an invite to all members of the room, including you. Since you are already a member of the room, you will get an error. We will use the data from this node later on to make sure that you don't send an invite to yourself.
@@ -89,7 +88,7 @@ In the screenshot below, you will notice that the node returns your user ID.
 
 ### 3. Matrix2 node (getAll: roomMember)
 
-This node will return the information of all the members in a room. 
+This node will return the information of all the members in a room.
 
 ::: v-pre
 1. Select the credentials that you entered in the previous node.

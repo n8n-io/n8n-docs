@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.clickUpTrigger
 description: Learn how to use the ClickUp Trigger node in n8n
 ---
 

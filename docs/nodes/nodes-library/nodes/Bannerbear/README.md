@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.bannerbear
 description: Learn how to use the Bannerbear node in n8n
 ---
 

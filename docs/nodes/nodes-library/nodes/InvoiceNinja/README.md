@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.invoiceNinja
 description: Learn how to use the Invoice Ninja node in n8n
 ---
 

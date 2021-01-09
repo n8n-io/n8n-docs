@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.zoom
 description: Learn how to use the Zoom node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mindee
 description: Learn how to use the Mindee node in n8n
 ---
 

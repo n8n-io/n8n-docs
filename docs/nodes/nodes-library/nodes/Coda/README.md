@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.coda
 description: Learn how to use the Coda node in n8n
 ---
 
 # Coda
 
-[Coda](https://coda.io/) is a new type of document that blends the flexibility of documents, the power of spreadsheets, and the utility of applications into a single new canvas. 
+[Coda](https://coda.io/) is a new type of document that blends the flexibility of documents, the power of spreadsheets, and the utility of applications into a single new canvas.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Coda/README.md).
@@ -63,7 +62,7 @@ The start node exists by default when you create a new workflow.
 1. Click on the *Add Value* button and select 'String' from the dropdown list.
 2. Enter `Column 1`in the *Name* field.
 3. Enter the value for the first column in the *Value* field.
-4. Repeat the first three steps of all the columns that you have in your Coda table. 
+4. Repeat the first three steps of all the columns that you have in your Coda table.
 
 **Note:** Here, we've used the default table in Coda, which has three columns namely Column 1, Column 2, and Column 3. Please make sure that the column names in the *Name* field matches the names of the table columns in Coda.
 

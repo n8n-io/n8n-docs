@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.awsRekognition
 description: Learn how to use the AWS Rekognition node in n8n
 ---
 
@@ -45,7 +44,7 @@ In the screenshot below, you will notice that the HTTP Request node fetches the 
 
 ![Using the HTTP Request node to fetch an image from a URL](./HTTPRequest_node.png)
 
-  
+
 ### 3. AWS Rekognition node (analyze: image)
 
 This node will detect faces in the image that we fetched in the previous node. You can also use this node to analyze an image stored in your AWS Bucket.

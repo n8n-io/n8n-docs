@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.splitInBatches
 description: Learn how to use the Split In Batches node in n8n
 ---
 

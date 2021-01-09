@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailgun
 description: Learn how to use the Mailgun node in n8n
 ---
 

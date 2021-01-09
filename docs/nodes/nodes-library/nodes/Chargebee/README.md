@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.chargebee
 description: Learn how to use the Chargebee node in n8n
 ---
 
 # Chargebee
 
-[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management. 
+[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Chargebee/README.md).
@@ -45,7 +44,7 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Chargebee node. You can find out how to do that [here](../../../credentials/Chargebee/README.md).
 2. Select the 'Customer' option from the *Resource* dropdown list.
-3. Under the *Properties* section, click on the *Add Property* button and select *First Name*. 
+3. Under the *Properties* section, click on the *Add Property* button and select *First Name*.
 5. Enter the first name of the contact in the *First Name* field.
 6. Click on *Add Property* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.

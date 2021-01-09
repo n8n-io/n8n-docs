@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.xero
 description: Learn how to use the Xero node in n8n
 ---
 

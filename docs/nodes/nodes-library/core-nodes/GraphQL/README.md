@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.graphql
 description: Learn how to use the GraphQL node in n8n
 ---
 

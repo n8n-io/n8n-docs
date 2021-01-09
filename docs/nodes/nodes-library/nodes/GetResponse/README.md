@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.getResponse
 description: Learn how to use the GetResponse node in n8n
 ---
 

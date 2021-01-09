@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.line
 description: Learn how to use the Line node in n8n
 ---
 

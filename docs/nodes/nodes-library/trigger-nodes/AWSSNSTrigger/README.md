@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.awsSnsTrigger
 description: Learn how to use the AWS SNS Trigger node in n8n
 ---
 

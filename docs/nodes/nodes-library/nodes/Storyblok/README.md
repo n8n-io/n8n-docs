@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.storyblok
 description: Learn how to use the Storyblok node in n8n
 ---
 
@@ -44,7 +43,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Storyblok node (getAll: story)
 
-This node will get all the stories that have a slug starting with `release`. 
+This node will get all the stories that have a slug starting with `release`.
 
 1. Select 'Management API' from the ***Source*** dropdown list.
 2. You'll have to enter credentials for the Storyblok node. You can find out how to do that [here](../../../credentials/Storyblok/README.md).

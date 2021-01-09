@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.googleBooks
 description: Learn how to use the Google Books node in n8n
 ---
 

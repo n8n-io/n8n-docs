@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.iterable
 description: Learn how to use the Iterable node in n8n
 ---
 

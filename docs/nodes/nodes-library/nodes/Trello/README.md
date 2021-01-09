@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.trello
 description: Learn how to use the Trello node in n8n
 ---
 
 # Trello
 
-[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them. 
+[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Trello/README.md).

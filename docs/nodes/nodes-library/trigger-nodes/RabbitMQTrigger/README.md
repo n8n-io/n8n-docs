@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.rabbitmqTrigger
 description: Learn how to use the RabbitMQ Trigger node in n8n
 ---
 

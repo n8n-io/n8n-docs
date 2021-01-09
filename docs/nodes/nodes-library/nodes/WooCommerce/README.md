@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.wooCommerce
 description: Learn how to use the WooCommerce node in n8n
 ---
 

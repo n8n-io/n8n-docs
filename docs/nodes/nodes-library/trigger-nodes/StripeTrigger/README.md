@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.stripeTrigger
 description: Learn how to use the Stripe Trigger node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.openThesaurus
 description: Learn how to use the OpenThesaurus node in n8n
 ---
 

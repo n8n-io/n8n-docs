@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.convertKitTrigger
 description: Learn how to use the ConvertKit Trigger node in n8n
 ---
 

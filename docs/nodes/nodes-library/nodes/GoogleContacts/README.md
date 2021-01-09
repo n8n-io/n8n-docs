@@ -1,10 +1,9 @@
 ---
-permalink: /nodes/n8n-nodes-base.googleContacts
 description: Learn how to use the Google Contacts node in n8n
 ---
 
 # Google Contacts
- 
+
 [Google Contacts](https://contacts.google.com/) is Google's contact management tool that is available in its free email service Gmail, as a standalone service, and as a part of Google's business-oriented suite of web apps Google Apps.
 
 ::: tip 🔑 Credentials

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.activeCampaignTrigger
 description: Learn how to use the ActiveCampaign Trigger node in n8n
 ---
 

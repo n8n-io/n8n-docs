@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.microsoftSql
 description: Learn how to use the Microsoft SQL node in n8n
 ---
 

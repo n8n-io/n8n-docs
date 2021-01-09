@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.medium
 description: Learn how to use the Medium node in n8n
 ---
 

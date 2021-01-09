@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.executeCommand
 description: Learn how to use the Execute Command node in n8n
 ---
 
@@ -121,7 +120,7 @@ ls
 
 You can also use the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to make a cURL request.
 
-If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
+If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
 1. Create a file named Dockerfile.
 2. Add the below code snippet to the Dockerfile.
 ```

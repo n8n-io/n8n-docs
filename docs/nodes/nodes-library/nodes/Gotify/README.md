@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.gotify
 description: Learn how to use the Gotify node in n8n
 ---
 

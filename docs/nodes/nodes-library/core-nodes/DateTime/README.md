@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.dateTime
 description: Learn how to use the Date & Time node in n8n
 ---
 
@@ -53,7 +52,7 @@ The start node exists by default when you create a new workflow.
 ### 2. Date & Time node
 
 1. Enter the date that you want to convert in the *Value* field.
-2. Click on the *Add Option* dropdown. 
+2. Click on the *Add Option* dropdown.
 3. Click on the *From Format* option, and enter the format of the input date.
 4. Select the format you want to convert it to from the *To Format* dropdown list.
 5. Click on *Execute Node* to run the workflow.

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.strava
 description: Learn how to use the Strava node in n8n
 ---
 

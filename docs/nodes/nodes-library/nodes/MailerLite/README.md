@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailerLite
 description: Learn how to use the MailerLite node in n8n
 ---
 
@@ -48,7 +47,7 @@ This node will create a new subscriber in MailerLite. We will add the name of th
 In the screenshot below, you will notice that the node creates a new subscriber with their name and email.
 
 ![Using the MailerLite node to create a room](./MailerLite_node.png)
-  
+
 ### 3. MailerLite1 node (update: subscriber)
 
 This node will update the information of the subscriber that we created in the previous node. We will add the information about the city of the subscriber using this node.
@@ -71,7 +70,7 @@ In the screenshot below, you will notice that the node updates the information o
 
 ### 3. MailerLite2 node (get: subscriber)
 
-This node will return the information of the subscriber that we created using the MailerLite node. 
+This node will return the information of the subscriber that we created using the MailerLite node.
 
 ::: v-pre
 1. Select the credentials that you entered in the previous node.

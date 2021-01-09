@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.spontit
 description: Learn how to use the Spontit node in n8n
 ---
 

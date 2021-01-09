@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.salesforce
 description: Learn how to use the Salesforce node in n8n
 ---
 

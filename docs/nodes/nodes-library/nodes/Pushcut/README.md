@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.pushcut
 description: Learn how to use the Pushcut node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.pipedriveTrigger
 description: Learn how to use the Pipedrive Trigger node in n8n
 ---
 

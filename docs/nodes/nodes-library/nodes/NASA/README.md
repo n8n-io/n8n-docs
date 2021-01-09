@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.nasa
 description: Learn how to use the NASA node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.flow
 description: Learn how to use the Flow node in n8n
 ---
 

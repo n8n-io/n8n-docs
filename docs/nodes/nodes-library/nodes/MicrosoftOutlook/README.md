@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.microsoftOutlook
 description: Learn how to use the Microsoft Outlook node in n8n
 ---
 

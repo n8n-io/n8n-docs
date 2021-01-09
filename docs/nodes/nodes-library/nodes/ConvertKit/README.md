@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.convertKit
 description: Learn how to use the ConvertKit node in n8n
 ---
 
@@ -9,7 +8,7 @@ description: Learn how to use the ConvertKit node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/ConvertKit/README.md).
-:::	
+:::
 
 ## Basic Operations
 

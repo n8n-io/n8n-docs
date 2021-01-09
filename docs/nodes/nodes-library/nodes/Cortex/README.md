@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.cortex
 description: Learn how to use the Cortex node in n8n
 ---
 

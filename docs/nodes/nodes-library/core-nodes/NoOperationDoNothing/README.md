@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.noOp
 description: Learn how to use the No Operation, do nothing node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.gmail
 description: Learn how to use the Gmail node in n8n
 ---
 

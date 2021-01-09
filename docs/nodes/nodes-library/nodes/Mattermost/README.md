@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mattermost
 description: Learn how to use the Mattermost node in n8n
 ---
 

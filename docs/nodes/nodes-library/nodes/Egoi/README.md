@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.egoi
 description: Learn how to use the E-goi node in n8n
 ---
 

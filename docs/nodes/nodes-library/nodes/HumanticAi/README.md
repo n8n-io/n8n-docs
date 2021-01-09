@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.humanticAi
 description: Learn how to use the Humantic AI node in n8n
 ---
 

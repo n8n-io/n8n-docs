@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.contentful
 description: Learn how to use the Contentful node in n8n
 ---
 
@@ -9,7 +8,7 @@ description: Learn how to use the Contentful node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Contentful/README.md).
-:::	
+:::
 
 ## Basic Operations
 

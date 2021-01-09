@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.theHiveTrigger
 ---
 
 # TheHive Trigger

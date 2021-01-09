@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.kafkaTrigger
 description: Learn how to use the Kafka Trigger node in n8n
 ---
 

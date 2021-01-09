@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.writeBinaryFile
 description: Learn how to use the Write Binary File node in n8n
 ---
 
@@ -37,7 +36,7 @@ The start node exists by default when you create a new workflow.
 ### 2. HTTP Request node
 
 1. Enter `https://docs.n8n.io/assets/img/n8n-logo.png` in the ***URL*** field.
-2. Select the 'File' option from the ***Response Format*** dropdown list. 
+2. Select the 'File' option from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
 ![Using the HTTP Request node to get an image](./HTTPRequest_node.png)

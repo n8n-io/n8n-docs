@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.wooCommerceTrigger
 description: Learn how to use the WooCommerce Trigger node in n8n
 ---
 

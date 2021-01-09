@@ -1,11 +1,10 @@
 ---
-permalink: /nodes/n8n-nodes-base.circleCi
 description: Learn how to use the CircleCI node in n8n
 ---
 
 # CircleCI
 
-[CircleCI](https://circleci.com/) is a continuous integration and delivery platform helps teams release quality code, faster. 
+[CircleCI](https://circleci.com/) is a continuous integration and delivery platform helps teams release quality code, faster.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/CircleCI/README.md).

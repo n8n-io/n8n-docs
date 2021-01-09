@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.invoiceNinjaTrigger
 description: Learn how to use the Invoice Ninja Trigger node in n8n
 ---
 

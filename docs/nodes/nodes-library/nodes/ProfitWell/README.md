@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.profitWell
 description: Learn how to use the ProfitWell node in n8n
 ---
 

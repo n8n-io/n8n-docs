@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mondayCom
 description: Learn how to use the monday.com node in n8n
 ---
 
@@ -33,7 +32,7 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Board Item
 - Add an update to an item
-- Change a column value for a board item 
+- Change a column value for a board item
 - Change multiple column values for a board item
 - Create an item in a board's group
 - Delete an item

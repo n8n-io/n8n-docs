@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailjetTrigger
 description: Learn how to use the Mailjet Trigger node in n8n
 ---
 

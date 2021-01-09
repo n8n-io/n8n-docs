@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.shopify
 description: Learn how to use the Shopify node in n8n
 ---
 

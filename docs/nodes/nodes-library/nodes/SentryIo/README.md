@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.sentryIo
 description: Learn how to use the Sentry.io node in n8n
 ---
 
@@ -68,7 +67,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.
-5. Enter the version in the ***Version*** field. 
+5. Enter the version in the ***Version*** field.
 6. Enter the URL that points to the release in the ***URL*** field.
 7. Select the project from ***Projects*** dropdown list.
 8. Click on ***Execute Node*** to run the node.
@@ -83,7 +82,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Get All' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.
-5. Toggle ***Return All*** to true. 
+5. Toggle ***Return All*** to true.
 6. Click on ***Execute Node*** to run the node.
 :::
 

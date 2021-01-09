@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.rocketchat
 description: Learn how to use the Rocket.Chat node in n8n
 ---
 

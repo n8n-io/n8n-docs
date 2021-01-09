@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.twist
 description: Learn how to use the Twist node in n8n
 ---
 

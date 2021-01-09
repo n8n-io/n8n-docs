@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.ghost
 description: Learn how to use the Ghost node in n8n
 ---
 

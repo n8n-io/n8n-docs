@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.todoist
 description: Learn how to use the Todoist node in n8n
 ---
 

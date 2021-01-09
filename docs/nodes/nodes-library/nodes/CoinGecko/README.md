@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.coinGecko
 description: Learn how to use the CoinGecko node in n8n
 ---
 

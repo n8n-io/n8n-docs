@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.quickbase
 description: Learn how to use the Quick Base node in n8n
 ---
 

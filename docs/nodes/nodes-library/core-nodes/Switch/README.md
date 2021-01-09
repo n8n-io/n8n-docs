@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.switch
 description: Learn how to use the Switch node in n8n
 ---
 

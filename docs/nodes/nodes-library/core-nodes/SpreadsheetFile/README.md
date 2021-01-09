@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.spreadsheetFile
 description: Learn how to use the Spreadsheet File node in n8n
 ---
 

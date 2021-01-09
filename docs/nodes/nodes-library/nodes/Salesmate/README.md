@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.salesmate
 description: Learn how to use the Salesmate node in n8n
 ---
 

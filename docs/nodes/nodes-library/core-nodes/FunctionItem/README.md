@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.functionItem
 description: Learn how to use the Function Item node in n8n
 ---
 

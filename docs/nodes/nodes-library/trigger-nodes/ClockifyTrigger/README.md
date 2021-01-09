@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.clockifyTrigger
 description: Learn how to use the Clockify Trigger node in n8n
 ---
 

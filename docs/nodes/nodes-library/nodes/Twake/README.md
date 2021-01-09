@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.twake
 description: Learn how to use the Twake node in n8n
 ---
 

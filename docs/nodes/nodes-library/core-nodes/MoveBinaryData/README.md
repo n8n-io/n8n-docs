@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.moveBinaryData
 description: Learn how to use the Move Binary Data node in n8n
 ---
 
@@ -12,10 +11,10 @@ The Move Binary Data node is useful to move data between binary and JSON propert
 - ***Mode:*** This field specifies from where and to the data should be moved.
     - Binary to JSON
     - JSON to Binary
-- ***Set all Data:*** If set to active, all JSON data is replaced with the data retrieved from binary key. If it is not set to active, the data will be written to a single key. This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list. 
+- ***Set all Data:*** If set to active, all JSON data is replaced with the data retrieved from binary key. If it is not set to active, the data will be written to a single key. This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
 - ***Source Key:*** The name of the binary key to get data from. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.currentKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
 - ***Destination Key:*** The name the JSON key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-- ***Convert all Data:*** If set to active all JSON data will be converted to binary. If it is not set to active only the data with one key will be converted. This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list. 
+- ***Convert all Data:*** If set to active all JSON data will be converted to binary. If it is not set to active only the data with one key will be converted. This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
 - ***Destination Key:*** The name of the binary key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
 
 - ***Options***

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.if
 description: Learn how to use the IF node in n8n
 ---
 

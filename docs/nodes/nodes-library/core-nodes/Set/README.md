@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.set
 description: Learn how to use the Set node in n8n
 ---
 

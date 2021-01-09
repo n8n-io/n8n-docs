@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.yourls
 description: Learn how to use the Yourls node in n8n
 ---
 

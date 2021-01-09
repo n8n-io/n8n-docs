@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mauticTrigger
 description: Learn how to use the Mautic Trigger node in n8n
 ---
 

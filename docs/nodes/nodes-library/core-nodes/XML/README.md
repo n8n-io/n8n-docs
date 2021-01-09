@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.xml
 description: Learn how to use the XML node in n8n
 ---
 
@@ -12,7 +11,7 @@ The XML node is useful to convert data from and to XML.
 - **Mode:** The format the data should be converted from and to.
 	- ***JSON to XML:*** Converts data from JSON to XML
     - ***XML to JSON:*** Converts data from XML to JSON
-- ***Property Name:*** The name of the property which contains the data to convert. 
+- ***Property Name:*** The name of the property which contains the data to convert.
 - ***Options***
 	- ***Allow Surrogate Chars:*** Allows using characters from the Unicode surrogate blocks. This field is displayed when 'JSON to XML' is selected from the ***Mode*** dropdown list.
     - ***cdata:***  Wrap text nodes instead of escaping when necessary. This field is displayed when 'JSON to XML' is selected from the ***Mode*** dropdown list.

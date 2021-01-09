@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.unleashedSoftware
 description: Learn how to use the Unleashed Software node in n8n
 ---
 

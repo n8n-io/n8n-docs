@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.readPDF
 description: Learn how to use the Read PDF node in n8n
 ---
 

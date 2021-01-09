@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.spotify
 description: Learn how to use the Spotify node in n8n
 ---
 

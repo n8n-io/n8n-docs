@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.airtableTrigger
 description: Learn how to use the Airtable Trigger node in n8n
 ---
 

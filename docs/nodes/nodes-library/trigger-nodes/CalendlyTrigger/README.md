@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.calendlyTrigger
 description: Learn how to use the Calendly Trigger node in n8n
 ---
 

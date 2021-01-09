@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.keap
 description: Learn how to use the Keap node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.clearbit
 description: Learn how to use the Clearbit node in n8n
 ---
 

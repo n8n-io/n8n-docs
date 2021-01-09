@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.clockify
 description: Learn how to use the Clockify node in n8n
 ---
 

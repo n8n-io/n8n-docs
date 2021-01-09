@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.bitly
 description: Learn how to use the Bitly node in n8n
 ---
 

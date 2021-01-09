@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.interval
 description: Learn how to use the Interval node in n8n
 ---
 

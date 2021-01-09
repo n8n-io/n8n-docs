@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.customerIoTrigger
 description: Learn how to use the Customer.io Trigger node in n8n
 ---
 

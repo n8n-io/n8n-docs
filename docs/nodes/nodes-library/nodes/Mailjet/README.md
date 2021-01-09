@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailjet
 description: Learn how to use the Mailjet node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.googleFirebaseCloudFirestore
 description: Learn how to use the Google Cloud Firestore node in n8n
 ---
 

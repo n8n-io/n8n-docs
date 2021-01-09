@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.bitbucketTrigger
 description: Learn how to use the Bitbucket Trigger node in n8n
 ---
 

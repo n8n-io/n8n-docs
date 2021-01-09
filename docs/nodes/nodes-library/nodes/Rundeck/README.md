@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.rundeck
 description: Learn how to use the Rundeck node in n8n
 ---
 
@@ -48,4 +47,4 @@ The start node exists by default when you create a new workflow.
 3. In the sidebar, click on 'JOBS'.
 4. Under 'All Jobs', click on the name of the job you want to use with n8n.
 5. In the top left corner, under the name of the job, copy the string that is displayed in smaller font below the job name. This is your job ID.
-6. Paste this job ID in the `Job Id` field in n8n. 
+6. Paste this job ID in the `Job Id` field in n8n.

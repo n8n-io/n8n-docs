@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.githubTrigger
 description: Learn how to use the GitHub Trigger node in n8n
 ---
 

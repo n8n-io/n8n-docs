@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.webflowTrigger
 description: Learn how to use the Webflow Trigger node in n8n
 ---
 

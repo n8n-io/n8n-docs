@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.renameKeys
 description: Learn how to use the Rename Keys node in n8n
 ---
 

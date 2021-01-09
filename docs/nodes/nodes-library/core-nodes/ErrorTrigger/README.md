@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.errorTrigger
 description: Learn how to use the Error Trigger node in n8n
 ---
 

@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailerLiteTrigger
 description: Learn how to use the MailerLite Trigger node in n8n
 ---
 

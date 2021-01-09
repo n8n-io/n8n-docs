@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.wekan
 description: Learn how to use the Wekan node in n8n
 ---
 
@@ -62,7 +61,7 @@ This workflow allows you to create a board and two lists called `To Do` and `Don
 
 The final workflow should look like the following image.
 
-![A workflow with the Wekan node](./workflow.png) 
+![A workflow with the Wekan node](./workflow.png)
 
 ::: v-pre
 ### 1. Start node

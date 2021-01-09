@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.awsLambda
 description: Learn how to use the AWS Lambda node in n8n
 ---
 

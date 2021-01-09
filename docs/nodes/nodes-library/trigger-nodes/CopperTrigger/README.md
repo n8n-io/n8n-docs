@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.copperTrigger
 description: Learn how to use the Copper Trigger node in n8n
 ---
 

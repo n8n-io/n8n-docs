@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.snowflake
 description: Learn how to use the Snowflake node in n8n
 ---
 

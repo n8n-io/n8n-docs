@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.lingvaNex
 description: Learn how to use the LingvaNex node in n8n
 ---
 

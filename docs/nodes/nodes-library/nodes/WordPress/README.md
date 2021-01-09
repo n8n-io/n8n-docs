@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.wordpress
 description: Learn how to use the WordPress node in n8n
 ---
 

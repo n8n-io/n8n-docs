@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.boxTrigger
 description: Learn how to use the Box Trigger node in n8n
 ---
 

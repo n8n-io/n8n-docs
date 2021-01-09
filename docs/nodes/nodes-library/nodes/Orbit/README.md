@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.orbit
 description: Learn how to use the Orbit node in n8n
 ---
 

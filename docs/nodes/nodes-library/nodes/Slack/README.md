@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.slack
 description: Learn how to use the Slack node in n8n
 ---
 

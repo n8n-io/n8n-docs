@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.airtable
 description: Learn how to use the Airtable node in n8n
 ---
 

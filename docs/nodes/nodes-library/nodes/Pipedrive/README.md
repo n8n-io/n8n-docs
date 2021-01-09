@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.pipedrive
 description: Learn how to use the Pipedrive node in n8n
 ---
 

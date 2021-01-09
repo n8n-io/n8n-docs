@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.mailchimpTrigger
 description: Learn how to use the Mailchimp Trigger node in n8n
 ---
 

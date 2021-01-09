@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.googleSheets
 description: Learn how to use the Google Sheets node in n8n
 ---
 

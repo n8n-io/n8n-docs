@@ -1,5 +1,4 @@
 ---
-permalink: /nodes/n8n-nodes-base.jira
 description: Learn how to use the Jira node in n8n
 ---
 

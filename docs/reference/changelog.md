@@ -1,5 +1,58 @@
 # Changelog
 
+## n8n@0.101.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.100.0...n8n@0.101.0) for this version.<br />
+**Release date:** 2021-01-07
+
+- New nodes
+    - Google Analytics
+    - Phantombuster
+- Enhanced nodes
+    - AWS: Added support for custom endpoints
+    - Gmail: Added an option to send messages formatted as HTML
+    - Philips Hue: Added Room/Group name to Light name to make it easier to identify lights
+    - Slack: Added ephemeral message option
+    - Telegram: Removed the Bot resource as the endpoint is no longer supported
+- Bug fixes
+    - E-goi: Fixed the name of the node
+    - Edit Image: Fixed an issue with the Border operation
+    - HTTP Request: Fixed batch sizing to work when `batchSize = 1`
+    - PayPal: Fixed a typo in the Environment field
+    - Split In Batches: Fixed a typo in the description
+    - Telegram: Fixed an issue with the Send Audio operation
+- Based on your settings, vacuum runs on SQLite on startup
+- Updated axios to version `0.21.1`
+
+## n8n@0.100.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.1...n8n@0.100.0) for this version.<br />
+**Release date:** 2020-12-30
+
+- New nodes
+    - Microsoft Outlook
+- Enhanced nodes
+    - ActiveCampaign: The node loads more options for the fields
+    - Asana: Added Subtask resource and Get All operation for the Task resource
+    - Edit Image: Added Multi Step operation
+    - HTTP Request: Added Use Querystring option
+    - IF: Added Ends With and Starts With operations
+    - Jira: Added Issue Comment resource
+    - Switch: Added Ends With and Starts With operations
+    - Telegram: Added File resource
+- Bug fixes
+    - Box Trigger: Fixed a typo in the description
+    - Edit Image: Fixed an issue with multiple composite operations
+    - HTTP Request: Fixed an issue with the binary data getting used by multiple nodes
+    - S3: Fixed an issue with uploading files
+    - Stripe Trigger: Fixed an issue with the existing webhooks
+    - Telegram: Fixed an issue with the Send Audio operation
+- Binary data stays visible if a node gets re-executed
+
+## n8n@0.99.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.0...n8n@0.99.1) for this version.<br />
+**Release date:** 2020-12-24
+
+- Fixed a bug that caused HTML to render in JSON view
+
 ## n8n@0.99.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.98.0...n8n@0.99.0) for this version.<br />
 **Release date:** 2020-12-24

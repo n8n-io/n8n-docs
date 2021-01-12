@@ -116,7 +116,7 @@ In the screenshot below, you will notice that the node updates the Name field.
 
 ## FAQs
 
-### 1. How to get the Record ID?
+### How to get the Record ID?
 
 To fetch data for a particular record, you need the Record ID. There are two ways to get the Record ID.
 

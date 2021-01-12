@@ -79,7 +79,7 @@ const allItems = $items("IF", 1, 0);
 
 ## Variable: $node
 
-Works exactly like `$item` with the difference that it will always return the data of the first item and
+Works exactly like `$item` with the difference that it will always return the data of the first output and
 the last run of the node.
 
 ```typescript

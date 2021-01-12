@@ -48,10 +48,14 @@ This node sends a registration confirmation SMS to the users who filled out the 
 Hey, {{$node["Mautic Trigger"].json["mautic.form_on_submit"][0]["submission"]["results"]["first_name"]}} 👋
 Thank you for signing up for the Webinar - Getting Started with n8n. The webinar will start at 1800 CEST on 31st October 2020.
 See you there!
-``` 
+```
 8. Click on ***Execute Node*** to run the node.
 :::
 
 In the screenshot below, you will notice that the node sends an SMS to the submitter whose name and phone number are returned by the Mautic Trigger node.
 
 ![Using the Twilio node to send an SMS](./Twilio_node.png)
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mautic Trigger node.
+:::

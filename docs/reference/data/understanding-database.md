@@ -2,6 +2,8 @@
 
 By default, n8n uses SQLite as the database. The [credentials](../glossary.md#credentials), [workflows](../glossary.md#workflow), [executions](../glossary.md#execution), and [webhook](../glossary.md#webhook) are decoupled and stored in different tables.
 
+[[toc]]
+
 To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
 
 ## Credentials Entity

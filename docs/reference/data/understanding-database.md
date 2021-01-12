@@ -1,6 +1,8 @@
-# Understanding n8n's SQLite Database
+# Understanding n8n's database
 
-By default, n8n uses SQLite as the database. The [credentials](../glossary.md#credentials), [workflows](../glossary.md#workflow), [executions](../glossary.md#execution), and [webhook](../glossary.md#webhook) are decoupled and stored in different tables.
+By default, n8n uses SQLite as the database. If you are using another database with n8n, it will be similar. Just the data-types will be slightly different depending on the database.
+
+The [credentials](../glossary.md#credentials), [workflows](../glossary.md#workflow), [executions](../glossary.md#execution), and [webhook](../glossary.md#webhook) are decoupled and stored in different tables.
 
 [[toc]]
 
@@ -29,7 +31,7 @@ The [Pipedrive](../../nodes/credentials/Pipedrive/README.md) node has two authen
 
 ## Execution Entity
 
-When a workflow is set to active, its executions are stored in the `execution_entity` table with the following fields.
+Depending on the settings, the executions are stored in the `execution_entity` table with the following fields.
 
 | Column Name | Data Type | Description |
 |-------------|-----------|-------|
@@ -52,7 +54,7 @@ The ***data*** field contains the data returned by the nodes after the execution
 
 ## Migrations
 
-[Migration](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) is a file with SQL queries to update a database schema. If a new column gets added to a database, n8n creates a migration. On startup, n8n checks for new migrations. The logs of the migrations that ran get stored in the `migrations` table. n8n uses this table to check for the migrations that got executed earlier. The `migrations` table has the following fields.
+[Migration](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) is a file with SQL queries to update a database schema. For example, if a new column gets added to a database, n8n creates a migration. On startup, n8n checks for new migrations. The logs of the migrations that ran get stored in the `migrations` table. n8n uses this table to check for the migrations that got executed earlier. The `migrations` table has the following fields.
 
 | Column Name | Data Type | Description |
 |-------------|-----------|-------|

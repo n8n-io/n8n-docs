@@ -73,7 +73,8 @@ We will use the Set node to ensure that only the data that we set in this node g
 In the screenshot below, you will notice that the node uses the data from the previous node and returns the data that we set for the workflow.
 
 ![Using the Set node to set the data](./Set_node.png)
-## 4. Airtable (Append)
+
+## 4. Airtable node (Append)
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shr6hP774ijrXFput) in your Airtable base.
 

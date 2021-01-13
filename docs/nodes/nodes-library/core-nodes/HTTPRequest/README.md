@@ -90,7 +90,7 @@ The start node exists by default when you create a new workflow.
 
 ## FAQs
 
-### 1. How to fetch a binary file from a URL?
+### How to fetch a binary file from a URL?
 
 1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://n8n.io/n8n-logo.png` to fetch the n8n logo.
 2. Select 'File' from the ***Response Format*** dropdown list.
@@ -99,7 +99,7 @@ The start node exists by default when you create a new workflow.
 5. After the node gets executed, click on the ***Binary*** tab.
 6. Click on the ***Show Binary Data*** button to view the file.
 
-### 2. How to send a binary file to an API endpoint?
+### How to send a binary file to an API endpoint?
 
 Depending on your use-case, you might want to send a binary file to an API endpoint. To do that, follow the steps mentioned below.
 
@@ -113,14 +113,14 @@ Depending on your use-case, you might want to send a binary file to an API endpo
 8. Select 'Form-Data Multipart' from the ***Body Content Type*** dropdown list.
 9. Click on ***Execute Node*** to run the node.
 
-### 3. How to get the HTTP status code after an execution?
+### How to get the HTTP status code after an execution?
 
 1. Click on ***Add Option*** and select 'Full Response'.
 2. Toggle ***Full Response*** to `true`.
 
 When the node gets executed, you will receive the HTTP status code, the HTTP status message, and the header parameters.
 
-### 4. How to send XML data?
+### How to send XML data?
 
 1. Toggle ***JSON/RAW Parameters*** to `true`.
 2. Click on ***Add Option*** and select 'Body Content Type'.

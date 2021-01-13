@@ -70,3 +70,7 @@ This node will tweet about the activity that gets created in Strava.
 In the screenshot below, you will notice that this node gets the information of the activity in Strava from the previous node and tweets about it.
 
 ![Using the Twitter node to tweet about the activity](./Twitter_node.png)
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
+:::

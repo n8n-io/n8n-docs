@@ -39,35 +39,47 @@ Create a [Google Cloud](https://cloud.google.com/) account.
 
 1. Access your [Google Cloud Console](https://console.cloud.google.com).
 2. Click on the hamburger menu on the top left.
-3. Click on API & Services.
-4. Click on Credentials.
-5. Click on Create Credentials.
-6. Select OAuth client ID.
-7. Select 'Web application' as the Application type.
-8. Click on the Add URL button under the 'Authorized redirect URIs' section.
-9. Copy your OAuth Callback URL from the 'Create New Credentials screen' in n8n and paste it there.
-10. Click on the Create button in the Google cloud console.
-11. Use provided Client Secret and Client ID with your Google node credentials in n8n.
-12. While still in n8n, click on the Connect button in the OAuth section, and once the connection is complete, click on the Create button.
-13. Now, go back to the Google cloud console and click on Library in the menu on the left.
+3. Select 'Credentials' from the ***APIs & Services*** dropdown list.
+4. Click on the ***+ CREATE CREDENTIALS*** button.
+5. Select 'OAuth client ID' from the dropdown list.
+6. Select 'Web application' from the ***Application type*** dropdown list.
+7. Click on the ***+ Add URI*** button under the ***Authorized redirect URIs*** section.
+8. Copy the 'OAuth Callback URL' provided in the 'Google OAuth2 API' credentials in n8n and paste it in the ***URIs*** field in the Create OAuth client ID page.
+9. Click on the ***CREATE*** button.
+10. Use provided ***Client Secret*** and ***Client ID*** with your Google node credentials in n8n.
+11. Click on the circle button in the OAuth section to connect a Google account to n8n.
+12. Click on the ***Save*** button to save your credentials.
+13. On Google Cloud Console, click on ***Library*** in the menu on the left.
 14. Search for the API that you want to enable. For example, search for 'Calendar', and click on 'Google Calendar API'.
-15. Click on the *Enable* button.
+15. Click on the ***ENABLE*** button.
 
-![Getting Google credentials](./using-oauth-calendar.gif)
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y-XHQbFOUww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Using Service Account
 
 1. Access your [Google Cloud Console](https://console.cloud.google.com).
 2. Click on the hamburger menu on the top left.
-3. Click on API & Services.
-4. Click on Credentials.
-5. Click on Create Credentials.
-6. Click on Service Account.
-7. Choose your preferences.
-8. Fill out information for your service account.
-9. You will receive a `.json` file with your credentials.
-10.  Use the values of client_email and private_key for your Google Credentials in the n8n node.
-11.  Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
+3. Select 'Credentials' from the ***APIs & Services*** dropdown list.
+4. Click on the ***+ CREATE CREDENTIALS*** button.
+5. Select 'Service account' from the dropdown list.
+6. Enter the required information and click on the ***CREATE*** button.
+7. Based on your use-case, you may want to select a role from the ***Select a role*** dropdown list.
+8. Based on your use-case, you may want to grant user access in the ***Grant users access to this service account*** section.
+9. Click on the ***Done*** button.
+10. Select the newly created service account under the ***Service Accounts*** section.
+11. Under the ***Keys*** section, click on ***ADD KEY*** and select 'Create new key'.
+12. Click on the ***Create*** button.
+13. Save the JSON file on your machine.
+14. Use the ***client_email*** and ***private_key*** from the JSON file you downloaded for your Google Credentials in the n8n node.
 
-![Getting Google credentials](./using-service-account.gif)
+**Note:** Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Druffw8Afro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## FAQs
+
+### How to implement user impersonification?
+
+To implement user impersonification make sure to check the ***Enable G Suite Domain-Wide Delegation*** on your Google Cloud Console.
+
+Refer to the [Delegation domain-wide authority to the service account](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) documentation to learn more.

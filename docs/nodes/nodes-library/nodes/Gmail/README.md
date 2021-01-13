@@ -107,7 +107,7 @@ In the screenshot below, you will notice that the node adds a new label `nodemat
 
 ## FAQs
 
-### 1. How to return all the messages with a particular label?
+### How to return all the messages with a particular label?
 
 To return all the messages with a particular label, follow the steps mentioned below.
 

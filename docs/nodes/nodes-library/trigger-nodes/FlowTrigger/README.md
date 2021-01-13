@@ -28,3 +28,7 @@ The final workflow should look like the following image.
 2. Select 'Task' from the *Resource* dropdown list.
 3. Enter one or more task IDs separated by commas in the *Task ID* field. You can find the task ID by clicking on the task in Flow and copying the number after `tasks/` in the URL.
 4. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Flow Trigger node.
+:::

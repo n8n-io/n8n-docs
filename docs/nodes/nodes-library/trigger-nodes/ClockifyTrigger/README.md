@@ -29,3 +29,7 @@ The final workflow should look like the following image.
 3. Click on *Execute Node* to run the workflow.
 
 **Note:** This node uses polling to get new time entries. You'll have to use the *Add Poll Time* button if you want this Trigger node to run regularly to retrieve new time entries.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
+:::

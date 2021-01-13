@@ -28,6 +28,10 @@ The final workflow should look like the following image.
 2. Enter the name of the queue or topic in the *Queue / Topic* field.
 3. Click on *Execute Node* to run the workflow.
 
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the AMQP Trigger node.
+:::
+
 ## Further Reading
 
 - [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

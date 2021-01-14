@@ -23,7 +23,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to get analytics of your website and store it Airtable. You can also find the [workflow](https://n8n.io/workflows/892) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to get analytical metrics of your website using the Goole Analytics node and store it Airtable. You can also find the [workflow](https://n8n.io/workflows/892) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Google Analytics]()
 - [Set](../../core-nodes/Set/README.md)
@@ -39,7 +39,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Google Analytics node (get: report)
 
-This node will retrieve the session metrics grouped by country in the given date range. You can select a different dimension, metric, and date range.
+This node will retrieve the session metrics grouped by country for a given date range. You can select a different dimension, metric, and date range.
 
 1. First of all, you'll have to enter credentials for the Google Analytics node. You can find out how to do that [here](../../../credentials/Google/README.md).
 2. Select a view from the ***View ID*** dropdown list.

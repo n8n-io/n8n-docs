@@ -5,7 +5,7 @@ A special file which contains configuration information in the form of environme
 
 n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](server-setup.html#_6-create-env-file) for more details.
 
-To learn more about the *.env* file, read [Manage Environemnt Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
+To learn more about the *.env* file, read [Manage Environment Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
 
 ## Account
 Service which allows a user to connect to a product. User's identity is confirmed through shared [credentials](#Credentials). Also known as a *user account*.

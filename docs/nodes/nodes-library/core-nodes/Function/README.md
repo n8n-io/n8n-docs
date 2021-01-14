@@ -153,6 +153,7 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 ## Further Reading
 
+- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)
 - [Giving kudos to contributors with GitHub, Slack, and n8n 👏](https://medium.com/n8n-io/giving-kudos-to-contributors-with-github-slack-and-n8n-b3f5f4a653a6)
 - [How to host virtual coffee breaks with n8n ☕️](https://n8n.io/blog/how-to-host-virtual-coffee-breaks-with-n8n/)
 - [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)

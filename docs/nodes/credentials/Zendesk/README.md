@@ -37,7 +37,7 @@ Create a [Zendesk](https://zendesk.com/) account.
 
 The following video demonstrates the steps mentioned above.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ieNHkgUVNhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/ieNHkgUVNhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Using Access Token
 
@@ -57,7 +57,7 @@ The following video demonstrates the steps mentioned above.
 
 The following video demonstrates the steps mentioned above.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AvduoHrFJdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/AvduoHrFJdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## FAQs
 

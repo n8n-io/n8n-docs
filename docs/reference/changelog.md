@@ -1,6 +1,6 @@
 # Changelog
 
-## n8n@0.101.0
+## n8n@0.102.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
 **Release date:** 2021-01-15
 

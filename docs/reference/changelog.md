@@ -1,6 +1,27 @@
 # Changelog
 
 ## n8n@0.101.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
+**Release date:** 2021-01-15
+
+- New nodes
+    - Beeminder
+- Enhanced nodes
+    - Crypto: Added hash type `SHA384`
+    - Google Books: Added support for user impersonification
+    - Google Drive: Added support for user impersonification
+    - Google Sheets: Added support for user impersonification
+    - Gmail: Added support for user impersonification
+    - Mircosoft Outlook: Added support for a shared mailbox
+    - RabbitMQ: Added Exchange mode
+    - Salesforce: Added filters to all Get All operations
+    - Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#what-changed) page
+    - Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#what-changed-1) page
+    - Zendesk: Removed the `Authorization URL` and `Access Token URL` fields from the OAuth2 credentials. The node now uses the subdomain passed by a user to connect to Zendesk.
+- Bug fixes
+    - CoinGecko: Fixed an issue to process multiple input items correctly
+
+## n8n@0.101.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.100.0...n8n@0.101.0) for this version.<br />
 **Release date:** 2021-01-07
 

@@ -99,12 +99,14 @@ The following video demonstrates the steps mentioned above.
 
 **Note:** Before entering the private_key in n8n, make sure that you replace all the `\n` with new lines.
 
+The following video demonstrates the steps mentioned above.
+
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ArXVlpo3y1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## FAQs
 
 ### How to implement user impersonification?
 
-To implement user impersonification make sure to check the ***Enable G Suite Domain-Wide Delegation*** on your Google Cloud Console.
+To implement user impersonification, make sure to check the ***Enable G Suite Domain-Wide Delegation*** on your Google Cloud Console.
 
 Refer to the [Delegation domain-wide authority to the service account](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) documentation to learn more.

@@ -18,38 +18,48 @@ Create a [Slack](https://slack.com/) account.
 You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
 :::
 
-1. Access your Slack workspace.
-2. Click on your workspace name in the top left.
-3. Click the 'Settings & administration' option, and then 'Manage apps'.
-4. Click on the 'Build' button in the top right.
-5. Click on the 'Start Building' button if this is your first Slack app, else click on the 'Create New App' button.
-6. Enter an app name and select your desired workspace.
-7. Scroll down and you will see your authentication information under the ***App Credentials*** section.
-8. Copy and paste ***Client ID*** and ***Client Secret*** in the Slack OAuth2 API credentials in n8n.
-9. Click on the 'Permissions' button in the ***Add features and functionality*** section.
+1. Access the [Slack API](https://api.slack.com/) page.
+2. Click on the ***Start Building*** button.
+3. Enter an app name in the ***App Name*** field.
+4. Select a workspace from the ***Development Slack Workspace*** dropdown list.
+5. Click on the ***Create App*** button.
+6. Scroll down to the ***App Credentials*** section.
+7. Copy and paste ***Client ID*** and ***Client Secret*** in the 'Slack OAuth2 API' credentials in n8n.
+8. On the Basic Information page, scroll up to the ***Add features and functionality*** section and click on 'Permissions'.
+9. Click on the ***Add New Redirect URL*** in the ***Redirect URLs***.
 10. Copy the 'OAuth Callback URL' provided in the 'Slack OAuth2 API' credentials in n8n.
-11. Click on the ***Add New Redirect URL*** in the ***Redirect URLs*** section in the Slack OAuth & Permissions page.
-12. Paste the 'OAuth Callback URL' in the field and click on the ***Save URLs*** button.
-13. Scroll down and add any scopes you plan to use under the ***User Token Scopes*** section.
-14. If you're building a bot, add the required scopes for the bot under the ***Bot Token Scopes*** section.
-15. Click on the circle button in the OAuth section to connect a Slack account to n8n.
-16. Click the ***Save*** button to save your credentials in n8n.
+11. Paste the URL in the ***Redirect URLs*** field and click on the ***Add*** button.
+12. Click on the ***Save URLs*** button.
+13. Scroll down to the ***Scopes*** section.
+14. Add the required scopes under the ***Bot Token Scopes*** section. You can refer to the list of scopes on the [Scopes and permissions](https://api.slack.com/scopes) documentation on Slack.
+15. Enter a name for your credentials in the ***Credentials Name*** field in the 'Slack OAuth2 API' credentials in n8n.
+16. Click on the circle button in the OAuth section to connect a Slack account to n8n.
+17. Click the ***Save*** button to save your credentials in n8n.
+18. On the Slack OAuth & Permissions page, scroll up to the ***OAuth Tokens & Redirect URLs*** section and click on the ***Install to Workspace*** button.
+19. Click on the ***Allow*** button.
 
-![Getting Slack OAuth credentials](./using-oauth.gif)
+The following video demonstrates the steps mentioned above.
+
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/ewjfY-XQ2Mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Using Access Token
 
-1. Access your Slack workspace.
-2. Click on your username in the top left.
-3. Click the 'Settings & administration' option, and then 'Manage apps'.
-4. Click on ***Build*** in the top right.
-5. Click on the ***Start Building*** button if this is your first Slack app, else click on the ***Create an App*** button.
-6. Enter an app name and select your desired workspace.
-7. Click on the 'Permissions' button in the ***Add features and functionality*** section.
-8. Scroll down and add any scopes you plan to use under the ***User Token Scopes*** section.
-9. If you're building a bot, add the required scopes for the bot under the ***Bot Token Scopes*** section.
-10. Click on the ***Install to Workspace*** button in the ***OAuth Tokens & Redirect URLs*** section.
-11. Click on the ***Allow*** button to install the app in your workspace.
-12. Use the displayed Access Token with your Slack node credentials in n8n.
+1. Access the [Slack API](https://api.slack.com/) page.
+2. Click on the ***Start Building*** button.
+3. Enter an app name in the ***App Name*** field.
+4. Select a workspace from the ***Development Slack Workspace*** dropdown list.
+5. Click on the ***Create App*** button.
+6. Click on 'Permissions' in the ***Add features and functionality*** section.
+7. Scroll down to the ***Scopes*** section.
+8. If you want your app to act on behalf of users that authorize the app, add the required scopes under the ***User Token Scopes*** section.
+9. If you're building a bot, add the required scopes under the ***Bot Token Scopes*** section. You can refer to the list of scopes on the [Scopes and permissions](https://api.slack.com/scopes) documentation on Slack.
+10. Scroll up to the ***OAuth Tokens & Redirect URLs*** section and click on the ***Install to Workspace*** button.
+11. Click on the ***Allow*** button.
+12. Copy the displayed 'OAuth Access Token' under the ***OAuth Tokens for Your Team*** section.
+13. Paste it in the ***Access Token*** field in the 'Slack API' credentials in n8n.
+14. Enter a name for your credentials in the ***Credentials Name*** field in the 'Slack API' credentials in n8n.
+15. Click the ***Save*** button to save your credentials in n8n.
 
-![Getting Slack credentials](./using-access-token.gif)
+The following video demonstrates the steps mentioned above.
+
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/8x3BzKhl_ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

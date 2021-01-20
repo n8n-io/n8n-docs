@@ -1,6 +1,8 @@
 # Changelog
 
-## n8n@0.102.0
+🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
+
+## n8n@0.102.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
 **Release date:** 2021-01-15
 
@@ -15,8 +17,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Microsoft Outlook: Added support for a shared mailbox
     - RabbitMQ: Added Exchange mode
     - Salesforce: Added filters to all Get All operations
-    - Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#what-changed) page
-    - Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#what-changed-1) page
+    - Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
+    - Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
     - Zendesk: Removed the `Authorization URL` and `Access Token URL` fields from the OAuth2 credentials. The node now uses the subdomain passed by a user to connect to Zendesk.
 - Bug fixes
     - CoinGecko: Fixed an issue to process multiple input items correctly
@@ -158,7 +160,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
     - Airtable Trigger: Fixed the icon of the node
 
-## n8n@0.95.0
+## n8n@0.95.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.1...n8n@0.95.0) for this version.<br />
 **Release date:** 2020-11-25
 
@@ -171,7 +173,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Spontit
 - Enhanced nodes
     - Airable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
-    - Harvest: Added OAuth authentication method
+    - Harvest: Moved the account field from the credentials to the node parameters. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0950) page
 - Bug Fixes
     - Slack: Fixed an issue with creating channels and inviting users to a channel
 
@@ -183,7 +185,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - GraphQL: Fixed an issue with the variables
     - WooCommerce Trigger: Fixed an issue with the webhook. The node now reuses a webhook if it already exists.
 
-## n8n@0.94.0
+## n8n@0.94.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
 **Release date:** 2020-11-19
 
@@ -205,7 +207,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - YouTube: Fixed a typo for the Unlisted option
 - Added horizontal scrolling
 
-## n8n@0.93.0
+## n8n@0.93.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.92.0...n8n@0.93.0) for this version.<br />
 **Release date:** 2020-11-11
 
@@ -268,16 +270,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added an option to get the full execution data from the server
 - The Editor UI gives an alert if you redirect without saving a workflow
 - The Editor UI now indicates if a workflow is saved or not
-- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Improved support for touch devices
 - Node properties now load on demand
 - Updated the Node.js version for the Docker images
 
 
-## n8n@0.90.0
+## n8n@0.90.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
 **Release date:** 2020-10-23
 
+- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Bug Fixes
     - Google Translate: Fixed an issue with the rendering of the image in n8n.io
 
@@ -343,7 +345,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - HTTP Request: Fixed an issue with the GET Request
 - Added `HMAC-SHA512` signature method for OAuth 1.0
 
-## n8n@0.87.0
+## n8n@0.87.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
 **Release date:** 2020-10-14
 
@@ -445,7 +447,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expressions now use short variables when selecting input data for the current node
 - Fixed issue with renaming credentials for active workflows
 
-## n8n@0.83.0
+## n8n@0.83.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />
 **Release date:** 2020-09-18
 
@@ -548,7 +550,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - HTTP Request node does not overwrite accept header if it's already set
 - Add rawBody to every request so that n8n does not give an error if body is missing
 
-## n8n@0.79.0
+## n8n@0.79.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 

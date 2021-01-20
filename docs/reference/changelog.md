@@ -12,7 +12,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Google Drive: Added support for user impersonification
     - Google Sheets: Added support for user impersonification
     - Gmail: Added support for user impersonification
-    - Mircosoft Outlook: Added support for a shared mailbox
+    - Microsoft Outlook: Added support for a shared mailbox
     - RabbitMQ: Added Exchange mode
     - Salesforce: Added filters to all Get All operations
     - Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#what-changed) page

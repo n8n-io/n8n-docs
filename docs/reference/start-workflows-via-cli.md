@@ -63,7 +63,7 @@ There are a couple of flags available for this.
 
 ### Workflows
 
-Export all your workflows:
+Export all your workflows to the standard output (terminal):
 
 ```bash
 n8n export:workflow --all
@@ -75,7 +75,7 @@ Export a workflow by its ID and specify the output file name:
 n8n export:workflow --id=<ID> --output=file.json
 ```
 
-Export all workflows to a specific directory:
+Export all workflows to a specific directory in a single file:
 
 ```bash
 n8n export:workflow --all --output=backups/latest/
@@ -89,7 +89,7 @@ n8n export:workflow --backup --output=backups/latest/
 
 ### Credentials
 
-Export all your credentials:
+Export all your credentials to the standard output (terminal):
 
 ```bash
 n8n export:credentials --all
@@ -101,7 +101,7 @@ Export credentials by their ID and specify the output file name:
 n8n export:credentials --id=<ID> --output=file.json
 ```
 
-Export all credentials to a specific directory:
+Export all credentials to a specific directory in a single file:
 
 ```bash
 n8n export:credentials --all --output=backups/latest/

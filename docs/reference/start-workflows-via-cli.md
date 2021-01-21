@@ -1,4 +1,4 @@
-# Use n8n via CLI
+# CLI commands for n8n
 
 [[toc]]
 
@@ -132,7 +132,7 @@ Import workflows from a specific file:
 ```bash
 n8n import:workflow --input=file.json
 ```
-Import all the workflow files (*.JSON) from the specified directory:
+Import all the workflow files (*.json) from the specified directory:
 
 ```bash
 n8n import:workflow --separate --input=backups/latest/
@@ -146,7 +146,7 @@ Import credentials from a specific file:
 n8n import:credentials --input=file.json
 ```
 
-Import all the credentials files (*.JSON) from the specified directory:
+Import all the credentials files (*.json) from the specified directory:
 
 ```bash
 n8n import:credentials --separate --input=backups/latest/

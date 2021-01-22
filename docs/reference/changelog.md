@@ -27,6 +27,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
 - The code editor can be closed either by clicking on the close (X) button or using the `ESC` key
 - Added CLI commands to [export](start-workflows-via-cli.md#export-workflows-and-credentials) and [import](start-workflows-via-cli.md#import-workflows-and-credentials) credentials and workflows
+- The title in the browser tab now resets for new workflows
+
 
 ## n8n@0.102.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />

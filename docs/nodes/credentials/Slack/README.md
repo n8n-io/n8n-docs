@@ -40,7 +40,9 @@ You'll only need to enter the Credentials Name and click on the circle button in
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ewjfY-XQ2Mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using Access Token
 
@@ -62,4 +64,14 @@ The following video demonstrates the steps mentioned above.
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/8x3BzKhl_ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Using OAuth in n8n.cloud
+
+The following video demonstrates the steps to get OAuth credentials for [n8n.cloud](https://n8n.cloud).
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHhaDb1KI2o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

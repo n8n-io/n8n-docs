@@ -37,7 +37,7 @@ Create a [Google Cloud](https://cloud.google.com/) account.
 ![Getting Google credentials](https://i.imgur.com/r9KX5Gh.gif)  -->
 
 ::: tip ❗️ Note for enabling the API
-You'll need to enable the API of the service you want to use. You can enable the API from the Google Cloud Platform. For example, if you want to use the Google Sheets node, enable the Google Sheets API on the Google Cloud Platform.
+You'll need to enable the API of the service you want to use. You can enable the API from the Google Cloud Platform. For example, if you want to use the Google Sheets node, enable the Google Sheets API on the Google Cloud Platform. Refer to the [FAQs](#how-to-enable-an-api) to learn how to enable an API.
 :::
 
 ## Using OAuth
@@ -65,7 +65,9 @@ You'll need to enable the API of the service you want to use. You can enable the
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using Service Account
 
@@ -101,9 +103,20 @@ The following video demonstrates the steps mentioned above.
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ArXVlpo3y1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## FAQs
+
+### How to enable an API?
+
+To enable an API, follow the steps mentioned below.
+1. Access your [Google Cloud Console](https://console.cloud.google.com).
+2. Click on the hamburger menu on the top left.
+3. Select 'Library' from the ***APIs & Services*** dropdown list.
+4. Select the API you want to enable.
+5. Click on the ***ENABLE*** button.
 
 ### How to implement user impersonification?
 

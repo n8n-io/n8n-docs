@@ -195,7 +195,7 @@ curl --request GET https://your-n8n.url/webhook/path --from 'key=@/path/to/file'
 ```
 Replace `/path/to/file` with the path of the file you want to send.
 
-### How to send a response of type string?
+### How to send a response of type `string`?
 To send a response of type string, follow the steps mentioned below.
 1. Select 'Last Node' from the ***Response Mode*** dropdown list.
 2. Select 'First Entry JSON' from the ***Response Data*** dropdown list.
@@ -203,10 +203,11 @@ To send a response of type string, follow the steps mentioned below.
 4. Enter the name of the property that contains the response.
 5. Connect a Set node to the Webhook node.
 6. In the Set node, click on 'Add Value' and select 'String'.
-7. Enter the name of the property in the ***Name*** field. The name should match the property name from Step 4.
+7. Enter the name of the property in the ***Name*** field. The name should match the property name from step 4.
 8. Enter the string value in the ***Value*** field.
 9. Toggle ***Keep Only Set*** to `true`.
-When the Webhook gets called, you will receive the string response you set in the Set node.
+
+When the Webhook gets called, it will send the string response that was set in the Set node.
 
 
 ## Further Reading

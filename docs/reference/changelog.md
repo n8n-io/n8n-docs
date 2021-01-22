@@ -2,6 +2,32 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.103.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
+**Release date:** 2021-01-21
+
+- Bug fixes
+	- Trello: Fixed the icon
+
+## n8n@0.103.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.102.0...n8n@0.103.0) for this version.<br />
+**Release date:** 2021-01-21
+
+- New nodes
+	- SendGrid
+- Enhanced nodes
+	- AMQP: Added Container ID, Reconnect, and Reconnect limit options
+	- AMQP Trigger: Added Container ID, Reconnect, and Reconnect Limit options
+	- GitHub: Added Review resource
+	- Google Drive: Added Drive resource
+	- Trello: Added Get All and Get Cards operation to the List resource
+- Bug fixes
+	- AWS Lambda: Fixed an issue with signature
+	- AWS SNS: Fixed an issue with signature
+- Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
+- The code editor can be closed either by clicking on the close (X) button or using the `ESC` key
+- Added CLI commands to [export](start-workflows-via-cli.md#export-workflows-and-credentials) and [import](start-workflows-via-cli.md#import-workflows-and-credentials) credentials and workflows
+
 ## n8n@0.102.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
 **Release date:** 2021-01-15

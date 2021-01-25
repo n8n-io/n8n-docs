@@ -15,11 +15,11 @@ Create an account on a [Mautic](https://www.mautic.org/) instance.
 
 ## Using OAuth
 
-1. Access your Mautic dashboard.
+1. Open your Mautic dashboard.
 2. Click on the gear icon on the top right and select ***API Credentials***.
 3. Click on the ***+ New*** button on the top right.
 4. Select 'OAuth 2' from the ***Authorization Protocol*** dropdown list.
-5. Enter a name for the credentials in the ***Name*** field.
+5. Enter the name of the credentials in the ***Name*** field.
 6. Copy the 'OAuth Callback URL' provided in the 'Mautic OAuth2 API' credentials in n8n.
 7. Paste it in the ***Redirect URI*** field on the Mautic credentials page.
 8. Click on the ***Apply*** button.
@@ -42,7 +42,7 @@ The following video demonstrates the steps mentioned above.
 
 ## Using Credentials
 
-1. Access your Mautic dashboard.
+1. Open your Mautic dashboard.
 2. Click on the gear icon on the top right and select ***Configuration***.
 3. Select 'API Settings' from the left sidebar.
 4. Select 'Yes' under the ***Enable HTTP basic auth?*** section.

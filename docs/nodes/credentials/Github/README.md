@@ -20,7 +20,7 @@ Create a [GitHub](https://github.com/) account.
 You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
 :::
 
-1. Access your GitHub [dashboard](https://github.com).
+1. Open your GitHub [dashboard](https://github.com).
 2. Click on your user icon in the top right.
 3. Click on ***Settings***.
 4. Click on ***Developer settings***.
@@ -44,10 +44,15 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/O1kEes6mQcs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+The following video demonstrates the steps to authenticate the GitHub node on [n8n.cloud](https://n8n.cloud).
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/WtjRxIVVCIg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using Access Token
 
-1. Access your GitHub [dashboard](https://github.com).
+1. Open your GitHub [dashboard](https://github.com).
 2. Click on your user icon in the top right.
 3. Click on ***Settings***.
 4. Click on ***Developer settings***.
@@ -66,12 +71,4 @@ The following video demonstrates the steps mentioned above.
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/zookYdMldt4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-## Using OAuth in n8n.cloud
-
-The following video demonstrates the steps to get OAuth credentials for [n8n.cloud](https://n8n.cloud).
-
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/WtjRxIVVCIg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

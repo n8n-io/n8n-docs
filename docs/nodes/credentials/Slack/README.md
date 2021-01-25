@@ -18,9 +18,9 @@ Create a [Slack](https://slack.com/) account.
 You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
 :::
 
-1. Access the [Slack API](https://api.slack.com/) page.
+1. Open the [Slack API](https://api.slack.com/) page.
 2. Click on the ***Start Building*** button.
-3. Enter an app name in the ***App Name*** field.
+3. Enter the name of the app in the ***App Name*** field.
 4. Select a workspace from the ***Development Slack Workspace*** dropdown list.
 5. Click on the ***Create App*** button.
 6. Scroll down to the ***App Credentials*** section.
@@ -44,11 +44,17 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ewjfY-XQ2Mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+The following video demonstrates the steps to authenticate the Slack node on [n8n.cloud](https://n8n.cloud).
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHhaDb1KI2o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Using Access Token
 
-1. Access the [Slack API](https://api.slack.com/) page.
+1. Open the [Slack API](https://api.slack.com/) page.
 2. Click on the ***Start Building*** button.
-3. Enter an app name in the ***App Name*** field.
+3. Enter the name of the app in the ***App Name*** field.
 4. Select a workspace from the ***Development Slack Workspace*** dropdown list.
 5. Click on the ***Create App*** button.
 6. Click on 'Permissions' in the ***Add features and functionality*** section.
@@ -66,12 +72,4 @@ The following video demonstrates the steps mentioned above.
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/8x3BzKhl_ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-## Using OAuth in n8n.cloud
-
-The following video demonstrates the steps to get OAuth credentials for [n8n.cloud](https://n8n.cloud).
-
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHhaDb1KI2o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

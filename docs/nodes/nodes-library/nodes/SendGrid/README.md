@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.sendgrid
+permalink: /nodes/n8n-nodes-base.sendGrid
 description: Learn how to use the SendGrid node in n8n
 ---
 

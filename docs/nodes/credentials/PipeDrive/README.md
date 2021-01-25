@@ -20,13 +20,13 @@ You'll only need to enter the Credentials Name and click on the circle button in
 ::: -->
 
 1. Create a [Developer Sandbox Account](https://pipedrive.readme.io/docs/developer-sandbox-account).
-2. Access your Pipedrive Dashboard.
+2. Open your Pipedrive Dashboard.
 3. Click on your user profile in the top right and select 'Tools and integrations' from the dropdown list.
 4. From the sidebar under the ***Tools*** section, select 'Marketplace manager'.
 5. Click on the ***Create new app*** button.
 6. Select either 'Yes' or 'No' when asked if you would like to publish your app on the Pipedrive marketplace.
 7. Click on the ***Next*** button.
-8. Enter a name in the ***App name*** field.
+8. Enter the name of the app in the ***App name*** field.
 9. Copy the 'OAuth Callback URL' provided in the 'Pipedrive OAuth2 API' credentials in n8n.
 10. On the Pipedrive app creation page, scroll down to the ***OAuth & Access scopes*** section and paste the URL in the ***Callback URL*** field.
 11. Based on your use-case, select the scopes from the ***Access scopes*** section.
@@ -49,12 +49,12 @@ The following video demonstrates the steps mentioned above.
 
 ## Using API Token
 
-1. Access your Pipedrive Dashboard.
+1. Open your Pipedrive Dashboard.
 2. Click on your user profile in the top right.
 3. Select 'Personal preferences' from the dropdown list.
 4. Click on the ***API*** tab.
 5. Click on the ***Copy*** button to copy the API Token.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Pipedrive API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Pipedrive API' credentials in n8n.
 7. Paste the API token in the ***API Token*** field in the 'Pipedrive API' credentials in n8n.
 8. Click on the ***Create*** button to save your credentials.
 

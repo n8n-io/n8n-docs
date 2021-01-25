@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.Beeminder
+permalink: /nodes/n8n-nodes-base.beeminder
 description: Learn how to use the Beeminder node in n8n
 ---
 

@@ -11,13 +11,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
 	- GitHub: Added Invite operation to the User resource
 	- EmailReadImap: Increased the authentication timeout
-	- Mautic: Added Custom Fields option to the create and update operations of Contact resource. Updated the Mautic OAuth credentials. Now you don't have to enter the Authorization URL and the Access Token URL
+	- Mautic: Added Custom Fields option to the Create and Update operations of the Contact resource. Also, the Mautic OAuth credentials have been updated. Now you don't have to enter the Authorization URL and the Access Token URL
 	- Nextcloud: Added User resource
 	- Slack: Added Get Permalink and Delete operations to the Message resource
 	- Webhook: Added support for route parameters
 - Bug fixes
 	- Google Drive: Fixed the default value for the Send Notification Email option
-- Added expression support to credentials
+- Added support for expressions to credentials
 - Removed support for MongoDB as a database
 
 ## n8n@0.103.1

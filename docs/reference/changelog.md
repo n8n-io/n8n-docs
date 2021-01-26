@@ -14,7 +14,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Mautic: Added Custom Fields option to the Create and Update operations of the Contact resource. Also, the Mautic OAuth credentials have been updated. Now you don't have to enter the Authorization URL and the Access Token URL
 	- Nextcloud: Added User resource
 	- Slack: Added Get Permalink and Delete operations to the Message resource
-	- Webhook: Added support for route parameters
+	- Webhook: Added support for request parameters in webhook paths
 - Bug fixes
 	- Google Drive: Fixed the default value for the Send Notification Email option
 - Added support for expressions to credentials

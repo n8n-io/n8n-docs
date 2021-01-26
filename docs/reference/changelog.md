@@ -25,7 +25,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- AWS Lambda: Fixed an issue with signature
 	- AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
-- The code editor can be closed either by clicking on the close (X) button or using the `ESC` key
+- The code editor does not get closed when clicked anywhere outside the editor
 - Added CLI commands to [export](start-workflows-via-cli.md#export-workflows-and-credentials) and [import](start-workflows-via-cli.md#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 

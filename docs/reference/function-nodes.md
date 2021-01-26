@@ -22,3 +22,9 @@ possible via the methods `getBinaryData` and `setBinaryData`.
 
 Both nodes support promises. So instead of returning the item or items directly, it is also possible to
 return a promise which resolves accordingly.
+
+#### Comparison
+| Data to access          | Function               | FunctionItem     |
+| :-------------------------- | :--------------------- | :--------------- |
+| JSON data                   | items\[_index_\].json    | item             |
+| Binary data                 | items\[_index_\].binary  | getBinaryData()  |

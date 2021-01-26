@@ -22,12 +22,33 @@ You can participate in the [forum](https://community.n8n.io/) and help the commu
 
 When sharing workflows in the community forum, use code blocks. Use triple backticks (```) to wrap the workflow code in a code block.
 
-![Creating code blocks to share workflow on the community forum](./using-code-block.png)
+The following video demonstrates the steps of sharing workflows on the community forum.
+
+<div class="video-container">
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/dVC8yLqUvCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Contribute a workflow 🧬
 
 You can publish workflows on [n8n.io](https://n8n.io/workflows) to help other users to get started.
 
+To share a workflow, follow the steps mentioned below.
+
+1. Sign in to [n8n](https://n8n.io/login).
+2. Open the [workflows](https://n8n.io/workflows) page.
+3. Click on the ***+ Share New Workflow*** button.
+4. Enter the name of your workflow in the ***Name*** field. The name of a workflow makes it easy for others to understand the purpose of the workflow.
+5. Enter a detailed description of the workflow in the ***Description*** field. Make sure the description contains information about the nodes used in the workflow.
+6. Add a screenshot of the workflow in the description.
+7. Copy your n8n workflow.
+8. Paste it in the ***Workflow Code*** field.
+9. Click on the ***Publish Workflow to Share*** button to share your workflow.
+
+The following video demonstrates the steps mentioned above.
+
+<div class="video-container">
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/pifW8extABQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Contribute to the docs 📚
 

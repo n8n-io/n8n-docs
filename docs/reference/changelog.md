@@ -2,6 +2,24 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.104.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
+**Release date:** 2021-01-26
+
+- New nodes
+	- Compression
+- Enhanced nodes
+	- GitHub: Added Invite operation to the User resource
+	- EmailReadImap: Increased the authentication timeout
+	- Mautic: Added Custom Fields option to the Create and Update operations of the Contact resource. Also, the Mautic OAuth credentials have been updated. Now you don't have to enter the Authorization URL and the Access Token URL
+	- Nextcloud: Added User resource
+	- Slack: Added Get Permalink and Delete operations to the Message resource
+	- Webhook: Added support for route parameters
+- Bug fixes
+	- Google Drive: Fixed the default value for the Send Notification Email option
+- Added support for expressions to credentials
+- Removed support for MongoDB as a database
+
 ## n8n@0.103.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
 **Release date:** 2021-01-21

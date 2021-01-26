@@ -35,7 +35,6 @@ return item;
 
 Returns all the binary data (all keys) of the item which gets currently processed.
 ```json
-// Makes a copy of <attachment_0>'s filename and attaches it to the "json" data.
 item.filename = getBinaryData().attachment_0.fileName;
 return item;
 ```

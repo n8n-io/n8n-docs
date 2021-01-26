@@ -20,6 +20,9 @@ n8n users come from a wide range of backgrounds, experience levels, and interest
 
 You can participate in the [forum](https://community.n8n.io/) and help the community members out with their questions.
 
+When sharing workflows in the community forum, use code blocks. Use triple backticks (```) to wrap the workflow code in a code block.
+
+![Creating code blocks to share workflow on the community forum](./using-code-block.png)
 
 ## Contribute a workflow 🧬
 
@@ -39,7 +42,7 @@ We have the following process for guest contributions to our [Medium publication
 3. After you submit the piece, one of our team members would start a first edit (we usually do this in Google docs), where they'll try running through the article to check if everything is clear and easy to follow.
 4. Once all the questions or comments are resolved, we'll do a final review before publishing the article on our Medium publication.
 
-Depending on the length of the article and the changes that might be required, there would be a bit of a back and forth and the whole process might take somewhere between a couple of days to a week or two. 
+Depending on the length of the article and the changes that might be required, there would be a bit of a back and forth and the whole process might take somewhere between a couple of days to a week or two.
 
 
 ## Contribute to n8n 🔨

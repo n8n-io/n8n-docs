@@ -31,10 +31,10 @@ You'll only need to enter the Credentials Name and click on the circle button in
 9. Click on the ***Register application*** button.
 10. Copy the displayed 'Client ID'.
 11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github OAuth2 API' credentials in n8n.
-12. Paste the client ID in the ***Client ID** field in the 'Github OAuth2 API' credentials in n8n.
+12. Paste the client ID in the ***Client ID*** field in the 'Github OAuth2 API' credentials in n8n.
 13. On your application page, click on the ***Generate a new client secret*** button.
 14. Copy the displayed 'Client Secret'.
-15. Paste the client secret in the ***Client Secret** field in the 'Github OAuth2 API' credentials in n8n.
+15. Paste the client secret in the ***Client Secret*** field in the 'Github OAuth2 API' credentials in n8n.
 16. Click on the circle button in the OAuth section to connect a GitHub account to n8n.
 17. Click the ***Save*** button to save your credentials in n8n.
 
@@ -63,7 +63,7 @@ The following video demonstrates the steps to authenticate the GitHub node on [n
 9. Scroll down to the bottom and click on the ***Generate token*** button.
 10. Copy the displayed 'Personal access token'.
 11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github API' credentials in n8n.
-12. Enter your username in the ***User*** field in the 'Github API' credentials in n8n.
+12. Enter your GitHub username in the ***User*** field in the 'Github API' credentials in n8n.
 13. Paste the access token in the ***Access Token*** field in the 'Github API' credentials in n8n.
 14. Click the ***Create*** button to save your credentials in n8n.
 

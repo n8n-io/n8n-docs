@@ -10,34 +10,6 @@ The following environment variables get used by all databases:
 
  - `DB_TABLE_PREFIX` (default: '') - Prefix for table names
 
-
-## MongoDB
-
-::: danger
-Use PostgresDB, if possible! MongoDB has problems saving large
-amounts of data in a document, among other issues. So, support
-will be dropped in the future.
-:::
-
-To use MongoDB as the database, you can provide the following environment variables like
-in the example below:
- - `DB_TYPE=mongodb`
- - `DB_MONGODB_CONNECTION_URL=<CONNECTION_URL>`
-
-Replace the following placeholders with the actual data:
- - MONGO_DATABASE
- - MONGO_HOST
- - MONGO_PORT
- - MONGO_USER
- - MONGO_PASSWORD
-
-```bash
-export DB_TYPE=mongodb
-export DB_MONGODB_CONNECTION_URL=mongodb://MONGO_USER:MONGO_PASSWORD@MONGO_HOST:MONGO_PORT/MONGO_DATABASE
-n8n start
-```
-
-
 ## PostgresDB
 
 To use PostgresDB as the database, you can provide the following environment variables

@@ -14,12 +14,12 @@ Create a [Beeminder](https://Beeminder.io/account) account.
 
 ## Using API Key
 
-1. Access your [Beeminder dashboard](https://beeminder.com/home).
+1. Open your [Beeminder dashboard](https://beeminder.com/home).
 2. Click on your avatar at the top-right corner.
 3. Select 'ACCOUNT SETTINGS' from the dropdown list.
 4. Scroll up and click on the ***APPS & API*** tab.
 5. Copy the ***Auth Token*** displayed in the ***API*** section.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Beeminder API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Beeminder API' credentials in n8n.
 7. Enter your username in the ***User*** field.
 8. Paste the Auth Token in the ***Auth Token*** field.
 9. Click on the ***Save*** button to save your credentials.

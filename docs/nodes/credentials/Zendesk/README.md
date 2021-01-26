@@ -15,7 +15,7 @@ Create a [Zendesk](https://zendesk.com/) account.
 
 ## Using OAuth
 
-1. Access your Zendesk dashboard.
+1. Open your Zendesk dashboard.
 2. Click on the gear icon on the left.
 3. Click on 'API' under the ***CHANNELS*** section in the sidebar.
 4. Click on the ***OAuth Clients*** tab.
@@ -37,11 +37,13 @@ Create a [Zendesk](https://zendesk.com/) account.
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ieNHkgUVNhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using Access Token
 
-1. Access your Zendesk dashboard.
+1. Open your Zendesk dashboard.
 2. Click on the gear icon on the left.
 3. Click on 'API' under the ***CHANNELS*** section in the sidebar.
 4. If ***Token access*** is disabled, click on the switch to toggle it to 'Enabled'.
@@ -57,7 +59,9 @@ The following video demonstrates the steps mentioned above.
 
 The following video demonstrates the steps mentioned above.
 
+<div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/AvduoHrFJdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## FAQs
 

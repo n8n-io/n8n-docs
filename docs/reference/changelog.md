@@ -2,11 +2,17 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-# n8n@0.104.2
+## n8n@0.104.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.1...n8n@0.104.2) for this version.<br />
 **Release date:** 2021-01-27
 
 - Fixed an issue with the credentials parameters that have the same name
+
+## n8n@0.104.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.0...n8n@0.104.1) for this version.<br />
+**Release date:** 2021-01-26
+
+- Fixed a bug with expressions in credentials
 
 ## n8n@0.104.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />

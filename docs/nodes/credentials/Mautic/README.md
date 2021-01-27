@@ -24,20 +24,18 @@ Create an account on a [Mautic](https://www.mautic.org/) instance.
 7. Paste it in the ***Redirect URI*** field on the Mautic credentials page.
 8. Click on the ***Apply*** button.
 9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Mautic OAuth2 API' credentials in n8n.
-10. Enter the authorization URL in the ***Authorization URL*** field. Refer to the [FAQs] to learn more about the authorization URL.
-11. Enter the access toke URL in the ***Access Token URL*** field. Refer to the [FAQs] to learn more about the access token URL.
-12. Copy the ***Client ID*** from the Mautic credentials page.
-13. Paste it in the ***Client ID*** field in the 'Mautic OAuth2 API' credentials in n8n.
-14. Copy the ***Client Secret*** from the Mautic credentials page.
-15. Paste it in the ***Client Secret*** field in the 'Mautic OAuth2 API' credentials in n8n.
-16. Enter the URL of your Mautic instance in the ***URL*** field.
-17. Click on the circle button in the OAuth section to connect a Mautic account to n8n.
-18. Click on the ***Save*** button to save your credentials.
+10. Copy the ***Client ID*** from the Mautic credentials page.
+11. Paste it in the ***Client ID*** field in the 'Mautic OAuth2 API' credentials in n8n.
+12. Copy the ***Client Secret*** from the Mautic credentials page.
+13. Paste it in the ***Client Secret*** field in the 'Mautic OAuth2 API' credentials in n8n.
+14. Enter the URL of your Mautic instance in the ***URL*** field.
+15. Click on the circle button in the OAuth section to connect a Mautic account to n8n.
+16. Click on the ***Save*** button to save your credentials.
 
 The following video demonstrates the steps mentioned above.
 
 <div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/bbQ3KL34DME" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/vEL0wJ2_91E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Using Credentials

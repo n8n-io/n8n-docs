@@ -46,7 +46,7 @@ You'll need to enable the API of the service you want to use. You can enable the
 2. Click on the hamburger menu on the top left.
 3. Select 'Credentials' from the ***APIs & Services*** dropdown list.
 4. Click on the ***+ CREATE CREDENTIALS*** button.
-5. Select 'OAuth client ID' from the dropdown list.
+5. Select 'OAuth client ID' from the dropdown list. If you're creating OAuth credentials for the first time, you will have to verify the configure consent screen. Refer to the [FAQs](#how-to-configure-the-consent-screen) to learn to configure the consent screen.
 6. Select 'Web application' from the ***Application type*** dropdown list.
 7. Click on the ***+ Add URI*** button under the ***Authorized redirect URIs*** section.
 8. Copy the 'OAuth Callback URL' provided in the Google node credentials in n8n.
@@ -117,6 +117,25 @@ To enable an API, follow the steps mentioned below.
 3. Select 'Library' from the ***APIs & Services*** dropdown list.
 4. Select the API you want to enable.
 5. Click on the ***ENABLE*** button.
+
+### How to configure the consent screen?
+
+If you're creating OAuth credentials for the first time, Google asks you to configure the consent screen. To configure the consent screen, follow the steps mentioned below.
+
+1. Access your [Google Cloud Console](https://console.cloud.google.com).
+2. Click on the hamburger menu on the top left.
+3. Select 'OAuth consent screen' from the ***APIs & Services*** dropdown list.
+4. Based on your use-case, select the user type under the ***User Type*** section and click on the ***CREATE*** button.
+5. Enter the name of your app in the ***App name*** field.
+6. Select the user support email from the ***User support email*** dropdown list.
+7. Scroll down to the ***Developer contact information*** section.
+8. Enter the email address of the developer in the ***Email addresses*** field.
+9. Click on the ***SAVE AND CONTINUE*** button.
+10. On the ***Scopes*** tab, scroll down to the bottom and click on the ***SAVE AND CONTINUE*** button.
+11. On the ***Test users*** tab, click on the ***SAVE AND CONTINUE*** button.
+12. On the ***Summary*** tab, scroll down to the bottom and click on the ***BACK TO DAShBOARD*** button.
+13. Under the ***Testing*** section, click on the ***PUBLISH APP*** button.
+14. Click on ***CONFIRM*** on the pop-up screen.
 
 ### How to implement user impersonification?
 

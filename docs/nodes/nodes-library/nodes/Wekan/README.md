@@ -168,4 +168,4 @@ In the screenshot below, you will notice that the node updates the list id of th
 
 ### How to load all the parameters for the node?
 
-To load all the parameters, for example, AuthorID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn to change permissions.
+To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn how to change permissions.

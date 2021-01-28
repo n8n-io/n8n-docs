@@ -62,7 +62,7 @@ This workflow allows you to create a board and two lists called `To Do` and `Don
 
 The final workflow should look like the following image.
 
-![A workflow with the Wekan node](./workflow.png) 
+![A workflow with the Wekan node](./workflow.png)
 
 ::: v-pre
 ### 1. Start node
@@ -162,3 +162,10 @@ In the screenshot below, you will notice that the node updates the list id of th
 :::
 
 ![Using the Wekan node to update the card](./Wekan4_node.png)
+
+
+## FAQs
+
+### How to load all the parameters for the node?
+
+To load all the parameters, for example, AuthorID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn to change permissions.

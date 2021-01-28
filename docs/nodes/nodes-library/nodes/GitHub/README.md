@@ -41,8 +41,16 @@ You can find authentication information for this node [here](../../../credential
 - Creates a new release
 :::
 
+::: details Review
+- Create a new review
+- Get a review for a pull request
+- Get all revies for a pull request
+- Update a review
+:::
+
 ::: details User
 - Returns the repositories of a user
+- Invite a user to an organization
 :::
 
 ## Example Usage

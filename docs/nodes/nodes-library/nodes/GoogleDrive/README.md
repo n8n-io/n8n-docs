@@ -13,6 +13,14 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Drive
+- Create a drive
+- Delete a drive
+- Get a drive
+- List all drives
+- Update a drive
+:::
+
 ::: details File
 - Copy a file
 - Delete a file

@@ -13,13 +13,19 @@ You can use these credentials to authenticate the following nodes with Airtable.
 
 Create an [Airtable](https://airtable.com/) account.
 
-## Using Access Token
+## Using API Key
 
-1. Open your Airtable dashboard.
-2. Click on your user icon in the top right of the window.
-3. Click on the Account button.
-4. Under the API section, click "Generate API key".
-5. Use this API key with your Airtable node credentials in n8n.
+1. Open your Airtable [dashboard](https://airtable.com/).
+2. Click on the user icon on the top right and select 'Account' from the dropdown list.
+3. Under the ***API*** section, click on the ***Generate API key*** button.
+4. Copy the displayed API key.
+5. Enter a name for your credentials in the ***Credentials Name*** field in the 'Airtable API' credentials in n8n.
+6. Paste the API key in the ***API Key*** field in the 'Airtable API' credentials in n8n.
+7. Click on the ***Create*** button to create the credentials.
 
 
-![Getting Airtable credentials](./using-access-token.gif)
+The following video demonstrates the steps mentioned above.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/yPP3ZnynNck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

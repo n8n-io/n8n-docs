@@ -122,6 +122,13 @@ Save the workflow and execute it again by clicking on the ***Execute Workflow***
 This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 :::
 
+
+🎥 The following playlist will help you learn how to use the Webhook node in n8n.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed//videoseries?list=PLlET0GsrLUL5niZQDjW56b_AxpvnEZyps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## FAQs
 
 ### Where to find the Webhook URLs?
@@ -148,7 +155,9 @@ The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests 
 
 Here is a video demonstrating how to send a request to a Webhook based workflow using the HTTP Request node:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### How to use cURL to trigger the Webhook node?
 

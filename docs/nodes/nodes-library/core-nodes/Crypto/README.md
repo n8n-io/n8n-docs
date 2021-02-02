@@ -18,6 +18,7 @@ You can configure further options for each action by selecting the type of encry
 - Type
     - MD5
     - SHA256
+	- SHA384
     - SHA512
 - Encoding
 	- BASE64

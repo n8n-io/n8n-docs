@@ -34,7 +34,10 @@ return item;
 ### Method: getBinaryData()
 
 Returns all the binary data (all keys) of the item which gets currently processed.
-
+```json
+item.filename = getBinaryData().attachment_0.fileName;
+return item;
+```
 
 ### Method: setBinaryData(binaryData)
 

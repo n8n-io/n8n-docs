@@ -40,7 +40,10 @@ You can find authentication information for this node [here](../../../credential
 :::
 
 ::: details Message
+- Delete a message
+- Get the permanent link of a message
 - Post a message in a channel
+- Post an ephemeral message to a user in a channel
 - Update a message
 :::
 

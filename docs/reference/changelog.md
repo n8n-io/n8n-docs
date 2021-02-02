@@ -2,6 +2,55 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.105.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.2...n8n@0.105.0) for this version.<br />
+**Release date:** 2021-02-01
+
+- New nodes
+	- Discourse
+    - SecurityScorecard
+    - TimescaleDB
+- Enhanced nodes
+    - Affinity: Added List and List Entry resource
+    - Asana: Added Project IDs option to the Create operation of the Task resource
+    - Hubspot Trigger: Added support for multiple subscriptions
+    - Jira: Added Issue Attachment resource and added custom fields to Create and Update operations of the Issue resource
+    - Todoist: Added Section option
+- Bug fixes
+    - SIGNL4: Fixed an issue with the attachment functionality
+- Added variable `$mode` to check the mode in which the workflow is being executed
+
+
+## n8n@0.104.2
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.1...n8n@0.104.2) for this version.<br />
+**Release date:** 2021-01-27
+
+- Fixed an issue with the credentials parameters that have the same name
+
+## n8n@0.104.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.0...n8n@0.104.1) for this version.<br />
+**Release date:** 2021-01-26
+
+- Fixed a bug with expressions in credentials
+
+## n8n@0.104.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
+**Release date:** 2021-01-26
+
+- New nodes
+	- Compression
+- Enhanced nodes
+	- GitHub: Added Invite operation to the User resource
+	- EmailReadImap: Increased the authentication timeout
+	- Mautic: Added Custom Fields option to the Create and Update operations of the Contact resource. Also, the Mautic OAuth credentials have been updated. Now you don't have to enter the Authorization URL and the Access Token URL
+	- Nextcloud: Added User resource
+	- Slack: Added Get Permalink and Delete operations to the Message resource
+	- Webhook: Added support for request parameters in webhook paths
+- Bug fixes
+	- Google Drive: Fixed the default value for the Send Notification Email option
+- Added support for expressions to credentials
+- Removed support for MongoDB as a database for n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
+
 ## n8n@0.103.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
 **Release date:** 2021-01-21
@@ -25,7 +74,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- AWS Lambda: Fixed an issue with signature
 	- AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
-- The code editor can be closed either by clicking on the close (X) button or using the `ESC` key
+- The code editor does not get closed when clicked anywhere outside the editor
 - Added CLI commands to [export](start-workflows-via-cli.md#export-workflows-and-credentials) and [import](start-workflows-via-cli.md#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 

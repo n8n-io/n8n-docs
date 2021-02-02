@@ -29,6 +29,10 @@ You can find authentication information for this node [here](../../../credential
 - Move a folder
 :::
 
+::: details User
+- Invite a user to a Nextcloud organization
+:::
+
 ## Example Usage
 
 This workflow allows you to create a folder in Nextcloud, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/620) on n8n.io. This example usage workflow would use the following nodes.

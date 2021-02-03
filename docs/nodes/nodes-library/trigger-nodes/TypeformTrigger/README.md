@@ -36,7 +36,7 @@ This example workflow uses a Typeform to collect name and email address. Below a
 |Let's start with your name | Short Text |
 |What's your email address? | Email |
 
-If you haven't, create a form with similar questions and question types.
+If you haven't, create a form similar to this [form](https://n8ndocsburner.typeform.com/to/dpr2kxSL).
 
 
 1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](../../../credentials/Typeform/README.md).
@@ -84,7 +84,7 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 This node will send a message about the new form submission to a channel in a Slack workspace.
 
-1. First of all, you'll have to enter credentials for the Slack node. You can find out how to do that [here](../../../credentials/Slac/README.md).
+1. First of all, you'll have to enter credentials for the Slack node. You can find out how to do that [here](../../../credentials/Slack/README.md).
 2. Enter the name of a channel in the ***Channel*** field.
 3. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 4. Enter the following text in the ***Expression Editor***

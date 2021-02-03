@@ -38,11 +38,15 @@ Create an email account on a service with IMAP support.
 15. Copy the displayed password.
 16. In the IMAP node credentials, enter your email address in the ***User*** field. For example, `example@gmail.com`.
 17. Paste the App password you copied in **Step 15** in the ***Password*** field.
-18. Enter `imap.google.com` in the ***Host*** field.
+18. Enter `imap.gmail.com` in the ***Host*** field.
 19. Toggle ***SSL/TLS*** to `true`.
 20. Click on ***Save*** to save your credentials.
 
 **Note:** Before executing the node, set the ***Ignore SSL Issues*** option to true as the Gmail certificate is self-signed.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/q4KUTgiglvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Using Yahoo Mail
 
@@ -60,6 +64,12 @@ Create an email account on a service with IMAP support.
 12. Enter `imap.mail.yahoo.com` in the ***Host*** field.
 13. Toggle ***SSL/TLS*** to `true`.
 14. Click on ***Save*** to save your credentials.
+
+The following video demonstrates the steps mentioned above.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/2SFGl3xBdOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Further Reading
 

@@ -13,21 +13,22 @@ The Compression node is useful to compress and decompress files. You can either 
 - Operations
 	- Compress
 	- Decompress
-
 - Options
     - ***Binary Property*** field: This field allows you to specify the name of the binary property
-    - ***Output Prefix*** field: This field allows you to specify a prefix for the name of the file gets generated
+    - ***Output Prefix*** field: This field allows you to specify a prefix for the name of the file that gets generated. This field gets displayed for the 'Decompress' operation and the 'gzip' output format for the 'Compress' operation
     - ***Output Format*** field: This field allows you to select an output format. This field is displayed when 'Compress' gets selected from the ***Operation*** dropdown list. The following are the available formats:
         - gzip
         - zip
     - ***File Name*** field: This field allows you to specify a file name. This field is displayed when 'zip' gets selected from the ***Output Format*** dropdown list.
+    - ***Binary Property Output*** field: This field allows you to specify a name for the file that gets generated. This field is displayed when 'zip' gets selected from the ***Output Format*** dropdown list.
 
 ## Example Usage
 
-This workflow allows you to compress binary files to zip format. You can also find the [workflow](https://n8n.io/workflows/908) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to compress binary files to zip format and upload them to Dropbox. You can also find the [workflow](https://n8n.io/workflows/908) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Compression]()
+- [Dropbox](../../nodes/Dropbox/README.md)
 
 
 The final workflow should look like the following image.
@@ -79,3 +80,16 @@ This node compresses the binary file that we received from the HTTP Request node
 In the screenshot below, you will notice that the node compresses the files and generates images.zip.
 
 ![Using the Compression node to compress files](./Compression_node.png)
+
+### 5. Dropbox node (upload: file)
+
+This node will upload the compressed file to your Dropbox account.
+
+1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](../../../credentials/Dropbox/README.md).
+2. Enter `/images.zip` in the ***File Path*** field.
+3. Toggle ***Binary Data*** to `true`. This option allows us to upload binary data from the previous node.
+4. Click on ***Execute Node*** to run the node.
+
+In the screenshot below, you will notice that the node uploads the compressed file that we generated in the previous node.
+
+![Using the Dropbox node to upload a file](./Dropbox_node.png)

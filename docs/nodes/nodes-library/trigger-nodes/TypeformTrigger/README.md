@@ -33,10 +33,10 @@ This example workflow uses a Typeform to collect name and email address. Below a
 
 |Question | Type  |
 |---------|-------|
-|Let's start with your name | Short Text |
+|Let's start with your name. | Short Text |
 |What's your email address? | Email |
 
-If you haven't, create a form similar to this [form](https://n8ndocsburner.typeform.com/to/dpr2kxSL).
+If you haven't, create a form exactly the same as this [form](https://n8ndocsburner.typeform.com/to/dpr2kxSL).
 
 
 1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](../../../credentials/Typeform/README.md).
@@ -54,7 +54,7 @@ We will use the Set node to ensure that only the data that we set in this node g
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
 3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > Let's start with your *name.*. You can also add the following expression: `{{$json["Let's start with your *name.*"]}}`.
+4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > Let's start with your name.. You can also add the following expression: `{{$json["Let's start with your name."]}}`.
 5. Click on ***Add Value*** and select 'String' from the dropdown list.
 6. Enter `Email` in the ***Name*** field.
 7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.

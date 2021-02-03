@@ -81,7 +81,12 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 ### 4. TimescaleDB node (Insert)
 
-This node will push the data from the previous node to the `iss` table in TimescaleDB. If you have created a table with a different name, you can use that table instead.
+We will insert the data from the previous node to a table named `iss`. To create the table, use the following SQL command.
+```
+CREATE TABLE iss(latitued NUMERIC, longitude NUMERIC, timestamp NUMERIC);
+```
+
+This node will insert the data from the previous node to the `iss` table in TimescaleDB. If you have created a table with a different name, you can use that table instead.
 
 1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](../../../credentials/TimescaleDb/README.md).
 2. Enter `iss` in the ***Table*** field.

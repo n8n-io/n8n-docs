@@ -86,8 +86,6 @@ We will insert the data from the previous node to a table named `iss`. To create
 CREATE TABLE iss(latitude NUMERIC, longitude NUMERIC, timestamp NUMERIC);
 ```
 
-This node will insert the data from the previous node to the `iss` table in TimescaleDB. If you have created a table with a different name, you can use that table instead.
-
 1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](../../../credentials/TimescaleDb/README.md).
 2. Enter `iss` in the ***Table*** field.
 3. Enter `latitude, longitude, timestamp` in the ***Columns*** field.

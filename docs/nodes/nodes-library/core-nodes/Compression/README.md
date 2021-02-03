@@ -77,7 +77,7 @@ This node compresses the binary file that we received from the HTTP Request node
 4. Enter `images.zip` in the ***File Name*** field.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node compresses the files and generates images.zip.
+In the screenshot below, you will notice that the node compresses the files and generates `images.zip`.
 
 ![Using the Compression node to compress files](./Compression_node.png)
 

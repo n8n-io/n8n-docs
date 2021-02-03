@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following node.
+This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following nodes.
 - [Typeform Trigger]()
 - [Set](../../core-nodes/Set/README.md)
 - [Airtable](../../nodes/Airtable/README.md)
@@ -29,15 +29,12 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when a form response is submitted.
 
-This example workflow uses a Typeform to collect name and email address. Below are the questions and their question type used in the form.
+This example workflow uses a Typeform to collect name and email address. Create a form exactly like [this](https://n8ndocsburner.typeform.com/to/dpr2kxSL) for the example workflow. Here are the questions and their question types for the form.
 
 |Question | Type  |
 |---------|-------|
 |Let's start with your name. | Short Text |
 |What's your email address? | Email |
-
-If you haven't, create a form exactly the same as this [form](https://n8ndocsburner.typeform.com/to/dpr2kxSL).
-
 
 1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](../../../credentials/Typeform/README.md).
 2. Select your form from the ***Form*** dropdown list.
@@ -66,7 +63,7 @@ In the screenshot below, you will notice that the node sets the values of `Name`
 
 ![Using the Set node to set the values](./Set_node.png)
 
-### 4. Airtable node (Append)
+### 3. Airtable node (Append)
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shreoj1AmTE6S6Eep) in your Airtable base.
 
@@ -80,7 +77,7 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 ![Using the Airtable node to insert data into an Airtable table](./Airtable_node.png)
 
-### 5. Slack node (post: message)
+### 4. Slack node (post: message)
 
 This node will send a message about the new form submission to a channel in a Slack workspace.
 

@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to store the response of a form submission to Airtable and send a message on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following node.
+This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following node.
 - [Typeform Trigger]()
 - [Set](../../core-nodes/Set/README.md)
 - [Airtable](../../nodes/Airtable/README.md)
@@ -29,6 +29,16 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when a form response is submitted.
 
+This example workflow uses a Typeform to collect name and email address. Below are the questions and their question type used in the form.
+
+|Question | Type  |
+|---------|-------|
+|Let's start with your name | Short Text |
+|What's your email address? | Email |
+
+If you haven't, create a form with similar questions and question types.
+
+
 1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](../../../credentials/Typeform/README.md).
 2. Select your form from the ***Form*** dropdown list.
 3. Click on ***Execute Node*** to run the workflow.
@@ -39,7 +49,7 @@ In the screenshot below, you will notice that the Typeform Trigger node triggers
 
 ### 2. Set node
 
-We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow. We will set the value of `Name`, `Email`, `Interest`, and `Country` in this node.
+We will use the Set node to ensure that only the data that we set in this node gets passed on to the next nodes in the workflow. We will set the value of `Name` and `Email` in this node.
 ::: v-pre
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
@@ -48,20 +58,11 @@ We will use the Set node to ensure that only the data that we set in this node g
 5. Click on ***Add Value*** and select 'String' from the dropdown list.
 6. Enter `Email` in the ***Name*** field.
 7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-8. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > [field:d566770d2197a78b] what's your email address?. You can also add the following expression: `{{$json["[field:d566770d2197a78b] what's your email address?"]}}`.
-9. Click on ***Add Value*** and select 'String' from the dropdown list.
-10. Enter `Interest` in the ***Name*** field.
-11. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-12. In the ***Variable Selector*** section, click on the circle button next to Current Node > Input Data > JSON > Let us know about your interest..
-13. Select 'Values' from the dropdown list. You can also add the following expression: `{{$json["Let us know about your interest."].join(', ')}}`. This will add all the options selected by the user.
-14. Click on ***Add Value*** and select 'String' from the dropdown list.
-15. Enter `Country` in the ***Name*** field.
-16. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-17. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > From which country will you attend the meetup?. You can also add the following expression: `{{$json["From which country will you attend the meetup?"]}}`.
-18. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
-19. Click on ***Execute Node*** to run the node.
+8. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > What's your email address?. You can also add the following expression: `{{$json["What's your email address?"]}}`.
+9. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
+10. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node sets the values of `Name`, `Email`, `Interest`, and `Country`. These values are passed to the next node in the workflow.
+In the screenshot below, you will notice that the node sets the values of `Name` and `Email`. These values are passed to the next node in the workflow.
 
 ![Using the Set node to set the values](./Set_node.png)
 
@@ -90,8 +91,7 @@ This node will send a message about the new form submission to a channel in a Sl
 ```
 *New Submission* 🙌
 Name: {{$node["Set"].json["Name"]}}
-Interests: {{$node["Set"].json["Interest"]}}
-Country: {{$node["Set"].json["Country"]}}
+Email: {{$node["Set"].json["Email"]}}
 ```
 5. Click on ***Execute Node*** to run the node.
 

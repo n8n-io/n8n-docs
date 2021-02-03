@@ -83,7 +83,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 We will insert the data from the previous node to a table named `iss`. To create the table, use the following SQL command.
 ```
-CREATE TABLE iss(latitued NUMERIC, longitude NUMERIC, timestamp NUMERIC);
+CREATE TABLE iss(latitude NUMERIC, longitude NUMERIC, timestamp NUMERIC);
 ```
 
 This node will insert the data from the previous node to the `iss` table in TimescaleDB. If you have created a table with a different name, you can use that table instead.
@@ -95,7 +95,7 @@ This node will insert the data from the previous node to the `iss` table in Time
 
 In the screenshot below, you will notice that the node inserts the data from the previous node to the `iss` table in TimescaleDB.
 
-![Using the Timescale node to insert the data to a table](./TimescaleDB_node.png)
+![Using the TimescaleDB node to insert the data to a table](./TimescaleDB_node.png)
 
 ::: tip 💡 Activate workflow for production
 This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.

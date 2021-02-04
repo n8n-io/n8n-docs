@@ -6,9 +6,10 @@ There are a couple of ways in which you can contribute to n8n, each of them very
 ## Share some love 💙
 
 - Give n8n a star on [GitHub](https://github.com/n8n-io/n8n) and [Docker Hub](https://hub.docker.com/r/n8nio/n8n).
-- Follow us on [Twitter](https://twitter.com/n8n_io) and [LinkedIn](https://www.linkedin.com/company/28491094).
+- Follow us on [Twitter](https://twitter.com/n8n_io), [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/).
 - Upvote n8n on [AlternativeTo](https://alternativeto.net/software/n8n-io/) and [Alternative.me](https://alternative.me/n8n-io).
 - Add n8n to your stack on [Stackshare](https://stackshare.io/n8n).
+- Write a review of n8n on [G2](https://www.g2.com/products/n8n/reviews) and [Slant](https://www.slant.co/improve/options/37977/~n8n-review).
 
 
 ## Share your story 💌

@@ -1,7 +1,7 @@
 # Database
 
 By default, n8n uses SQLite to save credentials, past executions, and workflows. However,
-n8n also supports MongoDB and PostgresDB.
+n8n also supports PostgresDB.
 
 
 ## Shared Settings

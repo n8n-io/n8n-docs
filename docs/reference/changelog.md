@@ -2,6 +2,37 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.105.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.2...n8n@0.105.0) for this version.<br />
+**Release date:** 2021-02-01
+
+- New nodes
+	- Discourse
+    - SecurityScorecard
+    - TimescaleDB
+- Enhanced nodes
+    - Affinity: Added List and List Entry resource
+    - Asana: Added Project IDs option to the Create operation of the Task resource
+    - Hubspot Trigger: Added support for multiple subscriptions
+    - Jira: Added Issue Attachment resource and added custom fields to Create and Update operations of the Issue resource
+    - Todoist: Added Section option
+- Bug fixes
+    - SIGNL4: Fixed an issue with the attachment functionality
+- Added variable `$mode` to check the mode in which the workflow is being executed
+
+
+## n8n@0.104.2
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.1...n8n@0.104.2) for this version.<br />
+**Release date:** 2021-01-27
+
+- Fixed an issue with the credentials parameters that have the same name
+
+## n8n@0.104.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.0...n8n@0.104.1) for this version.<br />
+**Release date:** 2021-01-26
+
+- Fixed a bug with expressions in credentials
+
 ## n8n@0.104.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
 **Release date:** 2021-01-26

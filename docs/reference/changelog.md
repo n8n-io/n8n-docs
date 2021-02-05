@@ -2,6 +2,22 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.106.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.105.0...n8n@0.106.0) for this version.<br />
+**Release date:** 2021-02-05
+
+- New nodes
+	- Reddit
+    - Tapfiliate
+- Enhanced nodes
+    - Airtable Trigger: Added Download Attachment option
+    - HubSpot: Added Custom Properties option to the Create and Update operations of the Company resource
+    - MySQL: Added Connection Timeout parameter to the credentials
+    - Telegram: Added Pin Chat Message and Unpin Chat Message operations for the Message resource
+- Bug fixes
+    - Typeform: Fixed an issue with the OAuth2 authentication method
+- Added support for `s` and `u` flags for regex in the IF node and the Switch node
+
 ## n8n@0.105.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.2...n8n@0.105.0) for this version.<br />
 **Release date:** 2021-02-01

@@ -16,7 +16,7 @@ Create a [SecurityScorecard](https://securityscorecard.com/) account.
 ## Using API
 
 1. Open your SecurityScorecard [dashboard](https://platform.securityscorecard.io/#/home).
-2. Click on ***Integratoins*** and select 'Get an API Key'.
+2. Click on ***Integrations*** and select 'Get an API Key'.
 3. Click on ***Generate new API token***.
 4. Click on the ***Confirm*** button.
 5. Copy the generated API key.

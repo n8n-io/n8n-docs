@@ -5,7 +5,7 @@ description: Learn how to use the SecurityScorecard node in n8n
 
 # SecurityScorecard
 
-[SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulation and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
+[SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/SecurityScorecard/README.md).
@@ -52,7 +52,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to generate, retrieve and download a report using the SecurityScorecard node. You can also find the [workflow](https://n8n.io/workflows/920) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to generate, retrieve, and download a report using the SecurityScorecard node. You can also find the [workflow](https://n8n.io/workflows/920) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [SecurityScorecard]()
 
@@ -105,6 +105,6 @@ This node will download the report that got returned by the previous node.
 6. Click on ***Execute Node*** to run the node.
 :::
 
-In the screenshot below, you will notice that the node downloads the report that got returned by the previous node.
+In the screenshot below, you will notice that the node downloads the report that was returned by the previous node.
 
 ![Using the SecurityScorecard node to download a report](./SecurityScorecard2_node.png)

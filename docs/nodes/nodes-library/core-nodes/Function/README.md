@@ -5,13 +5,13 @@ description: Learn how to use the Function node in n8n
 
 # Function
 
-The Function node is used to add custom snippets to JavaScript code to transform data from the other nodes or if you want to implement some custom functionality that n8n doesn’t support yet.
+The Function node is used to add custom snippets to JavaScript code to transform data from the other nodes or if you want to implement some custom functionality that n8n doesn’t support yet. 
 
 ::: tip 💡 Keep in mind
 Please note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Check out [this](../../../../reference/function-nodes.md) page to learn about the difference between the Function and Function Item nodes.
 :::
 
-The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
+If you want to use Function to transform input data, take a look at the [contract between nodes](../../../../reference/data/data-structure.md) which describes the input data structure that you could manipulate. The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
 ## Example Usage
 

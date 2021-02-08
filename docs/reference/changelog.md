@@ -8,7 +8,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - New nodes
     - AWS Comprehend
-	- GetResponse Trigger
+    - GetResponse Trigger
     - Peekalink
     - Stackby
 - Enhanced nodes

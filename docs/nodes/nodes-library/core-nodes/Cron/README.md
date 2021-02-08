@@ -36,20 +36,20 @@ The 'Every X' option allows you to specify the workflow to be triggered every x 
 
 To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the ***Cron Expression*** field in n8n.
 
-### Why there are 6 asterisk (*) for the Custom mode?
+### Why there are six asterisks (*) in the Cron Expression?
 
-The 6th asterisk in the Custom mode represents seconds. Setting this is optional. The node will execute if you don't set the value for seconds and only set 5 values.
+The 6th asterisk in the Cron Expression represents seconds. Setting this is optional. The node will execute if you don't set the value for seconds.
 
 | * | * | * | * | * | * |
 |---|---|---|---|---|---|
 |second|minute|hour|day|week|month|
 
-If you want to trigger your workflow, for example, every day at 4 hours 8 minutes and 30 seconds, enter the following in the ***Cron Expression*** field.
+If you want to trigger your workflow, for example, every day at 04:08:30, enter the following in the ***Cron Expression*** field.
 ```
 30 8 4 * * *
 ```
 
-If you want to trigger your workflow, for example, every day at 4 hours and 8 minutes, enter the following in the ***Cron Expression*** field.
+If you want to trigger your workflow, for example, every day at 04:08, enter the following in the ***Cron Expression*** field.
 ```
 8 4 * * *
 ```

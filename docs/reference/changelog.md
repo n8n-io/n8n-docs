@@ -18,7 +18,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
     - Google Drive: Fixed an issue with the Delete and Share operations
     - Filemaker: Fixed an issue with the script list parsing
-- Set SQLite3 to version `5.0.1`
 - Updated Node.js version of Docker images to `14.15`
 - Added a shortcut `CTRL + scroll` to zoom
 

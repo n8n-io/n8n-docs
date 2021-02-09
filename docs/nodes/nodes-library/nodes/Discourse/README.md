@@ -47,7 +47,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create, update and get a post using the Discourse node. You can also find the [workflow](https://n8n.io/workflows/930) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get a post using the Discourse node. You can also find the [workflow](https://n8n.io/workflows/930) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Discourse]()
 

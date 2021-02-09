@@ -38,7 +38,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru).
 
 ### Why there are six asterisks (*) in the Cron Expression?
 
-The 6th asterisk in the Cron Expression represents seconds. Setting this is optional. The node will execute if you don't set the value for seconds.
+The sixth asterisk in the Cron Expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
 
 | * | * | * | * | * | * |
 |---|---|---|---|---|---|

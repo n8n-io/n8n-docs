@@ -20,17 +20,21 @@ You can use these credentials to authenticate the following nodes with Discourse
 2. Click on the ***API*** tab.
 3. Click on the ***+ New API Key*** button.
 4. Enter a description in the ***Description*** field.
-5. If you want to create the API key for a single user, select 'Single User' from the ***User Level*** dropdown list.
-6. Enter the username in the ***User*** field and select the user from the dropdown list.
-7. If you want to create the API key for all your users, select 'All Users' from the ***User Level*** dropdown list.
-8. If you want to select all the scopes, check the ***Global Key (allowed all actions)*** checkbox. Otherwise, select scopes individually under the ***Scopes*** section.
-9. Click on the ***Save*** button.
-10. Copy the displayed API key.
-11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Discourse API' credentials in n8n.
-12. Enter the URL of your Discourse instance in the ***URL*** field in the 'Discourse API' credentials in n8n. For example, `https://community.n8n.io`.
-13. Paste the API key in the ***API Key*** field in the 'Discourse API' credentials in n8n.
-14. Enter your Discourse username in the ***Username*** field in the 'Discourse API' credentials in n8n.
-15. Click the ***Create*** button to create your credentials in n8n.
+5. Based on your use-case, do one of the following:
+    - If you want to create the API key for a single user, select 'Single User' from the ***User Level*** dropdown list.
+    - Enter the username in the ***User*** field and select the user from the dropdown list.
+
+    **OR**
+
+    - If you want to create the API key for all your users, select 'All Users' from the ***User Level*** dropdown list.
+6. If you want to select all the scopes, check the ***Global Key (allowed all actions)*** checkbox. Otherwise, select scopes individually under the ***Scopes*** section.
+7. Click on the ***Save*** button.
+8. Copy the displayed API key.
+9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Discourse API' credentials in n8n.
+10. Enter the URL of your Discourse instance in the ***URL*** field in the 'Discourse API' credentials in n8n. For example, `https://community.n8n.io`.
+11. Paste the API key in the ***API Key*** field in the 'Discourse API' credentials in n8n.
+12. Enter your Discourse username in the ***Username*** field in the 'Discourse API' credentials in n8n.
+13. Click the ***Create*** button to create your credentials in n8n.
 
 The following video demonstrates the steps mentioned above.
 

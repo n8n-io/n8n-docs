@@ -1,7 +1,7 @@
 # Glossary
 
 ## .env File
-A special file which contains configuration information in the form of environment [variables](#Variable).
+A special file which contains configuration information in the form of [environment variables](#environment-variables).
 
 n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](server-setup.html#_6-create-env-file) for more details.
 
@@ -77,6 +77,11 @@ For more information, see [What are encryption keys and how do they work? 🔐](
 **See also:**
 - [SSL](#SSL)
 - [Certificate](#Certificate)
+
+## Environment Variables
+Environment variables are predetermined values that typically get used to providing the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key, and `user` is the value.
+
+n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](https://docs.n8n.io/reference/configuration.html) documentation to learn more about the environment variables used in n8n.
 
 ## Execution
 A completed run of a [workflow](#Workflow) from start to finish.

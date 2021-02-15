@@ -29,3 +29,7 @@ The final workflow should look like the following image.
 3. Select the event you want to receive updates for from the *Event* dropdown list.
 4. Select the actions that you want to receive updates for from the *Actions* dropdown list.
 5. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Eventbrite Trigger node.
+:::

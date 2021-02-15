@@ -36,9 +36,28 @@ The 'Every X' option allows you to specify the workflow to be triggered every x 
 
 To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the ***Cron Expression*** field in n8n.
 
+### Why there are six asterisks (*) in the Cron Expression?
+
+The sixth asterisk in the Cron Expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
+
+| * | * | * | * | * | * |
+|---|---|---|---|---|---|
+|second|minute|hour|day|week|month|
+
+If you want to trigger your workflow, for example, every day at 04:08:30, enter the following in the ***Cron Expression*** field.
+```
+30 8 4 * * *
+```
+
+If you want to trigger your workflow, for example, every day at 04:08, enter the following in the ***Cron Expression*** field.
+```
+8 4 * * *
+```
+
 ## Further Reading
 
 - [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)
 - [Creating scheduled text affirmations with n8n 🤟](https://medium.com/n8n-io/creating-scheduled-text-affirmations-with-n8n-1c4189efae19)
 - [Database Monitoring and Alerting with n8n 📡](https://medium.com/n8n-io/database-monitoring-and-alerting-with-n8n-f5082df7bdb2)
+- [How to host virtual coffee breaks with n8n ☕️](https://n8n.io/blog/how-to-host-virtual-coffee-breaks-with-n8n/)
 - [Tracking Time Spent in Meetings With Google Calendar, Twilio, and n8n 🗓](https://medium.com/n8n-io/tracking-time-spent-in-meetings-with-google-calendar-twilio-and-n8n-a5d00f77da8c)

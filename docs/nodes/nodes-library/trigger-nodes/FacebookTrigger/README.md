@@ -62,3 +62,7 @@ This node will send a message of the updated information in the channel `Informa
 In the screenshot below, you will notice that the node sends a message about the updated information to the `Information Updated` channel in Mattermost.
 
 ![Using the Mattermost node to send a message of the updated information](./Mattermost_node.png)
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Facebook Trigger node.
+:::

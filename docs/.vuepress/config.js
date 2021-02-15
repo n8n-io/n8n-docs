@@ -75,7 +75,7 @@ module.exports = {
 			{
 				description: $page => getDescription($page.frontmatter.description, $page.frontmatter.permalink),
 				title: ($page, $site) => `${$page.title} | n8n ${$site.title}`,
-				image: () => 'https://n8n.io/n8n-logo.png',
+				image: () => '/assets/img/n8n-docs.png',
 				modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
 				url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
 			}
@@ -86,6 +86,12 @@ module.exports = {
 				'ga': 'UA-146470481-3',
 			},
 		],
+		[
+			'sitemap',
+			{
+				hostname: 'https://docs.n8n.io'
+			},
+		]
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',
@@ -219,7 +225,7 @@ module.exports = {
 					path: 'server-setup.md',
 				},
 				{
-					title: '👾 Use n8n via CLI',
+					title: '👾 CLI commands for n8n',
 					path: 'start-workflows-via-cli.md',
 				},
 				{

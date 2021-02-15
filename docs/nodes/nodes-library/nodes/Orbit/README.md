@@ -91,7 +91,7 @@ In the screenshot below, you will notice that the node updates the information o
 
 ### 4. Orbit2 node (create: note)
 
-This node will create a note for the member that we created using the Orbit node. 
+This node will create a note for the member that we created using the Orbit node.
 :::v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Note' from the ***Resource*** dropdown list.
@@ -123,3 +123,7 @@ This node will create a post for the member that we created using the Orbit node
 In the screenshot below, you will notice that the node creates a post for the member that we created using the Orbit node.
 
 ![Using the Orbit node to create a post for a member](./Orbit3_node.png)
+
+## Further Reading
+
+- [Migrating Community Metrics to Orbit using n8n 📈](https://medium.com/n8n-io/migrating-community-metrics-to-orbit-using-n8n-b293372e8daf)

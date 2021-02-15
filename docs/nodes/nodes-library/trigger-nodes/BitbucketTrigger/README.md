@@ -29,3 +29,7 @@ The final workflow should look like the following image.
 3. Select the repository you want to receive updates for from the *Repository* dropdown list.
 4. Select the events you want to receive updates for from the *Events* dropdown list.
 5. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Bitbucket Trigger node.
+:::

@@ -19,3 +19,7 @@ The Interval node has two fields:
     - Hours
 
 ![A workflow with the Interval node](./workflow.png)
+
+## Further Reading
+
+- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)

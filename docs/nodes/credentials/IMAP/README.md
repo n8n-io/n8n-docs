@@ -38,13 +38,42 @@ Create an email account on a service with IMAP support.
 15. Copy the displayed password.
 16. In the IMAP node credentials, enter your email address in the ***User*** field. For example, `example@gmail.com`.
 17. Paste the App password you copied in **Step 15** in the ***Password*** field.
-18. Enter `imap.google.com` in the ***Host*** field.
+18. Enter `imap.gmail.com` in the ***Host*** field.
 19. Toggle ***SSL/TLS*** to `true`.
 20. Click on ***Save*** to save your credentials.
 
 **Note:** Before executing the node, set the ***Ignore SSL Issues*** option to true as the Gmail certificate is self-signed.
 
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/q4KUTgiglvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Using Yahoo Mail
+
+1. Open your [Yahoo Mail](https://mail.yahoo.com) account.
+2. Click on your avatar on the top right and select 'Account info'.
+3. Click on the ***Account security*** tab in the left sidebar.
+4. Scroll down to the bottom and click on ***Generate app password***.
+5. Select 'Other app' from the ***Select your app*** dropdown list.
+6. Enter the name of the app in the ***Enter custom name*** field.
+7. Click on the ***Generate*** button.
+8. Copy the displayed password.
+9. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in n8n.
+10. Enter your email address in the ***User*** field.
+11. Paste the password you copied earlier in the ***Password*** field.
+12. Enter `imap.mail.yahoo.com` in the ***Host*** field.
+13. Toggle ***SSL/TLS*** to `true`.
+14. Click on ***Save*** to save your credentials.
+
+The following video demonstrates the steps mentioned above.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/2SFGl3xBdOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Further Reading
 
-- [Set up IMAP](https://support.google.com/mail/answer/7126229?hl=en)
-- [Sign in with App Passwords](https://support.google.com/accounts/answer/185833?hl=en)
+- [Set up IMAP for Gmail account](https://support.google.com/mail/answer/7126229?hl=en)
+- [Sign in with App Passwords for your Gmail Account](https://support.google.com/accounts/answer/185833?hl=en)
+- [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html)
+- [Sign in with App Passwords for your Yahoo mail Account](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html)

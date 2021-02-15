@@ -14,7 +14,9 @@
     "build": "vuepress build docs"
   },
   "author": "",
-  "dependencies": {},
+  "dependencies": {
+    "vuepress-plugin-sitemap": "^2.3.1"
+  },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.5.0",
     "directory-tree": "^2.2.4",

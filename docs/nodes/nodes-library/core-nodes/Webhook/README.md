@@ -17,6 +17,12 @@ Webhook nodes can be used as triggers for workflows when we want to receive data
 While building or testing a workflow, we recommend that you use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the Editor UI, which is useful for debugging. Make sure that you click on the *Execute Node* button to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
 
+🎥 The following playlist will help you learn how to use the Webhook node in n8n.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed//videoseries?list=PLlET0GsrLUL5niZQDjW56b_AxpvnEZyps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Node Reference
 
 First of all, in the parameters section, we have the Webhook URLs. Clicking on that will reveal the URLs for the webhook. Here you have two options, let’s understand the difference between them.
@@ -122,9 +128,10 @@ Save the workflow and execute it again by clicking on the ***Execute Workflow***
 This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 :::
 
+
 ## FAQs
 
-### 1. Where to find the Webhook URLs?
+### Where to find the Webhook URLs?
 
 The Webhook node has two URLs - Test URL and Production URL.
 To get these URLs, follow the steps mentioned below.
@@ -136,7 +143,7 @@ Here is a GIF demonstrating how to retrieve the test and production webhook URLs
 
 ![Retrieving the Test and Production URLs from the Webhook node](./webhook-url.gif)
 
-### 2. How to use the HTTP Request node to trigger the Webhook node?
+### How to use the HTTP Request node to trigger the Webhook node?
 
 The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
 1. Create a new workflow.
@@ -148,9 +155,11 @@ The [HTTP Request](../HTTPRequest/README.md) node is used to make HTTP requests 
 
 Here is a video demonstrating how to send a request to a Webhook based workflow using the HTTP Request node:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-### 3. How to use cURL to trigger the Webhook node?
+### How to use cURL to trigger the Webhook node?
 
 You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.
 Based on your use-case, you can make an HTTP request with or without any parameters. You can also send files with the HTTP request using cURL.
@@ -194,6 +203,21 @@ To send a file with the HTTP request, use the following command.
 curl --request GET https://your-n8n.url/webhook/path --from 'key=@/path/to/file'
 ```
 Replace `/path/to/file` with the path of the file you want to send.
+
+### How to send a response of type `string`?
+To send a response of type string, follow the steps mentioned below.
+1. Select 'Last Node' from the ***Response Mode*** dropdown list.
+2. Select 'First Entry JSON' from the ***Response Data*** dropdown list.
+3. Click on 'Add Option' and select 'Property Name' from the dropdown list.
+4. Enter the name of the property that contains the response.
+5. Connect a Set node to the Webhook node.
+6. In the Set node, click on 'Add Value' and select 'String'.
+7. Enter the name of the property in the ***Name*** field. The name should match the property name from step 4.
+8. Enter the string value in the ***Value*** field.
+9. Toggle ***Keep Only Set*** to `true`.
+
+When the Webhook gets called, it will send the string response that was set in the Set node.
+
 
 ## Further Reading
 

@@ -1,7 +1,7 @@
 # Database
 
 By default, n8n uses SQLite to save credentials, past executions, and workflows. However,
-n8n also supports MongoDB and PostgresDB.
+n8n also supports PostgresDB.
 
 
 ## Shared Settings
@@ -9,34 +9,6 @@ n8n also supports MongoDB and PostgresDB.
 The following environment variables get used by all databases:
 
  - `DB_TABLE_PREFIX` (default: '') - Prefix for table names
-
-
-## MongoDB
-
-::: danger
-Use PostgresDB, if possible! MongoDB has problems saving large
-amounts of data in a document, among other issues. So, support
-will be dropped in the future.
-:::
-
-To use MongoDB as the database, you can provide the following environment variables like
-in the example below:
- - `DB_TYPE=mongodb`
- - `DB_MONGODB_CONNECTION_URL=<CONNECTION_URL>`
-
-Replace the following placeholders with the actual data:
- - MONGO_DATABASE
- - MONGO_HOST
- - MONGO_PORT
- - MONGO_USER
- - MONGO_PASSWORD
-
-```bash
-export DB_TYPE=mongodb
-export DB_MONGODB_CONNECTION_URL=mongodb://MONGO_USER:MONGO_PASSWORD@MONGO_HOST:MONGO_PORT/MONGO_DATABASE
-n8n start
-```
-
 
 ## PostgresDB
 
@@ -48,7 +20,10 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_USER` (default: 'root')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
-
+ - `DB_POSTGRESDB_SSL_CA` (default: undefined) — a path to the server's CA certificate to use to validate the connection (opportunistic encryption is not supported)
+ - `DB_POSTGRESDB_SSL_CERT` (default: undefined) — a path to the client's TLS certificate to authenticate with
+ - `DB_POSTGRESDB_SSL_KEY` (default: undefined) — a path to the client's private key corresponding to the its certificate
+ - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true) — if TLS connections that fail validation should be rejected
 
 ```bash
 export DB_TYPE=postgresdb
@@ -59,8 +34,20 @@ export DB_POSTGRESDB_USER=n8n
 export DB_POSTGRESDB_PASSWORD=n8n
 export DB_POSTGRESDB_SCHEMA=n8n
 
+# optional:
+export DB_POSTGRESDB_SSL_CA=$(pwd)/ca.crt
+export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
+
 n8n start
 ```
+
+### TLS
+
+A note on TLS certificates — you can choose between these configurations:
+
+- not declaring (default) — in which case you'll connect with SSL=off
+- declaring only the CA + unauthorized flag — in which case you'll connect with SSL=on and verify the server's signature
+- declaring `_{CERT,KEY}` as well as the above — in which case you'll use the cert and key for client TLS authentication
 
 ## MySQL / MariaDB
 

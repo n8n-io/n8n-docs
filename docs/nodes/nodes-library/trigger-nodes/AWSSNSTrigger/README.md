@@ -27,3 +27,7 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the AWS SNS Trigger node. You can find out how to do that [here](../../../credentials/AWS/README.md).
 2. Select the topic you want to listen for in the *Topic* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+
+::: tip 💡 Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the AWS SNS Trigger node.
+:::

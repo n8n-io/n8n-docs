@@ -1,5 +1,215 @@
 # Changelog
 
+🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
+
+## n8n@0.107.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />
+**Release date:** 2021-02-08
+
+- New nodes
+    - AWS Comprehend
+    - GetResponse Trigger
+    - Peekalink
+    - Stackby
+- Enhanced nodes
+    - AWS SES: Added Custom Verification Email resource
+    - Microsoft Teams: Added Task resource
+    - Twitter: Added Delete operation to the Tweet resource
+- Bug fixes
+    - Google Drive: Fixed an issue with the Delete and Share operations
+    - Filemaker: Fixed an issue with the script list parsing
+- Updated Node.js version of Docker images to `14.15`
+- Added a shortcut `CTRL + scroll` to zoom
+
+## n8n@0.106.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.105.0...n8n@0.106.0) for this version.<br />
+**Release date:** 2021-02-05
+
+- New nodes
+	- Reddit
+    - Tapfiliate
+- Enhanced nodes
+    - Airtable Trigger: Added Download Attachment option
+    - HubSpot: Added Custom Properties option to the Create and Update operations of the Company resource
+    - MySQL: Added Connection Timeout parameter to the credentials
+    - Telegram: Added Pin Chat Message and Unpin Chat Message operations for the Message resource
+- Bug fixes
+    - Typeform: Fixed an issue with the OAuth2 authentication method
+- Added support for `s` and `u` flags for regex in the IF node and the Switch node
+
+## n8n@0.105.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.2...n8n@0.105.0) for this version.<br />
+**Release date:** 2021-02-01
+
+- New nodes
+	- Discourse
+    - SecurityScorecard
+    - TimescaleDB
+- Enhanced nodes
+    - Affinity: Added List and List Entry resource
+    - Asana: Added Project IDs option to the Create operation of the Task resource
+    - Hubspot Trigger: Added support for multiple subscriptions
+    - Jira: Added Issue Attachment resource and added custom fields to Create and Update operations of the Issue resource
+    - Todoist: Added Section option
+- Bug fixes
+    - SIGNL4: Fixed an issue with the attachment functionality
+- Added variable `$mode` to check the mode in which the workflow is being executed
+
+
+## n8n@0.104.2
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.1...n8n@0.104.2) for this version.<br />
+**Release date:** 2021-01-27
+
+- Fixed an issue with the credentials parameters that have the same name
+
+## n8n@0.104.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.0...n8n@0.104.1) for this version.<br />
+**Release date:** 2021-01-26
+
+- Fixed a bug with expressions in credentials
+
+## n8n@0.104.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
+**Release date:** 2021-01-26
+
+- New nodes
+	- Compression
+- Enhanced nodes
+	- GitHub: Added Invite operation to the User resource
+	- EmailReadImap: Increased the authentication timeout
+	- Mautic: Added Custom Fields option to the Create and Update operations of the Contact resource. Also, the Mautic OAuth credentials have been updated. Now you don't have to enter the Authorization URL and the Access Token URL
+	- Nextcloud: Added User resource
+	- Slack: Added Get Permalink and Delete operations to the Message resource
+	- Webhook: Added support for request parameters in webhook paths
+- Bug fixes
+	- Google Drive: Fixed the default value for the Send Notification Email option
+- Added support for expressions to credentials
+- Removed support for MongoDB as a database for n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
+
+## n8n@0.103.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
+**Release date:** 2021-01-21
+
+- Bug fixes
+	- Trello: Fixed the icon
+
+## n8n@0.103.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.102.0...n8n@0.103.0) for this version.<br />
+**Release date:** 2021-01-21
+
+- New nodes
+	- SendGrid
+- Enhanced nodes
+	- AMQP: Added Container ID, Reconnect, and Reconnect limit options
+	- AMQP Trigger: Added Container ID, Reconnect, and Reconnect Limit options
+	- GitHub: Added Review resource
+	- Google Drive: Added Drive resource
+	- Trello: Added Get All and Get Cards operation to the List resource
+- Bug fixes
+	- AWS Lambda: Fixed an issue with signature
+	- AWS SNS: Fixed an issue with signature
+- Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
+- The code editor does not get closed when clicked anywhere outside the editor
+- Added CLI commands to [export](start-workflows-via-cli.md#export-workflows-and-credentials) and [import](start-workflows-via-cli.md#import-workflows-and-credentials) credentials and workflows
+- The title in the browser tab now resets for new workflows
+
+
+## n8n@0.102.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
+**Release date:** 2021-01-15
+
+- New nodes
+    - Beeminder
+- Enhanced nodes
+    - Crypto: Added hash type `SHA384`
+    - Google Books: Added support for user impersonification
+    - Google Drive: Added support for user impersonification
+    - Google Sheets: Added support for user impersonification
+    - Gmail: Added support for user impersonification
+    - Microsoft Outlook: Added support for a shared mailbox
+    - RabbitMQ: Added Exchange mode
+    - Salesforce: Added filters to all Get All operations
+    - Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
+    - Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
+    - Zendesk: Removed the `Authorization URL` and `Access Token URL` fields from the OAuth2 credentials. The node now uses the subdomain passed by a user to connect to Zendesk.
+- Bug fixes
+    - CoinGecko: Fixed an issue to process multiple input items correctly
+
+## n8n@0.101.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.100.0...n8n@0.101.0) for this version.<br />
+**Release date:** 2021-01-07
+
+- New nodes
+    - Google Analytics
+    - Phantombuster
+- Enhanced nodes
+    - AWS: Added support for custom endpoints
+    - Gmail: Added an option to send messages formatted as HTML
+    - Philips Hue: Added Room/Group name to Light name to make it easier to identify lights
+    - Slack: Added ephemeral message option
+    - Telegram: Removed the Bot resource as the endpoint is no longer supported
+- Bug fixes
+    - E-goi: Fixed the name of the node
+    - Edit Image: Fixed an issue with the Border operation
+    - HTTP Request: Fixed batch sizing to work when `batchSize = 1`
+    - PayPal: Fixed a typo in the Environment field
+    - Split In Batches: Fixed a typo in the description
+    - Telegram: Fixed an issue with the Send Audio operation
+- Based on your settings, vacuum runs on SQLite on startup
+- Updated axios to version `0.21.1`
+
+## n8n@0.100.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.1...n8n@0.100.0) for this version.<br />
+**Release date:** 2020-12-30
+
+- New nodes
+    - Microsoft Outlook
+- Enhanced nodes
+    - ActiveCampaign: The node loads more options for the fields
+    - Asana: Added Subtask resource and Get All operation for the Task resource
+    - Edit Image: Added Multi Step operation
+    - HTTP Request: Added Use Querystring option
+    - IF: Added Ends With and Starts With operations
+    - Jira: Added Issue Comment resource
+    - Switch: Added Ends With and Starts With operations
+    - Telegram: Added File resource
+- Bug fixes
+    - Box Trigger: Fixed a typo in the description
+    - Edit Image: Fixed an issue with multiple composite operations
+    - HTTP Request: Fixed an issue with the binary data getting used by multiple nodes
+    - S3: Fixed an issue with uploading files
+    - Stripe Trigger: Fixed an issue with the existing webhooks
+    - Telegram: Fixed an issue with the Send Audio operation
+- Binary data stays visible if a node gets re-executed
+
+## n8n@0.99.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.0...n8n@0.99.1) for this version.<br />
+**Release date:** 2020-12-24
+
+- Fixed a bug that caused HTML to render in JSON view
+
+## n8n@0.99.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.98.0...n8n@0.99.0) for this version.<br />
+**Release date:** 2020-12-24
+
+- New nodes
+    - e-goi
+    - RabbitMQ
+    - RabbitMQ Trigger
+	- uProc
+- Enhanced nodes
+    - ActiveCampaign: Added the functionality to load the tags for a user
+    - FTP: Added Delete and Rename operation
+    - Google Cloud Firestore: The node now gives the Collection ID in response
+    - Iterable: Added User List resource
+    - MessageBird: Added Balance resource
+    - TheHive Trigger: Added support for the TheHive3 webhook events, and added Log Updated and Log Deleted events
+- Bug fixes
+    - Dropbox: Fixed an issue with the OAuth credentials
+	- Google Sheets: Fixed an issue with the parameters getting hidden for other operations
+- Added functionality to easily copy the data and the path from the output
+- Fixed an issue with the node getting selected after it was duplicated
+
 ## n8n@0.98.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.97.0...n8n@0.98.0) for this version.<br />
 **Release date:** 2020-12-16
@@ -17,7 +227,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
 	- GitLab: Fixed an issue with GitLab OAuth credentials. You can now specify your GitLab server to configure the credentials
     - Mautic: Fixed an issue with the OAuth credentials
-- If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow.
+- If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow
 - Fixed a bug that caused the Editor UI to display an incorrect (save) state upon activating or deactivating a workflow
 ## n8n@0.97.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.96.0...n8n@0.97.0) for this version.<br />
@@ -62,7 +272,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
     - Airtable Trigger: Fixed the icon of the node
 
-## n8n@0.95.0
+## n8n@0.95.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.1...n8n@0.95.0) for this version.<br />
 **Release date:** 2020-11-25
 
@@ -75,7 +285,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Spontit
 - Enhanced nodes
     - Airable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
-    - Harvest: Added OAuth authentication method
+    - Harvest: Moved the account field from the credentials to the node parameters. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0950) page
 - Bug Fixes
     - Slack: Fixed an issue with creating channels and inviting users to a channel
 
@@ -87,7 +297,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - GraphQL: Fixed an issue with the variables
     - WooCommerce Trigger: Fixed an issue with the webhook. The node now reuses a webhook if it already exists.
 
-## n8n@0.94.0
+## n8n@0.94.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
 **Release date:** 2020-11-19
 
@@ -109,7 +319,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - YouTube: Fixed a typo for the Unlisted option
 - Added horizontal scrolling
 
-## n8n@0.93.0
+## n8n@0.93.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.92.0...n8n@0.93.0) for this version.<br />
 **Release date:** 2020-11-11
 
@@ -172,16 +382,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added an option to get the full execution data from the server
 - The Editor UI gives an alert if you redirect without saving a workflow
 - The Editor UI now indicates if a workflow is saved or not
-- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Improved support for touch devices
 - Node properties now load on demand
 - Updated the Node.js version for the Docker images
 
 
-## n8n@0.90.0
+## n8n@0.90.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
 **Release date:** 2020-10-23
 
+- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Bug Fixes
     - Google Translate: Fixed an issue with the rendering of the image in n8n.io
 
@@ -247,7 +457,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - HTTP Request: Fixed an issue with the GET Request
 - Added `HMAC-SHA512` signature method for OAuth 1.0
 
-## n8n@0.87.0
+## n8n@0.87.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
 **Release date:** 2020-10-14
 
@@ -349,7 +559,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expressions now use short variables when selecting input data for the current node
 - Fixed issue with renaming credentials for active workflows
 
-## n8n@0.83.0
+## n8n@0.83.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />
 **Release date:** 2020-09-18
 
@@ -452,7 +662,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - HTTP Request node does not overwrite accept header if it's already set
 - Add rawBody to every request so that n8n does not give an error if body is missing
 
-## n8n@0.79.0
+## n8n@0.79.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 

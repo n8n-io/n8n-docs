@@ -21,11 +21,7 @@ You can use these credentials to authenticate the following nodes with Discourse
 3. Click on the ***+ New API Key*** button.
 4. Enter a description in the ***Description*** field.
 5. Based on your use-case, do one of the following:
-    - If you want to create the API key for a single user, select 'Single User' from the ***User Level*** dropdown list.
-    - Enter the username in the ***User*** field and select the user from the dropdown list.
-
-    **OR**
-
+    - If you want to create the API key for a single user, select 'Single User' from the ***User Level*** dropdown list. Enter the username in the ***User*** field and select the user from the dropdown list.
     - If you want to create the API key for all your users, select 'All Users' from the ***User Level*** dropdown list.
 6. If you want to select all the scopes, check the ***Global Key (allowed all actions)*** checkbox. Otherwise, select scopes individually under the ***Scopes*** section.
 7. Click on the ***Save*** button.

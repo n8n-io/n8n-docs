@@ -64,7 +64,7 @@ In the screenshot below, you will notice that the node creates an affiliate in T
 
 ### 3. Tapfiliate1 node (add:affiliateMetadata)
 
-This node will add metadata to the affiliate that we created in the previous node.
+This node will add metadata to the affiliate that we created with the previous node.
 
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
@@ -77,13 +77,13 @@ This node will add metadata to the affiliate that we created in the previous nod
 8. Enter `n8n` in the ***Value*** field.
 9. Click on ***Execute Node*** to run the node.
 :::
-In the screenshot below, you will notice that the node adds the metadata to the affiliate that we created in the previous node.
+In the screenshot below, you will notice that the node adds the metadata to the affiliate that we created with the previous node.
 
 ![Using the Tapfiliate node to add metadata](./Tapfiliate1_node.png)
 
 ### 4. Tapfiliate2 node (get:contact)
 
-This node will add the affiliate that we created in the Tapfiliate node to an affiliate program.
+This node will add the affiliate that we created with the Tapfiliate node to an affiliate program.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Program Affiliate' from the ***Resource*** dropdown list.

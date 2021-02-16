@@ -22,7 +22,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added the functionality to optionally save execution data after each node
 - Added queue mode to scale workflow execution
 - Separated webhook from the core to scale webhook separately
-- Fixed an issue of current execution query with unsaved running workflow
+- Fixed an issue with current execution query for unsaved running workflows
 - Fixed an issue with the regex that detected node names
 
 ## n8n@0.107.0

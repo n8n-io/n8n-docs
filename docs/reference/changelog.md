@@ -18,12 +18,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Twitter: Fixed a typo in the description
     - Webhook: Fixed logic for static route matching
 - Added the functionality to sort the values that you add in the IF node, Rename node, and the Set node
-- Unified execution ID
 - Added the functionality to optionally save execution data after each node
 - Added queue mode to scale workflow execution
 - Separated webhook from the core to scale webhook separately
 - Fixed an issue with current execution query for unsaved running workflows
 - Fixed an issue with the regex that detected node names
+- n8n now generates a unified execution ID instead of two separate IDs for currently running and saved executions
 
 ## n8n@0.107.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />

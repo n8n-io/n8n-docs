@@ -2,6 +2,25 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.107.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />
+**Release date:** 2021-02-08
+
+- New nodes
+    - AWS Comprehend
+    - GetResponse Trigger
+    - Peekalink
+    - Stackby
+- Enhanced nodes
+    - AWS SES: Added Custom Verification Email resource
+    - Microsoft Teams: Added Task resource
+    - Twitter: Added Delete operation to the Tweet resource
+- Bug fixes
+    - Google Drive: Fixed an issue with the Delete and Share operations
+    - Filemaker: Fixed an issue with the script list parsing
+- Updated Node.js version of Docker images to `14.15`
+- Added a shortcut `CTRL + scroll` to zoom
+
 ## n8n@0.106.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.105.0...n8n@0.106.0) for this version.<br />
 **Release date:** 2021-02-05

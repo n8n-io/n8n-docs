@@ -18,7 +18,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to check for preview for a link and return the preview if it exists. You can also find the [workflow](https://n8n.io/workflows/935) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to check if preview for a link is available and return the link preview. You can also find the [workflow](https://n8n.io/workflows/935) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Peekalink]()
 - [IF](../../core-nodes/IF/README.md)
@@ -34,14 +34,14 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Peekalink node (create: room)
 
-This node will check whether a preview for a given link is available or not.
+This node will check whether a preview for the specified link is available.
 
 1. First of all, you'll have to enter credentials for the Peekalink node. You can find out how to do that [here](../../../credentials/Peekalink/README.md).
 2. Select 'Is available' from the ***Operation*** dropdown list.
 3. Enter a URL in the ***URL*** field.
 4. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns information of whether a preview for the given link is available or not.
+In the screenshot below, you will notice that the node returns information about whether a preview for the specified link is available.
 
 ![Using the Peekalink node to check whether preview for a given link is available](./Peekalink_node.png)
 

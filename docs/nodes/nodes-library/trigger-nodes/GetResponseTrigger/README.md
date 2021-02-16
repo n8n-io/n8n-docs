@@ -21,7 +21,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to receive updates when a customer gets subscribed to a list in GetResponse and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/933) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a customer gets subscribed to a list in GetResponse and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/933) on n8n.io. This example usage workflow would use the following nodes.
 - [GetResponse Trigger]()
 - [Set](../../core-nodes/Set/README.md)
 - [Airtable](../../nodes/Airtable/README.md)

@@ -790,7 +790,7 @@ The output will then be similar to the following.
 
 ## Conditional Logic
 
-Based on your use-case, you may want to check the incoming data. If the incoming data doesn't satisfy a condition you may want to return a different value. For example, you want to check if a variable from the previous node is empty and return a string if it is empty. Use the following code snippet, to return `not found` if the variable is empty.
+At times, you may want to check the incoming data. If the incoming data doesn't satisfy a condition, you may want to return a different value. For example, you want to check if a variable from the previous node is empty and return a string if it is empty. Use the following code snippet to return `not found` if the variable is empty.
 
 ```js
 {{$json["variable_name"]? $json["variable_name"] :"not found"}}

@@ -79,9 +79,9 @@ For more information, see [What are encryption keys and how do they work? 🔐](
 - [Certificate](#Certificate)
 
 ## Environment Variables
-Environment variables are predetermined values that typically get used to providing the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key, and `user` is the value.
+Environment variables are predetermined values that typically get used to provide the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key and `user` is the value.
 
-n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](https://docs.n8n.io/reference/configuration.html) documentation to learn more about the environment variables used in n8n.
+n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](https://docs.n8n.io/reference/configuration.html) page to learn more about the environment variables used in n8n.
 
 ## Execution
 A completed run of a [workflow](#Workflow) from start to finish.

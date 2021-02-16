@@ -2,6 +2,29 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.108.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.107.0...n8n@0.108.0) for this version.<br />
+**Release date:** 2021-02-15
+
+- New nodes
+    - Demio
+    - PostHog
+    - QuickBooks
+- Enhanced nodes
+    - Trello: Added Create Checklist Item operation to the Checklist resource
+    - Webhook: Removed trailing slash in routes and updated logic to select dynamic webhook
+- Bug fixes
+    - Google Drive: Fixed an issue with returning the fields the user selects for the Folder and File resources
+    - Twitter: Fixed a typo in the description
+    - Webhook: Fixed logic for static route matching
+- Added the functionality to sort the values that you add in the IF node, Rename node, and the Set node
+- Unified execution ID
+- Added the functionality to optionally save execution data after each node
+- Added queue mode to scale workflow execution
+- Separated webhook from the core to scale webhook separately
+- Fixed an issue of current execution query with unsaved running workflow
+- Fixed an issue with the regex that detected node names
+
 ## n8n@0.107.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />
 **Release date:** 2021-02-08

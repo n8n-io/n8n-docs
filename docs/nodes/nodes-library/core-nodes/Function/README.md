@@ -11,7 +11,7 @@ The Function node is used to add custom snippets to JavaScript code to transform
 Please note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Check out [this](../../../../reference/function-nodes.md) page to learn about the difference between the Function and Function Item nodes.
 :::
 
-The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
+If you want to use the Function node to transform input data, check out how n8n's [data structure](../../../../reference/data/data-structure.md) looks like. The Function node also supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
 ## Example Usage
 

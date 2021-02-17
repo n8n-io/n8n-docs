@@ -164,7 +164,7 @@ module.exports = {
 				},
 				{
 					title: '🔬 Creating Nodes',
-					sidebarDepth: 2,
+					sidebarDepth: 1,
 					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
 				},
 				{

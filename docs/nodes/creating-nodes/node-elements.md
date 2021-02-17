@@ -222,7 +222,7 @@ The `options` type is used to provide options from which a single one has to be 
 ![Options](./images/options.png)
 
 
-## MultiOptions
+## Multi Options
 
 The `multiOptions` type is used to provide options from which many can be selected.
 
@@ -247,3 +247,79 @@ The `multiOptions` type is used to provide options from which many can be select
 ```
 
 ![MultiOptions](./images/multioptions.png)
+
+
+## Fixed Collection
+
+The `fixedCollection? type is used to present groups of fields that are semantically related.
+
+```typescript
+{
+	displayName: 'Metadata',
+	name: 'metadataUi',
+	placeholder: 'Add Metadata',
+	type: 'fixedCollection',
+	default: '',
+	typeOptions: {
+		multipleValues: true,
+	},
+	description: '',
+	options: [
+		{
+			name: 'metadataValues',
+			displayName: 'Metadata',
+			values: [
+				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: 'Name of the metadata key to add.',
+				},
+				{
+					displayName: 'Value',
+					name: 'value',
+					type: 'string',
+					default: '',
+					description: 'Value to set for the metadata key.',
+				},
+			],
+		},
+	],
+},
+```
+
+![Fixed Collection](./images/fixed-collection.png)
+
+
+## JSON
+
+The `json` type is used to input data formatted as JSON.
+
+```typescript
+{
+	displayName: 'Content (JSON)',
+	name: 'content',
+	type: 'json',
+	displayOptions: {
+		show: {
+			source: [
+				'adminApi',
+			],
+			resource: [
+				'post',
+			],
+			operation: [
+				'create',
+			],
+			contentFormat: [
+				'mobileDoc',
+			],
+		},
+	},
+
+	default: '',
+	description: '',
+},
+```
+
+![JSON](./images/json.png)

@@ -1,5 +1,9 @@
 # Using the Node Dev CLI
 
+Using the Node Dev CLI makes sense if you do not want to ever share the node that you create. For example, for internal systems or something very specific to your internal tooling. Also, the CLI only works if there are no additional dependencies required by the node as it does not support installing additional node modules.
+
+If that is not the case, it is best to do follow the [creating your first node](create-node.md) tutorial or create your own custom node-package.
+
 ## Create the first basic node
 
  1. Install the n8n-node-dev CLI: `npm install -g n8n-node-dev`

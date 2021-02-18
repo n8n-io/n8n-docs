@@ -67,21 +67,7 @@ IP address: <IP_OF_YOUR_SERVER>
 
 ### 5. Create docker-compose file
 
-Save this file as `docker-compose.yml`.
-
-Normally no changes should be needed, but if you are planning on reading/writing local files with n8n (for example, by using the *Write Binary File* node), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
-
-```yaml
-      - /local-files:/files
-```
-
-If you are running n8n as a non-root user, add this under `volumes` for the n8n service:
-
-```yaml
-      - /home/<YOUR USERNAME>/n8n-local-files:/files
-```
-
-Then, you will be able to write files to the `/files` directory in n8n and they will appear on your server in either `/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
+Create a `docker-compose.yml` file. Paste the following in the file.
 
 ```yaml
 version: "3"
@@ -138,6 +124,19 @@ services:
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 
+If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](../nodes/nodes-library/core-nodes/WriteBinaryFile/README.md)), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+
+```yaml
+      - /local-files:/files
+```
+
+If you are running n8n as a non-root user, add this under `volumes` for the n8n service:
+
+```yaml
+      - /home/<YOUR USERNAME>/n8n-local-files:/files
+```
+
+You will now be able to write files to the `/files` directory in n8n and they will appear on your server in either `/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
 
 ### 6. Create `.env` file
 

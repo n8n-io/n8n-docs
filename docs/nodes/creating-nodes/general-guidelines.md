@@ -34,9 +34,9 @@ That is using the npm package [`request-promise-native`](https://github.com/requ
 When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId", call them "id". n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
 
 
-### Create an "Options" parameter
+### Create an 'Additional Fields' parameter
 
-Some nodes may need a lot of options. Add only the very important ones to the top level and for all others, create an "Options" parameter where they can be added if needed. This ensures that the interface stays clean and does not unnecessarily confuse people. A good example of that would be the XML node.
+Some nodes may need a lot of options. Add only the very important ones to the top level and for all others, create an 'Additional Fields' parameter where they can be added if needed. This ensures that the interface stays clean and does not unnecessarily confuse people. A good example of that would be the XML node.
 
 
 ### Follow existing parameter naming guideline

@@ -8,6 +8,7 @@ description: Learn how to use the Merge node in n8n
 The Merge node is useful to merge data of multiple streams, once data of both streams is available.
 
 ## Node Reference
+
 ### Mode
 You can specify how data of branches should be merged. The following are the options.
 - ***Append:*** Combines data of both inputs. The output will contain items of input 1 and input 2.

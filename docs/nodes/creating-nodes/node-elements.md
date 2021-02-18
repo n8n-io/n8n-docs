@@ -11,54 +11,54 @@ The `string` type is used to input string values.
 Basic configuration
 
 ```typescript
-   {
-       displayName: Name, // The value the user would see in the UI
-       name: name, // The name use to reference the element UI within the code
-       type: string,
-       required: true, // Whether the field is required or not
-       default: 'n8n', // Value that would be set by default
-       description: 'The name of the user',
-   },
+{
+	displayName: Name, // The value the user would see in the UI
+	name: name, // The name use to reference the element UI within the code
+	type: string,
+	required: true, // Whether the field is required or not
+	default: 'n8n', // Value that would be set by default
+	description: 'The name of the user',
+},
 ```
 
-![String](./images/string.png)
+<img src="./images/string.png" width="350">
 
 Variation for inputting passwords
 
 ```typescript
-  {
-       displayName: 'Password',
-       name: 'password',
-       type: 'string',
-       required: true,
-       typeOptions: {
-           password: true,
-       },
-       default: '',
-       description: `User's password`,
+{
+	displayName: 'Password',
+	name: 'password',
+	type: 'string',
+	required: true,
+	typeOptions: {
+		password: true,
+	},
+	default: '',
+	description: `User's password`,
 
-   },
+},
 ```
 
-![Password](./images/password.png)
+<img src="./images/password.png" width="350">
 
 Variation with multiple rows
 
 ```typescript
-  {
-       displayName: 'Description',
-       name: 'description',
-       type: 'string',
-       required: true,
-       typeOptions: {
-           rows: 4,
-       },
-       default: '',
-       description: 'Description',
-   },
+{
+	displayName: 'Description',
+	name: 'description',
+	type: 'string',
+	required: true,
+	typeOptions: {
+		rows: 4,
+	},
+	default: '',
+	description: 'Description',
+},
 ```
 
-![Mutiple rows](./images/multiple-rows.png)
+<img src="./images/multiple-rows.png" width="350">
 
 
 ## Number
@@ -68,40 +68,40 @@ The `number` type is used to input numbers.
 Basic configuration
 
 ```typescript
-   {
-       displayName: 'Age',
-       name: 'age',
-       type: 'number',
-       required: true,
-       typeOptions: {
-           maxValue: 10,
-           minValue: 0,
-           numberStepSize: 1,
-       },
-       default: 10,
-       description: 'Your current age',
-   },
+{
+	displayName: 'Age',
+	name: 'age',
+	type: 'number',
+	required: true,
+	typeOptions: {
+		maxValue: 10,
+		minValue: 0,
+		numberStepSize: 1,
+	},
+	default: 10,
+	description: 'Your current age',
+},
 ```
 
-![Number](./images/number.png)
+<img src="./images/number.png" width="350">
 
 Variation with decimal points
 
 ```typescript
-	{
-    	displayName: 'Amount',
-    	name: 'amount',
-    	type: 'number',
-    	required: true,
-    	typeOptions: {
-        	numberPrecision: 2,
-       	},
-       	default: 10.00,
-       	description: 'Your current amount',
+{
+	displayName: 'Amount',
+	name: 'amount',
+	type: 'number',
+	required: true,
+	typeOptions: {
+		numberPrecision: 2,
 	},
+	default: 10.00,
+	description: 'Your current amount',
+},
 ```
 
-![Decimal](./images/decimal.png)
+<img src="./images/decimal.png" width="350">
 
 
 ## Collection
@@ -109,41 +109,38 @@ Variation with decimal points
 The `collection` type is used to input a collection of fields. For example, additional fields (or optional fields).
 
 ```typescript
-  	{
-    	displayName: 'Additional Fields',
-    	name: 'additionalFields',
-    	type: 'collection',
-    	description: 'Fields optional for the operation',
-    	placeholder: 'Add Field', // This for the button to add fields
-    	displayOptions: {
-      		show: {
-        		operation: [
-          			'create',
-        		],
-        		resource: [
-          			'customer',
-        		],
-      		},
-    	},
-    	default: {}, // The fields that will be selected by default
-    	options: [ // The fields contained in the Additional Fields collection
-      		{
-        		displayName: 'Address',
-        		name: 'address',
-        		type: 'string',
-        		default: '',
-        		description: 'The address of the customer',
-      		},
-      		{
-        		displayName: 'Telephone Number',
-        		name: 'telephoneNumber',
-        		type: 'string',
-        		default: '',
-        		description: 'The telephone number of the customer.',
-      		},
-    	],
-  	},
+{
+	displayName: 'Filters',
+	name: 'filters',
+	type: 'collection',
+	placeholder: 'Add Field',
+	default: {},
+	options: [
+		{
+			displayName: 'Type',
+			name: 'type',
+			type: 'options',
+			options: [
+				{
+					name: 'Automated',
+					value: 'automated',
+				},
+				{
+					name: 'Past',
+					value: 'past',
+				},
+				{
+					name: 'Upcoming',
+					value: 'upcoming',
+				},
+			],
+			default: '',
+		},
+	],
+},
 ```
+
+<img src="./images/collection.png" width="350">
 
 
 ## Datetime
@@ -151,32 +148,33 @@ The `collection` type is used to input a collection of fields. For example, addi
 The `dateTime` type provides a calendar from which you can pick a specific date and time.
 
 ```typescript
-  	{
-    	displayName: 'Modified Since',
-    	name: 'modified_since',
-    	type: 'dateTime',
-    	default: '',
-    	description: 'The date and time when the file was last modified',
-  	},
+{
+	displayName: 'Modified Since',
+	name: 'modified_since',
+	type: 'dateTime',
+	default: '',
+	description: 'The date and time when the file was last modified',
+},
 ```
 
-![Datetime](./images/datetime.png)
+<img src="./images/datetime.png" width="350">
+
 
 ## Boolean
 
 The `boolean` type is used to input a value that is either true or false. It is shown as a toggle that can be either on or off.
 
 ```typescript
-    {
-    	displayName: 'Wait for Image',
-        name: 'waitForImage',
-        type: 'boolean',
-        default: true, // Initial state of the toggle
-        description: 'Whether to wait for the image or not',
-    },
+{
+	displayName: 'Wait for Image',
+	name: 'waitForImage',
+	type: 'boolean',
+	default: true, // Initial state of the toggle
+	description: 'Whether to wait for the image or not',
+},
 ```
 
-![Boolean](./images/boolean.png)
+<img src="./images/boolean.png" width="350">
 
 
 ## Color
@@ -184,15 +182,15 @@ The `boolean` type is used to input a value that is either true or false. It is 
 The `color` type provides a color palette from which a specific color can be selected.
 
 ```typescript
-  	{
-    	displayName: 'Background Color',
-    	name: 'backgroundColor',
-    	type: 'color',
-    	default: '', // Initially selected color
-  	},
+{
+	displayName: 'Background Color',
+	name: 'backgroundColor',
+	type: 'color',
+	default: '', // Initially selected color
+},
 ```
 
-![Color](./images/color.png)
+<img src="./images/color.png" width="300">
 
 
 ## Options
@@ -200,26 +198,26 @@ The `color` type provides a color palette from which a specific color can be sel
 The `options` type is used to provide options from which a single one has to be selected.
 
 ```typescript
-    {
-        displayName: 'Resource',
-        name: 'resource',
-        type: 'options',
-        options: [
-        	{
-            	name: 'Image',
-            	value: 'image',
-          	},
-          	{
-            	name: 'Template',
-            	value: 'template',
-          	},
-        ],
-        default: 'image', // The initially selected option
-        description: 'Resource to consume',
-    },
+{
+	displayName: 'Resource',
+	name: 'resource',
+	type: 'options',
+	options: [
+		{
+			name: 'Image',
+			value: 'image',
+		},
+		{
+			name: 'Template',
+			value: 'template',
+		},
+	],
+	default: 'image', // The initially selected option
+	description: 'Resource to consume',
+},
 ```
 
-![Options](./images/options.png)
+<img src="./images/options.png" width="350">
 
 
 ## Multi Options
@@ -227,26 +225,26 @@ The `options` type is used to provide options from which a single one has to be 
 The `multiOptions` type is used to provide options from which many can be selected.
 
 ```typescript
-	{
-    	displayName: 'Events',
-        name: 'events',
-        type: 'multiOptions',
-        options: [
-          	{
-            	name: 'Plan Created',
-            	value: 'planCreated',
-          	},
-          	{
-            	name: 'Plan Deleted',
-            	value: 'planDeleted',
-          	},
-        ],
-        default: [], // Initially selected options
-        description: 'The events to be monitored',
-    },
+{
+	displayName: 'Events',
+	name: 'events',
+	type: 'multiOptions',
+	options: [
+		{
+			name: 'Plan Created',
+			value: 'planCreated',
+		},
+		{
+			name: 'Plan Deleted',
+			value: 'planDeleted',
+		},
+	],
+	default: [], // Initially selected options
+	description: 'The events to be monitored',
+},
 ```
 
-![MultiOptions](./images/multioptions.png)
+<img src="./images/multioptions.png" width="350">
 
 
 ## Fixed Collection
@@ -288,7 +286,7 @@ The `fixedCollection? type is used to present groups of fields that are semantic
 },
 ```
 
-![Fixed Collection](./images/fixed-collection.png)
+<img src="./images/fixed-collection.png" width="350">
 
 
 ## JSON
@@ -300,26 +298,9 @@ The `json` type is used to input data formatted as JSON.
 	displayName: 'Content (JSON)',
 	name: 'content',
 	type: 'json',
-	displayOptions: {
-		show: {
-			source: [
-				'adminApi',
-			],
-			resource: [
-				'post',
-			],
-			operation: [
-				'create',
-			],
-			contentFormat: [
-				'mobileDoc',
-			],
-		},
-	},
-
 	default: '',
 	description: '',
 },
 ```
 
-![JSON](./images/json.png)
+<img src="./images/json.png" width="350">

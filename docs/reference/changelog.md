@@ -20,6 +20,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Telegram: Added the Send Location operation
 - Bug fixes
 	- RocketChat: Fixed error responses
+- Fixed the issue which caused the execution history of subworkflows (workflows started via the Execute Workflow node) not to be saved
 - Added an option to export the credential data in plain text format using the CLI
 
 ## n8n@0.108.0

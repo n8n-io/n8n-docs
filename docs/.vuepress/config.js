@@ -237,6 +237,10 @@ module.exports = {
 					path: 'glossary.md',
 				},
 				{
+					title: '🗻 Scaling n8n',
+					path: 'scaling-n8n.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},

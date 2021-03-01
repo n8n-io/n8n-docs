@@ -2,6 +2,27 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.109.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.108.0...n8n@0.109.0) for this version.<br />
+**Release date:** 2021-02-22
+
+- New nodes
+    - Bitwarden
+    - Emelia
+    - Emelia Trigger
+	- GoToWebinar
+	- Raindrop
+- Enhanced nodes
+	- AWS Rekognition: Added the Detect Text type to the Ananlyze operation for the Image resource
+	- Google Calendar: Added RRULE parameter to the Get All operation for the Event resource
+	- Jira: Added User resource and operations
+	- Reddit: Added the Search operation for the Post resource
+	- Telegram: Added the Send Location operation
+- Bug fixes
+	- RocketChat: Fixed error responses
+- Fixed the issue which caused the execution history of subworkflows (workflows started via the Execute Workflow node) not to be saved
+- Added an option to export the credential data in plain text format using the CLI
+
 ## n8n@0.108.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.107.0...n8n@0.108.0) for this version.<br />
 **Release date:** 2021-02-15

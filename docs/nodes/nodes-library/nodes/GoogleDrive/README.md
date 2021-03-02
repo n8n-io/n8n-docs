@@ -62,3 +62,11 @@ The Start node exists by default when you create a new workflow.
 
 1. Enter the destination file path in the *File Name* field.
 2. Click on *Execute Node* to run the workflow.
+
+## FAQs
+
+### How do I list all files/folders within a folder?
+
+Enable **Use Query String** and fill the **Query String** field with `'FOLDER_ID' in parents`. Where `FOLDER_ID` is the ID after `https://drive.google.com/drive/u/0/folders/`.
+There are several additional options available to fine grain the listed results. More information at [Search for files and folders: Querystring](https://developers.google.com/drive/api/v3/search-files#query_string_examples).
+

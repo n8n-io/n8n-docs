@@ -54,12 +54,13 @@ There are a couple of flags available for this.
 | Flag | Description |
 |-------------|-------|
 | --help | Help prompt. |
-| --all | Export all workflows/credentials. |
+| --all | Exports all workflows/credentials. |
 | --backup | Sets --all --pretty --separate for simple backups. Only --output has to be set additionally. |
 | --id | The ID of the workflow to export. |
-| --output | Output file name or directory if using separate files. |
-| --pretty | Format the output in an easier to read fashion. |
+| --output | Outputs file name or directory if using separate files. |
+| --pretty | Formats the output in an easier to read fashion. |
 | --separate | Exports one file per workflow (useful for versioning). Must inform a directory via --output. |
+| --decrypted | Exports the credentials in a decrypted (plain text) format. |
 
 ### Workflows
 
@@ -111,6 +112,14 @@ Export all the credentials to a specific directory using the `--backup` flag (de
 
 ```bash
 n8n export:credentials --backup --output=backups/latest/
+```
+
+Export all the credentials in a decrypted (plain text) format. This can be used to migrate from one installation to another that has a different secret key (in the config file).
+
+**Note:** All sensitive information will be visible in the files.
+
+```bash
+n8n export:credentials --all --decrypted --output=backups/decrypted.json
 ```
 
 ## Import workflows and credentials

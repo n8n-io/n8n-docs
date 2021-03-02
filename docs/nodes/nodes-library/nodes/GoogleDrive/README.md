@@ -67,6 +67,10 @@ The Start node exists by default when you create a new workflow.
 
 ### How do I list all files/folders within a folder?
 
-Enable **Use Query String** and fill the **Query String** field with `'FOLDER_ID' in parents`. Where `FOLDER_ID` is the ID after `https://drive.google.com/drive/u/0/folders/`.
-There are several additional options available to fine grain the listed results. More information at [Search for files and folders: Querystring](https://developers.google.com/drive/api/v3/search-files#query_string_examples).
+To list all the files and folders within a folder, follow the steps mentioned below.
 
+1. Toggle ***Use Query String*** to `true`.
+2. Copy the string of characters located after `https://drive.google.com/drive/u/0/folders/`. This string is the folder ID.
+3. Enter `'FOLDER_ID' in parents` in the ***Query String*** field. Replace `FOLDER_ID` with the folder ID you copied in the previous step.
+
+There are several additional options available to fine grain the listed results. Refer to [Search for files and folders: Querystring](https://developers.google.com/drive/api/v3/search-files#query_string_examples) for more information.

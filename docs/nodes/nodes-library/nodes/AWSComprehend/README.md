@@ -41,6 +41,7 @@ This node will trigger the workflow when a feedback form is submitted. Make sure
 4. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when feedback is submitted. We will pass this feedback to the next nodes in the workflow.
+
 ![Using the Typeform Trigger node to trigger the workflow when a feedback form is submitted](./TypeformTrigger_node.png)
 
 ### 2. AWS Comprehend node (detectSentiment: text)

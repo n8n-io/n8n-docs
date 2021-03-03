@@ -42,14 +42,14 @@ The final workflow should look like the following image.
 
 ### 1. Webhook node
 
-This node will trigger the workflow. We will make a GET request to the Test URL and pass on a query parameter `event`. We will use the value of this query parameter in the next node in the workflow.
+This node will trigger the workflow. We will make a GET request to the test webhook URL and pass on a query parameter called  `event`.
 
 1. Click on ***Webhook URLs*** and select the 'Test' tab.
 2. Copy the displayed URL. We will make a GET request to this URL later on.
 3. Save the workflow to register the webhook.
 4. Click on ***Execute Node*** to run the node.
-5. In a new browser tab, paste the URL you copied in the previous step and append it with `?event=login`. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?event=login`. We are passing a query parameter `event` and assigning it the value `login`.
-6. Press Enter (or Return) to make a request to the Test Webhook URL.
+5. In a new browser tab, paste the URL that you copied in the previous step and append `?event=login` to it. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?event=login`. Here, we are passing a query parameter called `event` and assigning the value `login` to it.
+6. Press Enter (or Return) to make a request to the test webhook URL.
 
 In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.
 
@@ -64,10 +64,10 @@ This node will create a new event in PostHog.
 ::: v-pre
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > query > event. You can also add the following expression: `{{$json["query"]["event"]}}`.
 :::
-4. Enter a distinct Id in the ***Distinct ID*** field.
+4. Enter a distinct id in the ***Distinct ID*** field.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new event.
+In the screenshot below, you will notice that the node creates a new event in PostHog.
 
 ![Using the PostHog node to create a new event](./PostHog_node.png)
 

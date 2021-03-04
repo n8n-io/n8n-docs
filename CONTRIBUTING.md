@@ -35,9 +35,10 @@ In the **credentials** `README.md`:
 ### Style
 * Explain clearly each step of the process or changes you make.
 * Keep your writing as concise as possible.
-* Add commit messages in [this](https://gist.github.com/parmentf/035de27d6ed1dce0b36a) format.
-* Use correct spelling and grammar. [Grammarly](https://www.grammarly.com/) is a good tool to help you with that.
+* Use present tense, active voice, and "you"-form to address the readers.
 * Spell out correctly the names of organisations or brands. For example: "GitHub", not "Github".
+* Use correct spelling and grammar. [Grammarly](https://www.grammarly.com/) is a good tool to help you with that.
+* Add commit messages in [this](https://gist.github.com/parmentf/035de27d6ed1dce0b36a) format.
 
 ### Screenshots
 

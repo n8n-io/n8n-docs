@@ -43,10 +43,13 @@ Please make sure that the screenshots match the following criteria:
 
 ## General checklist
 
-Before submitting a PR, make sure your contribution checks all the boxes:
+Before submitting a PR, make sure your contribution ticks all these boxes:
 
 - [ ] Spelling and grammar are correct. [Grammarly](https://www.grammarly.com/) is a good tool to help you.
 - [ ] All links are working and direct to the right location.
-- [ ] Branding and organisation names are spelled correctly. For example: "GitHub", not "Github".
+- [ ] Branding or organisation names are spelled correctly. For example: "GitHub", not "Github".
 - [ ] GIFs capture every step of the process at a uniform pace.
 - [ ] All documentation files end with an empty newline.
+- [ ] The commit message describes clearly and succintly the changes you made.
+- [ ] The PR explains clearly and succintly the changes you made and why they are necessary.
+- [ ] You have read and accepted the [code of conduct](https://github.com/n8n-io/n8n-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).

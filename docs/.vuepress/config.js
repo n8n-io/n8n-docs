@@ -170,20 +170,24 @@ module.exports = {
 				{
 					title: '🧠 Nodes Library',
 					sidebarDepth: 3,
+					path: '/nodes/nodes-library',
 					children: [
 						{
 							title: 'Core Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/core-nodes',
 							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 						{
 							title: 'Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/nodes',
 							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{
 							title: 'Trigger Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/trigger-nodes',
 							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 					],
@@ -191,6 +195,7 @@ module.exports = {
 				{
 					title: '🔑 Credentials Library',
 					sidebarDepth: 2,
+					path: '/nodes/credentials',
 					children: getChildrenFolders('nodes/credentials'),
 				},
 			],

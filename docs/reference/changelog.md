@@ -2,6 +2,37 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.110.3
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.11.0...n8n@0.110.3) for this version.<br />
+**Release date:** 2021-03-04
+
+- Bug fixes
+	- APITemplate.io: Fixed an issue with the name
+
+## n8n@0.110.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.109.0...n8n@0.110.0) for this version.<br />
+**Release date:** 2021-03-04
+
+- New nodes
+	- APITemplate.io
+	- Bubble
+	- Lemlist
+	- Lemlist Trigger
+- Enhanced nodes
+	- Microsoft Teams: Added option to reply to a message
+- Bug fixes
+	- Dropbox: Fixed an issue with parsing the response with the Upload operation
+	- Gmail: Fixed an issue with the scope for the Service Account authentication method and fixed an issue with the label filter
+	- Google Drive: Fixed an issue with the missing Parent ID field for the Create operation and fixed an issue with the Permissions field
+	- HelpScout: Fix an issue with sending tags when creating a conversation
+	- HTTP Request: Fixed an issue with the raw data and file response
+	- HubSpot: Fixed an issue with the OAuth2 credentials
+- Added support for Date & Time in the IF node and the Switch node
+- Fixed an issue with mouse selection when zooming in or out
+- Fixed an issue with current executing workflows when using queues for Postgres
+- Fixed naming and description for the `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` environment variable
+- Fixed an issue with auto-refresh of the execution list
+
 ## n8n@0.109.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.108.0...n8n@0.109.0) for this version.<br />
 **Release date:** 2021-02-22

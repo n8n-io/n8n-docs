@@ -7,7 +7,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2021-03-04
 
 - Bug fixes
-	- APITemplate.io: Fixed an issue with the name
+	- APITemplate.io: Fixed an issue with the naming of the node
 
 ## n8n@0.110.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.109.0...n8n@0.110.0) for this version.<br />
@@ -24,7 +24,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Dropbox: Fixed an issue with parsing the response with the Upload operation
 	- Gmail: Fixed an issue with the scope for the Service Account authentication method and fixed an issue with the label filter
 	- Google Drive: Fixed an issue with the missing Parent ID field for the Create operation and fixed an issue with the Permissions field
-	- HelpScout: Fix an issue with sending tags when creating a conversation
+	- HelpScout: Fixed an issue with sending tags when creating a conversation
 	- HTTP Request: Fixed an issue with the raw data and file response
 	- HubSpot: Fixed an issue with the OAuth2 credentials
 - Added support for Date & Time in the IF node and the Switch node

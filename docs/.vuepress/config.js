@@ -207,10 +207,6 @@ module.exports = {
 					path: 'security.md',
 				},
 				{
-					title: '📦 Docker',
-					path: 'docker.md',
-				},
-				{
 					title: '🖥 Server Setup',
 					path: 'server-setup.md',
 				},

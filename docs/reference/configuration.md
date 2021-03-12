@@ -252,6 +252,26 @@ webhook URLs get registred with the external services.
 export WEBHOOK_TUNNEL_URL=https://n8n.example.com/
 ```
 
+## Prometheus
+
+In order to collection and expose metrics n8n uses the library
+[prom-client](https://www.npmjs.com/package/prom-client).
+
+The `/metrics` endpoint is disabled by default but it is possible to enable it
+via the environment variable `N8N_METRICS`.
+
+```bash
+export N8N_METRICS=true
+```
+
+It is also possible to overwrite the prefix metric names by providing the
+environment variable `N8N_METRICS_PREFIX`.
+
+```bash
+export N8N_METRICS_PREFIX=n8n_
+```
+
+**Note:** At the moment n8n does not support metrics for webhooks.
 
 ## Overwrites for credentials
 

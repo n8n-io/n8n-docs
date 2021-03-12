@@ -25,13 +25,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Spotify: Added Create a Playlist operation to Playlist resource and Get New Releases to the Album resource
 - Bug fixes
     - Airtable: Fixed a bug with updating and deleting records
-- Added the functionality to expose metrics to Prometheus
+- Added the functionality to expose metrics to Prometheus. Read more about that [here](configuration.md#prometheus)
 - Updated fallback values to match the value type
 - Added the functionality to display debugging information for pending workflows on exit
 - Fixed an issue with queue mode for the executions that should not be saved
-- Fixed an issue with workflows crashing and remaining with the status `Unknown` in the execution list
-- Fixed an issue to prevent crashing while saving execution data when the `data` field had over 64KB in MySQL
-- Updated jws-rsa to version `1.12.1`
+- Fixed an issue with workflows crashing and displaying `Unknown` status in the execution list
+- Fixed an issue to prevent crashing while saving execution data when the `data` field has over 64KB in MySQL
+- Updated `jws-rsa` to version `1.12.1`
 
 ## n8n@0.110.3
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.0...n8n@0.110.3) for this version.<br />

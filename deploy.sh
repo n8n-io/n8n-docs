@@ -15,6 +15,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:n8n-io/n8n-docs.git master:gh-pages
+git push -f git@github.com:n8n-io/n8n-docs.git master:temp-ahsan
 
 cd -

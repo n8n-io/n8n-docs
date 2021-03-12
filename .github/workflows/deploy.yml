@@ -1,21 +1,19 @@
-name: Deploy
+name: Deploy Docs
 
 on:
-  push:
-    branches:
-      - masterDEACTIVATED
+  workflow_dispatch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: npm install, build, and test
-      run: |
-        ./deploy.sh
+      # - uses: actions/checkout@v2
+      # - name: Checkout
+      #   with:
+      #     ref: ${{ github.event.inputs.branch || 'master' }}
+      - uses: actions/checkout@v2
+      - name: Build and deploy
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: ./deploy.sh

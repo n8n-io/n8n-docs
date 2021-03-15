@@ -5,6 +5,7 @@ Before you start automating workflows with n8n, it's important to understand som
 ## Connection
 
 A [connection](../reference/glossary.md#connection) establishes a link between nodes to route data through the workflow. Each node can have one or multiple connections.
+* *Example*: An [IF node](../nodes/nodes-library/core-nodes/If/README.md) has two connections to different nodes: one for the case when the statement is false and one for the case when the statement is true.
 
 
 ## Node
@@ -13,7 +14,7 @@ A [node](../reference/glossary.md#node) is an entry point for retrieving data, a
 
 * *Example*: A [Google Sheets node](../nodes/nodes-library/nodes/GoogleSheets/README.md) can be used to retrieve or write data to a Google Sheet.
 
-Note that if an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md).
+Note that if an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md). These nodes offer generic API support and are very versatile.
 
 
 ## Trigger Node

@@ -1,25 +1,28 @@
 # Key Components
 
+Before you start automating workflows with n8n, it's important to understand some key components and concepts.
 
 ## Connection
 
-A connection establishes a link between nodes to route data through the workflow. Each node can have one or multiple connections.
+A [connection](../reference/glossary.md#connection) establishes a link between nodes to route data through the workflow. Each node can have one or multiple connections.
 
 
 ## Node
 
-A node is an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively.
+A [node](../reference/glossary.md#node) is an entry point for retrieving data, a function to process data, or an exit for sending data. The data process includes filtering, recomposing, and changing data. There can be one or several nodes for your API, service, or app. By connecting multiple nodes, you can create simple and complex workflows.
 
-For example, consider a Google Sheets node. It can be used to retrieve or write data to a Google Sheet.
+* *Example*: A [Google Sheets node](../nodes/nodes-library/nodes/GoogleSheets/README.md) can be used to retrieve or write data to a Google Sheet.
+
+Note that if an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md).
 
 
 ## Trigger Node
 
-A trigger node is a node that starts a workflow and supplies the initial data. What triggers it, depends on the node. It could be the time, a webhook call or an event from an external service.
+A [trigger node](../reference/glossary.md#trigger) is a node that starts a workflow and supplies the initial data. What triggers it, depends on the node. It could be the time, a webhook call, or an event from an external service.
 
-For example, consider a Trello trigger node. When a Trello Board gets updated, it will trigger a workflow to start using the data from the updated board.
+* *Example*: A [Trello trigger node](../nodes/nodes-library/nodes/Trello/README.md) can be used to trigger a workflow when a Trello Board gets updated, using the data from the updated board.
 
 
 ## Workflow
 
-A workflow is a canvas on which you can place and connect nodes. A workflow can be started manually or by trigger nodes. A workflow run ends when all active and connected nodes have processed their data.
+A [workflow](../reference/glossary.md#workflow) is a collection of node connected together to automate a process. A workflow can be started manually or by trigger nodes. A workflow run ends when all active and connected nodes have processed their data.

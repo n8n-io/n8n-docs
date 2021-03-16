@@ -11,11 +11,11 @@ n8n (pronounced n-eight-n) helps you to interconnect every app with an API in th
 
 ## Get started with n8n
 
-### Understand the basics
-Before you start automating workflows with n8n, learn its [key components](getting-started/key-components.md).
-
 ### Install n8n
-Follow the [quickstart guide](getting-started/quickstart.md) to try out or install n8n locally.
+Follow the [quickstart guide](./getting-started/quickstart.md) to try out or install n8n locally.
+
+### Understand the basics
+Before you start automating workflows with n8n, learn its key [components](getting-started/key-components.md) and [concepts](getting-started/key-concepts.md).
 
 ### Create workflows
 Create your [first workflow](getting-started/create-your-first-workflow/README.md) and get inspiration for various use cases from our [blogposts](/getting-started/tutorials.md#blogposts), [videos](/getting-started/tutorials.md#videos), and [community tutorials](/getting-started/tutorials.md#community-tutorials).

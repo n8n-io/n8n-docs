@@ -6,7 +6,7 @@ Before you start automating workflows with n8n, it's important to understand som
 
 The [Editor UI](../reference/glossary.md#editor-ui) is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
 
-![Editor](./images/Editor.png)
+![Editor](./images/Editor_UI.gif)
 
 ## Connection
 
@@ -14,7 +14,7 @@ A [connection](../reference/glossary.md#connection) establishes a link between n
 
 *Example*: An [IF node](../nodes/nodes-library/core-nodes/If/README.md) has two connections to different nodes: one for the case when the statement is false and one for the case when the statement is true.
 
-![Connection](./images/Connection.png)
+![Connection](./images/Connection_ifnode.gif)
 
 ## Node
 
@@ -43,4 +43,4 @@ A [trigger node](../reference/glossary.md#trigger) is a node that starts a workf
 
 A [workflow](../reference/glossary.md#workflow) is a collection of node connected together to automate a process. A workflow can be started manually or by trigger nodes. A workflow run ends when all active and connected nodes have processed their data.
 
-![Workflow](./images/Workflow.png)
+![Workflow](./images/Execute_workflow.gif)

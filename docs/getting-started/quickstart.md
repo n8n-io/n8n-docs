@@ -66,8 +66,7 @@ More information about the Docker setup can be found in the README file of the
 [Docker Image](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/README.md).
 
 
-
-### Post installation: Starting n8n with tunnel
+### Starting n8n with tunnel (post-installation)
 
 ::: danger
 This is only meant for local development and testing. It should not be used in production.

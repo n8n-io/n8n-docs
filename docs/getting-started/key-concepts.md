@@ -2,7 +2,7 @@
 
 ## Activation
 
-A workflpw is active when...
+A workflow is active when...
 
 ## Errors
 

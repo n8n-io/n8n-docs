@@ -26,5 +26,5 @@ Create an account on a [Lemlist](https://www.lemlist.com/) instance.
 The following video demonstrates the steps mentioned above.
 
 <div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/077wqv1rPLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/MWjHr2qw5XA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

@@ -71,3 +71,17 @@ return [
 :::
 
 ![Using the RSS Read node to read data from RSS feed](./RSSFeedRead_node.png)
+
+## FAQs
+
+### How to identify that no items are left to be processed by the node?
+::: v-pre
+To identify if items are left to be processed by node use the following expression `{{$node["SplitInBatches"].context["noItemsLeft"]}}`. This expression returns a boolean value. If there is data yet to be processed, the expression will return `false`, otherwise `true`.
+:::
+Refer to this [workflow](https://n8n.io/workflows/995) to try it out.
+
+### How to get the current running index of the node?
+::: v-pre
+To get the current running index of the node use the following expression `{{$node["SplitInBatches"].context["currentRunIndex"];}}`.
+:::
+Refer to this [workflow](https://n8n.io/workflows/996) to try it out.

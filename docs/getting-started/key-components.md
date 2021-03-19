@@ -45,9 +45,9 @@ A [trigger node](../reference/glossary.md#trigger) is a node that starts a workf
 
 ![Trigger_nodes](./images/Trigger_nodes.png)
 
-*Example:* A [Trello trigger node](../nodes/nodes-library/nodes/Trello/README.md) can be used to trigger a workflow when a Trello Board gets updated, using the data from the updated board.
+*Example:* A [Telegram trigger node](../nodes/nodes-library/nodes/Trello/README.md) can be used to trigger a workflow when a message is sent in a Telegram chat.
 
-![Trello_trigger](./images/Trello_trigger.png)
+![Trello_trigger](./images/telegram_trigger.png)
 
 ## Workflow
 

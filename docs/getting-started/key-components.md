@@ -24,12 +24,12 @@ A [node](../reference/glossary.md#node) is an entry point for retrieving data, a
 * Regular Nodes
 * Trigger Nodes
 
-### Core Node
+### Core Nodes
 
-Note that if an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md). These nodes offer generic API support and are very versatile.
+Core nodes are functions or services that can be used to control how workflows are run or to provide generic API support. If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md).
 
 
-### Regular Node
+### Regular Nodes
 
 Regular nodes are named like the application they represent and are listed under Regular Nodes in the Editor UI.
 
@@ -39,7 +39,7 @@ Regular nodes are named like the application they represent and are listed under
 
 ![Sheets_node](./images/Google_sheets.png)
 
-### Trigger Node
+### Trigger Nodes
 
 A [trigger node](../reference/glossary.md#trigger) is a node that starts a workflow and supplies the initial data. What triggers it, depends on the node. It could be the time, a webhook call, or an event from an external service. Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. 
 

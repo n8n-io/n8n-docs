@@ -30,7 +30,7 @@ You can specify the format that the date has to be converted to from the *To For
 You can also specify a custom format by setting the *Custom Format* toggle to 'On'.
 
 - Options
-	- *From Format* field: Allows you to specify the format of the input values. For example, `YYYY/MM/DD HH:MM:SS`, `DD.MM.YYYY`, `MM/DD/YYYY`, etc.
+	- *From Format* field: Allows you to specify the format of the input values. For example, `YYYY/MM/DD HH:MM:SS`, `DD.MM.YYYY`, `MM/DD/YYYY`, etc. Refer to the FAQs to learn about the possible vaules.
 	- *From Timezone* field: Allows you to specify the timezone of the input values, for input timezones that are different from n8n's system clock.
 	- *To Timezone* field: Allows you to specify the timezone that the input values have to be converted to.
 
@@ -57,3 +57,18 @@ The start node exists by default when you create a new workflow.
 3. Click on the *From Format* option, and enter the format of the input date.
 4. Select the format you want to convert it to from the *To Format* dropdown list.
 5. Click on *Execute Node* to run the workflow.
+
+## FAQs
+
+### What values can I use in the Form Format field?
+
+You can use the following values in the ***Form Format*** field:
+
+| Input | Example | Description |
+|-------|---------|-------------|
+|X | 1616108400 | Unix timestamp |
+|x | 1616108400000 | Unix ms timestamp |
+| DD-MM-YYYY | 19-03-2021 | Date, month, and year separated by `-` |
+| DD/MM/YYYY | 19/03/2021 | Date, month, and year separated by `/` |
+
+You can also use the options available in the ***To Format*** dropdown list.

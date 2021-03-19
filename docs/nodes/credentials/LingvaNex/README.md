@@ -14,11 +14,9 @@ Create a [LingvaNex](https://lingvaNex.com) account.
 
 ## Using API
 
-1. Access your [LingvaNex user control panel](https://lingvanex.com/account/) page.
-2. Scroll to the ***API*** section at bottom of the page.
-3. Click on the ***Generate Key*** button.
-4. Enter a title in the ***Title*** field.
-5. Click on the ***Create*** button.
-6. Use the ***API Key*** with your LingavaNex node credentials in n8n.
+1. Go to your [LingvaNex Account](https://lingvanex.com/account/).
+2. Select ***Cloud API***.
+3. Click on ***Payment / Subscription***. Note that you can use the limited Translation API without having to subscribe or add a payment method. 
+4. Use the generated ***API Key*** with your LingavaNex node credentials in n8n.
 
-![Getting LingvaNex credentials](./using-api.gif)
+![Getting LingvaNex credentials](./LingvaNex_account.png)

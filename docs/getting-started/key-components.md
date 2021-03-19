@@ -10,9 +10,9 @@ The [Editor UI](../reference/glossary.md#editor-ui) is the web interface used to
 
 ## Connection
 
-A [connection](../reference/glossary.md#connection) establishes a link between nodes to route data through the workflow. Each node can have one or multiple connections.
+A [connection](../reference/glossary.md#connection) establishes a link between nodes to route data through the workflow. Each node can have one or multiple connections. To create a connection between two nodes, click on the grey dot on the right side of the node and slide the arrow to the grey rectangle on the left side of the following node.  
 
-*Example:* An [IF node](../nodes/nodes-library/core-nodes/If/README.md) has two connections to different nodes: one for the case when the statement is false and one for the case when the statement is true.
+*Example:* An [IF node](../nodes/nodes-library/core-nodes/If/README.md) has two connections to different nodes: one for the case when the statement is true and one for the case when the statement is false.
 
 ![Connection](./images/Connection_ifnode.gif)
 
@@ -35,11 +35,11 @@ Regular nodes are named like the application they represent and are listed under
 
 ![Regular_nodes](./images/Regular_nodes.png)
 
-*Example: A [Google Sheets node](../nodes/nodes-library/nodes/GoogleSheets/README.md) can be used to retrieve or write data to a Google Sheet.
+*Example:* A [Google Sheets node](../nodes/nodes-library/nodes/GoogleSheets/README.md) can be used to retrieve or write data to a Google Sheet.
 
 ![Sheets_node](./images/Google_sheets.png)
 
-## Trigger Node
+### Trigger Node
 
 A [trigger node](../reference/glossary.md#trigger) is a node that starts a workflow and supplies the initial data. What triggers it, depends on the node. It could be the time, a webhook call, or an event from an external service. Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. 
 

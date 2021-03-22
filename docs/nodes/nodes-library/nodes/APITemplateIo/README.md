@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create an invoice with the information received via Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on n8n.io. This example usage workflow would use the following nodes.
 - [Typeform Trigger](../../trigger-nodes/TypeformTrigger/README.md)
 - [APITemplate.io]()
 
@@ -57,7 +57,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 ### 2. APITemplate.io node (create: pdf)
 
-This node will generate an invoice using the information from the previous node. Create an invoice template in APITemplate.io, if you don't have one.
+This node will generate an invoice using the information from the previous node. Create an invoice template in APITemplate.io, if you don't already have one.
 
 1. First of all, you'll have to enter credentials for the APITemplate.io node. You can find out how to do that [here](../../../credentials/APITemplateIo/README.md).
 2. Select 'PDF' from the ***Resource*** dropdown list.

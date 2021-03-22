@@ -40,7 +40,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to list emails from Airtable and create leads in Lemlist. You can also find the [workflow](https://n8n.io/workflows/983) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to list emails from Airtable and create corresponding leads in Lemlist. You can also find the [workflow](https://n8n.io/workflows/983) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Airtable](../Airtable/README.md)
 - [Lemlist]()

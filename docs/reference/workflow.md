@@ -109,3 +109,13 @@ If the Execution data of the workflow should be saved when it succeeds.
 ### Save Manual Executions
 
 If executions started from the Editor UI should be saved.
+
+## Retry Failed Workflow Executions
+
+If your workflow execution fails, you can retry the execution. To retry a failed workflow execution, follow the steps mentioned below:
+
+1. Click on ***Executions*** in the left sidebar.
+2. For the workflow execution you want to retry, click on the circle button under the ***Status*** column.
+3. Select either of the following options to retry the execution:
+- ***Retry with currently saved workflow***: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
+- ***Retry with original workflow***: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.

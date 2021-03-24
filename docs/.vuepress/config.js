@@ -120,11 +120,11 @@ module.exports = {
 			// },
 			{
 				text: 'Nodes',
-				link: '/nodes/nodes.md',
+				link: '/nodes/',
 			},
 			{
 				text: 'Reference',
-				link: '/reference/reference.md',
+				link: '/reference/',
 			},
 			{
 				text: 'Community',
@@ -144,23 +144,8 @@ module.exports = {
 				{
 					title: '🧬 Overview',
 					sidebarDepth: 2,
-					children: [
-						{
-							title: 'Node Overview',
-							sidebarDepth: 2,
-							path: 'nodes.md',
-						},
-						{
-							title: 'Node Basics',
-							sidebarDepth: 2,
-							path: 'node-basics.md',
-						},
-						{
-							title: 'Expressions',
-							sidebarDepth: 2,
-							path: 'expressions.md',
-						},
-					]
+					path: '/nodes/',
+					children: getChildrenFiles('nodes'),
 				},
 				{
 					title: '🔬 Creating Nodes',
@@ -203,7 +188,7 @@ module.exports = {
 			'/reference/': [
 				{
 					title: '📚 Overview',
-					path: 'reference.md',
+					path: '/reference/',
 				},
 				{
 					title: '🧐 Changelog',
@@ -220,10 +205,6 @@ module.exports = {
 				{
 					title: '🚔 Security',
 					path: 'security.md',
-				},
-				{
-					title: '📦 Docker',
-					path: 'docker.md',
 				},
 				{
 					title: '🖥 Server Setup',
@@ -293,6 +274,7 @@ module.exports = {
 				},
 				{
 					title: '💪 Create Your First Workflow',
+					path: '/getting-started/create-your-first-workflow/',
 					children: getChildrenFolders('getting-started/create-your-first-workflow'),
 
 				},

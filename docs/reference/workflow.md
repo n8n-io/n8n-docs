@@ -110,6 +110,10 @@ If the Execution data of the workflow should be saved when it succeeds.
 
 If executions started from the Editor UI should be saved.
 
+### Save Execution Progress
+
+This setting allows you to save the execution data of each node. By setting it to `Yes`, you can resume the workflow from where it stopped in case of error. However, it may increase latency.
+
 ## Retry Failed Workflow Executions
 
 If your workflow execution fails, you can retry the execution. To retry a failed workflow execution, follow the steps mentioned below:

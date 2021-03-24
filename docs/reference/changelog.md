@@ -2,6 +2,86 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.112.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.111.0...n8n@0.112.0) for this version.<br />
+**Release date:** 2021-03-19
+
+- New nodes
+    - DeepL
+- Enhanced nodes
+    - TheHive: Added Mark as Read and Mark as Unread operations and added Ignore SSL Issues parameter to the credentials
+- Bug fixes
+    - AWS SES: Fixed an issue to map CC addresses correctly
+    - Salesforce: Fixed an issue with custom object for Get All operations and fixed an issue with the first name field for the Create and Update operations for the Lead resource
+    - Strava: Fixed an issue with the access tokens not getting refreshed
+    - TheHive: Fixed an issue with the case resolution status
+- Fixed an issue with importing separate decrypted credentials
+- Fixed issues with the sub-workflows not finishing
+- Fixed an issue with the sub-workflows running on the main process
+- Fixed concurrency issues with sub-workflows
+
+## n8n@0.111.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.3...n8n@0.111.0) for this version.<br />
+**Release date:** 2021-03-12
+
+- New nodes
+    - Autopilot
+    - Autopilot Trigger
+	- Wise
+    - Wise Trigger
+- Enhanced nodes
+    - Box: Added Get operation to the Folder resource
+    - Dropbox: Added Search operation to the File resource. All operations are now performed relative to the user's root directory. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01110) page
+    - Facebook Graph API: Added new API versions
+    - Google Drive: Added Update operation to the File resource
+    - HubSpot: Added the Deal Description option
+    - Kafka: Added the SASL mechanism
+    - Monday.com: Added Move operation to Board Item resource
+    - MongoDB: Added Date field to the Insert and Update operations
+    - Micrsoft SQL: Added connection timeout parameter to credentials
+	- Salesforce: Added Mobile Phone field to the Lead resource
+    - Spotify: Added Create a Playlist operation to Playlist resource and Get New Releases to the Album resource
+- Bug fixes
+    - Airtable: Fixed a bug with updating and deleting records
+- Added the functionality to expose metrics to Prometheus. Read more about that [here](configuration.md#prometheus)
+- Updated fallback values to match the value type
+- Added the functionality to display debugging information for pending workflows on exit
+- Fixed an issue with queue mode for the executions that should not be saved
+- Fixed an issue with workflows crashing and displaying `Unknown` status in the execution list
+- Fixed an issue to prevent crashing while saving execution data when the `data` field has over 64KB in MySQL
+- Updated `jws-rsa` to version `1.12.1`
+
+## n8n@0.110.3
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.0...n8n@0.110.3) for this version.<br />
+**Release date:** 2021-03-04
+
+- Bug fixes
+	- APITemplate.io: Fixed an issue with the naming of the node
+
+## n8n@0.110.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.109.0...n8n@0.110.0) for this version.<br />
+**Release date:** 2021-03-04
+
+- New nodes
+	- APITemplate.io
+	- Bubble
+	- Lemlist
+	- Lemlist Trigger
+- Enhanced nodes
+	- Microsoft Teams: Added option to reply to a message
+- Bug fixes
+	- Dropbox: Fixed an issue with parsing the response with the Upload operation
+	- Gmail: Fixed an issue with the scope for the Service Account authentication method and fixed an issue with the label filter
+	- Google Drive: Fixed an issue with the missing Parent ID field for the Create operation and fixed an issue with the Permissions field
+	- HelpScout: Fixed an issue with sending tags when creating a conversation
+	- HTTP Request: Fixed an issue with the raw data and file response
+	- HubSpot: Fixed an issue with the OAuth2 credentials
+- Added support for Date & Time in the IF node and the Switch node
+- Fixed an issue with mouse selection when zooming in or out
+- Fixed an issue with current executing workflows when using queues for Postgres
+- Fixed naming and description for the `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` environment variable
+- Fixed an issue with auto-refresh of the execution list
+
 ## n8n@0.109.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.108.0...n8n@0.109.0) for this version.<br />
 **Release date:** 2021-02-22

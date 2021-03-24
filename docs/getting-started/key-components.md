@@ -8,9 +8,13 @@ A connection establishes a link between nodes to route data through the workflow
 
 ## Node
 
-A node is an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively. If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md).
+A node is an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively.
 
 For example, consider a Google Sheets node. It can be used to retrieve or write data to a Google Sheet.
+
+::: tip 💡 Keep in mind
+If an application you need does not have a dedicated node yet, you can access the data by using the [HTTP Request](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook](../nodes/nodes-library/core-nodes/Webhook/README.md) node.
+:::
 
 
 ## Trigger Node

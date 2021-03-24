@@ -12,6 +12,10 @@ A node is an entry point for retrieving data, a function to process data or an e
 
 For example, consider a Google Sheets node. It can be used to retrieve or write data to a Google Sheet.
 
+::: tip 💡 Keep in mind
+If an application you need does not have a dedicated node yet, you can access the data by using the [HTTP Request](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook](../nodes/nodes-library/core-nodes/Webhook/README.md) node.
+:::
+
 
 ## Trigger Node
 

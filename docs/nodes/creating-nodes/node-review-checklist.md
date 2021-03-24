@@ -1,6 +1,8 @@
 # Node review checklist
 
-Before submitting a node for review, please make sure you follow the guidelines listed below. This will help our team review your PR easier and faster.
+If you want to create a new node for a service - that's great, thank you! There are several things to keep in mind when creating the node. To help you keep track of them, we prepared a checklist that covers the requirements for creating nodes, from preparation to submission. 
+
+Make sure you tick all the boxes below before submitting a node for review, as this will help our team review your PR easier and faster.
 
 ## Preparation
 

@@ -112,7 +112,7 @@ If executions started from the Editor UI should be saved.
 
 ### Save Execution Progress
 
-This setting allows you to save the execution data of each node. By setting it to `Yes`, you can resume the workflow from where it stopped in case of error. However, it may increase latency.
+This setting allows you to save the execution data of each node. By setting it to `Yes`, you can resume the workflow from where it stopped in case of an error. However, it may increase latency.
 
 ## Retry Failed Workflow Executions
 

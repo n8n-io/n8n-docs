@@ -50,7 +50,7 @@ This node will translate the cocktail instructions that we got from the previous
 1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](../../../credentials/DeepL/README.md).
 ::: v-pre
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
-3. Select the following in the ***Variable Selector*** section: Current Nodes > Input Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strInstructions"]}}`.
+3. Select the following in the ***Variable Selector*** section: Current Nodes > Input Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$json["drinks"][0]["strInstructions"]}}`.
 4. Select 'French' from the ***Target Language*** dropdown list.
 5. Click on ***Execute Node*** to run the node.
 :::

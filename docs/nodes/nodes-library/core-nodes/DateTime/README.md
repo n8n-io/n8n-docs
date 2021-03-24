@@ -30,7 +30,7 @@ You can specify the format that the date has to be converted to from the *To For
 You can also specify a custom format by setting the *Custom Format* toggle to 'On'.
 
 - Options
-	- *From Format* field: Allows you to specify the format of the input values. For example, `YYYY/MM/DD HH:MM:SS`, `DD.MM.YYYY`, `MM/DD/YYYY`, etc. Refer to the [FAQs](#what-values-can-i-use-in-the-from-format-field) to learn about the possible vaules.
+	- *From Format* field: Allows you to specify the format of the input values. Refer to the [FAQs](#what-values-can-i-use-in-the-from-format-field) to learn about the possible vaules.
 	- *From Timezone* field: Allows you to specify the timezone of the input values, for input timezones that are different from n8n's system clock.
 	- *To Timezone* field: Allows you to specify the timezone that the input values have to be converted to.
 
@@ -84,5 +84,3 @@ You can use the following values in the ***From Format*** field:
 | MMMM DD YYYY HH:MM:SS | March 03 2021 08:00:00 | Month, date, year, hours, minutes, and seconds |
 | DD MMMM YYYY | 03 March 2021 | Date, month, and year |
 | DD MMMM YYYY HH:MM:SS | 03 March 2021 08:00:00 | Date, month, year, hours, minutes, and seconds |
-
-You can also use the options available in the ***To Format*** dropdown list.

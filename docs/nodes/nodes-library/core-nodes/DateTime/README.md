@@ -71,7 +71,7 @@ You can use the following values in the ***From Format*** field:
 | DD-MM-YYYY | 19-03-2021 | Date, month, and year separated by `-` |
 | DD/MM/YYYY | 19/03/2021 | Date, month, and year separated by `/` |
 | DD.MM.YYYY | 19.03.2021 | Date, month, and year separated by `.` |
-| DD/MM/YYYY HH:MM:SS | 19.03.2021 08:00:00 | Date, month, year, hours, minutes, and seconds|
+| DD.MM.YYYY HH:MM:SS | 19.03.2021 08:00:00 | Date, month, year, hours, minutes, and seconds|
 | MM/DD/YYYY | 03/19/2021 | Month, date, and year separated by `/` |
 | MM-DD-YYYY | 03-19-2021 | Month, date, and year separated by `-` |
 | MM.DD.YYYY | 03.19.2021 | Month, date, and year separated by `.` |

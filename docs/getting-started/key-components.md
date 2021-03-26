@@ -8,7 +8,34 @@ The [Editor UI](../reference/glossary.md#editor-ui) is the web interface used to
 
 ![Editor](./images/Editor_UI.gif)
 
-In the Editor UI, you can 
+From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
+
+![Editor UI notes](./images/EditorUI_sidebar_notes.png)
+
+### Workflows
+1. Create a new workflow
+2. Open the list of saved workflows
+3. Save changes to the current workflow
+4. Save the current workflow under a new name
+5. Rename the current workflow
+6. Delete the current workflow
+7. Download the current workflow as a JSON file
+8. Import a workflow from a URL
+9. Import a workflow from a local file
+10. View and change the settings of the current workflow
+
+### Credentials
+1. Create new credentials
+2. Open the list of saved credentials
+
+### Executions
+Open the workflow executions log.
+
+### Help
+1. Open the n8n documentation page
+2. Open the n8n community forum
+3. Open the n8n public workflows page
+4. View information about n8n (version, source code, license)
 
 ## Connection
 
@@ -51,7 +78,8 @@ Regular nodes perform an action, like fetching data or creating an entry in a ca
 
 ![Trigger_nodes](./images/Trigger_nodes.png)
 
-Trigger nodes can be:
+Trigger nodes can be app or core nodes.
+
 * **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor.
 
 *Example:* A [Telegram trigger node](../nodes/nodes-library/nodes/Trello/README.md) can be used to trigger a workflow when a message is sent in a Telegram chat.

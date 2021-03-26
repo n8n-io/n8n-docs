@@ -55,14 +55,14 @@ There are three types of nodes:
 * Regular Nodes
 * Trigger Nodes
 
-### Core Nodes
+### Core nodes
 
 Core nodes are functions or services that can be used to control how workflows are run or to provide generic API support. If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md) or the [Webhook node](../nodes/nodes-library/core-nodes/Webhook/README.md).
 
 Use the Start node when you want to manually trigger the workflow with the `Execute Workflow` button at the bottom of the Editor UI. This way of starting the workflow with the Start node is useful for creating and testing workflows.
 
 
-### Regular Nodes
+### Regular nodes
 
 Regular nodes perform an action, like fetching data or creating an entry in a calendar. Regular nodes are named like the application they represent and are listed under Regular Nodes in the Editor UI.
 
@@ -72,7 +72,7 @@ Regular nodes perform an action, like fetching data or creating an entry in a ca
 
 ![Sheets_node](./images/Google_sheets.png)
 
-### Trigger Nodes
+### Trigger nodes
 
 [Trigger nodes](../reference/glossary.md#trigger) start workflows and supply the initial data. 
 
@@ -96,6 +96,48 @@ Each node has various parameters that cou can configure to perform one or more a
 
 ## Workflow
 
-A [workflow](../reference/glossary.md#workflow) is a collection of node connected together to automate a process. A workflow can be started manually or by trigger nodes. A workflow run ends when all active and connected nodes have processed their data. Once you created a workflow, you need to activate it, so that it is executed every time a trigger condition is met. An execution is a run of the workflow. You can view all the executions of your workflows in the **Execution log**. Reviewing past workflow executions can be helpful for debugging. 
+A [workflow](../reference/glossary.md#workflow) is a collection of nodes connected together to automate a process. A workflow can be started manually (with the Start node) or by Trigger nodes. When a workflow is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view all the executions of your workflow in the **Execution log**, which can be helpful for debugging.
 
 ![Workflow](./images/Execute_workflow.gif)
+
+
+### Activating a workflow
+
+Workflows that start with a Trigger node or a Webhook node need to be activated in order to be executed. Active workflows enable the Trigger and Webhook nodes to receive data whenever a condition is met (e.g., Monday at 10:00, an update in a Trello board) and in turn trigger the workflow execution.
+
+All the newly created workflows are deactivated by default. 
+
+
+### Sharing a workflow
+
+Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to share your  workflows on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
+
+You can export a workflow as a JSON file in two ways:
+
+  * **Download**: Click the "Download" button under the Workflow menu in the sidebar on the left. This will download the workflow as a JSON file.
+  * **Copy-Paste**: Select all the workflow nodes in the Editor UI, copy them (Ctrl + c), then paste them (Ctrl + v) in your desired file.
+
+You can import JSON files as workflows in two ways:
+
+  * **Import**: Click "Import from File" or "Import from URL" under the Workflow menu in the sidebar on the left and select the JSON file or paste the link to a workflow.
+  * **Copy-Paste**: Copy the JSON workflow to the clipboard (Ctrl + c) and paste it (Ctrl + v) into the Editor UI.
+
+
+### Workflow settings
+
+On each workflow, it is possible to set some custom settings and overwrite some of the global default settings. Currently, the following settings can be set:
+
+* **Timezone**: sets the timezone to be used in the workflow. The default timezone is EDT (New York). The Timezone setting is particularly important for the Cron Trigger node.
+* **Save Data Error Execution**: If the execution data of the workflow should be saved when the workflow fails.
+* **Save Data Success Execution**: If the execution data of the workflow should be saved when the workflow succeeds.
+* **Save Manual Executions**: If executions started from the Editor UI should be saved.
+* **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
+
+### Failed workflows
+
+If your workflow execution fails, you can retry the execution. To retry a failed workflow execution:
+1. Click on Executions in the left sidebar.
+2. For the workflow execution you want to retry, click on the refresh icon under the Status column.
+3. Select either of the following options to retry the execution:
+    * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
+    * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.

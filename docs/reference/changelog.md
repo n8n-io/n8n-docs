@@ -2,30 +2,28 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-🧡 = Contributions made by the community
-
 ## n8n@0.113.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />
 **Release date:** 2021-03-26
 
 - New nodes
-    - Activation Trigger 🧡
-    - Plivo 🧡
+    - Activation Trigger
+    - Plivo
 - Enhanced nodes
     - ClickUp: Added Space Tag, Task List, and Task Tag resource
     - GitHub: Added pagination to Get Issues and Get Repositories operations
     - Mattermost: Added Reaction resource and Post Ephemeral operation
-    - Move Binary Data: Added Encoding and Add BOM option to JSON to Binary mode and Strip BOM to Binary to JSON mode 🧡
+    - Move Binary Data: Added Encoding and Add BOM option to JSON to Binary mode and Strip BOM to Binary to JSON mode
     - SendGrid: Added Mail resource
-    - Spotify: Added Library resource 🧡
-    - Telegram: Added Answer Inline Query operation to the Callback resource 🧡
-    - uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Fullname and Company's domain, and Get Email by Fullname and Company's name operations 🧡
+    - Spotify: Added Library resource
+    - Telegram: Added Answer Inline Query operation to the Callback resource
+    - uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Fullname and Company's domain, and Get Email by Fullname and Company's name operations
 - Bug fixes
-    - Clearbit: Fixed an issue with the autocomplete URI 🧡
+    - Clearbit: Fixed an issue with the autocomplete URI
     - Dropbox: Fixed an issue with the Dropbox credentials by adding the APP Access Type parameter in the credentials
-    - Spotify: Fixed an issue with the Delete operation of the Playlist resource 🧡
+    - Spotify: Fixed an issue with the Delete operation of the Playlist resource
 - The variable selector now displays empty arrays
-- Fixed a permission issue with the Raspberry Pi Docker image 🧡
+- Fixed a permission issue with the Raspberry Pi Docker image
 
 ## n8n@0.112.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.111.0...n8n@0.112.0) for this version.<br />

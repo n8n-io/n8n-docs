@@ -73,7 +73,7 @@ In the screenshot below, you will notice that the node creates a new group in Bi
 
 ![Using the Bitwarden node to create a new group](./Bitwarden_node.png)
 
-### 3. Bitwarden node (getAll: member)
+### 3. Bitwarden1 node (getAll: member)
 
 This node will get all the members from Bitwarden.
 
@@ -87,7 +87,7 @@ In the screenshot below, you will notice that the node retrieves all the members
 
 ![Using the Bitwarden node to get all the members](./Bitwarden1_node.png)
 
-### 4. Bitwarden node (getAll: member)
+### 4. Bitwarden2 node (updateMembers: group)
 
 This node will update all the members in the group that we created earlier.
 ::: v-pre
@@ -105,7 +105,7 @@ In the screenshot below, you will notice that the node updates the members of th
 
 ![Using the Bitwarden node to update members in a group](./Bitwarden2_node.png)
 
-### 5. Bitwarden node (getMembers: group)
+### 5. Bitwarden3 node (getMembers: group)
 
 This node will get all the members in the group that we created earlier.
 ::: v-pre
@@ -119,4 +119,4 @@ This node will get all the members in the group that we created earlier.
 
 In the screenshot below, you will notice that the node retrieves the members in the group.
 
-![Using the Bitwarden node to get members in a group](./Bitwarden2_node.png)
+![Using the Bitwarden node to get members in a group](./Bitwarden3_node.png)

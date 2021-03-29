@@ -47,7 +47,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to create a group, add members to the group, and get the members of the group. You can also find the [workflow](https://n8n.io/workflows/1001) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create a group, add members to the group, and get the members of the group in Bitwarden. You can also find the [workflow](https://n8n.io/workflows/1001) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Bitwarden]()
 

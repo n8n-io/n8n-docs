@@ -66,21 +66,6 @@ All information is always present except:
 An "Error Workflow" can be set in the Workflow Settings which can be accessed by pressing the "Workflow" button in the menu on the on the left side. The last option is "Settings". In the window that appears, the "Error Workflow" can be selected via the Dropdown "Error Workflow".
 
 
-## Share Workflows
-
-All workflows are JSON and can be shared with others.
-
-There are multiple ways to download a workflow as JSON to then share it with other people via Email, Slack, Skype, Dropbox, …
-
-  1. Press the "Download" button under the Workflow menu in the sidebar on the left. It then downloads the workflow as a JSON file.
-  1. Select the nodes in the editor which should be exported and then copy them (Ctrl + c). The nodes then get saved as JSON in the clipboard and can be pasted wherever desired (Ctrl + v).
-
-Importing that JSON representation again into n8n can also be done in different ways:
-
-  1. Press "Import from File" or "Import from URL" under the Workflow menu in the sidebar on the left.
-  1. Copy the JSON workflow to the clipboard (Ctrl + c) and then pasting it directly into the editor (Ctrl + v).
-
-
 ## Workflow Settings
 
 On each workflow, it is possible to set some custom settings and overwrite some of the global default settings. Currently, the following settings can be set:
@@ -109,3 +94,17 @@ If the Execution data of the workflow should be saved when it succeeds.
 ### Save Manual Executions
 
 If executions started from the Editor UI should be saved.
+
+### Save Execution Progress
+
+This setting allows you to save the execution data of each node. By setting it to `Yes`, you can resume the workflow from where it stopped in case of an error. However, it may increase latency.
+
+## Retry Failed Workflow Executions
+
+If your workflow execution fails, you can retry the execution. To retry a failed workflow execution, follow the steps mentioned below:
+
+1. Click on ***Executions*** in the left sidebar.
+2. For the workflow execution you want to retry, click on the refresh icon under the ***Status*** column.
+3. Select either of the following options to retry the execution:
+- ***Retry with currently saved workflow***: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
+- ***Retry with original workflow***: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.

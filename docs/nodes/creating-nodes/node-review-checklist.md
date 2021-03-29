@@ -17,6 +17,7 @@ Make sure you tick the boxes below before submitting a node for review, as this 
 - [ ] Ensure the node works with multiple inputs.
 - [ ] Ensure the parameters have the correct type.
 - [ ] Mind the defaults: if the service has a default as true, keep it as true. Changing default values can break the existing workflows of the users.
+- [ ] Check if the node disposes of everything properly, in particular, if connections were properly closed.
 
 ## Testing
 

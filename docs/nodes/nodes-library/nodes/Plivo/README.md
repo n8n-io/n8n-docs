@@ -5,7 +5,7 @@ description: Learn how to use the Plivo node in n8n
 
 # Plivo
 
-[Plivo](https://www.plivo.com/) is a cloud communications platform as a service company that allows you to add SMS, MMS, & Voice calling functionality within your apps programmatically.
+[Plivo](https://www.plivo.com/) is a cloud communications platform as a service company that allows you to add SMS, MMS, and Voice calling functionality within your apps programmatically.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Plivo/README.md).

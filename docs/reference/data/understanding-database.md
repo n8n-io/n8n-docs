@@ -1,4 +1,4 @@
-# Understanding n8n's database
+# n8n's database
 
 By default, n8n uses SQLite as the database. If you are using another database with n8n, it will be similar. Just the data-types will be slightly different depending on the database.
 

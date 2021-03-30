@@ -195,20 +195,12 @@ module.exports = {
 					path: 'changelog.md',
 				},
 				{
-					title: '🎯 Workflow',
-					path: 'workflow.md',
+					title: '💭 Glossary',
+					path: 'glossary.md',
 				},
 				{
-					title: '⚙️ Configuration',
-					path: 'configuration.md',
-				},
-				{
-					title: '🚔 Security',
-					path: 'security.md',
-				},
-				{
-					title: '🖥 Server Setup',
-					path: 'server-setup.md',
+					title: '⌨️ Keyboard Shortcuts',
+					path: 'keyboard-shortcuts.md',
 				},
 				{
 					title: '👾 CLI commands for n8n',
@@ -219,20 +211,9 @@ module.exports = {
 					path: 'javascript-code-snippets.md',
 				},
 				{
-					title: '💭 Glossary',
-					path: 'glossary.md',
-				},
-				{
-					title: '🗻 Scaling n8n',
-					path: 'scaling-n8n.md',
-				},
-				{
-					title: '💡 Function and Function Item Nodes',
-					path: 'function-nodes.md',
-				},
-				{
-					title: '👀 Troubleshooting',
-					path: 'troubleshooting.md',
+					title: '💾 Advanced Settings',
+					sidebarDepth: 2,
+					children: getChildrenFiles('reference/advanced-users'),
 				},
 				{
 					title: '💾 Data',
@@ -240,12 +221,12 @@ module.exports = {
 					children: getChildrenFiles('reference/data'),
 				},
 				{
-					title: '🙌 Contributing',
-					path: 'contributing.md',
+					title: '👀 Troubleshooting',
+					path: 'troubleshooting.md',
 				},
 				{
-					title: '⌨️ Keyboard Shortcuts',
-					path: 'keyboard-shortcuts.md',
+					title: '🙌 Contributing',
+					path: 'contributing.md',
 				},
 				{
 					title: '🎫 License',

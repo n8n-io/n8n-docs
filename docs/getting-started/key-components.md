@@ -90,9 +90,21 @@ Trigger nodes can be app or core nodes.
 
 *Example:* To get all users from a Postgres database every 10 minutes, use the Interval Trigger node with the Postgres node.
 
-### Setting up a node
+### Node settings
 
-Each node has various parameters that cou can configure to perform one or more actions. Double-click on the node to open the parameter configuration. 
+In the Editor UI, each node has four operations illustrated with icons that appear on top of the node when you hover on it:
+* **Delete**: Removes the selected node from the workflow
+* **Pause**: Deactive the selected node
+* **Copy**: Duplicated the selected node
+* **Play**: Runs the selected node
+
+![Node settings](./images/Node_settings.gif)
+
+Each node also comes with various app-specific parameters that you can configure to perform one or more actions. Double-click on the node to open the parameter configuration. 
+
+If a node is not correctly configured or is missing some required information, a **warning sign** is displayed on the top right corner of the node. To see what parameters are incorrect, double-click on the node and have a look at fields marked with red and the error message displayed in the respective warning symbol.
+
+![Node error](./images/Node_error.gif)
 
 ## Workflow
 

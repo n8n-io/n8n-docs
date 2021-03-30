@@ -13,29 +13,29 @@ From the Editor UI, you can access all your workflows and credentials, as well a
 ![Editor UI notes](./images/EditorUI_sidebar_notes.png)
 
 ### Workflows
-1. Create a new workflow
-2. Open the list of saved workflows
-3. Save changes to the current workflow
-4. Save the current workflow under a new name
-5. Rename the current workflow
-6. Delete the current workflow
-7. Download the current workflow as a JSON file
-8. Import a workflow from a URL
-9. Import a workflow from a local file
-10. View and change the settings of the current workflow
+1. **New**: Create a new workflow
+2. **Open**: Open the list of saved workflows
+3. **Save**: Save changes to the current workflow
+4. **Save As**: Save the current workflow under a new name
+5. **Rename**: Rename the current workflow
+6. **Delete**: Delete the current workflow
+7. **Download**: Download the current workflow as a JSON file
+8. **Import from URL**: Import a workflow from a URL
+9. **Import from File**: Import a workflow from a local file
+10. **Settings**: View and change the settings of the current workflow
 
 ### Credentials
-1. Create new credentials
-2. Open the list of saved credentials
+1. **New**: Create new credentials
+2. **Open**: Open the list of saved credentials
 
 ### Executions
 Open the workflow executions log.
 
 ### Help
-1. Open the n8n documentation page
-2. Open the n8n community forum
-3. Open the n8n public workflows page
-4. View information about n8n (version, source code, license)
+1. **Documentation**: Open the n8n documentation page
+2. **Forum**: Open the n8n community forum
+3. **Workflows**: Open the n8n public workflows page
+4. **About n8n**: View information about n8n (version, source code, license)
 
 ## Connection
 

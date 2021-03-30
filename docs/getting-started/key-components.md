@@ -1,6 +1,6 @@
 # Key Components
 
-Before you start automating workflows with n8n, it's important to understand some key components and concepts.
+Before you start automating workflows with n8n, it's important to understand its key components.
 
 ## Editor UI
 
@@ -11,6 +11,8 @@ The [Editor UI](../reference/glossary.md#editor-ui) is the web interface used to
 From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
 
 ![Editor UI notes](./images/EditorUI_sidebar_notes.png)
+
+The Editor UI sidebar menu contains the following operations:
 
 ### Workflows
 1. **New**: Create a new workflow
@@ -94,8 +96,8 @@ Trigger nodes can be app or core nodes.
 
 In the Editor UI, each node has four operations illustrated with icons that appear on top of the node when you hover on it:
 * **Delete**: Removes the selected node from the workflow
-* **Pause**: Deactive the selected node
-* **Copy**: Duplicated the selected node
+* **Pause**: Deactives the selected node
+* **Copy**: Duplicates the selected node
 * **Play**: Runs the selected node
 
 ![Node settings](./images/Node_settings.gif)

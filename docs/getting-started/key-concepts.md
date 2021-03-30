@@ -1,4 +1,5 @@
 # Key Concepts
+To get the most out of n8n's functionalities and build powerful workflows, it's important to understand some basic concepts.
 
 ## Expression
 An expression is a string of characters and symbols in a programming language that represents a value depending upon its input.

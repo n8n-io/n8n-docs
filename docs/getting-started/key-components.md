@@ -95,10 +95,10 @@ Trigger nodes can be app or core nodes.
 ### Node settings
 
 In the Editor UI, each node has four operations illustrated with icons that appear on top of the node when you hover on it:
-* **Delete**: Removes the selected node from the workflow
-* **Pause**: Deactives the selected node
-* **Copy**: Duplicates the selected node
-* **Play**: Runs the selected node
+* **Delete**: Remove the selected node from the workflow
+* **Pause**: Deactive the selected node
+* **Copy**: Duplicate the selected node
+* **Play**: Run the selected node
 
 ![Node settings](./images/Node_settings.gif)
 

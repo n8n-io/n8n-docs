@@ -2,11 +2,9 @@
 
 This section contains information about all the trigger nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
-<div v-for="i in items">
-	<a :href="`/nodes/${i.name}`">
-    	<p>{{i.displayName}}</p>
-	</a>
-</div>
+
+<NodeCard items="items" />
+
 
 <script>
 export default {
@@ -24,11 +22,12 @@ export default {
 			body: JSON.stringify({
 				query: `
 					query GetRegularNodes{
-                        nodes(where: {categories:{name_ne: "Core Nodes"}, displayName_contains:"Trigger"}, sort:"displayName"){
-                            name
-                            displayName
-                        }
-}
+						nodes(where: {displayName_contains:"Trigger", categories:{name_ncontains: "Core Nodes"}}, sort:"displayName"){
+							name
+							displayName
+							iconData
+						}
+					}
 				`
 			})
 		})

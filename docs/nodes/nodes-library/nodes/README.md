@@ -2,11 +2,7 @@
 
 This section contains information about all the regular nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
-<div v-for="i in items">
-	<a :href="`/nodes/${i.name}`">
-    	<p>{{i.displayName}}</p>
-	</a>
-</div>
+<NodeCard :items="items" />
 
 <script>
 export default {
@@ -24,10 +20,11 @@ export default {
 			body: JSON.stringify({
 				query: `
 					query GetRegularNodes{
-                        nodes(where: {categories:{name_ne: "Core Nodes"}, displayName_ncontains:"Trigger"}, sort:"displayName"){
-                            name
-                            displayName
-                        }
+						nodes(where: {categories:{name_ncontains: "Core Nodes"}, displayName_ncontains:"Trigger"}, sort:"displayName"){
+							name
+							displayName
+							iconData
+						}
 }
 				`
 			})

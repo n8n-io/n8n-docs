@@ -2,9 +2,9 @@
 
 This section contains information about all the core nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
-<div v-for="i in items">
+<div v-for="i in items" :key="i.name">
 	<a :href="`/nodes/${i.name}`">
-    	<p>{{i.displayName}}</p>
+		<p>{{i.displayName}}</p>
 	</a>
 </div>
 
@@ -27,6 +27,7 @@ export default {
 						nodes(where: {categories:{name: "Core Nodes"}}){
 							displayName
 							name
+							iconData
 						}
 					}
 				`

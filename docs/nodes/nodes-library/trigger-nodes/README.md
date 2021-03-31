@@ -3,8 +3,7 @@
 This section contains information about all the trigger nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
 
-<NodeCard items="items" />
-
+<NodeCard :items="items" />
 
 <script>
 export default {
@@ -21,7 +20,7 @@ export default {
 			},
 			body: JSON.stringify({
 				query: `
-					query GetRegularNodes{
+					query GetTriggerNodes{
 						nodes(where: {displayName_contains:"Trigger", categories:{name_ncontains: "Core Nodes"}}, sort:"displayName"){
 							name
 							displayName

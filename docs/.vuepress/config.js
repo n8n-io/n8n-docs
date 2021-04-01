@@ -207,11 +207,11 @@ module.exports = {
 					path: 'start-workflows-via-cli.md',
 				},
 				{
-					title: '💪 JavaScript Code Snippets',
+					title: '💻 JavaScript Code Snippets',
 					path: 'javascript-code-snippets.md',
 				},
 				{
-					title: '💾 Advanced Settings',
+					title: '💪 Advanced Settings',
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference/advanced-users'),
 				},
@@ -250,11 +250,7 @@ module.exports = {
 					path: 'getting-started/quickstart.md',
 				},
 				{
-					title: '🍄 OLD Key Components',
-					path: 'getting-started/key-components.md',
-				},
-				{
-					title: '🍄 NEW Key Components',
+					title: '🍄 Key Components',
 					sidebarDepth: 2,
 					children: getChildrenFiles('getting-started/key-components'),
 				},
@@ -263,7 +259,7 @@ module.exports = {
 					path: 'getting-started/key-concepts.md',
 				},
 				{
-					title: '💪 Create Your First Workflow',
+					title: '🏅 Create Your First Workflow',
 					path: '/getting-started/create-your-first-workflow/',
 					children: getChildrenFolders('getting-started/create-your-first-workflow'),
 

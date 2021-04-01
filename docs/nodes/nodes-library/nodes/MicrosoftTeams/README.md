@@ -26,6 +26,14 @@ You can find authentication information for this node [here](../../../credential
 - Get all messages
 :::
 
+::: details Task
+- Create a task
+- Delete a task
+- Get a task
+- Get all tasks
+- Update a task
+:::
+
 ## Example Usage
 
 This workflow allows you to create, update and send a message to a channel in Microsoft Teams. You can also find the [workflow](https://n8n.io/workflows/680) on n8n.io. This example usage workflow would use the following nodes.

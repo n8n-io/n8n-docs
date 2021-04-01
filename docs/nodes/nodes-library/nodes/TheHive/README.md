@@ -19,6 +19,8 @@ You can find authentication information for this node [here](../../../credential
 - Execute a responder on a specified alert
 - Get an alert
 - Get all alerts
+- Mark an alert as read
+- Mark an alert as unread
 - Merge an alert into an existing case
 - Promote an alert into a case
 - Update an alert

@@ -5,7 +5,6 @@
 				<div class="thumb" :style="`background-image: url(${i.feature_image})`"></div>
 				<article>
 					<h1>{{i.title}}</h1>
-					<p>{{i.excerpt}}</p>
 					<span>{{i.primary_author.name}}</span>
 				</article>
 			</a>
@@ -61,12 +60,6 @@ export default {
 	font-size: 20px;
 	margin: 0;
 	color: #ff6d5a;
-}
-
-.card p {
-	flex: 1;
-	line-height: 1.4;
-	color:#333
 }
 
 .card span {

@@ -1,6 +1,6 @@
 # Editor UI
 
-The [Editor UI](../reference/glossary.md#editor-ui) is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
+The [Editor UI](../../reference/glossary.md#editor-ui) is the web interface used to create [workflows](./workflow.md). It is accessed through a web browser at a designated website address.
 
 ![Editor](../images/Editor_UI.gif)
 
@@ -11,7 +11,7 @@ From the Editor UI, you can access all your workflows and credentials, as well a
 The Editor UI sidebar menu contains the following operations:
 
 ## Workflows
-This section includes the operations for creating and editing [workflows](#Workflow).
+This section includes the operations for creating and editing workflows.
 1. **New**: Create a new workflow
 2. **Open**: Open the list of saved workflows
 3. **Save**: Save changes to the current workflow
@@ -29,7 +29,7 @@ This section includes the operations for creating credentials. Credentials are p
 2. **Open**: Open the list of saved credentials
 
 ## Executions
-This section includes information about your workflow [executions](../reference/glossary.md#execution), i.e. complete runs of a workflow from the first to the last node.
+This section includes information about your workflow [executions](../../reference/glossary.md#execution), i.e. complete runs of a workflow from the first to the last node.
 
 **Click**: Open the workflow executions log
 

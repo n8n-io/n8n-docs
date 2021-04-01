@@ -1,6 +1,6 @@
 # Workflow
 
-A [workflow](../reference/glossary.md#workflow) is a collection of nodes connected together to automate a process. A workflow can be started manually (with the Start node) or by Trigger nodes. When a workflow is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view all the executions of your workflow in the **Execution log**, which can be helpful for debugging.
+A [workflow](../../reference/glossary.md#workflow) is a collection of nodes connected together to automate a process. A workflow can be started manually (with the Start node) or by Trigger nodes. When a workflow is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view all the executions of your workflow in the **Execution log**, which can be helpful for debugging.
 
 ![Workflow](../images/Execute_workflow.gif)
 
@@ -14,7 +14,7 @@ All the newly created workflows are deactivated by default.
 
 ## Sharing a workflow
 
-Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to [share your workflows](../reference/contributing.md#contribute-a-workflow-🧬) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
+Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to [share your workflows](../../reference/contributing.md#contribute-a-workflow-🧬) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
 
 You can export a workflow as a JSON file in two ways:
 
@@ -46,4 +46,4 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
-You can also use the [Error Trigger node](../nodes/nodes-library/core-nodes/ErrorTrigger), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+You can also use the [Error Trigger node](../../nodes/nodes-library/core-nodes/ErrorTrigger), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.

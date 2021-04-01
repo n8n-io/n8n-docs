@@ -5,6 +5,7 @@ To get the most out of n8n's functionalities and build powerful workflows, it's 
 An expression is a string of characters and symbols in a programming language that represents a value depending upon its input.
 n8n uses [expressions](../nodes/expressions.md) extensively when a [node](#Node) is referring to another node for input.
 
+![Node expression](./images/Node_expression.gif)
 
 ## Item
 Data sent from one node to another is sent as an array of JSON objects. Each element in this collection is called an **Item**. A node performs its action on each item of incoming data.

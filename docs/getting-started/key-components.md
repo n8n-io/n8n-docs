@@ -15,6 +15,7 @@ From the Editor UI, you can access all your workflows and credentials, as well a
 The Editor UI sidebar menu contains the following operations:
 
 ### Workflows
+This section includes the operations for creating and editing [workflows](#Workflow).
 1. **New**: Create a new workflow
 2. **Open**: Open the list of saved workflows
 3. **Save**: Save changes to the current workflow
@@ -27,13 +28,17 @@ The Editor UI sidebar menu contains the following operations:
 10. **Settings**: View and change the settings of the current workflow
 
 ### Credentials
+This section includes the operations for creating credentials. Credentials are private pieces of information issued by apps/services (represented as n8n nodes) to authenticate you as a user and allow you to connect and share information between the app/service and the n8n node.
 1. **New**: Create new credentials
 2. **Open**: Open the list of saved credentials
 
 ### Executions
-Open the workflow executions log.
+This section includes information about your workflow [executions](../reference/glossary.md#execution), i.e. complete runs of a workflow from the first to the last node.
+
+**Click**: Open the workflow executions log
 
 ### Help
+This section includes resources around n8n product and community. 
 1. **Documentation**: Open the n8n documentation page
 2. **Forum**: Open the n8n community forum
 3. **Workflows**: Open the n8n public workflows page
@@ -94,7 +99,10 @@ Trigger nodes can be app or core nodes.
 
 ### Node settings
 
-In the Editor UI, each node has four operations illustrated with icons that appear on top of the node when you hover on it:
+Nodes come with global **operations** and **settings**, as well as app-specific **parameters** that can be configured.
+
+#### Operations
+The node operations are illustrated with icons that appear on top of the node when you hover on it:
 * **Delete**: Remove the selected node from the workflow
 * **Pause**: Deactive the selected node
 * **Copy**: Duplicate the selected node
@@ -102,7 +110,22 @@ In the Editor UI, each node has four operations illustrated with icons that appe
 
 ![Node settings](./images/Node_settings.gif)
 
-Each node also comes with various app-specific parameters that you can configure to perform one or more actions. Double-click on the node to open the parameter configuration. 
+To access the node parameters and settings, double-click on the node.
+
+#### Parameters
+The node parameters allow you to define the operations the node should perform. Find the available parameters of each node in the [node reference](../nodes/nodes-library/nodes/).
+
+#### Settings
+The node settings allow you to configure the look and execution of the node.
+* **Notes**: Optional note to save with the node
+* **Display note in flow**: If active, the note above will be displayed in the workflow as a subtitle
+* **Node Color**: The color of the node in the workflow
+* **Always Output Data**: If active, the node will return an empty item even if the node returns no data during an initial execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
+* **Execute Once**: If active, the node executes only once, with data from the first item it receives.
+* **Retry On Fail**: If active, the node tries to execute a failed attempt multiple times until it succeeds
+* **Continue On Fail**: If active, the workflow continues even if the execution of the node fails. When this happens, the node passes along input data from previous nodes, so the workflow should account for unexpected output data.
+
+![Node parameters](./images/Node_parameters.gif)
 
 If a node is not correctly configured or is missing some required information, a **warning sign** is displayed on the top right corner of the node. To see what parameters are incorrect, double-click on the node and have a look at fields marked with red and the error message displayed in the respective warning symbol.
 
@@ -124,7 +147,7 @@ All the newly created workflows are deactivated by default.
 
 ### Sharing a workflow
 
-Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to share your  workflows on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
+Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to [share your workflows](../reference/contributing.md#contribute-a-workflow-🧬) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
 
 You can export a workflow as a JSON file in two ways:
 
@@ -155,3 +178,5 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 3. Select either of the following options to retry the execution:
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
+
+You can also use the [Error Trigger node](../nodes/nodes-library/core-nodes/ErrorTrigger), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.

@@ -250,8 +250,13 @@ module.exports = {
 					path: 'getting-started/quickstart.md',
 				},
 				{
-					title: '🍄 Key Components',
+					title: '🍄 OLD Key Components',
 					path: 'getting-started/key-components.md',
+				},
+				{
+					title: '🍄 NEW Key Components',
+					sidebarDepth: 2,
+					children: getChildrenFiles('getting-started/key-components'),
 				},
 				{
 					title: '💡 Key Concepts',

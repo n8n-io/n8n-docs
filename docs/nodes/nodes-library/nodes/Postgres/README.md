@@ -65,4 +65,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Database Monitoring and Alerting with n8n 📡](https://medium.com/n8n-io/database-monitoring-and-alerting-with-n8n-f5082df7bdb2)
+<FurtherReadingBlog node="Postgres" />

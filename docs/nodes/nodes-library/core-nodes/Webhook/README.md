@@ -221,8 +221,4 @@ When the Webhook gets called, it will send the string response that was set in t
 
 ## Further Reading
 
-- [Webhook Node — The Versatile Toolbox 🧰](https://medium.com/n8n-io/webhook-node-the-versatile-toolbox-21cb17cee862)
-- [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
-- [Cross-posting content automatically with n8n ✍️](https://medium.com/n8n-io/automating-cross-posting-blog-posts-using-n8n-%EF%B8%8F-af2a89601810)
-- [Effortless video collaboration with Whereby, Mattermost, and n8n 📹](https://medium.com/n8n-io/effortless-video-collaboration-with-whereby-mattermost-and-n8n-8fc397feb9cb)
-- [Webhooks Fun with n8n and Mattermost 🍸](https://medium.com/n8n-io/webhooks-fun-with-n8n-and-mattermost-4ebf7e2b4d2a)
+<FurtherReadingBlog node="Webhook" />

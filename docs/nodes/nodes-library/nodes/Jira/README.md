@@ -64,4 +64,4 @@ You can refer to the [official documentation](https://www.atlassian.com/software
 
 ## Further Reading
 
-- [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
+<FurtherReadingBlog node="Jira Software" />

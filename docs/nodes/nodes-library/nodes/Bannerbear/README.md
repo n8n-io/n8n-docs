@@ -46,8 +46,6 @@ The start node exists by default when you create a new workflow.
 5. Enter the text in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
 
-
 ## Further Reading
 
-- [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
-- [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)
+<FurtherReadingBlog node="Bannerbear" />

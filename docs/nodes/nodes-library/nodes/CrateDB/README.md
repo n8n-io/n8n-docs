@@ -9,7 +9,7 @@ description: Learn how to use the CrateDB node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/CrateDB/README.md).
-:::	
+:::
 
 ## Basic Operations
 
@@ -65,4 +65,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)
+<FurtherReadingBlog node="CrateDB" />

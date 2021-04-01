@@ -113,11 +113,4 @@ To find the Channel ID in Mattermost, follow the steps mentioned below.
 
 ## Further Reading
 
-- [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
-- [Creating Error Workflows in n8n 🌪](https://medium.com/n8n-io/creating-error-workflows-in-n8n-6e03c9ecbc0f)
-- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)
-- [Effortless video collaboration with Whereby, Mattermost, and n8n 📹](https://medium.com/n8n-io/effortless-video-collaboration-with-whereby-mattermost-and-n8n-8fc397feb9cb)
-- [Giving kudos to contributors with GitHub, Slack, and n8n 👏](https://medium.com/n8n-io/giving-kudos-to-contributors-with-github-slack-and-n8n-b3f5f4a653a6)
-- [How to host virtual coffee breaks with n8n ☕️](https://n8n.io/blog/how-to-host-virtual-coffee-breaks-with-n8n/)
-- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
-- [Webhooks Fun with n8n and Mattermost 🍸](https://medium.com/n8n-io/webhooks-fun-with-n8n-and-mattermost-4ebf7e2b4d2a)
+<FurtherReadingBlog node="Mattermost" />

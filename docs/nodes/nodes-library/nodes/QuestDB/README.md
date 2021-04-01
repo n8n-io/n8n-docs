@@ -64,3 +64,7 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the QuestDB node to insert data into a table](./QuestDB1_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="QuestDB" />

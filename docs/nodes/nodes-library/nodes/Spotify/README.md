@@ -15,6 +15,7 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Album
 - Get an album by URI or ID
+- Get a list of new album releases
 - Get an album's tracks by URI or ID
 :::
 
@@ -23,6 +24,10 @@ You can find authentication information for this node [here](../../../credential
 - Get an artist's albums by URI or ID
 - Get an artist's related artists by URI or ID
 - Get an artist's top tracks by URI or ID
+:::
+
+::: details Library
+- Get the user's liked tracks
 :::
 
 ::: details Player
@@ -37,6 +42,7 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Playlist
 - Add tracks from a playlist by track and playlist URI or ID
+- Create a new playlist
 - Get a playlist by URI or ID
 - Get a playlist's tracks by URI or ID
 - Get a user's playlists
@@ -69,4 +75,3 @@ The start node exists by default when you create a new workflow.
 3. Click on *Execute Node* to run the workflow.
 
 ![Spotify URI](./spotifyURI.gif)
-

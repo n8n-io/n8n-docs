@@ -12,19 +12,21 @@ The Move Binary Data node is useful to move data between binary and JSON propert
 - ***Mode:*** This field specifies from where and to the data should be moved.
     - Binary to JSON
     - JSON to Binary
-- ***Set all Data:*** If set to active, all JSON data is replaced with the data retrieved from binary key. If it is not set to active, the data will be written to a single key. This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list. 
+- ***Set all Data:*** If set to active, all JSON data is replaced with the data retrieved from binary key. If it is not set to active, the data will be written to a single key. This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
 - ***Source Key:*** The name of the binary key to get data from. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.currentKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
 - ***Destination Key:*** The name the JSON key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-- ***Convert all Data:*** If set to active all JSON data will be converted to binary. If it is not set to active only the data with one key will be converted. This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list. 
+- ***Convert all Data:*** If set to active all JSON data will be converted to binary. If it is not set to active only the data with one key will be converted. This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
 - ***Destination Key:*** The name of the binary key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
 
 - ***Options***
     - ***Keep Source:*** Keep the source key. By default it gets deleted.
+    - ***Encoding:*** Set the encoding of the data stream.
     - The following are the options when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-        - ***Encoding:*** Set the encoding of the datastream.
         - ***JSON Parse:*** Run JSON parse on the data to get proper object data. This field is displayed when ***Set all Data*** is set to 'false'.
         - ***Keep As Base64:*** Keeps the binary data as base64 string. This field is displayed when ***Set all Data*** is set to 'false'.
+        - ***Strip BOM:*** Strip the byte order mark (BOM) from the string. This field is displayed when ***Encoding*** is selected.
     - The following are the options when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
+        - ***Add BOM:*** Add the byte order mark (BOM) to the string. This field is displayed when ***Encoding*** is selected.
         - ***File Name:*** The file name to set.
         - ***Mime Type:*** The mime-type to set. By default the JSON mime-type will be set.
         - ***Use Raw Data:*** Use data as is and do not stringify it.

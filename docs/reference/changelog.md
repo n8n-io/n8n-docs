@@ -2,6 +2,51 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.114.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.113.0...n8n@0.114.0) for this version.<br />
+**Release date:** 2021-04-03
+
+- New nodes
+	- AWS SQS
+	- Copper
+	- ERPNext
+	- Oura
+- Enhanced node
+	- Google Drive: Added support for creating folders for shared drives
+	- Google Sheets: Added Create and Remove operation to the Sheet resource
+	- Harvest: Added Update operation to the Task resource
+	- Jira: Added Reporter field to the Issue resource
+	- Postgres: Added support for type casting
+- Bug fixes
+	- Bitwarden: Fixed an issue with the Update operation of the Group resource
+	- Cortex: Fixed an issue where only the last item got returned
+	- Invoice Ninja: Fixed an issue with the Project parameter
+	- Salesforce: Fixed an issue with the Get All operation of the Custom Object resource
+- Fixed an issue with the Redis connection to prevent memory leaks
+
+## n8n@0.113.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />
+**Release date:** 2021-03-26
+
+- New nodes
+    - Activation Trigger
+    - Plivo
+- Enhanced nodes
+    - ClickUp: Added Space Tag, Task List, and Task Tag resource
+    - GitHub: Added pagination to Get Issues and Get Repositories operations
+    - Mattermost: Added Reaction resource and Post Ephemeral operation
+    - Move Binary Data: Added Encoding and Add BOM option to JSON to Binary mode and Strip BOM to Binary to JSON mode
+    - SendGrid: Added Mail resource
+    - Spotify: Added Library resource
+    - Telegram: Added Answer Inline Query operation to the Callback resource
+    - uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Fullname and Company's domain, and Get Email by Fullname and Company's name operations
+- Bug fixes
+    - Clearbit: Fixed an issue with the autocomplete URI
+    - Dropbox: Fixed an issue with the Dropbox credentials by adding the APP Access Type parameter in the credentials. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01130) page
+    - Spotify: Fixed an issue with the Delete operation of the Playlist resource
+- The variable selector now displays empty arrays
+- Fixed a permission issue with the Raspberry Pi Docker image
+
 ## n8n@0.112.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.111.0...n8n@0.112.0) for this version.<br />
 **Release date:** 2021-03-19

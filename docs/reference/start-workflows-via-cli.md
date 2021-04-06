@@ -134,6 +134,15 @@ There are a couple of flags available for this.
 | --input | Input file name or directory if --separate is used. |
 | --separate | Imports *.json files from directory provided by --input. |
 
+::: warning 💡 Migrating to different database systems
+Workflow and credential names are limited to 128 characters, but SQLite does not enforce size limits correctly.
+
+This might result in errors like `Data too long for column name` during the import process.
+
+In this case, you can edit the names from the n8n interface and export again or edit the JSON file directly before importing.
+:::
+
+
 ### Workflows
 
 Import workflows from a specific file:

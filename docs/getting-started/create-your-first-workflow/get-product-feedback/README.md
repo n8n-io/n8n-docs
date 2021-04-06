@@ -11,7 +11,7 @@ Here's a video that will take you through the process of creating this workflow.
 You’ll need the following tools and resources to complete the tutorial:
 
 - **n8n** — You can find details on how to install n8n on the [Quickstart](../../quickstart.md) page. Make sure that you start [n8n with tunnel](../../quickstart.md#starting-n8n-with-tunnel).
-- **Typeform account** - You'll need to obtain the credentials for the Typeform Trigger node. You can find instructions on how to obtain them [here](../../../nodes/credentials/typeform/README.md). You will also need to create a form to collect feedback with the following questions:
+- **Typeform account** - You'll need to obtain the credentials for the Typeform Trigger node. You can find instructions on how to obtain them [here](../../../nodes/credentials/Typeform/README.md). You will also need to create a form to collect feedback with the following questions:
 	- What is your name? *(Short Text)*
 	- What is your email address? *(Email)*
 	- Anything else you want to share? *(Long Text)*

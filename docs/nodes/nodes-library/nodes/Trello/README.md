@@ -35,6 +35,7 @@ You can find authentication information for this node [here](../../../credential
 :::
 
 ::: details Checklist
+- Create a checklist item
 - Create a new checklist
 - Delete a checklist
 - Delete a checklist item

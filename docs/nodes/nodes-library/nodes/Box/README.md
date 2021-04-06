@@ -24,6 +24,7 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Folder
 - Create a folder
+- Get a folder
 - Delete a folder
 - Search files
 :::

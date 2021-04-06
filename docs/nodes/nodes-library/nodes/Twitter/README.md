@@ -19,6 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Tweet
 - Create or reply to a tweet
+- Delete a tweet
 - Search tweets
 - Like a tweet
 - Retweet a tweet

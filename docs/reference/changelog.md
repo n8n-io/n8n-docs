@@ -22,7 +22,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Cortex: Fixed an issue where only the last item got returned
 	- Invoice Ninja: Fixed an issue with the Project parameter
 	- Salesforce: Fixed an issue with the Get All operation of the Custom Object resource
-- Fixed an issue with the Redis connection to prevent memory leak
+- Fixed an issue with the Redis connection to prevent memory leaks
 
 ## n8n@0.113.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />

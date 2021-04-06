@@ -14,15 +14,15 @@ Make sure you tick the boxes below before submitting a node for review, as this 
 ## Development
 
 - [ ] Ensure complementary operations to each resource (e.g., create, delete) have been added.
-- [ ] Ensure the node works with multiple inputs.
+- [ ] Ensure the node works with multiple items via one input.
 - [ ] Ensure the parameters have the correct type.
 - [ ] Mind the defaults: if the service has a default as true, keep it as true. Changing default values can break the existing workflows of the users.
 - [ ] Check if the node disposes of everything properly, in particular, if connections were properly closed.
 
 ## Testing
 
-- [ ] Test create and update operations with all fields/options.
-- [ ] Test `continueOnFail` with a Function node.
+- [ ] Test "create" and "update" operations with all fields/operations.
+- [ ] Test the `continueOnFail` option with a Function node. (For example, a Widget node has a GET operation that takes a widgetId and returns information on the widget. To test that the workflow continues on fail, set the Widget node to continue on fail, create a Function node, return a valid and an invalid widgetId, connect the Function node to Widget node, and run the workflow. The Widget node should show two items: one with information on the widget and another one with the error from having passed an invalid id.)
 
 ## Code formatting
 

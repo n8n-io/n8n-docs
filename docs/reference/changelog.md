@@ -16,6 +16,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Google Sheets: Added Create and Remove operation to the Sheet resource
 	- Harvest: Added Update operation to the Task resource
 	- Jira: Added Reporter field to the Issue resource
+	- Postgres: Added support for type casting
 - Bug fixes
 	- Bitwarden: Fixed an issue with the Update operation of the Group resource
 	- Cortex: Fixed an issue where only the last item got returned

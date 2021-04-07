@@ -65,8 +65,8 @@ The start node exists by default when you create a new workflow.
 
 ## FAQs
 
-### How to specify the data type of a field?
-To specify the data type of a field, append the field name with `:type`, where `type` is the data type of that field. For example, if you want to specify the type `int` for the field `id` and type `text` for the field `name`, you can use the following snippet `id:init,name:text`.
+### How to specify the data type of a column?
+To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
 
 ## Further Reading
 

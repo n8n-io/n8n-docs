@@ -16,7 +16,7 @@ Create a [Copper](https://www.copper.com/) account.
 ## Using Access Token
 
 1. Open your Copper dashboard.
-2. Click on the ***Settings*** tab on the lef-sidebar.
+2. Click on the ***Settings*** tab on the left-sidebar.
 3. Click on ***Integrations*** and select ***API Keys***.
 4. Click on the ***GENERATE API KEY*** button.
 5. Copy the displayed API key.

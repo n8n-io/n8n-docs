@@ -87,7 +87,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new person in Copper.
 
-1. First of all, you'll have to enter credentials for the Copper node. You can find out how to do that [here](../../../credentials/CustomerIo/README.md).
+1. First of all, you'll have to enter credentials for the Copper node. You can find out how to do that [here](../../../credentials/Copper/README.md).
 2. Select 'Person' from the ***Resource*** dropdown list.
 3. Enter the name of the lead in the ***Name*** field.
 4. Click on the ***Add Field*** button and select 'Emails' from the dropdown list.

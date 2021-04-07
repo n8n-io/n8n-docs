@@ -108,7 +108,7 @@ This node will return the entries from the Google Sheets that have `Berlin` as t
 9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option.
 10. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted. This output is passed on to the next nodes in the workflow.
+In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted and is passed on to the next nodes in the workflow.
 
 ![Using the Google Sheets node to lookup for data in the Google Sheets spreadsheet](./GoogleSheets1_node.png)
 

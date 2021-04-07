@@ -13,6 +13,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+<Resource node="Airtable" />
+
 - Append the data to a table
 - Delete data from a table
 - List data from a table

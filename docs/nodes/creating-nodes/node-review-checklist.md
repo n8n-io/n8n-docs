@@ -12,6 +12,8 @@ Make sure you tick the boxes below before submitting a node for review, as this 
 
 ## Development
 
+<input type="checkbox">Ensure to open a pull request as early as possible with `WIP` in the pull request title.</input><br>
+<input type="checkbox">If you're creating a node asked by a community member, ensure to comment on the feature request on the [community forum](https://community.n8n.io/c/feature-requests/5)</input><br>
 <input type="checkbox"> Ensure complementary operations to each resource (e.g., create, delete) have been added.</input><br>
 <input type="checkbox"> Ensure the node works with multiple items via one input.</input><br>
 <input type="checkbox"> Ensure the parameters have the correct type.</input><br>

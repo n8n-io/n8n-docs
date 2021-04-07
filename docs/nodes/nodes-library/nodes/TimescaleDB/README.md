@@ -98,3 +98,8 @@ In the screenshot below, you will notice that the node inserts the data from the
 ::: tip 💡 Activate workflow for production
 This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 :::
+
+## FAQs
+
+### How to specify the data type of a field?
+To specify the data type of a field, append the field name with `:type`, where `type` is the data type of that field. For example, if you want to specify the type `int` for the field `id` and type `text` for the field `name`, you can use the following snippet `id:init,name:text`.

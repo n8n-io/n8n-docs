@@ -60,7 +60,15 @@ You can find authentication information for this node [here](../../../credential
 - Delete a list
 - Get a list
 - Get all lists
+- Get list members
 - Update a list
+:::
+
+::: details Space Tag
+- Create a space tag
+- Delete a space tag
+- Get all space tags
+- Update a space tag
 :::
 
 ::: details Task
@@ -68,8 +76,19 @@ You can find authentication information for this node [here](../../../credential
 - Delete a task
 - Get a task
 - Get all tasks
+- Get task members
 - Set a custom field
 - Update a task
+:::
+
+::: details Task List
+- Add a task to a list
+- Remove a task from a list
+:::
+
+::: details Task Tag
+- Add a tag to a task
+- Remove a tag from a task
 :::
 
 ::: details Task Dependency
@@ -77,11 +96,19 @@ You can find authentication information for this node [here](../../../credential
 - Delete a task dependency
 :::
 
-::: details Time Tracking
-- Log time on task
-- Delete a logged time
-- Get all logging times on task
-- Update a logged time
+::: details Time Entry
+- Create a time entry
+- Delete a time entry
+- Get a time entry
+- Start a time entry
+- Stop the current running timer
+- Update a time entry
+:::
+
+::: details Time Entry Tag
+- Add a tag to a time entry
+- Get all time entry tags
+- Remove a tag from time entry
 :::
 
 ## Example Usage

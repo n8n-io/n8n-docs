@@ -11,7 +11,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Copper
 	- ERPNext
 	- Oura
-- Enhanced node
+- Enhanced nodes
 	- Google Drive: Added support for creating folders for shared drives
 	- Google Sheets: Added Create and Remove operation to the Sheet resource
 	- Harvest: Added Update operation to the Task resource

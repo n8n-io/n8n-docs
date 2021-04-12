@@ -27,6 +27,7 @@ You can find authentication information for this node [here](../../../credential
 - Download a file
 - List files and folders
 - Share a file
+- Update a file
 - Upload a file
 :::
 

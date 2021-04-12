@@ -63,6 +63,11 @@ The start node exists by default when you create a new workflow.
 
 ![Using the Postgres node to insert data into a table](./Postgres1_node.png)
 
+## FAQs
+
+### How to specify the data type of a column?
+To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
+
 ## Further Reading
 
 <FurtherReadingBlog node="Postgres" />

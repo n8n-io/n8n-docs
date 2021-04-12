@@ -2,6 +2,47 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.115.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.114.0...n8n@0.115.0) for this version.<br />
+**Release date:** 2021-04-10
+
+- New nodes
+	- Google Slides
+- Enhanced nodes
+	- GitHub: Added Release resource
+	- TheHive: Added support to fetch observable data types
+	- RabbitMQ: Added header parameters
+- Bug fixes
+	- Jira: Fixed an issue with loading issue types with classic project type
+	- RabbitMQ Trigger: Fixed an issue with the node reusing the same item
+	- SendGrid: Fixed an issue with the dynamic field generation
+- Fixed an issue with expressions not being displayed in read-only mode
+- Fixed an issue that didn't allow editing JavaScript code in read-only mode
+- Added support for configuring the maximum payload size
+- Added support to dynamically add menu items
+
+## n8n@0.114.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.113.0...n8n@0.114.0) for this version.<br />
+**Release date:** 2021-04-03
+
+- New nodes
+	- AWS SQS
+	- Copper
+	- ERPNext
+	- Oura
+- Enhanced nodes
+	- Google Drive: Added support for creating folders for shared drives
+	- Google Sheets: Added Create and Remove operation to the Sheet resource
+	- Harvest: Added Update operation to the Task resource
+	- Jira: Added Reporter field to the Issue resource
+	- Postgres: Added support for type casting
+- Bug fixes
+	- Bitwarden: Fixed an issue with the Update operation of the Group resource
+	- Cortex: Fixed an issue where only the last item got returned
+	- Invoice Ninja: Fixed an issue with the Project parameter
+	- Salesforce: Fixed an issue with the Get All operation of the Custom Object resource
+- Fixed an issue with the Redis connection to prevent memory leaks
+
 ## n8n@0.113.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />
 **Release date:** 2021-03-26

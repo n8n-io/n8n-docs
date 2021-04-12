@@ -87,6 +87,9 @@ You can find authentication information for this node [here](../../../credential
 - Send a custom invitation message if a profile is connected or a custom message otherwise
 - Visits a profile to show interest and get profile views in return from contact, increasing your LinkedIn network
 - Send a custom private message to a connected LinkedIn profile
+- Get an email by contact's LinkedIn profile URI
+- Discover an email by company's name and prospect's full name
+- Discover an email by company's website or domain and prospect's full name
 :::
 
 ::: details Company
@@ -359,6 +362,7 @@ You can find authentication information for this node [here](../../../credential
 - Allows checking if an ISBN13 code has a valid format
 - Check if a UPC exists
 - Check if a UPC has a valid format
+- Get ASIN by EAN
 - Get a book by author's surname
 - Get all publications by category
 - Get book data by an editor's name
@@ -368,6 +372,7 @@ You can find authentication information for this node [here](../../../credential
 - Get all books by category
 - Get all books by editor
 - Get all books by title
+- Get EAN code by ASIN code
 - Get product data on a UPC on Amazon Marketplace
 :::
 

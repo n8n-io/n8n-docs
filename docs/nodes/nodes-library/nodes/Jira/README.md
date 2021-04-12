@@ -24,6 +24,27 @@ You can find authentication information for this node [here](../../../credential
 - Delete an issue
 :::
 
+::: details Issue Attachment
+- Add attachment to an issue
+- Get an attachment
+- Get all attachments
+- Remove an attachment
+:::
+
+::: details Issue Comment
+- Add comment to issue
+- Get a comment
+- Get all comments
+- Remove a comment
+- Update a comment
+:::
+
+::: details User
+- Create a new user
+- Delete a user
+- Retrieve a user
+:::
+
 ## Example Usage
 
 This workflow allows you to create a new issue in Jira. You can also find the [workflow](https://n8n.io/workflows/459) on the website. This example usage workflow would use the following two nodes.

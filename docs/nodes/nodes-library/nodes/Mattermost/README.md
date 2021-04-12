@@ -25,6 +25,13 @@ You can find authentication information for this node [here](../../../credential
 ::: details Message
 - Soft delete a post, by marking the post as deleted in the database
 - Post a message into a channel
+- Post an ephemeral message into a channel
+:::
+
+::: details Reaction
+- Add a reaction to a post
+- Remove a reaction from a post
+- Get all the reactions to one or more posts
 :::
 
 ::: details User

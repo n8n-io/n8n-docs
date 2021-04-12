@@ -34,4 +34,4 @@ You'll need to save the workflow and then click on the Activate toggle on the to
 
 ## Further Reading
 
-- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)
+<FurtherReadingBlog node="AMQP Trigger" />

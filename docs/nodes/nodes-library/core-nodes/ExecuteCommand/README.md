@@ -121,7 +121,7 @@ ls
 
 You can also use the [HTTP Request](../../core-nodes/HTTPRequest/README.md) node to make a cURL request.
 
-If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package. 
+If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
 1. Create a file named Dockerfile.
 2. Add the below code snippet to the Dockerfile.
 ```
@@ -134,3 +134,7 @@ docker build -t n8n-curl
 ```
 4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-curl`.
 5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
+
+## Further Reading
+
+<FurtherReadingBlog node="Execute Command" />

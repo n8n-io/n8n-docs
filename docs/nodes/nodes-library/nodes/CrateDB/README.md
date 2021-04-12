@@ -70,4 +70,4 @@ To specify the data type of a column, append the column name with `:type`, where
 
 ## Further Reading
 
-- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)
+<FurtherReadingBlog node="CrateDB" />

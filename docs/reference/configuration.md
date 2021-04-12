@@ -281,13 +281,13 @@ export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 
 ## Maximum payload limit
 
-The default maximum incoming payload limit is **16MB**. To increase the maximum payload limit use, the following format.
+The default maximum incoming payload limit is **16MB**. To increase the maximum payload limit, the following format.
 
 ```bash
 export N8N_PAYLOAD_SIZE_MAX=VALUE
 ```
 
-The value is in MB. For example, if you want to set the limit to 32MB, use `N8N_PAYLOAD_SIZE_MAX=32`.
+The value should be in megabytes. For example, if you want to set the limit to 32MB, use `N8N_PAYLOAD_SIZE_MAX=32`.
 
 ## Configuration via file
 

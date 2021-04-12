@@ -13,12 +13,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- TheHive: Added support to fetch observable data types
 	- RabbitMQ: Added header parameters
 - Bug fixes
-	- Jira: Fixed an issue with loading issue types with classic project types
+	- Jira: Fixed an issue with loading issue types with classic project type
 	- RabbitMQ Trigger: Fixed an issue with the node reusing the same item
 	- SendGrid: Fixed an issue with the dynamic field generation
-- Fixed an issue with the expression not being displayed in read-only mode
-- Fixed an issue that doesn't allow to edit JavaScript code in read-only mode
-- Added support for configuring the max payload size
+- Fixed an issue with expressions not being displayed in read-only mode
+- Fixed an issue that didn't allow editing JavaScript code in read-only mode
+- Added support for configuring the maximum payload size
 - Added support to dynamically add menu items
 
 ## n8n@0.114.0

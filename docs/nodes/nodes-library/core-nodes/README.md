@@ -2,6 +2,7 @@
 
 This section contains information about all the core nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
+<!-- <NodeCard :items="items" /> -->
 <div v-for="i in items" :key="i.name">
 	<a :href="`/nodes/${i.name}`">
 		<p>{{i.displayName}}</p>
@@ -9,35 +10,12 @@ This section contains information about all the core nodes in n8n. Each node doc
 </div>
 
 <script>
+import data from './core-nodes.json'
 export default {
 	data () {
 		return {
-			items: []
+			items: data
 		}
-	},
-	beforeMount() {
-		fetch('https://api-staging.n8n.io/graphql', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				query: `
-					query GetCoreNodes{
-						nodes(where: {categories:{name: "Core Nodes"}}){
-							displayName
-							name
-							iconData
-						}
-					}
-				`
-			})
-		})
-		.then(response => response.json())
-		.then(res => {
-			this.$data.items = res.data.nodes
-		})
-		.catch(error => console.log(error))
 	}
 }
 </script>

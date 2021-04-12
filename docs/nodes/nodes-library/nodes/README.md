@@ -12,7 +12,7 @@ export default {
 		}
 	},
 	beforeMount() {
-		fetch('https://api-staging.n8n.io/graphql', {
+		fetch('https://api.n8n.io/graphql', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

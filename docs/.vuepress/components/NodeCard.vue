@@ -1,17 +1,17 @@
 <template>
 <div  class="container">
 	<div v-for="i in items" :key="i.name">
-	<a :href="`/nodes/${i.name}`" class="card-wrapper">
-		<div class="card" v-if="i.iconData.fileBuffer">
-			<div class="image-container">
-				<div style="width: 100%; height: 100%;">
-					<img :src="i.iconData.fileBuffer" style="width: 100%; height: 100%;">
+		<a :href="`/nodes/${i.name}`" class="card-wrapper">
+			<div class="card" v-if="i.iconData.fileBuffer">
+				<div class="image-container">
+					<div style="width: 100%; height: 100%;">
+						<img :src="i.iconData.fileBuffer" style="width: 100%; height: 100%;">
+					</div>
 				</div>
+				<p>{{i.displayName}}</p>
 			</div>
-			<p>{{i.displayName}}</p>
-		</div>
-	</a>
-		</div>
+		</a>
+	</div>
 </div>
 </template>
 

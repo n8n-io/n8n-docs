@@ -76,3 +76,7 @@ The start node exists by default when you create a new workflow.
 3. Select the 'Get' option under the *Operation* field.
 4. Enter the contact ID under the *Contact ID* field.
 3. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="HubSpot" />

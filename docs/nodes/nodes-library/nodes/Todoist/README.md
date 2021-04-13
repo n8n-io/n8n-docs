@@ -38,3 +38,7 @@ The start node exists by default when you create a new workflow.
 2. Select your project from the *Project* dropdown list.
 3. Enter the content for the task in the *Content* field.
 4. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Todoist" />

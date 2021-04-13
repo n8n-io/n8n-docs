@@ -85,3 +85,7 @@ Refer to this [workflow](https://n8n.io/workflows/995) to try it out.
 To get the current running index of the node, use the following expression: `{{$node["SplitInBatches"].context["currentRunIndex"];}}`.
 :::
 Refer to this [workflow](https://n8n.io/workflows/996) to try it out.
+
+## Further Reading
+
+<FurtherReadingBlog node="Split In Batches" />

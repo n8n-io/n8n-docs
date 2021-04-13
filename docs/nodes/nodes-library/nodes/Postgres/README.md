@@ -70,4 +70,4 @@ To specify the data type of a column, append the column name with `:type`, where
 
 ## Further Reading
 
-- [Database Monitoring and Alerting with n8n 📡](https://medium.com/n8n-io/database-monitoring-and-alerting-with-n8n-f5082df7bdb2)
+<FurtherReadingBlog node="Postgres" />

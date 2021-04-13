@@ -53,3 +53,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Bucket' from the *Resource* dropdown list.
 3. Enter a name for your bucket in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="AWS S3" />

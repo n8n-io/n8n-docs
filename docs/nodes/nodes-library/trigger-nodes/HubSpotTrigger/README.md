@@ -31,3 +31,7 @@ The final workflow should look like the following image.
 ::: tip 💡 Activate workflow for production
 You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the HubSpot Trigger node.
 :::
+
+## Further Reading
+
+<FurtherReadingBlog node="HubSpot Trigger" />

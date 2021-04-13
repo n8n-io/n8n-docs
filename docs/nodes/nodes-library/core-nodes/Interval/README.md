@@ -22,4 +22,4 @@ The Interval node has two fields:
 
 ## Further Reading
 
-- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)
+<FurtherReadingBlog node="Interval" />

@@ -55,3 +55,7 @@ This node will translate the cocktail instructions that we got from the previous
 In the screenshot below, you will notice that the node translates the instructions of the cocktail to Italian.
 
 ![Using the LingvaNex node to translate the instructions to Italian](./LingvaNex_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="LingvaNex" />

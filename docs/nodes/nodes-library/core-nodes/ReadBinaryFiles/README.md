@@ -38,3 +38,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the type of files you want to read in the *File Selector* field.
 2. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Read Binary File" />

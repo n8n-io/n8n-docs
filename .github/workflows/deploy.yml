@@ -1,21 +1,37 @@
-name: Deploy
+name: Deploy Docs
 
 on:
-  push:
-    branches:
-      - masterDEACTIVATED
+  workflow_dispatch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: npm install, build, and test
-      run: |
-        ./deploy.sh
+      - uses: actions/checkout@v2
+      - name: Build and deploy
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: build
+        run: |
+          npm install
+          npm run build
+          cd docs/.vuepress/dist
+          echo 'docs.n8n.io' > CNAME
+      - name: commit
+        run: |
+          cd docs/.vuepress/dist
+          git init
+          git config --local user.email "github-actions@users.noreply.github.com"
+          git config --local user.name "github-actions"
+          git add -A
+          git commit -m "Deploy" -a
+      - name: push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: 'docs/.vuepress/dist'

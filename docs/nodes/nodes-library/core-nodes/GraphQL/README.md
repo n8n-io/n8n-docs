@@ -76,4 +76,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Giving kudos to contributors with GitHub, Slack, and n8n 👏](https://medium.com/n8n-io/giving-kudos-to-contributors-with-github-slack-and-n8n-b3f5f4a653a6)
+<FurtherReadingBlog node="GraphQL" />

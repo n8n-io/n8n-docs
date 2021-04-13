@@ -91,3 +91,7 @@ This node returns the information of the activity that we created using the Stra
 In the screenshot below, you will notice that the node returns the information of the activity that we specified in this node.
 
 ![Using the Strava node to get an issue](./Strava2_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="Strava" />

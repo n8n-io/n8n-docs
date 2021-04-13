@@ -53,3 +53,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Mautic node. You can find out how to do that [here](../../../credentials/Mautic/README.md).
 2. Select 'Get All' from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Mautic" />

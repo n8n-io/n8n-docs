@@ -57,7 +57,6 @@ The Error Trigger node sends the actual error message thrown by the workflow. Yo
 
 There is currently no functionality to call an Error Workflow manually.
 
-
 ## Further Reading
 
-- [Creating Error Workflows in n8n 🌪](https://medium.com/n8n-io/creating-error-workflows-in-n8n-6e03c9ecbc0f)
+<FurtherReadingBlog node="Error Trigger" />

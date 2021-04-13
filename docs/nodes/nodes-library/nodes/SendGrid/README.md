@@ -28,6 +28,10 @@ You can find authentication information for this node [here](../../../credential
 - Update a list
 :::
 
+::: detials Mail
+- Send an email
+:::
+
 ## Example Usage
 
 This workflow allows you to create, update and get a contact using the SendGrid node. You can also find the [workflow](https://n8n.io/workflows/901) on n8n.io. This example usage workflow uses the following nodes.

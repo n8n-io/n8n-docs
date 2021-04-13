@@ -5,13 +5,13 @@ description: Learn how to use the Activation Trigger node in n8n
 
 # Activation Trigger
 
-The Activation Trigger node gets triggered when an event gets fired by n8n or the workflow.
+The Activation Trigger node gets triggered when an event gets fired by n8n or a workflow.
 
 ::: tip 💡 Keep in mind
-1. If you want to use the Activation Trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
+If you want to use the Activation Trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
 :::
 
-The Activation Trigger node gets triggered for the workflow it gets added. The Activation Trigger node can be used to trigger a workflow to notify the state of the workflow.
+The Activation Trigger node gets triggered for the workflow that it gets added to. The Activation Trigger node can be used to trigger a workflow to notify the state of the workflow.
 
 ## Node Reference
 
@@ -32,7 +32,7 @@ The final workflow should look like the following image.
 
 ### 1. Activation Trigger node
 
-Open the workflow where you want to add the Activation workflow. Add the Activation Trigger node to that workflow.
+Open the workflow where you want to add the activation workflow. Add the Activation Trigger node to the workflow.
 
 The Activation Trigger node will trigger the workflow when the workflow gets updated.
 

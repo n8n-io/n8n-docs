@@ -119,5 +119,4 @@ return [
 
 ## Further Reading
 
-- [Migrating Community Metrics to Orbit using n8n 📈](https://medium.com/n8n-io/migrating-community-metrics-to-orbit-using-n8n-b293372e8daf)
-- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
+<FurtherReadingBlog node="Merge" />

@@ -5,7 +5,7 @@ description: Learn how to use the OpenWeatherMap node in n8n
 
 # OpenWeatherMap
 
-[OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data. 
+[OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/OpenWeatherMap/README.md).
@@ -39,4 +39,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
+<FurtherReadingBlog node="OpenWeatherMap" />

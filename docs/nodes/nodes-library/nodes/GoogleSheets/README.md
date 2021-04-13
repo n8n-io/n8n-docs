@@ -203,9 +203,10 @@ To insert the data in Google Sheets, you have to first convert the data in a val
 
 By default, the Lookup operation returns only the first value that it matches. To return all the values that match, click on ***Add Option*** and select 'Return All Matches'. Toggle ***Return All Matches*** to true.
 
+### How to specify a sheet?
+
+By default, the Google Sheets node will operate on the default sheet, `Sheet 1`. If you rename the sheet or want to use a different sheet, you have to specify the name of the sheet. You can do that in the ***Range*** field. For example, if you need to use a sheet named `n8n` for the range `A` to `H`, enter `n8n!A:H` in the ***Range*** field.
 
 ## Further Reading
 
-- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)
-- [Migrating Community Metrics to Orbit using n8n 📈](https://medium.com/n8n-io/migrating-community-metrics-to-orbit-using-n8n-b293372e8daf)
-- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
+<FurtherReadingBlog node="Google Sheets" />

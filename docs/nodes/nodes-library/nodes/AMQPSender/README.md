@@ -44,7 +44,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will make a GET request to the API `https://api.wheretheiss.at/v1/satellites/25544/positions` to fetch the position of the ISS. This information gets passed on to the next node in the workflow.
 ::: v-pre
-1. Enter `https://api.wheretheiss.at/v1/satellites/25544/positions` in the ***URL*** field. 
+1. Enter `https://api.wheretheiss.at/v1/satellites/25544/positions` in the ***URL*** field.
 2. Click on the ***Add Parameter*** button in the ***Query Parameters*** section.
 3. Enter `timestamps` in the ***Name*** field.
 4. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
@@ -102,4 +102,4 @@ This example workflow uses the Cron node, which is a Trigger node. You'll need t
 
 ## Further Reading
 
-- [Smart Factory Automation using IoT and Sensor Data with n8n 🏭](https://medium.com/n8n-io/smart-factory-automation-using-iot-and-sensor-data-with-n8n-27675de9943b)
+<FurtherReadingBlog node="AMQP Sender" />

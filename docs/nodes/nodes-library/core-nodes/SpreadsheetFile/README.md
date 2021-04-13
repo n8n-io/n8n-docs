@@ -59,3 +59,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the *Property Name* you used in the previous node in the *Binary Property* field.
 2. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Spreadsheet File" />

@@ -37,4 +37,4 @@ The following video demonstrates the steps mentioned above.
 
 ### How to find the subdomain of an ERPNext account?
 
-In the address bar of your browser, you can find the subdomain. The string between `https://` and `.erpnext.com` is your subdomain. For example, if the URL in the address bar is `https://n8n.erpnext.com` the subdomain will be `n8n`.
+In the address bar of your browser, you can find the subdomain. The string between `https://` and `.erpnext.com` is your subdomain. For example, if the URL in the address bar is `https://n8n.erpnext.com`, the subdomain will be `n8n`.

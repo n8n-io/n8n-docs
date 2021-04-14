@@ -1,14 +1,15 @@
 # Scaling n8n
 
-To handle the workloads, n8n can be horizontally scaled, i.e. you can connect multiple entities, such as servers, so that they work as a single logical unit. Workflow executions can scale via workers. The trigger nodes that use webhooks can scale through webhook processors.
+To handle the workloads, n8n can be horizontally scaled. You can connect multiple entities, such as servers so that they work as a single logical unit. Workflow executions can scale via workers. The trigger nodes that use webhooks can scale through webhook processors.
 
 [[toc]]
 
 ## Prerequisites
+
 You have knowledge of:
 
 - Redis
-- Deploying database
+- Deploying databases
 - Networking
 
 ## Configuring Workers
@@ -19,7 +20,7 @@ To allow workers to interact with the main process, we need a message broker. We
 
 ### Set Executions Mode
 
-By default, n8n runs with the execution mode set to `regular`. To configure workers, set the execution mode to `queue`. Set the [environment variable](./glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command:
+By default, n8n runs with the execution mode set to `regular`. To configure workers, set the `EXECUTIONS_MODE` [environment variable](./glossary.md#environment-variables) to `queue` using the following command:
 
 ```bash
 export EXECUTIONS_MODE=queue
@@ -29,7 +30,7 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 By default, all workflows get executed in their separate process. Refer to the [Execute In Same Process](./configuration.md#execute-in-same-process) to learn how to execute the workflows in the main process.
 
-**Note:** We recommend using a database like MySQL, Postgres 13 (or newer). Running n8n with execution mode set to queue with an SQLite database is not recommended.
+**Note:** We recommend using a database like MySQL or Postgres 13 (or newer). Running n8n with execution mode set to queue with an SQLite database is not recommended.
 
 ### Start Redis
 
@@ -64,16 +65,20 @@ You can also set the following optional configurations.
 
 3. Start your n8n instance, and it will now connect to your Redis instance.
 
-**Note:** You can run Redis on a separate machine. Make sure that it is accessible by the n8n instance.
+**Note:** You can also run Redis on a separate machine. Make sure that it is accessible by the n8n instance.
+
+
 ### Start workers
 
-You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine, and make sure that it gets connected to your Redis instance and the n8n database. Start worker processes by running the following command from the root directory.
+You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine, and make sure that it is connected to your Redis instance and the n8n database. Start worker processes by running the following command from the root directory.
 
 ```
 ./packages/cli/bin/n8n worker
 ```
 
 You can also set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
+
+
 ## Considerations for running n8n with queues
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.

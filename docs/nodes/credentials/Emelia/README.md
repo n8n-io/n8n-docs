@@ -7,6 +7,7 @@ description: Learn to configure credentials for the Emelia node in n8n
 
 You can use these credentials to authenticate the following nodes with Emelia.
 - [Emelia](../../nodes-library/nodes/Emelia/README.md)
+- [Emelia Trigger](../../nodes-library/trigger-nodes/EmeliaTrigger/README.md)
 
 ## Prerequisites
 

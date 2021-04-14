@@ -71,9 +71,38 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/2SFGl3xBdOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## Using Outlook.com
+
+1. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in n8n.
+2. Enter your email address in the ***User*** field.
+3. Enter your account password in the ***Password*** field.
+4. Enter `outlook.office365.com` in the ***Host*** field.
+5. Toggle ***SSL/TLS*** to `true`.
+6. Click on ***Create*** to create your credentials.
+
+**Note** If you get a connection error, please follow the steps mentioned in the [FAQs](#how-to-solve-the-connection-error-when-connecting-to-outlook-com).
+
+The following video demonstrates the steps mentioned above.
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/gCWiILtHnPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## FAQs
+
+### How to solve the connection error when connecting to Outlook.com?
+
+If you receive a connection error while configuring the credentials for your Outlook account, follow the steps mentioned below:
+1. Go to [account.live.com/activity](https://account.live.com/activity).
+2. Sign in using the email address and password of your account.
+3. Under the ***Recent activity*** section, find the Session Type event that matches the most recent time you received the connection error and click to expand it.
+4. Select ***This was me*** to let the system know you authorize the IMAP connection.
+
+
 ## Further Reading
 
 - [Set up IMAP for Gmail account](https://support.google.com/mail/answer/7126229?hl=en)
 - [Sign in with App Passwords for your Gmail Account](https://support.google.com/accounts/answer/185833?hl=en)
 - [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html)
 - [Sign in with App Passwords for your Yahoo mail Account](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html)
+- [POP, IMAP, and SMTP settings for Outlook.com](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040)

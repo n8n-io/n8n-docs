@@ -16,6 +16,7 @@ You can use these credentials to authenticate the following nodes with Google.
 - [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md)
 - [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)
 - [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md)
+- [Google Slides](../../nodes-library/nodes/GoogleSlides/README.md)
 - [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md)
 - [Google Translate](../../nodes-library/nodes/GoogleTranslate/README.md)
 - [YouTube](../../nodes-library/nodes/YouTube/README.md)

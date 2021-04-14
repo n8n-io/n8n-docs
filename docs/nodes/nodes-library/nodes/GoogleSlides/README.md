@@ -27,7 +27,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to get all the slides from a presentation and get thumbnails for the pages. You can also find the [workflow](https://n8n.io/workflows/1035) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to get all the slides from a presentation and get the thumbnails for the pages. You can also find the [workflow](https://n8n.io/workflows/1035) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Google Slides]()
 
@@ -57,7 +57,7 @@ This Google Slides node will get all the slides from a presentation.
 5. Toggle ***Return All*** to `true`.
 6. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will observe that the node returns all the slides from the presentation.
+In the screenshot below, you will notice that the node returns all the slides from the presentation.
 
 ![Using the Google Slides node to get slides from a presentation](./GoogleSlides_node.png)
 

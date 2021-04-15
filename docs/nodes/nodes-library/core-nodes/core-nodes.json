@@ -25,35 +25,35 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.datetime"
+		"name":"n8n-nodes-base.dateTime"
 	},
 	{
 		"displayName":"Edit Image",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.editimage"
+		"name":"n8n-nodes-base.editImage"
 	},
 	{
 		"displayName":"Error Trigger",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.errortrigger"
+		"name":"n8n-nodes-base.errorTrigger"
 	},
 	{
 		"displayName":"Execute Command",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.executecommand"
+		"name":"n8n-nodes-base.executeCommand"
 	},
 	{
 		"displayName":"Execute Workflow",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.executeworkflow"
+		"name":"n8n-nodes-base.executeWorkflow"
 	},
 	{
 		"displayName":"Function",
@@ -67,7 +67,7 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.functionitem"
+		"name":"n8n-nodes-base.functionItem"
 	},
 	{
 		"displayName":"GraphQL",
@@ -81,14 +81,14 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.htmlextract"
+		"name":"n8n-nodes-base.htmlExtract"
 	},
 	{
 		"displayName":"HTTP Request",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.httprequest"
+		"name":"n8n-nodes-base.httpRequest"
 	},
 	{
 		"displayName":"IF",
@@ -102,7 +102,7 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.emailreadimap"
+		"name":"n8n-nodes-base.emailReadImap"
 	},
 	{
 		"displayName":"Interval",
@@ -123,56 +123,56 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.movebinarydata"
+		"name":"n8n-nodes-base.moveBinaryData"
 	},
 	{
 		"displayName":"No Operation, do nothing",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.noop"
+		"name":"n8n-nodes-base.noOp"
 	},
 	{
 		"displayName":"Read Binary File",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.readbinaryfile"
+		"name":"n8n-nodes-base.readBinaryFile"
 	},
 	{
 		"displayName":"Read Binary Files",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.readbinaryfiles"
+		"name":"n8n-nodes-base.readBinaryFiles"
 	},
 	{
 		"displayName":"Read PDF",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.readpdf"
+		"name":"n8n-nodes-base.readPDF"
 	},
 	{
 		"displayName":"Rename Keys",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.renamekeys"
+		"name":"n8n-nodes-base.renameKeys"
 	},
 	{
 		"displayName":"RSS Read",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.rssfeedread"
+		"name":"n8n-nodes-base.rssFeedRead"
 	},
 	{
 		"displayName":"Send Email",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.emailsend"
+		"name":"n8n-nodes-base.emailSend"
 	},
 	{
 		"displayName":"Set",
@@ -186,21 +186,21 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.splitinbatches"
+		"name":"n8n-nodes-base.splitInBatches"
 	},
 	{
 		"displayName":"Spreadsheet File",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.spreadsheetfile"
+		"name":"n8n-nodes-base.spreadsheetFile"
 	},
 	{
 		"displayName":"SSE Trigger",
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.ssetrigger/"
+		"name":"n8n-nodes-base.sseTrigger/"
 	},
 	{
 		"displayName":"Start",
@@ -228,7 +228,7 @@
 		"iconData":{
 			"fileBuffer":""
 		},
-		"name":"n8n-nodes-base.writebinaryfile"
+		"name":"n8n-nodes-base.writeBinaryFile"
 	},
 	{
 		"displayName":"XML",

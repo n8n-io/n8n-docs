@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes with Bubble.
 
 Create a [Bubble](https://bubble.io) account.
 
-**Note:** You need a Personal account or higher plan to get access to the Bubble API.
+**Note:** You need a Personal or a higher plan to get access to the Bubble API.
 
 ## Using API Key
 
@@ -29,7 +29,7 @@ Create a [Bubble](https://bubble.io) account.
 11. Select 'Development' from the ***Environment*** dropdown list. If you want to use the 'Live' environment, select 'Live' instead.
 12. Click on the ***Create*** button to create your credentials.
 
-**Note:** If you're self-hosting your Bubble app, select 'Self-hosted' from the ***Hosting*** dropdown list. You also need to enter the domain of your hosted instance in the ***Domain*** field.
+**Note:** If you're self-hosting your Bubble app, select 'Self-hosted' from the ***Hosting*** dropdown list. You will also need to enter the domain of your hosted instance in the ***Domain*** field.
 
 The following video demonstrates the steps mentioned above.
 

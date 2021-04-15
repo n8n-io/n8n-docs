@@ -44,7 +44,7 @@ This node will create a new object of the type `Doc` in Bubble. If you want to c
 3. Enter `Doc` in the ***Type Name*** field.
 4. Click on the ***Add Property*** button.
 5. Enter `Name` in the ***Key*** field. If you're using a different type, enter the field name present in the type.
-6. Enter `Bubble` in the ***Value** field.
+6. Enter `Bubble` in the ***Value*** field.
 7. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new object of the type `Doc` in Bubble.

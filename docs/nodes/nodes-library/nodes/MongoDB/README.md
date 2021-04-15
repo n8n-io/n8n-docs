@@ -5,7 +5,7 @@ description: Learn how to use the MongoDB node in n8n
 
 # MongoDB
 
-[MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas. 
+[MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/MongoDB/README.md).
@@ -47,3 +47,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the name of your MongoDB collection in the *Collection* field.
 4. Enter `my_key` in the *Fields* field.
 5. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="MongoDB" />

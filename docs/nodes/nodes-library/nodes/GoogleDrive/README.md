@@ -27,6 +27,7 @@ You can find authentication information for this node [here](../../../credential
 - Download a file
 - List files and folders
 - Share a file
+- Update a file
 - Upload a file
 :::
 
@@ -74,3 +75,7 @@ To list all the files and folders within a folder, follow the steps mentioned be
 3. Enter `'FOLDER_ID' in parents` in the ***Query String*** field. Replace `FOLDER_ID` with the folder ID you copied in the previous step.
 
 There are several additional options available to fine grain the listed results. Refer to [Search for files and folders: Querystring](https://developers.google.com/drive/api/v3/search-files#query_string_examples) for more information.
+
+## Further Reading
+
+<FurtherReadingBlog node="Google Drive" />

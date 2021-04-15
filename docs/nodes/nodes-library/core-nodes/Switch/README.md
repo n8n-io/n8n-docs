@@ -145,3 +145,7 @@ return [
 **Note:** Notice that none of the ids made their way to this node since the values of the all the ids were either 0, 1, or 2.
 
 ![Using the NoOp node for route 3](./NoOp_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="Switch" />

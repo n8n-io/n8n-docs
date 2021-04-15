@@ -35,3 +35,7 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the IMAP Email node. You can find out how to do that [here](../../../credentials/IMAP/README.md).
 2. Enter the name of the mailbox from which you want to receive emails in the ***Mailbox Name*** field.
 3. Click on ***Execute Node*** to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="EmailReadImap" />

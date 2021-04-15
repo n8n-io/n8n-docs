@@ -54,3 +54,7 @@ The start node exists by default when you create a new workflow.
 4. Enter a subject for your message in the *Subject* field.
 5. Enter your message in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Send Email" />

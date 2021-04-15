@@ -32,3 +32,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the URL of the RSS feed that you want to read in the *URL* field.
 2. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="RSS Read" />

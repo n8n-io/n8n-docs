@@ -23,13 +23,22 @@ You can find authentication information for this node [here](../../../credential
 
 ::: details Callback
 - Send an answer to a callback query sent from the inline keyboard
+- Send an answer to a callback query from inline bot
+:::
+
+::: details File
+- Get a file
 :::
 
 ::: details Message
 - Edit a text message
+- Pin a chat message
+- Unpin a chat message
+- Send an animated file
 - Send an audio file
 - Send a chat action
 - Send a document
+- Send a location
 - Send a text message
 - Send a group of photos or videos to an album
 - Send a photo
@@ -121,5 +130,4 @@ There are two ways to get the Chat ID in Telegram.
 
 ## Further Reading
 
-- [Automatically Adding Expense Receipts to Google Sheets with Telegram, Mindee, Twilio, and n8n 🧾](https://medium.com/n8n-io/automatically-adding-expense-receipts-to-google-sheets-with-telegram-mindee-twilio-and-n8n-c47eb2f8d7a5)
-- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
+<FurtherReadingBlog node="Telegram" />

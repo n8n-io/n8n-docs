@@ -34,7 +34,7 @@ By default, all workflows get executed in their separate process. Refer to the [
 
 ### Start Redis
 
-To run Redis in a docker container, follow the instructions mentioned below.
+To run Redis in a Docker container, follow the instructions mentioned below.
 
 1. Run the following command to start a Redis instance.
 
@@ -83,7 +83,7 @@ You will need to start worker processes to allow n8n to execute workflows. If yo
 ./packages/cli/bin/n8n worker
 ```
 
-If you're using docker, use the following command.
+If you're using Docker, use the following command.
 
 ```
 docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n worker
@@ -119,7 +119,7 @@ You can start the webhook processor by executing the following command from the 
 ./packages/cli/bin/n8n webhook
 ```
 
-If you're using docker, use the following command.
+If you're using Docker, use the following command.
 
 ```
 docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n webhook

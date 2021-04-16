@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/MailCheck
+permalink: /credentials/mailcheck
 description: Learn to configure credentials for the MailCheck node in n8n
 ---
 # Mailcheck integration

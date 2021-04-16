@@ -20,9 +20,11 @@ You can find authentication information for this node [here](../../../credential
 ::: details Sheet
 - Append data to a sheet
 - Clear data from a sheet
+- Create a new sheet
 - Delete columns and rows from a sheet
 - Look up a specific column value and return the matching row
 - Read data from a sheet
+- Remove a sheet
 - Update rows in a sheet
 :::
 ## Example Usage
@@ -72,16 +74,16 @@ In the screenshot below, you will notice that the Set node has created data that
 
 1. Create a new [Google Sheets](https://sheet.new) spreadsheet.
 2. In your spreadsheet, enter `ID`, `Name`, `Rent`, and `City` in the cells A1, B1, C1, and D1, respectively.
-3. Copy the string of characters located between `/d/` and `/edit` in your spreadsheet URL. This string is the Sheet ID, which we will use in the Google Sheets node.
+3. Copy the string of characters located between `/d/` and `/edit` in your spreadsheet URL. This string is the Spreadsheet ID, which we will use in the Google Sheets node.
 
 #### Configure the Google Sheets node
 
-This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Sheet ID.
+This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Spreadsheet ID.
 
 1. Select 'OAuth2' from the ***Authentication*** dropdown list.
 2.  First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
 3. Select 'Append' from the ***Operation*** dropdown list.
-4. Paste the Sheet ID you copied in the previous step, in the ***Sheet ID*** field.
+4. Paste the Spreadsheet ID you copied in the previous step, in the ***Spreadsheet ID*** field.
 5. In the ***Range*** field, enter the range of columns to append the data to your spreadsheet. Make sure that your range includes enough columns for all the data in the Set node. For this workflow, enter `A:D` in the ***Range*** field.
 6. Click on the ***Add Option*** button and select 'Value Input Mode' from the dropdown list.
 7. Select 'User Entered' from the ***Value Input Mode*** dropdown list. Refer to the [FAQs](#how-to-enter-values-with-a-proper-format) for more information on why we used this option.
@@ -98,7 +100,7 @@ This node will return the entries from the Google Sheets that have `Berlin` as t
 1. Select 'OAuth2' from the ***Authentication*** dropdown list.
 2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Lookup' from the ***Operation*** dropdown list.
-4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
+4. In the ***Spreadsheet ID*** field, enter the same string used in the previous Google Sheets node.
 5. Enter `City` in the ***Lookup Column*** field.
 6. Enter `Berlin` in the ***Lookup Value*** field.
 7. Click on the ***Add Option*** button and select 'Return All Matches' from the dropdown list.
@@ -106,7 +108,7 @@ This node will return the entries from the Google Sheets that have `Berlin` as t
 9. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list. This option determines how the values should render in the output. The 'Unformatted Value' option returns the data without formatting it. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option.
 10. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted. This output is passed on to the next nodes in the workflow.
+In the screenshot below, you will notice that the node returns all the entries that contain Berlin as the City. The output is unformatted and is passed on to the next nodes in the workflow.
 
 ![Using the Google Sheets node to lookup for data in the Google Sheets spreadsheet](./GoogleSheets1_node.png)
 
@@ -144,7 +146,7 @@ This node will update the rent for the houses in Berlin with the new rent set in
 1. Select 'OAuth2' in the ***Authentication*** field.
 2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Update' from the ***Operation*** dropdown list.
-4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
+4. In the ***Spreadsheet ID*** field, enter the same string used in the previous Google Sheets node.
 5. In the ***Range*** field, enter the same range used in the previous Google Sheets node.
 6. Enter `ID` in the ***Key*** field.
 7. Click on the ***Add Option*** button and select 'Value Input Mode' from the dropdown list.
@@ -162,7 +164,7 @@ This node will read the data from Google Sheets.
 1. Select 'OAuth2' in the ***Authentication*** field.
 2. Select the credentials that you entered in the previous Google Sheets node.
 3. Select 'Read' from the ***Operation*** dropdown list.
-4. In the ***Sheet ID*** field, enter the same string used in the previous Google Sheets node.
+4. In the ***Spreadsheet ID*** field, enter the same string used in the previous Google Sheets node.
 5. In the ***Range*** field, enter the same range used in the previous Google Sheets node.
 6. Click on the ***Add Option*** button and select 'Value Render Mode' from the dropdown list.
 7. Select 'Formatted Value' from the ***Value Render Mode*** dropdown list. Refer to the [FAQs](#what-are-the-various-formats-to-read-the-data-from-the-google-sheets) for more information on why we used this option.
@@ -201,9 +203,10 @@ To insert the data in Google Sheets, you have to first convert the data in a val
 
 By default, the Lookup operation returns only the first value that it matches. To return all the values that match, click on ***Add Option*** and select 'Return All Matches'. Toggle ***Return All Matches*** to true.
 
+### How to specify a sheet?
+
+By default, the Google Sheets node will operate on the default sheet, `Sheet 1`. If you rename the sheet or want to use a different sheet, you have to specify the name of the sheet. You can do that in the ***Range*** field. For example, if you need to use a sheet named `n8n` for the range `A` to `H`, enter `n8n!A:H` in the ***Range*** field.
 
 ## Further Reading
 
-- [Creating triggers for n8n workflows using polling ⏲](https://n8n.io/blog/creating-triggers-for-n8n-workflows-using-polling/)
-- [Migrating Community Metrics to Orbit using n8n 📈](https://medium.com/n8n-io/migrating-community-metrics-to-orbit-using-n8n-b293372e8daf)
-- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
+<FurtherReadingBlog node="Google Sheets" />

@@ -24,6 +24,27 @@ You can find authentication information for this node [here](../../../credential
 - Delete an issue
 :::
 
+::: details Issue Attachment
+- Add attachment to an issue
+- Get an attachment
+- Get all attachments
+- Remove an attachment
+:::
+
+::: details Issue Comment
+- Add comment to issue
+- Get a comment
+- Get all comments
+- Remove a comment
+- Update a comment
+:::
+
+::: details User
+- Create a new user
+- Delete a user
+- Retrieve a user
+:::
+
 ## Example Usage
 
 This workflow allows you to create a new issue in Jira. You can also find the [workflow](https://n8n.io/workflows/459) on the website. This example usage workflow would use the following two nodes.
@@ -64,4 +85,4 @@ You can refer to the [official documentation](https://www.atlassian.com/software
 
 ## Further Reading
 
-- [Creating Custom Incident Response Workflows with n8n 🚨](https://medium.com/n8n-io/creating-custom-incident-response-workflows-with-n8n-9baef0bbedb9)
+<FurtherReadingBlog node="Jira Software" />

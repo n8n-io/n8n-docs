@@ -4,12 +4,12 @@ Today, you will learn how to create your first node for n8n.
 
 ## Prerequisites
 You have knowledge of:
-- JavaScript
+- JavaScript/TypeScript
 - REST APIs
 - Expressions in n8n
 
 Install the following tools:
-- **GitHub CLI:** You can find instructions on how to install it [here](https://cli.github.com/).
+- **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
 - **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have installed Node.js, you can check your current version with following command:
 ```bash
 node -v
@@ -27,10 +27,10 @@ For the sake of brevity, we will only showcase how to add the functionality to c
 
 ## Cloning the repository
 
-To download the project, run the following command in your terminal:
+In GitHub, fork the [n8n repository](https://github.com/n8n-io/n8n). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
 
 ```bash
-gh repo fork n8n-io/n8n --remote=true --clone=true && cd n8n
+git clone https://github.com/<USERNAME>/n8n.git && cd n8n
 ```
 
 n8n is built from four main packages:
@@ -44,7 +44,8 @@ All these packages are under the `/packages` folder in the main n8n folder. We w
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
 
-![n8n folder structure](./images/n8n-folder-structure.png)
+<img src="./images/n8n-folder-structure.png" width="500">
+
 
 ## Creating the node
 
@@ -143,7 +144,7 @@ npm run dev
 
 Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
 
-FriendGrid's [docs](https://sendgrid.com/docs/api-reference/) mention that to create a contact, we need to provide the following pieces of information:
+SendGrid's [docs](https://sendgrid.com/docs/api-reference/) mention that to create a contact, we need to provide the following pieces of information:
 - email - Required
 - first_name - Optional
 - last_name - Optional
@@ -465,8 +466,8 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 				// get email input
 				const email = this.getNodeParameter('email', i) as string;
 
-				// i = 1 print ricardo@n8n.io
-				// i = 2 print hello@n8n.io
+				// i = 1 returns ricardo@n8n.io
+				// i = 2 returns hello@n8n.io
 
 				// get additional fields input
 				const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;

@@ -120,11 +120,11 @@ module.exports = {
 			// },
 			{
 				text: 'Nodes',
-				link: '/nodes/nodes.md',
+				link: '/nodes/',
 			},
 			{
 				text: 'Reference',
-				link: '/reference/reference.md',
+				link: '/reference/',
 			},
 			{
 				text: 'Community',
@@ -144,23 +144,8 @@ module.exports = {
 				{
 					title: '🧬 Overview',
 					sidebarDepth: 2,
-					children: [
-						{
-							title: 'Node Overview',
-							sidebarDepth: 2,
-							path: 'nodes.md',
-						},
-						{
-							title: 'Node Basics',
-							sidebarDepth: 2,
-							path: 'node-basics.md',
-						},
-						{
-							title: 'Expressions',
-							sidebarDepth: 2,
-							path: 'expressions.md',
-						},
-					]
+					path: '/nodes/',
+					children: getChildrenFiles('nodes'),
 				},
 				{
 					title: '🔬 Creating Nodes',
@@ -170,20 +155,24 @@ module.exports = {
 				{
 					title: '🧠 Nodes Library',
 					sidebarDepth: 3,
+					path: '/nodes/nodes-library',
 					children: [
 						{
 							title: 'Core Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/core-nodes',
 							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
 						},
 						{
 							title: 'Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/nodes',
 							children: getChildrenFolders('nodes/nodes-library/nodes'),
 						},
 						{
 							title: 'Trigger Nodes',
 							sidebarDepth: 1,
+							path: '/nodes/nodes-library/trigger-nodes',
 							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
 						},
 					],
@@ -191,6 +180,7 @@ module.exports = {
 				{
 					title: '🔑 Credentials Library',
 					sidebarDepth: 2,
+					path: '/nodes/credentials',
 					children: getChildrenFolders('nodes/credentials'),
 				},
 			],
@@ -198,7 +188,7 @@ module.exports = {
 			'/reference/': [
 				{
 					title: '📚 Overview',
-					path: 'reference.md',
+					path: '/reference/',
 				},
 				{
 					title: '🧐 Changelog',
@@ -217,10 +207,6 @@ module.exports = {
 					path: 'security.md',
 				},
 				{
-					title: '📦 Docker',
-					path: 'docker.md',
-				},
-				{
 					title: '🖥 Server Setup',
 					path: 'server-setup.md',
 				},
@@ -235,6 +221,10 @@ module.exports = {
 				{
 					title: '💭 Glossary',
 					path: 'glossary.md',
+				},
+				{
+					title: '🗻 Scaling n8n',
+					path: 'scaling-n8n.md',
 				},
 				{
 					title: '💡 Function and Function Item Nodes',
@@ -284,6 +274,7 @@ module.exports = {
 				},
 				{
 					title: '💪 Create Your First Workflow',
+					path: '/getting-started/create-your-first-workflow/',
 					children: getChildrenFolders('getting-started/create-your-first-workflow'),
 
 				},

@@ -13,6 +13,15 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+::: details Custom Verification Email
+- Create a new custom verification email template
+- Delete an existing custom verification email template
+- Get the custom email verification template
+- Get all the existing custom verification email templates for your account
+- Add an email address to the list of identities
+- Update an existing custom verification email template
+:::
+
 ::: details Email
 - Send Email
 - Send Template
@@ -48,3 +57,7 @@ The start node exists by default when you create a new workflow.
 4. Enter the email address from which you want to send the email in the *From Email* field.
 5. Click on the *Add To Email* button and add your recipient email addresses.
 6. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="AWS SES" />

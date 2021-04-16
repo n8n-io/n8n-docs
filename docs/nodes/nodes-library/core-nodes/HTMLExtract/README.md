@@ -12,8 +12,8 @@ The HTML Extract node is useful to extract the HTML content of a webpage.
 - **Source Data:** This field specifies if HTML should be read from binary or JSON data. In this dropdown list, there are two options.
 	- Binary
 	- JSON
-- ***JSON Property:*** The name of the JSON property in which the HTML (from which to extract the data) can be found. This field is displayed when 'JSON' is selected in the ***Source Data*** field. 
-- ***Binary Property:*** The name of the binary property in which the HTML (from which to extract the data) can be found. This field is displayed when 'Binary' is selected in the ***Source Data*** field. 
+- ***JSON Property:*** The name of the JSON property in which the HTML (from which to extract the data) can be found. This field is displayed when 'JSON' is selected in the ***Source Data*** field.
+- ***Binary Property:*** The name of the binary property in which the HTML (from which to extract the data) can be found. This field is displayed when 'Binary' is selected in the ***Source Data*** field.
 The property can either contain a string or an array of strings.
 - ***Extraction Values:***
 	- ***Key:*** The key under which the extracted value should be saved.
@@ -84,4 +84,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [HTTP Request Node — The Swiss Army Knife](https://medium.com/n8n-io/http-request-node-the-swiss-army-knife-b14e22283383)
+<FurtherReadingBlog node="HTML Extract" />

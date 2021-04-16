@@ -35,6 +35,7 @@ You can find authentication information for this node [here](../../../credential
 :::
 
 ::: details Checklist
+- Create a checklist item
 - Create a new checklist
 - Delete a checklist
 - Delete a checklist item
@@ -100,4 +101,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Automating Conference Organization Processes with n8n](https://medium.com/n8n-io/automating-conference-organization-processes-with-n8n-ab8f64a7a520)
+<FurtherReadingBlog node="Trello" />

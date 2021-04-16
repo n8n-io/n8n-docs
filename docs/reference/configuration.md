@@ -252,6 +252,24 @@ webhook URLs get registred with the external services.
 export WEBHOOK_TUNNEL_URL=https://n8n.example.com/
 ```
 
+## Prometheus
+
+In order to collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
+
+The `/metrics` endpoint is disabled by default, but it is possible to enable it using the `N8N_METRICS` environment variable.
+
+```bash
+export N8N_METRICS=true
+```
+
+It is also possible to overwrite the prefix of the metric names by setting the `N8N_METRICS_PREFIX` environment variable.
+
+```bash
+export N8N_METRICS_PREFIX=n8n_
+```
+
+**Note:** At the moment, n8n does not support metrics for webhooks.
+
 
 ## Overwrites for credentials
 
@@ -261,6 +279,15 @@ It is also possible to set default values for credentials. These credentials get
 export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
+## Maximum payload limit
+
+The default maximum incoming payload limit is **16MB**. To increase the maximum payload limit, the following format.
+
+```bash
+export N8N_PAYLOAD_SIZE_MAX=VALUE
+```
+
+The value should be in megabytes. For example, if you want to set the limit to 32MB, use `N8N_PAYLOAD_SIZE_MAX=32`.
 
 ## Configuration via file
 

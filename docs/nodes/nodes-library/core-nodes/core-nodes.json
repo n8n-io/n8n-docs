@@ -1,5 +1,12 @@
 [
 	{
+		"displayName":"Activation Trigger",
+		"iconData":{
+			"fileBuffer":""
+		},
+		"name":"n8n-nodes-base.activationTrigger"
+	},
+	{
 		"displayName":"Compression",
 		"iconData":{
 			"fileBuffer":""

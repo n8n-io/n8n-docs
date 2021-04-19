@@ -51,3 +51,7 @@ The start node exists by default when you create a new workflow.
 Let's say, that there's a Execute Workflow node in **Workflow A**. The Execute Workflow node calls another workflow, **Workflow B**.
 - The Execute Workflow node passes the data to the Start node of **Workflow B**.
 - The last node of **Workflow B** sends the data back to the Execute Workflow node in **Workflow A**.
+
+### Can we set a timeout for sub workflows?
+
+It is not possible to define a timeout for sub workflows executed by the Execute Workflow node. You can set a timeout for the workflow containing the Execute Workflow node. However, the sub-workflow will not follow this timeout.

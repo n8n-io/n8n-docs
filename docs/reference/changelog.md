@@ -23,8 +23,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Keap: Fixed an issue with the Opt In Reason parameter
 	- Salesforce: Fixed an issue with loading custom fields
 - Changed `bcrypt` library from `bcryptjs` to `@node-rs/bcrypt`
-- Improved node error handling. The status code and error message in the API response are standardized
-- Added global timeout setting for all the HTTP requests except for the HTTP Request node
+- Improved node error handling. Status codes and error messages in API responses have been standardized
+- Added global timeout setting for all HTTP requests (except HTTP Request node)
 - Implemented timeout for workers and corrected timeout for sub workflows
 
 ## n8n@0.115.0

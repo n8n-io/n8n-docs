@@ -169,6 +169,7 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=user@example.com
 ```
 
+**Note:** If you want to use special characters in the password, use quotes. For example, `N8N_BASIC_AUTH_PASSWORD="p@s$w0rd"`
 
 ### 7. Create data folder
 

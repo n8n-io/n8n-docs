@@ -106,6 +106,11 @@ If you want to migrate data from one database to another, you can use the Export
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional. Webhook processors allow you to scale the incoming webhook requests.
 
 Webhook processes rely on Redis too. Follow the steps mentioned above to [configure the workers](#configuring-workers).
+Finally start the processors with: 
+
+```
+./packages/cli/bin/n8n webhook
+```
 
 This method allows n8n to process a huge number of parallel requests. All you have to do is add more webhook processes and workers accordingly, as long as the database and Redis are provisioned correctly.
 

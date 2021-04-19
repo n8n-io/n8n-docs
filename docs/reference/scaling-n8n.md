@@ -55,20 +55,20 @@ docker run --name some-redis -p 6379:6379  -d redis
 You can also set the following optional configurations.
 
 - **Redis Password:** By default, Redis doesn’t require a password. However, if you’re using a password to access Redis, configure the variable.
-    - ***setting in the configuration file:*** `queue.bull.redis.password:PASSWORD`
-    - ***using environment variables:*** `QUEUE_BULL_REDIS_PASSWORD`
+    - **setting in the configuration file:** `queue.bull.redis.password:PASSWORD`
+    - **using environment variables:** `QUEUE_BULL_REDIS_PASSWORD`
 
 - **Redis Database:** The default value is `0`. If you change this value, update the configuration.
-    - ***setting in the configuration file:*** `queue.bull.redis.db:0`
-    - ***using environment variables:*** `QUEUE_BULL_REDIS_DB`
+    - **setting in the configuration file:** `queue.bull.redis.db:0`
+    - **using environment variables:** `QUEUE_BULL_REDIS_DB`
 
 - **Redis Timeout Threshold:** Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`.
-    - ***setting in the configuration file:*** `queue.bull.redis.timeoutThreshold:10000ms`
-    - ***using environment variables:*** `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD`
+    - **setting in the configuration file:** `queue.bull.redis.timeoutThreshold:10000ms`
+    - **using environment variables:** `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD`
 
 - **Queue Recovery Interval:** Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n’s main process loses connection temporarily to Redis and is unable to get notified about finished jobs. The default value is `60` seconds.
-    - ***setting in the configuration file:*** `queue.bull.queueRecoveryInterval:60`
-    - ***using environment variables:*** `QUEUE_RECOVERY_INTERVAL`
+    - **setting in the configuration file:** `queue.bull.queueRecoveryInterval:60`
+    - **using environment variables:** `QUEUE_RECOVERY_INTERVAL`
 
 3. Start your n8n instance, and it will now connect to your Redis instance.
 

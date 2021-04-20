@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.awsRekognition
+permalink: /nodes/n8n-nodes-base.awsSqs
 description: Learn how to use the AWS SQS node in n8n
 ---
 
@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to send updates about the position of the ISS every minute to a  queue using the AWS SQS node. You can also find the [workflow](https://n8n.io/workflows/762) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to send position updates of the ISS every minute to a queue using the AWS SQS node. You can also find the [workflow](https://n8n.io/workflows/1047) on n8n.io. This example usage workflow uses the following nodes.
 - [Cron](../../core-nodes/Cron/README.md)
 - [HTTP Request](../../core-nodes/HTTPRequest/README.md)
 - [Set](../../core-nodes/Set/README.md)
@@ -62,15 +62,15 @@ We will use the Set node to ensure that only the data that we set in this node g
 2. Enter `Name` in the ***Name*** field.
 3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > 0 > name. You can also add the following expression: `{{$node["HTTP Request"].json["0"]["name"]}}`.
-5. Click on ***Add Value*** and select 'String' from the dropdown list.
+5. Click on ***Add Value*** and select 'Number' from the dropdown list.
 6. Enter `Latitude` in the ***Name*** field.
 7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 8. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > 0 > latitude. You can also add the following expression: `{{$node["HTTP Request"].json["0"]["latitude"]}}`.
-9. Click on ***Add Value*** and select 'String' from the dropdown list.
+9. Click on ***Add Value*** and select 'Number' from the dropdown list.
 10. Enter `Longitude` in the ***Name*** field.
 11. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 12. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > 0 > longitude. You can also add the following expression: `{{$node["HTTP Request"].json["0"]["longitude"]}}`.
-13. Click on ***Add Value*** and select 'String' from the dropdown list.
+13. Click on ***Add Value*** and select 'Number' from the dropdown list.
 14. Enter `Timestamp` in the ***Name*** field.
 15. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 16. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > 0 > timpestamp. You can also add the following expression: `{{$node["HTTP Request"].json["0"]["timestamp"]}}`.
@@ -83,9 +83,9 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 ### 4. AWS SQS node
 
-This node will send the data from the previous node to the `iss-position` queue in ActiveMQ. If you have created a queue with a different, you can use that queue instead.
+This node will send the data from the previous node to the `iss-position` queue. If you have created a queue with a different one, you can use that queue instead.
 
-1. First of all, you'll have to enter credentials for the AMQP Sender node. You can find out how to do that [here](../../../credentials/AWS/README.md).
+1. First of all, you'll have to enter credentials for the AWS SQS node. You can find out how to do that [here](../../../credentials/AWS/README.md).
 2. Select the queue from the ***Queue*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

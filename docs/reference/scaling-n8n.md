@@ -54,19 +54,26 @@ docker run --name some-redis -p 6379:6379  -d redis
 
 You can also set the following optional configurations.
 
-| Setting in the configuration file | Using environment variables | Description |
-| ------ | ------ | ----- |
-| queue.bull.redis.password:PASSWORD | QUEUE_BULL_REDIS_PASSWORD | By default, Redis doesn’t require a password. However, if you’re using a password to access Redis, configure the variable. |
-| queue.bull.redis.db:0 | QUEUE_BULL_REDIS_DB | The default value is `0`. If you change this value, update the configuration. |
-| queue.bull.redis.timeoutThreshold:10000ms | QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms` |
-| queue.bull.queueRecoveryInterval:60 | QUEUE_RECOVERY_INTERVAL | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n’s main process loses connection temporarily to Redis and is unable to get notified about finished jobs. The default value is `60` seconds. |
+- **Redis Password:** By default, Redis doesn’t require a password. However, if you’re using a password to access Redis, configure the variable.
+    - **setting in the configuration file:** `queue.bull.redis.password:PASSWORD`
+    - **using environment variables:** `QUEUE_BULL_REDIS_PASSWORD`
 
+- **Redis Database:** The default value is `0`. If you change this value, update the configuration.
+    - **setting in the configuration file:** `queue.bull.redis.db:0`
+    - **using environment variables:** `QUEUE_BULL_REDIS_DB`
 
+- **Redis Timeout Threshold:** Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`.
+    - **setting in the configuration file:** `queue.bull.redis.timeoutThreshold:10000ms`
+    - **using environment variables:** `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD`
+
+- **Queue Recovery Interval:** Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n’s main process loses connection temporarily to Redis and is unable to get notified about finished jobs. The default value is `60` seconds.
+    - **setting in the configuration file:** `queue.bull.queueRecoveryInterval:60`
+    - **using environment variables:** `QUEUE_RECOVERY_INTERVAL`
 
 3. Start your n8n instance, and it will now connect to your Redis instance.
 
-**Note:** You can also run Redis on a separate machine. Make sure that it is accessible by the n8n instance.
 
+**Note:** You can run Redis on a separate machine. Make sure that it is accessible by the n8n instance.
 
 ### Start workers
 
@@ -76,8 +83,13 @@ You will need to start worker processes to allow n8n to execute workflows. If yo
 ./packages/cli/bin/n8n worker
 ```
 
-You can also set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
+If you're using Docker, use the following command.
 
+```
+docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n worker
+```
+
+You can also set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
 
 ## Considerations for running n8n with queues
 
@@ -100,6 +112,18 @@ This method allows n8n to process a huge number of parallel requests. All you ha
 The webhook process will listen to requests on the same port (default: `5678`). Run these processes in containers or separate machines, and have a load balancing system to route requests accordingly.
 
 We do not recommend adding the main process to the load balancer pool. If the main process is added to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
+
+You can start the webhook processor by executing the following command from the root directory.
+
+```
+./packages/cli/bin/n8n webhook
+```
+
+If you're using Docker, use the following command.
+
+```
+docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n webhook
+```
 
 ### Configure webhook URL
 

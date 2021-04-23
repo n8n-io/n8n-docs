@@ -34,7 +34,6 @@ export default {
 		.then(response => response.json())
 		.then(res => {
 			this.$data.items = res.data.nodes[0].codex.data.resources.generic
-			console.log(this.items)
 		})
 		.catch(error => console.log(error))
   }

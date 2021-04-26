@@ -23,7 +23,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Google Sheets: Fixed an issue with the Lookup operation for returning multiple empty rows
 	- Intercom: Fixed an issue with the User operation in the Company resource
 	- Mautic: Fixed an issue with sending the lastActive parameter
-- The Activation Trigger node is deprecated. It got replaced by two new nodes - the n8n Trigger node and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
+- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
 - Added the functionality to open the New Credentials dropdown by default
 
 ## n8n@0.116.1

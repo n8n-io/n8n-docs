@@ -19,7 +19,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example Usage
 
-This workflow allows you to validate emails stored in a table using the Mailcheck node. You can also find the [workflow](https://n8n.io/workflows/1055) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to validate emails stored in Airtable using the Mailcheck node. You can also find the [workflow](https://n8n.io/workflows/1055) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [Airtable](../Airtable/README.md)
 - [Mailcheck]()

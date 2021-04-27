@@ -1,8 +1,17 @@
 export default ({ router, siteData }) => {
 	// Redirects users which use links of old documentation to pages of new documentation
 
-	// Redirects paths from old -> new
-	const redirectPaths = {
+	// spring cleaning redirects
+	const latestRedirects = [
+		{ path: "/old-path-1", redirect: "/new-path-1" },
+		{ path: "/old-path-2", redirect: "/new-path-2" },
+		{ path: "/old-path-3", redirect: "/new-path-3" },
+	];
+
+	latestRedirects.forEach(redirect => router.addRoute(redirect));
+
+	// redirect paths for legacy Docusaurus hash URLs
+	const hashRedirects = {
 		'#/nodes?id=function-node': 'reference/function-nodes.html#function-node',
 		'#/?id=n8n-documentation' : '#overview',
 		'#/?id=what-is-n8n' : '#what-is-n8n',
@@ -133,9 +142,9 @@ export default ({ router, siteData }) => {
 		'#/troubleshooting?id=mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio' : 'reference/troubleshooting.html#mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio',
 	};
 
-	if (redirectPaths[window.location.hash] !== undefined) {
+	if (hashRedirects[window.location.hash] !== undefined) {
 		// Redirect to different page if defined
-		window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
+		window.location.href = `${window.location.origin}/${hashRedirects[window.location.hash]}`;
 	} else if (location.hash) {
 		// Scroll to element
 		setTimeout(() => {

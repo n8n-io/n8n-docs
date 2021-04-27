@@ -11,11 +11,12 @@ You have knowledge of:
 
 Install the following tools:
 - **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
-- **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have installed Node.js, you can check your current version with following command:
+- **Node.js and npm:** You can find instructions on how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
 ```bash
 node -v
+npm -v
 ```
-- **Lerna:** You can install lerna globally with the following command:
+- **Lerna:** Install [lerna](https://lerna.js.org/) globally with the following command:
 ```bash
 npm install --global lerna
 ```
@@ -73,36 +74,47 @@ import {
    IWebhookResponseData,
 } from 'n8n-workflow';
 
+/*
+import {
+	autofriendApiRequest,
+} from './GenericFunctions';
+
+import {
+	snakeCase,
+} from 'change-case';
+*/
+
+
 export class AutofriendTrigger implements INodeType {
    description: INodeTypeDescription = {
-       displayName: 'Autofriend Trigger',
-       name: 'autofriendTrigger',
-       icon: 'file:autofriend.svg',
-       group: ['trigger'],
-       version: 1,
-       subtitle: '={{$parameter["event"]}}',
-       description: 'Handle Autofriend events via webhooks',
-       defaults: {
-           name: 'Autofriend Trigger',
-           color: '#6ad7b9',
-       },
-       inputs: [],
-       outputs: ['main'],
-       credentials: [],
-       webhooks: [
-           {
-               name: 'default',
-               httpMethod: 'POST',
-               responseMode: 'onReceived',
-               path: 'webhook',
-           },
-       ],
-       properties: [],
+	   displayName: 'Autofriend Trigger',
+	   name: 'autofriendTrigger',
+	   icon: 'file:autofriend.svg',
+	   group: ['trigger'],
+	   version: 1,
+	   subtitle: '={{$parameter["event"]}}',
+	   description: 'Handle Autofriend events via webhooks',
+	   defaults: {
+		   name: 'Autofriend Trigger',
+		   color: '#6ad7b9',
+	   },
+	   inputs: [],
+	   outputs: ['main'],
+	   credentials: [],
+	   webhooks: [
+		   {
+			   name: 'default',
+			   httpMethod: 'POST',
+			   responseMode: 'onReceived',
+			   path: 'webhook',
+		   },
+	   ],
+	   properties: [],
    };
    async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
-       return {
-           workflowData: [],
-       };
+	   return {
+		   workflowData: [],
+	   };
    }
 }
 ```
@@ -142,7 +154,7 @@ npm run dev
 **Notes**
 - On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
-- The property `description.color` is the company branding's hexadecimal color. This is usually available on the company's website under style guide. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
+- The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 
 ## Creating the UI for the node
@@ -203,7 +215,7 @@ Let’s make the Node Editor View ask for these parameters:
 },
 ```
 
-2. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+2. Stop the current n8n process by pressing `ctrl + c` in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -228,21 +240,21 @@ With that in mind, let’s create the UI to ask for the user’s Autofriend API 
 
 ```typescript
 import {
-    ICredentialType,
-    NodePropertyTypes,
+	ICredentialType,
+	NodePropertyTypes,
 } from 'n8n-workflow';
 
 export class AutofriendApi implements ICredentialType {
-    name = 'autofriendApi';
-    displayName = Autofriend API';
-    properties = [
-        {
-            displayName: 'API Key',
-            name: 'apiKey',
-            type: 'string' as NodePropertyTypes,
-            default: '',
-        },
-    ];
+	name = 'autofriendApi';
+	displayName = 'Autofriend API';
+	properties = [
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string' as NodePropertyTypes,
+			default: '',
+		},
+	];
 }
 ```
 
@@ -253,14 +265,14 @@ export class AutofriendApi implements ICredentialType {
 
 ```typescript
  credentials: [
-      {
-          name: autofriendApi,
-          required: true,
-      },
+	  {
+		  name: 'autofriendApi',
+		  required: true,
+	  },
 ],
 ```
 
-8. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+8. Stop the current n8n process by pressing `ctrl + c` in the terminal in which you are running n8n.
 9. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -285,12 +297,12 @@ The property webhooks implements the interface **IWebhookDescription**. The inte
 
 1. **name:** The property name where n8n will look for the life cycle methods.
 2. **httpMethod:** The HTTP method.
-3. **responseMode:** When the trigger will respond. When developing a trigger node, this property must be set to OnReceive.
+3. **responseMode:** When the trigger will respond. When developing a trigger node, this property must be set to `OnReceived`.
 4. **path:** The path added to the base URL.
 
 For example, for a Trigger node with the following `webhooks` property, n8n will create the following webhooks URLs.
 
-```
+```typescript
 webhooks: [
 	{
 		name: 'default',
@@ -334,134 +346,134 @@ Let’s see how this would look for our current use-case:
 
 1. Go to `packages/nodes-base/nodes/Autofriend`, create a file named `GenericFunctions.ts`, and paste the following code.
 
-```
+```typescript
 import {
-    OptionsWithUri,
+	OptionsWithUri,
 } from 'request';
 
 import {
-    IExecuteFunctions,
-    ILoadOptionsFunctions,
+	IExecuteFunctions,
+	ILoadOptionsFunctions,
 } from 'n8n-core';
 
 import {
-    IDataObject,
-    IHookFunctions,
-    IWebhookFunctions,
+	IDataObject,
+	IHookFunctions,
+	IWebhookFunctions,
 } from 'n8n-workflow';
 
-export async function autopilotApiRequest(this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions, method: string, resource: string, body: any = {}, query: IDataObject = {}, uri?: string, option: IDataObject = {}): Promise<any> { // tslint:disable-line:no-any
+export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions, method: string, resource: string, body: any = {}, query: IDataObject = {}, uri?: string, option: IDataObject = {}): Promise<any> { // tslint:disable-line:no-any
 
-    const credentials = this.getCredentials('autofriendApi') as IDataObject;
+	const credentials = this.getCredentials('autofriendApi') as IDataObject;
 
-    const apiKey = credentials.apiKey;
+	const apiKey = credentials.apiKey;
 
-    const endpoint = 'https://api2.autopilothq.com/v1';
+	const endpoint = 'https://api2.autopilothq.com/v1';
 
-    const options: OptionsWithUri = {
-        headers: {
-            'Content-Type': 'application/json',
-            autopilotapikey: apiKey,
-        },
-        method,
-        body,
-        qs: query,
-        uri: uri || `${endpoint}${resource}`,
-        json: true,
-    };
-    if (!Object.keys(body).length) {
-        delete options.body;
-    }
-    if (!Object.keys(query).length) {
-        delete options.qs;
-    }
+	const options: OptionsWithUri = {
+		headers: {
+			'Content-Type': 'application/json',
+			autopilotapikey: apiKey,
+		},
+		method,
+		body,
+		qs: query,
+		uri: uri || `${endpoint}${resource}`,
+		json: true,
+	};
+	if (!Object.keys(body).length) {
+		delete options.body;
+	}
+	if (!Object.keys(query).length) {
+		delete options.qs;
+	}
 
-    try {
-        return await this.helpers.request!(options);
-    } catch (error) {
-        if (error.response) {
-            const errorMessage = error.response.body.message || error.response.body.description || error.message;
-            throw new Error(`Autopilot error response [${error.statusCode}]: ${errorMessage}`);
-        }
-        throw error;
-    }
+	try {
+		return await this.helpers.request!(options);
+	} catch (error) {
+		if (error.response) {
+			const errorMessage = error.response.body.message || error.response.body.description || error.message;
+			throw new Error(`Autopilot error response [${error.statusCode}]: ${errorMessage}`);
+		}
+		throw error;
+	}
 }
 ```
 
 2. Go to `packages/nodes-base/nodes/AutofriendTrigger.node.ts` and add the following code after the property description.
 
-```
+```typescript
 // @ts-ignore
 webhookMethods = {
-    default: {
-        async checkExists(this: IHookFunctions): Promise<boolean> {
-            const webhookData = this.getWorkflowStaticData('node');
-            const webhookUrl = this.getNodeWebhookUrl('default');
-            const event = this.getNodeParameter('event') as string;
-            const { hooks: webhooks } = await autopilotApiRequest.call(this, 'GET', '/hooks');
-            for (const webhook of webhooks) {
-                if (webhook.target_url === webhookUrl && webhook.event === snakeCase(event)) {
-                    webhookData.webhookId = webhook.hook_id;
-                    return true;
-                }
-            }
-            return false;
-        },
-        async create(this: IHookFunctions): Promise<boolean> {
-            const webhookUrl = this.getNodeWebhookUrl('default');
-            const webhookData = this.getWorkflowStaticData('node');
-            const event = this.getNodeParameter('event') as string;
-            const body: IDataObject = {
-                event: snakeCase(event),
-                target_url: webhookUrl,
-            };
-            const webhook = await autopilotApiRequest.call(this, 'POST', '/hook', body);
-            webhookData.webhookId = webhook.hook_id;
-            return true;
-        },
-        async delete(this: IHookFunctions): Promise<boolean> {
-            const webhookData = this.getWorkflowStaticData('node');
-            try {
-                await autopilotApiRequest.call(this, 'DELETE', `/hook/${webhookData.webhookId}`);
-            } catch (error) {
-                return false;
-            }
-            delete webhookData.webhookId;
-            return true;
-        },
-    },
+	default: {
+		async checkExists(this: IHookFunctions): Promise<boolean> {
+			const webhookData = this.getWorkflowStaticData('node');
+			const webhookUrl = this.getNodeWebhookUrl('default');
+			const event = this.getNodeParameter('event') as string;
+			const { hooks: webhooks } = await autofriendApiRequest.call(this, 'GET', '/hooks');
+			for (const webhook of webhooks) {
+				if (webhook.target_url === webhookUrl && webhook.event === snakeCase(event)) {
+					webhookData.webhookId = webhook.hook_id;
+					return true;
+				}
+			}
+			return false;
+		},
+		async create(this: IHookFunctions): Promise<boolean> {
+			const webhookUrl = this.getNodeWebhookUrl('default');
+			const webhookData = this.getWorkflowStaticData('node');
+			const event = this.getNodeParameter('event') as string;
+			const body: IDataObject = {
+				event: snakeCase(event),
+				target_url: webhookUrl,
+			};
+			const webhook = await autofriendApiRequest.call(this, 'POST', '/hook', body);
+			webhookData.webhookId = webhook.hook_id;
+			return true;
+		},
+		async delete(this: IHookFunctions): Promise<boolean> {
+			const webhookData = this.getWorkflowStaticData('node');
+			try {
+				await autofriendApiRequest.call(this, 'DELETE', `/hook/${webhookData.webhookId}`);
+			} catch (error) {
+				return false;
+			}
+			delete webhookData.webhookId;
+			return true;
+		},
+	},
 };
-
-
-async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
-    const req = this.getRequestObject();
-    return {
-        workflowData: [
-            this.helpers.returnJsonArray(req.body),
-        ],
-    };
 }
 ```
-
-3. In the same file, uncomment the comment lines at the top.
-4. Stop the current n8n process by pressing ctrl + c in the terminal where you are running n8n.
-5. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal.
-6. Enter your API key in the credentials. Instructions to find the API Key can be found [here](https://autopilot.docs.apiary.io/#reference/authentication).
-7. Go to the workflow editor and execute the node.
+3. Replace the `webhook` function with the following.
+```typescript
+async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
+	const req = this.getRequestObject();
+	return {
+		workflowData: [
+			this.helpers.returnJsonArray(req.body),
+		],
+};
+```
+4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
+5. Stop the current n8n process by pressing `ctrl + c` in the terminal where you are running n8n.
+6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the n8n Editor UI at [localhost:5678](http://localhost:5678/workflow).
+7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](../credentials/autopilot).
+8. Go to the workflow editor, save your workflow, and execute the node.
 
 ![Executed node](./images/executed-node.png)
 
-8. Log into Autopilot and update a contact. Keep in mind that this should be done within two minutes after you executed the node. After that time frame, the webhook will be unregistered automatically and you will not be able to receive the event. If it takes you longer than that, please execute the node and update the contact again.
+9. Log into Autopilot and update a contact. Keep in mind that this should be done within two minutes after you executed the node. After that time frame, the webhook will be unregistered automatically and you will not be able to receive the event. If it takes you longer than that, please execute the node and update the contact again.
 
 ![Executed node with results](./images/executed-node-with-results.png)
 
-Now the trigger node is receiving events. If it has not, be patient Sometimes it takes a bit of time for the payload to arrive.
+The trigger node is now receiving events. Sometimes it might take a bit longer for the payload to arrive.
 
 You probably noticed that this time we did not run the project using `npm run dev`, but instead using `./packages/cli/bin/n8n start --tunnel`.
 
-Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that n8n receives and handles the events from the external service (Autopilot). This is achieved by using a tunnel. The details about how a tunnel works are out of the scope of this tutorial but in case you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and it should not be used in production.
+Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that n8n receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and should not be used in production.
 
 
 ## Summary
 
-In this tutorial, we implemented one functionality of the Autofriend webhook API. First of all, we made the node show up in the Editor UI and in the Create Node menu with Autofriend's branding. Then, we added the fields necessary to create a webhook in the external service. We also added the credentials so that the API Key could be stored safely. Finally, we mapped all the parameters to the Autofriend API.
+In this tutorial, we implemented one functionality of the Autofriend webhook API. We made the node show up in the Editor UI and in the Create Node menu with Autofriend's branding. Then, we added the fields necessary to create a webhook in the external service. We also added the credentials so that the API Key could be stored safely. Finally, we mapped all the parameters to the Autofriend API.

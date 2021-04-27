@@ -1,32 +1,32 @@
 ---
 permalink: /credentials/mailcheck
-description: Learn to configure credentials for the MailCheck node in n8n
+description: Learn to configure credentials for the Mailcheck node in n8n
 ---
-# Mailcheck integration
+
+# Mailcheck
+
+You can use these credentials to authenticate the following nodes with Mailcheck.
+- [Mailcheck](../../nodes-library/nodes/Mailcheck/README.md)
 
 ## Prerequisites
 
-- Create a [MailCheck](https://app.mailcheck.co/) account.
+Create a [Mailcheck](https://app.mailcheck.co/) account.
 
+## Using API Key
 
+1. Open the Mailcheck [dashboard](https://app.mailcheck.co/dashboard) page.
+2. Click on the API on the top menu.
+3. Enter a key name in the ***Enter the key name*** field.
+4. Click on the ***Create Key*** button.
+5. Click on the ***Copy*** button to copy the API key.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Mailcheck API' credentials in n8n.
+7. Paste the API key in the ***API Key*** field in the 'Mailcheck API' credentials in n8n.
+8. Click on the ***Create*** button to create your credentials in n8n.
 
-In order to use n8n integration you require an API key, which can be generated on yours Mailcheck account.
+The following video demonstrates the steps mentioned above.
 
-### Step 1
-Open your Mailcheck account and click [“API”](https://app.mailcheck.co/dashboard/api) from the top menu.
-![open API tab](./api-tab.png)
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/Bv1YANfYhUo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-### Step 2
-Type the name of your Integration and tap “Create key”.
-
-### Step 3
-Copy your Key, now you can use it for your integrations.
-
-![copy out API key](./api-key-copy.png)
-
-::: tip
-Please note: don't share or send to anyone your API key. API key counts usage of service that directly impacts your bill.
-Leaked API key could lead to higher than expected money usage.
-:::
-
-Please reach out to Mailccheck support, should you have any questions [support@mailcheck.co](support+n8n@mailcheck.co)
+Please reach out to Mailcheck support should you have any questions [support@mailcheck.co](mailto:support+n8n@mailcheck.co)

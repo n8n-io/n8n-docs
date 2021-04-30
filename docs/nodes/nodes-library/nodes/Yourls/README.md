@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details URL
-- Expand a URL
-- Shorten a URL
-- Get stats about one short URL
-:::
+<Resource node="Yourls" />
 
 ## Example Usage
 

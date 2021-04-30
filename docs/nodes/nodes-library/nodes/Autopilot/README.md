@@ -13,28 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create/Update a contact
-- Delete a contact
-- Get a contact
-- Get all contacts
-:::
-
-::: details Contact Journey
-- Add contact to a list
-:::
-
-::: details Contact List
-- Add contact to a list
-- Check if contact is on a list
-- Get all contacts on a list
-- Remove a contact from a list
-:::
-
-::: details List
-- Create a list
-- Get all lists
-:::
+<Resource node="Autopilot" />
 
 ## Example Usage
 

@@ -13,22 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Bookshelf
-- Retrieve a specific bookshelf resource for the specified user
-- Get all public bookshelf resource for the specified user
-:::
-
-::: details Bookshelf Volume
-- Add a volume to a bookshelf
-- Clears all volumes from a bookshelf
-- Moves a volume within a bookshelf
-- Removes a volume from a bookshelf
-:::
-
-::: details Volume
-- Get a volume resource based on ID
-- Get all volumes filtered by query
-:::
+<Resource node="Google Books" />
 
 ## Example Usage
 

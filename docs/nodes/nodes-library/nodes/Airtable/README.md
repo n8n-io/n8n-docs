@@ -15,11 +15,6 @@ You can find authentication information for this node [here](../../../credential
 
 <Resource node="Airtable" />
 
-- Append the data to a table
-- Delete data from a table
-- List data from a table
-- Read data from a table
-- Update data in a table
 
 ## Example Usage
 

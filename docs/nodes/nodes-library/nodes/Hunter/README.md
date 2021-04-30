@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Get every email address found on the internet using a given domain name, with sources
-- Generate or retrieve the most likely email address from a domain name, a first name and a last name
-- Verify the deliverability of an email address
+<Resource node="Hunter" />
 
 
 ## Example Usage

@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create a contact
-- Get custom attributes
-- Delete a contact
-- Get a contact
-- Update a contact
-:::
-
+<Resource node="Drift" />
 
 ## Example Usage
 

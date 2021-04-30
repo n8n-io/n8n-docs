@@ -13,45 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Attendee
-- Get an attendee
-- Get all attendees
-- Get details of an attendee
-:::
-
-::: details Co-Organizer
-- Create a co-organizer
-- Delete a co-organizer
-- Get all co-organizers
-- Reinvite a co-organizer
-:::
-
-::: details Panelist
-- Create a panelist
-- Delete a panelist
-- Get all panelists
-- Reinvite a panelist
-:::
-
-::: details Registrant
-- Create a registrant
-- Delete a registrant
-- Get a registrant
-- Get all registrants
-:::
-
-::: details Session
-- Get a session
-- Get all sessions
-- Get details of a session
-:::
-
-::: details Webinar
-- Create a webinar
-- Get a webinar
-- Get all webinars
-- Update a webinar
-:::
+<Resource node="GoToWebinar" />
 
 ## Example Usage
 

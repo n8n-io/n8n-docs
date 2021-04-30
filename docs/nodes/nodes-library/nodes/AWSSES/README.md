@@ -13,27 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Custom Verification Email
-- Create a new custom verification email template
-- Delete an existing custom verification email template
-- Get the custom email verification template
-- Get all the existing custom verification email templates for your account
-- Add an email address to the list of identities
-- Update an existing custom verification email template
-:::
-
-::: details Email
-- Send Email
-- Send Template
-:::
-
-::: details Template
-- Create a template
-- Delete a template
-- Get a template
-- Get all templates
-- Update a template
-:::
+<Resource node="AWS SES" />
 
 ## Example Usage
 

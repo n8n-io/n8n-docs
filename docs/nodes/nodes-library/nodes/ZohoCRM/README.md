@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Lead
-- Create a new lead
-- Delete a lead
-- Get data of a lead
-- Get data of all leads
-- Get the fields' metadata
-- Update a lead
-:::
+<Resource node="Zoho CRM" />
 
 ## Example Usage
 

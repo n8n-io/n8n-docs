@@ -13,28 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Project
-- Create a project
-- Delete a project
-- Get a project
-- Get all projects
-- Update a project
-:::
-
-::: details Tag
-- Create a tag
-- Delete a tag
-- Get all tags
-- Update a tag
-:::
-
-::: details Time Entry
-- Create a time entry
-- Delete a time entry
-- Get a time entry
-- Update a time entry
-:::
-
+<Resource node="Clockify" />
 
 ## Example Usage
 

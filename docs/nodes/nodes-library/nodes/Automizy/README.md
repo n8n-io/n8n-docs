@@ -13,21 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create a contact
-- Delete a contact
-- Get a contact
-- Get all contacts
-- Update a contact
-:::
-
-::: details List
-- Create a list
-- Delete a list
-- Get a list
-- Get all lists
-- Update a list
-:::
+<Resource node="Automizy" />
 
 ## Example Usage
 
@@ -48,7 +34,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new list called `n8n-docs` in Automizy.
 
-1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](../../../credentials/Automizy/README.md). 
+1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](../../../credentials/Automizy/README.md).
 2. Select 'List' from the ***Resource*** dropdown list.
 3. Enter `n8n-docs` in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.

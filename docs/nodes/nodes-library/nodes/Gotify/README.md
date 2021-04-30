@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Message
-- Create
-- Delete
-- Get All
-:::
+<Resource node="Gotify" />
 
 ## Example Usage
 

@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Calendar
-- If a time-slot is available in a calendar
-:::
-
-::: details Event
-- Add a event to calendar
-- Delete an event
-- Retrieve an event
-- Retrieve all events from a calendar
-- Update an event
-:::
+<Resource node="Google Calendar" />
 
 ## Example Usage
 

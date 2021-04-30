@@ -14,36 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Category
-- Create a category
-- Get all categories
-- Update a category
-:::
-
-::: details Group
-- Create a group
-- Get a group
-- Get all groups
-- Update a group
-:::
-
-::: details Post
-- Create a post
-- Get a post
-- Get all posts
-- Update a post
-:::
-
-::: details User
-- Create a user
-- Get a user
-- Get all users
-:::
-
-::: details User Group
-- Add a user to a group
-- Remove a user from a group
-:::
+<Resource node="Discourse" />
 
 ## Example Usage
 

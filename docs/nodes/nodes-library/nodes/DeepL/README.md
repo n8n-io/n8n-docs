@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Resource
-- Translate
-:::
+<Resource node="DeepL" />
 
 ## Example Usage
 

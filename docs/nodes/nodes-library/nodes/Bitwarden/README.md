@@ -14,36 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Collection
-- Delete a collection
-- Get a collection
-- Get all collections
-- Update a collection
-:::
-
-::: details Event
-- Get all events
-:::
-
-::: details Group
-- Create a group
-- Delete a group
-- Get a group
-- Get all groups
-- Get members of a group
-- Update a group
-- Update members of a group
-:::
-
-::: details Member
-- Create a member
-- Delete a member
-- Get a member
-- Get all members
-- Get groups of a member
-- Update a member
-- Update groups of a member
-:::
+<Resource node="Bitwarden" />
 
 ## Example Usage
 

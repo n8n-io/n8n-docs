@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Look up person and company data based on an email or domain
-- Auto-complete company names and retrieve logo and domain
-:::
-
-::: details Person
-- Look up person and company data based on an email or domain
-:::
+<Resource node="Clearbit" />
 
 ## Example Usage
 

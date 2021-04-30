@@ -9,13 +9,11 @@ description: Learn how to use the CrateDB node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/CrateDB/README.md).
-:::	
+:::
 
 ## Basic Operations
 
-- Execute an SQL query
-- Insert rows in database
-- Update rows in database
+<Resource node="CrateDB" />
 
 
 ## Example Usage

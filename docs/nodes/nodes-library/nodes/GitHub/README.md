@@ -13,45 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details File
-- Create a new file in repository
-- Delete a file in repository
-- Edit a file in repository
-- Get the data of a single issue
-:::
-
-::: details Issue
-- Create a new issue
-- Create a new comment on an issue
-- Edit an issue
-- Get the data of a single issue
-- Lock an issue
-:::
-
-::: details Repository
-- Get the data of a single repository
-- Return the contents of the repository's license file, if one is detected
-- Returns issues of a repository
-- Get the community profile of a repository with metrics, health score, description, license, ...
-- Get the top 10 popular content paths over the last 14 days
-- Get the top 10 referrering domains over the last 14 days
-:::
-
-::: details Release
-- Creates a new release
-:::
-
-::: details Review
-- Create a new review
-- Get a review for a pull request
-- Get all revies for a pull request
-- Update a review
-:::
-
-::: details User
-- Returns the repositories of a user
-- Invite a user to an organization
-:::
+<Resource node="GitHub" />
 
 ## Example Usage
 

@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Image
-- Create an image
-- Get an image
-:::
-
-::: details User
-- Get a template
-- Get all templates
-:::
+<Resource node="Bannerbear" />
 
 ## Example Usage
 

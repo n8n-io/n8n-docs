@@ -13,8 +13,6 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<br>
-
 <Resource node="Asana" />
 
 ## Example Usage

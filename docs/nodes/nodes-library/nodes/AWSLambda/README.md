@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Invoke a function
+<Resource node="AWS Lambda" />
 
 ## Example Usage
 

@@ -13,61 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Create a company
-- Delete a company
-- Get a company
-- Get all companies
-- Update a company
-:::
-
-::: details Customer Source
-- Get all customer sources
-:::
-
-::: details Lead
-- Create a lead
-- Delete a lead
-- Get a lead
-- Get all leads
-- Update a lead
-:::
-
-::: details Opportunity
-- Create an opportunity
-- Delete an opportunity
-- Get an opportunity
-- Get all opportunities
-- Update an opportunity
-:::
-
-::: details Person
-- Create a person
-- Delete a person
-- Get a person
-- Get all persons
-- Update a person
-:::
-
-::: details Project
-- Create a project
-- Delete a project
-- Get a project
-- Get all projects
-- Update a project
-:::
-
-::: details Task
-- Create a task
-- Delete a task
-- Get a task
-- Get all tasks
-- Update a task
-:::
-
-::: details User
-- Get all users
-:::
+<Resource node="Copper" />
 
 ## Example Usage
 

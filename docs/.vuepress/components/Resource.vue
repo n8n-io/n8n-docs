@@ -1,13 +1,22 @@
 <template>
-	<div class="container">
-		<details  v-for="i in items" :key="i.name" class="details">
-			<summary>{{i.name}}</summary>
-			<ul class="operations">
-				<li v-for="o in i.operations" :key="o.description">
-					{{o.description}}
-				</li>
+	<div>
+		<br />
+		<div v-if="items[0].resource">
+			<details v-for="i in items" :key="i.name" class="details">
+				<summary>{{i.name}}</summary>
+				<ul class="operations">
+					<li v-for="o in i.operations" :key="o.description">
+						<span v-if="o.description">{{o.description}}</span>
+						<span v-else>{{o.name}}</span>
+					</li>
+				</ul>
+			</details>
+		</div>
+		<div v-else>
+			<ul v-for="i in items" :key="i.name">
+				<li>{{i.description}}</li>
 			</ul>
-		</details>
+		</div>
 	</div>
 </template>
 
@@ -37,19 +46,31 @@ export default {
 				}
 			}
 			const operations = data.filter(isOperation);
-			const resources = data.filter(isResource)
-			this.$data.items = resources[0].options.map(resource => {
-				return {
-					name: resource.name,
-					value: resource.value
-				}
-			})
-			const mapOperations = operations.map(operation => {
+			const resources = data.filter(isResource);
+			if(resources.length > 0){
+				this.$data.items = resources[0].options.map(resource => {
+					return {
+						name: resource.name,
+						value: resource.value,
+						resource: true
+					}
+				})
 				for (let i = 0; i< this.items.length; i++){
-					if (operation.displayOptions.show.resource.includes(this.items[i].value))
-					return this.items[i].operations = operation.options;
+					operations.map(operation => {
+						if (operation.displayOptions.show.resource.includes(this.items[i].value)){
+							return this.items[i].operations = operation.options;
+						}
+					})
 				}
-			})
+			} else {
+				this.$data.items = operations[0].options.map(operation => {
+					return {
+						name: operation.name,
+						value: operation.value,
+						description: operation.description
+					}
+				})
+			}
 		})
 		.catch(error => console.log(error))
   }
@@ -57,10 +78,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-	padding-left: 1.5em;
-
-}
 .details {
 	background-color: #fff;
 	margin-bottom: 16px;

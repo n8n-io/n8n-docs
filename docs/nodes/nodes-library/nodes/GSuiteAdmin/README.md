@@ -13,21 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Group
-- Create a group
-- Delete a group
-- Get a group
-- Get all groups
-- Update a group
-:::
-
-::: details User
-- Create a user
-- Delete a user
-- Get a user
-- Get all users
-- Update a user
-:::
+<Resource node="G Suite Admin" />
 
 ## Example Usage
 
@@ -42,7 +28,7 @@ The final workflow should look like the following image.
 ### 1. Start node
 
 The Start node exists by default when you create a new workflow.
-  
+
 ### 2. G Suite Admin node (create: user)
 
 This node will create a user in G Suite with the following information:  first name, last name, password, domain, and username.
@@ -73,7 +59,7 @@ This node will get the User ID from the previous node and update the user's last
 7. Click on ***Execute Node*** to run the workflow.
 :::
 
-In the screenshot below, you will notice that the node has updated the last name of the user that we created in the previous node. 
+In the screenshot below, you will notice that the node has updated the last name of the user that we created in the previous node.
 
 ![Using the G Suite Admin node to update the last name of the user](./GSuiteAdmin1_node.png)
 
@@ -89,7 +75,7 @@ This node will get the information of the user we created in the G Suite Admin n
 5. Click on ***Execute Node*** to run the workflow.
 :::
 
-In the screenshot below, you will notice that the node returns the information of the user we created in the G Suite Admin node. 
+In the screenshot below, you will notice that the node returns the information of the user we created in the G Suite Admin node.
 
 ![Using the G Suite Admin node to get the information of the user](./GSuiteAdmin2_node.png)
 

@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Ticket
-- Create a ticket
-- Delete a ticket
-- Get a ticket
-- Get all tickets
-- Update a ticket
-:::
-
-::: details Ticket Field
-- Get a ticket field
-- Get all system and custom ticket fields
-:::
-
+<Resource node="Zendesk" />
 
 ## Example Usage
 

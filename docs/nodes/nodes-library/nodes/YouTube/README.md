@@ -13,40 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Retrieve a channel
-- Retrieve all channels
-- Update a channel
-- Upload a channel banner
-:::
-
-::: details Playlist
-- Create a playlist
-- Delete a playlist
-- Get a playlist
-- Get all playlist
-- Update a playlist
-:::
-
-::: details Playlist Item
-- Add an item to a playlist
-- Delete an item from a playlist
-- Get a playlist's item
-- Retrieve all playlist items
-:::
-
-::: details Video
-- Delete a video
-- Get a video
-- Retrieve all videos
-- Rate a video
-- Update a video
-- Upload a video
-:::
-
-::: details Video Category
-- Retrieve all video categories
-:::
+<Resource node="YouTube" />
 
 ## Example Usage
 
@@ -65,7 +32,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Read Binary File node
 
-1. Enter the path to the video file you want to upload in the ***File Path*** field. 
+1. Enter the path to the video file you want to upload in the ***File Path*** field.
 2. Click on ***Execute Node*** to run the node.
 
 ![Using the Read Binary File node to get the video](./ReadBinaryFile_node.png)
@@ -77,7 +44,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the YouTube node. You can find out how to do that [here](../../../credentials/Google/README.md).
 2. Select 'Video' from the ***Resource*** dropdown list.
 3. Select 'Upload' from the ***Operation*** dropdown list.
-4. Enter the title of the video in the ***Title*** field. 
+4. Enter the title of the video in the ***Title*** field.
 5. Select the region code from ***Region Code*** dropdown list.
 6. Select the video category from the ***Category ID*** dropdown list.
 7. Click on ***Execute Node*** to run the node.

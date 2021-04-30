@@ -13,25 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details File
-- Copy a file
-- Delete a file
-- Download a file
-- Move a file
-- Upload a file
-:::
-
-::: details Folder
-- Copy a folder
-- Create a folder
-- Delete a folder
-- Return the files and folders in a given folder
-- Move a folder
-:::
-
-::: details Search
-- Query
-:::
+<Resource node="Dropbox" />
 
 ## Example Usage
 

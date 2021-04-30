@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create a contact
-- Get a contact
-- Get all contacts
-- Update a contact
-:::
-
-::: details Invoice
-- Create an invoice
-- Get an invoice
-- Get all invoices
-- Update an invoice
-:::
+<Resource node="Xero" />
 
 ## Example Usage
 

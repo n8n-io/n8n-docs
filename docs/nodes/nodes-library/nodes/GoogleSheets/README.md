@@ -25,6 +25,7 @@ You can find authentication information for this node [here](../../../credential
 - Read data from a sheet
 - Update rows in a sheet
 :::
+
 ## Example Usage
 
 This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.

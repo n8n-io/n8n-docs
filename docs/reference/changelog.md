@@ -2,7 +2,7 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-## n8n@0.118.0
+## n8n@0.118.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
 **Release date:** 2021-05-02
 
@@ -32,6 +32,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Xero: Fixed an issue with the Create operation for the Contact resource
 - Implemented the native `fs/promise` library where possible
 - Added the functionality to output logs to the console or a file
+- In the Postgres, CrateDB, QuestDB, and TimescaleDB nodes the `Execute Query` operation returns the result from all queries executed instead of just one of the results. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
 
 ## n8n@0.117.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />

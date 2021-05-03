@@ -2,6 +2,38 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.118.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
+**Release date:** 2021-05-02
+
+- New nodes
+    - Kitemaker
+    - MQTT
+- Enhanced nodes
+    - CrateDB: Added query parameters
+    - ERPNext: Added support for self-hosted ERPNext instances
+    - FTP: Added the functionality to delete folders
+    - Google Calendar: Added the Continue on Fail functionality
+    - Google Drive: Added the functionality to add file name when downloading files
+    - Gmail: Added functionality to handle multiple binary properties
+    - Microsoft Outlook: Added Is Read and Move option to the Message resource
+    - Postgres: Added query parameters
+    - QuestDB: Added query parameters
+    - QuickBase: Added option to use Field IDs
+    - TimescaleDB: Added query parameters
+    - Twist: Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
+- Bug fixes
+    - GetResponse Trigger: Fixed an issue with error handling
+    - GitHub Trigger: Fixed an issue with error handling
+    - GitLab Trigger: Fixed an issue with error handling
+    - Google Sheets: Fixed an issue with the Lookup operation for returning empty rows
+    - Orbit: Fixed issues with the Post resource
+    - Redis: Fixed an issue with the node not returning an error
+    - Xero: Fixed an issue with the Create operation for the Contact resource
+- Implemented the native `fs/promise` library where possible
+- Added the functionality to output logs to the console or a file
+- In the Postgres, CrateDB, QuestDB, and TimescaleDB nodes the `Execute Query` operation returns the result from all queries executed instead of just one of the results. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
+
 ## n8n@0.117.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />
 **Release date:** 2021-04-24

@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes with Kitemaker
 
 ## Prerequisites
 
-Create an account on a [Kitemaker](https://www.kitemaker.co/).
+Create an account on [Kitemaker](https://www.kitemaker.co/).
 
 ## Using Access Token
 

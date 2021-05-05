@@ -6,6 +6,7 @@ description: Learn to configure credentials for the MQTT node in n8n
 # MQTT
 
 You can use these credentials to authenticate the following nodes with MQTT.
+- [MQTT](../../nodes-library/nodes/MQTT/README.md)
 - [MQTT Trigger](../../nodes-library/trigger-nodes/MQTTTrigger/README.md)
 
 ## Prerequisites

@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="YouTube" />
+<Resource node="n8n-nodes-base.youTube" />
 
 ## Example Usage
 

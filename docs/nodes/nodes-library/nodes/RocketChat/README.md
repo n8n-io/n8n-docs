@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Chat
-- Post a message to a channel or a direct message
-:::
+<Resource node="n8n-nodes-base.rocketchat" />
 
 ## Example Usage
 

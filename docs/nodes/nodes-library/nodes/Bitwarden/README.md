@@ -14,7 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="Bitwarden" />
+<Resource node="n8n-nodes-base.bitwarden" />
 
 ## Example Usage
 

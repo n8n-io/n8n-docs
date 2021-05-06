@@ -13,18 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Spreadsheet
-- Create a spreadsheet
-:::
-
-::: details Sheet
-- Append data to a sheet
-- Clear data from a sheet
-- Delete columns and rows from a sheet
-- Look up a specific column value and return the matching row
-- Read data from a sheet
-- Update rows in a sheet
-:::
+<Resource node="n8n-nodes-base.googleSheets" />
 
 ## Example Usage
 

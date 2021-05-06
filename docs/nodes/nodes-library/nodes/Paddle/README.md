@@ -13,29 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Coupon
-- Create a coupon
-- Get all coupons
-- Update a coupon
-:::
-
-::: details Payment
-- Get all payments
-- Reschedule payment
-:::
-
-::: details Plan
-- Get a plan
-- Get all plans
-:::
-
-::: details Product
-- Get all products
-:::
-
-::: details User
-- Get all users
-:::
+<Resource node="n8n-nodes-base.paddle" />
 
 
 ## Example Usage

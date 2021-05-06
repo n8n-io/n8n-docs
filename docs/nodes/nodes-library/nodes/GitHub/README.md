@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="GitHub" />
+<Resource node="n8n-nodes-base.github" />
 
 ## Example Usage
 

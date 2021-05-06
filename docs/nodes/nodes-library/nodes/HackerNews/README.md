@@ -13,7 +13,7 @@ The Hacker News node does not require authentication.
 
 ## Basic Operations
 
-<Resource node="Hacker News" />
+<Resource node="n8n-nodes-base.hackerNews" />
 
 ## Example Usage
 

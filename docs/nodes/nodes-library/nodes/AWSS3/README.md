@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="AWS S3" />
+<Resource node="n8n-nodes-base.awsS3" />
 
 ## Example Usage
 

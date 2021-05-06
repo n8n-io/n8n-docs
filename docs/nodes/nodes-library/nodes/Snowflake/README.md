@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Execute an SQL query
-- Insert rows in a database
-- Update rows in a database
+<Resource node="n8n-nodes-base.snowflake" />
 
 ## Example Usage
 

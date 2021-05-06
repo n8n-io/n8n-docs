@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="Affinity" />
+<Resource node="n8n-nodes-base.affinity" />
 
 
 ## Example Usage

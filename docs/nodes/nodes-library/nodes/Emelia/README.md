@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="Emelia" />
+<Resource node="n8n-nodes-base.emelia" />
 
 ## Example Usage
 

@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details User
-- Create or update a user profile
-- Change a users identifier
-- Unsubscribe a user
-- Resubscribe a user
-- Delete a user
-- Add a tag to a users profile
-- Remove a tag from a users profile
-:::
-
-::: details Track
-- Track an event for a specific customer
-:::
+<Resource node="n8n-nodes-base.vero" />
 
 
 ## Example Usage

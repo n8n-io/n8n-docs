@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Sales Order
-- Get all sales orders
-:::
-
-::: details Stock On Hand
-- Get a stock on hand
-- Get all stocks on hand
-:::
+<Resource node="n8n-nodes-base.unleashedSoftware" />
 
 ## Example Usage
 

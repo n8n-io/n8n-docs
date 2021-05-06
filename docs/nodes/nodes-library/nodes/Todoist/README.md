@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Task
-- Create a new task
-:::
-
+<Resource node="n8n-nodes-base.todoist" />
 
 ## Example Usage
 

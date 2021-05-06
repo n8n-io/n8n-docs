@@ -13,20 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Event
-- Record the actions a user performs
-:::
-
-::: details User
-- Create/Update a user
-- Delete a user
-- Get a user
-:::
-
-::: details User List
-- Add user to a list
-- Remove a user from a list
-:::
+<Resource node="n8n-nodes-base.iterable" />
 
 ## Example Usage
 

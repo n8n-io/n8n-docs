@@ -13,29 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Create a new company
-- Get data of a company
-- Get data of all companies
-- Update a company
-- List company's users
-:::
-
-::: details Lead
-- Create a new lead
-- Get data of a lead
-- Get data of all leads
-- Update a new lead
-- Delete a lead
-:::
-
-::: details User
-- Create a new user
-- Get data of a user
-- Get data of all users
-- Update a user
-- Delete a user
-:::
+<Resource node="n8n-nodes-base.intercom" />
 
 ## Example Usage
 

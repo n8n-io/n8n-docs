@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Agent
-- Delete an agent by id
-- Get an agent by id
-- Get all agents of the current user's organization
-- Get the output of the most recent container of an agent
-- Add an agent to the launch queue
-:::
+<Resource node="n8n-nodes-base.phantombuster" />
 
 ## Example Usage
 

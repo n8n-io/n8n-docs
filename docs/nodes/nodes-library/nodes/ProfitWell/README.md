@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Get your company's ProfitWell account settings
-:::
-
-::: details Metric
-- Retrieve financial metric broken down by day for either the current month or the last
-:::
+<Resource node="n8n-nodes-base.profitWell" />
 
 ## Example Usage
 

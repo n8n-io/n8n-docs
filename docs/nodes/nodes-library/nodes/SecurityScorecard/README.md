@@ -13,42 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Get company factor scores and issue counts
-- Get a company's historical factor scores
-- Get a company's historical scores
-- Get company information and a summary of their scorecard
-- Get a company's score improvement plan
-:::
-
-::: details Industry
-- Get factor scores
-- Get historical factor scores
-- Get score
-:::
-
-::: details Invite
-- Crean an invite for a company/user
-:::
-
-::: details Portfolio
-- Create a portfolio
-- Delete a portfolio
-- Get all portfolios
-- Update a portfolio
-:::
-
-::: details Portfolio Company
-- Add a company to a portfolio
-- Get all companies in a portfolio
-- Remove a company from a portfolio
-:::
-
-::: details Report
-- Download a generated report
-- Generate a report
-- Get a list of the recently generated report
-:::
+<Resource node="n8n-nodes-base.securityScorecard" />
 
 ## Example Usage
 

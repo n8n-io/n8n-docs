@@ -5,7 +5,7 @@ description: Learn how to use the MongoDB node in n8n
 
 # MongoDB
 
-[MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas. 
+[MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/MongoDB/README.md).
@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Insert documents
-- Find documents
-- Delete documents
-- Update documents
+<Resource node="n8n-nodes-base.mongoDb" />
 
 
 ## Example Usage

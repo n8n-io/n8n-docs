@@ -13,26 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Affiliate
-- Create an affiliate
-- Delete an affiliate
-- Get an affiliate by ID
-- Get all affiliates
-:::
-
-::: details Affiliate Metadata
-- Add metadata to an affiliate
-- Remove metadata from an affiliate
-- Update an affiliate's metadata
-:::
-
-::: details Program Affiliate
-- Add an affiliate to a program
-- Approve an affiliate for a program
-- Disapprove an affiliate
-- Get an affiliate in a program
-- Get all affiliates in a program
-:::
+<Resource node="n8n-nodes-base.tapfiliate" />
 
 ## Example Usage
 

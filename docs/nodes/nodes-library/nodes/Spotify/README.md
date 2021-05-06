@@ -13,46 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Album
-- Get an album by URI or ID
-- Get a list of new album releases
-- Get an album's tracks by URI or ID
-:::
-
-::: details Artist
-- Get an artist by URI or ID
-- Get an artist's albums by URI or ID
-- Get an artist's related artists by URI or ID
-- Get an artist's top tracks by URI or ID
-:::
-
-::: details Library
-- Get the user's liked tracks
-:::
-
-::: details Player
-- Add a song to your queue
-- Get your currently playing track
-- Skip to your next track
-- Pause your music
-- Skip to your previous song
-- Get your recently played tracks
-- Start playing a playlist, artist, or album
-:::
-
-::: details Playlist
-- Add tracks from a playlist by track and playlist URI or ID
-- Create a new playlist
-- Get a playlist by URI or ID
-- Get a playlist's tracks by URI or ID
-- Get a user's playlists
-- Remove tracks from a playlist by track and playlist URI or ID
-:::
-
-::: details Track
-- Get a track by its URI or ID
-- Get audio features for a track by URI or ID
-:::
+<Resource node="n8n-nodes-base.spotify" />
 
 ## Example Usage
 

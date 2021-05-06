@@ -13,7 +13,7 @@ The CoinGecko node does not require authentication.
 
 ## Basic Operations
 
-<Resource node="CoinGecko" />
+<Resource node="n8n-nodes-base.coinGecko" />
 
 ## Example Usage
 

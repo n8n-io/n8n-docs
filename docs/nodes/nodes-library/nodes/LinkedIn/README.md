@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Post
-- Create a new post
-:::
+<Resource node="n8n-nodes-base.linkedIn" />
 
 ## Example Usage
 

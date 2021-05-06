@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="Yourls" />
+<Resource node="n8n-nodes-base.yourls" />
 
 ## Example Usage
 

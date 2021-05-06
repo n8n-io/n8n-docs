@@ -13,21 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Order
-- Create a order
-- Delete a order
-- Get a order
-- Get all orders
-- Update a order
-:::
-
-::: details Product
-- Create a product
-- Delete a product
-- Get a product
-- Get all products
-- Update a product
-:::
+<Resource node="n8n-nodes-base.wooCommerce" />
 
 ## Example Usage
 

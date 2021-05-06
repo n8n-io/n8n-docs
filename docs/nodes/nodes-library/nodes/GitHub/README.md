@@ -37,3 +37,7 @@ The start node exists by default when you create a new workflow.
 4. Enter the repository owner in the *Repository Owner* field.
 5. Enter the repository name in the *Repository Name* field.
 6. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="GitHub" />

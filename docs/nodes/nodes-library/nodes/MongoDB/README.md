@@ -44,3 +44,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the name of your MongoDB collection in the *Collection* field.
 4. Enter `my_key` in the *Fields* field.
 5. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="MongoDB" />

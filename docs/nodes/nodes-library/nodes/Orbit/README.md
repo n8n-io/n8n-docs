@@ -102,4 +102,4 @@ In the screenshot below, you will notice that the node creates a post for the me
 
 ## Further Reading
 
-- [Migrating Community Metrics to Orbit using n8n 📈](https://medium.com/n8n-io/migrating-community-metrics-to-orbit-using-n8n-b293372e8daf)
+<FurtherReadingBlog node="Orbit" />

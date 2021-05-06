@@ -36,3 +36,7 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Get' option from the *Operation* dropdown list.
 3. Enter the key for which you want to retrieve the value in the *Key* field.
 4. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Redis" />

@@ -38,3 +38,7 @@ The start node exists by default when you create a new workflow.
 5. Select your list ID from the *List ID* dropdown list.
 6. Enter the name of the task in the *Name* field.
 7. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="ClickUp" />

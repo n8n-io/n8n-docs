@@ -97,4 +97,4 @@ Refer to [Search operators you can use with Gmail](https://support.google.com/ma
 
 ## Further Reading
 
-- [Supercharging your conference registration process with n8n 🎫](https://medium.com/n8n-io/supercharging-your-conference-registration-process-with-n8n-2831cdff37f9)
+<FurtherReadingBlog node="Gmail" />

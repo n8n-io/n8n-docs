@@ -97,3 +97,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 :::
 
 ![Using the NoOp node](./NoOp_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="CoinGecko" />

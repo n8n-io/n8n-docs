@@ -78,3 +78,7 @@ The start node exists by default when you create a new workflow.
 :::
 
 ![Using the YouTube node to add the video to the playlist](./YouTube2_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="YouTube" />

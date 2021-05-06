@@ -35,3 +35,7 @@ The start node exists by default when you create a new workflow.
 2. Select your workspace from the *Workspace* dropdown list.
 3. Enter the name of the task in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Asana" />

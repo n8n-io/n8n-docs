@@ -119,6 +119,7 @@ services:
       - N8N_PROTOCOL=https
       - NODE_ENV=production
       - WEBHOOK_TUNNEL_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
@@ -169,6 +170,7 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=user@example.com
 ```
 
+**Note:** If you want to use special characters in the password, use quotes. For example, `N8N_BASIC_AUTH_PASSWORD="p@s$w0rd"`
 
 ### 7. Create data folder
 

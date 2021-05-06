@@ -39,4 +39,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Automate Designs with Bannerbear and n8n](https://medium.com/n8n-io/automate-designs-with-bannerbear-and-n8n-2b64c94b54db)
+<FurtherReadingBlog node="RocketChat" />

@@ -48,3 +48,7 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the node.
 
 ![Posting with the LinkedIn node](./LinkedIn_node.png)
+
+## Further Reading
+
+<FurtherReadingBlog node="LinkedIn" />

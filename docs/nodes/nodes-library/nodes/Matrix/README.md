@@ -141,4 +141,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ## Further Reading
 
-- [How to host virtual coffee breaks with n8n ☕️](https://n8n.io/blog/how-to-host-virtual-coffee-breaks-with-n8n/)
+<FurtherReadingBlog node="Matrix" />

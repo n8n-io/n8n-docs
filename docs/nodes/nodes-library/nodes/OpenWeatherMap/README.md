@@ -37,4 +37,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-- [Creating Telegram Bots with n8n, a No-Code Platform](https://medium.com/n8n-io/creating-telegram-bots-with-n8n-a-no-code-platform-fdf1f0928da7)
+<FurtherReadingBlog node="OpenWeatherMap" />

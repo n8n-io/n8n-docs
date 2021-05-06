@@ -45,3 +45,7 @@ The start node exists by default when you create a new workflow.
 2. Select the name of your document from the *Doc* dropdown list.
 3. Select the name of your table from the *Table* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+
+## Further Reading
+
+<FurtherReadingBlog node="Coda" />

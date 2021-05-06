@@ -13,24 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Organization
-- Retrieve data on the logged-in user's organization
-:::
-
-::: details Space
-- Retrieve data on all the spaces in the logged-in user's organization
-:::
-
-::: details User
-- Retrieve data on all the users in the logged-in user's organization
-:::
-
-::: details Work Item
-- Create
-- Get
-- Get All
-- Update
-:::
+<Resource node="n8n-nodes-base.kitemaker" />
 
 ## Example Usage
 

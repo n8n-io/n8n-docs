@@ -39,7 +39,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Implemented the native `fs/promise` library where possible
 - Added the functionality to output logs to the console or a file
 - In the Postgres, CrateDB, QuestDB, and TimescaleDB nodes the `Execute Query` operation returns the result from all queries executed instead of just one of the results. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
-- We have updated the minimum required version of Node.js to v14.15. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
+- We have updated the minimum required version for Node.js to v14.15. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
 
 ## n8n@0.117.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />

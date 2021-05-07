@@ -43,7 +43,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will make a GET request to the API `https://api.wheretheiss.at/v1/satellites/25544/positions` to fetch the position of the ISS. This information gets passed on to the next node in the workflow.
 ::: v-pre
-1. Enter `https://api.wheretheiss.at/v1/satellites/25544/positions` in the ***URL*** field. 
+1. Enter `https://api.wheretheiss.at/v1/satellites/25544/positions` in the ***URL*** field.
 2. Click on the ***Add Parameter*** button in the ***Query Parameters*** section.
 3. Enter `timestamps` in the ***Name*** field.
 4. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.

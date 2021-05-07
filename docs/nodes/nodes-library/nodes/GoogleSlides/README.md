@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Page
-- Get a page
-- Get a thumbnail
-:::
-
-::: details Presentation
-- Create a presentation
-- Get a presentation
-- Get presentation slides
-- Replace text in a presentation
-:::
+<Resource node="n8n-nodes-base.googleSlides" />
 
 ## Example Usage
 

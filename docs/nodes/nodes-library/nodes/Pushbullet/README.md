@@ -13,12 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Push
-- Create a push
-- Delete a push
-- Get all pushes
-- Update a push
-:::
+<Resource node="n8n-nodes-base.pushbullet" />
 
 ## Example Usage
 
@@ -47,7 +42,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](../../../credentials/OpenWeatherMap/README.md). 
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](../../../credentials/OpenWeatherMap/README.md).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 

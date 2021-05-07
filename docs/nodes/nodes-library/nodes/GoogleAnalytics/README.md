@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Report
-- Return the analytics data
-:::
-
-::: details User Activity
-- Return user activity data
-:::
+<Resource node="n8n-nodes-base.googleAnalytics" />
 
 ## Example Usage
 

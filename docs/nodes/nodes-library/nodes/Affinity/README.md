@@ -13,33 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details List
-- Get a list
-- Get all lists
-:::
-
-::: details List Entry
-- Create a list entry
-- Delete a list entry
-- Get a list entry
-- Get all list entries
-:::
-
-::: details Organization
-- Create an organization
-- Delete an organization
-- Get an organization
-- Get all organizations
-- Update an organization
-:::
-
-::: details Person
-- Create a person
-- Delete a person
-- Get a person
-- Get all persons
-- Update a person
-:::
+<Resource node="n8n-nodes-base.affinity" />
 
 
 ## Example Usage

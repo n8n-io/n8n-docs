@@ -13,22 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Alias
-- Create an alias
-:::
-
-::: details Event
-- Create an event
-:::
-
-::: details Identity
-- Create an identity
-:::
-
-::: details Track
-- Track a page
-- Track a screen
-:::
+<Resource node="n8n-nodes-base.postHog" />
 
 ## Example Usage
 

@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Link
-- Create a link
-- Get a link
-- Update a link
-:::
+<Resource node="n8n-nodes-base.bitly" />
 
 ## Example Usage
 

@@ -13,40 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Retrieve a channel
-- Retrieve all channels
-- Update a channel
-- Upload a channel banner
-:::
-
-::: details Playlist
-- Create a playlist
-- Delete a playlist
-- Get a playlist
-- Get all playlist
-- Update a playlist
-:::
-
-::: details Playlist Item
-- Add an item to a playlist
-- Delete an item from a playlist
-- Get a playlist's item
-- Retrieve all playlist items
-:::
-
-::: details Video
-- Delete a video
-- Get a video
-- Retrieve all videos
-- Rate a video
-- Update a video
-- Upload a video
-:::
-
-::: details Video Category
-- Retrieve all video categories
-:::
+<Resource node="n8n-nodes-base.youTube" />
 
 ## Example Usage
 

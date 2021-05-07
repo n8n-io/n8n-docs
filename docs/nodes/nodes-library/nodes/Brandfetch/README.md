@@ -14,11 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Return a company's colors
-- Return a company's data
-- Return a company's fonts
-- Return a company's industry
-- Return a company's logo & icon
+<Resource node="n8n-nodes-base.Brandfetch" />
 
 ## Example Usage
 

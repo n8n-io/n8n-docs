@@ -13,65 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Astronomy Picture of the Day
-- Get the Astronomy Picture of the Day
-:::
-
-::: details Asteroid Neo-Feed
-- Retrieve a list of asteroids based on their closest approach date to Earth
-:::
-
-::: details Asteroid Neo-Lookup
-- Look up an asteroid based on its NASA SPK-ID
-:::
-
-::: details Asteroid Neo-Browse
-- Browse the overall asteroid dataset
-:::
-
-::: details DONKI Coronal Mass Ejection
-- Retrieve DONKI coronal mass ejection data
-:::
-
-::: details DONKI Interplanetary Shock
-- Retrieve DONKI interplanetary shock data
-:::
-
-::: details DONKI Solar Flare
-- Retrieve DONKI solar flare data
-:::
-
-::: details DONKI Solar Energetic Particle
-- Retrieve DONKI solar energetic particle data
-:::
-
-::: details DONKI Magnetopause Crossing
-- Retrieve data on DONKI magnetopause crossings
-:::
-
-::: details DONKI Radiation Belt Enhancement
-- Retrieve DONKI radiation belt enhancement data
-:::
-
-::: details DONKI High Speed Stream
-- Retrieve DONKI high speed stream data
-:::
-
-::: details DONKI WSA+EnlilSimulation
-- Retrieve DONKI WSA+EnlilSimulation data
-:::
-
-::: details DONKI Notifications
-- Retrieve DONKI notifications data
-:::
-
-::: details Earth Imagery
-- Retrieve Earth imagery
-:::
-
-::: details Earth Assets
-- Retrieve Earth assets
-:::
+<Resource node="n8n-nodes-base.nasa" />
 
 ## Example Usage
 

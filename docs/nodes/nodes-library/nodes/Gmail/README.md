@@ -13,32 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Draft
-- Create a new email draft
-- Delete a draft
-- Get a draft
-- Get all drafts
-:::
-
-::: details Label
-- Create a new label
-- Delete a label
-- Get a label
-- Get all labels
-:::
-
-::: details Message
-- Send an email
-- Delete a message
-- Get a message
-- Get all messages
-- Reply to an email
-:::
-
-::: details Message Label
-- Add a label to a message
-- Remove a label from a message
-:::
+<Resource node="n8n-nodes-base.gmail" />
 
 ## Example Usage
 

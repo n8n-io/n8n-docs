@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Delete a key
-- Return the value of a key
-- Return generic information about the Redis instance
-- Return all the keys matching a pattern
-- Set the value of a key in Redis
+<Resource node="n8n-nodes-base.redis" />
 
 
 ## Example Usage

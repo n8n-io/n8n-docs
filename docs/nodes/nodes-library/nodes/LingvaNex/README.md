@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Translate
+<Resource node="n8n-nodes-base.lingvaNex" />
 
 ## Example Usage
 

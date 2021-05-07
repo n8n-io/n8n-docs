@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Payout
-- Create a batch payout
-- Show batch payout details
-:::
-
-::: details Payout item
-- Cancel an unpaid payout item
-- Show payout item details
-:::
+<Resource node="n8n-nodes-base.payPal" />
 
 ## Example Usage
 

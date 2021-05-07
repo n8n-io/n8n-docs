@@ -13,29 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Drive
-- Create a drive
-- Delete a drive
-- Get a drive
-- List all drives
-- Update a drive
-:::
-
-::: details File
-- Copy a file
-- Delete a file
-- Download a file
-- List files and folders
-- Share a file
-- Update a file
-- Upload a file
-:::
-
-::: details Folder
-- Create a folder
-- Delete a folder
-- Share a folder
-:::
+<Resource node="n8n-nodes-base.googleDrive" />
 
 ## Example Usage
 

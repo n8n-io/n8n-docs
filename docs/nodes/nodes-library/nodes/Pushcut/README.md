@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Notification
-- Send
-:::
+<Resource node="n8n-nodes-base.pushcut" />
 
 ## Example Usage
 

@@ -13,7 +13,7 @@ The OpenThesaurus node does not require authentication.
 
 ## Basic Operations
 
-- Get synonyms for a German word in German
+<Resource node="n8n-nodes-base.openThesaurus" />
 
 ## Example Usage
 

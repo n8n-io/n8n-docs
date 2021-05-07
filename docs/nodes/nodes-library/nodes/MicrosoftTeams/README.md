@@ -13,26 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Create a channel
-- Delete a channel
-- Get a channel
-- Get all channels
-- Update a channel
-:::
-
-::: details Channel Message (Beta)
-- Create a message
-- Get all messages
-:::
-
-::: details Task
-- Create a task
-- Delete a task
-- Get a task
-- Get all tasks
-- Update a task
-:::
+<Resource node="n8n-nodes-base.microsoftTeams" />
 
 ## Example Usage
 

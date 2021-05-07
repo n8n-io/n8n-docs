@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Execute an SQL query
-- Insert rows in database
-- Update rows in database
-- Delete rows in database
+<Resource node="n8n-nodes-base.microsoftSql" />
 
 
 ## Example Usage

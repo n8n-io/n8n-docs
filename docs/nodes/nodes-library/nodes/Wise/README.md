@@ -13,37 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Account
-- Retrieve balances for all account currencies of this user
-- Retrieve all currencies in the borderless account of this user
-- Retrieve the statement for the borderless account of this user
-:::
-
-::: details Exchange Rate
-- Get
-:::
-
-::: details Profile
-- Get a profile
-- Get all profiles
-:::
-
-::: details Recipient
-- Get all recipients
-:::
-
-::: details Quote
-- Create a quote
-- Get a quote
-:::
-
-::: details Transfer
-- Create a transfer
-- Delete a transfer
-- Execute a transfer
-- Get a transfer
-- Get all transfers
-:::
+<Resource node="n8n-nodes-base.wise" />
 
 ## Example Usage
 

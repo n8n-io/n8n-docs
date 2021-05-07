@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Entry
-- Create an entry
-- Delete an entry
-- Get an entry
-- Get all entries
-- Update an entry
-:::
+<Resource node="n8n-nodes-base.strapi" />
 
 
 ## Example Usage

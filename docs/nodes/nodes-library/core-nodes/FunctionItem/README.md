@@ -54,10 +54,13 @@ set on that object. When the workflow execution succeeds, n8n will check automat
 has changed and will save it, if necessary.
 
 There are two types of static data. The "global" and the "node" one. Global static data is the
-same in the whole workflow. And every node in the workflow can access it. The node static data
-, however, is different for every node and only the node which set it can retrieve it again.
+same in the whole workflow. And every node in the workflow can access it. The node static data,
+however, is different for every node and only the node which set it can retrieve it again.
 
-Example:
+**Note:** The static data cannot be read and written when executing via manual executions. The data will always be empty, and the changes will not persist. The static data will only be saved when a workflow is active.
+
+
+#### Example
 
 ```javascript
 // Get the global workflow static data
@@ -74,8 +77,3 @@ staticData.lastExecution = new Date().getTime();
 // Delete data
 delete staticData.lastExecution;
 ```
-
-It is important to know that the static data can not be read and written when testing via the UI.
-The data there will always be empty and the changes will not persist. Only when a workflow
-is active and it gets called by a Trigger or Webhook, the static data will be saved.
-This works in the same way as in the Function node.

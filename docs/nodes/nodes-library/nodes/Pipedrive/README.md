@@ -13,57 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Activity
-- Create an activity
-- Delete an activity
-- Get data of an activity
-- Get data of all activities
-- Update an activity
-:::
-
-::: details Deal
-- Create a deal
-- Delete a deal
-- Duplicate a deal
-- Get data of a deal
-- Get data of all deals
-- Update a deal
-:::
-
-::: details File
-- Create a file
-- Delete a file
-- Download a file
-- Get data of a file
-:::
-
-::: details Note
-- Create a note
-- Delete a note
-- Get data of a note
-- Get data of all notes
-- Update a note
-:::
-
-::: details Organization
-- Create an organization
-- Delete an organization
-- Get data of an organization
-- Get data of all organizations
-:::
-
-::: details Person
-- Create a person
-- Delete a person
-- Get data of a person
-- Get data of all persons
-- Update a person
-:::
-
-::: details Product
-- Get data of all products
-:::
-
+<Resource node="n8n-nodes-base.pipedrive" />
 
 ## Example Usage
 

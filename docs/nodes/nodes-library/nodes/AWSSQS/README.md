@@ -13,7 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Send Message
+<Resource node="n8n-nodes-base.awsSqs" />
 
 ## Example Usage
 

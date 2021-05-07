@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-:::details Document
-- Create a document
-- Create/Update a document
-- Delete a document
-- Get a document
-- Get all documents from a collection
-:::
-
-:::details Collection
-- Get all root collections
-:::
+<Resource node="n8n-nodes-base.googleFirebaseCloudFirestore" />
 
 ## Example Usage
 

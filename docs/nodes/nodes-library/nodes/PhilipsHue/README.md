@@ -13,12 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Light
-- Delete a light
-- Retrieve a light
-- Retrieve all lights
-- Update a light
-:::
+<Resource node="n8n-nodes-base.philipsHue" />
 
 
 ## Example Usage

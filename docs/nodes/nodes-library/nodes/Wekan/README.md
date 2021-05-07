@@ -13,46 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Board
-- Create a new board
-- Delete a board
-- Get the data of a board
-- Get all user boards
-:::
-
-::: details Card
-- Create a new card
-- Delete a card
-- Get a card
-- Update a card
-:::
-
-::: details Card Comment
-- Create a comment on a card
-- Delete a comment from a card
-- Get a card comment
-- Get all card comments
-:::
-
-::: details Checklist
-- Create a new checklist
-- Delete a checklist
-- Get the data of a checklist
-- Returns all checklists for the card
-:::
-
-::: details Checklist Item
-- Delete a checklist item
-- Get a checklist item
-- Update a checklist item
-:::
-
-::: details List
-- Create a new list
-- Delete a list
-- Get the data of a list
-- Get all board lists
-:::
+<Resource node="n8n-nodes-base.wekan" />
 
 ## Example Usage
 

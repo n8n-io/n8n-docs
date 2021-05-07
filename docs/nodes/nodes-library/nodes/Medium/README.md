@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Post
-- Create a post
-:::
-
-::: details Publication
-- Get all publications
-:::
+<Resource node="n8n-nodes-base.medium" />
 
 
 ## Example Usage

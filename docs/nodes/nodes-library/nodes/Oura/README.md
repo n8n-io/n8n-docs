@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Profile
-- Get the user's profile information
-:::
-
-::: details Summary
-- Get the user's activity summary
-- Get the user's readiness summary
-- Get the user's sleep summary
-:::
+<Resource node="n8n-nodes-base.oura" />
 
 ## Example Usage
 

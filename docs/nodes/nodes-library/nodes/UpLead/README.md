@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Get information about a company
-:::
-
-::: details Person
-- Get information about a person
-:::
-
+<Resource node="n8n-nodes-base.uplead" />
 
 ## Example Usage
 

@@ -13,67 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Bill
-- Create a bill
-- Delete a bill
-- Get a bill
-- Get all bills
-:::
-
-::: details Customer
-- Create a customer
-- Get a customer
-- Get all customers
-- Update a customer
-:::
-
-::: details Employee
-- Create an employee
-- Get an employee
-- Get all employees
-- Update an employee
-:::
-
-::: details Estimate
-- Create an estimate
-- Delete an estimate
-- Get an estimate
-- Get all estimates
-- Send an estimate
-- Update an estimate
-:::
-
-::: details Invoice
-- Create an invoice
-- Delete an invoice
-- Get an invoice
-- Get all invoices
-- Send an invoice
-- Update an invoice
-- Void an invoice
-:::
-
-::: details Item
-- Get an item
-- Get all items
-:::
-
-::: details Payment
-- Create a payment
-- Delete a payment
-- Get a payment
-- Get all payment
-- Send a payment
-- Update a payment
-- Void a payment
-:::
-
-::: details Vendor
-- Create a vendor
-- Get a vendor
-- Get all vendors
-- Update a vendor
-:::
+<Resource node="n8n-nodes-base.quickbooks" />
 
 ## Example Usage
 

@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Account
-- Get
-:::
-
-::: details Image
-- Create
-:::
-
-::: details PDF
-- Create
-:::
+<Resource node="n8n-nodes-base.apiTemplateIo" />
 
 ## Example Usage
 

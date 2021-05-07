@@ -13,31 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Activity
-- Create an activity for a member
-- Get all activities
-:::
-
-::: details Member
-- Delete a member
-- Get a member
-- Get all members in a workspace
-- Lookup a member by identity
-- Update a member
-- Create/Update a member
-:::
-
-::: details Note
-- Create a note
-- Get all notes for a member
-- Update a note
-:::
-
-::: details Post
-- Create a post
-- Get all posts
-- Delete a post
-:::
+<Resource node="n8n-nodes-base.orbit" />
 
 ## Example Usage
 

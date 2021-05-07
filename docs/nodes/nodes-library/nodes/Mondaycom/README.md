@@ -13,35 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Board
-- Archive a board
-- Create a new board
-- Get a board
-- Get all boards
-:::
-
-::: details Board Column
-- Create a new column
-- Get all columns
-:::
-
-::: details Board Group
-- Delete a group in a board
-- Create a group in a board
-- Get a list of groups in a board
-:::
-
-::: details Board Item
-- Add an update to an item
-- Change a column value for a board item
-- Change multiple column values for a board item
-- Create an item in a board's group
-- Delete an item
-- Get an item
-- Get all items
-- Get items by column value
-- Move item to group
-:::
+<Resource node="n8n-nodes-base.mondayCom" />
 
 ## Example Usage
 

@@ -13,49 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Client
-- Create a new client
-- Delete a client
-- Get data of a client
-- Get data of all clients
-:::
-
-:::details Expense
-- Create a new expense
-- Delete an expense
-- Get data of an expense
-- Get data of all expenses
-:::
-
-::: details Invoice
-- Create a new invoice
-- Delete an invoice
-- Email an invoice
-- Get data of an invoice
-- Get data of all invoices
-:::
-
-::: details Payment
-- Create a new payment
-- Delete a payment
-- Get data of a payment
-- Get data of all payments
-:::
-
-::: details Quote
-- Create a new quote
-- Delete a quote
-- Email a quote
-- Get data of a quote
-- Get data of all quotes
-:::
-
-::: details Task
-- Create a new task
-- Delete a task
-- Get data of a task
-- Get data of all tasks
-:::
+<Resource node="n8n-nodes-base.invoiceNinja" />
 
 ## Example Usage
 

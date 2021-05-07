@@ -13,27 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Field
-- Get all fields
-:::
-
-::: details File
-- Delete a file
-- Download a file
-:::
-
-::: details Record
-- Create a record
-- Delete a record
-- Get all records
-- Update a record
-- Upsert a record
-:::
-
-::: details Report
-- Get a report
-- Run a report
-:::
+<Resource node="n8n-nodes-base.quickbase" />
 
 ## Example Usage
 

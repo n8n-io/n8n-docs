@@ -13,22 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details File
-- Copy a file
-- Delete a file
-- Download a file
-- Get a file
-- Search a file
-- Share a file
-- Upload a file
-:::
-
-::: details Folder
-- Create a folder
-- Get items inside a folder
-- Search a folder
-- Share a folder
-:::
+<Resource node="n8n-nodes-base.microsoftOneDrive" />
 
 ## Example Usage
 

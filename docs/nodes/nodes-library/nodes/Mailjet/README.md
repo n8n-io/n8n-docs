@@ -13,14 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Email
-- Send an email
-- Send an email template
-:::
-
-::: details SMS
-- Send an SMS
-:::
+<Resource node="n8n-nodes-base.mailjet" />
 
 ## Example Usage
 

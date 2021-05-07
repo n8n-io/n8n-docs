@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details SMS
-- Send SMS
-- Send Whatsapp message
-:::
+<Resource node="n8n-nodes-base.twilio" />
 
 ## Example Usage
 

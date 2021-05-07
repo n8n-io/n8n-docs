@@ -13,26 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Issue
-- Create a new issue
-- Create a new comment on an issue
-- Edit an issue
-- Get the data of a single issue
-- Lock an issue
-:::
-
-::: details Repository
-- Get the data of a single repository
-- Return issues of a repository
-:::
-
-::: details Release
-- Create a new release
-:::
-
-::: details User
-- Returns the repositories of a user
-:::
+<Resource node="n8n-nodes-base.gitlab" />
 
 ## Example Usage
 
@@ -56,4 +37,3 @@ The start node exists by default when you create a new workflow.
 4. Enter the project owner in the *Project Owner* field.
 5. Enter the project name in the *Project Name* field.
 6. Click on *Execute Node* to run the workflow.
-

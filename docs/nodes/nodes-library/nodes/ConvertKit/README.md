@@ -9,39 +9,11 @@ description: Learn how to use the ConvertKit node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/ConvertKit/README.md).
-:::	
+:::
 
 ## Basic Operations
 
-::: details Custom Field
-- Create a field
-- Delete a field
-- Get all fields
-- Update a field
-:::
-
-::: details Form
-- Add a subscriber
-- Get all forms
-- List subscriptions to a form including subscriber data
-:::
-
-::: details Sequence
-- Add a subscriber
-- Get all sequences
-- Get all subscriptions to a sequence including subscriber data
-:::
-
-::: details Tag
-- Create a tag
-- Get all tags
-:::
-
-::: details Tag Subscriber
-- Add a tag to a subscriber
-- List subscriptions to a tag including subscriber data
-- Delete a tag from a subscriber
-:::
+<Resource node="n8n-nodes-base.convertKit" />
 
 ## Example Usage
 

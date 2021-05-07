@@ -13,47 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create/Update a contact
-- Delete a contact
-- Get a contact
-- Get all contacts
-- Get recently created/updated contacts
-:::
-
-:::details Company
-- Create a company
-- Delete a company
-- Get a company
-- Get all companies
-- Get recently created companies
-- Get recently modified companies
-- Search companies by domain
-- Update a company
-:::
-
-:::details Deal
-- Create a deal
-- Delete a deal
-- Get a deal
-- Get all deals
-- Get recently created deals
-- Get recently modified deals
-- Update a deal
-:::
-
-:::details Form
-- Get all fields from a form
-- Submit data to a form
-:::
-
-::: details Ticket
-- Create a ticket
-- Delete a ticket
-- Get a ticket
-- Get all tickets
-- Update a ticket
-:::
+<Resource node="n8n-nodes-base.hubspot" />
 
 ## Example Usage
 

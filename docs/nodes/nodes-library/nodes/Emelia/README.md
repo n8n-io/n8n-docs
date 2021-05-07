@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Campaign
-- Add contact
-- Create a campaign
-- Get a campaign
-- Get all campaigns
-- Pause a campaign
-- Start a campaign
-:::
-
-::: details Contact List
-- Add a contact
-- Get all contact lists
-:::
+<Resource node="n8n-nodes-base.emelia" />
 
 ## Example Usage
 

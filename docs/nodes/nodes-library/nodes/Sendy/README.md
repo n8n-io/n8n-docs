@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Campaign
-- Create a campaign
-:::
-
-::: details Subscriber
-- Add a subscriber to a list
-- Count subscribers
-- Delete a subscriber from a list
-- Unsubscribe a user from a list
-- Get the status of a subscriber
-:::
+<Resource node="n8n-nodes-base.sendy" />
 
 ## Example Usage
 
@@ -57,7 +47,7 @@ In the screenshot below, you will notice that the node adds a subscriber with th
 
 ### 3. Sendy1 node (create: campaign)
 
-This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list that we specify. 
+This node will create a campaign with the title 'Welcome to n8n' and send it to the subscribers of the list that we specify.
 ::: v-pre
 1. Select the credentials that you entered in the previous node.
 2. Select 'Campaign' from the ***Resource*** dropdown list.

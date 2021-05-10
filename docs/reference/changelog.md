@@ -2,6 +2,28 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.119.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.1...n8n@0.119.0) for this version.<br />
+**Release date:** 2021-05-09
+
+- Enhanced nodes
+    - AWS Comprehend: Added the Detect Entities operation
+    - AWS Lambda: Added the ability to list functions recursively if the number of functions exceeds 50
+    - Google Analytics: Added pagination to the Report resource
+    - Mailjet: Added Reply To parameter
+    - Redis: Added the Increment operation
+    - Spreadsheet File: Added the Header Row option
+    - Webflow Trigger: Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
+- Bug fixes
+    - Google Cloud Firestore: Fixed an issue with parsing null value
+    - Google Sheets: Fixed an issue with the Key Row parameter
+    - Zoho CRM: Fixed an issue with the authentication
+- Added various frontend hooks
+- Changed the version of cheerio to fix build issues
+- Implemented timeout for subworkflows
+- Removed the deregistration webhooks functionality from the webhook process
+- Fixed an issue with the nodes getting executed even if there was no input data
+
 ## n8n@0.118.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.0...n8n@0.118.1) for this version.<br />
 **Release date:** 2021-05-05

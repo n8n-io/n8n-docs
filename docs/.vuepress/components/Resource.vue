@@ -1,21 +1,26 @@
 <template>
 	<div>
 		<br />
-		<div v-if="items[0].resource">
-			<details v-for="i in items" :key="i.name" class="details">
-				<summary>{{i.name}}</summary>
-				<ul class="operations">
-					<li v-for="o in i.operations" :key="o.description">
-						<span v-if="o.description">{{o.description}}</span>
-						<span v-else>{{o.name}}</span>
-					</li>
-				</ul>
-			</details>
+		<div v-if="loading">
+			Loading
 		</div>
 		<div v-else>
-			<ul v-for="i in items" :key="i.name">
-				<li>{{i.description}}</li>
-			</ul>
+			<div v-if="items[0].resource">
+				<details v-for="i in items" :key="i.name" class="details">
+					<summary>{{i.name}}</summary>
+					<ul class="operations">
+						<li v-for="o in i.operations" :key="o.description">
+							<span v-if="o.description">{{o.description}}</span>
+							<span v-else>{{o.name}}</span>
+						</li>
+					</ul>
+				</details>
+			</div>
+			<div v-else>
+				<ul v-for="i in items" :key="i.name">
+					<li>{{i.description}}</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
@@ -24,7 +29,8 @@
 export default {
 	data () {
 		return {
-			items: []
+			items: [],
+			loading: true
 		}
 	},
 	props: ['node'],
@@ -70,6 +76,9 @@ export default {
 						description: operation.description
 					}
 				})
+			}
+			if(this.$data.items){
+				this.$data.loading = false;
 			}
 		})
 		.catch(error => console.log(error))

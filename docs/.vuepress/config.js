@@ -227,6 +227,10 @@ module.exports = {
 					path: 'scaling-n8n.md',
 				},
 				{
+					title: '💻 Logging in n8n',
+					path: 'logging.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},

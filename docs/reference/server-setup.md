@@ -121,7 +121,6 @@ services:
       - WEBHOOK_TUNNEL_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 

@@ -2,6 +2,34 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.120.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.119.0...n8n@0.120.0) for this version.<br />
+**Release date:** 2021-05-17
+
+- New nodes
+    - iCalendar
+- Enhanced nodes
+    - Google Cloud Firestore: Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
+    - IMAP: Added the Force reconnect option
+    - Paddle: Added the Use Sandbox environment API parameter
+    - Spotify: Added the Position parameter to the Add operation of the Playlist resource
+    - WooCommerce: Added the Include Credentials in Query parameter
+- Bug fixes
+    - Clockify Trigger: Fixed an issue that occurred when the node returned an empty array
+    - Google Cloud Firestore: Fixed an issue with parsing empty document, and an issue with the detection of date
+    - HubSpot: Fixed an issue with the Return All option
+- Added various frontend hooks
+- Added await to hooks to fix issues with the `Unknown` status of the workflows
+- Changed the data type of the `credentials_entity` field for MySQL database to fix issues with long credentials
+- Fixed an issue with the ordering of the executions when the list is auto-refreshed
+- Updated `amqplib` to 0.7.1
+- Improved logging and added wait to workflow deactivation
+- Added the functionality that allows reading sibling parameters
+- Fixed an issue with the expressions not getting resolved for additional options
+- Fixed an issue that did not save values for parameters that are based on another parameter with an expression
+- Fixed an issue with displaying parameter with root-level reference
+- Fixed an issue where workflow id was missing on deactivation of the workflow
+
 ## n8n@0.119.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.1...n8n@0.119.0) for this version.<br />
 **Release date:** 2021-05-09

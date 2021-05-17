@@ -18,17 +18,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Clockify Trigger: Fixed an issue that occurred when the node returned an empty array
     - Google Cloud Firestore: Fixed an issue with parsing empty document, and an issue with the detection of date
     - HubSpot: Fixed an issue with the Return All option
-- Added various frontend hooks
 - Added await to hooks to fix issues with the `Unknown` status of the workflows
 - Changed the data type of the `credentials_entity` field for MySQL database to fix issues with long credentials
 - Fixed an issue with the ordering of the executions when the list is auto-refreshed
-- Updated `amqplib` to 0.7.1
-- Improved logging and added wait to workflow deactivation
 - Added the functionality that allows reading sibling parameters
-- Fixed an issue with the expressions not getting resolved for additional options
-- Fixed an issue that did not save values for parameters that are based on another parameter with an expression
-- Fixed an issue with displaying parameter with root-level reference
-- Fixed an issue where workflow id was missing on deactivation of the workflow
 
 ## n8n@0.119.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.1...n8n@0.119.0) for this version.<br />
@@ -46,11 +39,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
     - Google Cloud Firestore: Fixed an issue with parsing null value
     - Google Sheets: Fixed an issue with the Key Row parameter
     - Zoho CRM: Fixed an issue with the authentication
-- Added various frontend hooks
-- Changed the version of cheerio to fix build issues
 - Implemented timeout for subworkflows
 - Removed the deregistration webhooks functionality from the webhook process
-- Fixed an issue with the nodes getting executed even if there was no input data
 
 ## n8n@0.118.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.0...n8n@0.118.1) for this version.<br />

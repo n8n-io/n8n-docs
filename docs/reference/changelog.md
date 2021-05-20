@@ -6,45 +6,68 @@
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.119.0...n8n@0.120.0) for this version.<br />
 **Release date:** 2021-05-17
 
-- New nodes
-    - iCalendar
-- Enhanced nodes
-    - Google Cloud Firestore: Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-    - IMAP: Added the Force reconnect option
-    - Paddle: Added the Use Sandbox environment API parameter
-    - Spotify: Added the Position parameter to the Add operation of the Playlist resource
-    - WooCommerce: Added the Include Credentials in Query parameter
-- Bug fixes
-    - Clockify Trigger: Fixed an issue that occurred when the node returned an empty array
-    - Google Cloud Firestore: Fixed an issue with parsing empty document, and an issue with the detection of date
-    - HubSpot: Fixed an issue with the Return All option
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.iCal" title="iCalendar" />
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.googleFirebaseCloudFirestore" title="Google Cloud Firestore:" text="Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation"/>
+<Changelog node="n8n-nodes-base.emailReadImap" title="IMAP Email:" text="Added the Force reconnect option"/>
+<Changelog node="n8n-nodes-base.paddle" title="Paddle:" text="Added the Use Sandbox environment API parameter"/>
+<Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Added the Position parameter to the Add operation of the Playlist resource"/>
+<Changelog node="n8n-nodes-base.wooCommerce" title="WooCommerce:" text="Added the Include Credentials in Query parameter"/>
+
+### Core Functionality ⚙️
 - Added await to hooks to fix issues with the `Unknown` status of the workflows
 - Changed the data type of the `credentials_entity` field for MySQL database to fix issues with long credentials
 - Fixed an issue with the ordering of the executions when the list is auto-refreshed
 - Added the functionality that allows reading sibling parameters
 
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.clockifyTrigger" title="Clockify Trigger:" text="Fixed an issue that occurred when the node returned an empty array"/>
+<Changelog node="n8n-nodes-base.googleFirebaseCloudFirestore" title="Google Cloud Firestore:" text="Fixed an issue with parsing empty document, and an issue with the detection of date"/>
+<Changelog node="n8n-nodes-base.hubspot" title="HubSpot:" text="Fixed an issue with the Return All option"/>
+
+### Contributors 🙌
+
+[DeskYT](https://github.com/DeskYT), [Daniel Lazaro](https://github.com/1izardo), [DerEnderKeks](https://github.com/DerEnderKeks), [mdasmendel](https://github.com/mdasmendel)
+
 ## n8n@0.119.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.1...n8n@0.119.0) for this version.<br />
 **Release date:** 2021-05-09
 
-- Enhanced nodes
-    - AWS Comprehend: Added the Detect Entities operation
-    - AWS Lambda: Added the ability to list functions recursively if the number of functions exceeds 50
-    - Google Analytics: Added pagination to the Report resource
-    - Mailjet: Added Reply To parameter
-    - Redis: Added the Increment operation
-    - Spreadsheet File: Added the Header Row option
-    - Webflow Trigger: Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
-- Bug fixes
-    - Google Cloud Firestore: Fixed an issue with parsing null value
-    - Google Sheets: Fixed an issue with the Key Row parameter
-    - Zoho CRM: Fixed an issue with the authentication
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.awsComprehend" title="AWS Comprehend:" text="Added the Detect Entities operation"/>
+<Changelog node="n8n-nodes-base.awsLambda" title="AWS Lambda:" text="Added the ability to list functions recursively if the number of functions exceeds 50"/>
+<Changelog node="n8n-nodes-base.googleAnalytics" title="Google Analytics:" text="Added pagination to the Report resource"/>
+<Changelog node="n8n-nodes-base.mailjet" title="Mailjet:" text="Added Reply To parameter"/>
+<Changelog node="n8n-nodes-base.redis" title="Redis:" text="Added the Increment operation"/>
+<Changelog node="n8n-nodes-base.spreadsheetFile" title="Spreadsheet File:" text="Added the Header Row option"/>
+<Changelog node="n8n-nodes-base.webflowTrigger" title="Webflow Trigger:" text="Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events"/>
+
+### Core Functionality ⚙️
 - Implemented timeout for subworkflows
 - Removed the deregistration webhooks functionality from the webhook process
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.googleFirebaseCloudFirestore" title="Google Cloud Firestore:" text="Fixed an issue with parsing null value"/>
+<Changelog node="n8n-nodes-base.googleSheets" title="Google Sheets:" text="Fixed an issue with the Key Row parameter"/>
+<Changelog node="n8n-nodes-base.zohoCrm" title="HubSpot:" text="Fixed an issue with the authentication"/>
+
+### Contributors 🙌
+
+[Nikita](https://github.com/Rirush)
+
 
 ## n8n@0.118.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.0...n8n@0.118.1) for this version.<br />
 **Release date:** 2021-05-05
+
+### Core Functionality ⚙️
 
 - Fixed an issue with error workflows
 
@@ -52,34 +75,50 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
 **Release date:** 2021-05-02
 
-- New nodes
-    - Kitemaker
-    - MQTT
-- Enhanced nodes
-    - CrateDB: Added query parameters
-    - ERPNext: Added support for self-hosted ERPNext instances
-    - FTP: Added the functionality to delete folders
-    - Google Calendar: Added the Continue on Fail functionality
-    - Google Drive: Added the functionality to add file name when downloading files
-    - Gmail: Added functionality to handle multiple binary properties
-    - Microsoft Outlook: Added Is Read and Move option to the Message resource
-    - Postgres: Added query parameters
-    - QuestDB: Added query parameters
-    - QuickBase: Added option to use Field IDs
-    - TimescaleDB: Added query parameters
-    - Twist: Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
-- Bug fixes
-    - GetResponse Trigger: Fixed an issue with error handling
-    - GitHub Trigger: Fixed an issue with error handling
-    - GitLab Trigger: Fixed an issue with error handling
-    - Google Sheets: Fixed an issue with the Lookup operation for returning empty rows
-    - Orbit: Fixed issues with the Post resource
-    - Redis: Fixed an issue with the node not returning an error
-    - Xero: Fixed an issue with the Create operation for the Contact resource
+::: warning ⚠️ Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
+The features that introduced the breaking changes have been flagged below.
+:::
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.kitemaker" title="Kitemaker" />
+<Changelog node="n8n-nodes-base.mqtt" title="MQTT" />
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.crateDb" title="CrateDB:" text="Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results." breakingChanges=true breakingChangeVersion="01180"/>
+<Changelog node="n8n-nodes-base.erpNext" title="ERPNext:" text="Added support for self-hosted ERPNext instances"/>
+<Changelog node="n8n-nodes-base.ftp" title="FTP:" text="Added the functionality to delete folders"/>
+<Changelog node="n8n-nodes-base.googleCalendar" title="Google Calendar:" text="Added the Continue on Fail functionality"/>
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Drive:" text="Added the functionality to add file name when downloading files"/>
+<Changelog node="n8n-nodes-base.gmail" title="Gmail:" text="Added functionality to handle multiple binary properties"/>
+<Changelog node="n8n-nodes-base.microsoftOutlook" title="Microsoft Outlook:" text="Added Is Read and Move option to the Message resource"/>
+<Changelog node="n8n-nodes-base.postgres" title="Postgres:" text="Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results." breakingChanges=true breakingChangeVersion="01180"/>
+<Changelog node="n8n-nodes-base.questDb" title="QuestDB:" text="Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results." breakingChanges=true breakingChangeVersion="01180"/>
+<Changelog node="n8n-nodes-base.quickbase" title="QuickBase:" text="Added option to use Field IDs"/>
+<Changelog node="n8n-nodes-base.timescaleDb" title="TimescaleDB:" text="Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results." breakingChanges=true breakingChangeVersion="01180"/>
+<Changelog node="n8n-nodes-base.twist" title="Twist:" text="Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource"/>
+
+### Core Functionality ⚙️
 - Implemented the native `fs/promise` library where possible
 - Added the functionality to output logs to the console or a file
-- In the Postgres, CrateDB, QuestDB, and TimescaleDB nodes the `Execute Query` operation returns the result from all queries executed instead of just one of the results. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
 - We have updated the minimum required version for Node.js to v14.15. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.getResponseTrigger" title="GetResponse Trigger:" text="Fixed an issue with error handling"/>
+<Changelog node="n8n-nodes-base.githubTrigger" title="GitHub Trigger:" text="Fixed an issue with error handling"/>
+<Changelog node="n8n-nodes-base.gitlabTrigger" title="GitLab Trigger:" text="Fixed an issue with error handling"/>
+<Changelog node="n8n-nodes-base.googleSheets" title="Google Sheets:" text="Fixed an issue with the Lookup operation for returning empty rows"/>
+<Changelog node="n8n-nodes-base.orbit" title="Orbit:" text="Fixed issues with the Post resource"/>
+<Changelog node="n8n-nodes-base.redis" title="Redis:" text="Fixed an issue with the node not returning an error"/>
+<Changelog node="n8n-nodes-base.xero" title="Xero:" text="Fixed an issue with the Create operation for the Contact resource"/>
+
+### Contributors 🙌
+
+[Gustavo Arjones](https://github.com/arjones), [lublak](https://github.com/lublak), [Colton Anglin](https://github.com/Colton), [Mika Luhta](https://github.com/mluhta)
+
 
 ## n8n@0.117.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />

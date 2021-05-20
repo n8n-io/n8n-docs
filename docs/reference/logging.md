@@ -1,14 +1,19 @@
 # Logging
 
-n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
+Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
 
-The logging level and output details can be customized by setting the following environment variables:
+## Set up
 
-- `N8N_LOG_LEVEL`: The log output level. The available options, from highest to lowest, are error, warn, info, verbose, and debug. Info is used by default.
-- `N8N_LOG_OUTPUT`: Where to output logs. The available options are console and file. Multiple values can be used separated by a comma (`,`). Console is used by default.
-- `N8N_LOG_FILE_LOCATION`: The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used.
-- `N8N_LOG_FILE_MAXSIZE`: The maximum size (in MB) for each log file. By default, 16 is used.
-- `N8N_LOG_FILE_MAXCOUNT`: The maximum number of log files to keep. By default, 100 is used.
+To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](./configuration.md#configuration-via-file))
+
+| Setting in the configuration file | Using environment variables | Description |
+|-----------------------------------|-----------------------------|-------------|
+| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, verbose, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
+| n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
+| n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
+| n8n.log.file.maxsize | N8N_LOG_FILE_MAXSIZE | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
+| n8n.log.file.maxcount | N8N_LOG_FILE_MAXCOUNT | The maximum number of log files to keep. The default value is 100. This value should be set when using workers. |
+
 
 ```bash
 # Set the logging level to 'debug'
@@ -23,27 +28,63 @@ export N8N_LOG_FILE_LOCATION=/home/jim/n8n/logs/n8n.log
 # Set a 50 MB maximum size for each log file
 export N8N_LOG_FILE_MAXSIZE=50
 
-# Set 60 as maximum number of log files to be kept
+# Set 60 as the maximum number of log files to be kept
 export N8N_LOG_FILE_MAXCOUNT=60
 ```
 
-## Adding logs
+### Log Levels
 
-Convenience methods are defined for all provided logging levels, so new logs can easily be added whenever needed using the format `Logger.<logLevel>('<message>', ...meta)` where `meta` represents any additional properties desired beyond `message`.
+n8n uses standard log levels to report:
+- `error`: the most strict level. Outputs only errors and nothing else
+- `warning`: outputs errors and warning messages
+- `info`: contains useful information about progress
+- `verbose`: make n8n output additional information about progress that allows you to further understand what is happening
+- `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
+
+## Development
+
+During development, adding log messages is a good practice. It assists in debugging errors. To configure logging for development, follow the guide below.
+
+### Implementation details
+
+n8n uses the `LoggerProxy` class, located in the `workflow` package. Calling the `LoggerProxy.init()` by passing in an instance of `Logger`, initializes the class before the usage.
+
+The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
+
+Once the `Logger` implementation gets created in the `cli` package, it can be obtained by calling the `getInstance` convenience method from the exported module.
+
+Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file to learn more about how this process works.
+
+### Adding logs
+
+Once the `LoggerProxy` class gets initialized in the project, you can import it to any other file and add logs.
+
+Convenience methods are provided for all logging levels, so new logs can be added whenever needed using the format `Logger.<logLevel>('<message>', ...meta)`, where `meta` represents any additional properties desired beyond `message`.
+
+In the example above, we use the standard log levels described [above](#log-levels). The `message` argument is a string, and `meta` is a data object.
 
 ```js
-// Info-level logging of a trigger function, with workflow name
-// and workflow ID as additional metadata properties
+// You have to import the LoggerProxy. We rename it to Logger to make it easier
+
+import {
+	LoggerProxy as Logger
+} from 'n8n-workflow';
+
+// Info-level logging of a trigger function, with workflow name and workflow ID as additional metadata properties
+
 Logger.info(`Polling trigger initiated for workflow "${workflow.name}"`, {workflowName: workflow.name, workflowId: workflow.id});
 
-// Verbose-level logging of hook function execution, with execution
-// ID, workflow ID, and session ID as metadata properties
+// Verbose-level logging of hook function execution, with execution ID, workflow ID, and session ID as metadata properties
+
 Logger.verbose(`Executing hook (workflowExecuteBefore, hookFunctionsPush)`, {executionId: this.executionId, workflowId: this.workflowData.id, sessionId: this.sessionId});
 ```
 
 When creating new loggers, some useful standards to keep in mind are:
-
 - Craft log messages to be as easily human-readable as possible. For example, always wrap names in quotes.
 - Duplicating information in the log message and metadata, like workflow name in the above example, can be useful as messages are easier to search and metadata enables easier filtering.
 - Include multiple IDs (e.g. executionId, workflowId, and sessionId) throughout all logs.
 - Use node types instead of node names (or both) as this is more consistent, and so easier to search.
+
+## Front-end logs
+
+As of now, front-end logs are not available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in future versions.

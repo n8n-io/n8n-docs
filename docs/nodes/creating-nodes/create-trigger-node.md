@@ -331,11 +331,11 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 
 **Methods**
 
-- **checkExist:** It’s the first method to be called and it ensures that if the webhook with the current path is already registered in the external system, n8n does not try to recreate it. If the webhook exists, it persists the webhook’s ID.
-- **create:** This method is called if the `checkExist`method returns false. Esentially, if the webhook with the current path does not exist. It registers the webhook in the external system and if it registers successfully, it persists the ID of the webhook.
-- **delete:** This method is called when the Trigger is either stopped manually or the webhook where the trigger lives is unactivated. It uses the ID previously persisted by either `create` method or the `checkExist` method to remove the webhook from the external system.
+- `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, n8n persists the webhook ID. If the webhook is not registered with the external system, the `create` method gets executed.
+- `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
+- `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
-![Lifecycle flowchart](./images/lifecycle-flowchart.png)
+![Lifecycle flowchart](./images/lifecycle.png)
 
 
 ### Wait for new events to trigger the workflow

@@ -1,8 +1,10 @@
-# Logging
+# Logging in n8n
 
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
 
-## Set up
+[[toc]]
+
+## Setup
 
 To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](./configuration.md#configuration-via-file))
 
@@ -87,4 +89,4 @@ When creating new loggers, some useful standards to keep in mind are:
 
 ## Front-end logs
 
-As of now, front-end logs are not available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in future versions.
+As of now, front-end logs are not available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.

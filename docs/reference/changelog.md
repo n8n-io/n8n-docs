@@ -2,6 +2,32 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.121.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.120.0...n8n@0.121.0) for this version.<br />
+**Release date:** 2021-05-20
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.notion" title="Notion" />
+<Changelog node="n8n-nodes-base.notionTrigger" title="Notion Trigger" />
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.graphql" title="GraphQL:" text="Added Header Auth authentication method"/>
+<Changelog node="n8n-nodes-base.twilio" title="Twilio:" text="Added API Key authentication method"/>
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.hubspot" title="HubSpot:" text="Fixed an issue with pagination for Deals resource"/>
+<Changelog node="n8n-nodes-base.keap" title="Keap:" text="Fixed an issue with the data type of the Order Title field"/>
+<Changelog node="n8n-nodes-base.orbit" title="Orbit:" text="Fixed an issue with the activity type in Post operation"/>
+<Changelog node="n8n-nodes-base.slack" title="Slack:" text="Fixed an issue with the Get Profile operation"/>
+<Changelog node="n8n-nodes-base.strava" title="Strava:" text="Fixed an issue with the paging parameter"/>
+
+### Contributors 🙌
+
+[Jacob Spizziri](https://github.com/jspizziri)
+
 ## n8n@0.120.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.119.0...n8n@0.120.0) for this version.<br />
 **Release date:** 2021-05-17

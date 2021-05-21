@@ -7,6 +7,7 @@ description: Learn to configure credentials for the Notion node in n8n
 
 You can use these credentials to authenticate the following nodes with Notion.
 - [Notion](../../nodes-library/nodes/Notion/README.md)
+- [Notion Trigger](../../nodes-library/trigger-nodes/NotionTrigger/README.md)
 
 ## Prerequisites
 

@@ -227,7 +227,7 @@ module.exports = {
 					path: 'scaling-n8n.md',
 				},
 				{
-					title: '💻 Logging in n8n',
+					title: '👀 Logging in n8n',
 					path: 'logging.md',
 				},
 				{

@@ -43,6 +43,7 @@ You can find authentication information for this node [here](../../../credential
 ## Example Usage
 
 This workflow allows you to add a new user to your Notion database when an invite gets created via Calendly. You can also find the [workflow](https://n8n.io/workflows/1088) on n8n.io. This example usage workflow uses the following nodes.
+
 - [Calendly Trigger](../../trigger-nodes/CalendlyTrigger/README.md)
 - [Notion]()
 

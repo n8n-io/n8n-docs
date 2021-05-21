@@ -30,6 +30,8 @@ The final workflow should look like the following image.
 
 **Note:** This node uses polling to get new time entries. You'll have to use the *Add Poll Time* button if you want this Trigger node to run regularly to retrieve new time entries.
 
+**Note:** This node uses the workflow timezone setting to specify the range of time entries starting time. You'll have to configure the workflow timezone setting if you want this Trigger node to retrieve the right time entries.
+
 ::: tip 💡 Activate workflow for production
 You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
 :::

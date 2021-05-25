@@ -122,6 +122,10 @@ Export all the credentials in a decrypted (plain text) format. This can be used 
 n8n export:credentials --all --decrypted --output=backups/decrypted.json
 ```
 
+::: warning 💡 Update IDs
+When exporting workflows and credentials, the IDs also gets exported. In your existing database, if you have workflows and credentials with the same IDs they will get overwritten. To avoid this, delete or change the IDs before import.
+:::
+
 ## Import workflows and credentials
 
 You can import your workflows and credentials from n8n via the CLI.

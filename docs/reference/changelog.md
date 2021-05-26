@@ -172,15 +172,15 @@ The features that introduced the breaking changes have been flagged below.
 <Changelog node="n8n-nodes-base.timescaleDb" title="TimescaleDB:" text="Added the Mode option that allows you to execute queries as transactions"/>
 <Changelog node="n8n-nodes-base.zendeskTrigger" title="Zendesk Trigger:" text="Added support to retrieve custom fields"/>
 
+### Core Functionality ⚙️
+- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
+- Added the functionality to open the New Credentials dropdown by default
+
 ### Bug fixes 🐛
 <br />
 <Changelog node="n8n-nodes-base.googleSheets" title="Google Sheets:" text="Fixed an issue with the Lookup operation for returning multiple empty rows"/>
 <Changelog node="n8n-nodes-base.intercom" title="Intercom:" text="Fixed an issue with the User operation in the Company resource"/>
 <Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Fixed an issue with sending the lastActive parameter"/>
-
-### Core Functionality ⚙️
-- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
-- Added the functionality to open the New Credentials dropdown by default
 
 ### Contributors 🙌
 
@@ -212,19 +212,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.mySql" title="MySQL:" text="Added support for insert modifiers and added support for SSL"/>
 <Changelog node="n8n-nodes-base.rabbitmq" title="RabbitMQ:" text="Added the functionality to close the connection after use and added support for AMPQS"/>
 
-### Bug fixes 🐛
-<br />
-<Changelog node="n8n-nodes-base.awsSqs" title="AWS SQS:" text="Fixed an issue with API version and casing"/>
-<Changelog node="n8n-nodes-base.emailReadImap" title="IMAP:" text="Fixed re-connection issue"/>
-<Changelog node="n8n-nodes-base.keap" title="Keap:" text="Fixed an issue with the Opt In Reason parameter"/>
-<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed an issue with loading custom fields"/>
-
 ### Core Functionality ⚙️
 
 - Changed `bcrypt` library from `bcryptjs` to `@node-rs/bcrypt`
 - Improved node error handling. Status codes and error messages in API responses have been standardized
 - Added global timeout setting for all HTTP requests (except HTTP Request node)
 - Implemented timeout for workers and corrected timeout for sub workflows
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.awsSqs" title="AWS SQS:" text="Fixed an issue with API version and casing"/>
+<Changelog node="n8n-nodes-base.emailReadImap" title="IMAP:" text="Fixed re-connection issue"/>
+<Changelog node="n8n-nodes-base.keap" title="Keap:" text="Fixed an issue with the Opt In Reason parameter"/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed an issue with loading custom fields"/>
 
 ### Contributors 🙌
 
@@ -244,18 +244,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.theHive" title="TheHive:" text="Added support to fetch observable data types"/>
 <Changelog node="n8n-nodes-base.rabbitmq" title="RabbitMQ:" text="Added header parameters"/>
 
-### Bug fixes 🐛
-<br />
-<Changelog node="n8n-nodes-base.jira" title="Jira:" text="Fixed an issue with loading issue types with classic project type"/>
-<Changelog node="n8n-nodes-base.rabbitmqTrigger" title="RabbitMQ Trigger:" text="Fixed an issue with the node reusing the same item"/>
-<Changelog node="n8n-nodes-base.sendGrid" title="SendGrid:" text="Fixed an issue with the dynamic field generation"/>
-
 ### Core Functionality ⚙️
 
 - Fixed an issue with expressions not being displayed in read-only mode
 - Fixed an issue that didn't allow editing JavaScript code in read-only mode
 - Added support for configuring the maximum payload size
 - Added support to dynamically add menu items
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.jira" title="Jira:" text="Fixed an issue with loading issue types with classic project type"/>
+<Changelog node="n8n-nodes-base.rabbitmqTrigger" title="RabbitMQ Trigger:" text="Fixed an issue with the node reusing the same item"/>
+<Changelog node="n8n-nodes-base.sendGrid" title="SendGrid:" text="Fixed an issue with the dynamic field generation"/>
 
 ### Contributors 🙌
 
@@ -280,16 +280,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.jira" title="Jira:" text="Added Reporter field to the Issue resource"/>
 <Changelog node="n8n-nodes-base.postgres" title="Postgres:" text="Added support for type casting"/>
 
+### Core Functionality ⚙️
+
+- Fixed an issue with the Redis connection to prevent memory leaks
+
 ### Bug fixes 🐛
 <br />
 <Changelog node="n8n-nodes-base.bitwarden" title="Bitwarden:" text="Fixed an issue with the Update operation of the Group resource"/>
 <Changelog node="n8n-nodes-base.cortex" title="Cortex:" text="Fixed an issue where only the last item got returned"/>
 <Changelog node="n8n-nodes-base.invoiceNinja" title="Invoice Ninja:" text="Fixed an issue with the Project parameter"/>
 <Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed an issue with the Get All operation of the Custom Object resource"/>
-
-### Core Functionality ⚙️
-
-- Fixed an issue with the Redis connection to prevent memory leaks
 
 ### Contributors 🙌
 

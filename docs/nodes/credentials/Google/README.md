@@ -113,7 +113,7 @@ The following video demonstrates the steps mentioned above.
 
 ### What is the difference between OAuth2 and the Service account authentication method?
 
-Some Google APIs can be accessed via OAuth2 or the Service account authentication method.
+Some Google APIs can be accessed via both the OAuth2 and the Service Account authentication method.
 
 Google APIs can act on behalf of your application without accessing user information. In these situations, your application needs to prove its own identity to the API, but no user consent is necessary. Refer to the [Service accounts](https://developers.google.com/identity/protocols/oauth2#serviceaccount) documentation to learn more.
 

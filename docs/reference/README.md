@@ -10,6 +10,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Configuration](configuration.md)
 - [Security](security.md)
 - [Server Setup](server-setup.md)
+- [Setup via PM2](setup-pm2.md)
 - [CLI commands for n8n](start-workflows-via-cli.md)
 - [JavaScript Code Snippets](javascript-code-snippets.md)
 - [Glossary](glossary.md)

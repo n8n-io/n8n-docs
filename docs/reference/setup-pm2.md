@@ -9,7 +9,7 @@ We don't officially support running n8n via PM2. You should follow the instructi
 ## Prerequisites
 
 To run n8n via PM2, you need to have the following software installed:
-- **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have installed Node.js, you can check your current version with following command:
+- **Node.js and npm:** You can find instructions on how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have installed Node.js, you can check your current version with the following command:
 ```bash
 node -v
 ```
@@ -31,7 +31,7 @@ pm2 start n8n
 
 ### Auto-start on machine restarts
 
-PM2 can generate startup scripts and configure them in order to keep your process list intact across expected or unexpected machine restarts.
+PM2 can generate startup scripts and configure them to keep your process list intact across expected or unexpected machine restarts.
 
 Refer to the official [PM2 documetation](https://pm2.keymetrics.io/docs/usage/startup/) to learn about configuring the auto-start script.
 
@@ -62,3 +62,11 @@ N8N_BASIC_AUTH_ACTIVE=true N8N_BASIC_AUTH_USER=USERNAME N8N_BASIC_AUTH_PASSWORD=
 You can learn more about all the possible configurations [here](./configuration.md).
 
 If you want to set these configurations via a file, refer to the [PM2 documentation](https://pm2.keymetrics.io/docs/usage/application-declaration/) to learn more.
+
+## FAQs
+
+### How to run n8n with PM2 on Windows?
+
+To run n8n via PM2 on Windows, execute the command `pm2 start n8n` from the start directory `C:\Users\<User Profile>\AppData\Roaming\npm\node_modules\n8n\bin`.
+
+**Note:** If you have installed n8n in a different directory execute the above-mentioned command from that directory.

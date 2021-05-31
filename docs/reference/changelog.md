@@ -32,6 +32,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added the functionality to tag workflows
 - Fixed errors in the Expression Editor
 - Fixed an issue with adding expressions to parameters
+- Fixed an issue with nodes that only get connected to the second input. This solves the issue of copying and pasting the workflows where only one output of the IF node gets connected to a node
 
 ### Bug fixes 🐛
 <br />

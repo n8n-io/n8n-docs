@@ -24,19 +24,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.deepL" title="DeepL:" text="Added support for Free API"/>
 <Changelog node="n8n-nodes-base.function" title="Function:" text="Added the functionality to log console.log messages to the browser console"/>
 <Changelog node="n8n-nodes-base.functionItem" title="Function Item:" text="Added the functionality to log console.log messages to the browser console"/>
-<Changelog node="n8n-nodes-base.linkedIn" title="LinkedIn:" text="Added placeholder to the Organization URN field"/>
 
 ### Core Functionality ⚙️
 - Changed `bcrypt` library from `@node-rs/bcrypt` to `bcryptjs`
 - Fixed an issue with optional parameters that have the same name
 - Added the functionality to tag workflows
 - Fixed errors in the Expression Editor
-- Fixed an issue with adding expressions to parameters
 - Fixed an issue with nodes that only get connected to the second input. This solves the issue of copying and pasting the workflows where only one output of the IF node gets connected to a node
 
 ### Bug fixes 🐛
 <br />
-<Changelog node="n8n-nodes-base.googleDrive" title="Google Dirve:" text="Fixed an issue with the Drive resource"/>
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Drive:" text="Fixed an issue with the Drive resource"/>
 <Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed an issue with the filtering fields type and fixed an issue with the link option"/>
 <Changelog node="n8n-nodes-base.switch" title="Switch:" text="Fixed an issue with the Expression mode"/>
 

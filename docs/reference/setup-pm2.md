@@ -67,6 +67,6 @@ If you want to set these configurations via a file, refer to the [PM2 documentat
 
 ### How to run n8n with PM2 on Windows?
 
-To run n8n via PM2 on Windows, execute the command `pm2 start n8n` from the start directory `C:\Users\<User Profile>\AppData\Roaming\npm\node_modules\n8n\bin`.
+To run n8n via PM2 on Windows, execute the command `pm2 start n8n` from the start directory `C:\Users\%AppData%\Roaming\npm\node_modules\n8n\bin`.
 
 **Note:** If you have installed n8n in a different directory execute the above-mentioned command from that directory.

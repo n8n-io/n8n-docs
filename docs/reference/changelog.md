@@ -2,6 +2,47 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.122.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.0...n8n@0.122.1) for this version.<br />
+**Release date:** 2021-05-30
+
+### Core Functionality ⚙️
+- Fixed an issue with the order in migration rollback
+
+## n8n@0.122.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.121.0...n8n@0.122.0) for this version.<br />
+**Release date:** 2021-05-30
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.awsTranscribe" title="AWS Transcribe" />
+<Changelog node="n8n-nodes-base.ssh" title="SSH" />
+<Changelog node="n8n-nodes-base.uptimeRobot" title="UptimeRobot" />
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.deepL" title="DeepL:" text="Added support for Free API"/>
+<Changelog node="n8n-nodes-base.function" title="Function:" text="Added the functionality to log console.log messages to the browser console"/>
+<Changelog node="n8n-nodes-base.functionItem" title="Function Item:" text="Added the functionality to log console.log messages to the browser console"/>
+<Changelog node="n8n-nodes-base.linkedIn" title="LinkedIn:" text="Added placeholder to the Organization URN field"/>
+
+### Core Functionality ⚙️
+- Changed `bcrypt` library from `@node-rs/bcrypt` to `bcryptjs`
+- Fixed an issue with optional parameters that have the same name
+- Added the functionality to tag workflows
+- Fixed errors in the Expression Editor
+- Fixed an issue with adding expressions to parameters
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Dirve:" text="Fixed an issue with the Drive resource"/>
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed an issue with the filtering fields type and fixed an issue with the link option"/>
+<Changelog node="n8n-nodes-base.switch" title="Switch:" text="Fixed an issue with the Expression mode"/>
+
+### Contributors 🙌
+
+[Alexander Mustafin](https://github.com/sashker)
+
 ## n8n@0.121.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.120.0...n8n@0.121.0) for this version.<br />
 **Release date:** 2021-05-20

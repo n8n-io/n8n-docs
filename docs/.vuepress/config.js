@@ -211,6 +211,10 @@ module.exports = {
 					path: 'server-setup.md',
 				},
 				{
+					title: '🧑‍💻 Setup via PM2',
+					path: 'setup-pm2.md',
+				},
+				{
 					title: '👾 CLI commands for n8n',
 					path: 'start-workflows-via-cli.md',
 				},

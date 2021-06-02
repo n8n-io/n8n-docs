@@ -3,7 +3,7 @@
 		<div v-if="loading">
 			Loading
 		</div>
-		<div style="display:flex; height:auto; align-items: baseline;">
+		<div style="display:flex; height:auto; align-items: baseline;" v-else>
 		<p style="margin-block-end:0;">
 			<div v-if="info.iconData && info.iconData.fileBuffer">
 				<img :src="info.iconData.fileBuffer" style="height:24px; min-width:24px; vertical-align:middle;">

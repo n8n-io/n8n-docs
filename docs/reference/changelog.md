@@ -51,6 +51,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Alexander Mustafin](https://github.com/sashker)
 
+## n8n@0.121.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.121.0...n8n@0.121.1) for this version.<br />
+**Release date:** 2021-06-01
+
+### Core Functionality ⚙️
+- Fixed an issue with copying the output values
+- Fixed issues with the Expression Editor
+- Made improvements to the Expression Editor
+
 ## n8n@0.121.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.120.0...n8n@0.121.0) for this version.<br />
 **Release date:** 2021-05-20

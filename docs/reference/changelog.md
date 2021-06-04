@@ -2,6 +2,20 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.122.3
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.2...n8n@0.122.3) for this version.<br />
+**Release date:** 2021-06-04
+
+### Core Functionality ⚙️
+- Fixed error messages for the Textarea field
+- Added the missing winston dependency
+- Fixed an issue with adding values via the Variable selector. The deleted values don't reappear
+- Fixed an issue with the Error Workflows not getting executed in the queue mode
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed an issue with parsing the last edited time"/>
+
 ## n8n@0.122.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.1...n8n@0.122.2) for this version.<br />
 **Release date:** 2021-05-31

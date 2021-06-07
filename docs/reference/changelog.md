@@ -33,7 +33,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors 🙌
 
-[Rodrigo Correia](https://github.com/rodrigoscdc)
+[Rodrigo Correia](https://github.com/rodrigoscdc), [Sam Roquitte](https://github.com/samr28)
 
 ## n8n@0.122.3
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.2...n8n@0.122.3) for this version.<br />

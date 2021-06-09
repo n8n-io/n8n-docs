@@ -10,14 +10,9 @@ import nodes from '@dynamic/nodes'
 
 export default {
 	data () {
-		return {
-			items: []
-		}
-	},
-	beforeMount() {
-		const triggerNodes = Object.values(nodes.nodes)
+		const triggerNodes = Object.values(nodes)
 			.filter((node) => {
-				if (node.group.includes('trigger')) {
+				if (!node.group.includes('trigger')) {
 					return false;
 				}
 
@@ -36,7 +31,9 @@ export default {
 			}
 			return 0;
 		});
-		this.$data.items = triggerNodes
+		return {
+			items: triggerNodes,
+		};
 	}
 }
 </script>

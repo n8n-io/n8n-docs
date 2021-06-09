@@ -13,6 +13,7 @@
 		</a>
 	</div>
 </div>
+<!-- todo support fa icons/ -->
 </template>
 
 <script>

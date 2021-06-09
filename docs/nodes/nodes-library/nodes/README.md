@@ -13,8 +13,8 @@ export default {
 			items: []
 		}
 	},
-	beforeMount() {
-		const regularNodes = Object.values(nodes.nodes)
+	data() {
+		const regularNodes = Object.values(nodes)
 			.filter((node) => {
 				if (node.group.includes('trigger')) {
 					return false;
@@ -35,7 +35,10 @@ export default {
 			}
 			return 0;
 		});
-		this.$data.items = regularNodes;
+
+		return {
+			items: regularNodes,
+		};
 	}
 }
 </script>

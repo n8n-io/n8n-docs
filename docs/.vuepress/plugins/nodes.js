@@ -26,37 +26,15 @@ function getNodes () {
 	return fetch(NODES_API_ENDPOINT);
 }
 
-/**
- * Transform map tp string.
- *
- * @param map
- * @param unstringedKeys Set to ture to force all field value to not be stringified.
- */
-function mapToString(map, unstringedKeys) {
-  const keys = unstringedKeys;
-  let str = `{\n`;
-  for (const key of Object.keys(map)) {
-    str += `  ${key}: ${
-      keys === true || (Array.isArray(keys) && keys.includes(key))
-        ? map[key]
-        : JSON.stringify(map[key])
-    },\n`;
-  }
-  str += '}';
-  return str;
-}
-
 const getContent = async () => {
-	const nodes = await getNodes();
-	const map = nodes.reduce((accu, node) => {
+	const nodesList = await getNodes();
+	const nodesMap = nodesList.reduce((accu, node) => {
 		accu[node.name] = node;
 
 		return accu;
 	}, {});
 
-	return mapToString({
-		nodes: map,
-	});
+	return JSON.stringify(nodesMap);
 };
 
 

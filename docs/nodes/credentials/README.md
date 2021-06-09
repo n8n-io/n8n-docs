@@ -12,11 +12,6 @@ This section contains step-by-step information about authenticating the differen
 import nodes from '@dynamic/nodes'
 
 export default {
-	data () {
-		return {
-			items: []
-		}
-	},
 	methods: {
 		filterCreds(node) {
 			if(Object.keys(node.codex).length) {
@@ -28,9 +23,9 @@ export default {
 			return nodes.filter(this.filterCreds)
 		}
 	},
-	beforeMount() {
+	data() {
 		// store nodes with credentials in an array
-		let credNodes = this.checkCreds(Object.values(nodes.nodes));
+		let credNodes = this.checkCreds(Object.values(nodes));
 		let node = {};
 		let creds = [];
 		credNodes.map(cred => {
@@ -56,8 +51,11 @@ export default {
 			if(a.name=== 'Microsoft Teams') {
 				a.name = 'Microsoft'
 			}
-		})
-		this.$data.items = creds;
+		});
+
+		return {
+			items: creds,
+		};
 	}
 }
 </script>

@@ -26,14 +26,9 @@
 import nodes from '@dynamic/nodes'
 
 export default {
-	data () {
-		return {
-			items: [],
-		}
-	},
 	props: ['node'],
-	beforeMount() {
-		const node = nodes.nodes[this.node];
+	data() {
+		const node = nodes[this.node];
 		const {data} = node.properties;
 		const isOperation = (item) => {
 			if(item.name === 'operation'){
@@ -47,23 +42,25 @@ export default {
 		}
 		const operations = data.filter(isOperation);
 		const resources = data.filter(isResource);
+
+		let items = [];
 		if(resources.length > 0 && resources[0].options){
-			this.$data.items = resources[0].options.map(resource => {
+			items = resources[0].options.map(resource => {
 				return {
 					name: resource.name,
 					value: resource.value,
 					resource: true
 				}
 			})
-			for (let i = 0; i< this.items.length; i++){
+			for (let i = 0; i< items.length; i++){
 				operations.map(operation => {
-					if (operation.displayOptions.show.resource.includes(this.items[i].value)){
-						return this.items[i].operations = operation.options;
+					if (operation.displayOptions.show.resource.includes(items[i].value)){
+						return items[i].operations = operation.options;
 					}
 				})
 			}
 		} else if (operations[0] && operations[0].options) {
-			this.$data.items = operations[0].options.map(operation => {
+			items = operations[0].options.map(operation => {
 				return {
 					name: operation.name,
 					value: operation.value,
@@ -71,6 +68,10 @@ export default {
 				}
 			})
 		}
+
+		return {
+			items,
+		};
   }
 }
 </script>

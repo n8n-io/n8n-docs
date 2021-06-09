@@ -27,7 +27,7 @@ import nodes from '@dynamic/nodes'
 export default {
 	data () {
 		return {
-			info:  nodes.nodes[this.$props.node]
+			info:  nodes[this.$props.node]
 		}
 	},
 	props: ['node', 'text', 'title', 'breakingChanges', 'breakingChangeVersion'],

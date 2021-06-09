@@ -10,19 +10,21 @@
 import nodes from '@dynamic/nodes'
 
 export default {
-	data () {
+	data() {
 		return {
-			items: []
-		}
+			items: [],
+		};
 	},
 	beforeMount() {
 		const parts = this.$page.path.split('/');
 		const name = parts[parts.length - 2];
 
-		const node = nodes.nodes[name];
+		const node = nodes[name];
+		let items = [];
 		if (node && node.codex) {
-			this.$data.items = node.codex.data.resources.generic
+			items = node.codex.data.resources.generic;
 		}
+		this.$data.items = items;
   }
 }
 </script>

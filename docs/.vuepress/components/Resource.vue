@@ -2,7 +2,7 @@
 	<div>
 		<br />
 		<div>
-			<div v-if="items[0].resource">
+			<div v-if="items[0] && items[0].resource">
 				<details v-for="i in items" :key="i.name" class="details">
 					<summary>{{i.name}}</summary>
 					<ul class="operations">
@@ -47,7 +47,7 @@ export default {
 		}
 		const operations = data.filter(isOperation);
 		const resources = data.filter(isResource);
-		if(resources.length > 0){
+		if(resources.length > 0 && resources[0].options){
 			this.$data.items = resources[0].options.map(resource => {
 				return {
 					name: resource.name,
@@ -62,7 +62,7 @@ export default {
 					}
 				})
 			}
-		} else {
+		} else if (operations[0] && operations[0].options) {
 			this.$data.items = operations[0].options.map(operation => {
 				return {
 					name: operation.name,

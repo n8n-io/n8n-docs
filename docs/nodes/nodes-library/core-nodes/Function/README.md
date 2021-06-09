@@ -97,7 +97,7 @@ By default the item of the last run of the node  will be returned. So if the ref
 3x (its last runIndex is 2) and the current node runs the first time (its runIndex is 0) the
 data of runIndex 2 of the referenced node will be returned.
 
-For more information about what data can be accessed via `$node`, check the `Variable: $node`section below.
+For more information about what data can be accessed via `$node`, check out the [`Variable: $node` section](../../../expressions.md#variable-node).
 
 Example:
 

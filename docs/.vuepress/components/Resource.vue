@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import nodes from '@dynamic/nodes'
+
 export default {
 	data () {
 		return {
@@ -35,6 +37,7 @@ export default {
 	},
 	props: ['node'],
 	beforeMount() {
+		console.log(nodes);
 	fetch(`https://api.n8n.io/nodes?name=${this.node}`, {
 			method: 'GET',
 		})

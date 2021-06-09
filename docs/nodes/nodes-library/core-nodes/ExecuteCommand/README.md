@@ -137,4 +137,4 @@ docker build -t n8n-curl
 
 ## Further Reading
 
-<FurtherReadingBlog node="Execute Command" />
+<FurtherReadingBlog />

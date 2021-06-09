@@ -35,4 +35,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="RSS Read" />
+<FurtherReadingBlog />

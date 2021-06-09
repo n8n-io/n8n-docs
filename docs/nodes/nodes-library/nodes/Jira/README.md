@@ -55,4 +55,4 @@ You can refer to the [official documentation](https://www.atlassian.com/software
 
 ## Further Reading
 
-<FurtherReadingBlog node="Jira Software" />
+<FurtherReadingBlog />

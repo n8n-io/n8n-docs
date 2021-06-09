@@ -59,4 +59,4 @@ There is currently no functionality to call an Error Workflow manually.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Error Trigger" />
+<FurtherReadingBlog />

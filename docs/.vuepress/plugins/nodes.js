@@ -48,9 +48,14 @@ function mapToString(map, unstringedKeys) {
 
 const getContent = async () => {
 	const nodes = await getNodes();
+	const map = nodes.reduce((accu, node) => {
+		accu[node.name] = node;
+
+		return accu;
+	}, {});
 
 	return mapToString({
-		nodes: nodes
+		nodes: map,
 	});
 };
 

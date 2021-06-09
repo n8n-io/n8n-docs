@@ -1,10 +1,7 @@
 <template>
 	<div>
 		<br />
-		<div v-if="loading">
-			Loading
-		</div>
-		<div v-else>
+		<div>
 			<div v-if="items[0].resource">
 				<details v-for="i in items" :key="i.name" class="details">
 					<summary>{{i.name}}</summary>
@@ -32,59 +29,48 @@ export default {
 	data () {
 		return {
 			items: [],
-			loading: true
 		}
 	},
 	props: ['node'],
 	beforeMount() {
-		console.log(nodes);
-	fetch(`https://api.n8n.io/nodes?name=${this.node}`, {
-			method: 'GET',
-		})
-		.then(response => response.json())
-		.then(res => {
-			const {data} = res[0].properties;
-			const isOperation = (item) => {
-				if(item.name === 'operation'){
-					return item;
-				}
+		const node = nodes.nodes[this.node];
+		const {data} = node.properties;
+		const isOperation = (item) => {
+			if(item.name === 'operation'){
+				return item;
 			}
-			const isResource = (item) => {
-				if(item.name === 'resource'){
-					return item;
-				}
+		}
+		const isResource = (item) => {
+			if(item.name === 'resource'){
+				return item;
 			}
-			const operations = data.filter(isOperation);
-			const resources = data.filter(isResource);
-			if(resources.length > 0){
-				this.$data.items = resources[0].options.map(resource => {
-					return {
-						name: resource.name,
-						value: resource.value,
-						resource: true
-					}
-				})
-				for (let i = 0; i< this.items.length; i++){
-					operations.map(operation => {
-						if (operation.displayOptions.show.resource.includes(this.items[i].value)){
-							return this.items[i].operations = operation.options;
-						}
-					})
+		}
+		const operations = data.filter(isOperation);
+		const resources = data.filter(isResource);
+		if(resources.length > 0){
+			this.$data.items = resources[0].options.map(resource => {
+				return {
+					name: resource.name,
+					value: resource.value,
+					resource: true
 				}
-			} else {
-				this.$data.items = operations[0].options.map(operation => {
-					return {
-						name: operation.name,
-						value: operation.value,
-						description: operation.description
+			})
+			for (let i = 0; i< this.items.length; i++){
+				operations.map(operation => {
+					if (operation.displayOptions.show.resource.includes(this.items[i].value)){
+						return this.items[i].operations = operation.options;
 					}
 				})
 			}
-			if(this.$data.items){
-				this.$data.loading = false;
-			}
-		})
-		.catch(error => console.log(error))
+		} else {
+			this.$data.items = operations[0].options.map(operation => {
+				return {
+					name: operation.name,
+					value: operation.value,
+					description: operation.description
+				}
+			})
+		}
   }
 }
 </script>
@@ -97,6 +83,11 @@ export default {
 .operations {
 	padding-left: 2.5em
 }
+
+summary {
+	cursor: pointer;
+}
+
 summary:focus {
 	outline: none;
 }

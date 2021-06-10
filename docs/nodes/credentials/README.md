@@ -2,14 +2,11 @@
 
 This section contains step-by-step information about authenticating the different nodes in n8n.
 
-<div v-for="i in items" :key="i.url">
-	<a :href="`/credentials/${i.url}/`">
-		<p>{{i.name}}</p>
-	</a>
-</div>
+<CredCards :items="items" />
 
 <script>
-import nodes from '@dynamic/nodes'
+import { nodes, credentials } from '@dynamic/nodes'
+
 
 export default {
 	methods: {
@@ -24,38 +21,66 @@ export default {
 		}
 	},
 	data() {
-		// store nodes with credentials in an array
-		let credNodes = this.checkCreds(Object.values(nodes));
-		let node = {};
-		let creds = [];
-		credNodes.map(cred => {
-			const url = cred.codex.data.resources.credentialDocumentation[0].url.split('/')[4];
-			const name = cred.displayName;
-			node[url] = name;
-		})
-		creds = Object.keys(node).map(key => {
-			return {
-				"url": key,
-				"name": node[key]
-			}
-		})
-		creds.map(a => {
-			let name = a.name.split(' ');
-			if(name.length>1 && name.includes('Trigger')){
-				name.splice(-1,1);
-			}
-			a.name = name.join(' ');
-			if(a.name=== 'Youtube') {
-				a.name = 'Google'
-			}
-			if(a.name=== 'Microsoft Teams') {
-				a.name = 'Microsoft'
-			}
-		});
+		const credToNode = Object.values(nodes)
+			.reduce((accu, node) => {
+				if (!node.credentials) {
+					return accu;
+				}
+
+				node.credentials.forEach((cred) => {
+					if (accu[cred.name]) {
+						return;
+					}
+
+					accu[cred.name] = node;
+				});
+
+				return accu;
+			}, {});
+
+		const creds = Object.values(credentials)
+			.reduce((accu, cred) => {
+				const path = `/nodes/credentials/${cred.documentationUrl || cred.name}/`.toLowerCase();
+				let node = credToNode[cred.name];
+				if (!node) {
+					console.log('Could not find node relevant to cred', cred.name);
+					node = {
+						displayName: cred.name,
+					};
+				}
+				accu[cred.name] = {
+					name: cred.name,
+					displayName: cred.displayName,
+					node,
+					path,
+				}
+
+				return accu;
+			}, {});
 
 		return {
-			items: creds,
+			items: [],
+			creds,
 		};
-	}
+	},
+	mounted() {
+		const sidebar = this.$root.$themeConfig.sidebar;
+		const nodesSection = sidebar['/nodes/'];
+		const credentialsSection = nodesSection.find(i => i.path === '/nodes/credentials');
+		const credentialPages = credentialsSection.children
+			.map((path) => path.toLowerCase());
+		const pages = new Set(credentialPages);
+		const items = Object.values(this.creds)
+			.filter((cred) => {
+				if (!pages.has(cred.path)) {
+					console.log('Could not find page for cred', cred.name, cred.path); // for missing items, need to set documentationUrl in credential in nodes-base
+					return false;
+				}
+				return true;
+			});
+
+		this.$data.items = items;
+
+	},
 }
 </script>

@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import nodes from '@dynamic/nodes'
+import { nodes } from '@dynamic/nodes'
 
 export default {
 	props: ['node'],
 	data() {
 		const node = nodes[this.node];
-		const {data} = node.properties;
+		const data = node.properties;
 		const isOperation = (item) => {
 			if(item.name === 'operation'){
 				return item;

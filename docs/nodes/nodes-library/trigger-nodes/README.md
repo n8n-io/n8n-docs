@@ -6,7 +6,7 @@ This section contains information about all the trigger nodes in n8n. Each node 
 <NodeCard :items="items" />
 
 <script>
-import nodes from '@dynamic/nodes'
+import { nodes } from '@dynamic/nodes'
 
 export default {
 	data () {

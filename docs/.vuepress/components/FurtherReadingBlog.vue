@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import nodes from '@dynamic/nodes'
+import { nodes } from '@dynamic/nodes'
 
 export default {
 	data() {

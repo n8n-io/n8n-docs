@@ -1,41 +1,98 @@
-const https = require('https');
+const path = require('path');
+const fs = require('fs');
+const util = require('util');
 
-const NODES_API_ENDPOINT = `https://api.n8n.io/nodes?_limit=1000`;
+const fsReadFileAsync = util.promisify(fs.readFile);
 
-function fetch(url) {
-	return new Promise((resolve, reject) => {
-		https.get(url, (resp) => {
-			let data = '';
+async function getItems(itemsName) {
+	const nodesBasePackageFilePath = require.resolve(`n8n-nodes-base/package.json`);
+	const nodesBasePackageFile = require(nodesBasePackageFilePath);
 
-			resp.on('data', (chunk) => {
-				data += chunk;
-			});
+	const results = {};
 
-			resp.on('end', () => {
-				resolve(JSON.parse(data));
-			});
+	const packagePath = path.dirname(nodesBasePackageFilePath);
 
-		}).on("error", (err) => {
-			reject(err);
-		});
-	});
+	for (const filePath of nodesBasePackageFile.n8n[itemsName]) {
+		let fullFilePath = path.join(packagePath, filePath);
+		// Remove the .node part
+		let itemName = path.parse(filePath).name.split('.').slice(0, -1).join('.');
+
+		const tempModule = require(fullFilePath);
+		try {
+			results[itemName] = new tempModule[itemName]();
+			results[itemName].fullFilePath = fullFilePath;
+
+		} catch (error) {
+			console.error(`Error loading item "${itemName}" from: "${fullFilePath}"`);
+			throw error;
+		}
+	}
+
+	return results;
 }
 
-function getNodes () {
-	return fetch(NODES_API_ENDPOINT);
+async function getCredentials() {
+	return await getItems('credentials');
+}
+
+async function getNodes() {
+	const nodes = await getItems('nodes');
+
+	const descriptions = {};
+	for (let name in nodes) {
+		const node = nodes[name].description;
+
+		const iconData = {};
+		if (node.icon) {
+			if (node.icon.startsWith('file:')) {
+				// If a file icon gets used add the full path
+				iconData.type = 'file';
+
+				fullIconPath = path.join(path.dirname(nodes[name].fullFilePath), node.icon.substr(5));
+
+				const fileBuffer = await fsReadFileAsync(fullIconPath);
+
+				const fileExtension = fullIconPath.split('.').pop();
+
+				let mimeType = 'image/png';
+				if (fileExtension === 'svg') {
+					mimeType = 'image/svg+xml';
+				} else if (fileExtension !== 'png') {
+					let iconFileType = fileType(fileBuffer);
+					if (iconFileType !== undefined) {
+						mimeType = iconFileType.mime;
+					}
+				}
+
+				iconData.fileBuffer = `data:${mimeType};base64,${fileBuffer.toString('base64')}`;
+			} else if (node.icon.startsWith('fa:')) {
+				iconData.type = 'icon';
+				iconData.icon = node.icon.substr(3);
+			}
+		}
+
+		try {
+			// rename .js file to .json
+			node.codex = {data: require(`${nodes[name].fullFilePath}on`)};
+		}
+		catch (e) {
+			console.log(`Could not resolve codex info for ${nodes[name].fullFilePath}`);
+		}
+
+		const key = `n8n-nodes-base.${node.name}`;
+		descriptions[key] = node;
+		descriptions[key].iconData = iconData;
+	}
+
+	return descriptions;
 }
 
 const getContent = async () => {
-	const nodesList = await getNodes();
-	const nodesMap = nodesList.reduce((accu, node) => {
-		accu[node.name] = node;
+	const nodes = await getNodes();
+	const credentials = await getCredentials();
 
-		return accu;
-	}, {});
-
-	return JSON.stringify(nodesMap);
+	return JSON.stringify({nodes, credentials });
 };
-
 
 module.exports = (options, context) => {
   return {

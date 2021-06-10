@@ -5,7 +5,7 @@ This section contains information about all the core nodes in n8n. Each node doc
 <NodeCard :items="items" />
 
 <script>
-import nodes from '@dynamic/nodes'
+import { nodes } from '@dynamic/nodes'
 
 export default {
 	data () {

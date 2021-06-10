@@ -1,7 +1,7 @@
 <template>
 <div  class="container">
 	<div v-for="i in items" :key="i.name">
-		<a :href="`/nodes/${i.name}`" class="card-wrapper">
+		<a :href="`/nodes/n8n-nodes-base.${i.name}`" class="card-wrapper">
 			<div class="card" v-if="i.iconData">
 				<div class="image-container">
 					<NodeIcon :node="i" />

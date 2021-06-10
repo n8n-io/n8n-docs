@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Vue from 'vue';
 
 export default ({ router, siteData }) => {
+	library.add(fas);
+  	Vue.component('font-awesome-icon', FontAwesomeIcon)
 	// Redirects users which use links of old documentation to pages of new documentation
 
 	// Redirects paths from old -> new
@@ -153,6 +155,4 @@ export default ({ router, siteData }) => {
 		}, 250)
 	}
 
-	library.add(fas);
-  Vue.component('font-awesome-icon', FontAwesomeIcon)
 }

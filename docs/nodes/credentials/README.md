@@ -67,17 +67,20 @@ export default {
 		const sidebar = this.$root.$themeConfig.sidebar;
 		const nodesSection = sidebar['/nodes/'];
 		const credentialsSection = nodesSection.find(i => i.path === '/nodes/credentials');
-		const credentialPages = credentialsSection.children
-			.map((path) => path.toLowerCase());
-		const pages = new Set(credentialPages);
+		const pages = credentialsSection.children
+			.reduce((accu, path) => {
+				accu[path.toLowerCase()] = path.replace('/nodes','');
+				return accu;
+			}, {});
 		const items = Object.values(this.creds)
 			.filter((cred) => {
-				if (!pages.has(cred.path)) {
+				if (!pages[cred.path]) {
 					console.log('Could not find page for cred', cred.name, cred.path); // for missing items, need to set documentationUrl in credential in nodes-base
 					return false;
 				}
 				return true;
-			});
+			})
+			.map((cred) => ({...cred, path: pages[cred.path]}));
 
 		this.$data.items = items;
 

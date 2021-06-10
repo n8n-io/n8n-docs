@@ -16,6 +16,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Glossary](glossary.md)
 - [Scaling n8n](scaling-n8n.md)
 - [Logging in n8n](logging.md)
+- [Looping in n8n](looping.md)
 - [Function and Function Items Nodes](function-nodes.md)
 - [Troubleshooting](troubleshooting.md)
 - [Data](data/data-structure.md)

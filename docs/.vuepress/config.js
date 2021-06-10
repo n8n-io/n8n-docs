@@ -235,6 +235,10 @@ module.exports = {
 					path: 'logging.md',
 				},
 				{
+					title: '♻ Looping in n8n',
+					path: 'looping.md',
+				},
+				{
 					title: '💡 Function and Function Item Nodes',
 					path: 'function-nodes.md',
 				},

@@ -14,10 +14,10 @@ export default {
 				return node.codex && node.codex.data && node.codex.data.categories && node.codex.data.categories.includes('Core Nodes');
 			});
 		coreNodes.sort((a, b) => {
-			if ( a.displayName < b.displayName ){
+			if ( a.displayName.toLowerCase() < b.displayName.toLowerCase() ){
 				return -1;
 			}
-			if ( a.displayName > b.displayName ){
+			if ( a.displayName.toLowerCase() > b.displayName.toLowerCase() ){
 				return 1;
 			}
 			return 0;

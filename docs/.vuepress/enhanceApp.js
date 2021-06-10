@@ -1,3 +1,8 @@
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vue from 'vue';
+
 export default ({ router, siteData }) => {
 	// Redirects users which use links of old documentation to pages of new documentation
 
@@ -147,4 +152,7 @@ export default ({ router, siteData }) => {
 			}
 		}, 250)
 	}
+
+	library.add(fas);
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
 }

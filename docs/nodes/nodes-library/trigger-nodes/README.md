@@ -16,21 +16,22 @@ export default {
 					return false;
 				}
 
-				if (node.codex && node.codex.categories && node.codex.categories.includes('Core Nodes')) {
+				if (node.codex && node.codex.data && node.codex.data.categories && node.codex.data.categories.includes('Core Nodes')) {
 					return false;
 				}
 
 				return true;
 			});
 		triggerNodes.sort((a, b) => {
-			if ( a.displayName < b.displayName ){
+			if ( a.displayName.toLowerCase() < b.displayName.toLowerCase() ){
 				return -1;
 			}
-			if ( a.displayName > b.displayName ){
+			if ( a.displayName.toLowerCase() > b.displayName.toLowerCase() ){
 				return 1;
 			}
 			return 0;
 		});
+
 		return {
 			items: triggerNodes,
 		};

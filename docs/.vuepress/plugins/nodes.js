@@ -1,4 +1,3 @@
-const Vue = require('vue')
 const https = require('https');
 
 const NODES_API_ENDPOINT = `https://api.n8n.io/nodes?_limit=1000`;

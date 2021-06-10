@@ -2,10 +2,14 @@
 <div  class="container">
 	<div v-for="i in items" :key="i.name">
 		<a :href="`/nodes/${i.name}`" class="card-wrapper">
-			<div class="card" v-if="i.iconData.fileBuffer">
+			<div class="card" v-if="i.iconData">
 				<div class="image-container">
-					<div style="width: 100%; height: 100%;">
-						<img :src="i.iconData.fileBuffer" style="width: 100%; height: 100%;">
+					<div style="width: 100%; height: 100%;" :style="{color: i.defaults.color}">
+						<font-awesome-icon v-if="i.iconData.type === 'icon'" :icon="i.iconData.icon"  />
+						<img v-else-if="i.iconData.fileBuffer" :src="i.iconData.fileBuffer" style="width: 100%; height: 100%;">
+						<div v-else class="placeholder">
+							{{ i.displayName.charAt(0) }}
+						</div>
 					</div>
 				</div>
 				<p>{{i.displayName}}</p>
@@ -13,7 +17,6 @@
 		</a>
 	</div>
 </div>
-<!-- todo support fa icons/ -->
 </template>
 
 <script>
@@ -30,8 +33,9 @@ export default {
 }
 .card-wrapper {
 	border-radius: 4px;
-	text-decoration:none;
+	text-decoration:none !important;
 }
+
 .card {
 	border-radius: 4px;
 	padding: .8em .6em;
@@ -44,5 +48,6 @@ export default {
 	height: 60px;
 	line-height: 60px;
 	margin:auto;
+	font-size: 34px;
 }
 </style>

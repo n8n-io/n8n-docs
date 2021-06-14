@@ -2,6 +2,30 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.124.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.123.1...n8n@0.124.0) for this version.<br />
+**Release date:** 2021-06-13
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Drive:" text="Added APP Properties and Properties options to the Upload operation of the File resource"/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added the functionlaity to log the request to the browser console for testing"/>
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Added the Include Time parameter date field types"/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources"/>
+<Changelog node="n8n-nodes-base.todoist" title="Todoist:" text="Added the Description option to the Task resource"/>
+
+### Core Functionality ⚙️
+- Implemented the functionality to display the error details in a toast message for trigger nodes
+- Improved error handling by removing circular references from API errors
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.jira" title="Jira:" text="Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource"/>
+
+### Contributors 🙌
+
+[Jean M](https://github.com/jemos), [romaincolombo-daily](https://github.com/romaincolombo-daily), [Thomas Jost](https://github.com/Schnouki), [Vincent](https://github.com/vbouchet31)
+
 ## n8n@0.123.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.123.0...n8n@0.123.1) for this version.<br />
 **Release date:** 2021-06-06

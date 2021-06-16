@@ -2,6 +2,15 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.124.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.0...n8n@0.124.1) for this version.<br />
+**Release date:** 2021-06-16
+
+### Core Functionality ⚙️
+- Improved error log messages
+- Fixed an issue where the tags got removed when deactivating the workflow or updating settings
+- Removed the circular references for the error caused by the request library
+
 ## n8n@0.124.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.123.1...n8n@0.124.0) for this version.<br />
 **Release date:** 2021-06-13

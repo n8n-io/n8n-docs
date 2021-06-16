@@ -5,8 +5,22 @@ This section contains step-by-step information about authenticating the differen
 <CredCards :items="items" />
 
 <script>
+import Vue, { inject } from "vue";
 import { nodes, credentials } from '@dynamic/nodes'
+import {resolveSidebarItems} from '../../../node_modules/@vuepress/theme-default/util/index';
 
+const overrides = {
+	'notionOAuth2Api': 'n8n-nodes-base.notion',
+	'twakeServerApi': 'n8n-nodes-base.twake',
+};
+
+Object.keys(overrides).forEach((cred) => {
+	const nodeType = overrides[cred];
+
+	if (nodes[nodeType]) {
+		overrides[cred] = nodes[nodeType];
+	}
+});
 
 export default {
 	methods: {
@@ -20,8 +34,14 @@ export default {
 			return nodes.filter(this.filterCreds)
 		}
 	},
+	computed: {
+		credentialPages () {
+			const pages = this.$site.pages;
+			return pages.filter((page) => page.path.startsWith('/credentials/'))
+		}
+	},
 	data() {
-		const credToNode = Object.values(nodes)
+		let credToNode = Object.values(nodes)
 			.reduce((accu, node) => {
 				if (!node.credentials) {
 					return accu;
@@ -37,10 +57,14 @@ export default {
 
 				return accu;
 			}, {});
+		credToNode = {
+			...credToNode,
+			...overrides,
+		};
 
 		const creds = Object.values(credentials)
 			.reduce((accu, cred) => {
-				const path = `/nodes/credentials/${cred.documentationUrl || cred.name}/`.toLowerCase();
+				const path = `/credentials/${cred.documentationUrl || cred.name}/`.toLowerCase();
 				let node = credToNode[cred.name];
 				if (!node) {
 					console.log('Could not find node relevant to cred', cred.name);
@@ -48,7 +72,7 @@ export default {
 						displayName: cred.name,
 					};
 				}
-				accu[cred.name] = {
+				accu[path] = {
 					name: cred.name,
 					displayName: cred.displayName,
 					node,
@@ -64,26 +88,17 @@ export default {
 		};
 	},
 	mounted() {
-		const sidebar = this.$root.$themeConfig.sidebar;
-		const nodesSection = sidebar['/nodes/'];
-		const credentialsSection = nodesSection.find(i => i.path === '/nodes/credentials');
-		const pages = credentialsSection.children
-			.reduce((accu, path) => {
-				accu[path.toLowerCase()] = path.replace('/nodes','');
-				return accu;
-			}, {});
-		const items = Object.values(this.creds)
-			.filter((cred) => {
-				if (!pages[cred.path]) {
-					console.log('Could not find page for cred', cred.name, cred.path); // for missing items, need to set documentationUrl in credential in nodes-base
+		const items = this.credentialPages.filter((page) => {
+				if (!this.$data.creds[page.path.toLowerCase()]) {
+					// for missing items, need to set documentationUrl in credential in nodes-base
+					console.log('Could not find cred for page', page.title, page.path); 
 					return false;
 				}
 				return true;
 			})
-			.map((cred) => ({...cred, path: pages[cred.path]}));
+			.map(page => ({...this.$data.creds[page.path.toLowerCase()], displayName: page.title, path: page.path}));
 
 		this.$data.items = items;
-
 	},
-}
+};
 </script>

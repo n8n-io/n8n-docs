@@ -15,6 +15,7 @@
   },
   "author": "",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {

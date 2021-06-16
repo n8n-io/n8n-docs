@@ -1,5 +1,7 @@
 const dirTree = require('directory-tree');
 const path = require('path');
+require('dotenv').config()
+const webpack = require('webpack')
 
 function getChildrenFiles(folder, topItem) {
 	const returnFiles = dirTree(path.join(__dirname, `../${folder}`), { extensions: /\.md/ }).children
@@ -61,6 +63,11 @@ function getDescription(frontmatterDescription, permalink) {
 }
 
 module.exports = {
+	configureWebpack: (config) => {
+		return { plugins: [
+		  new webpack.EnvironmentPlugin({ ...process.env })
+		]}
+	  },
 	description: 'Documentation for n8n',
 	title: 'Docs',
 	plugins: [

@@ -27,3 +27,5 @@ For example, consider a Trello trigger node. When a Trello Board gets updated, i
 ## Workflow
 
 A workflow is a canvas on which you can place and connect nodes. A workflow can be started manually or by trigger nodes. A workflow run ends when all active and connected nodes have processed their data.
+
+<Feedback />

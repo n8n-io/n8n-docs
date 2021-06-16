@@ -9,7 +9,7 @@
 				<span style="font-size:24px; vertical-align:middle;">🧰 </span>
 			</div>
 			<span style="margin-left:8px; line-height: 1.7;">
-				<a v-if="info.codex" :href="`../../nodes/${node}/`">{{title}}</a>
+				<a :href="`../../nodes/${node}/`">{{title}}</a>
 				<span v-if="breakingChanges" style="background: rgba(255,229,100,0.3); color: #6b5900; padding: 2px; border-radius: 5px; font-size: 10px;">
 					Breaking Changes
 				</span>

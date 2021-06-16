@@ -5,9 +5,7 @@ This section contains step-by-step information about authenticating the differen
 <CredCards :items="items" />
 
 <script>
-import Vue, { inject } from "vue";
 import { nodes, credentials } from '@dynamic/nodes'
-import {resolveSidebarItems} from '../../../node_modules/@vuepress/theme-default/util/index';
 
 const overrides = {
 	'notionOAuth2Api': 'n8n-nodes-base.notion',

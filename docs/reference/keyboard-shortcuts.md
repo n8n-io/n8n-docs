@@ -10,10 +10,16 @@ The following keyboard shortcuts can currently be used:
  - **Ctrl + o**: Open workflow
  - **Ctrl + s**: Save the current workflow
  - **Ctrl + v**: Paste nodes
- - **Tab**: Open "Node Creator". Type to filter and navigate with arrow keys. To create press "enter"
 
+## Node Panel
 
-## With node(s) selected
+ - **Tab**: Open Nodes Panel. Type any to search for node.
+ - **Enter**: Insert node into workflow, collapse/expand category, open subcategory
+ - **ArrowRight**: Expand category, open subcategory
+ - **ArrowLeft**: Collapse category, close subcategory view
+ - **Escape**: Close Nodes Panel
+
+## With node(s) selected in canvas
 
  - **ArrowDown**: Select sibling node bellow the current one
  - **ArrowLeft**: Select node left of the current one
@@ -26,3 +32,10 @@ The following keyboard shortcuts can currently be used:
  - **F2**: Rename node
  - **Shift + ArrowLeft**: Select all nodes left of the current one
  - **Shift + ArrowRight**: Select all nodes right of the current one
+
+## Editor canvas zoom
+
+- **+**: Zoom in
+- **-**: Zoom out
+- **0**: Zoom to fit workflow
+- **Ctrl+0**: Reset zoom to 1

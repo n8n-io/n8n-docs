@@ -21,7 +21,7 @@ The following keyboard shortcuts can currently be used:
 
 ## With node(s) selected in canvas
 
- - **ArrowDown**: Select sibling node bellow the current one
+ - **ArrowDown**: Select sibling node below the current one
  - **ArrowLeft**: Select node left of the current one
  - **ArrowRight**: Select node right of the current one
  - **ArrowUp**: Select sibling node above the current one
@@ -37,5 +37,5 @@ The following keyboard shortcuts can currently be used:
 
 - **+**: Zoom in
 - **-**: Zoom out
-- **0**: Zoom to fit workflow
-- **Ctrl+0**: Reset zoom to 1
+- **0**: Reset zoom level
+- **1**: Zoom to fit workflow

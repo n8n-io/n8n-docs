@@ -14,10 +14,13 @@ The following keyboard shortcuts can currently be used:
 ## Node Panel
 
  - **Tab**: Open Nodes Panel. Type any to search for node.
- - **Enter**: Insert node into workflow, collapse/expand category, open subcategory
- - **ArrowRight**: Expand category, open subcategory
- - **ArrowLeft**: Collapse category, close subcategory view
+ - **Enter**: Insert node into workflow
  - **Escape**: Close Nodes Panel
+
+### Nodes Panel Categories (>= 0.125.0)
+- **Enter**: Insert node into workflow, collapse/expand category, open subcategory
+- **ArrowRight**: Expand category, open subcategory (>= 0.125.0)
+- **ArrowLeft**: Collapse category, close subcategory view (>= 0.125.0)
 
 ## With node(s) selected in canvas
 
@@ -33,9 +36,14 @@ The following keyboard shortcuts can currently be used:
  - **Shift + ArrowLeft**: Select all nodes left of the current one
  - **Shift + ArrowRight**: Select all nodes right of the current one
 
-## Editor canvas zoom
+## Editor canvas zoom (>= 0.125.0)
+- **+** or **=**: Zoom in
+- **-** or **_**: Zoom out
+- **0**: Reset zoom level
+- **1**: Zoom to fit workflow
+
+## Editor canvas zoom (< 0.125.0)
 
 - **+**: Zoom in
 - **-**: Zoom out
-- **0**: Reset zoom level
-- **1**: Zoom to fit workflow
+- **ctrl+0**: Reset zoom level

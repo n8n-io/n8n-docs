@@ -148,4 +148,4 @@ return [
 
 ## Further Reading
 
-<FurtherReadingBlog node="Switch" />
+<FurtherReadingBlog />

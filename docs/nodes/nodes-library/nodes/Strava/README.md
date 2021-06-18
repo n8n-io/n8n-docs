@@ -84,4 +84,4 @@ In the screenshot below, you will notice that the node returns the information o
 
 ## Further Reading
 
-<FurtherReadingBlog node="Strava" />
+<FurtherReadingBlog />

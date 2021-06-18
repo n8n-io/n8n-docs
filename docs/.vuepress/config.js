@@ -98,7 +98,8 @@ module.exports = {
 			{
 				hostname: 'https://docs.n8n.io'
 			},
-		]
+		],
+		require('./plugins/nodes'),
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',
@@ -317,3 +318,4 @@ module.exports = {
 		}
 	},
 }
+

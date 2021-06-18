@@ -129,4 +129,4 @@ When the node gets executed, you will receive the HTTP status code, the HTTP sta
 
 ## Further Reading
 
-<FurtherReadingBlog node="HTTP Request" />
+<FurtherReadingBlog />

@@ -1,10 +1,10 @@
 <template>
 <div  class="container">
 	<div v-for="i in items" :key="i.name">
-		<a :href="`/nodes/n8n-nodes-base.${i.name}`" class="card-wrapper">
-			<div class="card" v-if="i.iconData">
+		<a :href="i.path" class="card-wrapper">
+			<div class="card">
 				<div class="image-container">
-					<NodeIcon :node="i" />
+					<NodeIcon :node="i.node" />
 				</div>
 				<p>{{i.displayName}}</p>
 			</div>

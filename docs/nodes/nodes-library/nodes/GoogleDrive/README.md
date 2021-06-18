@@ -56,4 +56,4 @@ There are several additional options available to fine grain the listed results.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Google Drive" />
+<FurtherReadingBlog />

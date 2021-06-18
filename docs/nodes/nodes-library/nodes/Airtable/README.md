@@ -140,4 +140,4 @@ Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/arti
 
 ## Further Reading
 
-<FurtherReadingBlog node="Airtable" />
+<FurtherReadingBlog />

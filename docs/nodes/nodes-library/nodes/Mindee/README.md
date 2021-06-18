@@ -64,4 +64,4 @@ In the screenshot below, you will notice that the node extracts the information 
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Mindee" />

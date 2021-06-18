@@ -119,4 +119,4 @@ return [
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Merge" />

@@ -59,4 +59,4 @@ You can deactivate this behaviour by clicking on the *Add Option* button and set
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Set" />

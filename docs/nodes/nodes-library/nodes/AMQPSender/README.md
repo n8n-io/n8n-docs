@@ -104,4 +104,4 @@ This example workflow uses the Cron node, which is a Trigger node. You'll need t
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="AMQP Sender" />

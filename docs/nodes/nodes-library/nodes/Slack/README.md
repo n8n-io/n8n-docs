@@ -136,4 +136,4 @@ You can refer to the official documentation on [Scopes and permissions](https://
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Slack" />

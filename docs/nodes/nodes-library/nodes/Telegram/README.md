@@ -99,4 +99,4 @@ There are two ways to get the Chat ID in Telegram.
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Telegram" />

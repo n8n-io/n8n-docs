@@ -5,40 +5,35 @@ This section contains information about all the regular nodes in n8n. Each node 
 <NodeCard :items="items" />
 
 <script>
-import { nodes } from '@dynamic/nodes'
-
 export default {
 	data () {
 		return {
 			items: []
 		}
 	},
-	data() {
-		const regularNodes = Object.values(nodes)
-			.filter((node) => {
-				if (node.group.includes('trigger')) {
-					return false;
-				}
-
-				if (node.codex && node.codex.data && node.codex.data.categories && node.codex.data.categories.includes('Core Nodes')) {
-					return false;
-				}
-
-				return true;
-			});
-		regularNodes.sort((a, b) => {
-			if ( a.displayName.toLowerCase() < b.displayName.toLowerCase() ){
-				return -1;
-			}
-			if ( a.displayName.toLowerCase() > b.displayName.toLowerCase() ){
-				return 1;
-			}
-			return 0;
-		});
-
-		return {
-			items: regularNodes,
-		};
+	beforeMount() {
+		fetch('https://api.n8n.io/graphql', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				query: `
+					query GetRegularNodes{
+						nodes(where: {categories:{name_ncontains: "Core Nodes"}, displayName_ncontains:"Trigger"}, sort:"displayName"){
+							name
+							displayName
+							iconData
+						}
+}
+				`
+			})
+		})
+		.then(response => response.json())
+		.then(res => {
+			this.$data.items = res.data.nodes
+		})
+		.catch(error => console.log(error))
 	}
 }
 </script>

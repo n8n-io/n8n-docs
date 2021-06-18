@@ -11,4 +11,4 @@ As an example, checkout how this node is being used in the [Create Your First Wo
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="No Operation, do nothing" />

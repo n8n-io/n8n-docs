@@ -197,4 +197,4 @@ By default, the Google Sheets node will operate on the default sheet, `Sheet 1`.
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Google Sheets" />

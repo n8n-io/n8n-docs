@@ -118,4 +118,4 @@ return [
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="IF" />

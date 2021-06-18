@@ -69,4 +69,4 @@ In the screenshot below, you will notice that the node sends an SMS to the phone
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="Vonage" />

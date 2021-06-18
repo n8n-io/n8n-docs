@@ -7,24 +7,35 @@
 </template>
 
 <script>
-import { nodes } from '@dynamic/nodes'
-
 export default {
-	data() {
+	data () {
 		return {
-			items: [],
-		};
-	},
-	beforeMount() {
-		const parts = this.$page.path.split('/');
-		const name = parts[parts.length - 2];
-
-		const node = nodes[name];
-		let items = [];
-		if (node && node.codex) {
-			items = node.codex.data.resources.generic;
+			items: []
 		}
-		this.$data.items = items;
+	},
+	props: ['node'],
+	beforeMount() {
+	fetch('https://api.n8n.io/graphql', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				query: `
+					query GetNode{
+						nodes (where: {displayName:"${this.node}"}){
+							displayName
+							codex
+						}
+					}
+				`
+			})
+		})
+		.then(response => response.json())
+		.then(res => {
+			this.$data.items = res.data.nodes[0].codex.data.resources.generic
+		})
+		.catch(error => console.log(error))
   }
 }
 </script>

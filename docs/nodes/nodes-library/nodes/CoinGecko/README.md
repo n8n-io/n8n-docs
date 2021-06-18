@@ -100,4 +100,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ## Further Reading
 
-<FurtherReadingBlog />
+<FurtherReadingBlog node="CoinGecko" />

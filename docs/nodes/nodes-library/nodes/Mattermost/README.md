@@ -92,4 +92,4 @@ To find the Channel ID in Mattermost, follow the steps mentioned below.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Mattermost" />
+<FurtherReadingBlog />

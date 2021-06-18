@@ -88,4 +88,4 @@ Refer to this [workflow](https://n8n.io/workflows/996) to try it out.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Split In Batches" />
+<FurtherReadingBlog />

@@ -70,4 +70,4 @@ To specify the data type of a column, append the column name with `:type`, where
 
 ## Further Reading
 
-<FurtherReadingBlog node="QuestDB" />
+<FurtherReadingBlog />

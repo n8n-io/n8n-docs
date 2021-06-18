@@ -58,4 +58,4 @@ In the screenshot below, you will notice that the node translates the instructio
 
 ## Further Reading
 
-<FurtherReadingBlog node="LingvaNex" />
+<FurtherReadingBlog />

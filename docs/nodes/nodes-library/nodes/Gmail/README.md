@@ -97,4 +97,4 @@ Refer to [Search operators you can use with Gmail](https://support.google.com/ma
 
 ## Further Reading
 
-<FurtherReadingBlog node="Gmail" />
+<FurtherReadingBlog />

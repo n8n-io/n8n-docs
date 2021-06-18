@@ -38,4 +38,4 @@ The final workflow should look like the following image.
 
 ## Further Reading
 
-<FurtherReadingBlog node="EmailReadImap" />
+<FurtherReadingBlog />

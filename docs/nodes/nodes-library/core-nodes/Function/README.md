@@ -153,4 +153,4 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 ## Further Reading
 
-<FurtherReadingBlog node="Function" />
+<FurtherReadingBlog />

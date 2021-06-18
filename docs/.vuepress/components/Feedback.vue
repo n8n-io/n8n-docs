@@ -2,9 +2,8 @@
 	<div style="max-width: 740px; margin: 0 auto;">
 		<div style="margin-bottom: 2px;">Was this page helpful?</div>
 		<div v-if="!submitted" style="max-width: 100px; font-size:24px;">
-			<button v-on:click="submitFeedback(-1)" class="btn"><span>🙁</span></button>
-			<button v-on:click="submitFeedback(0)" class="btn"><span>😐</span></button>
-			<button v-on:click="submitFeedback(1)" class="btn"><span>😄</span></button>
+			<font-awesome-icon class="btn" icon="thumbs-up" v-on:click="submitFeedback(1)" />
+			<font-awesome-icon class="btn" icon="thumbs-down" v-on:click="submitFeedback(-1)" />
 		</div>
 		<div v-else>
 			<p>{{message}}</p>
@@ -18,8 +17,7 @@ export default {
 		return {
 			submitted: false,
 			message: '',
-			apiKey: process.env.VUE_APP_API_KEY,
-			url: process.env.VUE_APP_FEEDBACK_URL
+			url: 'https://internal.users.n8n.cloud/webhook/d1b83b83-e584-45fe-a28c-a12a4272e472'
 		}
 	},
 	methods: {
@@ -28,18 +26,13 @@ export default {
 				const path = this.$page.path;
 				fetch(`${this.url}?feedback=${value}&path=${path}`, {
 					method: 'GET',
-					mode: "no-cors",
-					// headers: {
-					// 	'apiKey': this.apiKey,
-					// }
 				})
 				.then(res => {
-					console.log(res)
+					this.submitted = true;
 					return res.json()
 				})
 				.then(response => {
 					if(response.message) {
-						this.submitted = true;
 						this.message = response.message;
 					}
 				})
@@ -52,10 +45,9 @@ export default {
 
 <style scoped>
 .btn {
-	border: 0;
-	background: transparent;
-	padding: 0;
-	font-size: inherit;
 	cursor: pointer;
+	color: #bfbfbf;
+	padding-right: 16px;
+	padding-top: 4px;
 }
 </style>

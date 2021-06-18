@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<h4 style="margin-bottom: 2px;">Was this page helpful?</h4>
-		<div v-if="!submitted" style="max-width: 100px; display:flex; justify-content:space-between; font-size:24px;">
+	<div style="max-width: 740px; margin: 0 auto;">
+		<div style="margin-bottom: 2px;">Was this page helpful?</div>
+		<div v-if="!submitted" style="max-width: 100px; font-size:24px;">
 			<button v-on:click="submitFeedback(-1)" class="btn"><span>🙁</span></button>
 			<button v-on:click="submitFeedback(0)" class="btn"><span>😐</span></button>
 			<button v-on:click="submitFeedback(1)" class="btn"><span>😄</span></button>

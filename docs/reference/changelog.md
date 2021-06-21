@@ -2,6 +2,25 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.125.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.1...n8n@0.125.0) for this version.<br />
+**Release date:** 2021-06-20
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource."/>
+
+### Core Functionality ⚙️
+- New design and implementation of the Nodes Panel, adding categories and subcategories with improved search. For full details, see the [commits](https://github.com/n8n-io/n8n/commit/0470740737c5ee199447a68b7277c43be2042976).
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.mySql" title="MySQL:" text="Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status."/>
+
+### Contributors 🙌
+[Carlos Alexandro Becker](https://github.com/caarlos0), [smamudhan](https://github.com/smamudhan), [Kaito Udagawa](https://github.com/umireon) 
+
+
 ## n8n@0.124.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.0...n8n@0.124.1) for this version.<br />
 **Release date:** 2021-06-16

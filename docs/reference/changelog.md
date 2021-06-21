@@ -18,8 +18,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.mySql" title="MySQL:" text="Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status."/>
 
 ### Contributors 🙌
-[Amudhan Manivasagam](https://github.com/smamudhan),[Carlos Alexandro Becker](https://github.com/caarlos0),  [Kaito Udagawa](https://github.com/umireon) 
-
+[Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
 
 ## n8n@0.124.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.0...n8n@0.124.1) for this version.<br />

@@ -11,14 +11,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource."/>
 
 ### Core Functionality ⚙️
-- New design and implementation of the Nodes Panel, adding categories and subcategories with improved search. For full details, see the [commits](https://github.com/n8n-io/n8n/commit/0470740737c5ee199447a68b7277c43be2042976).
+- Implemented new desigen of the Nodes Panel, adding categories and subcategories, along with improved search. For full details, see the [commits](https://github.com/n8n-io/n8n/commit/0470740737c5ee199447a68b7277c43be2042976).
 
 ### Bug fixes 🐛
 <br />
 <Changelog node="n8n-nodes-base.mySql" title="MySQL:" text="Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status."/>
 
 ### Contributors 🙌
-[Carlos Alexandro Becker](https://github.com/caarlos0), [smamudhan](https://github.com/smamudhan), [Kaito Udagawa](https://github.com/umireon) 
+[Amudhan Manivasagam](https://github.com/smamudhan),[Carlos Alexandro Becker](https://github.com/caarlos0),  [Kaito Udagawa](https://github.com/umireon) 
 
 
 ## n8n@0.124.1

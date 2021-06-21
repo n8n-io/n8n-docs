@@ -1,29 +1,29 @@
 # Quickstart
 
-You can run n8n both locally and remotely. There are three different ways in which you can get started with n8n.
+n8n can be run locally via [npm](https://www.npmjs.com/package/n8n) and [Docker](https://hub.docker.com/r/n8nio/n8n), or using our hosted n8n.cloud offering.
 
 [[toc]]
 
-## Run n8n with n8n.cloud
+## n8n.cloud
 
-While n8n.cloud and n8n are the same in terms of features, n8n.cloud provides conveniences such as:
-- Not having to set up and maintain your n8n instance
+In addition to all the features of n8n, n8n.cloud provides added benefits such as:
+- No set up or maintenance for your n8n instance
 - Managed OAuth for authentication
-- Easily upgrading to the newest n8n versions
+- Easy upgrades to the newest n8n versions
 
 If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) account.
 
-## Run n8n locally
-### Using npx
-If you just want to try out n8n without installing it, run it with [npx](../reference/glossary.md#npx):
+## npm
+
+You can try out n8n without installing it using [npx](../reference/glossary.md#npx).
+
+From the terminal, run:
 
 ```bash
 npx n8n
 ```
 
-This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
-
-### Using npm
+This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678). 
 
 If you want to install n8n globally, use [npm](../reference/glossary.md#npm):
 
@@ -39,34 +39,13 @@ n8n
 n8n start
 ```
 
-### Using Docker
+## Docker
 
-If you do not want to install n8n, you can also start it using [Docker](../reference/glossary.md#docker):
-
-```bash
-docker run -it --rm \
-  --name n8n \
-  -p 5678:5678 \
-  n8nio/n8n
-```
-
-Be aware that all the data will be lost once the Docker container gets removed. To keep the data, mount the `~/.n8n` folder:
-
-```bash
-docker run -it --rm \
-  --name n8n \
-  -p 5678:5678 \
-  -v ~/.n8n:/home/node/.n8n \
-  n8nio/n8n
-```
+See the [Docker Quickstart](quickstart/docker-quickstart.md) page for running n8n using Docker.
 
 n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 
-More information about the Docker setup can be found in the README file of the
-[Docker Image](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/README.md).
-
-
-### Starting n8n with tunnel (post-installation)
+## n8n with tunnel
 
 ::: danger
 This is only meant for local development and testing. It should not be used in production.

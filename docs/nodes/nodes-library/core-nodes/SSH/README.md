@@ -8,7 +8,7 @@ description: Learn how to use the SSH node in n8n
 The SSH node is useful for executing commands via the Secure Shell Protocol.
 
 ::: tip 🔑 Credential
-Authentication for the SSH node requires that you have a username and password for connecting to the remote server, or an SSH key configured for the server or service you are connecting to. See [Connecting to GitHub with SSH] for an example](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+You can find authentication information for this node [here](../../../credentials/SSH/README.md).
 :::
 
 ## Basic Operations
@@ -47,17 +47,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. SSH node
 
-1. From the SSH Credentials dropdown, select ***Create New*** and complete the following fields:
-    - ***Credentials Name***: Enter a descriptive name, here we used `ssh_demo`.
-    - ***Host***: Enter the IP address of the server you are connecting to. Here we are using `192.168.1.8` for a local Mac set up for SSH access.
-    - ***Port***: Enter the port to use for this connection. SSH used port 22 by default.
-    - ***User***: Enter the your username for this server.
-    - ***Password***: Enter your password for the provided username.
-    - ***Private Key***: Only available for Private Key authentication. Enter your SSH key.
-    - ***Passphrase***: Only available for Private Key authentication. Enter your passphrase.
-
-![SSH credentials](./ssh_credentials.png)
-
+1. From the SSH Credentials dropdown, select ***Create New*** or an existing [credential](../../../credentials/SSH/README.md).
 2. Select ***Password*** from the ***Authentication*** dropdown list.
 3. Select ***Command*** from the ***Resource*** dropdown list.
 4. The ***Execute*** option is automatically selected as the ***Operation***.
@@ -65,4 +55,4 @@ The start node exists by default when you create a new workflow.
 6. In the ***Working Directory*** field you can enter where the command should be executed. Here we ran it in the root directory.
 7. Click on ***Execute Node*** to run the node.
 
-![Executed Workflow](./executed_ssh_workflow.png)
+![SSH Node](./ssh_node.png)

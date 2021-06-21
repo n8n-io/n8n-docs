@@ -36,14 +36,16 @@ The following keyboard shortcuts can currently be used:
  - **Shift + ArrowLeft**: Select all nodes left of the current one
  - **Shift + ArrowRight**: Select all nodes right of the current one
 
-## Editor canvas zoom (>= 0.125.0)
+## Editor canvas zoom (>= 0.126.0)
 - **+** or **=**: Zoom in
 - **-** or **_**: Zoom out
 - **0**: Reset zoom level
 - **1**: Zoom to fit workflow
+- **Ctrl + Mouse wheel**: Zoom in/out
 
-## Editor canvas zoom (< 0.125.0)
+## Editor canvas zoom (< 0.126.0)
 
 - **+**: Zoom in
 - **-**: Zoom out
 - **ctrl+0**: Reset zoom level
+- **Ctrl + Mouse wheel**: Zoom in/out

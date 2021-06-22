@@ -140,21 +140,19 @@ export default ({ router, siteData }) => {
 		'#/troubleshooting?id=mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio' : 'reference/troubleshooting.html#mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio',
 	};
 
-	if (typeof window !== 'undefined') {
-		if (redirectPaths[window.location.hash] !== undefined) {
-			// Redirect to different page if defined
-			window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
-		} else if (location.hash) {
-			// Scroll to element
-			setTimeout(() => {
-				const id = location.hash.slice(1);
-				const targetElement = document.getElementById(id);
-				if (targetElement) {
-					const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
-					window.scrollTo({ top: y, behavior: 'smooth' });
-				}
-			}, 250)
-		}
+	if (redirectPaths[window.location.hash] !== undefined) {
+		// Redirect to different page if defined
+		window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
+	} else if (location.hash) {
+		// Scroll to element
+		setTimeout(() => {
+			const id = location.hash.slice(1);
+			const targetElement = document.getElementById(id);
+			if (targetElement) {
+				const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
+				window.scrollTo({ top: y, behavior: 'smooth' });
+			}
+		}, 250)
 	}
 
 }

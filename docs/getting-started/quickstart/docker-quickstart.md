@@ -14,7 +14,7 @@ Before proceeding ensure that you have installed [Docker Desktop](https://docs.d
 Docker Desktop is only available for Mac and Windows. You must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
 :::
 
-## Start n8n
+## Starting n8n
 
 From your terminal, run:
 
@@ -43,7 +43,7 @@ for credentials. It is also the name of the webhook when the n8n tunnel is used.
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
-### Use with PostgresDB
+### PostgresDB
 
 ```sh
 docker run -it --rm \
@@ -78,7 +78,7 @@ The following environment variables support file input:
   - `N8N_BASIC_AUTH_USER_FILE`
 
 
-### Use with MySQL
+### MySQL
 
 ```sh
 docker run -it --rm \
@@ -95,7 +95,7 @@ docker run -it --rm \
 	n8n start
 ```
 
-## Setting Timezone
+## Setting timezone
 
 To define the timezone n8n should use, the environment variable `GENERIC_TIMEZONE` can be set. This gets used by schedule based nodes such as the Cron node.
 

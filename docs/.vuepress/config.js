@@ -247,10 +247,14 @@ module.exports = {
 				},
 				{
 					title: '🚀 Quickstart',
-					path: 'getting-started/quickstart.md',
+					path: '/getting-started/quickstart/',
+					sidebarDepth: 2,
+					children: getChildrenFiles('getting-started/quickstart'),
 				},
 				{
 					title: '🍄 Key Components',
+					path: '/getting-started/key-components/',
+					sidebarDepth: 2,
 					sidebarDepth: 2,
 					children: getChildrenFiles('getting-started/key-components'),
 				},

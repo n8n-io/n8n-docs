@@ -2,40 +2,52 @@
 
 The [Editor UI](../../reference/glossary.md#editor-ui) is the web interface used to create [workflows](./workflow.md). It is accessed through a web browser at a designated website address.
 
-![Editor](../images/Editor_UI.gif)
+![Editor](../images/Editor_UI.png)
 
 From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
 
-![Editor UI notes](../images/EditorUI_sidebar_notes.png)
+The Editor UI sidebar menu contains the following sections and operations:
 
-The Editor UI sidebar menu contains the following operations:
+## Admin Panel
+
+Available only for n8n.cloud, navigate to the Dashboard of your n8n.cloud instance. Here you can view your executions and workflows counts, manage and upgrade your instance, and access support. 
+
+![Admin Panel](../images/admin_panel.png)
 
 ## Workflows
+
 This section includes the operations for creating and editing workflows.
-1. **New**: Create a new workflow
-2. **Open**: Open the list of saved workflows
-3. **Save**: Save changes to the current workflow
-4. **Save As**: Save the current workflow under a new name
-5. **Rename**: Rename the current workflow
-6. **Delete**: Delete the current workflow
-7. **Download**: Download the current workflow as a JSON file
-8. **Import from URL**: Import a workflow from a URL
-9. **Import from File**: Import a workflow from a local file
-10. **Settings**: View and change the settings of the current workflow
+
+* **New**: Create a new workflow
+* **Open**: Open the list of saved workflows
+* **Save**: Save changes to the current workflow
+* **Save As**: Save the current workflow under a new name
+* **Rename**: Rename the current workflow
+* **Delete**: Delete the current workflow
+* **Download**: Download the current workflow as a JSON file
+* **Import from URL**: Import a workflow from a URL
+* **Import from File**: Import a workflow from a local file
+* **Settings**: View and change the settings of the current workflow
 
 ## Credentials
-This section includes the operations for creating credentials. Credentials are private pieces of information issued by apps/services (represented as n8n nodes) to authenticate you as a user and allow you to connect and share information between the app/service and the n8n node.
-1. **New**: Create new credentials
-2. **Open**: Open the list of saved credentials
+
+This section includes the operations for creating [credentials](../../nodes/node-basics.md#credentials). 
+
+Credentials are private pieces of information issued by apps/services to authenticate you as a user and allow you to connect and share information between the app/service and the n8n node.
+
+* **New**: Create new credentials
+* **Open**: Open the list of saved credentials
 
 ## Executions
-This section includes information about your workflow [executions](../../reference/glossary.md#execution), i.e. complete runs of a workflow from the first to the last node.
 
-**Click**: Open the workflow executions log
+This section includes information about your workflow [executions](../../reference/glossary.md#execution), each completed run of a workflow.
+
+You can enabling logging of your failed, successful, and/or manually selected workflows using the Workflow > Settings page.
 
 ## Help
-This section includes resources around n8n product and community. 
-1. **Documentation**: Open the n8n documentation page
-2. **Forum**: Open the n8n community forum
-3. **Workflows**: Open the n8n public workflows page
-4. **About n8n**: View information about n8n (version, source code, license)
+
+This section includes resources for using n8n and interacting with the community. 
+* **Documentation**: Open the n8n documentation page
+* **Forum**: Open the n8n community forum
+* **Workflows**: Open the n8n public [workflows](https://n8n.io/workflows) page
+* **About n8n**: View information about n8n (version, source code, license)

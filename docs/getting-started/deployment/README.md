@@ -1,4 +1,4 @@
-# Quickstart
+# Deployment
 
 n8n can be run locally via [npm](https://www.npmjs.com/package/n8n) and [Docker](https://hub.docker.com/r/n8nio/n8n), or using our hosted n8n.cloud offering.
 

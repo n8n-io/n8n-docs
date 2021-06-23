@@ -211,11 +211,6 @@ module.exports = {
 					path: 'javascript-code-snippets.md',
 				},
 				{
-					title: '💪 Advanced Settings',
-					sidebarDepth: 2,
-					children: getChildrenFiles('reference/advanced-users'),
-				},
-				{
 					title: '💾 Data',
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference/data'),
@@ -246,10 +241,31 @@ module.exports = {
 					sidebarDepth: 0,
 				},
 				{
-					title: '🚀 Quickstart',
-					path: '/getting-started/quickstart/',
+					title: '🚀 Deployment',
+					path: '/getting-started/deployment/',
 					sidebarDepth: 2,
-					children: getChildrenFiles('getting-started/quickstart'),
+					children: [
+							{
+									title: 'Docker Quickstart',
+									sidebarDepth: 1,
+									path: '/getting-started/deployment/docker-quickstart.md',
+							},
+							{
+									title: 'Configuration',
+									sidebarDepth: 1,
+									path: '/getting-started/deployment/configuration.md',
+							},
+							{
+									title: 'Server Setup',
+									sidebarDepth: 1,
+									path: '/getting-started/deployment/server-setup.md',
+							},
+							{
+									title: 'Scaling n8n',
+									sidebarDepth: 1,
+									path: '/getting-started/deployment/scaling-n8n.md',
+							},
+					],
 				},
 				{
 					title: '🍄 Key Components',

@@ -154,9 +154,3 @@ export N8N_JWT_AUTH_HEADER=<HEADER>
 export N8N_JWKS_URI=<URI>
 ```
 Keep in mind that there is currently no built-in way of passing down the Token in the request, so to use JWT you have to have the token in the request manually.
-
-## Scalability
-
-Scalability refers to the ability of a system or tool (like n8n workflows) to increase in size and functionality based on the user's demands. 
-
-Read more about [scaling n8n](../reference/scaling-n8n.md).

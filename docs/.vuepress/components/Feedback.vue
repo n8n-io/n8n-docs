@@ -6,7 +6,7 @@
 			<font-awesome-icon class="btn" icon="thumbs-down" v-on:click="submitFeedback(-1)" />
 		</div>
 		<div v-else>
-			<p>{{message}}</p>
+			<p style="color: #767676; margin-top:0; font-size:0.9em;">{{message}}</p>
 		</div>
 	</div>
 </template>
@@ -18,6 +18,11 @@ export default {
 			submitted: false,
 			message: '',
 			url: 'https://internal.users.n8n.cloud/webhook/d1b83b83-e584-45fe-a28c-a12a4272e472'
+		}
+	},
+	watch: {
+		$route(to, from) {
+			this.submitted = false
 		}
 	},
 	methods: {

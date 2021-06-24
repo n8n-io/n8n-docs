@@ -11,7 +11,7 @@ Here's a video that will take you through the process of creating this workflow.
 
 You’ll need the following tools and resources to complete the tutorial:
 
-- **n8n** — You can find details on how to install n8n in the [Quickstart](../../quickstart.md) page.
+- **n8n** — You can find details on how to install n8n in the [Quickstart](../../deployment/docker-quickstart.md) page.
 - **OpenWeatherMap account** - You'll need to obtain an Access Token for the OpenWeatherMap API. You can find instructions on how to obtain that [here](../../../nodes/credentials/OpenWeatherMap/README.md).
 - **Twilio account** - You'll need to obtain the Account SID and Auth Token for the Twilio API. You can find instructions on how to obtain that [here](../../../nodes/credentials/Twilio/README.md). You will also need a Twilio Phone Number. You can find information on how to obtain that [here](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account).
 

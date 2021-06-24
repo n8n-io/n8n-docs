@@ -3,7 +3,7 @@
 ## .env File
 A special file which contains configuration information in the form of [environment variables](#environment-variables).
 
-n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](server-setup.html#_6-create-env-file) for more details.
+n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](../getting-started/deployment/server-setup.md#_6-create-env-file) for more details.
 
 To learn more about the *.env* file, read [Manage Environment Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
 
@@ -25,7 +25,7 @@ For a more detailed understanding of APIs, see [What is API: Definition, Types, 
 ## Certificate
 A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
 
-n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the cetificate](configuration.md) that you use in n8n.
+n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the certificate](../getting-started/deployment/configuration.md) that you use in n8n.
 
 For further information, see [What are certificates?](https://www.youtube.com/watch?v=LRMBZhdFjDI).
 
@@ -114,7 +114,7 @@ To learn more about *functions*, see [Computer Programming - Functions](https://
 ## IP Address
 A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.
 
-n8n will often refer to [IP addresses](configuration.md) when accessing information on a system other than itself. This is more common when the service is on the local network rather than on the internet.
+n8n will often refer to [IP addresses](../getting-started/deployment/configuration.md) when accessing information on a system other than itself. This is more common when the service is on the local network rather than on the internet.
 
 If you want to learn more about *IP addresses*, see [What Is an IP Address?](https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm).
 
@@ -157,7 +157,7 @@ Read more at [About Node.js](https://nodejs.org/en/about/).
 ## npm
 A program that installs, updates and removes [JavaScript](#JavaScript) [Packages](#Package).
 
-n8n is [installed](../getting-started/quickstart.md#install-with-npm) and updated using npm.
+n8n is [installed](../getting-started/deployment/README.md#npm) and updated using npm.
 
 Find out more at [About npm](https://docs.npmjs.com/about-npm).
 
@@ -167,7 +167,7 @@ Find out more at [About npm](https://docs.npmjs.com/about-npm).
 ## npx
 A program that will download, run, then delete a [JavaScript](#JavaScript) [Packages](#Package). Often used for quickly testing what a package will do without completely installing it.
 
-You can [try out n8n without installing it](../getting-started/quickstart.md#give-n8n-a-spin) to your system using npx.
+You can [try out n8n without installing it](../getting-started/deployment/README.md#npm) to your system using npx.
 
 For more information about *npx*, see [npx documentation](https://docs.npmjs.com/cli/v7/commands/npx).
 
@@ -219,7 +219,7 @@ For more information about *root*, see [root Definition](http://www.linfo.org/ro
 ## SSL
 An acronym for *Secure Socket Layer*, it is the primary way that web based services are secured. A SSL [certificate](#Certificate) is often used on websites to encrypt the information that is travelling between a web server and a web page.
 
-n8n uses SSL certificates to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](configuration.md) the SSL installation.
+n8n uses SSL certificates to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](../getting-started/deployment/configuration.md) the SSL installation.
 
 For further reading, see [SSL and SSL Certificates Explained For Beginners](http://www.steves-internet-guide.com/ssl-certificates-explained/).
 
@@ -240,7 +240,7 @@ For more information about *triggers*, see [Event Driven Programming](https://en
 ## Tunnel
 An encrypted session between two systems used to secure data transmission.
 
-n8n [uses a tunnel](../getting-started/quickstart.md#starting-n8n-with-tunnel) to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
+n8n [uses a tunnel](../getting-started/deployment/README.md#n8n-with-tunnel) to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
 
 For further reading, see [VPN Tunnels explained: what are they and how can they keep your internet data secure](https://www.techradar.com/vpn/vpn-tunnels-explained-how-to-keep-your-internet-data-secure).
 

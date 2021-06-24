@@ -15,7 +15,7 @@ If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) ac
 
 ## npm
 
-You can try out n8n without installing it using [npx](../reference/glossary.md#npx).
+You can try out n8n without installing it using [npx](../../reference/glossary.md#npx).
 
 From the terminal, run:
 
@@ -25,7 +25,7 @@ npx n8n
 
 This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678). 
 
-If you want to install n8n globally, use [npm](../reference/glossary.md#npm):
+If you want to install n8n globally, use [npm](../../reference/glossary.md#npm):
 
 ```bash
 npm install n8n -g
@@ -41,7 +41,7 @@ n8n start
 
 ## Docker
 
-See the [Docker Quickstart](quickstart/docker-quickstart.md) page for running n8n using Docker.
+See the [Docker Quickstart](docker-quickstart.md) page for running n8n using Docker.
 
 n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 
@@ -70,4 +70,4 @@ docker run -it --rm \
 	n8n start --tunnel
 ```
 
-In case you run into issues with the installation, check out the [troubleshooting page](../reference/troubleshooting.md) or ask for help in the [community forum](https://community.n8n.io/).
+In case you run into issues with the installation, check out the [troubleshooting page](../../reference/troubleshooting.md) or ask for help in the [community forum](https://community.n8n.io/).

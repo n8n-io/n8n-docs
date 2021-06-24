@@ -16,7 +16,7 @@ See the [Deployment section](./getting-started/deployment/README.md) to get star
 
 ### Learn the basics
 
-Before you start automating workflows with n8n, learn its key [components](getting-started/key-components/editor-ui.md) and [concepts](getting-started/key-concepts.md).
+Before you start automating workflows with n8n, learn its key [components](getting-started/key-components/README.md) and [concepts](getting-started/key-concepts.md).
 
 ### Create workflows
 

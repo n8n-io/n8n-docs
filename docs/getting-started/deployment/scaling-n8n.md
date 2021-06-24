@@ -1,16 +1,16 @@
 # Scaling n8n
 
-With [n8n@0.108.0](./changelog.md#n8n-0-108-0) we have released a few important updates to make n8n more scalable and reliable.
+n8n has the following features to support scaling and reliability.
 
 [[toc]]
 
-## Configuring Workers
+## Configuring workers
 
 New configurations and settings have been added to n8n to run it using queues. To run n8n with queues, you will need to have a [Redis](https://redis.io/) service available. Redis is mandatory as it acts as the message broker.
 
-### Set Executions Mode
+### Set executions mode
 
-Set the [environment variable](./glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command.
+Set the [environment variable](../../reference/glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue
@@ -63,14 +63,14 @@ You will need to start worker processes to allow n8n to execute workflows. To st
 
 You can start multiple worker processes. They can run anywhere (in a different container or a different machine) as long as they have access to the Redis instance and the main database.
 
-## Considerations for running n8n with queues
+## Running n8n with queues
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls will be proxied to worker processes. This might add some overhead and extra latency. However, the manual workflow executions still use the main process.
 
 Redis is used as the queue broker, and the database is used to persist data. Hence, access to both is required. Running a distributed system like this over SQLite is not recommended.
 
 ::: tip Migrate data
-If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](./start-workflows-via-cli.md#export-workflows-and-credentials) documentation to learn how to use these commands.
+If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](../../reference/start-workflows-via-cli.md#export-workflows-and-credentials) documentation to learn how to use these commands.
 :::
 
 ## Webhook processors
@@ -132,5 +132,3 @@ export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ::: warning 💡 Keep in mind
 Do not use this procedure for blue/green deployments, where you have two n8n instances running simultaneously but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
 :::
-
-

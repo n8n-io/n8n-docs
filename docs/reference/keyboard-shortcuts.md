@@ -1,6 +1,6 @@
 # Keyboard Shortcuts
 
-The following keyboard shortcuts can currently be used:
+The following keyboard shortcuts can be used:
 
 ## General
 
@@ -11,18 +11,19 @@ The following keyboard shortcuts can currently be used:
  - **Ctrl + s**: Save the current workflow
  - **Ctrl + v**: Paste nodes
 
-## Node Panel
+## Node panel
 
- - **Tab**: Open Nodes Panel. Type any to search for node.
- - **Enter**: Insert node into workflow
- - **Escape**: Close Nodes Panel
+ - **Tab**: Open the Node Panel
+ - **Enter**: Insert selected node into workflow
+ - **Escape**: Close Node panel
 
-### Nodes Panel Categories (>= 0.125.0)
+### Node panel categories
+
 - **Enter**: Insert node into workflow, collapse/expand category, open subcategory
 - **ArrowRight**: Expand category, open subcategory 
 - **ArrowLeft**: Collapse category, close subcategory view
 
-## With node(s) selected in canvas
+## With nodes selected in canvas
 
  - **ArrowDown**: Select sibling node below the current one
  - **ArrowLeft**: Select node left of the current one
@@ -36,16 +37,10 @@ The following keyboard shortcuts can currently be used:
  - **Shift + ArrowLeft**: Select all nodes left of the current one
  - **Shift + ArrowRight**: Select all nodes right of the current one
 
-## Editor canvas zoom (>= 0.126.0)
+## Canvas zoom
+
 - **+** or **=**: Zoom in
 - **-** or **_**: Zoom out
 - **0**: Reset zoom level
 - **1**: Zoom to fit workflow
-- **Ctrl + Mouse wheel**: Zoom in/out
-
-## Editor canvas zoom (< 0.126.0)
-
-- **+**: Zoom in
-- **-**: Zoom out
-- **ctrl+0**: Reset zoom level
 - **Ctrl + Mouse wheel**: Zoom in/out

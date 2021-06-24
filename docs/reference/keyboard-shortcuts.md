@@ -19,8 +19,8 @@ The following keyboard shortcuts can currently be used:
 
 ### Nodes Panel Categories (>= 0.125.0)
 - **Enter**: Insert node into workflow, collapse/expand category, open subcategory
-- **ArrowRight**: Expand category, open subcategory (>= 0.125.0)
-- **ArrowLeft**: Collapse category, close subcategory view (>= 0.125.0)
+- **ArrowRight**: Expand category, open subcategory 
+- **ArrowLeft**: Collapse category, close subcategory view
 
 ## With node(s) selected in canvas
 

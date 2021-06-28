@@ -15,6 +15,7 @@ You can use these credentials to authenticate the following nodes with Google.
 - [Google Cloud Firestore](../../nodes-library/nodes/GoogleCloudFirestore/README.md)
 - [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md)
 - [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md)
+- [Google Docs](../../nodes-library/nodes/GoogleDocs/README.md)
 - [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md)
 - [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md)
 - [Google Slides](../../nodes-library/nodes/GoogleSlides/README.md)

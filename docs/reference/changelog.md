@@ -33,7 +33,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed an issue with pagination of databases and users."/>
 
 ### Contributors 🙌
-[calvintwr](https://github.com/calvintwr)
+[calvintwr](https://github.com/calvintwr), [Jan Baykara](https://github.com/janbaykara)
 
 ## n8n@0.125.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.1...n8n@0.125.0) for this version.<br />

@@ -28,11 +28,15 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 - **Response Format:** Select the format in which the data gets returned from the URL. You can choose between File, JSON, and String.
 - **JSON/RAW Parameters:** This option can be used to specify whether the body/query parameter should be set via the value-key pair UI or JSON/RAW.
 - **Options**
+	- **Batch Interval:** The time (in milliseconds) between each batch of requests. Set to `0` to disable.
+	- **Batch Size:** If set, input will be split in batches to throttle requests. Use `-1` to disable. `0` will be treated as `1`.
 	- **Full Response:** This option can be used to retrieve the full response instead of only the body from the URL.
-	- **Follow Redirect:** This option can be used to follow any redirections with a status code 3xx.
+	- **Follow Redirect:** This option can be used to follow any redirections with a status code `3xx`.
 	- **Ignore Response Code:** This option can be used to let the node execute even when the HTTP status code is not 2xx.
 	- **Proxy:** This field is used to specify an HTTP proxy that you may want to use.
+	- **Split Into Items:** This option can be used to flatten the node output as a simple array.
 	- **Timeout:** The maximum time (in ms) to wait for a response header from the server before aborting the request.
+	- **Use Querystring:** Set this option to `true` if you need arrays to be serialized as `foo=bar&foo=baz` instead of the default `foo[0]=bar&foo[1]=baz`.
 	- **Headers:** This section is used to specify any optional HTTP request headers you may want to include with your request.
 	- **Query Parameters:** This section is used to specify any HTTP query parameters you may want to include with your request.
 

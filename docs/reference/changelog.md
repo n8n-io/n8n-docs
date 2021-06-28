@@ -2,6 +2,39 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.126.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.125.0...n8n@0.126.0) for this version.<br />
+**Release date:** 2021-06-27
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.actionNetwork" title="Action Network" />
+<Changelog node="n8n-nodes-base.googleDocs" title="Google Docs"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.awsS3" title="AWS S3:" text="Added Delete operation to the Bucket Resource."/>
+<Changelog node="n8n-nodes-base.googleAnalytics" title="Google Analytics:" text="Added Dimension Filters to the available Additional Fields."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added Split Into Items option."/>
+<Changelog node="n8n-nodes-base.mqtt" title="MQTT:" text="Added mqqts protocol for MQTT credentials."/>
+<Changelog node="n8n-nodes-base.quickbooks" title="QuickBooks:" text="Added Purchase resource with Get and Get All operations."/>
+
+
+### Core Functionality ⚙️
+- Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details.
+- Fixed an issue causing console errors when deleting a node from the canvas.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.ghost" title="Ghost:" text="Fixed an issue with the Get All operation functionality."/>
+<Changelog node="n8n-nodes-base.googleAnalytics" title="Google Analytics:" text="Fixed an issue that caused an error when attempting to sort with no data present."/>
+<Changelog node="n8n-nodes-base.microsoftSQL" title="Microsoft SQL:" text="Fixed an issue when escaping single quotes and mapping empty fields."/>
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed an issue with pagination of databases and users."/>
+
+### Contributors 🙌
+[calvintwr](https://github.com/calvintwr)
+
 ## n8n@0.125.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.1...n8n@0.125.0) for this version.<br />
 **Release date:** 2021-06-20

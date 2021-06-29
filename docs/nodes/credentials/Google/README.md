@@ -69,15 +69,6 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Enable APIs
-
-To enable an API, follow the steps below:
-
-1. Access your [Google Cloud Console](https://console.cloud.google.com).
-2. From the hamburger menu select ***APIs & Services > Library***.
-3. Search for and select the API(s) you want to enable.
-5. Click on the ***ENABLE*** button.
-
 ## Using Service Account
 
 From your [Google Cloud Console](https://console.cloud.google.com) dashboard:

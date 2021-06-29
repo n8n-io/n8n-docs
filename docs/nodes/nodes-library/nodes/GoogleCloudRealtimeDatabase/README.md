@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Write data to a database
-- Delete data from a database
-- Get a record from a database
-- Append to a list of data
-- Update item on a database
+<Resource node="n8n-nodes-base.googleFirebaseRealtimeDatabase" />
 
 ## Example Usage
 

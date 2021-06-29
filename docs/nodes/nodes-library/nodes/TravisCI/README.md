@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Build
-- Cancel a build
-- Get a build
-- Get all builds
-- Restart a build
-- Trigger a build
-:::
+<Resource node="n8n-nodes-base.travisCi" />
 
 ## Example Usage
 

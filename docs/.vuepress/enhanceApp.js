@@ -1,4 +1,11 @@
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vue from 'vue';
+
 export default ({ router, siteData }) => {
+	library.add(fas);
+  	Vue.component('font-awesome-icon', FontAwesomeIcon)
 	// Redirects users which use links of old documentation to pages of new documentation
 
 	// Redirects paths from old -> new
@@ -133,18 +140,20 @@ export default ({ router, siteData }) => {
 		'#/troubleshooting?id=mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio' : 'reference/troubleshooting.html#mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio',
 	};
 
-	if (redirectPaths[window.location.hash] !== undefined) {
-		// Redirect to different page if defined
-		window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
-	} else if (location.hash) {
-		// Scroll to element
-		setTimeout(() => {
-			const id = location.hash.slice(1);
-			const targetElement = document.getElementById(id);
-			if (targetElement) {
-				const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
-				window.scrollTo({ top: y, behavior: 'smooth' });
-			}
-		}, 250)
+	if (typeof window !== 'undefined') {
+		if (redirectPaths[window.location.hash] !== undefined) {
+			// Redirect to different page if defined
+			window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
+		} else if (location.hash) {
+			// Scroll to element
+			setTimeout(() => {
+				const id = location.hash.slice(1);
+				const targetElement = document.getElementById(id);
+				if (targetElement) {
+					const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
+					window.scrollTo({ top: y, behavior: 'smooth' });
+				}
+			}, 250)
+		}
 	}
 }

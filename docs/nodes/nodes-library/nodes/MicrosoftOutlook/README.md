@@ -13,42 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Draft
-- Create a new email draft
-- Delete a draft
-- Get a draft
-- Send an existing draft message
-- Update a draft
-:::
-
-::: details Folder
-- Create a new mail folder in the root folder of the user's mailbox
-- Delete a folder
-- Get a folder
-- Get all folders under the root folder of the signed-in user
-- List all child folders under a folder
-:::
-
-::: details Folder Message
-- Get all the messages in a folder
-:::
-
-::: details Message
-- Delete a message
-- Get a message
-- Get all messages from the signed-in user's mailbox
-- Get MIME content of a message
-- Create a reply to a message
-- Send a message
-- Update a message
-:::
-
-::: details Message Attachment
-- Add an attachment to a message
-- Download attachment content
-- Get an attachment from a message
-- Get all the message's attachments
-:::
+<Resource node="n8n-nodes-base.microsoftOutlook" />
 
 ## Example Usage
 

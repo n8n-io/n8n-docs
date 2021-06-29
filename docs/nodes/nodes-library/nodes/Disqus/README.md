@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Forum
-- Return forum details
-- Return a list of categories within a forum
-- Return a list of threads within a forum
-- Return a list of posts within a forum
-:::
-
+<Resource node="n8n-nodes-base.disqus" />
 
 ## Example Usage
 

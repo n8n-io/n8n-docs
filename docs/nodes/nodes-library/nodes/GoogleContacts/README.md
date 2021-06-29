@@ -4,7 +4,7 @@ description: Learn how to use the Google Contacts node in n8n
 ---
 
 # Google Contacts
- 
+
 [Google Contacts](https://contacts.google.com/) is Google's contact management tool that is available in its free email service Gmail, as a standalone service, and as a part of Google's business-oriented suite of web apps Google Apps.
 
 ::: tip 🔑 Credentials
@@ -14,13 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create a contact
-- Delete a contact
-- Get a contact
-- Retrieve all contacts
-- Update a contact
-:::
+<Resource node="n8n-nodes-base.googleContacts" />
 
 ## Example Usage
 

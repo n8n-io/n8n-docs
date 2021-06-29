@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Document
-- Analyze Sentiment
-:::
+<Resource node="n8n-nodes-base.googleCloudNaturalLanguage" />
 
 ## Example Usage
 

@@ -9,31 +9,11 @@ description: Learn how to use the Customer.io node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/CustomerIo/README.md).
-:::	
+:::
 
 ## Basic Operations
 
-::: details Customer
-- Create/Update a customer
-- Delete a customer
-:::
-
-::: details Event
-- Track a customer event
-- Track an anonymous event
-:::
-
-::: details Campaign
-- Get a campaign
-- Get all campaigns
-- Get metrics
-:::
-
-::: details Segment
-- Add a customer
-- Remove a customer
-:::
-
+<Resource node="n8n-nodes-base.customerIo" />
 
 ## Example Usage
 

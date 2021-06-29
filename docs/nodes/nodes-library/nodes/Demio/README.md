@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Event
-- Get an event
-- Get all events
-- Register someone to an event
-:::
-
-::: details Report
-- Get an event report
-:::
+<Resource node="n8n-nodes-base.demio" />
 
 ## Example Usage
 

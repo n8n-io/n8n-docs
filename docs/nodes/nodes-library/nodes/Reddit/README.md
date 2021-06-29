@@ -13,32 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Post
-- Submit a post to a subreddit
-- Delete a post from a subreddit
-- Get a post from a subreddit
-- Get all posts from a subreddit
-:::
-
-::: details Post Comment
-- Create a top-level comment in a post
-- Retrieve all comments in a post
-- Remove comment from a post
-- Write a reply to a comment in a post
-:::
-
-::: details Profile
-- Get the profile of the logged-in user
-:::
-
-::: details Subreddit
-- Retrieve background information about a subreddit
-- Retrieve information about subreddits from all of Reddit
-:::
-
-::: details User
-- Get information about a user
-:::
+<Resource node="n8n-nodes-base.reddit" />
 
 ## Example Usage
 

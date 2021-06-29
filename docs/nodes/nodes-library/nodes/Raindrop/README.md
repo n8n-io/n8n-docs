@@ -13,30 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Bookmark
-- Create a bookmark
-- Delete a bookmark
-- Get a bookmark
-- Get all bookmarks
-- Update a bookmark
-:::
-
-::: details Collection
-- Create a collection
-- Delete a collection
-- Get a collection
-- Get all collections
-- Update a collection
-:::
-
-::: details Tag
-- Delete a tag
-- Get all tags
-:::
-
-::: details User
-- Get a user
-:::
+<Resource node="n8n-nodes-base.raindrop" />
 
 ## Example Usage
 

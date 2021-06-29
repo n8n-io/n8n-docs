@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Post
-- Create a post
-- Get a post
-- Get all posts
-- Update a post
-:::
-
-::: details User
-- Create a user
-- Get a user
-- Get all users
-- Update a user
-:::
+<Resource node="n8n-nodes-base.wordpress" />
 
 ## Example Usage
 

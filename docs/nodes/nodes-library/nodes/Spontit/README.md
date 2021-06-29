@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Push
-- Create a push notification
-:::
+<Resource node="n8n-nodes-base.spontit" />
 
 ## Example Usage
 

@@ -53,6 +53,7 @@ Here's a GIF of me following the steps mentioned above.
 
 ![Creating the OpenWeatherMap node](./images/creating-the-openweathermap-node.gif)
 
+**Note:** If you receive a 401 error when executing your node, your API key may not have been activated yet. API keys are activated automatically between 10 minutes and 2 hours after successful registration on OpenWeatherMap.
 
 ### 3. IF node
 

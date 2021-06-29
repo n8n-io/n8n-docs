@@ -13,35 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Control
-- Get a control
-- Get all controls
-:::
-
-::: details Formula
-- Get a formula
-- Get all formulas
-:::
-
-::: details Table
-- Create/Insert a row
-- Delete one or multiple rows
-- Get all columns
-- Get all the rows
-- Get a column
-- Get a row
-- Pushes a button
-:::
-
-::: details View
-- Delete view row
-- Get a view
-- Get all views
-- Get all views columns
-- Get all views rows
-- Update row
-- Push view button
-:::
+<Resource node="n8n-nodes-base.coda" />
 
 ## Example Usage
 
@@ -76,4 +48,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Coda" />
+<FurtherReadingBlog />

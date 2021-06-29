@@ -22,4 +22,4 @@ The Interval node has two fields:
 
 ## Further Reading
 
-<FurtherReadingBlog node="Interval" />
+<FurtherReadingBlog />

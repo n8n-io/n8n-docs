@@ -13,29 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Create a new company
-- Delete a company
-- Get a company
-- Get all companies
-- Update company properties
-:::
-
-::: details Contact
-- Create a new contact
-- Delete a contact
-- Get a contact
-- Get all contacts
-- Update contact properties
-:::
-
-::: details Deal
-- Create a new deal
-- Delete a deal
-- Get a deal
-- Get all deals
-- Update deal properties
-:::
+<Resource node="n8n-nodes-base.agileCrm" />
 
 
 ## Example Usage
@@ -56,7 +34,7 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Agile CRM node. You can find out how to do that [here](../../../credentials/AgileCRM/README.md).
 2. Select the 'Create' option from the *Operation* dropdown list.
-3. Under the *Additional Fields* section, click on the *Add Field* button and select *First Name*. 
+3. Under the *Additional Fields* section, click on the *Add Field* button and select *First Name*.
 5. Enter the first name of the contact in the *First Name* field.
 6. Click on *Add Field* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.

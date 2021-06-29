@@ -6,6 +6,7 @@ description: Learn to configure credentials for the Webflow node in n8n
 # Webflow
 
 You can use these credentials to authenticate the following nodes with Webflow.
+- [Webflow](../../nodes-library/nodes/Webflow/README.md)
 - [Webflow Trigger](../../nodes-library/trigger-nodes/WebflowTrigger/README.md)
 
 ## Prerequisites

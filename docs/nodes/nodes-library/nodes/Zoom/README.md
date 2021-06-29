@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Meeting
-- Create a meeting
-- Delete a meeting
-- Retrieve a meeting
-- Retrieve all meetings
-- Update a meeting
-:::
+<Resource node="n8n-nodes-base.zoom" />
 
 ## Example Usage
 

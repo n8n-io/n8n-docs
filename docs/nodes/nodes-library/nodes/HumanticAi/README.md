@@ -13,11 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Profile
-- Create a profile
-- Get a profile
-- Update a profile
-:::
+<Resource node="n8n-nodes-base.humanticAi" />
 
 ## Example Usage
 

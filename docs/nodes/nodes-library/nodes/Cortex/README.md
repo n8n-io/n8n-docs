@@ -13,18 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Analyzer
-- Execute
-:::
-
-::: details Job
-- Get job details
-- Get job report
-:::
-
-::: details Responder
-- Execute responder
-:::
+<Resource node="n8n-nodes-base.cortex" />
 
 ## Example Usage
 

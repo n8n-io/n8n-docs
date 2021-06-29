@@ -13,61 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Archive a conversation
-- Close a direct message or multi-person direct message
-- Create a public or private channel-based conversation
-- Get information about a channel
-- Get all channels in a Slack team
-- Get a conversation's history of messages and events
-- Invite a user to a channel
-- Join an existing conversation
-- Remove a user from a channel
-- Leave a conversation
-- List members of a conversation
-- Open or resume a direct message or multi-person direct message
-- Rename a conversation
-- Get a thread of replies posted to a channel
-- Set the purpose for a conversation
-- Set the topic for a conversation
-- Unarchive a conversation
-:::
-
-::: details File
-- Get a file's information
-- Get and filter a team's files
-- Upload an existing file or create a new one
-:::
-
-::: details Message
-- Delete a message
-- Get the permanent link of a message
-- Post a message in a channel
-- Post an ephemeral message to a user in a channel
-- Update a message
-:::
-
-::: details Reaction
-- Add a reaction to a message
-- Get the reactions of a message
-- Remove a reaction of a message
-:::
-
-::: details Star
-- Add a star to an item
-- Delete a star from an item
-- Get all the stars of an authenticated user
-:::
-
-::: details User
-- Get information about a user
-- Get online status of a user
-:::
-
-::: details User Profile
-- Get your user profile
-- Update user's profile
-:::
+<Resource node="n8n-nodes-base.slack" />
 
 ## Example Usage
 
@@ -190,4 +136,4 @@ You can refer to the official documentation on [Scopes and permissions](https://
 
 ## Further Reading
 
-<FurtherReadingBlog node="Slack" />
+<FurtherReadingBlog />

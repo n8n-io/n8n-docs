@@ -13,21 +13,7 @@ The CoinGecko node does not require authentication.
 
 ## Basic Operations
 
-::: details Coin
-- Get a candlestick open-high-low-close chart for the selected currency
-- Get current data for a coin
-- Get all coins
-- Get historical data (name, price, market, stats) at a given date for a coin
-- Get prices and market-related data for all trading pairs that match the selected currency
-- Get historical market data that includes the price, market cap, and 24 hours volume (granularity auto)
-- Get the current price of any cryptocurrencies in any other supported currencies that you need
-- Get coin tickers
-:::
-
-::: details Event
-- Get all events
-:::
-
+<Resource node="n8n-nodes-base.coinGecko" />
 
 ## Example Usage
 
@@ -114,4 +100,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ## Further Reading
 
-<FurtherReadingBlog node="CoinGecko" />
+<FurtherReadingBlog />

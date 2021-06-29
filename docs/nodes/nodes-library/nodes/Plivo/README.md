@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details SMS
-- Send an SMS message
-:::
-
-::: details MMS
-- Send an MMS message (US/Canada only)
-:::
-
-::: details Call
-- Make a voice call
-:::
+<Resource node="n8n-nodes-base.plivo" />
 
 ## Example Usage
 

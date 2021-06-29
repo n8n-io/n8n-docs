@@ -14,6 +14,8 @@ You can use these credentials to authenticate the following nodes with AWS.
 - [AWS SES](../../nodes-library/nodes/AWSSES/README.md)
 - [AWS SNS](../../nodes-library/nodes/AWSSNS/README.md)
 - [AWS SNS Trigger](../../nodes-library/trigger-nodes/AWSSNSTrigger/README.md)
+- [AWS SQS](../../nodes-library/nodes/AWSSQS/README.md)
+- [AWS Transcribe](../../nodes-library/nodes/AWSTranscribe/README.md)
 
 ## Prerequisites
 

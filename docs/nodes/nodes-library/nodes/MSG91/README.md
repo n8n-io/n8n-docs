@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details SMS
-- Send SMS
-:::
+<Resource node="n8n-nodes-base.msg91" />
 
 ## Example Usage
 

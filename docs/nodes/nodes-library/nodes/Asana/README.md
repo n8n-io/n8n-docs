@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Task
-- Create a task
-- Delete a task
-- Get data of a task
-- Update a task
-- Search for tasks
-:::
-
-::: details User
-- Get data of all users
-- Get data of a user
-:::
-
+<Resource node="n8n-nodes-base.asana" />
 
 ## Example Usage
 
@@ -50,4 +38,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Asana" />
+<FurtherReadingBlog />

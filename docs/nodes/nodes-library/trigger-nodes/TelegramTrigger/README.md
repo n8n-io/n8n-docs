@@ -86,4 +86,4 @@ You'll need to save the workflow and then click on the Activate toggle on the to
 
 ## Further Reading
 
-<FurtherReadingBlog node="Telegram Trigger" />
+<FurtherReadingBlog />

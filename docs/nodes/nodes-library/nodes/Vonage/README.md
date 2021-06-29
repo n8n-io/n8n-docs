@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details SMS
-- Send
-:::
+<Resource node="n8n-nodes-base.vonage" />
 
 ## Example Usage
 
@@ -71,4 +69,4 @@ In the screenshot below, you will notice that the node sends an SMS to the phone
 
 ## Further Reading
 
-<FurtherReadingBlog node="Vonage" />
+<FurtherReadingBlog />

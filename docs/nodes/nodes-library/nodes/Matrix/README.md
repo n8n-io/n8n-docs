@@ -13,34 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Account
-- Get current user's account information
-:::
-
-::: details Event
-- Get a single event by ID
-:::
-
-::: details Media
-- Send media to a chat room
-:::
-
-::: details Message
-- Send a message to a room
-- Get all messages from a room
-:::
-
-::: details Room
-- New chat room with defined settings
-- Invite a user to a room
-- Join a new room
-- Kick a user from a room
-- Leave a room
-:::
-
-::: details Room Member
-- Get all members
-:::
+<Resource node="n8n-nodes-base.matrix" />
 
 ## Example Usage
 
@@ -168,4 +141,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ## Further Reading
 
-<FurtherReadingBlog node="Matrix" />
+<FurtherReadingBlog />

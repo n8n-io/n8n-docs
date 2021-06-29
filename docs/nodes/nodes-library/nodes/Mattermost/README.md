@@ -13,35 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Add a user to a channel
-- Create a new channel
-- Soft delete a channel
-- Get a page of members for a channel
-- Restores a soft deleted channel
-- Get statistics for a channel
-:::
-
-::: details Message
-- Soft delete a post, by marking the post as deleted in the database
-- Post a message into a channel
-- Post an ephemeral message into a channel
-:::
-
-::: details Reaction
-- Add a reaction to a post
-- Remove a reaction from a post
-- Get all the reactions to one or more posts
-:::
-
-::: details User
-- Create a new user
-- Deactivates the user and revokes all its sessions by archiving its user object
-- Retrieve all users
-- Get a user by email
-- Get a user by id
-- Invite a user to a team
-:::
+<Resource node="n8n-nodes-base.mattermost" />
 
 ## Example Usage
 
@@ -120,4 +92,4 @@ To find the Channel ID in Mattermost, follow the steps mentioned below.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Mattermost" />
+<FurtherReadingBlog />

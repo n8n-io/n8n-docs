@@ -91,7 +91,8 @@ module.exports = {
 			{
 				hostname: 'https://docs.n8n.io'
 			},
-		]
+		],
+		require('./plugins/nodes'),
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',
@@ -203,6 +204,10 @@ module.exports = {
 					path: 'keyboard-shortcuts.md',
 				},
 				{
+					title: '🧑‍💻 Setup via PM2',
+					path: 'setup-pm2.md',
+				},
+				{
 					title: '👾 CLI commands for n8n',
 					path: 'start-workflows-via-cli.md',
 				},
@@ -308,3 +313,4 @@ module.exports = {
 		}
 	},
 }
+

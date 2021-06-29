@@ -29,19 +29,32 @@ export default {
 		submitFeedback: async function(value) {
 			if(!this.submitted){
 				const path = this.$page.path;
-				fetch(`${this.url}?feedback=${value}&path=${path}`, {
-					method: 'GET',
+				fetch('https://www.cloudflare.com/cdn-cgi/trace', {
+					headers: {
+						'Content-Type': 'text/plain; charset=uft-8'
+					}
+				}).then(res => {
+					return res.text()
 				})
-				.then(res => {
+				.then(t => {
+					var data = t.replace(/[\r\n]+/g, '","').replace(/\=+/g, '":"');
+					data = '{"' + data.slice(0, data.lastIndexOf('","')) + '"}';
+					var jsondata = JSON.parse(data);
+					fetch(`${this.url}?feedback=${value}&path=${path}&ip=${jsondata.ip}`, {
+					method: 'GET',
+					})
+					.then(res => {
 					this.submitted = true;
 					return res.json()
+					})
+					.then(response => {
+						if(response.message) {
+							this.message = response.message;
+						}
+					})
+					.catch(err => console.log(err));
 				})
-				.then(response => {
-					if(response.message) {
-						this.message = response.message;
-					}
-				})
-				.catch(err => console.log(err));
+				.catch(err => console.log(err))
 			}
 		}
 	}

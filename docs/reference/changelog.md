@@ -2,6 +2,18 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.126.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.0...n8n@0.126.1) for this version.<br />
+**Release date:** 2021-06-29
+
+### Core Functionality ⚙️
+- Fixed issues with keyboard shortcuts when a modal was open.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.microsoftSQL" title="Microsoft SQL:" text="Fixed an issue with handling of Boolean values when inserting."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Fixed an issue with the node icon."/>
+
 ## n8n@0.126.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.125.0...n8n@0.126.0) for this version.<br />
 **Release date:** 2021-06-27

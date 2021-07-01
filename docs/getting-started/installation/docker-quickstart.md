@@ -1,4 +1,4 @@
-# Docker Quickstart
+# Docker Installation
 
 [Docker](https://www.docker.com/) is a quick and simple way to download and start automating with n8n. By using Docker you are able to:
 

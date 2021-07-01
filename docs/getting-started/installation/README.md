@@ -1,6 +1,8 @@
-# Deployment
+# Installation
 
-n8n can be run locally via [npm](https://www.npmjs.com/package/n8n) and [Docker](https://hub.docker.com/r/n8nio/n8n), or using our hosted n8n.cloud offering.
+Get started with n8n right away by using our hosted n8n.cloud offering or running n8n locally via [npm](https://www.npmjs.com/package/n8n). 
+
+n8n is also available as a [Docker image](https://hub.docker.com/r/n8nio/n8n).
 
 [[toc]]
 
@@ -15,7 +17,7 @@ If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) ac
 
 ## npm
 
-You can try out n8n without installing it using [npx](../../reference/glossary.md#npx).
+You can try n8n without installing it using [npx](../../reference/glossary.md#npx).
 
 From the terminal, run:
 
@@ -41,7 +43,7 @@ n8n start
 
 ## Docker
 
-See the [Docker Quickstart](docker-quickstart.md) page for running n8n using Docker.
+See the [Docker installation](docker-quickstart.md) page for running n8n using Docker.
 
 n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 
@@ -51,7 +53,7 @@ n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 This is only meant for local development and testing. It should not be used in production.
 :::
 
-To be able to use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. To make that easy, n8n has a special [tunnel service](https://github.com/localtunnel/localtunnel), which redirects requests from our servers to your local n8n instance.
+To be able to use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. To make that easy, n8n has a special [tunnel service](https://github.com/localtunnel/localtunnel) which redirects requests from our servers to your local n8n instance.
 
 If you installed n8n with **npm**, start n8n with `--tunnel` by running:
 

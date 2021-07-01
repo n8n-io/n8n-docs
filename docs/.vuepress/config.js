@@ -246,33 +246,6 @@ module.exports = {
 					sidebarDepth: 0,
 				},
 				{
-					title: '🚀 Deployment',
-					path: '/getting-started/deployment/',
-					sidebarDepth: 2,
-					children: [
-							{
-									title: 'Docker Quickstart',
-									sidebarDepth: 1,
-									path: '/getting-started/deployment/docker-quickstart.md',
-							},
-							{
-									title: 'Configuration',
-									sidebarDepth: 1,
-									path: '/getting-started/deployment/configuration.md',
-							},
-							{
-									title: 'Server Setup',
-									sidebarDepth: 1,
-									path: '/getting-started/deployment/server-setup.md',
-							},
-							{
-									title: 'Scaling n8n',
-									sidebarDepth: 1,
-									path: '/getting-started/deployment/scaling-n8n.md',
-							},
-					],
-				},
-				{
 					title: '🍄 Key Components',
 					path: '/getting-started/key-components/',
 					sidebarDepth: 2,
@@ -282,6 +255,22 @@ module.exports = {
 				{
 					title: '💡 Key Concepts',
 					path: 'getting-started/key-concepts.md',
+				},
+				{
+					title: '🚀 Installation',
+					path: '/getting-started/installation/',
+					sidebarDepth: 2,
+					children: [
+							{
+									title: 'Docker',
+									sidebarDepth: 1,
+									path: '/getting-started/installation/docker-quickstart.md',
+							},
+							{		title: 'Advanced',
+									sidebarDepth: 1,
+									children: getChildrenFiles('getting-started/installation/advanced', 'configuration.md'),
+							}	
+					],
 				},
 				{
 					title: '🏅 Create Your First Workflow',

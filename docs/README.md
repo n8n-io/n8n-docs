@@ -12,7 +12,7 @@ n8n (pronounced n-eight-n) helps you to interconnect every app with an API in th
 
 ### Install n8n
 
-See the [Deployment section](./getting-started/deployment/README.md) to get started with n8n.
+See the [Installation section](./getting-started/installation/README.md) to get started with n8n.
 
 ### Learn the basics
 

@@ -164,5 +164,5 @@ export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ```
 
 ::: warning 💡 Keep in mind
-Do not use this procedure for blue/green deployments, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
+Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
 :::

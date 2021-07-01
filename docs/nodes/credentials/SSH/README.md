@@ -5,7 +5,7 @@ description: Learn to configure credentials for the SSH node in n8n
 
 # SSH
 
-You can use these credentials to authenticate the following nodes with SMTP.
+You can use these credentials to authenticate the following nodes:
 - [SSH](../../nodes-library/core-nodes/SSH/README.md)
 
 ## Prerequisites

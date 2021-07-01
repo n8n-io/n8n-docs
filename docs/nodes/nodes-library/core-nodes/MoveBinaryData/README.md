@@ -7,6 +7,10 @@ description: Learn how to use the Move Binary Data node in n8n
 
 The Move Binary Data node is useful to move data between binary and JSON properties.
 
+::: tip 💡 Hint
+If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](../SpreadsheetFile/README.md) node.
+:::
+
 ## Node Reference
 
 - ***Mode:*** This field specifies from where and to the data should be moved.

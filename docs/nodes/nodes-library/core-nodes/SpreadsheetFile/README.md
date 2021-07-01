@@ -20,7 +20,7 @@ You will need to use an additional node such as the [Read Binary File](../../cor
 
 When writing to a spreadsheet file, the *File Format* field can be used to specify the format of the file to save the data as.
 
-- File Format
+- ***File Format***
 	- CSV (Comma-separated values)
 	- HTML (HTML Table)
 	- ODS (OpenDocument Spreadsheet)
@@ -30,7 +30,7 @@ When writing to a spreadsheet file, the *File Format* field can be used to speci
 
 - ***Binary Property*** field: Name of the binary property in which to save the binary data of the spreadsheet file.
 
-- Options
+- ***Options***
 	- ***Sheet Name*** field: This field specifies the name of the sheet from which the data should be read or written to.
 	- ***Read As String*** field: This toggle enables you to parse all input data as strings.
 	- ***RAW Data*** field: This toggle enables you to skip the parsing of data.

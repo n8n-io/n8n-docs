@@ -15,6 +15,10 @@ You can find authentication information for this node [here](../../../credential
 
 <Resource node="n8n-nodes-base.linkedIn" />
 
+::: tip 💡 Keep in mind
+If posting as an Organization enter only the organization number in the URN field. For example, `03262013` not `urn:li:company:03262013`.
+:::
+
 ## Example Usage
 
 This workflow allows you to get an image from a URL and post it on LinkedIn. You can also find the [workflow](https://n8n.io/workflows/681) on n8n.io. This example usage workflow would use the following nodes.

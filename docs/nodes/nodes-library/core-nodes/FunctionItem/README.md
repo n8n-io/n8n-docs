@@ -13,6 +13,8 @@ Please note that the Function Item node is different from the [Function](../Func
 
 The Function Item node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
+It also provides the ability to write to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
+
 
 ## Node Reference
 

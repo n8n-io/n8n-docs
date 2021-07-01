@@ -13,6 +13,8 @@ Please note that the Function node is different from the [Function Item](../Func
 
 If you want to use the Function node to transform input data, check out how n8n's [data structure](../../../../reference/data/data-structure.md) looks like. The Function node also supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
+The Function node also provides the ability to write to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
+
 ## Example Usage
 
 This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.

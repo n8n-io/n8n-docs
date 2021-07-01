@@ -149,6 +149,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.1...n8n@0.122.2) for this version.<br />
 **Release date:** 2021-05-31
 
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function:" text="Added console.log support for writing to browser console"/>
+<Changelog node="n8n-nodes-base.functionItem" title="Function Item:" text="Added console.log support for writing to browser console"/>
+
 ### Core Functionality ⚙️
 - Fixed an issue that enables clicks on tags
 - Fixed an issue with escaping workflow name

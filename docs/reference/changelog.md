@@ -2,6 +2,26 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.127.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
+**Release date:** 2021-07-04
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Added Bulk Size option to all Operations."/>
+<Changelog node="n8n-nodes-base.box" title="Box:" text="Added Share operation to File and Folder resources."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Last Name field to Update operation on Contact resource."/>
+<Changelog node="n8n-nodes-base.zohoCrm" title="Zoho CRM:" text="Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources."/>
+
+### Core Functionality ⚙️
+- Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
+- Added support to display binary video content in Editor UI.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.googleSheets" title="Google Sheets:" text="Fixed an issue with handling 0 value that resulted in empty cells."/>
+<Changelog node="n8n-nodes-base.ssh" title="SSH:" text="Fixed an issue with setting passphrases."/>
+
 ## n8n@0.126.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.0...n8n@0.126.1) for this version.<br />
 **Release date:** 2021-06-29

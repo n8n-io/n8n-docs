@@ -266,6 +266,11 @@ module.exports = {
 									sidebarDepth: 1,
 									path: '/getting-started/installation/docker-quickstart.md',
 							},
+							{
+								title: 'Updating',
+								sidebarDepth: 1,
+								path: '/getting-started/installation/updating.md',
+							},
 							{		title: 'Advanced',
 									sidebarDepth: 1,
 									children: getChildrenFiles('getting-started/installation/advanced', 'configuration.md'),

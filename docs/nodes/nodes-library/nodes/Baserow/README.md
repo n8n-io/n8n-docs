@@ -46,7 +46,7 @@ We will use the Set node to set the values for the name and id fields for a new 
 
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
-3. Enter a nami in the ***Value*** field.
+3. Enter a name in the ***Value*** field.
 4. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 5. Enter `Last name` in the ***Name*** field.
 6. Enter a last name in the ***Value*** field.

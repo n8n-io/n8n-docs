@@ -22,6 +22,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.googleSheets" title="Google Sheets:" text="Fixed an issue with handling 0 value that resulted in empty cells."/>
 <Changelog node="n8n-nodes-base.ssh" title="SSH:" text="Fixed an issue with setting passphrases."/>
 
+### Contributors 🙌
+[flybluewolf](https://github.com/flybluewolf), [Kaito Udagawa](https://github.com/umireon)
+
 ## n8n@0.126.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.0...n8n@0.126.1) for this version.<br />
 **Release date:** 2021-06-29

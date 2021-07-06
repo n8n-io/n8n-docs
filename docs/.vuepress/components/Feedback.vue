@@ -1,7 +1,7 @@
 <template>
-	<div style="max-width: 740px; margin: 0 auto;">
-		<div style="margin-bottom: 2px;">Was this page helpful?</div>
-		<div v-if="!submitted" style="max-width: 100px; font-size:24px;">
+	<div class="page-nav">
+		<div class="text">Was this page helpful?</div>
+		<div v-if="!submitted">
 			<font-awesome-icon class="btn" icon="thumbs-up" v-on:click="submitFeedback(1)" />
 			<font-awesome-icon class="btn" icon="thumbs-down" v-on:click="submitFeedback(-1)" />
 		</div>
@@ -64,8 +64,21 @@ export default {
 <style scoped>
 .btn {
 	cursor: pointer;
-	color: #bfbfbf;
+	color: #7D7D87;
 	padding-right: 16px;
 	padding-top: 4px;
+	transition: 0.1s;
+	font-size: 24px;
+}
+
+.btn:hover {
+	color: #555555;
+	transform: scale(1.08);
+}
+
+.text {
+	margin-bottom: 6px;
+	color: #4e6e8e;
+	font-weight: 500;
 }
 </style>

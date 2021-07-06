@@ -2,8 +2,8 @@
 	<div class="page-nav">
 		<div class="text">Was this page helpful?</div>
 		<div v-if="!submitted">
-			<font-awesome-icon class="btn" icon="thumbs-up" v-on:click="submitFeedback(1)" />
-			<font-awesome-icon class="btn" icon="thumbs-down" v-on:click="submitFeedback(-1)" />
+			<font-awesome-icon class="btn" icon="thumbs-up" style="margin-bottom:7px;" v-on:click="submitFeedback(1)" />
+			<font-awesome-icon class="btn" icon="thumbs-down" style="margin-top:7px;" v-on:click="submitFeedback(-1)" />
 		</div>
 		<div v-else>
 			<p style="color: #767676; margin-top:0; font-size:0.9em;">{{message}}</p>

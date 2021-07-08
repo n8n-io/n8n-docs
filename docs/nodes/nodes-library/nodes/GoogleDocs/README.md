@@ -11,7 +11,7 @@ description: Learn how to use the Google Docs node in n8n
 You can find authentication information for this node [here](../../../credentials/Google/README.md).
 :::
 
-## Basic operations
+## Basic operations 
 
 <Resource node="n8n-nodes-base.googleDocs" />
 
@@ -33,10 +33,11 @@ The Start node exists by default when you create a new workflow.
 
 The **Document** resource is selected by default. Configure the remaining parameters as follows:
 
-1. From the **Operation** dropdown select **Create**.
-2. From the **Drive** dropdown select which of your drives this file will be created in. My Drive is selected by default.
-3. From the **Folder** dropdown select which of you drive folders this file will be created in. The root folder (`/`) is selected by default.
-4. In the **Title** field enter the name of your new Google Doc.
+1. From the **Authentication** dropdown select your desired method and the corresponding [**Credentials**](../../../credentials/Google/README.md).
+2. From the **Operation** dropdown select **Create**.
+3. From the **Drive** dropdown select which of your drives this file will be created in. My Drive is selected by default.
+4. From the **Folder** dropdown select which of you drive folders this file will be created in. The root folder (`/`) is selected by default.
+5. In the **Title** field enter the name of your new Google Doc.
 
 ![Creating a file with the Google Docs node](./googleDocs_node.png)
 

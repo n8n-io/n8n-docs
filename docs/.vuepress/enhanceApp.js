@@ -3,9 +3,19 @@ export default ({ router, siteData }) => {
 
 	// spring cleaning redirects
 	const latestRedirects = [
-		{ path: "/old-path-1", redirect: "/new-path-1" },
-		{ path: "/old-path-2", redirect: "/new-path-2" },
-		{ path: "/old-path-3", redirect: "/new-path-3" },
+		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation" },
+		{ path: "/getting-started/quickstart.html#sign-up-on-n8n-cloud", redirect: "/getting-started/installation/#n8n-cloud" },
+		{ path: "/getting-started/quickstart.html#give-it-a-spin-using-npx", redirect: "/getting-started/installation/#npm" },
+		{ path: "/getting-started/quickstart.html#install-with-npm", redirect: "/getting-started/installation/#npm" },
+		{ path: "/getting-started/quickstart.html#run-with-docker", redirect: "/getting-started/installation/#docker" },
+		{ path: "/getting-started/quickstart.html#post-installation-starting-n8n-with-tunnel", redirect: "/getting-started/installation/#n8n-with-tunnel" },
+		{ path: "/reference/configuration.html", redirect: "/getting-started/installation/advanced/configuration.html" },
+		{ path: "/reference/scaling-n8n.html", redirect: "/getting-started/installation/advanced/scaling-n8n.html" },
+		{ path: "/reference/server-setup.html", redirect: "/getting-started/installation/advanced/server-setup.html" },
+		{ path: "/reference/security.html", redirect: "/getting-started/key-concepts.html#security" },
+		{ path: "/reference/data/data-structure.html", redirect: "/getting-started/key-concepts.html#data-structure" },
+		{ path: "/reference/workflow.html#data-flow", redirect: "/getting-started/key-concepts.html#data-flow" },
+		{ path: "/reference/workflow.html#error-workflows", redirect: "/getting-started/key-concepts.html#error-workflow" },
 	];
 
 	latestRedirects.forEach(redirect => router.addRoute(redirect));

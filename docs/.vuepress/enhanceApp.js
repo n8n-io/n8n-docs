@@ -8,8 +8,27 @@ export default ({ router, siteData }) => {
   	Vue.component('font-awesome-icon', FontAwesomeIcon)
 	// Redirects users which use links of old documentation to pages of new documentation
 
-	// Redirects paths from old -> new
-	const redirectPaths = {
+	// spring cleaning redirects
+	const latestRedirects = [
+		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation" },
+		{ path: "/getting-started/quickstart.html#sign-up-on-n8n-cloud", redirect: "/getting-started/installation/#n8n-cloud" },
+		{ path: "/getting-started/quickstart.html#give-it-a-spin-using-npx", redirect: "/getting-started/installation/#npm" },
+		{ path: "/getting-started/quickstart.html#install-with-npm", redirect: "/getting-started/installation/#npm" },
+		{ path: "/getting-started/quickstart.html#run-with-docker", redirect: "/getting-started/installation/#docker" },
+		{ path: "/getting-started/quickstart.html#post-installation-starting-n8n-with-tunnel", redirect: "/getting-started/installation/#n8n-with-tunnel" },
+		{ path: "/reference/configuration.html", redirect: "/getting-started/installation/advanced/configuration.html" },
+		{ path: "/reference/scaling-n8n.html", redirect: "/getting-started/installation/advanced/scaling-n8n.html" },
+		{ path: "/reference/server-setup.html", redirect: "/getting-started/installation/advanced/server-setup.html" },
+		{ path: "/reference/security.html", redirect: "/getting-started/key-concepts.html#security" },
+		{ path: "/reference/data/data-structure.html", redirect: "/getting-started/key-concepts.html#data-structure" },
+		{ path: "/reference/workflow.html#data-flow", redirect: "/getting-started/key-concepts.html#data-flow" },
+		{ path: "/reference/workflow.html#error-workflows", redirect: "/getting-started/key-concepts.html#error-workflow" },
+	];
+
+	latestRedirects.forEach(redirect => router.addRoute(redirect));
+
+	// redirect paths for legacy Docusaurus hash URLs
+	const hashRedirects = {
 		'#/nodes?id=function-node': 'reference/function-nodes.html#function-node',
 		'#/?id=n8n-documentation' : '#overview',
 		'#/?id=what-is-n8n' : '#what-is-n8n',
@@ -140,20 +159,18 @@ export default ({ router, siteData }) => {
 		'#/troubleshooting?id=mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio' : 'reference/troubleshooting.html#mmmagic-npm-package-when-using-msbuild-tools-with-visual-studio',
 	};
 
-	if (typeof window !== 'undefined') {
-		if (redirectPaths[window.location.hash] !== undefined) {
-			// Redirect to different page if defined
-			window.location.href = `${window.location.origin}/${redirectPaths[window.location.hash]}`;
-		} else if (location.hash) {
-			// Scroll to element
-			setTimeout(() => {
-				const id = location.hash.slice(1);
-				const targetElement = document.getElementById(id);
-				if (targetElement) {
-					const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
-					window.scrollTo({ top: y, behavior: 'smooth' });
-				}
-			}, 250)
-		}
+	if (hashRedirects[window.location.hash] !== undefined) {
+		// Redirect to different page if defined
+		window.location.href = `${window.location.origin}/${hashRedirects[window.location.hash]}`;
+	} else if (location.hash) {
+		// Scroll to element
+		setTimeout(() => {
+			const id = location.hash.slice(1);
+			const targetElement = document.getElementById(id);
+			if (targetElement) {
+				const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
+				window.scrollTo({ top: y, behavior: 'smooth' });
+			}
+		}, 250)
 	}
 }

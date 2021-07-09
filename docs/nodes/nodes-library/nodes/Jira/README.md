@@ -13,37 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Issue
-- Create a new issue
-- Update an issue
-- Get an issue
-- Get all issues
-- Get issue changelog
-- Create an email notification for an issue and add it to the mail queue
-- Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status
-- Delete an issue
-:::
-
-::: details Issue Attachment
-- Add attachment to an issue
-- Get an attachment
-- Get all attachments
-- Remove an attachment
-:::
-
-::: details Issue Comment
-- Add comment to issue
-- Get a comment
-- Get all comments
-- Remove a comment
-- Update a comment
-:::
-
-::: details User
-- Create a new user
-- Delete a user
-- Retrieve a user
-:::
+<Resource node="n8n-nodes-base.jira" />
 
 ## Example Usage
 
@@ -85,4 +55,4 @@ You can refer to the [official documentation](https://www.atlassian.com/software
 
 ## Further Reading
 
-<FurtherReadingBlog node="Jira Software" />
+<FurtherReadingBlog />

@@ -91,7 +91,8 @@ module.exports = {
 			{
 				hostname: 'https://docs.n8n.io'
 			},
-		]
+		],
+		require('./plugins/nodes'),
 	],
 	themeConfig: {
 		repo: 'n8n-io/n8n',
@@ -211,6 +212,10 @@ module.exports = {
 					path: 'server-setup.md',
 				},
 				{
+					title: '🧑‍💻 Setup via PM2',
+					path: 'setup-pm2.md',
+				},
+				{
 					title: '👾 CLI commands for n8n',
 					path: 'start-workflows-via-cli.md',
 				},
@@ -225,6 +230,10 @@ module.exports = {
 				{
 					title: '🗻 Scaling n8n',
 					path: 'scaling-n8n.md',
+				},
+				{
+					title: '👀 Logging in n8n',
+					path: 'logging.md',
 				},
 				{
 					title: '💡 Function and Function Item Nodes',
@@ -302,3 +311,4 @@ module.exports = {
 		}
 	},
 }
+

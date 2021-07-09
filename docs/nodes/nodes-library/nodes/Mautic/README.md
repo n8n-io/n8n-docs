@@ -13,25 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Company
-- Create a new company
-- Delete a company
-- Get data of a company
-- Get data of all companies
-- Update a company
-:::
-::: details Contact
-- Create a new contact
-- Update a contact
-- Get data of a contact
-- Get data of all contacts
-- Delete a contact
-:::
-
-::: details Contact <> Company
-- Add a contact to a company
-- Remove a contact from a company
-:::
+<Resource node="n8n-nodes-base.mautic" />
 
 ## Example Usage
 
@@ -56,4 +38,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Mautic" />
+<FurtherReadingBlog />

@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Insert documents
-- Find documents
-- Delete documents
-- Update documents
+<Resource node="n8n-nodes-base.mongoDb" />
 
 
 ## Example Usage
@@ -50,4 +47,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="MongoDB" />
+<FurtherReadingBlog />

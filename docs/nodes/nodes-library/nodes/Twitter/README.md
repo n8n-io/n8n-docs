@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Direct Message
-- Create a direct message
-:::
-
-::: details Tweet
-- Create or reply to a tweet
-- Delete a tweet
-- Search tweets
-- Like a tweet
-- Retweet a tweet
-:::
+<Resource node="n8n-nodes-base.twitter" />
 
 ## Example Usage
 

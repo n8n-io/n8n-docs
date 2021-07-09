@@ -13,8 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Check whether a preview for a given link is available
-- Return the preview for a link
+<Resource node="n8n-nodes-base.peekalink" />
 
 ## Example Usage
 

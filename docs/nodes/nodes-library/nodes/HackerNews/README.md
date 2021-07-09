@@ -13,17 +13,7 @@ The Hacker News node does not require authentication.
 
 ## Basic Operations
 
-::: details All
-- Get all items
-:::
-
-::: details Article
-- Get a Hacker News article
-:::
-
-::: details User
-- Get a Hacker News user
-:::
+<Resource node="n8n-nodes-base.hackerNews" />
 
 ## Example Usage
 
@@ -46,4 +36,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Hacker News" />
+<FurtherReadingBlog />

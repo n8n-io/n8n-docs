@@ -13,6 +13,8 @@ Please note that the Function node is different from the [Function Item](../Func
 
 If you want to use the Function node to transform input data, check out how n8n's [data structure](../../../../reference/data/data-structure.md) looks like. The Function node also supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
+The Function node also provides the ability to write to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
+
 ## Example Usage
 
 This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
@@ -97,7 +99,7 @@ By default the item of the last run of the node  will be returned. So if the ref
 3x (its last runIndex is 2) and the current node runs the first time (its runIndex is 0) the
 data of runIndex 2 of the referenced node will be returned.
 
-For more information about what data can be accessed via $node, check the `Varibale: $node`section below.
+For more information about what data can be accessed via `$node`, check out the `Variable: $node` [section](../../../expressions.md#variable-node).
 
 Example:
 
@@ -153,4 +155,4 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 ## Further Reading
 
-<FurtherReadingBlog node="Function" />
+<FurtherReadingBlog />

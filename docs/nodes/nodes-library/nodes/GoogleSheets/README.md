@@ -13,20 +13,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Spreadsheet
-- Create a spreadsheet
-:::
+<Resource node="n8n-nodes-base.googleSheets" />
 
-::: details Sheet
-- Append data to a sheet
-- Clear data from a sheet
-- Create a new sheet
-- Delete columns and rows from a sheet
-- Look up a specific column value and return the matching row
-- Read data from a sheet
-- Remove a sheet
-- Update rows in a sheet
-:::
 ## Example Usage
 
 This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
@@ -209,4 +197,4 @@ By default, the Google Sheets node will operate on the default sheet, `Sheet 1`.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Google Sheets" />
+<FurtherReadingBlog />

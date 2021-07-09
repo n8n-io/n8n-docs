@@ -13,6 +13,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
+<Resource node="n8n-nodes-base.amqp" />
+
 - Send message
 
 
@@ -102,4 +104,4 @@ This example workflow uses the Cron node, which is a Trigger node. You'll need t
 
 ## Further Reading
 
-<FurtherReadingBlog node="AMQP Sender" />
+<FurtherReadingBlog />

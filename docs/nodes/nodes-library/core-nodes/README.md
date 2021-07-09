@@ -2,29 +2,30 @@
 
 This section contains information about all the core nodes in n8n. Each node documentation contains information on the available resources and operations along with an example workflow.
 
-<!-- <NodeCard :items="items" /> -->
-<div  class="container">
-	<div v-for="i in items" :key="i.name">
-		<a :href="`/nodes/${i.name}`" class="card-wrapper">
-			<div class="card">
-				<div class="image-container">
-					<div style="width: 100%; height: 100%;">
-						<div v-html="i.icon" />
-					</div>
-				</div>
-				<p>{{i.displayName}}</p>
-			</div>
-		</a>
-	</div>
-</div>
+<NodeCard :items="items" />
 
 <script>
-import data from './core-nodes.json'
+import { nodes } from '@dynamic/nodes'
+
 export default {
 	data () {
+		const coreNodes = Object.values(nodes)
+			.filter((node) => {
+				return node.codex && node.codex.data && node.codex.data.categories && node.codex.data.categories.includes('Core Nodes');
+			});
+		coreNodes.sort((a, b) => {
+			if ( a.displayName.toLowerCase() < b.displayName.toLowerCase() ){
+				return -1;
+			}
+			if ( a.displayName.toLowerCase() > b.displayName.toLowerCase() ){
+				return 1;
+			}
+			return 0;
+		});
+
 		return {
-			items: data
-		}
+			items: coreNodes,
+		};
 	}
 }
 </script>

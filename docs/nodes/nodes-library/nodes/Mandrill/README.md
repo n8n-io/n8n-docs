@@ -13,10 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Message
-- Send message based on a template
-- Send message based on HTML
-:::
+<Resource node="n8n-nodes-base.mandrill" />
 
 ## Example Usage
 
@@ -43,4 +40,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Mandrill" />
+<FurtherReadingBlog />

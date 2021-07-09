@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Item
-- Create an item
-- Delete an item
-- Get an item
-- Get all items
-- Update an item
-:::
+<Resource node="n8n-nodes-base.webflow" />
 
 ## Example Usage
 

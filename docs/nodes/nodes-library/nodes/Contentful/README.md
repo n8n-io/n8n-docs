@@ -9,32 +9,11 @@ description: Learn how to use the Contentful node in n8n
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Contentful/README.md).
-:::	
+:::
 
 ## Basic Operations
 
-::: details Asset
-- Get an asset
-- Get all assets
-:::
-
-::: details Content Type
-- Get the content type
-:::
-
-::: details Entry
-- Get an entry
-- Get all entires
-:::
-
-::: details Locale
-- Get all locale
-:::
-
-::: details Space
-- Get space details
-:::
-
+<Resource node="n8n-nodes-base.contentful" />
 
 ## Example Usage
 

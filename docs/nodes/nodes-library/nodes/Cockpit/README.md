@@ -13,19 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Collection
-- Create a collection entry
-- Get all collection entries
-- Update a collection entry
-:::
-
-::: details Form
-- Store data from a form submission
-:::
-
-::: details Singleton
-- Get a singleton
-:::
+<Resource node="n8n-nodes-base.cockpit" />
 
 ## Example Usage
 

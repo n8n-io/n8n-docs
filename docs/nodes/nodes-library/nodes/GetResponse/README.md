@@ -14,13 +14,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create a new contact
-- Delete a contact
-- Get a contact
-- Get all contacts
-- Update contact properties
-:::
+<Resource node="n8n-nodes-base.getResponse" />
 
 ## Example Usage
 

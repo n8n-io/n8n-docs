@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Publish
-- Publish a message to a topic
-:::
+<Resource node="n8n-nodes-base.awsSns" />
 
 ## Example Usage
 

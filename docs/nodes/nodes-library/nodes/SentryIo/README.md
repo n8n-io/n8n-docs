@@ -13,40 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Event
-- Get event by ID
-- Get all events
-:::
-
-::: details Issue
-- Delete an issue
-- Get issue by ID
-- Get all issues
-- Update an issue
-:::
-
-::: details Project
-- Get project by ID
-- Get all projects
-:::
-
-::: details Release
-- Create a release
-- Get release by a version identifier
-- Get all releases
-:::
-
-::: details Organization
-- Create an organization
-- Get an organization by slug
-- Get all organizations
-:::
-
-::: details Team
-- Create a new team
-- Get team by slug
-- Get all teams
-:::
+<Resource node="n8n-nodes-base.sentryIo" />
 
 ## Example Usage
 
@@ -68,7 +35,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.
-5. Enter the version in the ***Version*** field. 
+5. Enter the version in the ***Version*** field.
 6. Enter the URL that points to the release in the ***URL*** field.
 7. Select the project from ***Projects*** dropdown list.
 8. Click on ***Execute Node*** to run the node.
@@ -83,7 +50,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Get All' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.
-5. Toggle ***Return All*** to true. 
+5. Toggle ***Return All*** to true.
 6. Click on ***Execute Node*** to run the node.
 :::
 

@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Image
-- Create an image
-- Get an image
-:::
-
-::: details User
-- Get a template
-- Get all templates
-:::
+<Resource node="n8n-nodes-base.bannerbear" />
 
 ## Example Usage
 
@@ -48,4 +40,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="Bannerbear" />
+<FurtherReadingBlog />

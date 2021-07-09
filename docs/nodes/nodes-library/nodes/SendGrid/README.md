@@ -13,24 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Contact
-- Create/Update a contact
-- Delete a contact
-- Get a contact by ID
-- Get all contacts
-:::
-
-::: details List
-- Create a list
-- Delete a list
-- Get a list
-- Get all lists
-- Update a list
-:::
-
-::: detials Mail
-- Send an email
-:::
+<Resource node="n8n-nodes-base.sendGrid" />
 
 ## Example Usage
 

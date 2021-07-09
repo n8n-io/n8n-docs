@@ -6,35 +6,35 @@ This section contains information about all the trigger nodes in n8n. Each node 
 <NodeCard :items="items" />
 
 <script>
+import { nodes } from '@dynamic/nodes'
+
 export default {
 	data () {
+		const triggerNodes = Object.values(nodes)
+			.filter((node) => {
+				if (!node.group.includes('trigger')) {
+					return false;
+				}
+
+				if (node.codex && node.codex.data && node.codex.data.categories && node.codex.data.categories.includes('Core Nodes')) {
+					return false;
+				}
+
+				return true;
+			});
+		triggerNodes.sort((a, b) => {
+			if ( a.displayName.toLowerCase() < b.displayName.toLowerCase() ){
+				return -1;
+			}
+			if ( a.displayName.toLowerCase() > b.displayName.toLowerCase() ){
+				return 1;
+			}
+			return 0;
+		});
+
 		return {
-			items: []
-		}
-	},
-	beforeMount() {
-		fetch('https://api.n8n.io/graphql', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				query: `
-					query GetTriggerNodes{
-						nodes(where: {displayName_contains:"Trigger", categories:{name_ncontains: "Core Nodes"}}, sort:"displayName"){
-							name
-							displayName
-							iconData
-						}
-					}
-				`
-			})
-		})
-		.then(response => response.json())
-		.then(res => {
-			this.$data.items = res.data.nodes
-		})
-		.catch(error => console.log(error))
+			items: triggerNodes,
+		};
 	}
 }
 </script>

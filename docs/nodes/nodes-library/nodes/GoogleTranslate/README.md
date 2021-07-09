@@ -5,7 +5,7 @@ description: Learn how to use the Google Translate node in n8n
 
 # Google Translate
 
-[Google Translate](https://translate.google.com/) is a free multilingual translation service developed by Google to translate text and websites from one language into another. 
+[Google Translate](https://translate.google.com/) is a free multilingual translation service developed by Google to translate text and websites from one language into another.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).
@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Language
-- Translate data
-:::
+<Resource node="n8n-nodes-base.googleTranslate" />
 
 ## Example Usage
 
@@ -35,7 +33,7 @@ The start node exists by default when you create a new workflow.
 
 This node will translate the text `Hello from n8n!` to German. You can enter a different text as well as select another language to translate the text to.
 
-1. Select 'OAuth2' from the ***Authentication*** dropdown list. 
+1. Select 'OAuth2' from the ***Authentication*** dropdown list.
 2. Next, you'll have to enter credentials for the Google Translate node. You can find out how to enter credentials for this node [here](../../../credentials/Google/README.md).
 3. Enter the text `Hello from n8n!` in the ***Text*** field.
 4. Select 'DE' from the ***Translate To*** dropdown list. DE is the language code for German. You can refer to [Language Support](https://cloud.google.com/translate/docs/languages) to view the list of all supported languages and their corresponding language codes.

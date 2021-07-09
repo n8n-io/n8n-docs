@@ -13,11 +13,8 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Append the data to a table
-- Delete data from a table
-- List data from a table
-- Read data from a table
-- Update data in a table
+<Resource node="n8n-nodes-base.airtable" />
+
 
 ## Example Usage
 
@@ -143,4 +140,4 @@ Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/arti
 
 ## Further Reading
 
-<FurtherReadingBlog node="Airtable" />
+<FurtherReadingBlog />

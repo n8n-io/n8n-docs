@@ -13,16 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Channel
-- Initiate a public or private channel-based conversation
-- Get information about a channel
-- Get all channels
-- Update a channel
-:::
-
-::: details Message Conversation
-- Create a message in a conversation
-:::
+<Resource node="n8n-nodes-base.twist" />
 
 ## Example Usage
 

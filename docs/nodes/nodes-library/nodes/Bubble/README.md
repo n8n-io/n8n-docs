@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Object
-- Create an object
-- Delete an object
-- Get an object
-- Get all objects
-- Update an object
-:::
+<Resource node="n8n-nodes-base.bubble" />
 
 ## Example Usage
 

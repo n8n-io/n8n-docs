@@ -13,17 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Activity
-- Create a new activity
-- Get an activity
-- Get all activities
-- Get all activity comments
-- Get all activity kudos
-- Get all activity laps
-- Get all activity zones
-- Update an activity
-:::
-
+<Resource node="n8n-nodes-base.strava" />
 
 ## Example Usage
 
@@ -94,4 +84,4 @@ In the screenshot below, you will notice that the node returns the information o
 
 ## Further Reading
 
-<FurtherReadingBlog node="Strava" />
+<FurtherReadingBlog />

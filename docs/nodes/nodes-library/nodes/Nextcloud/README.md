@@ -13,25 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details File
-- Copy a file
-- Delete a file
-- Download a file
-- Move a file
-- Upload a file
-:::
-
-::: details Folder
-- Copy a folder
-- Create a folder
-- Delete a folder
-- Return the contents of a folder
-- Move a folder
-:::
-
-::: details User
-- Invite a user to a Nextcloud organization
-:::
+<Resource node="n8n-nodes-base.nextCloud" />
 
 ## Example Usage
 

@@ -13,26 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Incident
-- Create an incident
-- Get an incident
-- Get all incidents
-- Update an incident
-:::
-
-::: details Incident Note
-- Create an incident note
-- Get all incident's notes
-:::
-
-::: details Log Entry
-- Get a log entry
-- Get all log entries
-:::
-
-::: details User
-- Get a user
-:::
+<Resource node="n8n-nodes-base.pagerDuty" />
 
 
 ## Example Usage
@@ -93,4 +74,4 @@ The start node exists by default when you create a new workflow.
 
 ## Further Reading
 
-<FurtherReadingBlog node="PagerDuty" />
+<FurtherReadingBlog />

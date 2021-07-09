@@ -26,6 +26,8 @@ It will download everything that is needed to start n8n.
 You can then access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
 
+**Note:** The minimum required version for Node.js is v14.15. Make sure to update Node.js to v14.15 or above.
+
 ## Run with Docker
 
 To play around with n8n, you can also start it using [Docker](../reference/glossary.md#docker):

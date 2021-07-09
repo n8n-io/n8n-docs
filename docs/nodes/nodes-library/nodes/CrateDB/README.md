@@ -13,9 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-- Execute an SQL query
-- Insert rows in database
-- Update rows in database
+<Resource node="n8n-nodes-base.crateDb" />
 
 
 ## Example Usage
@@ -70,4 +68,4 @@ To specify the data type of a column, append the column name with `:type`, where
 
 ## Further Reading
 
-<FurtherReadingBlog node="CrateDB" />
+<FurtherReadingBlog />

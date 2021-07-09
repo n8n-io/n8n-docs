@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Task
-- Add a task to tasklist
-- Delete a task
-- Retrieve a task
-- Retrieve all  tasks from a task list
-- Update a task
-:::
+<Resource node="n8n-nodes-base.googleTasks" />
 
 ## Example Usage
 

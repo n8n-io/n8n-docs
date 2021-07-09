@@ -13,13 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details SMS
-- Send an SMS
-:::
-
-::: details Voice
-- Send a voice message
-:::
+<Resource node="n8n-nodes-base.mocean" />
 
 
 ## Example Usage

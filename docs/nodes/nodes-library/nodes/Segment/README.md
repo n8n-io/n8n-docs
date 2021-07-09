@@ -13,15 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Identify
-- Create an identity
-:::
-
-::: details Track
-- Record the actions performed by the users
-- Record page views on the website along with optional extra information
-:::
-
+<Resource node="n8n-nodes-base.segment" />
 
 ## Example Usage
 

@@ -13,30 +13,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-::: details Activity
-- Get all activities
-:::
-
-::: details Campaign
-- Get all campaigns
-:::
-
-::: details Lead
-- Create a lead
-- Delete a lead
-- Get a lead
-- Unsubscribe
-:::
-
-::: details Team
-- Get a team
-:::
-
-::: details Unsubscribes
-- Add
-- Delete
-- Get all
-:::
+<Resource node="n8n-nodes-base.lemlist" />
 
 ## Example Usage
 

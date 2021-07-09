@@ -15,10 +15,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Using API key
 
-After become an Action Network partner:
+After becoming an Action Network partner:
 
 1. Open your Action Network dashboard.
 2. From the **Start Organizing** menu navigate to **Details** > **API & Sync**.
 3. Use the dropdown to select the list you want to generate a key for, your personal list or that of any groups you are an administrator of.
-4. Generate your API key and copy it.
-5. Use this API key with your Action Network node credentials in n8n.
+4. From the **Your API Key** section, generate a new API key:
+
+![API & Sync Page](./action_network_api_key.png)
+
+5. Copy your new key and use it with your Action Network node credentials in n8n.

@@ -10,7 +10,7 @@ export default ({ router, siteData }) => {
 
 	// spring cleaning redirects
 	const latestRedirects = [
-		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation" },
+		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation/index.html" },
 		{ path: "/getting-started/quickstart.html#sign-up-on-n8n-cloud", redirect: "/getting-started/installation/#n8n-cloud" },
 		{ path: "/getting-started/quickstart.html#give-it-a-spin-using-npx", redirect: "/getting-started/installation/#npm" },
 		{ path: "/getting-started/quickstart.html#install-with-npm", redirect: "/getting-started/installation/#npm" },
@@ -23,6 +23,7 @@ export default ({ router, siteData }) => {
 		{ path: "/reference/data/data-structure.html", redirect: "/getting-started/key-concepts.html#data-structure" },
 		{ path: "/reference/workflow.html#data-flow", redirect: "/getting-started/key-concepts.html#data-flow" },
 		{ path: "/reference/workflow.html#error-workflows", redirect: "/getting-started/key-concepts.html#error-workflow" },
+		{ path: "/reference/workflow.html", redirect: "/getting-started/key-components/workflow.html" },
 	];
 
 	latestRedirects.forEach(redirect => router.addRoute(redirect));

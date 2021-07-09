@@ -115,13 +115,13 @@ module.exports = {
 				text: 'Getting Started',
 				link: '/',
 			},
-			// {
-			// 	text: 'Guides',
-			// 	link: '/guides/guides.md'
-			// },
 			{
 				text: 'Nodes',
 				link: '/nodes/',
+			},
+			{
+				text: 'Courses',
+				link: '/courses/',
 			},
 			{
 				text: 'Reference',
@@ -133,14 +133,6 @@ module.exports = {
 			},
 		],
 		sidebar: {
-			// '/guides/': [
-			// 	{
-			// 		title: 'Guide Overview',
-			// 		sidebarDepth: 2,
-			// 		children: getChildrenFiles('guides', 'guides.md'),
-			// 	},
-			// ],
-
 			'/nodes/': [
 				{
 					title: '🧬 Overview',
@@ -185,7 +177,28 @@ module.exports = {
 					children: getChildrenFolders('nodes/credentials'),
 				},
 			],
-
+			'/courses/': [
+				{
+					title: '😇 Overview',
+					path: '/courses/',
+				},
+				{
+					title: '🎓 Level 1',
+					path: '/courses/level-one/',
+					sidebarDepth: 3,
+					children: getChildrenFiles('courses/level-one', 'README.md'),
+					// children: [
+					// 	{
+					// 		title: 'Navigating the Editor UI',
+					// 		path: 'chapter-one.md',
+					// 	},
+					// 	{
+					// 		title: 'Automating a (real-world) use case',
+					// 		path: 'chapter-two.md',
+					// 	},
+					// ],
+				},
+			],
 			'/reference/': [
 				{
 					title: '📚 Overview',
@@ -296,18 +309,6 @@ module.exports = {
 					path: 'getting-started/whats-next.md',
 				},
 			],
-			// [
-			// {
-			// 	title: 'Introduction',
-			// 	sidebarDepth: 2,
-			// 	children: [
-			// 		'getting-started/overview.md',
-			// 		'getting-started/node-basics.md',
-			// 		'getting-started/workflow.md',
-			// 		'getting-started/start-workflows-via-cli.md',
-			// 	],
-			// },
-			// ]
 		}
 	},
 }

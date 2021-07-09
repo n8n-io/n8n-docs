@@ -118,13 +118,13 @@ The HackerNew node has several parameters that need to be configured in order to
 
 <figure><img src="./images/chapter-one/Hacker-news-node.png" alt="Hacker News node" style="width:100%"><figcaption align = "center"><i>Hacker News node</i></figcaption></figure>
 
-- Resource: All <br/>
+- *Resource*: All <br/>
 This resource selects all data records (articles).
-- Operation: Get All <br/>
+- *Operation*: Get All <br/>
 This operation fetches all the selected articles.
-- Limit: 10 <br/>
+- *Limit*: 10 <br/>
 This parameter sets a limit to how many results are returned by the Get All  operation.
-- Additional fields > Add Field > Keyword: automation <br/>
+- *Additional fields > Add Field > Keyword*: automation <br/>
 Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation”. <br/>
 
 The configuration of the parameters for the **Hacker News** node should now look like this:
@@ -133,13 +133,13 @@ The configuration of the parameters for the **Hacker News** node should now look
 
 #### Settings
 
-The Settings part includes several options for node design and executions. In this case, we’ll configure only the first two settings, which are about the node’s appearance in the Editor UI.
+The *Settings* part includes several options for node design and executions. In this case, we’ll configure only the first two settings, which are about the node’s appearance in the Editor UI.
 
 It is often helpful, especially for complex workflows or if you share them with other users, to add a short description in the node about what it does. This description note can be displayed under the node in the Editor UI.
 
 Here’s how to configure these settings in the **Hacker News** node:
-- Notes: Get the 10 latest articles
-- Display note in flow?: toggle to true
+- *Notes*: Get the 10 latest articles
+- *Display note in flow?*: toggle to true
 
 The configuration of the settings for the **Hacker News** node looks like this:
 
@@ -169,12 +169,13 @@ There are two ways in which you can save a workflow:
 
 Now, click on the *Execute Node* button in the top right corner of the node window.
 
-If the parameters are configured correctly and everything works fine, the requested data will be displayed in the node window, in two formats: Table and JSON. You can switch between these views by selecting the one you want from the JSON|Table button at the top of the node window.
+If the parameters are configured correctly and everything works fine, the requested data will be displayed in the node window, in two formats: Table and JSON. You can switch between these views by selecting the one you want from the *JSON|Table* button at the top of the node window.
 
 The *Table* view is the default. It displays the requested data in a table, where the rows are the records (in our case, articles published on Hacker News) and the columns are the available attributes of those records (in this case, information like the author of each article).
 
 <figure><img src="./images/chapter-one/Hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
+### Node executions
 
 The **JSON** view displays the requested data in JSON format, where the keys are the attributes and the values are the individual records.
 
@@ -189,6 +190,8 @@ Next to the *Items* information, notice a small orange *i* icon. If you hover on
 And one last thing: In the bottom right corner right under the node window, there is a reference link to the node’s documentation. Check it out if you ever run into troubles or are not sure how to configure the node’s parameters.
 
 Now you can close the node window and return to the Editor UI view.
+
+### Node buttons
 
 Wait, something looks slightly different… Did you notice? On top of the **Start** node and the **Hacker News** node, there is a small green circle with a number inside. This shows that the nodes executed correctly. Yay!
 
@@ -215,6 +218,8 @@ If you want to edit the parameters of a node, double-click on it and it will ope
 
 ::: tip 💡 To move a workflow around the canvas, select all nodes (**Ctrl + a**), click on a node, and drag it at a point you want on the canvas.
 :::
+
+----
 
 Congratulations, you just built your first workflow! Now that you know the basic concepts and components of n8n, you can start adding more nodes to the canvas and create more powerful workflows.
 

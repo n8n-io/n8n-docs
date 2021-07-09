@@ -1,14 +1,12 @@
-# Understanding n8n's database
+# Understanding n8n Database
 
-By default, n8n uses SQLite as the database. If you are using another database with n8n, it will be similar. Just the data-types will be slightly different depending on the database.
+By default, n8n uses SQLite as the database. If you are using another database it will be similar, but the data-types will be different depending on the database.
 
 The [credentials](../glossary.md#credentials), [workflows](../glossary.md#workflow), [executions](../glossary.md#execution), and [webhook](../glossary.md#webhook) are decoupled and stored in different tables.
 
-[[toc]]
-
 To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
 
-## Credentials Entity
+## Credentials entity
 
 Based on the node you use in a workflow, you may have to use credentials to connect the node with the respective service. These credentials get stored in the `credentials_entity` table with the following fields.
 
@@ -29,7 +27,7 @@ The [Pipedrive](../../nodes/credentials/Pipedrive/README.md) node has two authen
 
 ![Data stored in the credentials_entity table](./images/credentials_entity.png)
 
-## Execution Entity
+## Execution entity
 
 Depending on the settings, the executions are stored in the `execution_entity` table with the following fields.
 
@@ -68,7 +66,7 @@ The timestamp when the migration got executed is stored in the ***timestamp*** f
 
 ![Logs stored in the migrations table](./images/migrations.png)
 
-## Webhook Entity
+## Webhook entity
 
 You may have to use a Trigger node (for example, Webhook node, Pipedrive Trigger node, ClickUp Trigger node, etc.) to trigger your workflow. The information of active webhooks used by these trigger nodes gets stored in the `webhook_entity` table with the following fields.
 
@@ -87,7 +85,7 @@ Based on your use-case, you can configure the HTTP request method in the Webhook
 
 ![Data stored in the webhook_entity table](./images/webhook_entity.png)
 
-## Workflow Entity
+## Workflow entity
 
 The saved workflows get stored in the `workflow_entity` table with the following fields.
 

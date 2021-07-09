@@ -1,26 +1,18 @@
 # Scaling n8n
 
-To handle the workloads, n8n can be horizontally scaled. You can connect multiple entities, such as servers so that they work as a single logical unit. Workflow executions can scale via workers. The trigger nodes that use webhooks can scale through webhook processors.
+n8n has the following features to support scaling and reliability.
 
 [[toc]]
 
-## Prerequisites
-
-You have knowledge of:
-
-- Redis
-- Deploying databases
-- Networking
-
-## Configuring Workers
+## Configuring workers
 
 Workers are n8n instances that do the actual work. The main n8n process passes information to the workers about the workflows that have to get executed. The workers execute the workflow and update the status after the execution is complete.
 
 To allow workers to interact with the main process, we need a message broker. We will use Redis for that. Redis allows n8n to run with queues and acts as the message broker.
 
-### Set Executions Mode
+### Set executions mode
 
-By default, n8n runs with the execution mode set to `regular`. To configure workers, set the `EXECUTIONS_MODE` [environment variable](./glossary.md#environment-variables) to `queue` using the following command:
+Set the [environment variable](../../reference/glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue
@@ -91,14 +83,14 @@ docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n worker
 
 You can also set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
 
-## Considerations for running n8n with queues
+## Running n8n with queues
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.
 
 Redis is used as the queue broker, and the database is used to persist data. Hence, access to both is required. Running a distributed system with this setup over SQLite is not recommended.
 
 ::: tip Migrate data
-If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](./start-workflows-via-cli.md#export-workflows-and-credentials) documentation to learn how to use these commands.
+If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](../../reference/start-workflows-via-cli.md#export-workflows-and-credentials) documentation to learn how to use these commands.
 :::
 
 ## Webhook processors
@@ -172,5 +164,5 @@ export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ```
 
 ::: warning 💡 Keep in mind
-Do not use this procedure for blue/green deployments, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
+Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
 :::

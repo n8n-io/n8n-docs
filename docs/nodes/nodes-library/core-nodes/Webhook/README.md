@@ -8,7 +8,7 @@ description: Learn how to use the Webhook node in n8n
 The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
 
 ::: tip 💡 Keep in mind
-1. When using the Webhook node on the localhost, ensure that n8n is running with the [tunnel](../../../../getting-started/quickstart.md#start-with-tunnel) mode.
+1. When using the Webhook node on the localhost, ensure that n8n is running with the [tunnel](../../../../getting-started/installation/README.md#n8n-with-tunnel) mode.
 2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don’t forget that the data flowing through the webhook won’t be visible in the Editor UI with the Production webhook.
 :::
 

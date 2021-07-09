@@ -1,10 +1,8 @@
-# Database
+# Databases
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. However,
-n8n also supports PostgresDB.
+By default, n8n uses SQLite to save credentials, past executions, and workflows. However, n8n also supports PostgresDB.
 
-
-## Shared Settings
+## Shared settings
 
 The following environment variables get used by all databases:
 
@@ -20,10 +18,10 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_USER` (default: 'root')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
- - `DB_POSTGRESDB_SSL_CA` (default: undefined) — a path to the server's CA certificate to use to validate the connection (opportunistic encryption is not supported)
- - `DB_POSTGRESDB_SSL_CERT` (default: undefined) — a path to the client's TLS certificate to authenticate with
- - `DB_POSTGRESDB_SSL_KEY` (default: undefined) — a path to the client's private key corresponding to the its certificate
- - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true) — if TLS connections that fail validation should be rejected
+ - `DB_POSTGRESDB_SSL_CA` (default: undefined): Path to the server's CA certificate used to validate the connection (opportunistic encryption is not supported)
+ - `DB_POSTGRESDB_SSL_CERT` (default: undefined): Path to the client's TLS certificate
+ - `DB_POSTGRESDB_SSL_KEY` (default: undefined): Path to the client's private key corresponding to the certificate
+ - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true): If TLS connections that fail validation should be rejected
 
 ```bash
 export DB_TYPE=postgresdb
@@ -43,17 +41,18 @@ n8n start
 
 ### TLS
 
-A note on TLS certificates — you can choose between these configurations:
+You can choose between these configurations:
 
-- not declaring (default) — in which case you'll connect with SSL=off
-- declaring only the CA + unauthorized flag — in which case you'll connect with SSL=on and verify the server's signature
-- declaring `_{CERT,KEY}` as well as the above — in which case you'll use the cert and key for client TLS authentication
+- Not declaring (default): Connect with `SSL=off`
+- Declaring only the CA and unauthorized flag: Connect with `SSL=on` and verify the server's signature
+- Declaring `_{CERT,KEY}` and the above: Use the certificate and key for client TLS authentication
 
 ## MySQL / MariaDB
 
-The compatibility with MySQL/MariaDB has been tested. Even then, it is advisable to observe the operation of the application with this database as this option has been recently added. If you spot any problems, feel free to submit a burg report or a pull request.
+The compatibility with MySQL/MariaDB has been tested. Even then, it is advisable to observe the operation of the application with this database as this option has been recently added. If you spot any problems, feel free to submit a bug report or a pull request.
 
-To use MySQL as database you can provide the following environment variables:
+To use MySQL or MariaDB, provide the following environment variables:
+
  - `DB_TYPE=mysqldb` or `DB_TYPE=mariadb`
  - `DB_MYSQLDB_DATABASE` (default: 'n8n')
  - `DB_MYSQLDB_HOST` (default: 'localhost')
@@ -81,7 +80,7 @@ The database file is located at:
 `~/.n8n/database.sqlite`
 
 
-## Other Databases
+## Other databases
 
 Currently, only the databases mentioned above are supported. n8n internally uses
 [TypeORM](https://typeorm.io), so adding support for the following databases
@@ -92,7 +91,4 @@ should not be too much work:
  - Oracle
 
 If you cannot use any of the currently supported databases for some reason and
-you can code, we'd appreciate your support in the form of a pull request. If not, you can request
-for support here:
-
-[https://community.n8n.io/c/feature-requests/cli](https://community.n8n.io/c/feature-requests/cli)
+you can code, we'd appreciate your support in the form of a pull request. If not, you can request support [here](https://community.n8n.io/c/feature-requests/cli).

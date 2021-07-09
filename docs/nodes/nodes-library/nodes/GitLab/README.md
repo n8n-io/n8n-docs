@@ -5,7 +5,7 @@ description: Learn how to use the GitLab node in n8n
 
 # GitLab
 
-[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous deployment pipeline features.
+[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Gitlab/README.md).

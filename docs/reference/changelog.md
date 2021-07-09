@@ -587,8 +587,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- Salesforce: Added Mobile Phone field to the Lead resource
 	- Spotify: Added Create a Playlist operation to Playlist resource and Get New Releases to the Album resource
 - Bug fixes
-	- Airtable: Fixed a bug with updating and deleting records
-- Added the functionality to expose metrics to Prometheus. Read more about that [here](configuration.md#prometheus)
+    - Airtable: Fixed a bug with updating and deleting records
+- Added the functionality to expose metrics to Prometheus. Read more about that [here](../getting-started/installation/advanced/configuration.md#prometheus)
 - Updated fallback values to match the value type
 - Added the functionality to display debugging information for pending workflows on exit
 - Fixed an issue with queue mode for the executions that should not be saved

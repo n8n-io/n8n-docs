@@ -166,7 +166,7 @@ Back to your workflow, remove the connection between the **HTTP Request node** a
 
 In the **IF node** window, click on *Add Condition* > *string* and configure the parameters:
 ::: v-pre
-- *Value 1*: Current Node > Input Data > JSON > orderStatus → `{{$json["orderStatus"]}}`
+- *Value 1*: Current Node > Input Data > JSON > orderStatus → `{{$json["orderStatus"]}}` <br>
 To select this value, click on the wheel icon “Add Expression” on the right side of the Value 1 field. An [expression](../../reference/glossary.md#Expression) is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.
 :::
 ![Expression Editor in the IF node](./images/chapter-two/If-node-expression-editor.png)
@@ -174,7 +174,7 @@ To select this value, click on the wheel icon “Add Expression” on the right 
 - *Operation*: equal
 - *Value 2*: processing
 
-:::warning
+:::warning ⚠️
 Make sure to select the correct data type (boolean, data & time, number, or string) of the referenced data in Add Condition.
 :::
 
@@ -234,7 +234,7 @@ The next step in Nathan’s workflow is to calculate two values from the booked 
 
 To calculate data and add more functionality to your workflows, you can use the Function node, which lets you write custom JavaScript code.
 
-::: warning 💡
+::: warning ⚠️
 n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](../../reference/function-nodes.md).
 :::
 
@@ -289,7 +289,7 @@ return [{json:{totalBooked, bookedSum}}]
 Notice the format in which we return the results of the calculation:
 `return [{json:{totalBooked, bookedSum}}]`
 
-If you don’t use the correct data structure, you will get an error message: Error: Always an Array of items has to be returned!
+If you don’t use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
 
 Now execute the node and you should see the following results:
 

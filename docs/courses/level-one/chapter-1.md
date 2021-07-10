@@ -146,7 +146,8 @@ The configuration of the settings for the **Hacker News** node looks like this:
 <figure><img src="./images/chapter-one/Hacker-news-settings.png" alt="Hacker News node renaming" style="width:100%"><figcaption align = "center"><i>Hacker News node renaming</i></figcaption></figure>
 
 
-::: tip 💡 You can rename the node with a name that’s more descriptive for your use case. There are two ways to do this:
+::: tip 💡
+You can rename the node with a name that’s more descriptive for your use case. There are two ways to do this:
 - Double-click on the node you want to rename, which will open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click on the ✔ symbol to save the node under the new name.
 
 <figure><img src="./images/chapter-one/Renaming-node.gif" alt="Renaming a node from the window" style="width:100%"><figcaption align = "center"><i>Renaming a node from the window</i></figcaption></figure>
@@ -207,16 +208,18 @@ If you go ahead and hover on the node, you’ll notice that four other icons app
 <figure><img src="./images/chapter-one/Node-buttons.gif" alt="The four node buttons" style="width:100%"><figcaption align = "center"><i>The four node buttons</i></figcaption></figure>
 
 
-::: warning The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don’t use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
+::: warning ⚠️
+The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don’t use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 :::
 
 If you want to edit the parameters of a node, double-click on it and it will open the node window.
 
-::: tip💡 You can move the workflow canvas around in two ways:
+::: tip 💡 
+You can move the workflow canvas around in two ways:
 - Click **Ctrl + Left Mouse Button** on the canvas and move it around
 - Place two fingers on your touchpad and slide
 
-::: tip 💡 To move a workflow around the canvas, select all nodes (**Ctrl + a**), click on a node, and drag it at a point you want on the canvas.
+To move a workflow around the canvas, select all nodes (**Ctrl + a**), click on a node, and drag it at a point you want on the canvas.
 :::
 
 ----

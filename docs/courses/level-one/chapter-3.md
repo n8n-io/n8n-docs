@@ -39,8 +39,8 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 
 [This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
 
-5. In the Editor UI, select all the nodes in your workflow (Ctrl + A) and copy them (Ctrl + C).
-6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V).
+5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
+6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V or Cmd + V).
 7. Click on the **_Publish Workflow to Share_** button to share your workflow.
 
 ![Share workflow](./images/chapter-three/Share-workflow.png)

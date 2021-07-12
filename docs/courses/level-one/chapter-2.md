@@ -50,7 +50,7 @@ First of all, let’s set up the scene for building Nathan’s workflow. Open yo
 
 Name this new workflow “Nathan’s workflow”.
 
-### Getting data from the data warehouse
+### 1. Getting data from the data warehouse
 
 The first step we need to take is to get data from Evil Corp’s old data warehouse. In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan’s company. Nathan mentioned that it’s not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
@@ -101,11 +101,11 @@ In the **HTTP Request** node window, click the *Execute Node* button. The result
 
 This view should be familiar to you from the Hacker News mini-workflow. This is the data from Nathan’s data warehouse that he needs to work with. His data set includes sales information of 30 customers with 5 features:
 
-- *orderID*: the unique id of each order.
-- *customerID*: the unique id of each customer.
-- *employeeName*: the name of Nathan’s colleagues who are responsible for each client.
-- *orderPrice*: the total price of the customer’s order.
-- *orderStatus*: whether the customer’s order is booked or still in processing.
+- *orderID:* the unique id of each order.
+- *customerID:* the unique id of each customer.
+- *employeeName:* the name of Nathan’s colleagues who are responsible for each client.
+- *orderPrice:* the total price of the customer’s order.
+- *orderStatus:* whether the customer’s order is booked or still in processing.
 
 ----
 
@@ -113,17 +113,17 @@ This view should be familiar to you from the Hacker News mini-workflow. This is 
 
 **You 👩‍🔧**: Nice! In the next chapter, I’ll help you one step further and insert the received data into Airtable, as you need it.
 
-### Inserting data into Airtable
+### 2. Inserting data into Airtable
 
 Before starting to manipulate data from Evil Corp’s data warehouse, it’s helpful to understand how data is structured and why moving it from one source to another is not always straightforward.
 
-![Workflow with the Airtable node](./images/chapter-two/Workflow-with-Airtable-node.png)
+<figure><img src="./images/chapter-two/Workflow-with-Airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
 
 If we are going to insert data into Airtable, we first need to set up a table there. To do this:
 1. [Create an Airtable account](https://airtable.com/signup).
 2. In your Airtable workspace, add a new base from scratch and name it, for example, *beginner course*.
 
-![Create an Airtable base](./images/chapter-two/Create-airtable-base.png)
+<figure><img src="./images/chapter-two/Create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
 
 3. In the beginner course base, you have by default a *Table 1* with four fields: *Name, Notes, Attachment, and Status*.
 
@@ -131,26 +131,26 @@ These fields are not relevant for us, since they are not in our orders data set.
 
 Replace the four default table fields with the five column names from the data set. Also, rename the table from *Table 1* to *orders*, to make it easier to identify. Now your table should look like this:
 
-![Orders table](./images/chapter-two/Orders-table.png)
+<figure><img src="./images/chapter-two/Orders-table.png" alt="Orders table in Airtable" style="width:100%"><figcaption align = "center"><i>Orders table in Airtable</i></figcaption></figure>
 
 Now that the table is prepared, let’s return to the workflow in the Editor UI. Add an **Airtable node** connected to the HTTP Request node. In the **Airtable node** window, configure the following parameters:
-- *Airtable API*: the name of your credentials (e.g. airtable_api) and your API key.
+- *Airtable API:* the name of your credentials (e.g. airtable_api) and your API key.
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
-:bulb:
-- *Operation*: Append
+- *Operation:* Append
 This operation will append the new data to the table.
-- *Base ID*: the ID of the beginner_course base. To get the base Base ID, go to [Airtable's API page](https://airtable.com/api) and click on the base you want to use. The Base ID will be listed in the introduction.
-- *Table*: orders
+- *Base ID:* the ID of the beginner_course base. To get the base Base ID, go to [Airtable's API page](https://airtable.com/api) and click on the base you want to use. The Base ID will be listed in the introduction.
+- *Table:* orders
 
 Now execute the Airtable node and you should get the following result:
 
-![Airatble node](./images/chapter-two/Airtable-node.png)
+<figure><img src="./images/chapter-two/Airtable-node.png" alt="Airtable node results" style="width:100%"><figcaption align = "center"><i>Airtable node results</i></figcaption></figure>
+
 
 All 30 data records will now appear in the orders table:
 
-![Orders table with new records](./images/chapter-two/Airtable-records.png)
+<figure><img src="./images/chapter-two/Airtable-records.png" alt="Imported records in the orders table" style="width:100%"><figcaption align = "center"><i>Imported records in the orders table</i></figcaption></figure>
 
-### Filtering orders
+### 3. Filtering orders
 
 The workflow created in the previous step inserts all collected data into Airtable. But remember that Nathan wants to insert only processing orders in the table and calculate only the price of booked orders.
 
@@ -169,10 +169,11 @@ In the **IF node** window, click on *Add Condition* > *string* and configure the
 - *Value 1*: Current Node > Input Data > JSON > orderStatus → `{{$json["orderStatus"]}}` <br>
 To select this value, click on the wheel icon “Add Expression” on the right side of the Value 1 field. An [expression](../../reference/glossary.md#Expression) is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.
 :::
-![Expression Editor in the IF node](./images/chapter-two/If-node-expression-editor.png)
 
-- *Operation*: equal
-- *Value 2*: processing
+<figure><img src="./images/chapter-two/If-node-expression-editor.png" alt="Expression Editor in the IF node" style="width:100%"><figcaption align = "center"><i>Expression Editor in the IF node</i></figcaption></figure>
+
+- *Operation:* equal
+- *Value 2:* processing
 
 :::warning ⚠️
 Make sure to select the correct data type (boolean, data & time, number, or string) of the referenced data in Add Condition.
@@ -180,13 +181,14 @@ Make sure to select the correct data type (boolean, data & time, number, or stri
 
 Now execute the IF node and have a look at the resulted data, which should look like this:
 
-![IF node](./images/chapter-two/If-node.png)
+<figure><img src="./images/chapter-two/If-node.png" alt="IF node" style="width:100%"><figcaption align = "center"><i>IF node</i></figcaption></figure>
 
 Next, we want to insert this data into Airtable. You already know how to do this from the previous chapter, where we inserted all data into the *orders* table.
 
 At this stage, your workflow would look like this:
 
-![Workflow with the IF node](./images/chapter-two/Workflow-with-If-node.png)
+
+<figure><img src="./images/chapter-two/Workflow-with-If-node.png" alt="Workflow with the IF node" style="width:100%"><figcaption align = "center"><i>Workflow with the IF node</i></figcaption></figure>
 
 But Nathan doesn’t need all the information about the processing orders in Airtable. Sure, he could insert all the five fields “just in case”, but this is not good practice. Inserting more data requires more computational power, the data transfer is slower / takes longer, and takes up more storage resources in your table.
 
@@ -194,7 +196,7 @@ In this particular case, 14 records with 5 features might not seem like a lot to
 
 Nathan’s interest in storing processing orders is to have an overview of what employee is responsible for each open order, identified by their id. This means that he needs only the records for employeeName and orderId in Airtable. You’ll learn how to do this in the next lesson.
 
-### Setting values for processing orders
+### 4. Setting values for processing orders
 The next step in Nathan’s workflow is to insert the *employeeName* and orderId of all *processing* orders into Airtable.
 
 For this, you need to use the [Set node](../../nodes/nodes-library/core-nodes/Set/README.md), which allows you to select and set the data you want to be transferred from one app/service to another. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
@@ -214,7 +216,7 @@ In your workflow, add a new **Set node** between the **IF node** and the **Airta
 
 After setting the two values, click on Execute Node and you should the following results:
 
-![Set node](./images/chapter-two/Set-node.png)
+<figure><img src="./images/chapter-two/Set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
 
 Next, we need to insert these values into Airtable. Go to your Airtable and add a new table called *processingOrders* with two columns named *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](#inserting-data-into-airtable).
 
@@ -222,11 +224,11 @@ Once that’s done, execute the **Airtable node** in the workflow and you should
 
 We are getting closer and closer to fulfilling Nathan’s workflow! At this stage, it looks like this:
 
-![Workflow with the Set node](./images/chapter-two/Workflow-with-set-node.png)
+<figure><img src="./images/chapter-two/Workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
 
 In the next lesson, we’ll continue on the false branch and calculate the value of booked orders.
 
-### Calculating booked orders
+### 5. Calculating booked orders
 
 The next step in Nathan’s workflow is to calculate two values from the booked orders:
 - The total number of booked orders
@@ -293,17 +295,14 @@ If you don’t use the correct data structure, you will get an error message: `E
 
 Now execute the node and you should see the following results:
 
-![Function node](./images/chapter-two/Function-node.png)
+<figure><img src="./images/chapter-two/Function-node.png" alt="Function node" style="width:100%"><figcaption align = "center"><i>Function node</i></figcaption></figure>
 
-### Notifying the team
+
+### 6. Notifying the team
 
 Now that you have a calculated summary of the booked orders, you need to notify Nathan’s team in their Discord channel. n8n has a Discord node that allows you to send messages.
 
 Of course, you can replace the **Discord node** with another communication app (e.g. Slack or Mattermost).
-
-::: tip
-📖 Discord is a regular node.
-:::
 
 In your workflow, add a **Discord node** connected to the **Function node**. In the **Discord node** window, configure the parameters:
 ::: v-pre
@@ -311,15 +310,15 @@ In your workflow, add a **Discord node** connected to the **Function node**. In 
 * _Text (Expression)_: This week we have {{$json["bookedOrders"]}} booked orders.
 :::
 
-![Discord node](./images/chapter-two/Discord-node.png)
+<figure><img src="./images/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>
 
 Now execute the Discord node and if all works well, you should get a message in Discord:
 
-![Discord output](./images/chapter-two/Discord-output.png)
+<figure><img src="./images/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
 
 Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.
 
-### Scheduling the workflow
+### 7. Scheduling the workflow
 
 The workflow you’ve built so far executes only when you click on _Execute Workflow_. But Nathan needs it to run automatically every Monday morning. You can do this with the **Cron node**, which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
@@ -328,12 +327,12 @@ The workflow you’ve built so far executes only when you click on _Execute Work
 :::
 
 In your workflow, replace the **Start node** with the **Cron node** and configure its parameters:
-* _Mode_: Every Week
-* _Hour_: 9
-* _Minute_: 0
-* _Weekday_: Monday
+* _Mode:_ Every Week
+* _Hour:_ 9
+* _Minute:_ 0
+* _Weekday:_ Monday
 
-![Cron node](./images/chapter-two/Cron-node.png)
+<figure><img src="./images/chapter-two/Cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
 
 That was it for the workflow - you've added and configured all necessary nodes! Now every time you click on Execute Workflow, all nodes will be executed, getting and calculating the sales data for Nathan's team. In the next lesson, you will learn how to activate your workflow, so that it runs automatically every week, and how to interpret the execution log.
 
@@ -343,7 +342,7 @@ Activating a workflow means that it will run automatically every time a trigger 
 
 To activate your workflow, toggle the Active button on the top right corner of the Editor UI. Nathan’s workflow will now be executed automatically every Monday at 9 am.
 
-![Activated workflow](./images/chapter-two/Activated-workflow.png)
+<figure><img src="./images/chapter-two/Activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
 
 ### Workflow Executions
 
@@ -351,36 +350,32 @@ An execution represents a completed run of a workflow, from the first to the las
 
 To see the execution log, click on the icon with three lines in the left panel, which will open the Workflow Executions window.
 
-![Workflow Execution List](./images/chapter-two/Execution-list.png)
-
+<figure><img src="./images/chapter-two/Execution-list.png" alt="Workflow Execution List" style="width:100%"><figcaption align = "center"><i>Workflow Execution List</i></figcaption></figure>
 
 In the Workflow Executions window, you can filter the displayed executions by workflow and by status (All, Error, Running, or Success).
 
 Below, you get a table with information about:
 
-
-
 * _Started At / ID:_ the date and time when the workflow started, followed by the ID of this workflow execution
-* _Name_: the name of the workflow
-* _Status_: the status of the workflow (Error, Running, or Success)
-* _Mode_: how the workflow was triggered (trigger or webhook)
-* _Running Time_: the duration it took the workflow to execute
+* _Name:_ the name of the workflow
+* _Status:_ the status of the workflow (Error, Running, or Success)
+* _Mode:_ how the workflow was triggered (trigger or webhook)
+* _Running Time:_ the duration it took the workflow to execute
 
 
 ### Workflow Settings
 
 If you need to customize your workflows and executions or overwrite some of the global default settings., you can do this in Workflow Settings. To access them, click on Workflow Settings under the Workflows section in the left panel.
 
-![Workflow Setting](./images/chapter-two/Workflow-setting.png)
-
+<figure><img src="./images/chapter-two/Workflow-setting.png" alt="Workflow Setting" style="width:100%"><figcaption align = "center"><i>Workflow Setting</i></figcaption></figure>
 
 In the Workflow Settings window, you can configure six settings:
 
-* [Error Workflow](../../reference/workflow.md#error-workflows): A workflow to run in case the execution of the current workflow fails.
-* Timezone: The timezone to use in the current workflow. If not set, the global Timezone (by default "New York") is used. This setting is particularly important for the Cron node, as you want to make sure that the workflow gets executed at the right time.
-* Save Data Error Execution: If the Execution data of the workflow should be saved when it fails.
-* Save Data Success Execution: If the Execution data of the workflow should be saved when it succeeds.
-* Save Manual Executions: If executions started from the Editor UI should be saved.
-* Save Execution Progress: If the execution data of each node should be saved. If Yes, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower.
+* _[Error Workflow](../../reference/workflow.md#error-workflows):_ A workflow to run in case the execution of the current workflow fails.
+* _Timezone:_ The timezone to use in the current workflow. If not set, the global Timezone (by default "New York") is used. This setting is particularly important for the Cron node, as you want to make sure that the workflow gets executed at the right time.
+* _Save Data Error Execution:_ If the Execution data of the workflow should be saved when it fails.
+* _Save Data Success Execution:_ If the Execution data of the workflow should be saved when it succeeds.
+* _Save Manual Executions:_ If executions started from the Editor UI should be saved.
+* _Save Execution Progress:_ If the execution data of each node should be saved. If Yes, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower.
 
 Now you’ve learned the most important concepts about workflows! In the next lesson, you’ll learn how you can save and share your workflows so that others can benefit from your automation ideas as well.

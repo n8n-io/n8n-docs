@@ -176,7 +176,7 @@ The *Table* view is the default. It displays the requested data in a table, wher
 
 <figure><img src="./images/chapter-one/Hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
-### Node executions
+## Node executions
 
 The **JSON** view displays the requested data in JSON format, where the keys are the attributes and the values are the individual records.
 
@@ -192,7 +192,7 @@ And one last thing: In the bottom right corner right under the node window, ther
 
 Now you can close the node window and return to the Editor UI view.
 
-### Node buttons
+## Node buttons
 
 Wait, something looks slightly different… Did you notice? On top of the **Start** node and the **Hacker News** node, there is a small green circle with a number inside. This shows that the nodes executed correctly. Yay!
 

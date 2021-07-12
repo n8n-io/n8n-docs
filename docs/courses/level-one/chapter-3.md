@@ -43,6 +43,6 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V or Cmd + V).
 7. Click on the **_Publish Workflow to Share_** button to share your workflow.
 
-![Share workflow](./images/chapter-three/Share-workflow.png)
+<figure><img src="./images/chapter-three/Share-workflow.png" alt="Share workflow" style="width:100%"><figcaption align = "center"><i>Share workflow</i></figcaption></figure>
 
 Now your workflow will be reviewed by our team and if all is well, it will appear on the n8n workflows page for everyone to see and use!

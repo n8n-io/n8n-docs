@@ -43,7 +43,7 @@ Trigger nodes can be app or core nodes.
 
 * **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](../../nodes/nodes-library/trigger-nodes/TelegramTrigger/README.md) can be used to trigger a workflow when a message is sent in a Telegram chat.
 
-![Telegram trigger](../images/Telegram_trigger.png)
+![Telegram trigger](../images/telegram_trigger.png)
 
 ## Node settings
 

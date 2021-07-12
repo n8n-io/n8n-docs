@@ -2,7 +2,7 @@
 
 The [Editor UI](../../reference/glossary.md#editor-ui) is the web interface used to create [workflows](./workflow.md). It is accessed through a web browser at a designated website address.
 
-![Editor](../images/Editor_UI.png)
+![Editor](../images/editor_ui.png)
 
 From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
 
@@ -12,7 +12,7 @@ The Editor UI sidebar menu contains the following sections and operations:
 
 Available only for n8n.cloud, navigate to the Dashboard of your n8n.cloud instance. Here you can view your executions and workflows counts, manage and upgrade your instance, and access support.
 
-![Admin Panel](../images/Admin_panel.png)
+![Admin Panel](../images/admin_panel.png)
 
 ## Workflows
 

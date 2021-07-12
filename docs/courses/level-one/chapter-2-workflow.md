@@ -1,47 +1,6 @@
-# Automating a (real-world) use case
+# Building Nathan's workflow
 
 [[toc]]
-
-## Nathan's story
-
-Meet Nathan 🙋. Nathan works as an Analytics Manager at EvilCorp. His job is to support the EvilCorp team with reporting and analytics. Being a true jack of all trades, he also handles several miscellaneous initiatives.
-
-Some of the things that Nathan does are very repetitive and mind-numbing. He wants to automate some of these so that he doesn’t burn out. As an **Automation Expert**, you are meeting with Nathan today to help him understand how he can offload some of his responsibilities to n8n.
-
-**You:** Nice to meet you, Nathan. Glad to be doing this! What’s a repetitive task that is error-prone and that you’d like to get off your plate first?
-
-**Nathan:** Thanks for coming in! The most annoying one’s gotta be the weekly sales reporting.
-
-I have to collect sales data from our legacy data warehouse, which manages data from the main business processes of an organisation, such as sales or production. Now, each sales order can have the status Processing or Booked. I have to calculate the sum of all the Booked orders and announce them in the company Discord every Monday. Then I have to create a spreadsheet of all the Processing sales, so that the Sales Managers can review them and check if they need to follow up with customers.
-
-This manual work is tough and requires high attention to detail, to make sure that all the numbers are right. Inevitably, sometimes I lose my focus and mistype a number or don’t get to do it on time. I’ve been criticized once by my manager for miscalculating the data.
-
-**You:** Oh no! Doesn’t the data warehouse have a way to export the data?
-
-**Nathan:** The data warehouse was written in-house ages ago. It doesn’t have a CSV export but they recently added a couple of API endpoints that expose this data, if that helps.
-
-**You:** Perfect! That’s a good start. If you have a generic API, we can add some custom code and a couple of services to make an automated workflow. This gig has n8n written all over it. Let’s get started!
-
-
-## Designing the workflow
-
-Now that we have an idea of what Nathan wants to automate, let’s enumerate the steps he needs to take to achieve this:
-
-1. Get the relevant data (order id, order status, order value, employee name) from the data warehouse
-2. Filter the orders by their status (processing or booked)
-3. Calculate the total value of all the booked orders
-4. Notify the team members about their individually assigned orders in the company’s Discord channel
-5. Insert the details about the processing orders in Airtable for follow-up
-6. Schedule this workflow to run every Monday morning
-
-Nathan’s workflow involves sending data from the company’s data warehouse to two external services: Discord and Airtable. In between, the data has to be wrangled with general functions (conditional filtering, calculation, scheduling).
-
-n8n provides integrations for all these steps, so Nathan’s workflow in n8n would look like this:
-
-<figure><img src="./images/chapter-two/Finished-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
-
-
-## Building the workflow
 
 First of all, let’s set up the scene for building Nathan’s workflow. Open your Editor UI and create a new workflow with one of the two possible commands:
 
@@ -50,7 +9,7 @@ First of all, let’s set up the scene for building Nathan’s workflow. Open yo
 
 Name this new workflow “Nathan’s workflow”.
 
-### 1. Getting data from the data warehouse
+## 1. Getting data from the data warehouse
 
 The first step we need to take is to get data from Evil Corp’s old data warehouse. In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan’s company. Nathan mentioned that it’s not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
@@ -113,7 +72,7 @@ This view should be familiar to you from the Hacker News mini-workflow. This is 
 
 **You 👩‍🔧**: Nice! In the next chapter, I’ll help you one step further and insert the received data into Airtable, as you need it.
 
-### 2. Inserting data into Airtable
+## 2. Inserting data into Airtable
 
 Before starting to manipulate data from Evil Corp’s data warehouse, it’s helpful to understand how data is structured and why moving it from one source to another is not always straightforward.
 
@@ -150,7 +109,7 @@ All 30 data records will now appear in the orders table:
 
 <figure><img src="./images/chapter-two/Airtable-records.png" alt="Imported records in the orders table" style="width:100%"><figcaption align = "center"><i>Imported records in the orders table</i></figcaption></figure>
 
-### 3. Filtering orders
+## 3. Filtering orders
 
 The workflow created in the previous step inserts all collected data into Airtable. But remember that Nathan wants to insert only processing orders in the table and calculate only the price of booked orders.
 
@@ -196,7 +155,7 @@ In this particular case, 14 records with 5 features might not seem like a lot to
 
 Nathan’s interest in storing processing orders is to have an overview of what employee is responsible for each open order, identified by their id. This means that he needs only the records for employeeName and orderId in Airtable. You’ll learn how to do this in the next lesson.
 
-### 4. Setting values for processing orders
+## 4. Setting values for processing orders
 The next step in Nathan’s workflow is to insert the *employeeName* and orderId of all *processing* orders into Airtable.
 
 For this, you need to use the [Set node](../../nodes/nodes-library/core-nodes/Set/README.md), which allows you to select and set the data you want to be transferred from one app/service to another. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
@@ -228,7 +187,7 @@ We are getting closer and closer to fulfilling Nathan’s workflow! At this stag
 
 In the next lesson, we’ll continue on the false branch and calculate the value of booked orders.
 
-### 5. Calculating booked orders
+## 5. Calculating booked orders
 
 The next step in Nathan’s workflow is to calculate two values from the booked orders:
 - The total number of booked orders
@@ -298,7 +257,7 @@ Now execute the node and you should see the following results:
 <figure><img src="./images/chapter-two/Function-node.png" alt="Function node" style="width:100%"><figcaption align = "center"><i>Function node</i></figcaption></figure>
 
 
-### 6. Notifying the team
+## 6. Notifying the team
 
 Now that you have a calculated summary of the booked orders, you need to notify Nathan’s team in their Discord channel. n8n has a Discord node that allows you to send messages.
 
@@ -318,7 +277,7 @@ Now execute the Discord node and if all works well, you should get a message in 
 
 Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.
 
-### 7. Scheduling the workflow
+## 7. Scheduling the workflow
 
 The workflow you’ve built so far executes only when you click on _Execute Workflow_. But Nathan needs it to run automatically every Monday morning. You can do this with the **Cron node**, which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
@@ -336,7 +295,7 @@ In your workflow, replace the **Start node** with the **Cron node** and configur
 
 That was it for the workflow - you've added and configured all necessary nodes! Now every time you click on Execute Workflow, all nodes will be executed, getting and calculating the sales data for Nathan's team. In the next lesson, you will learn how to activate your workflow, so that it runs automatically every week, and how to interpret the execution log.
 
-## Activating and examining the workflow
+## 8. Activating and examining the workflow
 
 Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all the newly created workflows are deactivated.
 
@@ -344,7 +303,7 @@ To activate your workflow, toggle the Active button on the top right corner of t
 
 <figure><img src="./images/chapter-two/Activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
 
-### Workflow Executions
+**Workflow Executions**
 
 An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is really useful for debugging your workflow, seeing at what stage it runs into issues.
 
@@ -363,7 +322,7 @@ Below, you get a table with information about:
 * _Running Time:_ the duration it took the workflow to execute
 
 
-### Workflow Settings
+**Workflow Settings**
 
 If you need to customize your workflows and executions or overwrite some of the global default settings., you can do this in Workflow Settings. To access them, click on Workflow Settings under the Workflows section in the left panel.
 

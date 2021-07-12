@@ -1,6 +1,6 @@
 # Node
 
-A [node](../../reference/glossary.md#node) is an entry point for retrieving data, a function to process data, or an exit for sending data. The data process performed by nodes can include filtering, recomposing, and changing data. 
+A [node](../../reference/glossary.md#node) is an entry point for retrieving data, a function to process data, or an exit for sending data. The data process performed by nodes can include filtering, recomposing, and changing data.
 
 There may be one or several nodes for your API, service, or app. By connecting multiple nodes, you can create simple and complex workflows. When you add a node to the Editor UI, the node is automatically activated and requires you to configure it (by adding credentials, selecting operations, writing expressions, etc.).
 
@@ -23,9 +23,9 @@ If an application you need does not have a dedicated Node yet, you can access th
 
 Regular nodes perform an action, like fetching data or creating an entry in a calendar. Regular nodes are named for the application they represent and are listed under Regular Nodes in the Editor UI.
 
-![Regular Nodes](../images/regular_nodes.png)
+![Regular Nodes](../images/Regular_nodes.png)
 
-### Example 
+### Example
 
 A [Google Sheets node](../../nodes/nodes-library/nodes/GoogleSheets/README.md) can be used to retrieve or write data to a Google Sheet.
 
@@ -33,9 +33,9 @@ A [Google Sheets node](../../nodes/nodes-library/nodes/GoogleSheets/README.md) c
 
 ## Trigger nodes
 
-[Trigger nodes](../../reference/glossary.md#trigger) start workflows and supply the initial data. 
+[Trigger nodes](../../reference/glossary.md#trigger) start workflows and supply the initial data.
 
-![Trigger_nodes](../images/trigger_nodes.png)
+![Trigger_nodes](../images/Trigger_nodes.png)
 
 Trigger nodes can be app or core nodes.
 
@@ -43,7 +43,7 @@ Trigger nodes can be app or core nodes.
 
 * **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](../../nodes/nodes-library/trigger-nodes/TelegramTrigger/README.md) can be used to trigger a workflow when a message is sent in a Telegram chat.
 
-![Trello_trigger](../images/telegram_trigger.png)
+![Trello_trigger](../images/Telegram_trigger.png)
 
 ## Node settings
 

@@ -2,7 +2,7 @@
 
 The [Editor UI](../../reference/glossary.md#editor-ui) is the web interface used to create [workflows](./workflow.md). It is accessed through a web browser at a designated website address.
 
-![Editor](../images/Editor_UI.png)
+![Editor](../images/editor_ui.png)
 
 From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
 

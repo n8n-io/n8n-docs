@@ -23,7 +23,7 @@ If an application you need does not have a dedicated Node yet, you can access th
 
 Regular nodes perform an action, like fetching data or creating an entry in a calendar. Regular nodes are named for the application they represent and are listed under Regular Nodes in the Editor UI.
 
-![Regular Nodes](../images/regular_nodes.png)
+![Regular Nodes](../images/Regular_nodes.png)
 
 ### Example 
 
@@ -35,7 +35,7 @@ A [Google Sheets node](../../nodes/nodes-library/nodes/GoogleSheets/README.md) c
 
 [Trigger nodes](../../reference/glossary.md#trigger) start workflows and supply the initial data. 
 
-![Trigger_nodes](../images/trigger_nodes.png)
+![Trigger_nodes](../images/Trigger_nodes.png)
 
 Trigger nodes can be app or core nodes.
 

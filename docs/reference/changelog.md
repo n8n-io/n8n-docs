@@ -2,6 +2,35 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.128.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.127.0...n8n@0.128.0) for this version.<br />
+**Release date:** 2021-07-11
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant"/>
+<Changelog node="n8n-nodes-base.stripe" title="Stripe"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Added Contact Segment resource."/>
+<Changelog node="n8n-nodes-base.telegram" title="Telegram:" text="Added Delete operation to the Message resource."/>
+
+### Core Functionality ⚙️
+- Performance improvement for loading of historical executions (> 3mil) when using Postgres.
+- Fixed error handling for unending workflows and display of "unknown" workflow status.
+- Fixed format of Workflow ID when downloading from UI Editor to enable compatibility with importing from CLI.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.microsoftSql" title="Microsoft SQL:" text="Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces."/>
+
+### Contributors 🙌
+[Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
+
+
+
 ## n8n@0.127.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
 **Release date:** 2021-07-04

@@ -294,3 +294,93 @@ If you don’t use the correct data structure, you will get an error message: `E
 Now execute the node and you should see the following results:
 
 ![Function node](./images/chapter-two/Function-node.png)
+
+### Notifying the team
+
+Now that you have a calculated summary of the booked orders, you need to notify Nathan’s team in their Discord channel. n8n has a Discord node that allows you to send messages.
+
+Of course, you can replace the **Discord node** with another communication app (e.g. Slack or Mattermost).
+
+::: tip
+📖 Discord is a regular node.
+:::
+
+In your workflow, add a **Discord node** connected to the **Function node**. In the **Discord node** window, configure the parameters:
+::: v-pre
+* _Webhook URL_: [https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F](https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F)
+* _Text (Expression)_: This week we have {{$json["bookedOrders"]}} booked orders.
+:::
+
+![Discord node](./images/chapter-two/Discord-node.png)
+
+Now execute the Discord node and if all works well, you should get a message in Discord:
+
+![Discord output](./images/chapter-two/Discord-output.png)
+
+Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.
+
+### Scheduling the workflow
+
+The workflow you’ve built so far executes only when you click on _Execute Workflow_. But Nathan needs it to run automatically every Monday morning. You can do this with the **Cron node**, which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
+
+::: tip
+📖 Cron is a trigger node.
+:::
+
+In your workflow, replace the **Start node** with the **Cron node** and configure its parameters:
+* _Mode_: Every Week
+* _Hour_: 9
+* _Minute_: 0
+* _Weekday_: Monday
+
+![Cron node](./images/chapter-two/Cron-node.png)
+
+That was it for the workflow - you've added and configured all necessary nodes! Now every time you click on Execute Workflow, all nodes will be executed, getting and calculating the sales data for Nathan's team. In the next lesson, you will learn how to activate your workflow, so that it runs automatically every week, and how to interpret the execution log.
+
+## Activating and examining the workflow
+
+Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all the newly created workflows are deactivated.
+
+To activate your workflow, toggle the Active button on the top right corner of the Editor UI. Nathan’s workflow will now be executed automatically every Monday at 9 am.
+
+![Activated workflow](./images/chapter-two/Activated-workflow.png)
+
+### Workflow Executions
+
+An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is really useful for debugging your workflow, seeing at what stage it runs into issues.
+
+To see the execution log, click on the icon with three lines in the left panel, which will open the Workflow Executions window.
+
+![Workflow Execution List](./images/chapter-two/Execution-list.png)
+
+
+In the Workflow Executions window, you can filter the displayed executions by workflow and by status (All, Error, Running, or Success).
+
+Below, you get a table with information about:
+
+
+
+* _Started At / ID:_ the date and time when the workflow started, followed by the ID of this workflow execution
+* _Name_: the name of the workflow
+* _Status_: the status of the workflow (Error, Running, or Success)
+* _Mode_: how the workflow was triggered (trigger or webhook)
+* _Running Time_: the duration it took the workflow to execute
+
+
+### Workflow Settings
+
+If you need to customize your workflows and executions or overwrite some of the global default settings., you can do this in Workflow Settings. To access them, click on Workflow Settings under the Workflows section in the left panel.
+
+![Workflow Setting](./images/chapter-two/Workflow-setting.png)
+
+
+In the Workflow Settings window, you can configure six settings:
+
+* [Error Workflow](../../reference/workflow.md#error-workflows): A workflow to run in case the execution of the current workflow fails.
+* Timezone: The timezone to use in the current workflow. If not set, the global Timezone (by default "New York") is used. This setting is particularly important for the Cron node, as you want to make sure that the workflow gets executed at the right time.
+* Save Data Error Execution: If the Execution data of the workflow should be saved when it fails.
+* Save Data Success Execution: If the Execution data of the workflow should be saved when it succeeds.
+* Save Manual Executions: If executions started from the Editor UI should be saved.
+* Save Execution Progress: If the execution data of each node should be saved. If Yes, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower.
+
+Now you’ve learned the most important concepts about workflows! In the next lesson, you’ll learn how you can save and share your workflows so that others can benefit from your automation ideas as well.

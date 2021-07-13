@@ -1,5 +1,7 @@
 # Exporting, importing, and sharing workflows
 
+> In this lesson, you will learn how to export and import workflows, as well as share your workflows on the n8n workflows page.
+
 [[toc]]
 
 ## Exporting and importing workflows
@@ -13,7 +15,7 @@ Note that the exported JSON file of your workflow will contain your credentials 
 You can export and import workflows in two ways:
 
 * From the Editor UI:
-    * Export: In the left panel, click on _Download _under the _Workflow_ section. This will download your current workflow as a JSON file on your computer.
+    * Export: In the left panel, click on _Download_ under the _Workflow_ section. This will download your current workflow as a JSON file on your computer.
     * Import: In the left pane, click on _Import from URL_ (to import a published workflow) or _Import from File_ (to import a workflow as a JSON file).
 * From the command line:
     * Export: See the [full list of commands ](https://docs.n8n.io/reference/start-workflows-via-cli.html#export-workflows-and-credentials)for exporting workflows or credentials.

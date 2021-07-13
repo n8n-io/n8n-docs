@@ -1,6 +1,6 @@
-# Mini-workflow
+# Building a mini-workflow
 
-Now it’s time to apply what you learned by building your first workflow!
+> In this lesson, you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
 
 A simple, yet useful automation is getting articles from Hacker News, so that you’re up to date with the tech world. More specifically, let’s say you want to get the latest 10 articles related to automation.
 
@@ -8,11 +8,11 @@ You can build a workflow for this use case in 4 steps:
 
 [[toc]]
 
-## 1. Add the *Hacker News* node
+## 1. Add the Hacker News node
 
 Open the nodes panel, search for the *Hacker News* node, and click on it to add it to the Editor UI. The *Hacker News node* will automatically be connected to the *Start node*.
 
-## 2. Configure the **Hacker News** node
+## 2. Configure the Hacker News node
 
 When you add a new node to the Editor UI, the node will be automatically activated and open a window with two tabs on the left side: ***Parameters*** and ***Settings***.
 
@@ -84,7 +84,6 @@ Now, click on the *Execute Node* button in the top right corner of the node wind
 To consolidate what you've learned so far, have a closer look at the *JSON view* and information about the node's execution, like you learned in the [previous lesson](./chapter-1-components.md#node-executions).
 
 ----
-
-Congratulations, you just built your first workflow! Now that you know the basic concepts and components of n8n, you can start adding more nodes to the canvas and create more powerful workflows.
-
-In the next chapter, you will be introduced to our friend Nathan, who works as an Analytics Manager at EvilCorp. His job is to crunch numbers from different sources and send reports to his team. As you might have guessed, his tasks involve a good deal of manual work that thankfully can be automated – that’s where he needs your help as an Automation Expert! You will build a more complex workflow for Nathan’s use case, helping him become more productive at work.
+> Congratulations, you just built your first workflow! In this lesson, you've learned how to use Regular nodes, configure their parameters and settings, save and execute your workflow.
+>
+> In the next lesson, you will be introduced to our friend Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.

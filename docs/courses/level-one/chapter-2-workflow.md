@@ -1,4 +1,4 @@
-# Building Nathan's workflow
+# Building the main workflow
 
 [[toc]]
 

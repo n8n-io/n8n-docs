@@ -1,4 +1,4 @@
-# Summary
+# Wrapping up
 
 Congratulations – you finished the n8n Course Level I! You were able to help Nathan build a business use case workflow, saving him hours of tedious work and making him more productive. You’ve come a long way throughout this course and learned a lot about workflow automation.
 

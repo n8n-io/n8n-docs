@@ -1,5 +1,7 @@
 # Navigating the Editor UI
 
+> In this lesson, you will learn to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things. Don’t worry if you don’t understand some of the concepts that are mentioned, we will explain them in detail as we build the workflow.
+
 [[toc]]
 
 ## Getting started
@@ -12,7 +14,7 @@ Once you have n8n installed or set up, open the Editor UI in a browser window, w
 
 <figure><img src="./images/chapter-one/Editor-UI.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
-Now that you have the Editor UI open, you'll learn how to navigate it. We will walk through the canvas and show you what each icon means and where to find things. Don’t worry if you don’t understand some of the concepts that are mentioned, we will explain them in detail as we build the workflow.
+Now that you have the Editor UI open, you'll learn how to navigate it.
 
 ## Editor UI settings
 
@@ -151,3 +153,9 @@ You can move the workflow canvas around in two ways:
 
 To move a workflow around the canvas, select all nodes (**Ctrl + A**), click on a node, and drag it at a point you want on the canvas.
 :::
+
+----
+## Summary
+In this lesson, you learned how to navigate the Editor UI, what the icons mean, how to access the left-side and node panels, how to add nodes to the canvas and interpret their execution results.
+
+In the next lesson, you will build a mini-workflow to put into practice what you've learned so far. 

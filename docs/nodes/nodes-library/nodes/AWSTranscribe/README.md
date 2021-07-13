@@ -56,7 +56,7 @@ This node will create a transcription job for the files that get returned by the
 1. Select the credentials that you entered in the previous node.
 2. Click on the gears icon next to the ***Job Name*** field and click on ***Add Expression***.
 3. Enter `{{$json["Key"].replace(/\s/g,'-')}}` in the ***Expression*** field. The code snippet fetches the name of the file and replaces the white-spaces with a hyphen (-).
-4. Click on the gears icon next to the ***Job Name*** field and click on ***Add Expression***.
+4. Click on the gears icon next to the ***Media File URI*** field and click on ***Add Expression***.
 5. Enter `s3://{{$node["AWS S3"].parameter["bucketName"]}}/{{$json["Key"]}}` in the ***Expression*** field.
 6. Toggle ***Detect Language*** to `true`.
 7. Click on ***Execute Node*** to run the node.

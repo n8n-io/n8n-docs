@@ -11,6 +11,7 @@ export default ({ router, siteData }) => {
 	// spring cleaning redirects
 	const latestRedirects = [
 		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation/index.html" },
+		{ path: "/getting-started/quickstart.html", redirect: "/getting-started/installation/index.html" },
 		{ path: "/getting-started/quickstart.html#sign-up-on-n8n-cloud", redirect: "/getting-started/installation/#n8n-cloud" },
 		{ path: "/getting-started/quickstart.html#give-it-a-spin-using-npx", redirect: "/getting-started/installation/#npm" },
 		{ path: "/getting-started/quickstart.html#install-with-npm", redirect: "/getting-started/installation/#npm" },

@@ -8,7 +8,7 @@ description: Learn how to use the Function Item node in n8n
 The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input.
 
 ::: tip 💡 Keep in mind
-Please note that the Function Item node is different from the [Function](../Function/README.md) node. Check out [this](../../../../reference/function-nodes.md) page to learn about the difference between the Function and Function Item nodes.
+Please note that the Function Item node is different from the [Function](../Function/README.md) node. Check out [this](../../../../getting-started/key-concepts.md#function) page to learn about the difference between the two.
 :::
 
 The Function Item node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.

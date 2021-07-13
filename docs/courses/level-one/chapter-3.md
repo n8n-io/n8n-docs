@@ -6,7 +6,7 @@
 
 Workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else or import a workflow from someone else.
 
-::: warning
+::: warning ⚠️ Sharing credentials
 Note that the exported JSON file of your workflow will contain your credentials as well. If you don’t want to share your credentials (recommended), delete them from the JSON file.
 :::
 
@@ -35,9 +35,12 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 
 4. In the **_Description_** field, add a screenshot of your workflow and write a description below it.
 	* The screenshot should capture the entire Editor UI.
-	* The description should list all the nodes used in the workflow and the function they serve. You should also mention any prerequisites for building the workflow.
+	* The description should list all the nodes used in the workflow and the function they serve. You should also mention any prerequisites for building the workflow.  
 
-[This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
+    ::: tip 💡 Workflow description template
+    [This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
+    :::
+
 
 5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
 6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V or Cmd + V).

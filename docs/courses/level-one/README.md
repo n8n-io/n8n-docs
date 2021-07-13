@@ -2,12 +2,6 @@
 
 Welcome to the n8n Certification Course Level I!
 
-If you’ve found your way here, it means you’re about to get serious about your interest in automation. Maybe you got tired of manually entering data into the same spreadsheet every day, of clicking through a series of tabs and buttons to get that one piece of information you need, of managing tens of different tools and systems.
-
-Whatever the reason, one thing is clear: you shouldn’t spend precious time doing things that don’t spark joy and don’t contribute to your growth, in both your personal and professional life. 
-
-These tasks should and can be automated! And you don't even need advanced technical knowledge or excellent coding skills to do this: with no-code tools like n8n, automation feels like childsplay.
-
 ## Is this course right for me?
 This course teaches you how to automate processes with no code using n8n and jumpstart your qualification as an automation expert.
 
@@ -19,10 +13,6 @@ This course is for you if you:
 
 ## What will I learn?
 
-You will build two workflows:
-- A two-node workflow to get articles from Hacker News
-- A seven-node workflow to help our friend Nathan get records from a data warehouse, filter them, make calculations, and notify team members about the results
-
 By the end of this course, you will know:
 - How to set up n8n and navigate the Editor UI
 - How data is structured
@@ -31,14 +21,19 @@ By the end of this course, you will know:
 - How to schedule and control workflows
 - How to import, download, and share workflows with others
 
+You will build two workflows:
+- A two-node workflow to get articles from Hacker News
+- A seven-node workflow to help our friend Nathan get records from a data warehouse, filter them, make calculations, and notify team members about the results
+
 ## How will I learn?
 
-We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice by building workflows step by step. You will build two workflows.
+We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice by building workflows step by step.
+
 Throughout the course, we will use some symbols to highlight information:<br/>
 
-⚠️ Exceptions, possible errors, keep in mind <br/>
-💡 Tips, hacks<br/>
-📖 Further reading, documentation<br/>
+⚠️ warning, exception<br/>
+💡 tip, shortcut<br/>
+📖 definition, further reading<br/>
 
 ## What do I need to get started?
 
@@ -54,4 +49,4 @@ Completing the course should take around two hours. You do not have to complete 
 
 If you want to earn a certificate to show off your skills to the world, you need to take and pass a quiz at the end of the course.
 
-### [Let’s get started!](../level-one/chapter-1.md)
+### [Let’s get started!](../level-one/chapter-1-components.md)

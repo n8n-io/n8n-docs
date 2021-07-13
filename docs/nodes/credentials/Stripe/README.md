@@ -7,6 +7,7 @@ description: Learn to configure credentials for the Stripe node in n8n
 
 You can use these credentials to authenticate the following nodes with Stripe.
 - [Stripe Trigger](../../nodes-library/trigger-nodes/StripeTrigger/README.md)
+- [Stripe](../../nodes-library/nodes/Stripe/README.md)
 
 ## Prerequisites
 

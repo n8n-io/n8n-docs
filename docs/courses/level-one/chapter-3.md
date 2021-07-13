@@ -1,53 +1,19 @@
-# Exporting, importing, and sharing workflows
+# Automating a (real-world) use case
 
-> In this lesson, you will learn how to export and import workflows, as well as share your workflows on the n8n workflows page.
+Meet Nathan 🙋. Nathan works as an Analytics Manager at EvilCorp. His job is to support the EvilCorp team with reporting and analytics. Being a true jack of all trades, he also handles several miscellaneous initiatives.
 
-[[toc]]
+Some of the things that Nathan does are very repetitive and mind-numbing. He wants to automate some of these so that he doesn’t burn out. As an **Automation Expert**, you are meeting with Nathan today to help him understand how he can offload some of his responsibilities to n8n.
 
-## Exporting and importing workflows
+**You 👩‍🔧:** Nice to meet you, Nathan. Glad to be doing this! What’s a repetitive task that is error-prone and that you’d like to get off your plate first?
 
-Workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else or import a workflow from someone else.
+**Nathan 🙋:** Thanks for coming in! The most annoying one’s gotta be the weekly sales reporting.
 
-::: warning ⚠️ Sharing credentials
-Note that the exported JSON file of your workflow will contain your credentials as well. If you don’t want to share your credentials (recommended), delete them from the JSON file.
-:::
+I have to collect sales data from our legacy data warehouse, which manages data from the main business processes of an organisation, such as sales or production. Now, each sales order can have the status Processing or Booked. I have to calculate the sum of all the Booked orders and announce them in the company Discord every Monday. Then I have to create a spreadsheet of all the Processing sales, so that the Sales Managers can review them and check if they need to follow up with customers.
 
-You can export and import workflows in two ways:
+This manual work is tough and requires high attention to detail, to make sure that all the numbers are right. Inevitably, sometimes I lose my focus and mistype a number or don’t get to do it on time. I’ve been criticized once by my manager for miscalculating the data.
 
-* From the Editor UI:
-    * Export: In the left panel, click on _Download_ under the _Workflow_ section. This will download your current workflow as a JSON file on your computer.
-    * Import: In the left pane, click on _Import from URL_ (to import a published workflow) or _Import from File_ (to import a workflow as a JSON file).
-* From the command line:
-    * Export: See the [full list of commands ](https://docs.n8n.io/reference/start-workflows-via-cli.html#export-workflows-and-credentials)for exporting workflows or credentials.
-    * Import: See the [full list of commands ](https://docs.n8n.io/reference/start-workflows-via-cli.html#import-workflows-and-credentials)for importing workflows or credentials.
+**You 👩‍🔧:** Oh no! Doesn’t the data warehouse have a way to export the data?
 
+**Nathan 🙋:** The data warehouse was written in-house ages ago. It doesn’t have a CSV export but they recently added a couple of API endpoints that expose this data, if that helps.
 
-## Sharing workflows
-
-We love to see what users build with n8n and discover inspiring workflows, while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows), you can find hundreds of workflows contributed by our team or users. Feel free to share your workflows too!
-
-Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan’s workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
-
-To share a workflow, follow these steps:
-
-1. Sign in to[ n8n.io](https://n8n.io/login)
-2. Click on the **_+ Share New Workflow_** button.
-3. Enter the name of your workflow in the **_Name_** field.
-The name should be descriptive for the purpose of the workflow and easy for other users to understand.
-
-4. In the **_Description_** field, add a screenshot of your workflow and write a description below it.
-	* The screenshot should capture the entire Editor UI.
-	* The description should list all the nodes used in the workflow and the function they serve. You should also mention any prerequisites for building the workflow.  
-
-    ::: tip 💡 Workflow description template
-    [This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
-    :::
-
-
-5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
-6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V or Cmd + V).
-7. Click on the **_Publish Workflow to Share_** button to share your workflow.
-
-<figure><img src="./images/chapter-three/Share-workflow.png" alt="Share workflow" style="width:100%"><figcaption align = "center"><i>Share workflow</i></figcaption></figure>
-
-Now your workflow will be reviewed by our team and if all is well, it will appear on the n8n workflows page for everyone to see and use!
+**You 👩‍🔧:** Perfect! That’s a good start. If you have a generic API, we can add some custom code and a couple of services to make an automated workflow. This gig has n8n written all over it. Let’s get started!

@@ -10,7 +10,7 @@ In your workflow, replace the *Start node* with the *Cron node* and configure it
 * _Minute:_ 0
 * _Weekday:_ Monday
 
-<figure><img src="./images/chapter-two/Cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
+<figure><img src="../images/chapter-two/Cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
 
 ----
 > **You 👩‍🔧**: That was it for the workflow! I've added and configured all necessary nodes. Now every time you click on Execute Workflow, all nodes will be executed: getting, filtering, calculating, and transferring the sales data.

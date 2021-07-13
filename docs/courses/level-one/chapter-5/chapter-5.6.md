@@ -14,11 +14,11 @@ In your workflow, add a *Discord node* connected to the *Function node*. In the 
 - *Text (Expression):* This week we have {{$json["bookedOrders"]}} booked orders.
 :::
 
-<figure><img src="./images/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>
+<figure><img src="../images/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>
 
 Now execute the *Discord node* and if all works well, you should get a message in Discord:
 
-<figure><img src="./images/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
+<figure><img src="../images/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
 
 ----
 Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.

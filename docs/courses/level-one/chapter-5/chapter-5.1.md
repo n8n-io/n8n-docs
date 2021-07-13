@@ -9,7 +9,7 @@ First of all, let’s set up the scene for building Nathan’s workflow. Open yo
 
 Name this new workflow “Nathan’s workflow”.
 
-The first step we need to take is to get data from Evil Corp’s old data warehouse. 
+The first step we need to take is to get data from Evil Corp’s old data warehouse.
 
 In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan’s company. Nathan mentioned that it’s not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
@@ -21,14 +21,14 @@ The *HTTP Request node* is one of the most versatile nodes, allowing you to make
 
 Now, in your Editor UI, add an *HTTP Request node*, like you learned in the [lesson *Adding nodes*](./chapter-1-components.md#adding-nodes). The node window will open, where you need to configure some parameters.
 
-<figure><img src="./images/chapter-two/HTTP-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
+<figure><img src="../images/chapter-two/HTTP-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
 
 In the left panel, select:
 
 - *Authentication:* Header Auth
 - *URL:* https://internal.users.n8n.cloud/webhook-test/custom-erp
-- *Options > Add Option > Split Into Items:* toggle to true.  
+- *Options > Add Option > Split Into Items:* toggle to true.
 This option will output each element of an array as its own item.
 - *Headers > Add Header:*
   - *Name:* email
@@ -42,22 +42,22 @@ Credentials are unique pieces of information that identify a user or a service a
 
 Go to the top parameter *Credentials* and click on the pencil icon on the right of the field. This will open the Credentials window, where you need to add information to three fields:
 
-- *Credentials Name:* beginner_course  
+- *Credentials Name:* beginner_course
 You can name your credentials however you want. It’s good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
 - *Name:* `api_key`
 - *Value:* `"j[vKYdY68H(:WFb`
 
 Your *Credentials* window should look like this:
 
-<figure><img src="./images/chapter-two/HTTP-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
+<figure><img src="../images/chapter-two/HTTP-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
 
 Now click the *Save* button in the bottom right corner of the window.
 
 In the *HTTP Request node* window, click the *Execute Node* button. The result of the HTTP request should look like this:
 
-<figure><img src="./images/chapter-two/HTTP-Request-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
+<figure><img src="../images/chapter-two/HTTP-Request-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
 
-This view should be familiar to you from the [Hacker News mini-workflow](./chapter-1-miniworkflow.md). This is the data from Nathan’s data warehouse that he needs to work with. His data set includes sales information of 30 customers with 5 features:
+This view should be familiar to you from the [Hacker News mini-workflow](../chapter-2.md). This is the data from Nathan’s data warehouse that he needs to work with. His data set includes sales information of 30 customers with 5 features:
 
 - *orderID:* the unique id of each order.
 - *customerID:* the unique id of each customer.

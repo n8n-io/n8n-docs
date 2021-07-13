@@ -185,18 +185,38 @@ module.exports = {
 				{
 					title: '🎓 Level 1',
 					path: '/courses/level-one/',
-					sidebarDepth: 3,
-					children: getChildrenFiles('courses/level-one', 'README.md'),
-					// children: [
-					// 	{
-					// 		title: 'Navigating the Editor UI',
-					// 		path: 'chapter-one.md',
-					// 	},
-					// 	{
-					// 		title: 'Automating a (real-world) use case',
-					// 		path: 'chapter-two.md',
-					// 	},
-					// ],
+					sidebarDepth: 1,
+					children: [
+						{
+							title: 'Navigating the Editor UI',
+							path: '/courses/level-one/chapter-1.md',
+						},
+						{
+							title: 'Building a mini-workflow',
+							path: '/courses/level-one/chapter-2.md',
+						},
+						{
+							title: 'Automating a (real-world) use case',
+							path: '/courses/level-one/chapter-3.md',
+						},
+						{
+							title: 'Designing the workflow',
+							path: '/courses/level-one/chapter-4.md',
+						},
+						{
+							title: 'Building the workflow',
+							sidebarDepth: 1,
+							children: getChildrenFiles('courses/level-one/chapter-5'),
+						},
+						{
+							title: 'Exporting, importing, and sharing workflows',
+							path: '/courses/level-one/chapter-6.md',
+						},
+						{
+							title: 'Wrapping up',
+							path: '/courses/level-one/chapter-7.md',
+						},
+					],
 				},
 			],
 			'/reference/': [

@@ -31,7 +31,9 @@ export default ({ router, siteData }) => {
 	const currentPath = window.location.pathname + (window.location.hash ? window.location.hash : '');
 	const redirectUrl = latestRedirects[currentPath];
 	if (redirectUrl) {
-		window.location.href = `${window.location.origin}${redirectUrl}`;
+		setTimeout(() => {
+			window.location.href = `${window.location.origin}${redirectUrl}`;
+		}, 250);
 		return;
 	}
 

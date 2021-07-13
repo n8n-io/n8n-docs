@@ -9,25 +9,31 @@ export default ({ router, siteData }) => {
 	// Redirects users which use links of old documentation to pages of new documentation
 
 	// spring cleaning redirects
-	const latestRedirects = [
-		{ path: "/getting-started/quickstart", redirect: "/getting-started/installation/index.html" },
-		{ path: "/getting-started/quickstart.html", redirect: "/getting-started/installation/index.html" },
-		{ path: "/getting-started/quickstart.html#sign-up-on-n8n-cloud", redirect: "/getting-started/installation/#n8n-cloud" },
-		{ path: "/getting-started/quickstart.html#give-it-a-spin-using-npx", redirect: "/getting-started/installation/#npm" },
-		{ path: "/getting-started/quickstart.html#install-with-npm", redirect: "/getting-started/installation/#npm" },
-		{ path: "/getting-started/quickstart.html#run-with-docker", redirect: "/getting-started/installation/#docker" },
-		{ path: "/getting-started/quickstart.html#post-installation-starting-n8n-with-tunnel", redirect: "/getting-started/installation/#n8n-with-tunnel" },
-		{ path: "/reference/configuration.html", redirect: "/getting-started/installation/advanced/configuration.html" },
-		{ path: "/reference/scaling-n8n.html", redirect: "/getting-started/installation/advanced/scaling-n8n.html" },
-		{ path: "/reference/server-setup.html", redirect: "/getting-started/installation/advanced/server-setup.html" },
-		{ path: "/reference/security.html", redirect: "/getting-started/key-concepts.html#security" },
-		{ path: "/reference/data/data-structure.html", redirect: "/getting-started/key-concepts.html#data-structure" },
-		{ path: "/reference/workflow.html#data-flow", redirect: "/getting-started/key-concepts.html#data-flow" },
-		{ path: "/reference/workflow.html#error-workflows", redirect: "/getting-started/key-concepts.html#error-workflow" },
-		{ path: "/reference/workflow.html", redirect: "/getting-started/key-components/workflow.html" },
-	];
+	const latestRedirects = {
+		"/getting-started/quickstart": "/getting-started/installation/index.html",
+		"/getting-started/quickstart.html": "/getting-started/installation/index.html",
+		"/getting-started/quickstart.html#give-it-a-spin-using-npx": "/getting-started/installation/#npm",
+		"/getting-started/quickstart.html#install-with-npm": "/getting-started/installation/#npm",
+		"/getting-started/quickstart.html#post-installation-starting-n8n-with-tunnel": "/getting-started/installation/#n8n-with-tunnel",
+		"/getting-started/quickstart.html#run-with-docker": "/getting-started/installation/#docker",
+		"/getting-started/quickstart.html#sign-up-on-n8n-cloud": "/getting-started/installation/#n8n-cloud",
+		"/reference/configuration.html": "/getting-started/installation/advanced/configuration.html",
+		"/reference/data/data-structure.html": "/getting-started/key-concepts.html#data-structure",
+		"/reference/scaling-n8n.html": "/getting-started/installation/advanced/scaling-n8n.html",
+		"/reference/security.html": "/getting-started/key-concepts.html#security",
+		"/reference/server-setup.html": "/getting-started/installation/advanced/server-setup.html",
+		"/reference/workflow.html": "/getting-started/key-components/workflow.html",
+		"/reference/workflow.html#data-flow": "/getting-started/key-concepts.html#data-flow",
+		"/reference/workflow.html#error-workflows": "/getting-started/key-concepts.html#error-workflow",
+		"/reference/workflow.html": "/getting-started/key-components/workflow.html",
+	};
 
-	latestRedirects.forEach(redirect => router.addRoute(redirect));
+	const currentPath = window.location.pathname + (window.location.hash ? window.location.hash : '');
+	const redirectUrl = latestRedirects[currentPath];
+	if (redirectUrl) {
+		window.location.href = `${window.location.origin}${redirectUrl}`;
+		return;
+	}
 
 	// redirect paths for legacy Docusaurus hash URLs
 	const hashRedirects = {

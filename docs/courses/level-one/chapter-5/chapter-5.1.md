@@ -27,7 +27,7 @@ Now, in your Editor UI, add an *HTTP Request node*, like you learned in the [les
 In the left panel, select:
 
 - *Authentication:* Header Auth
-- *URL:* https://internal.users.n8n.cloud/webhook-test/custom-erp
+- *URL:* https://internal.users.n8n.cloud/webhook/custom-erp
 - *Options > Add Option > Split Into Items:* toggle to true.
 This option will output each element of an array as its own item.
 - *Headers > Add Header:*

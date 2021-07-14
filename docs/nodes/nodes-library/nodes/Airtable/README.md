@@ -11,12 +11,110 @@ description: Learn how to use the Airtable node in n8n
 You can find authentication information for this node [here](../../../credentials/Airtable/README.md).
 :::
 
-## Basic Operations
+## Operations
 
 <Resource node="n8n-nodes-base.airtable" />
 
+## Parameters
 
-## Example Usage
+<table>
+<thead>
+  <tr>
+    <th>Operation</th>
+    <th>Field</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Append</td>
+    <td>Base ID</td>
+    <td>The ID of the Airtable base to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Table</td>
+    <td>The name of the table to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Add All Fields</td>
+    <td>If enabled, all fields are sent to Airtable. If disabled, you must manually input which fields to send using the Add Field button.</td>
+  </tr>
+  <tr>
+    <td>Delete</td>
+    <td>Base ID</td>
+    <td>The ID of the Airtable base to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Table</td>
+    <td>The name of the table to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ID</td>
+    <td>The ID of the record to delete.</td>
+  </tr>
+  <tr>
+    <td>List</td>
+    <td>Base ID</td>
+    <td>The ID of the Airtable base to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Table</td>
+    <td>The name of the table to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Return All</td>
+    <td>If enabled, all results are returned. If disabled, you can manually enter the limit.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Download Attachment</td>
+    <td>If enabled, all fields provided in Download Fields are downloaded. Multiple values can be provided separated by a comma without spaces. For example: <code>Field 1,Field 2</code>.</td>
+  </tr>
+  <tr>
+    <td>Read</td>
+    <td>Base ID</td>
+    <td>The ID of the Airtable base to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Table</td>
+    <td>The name of the table to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ID</td>
+    <td>The ID of the record to delete.</td>
+  </tr>
+  <tr>
+    <td>Update</td>
+    <td>Base ID</td>
+    <td>The ID of the Airtable base to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Table</td>
+    <td>The name of the table to access.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ID</td>
+    <td>The ID of the record to delete.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Update All Fields</td>
+    <td>If enabled, all fields are sent to Airtable. If disabled, you must manually input which fields to send using the Add Field button.</td>
+  </tr>
+</tbody>
+</table>
+
+## Example
 
 This workflow allows you to insert and update data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/818) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](../../core-nodes/Start/README.md)

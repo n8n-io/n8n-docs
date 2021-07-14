@@ -1,6 +1,6 @@
-# Exporting, importing, and sharing workflows
+# Exporting, Importing, and Sharing Workflows
 
-In this chapter, you will learn how to export and import workflows, as well as share your workflows on the n8n workflows page.
+In this chapter you will learn how to export and import workflows, as well as share your workflows on the [n8n workflows](https://n8n.io/workflows) page.
 
 [[toc]]
 
@@ -21,10 +21,9 @@ You can export and import workflows in two ways:
     * Export: See the [full list of commands ](https://docs.n8n.io/reference/start-workflows-via-cli.html#export-workflows-and-credentials)for exporting workflows or credentials.
     * Import: See the [full list of commands ](https://docs.n8n.io/reference/start-workflows-via-cli.html#import-workflows-and-credentials)for importing workflows or credentials.
 
-
 ## Sharing workflows
 
-We love to see what users build with n8n and discover inspiring workflows, while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows), you can find hundreds of workflows contributed by our team or users. Feel free to share your workflows too!
+We love to see what users build with n8n and discover inspiring workflows while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
 
 Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan’s workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
 
@@ -42,7 +41,6 @@ The name should be descriptive for the purpose of the workflow and easy for othe
     ::: tip 💡 Workflow description template
     [This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
     :::
-
 
 5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
 6. In the **_Workflow Code_** field, delete the existing code and paste your workflow in it (Ctrl + V or Cmd + V).

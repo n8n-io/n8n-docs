@@ -1,16 +1,16 @@
-# 4. Setting values for processing orders
+# 4. Setting Values for Processing Orders
 
-In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the *Set node*.
+In this step of the workflow you will learn how to select and set data before transferring it to Airtable using the *Set* node.
 
-The next step in Nathan’s workflow is to insert the *employeeName* and orderId of all *processing* orders into Airtable.
+The next step in Nathan’s workflow is to insert the *employeeName* and *orderId* of all *processing* orders into Airtable.
 
-For this, you need to use the [***Set node***](../../../nodes/nodes-library/core-nodes/Set/README.md), which allows you to select and set the data you want to be transferred from one app/service to another.
+For this, you need to use the [**Set node**](../../../nodes/nodes-library/core-nodes/Set/README.md), which allows you to select and set the data you want to be transferred from one app/service to another.
 
 ::: tip 📖 Set node
-The *Set node* can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
+The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
 :::
 
-In your workflow, add a new *Set node* between the *IF node* and the *Airtable node*. In the Set node window, you need to add two values, similarly to the *IF node*. Select:
+In your workflow, add a new *Set* node between the *IF* node and the *Airtable* node. In the Set node window you need to add two values, similar to the *IF* node:
 
 ::: v-pre
 - *Add Value > Number:*
@@ -23,13 +23,13 @@ In your workflow, add a new *Set node* between the *IF node* and the *Airtable n
     *Current Node > Input Data > JSON > orderID*
 :::
 
-After setting the two values, click on *Execute Node* and you should the following results:
+After setting the two values click on *Execute Node* and you should see the following results:
 
 <figure><img src="../images/chapter-two/Set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
 
-Next, we need to insert these values into Airtable. Go to your Airtable and add a new table called *processingOrders* with two columns named *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](#inserting-data-into-airtable).
+Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called *processingOrders* with two columns, *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](#inserting-data-into-airtable).
 
-Once that’s done, execute the *Airtable node* in the workflow and you should see the records inserted in the table.
+Once that’s done, execute the *Airtable* node in the workflow and you should see the records inserted in the table.
 
 At this stage, it looks like this:
 

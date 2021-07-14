@@ -1,8 +1,8 @@
-# Building a mini-workflow
+# Building a Mini-workflow
 
-In this lesson, you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
+In this lesson you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
 
-A simple, yet useful automation is getting articles from Hacker News, so that you’re up to date with the tech world. More specifically, let’s say you want to get the latest 10 articles related to automation.
+A simple, yet useful, automation is getting articles from Hacker News so that you’re up to date with the tech world. More specifically, let’s say you want to get the latest 10 articles related to automation.
 
 You can build a workflow for this use case in 4 steps:
 
@@ -20,7 +20,7 @@ Open the nodes panel, search for the *Hacker News* node, and click on it to add 
 When you add a new node to the Editor UI, the node will be automatically activated and open a window with two tabs on the left side: ***Parameters*** and ***Settings***.
 
 ::: tip 📖 Parameters vs Settings
-*Parameters* are different for each node, depending on its functionality. *Settings* are largely the same for all nodes.
+*Parameters* are different for each node, depending on its functionality. *Settings* are the same for all nodes.
 :::
 
 ### Parameters
@@ -44,11 +44,11 @@ The configuration of the parameters for the *Hacker News node* should now look l
 
 ### Settings
 
-The *Settings* section includes several options for node design and executions. In this case, we’ll configure only the first two settings, which are about the node’s appearance in the Editor UI. In the *Hacker News node* settings, edit:
+The *Settings* section includes several options for node design and executions. In this case, we’ll configure only the first two settings, which set the node’s appearance in the Editor UI. In the *Hacker News node* settings, edit:
 
 - *Notes:* Get the 10 latest articles
 ::: tip 💡 Node notes
-It is often helpful, especially for complex workflows or if you share them with other users, to add a short description in the node about what it does.
+It is often helpful, especially for complex or shared workflows, to add a short description in the node about what it does.
 :::
 - *Display note in flow?:* toggle to true<br/>
 This option will display the description note under the node in the Editor UI.
@@ -60,7 +60,7 @@ The configuration of the settings for the *Hacker News node* looks like this:
 
 ::: tip 💡 Renaming a node
 You can rename the node with a name that’s more descriptive for your use case. There are two ways to do this:
-- Double-click on the node you want to rename, which will open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click on the ✔ symbol to save the node under the new name.
+- Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click on the ✔ symbol to save the node under the new name.
 
 <figure><img src="./images/chapter-one/Renaming-node.gif" alt="Renaming a node from the window" style="width:100%"><figcaption align = "center"><i>Renaming a node from the window</i></figcaption></figure>
 
@@ -80,18 +80,17 @@ There are two ways in which you can save a workflow:
 
 ## 4. Execute the node
 
-Now, click on the *Execute Node* button in the top right corner of the node window. You should see 10 results in *Table* view.
+Click on the *Execute Node* button in the top right corner of the node window. You should see 10 results in *Table* view.
 
 <figure><img src="./images/chapter-one/Hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
-
 
 ## Node executions
 
 ::: tip 📖 Node execution
-A node execution represents a run of that node, to retrieve the specified data.
+A node execution represents a run of that node to retrieve the specified data.
 :::
 
-If a node executed successfully, a small green circle with a number inside will appear on top of the node.
+If a node executed successfully a small green circle with a number inside will appear on top of the node.
 
 <figure><img src="./images/chapter-one/Hacker-news-success.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
 
@@ -109,10 +108,10 @@ The node window displays more information about the node execution:
 This field displays the number of items (records) that are returned by the node request. In our case, it’s expected to be 10, since this is the limit we set in the node. But if you don’t set a limit, it’s useful to see how many records are actually returned.
 - Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you’ll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
-- In the bottom right corner right under the node window, there is a reference link to the node’s **documentation**. Check it out if you ever run into troubles or are not sure how to configure the node’s parameters.
+- In the bottom right corner right under the node window, there is a reference link to the node’s **documentation**. Check it out if you run into trouble or are not sure how to configure the node’s parameters.
 
 ## Summary
 
-Congratulations, you just built your first workflow! In this lesson, you've learned how to use Regular nodes, configure their parameters and settings, save and execute your workflow.
+Congratulations, you just built your first workflow! In this lesson, you learned how to use Regular nodes, configure their parameters and settings, and save and execute your workflow.
 
-In the next lesson, you will be introduced to your client Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.
+In the next lesson you will be introduced to your client, Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.

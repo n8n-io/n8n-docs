@@ -3,17 +3,18 @@
 Welcome to the n8n Certification Course Level I!
 
 ## Is this course right for me?
-This course teaches you how to automate processes with no code using n8n and jumpstart your qualification as an automation expert.
+
+This course teaches you how to automate processes with no code using n8n and is meant to jumpstart your qualification as an automation expert.
 
 This course is for you if you:
-- want to automate things in your personal life
-- are looking for quick ways to automate common business processes
-- plan to become an n8n partner
-
+- Want to automate things in your personal life
+- Are looking for quick ways to automate common business processes
+- Plan to become an n8n partner
 
 ## What will I learn?
 
 By the end of this course, you will know:
+
 - How to set up n8n and navigate the Editor UI
 - How data is structured in n8n
 - How to configure different node parameters and add credentials
@@ -22,12 +23,13 @@ By the end of this course, you will know:
 - How to import, download, and share workflows with others
 
 You will build two workflows:
+
 - A two-node workflow to get articles from Hacker News
 - A seven-node workflow to help your client get records from a data warehouse, filter them, make calculations, and notify team members about the results
 
 ## How will I learn?
 
-We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice by building workflows step by step.
+We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice of building workflows step by step.
 
 Throughout the course, we will use some symbols to highlight information:<br/>
 

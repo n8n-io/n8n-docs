@@ -1,15 +1,14 @@
-# 6. Notifying the team
+# 6. Notifying the Team
 
-In this step of the workflow, you will learn how to send messages to a Discord channel using the *Discord node*.
+In this step of the workflow you will learn how to send messages to a Discord channel using the *Discord* node.
 
-
-Now that you have a calculated summary of the booked orders, you need to notify Nathan’s team in their Discord channel. n8n has a ***Discord node*** that allows you to send messages.
+Now that you have a calculated summary of the booked orders you need to notify Nathan’s team in their Discord channel. n8n has a **Discord node** that allows you to send messages.
 
 ::: tip 💡 Communication nodes
-You can replace the *Discord node* with another communication app. n8n also has nodes for [*Slack*](https://docs.n8n.io/nodes/n8n-nodes-base.slack/) and [*Mattermost*](https://docs.n8n.io/nodes/n8n-nodes-base.mattermost/).
+You can replace the *Discord* node with another communication app. n8n also has nodes for [*Slack*](https://docs.n8n.io/nodes/n8n-nodes-base.slack/) and [*Mattermost*](https://docs.n8n.io/nodes/n8n-nodes-base.mattermost/).
 :::
 
-In your workflow, add a *Discord node* connected to the *Function node*. In the *Discord node* window, configure the parameters:
+In your workflow, add a *Discord* node connected to the *Function* node. In the *Discord* node window, configure the parameters:
 ::: v-pre
 - *Webhook URL:* [https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F](https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F)
 - *Text (Expression):* This week we have {{$json["bookedOrders"]}} booked orders.
@@ -17,12 +16,9 @@ In your workflow, add a *Discord node* connected to the *Function node*. In the 
 
 <figure><img src="../images/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>
 
-Now execute the *Discord node* and if all works well, you should get a message in Discord:
+Now execute the *Discord* node and if all works well, you should get a message in Discord:
 
 <figure><img src="../images/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
-
-
-Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.
 
 ## What's next?
 

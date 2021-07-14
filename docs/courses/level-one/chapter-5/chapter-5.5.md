@@ -1,24 +1,25 @@
-# 5. Calculating booked orders
+# 5. Calculating Booked Orders
 
-In this step of the workflow, you will learn how n8n data is structured and how to add custom JavaScript code to your node to make calculations using the *Function node*.
+In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the *Function* node.
 
 The next step in Nathan’s workflow is to calculate two values from the booked orders:
 - The total number of booked orders
-- The total price of all booked order
+- The total value of all booked orders
 
-To calculate data and add more functionality to your workflows, you can use the ***Function node***, which lets you write custom JavaScript code.
+To calculate data and add more functionality to your workflows you can use the **Function node**, which lets you write custom JavaScript code.
 
 ::: warning ⚠️ Function vs Function Item
-n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](../../../reference/function-nodes.md).
+n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](../../../getting-started/key-concepts.md#function).
 :::
 
-Before going into the setup of the Function node, you should first learn the [data structure](../../../reference/data/data-structure.md) of n8n. This is important if you want to:
+Before going into the setup of the Function node, you should first learn the [data structure](../../../getting-started/key-concepts.md#data-structure) of n8n. This is important if you want to:
 - create your own node
 - write custom expressions
 - use the Function or Function Item node
-- you want to get the most out of n8n
+- get the most out of n8n
 
-In n8n, the data that is passed between nodes is an array of objects, with the following structure:
+In n8n, the data that is passed between nodes is an array of objects with the following structure:
+
 ```json
 [
     {
@@ -45,9 +46,10 @@ In n8n, the data that is passed between nodes is an array of objects, with the f
     ...
 ]
 ```
+
 Now let’s see how to implement this.
 
-In your workflow, add a *Function node* connected to the false branch of the *IF node*. In the *Function node* window, paste the following code in the JavaScript Code box:
+In your workflow, add a *Function* node connected to the false branch of the *IF* node. In the *Function* node window paste the following code in the JavaScript Code box:
 
 ```javascript
 let totalBooked = items.length;
@@ -57,7 +59,6 @@ for(let i=0; i < items.length; i++) {
   bookedSum = bookedSum + items[i].json.orderPrice;
 }
 return [{json:{totalBooked, bookedSum}}]
-
 ```
 
 Notice the format in which we return the results of the calculation:
@@ -73,7 +74,7 @@ Now execute the node and you should see the following results:
 
 ## What's next?
 
-**Nathan 🙋**: Wow, the Function node is really powerful! So if I have some basic JavaScript skills, I can power up my workflows.
+**Nathan 🙋**: Wow, the Function node is really powerful! So if I have some basic JavaScript skills I can power up my workflows.
 
 **You 👩‍🔧**: Exactly – you can progress from no-code to low-code!
 

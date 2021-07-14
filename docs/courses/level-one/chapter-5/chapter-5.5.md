@@ -1,5 +1,6 @@
 # 5. Calculating booked orders
-> In this step of the workflow, you will learn how n8n data is structured and how to add custom JavaScript code to your node to make calculations using the *Function node*.
+
+In this step of the workflow, you will learn how n8n data is structured and how to add custom JavaScript code to your node to make calculations using the *Function node*.
 
 The next step in Nathan’s workflow is to calculate two values from the booked orders:
 - The total number of booked orders
@@ -70,11 +71,12 @@ Now execute the node and you should see the following results:
 
 <figure><img src="../images/chapter-two/Function-node.png" alt="Function node" style="width:100%"><figcaption align = "center"><i>Function node</i></figcaption></figure>
 
-----
-> **Nathan 🙋**: Wow, the Function node is really powerful! So if I have some basic JavaScript skills, I can power up my workflows.
->
-> **You 👩‍🔧**: Exactly – you can progress from no-code to low-code!
->
-> **Nathan 🙋**: Now, how do I send the calculations for the booked orders to my team's Discord channel?
->
-> **You 👩‍🔧**: There's an n8n node for that – I'll set it up in the next step.
+## What's next?
+
+**Nathan 🙋**: Wow, the Function node is really powerful! So if I have some basic JavaScript skills, I can power up my workflows.
+
+**You 👩‍🔧**: Exactly – you can progress from no-code to low-code!
+
+**Nathan 🙋**: Now, how do I send the calculations for the booked orders to my team's Discord channel?
+
+**You 👩‍🔧**: There's an n8n node for that – I'll set it up in the next step.

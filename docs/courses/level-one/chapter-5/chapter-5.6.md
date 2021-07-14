@@ -1,5 +1,6 @@
 # 6. Notifying the team
-> In this step of the workflow, you will learn how to send messages to a Discord channel using the *Discord node*.
+
+In this step of the workflow, you will learn how to send messages to a Discord channel using the *Discord node*.
 
 
 Now that you have a calculated summary of the booked orders, you need to notify Nathan’s team in their Discord channel. n8n has a ***Discord node*** that allows you to send messages.
@@ -20,10 +21,11 @@ Now execute the *Discord node* and if all works well, you should get a message i
 
 <figure><img src="../images/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
 
-----
+
 Amazing! Think of how much time Nathan can save up thanks to this workflow! There’s only one small step left to make it even more effective – scheduling the workflow to run every week. You’ll learn how to do this in the next lesson.
 
-----
-> **Nathan 🙋**: Incredible, you've saved me so many hours of tedious work already! Now I can simply execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 am...
->
-> **You 👩‍🔧**: Don't worry about that, you can actually schedule the workflow to run on a specific day, time, or interval. I'll set this up in the next step.
+## What's next?
+
+**Nathan 🙋**: Incredible, you've saved me so many hours of tedious work already! Now I can simply execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 am...
+
+**You 👩‍🔧**: Don't worry about that, you can actually schedule the workflow to run on a specific day, time, or interval. I'll set this up in the next step.

@@ -1,5 +1,6 @@
 # 4. Setting values for processing orders
-> In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the *Set node*.
+
+In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the *Set node*.
 
 The next step in Nathan’s workflow is to insert the *employeeName* and orderId of all *processing* orders into Airtable.
 
@@ -34,7 +35,8 @@ At this stage, it looks like this:
 
 <figure><img src="../images/chapter-two/Workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
 
-----
-> **Nathan 🙋**: You've already automated half of my work! Now I still need to calculate the booked orders for my colleagues. Can that be automated as well?
->
-> **You 👩‍🔧**: Of course! In the next step, I'll use some JavaScript code in a node to calculate the booked orders.
+## What's next?
+
+**Nathan 🙋**: You've already automated half of my work! Now I still need to calculate the booked orders for my colleagues. Can that be automated as well?
+
+**You 👩‍🔧**: Of course! In the next step, I'll use some JavaScript code in a node to calculate the booked orders.

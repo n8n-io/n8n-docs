@@ -1,5 +1,6 @@
 # 3. Filtering orders
-> In this step of the workflow, you will learn how to filter data using conditional logic and how to use expressions in nodes using the *IF node*.
+
+In this step of the workflow, you will learn how to filter data using conditional logic and how to use expressions in nodes using the *IF node*.
 
 
 To insert only processing orders into Airtable, we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* is not *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
@@ -41,11 +42,13 @@ At this stage, your workflow would look like this:
 
 <figure><img src="../images/chapter-two/Workflow-with-If-node.png" alt="Workflow with the IF node" style="width:100%"><figcaption align = "center"><i>Workflow with the IF node</i></figcaption></figure>
 
-----
-> **Nathan 🙋**: This IF node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the employeeName and orderId, but I guess I can keep all the other fields just in case.
->
-> **You 👩‍🔧**: Actually, I wouldn't recommend doing that. Inserting more data requires more computational power, the data transfer is slower / takes longer, and takes up more storage resources in your table. In this particular case, 14 records with 5 features might not seem like a lot to make a significant difference, but if your business grows to thousands of records and tens of features, things add up and even one extra column can affect performance.
->
-> **Nathan 🙋**: Oh, that's good to know. So, can you select only two fields from the processing orders?
->
-> **You 👩‍🔧**: Sure, I'll do that in the next step.
+
+## What's next?
+
+**Nathan 🙋**: This IF node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the employeeName and orderId, but I guess I can keep all the other fields just in case.
+
+**You 👩‍🔧**: Actually, I wouldn't recommend doing that. Inserting more data requires more computational power, the data transfer is slower / takes longer, and takes up more storage resources in your table. In this particular case, 14 records with 5 features might not seem like a lot to make a significant difference, but if your business grows to thousands of records and tens of features, things add up and even one extra column can affect performance.
+
+**Nathan 🙋**: Oh, that's good to know. So, can you select only two fields from the processing orders?
+
+**You 👩‍🔧**: Sure, I'll do that in the next step.

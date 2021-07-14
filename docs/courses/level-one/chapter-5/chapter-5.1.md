@@ -1,5 +1,6 @@
 # 1. Getting data from the data warehouse
-> In this part of the workflow, you will learn how to get data by making HTTP requests using the *HTTP Request node*.
+
+In this part of the workflow, you will learn how to get data by making HTTP requests using the *HTTP Request node*.
 
 
 First of all, let’s set up the scene for building Nathan’s workflow. Open your Editor UI and create a new workflow with one of the two possible commands:
@@ -65,7 +66,8 @@ This view should be familiar to you from the [Hacker News mini-workflow](../chap
 - *orderPrice:* the total price of the customer’s order.
 - *orderStatus:* whether the customer’s order is booked or still in processing.
 
-----
-> **Nathan 🙋**: This is great! You already automated an important part of my job with only one node. Now instead of manually accessing the data every time I need it, I can use the HTTP Node to automatically get the information.
->
-> **You 👩‍🔧**: Exactly! In the next step, I’ll help you one step further and insert the received data into Airtable, as you need it.
+## What's next?
+
+**Nathan 🙋**: This is great! You already automated an important part of my job with only one node. Now instead of manually accessing the data every time I need it, I can use the HTTP Node to automatically get the information.
+
+**You 👩‍🔧**: Exactly! In the next step, I’ll help you one step further and insert the received data into Airtable, as you need it.

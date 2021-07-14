@@ -1,5 +1,6 @@
 # 2. Inserting data into Airtable
-> In this step of the workflow, you will learn how to insert the data received via the HTTP Request node into Airtable using the *Airtable node*.
+
+In this step of the workflow, you will learn how to insert the data received via the HTTP Request node into Airtable using the *Airtable node*.
 
 At this point, your workflow would look like this:
 
@@ -48,7 +49,8 @@ All 30 data records will now appear in the orders table:
 
 <figure><img src="../images/chapter-two/Airtable-records.png" alt="Imported records in the orders table" style="width:100%"><figcaption align = "center"><i>Imported records in the orders table</i></figcaption></figure>
 
-----
-> **Nathan 🙋**: Wow, this automation is really useful! But this inserts all collected data from the HTTP Request node into Airtable. Remember that I actually need to insert only processing orders in the table and calculate only the price of booked orders?
->
-> **You 👩‍🔧**: Sure, no problem. As a next step, I'll use a new node to filter the orders based on their status.
+## What's next?
+
+**Nathan 🙋**: Wow, this automation is really useful! But this inserts all collected data from the HTTP Request node into Airtable. Remember that I actually need to insert only processing orders in the table and calculate only the price of booked orders?
+
+**You 👩‍🔧**: Sure, no problem. As a next step, I'll use a new node to filter the orders based on their status.

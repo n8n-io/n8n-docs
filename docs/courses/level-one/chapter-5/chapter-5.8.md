@@ -1,5 +1,6 @@
 # 8. Activating and examining the workflow
-> In this step of the workflow, you will learn how to activate your workflow and change the default workflow settings.
+
+In this step of the workflow, you will learn how to activate your workflow and change the default workflow settings.
 
 Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all the newly created workflows are deactivated.
 
@@ -43,9 +44,10 @@ In the *Workflow Settings* window, you can configure six settings:
 * _Save Manual Executions:_ If executions started from the Editor UI should be saved.
 * _Save Execution Progress:_ If the execution data of each node should be saved. If Yes, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower.
 
-----
-> **You 👩‍🔧**: That was it! Now you have a 7-node workflow that will run automatically every Monday morning. You don't have to worry about remembering to wrangle the data. Instead, you can start your week with more meaningful or exciting work.
->
-> **Nathan 🙋**: This workflow is incredibly helpful, thank you! Now, what's next for you?
->
-> **You 👩‍🔧**: I'd like to build more workflows, share them with others, and use some workflows built by other people.
+## What's next?
+
+**You 👩‍🔧**: That was it! Now you have a 7-node workflow that will run automatically every Monday morning. You don't have to worry about remembering to wrangle the data. Instead, you can start your week with more meaningful or exciting work.
+
+**Nathan 🙋**: This workflow is incredibly helpful, thank you! Now, what's next for you?
+
+**You 👩‍🔧**: I'd like to build more workflows, share them with others, and use some workflows built by other people.

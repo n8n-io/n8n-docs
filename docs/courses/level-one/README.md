@@ -6,7 +6,7 @@ Welcome to the n8n Certification Course Level I!
 This course teaches you how to automate processes with no code using n8n and jumpstart your qualification as an automation expert.
 
 This course is for you if you:
-- want to automate things in your personal life<
+- want to automate things in your personal life
 - are looking for quick ways to automate common business processes
 - plan to become an n8n partner
 
@@ -15,7 +15,7 @@ This course is for you if you:
 
 By the end of this course, you will know:
 - How to set up n8n and navigate the Editor UI
-- How data is structured
+- How data is structured in n8n
 - How to configure different node parameters and add credentials
 - When and how to use conditional logic in workflows
 - How to schedule and control workflows
@@ -23,7 +23,7 @@ By the end of this course, you will know:
 
 You will build two workflows:
 - A two-node workflow to get articles from Hacker News
-- A seven-node workflow to help our friend Nathan get records from a data warehouse, filter them, make calculations, and notify team members about the results
+- A seven-node workflow to help your client get records from a data warehouse, filter them, make calculations, and notify team members about the results
 
 ## How will I learn?
 
@@ -49,4 +49,6 @@ Completing the course should take around two hours. You do not have to complete 
 
 If you want to earn a certificate to show off your skills to the world, you need to take and pass a quiz at the end of the course.
 
-### [Let’s get started!](../level-one/chapter-1-components.md)
+<div style="text-align:center;">
+	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="chapter-1.html" style="color: #fff;">Let’s get started!</a></button>
+</div>

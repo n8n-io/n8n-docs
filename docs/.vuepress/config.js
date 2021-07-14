@@ -183,7 +183,7 @@ module.exports = {
 					path: '/courses/',
 				},
 				{
-					title: '🎓 Level 1',
+					title: '🎓 Level 1: Beginners\' course',
 					path: '/courses/level-one/',
 					sidebarDepth: 1,
 					children: [

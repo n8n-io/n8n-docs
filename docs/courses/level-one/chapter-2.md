@@ -1,12 +1,15 @@
 # Building a mini-workflow
 
-> In this lesson, you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
+In this lesson, you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
 
 A simple, yet useful automation is getting articles from Hacker News, so that you’re up to date with the tech world. More specifically, let’s say you want to get the latest 10 articles related to automation.
 
 You can build a workflow for this use case in 4 steps:
 
-[[toc]]
+[1. Add the Hacker News node](#_1-add-the-hacker-news-node)<br/>
+[2. Configure the Hacker News node](#_2-configure-the-hacker-news-node)<br/>
+[3. Save the workflow](#_3-save-the-workflow)<br/>
+[4. Execute the node](#_4-execute-the-node)<br/>
 
 ## 1. Add the Hacker News node
 
@@ -20,7 +23,7 @@ When you add a new node to the Editor UI, the node will be automatically activat
 *Parameters* are different for each node, depending on its functionality. *Settings* are largely the same for all nodes.
 :::
 
-**Parameters**
+### Parameters
 
 The *HackerNew node* has several parameters that need to be configured in order to make it work:
 
@@ -39,15 +42,15 @@ The configuration of the parameters for the *Hacker News node* should now look l
 
 <figure><img src="./images/chapter-one/Hacker-news-params.png" alt="Hacker News node parameters" style="width:100%"><figcaption align = "center"><i>Hacker News node parameters</i></figcaption></figure>
 
-**Settings**
+### Settings
 
-The *Settings* part includes several options for node design and executions. In this case, we’ll configure only the first two settings, which are about the node’s appearance in the Editor UI. In the *Hacker News node* settings, edit:
+The *Settings* section includes several options for node design and executions. In this case, we’ll configure only the first two settings, which are about the node’s appearance in the Editor UI. In the *Hacker News node* settings, edit:
 
-- *Notes:* Get the 10 latest articles  
+- *Notes:* Get the 10 latest articles
 ::: tip 💡 Node notes
 It is often helpful, especially for complex workflows or if you share them with other users, to add a short description in the node about what it does.
 :::
-- *Display note in flow?:* toggle to true  
+- *Display note in flow?:* toggle to true<br/>
 This option will display the description note under the node in the Editor UI.
 
 The configuration of the settings for the *Hacker News node* looks like this:
@@ -81,9 +84,35 @@ Now, click on the *Execute Node* button in the top right corner of the node wind
 
 <figure><img src="./images/chapter-one/Hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
-To consolidate what you've learned so far, have a closer look at the *JSON view* and information about the node's execution, like you learned in the [previous lesson](./chapter-1-components.md#node-executions).
 
-----
-> Congratulations, you just built your first workflow! In this lesson, you've learned how to use Regular nodes, configure their parameters and settings, save and execute your workflow.
->
-> In the next lesson, you will be introduced to our friend Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.
+## Node executions
+
+::: tip 📖 Node execution
+A node execution represents a run of that node, to retrieve the specified data.
+:::
+
+If a node executed successfully, a small green circle with a number inside will appear on top of the node.
+
+<figure><img src="./images/chapter-one/Hacker-news-success.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
+
+If the parameters are configured correctly and everything works fine, the requested data will be displayed in the node window in *Table* and *JSON* format. You can switch between these views by selecting the one you want from the *JSON|Table* button at the top of the node window.
+
+::: tip 📖 Table vs JSON views
+The *Table* view is the default. It displays the requested data in a table, where the rows are the records and the columns are the available attributes of those records.
+:::
+
+<figure><img src="./images/chapter-one/Hacker-news-json.png" alt="Results in JSON view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in JSON view for the Hacker News node</i></figcaption></figure>
+
+The node window displays more information about the node execution:
+
+- In the top left corner of the results window, you’ll notice another piece of information: ***Items**: 10*.
+This field displays the number of items (records) that are returned by the node request. In our case, it’s expected to be 10, since this is the limit we set in the node. But if you don’t set a limit, it’s useful to see how many records are actually returned.
+- Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you’ll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
+*Start Time* and *Execution Time* can provide insights into the performance of each individual node.
+- In the bottom right corner right under the node window, there is a reference link to the node’s **documentation**. Check it out if you ever run into troubles or are not sure how to configure the node’s parameters.
+
+## Summary
+
+Congratulations, you just built your first workflow! In this lesson, you've learned how to use Regular nodes, configure their parameters and settings, save and execute your workflow.
+
+In the next lesson, you will be introduced to your client Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.

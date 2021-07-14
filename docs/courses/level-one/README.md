@@ -33,9 +33,9 @@ We believe in learning by doing. You can expect some theoretical information abo
 
 Throughout the course, we will use some symbols to highlight information:<br/>
 
-⚠️ warning, exception<br/>
-💡 tip, shortcut<br/>
-📖 definition, further reading<br/>
+⚠️ Warning, exception<br/>
+💡 Tip, shortcut<br/>
+📖 Definition, further reading<br/>
 
 ## What do I need to get started?
 

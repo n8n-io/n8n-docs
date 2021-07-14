@@ -192,28 +192,28 @@ module.exports = {
 							path: '/courses/level-one/chapter-1.md',
 						},
 						{
-							title: 'Building a mini-workflow',
+							title: 'Building a Mini-workflow',
 							path: '/courses/level-one/chapter-2.md',
 						},
 						{
-							title: 'Automating a (real-world) use case',
+							title: 'Automating a (Real-World) Use Case',
 							path: '/courses/level-one/chapter-3.md',
 						},
 						{
-							title: 'Designing the workflow',
+							title: 'Designing the Workflow',
 							path: '/courses/level-one/chapter-4.md',
 						},
 						{
-							title: 'Building the workflow',
+							title: 'Building the Workflow',
 							sidebarDepth: 1,
 							children: getChildrenFiles('courses/level-one/chapter-5'),
 						},
 						{
-							title: 'Exporting, importing, and sharing workflows',
+							title: 'Exporting, Importing, and Sharing Workflows',
 							path: '/courses/level-one/chapter-6.md',
 						},
 						{
-							title: 'Wrapping up',
+							title: 'Wrapping Up',
 							path: '/courses/level-one/chapter-7.md',
 						},
 					],

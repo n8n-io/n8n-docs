@@ -12,7 +12,7 @@ To allow workers to interact with the main process, we need a message broker. We
 
 ### Set executions mode
 
-Set the [environment variable](../../reference/glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command.
+Set the [environment variable](../../../reference/glossary.md#environment-variables) `EXECUTIONS_MODE` to `queue` using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue

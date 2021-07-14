@@ -37,7 +37,7 @@ export VUE_APP_URL_BASE_API=https://n8n.example.com/
 
 ## Security
 
-You can find information about securing your n8n instance [here](../key-concepts.md#security).
+You can find information about securing your n8n instance [here](../../key-concepts.md#security).
 
 ## Encryption key
 

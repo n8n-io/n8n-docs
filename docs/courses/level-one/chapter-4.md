@@ -24,5 +24,6 @@ You will build this workflow in 8 steps:
 7. [Scheduling the workflow](../level-one/chapter-5/chapter-5.7.md)
 8. [Activating and examining the workflow](../level-one/chapter-5/chapter-5.8.md)
 
-
-Now you're ready to [start building the workflow!](../level-one/chapter-5/chapter-5.8.md)
+<div style="text-align:center;">
+	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="chapter-5/chapter-5.1.html" style="color: #fff;">Start building!</a></button>
+</div>

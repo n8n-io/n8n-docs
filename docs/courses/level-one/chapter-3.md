@@ -4,6 +4,8 @@ Meet Nathan 🙋. Nathan works as an Analytics Manager at EvilCorp. His job is t
 
 Some of the things that Nathan does are very repetitive and mind-numbing. He wants to automate some of these so that he doesn’t burn out. As an **Automation Expert**, you are meeting with Nathan today to help him understand how he can offload some of his responsibilities to n8n.
 
+## Understanding the scenario
+
 **You 👩‍🔧:** Nice to meet you, Nathan. Glad to be doing this! What’s a repetitive task that is error-prone and that you’d like to get off your plate first?
 
 **Nathan 🙋:** Thanks for coming in! The most annoying one’s gotta be the weekly sales reporting.

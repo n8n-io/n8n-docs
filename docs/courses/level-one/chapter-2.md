@@ -110,6 +110,13 @@ This field displays the number of items (records) that are returned by the node 
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
 - In the bottom right corner right under the node window, there is a reference link to the node’s **documentation**. Check it out if you run into trouble or are not sure how to configure the node’s parameters.
 
+
+::: warning ⚠️ Error nodes
+A red warning icon on the top right corner of a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
+
+<figure><img src="./images/chapter-one/Error-node.png" alt="Error node" style="width:50%"><figcaption align = "center"><i>Error node</i></figcaption></figure>
+:::
+
 ## Summary
 
 Congratulations, you just built your first workflow! In this lesson, you learned how to use Regular nodes, configure their parameters and settings, and save and execute your workflow.

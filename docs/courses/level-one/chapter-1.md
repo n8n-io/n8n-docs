@@ -6,9 +6,14 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-First of all, you need to set up n8n. There are different ways to [get started with n8n](https://docs.n8n.io/getting-started/installation/): you can [install it locally with npm](https://docs.n8n.io/getting-started/installation/#npm), run it with [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html), or sign up on [n8n.cloud](http://n8n.cloud). The option you choose depends on your preference and technical requirements.
+First of all, you need to set up n8n. There are different ways to [get started with n8n](https://docs.n8n.io/getting-started/installation/), you can: 
 
-**In this course, we use an n8n.cloud instance with n8n version 0.127.0. Please make sure that your n8n instance's version is at least 0.127.0.**
+* [Install it locally with npm](https://docs.n8n.io/getting-started/installation/#npm) * Run it using [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html)
+* Sign up on [n8n.cloud](http://n8n.cloud)
+
+**This course was developed on n8n version 0.127.0, make sure you are using the same or newer version.**
+
+We recommend using n8n.cloud to ensure easy access to the latest version of n8n and all functionality needed to complete the course with no configuration to worry about.
 
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 
@@ -72,11 +77,14 @@ You can think of nodes as building blocks that serve different functions but, wh
 A [node](http://docs.n8n.io/reference/glossary.html#node) is an entry point for retrieving data, a function to process data, or an exit point for sending data. The functions can be pretty much anything, like data processing or conditional filtering.
 :::
 
-Based on their function, nodes can be classified into three types:
+Based on their function, nodes can be classified into two types:
 
 - **Regular Nodes** add, remove, and edit data, as well as request and send external data.
 - **Trigger Nodes** start a workflow and supply the initial data.
-- **Core Nodes** are those that do not represent an app or a service, instead they serve general functions, like scheduling workflows or adding JavaScript functions. Core Nodes can function as regular nodes or as triggers.
+
+::: tip 💡 Keep in mind
+Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Cron and Interval nodes) or adding JavaScript functions (e.g. Function and Function Item nodes). We refer to these as *Core Nodes*.
+:::
 
 ### Start node
 
@@ -86,7 +94,7 @@ The [*Start node*](https://docs.n8n.io/nodes/n8n-nodes-base.start) is the defaul
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don’t use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 
-You’ve probably figured out already that the *Start node* is a Core Trigger node. Apart from it, there are over 200 other Regular and Trigger nodes for various functions, apps, and services.
+You’ve probably figured out already that the *Start node* is a Core Trigger node. Apart from it, there are over 290 other Regular and Trigger nodes for various functions, apps, and services.
 
 ### Finding nodes
 

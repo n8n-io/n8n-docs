@@ -11,7 +11,7 @@ You can replace the *Discord* node with another communication app. n8n also has 
 In your workflow, add a *Discord* node connected to the *Function* node. In the *Discord* node window, configure the parameters:
 ::: v-pre
 - *Webhook URL:* [https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F](https://discord.com/api/webhooks/862290560479526932/qmSLXOr0RWmP9i7OSPJ-p08mFZbe4CBkxxg8IjUS0Mixxi-VjeLXONY8ZorIqjgILT0F)
-- *Text (Expression):* This week we have {{$json["bookedOrders"]}} booked orders.
+- *Text (Expression):* `This week we have {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{$node["HTTP Request"].parameter["headerParametersUi"]["parameter"][0]["value"]}}`
 :::
 
 <figure><img src="../images/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>

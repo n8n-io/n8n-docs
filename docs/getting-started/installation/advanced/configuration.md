@@ -2,6 +2,35 @@
 
 It is possible to change some of the n8n defaults via special environment variables.
 
+Where you set these environment variables depends on how you are [running](../README.md) n8n, via npm or Docker.
+
+For npm, set your desired environment variables in Terminal using the `export` command as shown below:
+
+```bash
+export <variable>=<value>
+```
+
+For Docker, you can set your desired environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file . For example:
+
+```yaml
+n8n:
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=<user>
+      - N8N_BASIC_AUTH_PASSWORD=<password>
+```
+
+Or using the `-e` flag from the command line:
+
+```bash
+docker run -it --rm \
+	--name n8n \
+	-p 5678:5678 \
+	-e GENERIC_TIMEZONE="Europe/Berlin" \
+	-e TZ="Europe/Berlin" \
+	n8nio/n8n
+```
+
 ## Publish
 
 Sets how n8n should be made available.

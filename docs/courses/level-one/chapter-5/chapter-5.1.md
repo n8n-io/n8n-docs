@@ -4,7 +4,7 @@ In this part of the workflow you will learn how to get data by making HTTP reque
 
 First, let’s set up the scene for building Nathan’s workflow. Open your Editor UI and create a new workflow with one of the two possible commands:
 
-- Click **Ctrl + Alt + N** or **Cmd + Alt + N** on your keyboard
+- Click **Ctrl + Alt + N** or **Cmd + Option + N** on your keyboard
 - Open the left menu and click on *New* under the Workflow section
 
 Name this new workflow “Nathan’s workflow”.

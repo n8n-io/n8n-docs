@@ -111,10 +111,10 @@ This field displays the number of items (records) that are returned by the node 
 - In the bottom right corner right under the node window, there is a reference link to the node’s **documentation**. Check it out if you run into trouble or are not sure how to configure the node’s parameters.
 
 
-::: warning ⚠️ Error nodes
+::: warning ⚠️ Error in nodes
 A red warning icon on the top right corner of a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
 
-<figure><img src="./images/chapter-one/Error-node.png" alt="Error node" style="width:50%"><figcaption align = "center"><i>Error node</i></figcaption></figure>
+<figure style="text-align:center;"><img src="./images/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 :::
 
 ## Summary

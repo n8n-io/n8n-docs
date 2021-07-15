@@ -25,7 +25,8 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Analytics](../../nodes-library/nodes/GoogleAnalytics/README.md) | :white_check_mark: | :x: | 
 | [Google BigQuery](../../nodes-library/nodes/GoogleBigQuery/README.md) | :white_check_mark: | :x: | 
 | [Google Books](../../nodes-library/nodes/GoogleBooks/README.md) | :white_check_mark: | :white_check_mark: | 
-| [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md) | :white_check_mark: | :x: | 
+| [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md) | :white_check_mark: | :x: |
+| [Google Contacts](../../nodes-library/nodes/GoogleContacts/README.md) | :white_check_mark: | :x: | 
 | [Google Cloud Firestore](../../nodes-library/nodes/GoogleCloudFirestore/README.md) | :white_check_mark: | :x: |  
 | [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md) | :white_check_mark: | :x: |  
 | [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md) | :white_check_mark: | :x: |
@@ -36,6 +37,14 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md) | :white_check_mark: | :x: | 
 | [Google Translate](../../nodes-library/nodes/GoogleTranslate/README.md) | :white_check_mark: | :white_check_mark: | 
 | [YouTube](../../nodes-library/nodes/YouTube/README.md) | :white_check_mark: | :x: |  
+
+::: tip ⛅️ Note for n8n.cloud users
+For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:
+* [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md)
+* [Google Contacts](../../nodes-library/nodes/GoogleContacts/README.md)
+* [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md)
+* [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md)
+:::
 
 ## Using OAuth
 

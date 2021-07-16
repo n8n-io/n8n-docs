@@ -13,7 +13,7 @@ This course is for you if you:
 
 ## What will I learn?
 
-By the end of this course, you will know:
+By the end of this course you will know:
 
 - How to set up n8n and navigate the Editor UI
 - How data is structured in n8n
@@ -39,9 +39,10 @@ Throughout the course, we will use some symbols to highlight information:<br/>
 
 ## What do I need to get started?
 
+Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID that you'll need in the course. Then all you need is:
+
 - A computer with macOS, Windows, or Linux
 - Some basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/) are nice-to-haves
-- Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID that you'll need in the course
 - Eagerness to learn about the power of low-code automation
 
 ## How long does it take to complete the course?

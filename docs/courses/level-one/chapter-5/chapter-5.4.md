@@ -10,7 +10,7 @@ For this, you need to use the [**Set node**](../../../nodes/nodes-library/core-n
 The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
 :::
 
-In your workflow, add a new *Set* node between the *IF* node and the *Airtable* node. In the Set node window you need to add two values, similar to the *IF* node:
+In your workflow, add a new *Set* node between the *IF* node and the *Airtable* node. In the Set node window you need to toggle *Keep Only Set* to true and then add two values:
 
 ::: v-pre
 - *Add Value > Number:*
@@ -20,7 +20,7 @@ In your workflow, add a new *Set* node between the *IF* node and the *Airtable* 
 - *Add Value > String:*
   - *Name:* employeeName
   - *Value:* `{{$json["employeeName"]}}`
-    *Current Node > Input Data > JSON > orderID*
+    *Current Node > Input Data > JSON > employeeName*
 :::
 
 After setting the two values click on *Execute Node* and you should see the following results:
@@ -28,6 +28,8 @@ After setting the two values click on *Execute Node* and you should see the foll
 <figure><img src="../images/chapter-two/Set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
 
 Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called *processingOrders* with two columns, *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](#inserting-data-into-airtable).
+
+Remember to update the Airtable node configuration to point to this new table.
 
 Once that’s done, execute the *Airtable* node in the workflow and you should see the records inserted in the table.
 

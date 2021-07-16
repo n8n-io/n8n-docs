@@ -8,7 +8,8 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 First of all, you need to set up n8n. There are different ways to [get started with n8n](https://docs.n8n.io/getting-started/installation/), you can: 
 
-* [Install it locally with npm](https://docs.n8n.io/getting-started/installation/#npm) * Run it using [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html)
+* [Install it locally with npm](https://docs.n8n.io/getting-started/installation/#npm) 
+* Run it using [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html)
 * Sign up on [n8n.cloud](http://n8n.cloud)
 
 **This course was developed on n8n version 0.127.0, make sure you are using the same or newer version.**
@@ -23,7 +24,7 @@ Now that you have the Editor UI open, you'll learn how to navigate it.
 
 ## Editor UI settings
 
-The [Editor UI](http://docs.n8n.io/reference/glossary.html#editor-ui) represents the web interface used to create [workflows](http://docs.n8n.io/getting-started/key-components/workflow.html). Think of it as a canvas where the artist in you will create automations. From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
+The [Editor UI](http://docs.n8n.io/reference/glossary.html#editor-ui) represents the web interface used to create [workflows](http://docs.n8n.io/getting-started/key-components/workflow.html). Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the n8n documentation and forum.
 
 ### Left-side panel
 
@@ -33,11 +34,12 @@ Under the n8n logo in the upper left corner you will notice a round arrow icon. 
 
 
 There are four main sections in the left menu:
-- The *Admin Panel*, only for users on n8n.cloud.
-- The *Workflows* section includes operations for creating and editing workflows.
-- The *Credentials* section includes operations for creating credentials.
-- The *Executions* section includes information about your workflow [executions](http://docs.n8n.io/reference/glossary.html#execution), which are complete runs of a workflow from the first to the last node.
-- The *Help* section includes resources around n8n product and community.
+
+- *Admin Panel*: Only for users on n8n.cloud, used to access the management Dashboard.
+- *Workflows*: Contains operations for creating and editing workflows.
+- *Credentials*: Contains operations for creating credentials.
+- *Executions*: Contains information about your workflow [executions](http://docs.n8n.io/reference/glossary.html#execution), which are complete runs of a workflow from the first to the last node.
+- *Help*: Contains resources around n8n product and community.
 
 ### Top bar
 

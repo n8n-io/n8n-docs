@@ -115,13 +115,13 @@ module.exports = {
 				text: 'Getting Started',
 				link: '/',
 			},
-			// {
-			// 	text: 'Guides',
-			// 	link: '/guides/guides.md'
-			// },
 			{
 				text: 'Nodes',
 				link: '/nodes/',
+			},
+			{
+				text: 'Courses',
+				link: '/courses/',
 			},
 			{
 				text: 'Reference',
@@ -133,14 +133,6 @@ module.exports = {
 			},
 		],
 		sidebar: {
-			// '/guides/': [
-			// 	{
-			// 		title: 'Guide Overview',
-			// 		sidebarDepth: 2,
-			// 		children: getChildrenFiles('guides', 'guides.md'),
-			// 	},
-			// ],
-
 			'/nodes/': [
 				{
 					title: '🧬 Overview',
@@ -185,7 +177,48 @@ module.exports = {
 					children: getChildrenFolders('nodes/credentials'),
 				},
 			],
-
+			'/courses/': [
+				{
+					title: '😇 Overview',
+					path: '/courses/',
+				},
+				{
+					title: '🎓 Level 1: Beginners\' course',
+					path: '/courses/level-one/',
+					sidebarDepth: 1,
+					children: [
+						{
+							title: 'Navigating the Editor UI',
+							path: '/courses/level-one/chapter-1.md',
+						},
+						{
+							title: 'Building a Mini-workflow',
+							path: '/courses/level-one/chapter-2.md',
+						},
+						{
+							title: 'Automating a (Real-World) Use Case',
+							path: '/courses/level-one/chapter-3.md',
+						},
+						{
+							title: 'Designing the Workflow',
+							path: '/courses/level-one/chapter-4.md',
+						},
+						{
+							title: 'Building the Workflow',
+							sidebarDepth: 1,
+							children: getChildrenFiles('courses/level-one/chapter-5'),
+						},
+						{
+							title: 'Exporting, Importing, and Sharing Workflows',
+							path: '/courses/level-one/chapter-6.md',
+						},
+						{
+							title: 'Wrapping Up',
+							path: '/courses/level-one/chapter-7.md',
+						},
+					],
+				},
+			],
 			'/reference/': [
 				{
 					title: '📚 Overview',
@@ -292,18 +325,6 @@ module.exports = {
 					path: 'getting-started/whats-next.md',
 				},
 			],
-			// [
-			// {
-			// 	title: 'Introduction',
-			// 	sidebarDepth: 2,
-			// 	children: [
-			// 		'getting-started/overview.md',
-			// 		'getting-started/node-basics.md',
-			// 		'getting-started/workflow.md',
-			// 		'getting-started/start-workflows-via-cli.md',
-			// 	],
-			// },
-			// ]
 		}
 	},
 }

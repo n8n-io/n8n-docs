@@ -39,7 +39,7 @@ Throughout the course, we will use some symbols to highlight information:<br/>
 
 ## What do I need to get started?
 
-Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID that you'll need in the course. Then all you need is:
+Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID and a Webhook URL that you'll need in the course. Then all you need is:
 
 - A computer with macOS, Windows, or Linux
 - Some basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/) are nice-to-haves

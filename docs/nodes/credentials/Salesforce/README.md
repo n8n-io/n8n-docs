@@ -31,7 +31,7 @@ You'll only need to enter the Credentials Name, Access Token URL, and click on t
 11. On the ***New Connected App*** page, click on the ***Continue*** button.
 12. In the 'API (Enable OAuth Settings)' section of the page, click on the ***Click to reveal*** button to reveal the consumer secret.
 13. Copy the displayed ***Consumer Key*** and the ***Consumer Secret*** and use these with your Salesforce OAuth2 API credentials in n8n.
-14. Copy the part of the URL between `https://` and `.salesforce.com` and replace 'yourcompany' in the ***Access Token URL*** in your Salesforce OAuth2 API credentials in n8n.
+14. In the n8n credentials window select your ***Environment Type***, where Production or Sandbox.
 15. Click on the circle button in the OAuth section to connect a Salesforce account to n8n.
 16. Click on the ***Save*** button to save your credentials.
 

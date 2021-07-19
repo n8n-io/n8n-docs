@@ -9,7 +9,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes ✨
 <br />
 <Changelog node="n8n-nodes-base.awsDynamoDb" title="AWS DynamoDB"/>
-<Changelog node="n8n-nodes-base.serviceNow" title="elasticsearch"/>
+<Changelog node="n8n-nodes-base.elasticsearch" title="Elasticsearch"/>
 <Changelog node="n8n-nodes-base.serviceNow" title="ServiceNow"/>
 
 ### Enhanced nodes 🚀

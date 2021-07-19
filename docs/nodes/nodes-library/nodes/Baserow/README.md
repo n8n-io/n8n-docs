@@ -58,7 +58,7 @@ This node will create a row in the `Customers` table with the content from the p
 4. Enter the Table ID in the ***Table ID*** field. For obtaining the Table ID, see the Database API page available from the database menu.
 5. Click on ***Execute Node*** to run the node.
 
-### 4. Baserow list
+### 4. Baserow node (List)
 
 This node will list all the rows with the name `Bill`. If you want to list records with a different name, use that name instead.
 
@@ -76,7 +76,7 @@ This node will list all the rows with the name `Bill`. If you want to list recor
 
 You will notice that the node only returns the record with a column containing `Bill`.
 
-### 4. Baserow delete
+### 5. Baserow node (Delete)
 
 This node will delete all the rows listed from the previous node.
 

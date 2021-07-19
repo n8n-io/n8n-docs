@@ -24,7 +24,7 @@ This workflow allows you to insert an item into your DynamoDB database. This exa
 
 The final workflow should look like the following image.
 
-![A workflow with the AWS Lambda node](./workflow.png)
+![A workflow with the AWS DynamoDB node](./workflow.png)
 
 ### 1. Start node
 

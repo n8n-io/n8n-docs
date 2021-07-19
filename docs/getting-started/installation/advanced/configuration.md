@@ -2,6 +2,10 @@
 
 It is possible to change some of the n8n defaults via special environment variables.
 
+For a full list of available configurations, see [Environment Variables](../../../reference/environment-variables.md).
+
+## How to set
+
 Where you set these environment variables depends on how you are [running](../README.md) n8n, via npm or Docker.
 
 For npm, set your desired environment variables in Terminal using the `export` command as shown below:
@@ -31,7 +35,9 @@ docker run -it --rm \
 	n8nio/n8n
 ```
 
-## Publish
+## Examples
+
+### Publish
 
 Sets how n8n should be made available.
 
@@ -50,7 +56,7 @@ N8N_HOST=n8n.example.com
 N8N_LISTEN_ADDRESS=1.1.1.1
 ```
 
-## Base URL
+### Base URL
 
 ::: warning 💡 Keep in mind
 This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence,
@@ -64,11 +70,11 @@ Tells the frontend how to reach the REST API of the backend.
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
 
-## Security
+### Security
 
 You can find information about securing your n8n instance [here](../../key-concepts.md#security).
 
-## Encryption key
+### Encryption key
 
 n8n creates a random encryption key automatically on the first launch and saves
 it in the `~/.n8n` folder. That key is used to encrypt the credentials before
@@ -79,7 +85,7 @@ set it via an environment variable.
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 
-## Execution data manual runs
+### Execution data manual runs
 
 Normally executions which got started via the Editor UI will not be saved as
 they are normally only for testing and debugging. That default can be changed
@@ -92,7 +98,7 @@ export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=true
 This setting can also be overwritten on a per workflow basis in the workflow
 settings in the Editor UI.
 
-## Execution data error/success
+### Execution data error/success
 
 When a workflow gets executed, it will save the result in the database. That's
 the case for executions that succeeded and for the ones that failed. The
@@ -110,7 +116,7 @@ Possible values are:
 These settings can also be overwritten on a per workflow basis in the workflow
 settings in the Editor UI.
 
-## Execute in same process
+### Execute in same process
 
 All workflows get executed in their own separate process. This ensures that all CPU cores
 get used and that they do not block each other on CPU intensive tasks. Additionally, this makes sure that
@@ -123,7 +129,7 @@ all directly in the main-process with this setting.
 export EXECUTIONS_PROCESS=main
 ```
 
-## Execution timeout
+### Execution timeout
 
 A workflow times out and gets canceled after this time (in seconds). If the workflow is executed in the main process, a soft timeout is executed (takes effect after the current node finishes). If a workflow is running in its own process, a soft timeout is tried first. The process is killed after waiting for an additional fifth of the given timeout duration.
 
@@ -139,7 +145,7 @@ You can also set maximum execution time (in seconds) for each workflow individua
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
 
-## Prune data
+### Prune data
 
 It is possible to prune the execution data. This prevents exceeding the database's capacity and keeping its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
 
@@ -159,7 +165,7 @@ You can also set the timeout (in seconds) after execution data has been pruned.
 export EXECUTIONS_DATA_PRUNE_TIMEOUT=7200
 ```
 
-## Exclude nodes
+### Exclude nodes
 
 It is possible to not allow users to use nodes of a specific node type. For example, if you
 do not want that people can write data to the disk with the "n8n-nodes-base.writeBinaryFile"
@@ -170,7 +176,7 @@ set the following:
 export NODES_EXCLUDE="[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
 ```
 
-## Include nodes
+### Include nodes
 
 It is possible to include only specific nodes. For example, if you want to use only the Webhook node and the HTTP Request node, you can set the following:
 
@@ -180,7 +186,7 @@ export NODES_INCLUDE="[\"n8n-nodes-base.start\", \"n8n-nodes-base.webhook\",\"n8
 
 **Note:** If you have workflows that do not use Trigger nodes, make sure to include the Start node.
 
-## Custom nodes location
+### Custom nodes location
 
 Every user can add custom nodes that get loaded by n8n on startup. The default
 location is in the subfolder `.n8n/custom` of the user who started n8n.
@@ -190,7 +196,7 @@ Additional folders can be defined with an environment variable.
 export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"
 ```
 
-## Use built-in and external modules in Function-Nodes
+### Use built-in and external modules in Function-Nodes
 
 For security reasons, importing modules is restricted by default in the Function-Nodes.
 It is, however, possible to lift that restriction for built-in and external modules by
@@ -212,7 +218,7 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
 
-## SSL
+### SSL
 
 It is possible to start n8n with SSL enabled by supplying a certificate to use:
 
@@ -222,7 +228,7 @@ export N8N_SSL_KEY=/data/certs/server.key
 export N8N_SSL_CERT=/data/certs/server.pem
 ```
 
-## Timezone
+### Timezone
 
 The timezone is set by default to "America/New_York". For instance, it is used by the
 Cron node to know at what time the workflow should be started. To set a different
@@ -235,7 +241,7 @@ export GENERIC_TIMEZONE=Europe/Berlin
 
 You can find the name of your timezone [here](https://momentjs.com/timezone/).
 
-## User folder
+### User folder
 
 User-specific data like the encryption key, SQLite database file, and
 the ID of the tunnel (if used) gets saved by default in the subfolder
@@ -246,7 +252,7 @@ user-folder via an environment variable.
 export N8N_USER_FOLDER=/home/jim/n8n
 ```
 
-## Webhook URL
+### Webhook URL
 
 The webhook URL will normally be created automatically by combining
 `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. However, if n8n runs behind a
@@ -260,7 +266,7 @@ webhook URLs get registred with the external services.
 export WEBHOOK_TUNNEL_URL=https://n8n.example.com/
 ```
 
-## Prometheus
+### Prometheus
 
 In order to collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
@@ -278,7 +284,7 @@ export N8N_METRICS_PREFIX=n8n_
 
 **Note:** At the moment, n8n does not support metrics for webhooks.
 
-## Overwrites for credentials
+### Overwrites for credentials
 
 It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials, use the following format.
 
@@ -286,7 +292,7 @@ It is also possible to set default values for credentials. These credentials get
 export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
 ```
 
-## Maximum payload limit
+### Maximum payload limit
 
 The default maximum incoming payload limit is **16MB**. To increase the maximum payload limit, the following format.
 
@@ -296,7 +302,7 @@ export N8N_PAYLOAD_SIZE_MAX=VALUE
 
 The value should be in megabytes. For example, if you want to set the limit to 32MB, use `N8N_PAYLOAD_SIZE_MAX=32`.
 
-## Configuration via file
+### Configuration via file
 
 It is also possible to configure n8n using a configuration file.
 

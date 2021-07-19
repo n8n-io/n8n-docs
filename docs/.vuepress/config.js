@@ -213,7 +213,7 @@ module.exports = {
 							path: '/courses/level-one/chapter-6.md',
 						},
 						{
-							title: 'Wrapping Up',
+							title: 'Take the Quiz and Get Your Certificate',
 							path: '/courses/level-one/chapter-7.md',
 						},
 					],
@@ -307,7 +307,7 @@ module.exports = {
 							{		title: 'Advanced',
 									sidebarDepth: 1,
 									children: getChildrenFiles('getting-started/installation/advanced', 'configuration.md'),
-							}	
+							}
 					],
 				},
 				{

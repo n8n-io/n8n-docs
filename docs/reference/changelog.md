@@ -2,6 +2,34 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.130.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
+**Release date:** 2021-07-18
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.awsDynamoDb" title="AWS DynamoDB"/>
+<Changelog node="n8n-nodes-base.serviceNow" title="elasticsearch"/>
+<Changelog node="n8n-nodes-base.serviceNow" title="ServiceNow"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.kafkaTrigger" title="Kafka Trigger:" text="Added Read Messages From Beginning option."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Sandbox Environment Type for OAuth2 credentials."/>
+<Changelog node="n8n-nodes-base.taiga" title="Taiga:" text="Added Epic, Task, and User Story operations."/>
+<Changelog node="n8n-nodes-base.theHive" title="TheHive:" text="Added Custom Fields option to the available Additional Fields."/>
+
+### Core Functionality ⚙️
+- Fixed an issue where failed workflows were displayed as "running".
+- Fixes issues with uncaught errors.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed issue when filtering field data type."/>
+
+### Contributors 🙌
+[Michael Hirschler](https://github.com/mvhirsch), [Mika Luhta](https://github.com/mluhta), [Pierre Lanvin](https://github.com/planvin)
+
 ## n8n@0.129.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.128.0...n8n@0.129.0) for this version.<br />
 **Release date:** 2021-07-12

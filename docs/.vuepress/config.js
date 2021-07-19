@@ -241,6 +241,10 @@ module.exports = {
 					path: 'setup-pm2.md',
 				},
 				{
+					title: '💻 Environment Variables',
+					path: 'environment-variables.md',
+				},
+				{
 					title: '👾 CLI commands for n8n',
 					path: 'start-workflows-via-cli.md',
 				},

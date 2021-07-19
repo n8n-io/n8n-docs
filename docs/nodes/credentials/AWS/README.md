@@ -8,6 +8,7 @@ description: Learn to configure credentials for the AWS nodes in n8n
 You can use these credentials to authenticate the following nodes with AWS.
 
 - [AWS Comprehend](../../nodes-library/nodes/AWSComprehend/README.md)
+- [AWS DynamoDB](../../nodes-library/nodes/AWSDynamoDB/README.md)
 - [AWS Lambda](../../nodes-library/nodes/AWSLambda/README.md)
 - [AWS Rekognition](../../nodes-library/nodes/AWSRekognition/README.md)
 - [AWS S3](../../nodes-library/nodes/AWSS3/README.md)

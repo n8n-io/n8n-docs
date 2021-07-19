@@ -2,17 +2,21 @@
 
 It is possible to change some of the n8n defaults via special environment variables.
 
-For a full list of available configurations, see [Environment Variables](../../../reference/environment-variables.md).
+For a full list of available configurations see [Environment Variables](../../../reference/environment-variables.md).
 
 ## How to set
 
 Where you set these environment variables depends on how you are [running](../README.md) n8n, via npm or Docker.
+
+### npm
 
 For npm, set your desired environment variables in Terminal using the `export` command as shown below:
 
 ```bash
 export <variable>=<value>
 ```
+
+## Docker
 
 For Docker, you can set your desired environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file . For example:
 
@@ -35,26 +39,51 @@ docker run -it --rm \
 	n8nio/n8n
 ```
 
-## Examples
+### Configuration via file
 
-### Publish
+It is also possible to configure n8n using a configuration file.
 
-Sets how n8n should be made available.
+It is not necessary to define all values but only the ones that should be
+different from the defaults.
+
+If needed multiple files can also be supplied to. For example, have generic
+base settings and some specific ones depending on the environment.
+
+The path to the JSON configuration file to use can be set using the environment
+variable `N8N_CONFIG_FILES`.
 
 ```bash
-# The port n8n should be made available on
-N8N_PORT=5678
+# Single file
+export N8N_CONFIG_FILES=/folder/my-config.json
 
-# This ones are currently only important for the webhook URL creation.
-# So if "WEBHOOK_TUNNEL_URL" got set they do get ignored. It is however
-# encouraged to set them correctly anyway in case they will become
-# important in the future.
-N8N_PROTOCOL=https
-N8N_HOST=n8n.example.com
-
-# The IP address n8n should listen on
-N8N_LISTEN_ADDRESS=1.1.1.1
+# Multiple files can be comma-separated
+export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
 ```
+
+A possible configuration file could look like this:
+```json
+{
+	"executions": {
+		"process": "main",
+		"saveDataOnSuccess": "none"
+	},
+	"generic": {
+		"timezone": "Europe/Berlin"
+	},
+	"security": {
+		"basicAuth": {
+			"active": true,
+			"user": "frank",
+			"password": "some-secure-password"
+		}
+	},
+	"nodes": {
+		"exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
+	}
+}
+```
+
+## Examples
 
 ### Base URL
 
@@ -70,10 +99,6 @@ Tells the frontend how to reach the REST API of the backend.
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
 
-### Security
-
-You can find information about securing your n8n instance [here](../../key-concepts.md#security).
-
 ### Encryption key
 
 n8n creates a random encryption key automatically on the first launch and saves
@@ -85,45 +110,10 @@ set it via an environment variable.
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 
-### Execution data manual runs
-
-Normally executions which got started via the Editor UI will not be saved as
-they are normally only for testing and debugging. That default can be changed
-with this environment variable.
-
-```bash
-export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=true
-```
-
-This setting can also be overwritten on a per workflow basis in the workflow
-settings in the Editor UI.
-
-### Execution data error/success
-
-When a workflow gets executed, it will save the result in the database. That's
-the case for executions that succeeded and for the ones that failed. The
-default behavior can be changed like this:
-
-```bash
-export EXECUTIONS_DATA_SAVE_ON_ERROR=none
-export EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
-```
-
-Possible values are:
- - **all**: Saves all data
- - **none**: Does not save anything (recommended if a workflow runs very often and/or processes a lot of data, set up "Error Workflow" instead)
-
-These settings can also be overwritten on a per workflow basis in the workflow
-settings in the Editor UI.
-
 ### Execute in same process
 
-All workflows get executed in their own separate process. This ensures that all CPU cores
-get used and that they do not block each other on CPU intensive tasks. Additionally, this makes sure that
-the crash of one execution does not take down the whole application. The disadvantage is, however,
-that it slows down the start-time considerably and uses much more memory. So in case the
-workflows are not CPU intensive and they have to start very fast, it is possible to run them
-all directly in the main-process with this setting.
+All workflows get executed in their own separate process. This ensures that all CPU cores get used and that they do not block each other on CPU intensive tasks. Additionally, this makes sure that the crash of one execution does not take down the whole application. The disadvantage is, however, that it slows down the start-time considerably and uses much more memory. So in case the
+workflows are not CPU intensive and they have to start very fast, it is possible to run them all directly in the main-process with this setting.
 
 ```bash
 export EXECUTIONS_PROCESS=main
@@ -144,47 +134,6 @@ You can also set maximum execution time (in seconds) for each workflow individua
 ```bash
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
-
-### Prune data
-
-It is possible to prune the execution data. This prevents exceeding the database's capacity and keeping its size moderate. The execution data gets pruned regularly (default: 1-hour interval). All saved execution data older than the max-age will be deleted. To delete data of past executions on a rolling basis:
-
-```bash
-export EXECUTIONS_DATA_PRUNE=true
-```
-
-You can also set how old (in hours) the execution data has to be to get deleted.
-
-```bash
-export EXECUTIONS_DATA_MAX_AGE=672
-```
-
-You can also set the timeout (in seconds) after execution data has been pruned.
-
-```bash
-export EXECUTIONS_DATA_PRUNE_TIMEOUT=7200
-```
-
-### Exclude nodes
-
-It is possible to not allow users to use nodes of a specific node type. For example, if you
-do not want that people can write data to the disk with the "n8n-nodes-base.writeBinaryFile"
-node and that they cannot execute commands with the "n8n-nodes-base.executeCommand" node, you can
-set the following:
-
-```bash
-export NODES_EXCLUDE="[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
-```
-
-### Include nodes
-
-It is possible to include only specific nodes. For example, if you want to use only the Webhook node and the HTTP Request node, you can set the following:
-
-```bash
-export NODES_INCLUDE="[\"n8n-nodes-base.start\", \"n8n-nodes-base.webhook\",\"n8n-nodes-base.httpRequest\"]"
-```
-
-**Note:** If you have workflows that do not use Trigger nodes, make sure to include the Start node.
 
 ### Custom nodes location
 
@@ -216,16 +165,6 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 
 # Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
-```
-
-### SSL
-
-It is possible to start n8n with SSL enabled by supplying a certificate to use:
-
-```bash
-export N8N_PROTOCOL=https
-export N8N_SSL_KEY=/data/certs/server.key
-export N8N_SSL_CERT=/data/certs/server.pem
 ```
 
 ### Timezone
@@ -283,67 +222,3 @@ export N8N_METRICS_PREFIX=n8n_
 ```
 
 **Note:** At the moment, n8n does not support metrics for webhooks.
-
-### Overwrites for credentials
-
-It is also possible to set default values for credentials. These credentials get automatically prefilled. To set default credentials, use the following format.
-
-```bash
-export CREDENTIALS_OVERWRITE_DATA={CREDENTIAL_NAME:{ PARAMATER: Value }}
-```
-
-### Maximum payload limit
-
-The default maximum incoming payload limit is **16MB**. To increase the maximum payload limit, the following format.
-
-```bash
-export N8N_PAYLOAD_SIZE_MAX=VALUE
-```
-
-The value should be in megabytes. For example, if you want to set the limit to 32MB, use `N8N_PAYLOAD_SIZE_MAX=32`.
-
-### Configuration via file
-
-It is also possible to configure n8n using a configuration file.
-
-It is not necessary to define all values but only the ones that should be
-different from the defaults.
-
-If needed multiple files can also be supplied to. For example, have generic
-base settings and some specific ones depending on the environment.
-
-The path to the JSON configuration file to use can be set using the environment
-variable `N8N_CONFIG_FILES`.
-
-```bash
-# Single file
-export N8N_CONFIG_FILES=/folder/my-config.json
-
-# Multiple files can be comma-separated
-export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
-```
-
-A possible configuration file could look like this:
-```json
-{
-	"executions": {
-		"process": "main",
-		"saveDataOnSuccess": "none"
-	},
-	"generic": {
-		"timezone": "Europe/Berlin"
-	},
-	"security": {
-		"basicAuth": {
-			"active": true,
-			"user": "frank",
-			"password": "some-secure-password"
-		}
-	},
-	"nodes": {
-		"exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
-	}
-}
-```
-
-All possible values which can be set and their defaults can be found [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/config/index.ts).

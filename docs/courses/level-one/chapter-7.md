@@ -2,11 +2,13 @@
 
 Congratulations – you finished the n8n Course Level I! You were able to help Nathan build a business use case workflow, saving him hours of tedious work and making him more productive. You’ve come a long way throughout this course and learned a lot about workflow automation.
 
-## Certification Quiz
+## Certification quiz
 
-You can now take a quiz to get a certificate recognizing the skills you've learnt as part of this course. The quiz consists of two parts: theory and practice.
-- You need to have at least 80% correct answers in each part of the quiz.
-- There is no time limit on the quiz.
+You're almost there! The last step before earning your certificate - after [signing-up](https://n8n-community.typeform.com/to/PDEMrevI) and completing the [course milestones](./readme.md#do-i-get-a-certificate) - is passing the quiz.
+
+The quiz consists of two parts: theory and practice. Remember:
+- You need to have at least 80% correct answers in each part.
+- There is no time limit.
 - You can take the quiz as many times as you want.
 
 <br/>

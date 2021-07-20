@@ -51,7 +51,9 @@ Completing the course should take around two hours. You do not have to complete 
 
 ## Do I get a certificate?
 
-If you want to earn a certificate to show off your skills to the world, you need to take and pass a quiz at the end of the course.
+Absolutely! We believe all good works deserve recognition. 
+
+Using the unique ID and webhook URL assigned when you [sign-up](https://n8n-community.typeform.com/to/PDEMrevI), you just need to complete the course milestones - [make a HTTP request](./chapter-5/chapter-5.1.md) and [sending the workflow results via Discord](./chapter-5/chapter-5.6.md) - and pass a quick quiz at the end.
 
 <div style="text-align:center;">
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="chapter-1.html" style="color: #fff;">Let’s get started!</a></button>

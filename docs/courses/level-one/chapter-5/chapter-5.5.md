@@ -58,7 +58,7 @@ let bookedSum = 0;
 for(let i=0; i < items.length; i++) {
   bookedSum = bookedSum + items[i].json.orderPrice;
 }
-return [{json:{totalBooked, bookedSum}}]
+return [{json:{totalBooked, bookedSum}}];
 ```
 
 Notice the format in which we return the results of the calculation:

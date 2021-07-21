@@ -19,7 +19,7 @@ That’s all we need to access the data via the [***HTTP Request node***](https:
 The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don’t have a dedicated node in n8n.
 :::
 
-Now, in your Editor UI, add an *HTTP Request node* like you learned in the [lesson *Adding nodes*](./chapter-1-components.md#adding-nodes). The node window will open, where you need to configure some parameters.
+Now, in your Editor UI, add an *HTTP Request node* like you learned in the [lesson *Adding nodes*](../chapter-1.md#adding-nodes). The node window will open, where you need to configure some parameters.
 
 <figure><img src="../images/chapter-two/HTTP-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
@@ -43,8 +43,10 @@ Credentials are unique pieces of information that identify a user or a service a
 
 Go to the top parameter *Credentials* and click on *Create New*. This will open the Credentials window where you need to add information to three fields:
 
-- *Credentials Name:* beginner_course
-You can name your credentials however you want. It’s good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
+- *Credentials Name:* `beginner_course`
+
+    You can name your credentials however you want. It’s good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
+
 - *Name:* `api_key`
 - *Value:* `j[vKYdY68H(:WFb`
 

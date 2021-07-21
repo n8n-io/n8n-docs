@@ -90,6 +90,31 @@ This data would, for example, create two boards. One named `test1` the other one
 ]
 ```
 
+## Loops
+
+[Looping](https://en.wikipedia.org/wiki/Control_flow#Loops) is useful when you need to perform the same action repeatedly over the same, or similar, items.
+
+In n8n this is handled automatically, with nodes processing each input item (data point) independently. For example, if you pass 100 items to an [Airtable](../nodes/nodes-library/nodes/Airtable/README.md) node all 100 will be added to your table, no loop required.
+
+Actions where you would typically use loops, such as [modifying data structure](../reference/javascript-code-snippets.md#modify-data-structure) or [merging data](../nodes/nodes-library/core-nodes/Merge/README.md), do not require explicit loops in n8n.
+
+There are a limited number of circumstances when you need to design a loop into your workflow, including:
+
+* **Using the Microsoft SQL node**: This node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
+* **HTTP Request pagination**: For the HTTP Request node you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
+* **Rate limitations**: Most APIs will have a limit on the number of requests you can make, using loops helps can ensure you don't exceed this limit. See also [Split In Batches](../nodes/nodes-library/core-nodes/SplitInBatches/README.md) node.
+* **Airtable > Filter By Formula**: The Filter by Formula option returns an output only for the first input item. To process all the incoming items you will have to create a loop.
+
+### Creating Loops
+
+To add a loop to your n8n workflow, connect the output of one node to the input of a previous node.
+
+![A workflow with a loop.](./images/loops.png)
+
+**Make sure to include an [IF](../nodes/nodes-library/core-nodes/if/README.md)  node to check for a condition and stop the loop.**
+
+Read more about looping in n8n in our [blog](add-link).
+
 ## Error Workflow
 
 For each workflow, an optional Error Workflow can be set in the Workflow Settings. It gets executed if the original execution fails. That makes it possible to, for instance, inform the user via Email or Slack if something goes wrong. The same Error Workflow can be set on multiple workflows.

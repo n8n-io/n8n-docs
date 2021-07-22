@@ -30,13 +30,20 @@ You can import JSON files as workflows in two ways:
 
 ## Workflow settings
 
-On each workflow, it is possible to set some custom settings and overwrite some of the global default settings. The following settings can be set:
+On each workflow, it is possible to set some custom settings and overwrite some of the global default settings from the **Workflow** > **Settings** menu.
 
+![The Workflow Setting modal.](../images/workflow_settings.png)
+
+The following settings are available:
+
+* **Error Workflow**: Select a workflow to trigger if the current workflow fails. See [Error Workflow](../key-concepts.md#error-workflow) for more details.
 * **Timezone**: Sets the timezone to be used in the workflow. The default timezone is EDT (New York). The Timezone setting is particularly important for the Cron Trigger node.
 * **Save Data Error Execution**: If the execution data of the workflow should be saved when the workflow fails.
 * **Save Data Success Execution**: If the execution data of the workflow should be saved when the workflow succeeds.
 * **Save Manual Executions**: If executions started from the Editor UI should be saved.
 * **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
+* **Timeout Workflow**: Toggle to enable setting a duration after which the current workflow execution should be cancelled.
+* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (e.g. 3 minutes for Start level).
 
 ## Failed workflows
 

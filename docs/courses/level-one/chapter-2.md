@@ -13,7 +13,7 @@ You can build a workflow for this use case in 4 steps:
 
 ## 1. Add the Hacker News node
 
-Open the nodes panel, search for the *Hacker News* node, and click on it to add it to the Editor UI. The *Hacker News node* will automatically be connected to the *Start node*.
+Open the nodes panel, search for the *Hacker News* node, and click on it to add it to the Editor UI. Connect the *Hacker News node* to the *Start node*.
 
 ## 2. Configure the Hacker News node
 
@@ -75,7 +75,7 @@ Save the workflow under the name “Hacker News workflow”
 By default, your workflow is automatically saved as “My workflow”.
 
 There are two ways in which you can save a workflow:
-- Click **Ctrl + S** or **Cmd + S** on your keyboard
+- From the Canvas in Editor UI, click **Ctrl + S** or **Cmd + S** on your keyboard
 - Click the **Save** button in the top right corner of the Editor UI
 
 ## 4. Execute the node

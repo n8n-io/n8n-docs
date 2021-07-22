@@ -60,7 +60,7 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 
 - In the bottom left corner of the canvas there are three small icons used to zoom in (**+**) or out (**-**) of the canvas, and reset (**←**) the canvas to the original resolution.
 - At the bottom center of the canvas there is an orange *Execute Workflow* button. When you click on it all nodes on the canvas are executed.
-- On the top right corner of the canvas there is an orange circle with a *+* sign inside. This button opens the nodes panel. You’ll learn more about nodes in the following chapter.
+- On the top right corner of the canvas there is an orange circle with a *+* sign inside. This button opens the nodes panel.
 - In the center of the canvas, there is a square with a green play icon inside. This is the *Start node*. You will learn more about nodes in the [next section](#nodes).
 
 ::: tip 💡 Moving the canvas
@@ -135,7 +135,7 @@ If you hover on a node, you’ll notice that four icons appear on top:
 
 
 ::: tip 💡 Moving a workflow
-To move a workflow around the canvas, select all nodes (**Ctrl + A**), click on a node and drag it at a point you want on the canvas.
+To move a workflow around the canvas, select all nodes (**Ctrl + A**), click and hold on a node then drag it to any point you want on the canvas.
 :::
 
 ## Summary

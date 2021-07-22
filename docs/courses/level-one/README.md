@@ -51,9 +51,11 @@ Completing the course should take around two hours. You do not have to complete 
 
 ## Do I get a certificate?
 
-Absolutely! We believe all good works deserve recognition. 
+Absolutely! We believe all good works deserve recognition.
 
 Using the unique ID and webhook URL assigned when you [sign-up](https://n8n-community.typeform.com/to/PDEMrevI), you just need to complete the course milestones - [make a HTTP request](./chapter-5/chapter-5.1.md) and [sending the workflow results via Discord](./chapter-5/chapter-5.6.md) - and pass a quick quiz at the end.
+
+<figure style="text-align: center"><img src="./images/chapter-one/certificate.png" alt="Certificate" style="height: 70%; width:70%; border: 1px solid #000000;"></figure>
 
 <div style="text-align:center;">
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="chapter-1.html" style="color: #fff;">Let’s get started!</a></button>

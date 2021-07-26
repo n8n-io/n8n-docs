@@ -58,6 +58,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_PROTOCOL` | `enum string`: `http`, `https` | The protocol used to reach n8n. |
 | `N8N_SSL_KEY` | `string` | The SSL Key for HTTPS protocol. |
 | `N8N_SSL_CERT` | `string` | The SSL certificate for HTTPS protocol. |
+| `N8N_VERSION_NOTIFICATIONS_ENABLED` | `boolean` | When enables, notifications of new versions and security updates are provided. |
+| `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | `string` | The endpoint where version information is retreived. By default `https://api.n8n.io/versions/` is used. |
+| `N8N_VERSION_NOTIFICATIONS_INFO_URL` | `string` | The URL displayed in the New Versions panel for additional information. By default `https://docs.n8n.io/getting-started/installation/updating.html` is used. |
 
 ## Endpoints
 

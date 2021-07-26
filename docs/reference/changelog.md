@@ -2,6 +2,35 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.131.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
+**Release date:** 2021-07-25
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.ciscoWebex" title="Cisco Webex"/>
+<Changelog node="n8n-nodes-base.ciscoWebexTrigger" title="Cisco Webex Trigger"/>
+
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Lead resource. Added Search operation to Organization resource."/>
+<Changelog node="n8n-nodes-base.taigaTrigger" title="Taiga Trigger:" text="Added Resource and Operations filters."/>
+
+
+### Core Functionality ⚙️
+- Added Continue-on-fail support to all nodes.
+- Added new version notifications.
+- Added Refresh List for remote options lists.
+- Added `$position` expression variable to return the index of an item within a list.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.spreadsheetFile" title="Spreadsheet File:" text="Fixed issue when saving dates."/>
+
+### Contributors 🙌
+[Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
+
 ## n8n@0.130.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
 **Release date:** 2021-07-18

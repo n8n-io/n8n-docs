@@ -9,6 +9,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Glossary](glossary.md)
 - [Keyboard Shortcuts](keyboard-shortcuts.md)
 - [CLI commands for n8n](start-workflows-via-cli.md)
+- [Environment Variables](environment-variables.md)
 - [JavaScript Code Snippets](javascript-code-snippets.md)
 - [Database](./data/database.md)
 - [Troubleshooting](troubleshooting.md)

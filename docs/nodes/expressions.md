@@ -29,6 +29,7 @@ The following special variables are available:
  - **$json**: Incoming JSON data of a node
  - **$node**: Data of other nodes (binary, context, json, parameter, runIndex)
  - **$parameters**: Parameters of the current node
+ - **$position**: The index of the item in the list of items
  - **$runIndex**: The current run index (first time node gets executed it is 0, second time 1, ...)
  - **$workflow**: Returns workflow metadata like: active, id, name
 

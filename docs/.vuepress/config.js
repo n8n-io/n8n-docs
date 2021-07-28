@@ -64,6 +64,7 @@ module.exports = {
 	description: 'Documentation for n8n',
 	title: 'Docs',
 	plugins: [
+		['@vuepress/medium-zoom'],
 		'vuepress-plugin-reading-time',
 		'@vuepress/last-updated',
 		[

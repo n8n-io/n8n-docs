@@ -259,6 +259,10 @@ module.exports = {
 					children: getChildrenFiles('reference/data'),
 				},
 				{
+					title: '📓 Logging in n8n',
+					path: 'logging.md',
+				},
+				{
 					title: '👀 Troubleshooting',
 					path: 'troubleshooting.md',
 				},

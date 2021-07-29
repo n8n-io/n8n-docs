@@ -12,6 +12,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Environment Variables](environment-variables.md)
 - [JavaScript Code Snippets](javascript-code-snippets.md)
 - [Database](./data/database.md)
+- [Logging in n8n](logging.md)
 - [Troubleshooting](troubleshooting.md)
 - [Contributing](contributing.md)
 - [License](license.md)

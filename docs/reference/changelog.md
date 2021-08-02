@@ -2,9 +2,37 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.132.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.131.0...n8n@0.132.0) for this version.<br />
+**Release date:** 2021-08-01
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.freshworksCrm" title="Freshworks CRM"/>
+<Changelog node="n8n-nodes-base.googlePerspective" title="Google Perspective"/>
+<Changelog node="n8n-nodes-base.marketstack" title="Marketstack"/>
+<Changelog node="n8n-nodes-base.nocoDb" title="NocoDB"/>
+
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.facebookTrigger" title="Facebook Trigger:" text="Added Fields parameter."/>
+<Changelog node="n8n-nodes-base.gmail" title="Gmail:" text="Added Sender Name parameter."/>
+<Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant:" text="Added Event resource."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Deal Product resource."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Document resource with Upload operation."/>
+<Changelog node="n8n-nodes-base.woocommerce" title="WooCommerce:" text="Added Customer resource."/>
+
+
+### Core Functionality ⚙️
+- Fixed an issue for large internal values.
+
+### Contributors 🙌
+[Ed Linklater](https://github.com/edlinklater), [Rodrigo Correia](https://github.com/rodrigoscdc)
+
 ## n8n@0.131.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
-**Release date:** 2021-07-25
+**Release date:** 2021-07-24
 
 ::: warning ⚠️ Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).

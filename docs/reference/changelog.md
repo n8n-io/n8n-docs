@@ -6,6 +6,11 @@
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
 **Release date:** 2021-07-25
 
+::: warning ⚠️ Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
+The features that introduced the breaking changes have been flagged below.
+:::
+
 ### New nodes ✨
 <br />
 <Changelog node="n8n-nodes-base.ciscoWebex" title="Cisco Webex"/>
@@ -14,7 +19,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 🚀
 <br />
-<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Lead resource. Added Search operation to Organization resource."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Lead resource. Added Search operation to Organization resource." breakingChanges=true breakingChangeVersion="01310"/>
 <Changelog node="n8n-nodes-base.taigaTrigger" title="Taiga Trigger:" text="Added Resource and Operations filters."/>
 
 
@@ -35,6 +40,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
 **Release date:** 2021-07-18
 
+::: warning ⚠️ Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01300).
+The features that introduced the breaking changes have been flagged below.
+:::
+
+
 ### New nodes ✨
 <br />
 <Changelog node="n8n-nodes-base.awsDynamoDb" title="AWS DynamoDB"/>
@@ -45,7 +56,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <br />
 <Changelog node="n8n-nodes-base.kafkaTrigger" title="Kafka Trigger:" text="Added Read Messages From Beginning option."/>
 <Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Sandbox Environment Type for OAuth2 credentials."/>
-<Changelog node="n8n-nodes-base.taiga" title="Taiga:" text="Added Epic, Task, and User Story operations."/>
+<Changelog node="n8n-nodes-base.taiga" title="Taiga:" text="Added Epic, Task, and User Story operations." breakingChanges=true breakingChangeVersion="01300"/>
 <Changelog node="n8n-nodes-base.theHive" title="TheHive:" text="Added Custom Fields option to the available Additional Fields."/>
 
 ### Core Functionality ⚙️
@@ -102,16 +113,21 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 
-## n8n@0.127.0
+## n8n@0.127.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
 **Release date:** 2021-07-04
+
+::: warning ⚠️ Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
+The features that introduced the breaking changes have been flagged below.
+:::
 
 ### Enhanced nodes 🚀
 <br />
 <Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Added Bulk Size option to all Operations."/>
 <Changelog node="n8n-nodes-base.box" title="Box:" text="Added Share operation to File and Folder resources."/>
 <Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Last Name field to Update operation on Contact resource."/>
-<Changelog node="n8n-nodes-base.zohoCrm" title="Zoho CRM:" text="Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources."/>
+<Changelog node="n8n-nodes-base.zohoCrm" title="Zoho CRM:" text="Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources." breakingChanges=true breakingChangeVersion="01270"/>
 
 ### Core Functionality ⚙️
 - Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.

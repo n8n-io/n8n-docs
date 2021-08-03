@@ -2,6 +2,24 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.132.2
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.1...n8n@0.132.2) for this version.<br />
+**Release date:** 2021-08-02
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.interval" title="Interval:" text="Fixed issue with infinite executions."/>
+
+### Contributors 🙌
+[Лебедев Иван](https://github.com/X-pech)
+
+## n8n@0.132.1
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.0...n8n@0.132.1) for this version.<br />
+**Release date:** 2021-08-02
+
+### Core Functionality ⚙️
+- Changed TypeORM version to 0.2.34
+
 ## n8n@0.132.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.131.0...n8n@0.132.0) for this version.<br />
 **Release date:** 2021-08-01

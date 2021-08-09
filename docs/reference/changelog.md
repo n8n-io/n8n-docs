@@ -2,6 +2,31 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.133.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.132.2...n8n@0.133.0) for this version.<br />
+**Release date:** 2021-08-08
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.monicaCrm" title="Monica CRM"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added Follow All Redirects option."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Record Type ID field."/>
+
+### Core Functionality ⚙️
+- Fixed UI lag when editing large workflows.
+- Revert TypeORM to version 0.2.30
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.nextCloud" title="Nextcloud:" text="Fixed issue where List operation on an empty Folder returned an error."/>
+<Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Fixed issues with pagination and infinite executions."/>
+
+### Contributors 🙌
+[Jacob Burrell](https://github.com/jacobburrell), [Лебедев Иван](https://github.com/X-pech)
+
 ## n8n@0.132.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.1...n8n@0.132.2) for this version.<br />
 **Release date:** 2021-08-02
@@ -59,8 +84,8 @@ The features that introduced the breaking changes have been flagged below.
 
 ### New nodes ✨
 <br />
-<Changelog node="n8n-nodes-base.ciscoWebex" title="Cisco Webex"/>
-<Changelog node="n8n-nodes-base.ciscoWebexTrigger" title="Cisco Webex Trigger"/>
+<Changelog node="n8n-nodes-base.ciscoWebex" title="Webex by Cisco"/>
+<Changelog node="n8n-nodes-base.ciscoWebexTrigger" title="Webex by Cisco Trigger"/>
 
 
 ### Enhanced nodes 🚀

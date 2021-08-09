@@ -1,21 +1,21 @@
 ---
 permalink: /credentials/ciscoWebex
-description: Learn to configure credentials for the Cisco Webex node in n8n
+description: Learn to configure credentials for the Webex by Cisco node in n8n
 ---
 
-# Cisco Webex
+# Webex by Cisco
 
 You can use these credentials to authenticate the following nodes:
-- [Cisco Webex](../../nodes-library/nodes/ciscoWebex/README.md)
-- [Cisco Webex Trigger](../../nodes-library/trigger-nodes/ciscoWebexTrigger/README.md)
+- [Webex by Cisco](../../nodes-library/nodes/ciscoWebex/README.md)
+- [Webex by Cisco Trigger](../../nodes-library/trigger-nodes/ciscoWebexTrigger/README.md)
 
 ## Prerequisites
 
-Create a [Cisco Webex](https://www.webex.com/) account.
+Create a [Webex by Cisco](https://www.webex.com/) account.
 
 ## Using OAuth
 
-1. Navigate to [Webex for Developers](https://developer.webex.com/) and sign in using your Cisco Webex account.
+1. Navigate to [Webex for Developers](https://developer.webex.com/) and sign in using your Webex by Cisco account.
 2. From the user menu select **My Webex Apps**, then **Create a New App**.
 3. From the ***Create a New App*** page select **Create an Integration**.
 4. Complete the following required fields for your new integration:
@@ -32,5 +32,5 @@ From n8n:
 
 7. Enter a descriptive ***Credentials Name***.
 8. Under ***Credential Data***, enter the ***Client ID*** and ***Client Secret*** obtained above.
-9. Under ***OAuth***, click the circle button to initiate authentication. A popup may appear prompting you to login to your Cisco Webex account.
+9. Under ***OAuth***, click the circle button to initiate authentication. A popup may appear prompting you to login to your Webex by Cisco account.
 10. After authentication is complete, click **Create** to save your new credentials.

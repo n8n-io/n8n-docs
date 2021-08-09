@@ -13,6 +13,7 @@ Note that while all nodes are [compatible](#compatible-nodes) with OAuth2 authen
 
 * [Google Cloud](https://cloud.google.com/) account
 * [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project)
+* [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started) (**For Google Perspective Only**)
 
 ## Compatible nodes
 
@@ -31,7 +32,8 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md) | :white_check_mark: | :x: |  
 | [Google Cloud Realtime Database](../../nodes-library/nodes/GoogleCloudRealtimeDatabase/README.md) | :white_check_mark: | :x: |
 | [Google Docs](../../nodes-library/nodes/GoogleDocs/README.md) | :white_check_mark: | :white_check_mark: | 
-| [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md) | :white_check_mark: | :white_check_mark: | 
+| [Google Drive](../../nodes-library/nodes/GoogleDrive/README.md) | :white_check_mark: | :white_check_mark: |
+| [Google Perspective](../../nodes-library/nodes/GooglePerspective/README.md) | :white_check_mark: | :x: | 
 | [Google Sheets](../../nodes-library/nodes/GoogleSheets/README.md) | :white_check_mark: | :white_check_mark: |
 | [Google Slides](../../nodes-library/nodes/GoogleSlides/README.md) | :white_check_mark: | :white_check_mark: | 
 | [Google Tasks](../../nodes-library/nodes/GoogleTasks/README.md) | :white_check_mark: | :x: | 

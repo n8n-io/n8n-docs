@@ -17,7 +17,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality ⚙️
 - Fixed UI lag when editing large workflows.
-- Revert TypeORM to version 0.2.30
 
 ### Bug fixes 🐛
 <br />

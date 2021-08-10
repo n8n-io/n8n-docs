@@ -238,10 +238,6 @@ module.exports = {
 					path: 'keyboard-shortcuts.md',
 				},
 				{
-					title: '🧑‍💻 Setup via PM2',
-					path: 'setup-pm2.md',
-				},
-				{
 					title: '💻 Environment Variables',
 					path: 'environment-variables.md',
 				},

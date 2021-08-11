@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 
 ## Example usage
 
-This workflow allows you to create a new row in your table. This example usage workflow would use the following two nodes.
+This workflow allows you to get all rows in your table. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [NocoDB]()
 
@@ -32,5 +32,10 @@ The start node exists by default when you create a new workflow.
 ### 2. NocoDB node
 
 1. First enter your credentials for the NocoDB node. You can find out how to do that [here](../../../credentials/NocoDb/README.md).
-2. Enter the name of the city in the *City* field.
-3. Click on *Execute Node* to run the workflow.
+2. The **Row** ***Resource*** is selected by default.
+3. Select **Get All** from the ***Operation*** dropdown.
+4. Enter the NocoDB **Project ID**.
+5. Enter the name of the targeted **Table**.
+6. Click on **Execute Node** to run the workflow.
+
+![The NocoDB node](./nocoDb_node.png)

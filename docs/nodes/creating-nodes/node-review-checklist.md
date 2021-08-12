@@ -1,4 +1,4 @@
-# Node review checklist
+# Node Review Checklist
 
 If you want to create a new node for a service - that's great, thank you! We recommend you take a look at the [existing nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) to get an idea of how your code should look and work like.
 

@@ -1,4 +1,4 @@
-# Creating your first trigger node
+# Creating Your First Trigger Node
 
 Today, you will learn how to create your first trigger node for n8n.
 

@@ -19,6 +19,7 @@ Make sure you tick the boxes below before submitting a node for review, as this 
 <input type="checkbox"> Ensure the parameters have the correct type.</input><br>
 <input type="checkbox"> Mind the defaults: if the service has a default as true, keep it as true. Changing default values can break the existing workflows of the users.</input><br>
 <input type="checkbox"> Check if the node disposes of everything properly, in particular, if connections were properly closed.</input><br>
+<input type="checkbox"> Check your code using <a href="https://docs.n8n.io/nodes/creating-nodes/nodelinter.html">Nodelinter</a> to ensure a clean lint <strong>before</strong> submitting your pull request</input><br>
 
 ## Testing
 

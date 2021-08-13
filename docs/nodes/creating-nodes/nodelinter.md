@@ -10,27 +10,25 @@ This includes rules for:
 
 See the full linting list [here](https://github.com/n8n-io/nodelinter/blob/master/src/lintings.ts) for more details.
 
-## Installation
+## Installation and Usage
 
-Nodelinter is a dependency of the `nodes-base` package you [cloned](./create-node.md#cloning-the-repository) when first getting started.
+Nodelinter is a dependency of the `nodes-base` package and available upon [installing](../../getting-started/installation/README.md) n8n.
 
-To install run:
-
-```sh
-lerna bootstrap --hoist && npm run build
-```
-
-Then you can run Nodelinter from the `packages/nodes-base` directory as follows:
+You can run Nodelinter from the `packages/nodes-base` directory as follows:
 
 ```sh
 npm run nodelinter -- --<options>
 ```
 
+:::tip 💡 Keep in mind
+Be sure to run Nodelinter and verify your code before submitting a pull request.
+:::
+
 ## Options
 
 | Option            | Description                                        | Example |
 | ----------------- | -------------------------------------------------- | -------- |
-| `--target`        | Path of the file or directory to lint              | Lint a single file:<br>`--target=./packages/nodes-base/nodes/Stripe/Stripe.node.ts` <br><br>Lint all files in a directory:<br>`--target=./packages/nodes-base/nodes/Stripe` |
+| `--target`        | Path of the file or directory to lint              | Lint a single file:<br>`--target=nodes/Stripe/Stripe.node.ts` <br><br>Lint all files in a directory:<br>`--target=nodes/Stripe` |
 | `--config`        | Path of the [custom config](#custom-config) to use | `--config=/Users/john/Documents/myConfig.json` |
 | `--patterns`      | Lintable file patterns                             | `--patterns:.node.ts,Description.ts` |
 | `--print`         | Print output to JSON<br><br>A custom filename can optionally be specified. | `--print=myLintOutput` |
@@ -60,7 +58,7 @@ To do so create a JSON file containing the key values you want to override. For 
 }
 ```
 
-Name this file `nodelinter.config.json` and place it anywhere in your local Nodelinter directory and it will be automatically detected. Alternatively, you can specify the custom config file and location using the `--config` option.
+Name this file `nodelinter.config.json` and place it anywhere in your `nodes-base` directory and it will be automatically detected. Alternatively, you can specify the custom config file and location using the `--config` option.
 
 ## Lint exceptions
 

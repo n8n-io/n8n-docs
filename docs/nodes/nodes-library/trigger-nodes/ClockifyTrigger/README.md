@@ -11,6 +11,7 @@ description: Learn how to use the Clockify Trigger node in n8n
 You can find authentication information for this node [here](../../../credentials/Clockify/README.md).
 :::
 
+**Note:** This node uses the workflow timezone setting to specify the range of time entries starting time. You have to configure the workflow timezone setting if you want this Trigger node to retrieve the right time entries.
 
 ## Example Usage
 
@@ -24,11 +25,11 @@ The final workflow should look like the following image.
 
 ### 1. Clockify Trigger node
 
-1. First of all, you'll have to enter credentials for the Clockify Trigger node. You can find out how to do that [here](../../../credentials/Clockify/README.md).
-2. Select the workspace you want to receive updates for from the *Workspace* dropdown list.
+1. First enter your credentials for the Clockify Trigger node. You can find out how to do that [here](../../../credentials/Clockify/README.md).
+2. Select the *Workspace* you want to receive updates for using the dropdown list.
 3. Click on *Execute Node* to run the workflow.
 
-**Note:** This node uses polling to get new time entries. You'll have to use the *Add Poll Time* button if you want this Trigger node to run regularly to retrieve new time entries.
+**Note:** This node uses polling to get new time entries. You have to use the *Add Poll Time* button if you want this Trigger node to run and retrieve new time entries regularly.
 
 ::: tip 💡 Activate workflow for production
 You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.

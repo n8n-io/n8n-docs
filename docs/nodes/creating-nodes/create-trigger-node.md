@@ -297,7 +297,7 @@ The property webhooks implements the interface **IWebhookDescription**. The inte
 
 1. **name:** The property name where n8n will look for the life cycle methods.
 2. **httpMethod:** The HTTP method.
-3. **responseMode:** When the trigger will respond. When developing a trigger node, this property must be set to `OnReceived`.
+3. **responseMode:** When the trigger will respond. When developing a trigger node, this property must be set to `onReceived`.
 4. **path:** The path added to the base URL.
 
 For example, for a Trigger node with the following `webhooks` property, n8n will create the following webhooks URLs.

@@ -9,10 +9,10 @@ The next step in Nathan’s workflow is to calculate two values from the booked 
 To calculate data and add more functionality to your workflows you can use the **Function node**, which lets you write custom JavaScript code.
 
 ::: warning ⚠️ Function vs Function Item
-n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](../../../getting-started/key-concepts.md#function).
+n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](../../../getting-started/key-concepts/README.md#function).
 :::
 
-Before going into the setup of the Function node, you should first learn the [data structure](../../../getting-started/key-concepts.md#data-structure) of n8n. This is important if you want to:
+Before going into the setup of the Function node, you should first learn the [data structure](../../../getting-started/key-concepts/README.md#data-structure) of n8n. This is important if you want to:
 - create your own node
 - write custom expressions
 - use the Function or Function Item node

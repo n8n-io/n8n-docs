@@ -1,5 +1,5 @@
 ---
-permalink: /credentials/servicenow
+permalink: /credentials/serviceNow
 description: Learn to configure credentials for the ServiceNow node in n8n
 ---
 

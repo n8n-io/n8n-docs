@@ -6,7 +6,7 @@ description: Learn to configure credentials for the Home Assistant node in n8n
 # Home Assistant
 
 You can use these credentials to authenticate the following nodes with Home Assistant.
-- [Home Assistant](https://docs.n8n.io/nodes/n8n-nodes-base.homeAssistant/)
+- [Home Assistant](../../nodes-library/nodes/HomeAssistant/README.md)
 
 ## Prerequisites
 

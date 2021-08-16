@@ -14,6 +14,7 @@ You can find authentication information for this node [here](../../../credential
 ## Basic Operations
 
 <Resource node="n8n-nodes-base.openWeatherMap" />
+
 ## Example Usage
 
 This workflow allows you to get the current weather data for a city. You can also find the [workflow](https://n8n.io/workflows/460) on the website. This example usage workflow would use the following two nodes.

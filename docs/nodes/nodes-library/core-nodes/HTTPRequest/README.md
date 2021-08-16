@@ -34,7 +34,7 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 	- **Follow Redirect:** This option can be used to follow any redirections with a status code `3xx`.
 	- **Ignore Response Code:** This option can be used to let the node execute even when the HTTP status code is not 2xx.
 	- **Proxy:** This field is used to specify an HTTP proxy that you may want to use.
-	- **Split Into Items:** This option can be used to flatten the node output as a simple array.
+	- **Split Into Items:** This option can be used to flatten the node output as a simple array. See the [FAQ](#faqs) section to learn more.
 	- **Timeout:** The maximum time (in ms) to wait for a response header from the server before aborting the request.
 	- **Use Querystring:** Set this option to `true` if you need arrays to be serialized as `foo=bar&foo=baz` instead of the default `foo[0]=bar&foo[1]=baz`.
 	- **Headers:** This section is used to specify any optional HTTP request headers you may want to include with your request.
@@ -130,6 +130,14 @@ When the node gets executed, you will receive the HTTP status code, the HTTP sta
 2. Click on ***Add Option*** and select 'Body Content Type'.
 3. Select 'RAW/Custom' from the ***Body Content Type*** field.
 4. Enter the XML data in the ***Body*** field.
+
+### When to use the Split Into Items parameter?
+
+Not all incoming data you receive will be properly [structured](../../../../getting-started/key-concepts.md#data-structure) to allow nodes to [process](../../../../getting-started/key-concepts.md#data-flow) each individual item.
+
+Typically you would need to use [JavaScript code](../../../../reference/javascript-code-snippets.md) inside the [Function](../Function/README.md) node to [modify the data structure](../../../../reference/javascript-code-snippets.md#modify-data-structure).
+
+The HTTP Request node allows you to do this automatically by enabling the Split Into Items parameter.
 
 ## Further Reading
 

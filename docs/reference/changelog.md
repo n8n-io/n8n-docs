@@ -2,6 +2,32 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.134.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.133.0...n8n@0.134.0) for this version.<br />
+**Release date:** 2021-08-15
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.awsDynamoDb" title="AWS DynamoDB:" text="Added Scan option to Item > Get All operation."/>
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Drive:" text="Added File Name option to File > Update operation."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website."/>
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Added Timezone option when inserting Date fields."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID."/>
+<Changelog node="n8n-nodes-base.quickbooks" title="QuickBooks:" text="Added the Transaction resource and Get Report operation."/>
+
+### Core Functionality ⚙️
+- Integrated [Nodelinter](../nodes/creating-nodes/nodelinter.md) in n8n.
+- Fix to add a trailing slash (`/`) to all webhook URLs for proper functionality.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.awsSes" title="AWS SES:" text="Fixed issue where special characters in the message were not encoded."/>
+<Changelog node="n8n-nodes-base.baserow" title="Baserow:" text="Fixed issue where Create operation inserted null values."/>
+<Changelog node="n8n-nodes-base.hubspot" title="Hubspot:" text="Fixed issue when sending context parameter."/>
+
+### Contributors 🙌
+[calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1) 
+
 ## n8n@0.133.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.132.2...n8n@0.133.0) for this version.<br />
 **Release date:** 2021-08-08

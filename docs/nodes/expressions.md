@@ -126,3 +126,7 @@ const isActive = $workflow.active;
 const workflowId = $workflow.id;
 const workflowName = $workflow.name;
 ```
+
+## Variable: $restartWebhookUrl
+
+This section is still a work in progress. We'll add more details about this variable soon.

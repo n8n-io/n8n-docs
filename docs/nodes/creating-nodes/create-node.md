@@ -1,4 +1,4 @@
-# Creating your first node
+# Creating Your First Node
 
 Today, you will learn how to create your first node for n8n.
 

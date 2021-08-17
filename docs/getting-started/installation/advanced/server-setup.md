@@ -1,18 +1,16 @@
 # Server Setup
 
 ::: warning 💡 Keep in mind
-If you haven't followed this guide to setup your n8n instance on a server, please make sure that you secure your n8n instance as described under [Security](security.md).
+If you are following this guide to setup your n8n instance on a server, please make sure that you [secure](../../key-concepts.md#security) your n8n instance.
 :::
 
+## Docker-Compose example
 
-## Example setup with docker-compose
-
-If you have already installed docker and docker-compose, then you can directly start with step 4.
-
+If you have already installed Docker and Docker-Compose, then you can start with step 4.
 
 ### 1. Install Docker
 
-This can vary depending on the Linux distribution used. Example bellow is for Ubuntu:
+This can vary depending on the Linux distribution used. The below example is for Ubuntu:
 
 ```bash
 sudo apt update
@@ -32,7 +30,7 @@ sudo apt upgrade -y
 sudo apt install docker-ce -y
 ```
 
-### 2. Optional: If it should run as not root user
+### 2. Optional: Non-root user access
 
 Run when logged in as the user that should also be allowed to run docker:
 
@@ -41,33 +39,30 @@ sudo usermod -aG docker ${USER}
 su - ${USER}
 ```
 
-### 3. Install Docker-compose
+### 3. Install Docker-Compose
 
-This can vary depending on the Linux distribution used. Example bellow is for Ubuntu:
+This can vary depending on the Linux distribution used. Before proceeding check the [latest version](https://github.com/docker/compose/releases) and replace the `1.27.4` below.
 
-Check before what version the latestand replace "1.24.1" with that version accordingly.
-https://github.com/docker/compose/releases
+The example below is for Ubuntu:
 
 ```bash
 sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
+### 4. DNS setup 
 
-### 4. Setup DNS
-
-Add A record to route the subdomain accordingly.
+Add A record to route the subdomain accordingly:
 
 ```
 Type: A
-Name: n8n (or whatever the subdomain should be)
+Name: n8n (or the desired subdomain)
 IP address: <IP_OF_YOUR_SERVER>
 ```
 
-
 ### 5. Create docker-compose file
 
-Create a `docker-compose.yml` file. Paste the following in the file.
+Create a `docker-compose.yml` file. Paste the following in the file:
 
 ```yaml
 version: "3"
@@ -81,11 +76,15 @@ services:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
       - "--certificatesresolvers.mytlschallenge.acme.email=${SSL_EMAIL}"
       - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
     ports:
+      - "80:80"
       - "443:443"
     volumes:
       - ${DATA_FOLDER}/letsencrypt:/letsencrypt
@@ -100,7 +99,7 @@ services:
       - traefik.enable=true
       - traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
       - traefik.http.routers.n8n.tls=true
-      - traefik.http.routers.n8n.entrypoints=websecure
+      - traefik.http.routers.n8n.entrypoints=web,websecure
       - traefik.http.routers.n8n.tls.certresolver=mytlschallenge
       - traefik.http.middlewares.n8n.headers.SSLRedirect=true
       - traefik.http.middlewares.n8n.headers.STSSeconds=315360000
@@ -124,7 +123,7 @@ services:
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 
-If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](../../nodes/nodes-library/core-nodes/WriteBinaryFile/README.md)), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](../../nodes/nodes-library/core-nodes/WriteBinaryFile/README.md), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
       - /local-files:/files
@@ -140,7 +139,7 @@ You will now be able to write files to the `/files` directory in n8n and they wi
 
 ### 6. Create `.env` file
 
-Create `.env` file and change it accordingly.
+Create an `.env` file and change it accordingly.
 
 ```bash
 # Folder where data should be saved
@@ -179,12 +178,12 @@ above, it is `/root/n8n/`.
 In that folder, the database file from SQLite as well as the encryption key will be saved.
 
 The folder can be created like this:
+
 ```
 mkdir /root/n8n/
 ```
 
-
-### 8. Start docker-compose setup
+### 8. Start docker-compose
 
 n8n can now be started via:
 
@@ -192,15 +191,15 @@ n8n can now be started via:
 sudo docker-compose up -d
 ```
 
-In case it should ever be stopped that can be done with this command:
+To stop the container:
+
 ```bash
 sudo docker-compose stop
 ```
-
 
 ### 9. Done
 
 n8n will now be reachable via the above defined subdomain + domain combination.
 The above example would result in: https://n8n.example.com
 
-n8n will only be reachable via https and not via http.
+n8n will only be reachable via `https` and not via `http`.

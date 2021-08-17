@@ -1,0 +1,268 @@
+{
+	"name": "n8n_camunda",
+	"nodes": [
+		{
+			"parameters": {},
+			"name": "Start",
+			"type": "n8n-nodes-base.start",
+			"typeVersion": 1,
+			"position": [-1700, -440]
+		},
+		{
+			"parameters": {
+				"bpmnProcessId": "n8n_camunda",
+				"variables": "={\"company\":\"{{$json[\"company\"]}}\", \"name\": \"{{$json[\"name\"]}}\",\"email\":\"{{$json[\"email\"]}}\"}"
+			},
+			"name": "Camunda Cloud 1",
+			"type": "n8n-nodes-base.camundaCloud",
+			"typeVersion": 1,
+			"position": [-1200, -450],
+			"notesInFlow": true,
+			"credentials": {
+				"camundaCloudApi": "Camunda Cloud Cluster"
+			},
+			"notes": "create new process instance"
+		},
+		{
+			"parameters": {
+				"topics": "signups",
+				"options": {
+					"jsonParseBody": true,
+					"onlyMessage": true
+				}
+			},
+			"name": "MQTT Trigger",
+			"type": "n8n-nodes-base.mqttTrigger",
+			"typeVersion": 1,
+			"position": [-1450, -450],
+			"credentials": {
+				"mqtt": "local mosquitto"
+			}
+		},
+		{
+			"parameters": {
+				"requestMethod": "POST",
+				"url": "https://hooks.slack.com/services/XXXXX/YYYYY/abcabcabc",
+				"responseFormat": "string",
+				"options": {},
+				"bodyParametersUi": {
+					"parameter": [
+						{
+							"name": "text",
+							"value": "=NEW SIGNUP! Company: {{$json[\"variables\"][\"company\"]}}, Name: {{$json[\"variables\"][\"name\"]}}, Email: {{$json[\"variables\"][\"email\"]}}"
+						}
+					]
+				},
+				"headerParametersUi": {
+					"parameter": [
+						{
+							"name": "Content-type",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"name": "HTTP Request",
+			"type": "n8n-nodes-base.httpRequest",
+			"typeVersion": 1,
+			"position": [-500, -450],
+			"notesInFlow": true,
+			"notes": "Send Slack Msg to Marketing"
+		},
+		{
+			"parameters": {
+				"operation": "append",
+				"application": "appFgBAYnJcW8uS4l",
+				"table": "signups",
+				"options": {
+					"typecast": false
+				}
+			},
+			"name": "Airtable",
+			"type": "n8n-nodes-base.airtable",
+			"typeVersion": 1,
+			"position": [-250, -200],
+			"credentials": {
+				"airtableApi": "Airtable creds"
+			}
+		},
+		{
+			"parameters": {
+				"taskType": "airtable",
+				"timeout": 15,
+				"autoComplete": false
+			},
+			"name": "Camunda Cloud Trigger 2",
+			"type": "n8n-nodes-base.camundaCloudTrigger",
+			"typeVersion": 1,
+			"position": [-750, -200],
+			"notesInFlow": true,
+			"credentials": {
+				"camundaCloudApi": "Camunda Cloud Cluster"
+			},
+			"notes": "airtable service task"
+		},
+		{
+			"parameters": {
+				"taskType": "slack",
+				"timeout": 15
+			},
+			"name": "Camunda Cloud Trigger 1",
+			"type": "n8n-nodes-base.camundaCloudTrigger",
+			"typeVersion": 1,
+			"position": [-750, -450],
+			"notesInFlow": true,
+			"credentials": {
+				"camundaCloudApi": "Camunda Cloud Cluster"
+			},
+			"notes": "slack service task"
+		},
+		{
+			"parameters": {
+				"taskType": "email",
+				"timeout": 15
+			},
+			"name": "Camunda Cloud Trigger 3",
+			"type": "n8n-nodes-base.camundaCloudTrigger",
+			"typeVersion": 1,
+			"position": [-750, 50],
+			"notesInFlow": true,
+			"credentials": {
+				"camundaCloudApi": "Camunda Cloud Cluster"
+			},
+			"notes": "email service task"
+		},
+		{
+			"parameters": {
+				"fromEmail": "john@doe.com",
+				"toEmail": "me@me.com",
+				"subject": "Welcome!",
+				"text": "=Hey {{$json[\"variables\"][\"name\"]}},\n\nGreat to have {{$json[\"variables\"][\"company\"]}} on board!\n\nHappy Weekend!",
+				"options": {
+					"allowUnauthorizedCerts": false
+				}
+			},
+			"name": "Send Email",
+			"type": "n8n-nodes-base.emailSend",
+			"typeVersion": 1,
+			"position": [-500, 50],
+			"credentials": {
+				"smtp": "SMTP credentials"
+			}
+		},
+		{
+			"parameters": {
+				"keepOnlySet": true,
+				"values": {
+					"string": [
+						{
+							"name": "company",
+							"value": "={{$json[\"variables\"][\"company\"]}}"
+						},
+						{
+							"name": "name",
+							"value": "={{$json[\"variables\"][\"name\"]}}"
+						},
+						{
+							"name": "email",
+							"value": "={{$json[\"variables\"][\"email\"]}}"
+						}
+					],
+					"number": []
+				},
+				"options": {
+					"dotNotation": true
+				}
+			},
+			"name": "Set",
+			"type": "n8n-nodes-base.set",
+			"typeVersion": 1,
+			"position": [-500, -200]
+		},
+		{
+			"parameters": {
+				"resource": "job",
+				"jobKey": "={{$node[\"Camunda Cloud 2 Trigger 2\"].json[\"jobKey\"]}}",
+				"variables": "={\"createdAt\":\"{{$json[\"createdTime\"]}}\",\"airtableId\":\"{{$json[\"id\"]}}\"}"
+			},
+			"name": "Camunda Cloud 2",
+			"type": "n8n-nodes-base.camundaCloud",
+			"typeVersion": 1,
+			"position": [0, -200],
+			"credentials": {
+				"camundaCloudApi": "Camunda Cloud Cluster"
+			}
+		}
+	],
+	"connections": {
+		"MQTT Trigger": {
+			"main": [
+				[
+					{
+						"node": "Camunda Cloud 1",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Camunda Cloud Trigger 2": {
+			"main": [
+				[
+					{
+						"node": "Set",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Camunda Cloud Trigger 1": {
+			"main": [
+				[
+					{
+						"node": "HTTP Request",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Camunda Cloud Trigger 3": {
+			"main": [
+				[
+					{
+						"node": "Send Email",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Set": {
+			"main": [
+				[
+					{
+						"node": "Airtable",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Airtable": {
+			"main": [
+				[
+					{
+						"node": "Camunda Cloud 2",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	},
+	"active": true,
+	"settings": {},
+	"id": 2
+}

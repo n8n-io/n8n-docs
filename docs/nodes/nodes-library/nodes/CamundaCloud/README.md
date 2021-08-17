@@ -19,7 +19,7 @@ description: Learn how to use the Camunda Cloud node in n8n
 
 ## Example Use-Case
 
-In this [example](./workflow.json) we combine the advantages of the powerful Camunda Cloud workflow engine with the extensibility of n8n to implement a long-running business process that handles new sign-ups.
+In this example we combine the advantages of the powerful Camunda Cloud workflow engine with the extensibility of n8n to implement a long-running business process that handles new sign-ups.
 
 The following BPMN process is already deployed to our Camunda Cloud account. How to do this is out of scope for this guide, but more information can be found [here](https://docs.camunda.io/docs/guides).
 

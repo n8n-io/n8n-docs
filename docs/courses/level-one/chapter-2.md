@@ -25,7 +25,7 @@ When you add a new node to the Editor UI, the node will be automatically activat
 
 ### Parameters
 
-The *HackerNew node* has several parameters that need to be configured in order to make it work:
+The *Hacker News node* has several parameters that need to be configured in order to make it work:
 
 <figure><img src="./images/chapter-one/Hacker-news-node.png" alt="Hacker News node" style="width:100%"><figcaption align = "center"><i>Hacker News node</i></figcaption></figure>
 

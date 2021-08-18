@@ -23,8 +23,10 @@ All code of n8n is written in TypeScript and hence, the nodes should also be wri
 Some third-party services have their own libraries on npm which make it easier to create an integration. It can be quite tempting to use them. The problem with those is that you add another dependency and not only one, you add but also all the dependencies of the dependencies. This means more and more code gets added, has to get loaded, can introduce security vulnerabilities, bugs, and so on. So please use the built-in module which can be used like this:
 
 ```typescript
-const response = await this.helpers.request(options);
+const response = await this.helpers.httpRequest(options);
 ```
+
+The full documentation and migration instructions from the deprecated `this.helpers.request` can be found [installing](making-http-requests.md).
 
 That is using the npm package [`request-promise-native`](https://github.com/request/request-promise-native) which is the basic npm `request` module but with promises. For a full set of `options` consider looking at [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
 
@@ -47,3 +49,22 @@ There is not much of a guideline yet but if your node can do multiple things, ca
 ### Node Icons
 
 Check existing node icons as a reference when you create own ones. The resolution of an icon should be 60x60px and saved as PNG.
+
+### Node versions
+
+n8n now supports node versioning and it's a blast! You can make changes to existing nodes without breaking the existing behavior by introducing a new version. You can check an example of a versioned node by browsing the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).
+
+Node versioning in a glimpse:
+
+- The main node file should now extend `NodeVersionedType` instead of `INodeType`
+- The main node file now only contains a base description containing the `defaultVersion` (usually the latest) and a list of versions
+- We recommend you use `v1`, `v2`, etc. for version folder names
+- A new code separation has been created and can be seen in the Mattermost node above. Highlights:  
+`actions` folder with the implementation of each action the node can perform  
+`description` folder with the node parameters, separated by folders  
+`methods` is an optional folder with the loading dynamic parameters' functions  
+`transport` is a folder with all the communication implementation
+
+**Note:** For both `actions` and `description` folders we recommend using `resources` as subfolders and `operations` as file names. This make browsing through the code a lot easier. This can be simplified for nodes that have a less complicated structure.
+
+

@@ -7,7 +7,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2021-08-23
 
 ### Core Functionality ⚙️
-- Fixed an issue resulting in 503 errors when upgrading to `v0.135.0`.
+- Fixed an issue where if n8n was shutdown during database migration while upgrading versions, errors would result upon next startup.
 
 ## n8n@0.135.0 🛠
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />

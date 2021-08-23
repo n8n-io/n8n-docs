@@ -4,7 +4,7 @@ Looping enables you to repeatedly perform the same actions, stopping only after 
 
 Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In n8n this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn’t true.
 
-## Explicit loops unnecessary in n8n
+## Using loops in n8n
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point (or a single row in the output table of a node).
 

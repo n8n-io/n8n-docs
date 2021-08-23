@@ -2,6 +2,42 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.135.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.0...n8n@0.135.1) for this version.<br />
+**Release date:** 2021-08-23
+
+### Core Functionality ⚙️
+- Fixed an issue resulting in 503 errors when upgrading to `v0.135.0`.
+
+## n8n@0.135.0 🛠
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />
+**Release date:** 2021-08-22
+
+::: warning ⚠️ Breaking changes
+Please note that this version contains breaking changes. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
+The features that introduced the breaking changes have been flagged below.
+:::
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.formIoTrigger" title="Form.io Trigger"/>
+<Changelog node="n8n-nodes-base.formstackTrigger" title="Formstack Trigger"/>
+<Changelog node="n8n-nodes-base.wait" title="Wait"/>
+
+### Core Functionality ⚙️
+- In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [🛠](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- Credentials are now loaded from the database on-demand. [🛠](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- Webhook UUIDs are automatically updated when duplicating a workflow.
+- Fixed an issue when referencing values before loops.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.interval" title="Interval:" text="Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error."/>
+
+### Contributors 🙌
+[Aniruddha Adhikary](https://github.com/aniruddha-adhikary), [lublak](https://github.com/lublak), [parthibanbalaji](https://github.com/parthibanbalaji)
+
+
 ## n8n@0.134.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.133.0...n8n@0.134.0) for this version.<br />
 **Release date:** 2021-08-15

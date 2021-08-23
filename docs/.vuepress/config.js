@@ -292,7 +292,10 @@ module.exports = {
 				},
 				{
 					title: '💡 Key Concepts',
-					path: 'getting-started/key-concepts.md',
+					path: '/getting-started/key-concepts/',
+					sidebarDepth: 2,
+					sidebarDepth: 2,
+					children: getChildrenFiles('getting-started/key-concepts'),
 				},
 				{
 					title: '🚀 Installation',

@@ -13,6 +13,10 @@ The Split In Batches node saves the original incoming data, and with each iterat
 - ***Options***
     - ***Reset:*** If set to true, the node will reset.
 
+::: warning
+n8n natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](../../../../getting-started/key-concepts/looping.md).
+:::
+
 ## Example Usage
 
 This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on n8n.io. This example usage workflow would use the following nodes.

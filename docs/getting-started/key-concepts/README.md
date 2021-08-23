@@ -5,9 +5,9 @@ To get the most out of n8n's functionalities and build powerful workflows, it's 
 ## Expression
 
 An expression is a string of characters and symbols in a programming language that represents a value depending upon its input.
-n8n uses [expressions](../nodes/expressions.md) extensively when a node refers to another node for input.
+n8n uses [expressions](../../nodes/expressions.md) extensively when a node refers to another node for input.
 
-![Node expression](./images/Node_expression.gif)
+![Node expression](../images/Node_expression.gif)
 
 ## Item
 
@@ -15,9 +15,9 @@ Data sent from one node to another is sent as an array of JSON objects. Each ele
 
 ## Function
 
-A function is a block of code designed to perform a certain task. In n8n, you can write custom [JavaScript code snippets](../reference/javascript-code-snippets.md) to add, remove, and update the data you receive from a node.
+A function is a block of code designed to perform a certain task. In n8n, you can write custom [JavaScript code snippets](../../reference/javascript-code-snippets.md) to add, remove, and update the data you receive from a node.
 
-The [Function](../nodes/nodes-library/core-nodes/Function/README.md) and [Function Item](../nodes/nodes-library/core-nodes/FunctionItem/README.md) nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code. 
+The [Function](../../nodes/nodes-library/core-nodes/Function/README.md) and [Function Item](../nodes/nodes-library/core-nodes/FunctionItem/README.md) nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code. 
 
 The code of the **Function node** gets executed only once. The node receives the full items (JSON and binary data) as an array and expects an array of items as a return value. The items returned can be totally different from the incoming ones. So it is not only possible to remove and edit existing items, but also to add or return totally new ones.
 
@@ -89,47 +89,6 @@ This data would, for example, create two boards. One named `test1` the other one
 	}
 ]
 ```
-
-## Loops
-
-[Looping](https://en.wikipedia.org/wiki/Control_flow#Loops) is useful when you need to perform the same action repeatedly over the same, or similar, items.
-
-In n8n this is handled automatically, with nodes processing each input item (data point) independently. For example, if you pass 100 items to an [Airtable](../nodes/nodes-library/nodes/Airtable/README.md) node all 100 will be added to your table, no loop required.
-
-Actions where you would typically use loops, such as [modifying data structure](../reference/javascript-code-snippets.md#modify-data-structure) or [merging data](../nodes/nodes-library/core-nodes/Merge/README.md), do not require explicit loops in n8n.
-
-There are a limited number of nodes and operations where you need to design a loop into your workflow:
-
-* [**Airtable**](../nodes/nodes-library/nodes/Airtable/README.md) node:
-	* **List**: This operation executes only once, not for each incoming item.
-* [**Coda**](../nodes/nodes-library/nodes/Coda/README.md) node:
-	* **Get All**: For the Table and View resources, this operation executes only once.
-* [**CrateDB**](../nodes/nodes-library/nodes/crateDb/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Execute Workflow**](../nodes/nodes-library/core-nodes/ExecuteWorkflow/README.md) node executes only once by default.
-* [**Function**](../nodes/nodes-library/core-nodes/Function/README.md) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](../nodes/nodes-library/core-nodes/SplitInBatches/README.md) node.
-* [**Google Cloud Firestore**](../nodes/nodes-library/nodes/GoogleCloudFirestore/README.md) node:
-	* **Get All**: For the Collection and Document resources, this operation executes only once.
-* [**HTTP Request**](../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
-* [**Microsoft SQL**](../nodes/nodes-library/nodes/microsoftSql/README.md) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
-* [**Postgres**](../nodes/nodes-library/nodes/postgres/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**QuestDB**](../nodes/nodes-library/nodes/QuestDb/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Read Binary Files**](../nodes/nodes-library/core-nodes/readBinaryFiles/README.md) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
-* [**Redis**](../nodes/nodes-library/nodes/redis/README.md) node:
-	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
-* [**Spreadsheet**](../nodes/nodes-library/core-nodes/SpreadsheetFile/README.md) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
-* [**TimescaleDB**](../nodes/nodes-library/nodes/TimescaleDb/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-
-::: tip 💡 Keep in mind
-Most APIs will have a limit on the number of requests you can make, using loops helps can ensure you don't exceed this limit. See also [Split In Batches](../nodes/nodes-library/core-nodes/SplitInBatches/README.md) node.
-:::
-
-### Creating Loops
-
-To add a loop to your n8n workflow, connect the output of one node to the input of a previous node.
-
-![A workflow with a loop.](./images/loops.png)
-
-**Make sure to include an [IF](../nodes/nodes-library/core-nodes/if/README.md)  node to check for a condition and stop the loop.**
 
 ## Error Workflow
 

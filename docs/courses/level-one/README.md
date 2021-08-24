@@ -53,10 +53,10 @@ Completing the course should take around two hours. You do not have to complete 
 
 Absolutely! We believe all good works deserve recognition. To get your certificate, you need to complete the following milestones:
 
-✅ [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL
-✅ [Make an HTTP request](./chapter-5/chapter-5.1.md)
-✅ [Send the workflow results as a message via Discord](./chapter-5/chapter-5.6.md)
-✅ Pass the quiz (theory and practice) at the end of the course
+✅ [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL<br/>
+✅ [Make an HTTP request](./chapter-5/chapter-5.1.md)<br/>
+✅ [Send the workflow results as a message via Discord](./chapter-5/chapter-5.6.md)<br/>
+✅ Pass the quiz (theory and practice) at the end of the course<br/>
 
 <figure style="text-align: center"><img src="./images/chapter-one/certificate.png" alt="Certificate" style="height: 70%; width:70%; border: 1px solid #000000;"></figure>
 

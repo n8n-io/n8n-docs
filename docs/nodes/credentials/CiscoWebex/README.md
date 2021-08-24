@@ -24,7 +24,17 @@ Create a [Webex by Cisco](https://www.webex.com/) account.
     * ***Icon***: Provide an icon for your app or select one of the available defaults.
     * ***Description***: Enter a brief description of your app.
     * ***Redirect URIs***: Enter the **OAuth Callback URL** from the n8n credentials modal.
-    * ***Scopes***: Select the access granted to your new app.
+    * ***Scopes***: Enable the following scopes:
+        * `spark:rooms_read`
+        * `spark:messages_write`
+        * `spark:messages_read`
+        * `spark:membership_read`
+        * `spark_membership_write`
+        * `meeting:recordings_write`
+        * `meeting:recordings_read`
+        * `meeting:preferences_read`
+        * `meeting:schedules_write`
+        * `meeting:schedules_read`
 5. Click **Add Integration** to create your app.
 6. Copy the ***Client ID*** and ***Client Secret*** for this new app.
 

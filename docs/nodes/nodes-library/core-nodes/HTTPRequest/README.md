@@ -7,16 +7,20 @@ description: Learn how to use the HTTP Request node in n8n
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests which can be used to query data from apps and services.
 
+::: tip 🔑 Credential
+You can find authentication information for this node [here](../../../credentials/HTTPRequest/README.md).
+:::
+
 ## Node Reference
 
-- **Authentication:** In this dropdown list, there are several authentication options to use with HTTP requests.
+- **Authentication:** Select the authentication method to use for the request from the following:
 	- Basic Auth
 	- Digest Auth
 	- Header Auth
 	- OAuth1
 	- OAuth2
 	- None
-- **Request Method:** In this dropdown list, there are several methods that can be used to send different type of HTTP requests.
+- **Request Method:** Select the method to be used for the request:
 	- DELETE
 	- GET
 	- HEAD

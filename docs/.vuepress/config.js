@@ -300,7 +300,7 @@ module.exports = {
 				{
 					title: '🚀 Installation',
 					path: '/getting-started/installation/',
-					sidebarDepth: 2,
+					sidebarDepth: 3,
 					children: [
 							{
 									title: 'Docker',

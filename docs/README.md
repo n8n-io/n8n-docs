@@ -16,7 +16,7 @@ See the [Installation section](./getting-started/installation/README.md) to get 
 
 ### Learn the basics
 
-Before you start automating workflows with n8n, learn its key [components](getting-started/key-components/README.md) and [concepts](getting-started/key-concepts.md).
+Before you start automating workflows with n8n, learn its key [components](getting-started/key-components/README.md) and [concepts](getting-started/key-concepts/README.md).
 
 ### Create workflows
 

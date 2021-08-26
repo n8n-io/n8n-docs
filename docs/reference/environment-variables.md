@@ -51,6 +51,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
+| `N8N_CONFIG_FILES` | `string` | Use to provide the path to any JSON [configuration file(s)](../getting-started/installation/advanced/configuration.md#configuration-via-file). |
+| `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the n8n database. By default a random key is generated on first launch. |
+| `N8N_USER_FOLDER` | `string` | Provide the path where n8n will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |
 | `N8N_PATH` | `string` | The path n8n is deployed to. |
 | `N8N_HOST` | `string` | Host name (e.g. `localhost`) where n8n can be reached. |
 | `N8N_PORT` | `number` | The HTTP port (e.g. `5678`) where n8n can be reached. |
@@ -59,8 +62,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_SSL_KEY` | `string` | The SSL Key for HTTPS protocol. |
 | `N8N_SSL_CERT` | `string` | The SSL certificate for HTTPS protocol. |
 | `N8N_VERSION_NOTIFICATIONS_ENABLED` | `boolean` | When enables, notifications of new versions and security updates are provided. |
-| `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | `string` | The endpoint where version information is retreived. By default `https://api.n8n.io/versions/` is used. |
+| `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | `string` | The endpoint where version information is retrieved. By default `https://api.n8n.io/versions/` is used. |
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | `string` | The URL displayed in the New Versions panel for additional information. By default `https://docs.n8n.io/getting-started/installation/updating.html` is used. |
+| `VUE_APP_URL_BASE_API` | `string` | Used when building the `n8n-editor-ui` package manually to indicate how the frontend can reach the backend API. |
 
 ## Endpoints
 
@@ -72,6 +76,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_ENDPOINT_REST` | `string` | The path used for REST endpoint. |
 | `N8N_ENDPOINT_WEBHOOK` | `string` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | `string` | The path used for test-webhook endpoint. |
+| `WEBHOOK_TUNNEL_URL` | `string` | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](../getting-started/installation/advanced/configuration.md#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | `boolean` | Disable production webhooks from main process. This helps ensures no HTTP traffic load to main process when using webhook-specific processes. |
 | `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | `boolean` | Deregister webhooks on external services only when workflows are deactivated. |
 
@@ -113,7 +118,10 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `NODES_INCLUDE` | `string` | Specify which nodes to load. |
 | `NODES_EXCLUDE` | `string` | Specify which nodes not to load. |
-| `NODES_ERROR_TRIGGER_TYPE` | `string` | Specify which node Node Type to use as Error Trigger. |
+| `NODE_FUNCTION_ALLOW_BUILTIN` | `string` | Specify which built-in modules may be imported in Function nodes. Use `*` to allow all. By default importing modules is disabled. |
+| `NODE_FUNCTION_ALLOW_EXTERNAL` | `string` | Specify which external modules (from `n8n/node_modules`) may be imported in Function nodes. By default importing modules is disabled. |
+| `NODES_ERROR_TRIGGER_TYPE` | `string` | Specify which Node Type to use as Error Trigger. |
+| `N8N_CUSTOM_EXTENSIONS` | `string` | Specify the path to additional directories containing your custom nodes. |
 
 ## Queues
 

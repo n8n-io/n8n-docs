@@ -16,7 +16,7 @@ For npm, set your desired environment variables in Terminal using the `export` c
 export <variable>=<value>
 ```
 
-## Docker
+### Docker
 
 For Docker, you can set your desired environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file . For example:
 
@@ -43,11 +43,7 @@ docker run -it --rm \
 
 It is also possible to configure n8n using a configuration file.
 
-It is not necessary to define all values but only the ones that should be
-different from the defaults.
-
-If needed multiple files can also be supplied to. For example, have generic
-base settings and some specific ones depending on the environment.
+Only the values that should be different from the default need to be defined in your configuration file. If needed multiple files can also be supplied. For example, you can have some generic base settings and some specific ones depending on the environment.
 
 The path to the JSON configuration file to use can be set using the environment
 variable `N8N_CONFIG_FILES`.
@@ -82,6 +78,20 @@ A possible configuration file could look like this:
 	}
 }
 ```
+
+You can also append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details via environment variables. 
+
+n8n will then load the data from the file with the given name, making it possible to easily load data from Docker- and Kubernetes-Secrets.
+
+The following environment variables support file input:
+  - `DB_POSTGRESDB_DATABASE_FILE`
+  - `DB_POSTGRESDB_HOST_FILE`
+  - `DB_POSTGRESDB_PASSWORD_FILE`
+  - `DB_POSTGRESDB_PORT_FILE`
+  - `DB_POSTGRESDB_USER_FILE`
+  - `DB_POSTGRESDB_SCHEMA_FILE`
+  - `N8N_BASIC_AUTH_PASSWORD_FILE`
+  - `N8N_BASIC_AUTH_USER_FILE`
 
 ## Examples
 

@@ -53,9 +53,8 @@ Node versioning in a glimpse:
 - The main node file now only contains a base description containing the `defaultVersion` (usually the latest) and a list of versions
 - We recommend you use `v1`, `v2`, etc. for version folder names
 - A new code separation has been created and can be seen in the Mattermost node above. Highlights:  
-    * `actions` folder with the implementation of each action the node can perform  
-    * `description` folder with the node parameters, separated by folders  
+    * `actions` folder with description and implementation of each possible action  
     * `methods` is an optional folder with the loading dynamic parameters' functions  
     * `transport` is a folder with all the communication implementation
 
-**Note:** For both the `actions` and `description` folders we recommend using `resources` as subfolders and `operations` as file names. This make browsing through the code a lot easier. This can be simplified for nodes that have a less complicated structure.
+**Note:** For the `actions` folder we recommend using `resources` and `operations` names as subfolders hierarchically. For the implementation an description you can use separate files. Our recommendation is to use `execute.ts` and `description.ts` as file names. This make browsing through the code a lot easier. This can be simplified for nodes that have a less complicated structure.

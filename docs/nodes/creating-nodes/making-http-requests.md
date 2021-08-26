@@ -23,7 +23,7 @@ Where `options` is an object in this format:
 	headers?: object;
 	method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD';
 	body?: FormData | Array | string | number | object | Buffer | URLSearchParams;
-	queryString?: object;
+	qs?: object;
 	arrayFormat?: 'indices' | 'brackets' | 'repeat' | 'comma';
 	auth?: {
 		username: string,
@@ -43,6 +43,7 @@ Where `options` is an object in this format:
 		protocol?: string;
 	};
 	timeout?: number;
+	json?: boolean;
 }	
 ```
 
@@ -55,7 +56,7 @@ Some notes about the possible fields:
 	* If `body` is an instance of `FormData` then `content-type: multipart/form-data` is injected automatically.  
 	* If `body` is an instance of `URLSearchParams`, then `content-type: application/x-www-form-urlencoded` is added.  
 	* To override this behavior, you can set any `content-type` header you wish and it won't be overridden.
-- **arrayFormat**: If your query string contains an array of data, let's say `const queryString = {IDs: [15,17]}`, the values set to `arrayFormat` define how it will be sent.  
+- **arrayFormat**: If your query string contains an array of data, let's say `const qs = {IDs: [15,17]}`, the values set to `arrayFormat` define how it will be sent.  
 	* `indices` (default): `{ a: ['b', 'c'] }` will be formatted as `a[0]=b&a[1]=c`  
 	* `brackets`: `{ a: ['b', 'c'] }` will be formatted as `a[]=b&a[]=c`  
 	* `repeat`: `{ a: ['b', 'c'] }` will be formatted as `a=b&a=c`  
@@ -63,7 +64,7 @@ Some notes about the possible fields:
 - **auth**: Used for Basic auth. Provide `username` and `password`.
 - **disableFollowRedirect**: By default, we'll follow redirects. You can set this to false to prevent this from happening
 - **skipSslCertificateValidation**: Used for calling HTTPS services without proper certificate
-- **returnFullResponse**: Instead of returning only the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK', request: requestObject}`
+- **returnFullResponse**: Instead of returning only the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
 - **encoding**: We usually detect the content type correctly but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
 
 ## Deprecation of the previous helper
@@ -84,10 +85,8 @@ As mentioned above, the previous helper is deprecated and will be replaced in th
 
 New nodes should all use the new helper, and if you have built custom nodes we strongly suggest you migrate to the new helper. Here are the main considerations when migrating:
 
-- `qs` is now called `queryString`
 - Only `url` is accepted. Previously `uri` was also accepted
 - `encoding: null` now must be `encoding: arrayBuffer`
-- If using `json: true` you should now instead set the `accept: application/json` header
 - `rejectUnauthorized: false` is now `skipSslCertificateValidation: true`
 - Use `body` according to `content-type` headers to clarify what is being sent
 - `resolveWithFullResponse` is now `returnFullResponse` and has similar behavior

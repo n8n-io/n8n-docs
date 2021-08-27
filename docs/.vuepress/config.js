@@ -284,9 +284,13 @@ module.exports = {
 					sidebarDepth: 0,
 				},
 				{
+					title: '🏃 Quickstart',
+					path: '/quickstart/',
+					sidebarDepth: 2,
+				},
+				{
 					title: '🍄 Key Components',
 					path: '/getting-started/key-components/',
-					sidebarDepth: 2,
 					sidebarDepth: 2,
 					children: getChildrenFiles('getting-started/key-components'),
 				},
@@ -308,9 +312,9 @@ module.exports = {
 									path: '/getting-started/installation/docker-quickstart.md',
 							},
 							{
-								title: 'Updating',
-								sidebarDepth: 1,
-								path: '/getting-started/installation/updating.md',
+									title: 'Updating',
+									sidebarDepth: 1,
+									path: '/getting-started/installation/updating.md',
 							},
 							{		title: 'Advanced',
 									sidebarDepth: 1,

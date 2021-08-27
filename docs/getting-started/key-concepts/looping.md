@@ -84,5 +84,6 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Read Binary Files**](../../nodes/nodes-library/core-nodes/readBinaryFiles/README.md) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
 * [**Redis**](../../nodes/nodes-library/nodes/redis/README.md) node:
 	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
+* [**RSS**](../../nodes/nodes-library/core-nodes/RSSREAD/README.md) nodes executes only once regardless of the number of items in the incoming data.
 * [**Spreadsheet**](../../nodes/nodes-library/core-nodes/SpreadsheetFile/README.md) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
 * [**TimescaleDB**](../../nodes/nodes-library/nodes/TimescaleDb/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

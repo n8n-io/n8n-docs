@@ -60,7 +60,7 @@ These settings can also be configured on an individual workflow basis via the [w
 
 ### Enable data pruning
 
-You can enable data pruning to automatically delete execution data older than a desired time period. If no `EXECUTIONS_DATA_MAX_AGE` is set than 336 hours (14 days) is used by default.
+You can enable data pruning to automatically delete execution data older than a desired time period. If no `EXECUTIONS_DATA_MAX_AGE` is set, then 336 hours (14 days) is used by default.
 
 <code-group>
 <code-block title="npm">

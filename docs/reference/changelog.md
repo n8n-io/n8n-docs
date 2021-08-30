@@ -2,6 +2,39 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.136.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.3...n8n@0.136.0) for this version.<br />
+**Release date:** 2021-08-30
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Added handling of Rich Text when simplifying data."/>
+
+### Core Functionality ⚙️
+- General UI design improvements.
+- Improved errors messages during debugging of custom nodes.
+- All packages upgraded to TypeScript 4.3.5, improved linting and formatting.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.ftp" title="FTP:" text="Fixed issue where incorrect paths were displayed when using the node."/>
+<Changelog node="n8n-nodes-base.wait" title="Wait:" text="Fixed issue when receiving multiple files using On Webhook Call operation."/>
+<Changelog node="n8n-nodes-base.webhook" title="Webhook:" text="Fixed issue when receiving multiple files."/>
+
+
+## n8n@0.135.3
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.2...n8n@0.135.3) for this version.<br />
+**Release date:** 2021-08-27
+
+### Core Functionality ⚙️
+- Fixed Canvas UI inconsistencies when duplicating workflows.
+- Added log message during upgrade to indicate database migration has started.
+- General improvements to parameter labels and tooltips.
+
+### Contributors 🙌
+[Kyle Mohr](https://github.com/kylefmohr)
+
+
 ## n8n@0.135.2 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.1...n8n@0.135.2) for this version.<br />
 **Release date:** 2021-08-26

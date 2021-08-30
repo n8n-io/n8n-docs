@@ -94,8 +94,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `EXECUTIONS_PROCESS` | `enum string`: `main`, `own` | Whether processes are executed in their own process (default) or the main process. | 
-| `EXECUTIONS_MODE` | `enum string`: `regular`, `queue` | Whether processes should run directly (default) or via queue. |
+| `EXECUTIONS_PROCESS` | `enum string`: `main`, `own` | Whether processes are executed in their own process (default) or the main process.<br><br>See [here](../getting-started/key-concepts/modes.md) for more details. | 
+| `EXECUTIONS_MODE` | `enum string`: `regular`, `queue` | Whether processes should run directly (default) or via queue.<br><br>See [here](../getting-started/key-concepts/modes.md) for more details. |
 | `EXECUTIONS_TIMEOUT` | `number` | The max run time (in seconds) before stopping a workflow execution. Set to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | `number` | The max execution time (in seconds) that can be set for a workflow individually. |
 | `EXECUTIONS_DATA_SAVE_ON_ERROR` | `enum string`: `all`, `none` | Whether execution data is saved on error. |

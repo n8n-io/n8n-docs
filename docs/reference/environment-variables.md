@@ -1,45 +1,49 @@
 # Environment Variables
 
+::: tip 💡 Keep in mind
+You can provide a [configuration file](../getting-started/installation/advanced/configuration.md#configuration-via-file) for n8n, and also append `_FILE` to certain variables to provide their configuration separately, indicated by "/`_FILE`" below.
+:::
+
 ## Credentials
 
 Enabling overwrites for credentials allows you to set default values for credentials which get automatically prefilled. The user cannot see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMTER: VALUE }}`.
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `CREDENTIALS_OVERWRITE_DATA` | `*` | Overwrites for credentials. |
+| `CREDENTIALS_OVERWRITE_DATA`/`_FILE` | `*` | Overwrites for credentials. |
 | `CREDENTIALS_OVERWRITE_ENDPOINT` | `string` | The API endpoint to fetch credentials. |
 
 ## Database
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `DB_TYPE` | `enum string`: `sqlite`, `mariadb`, `mysqldb`, `postgresdb` | The type of database to use. |
+| `DB_TYPE`/`_FILE` | `enum string`: `sqlite`, `mariadb`, `mysqldb`, `postgresdb` | The type of database to use. |
 | `DB_TABLE_PREFIX` | `*` | Prefix to be used for table names. |
 
 ### MySQL
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `DB_MYSQLDB_DATABASE` | `string` | The name of the MySQL database. |
-| `DB_MYSQLDB_HOST` | `string` | The MySQL host (e.g. `localhost`). |
-| `DB_MYSQLDB_PORT` | `number` | The MySQL port (e.g. `3306`). |
-| `DB_MYSQLDB_USER` | `string` | The MySQL user (e.g. `root`). |
-| `DB_MYSQLDB_PASSWORD` | `string` | The MySQL password. |
+| `DB_MYSQLDB_DATABASE`/`_FILE` | `string` | The name of the MySQL database. |
+| `DB_MYSQLDB_HOST`/`_FILE` | `string` | The MySQL host (e.g. `localhost`). |
+| `DB_MYSQLDB_PORT`/`_FILE` | `number` | The MySQL port (e.g. `3306`). |
+| `DB_MYSQLDB_USER`/`_FILE` | `string` | The MySQL user (e.g. `root`). |
+| `DB_MYSQLDB_PASSWORD`/`_FILE` | `string` | The MySQL password. |
 
 ### Postgres
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `DB_POSTGRESDB_DATABASE` | `string` | The name of the PostgresDB database. |
-| `DB_POSTGRESDB_HOST` | `string` | The PostgresDB host (e.g. `localhost`). |
-| `DB_POSTGRESDB_PORT` | `number` | The PostgresDB port (e.g. `5432`). |
-| `DB_POSTGRESDB_USER` | `string` | The PostgresDB user (e.g. `root`). |
-| `DB_POSTGRESDB_PASSWORD` | `string` | The PostgresDB password. |
-| `DB_POSTGRESDB_SCHEMA` | `string` | The PostgresDB schema (e.g. `public`). |
-| `DB_POSTGRESDB_SSL_CA` | `string` | The PostgresDB SSL certificate authority. |
-| `DB_POSTGRESDB_SSL_CERT` | `string` | The PostgresDB SSL certificate. |
-| `DB_POSTGRESDB_SSL_KEY` | `string` | The PostgresDB SSL key. |
-| `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` | `boolean` | If unauthorized SSL connections should be rejected. |
+| `DB_POSTGRESDB_DATABASE`/`_FILE` | `string` | The name of the PostgresDB database. |
+| `DB_POSTGRESDB_HOST`/`_FILE` | `string` | The PostgresDB host (e.g. `localhost`). |
+| `DB_POSTGRESDB_PORT`/`_FILE` | `number` | The PostgresDB port (e.g. `5432`). |
+| `DB_POSTGRESDB_USER`/`_FILE` | `string` | The PostgresDB user (e.g. `root`). |
+| `DB_POSTGRESDB_PASSWORD`/`_FILE` | `string` | The PostgresDB password. |
+| `DB_POSTGRESDB_SCHEMA`/`_FILE` | `string` | The PostgresDB schema (e.g. `public`). |
+| `DB_POSTGRESDB_SSL_CA`/`_FILE` | `string` | The PostgresDB SSL certificate authority. |
+| `DB_POSTGRESDB_SSL_CERT`/`_FILE` | `string` | The PostgresDB SSL certificate. |
+| `DB_POSTGRESDB_SSL_KEY`/`_FILE` | `string` | The PostgresDB SSL key. |
+| `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED`/`_FILE` | `boolean` | If unauthorized SSL connections should be rejected. |
 
 ### SQLite
 
@@ -141,17 +145,17 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon (":"). |
 | `N8N_BASIC_AUTH_ACTIVE` | `boolean` | Whether basic auth should be activated for editor and REST-API access. |
-| `N8N_BASIC_AUTH_USER` | `string` | The name of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_PASSWORD` | `string` | The password of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_HASH` | `boolean` | Whether the basic authentication password is hashed. |
+| `N8N_BASIC_AUTH_USER`/`_FILE` | `string` | The name of the n8n user for basic authentication. |
+| `N8N_BASIC_AUTH_PASSWORD`/`_FILE` | `string` | The password of the n8n user for basic authentication. |
+| `N8N_BASIC_AUTH_HASH`/`_FILE` | `boolean` | Whether the basic authentication password is hashed. |
 | `N8N_JWT_AUTH_ACTIVE` | `boolean` | Whether JWT authentication should be activated for editor and REST-API access. |
-| `N8N_JWT_AUTH_HEADER` | `string` | The request header containing a signed JWT. |
-| `N8N_JWT_AUTH_HEADER_VALUE_PREFIX` | `string` | Optional. The request header value prefix to strip. |
-| `N8N_JWKS_URI` | `string` | The URI to fetch JWK Set for JWT authentication. |
-| `N8N_JWT_ISSUER` | `string` | Optional. The expected JWT issuer. |
-| `N8N_JWT_NAMESPACE` | `string` | Optional. The expected JWT namespace. |
-| `N8N_JWT_ALLOWED_TENANT` | `string` | Optional. The allowed JWT tenant. |
-| `N8N_JWT_ALLOWED_TENANT_KEY` | `string` | Optional. The JWT tenant key name to inspect within the JWT namespace. |
+| `N8N_JWT_AUTH_HEADER`/`_FILE` | `string` | The request header containing a signed JWT. |
+| `N8N_JWT_AUTH_HEADER_VALUE_PREFIX`/`_FILE` | `string` | Optional. The request header value prefix to strip. |
+| `N8N_JWKS_URI`/`_FILE` | `string` | The URI to fetch JWK Set for JWT authentication. |
+| `N8N_JWT_ISSUER`/`_FILE` | `string` | Optional. The expected JWT issuer. |
+| `N8N_JWT_NAMESPACE`/`_FILE` | `string` | Optional. The expected JWT namespace. |
+| `N8N_JWT_ALLOWED_TENANT`/`_FILE` | `string` | Optional. The allowed JWT tenant. |
+| `N8N_JWT_ALLOWED_TENANT_KEY`/`_FILE` | `string` | Optional. The JWT tenant key name to inspect within the JWT namespace. |
 
 
 ## Timezone

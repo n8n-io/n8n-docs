@@ -45,8 +45,7 @@ It is also possible to configure n8n using a configuration file.
 
 Only the values that should be different from the default need to be defined in your configuration file. If needed multiple files can also be supplied. For example, you can have some generic base settings and some specific ones depending on the environment.
 
-The path to the JSON configuration file to use can be set using the environment
-variable `N8N_CONFIG_FILES`.
+The path to the JSON configuration file to use can be set using the environment variable `N8N_CONFIG_FILES`.
 
 ```bash
 # Single file
@@ -84,14 +83,33 @@ You can also append `_FILE` to some individual environment variables to provide 
 n8n will then load the data from the file with the given name, making it possible to easily load data from Docker- and Kubernetes-Secrets.
 
 The following environment variables support file input:
+  - `CREDENTIALS_OVERWRITE_DATA_FILE`
+  - `DB_TYPE_FILE`
+  - `DB_MYSQLDB_DATABASE`
+  - `DB_MYSQLDB_HOST_FILE`
+  - `DB_MYSQLDB_PORT_FILE`	
+  - `DB_MYSQLDB_USER_FILE`
+  - `DB_MYSQLDB_PASSWORD_FILE`
   - `DB_POSTGRESDB_DATABASE_FILE`
   - `DB_POSTGRESDB_HOST_FILE`
   - `DB_POSTGRESDB_PASSWORD_FILE`
   - `DB_POSTGRESDB_PORT_FILE`
+  - `DB_POSTGRESDB_SSL_CA_FILE`
+  - `DB_POSTGRESDB_SSL_CERT_FILE`
+  - `DB_POSTGRESDB_SSL_KEY_FILE`
+  - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
   - `DB_POSTGRESDB_USER_FILE`
   - `DB_POSTGRESDB_SCHEMA_FILE`
   - `N8N_BASIC_AUTH_PASSWORD_FILE`
   - `N8N_BASIC_AUTH_USER_FILE`
+  - `N8N_BASIC_AUTH_HASH_FILE`
+  - `N8N_JWT_AUTH_HEADER_FILE`
+  - `N8N_JWKS_URI_FILE`
+  - `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
+  - `N8N_JWT_ISSUER_FILE`
+  - `N8N_JWT_NAMESPACE_FILE`
+  - `N8N_JWT_ALLOWED_TENANT_FILE`
+  - `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
 
 ## Examples
 

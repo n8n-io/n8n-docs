@@ -29,7 +29,7 @@ The Notion Trigger node will trigger the workflow when new data gets added to No
 
 1. First of all, you'll have to enter credentials for the Notion Trigger node. You can find out how to do that [here](../../../credentials/Notion/README.md).
 2. Click on ***Add Poll Time*** and select 'Every Hour' from the ***Mode*** dropdown list. This will check Notion every hour for new meeting notes.
-3. Select 'Record Added' from the ***Event*** dropdown list.
+3. Select 'Page Added to Database' from the ***Event*** dropdown list.
 4. Select the database that contains the meeting notes from the ***Database*** dropdown list.
 5. Click on ***Execute Node*** to run the node.
 

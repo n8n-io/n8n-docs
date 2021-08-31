@@ -3,7 +3,7 @@
 [Docker](https://www.docker.com/) is a quick and simple way to download and start automating with n8n. By using Docker you are able to:
 
 * Install to a pristine environment
-* Easily install and run the your preferred database with n8n
+* Easily install and run your preferred database with n8n
 * Enjoy a quick and simplified installation experience regardless of your OS
 
 ## Prerequisites

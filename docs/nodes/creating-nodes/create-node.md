@@ -10,10 +10,13 @@ You have knowledge of:
 
 Install the following tools:
 - **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
-- **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have installed Node.js, you can check your current version with following command:
+- **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
 ```bash
 node -v
+npm -v
 ```
+**NOTE:** Use node version `14.x` and npm version `6.x`
+
 - **Lerna:** You can install lerna globally with the following command:
 ```bash
 npm install --global lerna
@@ -363,7 +366,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 	const resource = this.getNodeParameter('resource', 0) as string;
 	const operation = this.getNodeParameter('operation', 0) as string;
 	//Get credentials the user provided for this node
-	const credentials = this.getCredentials('friendGridApi') as IDataObject;
+	const credentials = await this.getCredentials('friendGridApi') as IDataObject;
 
 	if (resource === 'contact') {
 		if (operation === 'create') {
@@ -458,7 +461,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 	const resource = this.getNodeParameter('resource', 0) as string;
 	const operation = this.getNodeParameter('operation', 0) as string;
 	//Get credentials the user provided for this node
-	const credentials = this.getCredentials('friendGridApi') as IDataObject;
+	const credentials = await this.getCredentials('friendGridApi') as IDataObject;
 
 	for (let i = 0; i < items.length; i++) {
 		if (resource === 'contact') {
@@ -561,3 +564,7 @@ We then used the `this.helpers.returnJsonArray()` method to map the API’s outp
 In this tutorial, we implemented the "Create a Contact" functionality of the FriendGrid API. First of all, we made the node show up in the Editor UI and in the Create Node menu with FriendGrid's branding. Then, we added the fields necessary to create a contact in FriendGrid. We also added the credentials so that the API Key could be stored safely. Finally, we mapped all the parameters to the FriendGrid API.
 
 This is just the tip of the iceberg. We built a regular node that consumes a REST API, but a regular node can do everything that can be done with Node.js. Aside from regular nodes you can also build Trigger nodes.
+
+## Next steps
+
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](./node-review-checklist.md). Make sure you complete the checklist before creating a pull request.

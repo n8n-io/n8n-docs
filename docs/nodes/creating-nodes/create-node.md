@@ -15,7 +15,7 @@ Install the following tools:
 node -v
 npm -v
 ```
-**NOTE:** Use node version `14.x` and npm version `6.x`
+**NOTE:** Use node version `14.x` and npm version `6.x`. If using npm version `7+`, you must enable legacy peer dependencies by setting: `npm config set legacy-peer-deps true`.
 
 - **Lerna:** You can install lerna globally with the following command:
 ```bash

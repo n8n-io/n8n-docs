@@ -16,6 +16,8 @@ Install the following tools:
 node -v
 npm -v
 ```
+**NOTE:** Use node version `14.x` and npm version `6.x`
+
 - **Lerna:** Install [lerna](https://lerna.js.org/) globally with the following command:
 ```bash
 npm install --global lerna
@@ -364,7 +366,7 @@ import {
 
 export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions, method: string, resource: string, body: any = {}, query: IDataObject = {}, uri?: string, option: IDataObject = {}): Promise<any> { // tslint:disable-line:no-any
 
-	const credentials = this.getCredentials('autofriendApi') as IDataObject;
+	const credentials = await this.getCredentials('autofriendApi') as IDataObject;
 
 	const apiKey = credentials.apiKey;
 
@@ -477,3 +479,7 @@ Since our server is running locally, we need a tool that lets us proxy all reque
 ## Summary
 
 In this tutorial, we implemented one functionality of the Autofriend webhook API. We made the node show up in the Editor UI and in the Create Node menu with Autofriend's branding. Then, we added the fields necessary to create a webhook in the external service. We also added the credentials so that the API Key could be stored safely. Finally, we mapped all the parameters to the Autofriend API.
+
+## Next steps
+
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](./node-review-checklist.md). Make sure you complete the checklist before creating a pull request.

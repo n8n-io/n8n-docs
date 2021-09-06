@@ -2,6 +2,39 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.137.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.136.0...n8n@0.137.0) for this version.<br />
+**Release date:** 2021-09-05
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.freshservice" title="Freshservice"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.clockify" title="Clockify:" text="Added Task resource."/>
+<Changelog node="n8n-nodes-base.hubspot" title="Hubspot:" text="Added dropdown selection for Properties and Properties with History filters for Get All Deals operations."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Added Campaign Contact resource."/>
+<Changelog node="n8n-nodes-base.mongoDb" title="MongoDB:" text="Added ability to query documents by '_id'."/>
+<Changelog node="n8n-nodes-base.mqtt" title="MQTT:" text="Added SSL/TLS support to authentication."/>
+<Changelog node="n8n-nodes-base.mqttTrigger" title="MQTT Trigger:" text="Added SSL/TLS support to authentication."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added File Extension option to the Document resource. Added Type field to Task resource."/>
+<Changelog node="n8n-nodes-base.sms77" title="Sms77:" text="Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL."/>
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Added Organization resource. Added Get Organizations and Get Related Data operations to User resource."/>
+
+### Core Functionality ⚙️
+- Added execution ID to logs of queue processes.
+- Added description to operation errors.
+- Added ability for webhook processes to wake waiting executions.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.hubspot" title="Hubspot:" text="Fixed issue with 'RequestAllItems' API."/>
+<Changelog node="n8n-nodes-base.wordpress" title="Wordpress:" text="Fixed issue with 'RequestAllItems' API only returning the first 10 items."/>
+
+### Contributors 🙌
+[André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
+
 ## n8n@0.136.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.3...n8n@0.136.0) for this version.<br />
 **Release date:** 2021-08-30

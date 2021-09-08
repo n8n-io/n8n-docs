@@ -3,7 +3,7 @@
 [Docker](https://www.docker.com/) is a quick and simple way to download and start automating with n8n. By using Docker you are able to:
 
 * Install to a pristine environment
-* Easily install and run the your preferred database with n8n
+* Easily install and run your preferred database with n8n
 * Enjoy a quick and simplified installation experience regardless of your OS
 
 ## Prerequisites
@@ -42,6 +42,10 @@ for credentials. It is also the name of the webhook when the n8n tunnel is used.
 
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
+
+::: tip 💡 Keep in mind
+Persisting the `/root/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](../../reference/environment-variables.md#deployment).
+:::
 
 ### PostgresDB
 

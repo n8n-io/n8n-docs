@@ -56,6 +56,80 @@ See the [Webhook node](./Webhook/README.md) documentation to learn more about th
 In addition to the parameters shared with the Webhook mode, the Wait node has the following additional configuration options:
 
 * **Limit wait time**: Set the maximum amount of time to wait before the execution is resumed by default (i.e. even with no webhook call received).
-* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the restart URL.
+* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the restart URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes.
 
     **Note**: The generated `$resumeWebhookUrl` will not automatically include this suffix, you must manually append it to the webhook URL before exposing it.
+
+### Limitations
+
+There are a few functional limitations to keep in mind when working with the *On Webhook Call* operations of the Wait node:
+
+* Partial executions of your workflow will change the `$resumeWebhookUrl`, so be sure that the node being used to send this URL to your desired third-party runs in the same execution as the Wait node.
+* When testing your workflow via the Editor UI, you cannot see the rest of the execution following the Wait node. To inspect the execution results ensure you have enabled *Save Manual Executions* in you [workflow settings](../../../../getting-started/key-components/workflow.md#workflow-settings) to be able to review the execution results there.
+
+## Example usage
+
+This workflow allows you to complete a user sign-up flow by adding their details contact details in an Airtable, sending a confirmation email, and updating the Airtable record after they have confirmed their email address.
+
+For our example here, we assume there is an existing workflow/webpage where new users sign-up and this workflow begins when they hit "Submit" there.
+
+This example workflow uses the following nodes.
+- [Wait]()
+- [Webhook](../../core-nodes/Webhook/README.md)
+- [Set](../../core-nodes/Set/README.md)
+- [Send Email](../../core-nodes/SendEmail/README.md)
+- [Airtable](../../nodes/Airtable/README.md)
+
+The final workflow should look like the following image.
+
+![A workflow with the Wait node](./workflow.png)
+
+### 1. Webhook node
+
+This node is triggered when a new user submits their details in your contact form. It is configured as displayed below:
+
+![Submit Webhook node configuration](./webhook_node_1.png)
+
+### 2. Set node
+
+This node is used to set the values submitted by the user (first name, last name, and email address) as values corresponding to what you want to enter in the Airtable. 
+
+![Set node configuration](./set_node_1.png)
+
+Note that expressions are used based on the input data received from the previous Webhook node:
+
+![Set node expression](./set_node_expression.png)
+
+### 3. Airtable node
+
+In this node we add the new users contact details to the desired table, Newsletter in our example:
+
+![Airtable node configuration](./airtable_node_1.png)
+
+### 4. Send Email node
+
+This node uses your desired email address (via SMTP) to send a confirmation email to the user:
+
+![Send Email node configuration](./email_node_1.png)
+
+This is where the `$resumeWebhookUrl` is passed, meaning the workflow will wait until the user clicks the confirmation link in this email before resuming execution:
+
+![Send Email expression configuration](./email_node_2.png)
+
+### 5. Wait node
+
+The Wait node will resume execution once the new user clicks the confirmation link in their email (containing the `$resumeWebhookUrl`):
+
+![Wait node](./wait_node.png)
+
+### 6. Set node
+
+In this node set the `id` of the user and new **Verified** boolean value to true:
+
+![Set node 2](./set_node_2.png)
+
+### 7. Airtable node
+
+Finally you update the table to reflect this newly created *Verified* field:
+
+![Airtable node configuration](./airtable_node_2.png)

@@ -15,6 +15,10 @@ In addition to all the features of n8n, n8n.cloud provides added benefits such a
 
 If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) account.
 
+::: tip 💡 Keep in mind
+The IP address of n8n.cloud is `20.79.72.105`, however this may change in the future.
+:::
+
 ## npm
 
 You can try n8n without installing it using [npx](../../reference/glossary.md#npx).

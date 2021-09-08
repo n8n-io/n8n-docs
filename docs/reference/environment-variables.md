@@ -88,7 +88,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `EXTERNAL_HOOK_FILES` | `string` | Files containing external hooks. Multiple files can be provided separated by colon (":"). |
+| `EXTERNAL_HOOK_FILES` | `string` | Files containing external hooks. Multiple files can be provided separated by colon ("`:`"). |
 
 ## Executions
 
@@ -133,8 +133,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `QUEUE_BULL_PREFIX` | `string` | Prefix to be used for all queue keys. |
 | `QUEUE_BULL_REDIS_DB` | `number` | The Redis database used. |
-| `QUEUE_BULL_REDIS_HOST` | `string` | The Redis host (e.g. `localhost`). | 
-| `QUEUE_BULL_REDIS_PORT` | `number` | The Redis port used (e.g. `6379`). | 
+| `QUEUE_BULL_REDIS_HOST` | `string` | The Redis host (e.g. `localhost`). |
+| `QUEUE_BULL_REDIS_PORT` | `number` | The Redis port used (e.g. `6379`). |
 | `QUEUE_BULL_REDIS_PASSWORD` | `string` | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | `number` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | `number` | Internal (in seconds) for active polling to the queue to recover from Redis crashes. `0` is disabled. May increase Redis traffic significantly. |
@@ -143,7 +143,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon (":"). |
+| `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon ("`:`"). |
 | `N8N_BASIC_AUTH_ACTIVE` | `boolean` | Whether basic auth should be activated for editor and REST-API access. |
 | `N8N_BASIC_AUTH_USER`/`_FILE` | `string` | The name of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_PASSWORD`/`_FILE` | `string` | The password of the n8n user for basic authentication. |

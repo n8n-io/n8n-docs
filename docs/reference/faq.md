@@ -45,3 +45,9 @@ We love open-source and the idea that everybody can freely use and extend what w
 As n8n itself depends on and uses a lot of other open-source projects, it is only fair that we support them back. That is why we have planned to contribute a certain percentage of revenue/profit every month to these projects. 
 
 We have already started with the first monthly contributions via [Open Collective](https://opencollective.com/n8n). It is not much yet, but we hope to be able to ramp that up substantially over time.
+
+## n8n.cloud
+
+### What is the IP address of n8n.cloud?
+
+Currently it is `20.79.72.105`, however this is subject to change.

@@ -1,7 +1,7 @@
 # Server Setup
 
 ::: warning 💡 Keep in mind
-If you are following this guide to setup your n8n instance on a server, please make sure that you [secure](../../key-concepts.md#security) your n8n instance.
+If you are following this guide to setup your n8n instance on a server, please make sure that you [secure](../../key-concepts/README.md#security) your n8n instance.
 :::
 
 ## Docker-Compose example

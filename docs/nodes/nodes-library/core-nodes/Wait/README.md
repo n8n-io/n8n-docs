@@ -39,15 +39,11 @@ For example, if you want the workflow execution to continue at midnight of New Y
 
 ## Webhook call
 
-Use the **On webhook call** resume operation to configure your workflow execution to resume when an HTTP call is received.
+The resume **On webhook call** option enables your workflows to resume when an HTTP call is received.
 
-::: tip 💡 Keep in mind
-The Wait node cannot be used to stop a workflow execution, it will wait indefinitely for the restart webhook URL to be called. To stop the execution an [IF node](./If/README.md) can be used to check if the `headers` or `response` variables are empty (meaning no webhook call was received).
-:::
+The webhook URL that will resume the execution when called is only generated at runtime. The Wait node provides the `$resumeWebhookUrl` variable so that you can reference and send (the yet to be generated URL) wherever needed, for example to a third-party service or in an email (see example below). 
 
-The webhook URL that needs to be called to trigger the execution resumption is available by referencing the `$resumeWebhookUrl` variable wherever needed (e.g. expressions). The URL itself will be generated when the workflow executes.
-
-This generated URL is unique to each execution, meaning that your workflow can contain multiple Wait nodes and as the webhook URL is called it will resume each Wait node sequentially.
+When the workflow executes, the resume URL is generated and the webhook(s) in your workflow using the `$resumeWebhookUrl` reference become functional. This generated URL is unique to each execution, meaning that your workflow can contain multiple Wait nodes and as the webhook URL is called it will resume each Wait node sequentially.
 
 ### Reference
 
@@ -56,7 +52,7 @@ See the [Webhook node](./Webhook/README.md) documentation to learn more about th
 In addition to the parameters shared with the Webhook mode, the Wait node has the following additional configuration options:
 
 * **Limit wait time**: Set the maximum amount of time to wait before the execution is resumed by default (i.e. even with no webhook call received).
-* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the restart URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes.
+* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes.
 
     **Note**: The generated `$resumeWebhookUrl` will not automatically include this suffix, you must manually append it to the webhook URL before exposing it.
 

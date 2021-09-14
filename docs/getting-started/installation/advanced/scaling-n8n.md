@@ -18,6 +18,18 @@ By using worker instances and running in queue mode, you can scale n8n up (by ad
 
 Workers are n8n instances that do the actual work. They receive information from the main n8n process about the workflows that have to get executed, execute the workflows, and update the status after each execution is complete.
 
+### Set encryption key
+
+n8n will automatically generates an encryption key upon first startup. You can also provide your own custom key via [environment variable](../../../reference/environment-variables.md#deployment) if desired.
+
+The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
+
+Set the encryption key for each worker node in a [configuration file](./configuration.md#configuration-via-file) or by setting the corresponding environment variable:
+
+```bash
+export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
+```
+
 ### Set executions mode
 
 ::: tip Database considerations
@@ -93,13 +105,15 @@ If you want to migrate data from one database to another, you can use the Export
 
 ## Webhook processors
 
+::: tip 💡 Keep in mind
+Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+:::
+
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
 
 This method allows n8n to process a huge number of parallel requests. All you have to do is add more webhook processes and workers accordingly. The webhook process will listen to requests on the same port (default: `5678`). Run these processes in containers or separate machines, and have a load balancing system to route requests accordingly.
 
 We do not recommend adding the main process to the load balancer pool. If the main process is added to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
-
-Webhook processes rely on Redis too. Follow the steps mentioned above to [configure the workers](#configuring-workers).
 
 You can start the webhook processor by executing the following command from the root directory:
 ```

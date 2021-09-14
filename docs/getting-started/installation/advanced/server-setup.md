@@ -197,7 +197,25 @@ To stop the container:
 sudo docker-compose stop
 ```
 
-### 9. Done
+### 9. Hosting with Caddy Server
+
+[Caddy](https://caddyserver.com) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.
+
+In your Caddyfile configuration
+
+```
+mydomain.io {
+    reverse_proxy localhost:5678
+}
+```
+
+Then start your server
+
+```bash
+$ caddy start
+```
+
+### 10. Done
 
 n8n will now be reachable via the above defined subdomain + domain combination.
 The above example would result in: https://n8n.example.com

@@ -2,6 +2,34 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.138.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.137.0...n8n@0.138.0) for this version.<br />
+**Release date:** 2021-09-15
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.itemLists" title="Item Lists"/>
+<Changelog node="n8n-nodes-base.magento2" title="Magento 2"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.baserow" title="Baserow:" text="Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added support for Notes on Leads."/>
+<Changelog node="n8n-nodes-base.wekan" title="Wekan:" text="Added Sort field to the Card resource."/>
+
+
+### Core Functionality ⚙️
+- General UX improvements to the Editor UI.
+- Fixed an issue with the `PayloadTooLargeError`.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.lemlist" title="Lemlist:" text="Fixed issue where events were not sent in the correct property."/>
+<Changelog node="n8n-nodes-base.notion" title="Notion:" text="Fixed issue listed unnamed databases."/>
+
+### Contributors 🙌
+[bramknuever](https://github.com/bramknuever), [Chris Magnuson](https://github.com/ChrisMagnuson)
+
 ## n8n@0.137.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.136.0...n8n@0.137.0) for this version.<br />
 **Release date:** 2021-09-05

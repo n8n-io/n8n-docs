@@ -16,7 +16,8 @@ In addition to all the features of n8n, n8n.cloud provides added benefits such a
 If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) account.
 
 ::: tip 💡 Keep in mind
-The IP address of n8n.cloud is `20.79.72.105`, however this may change in the future.
+The IP address of n8n.cloud is `20.79.72.105` and the NAT address is `20.79.72.36`, however this may change in the future.
+Recommended practice is to whitelist `20.79.72.0/24`, but if more strict measures are needed, at minimum both `20.79.72.105` and `20.79.72.36` must be whitelisted.
 :::
 
 ## npm

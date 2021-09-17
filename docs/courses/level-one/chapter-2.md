@@ -34,7 +34,7 @@ This resource selects all data records (articles).
 - *Operation:* Get All <br/>
 This operation fetches all the selected articles.
 - *Limit:* 10 <br/>
-This parameter sets a limit to how many results are returned by the Get All  operation.
+This parameter sets a limit to how many results are returned by the Get All operation.
 - *Additional fields > Add Field > Keyword:* automation <br/>
 Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation”. <br/>
 

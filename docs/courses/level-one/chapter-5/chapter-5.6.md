@@ -5,7 +5,7 @@ In this step of the workflow you will learn how to send messages to a Discord ch
 Now that you have a calculated summary of the booked orders you need to notify Nathan’s team in their Discord channel. n8n has a **Discord node** that allows you to send messages. We'll be sending the messages to the [n8n server](https://discord.gg/G98WXzsjky) on Discord.
 
 ::: tip 💡 Communication nodes
-You can replace the *Discord* node with another communication app. n8n also has nodes for [*Slack*](https://docs.n8n.io/nodes/n8n-nodes-base.slack/) and [*Mattermost*](https://docs.n8n.io/nodes/n8n-nodes-base.mattermost/).
+You can replace the *Discord* node with another communication app. For example, n8n also has nodes for [*Slack*](https://docs.n8n.io/nodes/n8n-nodes-base.slack/) and [*Mattermost*](https://docs.n8n.io/nodes/n8n-nodes-base.mattermost/).
 :::
 
 In your workflow, add a *Discord* node connected to the *Function* node. In the *Discord* node window, configure the parameters:

@@ -76,7 +76,7 @@ Don’t worry about workflow execution and activation for now, we will explain t
 You can think of nodes as building blocks that serve different functions but, when put together, they make up a functioning machinery – an automated workflow.
 
 ::: tip 📖 Node
-A [node](http://docs.n8n.io/reference/glossary.html#node) is an entry point for retrieving data, a function to process data, or an exit point for sending data. The functions can be pretty much anything, like data processing or conditional filtering.
+A [node](http://docs.n8n.io/reference/glossary.html#node) is an individual step in your workflow — one that either (a) loads, (b) processes or (c) sends data.
 :::
 
 Based on their function, nodes can be classified into two types:

@@ -27,8 +27,6 @@ When you add a new node to the Editor UI, the node will be automatically activat
 
 The *Hacker News node* has several parameters that need to be configured in order to make it work:
 
-<figure><img src="./images/chapter-one/Hacker-news-node.png" alt="Hacker News node" style="width:100%"><figcaption align = "center"><i>Hacker News node</i></figcaption></figure>
-
 - *Resource:* All <br/>
 This resource selects all data records (articles).
 - *Operation:* Get All <br/>

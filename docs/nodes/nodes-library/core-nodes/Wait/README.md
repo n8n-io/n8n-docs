@@ -7,7 +7,7 @@ description: Learn how to use the Wait node in n8n
 
 The Wait node is used to create a pause of any desired duration in your workflows. When the workflow is paused the execution data is offloaded to the database, and when the resume condition is met it is reloaded and the execution continues.
 
-The Wait node can be be set to resume on the following conditions:
+The Wait node can be set to resume on the following conditions:
 
 * [**After time interval**](#time-interval)
 * [**At specified time**](#specified-time)

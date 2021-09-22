@@ -97,7 +97,7 @@ You can set up multiple worker processes. Make sure that all the worker processe
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.
 
-Redis is used as the queue broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
+Redis is used as the message broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
 
 ::: tip Migrate data
 If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](../../reference/start-workflows-via-cli.md#export-workflows-and-credentials) documentation to learn how to use these commands.

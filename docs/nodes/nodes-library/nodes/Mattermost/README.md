@@ -11,11 +11,10 @@ description: Learn how to use the Mattermost node in n8n
 You can find authentication information for this node [here](../../../credentials/Mattermost/README.md).
 :::
 
-<!--->
 ## Basic Operations
 
 <Resource node="n8n-nodes-base.mattermost" />
---->
+
 ## Example Usage
 
 This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://n8n.io/workflows/832) on n8n.io. This example usage workflow uses the following nodes.

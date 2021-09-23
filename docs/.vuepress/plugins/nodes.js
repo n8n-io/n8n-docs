@@ -40,7 +40,14 @@ async function getNodes() {
 
 	const descriptions = {};
 	for (let name in nodes) {
-		const node = nodes[name].description;
+		let node;
+
+		if (nodes[name].nodeVersions) {
+			const maxVersion = Math.max(...Object.keys(nodes[name].nodeVersions));
+			node = nodes[name].nodeVersions[maxVersion].description;
+		} else {
+			node = nodes[name].description;
+		}
 
 		const iconData = {};
 		if (node.icon) {

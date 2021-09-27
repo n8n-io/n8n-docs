@@ -204,9 +204,18 @@ sudo docker-compose stop
 In your Caddyfile configuration
 
 ```
-mydomain.io {
-    reverse_proxy localhost:5678
+n8n.example.com {
+    reverse_proxy localhost:5678 {
+      flush_interval 10
+    }
 }
+```
+
+The `.env` should be adapted as folowing
+
+```bash
+DOMAIN_NAME=example.com
+SUBDOMAIN=n8n
 ```
 
 Then start your server

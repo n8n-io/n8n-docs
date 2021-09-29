@@ -2,6 +2,26 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.140.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.1...n8n@0.140.0) for this version.<br />
+**Release date:** 2021-09-29
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.splunk" title="Splunk"/>
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.telegram" title="Telegram:" text="Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations."/>
+
+### Core Functionality ⚙️
+- Fixed startup behavior when running n8n in scaled mode (i.e. `skipWebhoooksDeregistrationOnShutdown` is enabled).
+- Fixed behavior around handling empty response bodies.
+- Fixed an issue with handling of refresh tokens.
+
+### Contributors 🙌
+[pemontto](https://github.com/pemontto)
+
 ## n8n@0.139.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.0...n8n@0.139.1) for this version.<br />
 **Release date:** 2021-09-23

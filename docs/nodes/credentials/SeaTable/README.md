@@ -3,11 +3,11 @@ permalink: /credentials/seaTable
 description: Learn to configure credentials for the SeaTable node in n8n
 ---
 
-# RabbitMQ
+# SeaTable
 
 You can use these credentials to authenticate the following nodes:
 - [SeaTable](../../nodes-library/nodes/SeaTable/README.md)
-- [SeaTable Trigger](../../nodes-library/trigger-nodes/SeaTable/README.md)
+- [SeaTable Trigger](../../nodes-library/trigger-nodes/SeaTableTrigger/README.md)
 
 ## Prerequisites
 

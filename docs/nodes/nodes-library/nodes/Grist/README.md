@@ -33,7 +33,7 @@ The start node exists by default when you create a new workflow.
 
 This workflow assumes there is a document with a table in your Grist workspace.
  
-![Table in an example Grist document](./table_start.png)
+![Table in an example Grist document](./Table_Start.png)
 
 This node will create a new record in a table.
 
@@ -48,11 +48,11 @@ This node will create a new record in a table.
 
 Here is an example of how the configuration should look:
 
-![Using the Grist node to insert data into an Grist table](./grist_node.png)
+![Using the Grist node to insert data into an Grist table](./Grist_node.png)
 
 And here's the result of adding the record to the Grist table:
 
-![The example table after creating a new record with the Grist node](./table_create.png)
+![The example table after creating a new record with the Grist node](./Table_Create.png)
 
 ### 3. Grist1 node (Get All)
 
@@ -72,7 +72,7 @@ This node will list all the records with a particular `Name` value.
 
 In the screenshot below, the node only returned the record with the name 'Grist':
 
-![Using the Grist node to read data from an Grist table](./grist1_node.png)
+![Using the Grist node to read data from an Grist table](./Grist1_node.png)
 
 ### 4. Grist2 node (Update)
 
@@ -89,11 +89,11 @@ This node will update the Name field of the record that we received from the pre
 
 Here is an example of how the configuration should look:
 
-![Using the Grist node to update data of a record](./grist2_node.png)
+![Using the Grist node to update data of a record](./Grist2_node.png)
 
 The result is that the Name in the first record changed from 'Grist' to 'Grist Labs':
 
-![The example table after updating a record with the Grist node](./table_update.png)
+![The example table after updating a record with the Grist node](./Table_Update.png)
 
 ## FAQs
 

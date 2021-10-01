@@ -46,6 +46,10 @@ n8n
 n8n start
 ```
 
+::: tip 💡 Keep in mind
+Windows users remember to change into the `.n8n` directory of your Home folder (`~/.n8n`) before running `n8n start`.
+:::
+
 ## Docker
 
 See the [Docker installation](docker-quickstart.md) page for running n8n using Docker.

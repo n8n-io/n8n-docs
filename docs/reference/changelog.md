@@ -2,6 +2,24 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.141.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.140.0...n8n@0.141.0) for this version.<br />
+**Release date:** 2021-09-30
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.grist" title="Grist"/>
+<Changelog node="n8n-nodes-base.seaTable" title="SeaTable"/>
+<Changelog node="n8n-nodes-base.seaTableTrigger" title="SeaTable Trigger"/>
+<Changelog node="n8n-nodes-base.urlScanIo" title="urlscan.io"/>
+
+### Core Functionality ⚙️
+- Performance improvements in Editor UI
+- Improved error reporting
+
+### Contributors 🙌
+[Tom Klingenberg](https://github.com/ktomk)
+
 ## n8n@0.140.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.1...n8n@0.140.0) for this version.<br />
 **Release date:** 2021-09-29

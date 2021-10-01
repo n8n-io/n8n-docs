@@ -18,7 +18,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Improved error reporting
 
 ### Contributors 🙌
-[Tom Klingenberg](https://github.com/ktomk)
+[Alex Hall](https://github.com/alexmojaki), [Tom Klingenberg](https://github.com/ktomk)
 
 ## n8n@0.140.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.1...n8n@0.140.0) for this version.<br />

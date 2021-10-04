@@ -2,6 +2,13 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.141.1 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.0...n8n@0.141.1) for this version.<br />
+**Release date:** 2021-10-01
+
+### Core Functionality ⚙️
+- Fixed issue with body formatting of `x-form-www-urlencoded` requests.
+
 ## n8n@0.141.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.140.0...n8n@0.141.0) for this version.<br />
 **Release date:** 2021-09-30

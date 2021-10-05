@@ -77,7 +77,7 @@ In n8n, all the data that is passed between nodes is an array of objects. It has
 Nodes do not only process one "item", they process multiple ones. 
 For example, if the Trello node is set to `Create-Card` and it has an expression set for `Name` to be set depending on `name` property, it will create a card for each item, always choosing the `name-property-value` of the current one.
 
-This data would, for example, create two boards. One named `test1` the other one named `test2`:
+This data would, for example, create two cards. One named `test1` the other one named `test2`:
 
 ```json
 [

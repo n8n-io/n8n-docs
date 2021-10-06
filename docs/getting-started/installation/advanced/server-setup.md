@@ -197,11 +197,18 @@ To stop the container:
 sudo docker-compose stop
 ```
 
-### 9. Hosting with Caddy Server
+### 9. Done
 
-[Caddy](https://caddyserver.com) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.
+n8n will now be reachable via the above defined subdomain + domain combination.
+The above example would result in: https://n8n.example.com
 
-In your Caddyfile configuration
+n8n will only be reachable via `https` and not via `http`.
+
+## Hosting with Caddy Server
+
+[Caddy](https://caddyserver.com) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go. 
+
+1. In your Caddyfile configuration, add:
 
 ```
 n8n.example.com {
@@ -211,22 +218,15 @@ n8n.example.com {
 }
 ```
 
-The `.env` should be adapted as folowing
+2. The `.env` should be adapted as follows:
 
 ```bash
 DOMAIN_NAME=example.com
 SUBDOMAIN=n8n
 ```
 
-Then start your server
+3. To start your server:
 
 ```bash
 $ caddy start
 ```
-
-### 10. Done
-
-n8n will now be reachable via the above defined subdomain + domain combination.
-The above example would result in: https://n8n.example.com
-
-n8n will only be reachable via `https` and not via `http`.

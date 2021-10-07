@@ -36,6 +36,11 @@ The following special variables are available:
 
 Normally it is not needed to write the JavaScript variables manually as they can be selected with the help of the Expression Editor.
 
+## Parameters
+
+Parameters can be set for most nodes in n8n. The values that get set define what exactly a node does.
+
+Parameter values are static by default and are always the same no matter what kind of data the node processes. However, it is possible to set the values dynamically with the help of an Expression. Using Expressions, it is possible to make the parameter value dependent on other factors like the data of flow or parameters of other nodes.
 
 ## Method: $evaluateExpression(expression: string, itemIndex: number)
 
@@ -77,11 +82,13 @@ const allItems = $items("IF", 0, $runIndex);
 const allItems = $items("IF", 1, 0);
 ```
 
+## Variable: $executionId
+
+Contains the unique ID of the current workflow execution.
 
 ## Variable: $node
 
-Works exactly like `$item` with the difference that it will always return the data of the first output and
-the last run of the node.
+Works exactly like `$item` with the difference that it will always return the data of the first output and the last run of the node.
 
 ```typescript
 // Returns the fileName of binary property "data" of Node "HTTP Request"
@@ -99,13 +106,6 @@ const channel = $node["Slack"].parameter["channel"];
 // Returns the index of the last run of Node "HTTP Request"
 const runIndex = $node["HTTP Request"].runIndex}}
 ```
-
-## Parameters
-
-Parameters can be set for most nodes in n8n. The values that get set define what exactly a node does.
-
-Parameter values are static by default and are always the same no matter what kind of data the node processes. However, it is possible to set the values dynamically with the help of an Expression. Using Expressions, it is possible to make the parameter value dependent on other factors like the data of flow or parameters of other nodes.
-
 
 ## Variable: $runIndex
 
@@ -129,4 +129,6 @@ const workflowName = $workflow.name;
 
 ## Variable: $resumeWebhookUrl
 
-This section is still a work in progress. We'll add more details about this variable soon.
+The webhook URL to call to resume a [waiting](./nodes-library/core-nodes/Wait/README.md) workflow.
+
+See the [**Wait** > **On webhook call**](./nodes-library/core-nodes/Wait/README.md#webhook-call) documentation to learn more.

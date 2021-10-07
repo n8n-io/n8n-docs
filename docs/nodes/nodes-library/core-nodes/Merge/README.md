@@ -10,7 +10,12 @@ The Merge node is useful to merge data of multiple streams, once data of both st
 ## Node Reference
 
 ### Mode
-You can specify how data of branches should be merged. The following are the options.
+
+::: tip 💡 Keep in mind
+The items passed into Input 1 of the Merge node will take precedence. For example, if 5 items are received in Input 1 and 10 items are received in Input 2, the Merge node will only process 5 items. The remaining 5 items from Input 2 will not be processed.
+:::
+
+You can specify how data of branches should be merged. The following options are available:
 - ***Append:*** Combines data of both inputs. The output will contain items of input 1 and input 2.
 - ***Keep Key Matches:*** Keeps data of input 1 if it finds a match with data of input 2.
 - ***Merge By Index:*** Merges data of both the inputs. The output will contain the data of input 1 merged with the data of input 2. The merge occurs based on the index of the items. For example, the first item of input 1 will be merged with the first item of input 2.

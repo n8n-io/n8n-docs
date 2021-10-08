@@ -2,6 +2,33 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.142.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.1...n8n@0.142.0) for this version.<br />
+**Release date:** 2021-10-07
+
+### New nodes ✨
+<br />
+<Changelog node="n8n-nodes-base.stopAndError" title="Stop and Error"/>
+
+### Core Functionality ⚙️
+- Fixed overlapping buttons when viewing on mobile.
+- Fixed issue with partial workflow executions when Wait node was last.
+- Fixed issue with broken non-JSON requests.
+- Node errors now only displayed for executing nodes, not disconnected nodes.
+- Automatic save when executing new workflows with Webhook node.
+- Fixed an issue with how arrays were serialized for certain nodes.
+- Fixed an issue where executions could not be cancelled when running in Main mode.
+- Fixed an issue where editing a duplicated workflow also modified the original.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed 'Ignore response code' flag."/>
+<Changelog node="n8n-nodes-base.rundeck" title="Rundeck:" text="Fixed issue with async loading of credentials."/>
+<Changelog node="n8n-nodes-base.seaTable" title="SeaTable:" text="Fixed issue when entering a Baser URI with a trailing slash."/>
+
+### Contributors 🙌
+[Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
+
 ## n8n@0.141.1 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.0...n8n@0.141.1) for this version.<br />
 **Release date:** 2021-10-01

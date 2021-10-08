@@ -64,3 +64,11 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the S3 node to get a list of all the files in a bucket](./S_node.png)
+
+## FAQs
+
+### Setting file permissions in Wasabi
+
+When uploading files to [Wasabi](https://wasabi.com/), permissions for the files must be set using the **ACL** dropdown and not the toggles.
+
+![File permissions when using the S3 node with Wasabi](./acl_dropdown.png)

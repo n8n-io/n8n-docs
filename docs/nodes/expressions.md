@@ -86,6 +86,12 @@ const allItems = $items("IF", 1, 0);
 
 Contains the unique ID of the current workflow execution.
 
+```typescript
+const executionId = $executionId;
+
+return [{json:{executionId}}];
+```
+
 ## Variable: $node
 
 Works exactly like `$item` with the difference that it will always return the data of the first output and the last run of the node.

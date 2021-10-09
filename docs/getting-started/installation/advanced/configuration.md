@@ -230,7 +230,7 @@ displayed correctly in the Editor UI and even more important is that the correct
 webhook URLs get registred with the external services.
 
 ```bash
-export WEBHOOK_TUNNEL_URL=https://n8n.example.com/
+export WEBHOOK_URL=https://n8n.example.com/
 ```
 
 ### Prometheus

@@ -80,7 +80,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_ENDPOINT_REST` | `string` | The path used for REST endpoint. |
 | `N8N_ENDPOINT_WEBHOOK` | `string` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | `string` | The path used for test-webhook endpoint. |
-| `WEBHOOK_TUNNEL_URL` | `string` | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](../getting-started/installation/advanced/configuration.md#webhook-url) for more details. |
+| `WEBHOOK_URL` | `string` | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](../getting-started/installation/advanced/configuration.md#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | `boolean` | Disable production webhooks from main process. This helps ensures no HTTP traffic load to main process when using webhook-specific processes. |
 | `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | `boolean` | Deregister webhooks on external services only when workflows are deactivated. |
 

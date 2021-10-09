@@ -46,7 +46,7 @@ ngrok http 5678
 ```
 2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step.
 ```sh
-export WEBHOOK_TUNNEL_URL=<YOUR-NGROK-URL>
+export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Start your n8n instance.
 4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.

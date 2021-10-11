@@ -41,16 +41,18 @@ Since you selected *Header Authentication*, now you need to enter your [credenti
 Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
 :::
 
-Go to the top parameter *Credentials* and click on *Create New*. This will open the Credentials window where you need to add information to three fields:
+In the left panel, click on *Create New* in the box next to the parameter *Credentials*. This will open the Credentials window where you need to add the following information in the *Connection* tab:
 
-- *Credentials Name:* `beginner_course`
+- *Credentials Name* in the top left corner, next to the node logo. By default, the name of the credentials is `Header Auth account`, but you can can rename to `beginner_course`, for example.
 
-    You can name your credentials however you want. It’s good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
+  ::: tip 💡 Credentials naming
+  You can name your credentials however you want. It’s good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
+  :::
 
 - *Name:* `api_key`
 - *Value:* `j[vKYdY68H(:WFb`
 
-Your *Credentials* window should look like this:
+Click on the *Save* button in the top right corner to save your credentials. Your *Credentials Connection* window should look like this:
 
 <figure><img src="../images/chapter-two/HTTP-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
 

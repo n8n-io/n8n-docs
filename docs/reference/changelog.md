@@ -18,7 +18,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Automatic save when executing new workflows with Webhook node.
 - Fixed an issue with how arrays were serialized for certain nodes.
 - Fixed an issue where executions could not be cancelled when running in Main mode.
-- Fixed an issue where editing a duplicated workflow also modified the original.
+- Duplicated workflows now open in a new window.
 
 ### Bug fixes 🐛
 <br />

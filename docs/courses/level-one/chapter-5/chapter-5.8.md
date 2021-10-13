@@ -20,7 +20,7 @@ To see the execution log click on the icon with three lines in the left panel, w
 In the *Workflow Executions* window you can filter the displayed executions by workflow and by status (*All*, *Error*, *Running*, or *Success*).
 :::
 
-You get a table with information about:
+The *Workflow Executions* window displays a table with the following information:
 
 * _Started At / ID:_ The date and time when the workflow started, followed by the ID of this workflow execution
 * _Name:_ The name of the workflow

@@ -65,9 +65,11 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_PROTOCOL` | `enum string`: `http`, `https` | The protocol used to reach n8n. |
 | `N8N_SSL_KEY` | `string` | The SSL Key for HTTPS protocol. |
 | `N8N_SSL_CERT` | `string` | The SSL certificate for HTTPS protocol. |
-| `N8N_VERSION_NOTIFICATIONS_ENABLED` | `boolean` | When enables, notifications of new versions and security updates are provided. |
+| `N8N_PERSONALIZATION_ENABLED` | `boolean` | Whether to ask users personalisation questions and then customise n8n accordingly. |
+| `N8N_VERSION_NOTIFICATIONS_ENABLED` | `boolean` | When enabled, notifications of new versions and security updates are provided. |
 | `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | `string` | The endpoint where version information is retrieved. By default `https://api.n8n.io/versions/` is used. |
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | `string` | The URL displayed in the New Versions panel for additional information. By default `https://docs.n8n.io/getting-started/installation/updating.html` is used. |
+| `N8N_DIAGNOSTICS_ENABLED` | `boolean` | Whether to share selected, anonymous [telemetry](../reference/telemetry.html) with n8n |
 | `VUE_APP_URL_BASE_API` | `string` | Used when building the `n8n-editor-ui` package manually to indicate how the frontend can reach the backend API. |
 
 ## Endpoints

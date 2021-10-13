@@ -25,7 +25,15 @@ cd n8n-docs
 npm install
 npm run dev
 ```
+After doing this, visit [http://localhost:8080](http://localhost:8080) to see the docs website. Pages should refresh as you make changes to them.
+
 You can find the contribution guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Structure
+
+The structure of the `/docs` directory mirrors the structure of the docs website itself. Each page has a corresponding markdown file that is compiled to HTML on build. The `README.md` in each directory is the index page for the corresponding section.
+
+The left menu is defined in `/docs/.vuepress/config.js`.
 
 
 ## Support

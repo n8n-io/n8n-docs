@@ -254,9 +254,13 @@ module.exports = {
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference/data'),
 				},
+        {
+          title: '📓 Logging in n8n',
+          path: 'logging.md',
+        },
 				{
-					title: '📓 Logging in n8n',
-					path: 'logging.md',
+					title: '📻 Telemetry',
+					path: 'telemetry.md',
 				},
 				{
 					title: '👀 Troubleshooting',

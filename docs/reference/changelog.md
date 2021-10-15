@@ -8,17 +8,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 🚀
 <br />
-<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Added support for deleting, listing, getting and recovering suspended tickets. Added an option to search for active tickets. Also added options to add internal notes, public replies and assignee emails to active ticket updates."/>
-<Changelog node="n8n-nodes-base.nextCloud" title="Nextcloud:" text="Added support for Nextcloud's share functionality."/>
+<Changelog node="n8n-nodes-base.nextCloud" title="Nextcloud:" text="Added Share operation to the File and Folder resources."/>
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation."/>
 
 ### Core Functionality ⚙️
-- Improved the autofill behaviour on Google Chrome when entering credentials
-- Adding/updating alias terms and categories to make finding the FTP and Stop and Error nodes easier
+- Improved the autofill behaviour on Google Chrome when entering credentials.
 
 ### Bug fixes 🐛
 <br />
-<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Fixed an issue that would cause Airtable operations to fail when a sort field is used."/>
-<Changelog node="n8n-nodes-base.cron" title="Cron:" text="Fixed an issue caused by a bug in the cron library used by the node that would prevent a workflow from running."/>
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Fixed an issue with the sort field"/>
+<Changelog node="n8n-nodes-base.cron" title="Cron:" text="Set the version of the cron library to 1.7.2"/>
 
 ### Contributors 🙌
 [Jonathan Bennetts](https://github.com/Joffcom)

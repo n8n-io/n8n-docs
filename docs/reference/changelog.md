@@ -2,7 +2,47 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-## n8n@0.142.0 
+## n8n@0.144.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.143.0...n8n@0.144.0) for this version.<br />
+**Release date:** 2021-10-15
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.nextCloud" title="Nextcloud:" text="Added Share operation to the File and Folder resources."/>
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation."/>
+
+### Core Functionality ⚙️
+- Improved the autofill behaviour on Google Chrome when entering credentials.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Fixed an issue with the sort field."/>
+<Changelog node="n8n-nodes-base.cron" title="Cron:" text="Set the version of the cron library to 1.7.2."/>
+
+### Contributors 🙌
+[Jonathan Bennetts](https://github.com/Joffcom)
+
+## n8n@0.143.0
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.142.0...n8n@0.143.0) for this version.<br />
+**Release date:** 2021-10-14
+
+### Enhanced nodes 🚀
+<br />
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added support for getting activities from deal ID."/>
+<Changelog node="n8n-nodes-base.facebookGraphApi" title="Facebook Graph API:" text="Added support for Facebook Graph API versions 11 and 12."/>
+
+### Core Functionality ⚙️
+- Fixed a build issue affecting a number of AWS nodes.
+- Changed workflows to use credential ids primarily (instead of names), allowing users to have different credentials with the same name.
+
+### Bug fixes 🐛
+<br />
+<Changelog node="n8n-nodes-base.ftp" title=" FTP:" text="Fixed error when opening FTP/SFTP credentials."/>
+
+### Contributors 🙌
+[Rodrigo Correia](https://github.com/rodrigoscdc)
+
+## n8n@0.142.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.1...n8n@0.142.0) for this version.<br />
 **Release date:** 2021-10-07
 
@@ -29,14 +69,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 🙌
 [Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
 
-## n8n@0.141.1 
+## n8n@0.141.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.0...n8n@0.141.1) for this version.<br />
 **Release date:** 2021-10-01
 
 ### Core Functionality ⚙️
 - Fixed issue with body formatting of `x-form-www-urlencoded` requests.
 
-## n8n@0.141.0 
+## n8n@0.141.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.140.0...n8n@0.141.0) for this version.<br />
 **Release date:** 2021-09-30
 
@@ -54,7 +94,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 🙌
 [Alex Hall](https://github.com/alexmojaki), [Tom Klingenberg](https://github.com/ktomk)
 
-## n8n@0.140.0 
+## n8n@0.140.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.1...n8n@0.140.0) for this version.<br />
 **Release date:** 2021-09-29
 
@@ -201,7 +241,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Kyle Mohr](https://github.com/kylefmohr)
 
 
-## n8n@0.135.2 
+## n8n@0.135.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.1...n8n@0.135.2) for this version.<br />
 **Release date:** 2021-08-26
 
@@ -209,7 +249,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added expression support for credentials.
 - Fixed performance issues when loading credentials.
 
-## n8n@0.135.1 
+## n8n@0.135.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.0...n8n@0.135.1) for this version.<br />
 **Release date:** 2021-08-23
 
@@ -269,7 +309,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.hubspot" title="Hubspot:" text="Fixed issue when sending context parameter."/>
 
 ### Contributors 🙌
-[calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1) 
+[calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1)
 
 ## n8n@0.133.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.132.2...n8n@0.133.0) for this version.<br />

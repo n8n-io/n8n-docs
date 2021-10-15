@@ -16,8 +16,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 🐛
 <br />
-<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Fixed an issue with the sort field"/>
-<Changelog node="n8n-nodes-base.cron" title="Cron:" text="Set the version of the cron library to 1.7.2"/>
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Fixed an issue with the sort field."/>
+<Changelog node="n8n-nodes-base.cron" title="Cron:" text="Set the version of the cron library to 1.7.2."/>
 
 ### Contributors 🙌
 [Jonathan Bennetts](https://github.com/Joffcom)
@@ -28,16 +28,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 🚀
 <br />
-<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added support for getting activities from deal ID"/>
-<Changelog node="n8n-nodes-base.facebookGraphApi" title="Facebook Graph API:" text="Added support for Facebook Graph API versions 11 and 12"/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added support for getting activities from deal ID."/>
+<Changelog node="n8n-nodes-base.facebookGraphApi" title="Facebook Graph API:" text="Added support for Facebook Graph API versions 11 and 12."/>
 
 ### Core Functionality ⚙️
-- Fixed a build issue affecting a number of AWS nodes
-- Changed credentials structure (where credentials get copied from one instance to another we now do an optimistic search for the name if credentials is still a string or the id is null or not existing. If just one result is found it gets used, otherwise shows an issue.)
+- Fixed a build issue affecting a number of AWS nodes.
+- Changed workflows to use credential ids primarily (instead of names), allowing users to have different credentials with the same name.
 
 ### Bug fixes 🐛
 <br />
-<Changelog node="n8n-nodes-base.ftp" title=" FTP:" text="Fixed error when opening FTP/SFTP credentials"/>
+<Changelog node="n8n-nodes-base.ftp" title=" FTP:" text="Fixed error when opening FTP/SFTP credentials."/>
 
 ### Contributors 🙌
 [Rodrigo Correia](https://github.com/rodrigoscdc)

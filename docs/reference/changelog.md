@@ -40,7 +40,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 🙌
 [pemontto](https://github.com/pemontto), [robertodamiani](https://github.com/robertodamiani)
 
-
 ## n8n@0.144.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.143.0...n8n@0.144.0) for this version.<br />
 **Release date:** 2021-10-15

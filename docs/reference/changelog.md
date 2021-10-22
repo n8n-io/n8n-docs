@@ -37,6 +37,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.strapi" title="Strapi:" text="Fixed an issue using the Where option of the Get All operation."/>
 <Changelog node="n8n-nodes-base.wooCommerce" title="WooCommerce:" text="Fixed an issue where a wrong postcode field name was used for the Order resource."/>
 
+### Contributors 🙌
+[pemontto](https://github.com/pemontto), [robertodamiani](https://github.com/robertodamiani)
+
 
 ## n8n@0.144.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.143.0...n8n@0.144.0) for this version.<br />

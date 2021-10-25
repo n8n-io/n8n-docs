@@ -3,34 +3,38 @@
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
 ## n8n@0.145.0
+
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.144.0...n8n@0.145.0) for this version.<br />
 **Release date:** 2021-10-22
 
 ### New nodes ✨
+
 <br />
 <Changelog node="n8n-nodes-base.awsTextract" title="AWS Textract"/>
 <Changelog node="n8n-nodes-base.googleDriveTrigger" title="Google Drive Trigger"/>
 
 ### Enhanced nodes 🚀
+
 <br />
 <Changelog node="n8n-nodes-base.bitbucketTrigger" title="Bitbucket Trigger:" text="Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource."/>
 <Changelog node="n8n-nodes-base.github" title="GitHub:" text="Added check for API credentials validity."/>
 <Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant:" text="Added check for credentials validity."/>
+<Changelog node="n8n-nodes-base.jira" title="Jira Software:" text="Added check for credentials validity."/>
 <Changelog node="n8n-nodes-base.microsoftOneDrive" title="Microsoft OneDrive:" text="Added functionality to create folder hierarchy automatically upon subfolder creation."/>
 <Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added All Users option to Get All operation of Activity resource."/>
 <Changelog node="n8n-nodes-base.slack" title="Slack:" text="Increase the Slack default query limit from 5 to 100 in order to reduce number of requests."/>
-<Changelog node="n8n-nodes-base.jira" title="Jira Software:" text="Added check for credentials validity."/>
 <Changelog node="n8n-nodes-base.twitter" title="Twitter:" text="Added Tweet Mode additional field to the Search operation of Tweet resource."/>
 
 ### Core Functionality ⚙️
+
 - Changed `vm2` library version from `3.9.3` to `3.9.5`.
 - Fixed an issue with ignoring the response code.
 - Fixed an issue with overwriting credentials via environment variables.
 - Fixed an issue with using query strings combined with the `x-www-form-urlencoded` content type.
-- Fixed an issue with running n8n in queue mode.
 - Introduced telemetry.
 
 ### Bug fixes 🐛
+
 <br />
 <Changelog node="n8n-nodes-base.jira" title="Jira Software:" text="Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server."/>
 <Changelog node="n8n-nodes-base.slack" title="Slack:" text="Fixed an issue with pagination when loading more than 1,000 channels."/>
@@ -38,6 +42,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.wooCommerce" title="WooCommerce:" text="Fixed an issue where a wrong postcode field name was used for the Order resource."/>
 
 ### Contributors 🙌
+
 [pemontto](https://github.com/pemontto), [rdd2](https://github.com/rdd2), [robertodamiani](https://github.com/robertodamiani), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 ## n8n@0.144.0

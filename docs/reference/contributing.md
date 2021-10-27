@@ -62,7 +62,7 @@ There are different ways in which you can contribute to the n8n code base:
 
 ## Contribute to the docs 📚
 
-You can contribute to the n8n documentation, for example by documenting nodes or fixing issues.\
+You can contribute to the n8n documentation, for example by documenting nodes or fixing issues.
 
 The repository for the docs is [here](https://github.com/n8n-io/n8n-docs) and the guidelines for contributing to the docs are [here](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md).
 
@@ -91,11 +91,11 @@ This is usually an interactive, back-and-forth process, where we might ask for c
 
 ## Refer a candidate 👥
 
-Do you know someone who would be a great fit for one of our [open positions](https://apply.workable.com/n8n/)? Refer them to us! In return, we'll pay you €1,000 when the referral successfully passes their probationary period.
+Do you know someone who would be a great fit for one of our [open positions](https://n8n.io/careers)? Refer them to us! In return, we'll pay you €1,000 when the referral successfully passes their probationary period.
 
 Here's how this works:
 
 1. **Search**: Have a look at the description and requirements of each role, and consider if someone you know would be a great fit.
-2. **Referral**: Once you’ve identified a potential candidate, send an email to [Leoni](mailto:leoni@n8n.io) with the subject line *Employee referral - [job title]* and a short description of the person you’re referring (and the reason why). Also, tell your referral to apply for the job through [Workable](https://apply.workable.com/n8n/).
+2. **Referral**: Once you’ve identified a potential candidate, send an email to [Leoni](mailto:leoni@n8n.io) with the subject line *Employee referral - [job title]* and a short description of the person you’re referring (and the reason why). Also, tell your referral to apply for the job through our [careers page](https://n8n.io/careers).
 3. **Evaluation**: We'll screen the application and inform you about the next steps of the hiring process.
 4. **Reward**: As soon as your referral has successfully finished the probationary period, we'll reward you for your efforts by transferring the €1,000 to your bank account.

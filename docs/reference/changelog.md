@@ -15,18 +15,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 🚀
 
 <br />
-<Changelog node="n8n-nodes-base.if" title="IF:" text="Added support for moment types to Date & Time condition."/>
-<Changelog node="n8n-nodes-base.dateTime" title="Date & Time:" text="Ensuring the return values are always of type string."/>
 <Changelog node="n8n-nodes-base.agileCrm" title="Agile CRM:" text="Added Filters to Get All operation of Contact and Company resources."/>
+<Changelog node="n8n-nodes-base.dateTime" title="Date & Time:" text="Ensuring the return values are always of type string."/>
+<Changelog node="n8n-nodes-base.if" title="IF:" text="Added support for moment types to Date & Time condition."/>
 
 
 ### Core Functionality ⚙️
 
 - Added name and ID of a workflow to its settings
 - Added parameter inputs to be multi-line
-- Fixed an issue with updating epxressions after renaming a node
 - Fixed an issue with declaring proxies when axios is used
 - Fixed an issue with serializing arrays and special characters
+- Fixed an issue with updating epxressions after renaming a node
 
 ### Bug fixes 🐛
 

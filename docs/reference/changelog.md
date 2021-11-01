@@ -26,7 +26,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added parameter inputs to be multi-line
 - Fixed an issue with declaring proxies when axios is used
 - Fixed an issue with serializing arrays and special characters
-- Fixed an issue with updating epxressions after renaming a node
+- Fixed an issue with updating expressions after renaming a node
 
 ### Bug fixes 🐛
 

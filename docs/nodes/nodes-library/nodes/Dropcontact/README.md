@@ -45,14 +45,14 @@ In the screenshot below, you will notice that the node returns the information o
 ### 3. Dropontact node
 This node will find the email address and enrich your contact.
 1. First of all, you'll have to enter credentials for the Dropcontact node. You can find out how to do that [here](../../../credentials/Dropcontact/README.md).
-2. Select 'Contact' from the Resource dropdown list.
-3. For each input field, click on the gears icon next to the field and click on Add Expression.
-Select the following in the Variable Selector section: Node > Input Data > JSON > fields > firstName . You can also add the following expression: {{$json["fields"]["firstName"]}}.
+2. Select 'Enrich Contact' from the Operation dropdown list.
+3. For each input field, click on the gears icon next to the field and click on 'Add Expression'.
+Select the following in the Variable Selector section: Node > Input Data > JSON > fields > email . You can also add the following expression: {{$json["fields"]["email"]}}.
+The email field is not required. If you don't have it, you can find the email from the first name, last name, and the company website of your lead 
 4. If your contacts are french, you can choose to enrich with company information
-5. Specify in which language you want your output data : French or English
-6. You can add additional fields if you have information like LinkedIn URL, SIREN, or if you want to verify and qualify an existing email address.
+5. Specify in which language you want your output data: French or English. 
+6. You can specify a time of execution. We recommend (by default) 45 seconds: Dropcontact's algorithms are working in real-time. 
 7. Click on Execute Node to run the node.
-The execution takes 45 seconds. This is normal: Dropcontact's algorithms are working in real-time. 😘
 
 In the screenshot below, you will notice that the Dropcontact node has enriched your data.
 ![get your enriched contacts from Dropcontact](./enrichmentFromDropcontact.png)

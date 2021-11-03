@@ -1,26 +1,45 @@
 # Installation
 
-Get started with n8n right away by using our hosted n8n.cloud offering or running n8n locally via [npm](https://www.npmjs.com/package/n8n). 
+There are a few different ways to set up n8n depending on how you intend to use it:
 
-n8n is also available as a [Docker image](https://hub.docker.com/r/n8nio/n8n).
-
-[[toc]]
+- [n8n.cloud](#n8n-cloud) - Hosted solution, no need to install anything
+- [Desktop app](#desktop-app) - The fastest way to try n8n on your computer   
+- [Self-host](#self-hosting-n8n) - Recommended method for production or customized usecases
+	- [npm](#npm)
+	- [Docker](#docker)
+	- [n8n with tunnel](#n8n-with-tunnel)
 
 ## n8n.cloud
 
-In addition to all the features of n8n, n8n.cloud provides added benefits such as:
-- No set up or maintenance for your n8n instance
+n8n.cloud is our hosted solution. In addition to all the features of n8n, it provides added benefits such as:
+- No technical set up or maintenance for your n8n instance
+- 24/7 uptime monitoring
 - Managed OAuth for authentication
 - Easy upgrades to the newest n8n versions
 
-If this option is for you, sign up for an [n8n.cloud](https://www.n8n.cloud/) account.
+[Sign up for n8n.cloud](https://www.n8n.cloud/)
 
 ::: tip 💡 Keep in mind
 The IP address of n8n.cloud is `20.79.72.105` and the NAT address is `20.79.72.36`, however this may change in the future.
-Recommended practice is to whitelist `20.79.72.0/24`, but if more strict measures are needed, at minimum both `20.79.72.105` and `20.79.72.36` must be whitelisted.
 :::
 
-## npm
+## Desktop app
+
+The n8n desktop app is the fastest way to try n8n on Windows or Mac computers (support for Linux is coming soon). Download the app from the link below:
+
+[Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip)  
+[Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip)
+
+
+::: tip 💡 Keep in mind
+If you have already installed n8n locally via `npm`, the desktop app will connect to the existing `sqlite` database.
+:::
+
+## Self-hosting n8n 
+You can install via Docker or npm.
+
+
+### npm
 
 You can try n8n without installing it using [npx](../../reference/glossary.md#npx).
 
@@ -50,13 +69,13 @@ n8n start
 Windows users remember to change into the `.n8n` directory of your Home folder (`~/.n8n`) before running `n8n start`.
 :::
 
-## Docker
+### Docker
 
 See the [Docker installation](docker-quickstart.md) page for running n8n using Docker.
 
 n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
 
-## n8n with tunnel
+### n8n with tunnel
 
 ::: danger
 This is only meant for local development and testing. It should not be used in production.

@@ -2,6 +2,30 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.147.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.0...n8n@0.147.1) for this version.<br />
+**Release date:** 2021-11-03
+
+### Core Functionality ⚙️
+
+- Fixed a build issue by moving the `chokidar` dependency to a regular dependency.
+
+## n8n@0.147.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.146.0...n8n@0.147.0) for this version.<br />
+**Release date:** 2021-11-03
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.localFileTrigger" title="Local File Trigger"/>
+
+### Core Functionality ⚙️
+
+- Improved the database migration process to reduce memory footprint.
+- Fixed an issue with telemetry by adding an anonymous ID.
+
 ## n8n@0.146.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.145.0...n8n@0.146.0) for this version.<br />
@@ -22,11 +46,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality ⚙️
 
-- Added name and ID of a workflow to its settings
-- Added parameter inputs to be multi-line
-- Fixed an issue with declaring proxies when axios is used
-- Fixed an issue with serializing arrays and special characters
-- Fixed an issue with updating expressions after renaming a node
+- Added name and ID of a workflow to its settings.
+- Added parameter inputs to be multi-line.
+- Fixed an issue with declaring proxies when axios is used.
+- Fixed an issue with serializing arrays and special characters.
+- Fixed an issue with updating expressions after renaming a node.
 
 ### Bug fixes 🐛
 

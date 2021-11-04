@@ -8,6 +8,10 @@ To ensure you can follow along with the steps below, be sure to first:
     * Linux users, you'll have to install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually
 * [Register](https://discord.com/register) for a Discord account
 
+::: tip 💡 n8n desktop app
+Install our [desktop app](../getting-started/installation/#desktop-app) if you want to start faster and skip a technical setup. 
+:::
+
 ## Install n8n
 
 1. Now that your have Docker installed, let's start by pulling the latest n8n image. Open your Terminal window and run:

@@ -6,6 +6,7 @@ description: Learn to configure credentials for the nodes based on Microsoft ser
 # Microsoft
 
 You can use these credentials to authenticate the following nodes with Microsoft.
+- [Microsoft Dynamics CRM](../../nodes-library/nodes/MicrosoftDynamicsCrm/README.md)
 - [Microsoft Excel](../../nodes-library/nodes/MicrosoftExcel/README.md)
 - [Microsoft OneDrive](../../nodes-library/nodes/MicrosoftOneDrive/README.md)
 - [Microsoft Outlook](../../nodes-library/nodes/MicrosoftOutlook/README.md)

@@ -28,7 +28,7 @@ Make sure you tick the boxes below before submitting a node for review, as this 
 
 ## Code formatting
 
-<input type="checkbox"> Ensure the branch lints cleanly by running `npm run tslint`.</input><br>
+<input type="checkbox"> Ensure the branch lints cleanly by running `npm run lint`.</input><br>
 <input type="checkbox"> Ensure the indentation is correct. Check this in the editorconfig.</input><br>
 <input type="checkbox"> Ensure there are no extra spaces. Check this in the editorconfig.</input><br>
 <input type="checkbox"> Code comment dividers inside if-branches.</input><br>

@@ -2,6 +2,43 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.148.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.1...n8n@0.148.0) for this version.<br />
+**Release date:** 2021-11-05
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.dropcontact" title="Dropcontact"/>
+<Changelog node="n8n-nodes-base.respondToWebhook" title="Respond to Webhook"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.lemlist" title="Lemlist:" text="Added additional fields to Create operation of Lead resource."/>
+<Changelog node="n8n-nodes-base.slack" title="Slack:" text="Added User Group resource."/>
+<Changelog node="n8n-nodes-base.todoist" title="Todoist:" text="Added Update operation to Task resource."/>
+<Changelog node="n8n-nodes-base.wait" title="Wait:" text="Improved descriptions of available Respond options."/>
+<Changelog node="n8n-nodes-base.wooCommerce" title="WooCommerce:" text="Added password field to Crate operation of Customer resource."/>
+
+### Core Functionality ⚙️
+
+- Added a hook after workflow creation.
+- Fixed a build issue with npm v7 by overriding unwanted behaviour through the .npmrc file.
+- Fixed an issue preventing unknown node types from being imported.
+- Fixed an issue with the UI falsely indicating a credential cannot be selected when using SQLite and multiple credentials with the same name exist.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.stripe" title="Stripe:" text="Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected."/>
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Fixed an issue preventing the additional field External ID from being evaulated correctly."/>
+
+### Contributors 🙌
+
+[mizzimizzi](https://github.com/mizzimizzi), [nikozila](https://github.com/nikozila), [Pauline](https://github.com/PaulineDropcontact)
+
 ## n8n@0.147.1
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.0...n8n@0.147.1) for this version.<br />
@@ -42,7 +79,6 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.agileCrm" title="Agile CRM:" text="Added Filters to Get All operation of Contact and Company resources."/>
 <Changelog node="n8n-nodes-base.dateTime" title="Date & Time:" text="Ensuring the return values are always of type string."/>
 <Changelog node="n8n-nodes-base.if" title="IF:" text="Added support for moment types to Date & Time condition."/>
-
 
 ### Core Functionality ⚙️
 

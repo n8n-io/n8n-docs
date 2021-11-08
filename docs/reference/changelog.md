@@ -32,7 +32,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 🐛
 
 <br />
-<Changelog node="n8n-nodes-base.stripe" title="Stripe:" text="Fixed an issue where setting additional Metadata fields would not have the expected effect."/>
+<Changelog node="n8n-nodes-base.stripe" title="Stripe:" text="Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected."/>
 <Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Fixed an issue preventing the additional field External ID from being evaulated correctly."/>
 
 ### Contributors 🙌

@@ -37,7 +37,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors 🙌
 
-[mizzimizzi](https://github.com/mizzimizzi), [nikozila](https://github.com/nikozila)
+[mizzimizzi](https://github.com/mizzimizzi), [nikozila](https://github.com/nikozila), [Pauline](https://github.com/PaulineDropcontact)
 
 ## n8n@0.147.1
 

@@ -15,7 +15,10 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<Resource node="n8n-nodes-base.dropcontact" />
+::: details Contact
+- Enrich
+- Fetch Request
+:::
 
 
 ## Example Usage

@@ -39,7 +39,7 @@ You'll only need to enter the Credentials Name, Access Token URL, and click on t
 
 ## Using OAuth JWT
 
-To use the OAuth JWT authentication method with the Salesforce node you need to create a private key. Follow the instructions mentioned in the documentation [here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm) to create a priavte key.
+To use the OAuth JWT authentication method with the Salesforce node you need to create a private key. Follow the instructions mentioned in the documentation [here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm) to create a private key.
 
 1. Access your Salesforce Dashboard.
 2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.

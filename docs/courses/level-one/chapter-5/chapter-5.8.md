@@ -10,15 +10,11 @@ To activate your workflow toggle the *Active* button on the top right corner of 
 
 **Workflow Executions**
 
-An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions allowing you to see if the workflow was completed successfully or not. The execution log is really useful for debugging your workflow and seeing at what stage it runs into issues.
+An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
 
-To see the execution log click on the icon with three lines in the left panel, which will open the *Workflow Executions* window.
+To see the execution log, click on the icon with three lines in the left panel, which will open the *Workflow Executions* window.
 
 <figure><img src="../images/chapter-two/Execution-list.png" alt="Workflow Execution List" style="width:100%"><figcaption align = "center"><i>Workflow Execution List</i></figcaption></figure>
-
-::: tip 💡 Workflow execution status
-In the *Workflow Executions* window you can filter the displayed executions by workflow and by status (*All*, *Error*, *Running*, or *Success*).
-:::
 
 The *Workflow Executions* window displays a table with the following information:
 
@@ -28,11 +24,16 @@ The *Workflow Executions* window displays a table with the following information
 * _Mode:_ How the workflow was triggered (trigger or webhook)
 * _Running Time:_ The duration it took the workflow to execute
 
+::: tip 💡 Workflow execution status
+In the *Workflow Executions* window you can filter the displayed executions by workflow and by status (*All*, *Error*, *Running*, or *Success*).\
+The information displayed here depends on what workflows and executions you set up in *Workflow Settings* to be saved.
+:::
+
 **Workflow Settings**
 
-If you need to customize your workflows and executions, or overwrite some of the global default settings, you can do this in *Workflow Settings*. To access them click on *Workflow Settings* under the *Workflows* section in the left panel.
+You can customize your workflows and executions, or overwrite some of the global default settings in *Workflow Settings*. These settings are located in the left panel, under the *Workflows* section.
 
-<figure><img src="../images/chapter-two/Workflow-setting.png" alt="Workflow Setting" style="width:100%"><figcaption align = "center"><i>Workflow Setting</i></figcaption></figure>
+<figure><img src="../images/chapter-two/Workflow-setting.png" alt="Workflow Settings" style="width:100%"><figcaption align = "center"><i>Workflow Settings</i></figcaption></figure>
 
 In the *Workflow Settings* window you can configure six settings:
 

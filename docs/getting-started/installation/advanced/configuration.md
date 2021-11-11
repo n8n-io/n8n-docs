@@ -86,7 +86,7 @@ n8n will then load the data from the file with the given name, making it possibl
 The following environment variables support file input:
   - `CREDENTIALS_OVERWRITE_DATA_FILE`
   - `DB_TYPE_FILE`
-  - `DB_MYSQLDB_DATABASE`
+  - `DB_MYSQLDB_DATABASE_FILE`
   - `DB_MYSQLDB_HOST_FILE`
   - `DB_MYSQLDB_PORT_FILE`	
   - `DB_MYSQLDB_USER_FILE`

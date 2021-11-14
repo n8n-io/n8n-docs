@@ -33,7 +33,7 @@ You can replace the *Airtable* node with another spreadsheet app/service. For ex
 In the *Airtable node* window, configure the following parameters:
 - *Airtable API:*
 	- *Name:* The name of your credentials (e.g. airtable_api)
-	- *API Key:* Your API key
+	- *API Key:* Your API key [Get your Airtable's API Key](https://airtable.com/account)
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
 - *Operation:* Append
 This operation will append the new data to the table.

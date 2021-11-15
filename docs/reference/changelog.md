@@ -2,6 +2,38 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.149.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.148.0...n8n@0.149.0) for this version.<br />
+**Release date:** 2021-11-13
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.oneSimpleApi" title="One Simple API"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Added Circle Primitive to Draw operation. Also added Composite operation."/>
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk:" text="Added check for API credentials validity."/>
+<Changelog node="n8n-nodes-base.zulip" title="Zulip:" text="Added additional field Role to the Update operation of the User resource."/>
+
+### Core Functionality ⚙️
+
+- Fixed an issue causing an error message to be thrown when executing a workflow through the CLI.
+- Improved expression security by limiting the available process properties.
+- Improved the behaviour of internal tests executed through the CLI.
+- Updated the owner of the node user's home directory in the custom docker image.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.googleTasks" title="Google Tasks:" text="Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation)."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart."/>
+<Changelog node="n8n-nodes-base.stripeTrigger" title="Stripe Trigger:" text="Fixed an issue preventing the node from being activated when a previously created webhook no longer exists."/>
+<Changelog node="n8n-nodes-base.togglTrigger" title="Toggl Trigger:" text="Updated the API URL used by the node."/>
+
 ## n8n@0.148.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.1...n8n@0.148.0) for this version.<br />

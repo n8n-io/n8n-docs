@@ -34,8 +34,9 @@ Or using the `-e` flag from the command line:
 docker run -it --rm \
 	--name n8n \
 	-p 5678:5678 \
-	-e GENERIC_TIMEZONE="Europe/Berlin" \
-	-e TZ="Europe/Berlin" \
+	-e N8N_BASIC_AUTH_ACTIVE="true" \
+	-e N8N_BASIC_AUTH_USER="<user>" \
+	-e N8N_BASIC_AUTH_PASSWORD="<password>" \
 	n8nio/n8n
 ```
 

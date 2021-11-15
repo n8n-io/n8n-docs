@@ -34,6 +34,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.stripeTrigger" title="Stripe Trigger:" text="Fixed an issue preventing the node from being activated when a previously created webhook no longer exists."/>
 <Changelog node="n8n-nodes-base.togglTrigger" title="Toggl Trigger:" text="Updated the API URL used by the node."/>
 
+### Contributors 🙌
+
+[GeylaniBerk](https://github.com/GeylaniBerk), [Jonathan Bennetts](https://github.com/Joffcom)
+
 ## n8n@0.148.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.1...n8n@0.148.0) for this version.<br />

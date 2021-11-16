@@ -26,12 +26,14 @@ The following special variables are available:
  - **$env**: Environment variables
  - **$evaluateExpression**: Evaluates a string as expression
  - **$items**: Incoming data from an input node
+ - **$item**: Returns item at the specified index
  - **$json**: Incoming JSON data of a node
  - **$node**: Data of other nodes (binary, context, json, parameter, runIndex)
  - **$parameters**: Parameters of the current node
  - **$position**: The index of the item in the list of items
  - **$runIndex**: The current run index (first time node gets executed it is 0, second time 1, ...)
  - **$workflow**: Returns workflow metadata like: active, id, name
+ - **$resumeWebhookUrl**: The webhook URL to call to resume a waiting workflow.
 
 
 Normally it is not needed to write the JavaScript variables manually as they can be selected with the help of the Expression Editor.
@@ -81,6 +83,22 @@ const allItems = $items("IF", 0, $runIndex);
 // Returns all items the node "IF" outputs (index: 1 which is Output "false" of run 0 which is the first run)
 const allItems = $items("IF", 1, 0);
 ```
+
+## Method: $item(index: number, runIndex?: number)
+
+This method allows you to return an item at a specific index. The index is zero-based. Hence, `$item(0)` will return the first item, `$item(1)` the second one, and so on. Refer to [this](./nodes-library/core-nodes/Function/#method-item-index-number-runindex-number) documentation to learn more.
+
+Example:
+
+```typescript
+// Returns the first item returned by the Example node
+const firstItem = $item(0).$node["Example Node"];
+
+// Returns the second item returned by the Example node
+const secondItem = $item(1).$node["Example Node"];
+```
+
+Refer to this [example workflow](https://n8n.io/workflows/1330) to learn how this method can be used.
 
 ## Variable: $executionId
 

@@ -15,7 +15,7 @@ In your workflow, add a new *Set* node between the *IF* node and the *Airtable* 
 ::: v-pre
 - *Add Value > Number:*
   - *Name:* orderId
-  - *Value:* `{{$json["orderId"]}}`
+  - *Value:* `{{$json["orderID"]}}`
     *Current Node > Input Data > JSON > orderID*
 - *Add Value > String:*
   - *Name:* employeeName

@@ -2,6 +2,33 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.150.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.149.0...n8n@0.150.0) for this version.<br />
+**Release date:** 2021-11-19
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.jira" title="Jira Software:" text="Added Components as an additional field."/>
+
+### Core Functionality ⚙️
+
+- Fixed a build issue by pinning rudder-sdk-node version 1.0.6 in CLI package.
+- Fixed an issue preventing the `n8n import:workflow --separate` CLI command from finding workflows on Windows.
+- Further improved the expression security.
+- Moved all nodes into separate directories in preparation for internationalization.
+- Removing default headers for PUT and PATCH operations when using axios.
+- Revamped the workflow canvas.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed an issue causing the wrong Content-Type header to be set when downloading a file."/>
+<Changelog node="n8n-nodes-base.serviceNow" title="ServiceNow:" text="Fixed incorrect mapping of incident urgency and impact values."/>
+<Changelog node="n8n-nodes-base.start" title="Start:" text="Fixed an issue causing the node to be disabled in a new workflow."/>
+<Changelog node="n8n-nodes-base.xero" title="Xero:" text="Fixed an issue causing the node to only fetch the first page when querying the Xero API."/>
+
 ## n8n@0.149.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.148.0...n8n@0.149.0) for this version.<br />

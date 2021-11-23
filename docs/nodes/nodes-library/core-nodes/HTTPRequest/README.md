@@ -116,7 +116,7 @@ Depending on your use-case, you might want to send a binary file to an API endpo
 3. Enter the URL where you want to send the binary file in the ***URL*** field.
 4. Toggle ***JSON/RAW Parameters*** to `true`.
 5. Toggle ***Send Binary Data*** to `true`.
-6. If you are referring to the binary property with a different value, enter that value in the ***Binary Property*** field.
+6. If you are referring to the binary property with a different value, enter that value in the ***Binary Property*** field (This is the name displayed in the binary tab after executing a node.). If you want to set a name for the form field you can do this by seperating it with a colon like this: `form_field:binary_1`, which means take binary_1 from the the flow and send it as `form_field` in the multipart part.
 7. Click on ***Add Option*** and select 'Body Content Type' from the dropdown list.
 8. Select 'Form-Data Multipart' from the ***Body Content Type*** dropdown list.
 9. Click on ***Execute Node*** to run the node.

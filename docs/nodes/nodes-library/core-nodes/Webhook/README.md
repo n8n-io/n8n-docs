@@ -162,6 +162,15 @@ Here is a video demonstrating how to send a request to a Webhook based workflow 
 <iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/WLIDTRJGfWw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+### How to use route parameters?
+
+You can add route parameters to the webhook URL path. This is useful when you are creating an API. The *Path* field can take the following values:
+- `/:variable`
+- `/path/:variable`
+- `/:variable/path`
+- `/:variable1/path/:variable2`
+- `/:variable1/:variable2`
+
 ### How to use cURL to trigger the Webhook node?
 
 You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.

@@ -316,6 +316,8 @@ false
 
 Depending on your use-case, you might want to convert the structure of the incoming data. You can use the Function node to change the data structure of the incoming data. Please note that you might have to make some changes to the code based on your data. To know more about the data structure in n8n, please refer to the [Data Structure](../getting-started/key-concepts/README.md#data-structure) page.
 
+**Note:** Use the [Item Lists](../nodes/nodes-library/core-nodes/ItemLists/README.md) node to modify the data structure instead of the following coding snippets.
+
 ### 1. Create multiple items from a single item
 
 If you receive a single item from a node, you can split the data into individual items.
@@ -479,6 +481,8 @@ The output will then be similar to the following.
 
 ##  Sort items
 Depending on your use-case, you might want to sort the items returned by the last node. You can sort the items based on the integer values (for example, id or age) or string (for example, name).
+
+**Note:** Use the [Item Lists](../nodes/nodes-library/core-nodes/ItemLists/README.md) node to sort items.
 
 ### 1. Sort items based on an integer value
 You can sort the items based on a field that has numerical values using the Function node.
@@ -669,6 +673,8 @@ You can also use this example [workflow](https://n8n.io/workflows/804).
 
 Depending on your use-case, you might want to get only the first n items returned by the last node. Use the following snippet in the Function node.
 
+**Note:** Use the [Item Lists](../nodes/nodes-library/core-nodes/ItemLists/README.md) node to return the first n items.
+
 ```js
 return items.slice(0,n)
 ```
@@ -678,6 +684,8 @@ return items.slice(0,n)
 ## Remove Duplicate Values
 
 Depending on your use-case, you might want to remove the duplicate values returned by the last node.
+
+**Note:** Use the [Item Lists](../nodes/nodes-library/core-nodes/ItemLists/README.md) node to remove duplicate values.
 
 ### 1. Remove duplicate values from an array
 

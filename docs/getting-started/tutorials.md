@@ -21,6 +21,8 @@
 - [n8n nodes - Using Google Sheets and Google API](https://www.youtube.com/watch?v=KFqx8OmkqVE)
 - [Raspberry Pi as a local server for self-hosting applications like n8n](https://cri.dev/posts/2020-09-12-Raspberry-Pi-as-a-local-server-for-self-hosting-applications/)
 
+Find more tutorials from the community [here](https://n8n.notion.site/Created-by-Community-45bd1aa8d77845c2af4ea7c44bdf46e7)
+
 <script>
 export default {
   data () {

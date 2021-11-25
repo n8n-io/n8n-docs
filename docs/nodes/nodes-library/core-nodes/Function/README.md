@@ -153,6 +153,10 @@ It is important to know that the static data can not be read and written when te
 The data there will always be empty and the changes will not persist. Only when a workflow
 is active and it gets called by a Trigger or Webhook, the static data will be saved.
 
+## External libraries
+
+You can import and use built-in and external npm modules in the Function node. To learn how to enable external moduels, refer the [Configuration](../../../../getting-started/installation/advanced/configuration.md#use-built-in-and-external-modules-in-function-nodes) guide.
+
 ## Further Reading
 
 <FurtherReadingBlog />

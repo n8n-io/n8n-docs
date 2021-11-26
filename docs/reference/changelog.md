@@ -2,6 +2,33 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.151.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.150.0...n8n@0.151.0) for this version.<br />
+**Release date:** 2021-11-26
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.dhl" title="DHL"/>
+<Changelog node="n8n-nodes-base.grafana" title="Grafana"/>
+
+### Core Functionality ⚙️
+
+- Fixed a bug causing connections between nodes to disappear when renaming a newly added node after drawing a connection to its endpoints.
+- Fixed a build issue by adding TypeScript definitions for validator.js to CLI package, also fixed a linting issue by removing an unused import.
+- Improved the waiting state of trigger nodes to explain when an external event is required.
+- Loops are now drawn below their source node.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Fixed an issue preventing the Composite operation from working correctly in some cases."/>
+
+### Contributors 🙌
+
+[Jonathan Bennetts](https://github.com/Joffcom)
+
 ## n8n@0.150.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.149.0...n8n@0.150.0) for this version.<br />

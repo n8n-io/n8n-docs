@@ -177,7 +177,7 @@ Do not use this procedure for blue/green installations, where you have two n8n i
 
 ### How to configure worker concurrency?
 
-You can define the number of jobs a worker can run in parallel by using the `concurrency` falg. It defaults to `10` but can be changed:
+You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10` but can be changed:
 
 ```bash
 n8n worker --concurrency=5

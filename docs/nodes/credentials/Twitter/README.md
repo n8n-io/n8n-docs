@@ -15,23 +15,30 @@ Create a [Twitter developer account](https://developer.twitter.com/).
 ## Using OAuth
 
 1. Access the [Twitter Developer](https://developer.twitter.com/en/portal/projects-and-apps) portal.
-2. Scroll down to the ***Standalone Apps*** section and click on the ***+Create App*** button.
-3. Enter a name for your app in the ***App name*** field.
-4. Click on the ***Complete*** button.
-5. Copy the displayed ***API key*** and ***API secret key***.
-6. Scroll down to the ***Setup your App*** section and click on the ***App settings*** button.
-7. Scroll down to the ***Authentication settings*** section and click on the ***Edit*** button.
-8. Toggle ***Enable 3-legged OAuth*** to `true`.
-9. Copy the 'OAuth Callback URL' provided in the Twitter OAuth API credentials in n8n and paste it in the ***Callback URLs*** field on the Twitter Developer Portal.
-10. Enter your website URL in the ***Website URL*** field.
-11. Click on the ***Save*** button.
-12. Use the 'API key' and the 'API secret key' that you copied earlier with your Twitter OAuth API credentials in n8n.
-13. Click on the circle button in the OAuth section to connect a Twitter account to n8n.
-14. Click the ***Save*** button to save your credentials.
-
-**Note:** If you want to create, like, or retweet a tweet, or send a direct message you have to provide the appropriate App permissions to your Twitter app.
-
-![Getting Twitter credentials](./using-oauth.gif)
+2. Fill out the questionnaire to gain essential access and click **Next** once done.
+![Getting essential access to the Twitter API](./essential-access.png)
+3. Confirm the Developer agreement by checking the box and clicking **Submit** once done.
+![The Twitter Developer Agreement](./developer-agreement.png)
+4. Twitter will now send you a confirmation email. Click the **Confirm your email** button in the email.
+![Email Validation Email](./email-validation.png)
+5. After confirming your email, you are redirected to the [#Welcome to the Twitter Developer Platform](https://developer.twitter.com/en/portal/register/welcome) page. Enter a name for your Twitter application and click the **Get keys** button.
+6. Copy the **API Key**, **API Key Secret** shown on the next page.
+![API Keys provided by Twitter](./api-keys.png)
+7. Click the **Skip to dashboard** link at the bottom of the page and click the **Yes, I saved them** button.
+8. Click the **Gear button** next to your newly created app to open it's **App settings**.
+![The App settings button](./app-settings-button.png)
+9. In the Authentication settings sections, click **Edit**.
+10. Turn on the **Enable 3-legged OAuth** switch and paste the URL shown in the **OAuth Redirect URL** of the n8n credentials screen into the **Callback URLs** field of your Twitter apps authentication settings.
+11. Enter a valid Website URL in the respective field (for example https://n8n.io).
+![The App settings button](./oauth-settings.png)
+12. Save your input by clicking the **Save** button at the bottom of the page.
+13. Under App permissions, click **Edit** and choose the appropriate permissions for your app (pick **Read and write and Direct message** if you want to use all functions of the Twitter n8n in n8n) and click **Save** to confirm.
+14. In the sidebar on the left, click on the Project your app has been created in (usually **Project 1**) and then on the **Apply for Elevated** button.
+15. Fill out the questionnaire and confirm the inputs on each questionnaire page with a click on **Next** (**Submit** on the final page).
+![Application process for elevated access to the Twitter API](./elevated-access.png)
+16. Once you receive confirmation that your application has been approved, you're ready to use the n8n Twitter node.
+17. In the n8n credentials screen, paste your **API Key** from steps 6 above into the **Consumer Key** field, and your **API Key Secret** into the **Consumer Secret** field.
+18. Click **Connect my account** and confirm the connection by clicking **Authorize app**.
 
 ## Further Reference
 

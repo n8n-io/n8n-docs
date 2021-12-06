@@ -34,7 +34,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 <br />
 <Changelog node="n8n-nodes-base.googleBigQuery" title="Google BigQuery:" text="Fixed a bug preventing pagination from working as expected when the Return All option is enabled."/>
-<Changelog node="n8n-nodes-base.salesforce" title="RabbitMQ Trigger:" text="Added Trigger to the name of the trigger node."/>
+<Changelog node="n8n-nodes-base.rabbitmqTrigger" title="RabbitMQ Trigger:" text="Added Trigger to the name of the trigger node."/>
 <Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed a typo affecting the Type field of the Opportunity resource."/>
 
 ### Contributors 🙌

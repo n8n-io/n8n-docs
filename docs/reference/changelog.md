@@ -2,6 +2,45 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.152.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.151.0...n8n@0.152.0) for this version.<br />
+**Release date:** 2021-12-04
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.googleCalendarTrigger" title="Google Calendar Trigger"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.telegramTrigger" title="Telegram Trigger:" text="Added support for downloading images to channel_post updates."/>
+
+### Core Functionality ⚙️
+
+- Added a plus (+) connector to end nodes
+- Allowed opening workflows and executions in a new window when using Ctrl + Click
+- Enforced type checking for all node parameters
+- Fixed a build issue in the custom n8n docker image
+- Fixed a memory leak in the UI which could occur when renaming nodes or navigate to another workflow
+- Improved stability of internal test workflows
+- Improved expression security
+- Introduced redirect to a new page and UI error message when trying to open a deleted workflow
+- Introduced support for multiple arguments when logging
+- Updated the onboarding survey
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.googleBigQuery" title="Google BigQuery:" text="Fixed a bug preventing pagination from working as expected when the Return All option is enabled."/>
+<Changelog node="n8n-nodes-base.salesforce" title="RabbitMQ Trigger:" text="Added Trigger to the name of the trigger node."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed a typo affecting the Type field of the Opportunity resource."/>
+
+### Contributors 🙌
+
+[Zvonimir Erdelja](https://github.com/zvonimir-ebot7), [m2scared](https://github.com/m2scared)
+
 ## n8n@0.151.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.150.0...n8n@0.151.0) for this version.<br />

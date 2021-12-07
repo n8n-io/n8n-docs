@@ -3,7 +3,7 @@
 There are a few different ways to set up n8n depending on how you intend to use it:
 
 - [n8n.cloud](#n8n-cloud) - Hosted solution, no need to install anything
-- [Desktop app](#desktop-app) - The fastest way to try n8n on your computer   
+- [Desktop app](#desktop-app) - The fastest way to try n8n on your computer
 - [Self-host](#self-hosting-n8n) - Recommended method for production or customized usecases
 	- [npm](#npm)
 	- [Docker](#docker)
@@ -27,15 +27,19 @@ The IP address of n8n.cloud is `20.79.72.105` and the NAT address is `20.79.72.3
 
 The n8n desktop app is the fastest way to try n8n on Windows or Mac computers (support for Linux is coming soon). Download the app from the link below:
 
-[Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip)  
+[Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip)
 [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip)
-
 
 ::: tip 💡 Keep in mind
 If you have already installed n8n locally via `npm`, the desktop app will connect to the existing `sqlite` database.
 :::
 
-## Self-hosting n8n 
+::: tip 💡 Tunnel credentials
+The n8n desktop creates a tunnel in order to receive webhooks from external services such as Google. This tunnel is protected using a randomly generated combination of username and password. If you are asked for a login to your personal tunnel URL, you can find the generated credentials in the `n8n-desktop.env` file in the `.n8n` folder of your home directory.
+:::
+
+
+## Self-hosting n8n
 You can install via Docker or npm.
 
 
@@ -49,7 +53,7 @@ From the terminal, run:
 npx n8n
 ```
 
-This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678). 
+This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
 
 If you want to install n8n globally, use [npm](../../reference/glossary.md#npm):
 

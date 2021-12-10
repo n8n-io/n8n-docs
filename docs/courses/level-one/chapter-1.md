@@ -12,7 +12,7 @@ First of all, you need to set up n8n. There are different ways to [get started w
 * Run it using [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html)
 * Sign up on [n8n.cloud](http://n8n.cloud)
 
-**This course was developed on n8n version 0.127.0, make sure you are using the same or newer version.**
+**This course was developed on n8n version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
 
 We recommend using n8n.cloud to ensure easy access to the latest version of n8n and all functionality needed to complete the course with no configuration to worry about.
 

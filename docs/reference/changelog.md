@@ -17,8 +17,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 <br />
 <Changelog node="n8n-nodes-base.googleContacts" title="Google Contacts:" text="Added Query option to Get All operation, also prevented the node from failing when no contacts are found."/>
-<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added support for loading possible options in the Domain, Service, and Entity ID fields."/>
-<Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant:" text="Added support for query-based authentication."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added support for query-based authentication."/>
+<Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant:" text="Added support for loading possible options in the Domain, Service, and Entity ID fields."/>
 <Changelog node="n8n-nodes-base.oneSimpleApi" title="One Simple API:" text="Added support for Social Profile resources."/>
 <Changelog node="n8n-nodes-base.pagerDuty" title="PagerDuty:" text="Write scope is now requested upon authentication against the PagerDuty OAuth2 API."/>
 

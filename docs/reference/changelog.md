@@ -2,6 +2,52 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.153.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.152.0...n8n@0.153.0) for this version.<br />
+**Release date:** 2021-12-11
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.figmaTrigger" title="Figma Trigger (Beta)"/>
+<Changelog node="n8n-nodes-base.workableTrigger" title="Workable Trigger"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.googleContacts" title="Google Contacts:" text="Added Query option to Get All operation, also prevented the node from failing when no contacts are found."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Added support for loading possible options in the Domain, Service, and Entity ID fields."/>
+<Changelog node="n8n-nodes-base.homeAssistant" title="Home Assistant:" text="Added support for query-based authentication."/>
+<Changelog node="n8n-nodes-base.oneSimpleApi" title="One Simple API:" text="Added support for Social Profile resources."/>
+<Changelog node="n8n-nodes-base.pagerDuty" title="PagerDuty:" text="Write scope is now requested upon authentication against the PagerDuty OAuth2 API."/>
+
+### Core Functionality ⚙️
+
+- Added frontend for value surveys
+- Fixed an issue preventing the recommendation logic from working as expected after selecting a work area
+- Fixed an issue where a wrong exit code was sent when running n8n on an unsupported version of Node.js
+- Fixed an issue where node options would disappear on hovering when a node is not selected
+- Fixed an issue where the execution id was missing when running n8n in queue mode
+- Fixed an issue where execution data was missing when waiting for a webhook in queue mode
+- Improved error handling when the n8n port is already in use
+- Improved diagnostic events
+- Removed toast notification on webhook deletion, added toast notification after node is copied
+- Removed default trigger tooltip for polling trigger nodes
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.apiTemplateIo" title="APITemplate.io:" text="Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled."/>
+<Changelog node="n8n-nodes-base.hubspot" title="HubSpot:" text="Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot OAuth2 API."/>
+<Changelog node="n8n-nodes-base.hubspotTrigger" title="HubSpot Trigger:" text="Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API."/>
+<Changelog node="n8n-nodes-base.jira" title="Jira Software:" text="Fixed an issue where the Reporter field would not work as expected on Jira Server instances."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed a typo preventing the value in the amount field of from being saved."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto), [Jascha Lülsdorf](https://github.com/buelsenfrucht), [Jonathan Bennetts](https://github.com/Joffcom)
+
 ## n8n@0.152.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.151.0...n8n@0.152.0) for this version.<br />

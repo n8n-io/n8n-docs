@@ -36,7 +36,7 @@ When you execute a node a green number gets displayed on its icon. This number r
 
 ![The executions indicator.](../images/executions_indicator.png)
 
-If a node receives input from multiple nodes, it will execute separately for each set of input data. For example, if the above node has two input nodes, it will execute twice, once for each input as pictured below. 
+If a node receives input from multiple nodes, it will execute separately for each set of input data. For example, if the above node has two input nodes, it will execute twice, once for each input as pictured below.
 
 ![Node taking inputs from two different nodes](../images/multiple_inputs.png)
 
@@ -54,7 +54,7 @@ When you have a loop in a workflow, the node gets executed multiple times. The n
 
 As discussed above, n8n typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. You can learn more about these [here](#node-exceptions).
 
-To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](../../nodes/nodes-library/core-nodes/If/README.md) node to check when to stop the loop. You now have a loop that iterates over each item. 
+To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](../../nodes/nodes-library/core-nodes/If/README.md) node to check when to stop the loop. You now have a loop that iterates over each item.
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
@@ -77,6 +77,8 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Function**](../../nodes/nodes-library/core-nodes/Function/README.md) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](../../nodes/nodes-library/core-nodes/SplitInBatches/README.md) node.
 * [**Google Cloud Firestore**](../../nodes/nodes-library/nodes/GoogleCloudFirestore/README.md) node:
 	* **Get All**: For the Collection and Document resources, this operation executes only once.
+* [**Google Sheets**](../../nodes/nodes-library/nodes/GoogleSheets/README.md) node:
+	* **Read**: This operation will execute only once for the `Sheet` resource.
 * [**HTTP Request**](../../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
 * [**Microsoft SQL**](../../nodes/nodes-library/nodes/microsoftSql/README.md) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
 * [**Postgres**](../../nodes/nodes-library/nodes/postgres/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

@@ -78,4 +78,6 @@ docker-compose down
 docker-compose up -d
 ```
 
+## N8n Desktop
 
+If you've running n8n using the desktop distribution, updates are not currently available but should be coming soon. Keep an eye here for updates.

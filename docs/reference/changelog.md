@@ -2,6 +2,40 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.155.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.154.0...n8n@0.155.1) for this version.<br />
+**Release date:** 2021-12-19
+
+### Core Functionality ⚙️
+
+- Added support for internationalization (i18n)
+
+## n8n@0.154.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.153.0...n8n@0.154.0) for this version.<br />
+**Release date:** 2021-12-19
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.plivo" title="Plivo:" text="Added user agent to all API requests."/>
+
+### Core Functionality ⚙️
+
+- Allow deletion of nodes from the canvas using the backspace key
+- Fixed an issue causing clicks in the value survey to impact the main view
+- Fixed an issue preventing the update panel from closing
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.todoist" title="Todoist:" text="Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail."/>
+
+### Contributors 🙌
+
+[Mohammed Huzaif](https://github.com/huzaif-plivo), [Лебедев Иван](https://github.com/X-pech)
+
 ## n8n@0.153.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.152.0...n8n@0.153.0) for this version.<br />

@@ -9,7 +9,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality ⚙️
 
-- Added support for internationalization (i18n)
+- Added support for internationalization (i18n). This functionality is currently in alpha status and breaking changes are to be expected.
 
 ## n8n@0.154.0
 

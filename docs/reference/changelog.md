@@ -24,6 +24,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed a bug causing the wrong expression result to be shown for items from an output other than the first
 - Improved binary data management
 - Introduced Monaco as new UI code editor
+
 ### Contributors 🙌
 
 [Arpad Gabor](https://github.com/arpadgabor), [Leo Lou](https://github.com/l4u), [Manuel](https://github.com/tennox)

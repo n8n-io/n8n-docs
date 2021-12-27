@@ -57,6 +57,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
 | `N8N_CONFIG_FILES` | `string` | Use to provide the path to any JSON [configuration file(s)](../getting-started/installation/advanced/configuration.md#configuration-via-file). |
+| `N8N_DISABLE_UI` | `boolean` | Whether the UI should be disabled. |
 | `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the n8n database. By default a random key is generated on first launch. |
 | `N8N_USER_FOLDER` | `string` | Provide the path where n8n will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |
 | `N8N_PATH` | `string` | The path n8n is deployed to. Default is `/`. |
@@ -100,7 +101,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `EXECUTIONS_PROCESS` | `enum string`: `main`, `own` | Whether processes are executed in their own process or the main process. By default it is set to `own`.<br><br>See [here](../getting-started/key-concepts/modes.md) for more details. | 
+| `EXECUTIONS_PROCESS` | `enum string`: `main`, `own` | Whether processes are executed in their own process or the main process. By default it is set to `own`.<br><br>See [here](../getting-started/key-concepts/modes.md) for more details. |
 | `EXECUTIONS_MODE` | `enum string`: `regular`, `queue` | Whether processes should run directly or via queue. By default it is set to `regular`.<br><br>See [here](../getting-started/key-concepts/modes.md) for more details. |
 | `EXECUTIONS_TIMEOUT` | `number` | The max run time (in seconds) before stopping a workflow execution. Set to `-1` to disable. Default value is `-1`. |
 | `EXECUTIONS_TIMEOUT_MAX` | `number` | The max execution time (in seconds) that can be set for a workflow individually. Default value is `3600`. |

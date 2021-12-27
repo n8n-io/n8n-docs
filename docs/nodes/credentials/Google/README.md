@@ -99,7 +99,7 @@ From you n8n instance:
 
 10. Enter a ***Credentials Name***.
 11. In the ***Service Account Email*** field, enter the email associated with your new Service Account (visible in the ***Details*** tab).
-12. Enter the ***Private Key*** from the downloaded JSON file. **Be sure to replace all instances of `\n` in the JSON file with new lines.**
+12. Enter the ***Private Key*** from the downloaded JSON file. **If you are running an n8n version older than 0.156.0: Replace all instances of `\n` in the JSON file with new lines.**
 13. (***Optional***) Click the toggle to enable [***Impersonate a User***](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) and enter the desired email.
 14. ***Save*** your credentials.
 

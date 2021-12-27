@@ -2,9 +2,35 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-## n8n@0.155.1
+## n8n@0.156.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.154.0...n8n@0.155.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.155.2...n8n@0.156.0) for this version.<br />
+**Release date:** 2021-12-25
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.gitlabTrigger" title="GitLab Trigger:" text="Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release."/>
+<Changelog node="n8n-nodes-base.googleDrive" title="Google Drive:" text="Added support for downloading and converting native Google files."/>
+<Changelog node="n8n-nodes-base.kitemaker" title="Kitemaker:" text="Added Space ID field to Create operation of Work Item resource."/>
+<Changelog node="n8n-nodes-base.raindrop" title="Raindrop:" text="Added Parse Metadata option to Create, Update operations of the Bookmark resource."/>
+
+### Core Functionality ⚙️
+
+- Added execution ID to workflow.postExecute hook
+- Added response body to UI for failed Axios requests
+- Added support for automatically removing new lines from Google Service Account credentials
+- Added support for disabling the UI via environment variable
+- Fixed a bug causing the wrong expression result to be shown for items from an output other than the first
+- Improved binary data management
+- Introduced Monaco as new UI code editor
+### Contributors 🙌
+
+[Arpad Gabor](https://github.com/arpadgabor), [Leo Lou](https://github.com/l4u), [Manuel](https://github.com/tennox)
+
+## n8n@0.155.2
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.154.0...n8n@0.155.2) for this version.<br />
 **Release date:** 2021-12-19
 
 ### Core Functionality ⚙️

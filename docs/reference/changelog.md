@@ -2,6 +2,34 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.157.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.156.0...n8n@0.157.0) for this version.<br />
+**Release date:** 2022-01-02
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function:" text="The node now prevents unsupported data from being returned."/>
+<Changelog node="n8n-nodes-base.functionItem" title="Function Item:" text="The node now prevents unsupported data from being returned."/>
+<Changelog node="n8n-nodes-base.hubspot" title="HubSpot:" text="Added Engagement resource with Create, Delete, Get, and Get All operations."/>
+<Changelog node="n8n-nodes-base.notion" title="Notion (Beta):" text="Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity."/>
+<Changelog node="n8n-nodes-base.wait" title="Wait:" text="Added new Ignore Bots option."/>
+<Changelog node="n8n-nodes-base.webhook" title="Webhook:" text="Added new Ignore Bots option."/>
+
+### Core Functionality ⚙️
+
+- Fixed a bug where a wrong number suffix was used after duplicating nodes.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed a bug where using Digest Auth would fail."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto)
+
 ## n8n@0.156.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.155.2...n8n@0.156.0) for this version.<br />

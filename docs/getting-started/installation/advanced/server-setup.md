@@ -41,16 +41,16 @@ su - ${USER}
 
 ### 3. Install Docker-Compose
 
-This can vary depending on the Linux distribution used. Before proceeding check the [latest version](https://github.com/docker/compose/releases) and replace the `1.27.4` below.
+This can vary depending on the Linux distribution used. Before proceeding check the latest version of Docker Compose v1 [on the repository's release page](https://github.com/docker/compose/releases) and replace the `1.29.2` below. Should you wish to use Docker Compose v2 instead you can find detailed instructions [here in the Docker documentation](https://docs.docker.com/compose/cli-command/).
 
 The example below is for Ubuntu:
 
 ```bash
-sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### 4. DNS setup 
+### 4. DNS setup
 
 Add A record to route the subdomain accordingly:
 
@@ -206,7 +206,7 @@ n8n will only be reachable via `https` and not via `http`.
 
 ## Hosting with Caddy Server
 
-[Caddy](https://caddyserver.com) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go. 
+[Caddy](https://caddyserver.com) is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.
 
 1. In your Caddyfile configuration, add:
 

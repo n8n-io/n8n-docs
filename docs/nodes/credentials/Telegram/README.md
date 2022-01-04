@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes with Telegram.
 
 ## Prerequisites
 
-Create a [Telegram](https://telegram.com/) account.
+Create a [Telegram](https://telegram.org/) account.
 
 ## Using Bot Access Token
 

@@ -150,7 +150,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon ("`:`"). |
+| `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon ("`:`"). The endpoints should **not** start with a forward slash ("`/`"). |
 | `N8N_BASIC_AUTH_ACTIVE` | `boolean` | Whether basic auth should be activated for editor and REST-API access. Default value is `false`. |
 | `N8N_BASIC_AUTH_USER`/`_FILE` | `string` | The name of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_PASSWORD`/`_FILE` | `string` | The password of the n8n user for basic authentication. |

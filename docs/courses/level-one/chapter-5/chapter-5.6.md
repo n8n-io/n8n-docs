@@ -10,7 +10,7 @@ You can replace the *Discord* node with another communication app. For example, 
 
 In your workflow, add a *Discord* node connected to the *Function* node. In the *Discord* node window, configure the parameters:
 ::: v-pre
-- *Webhook URL:* Please use the URL that you received in the email upon signing up.
+- *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
 - *Text (Expression):* `This week we have {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{$node["HTTP Request"].parameter["headerParametersUi"]["parameter"][0]["value"]}}`
 :::
 

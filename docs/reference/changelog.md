@@ -2,6 +2,53 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.158.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.1...n8n@0.158.0) for this version.<br />
+**Release date:** 2022-01-09
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.microsoftGraphSecurity" title="Microsoft Graph Security"/>
+<Changelog node="n8n-nodes-base.syncroMsp" title="SyncroMSP"/>
+<Changelog node="n8n-nodes-base.supabase" title="Supabase"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Added Transparent operation."/>
+<Changelog node="n8n-nodes-base.kafka" title="Kafka:" text="Added Use Schema Registry option."/>
+<Changelog node="n8n-nodes-base.kafkaTrigger" title="Kafka Trigger:" text="Added Use Schema Registry option."/>
+<Changelog node="n8n-nodes-base.redis" title="Redis:" text="Added database field to credentials."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Account Number field."/>
+
+### Core Functionality ⚙️
+
+- Added new external hook when active workflows finished initializing.
+- Fixed a bug preventing the personalisation survey from showing up.
+- Improved telemetry.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Fixed a bug causing two items to be returned."/>
+<Changelog node="n8n-nodes-base.iCal" title="iCalendar:" text="Fixed a bug preventing dates in January from working as expected."/>
+<Changelog node="n8n-nodes-base.merge" title="Merge:" text="Fixed causing empty binary data to overwrite other binary data on merge."/>
+
+### Contributors 🙌
+
+[Ricardo Georgel](https://github.com/rgeorgel), [Pierre](https://github.com/hnb2), [Vahid Sebto](https://github.com/sebto)
+
+## n8n@0.157.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.0...n8n@0.157.1) for this version.<br />
+**Release date:** 2022-01-03
+
+### Core Functionality ⚙️
+
+- Fixed a bug where not all nodes could use the new binary data handling.
+
 ## n8n@0.157.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.156.0...n8n@0.157.0) for this version.<br />

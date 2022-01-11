@@ -1,24 +1,23 @@
 # 简介
 
-This is the documentation of [n8n](https://n8n.io/), a free and open [fair-code](http://faircode.io) licensed node-based Workflow Automation Tool.
+这是 [n8n](https://n8n.io/) 的文档，它是一个自由开放的 [公平代码许可](http://faircode.io) 的基于节点的工作流自动化工具。
 
+它涵盖了从设置到使用和开发的所有内容。它仍然是一项正在进行的工作，欢迎所有的贡献。
 
-It covers everything from setup to usage and development. It is still a work in progress and all contributions are welcome.
+## 什么是 n8n?
 
-## What is n8n?
+n8n（发音为n-eight-n）帮助你将世界上每一个拥有API的应用程序相互连接起来，无需一行代码就可以共享和操作其数据。它是一个易于使用、用户友好和高度可定制的服务，它使用一个直观的用户界面，让你非常快速地设计你的独特工作流程。托管在服务器上，而不是基于云，它将数据安全地保存在你自己的可信赖的数据库中。
 
-n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service, which uses an intuitive user interface for you to design your unique workflows very fast. Hosted on your server and not based in the cloud, it keeps your sensible data very secure in your own trusted database.
+## 入门
 
-## Getting started
+### 安装 n8n
 
-### Install n8n
+直接进入n8n[快速入门](./quickstart/README.md)指南，或查看[安装部分](./getting-started/installation/README.md)，了解可用选项以开始使用n8n。
 
-Jump right in with the n8n [Quickstart](./quickstart/README.md) guide, or see the [Installation section](./getting-started/installation/README.md) to learn about the available option to get started with n8n.
+### 学习基本知识
 
-### Learn the basics
+在你开始使用n8n自动化工作流程之前，请学习它的关键[组件](getting-started/key-components/README.md)和[概念](getting-started/key-concepts/README.md)。
 
-Before you start automating workflows with n8n, learn its key [components](getting-started/key-components/README.md) and [concepts](getting-started/key-concepts/README.md).
+### 创建工作流
 
-### Create workflows
-
-Create your [first workflow](getting-started/create-your-first-workflow/README.md) and get inspiration for various use cases from our [blogposts](/getting-started/tutorials.md#blogposts), [videos](/getting-started/tutorials.md#videos), and [community tutorials](/getting-started/tutorials.md#community-tutorials).
+创建你的第一个[工作流](getting-started/create-your-first-workflow/README.md)，并从我们的[博客](/getting-started/tutorials.md#blogposts)、[视频](/getting-started/tutorials.md#videos)和[社区教程](/getting-started/tutorials.md#community-tutorials)中获得各种使用案例中获取创作灵感。

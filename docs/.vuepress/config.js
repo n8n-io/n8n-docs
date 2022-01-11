@@ -61,8 +61,6 @@ function getDescription(frontmatterDescription, permalink) {
 }
 
 module.exports = {
-	description: 'Documentation for n8n',
-	title: 'Docs',
 	plugins: [
 		['@vuepress/medium-zoom'],
 		'vuepress-plugin-reading-time',
@@ -109,239 +107,492 @@ module.exports = {
 			apiKey: '36968f1949f14fc25079286688915dc9',
 			indexName: 'n8n_io',
 		},
-		searchPlaceholder: 'Search...',
-		logo: '/assets/img/n8n-logo.png',
-		nav: [
-			{
-				text: 'Getting Started',
-				link: '/',
-			},
-			{
-				text: 'Nodes',
-				link: '/nodes/',
-			},
-			{
-				text: 'Courses',
-				link: '/courses/',
-			},
-			{
-				text: 'Reference',
-				link: '/reference/',
-			},
-			{
-				text: 'Community',
-				link: 'https://community.n8n.io',
-			},
-		],
-		sidebar: {
-			'/nodes/': [
-				{
-					title: '🧬 Overview',
-					sidebarDepth: 2,
-					path: '/nodes/',
-					children: getChildrenFiles('nodes'),
-				},
-				{
-					title: '🔬 Creating Nodes',
-					sidebarDepth: 1,
-					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
-				},
-				{
-					title: '🧠 Nodes Library',
-					sidebarDepth: 3,
-					path: '/nodes/nodes-library',
-					children: [
-						{
-							title: 'Core Nodes',
-							sidebarDepth: 1,
-							path: '/nodes/nodes-library/core-nodes',
-							children: getChildrenFolders('nodes/nodes-library/core-nodes'),
-						},
-						{
-							title: 'Nodes',
-							sidebarDepth: 1,
-							path: '/nodes/nodes-library/nodes',
-							children: getChildrenFolders('nodes/nodes-library/nodes'),
-						},
-						{
-							title: 'Trigger Nodes',
-							sidebarDepth: 1,
-							path: '/nodes/nodes-library/trigger-nodes',
-							children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
-						},
-					],
-				},
-				{
-					title: '🔑 Credentials Library',
-					sidebarDepth: 2,
-					path: '/nodes/credentials',
-					children: getChildrenFolders('nodes/credentials'),
-				},
-			],
-			'/courses/': [
-				{
-					title: '😇 Overview',
-					path: '/courses/',
-				},
-				{
-					title: '🎓 Level 1: Beginners\' course',
-					path: '/courses/level-one/',
-					sidebarDepth: 1,
-					children: [
-						{
-							title: 'Navigating the Editor UI',
-							path: '/courses/level-one/chapter-1.md',
-						},
-						{
-							title: 'Building a Mini-workflow',
-							path: '/courses/level-one/chapter-2.md',
-						},
-						{
-							title: 'Automating a (Real-World) Use Case',
-							path: '/courses/level-one/chapter-3.md',
-						},
-						{
-							title: 'Designing the Workflow',
-							path: '/courses/level-one/chapter-4.md',
-						},
-						{
-							title: 'Building the Workflow',
-							sidebarDepth: 1,
-							children: getChildrenFiles('courses/level-one/chapter-5'),
-						},
-						{
-							title: 'Exporting, Importing, and Sharing Workflows',
-							path: '/courses/level-one/chapter-6.md',
-						},
-						{
-							title: 'Take the Quiz and Get Your Certificate',
-							path: '/courses/level-one/chapter-7.md',
-						},
-					],
-				},
-			],
-			'/reference/': [
-				{
-					title: '📚 Overview',
-					path: '/reference/',
-				},
-				{
-					title: '🧐 Changelog',
-					path: 'changelog.md',
-				},
-				{
-					title: '💭 Glossary',
-					path: 'glossary.md',
-				},
-				{
-					title: '⌨️ Keyboard Shortcuts',
-					path: 'keyboard-shortcuts.md',
-				},
-				{
-					title: '💻 Environment Variables',
-					path: 'environment-variables.md',
-				},
-				{
-					title: '👾 CLI commands for n8n',
-					path: 'start-workflows-via-cli.md',
-				},
-				{
-					title: '💻 JavaScript Code Snippets',
-					path: 'javascript-code-snippets.md',
-				},
-				{
-					title: '💾 Data',
-					sidebarDepth: 2,
-					children: getChildrenFiles('reference/data'),
-				},
-        {
-          title: '📓 Logging in n8n',
-          path: 'logging.md',
-        },
-				{
-					title: '📻 Telemetry',
-					path: 'telemetry.md',
-				},
-				{
-					title: '👀 Troubleshooting',
-					path: 'troubleshooting.md',
-				},
-				{
-					title: '🙌 Contributing',
-					path: 'contributing.md',
-				},
-				{
-					title: '🎫 License',
-					path: 'license.md',
-				},
-				{
-					title: '❓ FAQ',
-					path: 'faq.md',
-				},
-			],
 
-			'/': [
-				{
-					title: '👋 Introduction',
-					collapsable: false,
-					path: '/',
-					sidebarDepth: 0,
-				},
-				{
-					title: '🏃 Quickstart',
-					path: '/quickstart/',
-					sidebarDepth: 2,
-				},
-				{
-					title: '🍄 Key Components',
-					path: '/getting-started/key-components/',
-					sidebarDepth: 2,
-					children: getChildrenFiles('getting-started/key-components'),
-				},
-				{
-					title: '💡 Key Concepts',
-					path: '/getting-started/key-concepts/',
-					sidebarDepth: 2,
-					sidebarDepth: 2,
-					children: getChildrenFiles('getting-started/key-concepts'),
-				},
-				{
-					title: '🚀 Installation',
-					path: '/getting-started/installation/',
-					sidebarDepth: 3,
-					children: [
-							{
+		logo: '/assets/img/n8n-logo.png',
+
+		locales: {
+			'/': {
+				searchPlaceholder: 'Search...',
+				nav: [
+					{
+						text: 'Getting Started',
+						link: '/',
+					},
+					{
+						text: 'Nodes',
+						link: '/nodes/',
+					},
+					{
+						text: 'Courses',
+						link: '/courses/',
+					},
+					{
+						text: 'Reference',
+						link: '/reference/',
+					},
+					{
+						text: 'Community',
+						link: 'https://community.n8n.io',
+					},
+				],
+				sidebar: {
+					'/nodes/': [
+						{
+							title: '🧬 Overview',
+							sidebarDepth: 2,
+							path: '/nodes/',
+							children: getChildrenFiles('nodes'),
+						},
+						{
+							title: '🔬 Creating Nodes',
+							sidebarDepth: 1,
+							children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
+						},
+						{
+							title: '🧠 Nodes Library',
+							sidebarDepth: 3,
+							path: '/nodes/nodes-library',
+							children: [
+								{
+									title: 'Core Nodes',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/core-nodes',
+									children: getChildrenFolders('nodes/nodes-library/core-nodes'),
+								},
+								{
+									title: 'Nodes',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/nodes',
+									children: getChildrenFolders('nodes/nodes-library/nodes'),
+								},
+								{
+									title: 'Trigger Nodes',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/trigger-nodes',
+									children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
+								},
+							],
+						},
+						{
+							title: '🔑 Credentials Library',
+							sidebarDepth: 2,
+							path: '/nodes/credentials',
+							children: getChildrenFolders('nodes/credentials'),
+						},
+					],
+					'/courses/': [
+						{
+							title: '😇 Overview',
+							path: '/courses/',
+						},
+						{
+							title: '🎓 Level 1: Beginners\' course',
+							path: '/courses/level-one/',
+							sidebarDepth: 1,
+							children: [
+								{
+									title: 'Navigating the Editor UI',
+									path: '/courses/level-one/chapter-1.md',
+								},
+								{
+									title: 'Building a Mini-workflow',
+									path: '/courses/level-one/chapter-2.md',
+								},
+								{
+									title: 'Automating a (Real-World) Use Case',
+									path: '/courses/level-one/chapter-3.md',
+								},
+								{
+									title: 'Designing the Workflow',
+									path: '/courses/level-one/chapter-4.md',
+								},
+								{
+									title: 'Building the Workflow',
+									sidebarDepth: 1,
+									children: getChildrenFiles('courses/level-one/chapter-5'),
+								},
+								{
+									title: 'Exporting, Importing, and Sharing Workflows',
+									path: '/courses/level-one/chapter-6.md',
+								},
+								{
+									title: 'Take the Quiz and Get Your Certificate',
+									path: '/courses/level-one/chapter-7.md',
+								},
+							],
+						},
+					],
+					'/reference/': [
+						{
+							title: '📚 Overview',
+							path: '/reference/',
+						},
+						{
+							title: '🧐 Changelog',
+							path: 'changelog.md',
+						},
+						{
+							title: '💭 Glossary',
+							path: 'glossary.md',
+						},
+						{
+							title: '⌨️ Keyboard Shortcuts',
+							path: 'keyboard-shortcuts.md',
+						},
+						{
+							title: '💻 Environment Variables',
+							path: 'environment-variables.md',
+						},
+						{
+							title: '👾 CLI commands for n8n',
+							path: 'start-workflows-via-cli.md',
+						},
+						{
+							title: '💻 JavaScript Code Snippets',
+							path: 'javascript-code-snippets.md',
+						},
+						{
+							title: '💾 Data',
+							sidebarDepth: 2,
+							children: getChildrenFiles('reference/data'),
+						},
+						{
+							title: '📓 Logging in n8n',
+							path: 'logging.md',
+						},
+						{
+							title: '📻 Telemetry',
+							path: 'telemetry.md',
+						},
+						{
+							title: '👀 Troubleshooting',
+							path: 'troubleshooting.md',
+						},
+						{
+							title: '🙌 Contributing',
+							path: 'contributing.md',
+						},
+						{
+							title: '🎫 License',
+							path: 'license.md',
+						},
+						{
+							title: '❓ FAQ',
+							path: 'faq.md',
+						},
+					],
+
+					'/': [
+						{
+							title: '👋 Introduction',
+							collapsable: false,
+							path: '/',
+							sidebarDepth: 0,
+						},
+						{
+							title: '🏃 Quickstart',
+							path: '/quickstart/',
+							sidebarDepth: 2,
+						},
+						{
+							title: '🍄 Key Components',
+							path: '/getting-started/key-components/',
+							sidebarDepth: 2,
+							children: getChildrenFiles('getting-started/key-components'),
+						},
+						{
+							title: '💡 Key Concepts',
+							path: '/getting-started/key-concepts/',
+							sidebarDepth: 2,
+							children: getChildrenFiles('getting-started/key-concepts'),
+						},
+						{
+							title: '🚀 Installation',
+							path: '/getting-started/installation/',
+							sidebarDepth: 3,
+							children: [
+								{
 									title: 'Docker',
 									sidebarDepth: 1,
 									path: '/getting-started/installation/docker-quickstart.md',
-							},
-							{
+								},
+								{
 									title: 'Updating',
 									sidebarDepth: 1,
 									path: '/getting-started/installation/updating.md',
-							},
-							{		title: 'Advanced',
+								},
+								{		title: 'Advanced',
 									sidebarDepth: 1,
 									children: getChildrenFiles('getting-started/installation/advanced', 'configuration.md'),
-							}
+								}
+							],
+						},
+						{
+							title: '🏅 Create Your First Workflow',
+							path: '/getting-started/create-your-first-workflow/',
+							children: getChildrenFolders('getting-started/create-your-first-workflow'),
+
+						},
+						{
+							title: '🤘 Tutorials',
+							path: 'getting-started/tutorials.md',
+						},
+						{
+							title: '🤔 What\'s Next?',
+							path: 'getting-started/whats-next.md',
+						},
 					],
 				},
-				{
-					title: '🏅 Create Your First Workflow',
-					path: '/getting-started/create-your-first-workflow/',
-					children: getChildrenFolders('getting-started/create-your-first-workflow'),
+			},
+			'/zh/': {
+				selectText: '选择语言',
+				searchPlaceholder: '搜索...',
+				label: '简体中文',
+				nav: [
+					{
+						text: '快速开始',
+						link: '/',
+					},
+					{
+						text: '节点',
+						link: '/nodes/',
+					},
+					{
+						text: '教程',
+						link: '/courses/',
+					},
+					{
+						text: '参考资料',
+						link: '/reference/',
+					},
+					{
+						text: '社区',
+						link: 'https://community.n8n.io',
+					},
+				],
+				sidebar: {
+					'/nodes/': [
+						{
+							title: '🧬 概览',
+							sidebarDepth: 2,
+							path: '/nodes/',
+							children: getChildrenFiles('nodes'),
+						},
+						{
+							title: '🔬 创建节点',
+							sidebarDepth: 1,
+							children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),
+						},
+						{
+							title: '🧠 节点库',
+							sidebarDepth: 3,
+							path: '/nodes/nodes-library',
+							children: [
+								{
+									title: '核心节点',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/core-nodes',
+									children: getChildrenFolders('nodes/nodes-library/core-nodes'),
+								},
+								{
+									title: '节点',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/nodes',
+									children: getChildrenFolders('nodes/nodes-library/nodes'),
+								},
+								{
+									title: '触发节点',
+									sidebarDepth: 1,
+									path: '/nodes/nodes-library/trigger-nodes',
+									children: getChildrenFolders('nodes/nodes-library/trigger-nodes'),
+								},
+							],
+						},
+						{
+							title: '🔑 认证库',
+							sidebarDepth: 2,
+							path: '/nodes/credentials',
+							children: getChildrenFolders('nodes/credentials'),
+						},
+					],
+					'/courses/': [
+						{
+							title: '😇 概览',
+							path: '/courses/',
+						},
+						{
+							title: '🎓 L1: 初级课程',
+							path: '/courses/level-one/',
+							sidebarDepth: 1,
+							children: [
+								{
+									title: '浏览编辑器UI',
+									path: '/courses/level-one/chapter-1.md',
+								},
+								{
+									title: '创建一个迷你工作流',
+									path: '/courses/level-one/chapter-2.md',
+								},
+								{
+									title: '自动化(现实世界)用例',
+									path: '/courses/level-one/chapter-3.md',
+								},
+								{
+									title: '设计工作流',
+									path: '/courses/level-one/chapter-4.md',
+								},
+								{
+									title: '创建工作流',
+									sidebarDepth: 1,
+									children: getChildrenFiles('courses/level-one/chapter-5'),
+								},
+								{
+									title: '导出，导入，分享工作流',
+									path: '/courses/level-one/chapter-6.md',
+								},
+								{
+									title: '参加测验，获得证书',
+									path: '/courses/level-one/chapter-7.md',
+								},
+							],
+						},
+					],
+					'/reference/': [
+						{
+							title: '📚 概览',
+							path: '/reference/',
+						},
+						{
+							title: '🧐 更新日志',
+							path: 'changelog.md',
+						},
+						{
+							title: '💭 术语',
+							path: 'glossary.md',
+						},
+						{
+							title: '⌨️ 快捷键',
+							path: 'keyboard-shortcuts.md',
+						},
+						{
+							title: '💻 环境变量',
+							path: 'environment-variables.md',
+						},
+						{
+							title: '👾 n8n 命令行工具',
+							path: 'start-workflows-via-cli.md',
+						},
+						{
+							title: '💻 JavaScript 代码片段',
+							path: 'javascript-code-snippets.md',
+						},
+						{
+							title: '💾 数据',
+							sidebarDepth: 2,
+							children: getChildrenFiles('reference/data'),
+						},
+						{
+							title: '📓 日志',
+							path: 'logging.md',
+						},
+						{
+							title: '📻 监控',
+							path: 'telemetry.md',
+						},
+						{
+							title: '👀 故障排除',
+							path: 'troubleshooting.md',
+						},
+						{
+							title: '🙌 贡献',
+							path: 'contributing.md',
+						},
+						{
+							title: '🎫 许可',
+							path: 'license.md',
+						},
+						{
+							title: '❓ FAQ',
+							path: 'faq.md',
+						},
+					],
 
+					'/': [
+						{
+							title: '👋 简介',
+							collapsable: false,
+							path: '/',
+							sidebarDepth: 0,
+						},
+						{
+							title: '🏃 快速开始',
+							path: '/quickstart/',
+							sidebarDepth: 2,
+						},
+						{
+							title: '🍄 关键部分',
+							path: '/getting-started/key-components/',
+							sidebarDepth: 2,
+							children: getChildrenFiles('getting-started/key-components'),
+						},
+						{
+							title: '💡 主要概念',
+							path: '/getting-started/key-concepts/',
+							sidebarDepth: 2,
+							children: getChildrenFiles('getting-started/key-concepts'),
+						},
+						{
+							title: '🚀 安装',
+							path: '/getting-started/installation/',
+							sidebarDepth: 3,
+							children: [
+								{
+									title: 'Docker',
+									sidebarDepth: 1,
+									path: '/getting-started/installation/docker-quickstart.md',
+								},
+								{
+									title: '更新',
+									sidebarDepth: 1,
+									path: '/getting-started/installation/updating.md',
+								},
+								{		title: '进阶',
+									sidebarDepth: 1,
+									children: getChildrenFiles('getting-started/installation/advanced', 'configuration.md'),
+								}
+							],
+						},
+						{
+							title: '🏅 创建第一个工作流',
+							path: '/getting-started/create-your-first-workflow/',
+							children: getChildrenFolders('getting-started/create-your-first-workflow'),
+
+						},
+						{
+							title: '🤘 教程',
+							path: 'getting-started/tutorials.md',
+						},
+						{
+							title: '🤔 下一步?',
+							path: 'getting-started/whats-next.md',
+						},
+					],
 				},
-				{
-					title: '🤘 Tutorials',
-					path: 'getting-started/tutorials.md',
-				},
-				{
-					title: '🤔 What\'s Next?',
-					path: 'getting-started/whats-next.md',
-				},
-			],
+			}
 		}
 	},
+	locales: {
+		'/': {
+			lang: 'en-US',
+			title: 'Docs',
+			description: 'Documentation for n8n',
+
+		},
+		'/zh/': {
+			lang: 'zh-CN',
+			title: '文档',
+			description: 'n8n 文档'
+		}
+	}
 }
 

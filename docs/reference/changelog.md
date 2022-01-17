@@ -2,6 +2,40 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.159.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.158.0...n8n@0.159.0) for this version.<br />
+**Release date:** 2022-01-16
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.jenkins" title="Jenkins"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.graphql" title="GraphQL:" text="Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth."/>
+
+### Core Functionality ⚙️
+
+- Added support for executing workflows without an ID through the CLI.
+- Fixed a build problem.
+- Fixed a bug preventing the tag description from being shown on the canvas.
+- Improved build performance by skipping the `node-dev` package during build.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.box" title="Box:" text="Fixed a bug causing some files to be corrupted during download."/>
+<Changelog node="n8n-nodes-base.philipsHue" title="Philips Hue:" text="Fixed a bug preventing the node from connecting to Philips Hue."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed a bug preventing filters on date and datetime fields from working as expected."/>
+<Changelog node="n8n-nodes-base.supabase" title="Supabase:" text="Fixed an errorneous documentation link."/>
+
+### Contributors 🙌
+
+[Phil Clifford](https://github.com/philclifford)
+
 ## n8n@0.158.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.1...n8n@0.158.0) for this version.<br />

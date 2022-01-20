@@ -10,9 +10,16 @@ You can use these credentials to authenticate the following nodes with WordPress
 
 ## Prerequisites
 
-- Create a [WordPress](https://wordpress.com/) account.
-- After creating the user go back and edit the user.  Scroll down until you see 'Application Passwords'.  In the box 'New Application Password Name' 
-name it whatever you like ie 'n8n'.  Click button 'Add New Application Password'.  It will give you a password in this format'NXlU oZC9 Cljv 777G EV4s icsJ'.  This is better because as wordpress states: ''Application passwords allow authentication via non-interactive systems, such as XML-RPC or the REST API, without providing your actual password. Application passwords can be easily revoked. They cannot be used for traditional logins to your website.''
+- Create a [WordPress](https://wordpress.com/) account or deploy WordPress on a server.
+
 ## Using Username and Password
 
-Use your username, and "application password" from previous step and WordPress URL with your WordPress node credentials in n8n.  If you are connecting ssl Wordpress URL needs to start with https://
+1. Log in to your WordPress dashboard.
+2. Click on ***Profile*** in the left side menu, and scroll down to the **Application Password** section.
+3. Enter an application name in the ***New Application Password Name*** field.
+4. Click on the ***Add New Application Password*** button.
+5. Copy the displayed application password.
+6. Enter your WordPress username in the ***Username*** field in the 'WordPress API' credentials in n8n.
+7. Paste the application password in the ***Password*** field in the 'WordPress API' credentials in n8n.
+8. Enter your WordPress website URL in the ***WordPress URL*** field in the 'WordPress API' credentials in n8n.
+9. Click on the ***Save*** button to save the credentials.

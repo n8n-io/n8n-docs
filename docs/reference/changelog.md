@@ -2,6 +2,35 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.160.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.1...n8n@0.160.0) for this version.<br />
+**Release date:** 2022-01-22
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.bambooHr" title="BambooHR"/>
+
+### Core Functionality ⚙️
+
+- Fixed a bug preventing the binary data preview from using the full available height and width.
+- Fixed a build problem by pinning chokidar version 3.5.2.
+- Prevent workflow activation when no trigger is presentand introduced a modal explaining production data handling.
+- Fixed *Filter by tags*`* placeholder text used in the Open Workflow modal.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed a bug causing custom headers from being ignored."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Fixed a bug preventing all items from being returned in some situations."/>
+<Changelog node="n8n-nodes-base.microsoftOneDrive" title="Microsoft OneDrive:" text="Fixed a bug preventing more than 200 items from being returned."/>
+<Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected."/>
+
+### Contributors 🙌
+
+[fabian wohlgemuth](https://github.com/wohfab)
+
 ## n8n@0.159.1
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.0...n8n@0.159.1) for this version.<br />

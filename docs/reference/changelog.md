@@ -17,7 +17,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed a bug preventing the binary data preview from using the full available height and width.
 - Fixed a build problem by pinning chokidar version 3.5.2.
 - Prevent workflow activation when no trigger is presentand introduced a modal explaining production data handling.
-- Fixed *Filter by tags*`* placeholder text used in the Open Workflow modal.
+- Fixed *Filter by tags* placeholder text used in the Open Workflow modal.
 
 ### Bug fixes 🐛
 

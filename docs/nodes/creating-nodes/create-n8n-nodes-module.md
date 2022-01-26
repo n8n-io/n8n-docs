@@ -1,4 +1,4 @@
-# Create n8n-nodes-module
+# Creating n8n-nodes-module
 
 In this guide, you’ll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
 
@@ -483,4 +483,3 @@ EXPOSE 5678/tcp
 You will now be able to use your n8n-nodes-module in Docker.
 
 If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside n8n. n8n will find the module and load it automatically.
-

@@ -25,6 +25,10 @@ If you want to create multiple custom nodes which are either:
   - Are only useful for a small number of people
   - Require many or large dependencies
 
+::: tip
+To learn how to develop and test n8n-nodes-module, refer to the [Create n8n-nodes-module](./create-n8n-nodes-module.md) documentation.
+:::
+
 It is best to create your own `n8n-nodes-module` which can be installed separately.
 That is an npm package that contains the nodes and is set up in a way
 that n8n can automatically find and load them on startup.

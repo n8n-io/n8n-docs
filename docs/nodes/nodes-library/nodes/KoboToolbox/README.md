@@ -1,67 +1,72 @@
 ---
-permalink: /nodes/n8n-nodes-base.koboToolbox
-description: Learn how to use the KoboToolbox node in n8n
+permalink: /nodes/n8n-nodes-base.koBoToolbox
+description: Learn how to use the KoBoToolbox node in n8n
 ---
 
-# KoboToolbox
+# KoBoToolbox
 
-[KoboToolbox](https://www.kobotoolbox.org/) is a field survey / data collection tool that makes it easy to design interactive forms to be filled offfline from mobile devices. It is available both as a free cloud solution or as a self-hosted version.
+[KoBoToolbox](https://www.kobotoolbox.org/) is a field survey / data collection tool that makes it easy to design interactive forms to be filled offfline from mobile devices. It is available both as a free cloud solution or as a self-hosted version.
 
 ::: tip 🔑 Credentials
-You can find authentication information for this node [here](../../../credentials/KoboToolbox/README.md).
+You can find authentication information for this node [here](../../../credentials/KoBoToolbox/README.md).
 :::
 
 ## Basic Operations
 
-<Resource node="n8n-nodes-base.koboToolbox" />
+<Resource node="n8n-nodes-base.koBoToolbox" />
 
 ## Example Usage
 
 This workflow allows you to query some submissions for a particular form, and download associated binary attachments. It uses the following nodes:
 
 - [Start](../../core-nodes/Start/README.md)
-- [KoboToolbox]()
+- [KoBoToolbox]()
 
 The final workflow should look like the following image.
 
-![A simple workflow with the KoboToolbox node](./workflow.png)
+![A simple workflow with the KoBoToolbox node](./workflow.png)
 
 ### 1. Start node
 
 The start node exists by default when you create a new workflow.
 
-### 2. KoboToolbox node (submission: query)
+### 2. KoBoToolbox node (submission: query)
 
 This node will fetch form submissions for a given form ID.
 
-1. First of all, you'll have to enter credentials for the KoboToolbox node. You can find out how to do that [here](../../../credentials/KoboToolbox/README.md).
+1. First of all, you'll have to enter credentials for the KoBoToolbox node. You can find out how to do that [here](../../../credentials/KoBoToolbox/README.md).
 1. Select 'Submission' from the ***Resource*** dropdown list.
 1. Select 'Query' from the ***Operation*** dropdown list.
-1. Provide a valid KoboToolbox form ID for your KoboToolbox instance in the ***Form ID*** field (get it from the URL of your form view in the KoboToolbox UI - e.g. a form at https://kf.kobotoolbox.org/#/forms/aJ6uJj8zhnQPij3myN4xRm/landing would have an id of `aJ6uJj8zhnQPij3myN4xRm`).
+1. Provide a valid KoBoToolbox form ID for your KoBoToolbox instance in the ***Form ID*** field (get it from the URL of your form view in the KoBoToolbox UI - e.g. a form at `https://kf.kobotoolbox.org/#/forms/aJ6uJj8zhnQPij3myN4xRm/landing` would have an id of `aJ6uJj8zhnQPij3myN4xRm`), or simply look it up from the dropdown list that should auto-populate.
 1. You may tweak the query options such as max returned records and search offset.
+1. You may also tweak the general options, affecting the formatting, such as whether to download any binary attachments, or apply some generic field reformatting.
 1. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node outputs 10 submissions.
+In the screenshot below, you will notice that the node returns a number of submissions.
 
-![Query Submissions](./query.png)
+![Query Submissions](./submissions.png)
 
-### 3. Kitemaker1 node (attachment: download)
+## Available Operations
 
-This node will download any attachment related to each particular form submissions, such as pictures and videos.
+This node lets you perform the following operations:
 
-1. Add a new KoboToolbox node.
-1. Select the credentials that you entered in the previous KoboToolbox node.
-1. Select 'Attachment' from the ***Resource*** dropdown list.
-1. Select 'Download' from the ***Operation*** dropdown list.
-1. Next to the ***Form ID*** field, click on the gears icon, select ***Add Expression***, and enter the expression `{{$json["_xform_id_string"]}}` to reference the form ID from each submission record, or select the following in the ***Variable Selector***: Current Node > Input Data > JSON > `_xform_id_string`
-1. Next to the ***Submission ID*** field, click on the gears icon, select ***Add Expression***, and enter the expression `{{$json["_id"]}}` to reference the submission ID from each submission record, or select the following in the ***Variable Selector***: Current Node > Input Data > JSON > `_id`
-1. Click on ***Execute Node*** to run the node.
+- Forms:
+  - Get a single form definition
+  - Get all or query available forms
+- Hooks:
+  - Get a single hook definition for a given form
+  - Get all hooks for a given form
+  - Get the execution logs for a given hook
+  - Retry all failed executions for a given hook
+  - Retry a single failed execution for given hook
+- Submissions:
+  - Delete a single submission
+  - Get a single submission
+  - Get all / query submissions for a given form
+  - Get the validation status of a single submission
+  - Update the validation status of a single submission
 
-In the screenshot below, you can see some sample binary downloads (possibly more than one per submission).
-
-![Download Attachments](./download.png)
-
-## More details
+## Options
 
 ### Query Options
 
@@ -74,9 +79,19 @@ The Query Submission operation supports a few query options:
   - The ***Sort*** option will let you provide a list of sorting criteria, in MongoDB JSON format. For example, `{"status": 1, "_submission_time": -1}` will specifiy a sort order by ascending status, and then descending submission time.
   - More details about these options can be found in the [Formhub API docs](https://github.com/SEL-Columbia/formhub/wiki/Formhub-Access-Points-(API)#api-parameters)
 
-### Reformatting options
+### Submission Options
 
-The default JSON format for KoboToolbox submission data is sometimes hard to deal with, because it is not schema-aware, and all fields are therefore returned as strings.
+All operations that return form submission data will offer options to tweak the response, in particular:
+
+- Download options will let you download any attachment linked to each particular form submissions, such as pictures and videos. It will also let you select the naming pattern, and the file size to download (if available - typically for images). See an example with downloads enabled:
+
+![Downloads](./downloads.png)
+
+- Formatting options will perform some reformatting as described below
+
+#### About Reformatting
+
+The default JSON format for KoBoToolbox submission data is sometimes hard to deal with, because it is not schema-aware, and all fields are therefore returned as strings.
 
 This node provides a lightweight opinionated reformatting logic, enabled with the ***Reformat?*** parameter, available on all operations that return form submissions, i.e. the submission query, get, and the attachment download operations.
 
@@ -88,7 +103,17 @@ When enabled, the reformatting will:
 - Split all fields matching any of the the ***Multiselect Mask*** wildcard masks into an array. Since the multi-select fields appear as space-separated strings, they cannot be guessed algorithmically, so a field naming mask needs to be provided. The masks are provided as a comma-separated list supporting the `*` wildcard.
 - Convert all fields matching any of the ***Number Mask*** wildcard masks into a JSON float.
 
-Consider for instance the following form submission:
+See below the effects of the reformatting on a few sample submissions - notice the field renaming, the geolocation parsing, the array for multi-valued field, the structured `meta` object:
+
+- Without reformatting:
+
+![Without reformatting](./submissions-unformatted.png)
+
+- With reformatting:
+
+![With reformatting](./submissions-formatted.png)
+
+Here's a detailed example in JSON:
 
 ```json
 {

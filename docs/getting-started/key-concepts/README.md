@@ -17,7 +17,7 @@ Data sent from one node to another is sent as an array of JSON objects. Each ele
 
 A function is a block of code designed to perform a certain task. In n8n, you can write custom [JavaScript code snippets](../../reference/javascript-code-snippets.md) to add, remove, and update the data you receive from a node.
 
-The [Function](../../nodes/nodes-library/core-nodes/Function/README.md) and [Function Item](../nodes/nodes-library/core-nodes/FunctionItem/README.md) nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code. 
+The [Function](../../nodes/nodes-library/core-nodes/Function/README.md) and [Function Item](../../nodes/nodes-library/core-nodes/FunctionItem/README.md) nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
 
 The code of the **Function node** gets executed only once. The node receives the full items (JSON and binary data) as an array and expects an array of items as a return value. The items returned can be totally different from the incoming ones. So it is not only possible to remove and edit existing items, but also to add or return totally new ones.
 
@@ -74,7 +74,7 @@ In n8n, all the data that is passed between nodes is an array of objects. It has
 
 ### Data Flow
 
-Nodes do not only process one "item", they process multiple ones. 
+Nodes do not only process one "item", they process multiple ones.
 For example, if the Trello node is set to `Create-Card` and it has an expression set for `Name` to be set depending on `name` property, it will create a card for each item, always choosing the `name-property-value` of the current one.
 
 This data would, for example, create two cards. One named `test1` the other one named `test2`:

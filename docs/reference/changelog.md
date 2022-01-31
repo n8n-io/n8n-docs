@@ -2,6 +2,32 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.161.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.160.0...n8n@0.161.0) for this version.<br />
+**Release date:** 2022-01-30
+
+### Core Functionality ⚙️
+
+- Added default polling interval for trigger nodes using polling.
+- Added support for additional hints below parameter fields.
+- Fixed a bug preventing default values from being used when testing credentials.
+- Improved the wording in the *Save your Changes?* dialog.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Improved field description."/>
+<Changelog node="n8n-nodes-base.airtableTrigger" title="Airtable Trigger:" text="Improved field description."/>
+<Changelog node="n8n-nodes-base.erpNext" title="erpNext:" text="Prevented the node from throwing an error when no data is found."/>
+<Changelog node="n8n-nodes-base.gmail" title="Gmail:" text="Fixed a bug causing the BCC field to be ignored."/>
+<Changelog node="n8n-nodes-base.moveBinaryData" title="Move Binary Data:" text="Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling."/>
+<Changelog node="n8n-nodes-base.slack" title="Slack:" text="Fixed a typo in the Type field."/>
+
+### Contributors 🙌
+
+[fabian wohlgemuth](https://github.com/wohfab)
+
 ## n8n@0.160.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.1...n8n@0.160.0) for this version.<br />

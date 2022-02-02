@@ -22,7 +22,7 @@ Create a [Nextcloud](https://nextcloud.com/) account.
 6. Fill out any other information that is necessary and click on the 'Add' button.
 7. Click on the eye icon to reveal the Secret and use the 'Client Identifier' and the 'Secret' with your Nextcloud OAuth2 API credentials in n8n.
 8. Replace your domain in the samples for the *Authorization URL* and *Access Token URL* fields.
-9. Enter your [Web DAV URL](https://docs.nextcloud.com/server/15/user_manual/files/access_webdav.html) in the *Web DAV URL* field.
+9. Enter your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html) in the *Web DAV URL* field.
 10. Click on the circle button in the OAuth section to connect a Nextcloud account to n8n.
 11. Click the *Save* button to save your credentials.
 
@@ -30,4 +30,4 @@ Create a [Nextcloud](https://nextcloud.com/) account.
 
 ## Using Username and Password
 
-Use your [Web DAV URL](https://docs.nextcloud.com/server/15/user_manual/files/access_webdav.html) along with your Nextcloud username and password in the node credentials.
+Use your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html) along with your Nextcloud username and password in the node credentials.

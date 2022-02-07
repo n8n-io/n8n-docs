@@ -2,6 +2,46 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.162.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.1...n8n@0.162.0) for this version.<br />
+**Release date:** 2022-02-06
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.github" title="GitHub:" text="Added new List operation to File resource."/>
+
+### Core Functionality ⚙️
+
+- Added configurable debug logging for telemetry.
+- Added support for defining nodes through JSON. This functionality is in alpha state and breaking changes to the interface can take place in upcoming versions.
+- Added telemetry support to page events occuring before telemetry is initialized.
+- Fixed a bug preventing errors in sub-workflows from appearing in parent executions.
+- Fixed a bug where node versioning would not work as expected.
+- Fixed a bug where remote parameters would not load as expected.
+- Fixed a bug where unkown node types would not work as expected.
+- Prevented the node details view from opening automatically after duplicating a node.
+- Removed dependency `fibers` which is incompatible with the current LTS version 16 of Node.js.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.xml" title="XML:" text="Fixed a bug causing the node to alter incoming data."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto)
+
+## n8n@0.161.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.0...n8n@0.161.1) for this version.<br />
+**Release date:** 2022-02-01
+
+### Core Functionality ⚙️
+
+- Added optional debug logging to health check functionality.
+
 ## n8n@0.161.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.160.0...n8n@0.161.0) for this version.<br />

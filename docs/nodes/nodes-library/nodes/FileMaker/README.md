@@ -5,7 +5,7 @@ description: Learn how to use the FileMaker node in n8n
 
 # FileMaker
 
-[FileMaker](https://FileMaker.com) is an open-source integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and service companies.
+[FileMaker](https://www.claris.com/filemaker/) is an integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and service companies.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/FileMaker/README.md).

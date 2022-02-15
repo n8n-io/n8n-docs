@@ -1,5 +1,5 @@
 ---
-permalink: /nodes/n8n-nodes-base.halopsa
+permalink: /nodes/n8n-nodes-base.haloPSA
 description: Learn how to use the HaloPSA node in n8n
 ---
 
@@ -13,16 +13,11 @@ You can find authentication information for this node [here](../../../credential
 
 ## Basic Operations
 
-<!-- <Resource node="n8n-nodes-base.halopsa" /> -->
-- Create
-- Delete
-- Get
-- Get All
-- Update
+<Resource node="n8n-nodes-base.haloPSA" />
 
 ## Example Usage
 
-This workflow allows you to create a client in HaloPSA. This example usage workflow would use the following nodes.
+This workflow allows you to create a client in HaloPSA. This example workflow uses the following nodes.
 - [Start](../../core-nodes/Start/README.md)
 - [HaloPSA]()
 
@@ -32,7 +27,6 @@ This workflow allows you to create a client in HaloPSA. This example usage workf
 
 The start node exists by default when you create a new workflow.
 
-
 ### 2. HaloPSA node (resource: client)
 
 This node will create a new client in HaloPSA.
@@ -41,11 +35,8 @@ This node will create a new client in HaloPSA.
 2. Select 'Client' in the ***Resource*** field.
 3. Select 'Create' in the ***Operation*** field.
 4. Enter the client name in the ***Name*** field.
-4. Click on ***Important Client*** to set this client as important.
-5. Enter the reference in the ***Reference*** field.
-6. Select an site from ***Website*** dropdown field.
-7. Add additional fields with value clicking on ***Choose...*** button.
+5. Add additional fields such as ***VIP*** or ***Website*** by clicking ***Add Field***.
 
-In the screenshot below, you will notice that the node creates a new client in HaloPSA.
+In the below screenshot you can see how the node creates a new client in HaloPSA.
 
 ![Using the HaloPSA node to create a client](./halopsa-client-create.png)

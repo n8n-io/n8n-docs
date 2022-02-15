@@ -83,7 +83,7 @@ You can write an article for the [n8n blog](https://n8n.io/blog/). Your article 
 
 We have the following process for guest contributions to our blog:
 
-1. **Pitch:** Send an email to [Lorena](mailto:lorena@n8n.io) in which you outline your content idea. The more detailed the better.
+1. **Pitch:** Fill out [this typeform](https://n8n-community.typeform.com/to/VYiRI7WN?typeform-source=n8n.io) to tell us what kind of content you'd like to contribute.
 2. **Evaluation:** We evaluate your content idea and, if it matches our content topics and target audience, we give you green light to start writing and submit the article.
 3. **Review**: You submit your finished article as a Google Doc and we start reviewing and editing it.\
 This is usually an interactive, back-and-forth process, where we might ask for clarification and make suggestions in the doc for you to review. Depending on the length of the article and the required changes, the review process could take between a couple of days to a week or two.

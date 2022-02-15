@@ -2,6 +2,54 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.163.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.0...n8n@0.163.1) for this version.<br />
+**Release date:** 2022-02-13
+
+### Core Functionality ⚙️
+
+- Fixed a bug preventing OAuth2 authentication from working as expected in some scenarios.
+
+## n8n@0.163.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.162.0...n8n@0.163.0) for this version.<br />
+**Release date:** 2022-02-13
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.haloPSA" title="HaloPSA"/>
+<Changelog node="n8n-nodes-base.linearTrigger" title="Linear Trigger"/>
+<Changelog node="n8n-nodes-base.zammad" title="Zammad"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.github" title="GitHub:" text="Added Reference option to the Get operation of the File resource."/>
+<Changelog node="n8n-nodes-base.twilio" title="Twilio:" text="Added Status Callbacks option."/>
+<Changelog node="n8n-nodes-base.uproc" title="uProc:" text="Sanitized Data Webhook field description."/>
+
+### Core Functionality ⚙️
+
+- Added automatic sorting by relative position to the node list inside the expression editor.
+- Added new `/workflows/demo` page to allow read-only rendering of workflows inside an iframe.
+- Added optional `/healthz` health check endpoint to worker instances.
+- Fixed unwanted list autofill behaviour inside the expression editor.
+- Improved the GitHub actions used by the nightly Docker image.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function" text="Fixed a bug leaving the code editor size unchanged after resizing the window."/>
+<Changelog node="n8n-nodes-base.functionItem" title="Function Item" text="Fixed a bug leaving the code editor size unchanged after resizing the window."/>
+<Changelog node="n8n-nodes-base.if" title="IF" text="Removed the empty sections left after removing a condition."/>
+<Changelog node="n8n-nodes-base.itemLists" title="Item Lists" text="Fixed an erroneous placeholder text."/>
+
+### Contributors 🙌
+
+[Iñaki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
+
 ## n8n@0.162.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.1...n8n@0.162.0) for this version.<br />

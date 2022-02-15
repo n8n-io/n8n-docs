@@ -77,8 +77,6 @@ Windows users remember to change into the `.n8n` directory of your Home folder (
 
 See the [Docker installation](docker-quickstart.md) page for running n8n using Docker.
 
-n8n also offers a Docker image for Raspberry Pi: `n8nio/n8n:latest-rpi`.
-
 ### n8n with tunnel
 
 ::: danger

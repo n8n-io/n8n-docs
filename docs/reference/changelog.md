@@ -2,6 +2,239 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.163.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.0...n8n@0.163.1) for this version.<br />
+**Release date:** 2022-02-13
+
+### Core Functionality ⚙️
+
+- Fixed a bug preventing OAuth2 authentication from working as expected in some scenarios.
+
+## n8n@0.163.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.162.0...n8n@0.163.0) for this version.<br />
+**Release date:** 2022-02-13
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.haloPSA" title="HaloPSA"/>
+<Changelog node="n8n-nodes-base.linearTrigger" title="Linear Trigger"/>
+<Changelog node="n8n-nodes-base.zammad" title="Zammad"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.github" title="GitHub:" text="Added Reference option to the Get operation of the File resource."/>
+<Changelog node="n8n-nodes-base.twilio" title="Twilio:" text="Added Status Callbacks option."/>
+<Changelog node="n8n-nodes-base.uproc" title="uProc:" text="Sanitized Data Webhook field description."/>
+
+### Core Functionality ⚙️
+
+- Added automatic sorting by relative position to the node list inside the expression editor.
+- Added new `/workflows/demo` page to allow read-only rendering of workflows inside an iframe.
+- Added optional `/healthz` health check endpoint to worker instances.
+- Fixed unwanted list autofill behaviour inside the expression editor.
+- Improved the GitHub actions used by the nightly Docker image.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function" text="Fixed a bug leaving the code editor size unchanged after resizing the window."/>
+<Changelog node="n8n-nodes-base.functionItem" title="Function Item" text="Fixed a bug leaving the code editor size unchanged after resizing the window."/>
+<Changelog node="n8n-nodes-base.if" title="IF" text="Removed the empty sections left after removing a condition."/>
+<Changelog node="n8n-nodes-base.itemLists" title="Item Lists" text="Fixed an erroneous placeholder text."/>
+
+### Contributors 🙌
+
+[Iñaki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
+
+## n8n@0.162.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.1...n8n@0.162.0) for this version.<br />
+**Release date:** 2022-02-06
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.github" title="GitHub:" text="Added new List operation to File resource."/>
+
+### Core Functionality ⚙️
+
+- Added configurable debug logging for telemetry.
+- Added support for defining nodes through JSON. This functionality is in alpha state and breaking changes to the interface can take place in upcoming versions.
+- Added telemetry support to page events occuring before telemetry is initialized.
+- Fixed a bug preventing errors in sub-workflows from appearing in parent executions.
+- Fixed a bug where node versioning would not work as expected.
+- Fixed a bug where remote parameters would not load as expected.
+- Fixed a bug where unkown node types would not work as expected.
+- Prevented the node details view from opening automatically after duplicating a node.
+- Removed dependency `fibers` which is incompatible with the current LTS version 16 of Node.js.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.xml" title="XML:" text="Fixed a bug causing the node to alter incoming data."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto)
+
+## n8n@0.161.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.0...n8n@0.161.1) for this version.<br />
+**Release date:** 2022-02-01
+
+### Core Functionality ⚙️
+
+- Added optional debug logging to health check functionality.
+
+## n8n@0.161.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.160.0...n8n@0.161.0) for this version.<br />
+**Release date:** 2022-01-30
+
+### Core Functionality ⚙️
+
+- Added default polling interval for trigger nodes using polling.
+- Added support for additional hints below parameter fields.
+- Fixed a bug preventing default values from being used when testing credentials.
+- Improved the wording in the *Save your Changes?* dialog.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.airtable" title="Airtable:" text="Improved field description."/>
+<Changelog node="n8n-nodes-base.airtableTrigger" title="Airtable Trigger:" text="Improved field description."/>
+<Changelog node="n8n-nodes-base.erpNext" title="erpNext:" text="Prevented the node from throwing an error when no data is found."/>
+<Changelog node="n8n-nodes-base.gmail" title="Gmail:" text="Fixed a bug causing the BCC field to be ignored."/>
+<Changelog node="n8n-nodes-base.moveBinaryData" title="Move Binary Data:" text="Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling."/>
+<Changelog node="n8n-nodes-base.slack" title="Slack:" text="Fixed a typo in the Type field."/>
+
+### Contributors 🙌
+
+[fabian wohlgemuth](https://github.com/wohfab)
+
+## n8n@0.160.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.1...n8n@0.160.0) for this version.<br />
+**Release date:** 2022-01-22
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.bambooHr" title="BambooHR"/>
+
+### Core Functionality ⚙️
+
+- Fixed a bug preventing the binary data preview from using the full available height and width.
+- Fixed a build problem by pinning chokidar version 3.5.2.
+- Prevent workflow activation when no trigger is presentand introduced a modal explaining production data handling.
+- Fixed *Filter by tags* placeholder text used in the Open Workflow modal.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed a bug causing custom headers from being ignored."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Fixed a bug preventing all items from being returned in some situations."/>
+<Changelog node="n8n-nodes-base.microsoftOneDrive" title="Microsoft OneDrive:" text="Fixed a bug preventing more than 200 items from being returned."/>
+<Changelog node="n8n-nodes-base.spotify" title="Spotify:" text="Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected."/>
+
+### Contributors 🙌
+
+[fabian wohlgemuth](https://github.com/wohfab)
+
+## n8n@0.159.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.0...n8n@0.159.1) for this version.<br />
+**Release date:** 2022-01-18
+
+### Core Functionality ⚙️
+
+- Temporarily removed debug logging for axios requests.
+
+## n8n@0.159.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.158.0...n8n@0.159.0) for this version.<br />
+**Release date:** 2022-01-16
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.jenkins" title="Jenkins"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.graphql" title="GraphQL:" text="Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth."/>
+
+### Core Functionality ⚙️
+
+- Added support for executing workflows without an ID through the CLI.
+- Fixed a build problem.
+- Fixed a bug preventing the tag description from being shown on the canvas.
+- Improved build performance by skipping the `node-dev` package during build.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.box" title="Box:" text="Fixed a bug causing some files to be corrupted during download."/>
+<Changelog node="n8n-nodes-base.philipsHue" title="Philips Hue:" text="Fixed a bug preventing the node from connecting to Philips Hue."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Fixed a bug preventing filters on date and datetime fields from working as expected."/>
+<Changelog node="n8n-nodes-base.supabase" title="Supabase:" text="Fixed an errorneous documentation link."/>
+
+### Contributors 🙌
+
+[Phil Clifford](https://github.com/philclifford)
+
+## n8n@0.158.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.1...n8n@0.158.0) for this version.<br />
+**Release date:** 2022-01-09
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.microsoftGraphSecurity" title="Microsoft Graph Security"/>
+<Changelog node="n8n-nodes-base.syncroMsp" title="SyncroMSP"/>
+<Changelog node="n8n-nodes-base.supabase" title="Supabase"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Added Transparent operation."/>
+<Changelog node="n8n-nodes-base.kafka" title="Kafka:" text="Added Use Schema Registry option."/>
+<Changelog node="n8n-nodes-base.kafkaTrigger" title="Kafka Trigger:" text="Added Use Schema Registry option."/>
+<Changelog node="n8n-nodes-base.redis" title="Redis:" text="Added database field to credentials."/>
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce:" text="Added Account Number field."/>
+
+### Core Functionality ⚙️
+
+- Added new external hook when active workflows finished initializing.
+- Fixed a bug preventing the personalisation survey from showing up.
+- Improved telemetry.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.editImage" title="Edit Image:" text="Fixed a bug causing two items to be returned."/>
+<Changelog node="n8n-nodes-base.iCal" title="iCalendar:" text="Fixed a bug preventing dates in January from working as expected."/>
+<Changelog node="n8n-nodes-base.merge" title="Merge:" text="Fixed causing empty binary data to overwrite other binary data on merge."/>
+
+### Contributors 🙌
+
+[Ricardo Georgel](https://github.com/rgeorgel), [Pierre](https://github.com/hnb2), [Vahid Sebto](https://github.com/sebto)
+
+## n8n@0.157.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.0...n8n@0.157.1) for this version.<br />
+**Release date:** 2022-01-03
+
+### Core Functionality ⚙️
+
+- Fixed a bug where not all nodes could use the new binary data handling.
+
 ## n8n@0.157.0
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.156.0...n8n@0.157.0) for this version.<br />

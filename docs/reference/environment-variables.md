@@ -74,6 +74,11 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DIAGNOSTICS_ENABLED` | `boolean` | Whether to share selected, anonymous [telemetry](../reference/telemetry.html) with n8n |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | `string` | Telemetry config for the frontend. Default is `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io`. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | `string` | Telemetry config for the frontend. Default is `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch`. |
+| `N8N_AVAILABLE_BINARY_DATA_MODES` | `string` | A comma separated list of available binary data modes. Default is `filesystem`. |
+| `N8N_BINARY_DATA_STORAGE_PATH` | `string` | The path where binary data is stored. Defaults to `binaryData` under the `N8N_USER_FOLDER`. |
+| `N8N_BINARY_DATA_TTL` | `number` | Time to live (in minutes) for binary data of unsaved executions. Default is `60`. |
+| `N8N_DEFAULT_BINARY_DATA_MODE` | `string` | The default binary data mode. Default value is `default` and keeps binary data in memory. Set to `filesystem` in order to use the filesystem. |
+| `N8N_PERSISTED_BINARY_DATA_TTL` | `number` | Time to live (in minutes) for persisted data. Default is `1440`. |
 | `VUE_APP_URL_BASE_API` | `string` | Used when building the `n8n-editor-ui` package manually to indicate how the frontend can reach the backend API. |
 
 ## Endpoints
@@ -122,6 +127,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_LOG_FILE_COUNT_MAX` | `number` | Max number of log files to keep. Default is `100`. |
 | `N8N_LOG_FILE_SIZE_MAX` | `number` | Max size of each log file in MB. Default is `16`. |
 | `N8N_LOG_FILE_LOCATION` | `string` | Log file location. Only used if log output is set to `file`. |
+| `DB_LOGGING_ENABLED` | `boolean` | Whether to enable database-specific logging. Default is `false`. |
+| `DB_LOGGING_OPTIONS` | `string` | Database log output level. Possible values: `query`, `error`, `schema`, `warn`, `info`, `log`. To enable all logging, specify `all`. |
+| `DB_LOGGING_MAX_EXECUTION_TIME` | `number` | Max execution time (in milliseconds) before a warning is logged. Default is `1000`. Set to `0` to disable long running query warning. |
 
 ## Nodes
 
@@ -163,7 +171,6 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_JWT_NAMESPACE`/`_FILE` | `string` | Optional. The expected JWT namespace. |
 | `N8N_JWT_ALLOWED_TENANT`/`_FILE` | `string` | Optional. The allowed JWT tenant. |
 | `N8N_JWT_ALLOWED_TENANT_KEY`/`_FILE` | `string` | Optional. The JWT tenant key name to inspect within the JWT namespace. |
-
 
 ## Timezone
 

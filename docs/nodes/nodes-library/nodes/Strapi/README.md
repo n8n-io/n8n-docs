@@ -5,10 +5,14 @@ description: Learn how to use the Strapi node in n8n
 
 # Strapi
 
-[Strapi](https://www.strapi.io/)  is an open-source Headless CMS that gives developers the freedom to choose their tools and frameworks while also allowing editors to easily manage and distribute their content.
+[Strapi](https://www.strapi.io/) is an open-source Headless CMS that gives developers the freedom to choose their tools and frameworks while also allowing editors to easily manage and distribute their content.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Strapi/README.md).
+:::
+
+::: warning ⚠️ Strapi Version 4
+The Strapi node node was built for Strapi version 3. Some of its operations will not work with Strapi version 4.
 :::
 
 ## Basic Operations

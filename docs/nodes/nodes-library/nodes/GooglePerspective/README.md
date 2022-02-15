@@ -5,7 +5,7 @@ description: Learn how to use the Google Perspective node in n8n
 
 # Google Perspective
 
-[Google Perspective](https://www.perspectiveapi.com/) is a free API that uses machine learning to identify "" comments, making it easier to host better conversations online.
+[Google Perspective](https://www.perspectiveapi.com/) is a free API that uses machine learning to identify "toxic" comments, making it easier to host better conversations online.
 
 ::: tip 🔑 Credentials
 You can find authentication information for this node [here](../../../credentials/Google/README.md).

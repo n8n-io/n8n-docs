@@ -71,7 +71,6 @@ The node settings allow you to configure the look and execution of the node. The
 
 * **Notes**: Optional note to save with the node
 * **Display note in flow**: If active, the note above will be displayed in the workflow as a subtitle
-* **Node Color**: The color of the node in the workflow
 * **Always Output Data**: If active, the node will return an empty item even if the node returns no data during an initial execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
 * **Execute Once**: If active, the node executes only once, with data from the first item it receives.
 * **Retry On Fail**: If active, the node tries to execute a failed attempt multiple times until it succeeds

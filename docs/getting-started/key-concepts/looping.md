@@ -77,6 +77,8 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Function**](../../nodes/nodes-library/core-nodes/Function/README.md) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](../../nodes/nodes-library/core-nodes/SplitInBatches/README.md) node.
 * [**Google Cloud Firestore**](../../nodes/nodes-library/nodes/GoogleCloudFirestore/README.md) node:
 	* **Get All**: For the Collection and Document resources, this operation executes only once.
+* [**Google Drive**](../../nodes/nodes-library/nodes/GoogleDrive/README.md) node:
+	* **List**: This operation executes only once, not for each incoming item.
 * [**Google Sheets**](../../nodes/nodes-library/nodes/GoogleSheets/README.md) node:
 	* **Read**: This operation will execute only once for the `Sheet` resource.
 * [**HTTP Request**](../../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.

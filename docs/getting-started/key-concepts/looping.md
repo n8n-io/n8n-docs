@@ -81,6 +81,7 @@ There are a limited number of nodes and operations where you need to design a lo
 	* **List**: This operation executes only once, not for each incoming item.
 * [**Google Sheets**](../../nodes/nodes-library/nodes/GoogleSheets/README.md) node:
 	* **Read**: This operation will execute only once for the `Sheet` resource.
+	* **Update**: This operation will update multiple rows only if they are in the same range.
 * [**HTTP Request**](../../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
 * [**Microsoft SQL**](../../nodes/nodes-library/nodes/microsoftSql/README.md) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
 * [**Postgres**](../../nodes/nodes-library/nodes/postgres/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

@@ -11,6 +11,9 @@ description: Learn how to use the HubSpot Trigger node in n8n
 For this node, you will have to retrieve the App ID and Client secret from the 'Using OAuth' section as well as the Developer API Key from the 'Using Developer API Key' section. You can find authentication information for this node [here](../../../credentials/Hubspot/README.md).
 :::
 
+::: tip Webhooks
+If you activate a second trigger, the previous trigger stops working. This is because the trigger registers a new webhook with HubSpot when activated. HubSpot only allows one webhook at a time. 
+:::
 
 ## Example Usage
 

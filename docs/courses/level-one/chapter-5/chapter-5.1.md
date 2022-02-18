@@ -9,7 +9,7 @@ First, let’s set up the scene for building Nathan’s workflow. Open your Edit
 
 Name this new workflow “Nathan’s workflow”.
 
-The first thing we need to do is get data from Evil Corp’s old data warehouse.
+The first thing we need to do is get data from ABCorp’s old data warehouse.
 
 In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan’s company. Nathan mentioned that it’s not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
@@ -35,7 +35,7 @@ This option will output each element of an array as its own item.
 
 **Note:** In case you don't already have your Unique ID, please sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to obtain it.
 
-Since you selected *Header Authentication*, now you need to enter your [credentials](https://docs.n8n.io/reference/glossary.html%23credentials) in order to be able to access the data.
+Since you selected *Header Authentication*, now you need to enter your [credentials](../../../reference/glossary.html#credentials) in order to be able to access the data.
 
 ::: tip 📖 Credentials
 Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
@@ -62,7 +62,7 @@ In the *HTTP Request node* window, click the *Execute Node* button. The result o
 
 <figure><img src="../images/chapter-two/HTTP-Request-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
 
-This view should be familiar to you from the [Hacker News mini-workflow](../chapter-2.md). This is the data from EvilCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with 5 features:
+This view should be familiar to you from the [Hacker News mini-workflow](../chapter-2.md). This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with 5 features:
 
 - *orderID:* The unique id of each order.
 - *customerID:* The unique id of each customer.

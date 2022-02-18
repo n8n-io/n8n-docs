@@ -6,15 +6,9 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-First of all, you need to set up n8n. There are different ways to [get started with n8n](https://docs.n8n.io/getting-started/installation/), you can: 
-
-* [Install it locally with npm](https://docs.n8n.io/getting-started/installation/#npm) 
-* Run it using [Docker](https://docs.n8n.io/getting-started/installation/docker-quickstart.html)
-* Sign up on [n8n.cloud](http://n8n.cloud)
+First of all, you need to get n8n. There are different [ways to set up n8n](https://docs.n8n.io/getting-started/installation/), choose the option that best suits your skills and needs.
 
 **This course was developed on n8n version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
-
-We recommend using n8n.cloud to ensure easy access to the latest version of n8n and all functionality needed to complete the course with no configuration to worry about.
 
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 

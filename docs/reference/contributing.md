@@ -72,7 +72,7 @@ n8n users come from a wide range of backgrounds, experience levels, and interest
 
 We have the following process for user stories for our blog:
 
-1. **Pitch:** Send an email to [Lorena](mailto:lorena@n8n.io) in which you describe how you use n8n and what you'd like to share with the world about your experience.
+1. **Pitch:** Fill out [this typeform](https://n8n-community.typeform.com/to/VYiRI7WN?typeform-source=n8n.io) to tell us briefly how you use n8n and what you'd like to share with the world about your experience.
 2. **Discussion:** We get back to you and schedule a call to discuss more or send you a list of questions.
 3. **Review:** We write/edit the interview and send you the final draft for review.
 4. **Publishing:** Once you approve the final draft, we schedule the post to be published on our blog.

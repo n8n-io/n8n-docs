@@ -2,6 +2,42 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.164.1
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.0...n8n@0.164.1) for this version.<br />
+**Release date:** 2022-02-20
+
+### Core Functionality ⚙️
+
+- Fixed a bug preventing webhooks from working as expected in some scenarios.
+
+## n8n@0.164.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.1...n8n@0.164.0) for this version.<br />
+**Release date:** 2022-02-20
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.googleChat" title="Google Chat"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.grist" title="Grist:" text="Added support for self-hosted Grist instances."/>
+<Changelog node="n8n-nodes-base.telegramTrigger" title="Telegram Trigger:" text="Added new Extra Large option to Image Size field."/>
+<Changelog node="n8n-nodes-base.webhook" title="Webhook:" text="Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods."/>
+
+### Core Functionality ⚙️
+
+- Added new database indices to improve the performance when querying past executions.
+- Fixed a bug causing the base portion of a URL not to be prepended as expected in some scenarios.
+- Fixed a bug cuasing expressions to resolve incorrectly when referencing non-existent nodes or parameters.
+
+### Contributors 🙌
+
+[Jhalter5Stones](https://github.com/Jhalter5Stones), [Valentina Lilova](https://github.com/valentina98), [thorstenfreitag](https://github.com/thorstenfreitag)
+
 ## n8n@0.163.1
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.0...n8n@0.163.1) for this version.<br />

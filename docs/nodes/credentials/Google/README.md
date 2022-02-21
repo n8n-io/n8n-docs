@@ -27,6 +27,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google BigQuery](../../nodes-library/nodes/GoogleBigQuery/README.md) | :white_check_mark: | :x: |
 | [Google Books](../../nodes-library/nodes/GoogleBooks/README.md) | :white_check_mark: | :white_check_mark: |
 | [Google Calendar](../../nodes-library/nodes/GoogleCalendar/README.md) | :white_check_mark: | :x: |
+| [Google Chat](../../nodes-library/nodes/GoogleChat/README.md) | :x: | :white_check_mark: |
 | [Google Contacts](../../nodes-library/nodes/GoogleContacts/README.md) | :white_check_mark: | :x: |
 | [Google Cloud Firestore](../../nodes-library/nodes/GoogleCloudFirestore/README.md) | :white_check_mark: | :x: |
 | [Google Cloud Natural Language](../../nodes-library/nodes/GoogleCloudNaturalLanguage/README.md) | :white_check_mark: | :x: |

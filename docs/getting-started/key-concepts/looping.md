@@ -80,7 +80,7 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Google Drive**](../../nodes/nodes-library/nodes/GoogleDrive/README.md) node:
 	* **List**: This operation executes only once, not for each incoming item.
 * [**Google Sheets**](../../nodes/nodes-library/nodes/GoogleSheets/README.md) node:
-	* **Read**: This operation will execute only once for the `Sheet` resource.
+	* **Read**: This operation executes only once for the `Sheet` resource.
 	* **Update**: This operation updates multiple rows if they are in the same range. It does not iterate through additional ranges.
 * [**HTTP Request**](../../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
 * [**Microsoft SQL**](../../nodes/nodes-library/nodes/microsoftSql/README.md) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.

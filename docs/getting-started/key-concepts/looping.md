@@ -80,10 +80,11 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Google Drive**](../../nodes/nodes-library/nodes/GoogleDrive/README.md) node:
 	* **List**: This operation executes only once, not for each incoming item.
 * [**Google Sheets**](../../nodes/nodes-library/nodes/GoogleSheets/README.md) node:
-	* **Read**: This operation will execute only once for the `Sheet` resource.
+	* **Read**: This operation executes only once for the `Sheet` resource.
+	* **Update**: This operation updates multiple rows if they are in the same range. It does not iterate through additional ranges.
 * [**HTTP Request**](../../nodes/nodes-library/core-nodes/httpRequest/README.md) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
 * [**Microsoft SQL**](../../nodes/nodes-library/nodes/microsoftSql/README.md) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
-* [**Postgres**](../../nodes/nodes-library/nodes/postgres/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**Postgres**](../../nodes/nodes-library/nodes/postgres/README.md) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
 * [**QuestDB**](../../nodes/nodes-library/nodes/QuestDb/README.md) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
 * [**Read Binary Files**](../../nodes/nodes-library/core-nodes/readBinaryFiles/README.md) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
 * [**Redis**](../../nodes/nodes-library/nodes/redis/README.md) node:

@@ -56,3 +56,18 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
 You can also use the [Error Trigger node](../../nodes/nodes-library/core-nodes/ErrorTrigger), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+
+## Using workflow templates
+
+When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing template.
+
+To use a workflow template:
+
+1. In the sidebar, select **Templates**.
+2. Browse or search the workflow templates list.
+3. Select a workflow to view more information. n8n opens the workflow details page.
+4. On the workflow details page, select **Use this workflow**. n8n opens the workflow.
+5. Select **Save** to add the workflow to your workflows.
+
+::: note 
+    n8n released workflow templates in [TODO: CHECK 0.165.0]. It is available for cloud users, and is enabled by default for self-hosted n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.

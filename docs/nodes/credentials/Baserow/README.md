@@ -13,11 +13,13 @@ You can use these credentials to authenticate the following node:
 Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance
 or a self hosted instance.
 
-## Using API Key
+## Using User Account
 
-1. Open your Baserow dashboard.
-2. Click on the user menu on the top left and select **Settings** from the dropdown list.
-3. Select the **API Tokens** section and click on the **Create token +** button.
-4. Enter a name and give rights to your desired group.
-5. Click on the **...** menu next to the token name and copy the token.
-6. Use this token for your Baserow credential in n8n.
+1. In n8n, open the Credentials menu item and click on **New**
+2. In the **Add new credential** dialogue, select **Baserow API** and click on the **Continue** button
+3. If using the online version of Baserow, leave the **Host** as **https://api/baserow.io**, otherwise set it to your self hosted instance API URL.
+4. Enter your Baserow username in the **Username** field
+5. Enter your Baserow password in the **Password** field
+6. Click on the **Save** button
+
+You can now use this credential in your Baserow nodes.

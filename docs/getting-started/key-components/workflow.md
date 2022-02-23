@@ -69,5 +69,6 @@ To use a workflow template:
 4. On the workflow details page, select **Use this workflow**. n8n opens the workflow.
 5. Select **Save** to add the workflow to your workflows.
 
-::: note 
-    n8n released workflow templates in [TODO: CHECK 0.165.0]. It is available for cloud users, and is enabled by default for self-hosted n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.
+::: tip 
+n8n released workflow templates in [TODO: CHECK 0.165.0]. It is available for cloud users, and is enabled by default for self-hosted n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.
+:::

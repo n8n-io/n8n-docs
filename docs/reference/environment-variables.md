@@ -58,7 +58,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `N8N_CONFIG_FILES` | `string` | Use to provide the path to any JSON [configuration file(s)](../getting-started/installation/advanced/configuration.md#configuration-via-file). |
 | `N8N_DISABLE_UI` | `boolean` | Whether the UI should be disabled. |
-| `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates should be enabled (true) or disabled (false) |
+| `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates are enabled (true) or disabled (false) |
 | `N8N_TEMPLATES_HOST` | `string` | Defaults to https://api.n8n.io. Change this if creating your own workflow template library. |
 | `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the n8n database. By default a random key is generated on first launch. |
 | `N8N_USER_FOLDER` | `string` | Provide the path where n8n will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |

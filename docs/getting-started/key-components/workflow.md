@@ -82,7 +82,7 @@ Workflow templates are available on all flavours of n8n. If you can't access wor
 
 You can submit your own workflows to n8n's template library.
 
-1. In n8n, download you workflow JSON: 
+1. In n8n, download your workflow JSON: 
     1. Open the workflow
     2. Click **Workflows** > **Download**.
 2. [Log in](https://n8n.io/login) to your n8n dashboard.

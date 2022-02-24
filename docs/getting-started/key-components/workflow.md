@@ -57,18 +57,38 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 
 You can also use the [Error Trigger node](../../nodes/nodes-library/core-nodes/ErrorTrigger), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
 
-## Using workflow templates
+## Workflow templates
 
 When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing template.
 
-To use a workflow template:
+Templates provide:
 
-1. In the sidebar, select **Templates**.
+* A way to get started quickly: we might already have a template that does what you need.
+* Examples of what you can build, and best practices for creating your own workflows.
+
+### Use a workflow template
+
+1. In the sidebar, click **Templates**.
 2. Browse or search the workflow templates list.
-3. Select a workflow to view more information. n8n opens the workflow details page.
-4. On the workflow details page, select **Use this workflow**. n8n opens the workflow.
-5. Select **Save** to add the workflow to your workflows.
+3. Click a workflow to view more information. n8n opens the workflow details page.
+4. On the workflow details page, click **Use this workflow**. n8n opens the workflow.
+5. Click **Save** to add the workflow to your workflows.
 
 ::: tip 
-Workflow templates are available for cloud users, and are enabled by default for self-hosted and embeded n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.
+Workflow templates are available on all flavours of n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.
 :::
+
+### Add your workflow to the library
+
+You can submit your own workflows to n8n's template library.
+
+1. In n8n, download you workflow JSON: 
+    1. Open the workflow
+    2. Click **Workflows** > **Download**.
+2. [Log in](https://n8n.io/login) to your n8n dashboard.
+3. Click **Share New Workflow**.
+4. Enter your workflow details:
+    * **Name**: this should be descriptive but simple. It will appear on the website and in app.
+    * **Description**: tell users what the workflow does. Include any configuration or setup steps.
+    * **Workflow code**: copy in the workflow JSON that you downloaded.
+5. Click **Publish Workflow to Share**. n8n reviews all workflows before publishing them.

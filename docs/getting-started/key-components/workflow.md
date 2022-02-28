@@ -76,7 +76,7 @@ Templates provide:
 5. Click **Save** to add the workflow to your workflows.
 
 ::: tip 
-Workflow templates are available on all flavors of n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embedded version of n8n with templates disabled.
+Workflow templates are available on all flavors of n8n. If you can't access workflow templates in n8n, check that your n8n version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of n8n with templates disabled.
 :::
 
 ### Add your workflow to the library

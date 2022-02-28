@@ -64,7 +64,8 @@ When creating a new workflow, you can choose whether to start with an empty work
 Templates provide:
 
 * A way to get started quickly: we might already have a template that does what you need.
-* Examples of what you can build, and best practices for creating your own workflows.
+* Examples of what you can build
+* Best practices for creating your own workflows
 
 ### Use a workflow template
 

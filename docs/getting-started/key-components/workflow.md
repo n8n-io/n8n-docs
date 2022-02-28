@@ -64,7 +64,8 @@ When creating a new workflow, you can choose whether to start with an empty work
 Templates provide:
 
 * A way to get started quickly: we might already have a template that does what you need.
-* Examples of what you can build, and best practices for creating your own workflows.
+* Examples of what you can build
+* Best practices for creating your own workflows
 
 ### Use a workflow template
 
@@ -75,7 +76,7 @@ Templates provide:
 5. Click **Save** to add the workflow to your workflows.
 
 ::: tip 
-Workflow templates are available on all flavours of n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embeded version of n8n with templates disabled.
+Workflow templates are available on all flavors of n8n. If you can't access workflow templates in n8n, you may be on an old version, or using a self-hosted or embedded version of n8n with templates disabled.
 :::
 
 ### Add your workflow to the library

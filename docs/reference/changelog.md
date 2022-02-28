@@ -1,16 +1,22 @@
 # Changelog
 
-🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
+🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-## n8n@0.165.0
+## n8n@0.165.0 🛠
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
 **Release date:** 2022-02-28
+
+::: warning ⚠️ Breaking changes
+Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01650).
+:::
+
 
 ### New nodes ✨
 
 <br />
-<Changelog node="n8n-nodes-base.onfleet" title="Onfleet"/>
+
+<Changelog node="n8n-nodes-base.onfleet" title="Onfleet" />
 
 ### Enhanced nodes 🚀
 
@@ -20,9 +26,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 <Changelog node="n8n-nodes-base.notion" title="Notion (Beta):" text="Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource."/>
 <Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource."/>
 
-### Core Functionality ⚙️
+### Core functionality ⚙️
 
-- Added support for optional `success-url` parameter to nightly builds workflow.
 - Added support for workflow templates.
 - Fixed a bug causing credentials tests to fail for versioned nodes.
 - Fixed a build problem by addind dependencies `@types/lodash.set` to the `workflow` package and `@types/uuid` to the `core` package.
@@ -34,7 +39,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 <br />
 <Changelog node="n8n-nodes-base.orbit" title="Orbit" text="Fixed a bug causing API requests to use an incorrect workspace identifier."/>
-<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/>
+<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="🛠 Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/> 
 
 ### Contributors 🙌
 

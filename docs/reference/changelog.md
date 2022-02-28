@@ -2,6 +2,44 @@
 
 🛠 = Version contains a breaking change. Check out the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.165.0
+
+For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
+**Release date:** 2022-02-28
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.onfleet" title="Onfleet"/>
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.asana" title="Asana:" text="Added Create operation to the Project resource."/>
+<Changelog node="n8n-nodes-base.mautic" title="Mautic:" text="Added Edit Contact Points, Edit Do Not Contact List, Send Email operations to Contact resource. Also added new Segment Email resource."/>
+<Changelog node="n8n-nodes-base.notion" title="Notion (Beta):" text="Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource."/>
+<Changelog node="n8n-nodes-base.pipedrive" title="Pipedrive:" text="Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource."/>
+
+### Core Functionality ⚙️
+
+- Added support for optional `success-url` parameter to nightly builds workflow.
+- Added support for workflow templates.
+- Fixed a bug causing credentials tests to fail for versioned nodes.
+- Fixed a build problem by addind dependencies `@types/lodash.set` to the `workflow` package and `@types/uuid` to the `core` package.
+- Fixed an error causing some resources to ignore a non-standard `N8N_PATH` value.
+- Fixed an error preventing the placeholder text from being shown when entering credentials.
+- Improved error handling for telemetry-related errors.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.orbit" title="Orbit" text="Fixed a bug causing API requests to use an incorrect workspace identifier."/>
+<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/>
+
+### Contributors 🙌
+
+[alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [saurabh kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
+
 ## n8n@0.164.1
 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.0...n8n@0.164.1) for this version.<br />

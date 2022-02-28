@@ -58,6 +58,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `N8N_CONFIG_FILES` | `string` | Use to provide the path to any JSON [configuration file(s)](../getting-started/installation/advanced/configuration.md#configuration-via-file). |
 | `N8N_DISABLE_UI` | `boolean` | Whether the UI should be disabled. |
+| `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates are enabled (true) or disabled (false) |
+| `N8N_TEMPLATES_HOST` | `string` | Defaults to https://api.n8n.io. Change this if creating your own workflow template library. |
 | `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the n8n database. By default a random key is generated on first launch. |
 | `N8N_USER_FOLDER` | `string` | Provide the path where n8n will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |
 | `N8N_PATH` | `string` | The path n8n is deployed to. Default is `/`. |
@@ -96,7 +98,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | `boolean` | Disable production webhooks from main process. This helps ensures no HTTP traffic load to main process when using webhook-specific processes. Default value is `false`.  |
 | `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | `boolean` | Deregister webhooks on external services only when workflows are deactivated. Default value is `false`. |
 
-## External Hooks
+## External hooks
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |

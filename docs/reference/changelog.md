@@ -39,11 +39,11 @@ Please note that this version contains breaking changes. You can read more about
 
 <br />
 <Changelog node="n8n-nodes-base.orbit" title="Orbit" text="Fixed a bug causing API requests to use an incorrect workspace identifier."/>
-<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="🛠 Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/> 
+<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="🛠 Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/>
 
 ### Contributors 🙌
 
-[alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [saurabh kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
+[alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [lsemaj](https://github.com/jamesliupenn), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [Saurabh Kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
 
 ## n8n@0.164.1
 

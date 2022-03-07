@@ -1,11 +1,11 @@
 ---
 permalink: /credentials/onfleet
-description: Learn to configure credentials for the Onfleet node in n8n
+description: Learn to configure credentials for the Onfleet node in n8n.
 ---
 
 # Onfleet credentials
 
-You can use these credentials to authenticate the following nodes with Onfleet.
+You can use these credentials to authenticate the following nodes with Onfleet:
 - [Onfleet](../../nodes-library/nodes/Onfleet/README.md)
 - [Onfleet Trigger](../../nodes-library/trigger-nodes/OnfleetTrigger/README.md)
 
@@ -13,9 +13,8 @@ You can use these credentials to authenticate the following nodes with Onfleet.
     * [Creating an API key](https://support.onfleet.com/hc/en-us/articles/360045763292-API)
     * [Getting started with the Onfleet API](https://docs.onfleet.com/reference#setup-tutorial)
 2. In n8n, create a new credential. You can either:
-    * Click **Credentials** > **New**, then find **Onfleet API**. After selecting **Onfleet API**, click **Continue**.
+    * Click **Credentials** > **New**, then search for **Onfleet API**. After selecting **Onfleet API**, click **Continue**.
     * In an Onfleet node, click the **Credential for Onfleet API** dropdown, then click **Create new**.
-    n8n opens the **Onfleet account** modal.
 3. In the **Onfleet account** modal, paste your Onfleet API key into **API key**. 
 4. By default, this credential is available to both the Onfleet and Onfleet Trigger nodes. You can change this using the settings on the **Details** tab.
 5. After entering the key and editing the credential details, click **Save**. n8n tests the key to check it can connect to Onfleet.

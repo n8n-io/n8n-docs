@@ -17,8 +17,8 @@ The Item Lists node enables you to perform the following operations:
 * *Sort*: Change the ordering of items.
 * *Limit*: Remove items beyond a defined maximum number.
 
-::: tip 💡 Keep in mind
-When configuring the Item Lists node, all fields needing a `key` value (e.g. Field to Split Out) must be manually entered in plaintext, you cannot use expressions for these fields.
+::: tip 
+Usually, you shouldn't use expressions for fields that expect a `key` value (for example, **Field to Split Out**). Expressions usually return values, not keys.
 :::
 
 ### Split Out Items

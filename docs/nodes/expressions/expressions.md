@@ -11,7 +11,9 @@ Expressions allow you to set node parameters dynamically based on data from:
 
 n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 
 
-You can execute JavaScript within an expression. You can also use two libraries that make common tasks easier:
+You can execute JavaScript within an expression. 
+
+n8n supports two libraries that make common tasks easier:
 
 - [Luxon](https://github.com/moment/luxon/), for working with data and time.
 - [JMESPath](https://jmespath.org/), for querying JSON.
@@ -60,13 +62,12 @@ In the next node in the workflow, you want to get just the value of `city`. You 
 {{$json.body.city}}
 ```
 
-
 This expression:
   1. Accesses the incoming JSON-formatted data using n8n's custom `$json` variable.
   2. Finds the value of `city` (in this example, "New York"). Note that this example uses JMESPath syntax to query the JSON data. You can also write this expression as `{{$json['body']['city']}}`.
 :::
 
-n8n sets "New York" as the value of the parameter.
+### Example: writing longer JavaScript
 
 
 ## Custom variables and methods
@@ -77,11 +78,14 @@ n8n provides the following variables:
 - `$data`: incoming raw data from a node
 - `$env`: contains environment variables
 - `$json`: incoming JSON data from a node
+- `$now`: [TODO - currently something like this: $now: the current timestamp, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
 - `$parameters`: parameters of the current node
 - `$position`: the index of an item in a list of items
-- `$runIndex`: how many times the node has been executed. Zero-based (the first run is 0, the second is 1, and so on).
-- `$workflow`: workflow metadata
 - `$resumeWebhookUrl`: the webhook URL to call to resume a waiting workflow.
+- `$runIndex`: how many times the node has been executed. Zero-based (the first run is 0, the second is 1, and so on).
+- `$today`: [TODO - currently something like this: $today: the current timestamp rounded down to today's date, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
+- `$workflow`: workflow metadata
+
 
 n8n provides the following methods:
 
@@ -90,6 +94,46 @@ n8n provides the following methods:
 - `$item`: returns an item at a given index
 - `$node`: data from a specified node
 
+## Variables
+
+### $executionId
+
+Contains the unique ID of the current workflow execution.
+
+```typescript
+const executionId = $executionId;
+
+return [{json:{executionId}}];
+```
+
+### $runIndex
+
+Contains the index of the current run of the node.
+
+```typescript
+// Returns all items the node "IF" outputs (index: 0 which is Output "true" of the same run as current node)
+const allItems = $items("IF", 0, $runIndex);
+```
+
+
+### $workflow
+
+Gives information about the current workflow.
+
+```js
+// Boolean. Whether the workflow is active (true) or not (false)
+$workflow.active
+// Number. The workflow ID.
+$workflow.id
+// String. The workflow name.
+$workflow.name
+```
+
+### $resumeWebhookUrl
+
+The webhook URL to call to resume a [waiting](./nodes-library/core-nodes/Wait/README.md) workflow.
+
+See the [Wait > On webhook call](./nodes-library/core-nodes/Wait/README.md#webhook-call) documentation to learn more.
 
 
 ## Methods
@@ -171,43 +215,3 @@ const channel = $node["Slack"].parameter["channel"];
 const runIndex = $node["HTTP Request"].runIndex}}
 ```
 
-## Variables
-
-### $executionId
-
-Contains the unique ID of the current workflow execution.
-
-```typescript
-const executionId = $executionId;
-
-return [{json:{executionId}}];
-```
-
-### $runIndex
-
-Contains the index of the current run of the node.
-
-```typescript
-// Returns all items the node "IF" outputs (index: 0 which is Output "true" of the same run as current node)
-const allItems = $items("IF", 0, $runIndex);
-```
-
-
-### $workflow
-
-Gives information about the current workflow.
-
-```js
-// Boolean. Whether the workflow is active (true) or not (false)
-$workflow.active
-// Number. The workflow ID.
-$workflow.id
-// String. The workflow name.
-$workflow.name
-```
-
-### $resumeWebhookUrl
-
-The webhook URL to call to resume a [waiting](./nodes-library/core-nodes/Wait/README.md) workflow.
-
-See the [Wait > On webhook call](./nodes-library/core-nodes/Wait/README.md#webhook-call) documentation to learn more.

@@ -6,8 +6,20 @@
 
 n8n uses Luxon to provide two custom variables:
 
-`$now`: [TODO - currently something like this: $now: the current timestamp, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
-`$today`: [TODO - currently something like this: $today: the current timestamp rounded down to today's date, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
+- `$now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
+- `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
+
+Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
+::: v-pre
+
+```js
+{{$now}}
+// Returns [Object: "<ISO formatted timestamp>"], for example [Object: "2022-03-09T14:00:25.058+00:00"]
+{{$now.toString()}}
+// Returns the ISO formatted timestamp, for example 2022-03-09T14:02:37.065+00:00
+{{"Today's date is " + $now}}
+// Returns "Today's date is <unix timestamp>", for example "Today's date is 1646834498755"
+```
 
 ## Common tasks
 
@@ -21,7 +33,7 @@ For example, you want to set a field to always show the date seven days before t
 
 In the expressions editor, enter:
 
-::: v-pre
+
 ```js
 {{$today.minus({days: 7})}}
 ```
@@ -29,7 +41,7 @@ In the expressions editor, enter:
 On the 9th March 2022, this returns `[Object: "2022-03-02T00:00:00.000+00:00"]`.
 
 This example uses n8n's custom variable `$today` for convenience. It is the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
-:::
+
 
 For more detailed information and examples, refer to:
 
@@ -56,31 +68,49 @@ You can alter the format. For example:
 
 On 9th March, this returns "2 March 2022".
 
-For more detailed information and examples, refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans).
+Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans) for more information.
 
 ### Get the time between two dates
 
-To get the time between two dates, use Luxon's diffs.
+To get the time between two dates, use Luxon's diffs feature. This subtracts one date from another and returns a duration.
 
-There is a basic example in the Luxon documentation. This creates two DateTimes, `end` and `start`, then finds out how many months there are between them:
+For example, get the number of months between two dates:
 
 ```js
-var end = DateTime.fromISO('2017-03-13');
-var start = DateTime.fromISO('2017-02-13');
-
-var diffInMonths = end.diff(start, 'months');
-diffInMonths.toObject();
-// returns { months:1 }
+{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
 ```
 
-You cannot use this example exactly as it is in the n8n expressions editor. However, you can rewrite it
+This returns `[Object: {"months":1}]`.
+
+Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs) for more information.
+
+### A longer example: how many days to Christmas?
+
+This example brings together several Luxon features, uses JMESPath, and does some basic string manipulation. 
+
+The scenario: you want a countdown to 25th December. Every day, it should tell you the number of days remaining to Christmas. You don't want to update it for next year - it needs to seamelessly work for every year.
+
+```js
+{{"There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!"}}
+```
+
+This outputs `"There are <number of days> days to Christmas!"`. For example, on 9th March, it outputs "There are 291 days to Christmas!".
+
+A detailed explanation of what the expression does:
+
+* `{{`: indicates the start of the expression.
+* `"There are "`: a string. 
+* `+`: used to join two strings.
+* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
+* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
+* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
+* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](jmespath.md) documentation. This gives you the number of days to Christmas, as a negative number.
+* `.toString().substring(1)` turns the number into a string and removes the `-`.
+* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
+* `}}`: indicates the end of the expression.
 
 
-{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
-
-For example, you want to find out how many months it is from now until Christmas.
-
-
+:::
 
 
 

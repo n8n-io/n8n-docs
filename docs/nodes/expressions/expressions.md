@@ -78,12 +78,12 @@ n8n provides the following variables:
 - `$data`: incoming raw data from a node
 - `$env`: contains environment variables
 - `$json`: incoming JSON data from a node
-- `$now`: [TODO - currently something like this: $now: the current timestamp, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
+- `$now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
 - `$parameters`: parameters of the current node
 - `$position`: the index of an item in a list of items
 - `$resumeWebhookUrl`: the webhook URL to call to resume a waiting workflow.
 - `$runIndex`: how many times the node has been executed. Zero-based (the first run is 0, the second is 1, and so on).
-- `$today`: [TODO - currently something like this: $today: the current timestamp rounded down to today's date, in UNIX format or ISO format, depending on how you use it. In most cases it is in UNIX format, but if you use it by itself, it returns an ISO-formatted date.]
+- `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
 - `$workflow`: workflow metadata
 
 

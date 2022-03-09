@@ -153,8 +153,8 @@ module.exports = {
 				},
 				{
 					title: '🧠 Nodes Library',
-					sidebarDepth: 3,
-					path: '/nodes/nodes-library',
+					sidebarDepth: 2,
+					path: '/nodes/nodes-library/',
 					children: [
 						{
 							title: 'Core Nodes',
@@ -306,7 +306,6 @@ module.exports = {
 				{
 					title: '💡 Key Concepts',
 					path: '/getting-started/key-concepts/',
-					sidebarDepth: 2,
 					sidebarDepth: 2,
 					children: getChildrenFiles('getting-started/key-concepts'),
 				},

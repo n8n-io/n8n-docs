@@ -15,7 +15,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 ### Enhanced nodes 🚀
 
 <br />
-<Changelog node="n8n-nodes-base.function" title="Function:" text="Added support for items without a json key."/>
+<Changelog node="n8n-nodes-base.function" title="Function:" text="Added support for items without a JSON key."/>
 
 ### Core functionality ⚙️
 

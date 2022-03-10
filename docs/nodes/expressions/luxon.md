@@ -14,11 +14,14 @@ Note that these variables can return different time formats when cast as a strin
 
 ```js
 {{$now}}
-// Returns [Object: "<ISO formatted timestamp>"], for example [Object: "2022-03-09T14:00:25.058+00:00"]
+// Returns [Object: "<ISO formatted timestamp>"]
+// For example [Object: "2022-03-09T14:00:25.058+00:00"]
 {{$now.toString()}}
-// Returns the ISO formatted timestamp, for example 2022-03-09T14:02:37.065+00:00
+// Returns the ISO formatted timestamp
+// For example 2022-03-09T14:02:37.065+00:00
 {{"Today's date is " + $now}}
-// Returns "Today's date is <unix timestamp>", for example "Today's date is 1646834498755"
+// Returns "Today's date is <unix timestamp>"
+// For example "Today's date is 1646834498755"
 ```
 
 ## Common tasks
@@ -38,7 +41,7 @@ In the expressions editor, enter:
 {{$today.minus({days: 7})}}
 ```
 
-On the 9th March 2022, this returns `[Object: "2022-03-02T00:00:00.000+00:00"]`.
+On the 23rd June 2019, this returns `[Object: "2019-06-16T00:00:00.000+00:00"]`.
 
 This example uses n8n's custom variable `$today` for convenience. It is the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
 
@@ -54,7 +57,7 @@ In [Get n days from today](#get-n-days-from-today), the example gets the date se
 
 For example, you want the field containing the date to be formatted as DD/MM/YYYY.
 
-This expression gets the date seven days before today, and converts it to the DD/MM/YYYY format. So on the 9th March, it returns 02/03/2022:
+This expression gets the date seven days before today, and converts it to the DD/MM/YYYY format. So on the 23rd June 2019, it returns 23/06/2019:
 
 ```js
 {{$today.minus({days: 7}).toLocaleString()}}
@@ -66,9 +69,13 @@ You can alter the format. For example:
 {{$today.minus({days: 7}).toLocaleString({month: 'long', day: 'numeric', year: 'numeric'})}}
 ```
 
-On 9th March, this returns "2 March 2022".
+On 23rd June 2019, this returns "16 June 2019".
 
 Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans) for more information.
+
+### Convert date string to Luxon
+
+
 
 ### Get the time between two dates
 
@@ -77,7 +84,7 @@ To get the time between two dates, use Luxon's diffs feature. This subtracts one
 For example, get the number of months between two dates:
 
 ```js
-{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
+{{DateTime.fromISO('201-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()}}
 ```
 
 This returns `[Object: {"months":1}]`.

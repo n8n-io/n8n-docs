@@ -2,6 +2,39 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.166.0
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.165.1...n8n@0.166.0) for this version.<br />
+**Release date:** 2022-03-08
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.odoo" title="Odoo" />
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function:" text="Added support for items without a JSON key."/>
+
+### Core functionality ⚙️
+
+- Added new environment variable `N8N_HIRING_BANNER_ENABLED` to enable/disable the hiring banner.
+- Fixed a bug preventing keyboard shortcuts from working as expected.
+- Fixed a bug causing tooltips to be hidden behind other elements.
+- Fixed a bug causing some credentials to be hidden from the credentials list.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.baserow" title="Baserow:" text="Fixed a bug preventing the Sorting option of the Get All operation from working as expected."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed a bug causing Digest Authentication to fail in some scenarios."/>
+<Changelog node="n8n-nodes-base.wise" title="Wise:" text="Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto)
+
 ## n8n@0.165.0 🛠
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />

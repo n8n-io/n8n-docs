@@ -6,7 +6,26 @@ User management in n8n allows you to invite people to work in your n8n instance.
 * Adding and removing users
 * Two account types: owner and member
 
-User management is available for self-hosted n8n. It isn't currently available for Cloud.
+User management is available for self-hosted n8n. It isn't currently available for Cloud or Desktop.
+
+## Account types
+
+There are two account types, owner and member. The account type affects the user permissions and access.
+
+* Owner: this is the account that set up user management. There is one owner account for each n8n instance. You can't transfer ownership.  
+  The owner can:
+    * Add and remove users
+    * See all workflows
+    * Delete tags
+* Members: these are normal n8n users.  
+  Members can:
+    * See all workflow tags, create new tags, and assign tags to their workflows. Members can't delete tags.
+    * Change their own password.
+    * See their own workflows.
+
+::: tip Create a member-level account for the owner
+We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+:::
 
 ## Setup
 
@@ -25,7 +44,7 @@ You need an SMTP server for user management to send invites and password resets.
 * SMTP password
 * SMTP sender name
 
-To set up SMTP with n8n, configure the following environment variables for your n8n instance:
+To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](../getting-started/installation/advanced/configuration.md)
 
 | Variable | Type | Value |
 | -------- | ---- | ----- |
@@ -36,6 +55,10 @@ To set up SMTP with n8n, configure the following environment variables for your 
 | `N8N_SMTP_SENDER` | string | _your_smtp_sender_name_ |
 
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
+
+::: tip More configuration options
+There are more configuration options available as environment variables. Refer to [Environment variables](environment-variables.md) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+::: 
 
 ::: tip New to SMTP?
 If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.com/blog/what-is-an-smtp-server/) offers a short introduction, while [Wikipedia's Simple Mail Transfer Protocol article](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) provides more detailed technical background.
@@ -70,38 +93,20 @@ The **Users** page shows all users, including ones with pending invitations. You
   3. If they are an active user, choose whether to copy their workflow data and credentials to a new user, or permanently delete their workflows and credentials.
 * Resend an invitation to a pending user: click the menu icon by the user, then click **Resend invite**.
 
-## Account types
-
-There are two account types, owner and member. The account type affects the user permissions and access.
-
-* Owner: this is the account that set up user management. There is one owner account for each n8n instance. You can't transfer ownership.  
-  The owner can:
-    * Add and remove users
-    * See all workflows
-    * Delete tags
-* Members: these are normal n8n users.  
-  Members can:
-    * See all workflow tags, create new tags, and assign tags to their workflows. Members can't delete tags.
-    * Change their own password.
-    * See their own workflows.
-
-::: tip Create a member-level account for the owner
-We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
-:::
 
 ## Skipping or disabling user management
 
 You don't have to use n8n's user management feature. You can:
 
 * Leave it enabled, but choose to skip the setup step. You can use n8n as normal. If you want to set up user management later, go to **Settings** > **Users**.
-* Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your n8n instance.
+* Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your n8n instance. You can't use this setting if you have already set up an owner account.
 
 ## Best practices
 
 This sections contains advice on best practices relating to user management in n8n.
 
 * We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
-* Multiple users can't edit the same workflow simultaneously. n8n does not support this type of synchronous collaboration.
+* Users must be careful not to edit the same workflow simultaneously. It is possible to do it, but the users will overwrite each other's changes.
 * Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, n8n generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
-    * The path works for the first workflow that registers it (n8n registers workflow paths the first time the workflow activates or runs).
+    * The path works for the first workflow that is run or activated.
     * Other workflows will error if they try to run with the same path.

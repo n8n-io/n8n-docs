@@ -110,3 +110,9 @@ This sections contains advice on best practices relating to user management in n
 * Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, n8n generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
     * The path works for the first workflow that is run or activated.
     * Other workflows will error if they try to run with the same path.
+* If you run n8n behind a reverse proxy, set the following environment variables so that emails are generated with the correct URL:
+  * `N8N_HOST`
+  * `N8N_PORT`
+  * `N8N_PROTOCOL`
+  More information on these variables is available in [Environment variables](environment-variables.md).
+* You can't use n8n's user management with basic auth authentication. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.

@@ -3,7 +3,7 @@
 User management in n8n allows you to invite people to work in your n8n instance. It includes:
 
 * Login and password management
-* Support for adding and removing users
+* Adding and removing users
 * Two account types: owner and member
 
 User management is available for self-hosted n8n. It isn't currently available for Cloud.
@@ -21,7 +21,6 @@ There are three stages to set up user management in n8n:
 You need an SMTP server for user management to send invites and password resets. Get the following information from your SMTP provider:
 
 * Server name
-* Port
 * SMTP username
 * SMTP password
 * SMTP sender name
@@ -31,7 +30,7 @@ To set up SMTP with n8n, configure the following environment variables for your 
 | Variable | Type | Value |
 | -------- | ---- | ----- |
 | `N8N_SMTP_EMAIL_MODE` | string | smtp |
-| `N8N_SMTP_HOST` | string | _your_server_name_:_your_smtp_port_ |
+| `N8N_SMTP_HOST` | string | _your_server_name_ |
 | `N8N_SMTP_USER` | string | _your_smtp_username_ |
 | `N8N_SMTP_PASSWORD` | string | _your_smtp_password_ |
 | `N8N_SMTP_SENDER` | string | _your_smtp_sender_name_ |

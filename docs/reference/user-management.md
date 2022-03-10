@@ -115,4 +115,4 @@ This sections contains advice on best practices relating to user management in n
   * `N8N_PORT`
   * `N8N_PROTOCOL`
   More information on these variables is available in [Environment variables](environment-variables.md).
-* You can't use n8n's user management with basic auth authentication. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.
+* You can't use n8n's user management with basic auth. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.

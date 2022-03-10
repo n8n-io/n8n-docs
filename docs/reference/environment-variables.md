@@ -82,6 +82,13 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DEFAULT_BINARY_DATA_MODE` | `string` | The default binary data mode. Default value is `default` and keeps binary data in memory. Set to `filesystem` in order to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | `number` | Time to live (in minutes) for persisted data. Default is `1440`. |
 | `VUE_APP_URL_BASE_API` | `string` | Used when building the `n8n-editor-ui` package manually to indicate how the frontend can reach the backend API. |
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | Defaults to user management enabled (false). Set to `true` to disable the [user management](user-management.md) feature. |
+| `N8N_SMTP_EMAIL_MODE` | string | smtp |
+| `N8N_SMTP_HOST` | string | _your_server_name_:_your_smtp_port_ |
+| `N8N_SMTP_USER` | string | _your_smtp_username_ |
+| `N8N_SMTP_PASSWORD` | string | _your_smtp_password_ |
+| `N8N_SMTP_SENDER` | string | _your_smtp_sender_name_ |
+
 
 ## Endpoints
 

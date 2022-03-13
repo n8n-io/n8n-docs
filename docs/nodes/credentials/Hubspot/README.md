@@ -68,6 +68,12 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 5. Use the key with HubSpot node credentials in n8n.
 
 
+## Using APP Token
+
+1. Follow the instructions on the [Private Apps Documentation](https://developers.hubspot.com/docs/api/private-apps)
+2. Use the key with HubSpot node credentials in n8n.
+
+
 ## Using Developer API Key (for HubSpot Trigger node)
 
 1. Access your [HubSpot Developer Home](https://developers.hubspot.com/).
@@ -75,5 +81,3 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 3. Click on the **Get HubSpot API key** button.
 4. Click on the **Show key** button.
 5. Use the displayed Developer API key with your HubSpot Trigger node credentials in n8n.
-
-

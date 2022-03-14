@@ -23,6 +23,10 @@ n8n.cloud is our hosted solution. In addition to all the features of n8n, it pro
 The IP address of n8n.cloud is `20.79.72.105` and the NAT address is `20.79.72.36`, however this may change in the future.
 :::
 
+::: warning Russia and Belarus
+n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
+:::
+
 ## Desktop app
 
 The n8n desktop app is the fastest way to try n8n on Windows or Mac computers (support for Linux is coming soon). Download the app from the link below:

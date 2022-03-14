@@ -6,7 +6,7 @@ Interested in learning more about n8n? You've come to the right place.
 ## Where to go next?
 
 - [Changelog](changelog.md)
-- [Keyboard Shortcuts](keyboard-shortcuts.md)
+- [User management](user-management.md)
 - [CLI commands for n8n](start-workflows-via-cli.md)
 - [Environment variables](environment-variables.md)
 - [Javascript code snippets](javascript-code-snippets.md)
@@ -15,6 +15,7 @@ Interested in learning more about n8n? You've come to the right place.
 - [Telemetry](telemetry.md)
 - [Troubleshooting](troubleshooting.md)
 - [Contributing](contributing.md)
+- [Keyboard Shortcuts](keyboard-shortcuts.md)
 - [License](license.md)
 - [FAQ](faq.md)
 - [Glossary](glossary.md)

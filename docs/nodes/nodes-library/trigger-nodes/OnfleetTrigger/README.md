@@ -13,4 +13,21 @@ You can find authentication information for this node [here](../../../credential
 
 ## Operations
 
-<Resource node="n8n-nodes-base.onfleet" />
+Trigger a workflow on:
+
+* SMS recipient opt out
+* SMS recipient response missed
+* Task arrival
+* Task assigned
+* Task cloned
+* Task completed
+* Task created
+* Task delayed
+* Task ETA
+* Task failed
+* Task started
+* Task unassigned
+* Task updated
+* Worker created
+* Worker deleted
+* Worker duty

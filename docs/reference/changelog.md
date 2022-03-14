@@ -2,6 +2,25 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.168.0 🛠
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0) for this version.<br />
+**Release date:** 2022-03-14
+
+### New feature: user management
+
+User management in n8n allows you to invite people to work in your self-hosted n8n instance. It includes:
+
+* Login and password management
+* Adding and removing users
+* Two account types: owner and member
+
+Check out the [user management documentation](user-management.md) for more information.
+
+::: warning Breaking change for API users
+Upgrading to any n8n version that includes user management will cause calls to the frontend API to break.
+:::
+
 ## n8n@0.167.0
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.166.0...n8n@0.167.0) for this version.<br />

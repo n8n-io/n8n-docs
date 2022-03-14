@@ -24,7 +24,7 @@ The IP address of n8n.cloud is `20.79.72.105` and the NAT address is `20.79.72.3
 :::
 
 ::: warning Russia and Belarus
-n8n Cloud is not available in Russia and Belarus. Refer to []() for more information.
+n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
 :::
 
 ## Desktop app

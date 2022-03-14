@@ -50,7 +50,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 
 ### Core functionality
 
-- Added support for [Luxon](https://moment.github.io/luxon/#/) and [JMESPath](https://jmespath.org/)
+- Added support for [Luxon](https://moment.github.io/luxon/#/) and [JMESPath](https://jmespath.org/).
 - Added two new expressions variables, `$now` and `$today`.
 - Added more negative operations for numbers and strings.
 - Added a link to the course from the help menu.

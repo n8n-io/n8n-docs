@@ -2,6 +2,13 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.168.1
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.0...n8n@0.168.1) for this version.<br />
+**Release date:** 2022-03-15
+
+A bug fix for user management: fixed an issue with email templates that was preventing owners from inviting members.
+
 ## n8n@0.168.0 🛠
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0) for this version.<br />

@@ -68,7 +68,36 @@ This expression:
 :::
 
 ### Example: writing longer JavaScript
-[TODO]
+
+An expression contains one line of JavaScript. This means you can'd do things like variable assignments or multiple standalone operations.
+
+To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
+
+However, the first example isn't a valid n8n expression:
+
+:::v-pre
+```js
+// This example is split over multiple lines for readability
+// It is still invalid when formatted as a single line
+{{
+  function example() {
+    let end = DateTime.fromISO('2017-03-13');
+    let start = DateTime.fromISO('2017-02-13');
+    let diffInMonths = end.diff(start, 'months');
+    return diffInMonths.toObject();
+  }
+  example();
+}}
+```
+:::
+
+While the second example is valid:
+
+:::v-pre
+```js
+{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
+```
+:::
 
 ## Custom variables and methods
 

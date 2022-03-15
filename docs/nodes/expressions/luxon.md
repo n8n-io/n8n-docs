@@ -75,6 +75,23 @@ Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.g
 
 ### Convert date string to Luxon
 
+You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
+
+If you have a date in a supported standard technical format: 
+
+Luxon provides functions to handle the conversion. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
+
+If you have a date as a string that does not use a standard format: 
+
+Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing). To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) that describe the format.
+
+For example, you have n8n's founding date, 23rd June 2019, formatted as '23-06-2019'. You want to turn this into a Luxon object:
+
+```js
+{{DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")}}
+```
+
+When using ad-hoc parsing, note Luxon's warning about [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations). If you see unexpected results, try their [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging) guide.
 
 
 ### Get the time between two dates

@@ -91,7 +91,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_USER_MANAGEMENT_DISABLED` | Boolean | Defaults to user management enabled (false). Set to `true` to disable the [user management](user-management.md) feature. Note that n8n ignores this environment variable if you have already set up an owner account. |
 | `N8N_EMAIL_MODE` | string | SMTP | Required |
 | `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
-| `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ | Optional |
+| `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`. | Optional |
 | `N8N_SMTP_USER` | string | _your_SMTP_username_ | Required |
 | `N8N_SMTP_PASS` | string | _your_SMTP_password_ | Required |
 | `N8N_SMTP_SENDER` | string | _your_SMTP_sender_name_ | Required |

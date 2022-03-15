@@ -235,12 +235,8 @@ module.exports = {
 					path: 'changelog.md',
 				},
 				{
-					title: '💭 Glossary',
-					path: 'glossary.md',
-				},
-				{
-					title: '⌨️ Keyboard Shortcuts',
-					path: 'keyboard-shortcuts.md',
+					title: 'User management',
+					path: 'user-management.md'
 				},
 				{
 					title: '💻 Environment Variables',
@@ -259,10 +255,10 @@ module.exports = {
 					sidebarDepth: 2,
 					children: getChildrenFiles('reference/data'),
 				},
-        {
-          title: '📓 Logging in n8n',
-          path: 'logging.md',
-        },
+				{
+				title: '📓 Logging in n8n',
+				path: 'logging.md',
+				},
 				{
 					title: '📻 Telemetry',
 					path: 'telemetry.md',
@@ -274,6 +270,14 @@ module.exports = {
 				{
 					title: '🙌 Contributing',
 					path: 'contributing.md',
+				},
+				{
+					title: '⌨️ Keyboard Shortcuts',
+					path: 'keyboard-shortcuts.md',
+				},
+				{
+					title: '💭 Glossary',
+					path: 'glossary.md',
 				},
 				{
 					title: '🎫 License',

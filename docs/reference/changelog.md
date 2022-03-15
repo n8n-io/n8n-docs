@@ -2,6 +2,145 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.168.1
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.0...n8n@0.168.1) for this version.<br />
+**Release date:** 2022-03-15
+
+A bug fix for user management: fixed an issue with email templates that was preventing owners from inviting members.
+
+## n8n@0.168.0 🛠
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0) for this version.<br />
+**Release date:** 2022-03-14
+
+### New feature: user management
+
+User management in n8n allows you to invite people to work in your self-hosted n8n instance. It includes:
+
+* Login and password management
+* Adding and removing users
+* Two account types: owner and member
+
+Check out the [user management documentation](user-management.md) for more information.
+
+::: warning Breaking change for API users
+Upgrading to any n8n version that includes user management will cause calls to the frontend API to break.
+:::
+
+## n8n@0.167.0
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.166.0...n8n@0.167.0) for this version.<br />
+**Release date:** 2022-03-13
+
+### Highlights
+
+#### Luxon and JMESPath
+
+0.167.0 adds support for two new libraries:
+
+* [Luxon](https://moment.github.io/luxon/#/): a JavaScript library for working with date and time
+* [JMESPath](https://jmespath.org/): a query language for JSON
+
+You can use Luxon and JMESPath in the code editor and in expressions.
+
+#### New expressions variables
+
+We've added two new variables to simplify working with date and time in expressions:
+
+* `$now`: a Luxon object containing the current timestamp. Equivalent to DateTime.now().
+* `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).
+
+#### Negative operations in If and Switch nodes
+
+Made it easier to perform negative operations on strings. 
+
+This release adds one new operation for numbers:
+
+* Is Not Empty
+
+And the following new operations for strings:
+
+* Not Ends With
+* Regex Not Match
+* Not Starts With
+* Is Not Empty
+
+Additionally, Regex is now labelled Regex Match.
+
+#### New node: Redis Trigger
+
+Added a Redis Trigger node, so you can now start workflows based on a Redis event.
+
+<Changelog node="n8n-nodes-base.redisTrigger" title="Redis Trigger:" text="Added a Redis Trigger node." />
+
+### Core functionality
+
+- Added support for [Luxon](https://moment.github.io/luxon/#/) and [JMESPath](https://jmespath.org/).
+- Added two new expressions variables, `$now` and `$today`.
+- Added more negative operations for numbers and strings.
+- Added a link to the course from the help menu.
+
+### Nodes
+<br />
+
+<Changelog node="n8n-nodes-base.facebookGraphApi" title="Facebook Graph API:" text="Added suport for Facebook Graph API 13." />
+<Changelog node="n8n-nodes-base.hubspot" title="Hubspot:" text="Added suport for private app token authentication." />
+<Changelog node="n8n-nodes-base.mongoDb" title="MongoDB:" text="Added the aggregate operation." />
+<Changelog node="n8n-nodes-base.redisTrigger" title="Redis Trigger:" text="Added a Redis Trigger node." />
+<Changelog node="n8n-nodes-base.redis" title="Redis:" text="Added support for publish operations." />
+<Changelog node="n8n-nodes-base.strapi" title="Strapi:" text="Added support for Strapi 4." />
+<Changelog node="n8n-nodes-base.wordpress" title="WordPress:" text="Added status as an option to getAll post requests." />
+
+
+### Bugfixes
+
+- The Google Calendar node now correctly applies timezones when creating, updating, and scheduling all day events.
+- Fixed a bug that occasionally caused n8n to crash, or shut down workflows unexpectedly.
+- You can now use long credential type names with Postgres.
+
+### Contributors
+
+* [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof)  
+* [Vitaliy Fratkin](https://github.com/viiy)  
+* [sol](https://github.com/5pecia1)  
+* [vcrwr](https://github.com/vcrwr)  
+* [FFTDB](https://github.com/FFTDB)  
+
+
+## n8n@0.166.0
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.165.1...n8n@0.166.0) for this version.<br />
+**Release date:** 2022-03-08
+
+### New nodes ✨
+
+<br />
+<Changelog node="n8n-nodes-base.odoo" title="Odoo" />
+
+### Enhanced nodes 🚀
+
+<br />
+<Changelog node="n8n-nodes-base.function" title="Function:" text="Added support for items without a JSON key."/>
+
+### Core functionality ⚙️
+
+- Added new environment variable `N8N_HIRING_BANNER_ENABLED` to enable/disable the hiring banner.
+- Fixed a bug preventing keyboard shortcuts from working as expected.
+- Fixed a bug causing tooltips to be hidden behind other elements.
+- Fixed a bug causing some credentials to be hidden from the credentials list.
+
+### Bug fixes 🐛
+
+<br />
+<Changelog node="n8n-nodes-base.baserow" title="Baserow:" text="Fixed a bug preventing the Sorting option of the Get All operation from working as expected."/>
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request:" text="Fixed a bug causing Digest Authentication to fail in some scenarios."/>
+<Changelog node="n8n-nodes-base.wise" title="Wise:" text="Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail."/>
+
+### Contributors 🙌
+
+[pemontto](https://github.com/pemontto)
+
 ## n8n@0.165.0 🛠
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />

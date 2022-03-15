@@ -83,12 +83,21 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DEFAULT_BINARY_DATA_MODE` | `string` | The default binary data mode. Default value is `default` and keeps binary data in memory. Set to `filesystem` in order to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | `number` | Time to live (in minutes) for persisted data. Default is `1440`. |
 | `VUE_APP_URL_BASE_API` | `string` | Used when building the `n8n-editor-ui` package manually to indicate how the frontend can reach the backend API. |
+
+## User management and SMTP
+
+| Variable | Type | Description |
+| :------- | :--- | :---------- |
 | `N8N_USER_MANAGEMENT_DISABLED` | Boolean | Defaults to user management enabled (false). Set to `true` to disable the [user management](user-management.md) feature. Note that n8n ignores this environment variable if you have already set up an owner account. |
-| `N8N_EMAIL_MODE` | string | smtp |
-| `N8N_SMTP_HOST` | string | _your_server_name_ |
-| `N8N_SMTP_USER` | string | _your_smtp_username_ |
-| `N8N_SMTP_PASS` | string | _your_smtp_password_ |
-| `N8N_SMTP_SENDER` | string | _your_smtp_sender_name_ |
+| `N8N_EMAIL_MODE` | string | SMTP | Required |
+| `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
+| `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`. | Optional |
+| `N8N_SMTP_USER` | string | _your_SMTP_username_ | Required |
+| `N8N_SMTP_PASS` | string | _your_SMTP_password_ | Required |
+| `N8N_SMTP_SENDER` | string | _your_SMTP_sender_name_ | Required |
+| `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
+| `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
 
 
 ## Endpoints

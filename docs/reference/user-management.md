@@ -54,13 +54,17 @@ You need an SMTP server for user management to send invites and password resets.
 
 To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](../getting-started/installation/advanced/configuration.md)
 
-| Variable | Type | Value |
-| -------- | ---- | ----- |
-| `N8N_EMAIL_MODE` | string | smtp |
-| `N8N_SMTP_HOST` | string | _your_server_name_ |
-| `N8N_SMTP_USER` | string | _your_smtp_username_ |
-| `N8N_SMTP_PASS` | string | _your_smtp_password_ |
-| `N8N_SMTP_SENDER` | string | _your_smtp_sender_name_ |
+| Variable | Type | Description | Required? |
+| -------- | ---- | ----------- | --------- |
+| `N8N_EMAIL_MODE` | string | SMTP | Required |
+| `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
+| `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ | Optional |
+| `N8N_SMTP_USER` | string | _your_SMTP_username_ | Required |
+| `N8N_SMTP_PASS` | string | _your_SMTP_password_ | Required |
+| `N8N_SMTP_SENDER` | string | _your_SMTP_sender_name_ | Required |
+| `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
+| `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
 
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 

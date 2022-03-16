@@ -26,7 +26,7 @@ Note that these variables can return different time formats when cast as a strin
 
 ## Common tasks
 
-This section provides examples for some common operations. Many more examples, and detailed guidance, is available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
+This section provides examples for some common operations. Many more examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
 
 ### Get n days from today
 

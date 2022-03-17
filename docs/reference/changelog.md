@@ -9,7 +9,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 A bug fix for user management: fixed an issue with email templates that was preventing owners from inviting members.
 
-## n8n@0.168.0 🛠
+## n8n@0.168.0
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0) for this version.<br />
 **Release date:** 2022-03-14
@@ -23,10 +23,6 @@ User management in n8n allows you to invite people to work in your self-hosted n
 * Two account types: owner and member
 
 Check out the [user management documentation](user-management.md) for more information.
-
-::: warning Breaking change for API users
-Upgrading to any n8n version that includes user management will cause calls to the frontend API to break.
-:::
 
 ## n8n@0.167.0
 

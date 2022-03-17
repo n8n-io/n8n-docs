@@ -12,10 +12,6 @@ User management is available for self-hosted n8n. It isn't currently available f
 The user management feature doesn't send personal information, such as email or username, to n8n.
 :::
 
-::: warning Breaking change for API users
-Upgrading to any n8n version that includes user management will cause calls to the frontend API to break.
-:::
-
 ## Account types
 
 There are two account types, owner and member. The account type affects the user permissions and access.

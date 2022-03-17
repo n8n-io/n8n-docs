@@ -22,7 +22,11 @@ what we can do. Request a new feature [here](https://community.n8n.io/c/feature-
 Information about that can be found in the [CONTRIBUTING guide](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md).
 
 
-## License: the Sustainable Use License
+## License
+
+### What license do you use?
+
+n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
 
 
 ### What source code is covered by the Sustainable Use License? 

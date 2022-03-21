@@ -43,6 +43,6 @@ If you have problems or questions, head to our forum, and we will try to help yo
 
 ## License
 
-n8n-docs is [fair-code](http://faircode.io) licensed under [**Apache 2.0 with Commons Clause**](https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md).
+n8n-docs is [fair-code](http://faircode.io) licensed under the [**Sustainable Use License**](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
 
 Additional information about license can be found in the [FAQ](https://docs.n8n.io/#/faq?id=license).

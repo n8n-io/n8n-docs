@@ -21,12 +21,15 @@ Workflows are saved in JSON format. You can export your workflows as JSON files 
 You can export a workflow as a JSON file in two ways:
 
   * **Download**: Click the Download button under the Workflow menu in the sidebar. This will download the workflow as a JSON file.
-  * **Copy-Paste**: Select all the workflow nodes in the Editor UI, copy them (Ctrl + c), then paste them (Ctrl + v) in your desired file.
+  * **Copy-Paste**: Select all the workflow nodes in the Editor UI, copy them (`Ctrl + c` or `cmd +c`), then paste them (`Ctrl + v` or `cmd + v`) in your desired file.  
+  
+  To select all nodes, or a group of nodes, click and drag:
+  ![Select a group of nodes](../images/selectingnodes.gif)
 
 You can import JSON files as workflows in two ways:
 
   * **Import**: Click Import from File or Import from URL under the Workflow menu in the sidebar and select the JSON file or paste the link to a workflow.
-  * **Copy-Paste**: Copy the JSON workflow to the clipboard (Ctrl + c) and paste it (Ctrl + v) into the Editor UI.
+  * **Copy-Paste**: Copy the JSON workflow to the clipboard (`Ctrl + c` or `cmd +c`) and paste it (`Ctrl + v` or `cmd + v`) into the Editor UI.
 
 ## Workflow settings
 

@@ -52,7 +52,7 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 
 | Variable | Type | Description | Required? |
 | -------- | ---- | ----------- | --------- |
-| `N8N_EMAIL_MODE` | string | SMTP | Required |
+| `N8N_EMAIL_MODE` | string | smtp | Required |
 | `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
 | `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`.| Optional |
 | `N8N_SMTP_USER` | string | _your_SMTP_username_ | Required |

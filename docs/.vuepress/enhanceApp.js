@@ -10,6 +10,7 @@ export default ({ router, siteData }) => {
 
 	// spring cleaning redirects
 	const latestRedirects = {
+		"/nodes/expressions.html#expressions": "/nodes/expressions/expressions.html",
 		"/getting-started/quickstart": "/getting-started/installation/index.html",
 		"/getting-started/quickstart.html": "/getting-started/installation/index.html",
 		"/getting-started/quickstart.html#give-it-a-spin-using-npx": "/getting-started/installation/#npm",

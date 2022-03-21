@@ -142,6 +142,11 @@ module.exports = {
 					children: getChildrenFiles('nodes'),
 				},
 				{
+					title: 'Expressions',
+					sidebarDepth: 1,
+					children: getChildrenFiles('nodes/expressions', 'expressions.md')
+				},
+				{
 					title: '🔬 Creating Nodes',
 					sidebarDepth: 1,
 					children: getChildrenFiles('nodes/creating-nodes', 'create-node.md'),

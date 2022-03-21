@@ -26,7 +26,7 @@ jmespath.search(object, searchString);
 `object` is a JSON object, such as the output of a previous node. `searchString` is an expression written in the JMESPath query language. The [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) provides a list of supported expressions, while their [Tutorial](https://jmespath.org/tutorial.html) and [Examples](https://jmespath.org/examples.html) provide interactive examples.
 
 ::: warning Search parameter order
-The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) follow the pattern `search(searchString, obj)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/), which n8n uses, supports `search(obj, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
+The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) follow the pattern `search(searchString, object)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/), which n8n uses, supports `search(object, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
 :::
 
 ## Common tasks
@@ -96,7 +96,7 @@ From the [JMESPath projections documentation](https://jmespath.org/tutorial.html
 > * Flatten Projections
 > * Filter Projections
 
-
+The following example shows basic usage of list, slice, and object projections. Refer to the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections) for detailed explanations of each projection type, and more examples.
 
 Given this JSON from a webhook node:
 
@@ -111,16 +111,28 @@ Given this JSON from a webhook node:
     "params": {},
     "query": {},
     "body": {
-      {
-        "people": [
-          {"first": "James", "last": "Green"},
-          {"first": "Jacob", "last": "Jones"},
-          {"first": "Jayden", "last": "Smith"},
-          {"missing": "different"}
-        ],
-        "dogs": {
-          {"name": "Fido", "color": "brown"},
-          {"name": "Spot", "color": "black and white"}
+      "people": [
+        {
+          "first": "James",
+          "last": "Green"
+        },
+        {
+          "first": "Jacob",
+          "last": "Jones"
+        },
+        {
+          "first": "Jayden",
+          "last": "Smith"
+        }
+      ],
+      "dogs": {
+        "Fido": {
+          "color": "brown",
+          "age": 7
+        },
+        "Spot": {
+          "color": "black and white",
+          "age": 5
         }
       }
     }
@@ -135,8 +147,7 @@ Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections)
 ::: v-pre
 ```js
 {{$jmespath($json.body.people, "[*].first" )}}
-// Returns
-
+// Returns ["James", "Jacob", "Jayden"]
 ```
 :::
 
@@ -145,7 +156,7 @@ Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections) of 
 ::: v-pre
 ```js
 {{$jmespath($json.body.people, "[:2].first")}}
-// Returns
+// Returns ["James", "Jacob"]
 ```
 
 Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections):
@@ -153,5 +164,64 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 ::: v-pre
 ```js
 {{$jmespath($json.body.dogs, "*.age")}}
+// Returns [7,5]
 ```
 :::
+
+### Select multiple elements and create a new list or object
+
+[Multiselect](https://jmespath.org/tutorial.html#multiselect) allows you to select elements from a JSON object and combine them into a new list or object.
+
+Given this JSON from a webhook node:
+
+::: v-pre
+```js
+[
+  {
+    "headers": {
+      "host": "n8n.instance.address",
+      ...
+    },
+    "params": {},
+    "query": {},
+    "body": {
+      "people": [
+        {
+          "first": "James",
+          "last": "Green"
+        },
+        {
+          "first": "Jacob",
+          "last": "Jones"
+        },
+        {
+          "first": "Jayden",
+          "last": "Smith"
+        }
+      ],
+      "dogs": {
+        "Fido": {
+          "color": "brown",
+          "age": 7
+        },
+        "Spot": {
+          "color": "black and white",
+          "age": 5
+        }
+      }
+    }
+  }
+]
+
+```
+:::
+
+Use multiselect list to get the first and last names and create new lists containing both names:
+
+::: v-pre
+```js
+{{$jmespath($json.body.people, "[].[first, last]")}}
+// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
+```
+:::
+

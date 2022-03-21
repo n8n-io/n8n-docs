@@ -6,7 +6,6 @@ Expressions allow you to set node parameters dynamically based on data from:
 - Previous nodes
 - The workflow
 - Your n8n environment
-- Other self-generated data [TODO: what is this?]
 
 
 n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 

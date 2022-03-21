@@ -2,6 +2,19 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+### n8n@0.169.0
+
+For a comprehensive list of changes, view the [changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md) and the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169.0) for this version.<br />
+**Release date:** 2022-03-20
+
+### New license
+
+This release changes n8n's license, from [Apache 2.0 with Commons Clause](https://github.com/n8n-io/n8n/blob/181ba3c4e236279b65d102a8a33ae6896f160487/LICENSE.md) to [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
+
+This change aims to clarify our license terms, and our position as a fair-code project.
+
+Read more about the new license in our [License FAQ](faq.md#license).
+
 ## n8n@0.168.1
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.0...n8n@0.168.1) for this version.<br />

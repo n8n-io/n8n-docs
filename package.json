@@ -26,6 +26,7 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "directory-tree": "^2.2.4",
     "lerna": "^4.0.0",
+    "netlify-plugin-checklinks": "^4.1.1",
     "vuepress": "^1.5.0",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-medium-zoom": "^1.0.0",

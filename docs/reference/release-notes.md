@@ -19,6 +19,13 @@ This change aims to clarify our license terms, and our position as a fair-code p
 
 Read more about the new license in our [License FAQ](faq.md#license).
 
+## n8n@0.168.2
+
+For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.1...n8n@0.168.2) for this version.<br />
+**Release date:** 2022-03-16
+
+This release contains an important bug fix for 0.168.0. Users on 0.168.0 or 0.168.1 should upgrade to this.
+
 ## n8n@0.168.1
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.0...n8n@0.168.1) for this version.<br />

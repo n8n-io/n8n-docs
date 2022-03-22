@@ -232,7 +232,7 @@ module.exports = {
 				},
 				{
 					title: '🧐 Changelog',
-					path: 'changelog.md',
+					path: 'release-notes.md',
 				},
 				{
 					title: 'User management',

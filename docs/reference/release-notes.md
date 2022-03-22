@@ -2,6 +2,10 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+::: tip
+From 0.167.0 onwards, these release notes list release highlights and contributors. For a full changelog, refer to the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md) in the GitHub repo.
+:::
+
 ### n8n@0.169.0
 
 For a comprehensive list of changes, view the [changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md) and the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169.0) for this version.<br />

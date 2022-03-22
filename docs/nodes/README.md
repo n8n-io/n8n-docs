@@ -7,5 +7,5 @@ Nodes are the building blocks of workflows in n8n. They are an entry point for r
 
 1. If you would like to learn the basics of nodes, head over to the [Node Basics](node-basics.md) document.
 2. If you are looking to create your own node, head over to the [Creating Nodes](creating-nodes/create-node.md) section.
-3. If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, head over to the [Nodes Library](nodes-library/core-nodes/Cron/README.md) section.
-4. If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](credentials/ActiveCampaign/README.md) section.
+3. If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, head over to the [Nodes Library](nodes-library/core-nodes/README.md) section.
+4. If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](credentials/README.md) section.

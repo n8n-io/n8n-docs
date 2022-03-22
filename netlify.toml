@@ -1,5 +1,6 @@
 [build]
     command = "npm run build"
     publish = "docs/.vuepress/dist"
+# Handle our memory-hungry builds
 [build.environment]
   NODE_OPTIONS = "--max_old_space_size=4096"

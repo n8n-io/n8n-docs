@@ -133,5 +133,5 @@ We're always excited to talk about software licenses, fair-code and other princi
 
 ### What is the IP address of n8n.cloud?
 
-Currently it is `20.79.72.105`, however this is subject to change. Also the NAT address is `20.79.227.226`, but this is also subject to change.
-Recommended practice is to whitelist `20.79.72.0/24`, but if more strict measures are needed, at minimum both `20.79.72.105` and `20.79.227.226` must be whitelisted.
+Currently it is `20.79.72.105`, however this is subject to change. The NAT addresses are `20.79.227.226` and `20.79.72.36`, but this is also subject to change.
+Recommended practice is to whitelist `20.79.72.0/24`, but if more strict measures are needed, at minimum `20.79.72.105`, `20.79.72.36`, and `20.79.227.226` must be whitelisted.

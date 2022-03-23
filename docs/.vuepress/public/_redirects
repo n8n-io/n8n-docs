@@ -1,3 +1,8 @@
+import { faNotesMedical } from "@fortawesome/free-solid-svg-icons"
+
+
+/reference/changelog.html                                                      /reference/release-notes.html
+
 #Existing redirects at time of Netlify setup
 
 /nodes/expressions.html#expressions                                            /nodes/expressions/expressions.html

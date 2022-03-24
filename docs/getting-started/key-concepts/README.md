@@ -1,4 +1,4 @@
-# Key Concepts
+# Key concepts
 
 To get the most out of n8n's functionalities and build powerful workflows, it's important to understand some basic concepts.
 
@@ -41,30 +41,31 @@ Data represents units of information that are collected by and transmitted throu
  - Write custom expressions
  - Use the Function or Function Item node
 
-### Data Structure
+### Data structure
 
-In n8n, all the data that is passed between nodes is an array of objects. It has the following structure:
+In n8n, all data passed between nodes is an array of objects. It has the following structure:
 
 ```json
 [
 	{
-		// Each item has to contain a "json" property. But it can be an empty object like {}.
-		// Any kind of JSON data is allowed. So arrays and the data being deeply nested is fine.
-		json: { // The actual data n8n operates on (required)
-			// This data is only an example it could be any kind of JSON data
-			jsonKeyName: 'keyValue',
-			anotherJsonKey: {
-				lowerLevelJsonKey: 1
+		// For most data:
+		// Wrap each item in another object, with the key 'json'
+		"json": {
+			// Example data
+			"jsonKeyName": "keyValue",
+			"anotherJsonKey": {
+				"lowerLevelJsonKey": 1
 			}
 		},
-		// Binary data of item. The most items in n8n do not contain any (optional)
-		binary: {
-			// The key-name "binaryKeyName" is only an example. Any kind of key-name is possible.
-			binaryKeyName: {
-				data: '....', // Base64 encoded binary data (required)
-				mimeType: 'image/png', // Optional but should be set if possible (optional)
-				fileExtension: 'png', // Optional but should be set if possible (optional)
-				fileName: 'example.png', // Optional but should be set if possible (optional)
+		// For binary data:
+		// Wrap each item in another object, with the key 'binary'
+		"binary": {
+			// Example data
+			"binaryKeyName": {
+				"data": "....", // Base64 encoded binary data (required)
+				"mimeType": "image/png", // Best practice to set if possible (optional)
+				"fileExtension": "png", // Best practice to set if possible (optional)
+				"fileName": "example.png", // Best practice to set if possible (optional)
 			}
 		}
 	},
@@ -72,7 +73,11 @@ In n8n, all the data that is passed between nodes is an array of objects. It has
 ]
 ```
 
-### Data Flow
+::: tip Skipping the 'json' key and array syntax
+From 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
+:::
+
+### Data flow
 
 Nodes do not only process one "item", they process multiple ones.
 For example, if the Trello node is set to `Create-Card` and it has an expression set for `Name` to be set depending on `name` property, it will create a card for each item, always choosing the `name-property-value` of the current one.
@@ -90,7 +95,7 @@ This data would, for example, create two cards. One named `test1` the other one 
 ]
 ```
 
-## Error Workflow
+## Error workflow
 
 For each workflow, an optional Error Workflow can be set in the Workflow Settings. It gets executed if the original execution fails. That makes it possible to, for instance, inform the user via Email or Slack if something goes wrong. The same Error Workflow can be set on multiple workflows.
 
@@ -133,7 +138,7 @@ By default, n8n can be accessed by everybody. This is okay if you only have it r
 locally but if you deploy it on a server which is accessible from the web, you have
 to make sure that n8n is protected.
 
-### Basic Auth
+### Basic auth
 
 Right now we have very basic protection in place using basic-auth. It can be activated
 by setting the following environment variables:

@@ -5,17 +5,58 @@ description: Learn how to use the Function node in n8n
 
 # Function
 
-The Function node is used to add custom snippets to JavaScript code to transform data from the other nodes or if you want to implement some custom functionality that n8n doesn’t support yet.
+Using the function node, you can:
 
-::: tip 💡 Keep in mind
-Please note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Check out [this](../../../../getting-started/key-concepts/#function) page to learn about the difference between the two.
+* Transform data from other nodes
+* Implement custom functionality
+
+::: tip Function node and function item node
+Note that the Function node is different from the [Function Item](../FunctionItem/README.md) node. Refer to [Key concepts | Function](../../../../getting-started/key-concepts/#function) to learn about the difference between the two.
 :::
 
-If you want to use the Function node to transform input data, check out how n8n's [data structure](../../../../getting-started/key-concepts/#data-structure) looks like. The Function node also supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
+The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 
-The Function node also provides the ability to write to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
+The Function node supports writing to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
 
-## Example Usage
+## Data structure
+
+In n8n, all data passed between nodes is an array of objects. It has the following structure:
+
+```json
+[
+	{
+		// For most data:
+		// Wrap each item in another object, with the key 'json'
+		"json": {
+			// Example data
+			"jsonKeyName": "keyValue",
+			"anotherJsonKey": {
+				"lowerLevelJsonKey": 1
+			}
+		},
+		// For binary data:
+		// Wrap each item in another object, with the key 'binary'
+		"binary": {
+			// Example data
+			"binaryKeyName": {
+				"data": "....", // Base64 encoded binary data (required)
+				"mimeType": "image/png", // Best practice to set if possible (optional)
+				"fileExtension": "png", // Best practice to set if possible (optional)
+				"fileName": "example.png", // Best practice to set if possible (optional)
+			}
+		}
+	},
+	...
+]
+```
+
+::: tip Skipping the 'json' key and array syntax
+From 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
+:::
+
+
+
+## Example usage
 
 This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
@@ -46,7 +87,7 @@ return items;
 2. Click on *Execute Node* to run the workflow.
 
 
-## Node Reference
+## Node reference
 
 You can also use the methods and variables mentioned in the [Expressions](../../../expressions.md) page in the Function node.
 
@@ -157,6 +198,6 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 You can import and use built-in and external npm modules in the Function node. To learn how to enable external moduels, refer the [Configuration](../../../../getting-started/installation/advanced/configuration.md#use-built-in-and-external-modules-in-function-nodes) guide.
 
-## Further Reading
+## Further reading
 
 <FurtherReadingBlog />

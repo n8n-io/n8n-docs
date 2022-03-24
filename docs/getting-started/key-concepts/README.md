@@ -1,4 +1,4 @@
-# Key Concepts
+# Key concepts
 
 To get the most out of n8n's functionalities and build powerful workflows, it's important to understand some basic concepts.
 
@@ -41,7 +41,7 @@ Data represents units of information that are collected by and transmitted throu
  - Write custom expressions
  - Use the Function or Function Item node
 
-### Data Structure
+### Data structure
 
 In n8n, all data passed between nodes is an array of objects. It has the following structure:
 
@@ -74,10 +74,10 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 ```
 
 ::: tip Skipping the 'json' key and array syntax
-From n8n 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
+From 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
 :::
 
-### Data Flow
+### Data flow
 
 Nodes do not only process one "item", they process multiple ones.
 For example, if the Trello node is set to `Create-Card` and it has an expression set for `Name` to be set depending on `name` property, it will create a card for each item, always choosing the `name-property-value` of the current one.
@@ -95,7 +95,7 @@ This data would, for example, create two cards. One named `test1` the other one 
 ]
 ```
 
-## Error Workflow
+## Error workflow
 
 For each workflow, an optional Error Workflow can be set in the Workflow Settings. It gets executed if the original execution fails. That makes it possible to, for instance, inform the user via Email or Slack if something goes wrong. The same Error Workflow can be set on multiple workflows.
 
@@ -138,7 +138,7 @@ By default, n8n can be accessed by everybody. This is okay if you only have it r
 locally but if you deploy it on a server which is accessible from the web, you have
 to make sure that n8n is protected.
 
-### Basic Auth
+### Basic auth
 
 Right now we have very basic protection in place using basic-auth. It can be activated
 by setting the following environment variables:

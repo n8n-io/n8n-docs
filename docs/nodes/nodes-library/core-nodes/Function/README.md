@@ -51,12 +51,12 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 ```
 
 ::: tip Skipping the 'json' key and array syntax
-From n8n 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
+From 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
 :::
 
 
 
-## Example Usage
+## Example usage
 
 This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
 - [Start](../../core-nodes/Start/README.md)
@@ -87,7 +87,7 @@ return items;
 2. Click on *Execute Node* to run the workflow.
 
 
-## Node Reference
+## Node reference
 
 You can also use the methods and variables mentioned in the [Expressions](../../../expressions.md) page in the Function node.
 
@@ -198,6 +198,6 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 You can import and use built-in and external npm modules in the Function node. To learn how to enable external moduels, refer the [Configuration](../../../../getting-started/installation/advanced/configuration.md#use-built-in-and-external-modules-in-function-nodes) guide.
 
-## Further Reading
+## Further reading
 
 <FurtherReadingBlog />

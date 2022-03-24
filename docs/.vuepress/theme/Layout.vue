@@ -1,8 +1,6 @@
 <template>
   <Layout>
-    <template slot="page-bottom">
-			<Feedback />
-    </template>
+
   </Layout>
 </template>
 

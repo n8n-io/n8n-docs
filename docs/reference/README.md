@@ -5,7 +5,7 @@ Interested in learning more about n8n? You've come to the right place.
 
 ## Where to go next?
 
-- [Changelog](changelog.md)
+- [Changelog](release-notes.md)
 - [User management](user-management.md)
 - [CLI commands for n8n](start-workflows-via-cli.md)
 - [Environment variables](environment-variables.md)

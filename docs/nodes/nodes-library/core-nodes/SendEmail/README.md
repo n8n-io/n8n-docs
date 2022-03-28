@@ -52,8 +52,9 @@ The start node exists by default when you create a new workflow.
 2. Enter the email address you want to send from in the *From Email* field.
 3. Enter the recipient email address in the *To Email* field.
 4. Enter a subject for your message in the *Subject* field.
-5. Enter your message in the *Text* field.
-6. Click on *Execute Node* to run the workflow.
+5. If you want to send the e-mail to multiple recipients you can use an [expression](../../../expressions/expressions.md) and provide an array of recipient address like so: `{{ ['recipent_1@example.com', 'recipient_2@example.com'] }}`
+6. Enter your message in the *Text* field.
+7. Click on *Execute Node* to run the workflow.
 
 ## Further Reading
 

@@ -42,7 +42,7 @@ The sixth asterisk in the Cron Expression represents seconds. Setting this is op
 
 | * | * | * | * | * | * |
 |---|---|---|---|---|---|
-|second|minute|hour|day|week|month|
+|second|minute|hour|day|month|week|
 
 If you want to trigger your workflow, for example, every day at 04:08:30, enter the following in the ***Cron Expression*** field.
 ```

@@ -9,22 +9,34 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.169.0...n8n@0.170
 
 This release focuses on bug fixes and adding functionality to existing nodes.
 
-### Node improvements
+### Enhanced nodes
 
-- **Crypto Node:** Add Generate operation to generate random values ([#2541](https://github.com/n8n-io/n8n/issues/2541)) ([b5ecccb](https://github.com/n8n-io/n8n/commit/b5ecccb84080362880a307e3f9d76d429bd1d537))
-- **HTTP Request Node:** Add support for OPTIONS method ([#3030](https://github.com/n8n-io/n8n/issues/3030)) ([bd9064c](https://github.com/n8n-io/n8n/commit/bd9064cd0ea8833b49a7e3860f12bfa37c286947))
-- **Jira Node:** Add Simplify Output option to Issue > Get ([#2408](https://github.com/n8n-io/n8n/issues/2408)) ([016aeaa](https://github.com/n8n-io/n8n/commit/016aeaaa791205c5ee3d16eef25f856603cf0085))
-- **Reddit Node:** Add possibility to query saved posts ([#3034](https://github.com/n8n-io/n8n/issues/3034)) ([5ba4c27](https://github.com/n8n-io/n8n/commit/5ba4c27d8c417964187af89a15d5dd4ce9f3271a))
-- **Zendesk Node:** Add ticket status "On-hold" ([2b20a46](https://github.com/n8n-io/n8n/commit/2b20a460915655791647d62b48dde97dad3b2fd3))
+- **Crypto Node:** Add Generate operation to generate random values.
+- **HTTP Request Node:** Add support for OPTIONS method.
+- **Jira Node:** Add Simplify Output option to Issue > Get.
+- **Reddit Node:** Add possibility to query saved posts.
+- **Zendesk Node:** Add ticket status "On-hold".
 
 ### Bug fixes
 
-- **core:** Add logs and error catches for possible failures in queue mode ([#3032](https://github.com/n8n-io/n8n/issues/3032)) ([3b4a97d](https://github.com/n8n-io/n8n/commit/3b4a97dd576bd3c2f53f958266964d3e02f01c96))
-- **AWS Lambda Node:** Fix "Invocation Type" > "Continue Workflow" ([#3010](https://github.com/n8n-io/n8n/issues/3010)) ([9547a08](https://github.com/n8n-io/n8n/commit/9547a08f0344825e42f5580da035bb1f21c03368))
-- **Supabase Node:** Fix Row > Get operation ([#3045](https://github.com/n8n-io/n8n/issues/3045)) ([b9aa440](https://github.com/n8n-io/n8n/commit/b9aa440be3d52bf412990b93cfc3758353fb4943))
-- **Supabase Node:** Send token also via Authorization Bearer ([#2814](https://github.com/n8n-io/n8n/issues/2814)) ([5774dd8](https://github.com/n8n-io/n8n/commit/5774dd8885a87a1ebe70f4ef4a06a42013112afe))
-- **Xero Node:** Fix some operations and add support for setting address and phone number ([#3048](https://github.com/n8n-io/n8n/issues/3048)) ([ab08c0d](https://github.com/n8n-io/n8n/commit/ab08c0df1599d44326b45c37f80918e5c107cc6a))
-- **Wise Node:** Fix issue when executing a transfer ([#3039](https://github.com/n8n-io/n8n/issues/3039)) ([b90bf45](https://github.com/n8n-io/n8n/commit/b90bf4576c6e3f86000d61606f412ea0544b59ef))
+- **core:** Add logs and error catches for possible failures in queue mode.
+- **AWS Lambda Node:** Fix "Invocation Type" > "Continue Workflow".
+- **Supabase Node:** Fix Row > Get operation.
+- **Supabase Node:** Send token also via Authorization Bearer.
+- **Xero Node:** Fix some operations and add support for setting address and phone number.
+- **Wise Node:** Fix issue when executing a transfer.
+
+### Contributors
+
+* [FFTDB](https://github.com/FFTDB) 
+* [Fred](https://github.com/choudat)
+* [Jasper Zonneveld](https://github.com/JaZo)
+* [pemontto](https://github.com/pemontto) 
+* [Sergio](https://github.com/mcmx)
+* [TheFSilver](https://github.com/TheFSilver)
+* [Valentin Mocanu](https://github.com/rontav)
+* [Yassine Fathi](https://github.com/m4tt72)
+
 
 
 ## n8n@0.169.0
@@ -46,22 +58,32 @@ This change aims to clarify our license terms, and our position as a fair-code p
 
 Read more about the new license in our [License FAQ](faq.md#license).
 
-### Node improvements
+### New nodes
 
-- **HTTP Request Node:** Allow Delete requests with body ([#2900](https://github.com/n8n-io/n8n/issues/2900)) ([8a88f94](https://github.com/n8n-io/n8n/commit/8a88f948f2bb6ab780a58cd284c0f6d4f499f9c6))
-- **KoBoToolbox Node:** Add KoBoToolbox Regular and Trigger Node ([#2765](https://github.com/n8n-io/n8n/issues/2765)) ([1a7f0a4](https://github.com/n8n-io/n8n/commit/1a7f0a42465574f46f00e4d9d50cf71d947dc2bc)), closes [#2510](https://github.com/n8n-io/n8n/issues/2510)
-- **Linear Node:** Add Linear Node ([#2971](https://github.com/n8n-io/n8n/issues/2971)) ([8d04474](https://github.com/n8n-io/n8n/commit/8d04474e30dc9109ad84fc945cc734483d0d067b))
-- **Mailjet Node:** Add credential tests and support for sandbox, JSON parameters & variables ([#2987](https://github.com/n8n-io/n8n/issues/2987)) ([d2756de](https://github.com/n8n-io/n8n/commit/d2756de090f2628f9025ba2f4436870e67576367))
-- **Mattermost Node:** Add support for Channel Search ([#2687](https://github.com/n8n-io/n8n/issues/2687)) ([1b993e4](https://github.com/n8n-io/n8n/commit/1b993e402297ac400c5167d1bcfa78e9a73c07df))
+- **Linear Node:** Add Linear Node.
+
+### Enhanced nodes
+
+- **HTTP Request Node:** Allow Delete requests with body.
+- **KoBoToolbox Node:** Add KoBoToolbox Regular and Trigger Node.
+- **Mailjet Node:** Add credential tests and support for sandbox, JSON parameters & variables
+- **Mattermost Node:** Add support for Channel search.
 
 ### Other improvements
 
-- Add support for reading IDs from file with executeBatch command ([#3008](https://github.com/n8n-io/n8n/issues/3008)) ([5658593](https://github.com/n8n-io/n8n/commit/5658593df4cde8615f3a8383f1045d8659fffb04))
+- Add support for reading IDs from file with executeBatch command.
 
 ### Bug fixes
 
-- **GitHub Node:** Fix credential tests and File > List operation ([#2999](https://github.com/n8n-io/n8n/issues/2999)) ([ec618e2](https://github.com/n8n-io/n8n/commit/ec618e25bba5e36592ff37e7c560d738387c9112))
-- **Telegram Node:** Fix sending binary data when disable notification is set ([#2990](https://github.com/n8n-io/n8n/issues/2990)) ([26a7c61](https://github.com/n8n-io/n8n/commit/26a7c61175c1aadc101e055067224aa0797db5c5))
+- **GitHub Node:** Fix credential tests and File > List operation.
+- **Telegram Node:** Fix sending binary data when disable notification is set.
+
+### Contributors
+
+* [Manuel](https://github.com/tennox)
+* [Marcin Kozey](https://github.com/marcinkoziej)
+* [Matthew Walther](https://github.com/mashiox)
+* [Yann Jouanique](https://github.com/Yann-J)
 
 ## n8n@0.168.2
 

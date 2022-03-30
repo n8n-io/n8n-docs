@@ -2,14 +2,53 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
-::: tip
-From 0.167.0 onwards, these release notes list release highlights and contributors. For a full changelog, refer to the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md) in the GitHub repo.
-:::
+## n8n@0.170.0
 
-### n8n@0.169.0
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.169.0...n8n@0.170.0) for this version.<br />
+**Release date:** 2022-03-27
 
-For a comprehensive list of changes, view the [changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md) and the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169.0) for this version.<br />
+This release focuses on bug fixes and adding functionality to existing nodes.
+
+### Enhanced nodes
+
+- **Crypto Node:** Add Generate operation to generate random values.
+- **HTTP Request Node:** Add support for OPTIONS method.
+- **Jira Node:** Add Simplify Output option to Issue > Get.
+- **Reddit Node:** Add possibility to query saved posts.
+- **Zendesk Node:** Add ticket status "On-hold".
+
+### Bug fixes
+
+- **core:** Add logs and error catches for possible failures in queue mode.
+- **AWS Lambda Node:** Fix "Invocation Type" > "Continue Workflow".
+- **Supabase Node:** Fix Row > Get operation.
+- **Supabase Node:** Send token also via Authorization Bearer.
+- **Xero Node:** Fix some operations and add support for setting address and phone number.
+- **Wise Node:** Fix issue when executing a transfer.
+
+### Contributors
+
+* [FFTDB](https://github.com/FFTDB) 
+* [Fred](https://github.com/choudat)
+* [Jasper Zonneveld](https://github.com/JaZo)
+* [pemontto](https://github.com/pemontto) 
+* [Sergio](https://github.com/mcmx)
+* [TheFSilver](https://github.com/TheFSilver)
+* [Valentin Mocanu](https://github.com/rontav)
+* [Yassine Fathi](https://github.com/m4tt72)
+
+
+
+## n8n@0.169.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169.0) for this version.<br />
 **Release date:** 2022-03-20
+
+This release includes:
+
+* New functionality for existing nodes
+* Bug fixes
+* And a license change!
 
 ### New license
 
@@ -18,6 +57,33 @@ This release changes n8n's license, from [Apache 2.0 with Commons Clause](https:
 This change aims to clarify our license terms, and our position as a fair-code project.
 
 Read more about the new license in our [License FAQ](faq.md#license).
+
+### New nodes
+
+- **Linear Node:** Add Linear Node.
+
+### Enhanced nodes
+
+- **HTTP Request Node:** Allow Delete requests with body.
+- **KoBoToolbox Node:** Add KoBoToolbox Regular and Trigger Node.
+- **Mailjet Node:** Add credential tests and support for sandbox, JSON parameters & variables
+- **Mattermost Node:** Add support for Channel search.
+
+### Other improvements
+
+- Add support for reading IDs from file with executeBatch command.
+
+### Bug fixes
+
+- **GitHub Node:** Fix credential tests and File > List operation.
+- **Telegram Node:** Fix sending binary data when disable notification is set.
+
+### Contributors
+
+* [Manuel](https://github.com/tennox)
+* [Marcin Kozey](https://github.com/marcinkoziej)
+* [Matthew Walther](https://github.com/mashiox)
+* [Yann Jouanique](https://github.com/Yann-J)
 
 ## n8n@0.168.2
 

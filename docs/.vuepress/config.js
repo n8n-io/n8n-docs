@@ -231,7 +231,7 @@ module.exports = {
 					path: '/reference/',
 				},
 				{
-					title: '🧐 Changelog',
+					title: '🧐 Release notes',
 					path: 'release-notes.md',
 				},
 				{

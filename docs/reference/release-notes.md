@@ -2,6 +2,52 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.171.0 🛠
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />
+**Release date:** 2022-04-03
+
+This release focuses on bug fixes and node enhancements, with one new feature, and one breaking change to the GraphQL node.
+
+## Breaking change to GraphQL node
+
+The GraphQL node now errors when the response includes an error. If you use this node, you can choose to:
+
+* Do nothing: a GraphQL response containing an error will now cause the workflow to fail.
+* Update your GraphQL node settings: set **Continue on Fail** to true to allow the workflow to continue even when the GraphQL response contains an error.
+
+## New features
+
+You can now download binary data from individual nodes in your workflow.
+
+## Enhanced nodes
+
+<Changelog node="n8n-nodes-base.emelia" title="Emelia Node:" text="Add Campaign > Duplicate functionality." /> 
+<Changelog node="n8n-nodes-base.ftp" title="FTP Node:" text="Add option to recursively create directories on rename." /> 
+<Changelog node="n8n-nodes-base.mautic" title="Mautic Node:" text="Add credential test and allow trailing slash in host." /> 
+<Changelog node="n8n-nodes-base.microsoftteams" title="Microsoft Teams Node:" text="Add chat message support." /> 
+<Changelog node="n8n-nodes-base.mocean" title="Mocean Node:" text="Add 'Delivery Report URL' option and credential tests." /> 
+<Changelog node="n8n-nodes-base.serviceNow" title="ServiceNow Node:" text="Add basicAuth support and fix getColumns loadOptions." /> 
+<Changelog node="n8n-nodes-base.strava" title="Strava Node:" text="Add 'Get Streams' operation." />
+
+
+## Bug fixes
+
+**core:** Fix crash on webhook when last node did not return data <br>
+<Changelog node="n8n-nodes-base.emailReadImap" title="EmailReadImap Node:" text="Fix issue that crashed process if node was configured wrong." /> 
+<Changelog node="n8n-nodes-base.googleTasks" title="Google Tasks Node:" text="Fix 'Show Completed' option and hide title field where not needed." /> 
+<Changelog node="n8n-nodes-base.nocoDb" title="NocoDB Node:" text="Fix pagination." /> 
+<Changelog node="n8n-nodes-base.salesforce" title="Salesforce Node:" text="Fix issue that 'status' did not get used for Case => Create & Update" /> 
+
+## Contributors
+
+* [Charles Lecalier](https://github.com/chlec)
+* [d3no](https://github.com/d3no)
+* [Ketan Somvanshi](https://github.com/KetanSomvanshi)
+* [Luis Cipriani](https://github.com/lfcipriani)
+* [pemontto](https://github.com/pemontto)
+* [Rhys Williams](https://github.com/rhyswilliamsza)
+
 ## n8n@0.170.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.169.0...n8n@0.170.0) for this version.<br />
@@ -11,20 +57,19 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 ### Enhanced nodes
 
-- **Crypto Node:** Add Generate operation to generate random values.
-- **HTTP Request Node:** Add support for OPTIONS method.
-- **Jira Node:** Add Simplify Output option to Issue > Get.
-- **Reddit Node:** Add possibility to query saved posts.
-- **Zendesk Node:** Add ticket status "On-hold".
+<Changelog node="n8n-nodes-base.crypto" title="Crypto Node:" text="Add Generate operation to generate random values." />
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request Node:" text="Add support for OPTIONS method." />
+<Changelog node="n8n-nodes-base.jira" title="Jira Node:" text="Add Simplify Output option to Issue > Get." />
+<Changelog node="n8n-nodes-base.reddit" title="Reddit Node:" text="Add possibility to query saved posts." />
+<Changelog node="n8n-nodes-base.zendesk" title="Zendesk Node:" text="Add ticket status On-hold." />
 
 ### Bug fixes
 
-- **core:** Add logs and error catches for possible failures in queue mode.
-- **AWS Lambda Node:** Fix "Invocation Type" > "Continue Workflow".
-- **Supabase Node:** Fix Row > Get operation.
-- **Supabase Node:** Send token also via Authorization Bearer.
-- **Xero Node:** Fix some operations and add support for setting address and phone number.
-- **Wise Node:** Fix issue when executing a transfer.
+**core:** Add logs and error catches for possible failures in queue mode.<br>
+<Changelog node="n8n-nodes-base.awslambda" title="AWS Lambda Node:" text="Fix Invocation Type > Continue Workflow." />
+<Changelog node="n8n-nodes-base.supabase" title="Supabase Node:" text="Send token also via Authorization Bearer; fix Row > Get operation." />
+<Changelog node="n8n-nodes-base.xero" title="Xero Node:" text="Fix some operations and add support for setting address and phone number." />
+<Changelog node="n8n-nodes-base.wise" title="Wise Node:" text="Fix issue when executing a transfer." />
 
 ### Contributors
 
@@ -47,6 +92,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169
 This release includes:
 
 * New functionality for existing nodes
+* A new node for Linear
 * Bug fixes
 * And a license change!
 
@@ -60,14 +106,14 @@ Read more about the new license in our [License FAQ](faq.md#license).
 
 ### New nodes
 
-- **Linear Node:** Add Linear Node.
+<Changelog node="n8n-nodes-base.linear" title="Linear Node:" text="Add Linear Node." />
 
 ### Enhanced nodes
 
-- **HTTP Request Node:** Allow Delete requests with body.
-- **KoBoToolbox Node:** Add KoBoToolbox Regular and Trigger Node.
-- **Mailjet Node:** Add credential tests and support for sandbox, JSON parameters & variables
-- **Mattermost Node:** Add support for Channel search.
+<Changelog node="n8n-nodes-base.httpRequest" title="HTTP Request Node:" text="Allow Delete requests with body." />
+<Changelog node="n8n-nodes-base.kobo" title="KoBoToolbox Node:" text="Add KoBoToolbox Regular and Trigger Node." />
+<Changelog node="n8n-nodes-base.mailjet" title="Mailjet Node:" text="Add credential tests and support for sandbox, JSON parameters & variables." />
+<Changelog node="n8n-nodes-base.mattermost" title="Mattermost Node:" text="Add support for Channel search." />
 
 ### Other improvements
 
@@ -75,8 +121,8 @@ Read more about the new license in our [License FAQ](faq.md#license).
 
 ### Bug fixes
 
-- **GitHub Node:** Fix credential tests and File > List operation.
-- **Telegram Node:** Fix sending binary data when disable notification is set.
+<Changelog node="n8n-nodes-base.github" title="GitHub node:" text="Fix credential tests and File List operation." />
+<Changelog node="n8n-nodes-base.telegram" title="Telegram node:" text="Fix sending binary data when disable notification is set." />
 
 ### Contributors
 

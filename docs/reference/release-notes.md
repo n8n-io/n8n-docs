@@ -7,6 +7,10 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />
 **Release date:** 2022-04-03
 
+::: warning ⚠️ Breaking changes
+Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01710).
+:::
+
 This release focuses on bug fixes and node enhancements, with one new feature, and one breaking change to the GraphQL node.
 
 ## Breaking change to GraphQL node

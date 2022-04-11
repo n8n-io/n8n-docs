@@ -2,6 +2,21 @@
 
 🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
 
+## n8n@0.171.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.171.0...n8n@0.171.1) for this version.<br />
+**Release date:** 2022-04-06
+
+This is a small bug fix release.
+
+## Bug fixes
+
+**core**: fix issue with current executions not displaying.<br>
+**core**: fix an issue causing n8n to falsely skip some authentication.<br>
+<Changelog node="n8n-nodes-base.wooCommerce" title="WooCommerce Node:" text="Fix a pagination issue with the GetAll operation." /> 
+
+
+
 ## n8n@0.171.0 🛠
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />

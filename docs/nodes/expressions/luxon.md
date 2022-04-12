@@ -24,6 +24,14 @@ Note that these variables can return different time formats when cast as a strin
 // For example "Today's date is 1646834498755"
 ```
 
+## Setting the timezone in n8n
+
+Luxon uses the n8n timezone. This value is either:
+
+* Default: `America/New York`
+* A custom timezone for your n8n instance, set using the `GENERIC_TIMEZONE` environment variable.
+* A custome timezone for an individual workflow, configured in workflow settings.
+
 ## Common tasks
 
 This section provides examples for some common operations. Many more examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).

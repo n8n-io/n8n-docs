@@ -5,20 +5,25 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172.0) for this version.<br />
 **Release date:** 2022-04-11
 
-## Enhancements
+### Enhancements
 
 * Changes to the data output display in nodes. 
 
-## Node enhancements
+### Node enhancements
 <br>
 <Changelog node="n8n-nodes-base.magento2" title="Magento 2 Node:" text="Added credential tests." /> 
 <Changelog node="n8n-nodes-base.payPal" title="PayPal Node:" text="Added credential tests and updated the API URL." /> 
 
-## Bug fixes
+### Bug fixes
 
 **core**: Luxon now applies the correct timezone. Refer to [Luxon](../nodes/expressions/luxon/) for more information.<br>
 **core**: fixed an issue with localization that was preventing i18n files from loading.<br>
 <Changelog node="n8n-nodes-base.actionNetwork" title="Action Network Node:" text="Fix a pagination issue and add credentials test." /> 
+
+### Contributors
+
+[Paolo Rechia](https://github.com/paolo-rechia)  
+
 
 ## n8n@0.171.1
 

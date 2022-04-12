@@ -32,7 +32,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.171.0...n8n@0.1
 
 This is a small bug fix release.
 
-## Bug fixes
+### Bug fixes
 
 **core**: fix issue with current executions not displaying.<br>
 **core**: fix an issue causing n8n to falsely skip some authentication.<br>

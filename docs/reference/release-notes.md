@@ -1,6 +1,24 @@
 # Release notes
 
-🛠 = Version contains a breaking change. View the list of all the breaking changes [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md).
+## n8n@0.172.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172.0) for this version.<br />
+**Release date:** 2022-04-11
+
+## Enhancements
+
+* Changes to the data output display in nodes. 
+
+## Node enhancements
+<br>
+<Changelog node="n8n-nodes-base.magento2" title="Magento 2 Node:" text="Added credential tests." /> 
+<Changelog node="n8n-nodes-base.payPal" title="PayPal Node:" text="Added credential tests and updated the API URL." /> 
+
+## Bug fixes
+
+**core**: Luxon now applies the correct timezone. Refer to [Luxon](../nodes/expressions/luxon/) for more information.<br>
+**core**: fixed an issue with localization that was preventing i18n files from loading.<br>
+<Changelog node="n8n-nodes-base.actionNetwork" title="Action Network Node:" text="Fix a pagination issue and add credentials test." /> 
 
 ## n8n@0.171.1
 
@@ -17,7 +35,7 @@ This is a small bug fix release.
 
 
 
-## n8n@0.171.0 🛠
+## n8n@0.171.0 
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />
 **Release date:** 2022-04-03
@@ -292,7 +310,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 [pemontto](https://github.com/pemontto)
 
-## n8n@0.165.0 🛠
+## n8n@0.165.0 
 
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
 **Release date:** 2022-02-28
@@ -329,7 +347,7 @@ Please note that this version contains breaking changes. You can read more about
 
 <br />
 <Changelog node="n8n-nodes-base.orbit" title="Orbit" text="Fixed a bug causing API requests to use an incorrect workspace identifier."/>
-<Changelog node="n8n-nodes-base.theHive" title="TheHive" text="🛠 Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/>
+<Changelog node="n8n-nodes-base.theHive" title="TheHive" text=" Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly."/>
 
 ### Contributors 🙌
 
@@ -1125,7 +1143,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Core Functionality ⚙️
 - Bug fixes and improvements for Editor UI.
 
-## n8n@0.139.0 🛠
+## n8n@0.139.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.138.0...n8n@0.139.0) for this version.<br />
 **Release date:** 2021-09-22
 
@@ -1260,7 +1278,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Core Functionality ⚙️
 - Fixed an issue where if n8n was shutdown during database migration while upgrading versions, errors would result upon next startup.
 
-## n8n@0.135.0 🛠
+## n8n@0.135.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />
 **Release date:** 2021-08-22
 
@@ -1276,8 +1294,8 @@ The features that introduced the breaking changes have been flagged below.
 <Changelog node="n8n-nodes-base.wait" title="Wait"/>
 
 ### Core Functionality ⚙️
-- In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [🛠](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
-- Credentials are now loaded from the database on-demand. [🛠](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- Credentials are now loaded from the database on-demand. [](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
 - Webhook UUIDs are automatically updated when duplicating a workflow.
 - Fixed an issue when referencing values before loops.
 
@@ -1385,7 +1403,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 🙌
 [Ed Linklater](https://github.com/edlinklater), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
-## n8n@0.131.0 🛠
+## n8n@0.131.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
 **Release date:** 2021-07-24
 
@@ -1419,7 +1437,7 @@ The features that introduced the breaking changes have been flagged below.
 ### Contributors 🙌
 [Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
 
-## n8n@0.130.0 🛠
+## n8n@0.130.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
 **Release date:** 2021-07-18
 
@@ -1496,7 +1514,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 
-## n8n@0.127.0 🛠
+## n8n@0.127.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
 **Release date:** 2021-07-04
 
@@ -1825,7 +1843,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Fixed an issue with error workflows
 
-## n8n@0.118.0 🛠
+## n8n@0.118.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
 **Release date:** 2021-05-02
 
@@ -1874,7 +1892,7 @@ The features that introduced the breaking changes have been flagged below.
 [Gustavo Arjones](https://github.com/arjones), [lublak](https://github.com/lublak), [Colton Anglin](https://github.com/Colton), [Mika Luhta](https://github.com/mluhta)
 
 
-## n8n@0.117.0 🛠
+## n8n@0.117.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />
 **Release date:** 2021-04-24
 
@@ -2023,7 +2041,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Agata M](https://github.com/curryy), [Allan Daemon](https://github.com/AllanDaemon), [Craig McElroy](https://github.com/camcelroy), [mjysci](https://github.com/mjysci)
 
-## n8n@0.113.0 🛠
+## n8n@0.113.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />
 **Release date:** 2021-03-26
 
@@ -2064,7 +2082,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with the sub-workflows running on the main process
 - Fixed concurrency issues with sub-workflows
 
-## n8n@0.111.0 🛠
+## n8n@0.111.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.3...n8n@0.111.0) for this version.<br />
 **Release date:** 2021-03-12
 
@@ -2236,7 +2254,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Fixed a bug with expressions in credentials
 
-## n8n@0.104.0 🛠
+## n8n@0.104.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
 **Release date:** 2021-01-26
 
@@ -2282,7 +2300,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - The title in the browser tab now resets for new workflows
 
 
-## n8n@0.102.0 🛠
+## n8n@0.102.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
 **Release date:** 2021-01-15
 
@@ -2440,7 +2458,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
 	- Airtable Trigger: Fixed the icon of the node
 
-## n8n@0.95.0 🛠
+## n8n@0.95.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.1...n8n@0.95.0) for this version.<br />
 **Release date:** 2020-11-25
 
@@ -2465,7 +2483,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- GraphQL: Fixed an issue with the variables
 	- WooCommerce Trigger: Fixed an issue with the webhook. The node now reuses a webhook if it already exists.
 
-## n8n@0.94.0 🛠
+## n8n@0.94.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
 **Release date:** 2020-11-19
 
@@ -2487,7 +2505,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- YouTube: Fixed a typo for the Unlisted option
 - Added horizontal scrolling
 
-## n8n@0.93.0 🛠
+## n8n@0.93.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.92.0...n8n@0.93.0) for this version.<br />
 **Release date:** 2020-11-11
 
@@ -2555,7 +2573,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Updated the Node.js version for the Docker images
 
 
-## n8n@0.90.0 🛠
+## n8n@0.90.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
 **Release date:** 2020-10-23
 
@@ -2625,7 +2643,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 	- HTTP Request: Fixed an issue with the GET Request
 - Added `HMAC-SHA512` signature method for OAuth 1.0
 
-## n8n@0.87.0 🛠
+## n8n@0.87.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
 **Release date:** 2020-10-14
 
@@ -2727,7 +2745,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expressions now use short variables when selecting input data for the current node
 - Fixed issue with renaming credentials for active workflows
 
-## n8n@0.83.0 🛠
+## n8n@0.83.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />
 **Release date:** 2020-09-18
 
@@ -2830,7 +2848,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - HTTP Request node does not overwrite accept header if it's already set
 - Add rawBody to every request so that n8n does not give an error if body is missing
 
-## n8n@0.79.0 🛠
+## n8n@0.79.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 

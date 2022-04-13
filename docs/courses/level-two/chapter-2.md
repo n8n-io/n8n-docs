@@ -5,11 +5,11 @@ In this chapter, you will learn how to process different types of data using [n8
 
 ## HTML and XML data
 
-You're most likely familiar with HTML and XML. 
+You're most likely familiar with HTML and XML.
 
-:::tip :open_book: **HTML vs. XML**
-HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
-:::
+!!! note "HTML vs. XML"
+
+    HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 
 If you need to process HTML or XML data in your n8n workflows, use the [***HTML Extract node***](https://docs.n8n.io/nodes/n8n-nodes-base.htmlExtract/) or [***XML node***](https://docs.n8n.io/nodes/n8n-nodes-base.xml/#xml).
 
@@ -260,6 +260,7 @@ To check the configuration of each node, you can copy the JSON code of this work
 So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is **binary data**, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
+
 - [***Move Binary Data node***](https://docs.n8n.io/nodes/n8n-nodes-base.moveBinaryData/) to move data between binary and JSON properties.
 - [***Read Binary File node***](https://docs.n8n.io/nodes/n8n-nodes-base.readBinaryFile/) to read a file from the host machine that runs n8n.
 - [***Read Binary Files***](https://docs.n8n.io/nodes/n8n-nodes-base.readBinaryFiles/) to read multiple files from the host machine that runs n8n.
@@ -268,20 +269,16 @@ In n8n, you can process binary data with the following nodes:
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 
-:::tip :warning: **Naming the right path**
-The file path looks slightly different on n8n cloud compared to desktop or self-hosted:
-- n8n desktop and self-hosted: `./Documents/my_file.json`
-- n8n cloud: `/home/node/.n8n/my_file.json`
-:::
+!!! warning "Naming the right path"
+
+		The file path looks slightly different on n8n cloud compared to desktop or self-hosted:
+
+		- n8n desktop and self-hosted: `./Documents/my_file.json`
+		- n8n cloud: `/home/node/.n8n/my_file.json`
 
 ### Exercise (Binary to JSON)
 
-Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the *Move Binary Data node* to convert the file from binary to JSON, with binary64 encoding.
-
-:::tip 📖 **What is binary64?**
-
-"Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data. This is to ensure that the data remains intact without modification during transport."
-:::
+Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the *Move Binary Data node* to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
 
 <details>
 <summary>Show me the solution</summary>

@@ -7,36 +7,37 @@ In this chapter, you will learn how to merge and split data, and in what cases i
 
 In some cases, you might need to merge (combine) and process data from different sources.
 
-Merging (combining) data can involve:
+Merging data can involve:
+
 - Creating one data set from multiple sources.
 - Synchronizing data between multiple systems. For example, removing duplicate data, or updating data in one system when it changes in another.
 
-:::tip :open_book: One-way vs. two-way sync
-In a **one-way sync**, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
+!!! note "One-way vs. two-way sync"
 
-In a **two-way sync**, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well. 
+		In a **one-way sync**, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
 
-[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
-:::
+		In a **two-way sync**, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
-In n8n, you can merge data from two different nodes using the [***Merge node***](https://docs.n8n.io/nodes/n8n-nodes-base.merge/), which provides four merging modes:
+		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+
+In n8n, you can merge data from two different nodes using the [***Merge node***](https://docs.n8n.io/nodes/n8n-nodes-base.merge/), which provides several merging modes:
 
 - Append
-- Keep Key Matches :key:
+- Keep Key Matches
 - Merge By Index
-- Merge By Key :key:
+- Merge By Key
 - Multiples
 - Pass-through
-- Remove Key Matches :key:
+- Remove Key Matches
 - Wait
 
-Notice that three of these modes require a **key** :key: (Merge By Key, Keep Key Matches, Remove Key Matches). This key represents a common property between the two data sources, based on which the data can be merged. In the *Merge node*, they are called `Property Input 1` and `Property Input 2`.
+Notice that three of these modes require a **key** (Merge By Key, Keep Key Matches, Remove Key Matches). This key represents a common property between the two data sources, based on which the data can be merged. In the *Merge node*, they are called `Property Input 1` and `Property Input 2`.
 
 <figure><img src="./course_images/explanation_mergePropertyInput.png" alt="" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
 
-:::warning :warning: **Property Input in dot notation**
-If you want to reference nested values in the *Merge node* parameters `Property Input 1` and `Property Input 2`, you need to enter the property key in dot-notation format (as text, not as an expression).
-:::
+!!! warning "Property Input in dot notation"
+
+		If you want to reference nested values in the *Merge node* parameters `Property Input 1` and `Property Input 2`, you need to enter the property key in dot-notation format (as text, not as an expression).
 
 ### Exercise
 
@@ -65,14 +66,10 @@ If you merge data with the option *Keep Key Matches* using the country code as t
 
 In some cases, you might need to perform the same operation on each element of an array / each data item (for example sending a message to every contact in your address book). In technical terms, you need to **iterate** through the data (with **loops**).
 
-[//]: #TODO: "Include explanations and illustrations of for vs. while loops"
 
-
-n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations for which you need to build a loop into your workflow](https://docs.n8n.io/getting-started/key-concepts/looping.html#node-exceptions).
+n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](https://docs.n8n.io/getting-started/key-concepts/looping.html#node-exceptions) for which you need to build a loop into your workflow.
 
 To [create a loop in an n8n workflow](https://docs.n8n.io/getting-started/key-concepts/looping.html#using-loops-in-n8n), you need to connect the output of one node to the input of a previous node, and add an *IF node* to check when to stop the loop.
-
-[//]: #TODO: "Add workflow example / exercise"
 
 ## Splitting data in batches
 

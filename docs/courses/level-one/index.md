@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the n8n Certification Course Level I!
+Welcome to the n8n Certification Course Level 1!
 
 ## Is this course right for me?
 

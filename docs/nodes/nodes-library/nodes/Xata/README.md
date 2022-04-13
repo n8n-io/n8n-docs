@@ -17,7 +17,7 @@ You can find authentication information for this node [here](../../../credential
 2. Delete records from a table.
 3. List records from a table.
 4. Read records from a table.
-5. Delete records from a table.
+5. Update records in a table.
 
 ## Example Usage
 

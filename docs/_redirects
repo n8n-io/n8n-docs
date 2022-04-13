@@ -27,11 +27,11 @@
 /reference/release-notes.html                        /reference/release-notes/
 
 # The nodes library . . . may the odds be ever in your favour
-/credentials/* /integrations/credentials/:splat!
+/credentials/* /integrations/credentials/:splat
 
-/nodes/creating-nodes/* /integrations/creating-nodes/code/:splat!
+/nodes/creating-nodes/* /integrations/creating-nodes/code/:splat
 
-/nodes/expressions/* /code-examples/expressions/:splat!
+/nodes/expressions/* /code-examples/expressions/:splat
 
 /nodes/node-basics/ /integrations/
 /nodes/creating-nodes/		/integrations/creating-nodes/

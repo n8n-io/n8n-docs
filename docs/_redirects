@@ -4,7 +4,7 @@
 /getting-started/key-components/editor-ui.html       /editor-ui/
 /getting-started/key-components/node.html            /workflows/nodes/
 /getting-started/key-components/workflow.html        /workflows/workflows/
-/getting-started/key-concepts/looping.htm            /flow-logic/looping/
+/getting-started/key-concepts/looping.html            /flow-logic/looping/
 /getting-started/key-concepts/modes.html             /hosting/scaling/execution-modes-processes/
 /getting-started/key-concepts/transforming-data.html /data/
 /getting-started/installation/                       /hosting/options/
@@ -181,6 +181,7 @@
 /nodes/n8n-nodes-base.homeAssistant/		/integrations/nodes/n8n-nodes-base.homeAssistant/
 /nodes/n8n-nodes-base.htmlExtract/		/integrations/core-nodes/n8n-nodes-base.htmlExtract/
 /nodes/n8n-nodes-base.httpRequest/		/integrations/core-nodes/n8n-nodes-base.httpRequest/
+/nodes/n8n-nodes-base.httprequest/      /integrations/core-nodes/n8n-nodes-base.httpRequest/
 /nodes/n8n-nodes-base.hubspot/		/integrations/nodes/n8n-nodes-base.hubspot/
 /nodes/n8n-nodes-base.hubspotTrigger/		/integrations/trigger-nodes/n8n-nodes-base.hubspotTrigger/
 /nodes/n8n-nodes-base.humanticAi/		/integrations/nodes/n8n-nodes-base.humanticAi/

@@ -3,24 +3,27 @@
 Today, you will learn how to create your first node for n8n.
 
 ## Prerequisites
+
 You have knowledge of:
+
 - JavaScript/TypeScript
 - REST APIs
 - Expressions in n8n
 
 Install the following tools:
+
 - **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
 - **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
-```bash
-node -v
-npm -v
+	```bash
+	node -v
+	npm -v
 ```
 **NOTE:** Use node version `14.x` and npm version `6.x`. If using npm version `7+`, you must enable legacy peer dependencies by setting: `npm config set legacy-peer-deps true`.
 
 - **Lerna:** You can install lerna globally with the following command:
-```bash
-npm install --global lerna
-```
+	```bash
+	npm install --global lerna
+	```
 
 ## Selecting the node
 
@@ -37,17 +40,19 @@ git clone https://github.com/<USERNAME>/n8n.git && cd n8n
 ```
 
 n8n is built from four main packages:
+
 - cli
 - core
 - editor-ui
 - nodes-base
 
 All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
+
 - The folder `nodes`, contains all the nodes in n8n.
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
 
-<img src="./images/n8n-folder-structure.png" width="500">
+![n8n folder structure](/_images/creating-nodes/code/n8n-folder-structure.png)
 
 
 ## Creating the node
@@ -121,6 +126,7 @@ Check the following figure to see how the properties affect the looks of the nod
 **Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
 Let's see how the node looks in the UI by following these steps:
+
 1. Go to `/packages/nodes-base/package.json`.
 2. Paste `"dist/nodes/FriendGrid/FriendGrid.node.js",` in the nodes array to register the node (in an alphabetical order).
 3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
@@ -128,11 +134,11 @@ Let's see how the node looks in the UI by following these steps:
 	- The second command builds all the code.
 	- The third command starts n8n in development mode.
 
-```bash
-lerna bootstrap --hoist
-npm run build
-npm run dev
-```
+	```bash
+	lerna bootstrap --hoist
+	npm run build
+	npm run dev
+	```
 
 4. Open your browser and go to [localhost:8080](http://localhost:8080/) and you should be able to see the Editor UI.
 5. Open the ***Create Node*** menu, type `FriendGrid`, and click on it to add the node to the Editor UI.
@@ -148,6 +154,7 @@ npm run dev
 Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
 
 SendGrid's [docs](https://sendgrid.com/docs/api-reference/) mention that to create a contact, we need to provide the following pieces of information:
+
 - email - Required
 - first_name - Optional
 - last_name - Optional
@@ -157,6 +164,7 @@ There are more parameters that can be provided to create a contact in FriendGrid
 ### Resources and operations
 
 Now, n8n requires a couple of parameters as well:
+
 - resource - Required
 - operation - Required
 
@@ -170,6 +178,7 @@ You might say that you can “Add a contact” and you are right, but we try to 
 ### Adding required fields
 
 Let’s make the Node Editor View ask for these parameters:
+
 1. Add the following under `description.properties` in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
 
 ```typescript
@@ -230,9 +239,9 @@ Let’s make the Node Editor View ask for these parameters:
 
 2. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
-```bash
-npm run dev
-```
+	```bash
+	npm run dev
+	```
 4. Go to [localhost:8080](http://localhost:8080/), refresh the page, and open the node again.
 
 The node should now look like in the following image.
@@ -247,45 +256,45 @@ We can add them below the email parameter and set `required: false`. However, if
 
 1. Add the following below the `email` field in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
 
-```typescript
-{
-	displayName: 'Additional Fields',
-	name: 'additionalFields',
-	type: 'collection',
-	placeholder: 'Add Field',
-	default: {},
-	displayOptions: {
-		show: {
-			resource: [
-				'contact',
-			],
-			operation: [
-				'create',
-			],
+	```typescript
+	{
+		displayName: 'Additional Fields',
+		name: 'additionalFields',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: [
+					'contact',
+				],
+				operation: [
+					'create',
+				],
+			},
 		},
+		options: [
+			{
+				displayName: 'First Name',
+				name: 'firstName',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'Last Name',
+				name: 'lastName',
+				type: 'string',
+				default: '',
+			},
+		],
 	},
-	options: [
-		{
-			displayName: 'First Name',
-			name: 'firstName',
-			type: 'string',
-			default: '',
-		},
-		{
-			displayName: 'Last Name',
-			name: 'lastName',
-			type: 'string',
-			default: '',
-		},
-	],
-},
-```
+	```
 
 2. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
-```bash
-npm run dev
-```
+	```bash
+	npm run dev
+	```
 4. Go to [localhost:8080](http://localhost:8080/), refresh the page, and open the node again.
 
 The node should now look like in the following image.
@@ -301,6 +310,7 @@ Most REST APIs use some sort of authentication mechanism. FriendGrid's REST API 
 n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s FriendGrid API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
+
 1. Go to `packages/nodes-base/credentials`.
 2. Within the credentials folder, create a file named `FriendGridApi.credentials.ts`.
 3. Paste the following code.
@@ -331,18 +341,18 @@ export class FriendGridApi implements ICredentialType {
 6. Got to `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
 7. Associate the credentials with the node by adding the following to `description.credentials`.
 
-```typescript
-{
-	name: 'friendGridApi',
-	required: true,
-},
-```
+	```typescript
+	{
+		name: 'friendGridApi',
+		required: true,
+	},
+	```
 
 8. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
 9. Run again, by entering the following in the terminal.
-```bash
-npm run dev
-```
+	```bash
+	npm run dev
+	```
 
 When you go to the Node Editor view, you should see the following.
 
@@ -357,6 +367,7 @@ With the UI that we added, we now have all the data that we need to make a reque
 
 This is where the `execute` method comes into play. Every time the node is executed, this method will be run. Within this method, we can have access to the input items and to the parameters that the user set in the UI, including the credentials.
 To map the fields to the API, perform the following steps:
+
 1. Go to `package/nodes-base/nodes/FriendGrid.node.ts`.
 2. Replace the current `execute` method with the following code.
 
@@ -407,9 +418,9 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 
 3. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
 4. Run again, by entering the following in the terminal.
-```bash
-npm run dev
-```
+	```bash
+	npm run dev
+	```
 5. Enter the credentials (FriendGrid API Key), contact parameters, and execute the node.
 	- Instructions to find the FriendGrid API Key can be found [here](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
 
@@ -445,66 +456,66 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 
 3. Execute the Function node. We're using the function node for testing, but you can think of it as any node that is returning “two people” (or more). These two people need to be added to FriendGrid as contacts.
 
-![Output of the Function node](/_images/creating-nodes/code/function-node-output.png)
+	![Output of the Function node](/_images/creating-nodes/code/function-node-output.png)
 
 4. Add a FriendGrid node to the workflow and connect it to the Function node. Add an expression in the ***Email*** field of the FriendGrid node and reference the ***name*** property that the Function node outputs.
 
-![Using expressions in the FriendGrid node](/_images/creating-nodes/code/expressions-friendgrid.png)
+	![Using expressions in the FriendGrid node](/_images/creating-nodes/code/expressions-friendgrid.png)
 
 5. Replace the existing `execute` method with the following:
 
-```typescript
-async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-	const items = this.getInputData();
-	let responseData;
-	const returnData = [];
-	const resource = this.getNodeParameter('resource', 0) as string;
-	const operation = this.getNodeParameter('operation', 0) as string;
-	//Get credentials the user provided for this node
-	const credentials = await this.getCredentials('friendGridApi') as IDataObject;
+	```typescript
+	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+		const items = this.getInputData();
+		let responseData;
+		const returnData = [];
+		const resource = this.getNodeParameter('resource', 0) as string;
+		const operation = this.getNodeParameter('operation', 0) as string;
+		//Get credentials the user provided for this node
+		const credentials = await this.getCredentials('friendGridApi') as IDataObject;
 
-	for (let i = 0; i < items.length; i++) {
-		if (resource === 'contact') {
-			if (operation === 'create') {
-				// get email input
-				const email = this.getNodeParameter('email', i) as string;
+		for (let i = 0; i < items.length; i++) {
+			if (resource === 'contact') {
+				if (operation === 'create') {
+					// get email input
+					const email = this.getNodeParameter('email', i) as string;
 
-				// i = 1 returns ricardo@n8n.io
-				// i = 2 returns hello@n8n.io
+					// i = 1 returns ricardo@n8n.io
+					// i = 2 returns hello@n8n.io
 
-				// get additional fields input
-				const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
-				const data: IDataObject = {
-					email,
-				};
+					// get additional fields input
+					const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
+					const data: IDataObject = {
+						email,
+					};
 
-				Object.assign(data, additionalFields);
+					Object.assign(data, additionalFields);
 
-				//Make http request according to <https://sendgrid.com/docs/api-reference/>
-				const options: OptionsWithUri = {
-					headers: {
-						'Accept': 'application/json',
-						'Authorization': `Bearer ${credentials.apiKey}`,
-					},
-					method: 'PUT',
-					body: {
-						contacts: [
-							data,
-						],
-					},
-					uri: `https://api.sendgrid.com/v3/marketing/contacts`,
-					json: true,
-				};
+					//Make http request according to <https://sendgrid.com/docs/api-reference/>
+					const options: OptionsWithUri = {
+						headers: {
+							'Accept': 'application/json',
+							'Authorization': `Bearer ${credentials.apiKey}`,
+						},
+						method: 'PUT',
+						body: {
+							contacts: [
+								data,
+							],
+						},
+						uri: `https://api.sendgrid.com/v3/marketing/contacts`,
+						json: true,
+					};
 
-				responseData = await this.helpers.request(options);
-				returnData.push(responseData);
+					responseData = await this.helpers.request(options);
+					returnData.push(responseData);
+				}
 			}
 		}
+		// Map data to n8n data structure
+		return [this.helpers.returnJsonArray(returnData)];
 	}
-	// Map data to n8n data structure
-	return [this.helpers.returnJsonArray(returnData)];
-}
-```
+	```
 
 6. Execute the workflow.
 

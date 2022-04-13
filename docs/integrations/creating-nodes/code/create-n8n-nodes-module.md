@@ -13,19 +13,20 @@ Consider creating n8n-nodes-module if any of the following conditions satisfy yo
 You may already be familiar with creating nodes in n8n. If you are unfamiliar with how to create n8n nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.n8n.io/nodes/creating-nodes/create-node.html) tutorial.
 
 Install the following tools:
+
 - **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
 - **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
-```bash
-node -v
-npm -v
-```
+	```bash
+	node -v
+	npm -v
+	```
 
 **NOTE:** Use node version `14.x` and npm version `6.x`. If using npm version `7+`, you must enable legacy peer dependencies by setting: `npm config set legacy-peer-deps true`.
 
 - **Lerna:** You can install lerna globally with the following command:
-```bash
-npm i
-```
+	```bash
+	npm i
+	```
 
 - Install n8n: Create a new folder and install n8n using the command:
 
@@ -416,6 +417,7 @@ You will now be able to test and use your newly created n8n-nodes-module.
 As mentioned, the n8n-nodes-module is an npm package. To make it available to others, you can publish it to the npm registry. Refer to the [Publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) guide to learn about publishing packages.
 
 Following the steps mentioned above, you can create multiple nodes within a single n8n-nodes-module. You can also create nodes that require dependencies that are not present in n8n. When creating an n8n-nodes-module make sure that you follow the following guidelines:
+
 - The name of the module should start with `n8n-nodes-`.
 - The `package.json` file has to contain a key `n8n` with the paths to nodes and credentials.
 - The module has to be installed alongside n8n.
@@ -425,6 +427,7 @@ Following the steps mentioned above, you can create multiple nodes within a sing
 Once you test and publish your n8n-nodes-module you would want to use it in your production environment.
 
 If you’re running n8n via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
+
 1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
 2. Add the following command in your Dockerfile before the font installation command.
 

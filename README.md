@@ -16,10 +16,13 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
-# You need a GitHub token for access to Material Insiders.
-# n8n employees: request this from Deborah
-pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-# External contributors: use the free version of Material (most features will still work), or rely on the preview builds on pull requests
+# n8n organization members: 
+# Outside your docs project, do:
+git clone https://github.com/n8n-io/mkdocs-material-insiders.git mkdocs-material
+# Navigate back into the docs project and run:
+pip install -e <path-to-mkdocs-material>
+# External contributors: rely on the preview builds on pull requests, or 
+# use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
 pip install mkdocs-material
 # Serve a local preview
 mkdocs serve

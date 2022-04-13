@@ -1,3 +1,6 @@
+# Weird ones after IA launch
+/integrations/nodes/core-nodes/n8n-nodes-base.function/     /integrations/core-nodes/n8n-nodes-base.function/
+
 # Updated during IA work
 /getting-started/key-components/                     /workflows/
 /getting-started/key-components/connection.html      /workflows/connections/
@@ -193,6 +196,7 @@
 /nodes/n8n-nodes-base.invoiceNinja/		/integrations/nodes/n8n-nodes-base.invoiceNinja/
 /nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/trigger-nodes/n8n-nodes-base.invoiceNinjaTrigger/
 /nodes/n8n-nodes-base.itemLists/		/integrations/core-core-nodes/n8n-nodes-base.itemLists/
+/nodes/n8n-nodes-base.itemlists/        /integrations/core-core-nodes/n8n-nodes-base.itemLists/
 /nodes/n8n-nodes-base.iterable/		/integrations/nodes/n8n-nodes-base.iterable/
 /nodes/n8n-nodes-base.jenkins/		/integrations/nodes/n8n-nodes-base.jenkins/
 /nodes/n8n-nodes-base.jira/		/integrations/nodes/n8n-nodes-base.jira/

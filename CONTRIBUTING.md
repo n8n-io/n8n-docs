@@ -4,40 +4,38 @@
 
 If you want to contribute to this repository - thank you! Beforehand, we encourage you to have a look at the existing documentation to get an idea of the structure and writing conventions we use. In writing your documentation, please follow the guidelines described below, in order to ensure quality and consistency with our style.
 
-## Documentation files
+## Documenting nodes
 
-* **Main:** Create a directory with the name of the node at `docs/nodes/nodes-library/nodes/` containing:
-  - A text file named `README.md` describing the functionality of the relevant node.
-  - An image file named `workflow.png` showing a screenshot of the Start node connected to the relevant node.
-* **Credentials:** Create a directory with the name of the node at `docs/nodes/credentials/` containing:
-  - A text file called `README.md` describing how to obtain credentials for the relevant node.
+* **Nodes and trigger nodes:** Create a directory with the name of the node at `docs/integrations/nodes/` or `docs/integrations/trigger-nodes` containing:
+  - A text file named `n8n-nodes-base.<node-nam>.md` describing the functionality of the relevant node.
+* **Credentials:** Create a directory with the name of the node at `docs/integrations/credentials/` containing:
+  - A text file with the node name describing how to obtain credentials for the relevant node.
 
-## Writing guidelines
-
-### Content
-A standard **node documentation** `README.md` includes the following parts:
-* Node Description
+A standard node doc includes the following parts:
+* Node description
   - Describe briefly the purpose and function of the node.
-* Basic Operations
+* Operations
   - Enter the resources and operations exactly as they are named in the nodes.
-* Example Usage
-  - Ensure that the link of the relevant node remains empty.
-  - Exclude any optional steps from the example usage steps for the relevant node.
-  - Create a workflow at [n8n.io](https://n8n.io/workflows) and use the resulting link in "Example Usage".
-* Further Reading
-  - Include n8n [Medium](https://medium.com/n8n-io) articles that are relevant for the specific node. The resulting list should be ordered alphabetically. See the [Telegram node](https://docs.n8n.io/nodes/n8n-nodes-base.telegram/).
 
-In the **credentials** `README.md`:
+In the credentials doc:
 * If there is more than one authentication method, list OAuth first.
-* If there are steps that are necessary but out of the scope of creating a node in n8n, move them to the FAQ section. See the [Chargebee Trigger node](https://docs.n8n.io/nodes/n8n-nodes-base.chargebeeTrigger/).
+* If possible, avoid documenting external products. Instead, provide links to the relevant product documentation. For example, for guidance on getting credentials (such as how to get an API token for a service), provide a link to the product's API authentication docs. 
 
 
-### Style
-* Explain clearly each step of the process or changes you make.
-* Keep your writing as concise as possible.
-* Use present tense, active voice, and "you"-form to address the readers.
-* Spell out correctly the names of organisations or brands. For example: "GitHub", not "Github".
-* Use correct spelling and grammar. [Grammarly](https://www.grammarly.com/) is a good tool to help you with that.
+## Style
+
+n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+
+Some quick tips:
+
+* Plain language:
+  * Clearly explain each step of the process you are documenting.
+  * Use present tense, active voice, and "you"-form to address the readers.
+  * Keep your writing as concise as possible. [Hemingway](https://hemingwayapp.com/) is a free browser app to measure language complexity. There is no fixed rule about what grade to aim for, but the lower the reading grade, the better.
+* Formatting:
+  * Make sure you match brand names precisely. For example: "GitHub", not "Github".
+  * Headings should be sentence case
+  * Use bold when referring to UI elements. For example, "Click **Save** to proceed."
 * Add commit messages in [this](https://gist.github.com/parmentf/035de27d6ed1dce0b36a) format.
 
 ### Screenshots

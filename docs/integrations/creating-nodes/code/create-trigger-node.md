@@ -4,24 +4,26 @@ Today, you will learn how to create your first trigger node for n8n.
 
 ## Prerequisites
 You have knowledge of:
+
 - JavaScript/TypeScript
 - REST APIs
 - [Webhooks](https://www.getvero.com/resources/webhooks/)
 - Expressions in n8n
 
 Install the following tools:
+
 - **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
 - **Node.js and npm:** You can find instructions on how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
-```bash
-node -v
-npm -v
-```
+	```bash
+	node -v
+	npm -v
+	```
 **NOTE:** Use node version `14.x` and npm version `6.x`
 
 - **Lerna:** Install [lerna](https://lerna.js.org/) globally with the following command:
-```bash
-npm install --global lerna
-```
+	```bash
+	npm install --global lerna
+	```
 
 ## Selecting the node
 
@@ -39,17 +41,19 @@ git clone https://github.com/<USERNAME>/n8n.git && cd n8n
 ```
 
 n8n is built from four main packages:
+
 - cli
 - core
 - editor-ui
 - nodes-base
 
 All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
+
 - The folder `nodes`, contains all the nodes in n8n.
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
 
-<img src="./images/n8n-folder-structure.png" width="500">
+![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
 
 
 ## Creating the node
@@ -137,6 +141,7 @@ Check the following figure to see how the properties affect the looks of the nod
 **Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
 Let's see how the node looks in the UI by following these steps:
+
 1. Go to `/packages/nodes-base/package.json`.
 2. Paste `"dist/nodes/Autofriend/AutofriendTrigger.node.js",` in the nodes array to register the node (in an alphabetical order).
 3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
@@ -154,6 +159,7 @@ npm run dev
 5. Open the ***Create Node*** menu, select the ***Trigger*** tab, type `Autofriend`, and click on it to add the node to the Editor UI.
 
 **Notes**
+
 - On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
 - The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
@@ -164,6 +170,7 @@ npm run dev
 Double-clicking on the Autofriend Trigger node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
 
 Autopilots's [docs](https://autopilot.docs.apiary.io/#reference/rest-hooks/register-rest-hook/register-a-rest-hook) mention that to create a hook, we need to provide the following pieces of information:
+
 - event - Required
 - target_url - Required
 
@@ -236,6 +243,7 @@ Most REST APIs use some sort of authentication mechanism. Autofriend's REST API 
 n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
+
 1. Go to `packages/nodes-base/credentials`.
 2. Within the credentials folder, create a file named `AutofriendApi.credentials.ts`.
 3. Paste the following code.

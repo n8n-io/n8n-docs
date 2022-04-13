@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block htmltitle %}
+<title>404</title>
+{% endblock %}
+{% block extrahead %}
+<script>
+    // Create an object containing all your redirects
+    const redirects = {
+      // The big key concepts split
+      "/getting-started/key-concepts/": "/flow-logic/",
+      "/getting-started/key-concepts/#expression": "/code-examples/expressions/",
+      "/getting-started/key-concepts/#item": "/workflows/items/",
+      "/getting-started/key-concepts/#function": "/data/code/",
+      "/getting-started/key-concepts/#data": "/data/",
+      "/getting-started/key-concepts/#data-structure": "/data/data-structure/",
+      "/key-concepts/#data-flow": "/data/data-structure/",
+      "/key-concepts/#error-workflow": "/flow-logic/error-handling/",
+      "/key-concepts/#security": "/hosting/security/",
+      // Other IA redirects that seemed essential
+      "/getting-started/whats-next.html": "/quickstart/#whats-next",
+      "/getting-started/installation/advanced/server-setup.html": "/hosting/server-setups/",
+      "/getting-started/installation/advanced/server-setup.html#docker-compose-example": "/hosting/server-setups/docker-compose/",
+      "/getting-started/installation/advanced/server-setup.html#hosting-with-caddy-server": "/hosting/server-setups/caddy/",
+      "/reference/faq.html#integrations": "/integrations/#requesting-new-integrations-or-integration-features",
+      "/reference/faq.html#license": "/reference/license/",
+      "/reference/faq.html#n8n-cloud": "/hosting/installation/cloud/",
+      // High traffic anchor tag landing pages (if not covered by the above or by /docs/_redirects)
+      "/#what-is-n8n": "/",
+      "/getting-started/tutorials.html#blogposts": "https://n8n.io/blog/tag/tutorial/",
+      "/#/server-setup": "/hosting/server-setups/"
+
+      
+
+    };
+
+    (function redirect(){
+        
+            const currentPath = window.location.pathname + (window.location.hash ? window.location.hash : '');
+            const redirectUrl = redirects[currentPath];
+            if (redirectUrl) {
+                window.location.href = `${window.location.origin}${redirectUrl}`;
+                return;
+            }
+          
+    })();	
+  
+</script>
+{% endblock %}
+{% block content %}
+  <h1>404 - Page not found</h1>
+  <h2>Go <a href="/">home</a></h2>
+{% endblock %}

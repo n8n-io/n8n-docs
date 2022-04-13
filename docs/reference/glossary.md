@@ -3,7 +3,7 @@
 ## .env File
 A special file which contains configuration information in the form of [environment variables](#environment-variables).
 
-n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](../getting-started/installation/advanced/server-setup.md#_6-create-env-file) for more details.
+n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](/hosting/configuration/#configuration-via-file) for more details.
 
 To learn more about the *.env* file, read [Manage Environment Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
 
@@ -25,7 +25,7 @@ For a more detailed understanding of APIs, see [What is API: Definition, Types, 
 ## Certificate
 A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
 
-n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the certificate](../getting-started/installation/advanced/configuration.md) that you use in n8n.
+n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the certificate](/hosting/configuration/) that you use in n8n.
 
 For further information, see [What are certificates?](https://www.youtube.com/watch?v=LRMBZhdFjDI).
 
@@ -36,19 +36,19 @@ For further information, see [What are certificates?](https://www.youtube.com/wa
 ## CLI
 An acronym for *Command Line Interface*, it is a text-based form of processing computer commands.
 
-It is possible to [start a workflow or change its status](start-workflows-via-cli.md) using the CLI in n8n.
+It is possible to [start a workflow or change its status](/reference/cli-commands/) using the CLI in n8n.
 
 To learn more, see [What is Command Line Interface (CLI)?](https://www.w3schools.com/whatis/whatis_cli.asp).
 
 ## Connection
 A link between two or more [nodes](#Node) that allows data to flow from one node to another.
 
-This is a [core concept](../getting-started/key-components.html#connection) in n8n.
+This is a [core concept](/workflows/connections/) in n8n.
 
 ## Credentials
 Unique pieces of information that identifies a user or a service. A common form of credentials is a [username](#Username) and [password](#Password) pair.
 
-n8n [stores encrypted credentials](../nodes/credentials/README.md) so that it can automate tasks that require this information to run properly.
+n8n [stores encrypted credentials](/integrations/credentials/) so that it can automate tasks that require this information to run properly.
 
 For more information, see [Credentials](https://www.techopedia.com/definition/10259/credentials).
 
@@ -58,7 +58,7 @@ For more information, see [Credentials](https://www.techopedia.com/definition/10
 ## Docker
 A system to build, run and share applications with all of the services bundled to support the application in one package.
 
-n8n has created a [docker image](docker.md) so that users who have a docker environment can quickly install and run n8n.
+n8n has created a [docker image](/hosting/installation/docker/) so that users who have a docker environment can quickly install and run n8n.
 
 For more information, read [Docker overview](https://docs.docker.com/get-started/overview/) and [A Docker Tutorial for Beginners](https://docker-curriculum.com/).
 
@@ -70,7 +70,7 @@ To learn more about user interfaces, see [User interface](https://en.wikipedia.o
 ## Encryption Key
 A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.
 
-n8n will sometimes use encryption keys for accessing [APIs](#API) when required. It also uses a [personal encryption key](../nodes/node-basics.md#credentials) to secure credentials.
+n8n will sometimes use encryption keys for accessing [APIs](#API) when required. It also uses a [personal encryption key](/integrations/#credentials) to secure credentials.
 
 For more information, see [What are encryption keys and how do they work? 🔐](https://medium.com/codeclan/what-are-encryption-keys-and-how-do-they-work-cc48c3053bd6)
 
@@ -81,7 +81,7 @@ For more information, see [What are encryption keys and how do they work? 🔐](
 ## Environment Variables
 Environment variables are predetermined values that typically get used to provide the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key and `user` is the value.
 
-n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](https://docs.n8n.io/reference/configuration.html) page to learn more about the environment variables used in n8n.
+n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](/hosting/configuration/) page to learn more about the environment variables used in n8n.
 
 ## Execution
 A completed run of a [workflow](#Workflow) from start to finish.
@@ -95,7 +95,7 @@ To learn more, see [Execution (computing)](https://windowsreport.com/execution-c
 ## Expression
 A string of characters and symbols in a programming language that represents a value depending upon its input.
 
-n8n uses [expressions](../nodes/expressions.md) extensively when a [node](#Node) is referring to another node for input.
+n8n uses [expressions](/code-examples/expressions/) extensively when a [node](#Node) is referring to another node for input.
 
 Find out more about *expressions* by reading [Expression](https://www.techopedia.com/definition/1808/expression-computer-science).
 
@@ -114,14 +114,14 @@ To learn more about *functions*, see [Computer Programming - Functions](https://
 ## IP Address
 A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.
 
-n8n will often refer to [IP addresses](../getting-started/installation/advanced/configuration.md) when accessing information on a system other than itself. This is more common when the service is on the local network rather than on the internet.
+n8n will often refer to [IP addresses](/hosting/configuration/) when accessing information on a system other than itself. This is more common when the service is on the local network rather than on the internet.
 
 If you want to learn more about *IP addresses*, see [What Is an IP Address?](https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm).
 
 ## JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.
 
-While n8n is written in TypeScript, the final code generated is JavaScript and the [Function node](../nodes/nodes-library/core-nodes/Function/README.md) uses JavaScript to create customized [nodes](#Node). [JavaScript](javascript-code-snippets.md) is used in the n8n's Function nodes.
+While n8n is written in TypeScript, the final code generated is JavaScript and the [Function node](/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
 
 To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
 
@@ -135,14 +135,14 @@ For further reading, please see [Introducing JSON](https://www.json.org/json-en.
 ## Header
 Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.
 
-n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](../nodes/nodes-library/core-nodes/HTTPRequest/README.md).
+n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httprequest/).
 
 For further information, see [Request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header).
 
 ## Node
 The basic building block for n8n. Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
 
-For more information, see [Node Basics](../nodes/node-basics.md).
+For more information, see [Node Basics](/integrations/).
 
 ## NodeJS
 A package of [JavaScript](#JavaScript) file used to provide everything needed to run JavaScript code without a web browser.
@@ -157,7 +157,7 @@ Read more at [About Node.js](https://nodejs.org/en/about/).
 ## npm
 A program that installs, updates and removes [JavaScript](#JavaScript) [Packages](#Package).
 
-n8n is [installed](../getting-started/installation/README.md#npm) and updated using npm.
+n8n is [installed](/hosting/installation/npm/) and updated using npm.
 
 Find out more at [About npm](https://docs.npmjs.com/about-npm).
 
@@ -167,7 +167,7 @@ Find out more at [About npm](https://docs.npmjs.com/about-npm).
 ## npx
 A program that will download, run, then delete a [JavaScript](#JavaScript) [Packages](#Package). Often used for quickly testing what a package will do without completely installing it.
 
-You can [try out n8n without installing it](../getting-started/installation/README.md#npm) to your system using npx.
+You can [try out n8n without installing it](/hosting/installation/npm/) to your system using npx.
 
 For more information about *npx*, see [npx documentation](https://docs.npmjs.com/cli/v7/commands/npx).
 
@@ -219,7 +219,7 @@ For more information about *root*, see [root Definition](http://www.linfo.org/ro
 ## SSL
 An acronym for *Secure Socket Layer*, it is the primary way that web based services are secured. A SSL [certificate](#Certificate) is often used on websites to encrypt the information that is travelling between a web server and a web page.
 
-n8n uses SSL certificates to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](../getting-started/installation/advanced/configuration.md) the SSL installation.
+n8n uses SSL certificates to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](/hosting/configuration/) the SSL installation.
 
 For further reading, see [SSL and SSL Certificates Explained For Beginners](http://www.steves-internet-guide.com/ssl-certificates-explained/).
 
@@ -233,14 +233,14 @@ For more information, see [token](https://whatis.techtarget.com/definition/token
 ## Trigger
 A specific type of [node](#Node) that starts a [workflow](#Workflow) when it receives data from a source outside of the workflow itself.
 
-A good example of a [trigger node](https://docs.n8n.io/nodes/node-basics.html#trigger-nodes) in n8n is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
+A good example of a [trigger node](/integrations/#trigger-nodes) in n8n is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
 
 For more information about *triggers*, see [Event Driven Programming](https://en.wikipedia.org/wiki/Event-driven_programming).
 
 ## Tunnel
 An encrypted session between two systems used to secure data transmission.
 
-n8n [uses a tunnel](../getting-started/installation/README.md#n8n-with-tunnel) to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
+n8n [uses a tunnel](/hosting/installation/npm/#n8n-with-tunnel) to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
 
 For further reading, see [VPN Tunnels explained: what are they and how can they keep your internet data secure](https://www.techradar.com/vpn/vpn-tunnels-explained-how-to-keep-your-internet-data-secure).
 
@@ -290,13 +290,13 @@ Read more at [Computer Programming - Variables](https://www.tutorialspoint.com/c
 ## Webhook
 A service that listens for data input from an external source used to trigger an action in a system. Webhooks allow external systems to provide real-time alerts and updates to the system that does not limit the updates to regular polling intervals. Webhooks are often referenced by push notifications.
 
-n8n has the ability to create [webhooks](../nodes/nodes-library/core-nodes/Webhook/README.md) that can be used to start workflows and receive data from systems outside of the n8n system itself.
+n8n has the ability to create [webhooks](/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the n8n system itself.
 
 To learn more about *webhooks*, see [What's a Webhook?](https://sendgrid.com/blog/whats-webhook/).
 
 ## Workflow
 A collection of [nodes](#Node) connected together to produce a specific outcome.
 
-n8n's primary form of programming uses a [workflow model](workflow.md) to represent both code and data flow.
+n8n's primary form of programming uses a [workflow model](/workflows/workflows/) to represent both code and data flow.
 
 For more information, see [Workflow application](https://en.wikipedia.org/wiki/Workflow_application).

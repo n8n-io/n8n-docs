@@ -1,0 +1,170 @@
+site_name: n8n Documentation
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: _images/favicon.ico
+  font:
+    text: Open Sans
+  language: en
+  logo: _images/n8n-docs-icon.svg
+  palette:
+      scheme: light
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
+    - navigation.tracking
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
+extra_css:
+  - _extra/css/extra.css
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
+extra_javascript:
+  - _extra/javascript/extra.js
+extra:
+  analytics:
+    provider: google
+    property: UA-146470481-3
+markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
+  - attr_list
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
+  - admonition
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
+  - meta
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+  - pymdownx.highlight:
+      linenums: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.inlinehilite
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets  
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - tables
+  # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
+  - toc:
+      permalink: "#"
+plugins:
+  - search
+  - literate-nav
+nav: 
+  - Using n8n: 
+    - Welcome: index.md
+    - Try it out: quickstart.md
+    - Editor UI: editor-ui.md
+    - Understand workflows: 
+      - Overview: workflows/index.md
+      - Workflows: workflows/workflows.md
+      - Connections: workflows/connections.md
+      - Nodes: workflows/nodes.md
+      - Items: workflows/items.md
+      - Workflow notes: workflows/workflow-notes.md
+    - Flow logic:
+      - Overview: flow-logic/index.md
+      - Merging: flow-logic/merging.md
+      - Looping: flow-logic/looping.md
+      - Error handling: flow-logic/error-handling.md
+    - Mapping and transforming data:
+      - Overview: data/index.md
+      - Data structure: data/data-structure.md
+      - Transforming data: data/transforming-data.md
+      - Using code: data/code.md
+    - Code examples: 
+      - Overview: code-examples/index.md
+      - Expressions: 
+        - Overview: code-examples/expressions/index.md
+        - Methods: code-examples/expressions/methods.md
+        - Variables: code-examples/expressions/variables.md
+        - Data and time with Luxon: code-examples/expressions/luxon.md
+        - JSON with JMESPath: code-examples/expressions/jmespath.md
+      - JavaScript for workflows:
+        - Overview: code-examples/javascript-functions/index.md
+        - Methods: code-examples/javascript-functions/methods.md
+        - Variables: code-examples/javascript-functions/variables.md
+        - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
+        - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
+    - Reference:
+      - Overview: reference/index.md
+      - Release notes: reference/release-notes.md
+      - CLI commands: reference/cli-commands.md
+      - Keyboard shortcuts: reference/keyboard-shortcuts.md
+      - Glossary: reference/glossary.md
+      - License: reference/license.md
+      - Data collection: reference/data-collection.md
+  - Integrations: 
+    - Overview: integrations/index.md
+    - Core nodes: integrations/core-nodes/
+    - Nodes: integrations/nodes/
+    - Trigger nodes: integrations/trigger-nodes/
+    - Credentials: integrations/credentials/
+    - Creating nodes:
+      - Overview: integrations/creating-nodes/index.md
+      - Code-based node building:
+        - Overview: integrations/creating-nodes/code/index.md
+        - Standards: integrations/creating-nodes/code/standards.md
+        - Create your first node: integrations/creating-nodes/code/create-first-node.md
+        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
+        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
+        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
+        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
+        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
+        - Node linter: integrations/creating-nodes/code/node-linter.md
+        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
+        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
+  - Courses:
+    - Overview: courses/index.md
+    - Level one:
+      - Overview: courses/level-one/index.md
+      - Navigating the editor UI: courses/level-one/chapter-1.md
+      - Building a mini-workflow: courses/level-one/chapter-2.md
+      - Automating a (real-world) use case: courses/level-one/chapter-3.md
+      - Designing the workflow: courses/level-one/chapter-4.md
+      - Building the workflow:
+        - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+        - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+        - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+        - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+        - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+        - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+        - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+        - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+      - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
+      - Take the quiz and get your certificate: courses/level-one/chapter-7.md
+  - Hosting n8n: 
+    - Overview: hosting/index.md
+    - Installation and hosting options: hosting/options.md
+    - Installation:
+      - Overview: hosting/installation/index.md
+      - Desktop app: hosting/installation/desktop-app.md
+      - npm: hosting/installation/npm.md
+      - Docker: hosting/installation/docker.md
+      - Cloud: hosting/installation/cloud.md
+    - Configuration: hosting/configuration.md
+    - User management: hosting/user-management.md
+    - Environment variables: hosting/environment-variables.md
+    - Security: hosting/security.md
+    - Logging: hosting/logging.md
+    - Server setups:
+      - Overview: hosting/server-setups/index.md
+      - Docker Compose: hosting/server-setups/docker-compose.md
+      - Caddy: hosting/server-setups/caddy.md
+    - Databases:
+      - Overview: hosting/databases/index.md
+      - Supported databases and settings: hosting/databases/supported-databases-settings.md
+      - Database structure: hosting/databases/structure.md
+    - Updating:
+      - Overview: hosting/updating/index.md
+      - npm: hosting/updating/npm.md
+      - Docker: hosting/updating/docker.md
+      - Desktop app: hosting/updating/desktop.md
+      - Cloud: hosting/updating/cloud.md
+    - Scaling:
+      - Overview: hosting/scaling/index.md
+      - Execution data: hosting/scaling/execution-data.md
+      - Execution modes and processes: hosting/scaling/execution-modes-processes.md
+      - Configuring queue mode: hosting/scaling/queue-mode.md
+  - Contributing: contributing.md 

@@ -1,0 +1,1 @@
+mkdocs-literate-nav==0.4.1

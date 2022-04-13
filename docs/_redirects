@@ -24,7 +24,7 @@
 /reference/telemetry.html                            /reference/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
-/reference/release-notes.html                        /reference/release-notes
+/reference/release-notes.html                        /reference/release-notes/
 
 # The nodes library . . . may the odds be ever in your favour
 /credentials/* /integrations/credentials/:splat!

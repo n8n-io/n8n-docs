@@ -81,6 +81,7 @@
     --md-footer-fg-color: var(--color-text-base);
     --md-footer-bg-color--dark: var(--color-background-dark);
     --md-primary-bg-color: var(--color-text-dark);
+    --md-primary-fg-color: var(--color-background-light);
   }
 
 /* dark mode */  

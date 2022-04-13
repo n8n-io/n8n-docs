@@ -8,3 +8,7 @@ yarn.lock
 .env
 .vscode
 .idea
+
+venv
+env
+site

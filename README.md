@@ -3,37 +3,33 @@
 This repository hosts the documentation for [n8n](https://n8n.io/), an extendable workflow automation tool which enables you to connect anything to everything via its open, [fair-code](https://faircode.io/) model. The documentation is live at [docs.n8n.io](https://docs.n8n.io/).
 
 
-## Building the documentation
+## Previewing and building the documentation locally
 
-To build the documentation:
+### Prerequisites
+
+* Python 3.8 or above
+* We recommend using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
+
+### Steps
 
 ```bash
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
-npm install
-npm run build
+pip install -r requirements.txt
+# You need a GitHub token for access to Material Insiders.
+# n8n employees: request this from Deborah
+pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+# External contributors: use the free version of Material (most features will still work), or rely on the preview builds on pull requests
+pip install mkdocs-material
+# Serve a local preview
+mkdocs serve
+# Or build
+mkdocs build
 ```
-
 
 ## Contributing
 
-To add to the documentation:
-
-```bash
-git clone https://github.com/n8n-io/n8n-docs.git
-cd n8n-docs
-npm install
-npm run dev
-```
-After doing this, visit [http://localhost:8080](http://localhost:8080) to see the docs website. Pages should refresh as you make changes to them.
-
-You can find the contribution guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-## Structure
-
-The structure of the `/docs` directory mirrors the structure of the docs website itself. Each page has a corresponding markdown file that is compiled to HTML on build. The `README.md` in each directory is the index page for the corresponding section.
-
-The left menu is defined in `/docs/.vuepress/config.js`.
+Please read our [CONTRIBUTING](CONTRIBUTING.md) guide.
 
 
 ## Support

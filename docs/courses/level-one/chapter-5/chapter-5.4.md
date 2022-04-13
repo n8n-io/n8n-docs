@@ -4,15 +4,15 @@ In this step of the workflow you will learn how to select and set data before tr
 
 The next step in Nathan’s workflow is to insert the *employeeName* and *orderId* of all *processing* orders into Airtable.
 
-For this, you need to use the [**Set node**](../../../nodes/nodes-library/core-nodes/Set/README.md), which allows you to select and set the data you want to be transferred from one app/service to another.
+For this, you need to use the [**Set node**](/integrations/core-nodes/n8n-nodes-base.set/), which allows you to select and set the data you want to be transferred from one app/service to another.
 
-::: tip 📖 Set node
-The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
-:::
+!!! note " Set node"
+    The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
+
 
 In your workflow, add a new *Set* node between the *IF* node and the *Airtable* node. In the Set node window you need to toggle *Keep Only Set* to true and then add two values:
 
-::: v-pre
+
 - *Add Value > Number:*
   - *Name:* orderId
   - *Value:* `{{$json["orderID"]}}`
@@ -21,13 +21,13 @@ In your workflow, add a new *Set* node between the *IF* node and the *Airtable* 
   - *Name:* employeeName
   - *Value:* `{{$json["employeeName"]}}`
     *Current Node > Input Data > JSON > employeeName*
-:::
+
 
 After setting the two values click on *Execute Node* and you should see the following results:
 
-<figure><img src="../images/chapter-two/Set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/Set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
 
-Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called *processingOrders* with two columns, *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](chapter-5.2.md).
+Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called *processingOrders* with two columns, *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/).
 
 Remember to update the Airtable node configuration to point to this new table.
 
@@ -35,7 +35,7 @@ Once that’s done, execute the *Airtable* node in the workflow and you should s
 
 At this stage, it looks like this:
 
-<figure><img src="../images/chapter-two/Workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/Workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
 
 ## What's next?
 

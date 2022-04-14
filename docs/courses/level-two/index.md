@@ -7,7 +7,7 @@ Welcome to the n8n Course Level 2!
 This course is for you if you:
 
 - Want to automate somewhat complex business processes.
-- Want to dive deeper into n8n after taking the Level 1 course.
+- Want to dive deeper into n8n after taking the [Level 1 course](/courses/level-one/).
 
 ## What will I learn?
 
@@ -26,7 +26,7 @@ You will learn all this by completing short practical exercises after the theore
 To follow along this course (at a comfortable pace) you will need the following:
 
 - [n8n set up](https://docs.n8n.io/getting-started/installation/). This course was developed on n8n version 0.161.
-- basic knowledge of n8n (for example, key components and concepts). We strongly recommend taking our [Level 1 course](/courses/level-one/) prior to this one.
+- basic knowledge of n8n (for example, key components and concepts). We strongly recommend taking our Level 1 course prior to this one.
 
 ## How long does it take to complete the course?
 

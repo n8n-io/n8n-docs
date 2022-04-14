@@ -23,6 +23,10 @@ extra_css:
 extra_javascript:
   - _extra/javascript/extra.js
 extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/company/645725/
   analytics:
     provider: google
     property: UA-208531131-1
@@ -96,6 +100,8 @@ nav:
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
       - Import: doc2/import.md
+      - Amount: doc2/settings-amount-settings.md
+      - Doc Types: doc2/settings-document-types.md
 
 
     - Table Train: doc2/table-train.md
@@ -108,7 +114,7 @@ nav:
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
-  - Workflow:
+  - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
     - Editor UI: workflow/editor-ui.md
@@ -201,37 +207,4 @@ nav:
         - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
       - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
       - Take the quiz and get your certificate: courses/level-one/chapter-7.md
-  # - Hosting n8n: 
-  #   - Overview: hosting/index.md
-  #   - Installation and hosting options: hosting/options.md
-  #   - Installation:
-  #     - Overview: hosting/installation/index.md
-  #     - Desktop app: hosting/installation/desktop-app.md
-  #     - npm: hosting/installation/npm.md
-  #     - Docker: hosting/installation/docker.md
-  #     - Cloud: hosting/installation/cloud.md
-  #   - Configuration: hosting/configuration.md
-  #   - User management: hosting/user-management.md
-  #   - Environment variables: hosting/environment-variables.md
-  #   - Security: hosting/security.md
-  #   - Logging: hosting/logging.md
-  #   - Server setups:
-  #     - Overview: hosting/server-setups/index.md
-  #     - Docker Compose: hosting/server-setups/docker-compose.md
-  #     - Caddy: hosting/server-setups/caddy.md
-  #   - Databases:
-  #     - Overview: hosting/databases/index.md
-  #     - Supported databases and settings: hosting/databases/supported-databases-settings.md
-  #     - Database structure: hosting/databases/structure.md
-  #   - Updating:
-  #     - Overview: hosting/updating/index.md
-  #     - npm: hosting/updating/npm.md
-  #     - Docker: hosting/updating/docker.md
-  #     - Desktop app: hosting/updating/desktop.md
-  #     - Cloud: hosting/updating/cloud.md
-  #   - Scaling:
-  #     - Overview: hosting/scaling/index.md
-  #     - Execution data: hosting/scaling/execution-data.md
-  #     - Execution modes and processes: hosting/scaling/execution-modes-processes.md
-  #     - Configuring queue mode: hosting/scaling/queue-mode.md
-  # - Contributing: contributing.md 
+  

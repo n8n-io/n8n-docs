@@ -14,9 +14,9 @@ Available only for n8n.cloud, navigate to the Dashboard of your n8n.cloud instan
 
 ![Admin Panel](/_images/editor-ui/admin_panel.png)
 
-## Workflows
+## Workflows²
 
-This section includes the operations for creating and editing workflows.
+This section includes the operations for creating and editing workflows².
 
 * **New**: Create a new workflow
 * **Open**: Open the list of saved workflows

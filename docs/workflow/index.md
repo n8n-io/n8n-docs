@@ -1,13 +1,13 @@
 # Welcome
 
-This is the documentation for n8n, a fair-code licensed node-based workflow automation tool.
+
 
 It covers everything from setup to usage and development. It is a work in progress and all contributions are welcome.
 
 
-## What is n8n?
+## What is Workflow²?
 
-n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code. n8n is:
+DOC² Workflow helps you to connect any app with an API with any other, and manipulate its data with little or no code. Workflow² is:
 
     Customizable: highly flexible workflows and the option to build custom nodes.
     Convenient: use our Desktop app or npm to try out n8n, and our Cloud hosting option if you want us to handle the infrastructure.

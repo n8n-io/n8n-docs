@@ -2,7 +2,7 @@
 
 ## Function
 
-A function is a block of code designed to perform a certain task. In Doc², you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.
+A function is a block of code designed to perform a certain task. In Workflow², you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.
 
 The [Function](/integrations/core-nodes/n8n-nodes-base.function/) and [Function Item](/integrations/core-nodes/n8n-nodes-base.functionItem/) nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
 

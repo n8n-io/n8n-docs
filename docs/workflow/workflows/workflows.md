@@ -1,14 +1,14 @@
-# Workflow
+# Workflow²
 
 A workflow is a collection of nodes connected together to automate a process. 
 
-A workflow can be started manually (with the Start node) or by Trigger nodes. When a workflow is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view your workflow executions in the **Execution log**, which can be helpful for debugging.
+A workflow² can be started manually (with the Start node) or by Trigger nodes. When a workflow² is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view your workflow executions in the **Execution log**, which can be helpful for debugging.
 
-![Workflow](/_images/workflows/workflows/Execute_workflow.gif)
+![Workflow²](/_images/workflows/workflows/Execute_workflow.gif)
 
-## Activating a workflow
+## Activating a workflow²
 
-Workflows that start with a Trigger node or a Webhook node need to be activated in order to be executed. This is done via the **Active** toggle in the Editor UI.
+Workflows² that start with a Trigger node or a Webhook node need to be activated in order to be executed. This is done via the **Active** toggle in the Editor UI.
 
 Active workflows enable the Trigger and Webhook nodes to receive data whenever a condition is met (e.g., Monday at 10:00, an update in a Trello board) and in turn trigger the workflow execution.
 
@@ -16,7 +16,7 @@ All the newly created workflows are deactivated by default.
 
 ## Sharing a workflow
 
-Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your Doc² library. Feel free to [share your workflows](/contributing/#contribute-a-workflow) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
+Workflows² are saved in JSON format. You can export your workflows as JSON files or import JSON files into your Doc² library. Feel free to [share your workflows](/contributing/#contribute-a-workflow) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
 
 You can export a workflow as a JSON file in two ways:
 

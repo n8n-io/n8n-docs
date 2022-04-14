@@ -6,7 +6,7 @@ We encourage using workflow notes heavily, especially on template workflows, to 
 
 ## Create a note
 
-Workflow notes are a type of core node. To add a new note:
+Workflow² notes are a type of core node. To add a new note:
 
 1. Open the nodes panel.
 2. Search for `note`.

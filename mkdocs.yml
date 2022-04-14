@@ -152,8 +152,8 @@ nav:
     - Overview: flow2/flow2.md
     - OnBoarding: flow2/flow2-onboarding-guide.md
   - KV²:
-    - Overview: kv2/fellowkv2-plugin.md
     - Tutorial: kv2/fellowkv2-tutorial.md
+    - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
   - TE²:
     - Overview: te2/fellow-te2-plugin.md
     - Tutorial: te2/fellowte2-tutorial.md

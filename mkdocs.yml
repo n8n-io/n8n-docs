@@ -70,6 +70,7 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
+    - AI Indicator: doc2/ai-indicators.md
     - Import:
       - Email: doc2/e-mail.md
     - Table: 

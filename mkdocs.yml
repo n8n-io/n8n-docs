@@ -52,7 +52,7 @@ plugins:
   - search
   - literate-nav
 nav: 
-  - Using DOC²:
+  - Using DOC² Workflow:
     - Welcome: index.md
     - Try it out: quickstart.md
     - Editor UI: editor-ui.md

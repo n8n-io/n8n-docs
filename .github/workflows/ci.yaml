@@ -14,7 +14,7 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material 
       - run: pip install -r requirements.txt
-      - run: pip pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       #- run: mkdocs build
       - run: mkdocs gh-deploy --force
       # - name: Pushes to another repository

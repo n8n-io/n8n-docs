@@ -1,4 +1,4 @@
-# Try it out
+# Overview
 
 This section gets you up and running with n8n.
 

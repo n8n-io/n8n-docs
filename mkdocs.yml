@@ -54,7 +54,10 @@ plugins:
 nav: 
   - Using n8n: 
     - Welcome: index.md
-    - Try it out: quickstart.md
+    - Try it out: 
+      - Overview: try-it-out/index.md
+      - A very quick quickstart: try-it-out/quickstart.md
+      - A longer introduction: try-it-out/longer-introduction.md
     - Editor UI: editor-ui.md
     - Understand workflows: 
       - Overview: workflows/index.md

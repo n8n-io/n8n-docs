@@ -1,4 +1,4 @@
-site_name: Doc² Documentation
+site_name: Docs Documentation
 theme:
   name: material
   custom_dir: overrides
@@ -61,6 +61,7 @@ nav:
       - Workflows: doc2/workflows/workflows.md
       - Connections: doc2/workflows/connections.md
       - Nodes: doc2/workflows/nodes.md
+      - Notes: doc2/workflows/workflow-notes.md
       - Items: doc2/workflows/items.md
     - Flow logic:
       - Overview: doc2/flow-logic/index.md
@@ -94,8 +95,28 @@ nav:
       - Glossary: doc2/reference/glossary.md
       - License: doc2/reference/license.md
       - Data collection: doc2/reference/data-collection.md
-  - DOC² Workflow:
-    - Overview: doc2workflow/index.md
+  - Workflow:
+    - Overview: workflow/index.md
+    - Integrations: 
+      - Overview: workflow/integrations/index.md
+      - Core nodes: workflow/integrations/core-nodes/
+      - Nodes: workflow/integrations/nodes/
+      - Trigger nodes: workflow/integrations/trigger-nodes/
+      - Credentials: workflow/integrations/credentials/
+      - Creating nodes:
+        - Overview: workflow/integrations/creating-nodes/index.md
+        - Code-based node building:
+          - Overview: workflow/integrations/creating-nodes/code/index.md
+          - Standards: workflow/integrations/creating-nodes/code/standards.md
+          - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
+          - Create an n8n-nodes-module: workflow/integrations/creating-nodes/code/create-n8n-nodes-module.md
+          - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
+          - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
+          - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md
+          - HTTP request helpers: workflow/integrations/creating-nodes/code/http-helpers.md
+          - Node linter: workflow/integrations/creating-nodes/code/node-linter.md
+          - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
+          - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
     - Overview: flow2/index.md
   - KV²:
@@ -104,26 +125,6 @@ nav:
     - Overview: te2/index.md
   - OCR:
     - Overview: ocr/index.md
-  - Integrations: 
-    - Overview: integrations/index.md
-    - Core nodes: integrations/core-nodes/
-    - Nodes: integrations/nodes/
-    - Trigger nodes: integrations/trigger-nodes/
-    - Credentials: integrations/credentials/
-    - Creating nodes:
-      - Overview: integrations/creating-nodes/index.md
-      - Code-based node building:
-        - Overview: integrations/creating-nodes/code/index.md
-        - Standards: integrations/creating-nodes/code/standards.md
-        - Create your first node: integrations/creating-nodes/code/create-first-node.md
-        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
-        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
-        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
-        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
-        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
-        - Node linter: integrations/creating-nodes/code/node-linter.md
-        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
-        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
   - Courses:
     - Overview: courses/index.md
     - Level one:

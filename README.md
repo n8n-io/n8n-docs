@@ -14,15 +14,9 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 ```bash
 git clone https://github.com/n8n-io/n8n-docs.git
-cd n8n-docs
+cd docapp-docs
 pip install -r requirements.txt
-# Doc² organization members: 
-# Outside your docs project, do:
-git clone https://github.com/n8n-io/mkdocs-material-insiders.git mkdocs-material
-# Navigate back into the docs project and run:
-pip install -e <path-to-mkdocs-material>
-# External contributors: rely on the preview builds on pull requests, or 
-# use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
+
 pip install mkdocs-material
 # Serve a local preview
 mkdocs serve

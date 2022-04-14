@@ -14,17 +14,18 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material 
       - run: pip install -r requirements.txt
-      - run: mkdocs build
-      - name: Pushes to another repository
-        id: push_directory
-        uses: cpina/github-action-push-to-another-repository@devel
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source-directory: site/
-          destination-github-username: 'Fellow-Consulting-AG'
-          destination-repository-name: 'doc-site'
-          user-email: daniel.jordan@fellow-consulting.de
-          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
-          target-branch: main
+      #- run: mkdocs build
+      - run: mkdocs gh-deploy --force
+      # - name: Pushes to another repository
+      #   id: push_directory
+      #   uses: cpina/github-action-push-to-another-repository@devel
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source-directory: site/
+      #     destination-github-username: 'Fellow-Consulting-AG'
+      #     destination-repository-name: 'doc-site'
+      #     user-email: daniel.jordan@fellow-consulting.de
+      #     commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+      #     target-branch: main
 

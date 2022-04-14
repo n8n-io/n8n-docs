@@ -20,10 +20,10 @@ Create a [PagerDuty](https://pagerduty.com/) account.
 5. Select 'Infrastructure Automation' from the ***Category*** dropdown list.
 6. Choose the appropriate option for the publication of your app and click on the ***Save*** button.
 7. Click on the ***Add*** button in the 'OAuth 2.0' section.
-8. Copy the 'OAuth Callback URL' provided in the 'PagerDuty OAuth2 API' credentials in n8n and paste it in the ***Redirect URL*** field in the PagerDuty app creation page.
+8. Copy the 'OAuth Callback URL' provided in the 'PagerDuty OAuth2 API' credentials in Doc² and paste it in the ***Redirect URL*** field in the PagerDuty app creation page.
 9. Use the provided ***Client ID*** and ***Client Secret*** with your PagerDuty OAuth2 API credentials in n8n.
 10. Select 'Read/Write' from the ***Set Permission Scopes*** dropdown list and then click on ***Save***.
-11. Click on the circle button in the OAuth section of n8n to connect a PagerDuty account to n8n.
+11. Click on the circle button in the OAuth section of Doc² to connect a PagerDuty account to n8n.
 12. Click on the ***Save*** button to save your credentials.
 
 ![Getting PagerDuty OAuth credentials](/_images/integrations/credentials/pagerduty/using-oauth.gif)

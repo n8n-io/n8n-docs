@@ -22,7 +22,7 @@ Create a [GitHub](https://github.com/) account.
 5. Select ***OAuth Apps***.
 6. Click on the ***Register a new application*** button.
 7. Enter the ***Application name*** and ***Homepage URL***.
-8. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***Authorization callback URL*** field.
+8. Copy the ***OAuth Callback URL*** from Doc² and paste it in the ***Authorization callback URL*** field.
 9. Click on the ***Register application*** button.
 10. Copy the displayed 'Client ID'.
 11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github OAuth2 API' credentials in n8n.

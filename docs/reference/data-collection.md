@@ -12,7 +12,7 @@ n8n collects selected usage and performance data to help us diagnose problems an
 - The number of workflow executions and their status
 - Details on how the UI is used (e.g. navigation, nodes panel searches)
 - Diagnostic information
-    - n8n version
+    - Doc² version
     - Selected settings:
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
@@ -35,7 +35,7 @@ We do not collect private or sensitive information, such as:
 
 ## How collection works
 
-Telemetry is collected anonymously, with most data sent to n8n as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
+Telemetry is collected anonymously, with most data sent to Doc² as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
 
 ## Opting out of telemetry
 

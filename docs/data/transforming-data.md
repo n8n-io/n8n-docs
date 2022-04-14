@@ -8,7 +8,7 @@ For example, the image below shows the output of an [HTTP Request](/integrations
 
 ![HTTP Request node output](/_images/data/transforming-data/HTTPRequest_output.png)
 
-To transform this kind of structure into the n8n data structure you will have to use the Item Lists node.
+To transform this kind of structure into the Doc² data structure you will have to use the Item Lists node.
 
 !!! note
         If you’re using the HTTP Request node, you should use the Split Into items option to transform the data. You don’t have to use a Function node in that case.

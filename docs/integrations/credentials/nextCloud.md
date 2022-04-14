@@ -13,7 +13,7 @@ Create a [Nextcloud](https://nextcloud.com/) account.
 2. Click on the user icon in the top right.
 3. Select 'Settings' in the drop down menu.
 4. Click on 'Security' under Administration in the sidebar.
-5. Copy the 'OAuth Callback URL' provided in the Nextcloud OAuth2 API credentials in n8n and paste it in the *Redirection URI* field under the 'OAuth 2.0 clients' section in the Nextcloud page.
+5. Copy the 'OAuth Callback URL' provided in the Nextcloud OAuth2 API credentials in Doc² and paste it in the *Redirection URI* field under the 'OAuth 2.0 clients' section in the Nextcloud page.
 6. Fill out any other information that is necessary and click on the 'Add' button.
 7. Click on the eye icon to reveal the Secret and use the 'Client Identifier' and the 'Secret' with your Nextcloud OAuth2 API credentials in n8n.
 8. Replace your domain in the samples for the *Authorization URL* and *Access Token URL* fields.

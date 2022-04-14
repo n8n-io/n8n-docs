@@ -1,8 +1,8 @@
 ## Security
 
-By default, n8n can be accessed by everybody. This is okay if you only have it running
+By default, Doc² can be accessed by everybody. This is okay if you only have it running
 locally but if you deploy it on a server which is accessible from the web, you have
-to make sure that n8n is protected.
+to make sure that Doc² is protected.
 
 ### Basic auth
 
@@ -17,7 +17,7 @@ export N8N_BASIC_AUTH_PASSWORD=<PASSWORD>
 
 ### JWT
 
-There is also limited support for JWT based authentication. If enabled, n8n will verify the token with the provided JSON Web Key Set URI. It can be configured through the following environment variables:
+There is also limited support for JWT based authentication. If enabled, Doc² will verify the token with the provided JSON Web Key Set URI. It can be configured through the following environment variables:
 
 ```bash
 export N8N_JWT_AUTH_ACTIVE=true

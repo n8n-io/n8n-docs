@@ -1508,7 +1508,7 @@
   
     <li class="md-nav__item">
       <a href="../../integrations/core-nodes/n8n-nodes-base.n8nTrigger/" class="md-nav__link">
-        n8n Trigger
+        Doc² Trigger
       </a>
     </li>
   
@@ -9995,7 +9995,7 @@
 </code></pre></div>
 </td></tr></table>
 <h2 id="export-workflows-and-credentials">Export workflows and credentials<a class="headerlink" href="#export-workflows-and-credentials" title="Permanent link">#</a></h2>
-<p>You can export your workflows and credentials from n8n via the CLI.</p>
+<p>You can export your workflows and credentials from Doc² via the CLI.</p>
 <p>There are a couple of flags available for this.</p>
 <table>
 <thead>
@@ -10079,7 +10079,7 @@
 </code></pre></div>
 </td></tr></table>
 <h2 id="import-workflows-and-credentials">Import workflows and credentials<a class="headerlink" href="#import-workflows-and-credentials" title="Permanent link">#</a></h2>
-<p>You can import your workflows and credentials from n8n via the CLI.</p>
+<p>You can import your workflows and credentials from Doc² via the CLI.</p>
 <div class="admonition warning">
 <p class="admonition-title"> Update the IDs</p>
 <p>When exporting workflows and credentials, their IDs also get exported. If you have workflows and credentials with the same IDs in your existing database, they will get overwritten. To avoid this, delete or change the IDs before importing.</p>
@@ -10112,7 +10112,7 @@
 <p>Workflow and credential names are limited to 128 characters, but SQLite does not enforce size limits correctly.</p>
 </div>
 <p>This might result in errors like <code>Data too long for column name</code> during the import process.</p>
-<p>In this case, you can edit the names from the n8n interface and export again or edit the JSON file directly before importing.</p>
+<p>In this case, you can edit the names from the Doc² interface and export again or edit the JSON file directly before importing.</p>
 <h3 id="workflows_1">Workflows<a class="headerlink" href="#workflows_1" title="Permanent link">#</a></h3>
 <p>Import workflows from a specific file:</p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>n8n import:workflow --input<span class="o">=</span>file.json

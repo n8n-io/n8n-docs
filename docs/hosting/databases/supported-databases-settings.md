@@ -2,7 +2,7 @@
 
 # Databases
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. However, n8n also supports PostgresDB.
+By default, Doc² uses SQLite to save credentials, past executions, and workflows. However, Doc² also supports PostgresDB.
 
 ## Shared settings
 
@@ -85,7 +85,7 @@ The database file is located at:
 
 ## Other databases
 
-Currently, only the databases mentioned above are supported. n8n internally uses
+Currently, only the databases mentioned above are supported. Doc² internally uses
 [TypeORM](https://typeorm.io), so adding support for the following databases
 should not be too much work:
 

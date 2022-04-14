@@ -9,6 +9,6 @@ To updated your n8n.cloud instance navigate to your Dashboard:
 
     ![Manage Tab](/_images/hosting/updating/cloud/manage_version.png)
 
-3. Click **Save Changes** to restart your n8n instance and perform the update. A confirmation modal will appear and the **Instance Status** will reflect the update in progress.
+3. Click **Save Changes** to restart your Doc² instance and perform the update. A confirmation modal will appear and the **Instance Status** will reflect the update in progress.
 
     ![Instance Status](/_images/hosting/updating/cloud/instance_status.png)

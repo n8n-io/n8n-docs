@@ -1,11 +1,11 @@
 # n8n.cloud
 
-n8n.cloud is our hosted solution. In addition to all the features of n8n, it provides added benefits such as:
+n8n.cloud is our hosted solution. In addition to all the features of Doc², it provides added benefits such as:
 
-- No technical set up or maintenance for your n8n instance
+- No technical set up or maintenance for your Doc² instance
 - 24/7 uptime monitoring
 - Managed OAuth for authentication
-- Easy upgrades to the newest n8n versions
+- Easy upgrades to the newest Doc² versions
 
 [Sign up for n8n.cloud](https://www.n8n.cloud/)
 
@@ -15,4 +15,4 @@ n8n.cloud is our hosted solution. In addition to all the features of n8n, it pro
 
 
 !!! warning "Russia and Belarus"
-        n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
+        Doc² Cloud is not available in Russia and Belarus. Refer to our blog post [Update on Doc² cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.

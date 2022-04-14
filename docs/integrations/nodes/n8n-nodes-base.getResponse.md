@@ -58,7 +58,7 @@ This node will check if a contact belongs to the `n8n` campaign or not. If a con
 
 In the screenshot below, you will notice that the node returns all the contacts that do not belong to the `n8n` campaign.
 
-![Using the IF node to check if a contact belongs to the n8n campaign or not](/_images/integrations/nodes/getresponse/if_node.png)
+![Using the IF node to check if a contact belongs to the Doc² campaign or not](/_images/integrations/nodes/getresponse/if_node.png)
 
 ### 4. GetResponse1 node (update: contact)
 

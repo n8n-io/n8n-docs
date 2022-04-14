@@ -13,7 +13,7 @@ The IMAP Email node is used to receive emails via an IMAP email server. This nod
 ## Node Reference
 
 - ***Mailbox Name*** field: The mailbox from which you want to receive emails.
-- ***Action*** field: Used to specify whether or not an email should be marked as read when n8n receives it.
+- ***Action*** field: Used to specify whether or not an email should be marked as read when Doc² receives it.
 - ***Download Attachment*** field: Used to specify whether or not you want to download any attachments received with the emails.
 
 ## Example Usage

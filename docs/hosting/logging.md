@@ -1,19 +1,19 @@
 # Logging in n8n
 
-Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
+Logging is an important feature for debugging. Doc² uses the [winston](https://www.npmjs.com/package/winston) logging library.
 
 
 
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/#configuration-via-file))
+To set up logging in Doc², you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/#configuration-via-file))
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
 | n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, verbose, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
 | n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
 | n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
-| n8n.log.file.maxsize | N8N_LOG_FILE_MAXSIZE | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
+| n8n.log.file.maxsize | N8N_LOG_FILE_MAXSIZE | The maximum size (in MB) for each log file. By default, Doc² uses 16 MB. |
 | n8n.log.file.maxcount | N8N_LOG_FILE_MAXCOUNT | The maximum number of log files to keep. The default value is 100. This value should be set when using workers. |
 
 
@@ -41,8 +41,8 @@ n8n uses standard log levels to report:
 - `error`: the most strict level. Outputs only errors and nothing else
 - `warning`: outputs errors and warning messages
 - `info`: contains useful information about progress
-- `verbose`: make n8n output additional information about progress that allows you to further understand what is happening
-- `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
+- `verbose`: make Doc² output additional information about progress that allows you to further understand what is happening
+- `debug`: the most verbose output. Doc² outputs a lot of information to help you debug issues.
 
 ## Development
 

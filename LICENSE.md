@@ -21,7 +21,7 @@ Software: n8n
 
 License: Apache 2.0
 
-Licensor: n8n GmbH
+Licensor: Doc² GmbH
 
 
 ---------------------------------------------------------------------

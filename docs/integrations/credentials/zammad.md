@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes with Zammad.
 
 ## Basic Auth
 
-1. Enter the URL of your Zammad instance in the **Base URL** field of the n8n credentials screen.
+1. Enter the URL of your Zammad instance in the **Base URL** field of the Doc² credentials screen.
 2. Enter your Zammad email om the **Email** field and your password in the **Password** field.
 
 ## Token Auth

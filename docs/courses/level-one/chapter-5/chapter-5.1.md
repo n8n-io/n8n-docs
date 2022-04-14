@@ -38,7 +38,7 @@ This option will output each element of an array as its own item.
 Since you selected *Header Authentication*, now you need to enter your credentials in order to be able to access the data.
 
 !!! note "Credentials"
-    Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
+    Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as Doc² nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
 
 
 In the left panel, click on *Create New* in the box next to the parameter *Credentials*. This will open the Credentials window where you need to add the following information in the *Connection* tab:

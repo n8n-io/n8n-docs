@@ -15,7 +15,7 @@ Create a [PayPal](https://paypal.com/) account.
 3. Enter your PayPal account credentials.
 4. In the section 'REST API apps', click on *Create app*.
 5. Enter a name for your app in *App Name* and click on *Create App*.
-6. Return to n8n and enter the Client ID and Client Secret in your PayPal API credentials.
+6. Return to Doc² and enter the Client ID and Client Secret in your PayPal API credentials.
 7. Choose the environment: sandbox or live.
 
 ![Getting PayPal credentials](/_images/integrations/credentials/paypal/using-oauth.gif)

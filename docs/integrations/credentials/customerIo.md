@@ -41,4 +41,4 @@ The following video demonstrates the steps mentioned above.
 
 ### Why do I need the Tracking API Key and the App API Key?
 
-Customer.io uses different API Keys for different endpoints. Based on the operation you want to perform, n8n uses the correct API key to connect to your Customer.io account.
+Customer.io uses different API Keys for different endpoints. Based on the operation you want to perform, Doc² uses the correct API key to connect to your Customer.io account.

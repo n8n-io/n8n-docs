@@ -8,9 +8,9 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/), choose the option that best suits your skills and needs.
 
-**This course was developed on n8n version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
+**This course was developed on Doc² version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
 
-Once you have n8n running, open the Editor UI in a browser window. It should look like this:
+Once you have Doc² running, open the Editor UI in a browser window. It should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-one/Editor-UI.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
@@ -18,11 +18,11 @@ Now that you have the Editor UI open, you'll learn how to navigate it.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/) represents the web interface used to create [workflows](/workflows/workflows/). Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the n8n documentation and forum.
+The [Editor UI](/editor-ui/) represents the web interface used to create [workflows](/workflows/workflows/). Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the Doc² documentation and forum.
 
 ### Left-side panel
 
-Under the n8n logo in the upper left corner you will notice a round arrow icon. Click on it to open the left-side menu, which contains the core functionalities and settings for managing workflows.
+Under the Doc² logo in the upper left corner you will notice a round arrow icon. Click on it to open the left-side menu, which contains the core functionalities and settings for managing workflows.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
@@ -33,7 +33,7 @@ There are four main sections in the left menu:
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions, which are complete runs of a workflow from the first to the last node.
-- *Help*: Contains resources around n8n product and community.
+- *Help*: Contains resources around Doc² product and community.
 
 ### Top bar
 

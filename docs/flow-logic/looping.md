@@ -2,7 +2,7 @@
 
 Looping enables you to repeatedly perform the same actions, stopping only after a set number of repetitions (e.g. fetch the 10 most recent items) or when a specific condition is met (e.g. no new items exist).
 
-Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In n8n this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn’t true.
+Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In Doc² this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn’t true.
 
 ## Using loops in n8n
 
@@ -17,7 +17,7 @@ The following image shows the output from the [Customer Datastore](/integrations
 This is how you can process multiple items without having to explicitly connect nodes in a loop.
 
 !!! note " Keep in mind"
-    Your data must be in the proper structure for n8n to process it as described here. See [Transforming Data](/data/transforming-data/) to learn more.
+    Your data must be in the proper structure for Doc² to process it as described here. See [Transforming Data](/data/transforming-data/) to learn more.
 
 
 ### Executing nodes once
@@ -52,9 +52,9 @@ When you have a loop in a workflow, the node gets executed multiple times. The n
 
 ## Creating loops
 
-As discussed above, n8n typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. You can learn more about these [here](#node-exceptions).
+As discussed above, Doc² typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. You can learn more about these [here](#node-exceptions).
 
-To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](/integrations/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. You now have a loop that iterates over each item.
+To create a loop in an Doc² workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](/integrations/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. You now have a loop that iterates over each item.
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 

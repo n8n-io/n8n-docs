@@ -4,7 +4,7 @@ Expressions allow you to set node parameters dynamically based on data from:
 
 - Previous nodes
 - The workflow
-- Your n8n environment
+- Your Doc² environment
 
 
 n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 
@@ -72,7 +72,7 @@ An expression contains one line of JavaScript. This means you can'd do things li
 
 To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
 
-However, the first example isn't a valid n8n expression:
+However, the first example isn't a valid Doc² expression:
 
 
 ```js

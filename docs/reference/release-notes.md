@@ -34,7 +34,7 @@ This is a small bug fix release.
 ### Bug fixes
 
 * **core**: fix issue with current executions not displaying.<br>
-* **core**: fix an issue causing n8n to falsely skip some authentication.<br>
+* **core**: fix an issue causing Doc² to falsely skip some authentication.<br>
 * [WooCommerce Node:](/integrations/nodes/n8n-nodes-base.wooCommerce) Fix a pagination issue with the GetAll operation.
 
 ## n8n@0.171.0 
@@ -191,7 +191,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 ### New feature: user management
 
-User management in n8n allows you to invite people to work in your self-hosted n8n instance. It includes:
+User management in Doc² allows you to invite people to work in your self-hosted Doc² instance. It includes:
 
 * Login and password management
 * Adding and removing users
@@ -267,7 +267,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 ### Bugfixes
 
 - The Google Calendar node now correctly applies timezones when creating, updating, and scheduling all day events.
-- Fixed a bug that occasionally caused n8n to crash, or shut down workflows unexpectedly.
+- Fixed a bug that occasionally caused Doc² to crash, or shut down workflows unexpectedly.
 - You can now use long credential type names with Postgres.
 
 ### Contributors
@@ -737,11 +737,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Added frontend for value surveys
 - Fixed an issue preventing the recommendation logic from working as expected after selecting a work area
-- Fixed an issue where a wrong exit code was sent when running n8n on an unsupported version of Node.js
+- Fixed an issue where a wrong exit code was sent when running Doc² on an unsupported version of Node.js
 - Fixed an issue where node options would disappear on hovering when a node is not selected
-- Fixed an issue where the execution id was missing when running n8n in queue mode
+- Fixed an issue where the execution id was missing when running Doc² in queue mode
 - Fixed an issue where execution data was missing when waiting for a webhook in queue mode
-- Improved error handling when the n8n port is already in use
+- Improved error handling when the Doc² port is already in use
 - Improved diagnostic events
 - Removed toast notification on webhook deletion, added toast notification after node is copied
 - Removed default trigger tooltip for polling trigger nodes
@@ -779,7 +779,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added a plus (+) connector to end nodes
 - Allowed opening workflows and executions in a new window when using Ctrl + Click
 - Enforced type checking for all node parameters
-- Fixed a build issue in the custom n8n docker image
+- Fixed a build issue in the custom Doc² docker image
 - Fixed a memory leak in the UI which could occur when renaming nodes or navigate to another workflow
 - Improved stability of internal test workflows
 - Improved expression security
@@ -1131,7 +1131,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Telegram:](/integrations/nodes/n8n-nodes-base.telegram/) Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations.
 
 ### Core Functionality 
-- Fixed startup behavior when running n8n in scaled mode (i.e. `skipWebhoooksDeregistrationOnShutdown` is enabled).
+- Fixed startup behavior when running Doc² in scaled mode (i.e. `skipWebhoooksDeregistrationOnShutdown` is enabled).
 - Fixed behavior around handling empty response bodies.
 - Fixed an issue with handling of refresh tokens.
 
@@ -1282,7 +1282,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2021-08-23
 
 ### Core Functionality 
-- Fixed an issue where if n8n was shutdown during database migration while upgrading versions, errors would result upon next startup.
+- Fixed an issue where if Doc² was shutdown during database migration while upgrading versions, errors would result upon next startup.
 
 ## n8n@0.135.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />
@@ -1606,7 +1606,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [MySQL:](/integrations/nodes/n8n-nodes-base.mySql/) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
+* [MySQL:](/integrations/nodes/n8n-nodes-base.mySql/) Fixed an issue where Doc² was unable to save data due to collation, resulting in workflows ending with Unknown status.
 
 ### Contributors 
 [Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
@@ -1925,7 +1925,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Zendesk Trigger:](/integrations/trigger-nodes/n8n-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
 
 ### Core Functionality 
-- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
+- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the Doc² Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
 - Added the functionality to open the New Credentials dropdown by default
 
 ### Bug fixes 
@@ -2192,7 +2192,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Separated webhook from the core to scale webhook separately
 - Fixed an issue with current execution query for unsaved running workflows
 - Fixed an issue with the regex that detected node names
-- n8n now generates a unified execution ID instead of two separate IDs for currently running and saved executions
+- Doc² now generates a unified execution ID instead of two separate IDs for currently running and saved executions
 
 ## n8n@0.107.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />
@@ -2795,7 +2795,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Postmark Trigger: Fixed parameters for the node
 - The default space between nodes has been increased to two units
 - Expression support has been added to the credentials
-- Passwords for your n8n instance can now be hashed
+- Passwords for your Doc² instance can now be hashed
 
 ## n8n@0.81.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.80.0...n8n@0.81.0) for this version.<br />
@@ -2852,7 +2852,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Webhook
 - Removed Test-Webhook also in case checkExists fails
 - HTTP Request node does not overwrite accept header if it's already set
-- Add rawBody to every request so that n8n does not give an error if body is missing
+- Add rawBody to every request so that Doc² does not give an error if body is missing
 
 ## n8n@0.79.0 
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
@@ -3000,7 +3000,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Webflow
 - Zendesk
 - Added Postgres SSL support
-- It is now possible to deploy n8n under a subfolder
+- It is now possible to deploy Doc² under a subfolder
 
 
 ## n8n@0.70.0

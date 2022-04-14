@@ -1447,7 +1447,7 @@
   
     <li class="md-nav__item">
       <a href="../../integrations/core-nodes/n8n-nodes-base.n8nTrigger/" class="md-nav__link">
-        n8n Trigger
+        Doc² Trigger
       </a>
     </li>
   
@@ -9845,7 +9845,7 @@
 
 <h1 id="processing-data-with-code">Processing data with code<a class="headerlink" href="#processing-data-with-code" title="Permanent link">#</a></h1>
 <h2 id="function">Function<a class="headerlink" href="#function" title="Permanent link">#</a></h2>
-<p>A function is a block of code designed to perform a certain task. In n8n, you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.</p>
+<p>A function is a block of code designed to perform a certain task. In Doc², you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.</p>
 <p>The <a href="/integrations/core-nodes/n8n-nodes-base.function/">Function</a> and <a href="/integrations/core-nodes/n8n-nodes-base.functionItem/">Function Item</a> nodes are the most powerful in n8n. Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.</p>
 <p>The code of the <strong>Function node</strong> gets executed only once. The node receives the full items (JSON and binary data) as an array and expects an array of items as a return value. The items returned can be totally different from the incoming ones. So it is not only possible to remove and edit existing items, but also to add or return totally new ones.</p>
 <p>The code of the <strong>Function Item node</strong> gets executed once for every item. The node receives one item (just the JSON data) at a time as input. As a return value, it expects the JSON data of one single item. That makes it possible to add, remove, and edit JSON properties of items, but it is not possible to add new or remove existing items. Accessing and changing binary data is only possible via the methods <code>getBinaryData</code> and <code>setBinaryData</code>.</p>

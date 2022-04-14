@@ -19,7 +19,7 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 3. Click on 'Account' in the dropdown list.
 4. Click on the *Extras* dropdown list and then select 'Registered apps'.
 5. Click on the *Register An App* button.
-6. Copy the 'OAuth Callback URL' from your n8n Mailchimp OAuth2 API credentials and paste it in the 'Redirect URI' field of the Mailchimp form.
+6. Copy the 'OAuth Callback URL' from your Doc² Mailchimp OAuth2 API credentials and paste it in the 'Redirect URI' field of the Mailchimp form.
 7. Fill out any other necessary details and click on the *Create* button.
 8. Use the generated Client ID and Client secret with your Mailchimp OAuth2 API node credentials in n8n.
 9. Click on the circle button in the OAuth section to connect your Mailchimp account to n8n.

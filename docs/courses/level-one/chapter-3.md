@@ -18,4 +18,4 @@ This manual work is tough and requires high attention to detail to make sure tha
 
 **Nathan 🙋:** The data warehouse was written in-house ages ago. It doesn’t have a CSV export but they recently added a couple of API endpoints that expose this data, if that helps.
 
-**You 👩‍🔧:** Perfect! That’s a good start. If you have a generic API, we can add some custom code and a couple of services to make an automated workflow. This gig has n8n written all over it. Let’s get started!
+**You 👩‍🔧:** Perfect! That’s a good start. If you have a generic API, we can add some custom code and a couple of services to make an automated workflow. This gig has Doc² written all over it. Let’s get started!

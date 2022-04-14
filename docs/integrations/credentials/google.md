@@ -62,9 +62,9 @@ From your [Google Cloud Console](https://console.cloud.google.com) dashboard:
     ![OAuth Callback URL](/_images/integrations/credentials/google/oauth_callback.png)
 6. Click the ***CREATE*** button.
 
-From your n8n instance:
+From your Doc² instance:
 
-7. Enter your new ***Client ID*** and ***Client Secret*** from Google Cloud Console in the n8n Credentials modal.
+7. Enter your new ***Client ID*** and ***Client Secret*** from Google Cloud Console in the Doc² Credentials modal.
 8. Enter a ***Credentials Name***.
 9. Click on the ***Sign in with Google*** button to complete your Google authentication.
 10. ***Save*** your new credentials in n8n.
@@ -91,11 +91,11 @@ From your [Google Cloud Console](https://console.cloud.google.com) dashboard:
 8. Click on ***ADD KEY*** and select ***Create new key***.
 9. In the modal that appears, select ***JSON*** and click ***Create***. The file is saved to your computer.
 
-From you n8n instance:
+From you Doc² instance:
 
 10. Enter a ***Credentials Name***.
 11. In the ***Service Account Email*** field, enter the email associated with your new Service Account (visible in the ***Details*** tab).
-12. Enter the ***Private Key*** from the downloaded JSON file. **If you are running an n8n version older than 0.156.0: Replace all instances of `\n` in the JSON file with new lines.**
+12. Enter the ***Private Key*** from the downloaded JSON file. **If you are running an Doc² version older than 0.156.0: Replace all instances of `\n` in the JSON file with new lines.**
 13. (***Optional***) Click the toggle to enable [***Impersonate a User***](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) and enter the desired email.
 14. ***Save*** your credentials.
 

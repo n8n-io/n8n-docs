@@ -3,7 +3,7 @@
 The Execute Command node is used to run shell commands on the host machine that runs n8n.
 
 !!! note " Keep in mind"
-    1. If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
+    1. If you are running Doc² in Docker, your command will run on the Doc² container and not the Docker host.
 2. This node will execute the command in the default shell of the host machine. For example, this will be PowerShell on Windows and zsh on macOS.
 
 
@@ -116,7 +116,7 @@ ls
 
 You can also use the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to make a cURL request.
 
-If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
+If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing Doc² image. The default Doc² Docker image uses Alpine Linux. You will have to install the curl package.
 1. Create a file named Dockerfile.
 2. Add the below code snippet to the Dockerfile.
 ```

@@ -3,7 +3,7 @@
 The Edit Image node is used to manipulate and edit images.
 
 !!! note " Keep in mind"
-    1. If you are not running n8n on Docker, you'll need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html).
+    1. If you are not running Doc² on Docker, you'll need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html).
 2. You will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Edit Image node.
 
 

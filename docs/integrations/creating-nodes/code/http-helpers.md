@@ -75,7 +75,7 @@ In an effort to keep maximum compatibility, we made a transparent conversion to 
 
 If you are having issues, please report them in our [Community Forums](https://community.n8n.io/) or on [Github](https://github.com/n8n-io/n8n/issues).
 
-Also, you can temporarily enable n8n to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
+Also, you can temporarily enable Doc² to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
 
 **Please note:** This behavior is permanent and we will be removing the `request-promise` library entirely in the future so please report any errors you have so we can fix them.
 

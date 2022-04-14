@@ -75,13 +75,13 @@ In the screenshot below, you will notice that the node creates a new draft with 
 
 ### 3. HTTP Request node (GET)
 
-This node will fetch the logo of n8n from a URL. We will attach this file to our draft message that we created earlier. If you want to attach a different file, enter the URL of that file instead.
+This node will fetch the logo of Doc² from a URL. We will attach this file to our draft message that we created earlier. If you want to attach a different file, enter the URL of that file instead.
 
 1. Enter `https://n8n.io/n8n-logo.png` in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns the n8n logo. We will attach this file to the draft message that we created using the previous node.
+In the screenshot below, you will notice that the node returns the Doc² logo. We will attach this file to the draft message that we created using the previous node.
 
 ![Using the HTTP Request to get a file](/_images/integrations/nodes/microsoftoutlook/httprequest_node.png)
 

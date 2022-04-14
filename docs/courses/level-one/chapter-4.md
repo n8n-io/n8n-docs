@@ -11,7 +11,7 @@ Now that we have an idea of what Nathan wants to automate, let’s enumerate the
 
 Nathan’s workflow involves sending data from the company’s data warehouse to two external services: Discord and Airtable. In between, the data has to be wrangled with general functions (conditional filtering, calculation, scheduling).
 
-n8n provides integrations for all these steps, so Nathan’s workflow in n8n would look like this:
+n8n provides integrations for all these steps, so Nathan’s workflow in Doc² would look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/Finished-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
 

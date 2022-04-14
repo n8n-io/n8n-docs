@@ -37,7 +37,7 @@ Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 16. Paste the secret in the ***Client Secret*** field in the Microsoft node credentials in n8n.
 17. Click on the circle button in the OAuth section to connect a Microsoft account to n8n.
 18. Login to your Microsoft account and allow the app to access your info.
-19. Click on the ***Save*** button in the Microsoft node credentials in n8n to save your credentials.
+19. Click on the ***Save*** button in the Microsoft node credentials in Doc² to save your credentials.
 
 The following video demonstrates the steps mentioned above.
 

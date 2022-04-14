@@ -22,7 +22,7 @@ Create an [Asana](https://www.Asana.com/) account.
 5. Click on ***Manage Developer Apps***.
 6. Click on ***New App***.
 7. Enter a name, accept the *API terms and conditions*, and click on ***Create app***.
-8. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***Redirect URLs*** field and click ***Add***.
+8. Copy the ***OAuth Callback URL*** from Doc² and paste it in the ***Redirect URLs*** field and click ***Add***.
 9. Use the provided ***Client ID*** and ***Client secret*** with your Asana OAuth2 API credentials in n8n.
 10. Click on the circle button in the OAuth section to connect an Asana account to n8n.
 11. Click the ***Save*** button to save your credentials in n8n.

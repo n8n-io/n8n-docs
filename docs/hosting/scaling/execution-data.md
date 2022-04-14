@@ -1,6 +1,6 @@
 # Execution data
 
-Depending on your executions settings and volume, your n8n database can quickly swell in size and eventually run out of storage. 
+Depending on your executions settings and volume, your Doc² database can quickly swell in size and eventually run out of storage. 
 
 To avoid this and ensure continued proper functionality, it is recommended to ensure you are only saving the desired data and to enable pruning of old executions data.
 
@@ -30,7 +30,7 @@ export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 <code-block title="Docker">
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e EXECUTIONS_DATA_SAVE_ON_ERROR=all \
 	-e EXECUTIONS_DATA_SAVE_ON_SUCCESS=none \
@@ -74,7 +74,7 @@ export EXECUTIONS_DATA_MAX_AGE=168
 <code-block title="Docker">
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e EXECUTIONS_DATA_PRUNE=true \
 	-e EXECUTIONS_DATA_MAX_AGE=168 \
@@ -93,4 +93,4 @@ n8n:
 </code-group>
 
 !!! note " Keep in mind"
-    If you are running n8n using the default SQLite database, the disk-space of any pruned data is not automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.
+    If you are running Doc² using the default SQLite database, the disk-space of any pruned data is not automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.

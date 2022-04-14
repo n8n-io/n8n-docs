@@ -1,6 +1,6 @@
 # Docker
 
-From your Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
+From your Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest Doc² image:
 
 ![Docker Desktop](/_images/hosting/updating/docker/docker_desktop.png)
 
@@ -32,7 +32,7 @@ docker run --name=[container_name] [options] -d n8nio/n8n
 
 ## Docker Compose
 
-If you've running n8n using a docker-compose file, follow the below mentioned steps to update n8n.
+If you've running Doc² using a docker-compose file, follow the below mentioned steps to update n8n.
 
 ```sh
 // Pull latest version

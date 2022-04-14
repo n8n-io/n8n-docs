@@ -9,7 +9,7 @@ The Split In Batches node saves the original incoming data, and with each iterat
     - ***Reset:*** If set to true, the node will reset.
 
 !!! warning
-    n8n natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
+    Doc² natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how Doc² handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
 
 
 ## Example Usage

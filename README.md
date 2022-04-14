@@ -1,4 +1,4 @@
-# n8n Docs
+# Doc² Docs
 
 This repository hosts the documentation for [n8n](https://n8n.io/), an extendable workflow automation tool which enables you to connect anything to everything via its open, [fair-code](https://faircode.io/) model. The documentation is live at [docs.n8n.io](https://docs.n8n.io/).
 
@@ -16,7 +16,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
-# n8n organization members: 
+# Doc² organization members: 
 # Outside your docs project, do:
 git clone https://github.com/n8n-io/mkdocs-material-insiders.git mkdocs-material
 # Navigate back into the docs project and run:

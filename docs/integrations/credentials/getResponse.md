@@ -19,7 +19,7 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 3. Click on the ***Custom apps*** tab.
 4. Click on the ***Register your app*** button.
 5. Enter all the necessary information.
-6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste it in the ***Redirect URL*** field.
+6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste it in the ***Redirect URL*** field.
 7. Click on the ***Add*** button.
 8. Click on the app you created to get the ***Client ID*** and the ***Client Secret***.
 9. Copy the displayed ***Client ID***.
@@ -67,7 +67,7 @@ ngrok http 5678
 ```sh
 export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
-3. Start your n8n instance.
+3. Start your Doc² instance.
 4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.
 
 ## Further Reference

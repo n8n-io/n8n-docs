@@ -14,7 +14,7 @@ If that is not the case, it is best to do follow the [creating your first node](
  1. Program… Add the functionality to the node
  1. Build the node and copy to correct location: `n8n-node-dev build`
     That command will build the JavaScript version of the node from the TypeScript code and copy it to the user folder where custom nodes get read from `~/.n8n/custom/`
- 1. Restart n8n and refresh the window so that the new node gets displayed
+ 1. Restart Doc² and refresh the window so that the new node gets displayed
 
 
 ## Create own custom n8n-nodes-module
@@ -31,7 +31,7 @@ If you want to create multiple custom nodes which are either:
 
 It is best to create your own `n8n-nodes-module` which can be installed separately.
 That is an npm package that contains the nodes and is set up in a way
-that n8n can automatically find and load them on startup.
+that Doc² can automatically find and load them on startup.
 
 When creating such a module the following rules have to be followed that n8n
 can automatically find the nodes in the module:
@@ -52,7 +52,7 @@ To use a custom `n8n-nodes-module`, it needs to be installed alongside n8n.
 For example like this:
 
 ```bash
-# Create folder for n8n installation
+# Create folder for Doc² installation
 mkdir my-n8n
 cd my-n8n
 
@@ -82,7 +82,7 @@ npm run build
 npm link
 ```
 
-Then in the folder in which n8n is installed:
+Then in the folder in which Doc² is installed:
 
 ```bash
 # "Install" the above locally published module

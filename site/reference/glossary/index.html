@@ -1713,7 +1713,7 @@
   
     <li class="md-nav__item">
       <a href="../../integrations/core-nodes/n8n-nodes-base.n8nTrigger/" class="md-nav__link">
-        n8n Trigger
+        Doc² Trigger
       </a>
     </li>
   
@@ -10378,14 +10378,14 @@
 <h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">#</a></h1>
 <h2 id="env-file">.env File<a class="headerlink" href="#env-file" title="Permanent link">#</a></h2>
 <p>A special file which contains configuration information in the form of <a href="#environment-variables">environment variables</a>.</p>
-<p>n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the <a href="/hosting/configuration/#configuration-via-file">n8n docs</a> for more details.</p>
+<p>n8n uses the .env file to control how Doc² works. You can set items such as username and password for the editor or your timezone using this file. See the <a href="/hosting/configuration/#configuration-via-file">n8n docs</a> for more details.</p>
 <p>To learn more about the <em>.env</em> file, read <a href="https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b">Manage Environment Variables in your NodeJS Application with dotenv</a>.</p>
 <h2 id="account">Account<a class="headerlink" href="#account" title="Permanent link">#</a></h2>
 <p>Service which allows a user to connect to a product. User's identity is confirmed through shared <a href="#Credentials">credentials</a>. Also known as a <em>user account</em>.</p>
-<p>Many of the <a href="#Node">nodes</a> in n8n require you to have an account with the service for which the node was built. For example, Typeform.</p>
+<p>Many of the <a href="#Node">nodes</a> in Doc² require you to have an account with the service for which the node was built. For example, Typeform.</p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">#</a></h2>
 <p>An acronym for <em>Application Programming Interface</em>, it is a framework for sharing text information by providing a specifically formatted <a href="#URL">URL</a> to retrieve desired information.</p>
-<p>APIs are a critical part of many n8n <a href="#Node">nodes</a> and <a href="#Workflow">workflows</a>. The nodes talk to the API that is provided by a service on the internet. n8n <a href="#Workflow">workflows</a> allow these APIs to talk to each other.</p>
+<p>APIs are a critical part of many Doc² <a href="#Node">nodes</a> and <a href="#Workflow">workflows</a>. The nodes talk to the API that is provided by a service on the internet. Doc² <a href="#Workflow">workflows</a> allow these APIs to talk to each other.</p>
 <p>For a more detailed understanding of APIs, see <a href="https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/">What is API: Definition, Types, Specifications, Documentation</a>.</p>
 <p><strong>See also:</strong>
 - <a href="#Header">Header</a></p>
@@ -10414,7 +10414,7 @@
 <p>n8n has created a <a href="/hosting/installation/docker/">docker image</a> so that users who have a docker environment can quickly install and run n8n.</p>
 <p>For more information, read <a href="https://docs.docker.com/get-started/overview/">Docker overview</a> and <a href="https://docker-curriculum.com/">A Docker Tutorial for Beginners</a>.</p>
 <h2 id="editor-ui">Editor UI<a class="headerlink" href="#editor-ui" title="Permanent link">#</a></h2>
-<p>In n8n, this is the web interface used to create <a href="#Workflow">workflows</a>. It is accessed through a web browser at a designated website address.</p>
+<p>In Doc², this is the web interface used to create <a href="#Workflow">workflows</a>. It is accessed through a web browser at a designated website address.</p>
 <p>To learn more about user interfaces, see <a href="https://en.wikipedia.org/wiki/User_interface">User interface</a>.</p>
 <h2 id="encryption-key">Encryption Key<a class="headerlink" href="#encryption-key" title="Permanent link">#</a></h2>
 <p>A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.</p>
@@ -10425,7 +10425,7 @@
 - <a href="#Certificate">Certificate</a></p>
 <h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h2>
 <p>Environment variables are predetermined values that typically get used to provide the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, <code>N8N_BASIC_AUTH_USER=user</code>. Here, <code>N8N_BASIC_AUTH_USER</code> is the key and <code>user</code> is the value.</p>
-<p>n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set <a href="#username">username</a> and <a href="#password">password</a> for your n8n instance, configure the timezone, and a lot more. Refer to the <a href="/hosting/configuration/">configuration</a> page to learn more about the environment variables used in n8n.</p>
+<p>n8n uses environment variables that help you configure your self-hosted Doc² instance. You can use environment variables to set <a href="#username">username</a> and <a href="#password">password</a> for your Doc² instance, configure the timezone, and a lot more. Refer to the <a href="/hosting/configuration/">configuration</a> page to learn more about the environment variables used in n8n.</p>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">#</a></h2>
 <p>A completed run of a <a href="#Workflow">workflow</a> from start to finish.</p>
 <p>n8n logs workflow executions and allows the user to see if the workflow completed successfully or not.</p>
@@ -10440,7 +10440,7 @@
 <p>n8n is licensed under the fair-code model. See <a href="https://faircode.io/">faircode.io</a> for more details.</p>
 <h2 id="function">Function<a class="headerlink" href="#function" title="Permanent link">#</a></h2>
 <p>In programming, a set of reusable commands designed to be run together and launched by other commands in the code. It may or may not receive input from the command that launches it.</p>
-<p>Many of the nodes in n8n behave like functions, receiving specific input to generate a specific output.</p>
+<p>Many of the nodes in Doc² behave like functions, receiving specific input to generate a specific output.</p>
 <p>To learn more about <em>functions</em>, see <a href="https://www.tutorialspoint.com/computer_programming/computer_programming_functions.htm">Computer Programming - Functions</a>.</p>
 <h2 id="ip-address">IP Address<a class="headerlink" href="#ip-address" title="Permanent link">#</a></h2>
 <p>A string of numbers and letters which represents the location of an electronic device on a TCP/IP network.</p>
@@ -10448,11 +10448,11 @@
 <p>If you want to learn more about <em>IP addresses</em>, see <a href="https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm">What Is an IP Address?</a>.</p>
 <h2 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">#</a></h2>
 <p>A modern programming language popular with web platforms used to create interactive web interfaces.</p>
-<p>While n8n is written in TypeScript, the final code generated is JavaScript and the <a href="/integrations/core-nodes/n8n-nodes-base.function/">Function node</a> uses JavaScript to create customized <a href="#Node">nodes</a>. JavaScript is used in the n8n's Function nodes.</p>
+<p>While Doc² is written in TypeScript, the final code generated is JavaScript and the <a href="/integrations/core-nodes/n8n-nodes-base.function/">Function node</a> uses JavaScript to create customized <a href="#Node">nodes</a>. JavaScript is used in the n8n's Function nodes.</p>
 <p>To learn more about Javascript, visit <a href="https://www.w3schools.com/js/DEFAULT.asp">Javascript Tutorial</a>.</p>
 <h2 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">#</a></h2>
 <p>An open standard file and data format commonly used with <a href="#JavaScript">JavaScript</a>. It is easy for humans to read and for computers to parse.</p>
-<p>The majority of data that is transferred from one <a href="#Node">node</a> to another in n8n is most likely in the JSON format.</p>
+<p>The majority of data that is transferred from one <a href="#Node">node</a> to another in Doc² is most likely in the JSON format.</p>
 <p>For further reading, please see <a href="https://www.json.org/json-en.html">Introducing JSON</a>.</p>
 <h2 id="header">Header<a class="headerlink" href="#header" title="Permanent link">#</a></h2>
 <p>Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.</p>
@@ -10475,7 +10475,7 @@
 - <a href="#npx">npx</a></p>
 <h2 id="npx">npx<a class="headerlink" href="#npx" title="Permanent link">#</a></h2>
 <p>A program that will download, run, then delete a <a href="#JavaScript">JavaScript</a> <a href="#Package">Packages</a>. Often used for quickly testing what a package will do without completely installing it.</p>
-<p>You can <a href="/hosting/installation/npm/">try out n8n without installing it</a> to your system using npx.</p>
+<p>You can <a href="/hosting/installation/npm/">try out Doc² without installing it</a> to your system using npx.</p>
 <p>For more information about <em>npx</em>, see <a href="https://docs.npmjs.com/cli/v7/commands/npx">npx documentation</a>.</p>
 <p><strong>See also:</strong>
 - <a href="#npm">npm</a></p>
@@ -10487,12 +10487,12 @@
 - <a href="#npx">npx</a></p>
 <h2 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">#</a></h2>
 <p>Data that is passed to a program or script which is used for processing and directly effects the output or results generated.</p>
-<p>Many n8n <a href="#Node">nodes</a> accept parameters to customize their output.</p>
-<p>The n8n <a href="#CLI">CLI</a> also accepts parameters so that it knows how to properly execute.</p>
+<p>Many Doc² <a href="#Node">nodes</a> accept parameters to customize their output.</p>
+<p>The Doc² <a href="#CLI">CLI</a> also accepts parameters so that it knows how to properly execute.</p>
 <p>For more information, see <a href="https://www.bbc.co.uk/bitesize/guides/z9hykqt/revision/4">Functions, procedures nad modules</a>.</p>
 <h2 id="password">Password<a class="headerlink" href="#password" title="Permanent link">#</a></h2>
 <p>A secret string of characters provided to prove one's identity. Often used to gain access to restricted applications and systems.</p>
-<p>The n8n <a href="#editor-ui">Editor UI</a> can be password protected so that only authorized users can access the interface.</p>
+<p>The Doc² <a href="#editor-ui">Editor UI</a> can be password protected so that only authorized users can access the interface.</p>
 <p>n8n also stores passwords as a part of <a href="#Credentials">credentials</a> for some services.</p>
 <p>To read more about <em>passwords</em>, see <a href="https://it.uottawa.ca/security/identity-authentication-theft">The Importance of passwords</a>.</p>
 <p><strong>See also:</strong>
@@ -10502,11 +10502,11 @@
 <p>See <em><a href="#API">API</a></em></p>
 <h2 id="root-user">Root User<a class="headerlink" href="#root-user" title="Permanent link">#</a></h2>
 <p>In *NIX operating system, the user <a href="#Account">account</a> that has no restrictions placed upon it within the system. The root user is typically only used for performing maintenance and upgrade tasks as improperly run applications using the root user account can cause significant damage to the system.</p>
-<p>For the protection of the system, it is generally not recommended that n8n be run by the root user.</p>
+<p>For the protection of the system, it is generally not recommended that Doc² be run by the root user.</p>
 <p>For more information about <em>root</em>, see <a href="http://www.linfo.org/root.html">root Definition</a>.</p>
 <h2 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">#</a></h2>
 <p>An acronym for <em>Secure Socket Layer</em>, it is the primary way that web based services are secured. A SSL <a href="#Certificate">certificate</a> is often used on websites to encrypt the information that is travelling between a web server and a web page.</p>
-<p>n8n uses SSL certificates to secure the n8n <a href="#UI">UI</a> so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to <a href="/hosting/configuration/">customize</a> the SSL installation.</p>
+<p>n8n uses SSL certificates to secure the Doc² <a href="#UI">UI</a> so that any information that is passed between the Doc² server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to <a href="/hosting/configuration/">customize</a> the SSL installation.</p>
 <p>For further reading, see <a href="http://www.steves-internet-guide.com/ssl-certificates-explained/">SSL and SSL Certificates Explained For Beginners</a>.</p>
 <h2 id="token">Token<a class="headerlink" href="#token" title="Permanent link">#</a></h2>
 <p>A unique identifier, typically a long string of characters, used to increase the security of systems that request or transmit data. It is usually a shared secret between the sender and the receiver to allow either system to determine if they should be requesting/transmitting data. Tokens can also sometimes be used as <a href="#encryption-key">encryption keys</a> to make the data which is transmitted illegible to thoses without the token.</p>
@@ -10514,11 +10514,11 @@
 <p>For more information, see <a href="https://whatis.techtarget.com/definition/token">token</a>.</p>
 <h2 id="trigger">Trigger<a class="headerlink" href="#trigger" title="Permanent link">#</a></h2>
 <p>A specific type of <a href="#Node">node</a> that starts a <a href="#Workflow">workflow</a> when it receives data from a source outside of the workflow itself.</p>
-<p>A good example of a <a href="/integrations/#trigger-nodes">trigger node</a> in n8n is a <a href="#Webhook">webhook</a>. It listens for data coming into it and then starts a <a href="#Workflow">workflow</a> when it sees data.</p>
+<p>A good example of a <a href="/integrations/#trigger-nodes">trigger node</a> in Doc² is a <a href="#Webhook">webhook</a>. It listens for data coming into it and then starts a <a href="#Workflow">workflow</a> when it sees data.</p>
 <p>For more information about <em>triggers</em>, see <a href="https://en.wikipedia.org/wiki/Event-driven_programming">Event Driven Programming</a>.</p>
 <h2 id="tunnel">Tunnel<a class="headerlink" href="#tunnel" title="Permanent link">#</a></h2>
 <p>An encrypted session between two systems used to secure data transmission.</p>
-<p>n8n <a href="/hosting/installation/npm/#n8n-with-tunnel">uses a tunnel</a> to allow external users to access n8n installations that are behind firewalls, typically for triggering <a href="#Webhook">webhooks</a>. This setup is recommended for testing use only.</p>
+<p>n8n <a href="/hosting/installation/npm/#n8n-with-tunnel">uses a tunnel</a> to allow external users to access Doc² installations that are behind firewalls, typically for triggering <a href="#Webhook">webhooks</a>. This setup is recommended for testing use only.</p>
 <p>For further reading, see <a href="https://www.techradar.com/vpn/vpn-tunnels-explained-how-to-keep-your-internet-data-secure">VPN Tunnels explained: what are they and how can they keep your internet data secure</a>.</p>
 <h2 id="typescript">TypeScript<a class="headerlink" href="#typescript" title="Permanent link">#</a></h2>
 <p>An open source programming language that extends the <a href="#JavaScript">JavaScript</a> programming language.</p>
@@ -10526,12 +10526,12 @@
 <p>Read more at <a href="https://www.typescriptlang.org/">Typescript</a>.</p>
 <h2 id="ui">UI<a class="headerlink" href="#ui" title="Permanent link">#</a></h2>
 <p>An acronym for <em>User Interface</em>, it is the method or tool a person uses to interact with a computer system and its software.</p>
-<p>n8n has a web based UI, meaning that you program and interact with n8n using a web browser.</p>
+<p>n8n has a web based UI, meaning that you program and interact with Doc² using a web browser.</p>
 <p>Learn more at <a href="https://searchapparchitecture.techtarget.com/definition/user-interface-UI">user interface (UI)</a>.</p>
 <h2 id="url">URL<a class="headerlink" href="#url" title="Permanent link">#</a></h2>
 <p>An acronym for <em>Universal Resource Locator</em>, it is a string of characters that represents a network location. Most people's experience with URLs is in the form of a website address (e.g. https://n8n.io)</p>
 <p>n8n's <a href="#editor-ui">Editor UI</a> is accessed via an URL entered into a web browser (often https://localhost:5678).</p>
-<p>Some <a href="#Node">nodes</a> in n8n access resources on the internet using an URL.</p>
+<p>Some <a href="#Node">nodes</a> in Doc² access resources on the internet using an URL.</p>
 <p>Read more at <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a>.</p>
 <h2 id="username">Username<a class="headerlink" href="#username" title="Permanent link">#</a></h2>
 <p>A character string representing an <a href="#Account">account</a> on a computer system. It is often paired with a <a href="#Password">password</a> to allow a person to access information and services that the person has permissions to use.</p>
@@ -10547,7 +10547,7 @@
 - <a href="#.env">.env</a></p>
 <h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">#</a></h2>
 <p>A service that listens for data input from an external source used to trigger an action in a system. Webhooks allow external systems to provide real-time alerts and updates to the system that does not limit the updates to regular polling intervals. Webhooks are often referenced by push notifications.</p>
-<p>n8n has the ability to create <a href="/integrations/core-nodes/n8n-nodes-base.webhook/">webhooks</a> that can be used to start workflows and receive data from systems outside of the n8n system itself.</p>
+<p>n8n has the ability to create <a href="/integrations/core-nodes/n8n-nodes-base.webhook/">webhooks</a> that can be used to start workflows and receive data from systems outside of the Doc² system itself.</p>
 <p>To learn more about <em>webhooks</em>, see <a href="https://sendgrid.com/blog/whats-webhook/">What's a Webhook?</a>.</p>
 <h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">#</a></h2>
 <p>A collection of <a href="#Node">nodes</a> connected together to produce a specific outcome.</p>

@@ -4,7 +4,7 @@ In this step of the workflow you will learn how to filter data using conditional
 
 To insert only processing orders into Airtable we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* is not *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
 
-This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/core-nodes/n8n-nodes-base.if/), which splits a workflow conditionally based on comparison operations.
+This if-then-else command is conditional logic. In Doc² workflows, conditional logic can be implemented with the [**IF node**](/integrations/core-nodes/n8n-nodes-base.if/), which splits a workflow conditionally based on comparison operations.
 
 !!! note " IF vs Switch"
     If you need to filter data on more than two conditional routes that are possible with the *IF* node (true and false), use the [*Switch node*](/integrations/core-nodes/n8n-nodes-base.switch/). The *Switch node* is similar to the *IF* node, but supports up to four conditional routes.
@@ -18,7 +18,7 @@ In the *IF* node window click on *Add Condition* > *string* and configure the pa
 To select this value, click on the wheel icon “Add Expression” on the right side of the Value 1 field.
 
     !!! note "Expressions"
-        An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.
+        An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In Doc² workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.
 
 
     <figure><img src="/_images/courses/level-one/chapter-two/If-node-expression-editor.png" alt="Expression Editor in the IF node" style="width:100%"><figcaption align = "center"><i>Expression Editor in the IF node</i></figcaption></figure>

@@ -10,12 +10,12 @@ Workflow notes are a type of core node. To add a new note:
 
 1. Open the nodes panel.
 2. Search for `note`.
-3. Click the **Note** node. n8n adds a new note to the canvas.
+3. Click the **Note** node. Doc² adds a new note to the canvas.
 
 ## Edit a note
 
 1. Double click the note you want to edit.
-2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
+2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. Doc² uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
 3. Click away from the note, or press `Esc`, to stop editing.
 
 ## Note positioning

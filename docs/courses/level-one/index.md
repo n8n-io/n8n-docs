@@ -1,22 +1,22 @@
 # Introduction
 
-Welcome to the n8n Certification Course Level I!
+Welcome to the Doc² Certification Course Level I!
 
 ## Is this course right for me?
 
-This course teaches you how to automate processes with no code using n8n and is meant to jumpstart your qualification as an automation expert.
+This course teaches you how to automate processes with no code using Doc² and is meant to jumpstart your qualification as an automation expert.
 
 This course is for you if you:
 
 - Want to automate things in your personal life
 - Are looking for quick ways to automate common business processes
-- Plan to become an n8n partner
+- Plan to become an Doc² partner
 
 ## What will I learn?
 
 By the end of this course you will know:
 
-- How to set up n8n and navigate the Editor UI
+- How to set up Doc² and navigate the Editor UI
 - How data is structured in n8n
 - How to configure different node parameters and add credentials
 - When and how to use conditional logic in workflows
@@ -30,7 +30,7 @@ You will build two workflows:
 
 ## How will I learn?
 
-We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice of building workflows step by step.
+We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of Doc², followed by practice of building workflows step by step.
 
 
 ## What do I need to get started?

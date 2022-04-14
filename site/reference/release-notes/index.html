@@ -4969,7 +4969,7 @@
   
     <li class="md-nav__item">
       <a href="../../integrations/core-nodes/n8n-nodes-base.n8nTrigger/" class="md-nav__link">
-        n8n Trigger
+        Doc² Trigger
       </a>
     </li>
   
@@ -16912,7 +16912,7 @@
 <h3 id="bug-fixes_1">Bug fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>core</strong>: fix issue with current executions not displaying.<br></li>
-<li><strong>core</strong>: fix an issue causing n8n to falsely skip some authentication.<br></li>
+<li><strong>core</strong>: fix an issue causing Doc² to falsely skip some authentication.<br></li>
 <li><a href="/integrations/nodes/n8n-nodes-base.wooCommerce">WooCommerce Node:</a> Fix a pagination issue with the GetAll operation.</li>
 </ul>
 <h2 id="n8n01710">n8n@0.171.0<a class="headerlink" href="#n8n01710" title="Permanent link">#</a></h2>
@@ -17042,7 +17042,7 @@
 <p>For a comprehensive list of changes, view the <a href="https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0">commits</a> for this version.<br />
 <strong>Release date:</strong> 2022-03-14</p>
 <h3 id="new-feature-user-management">New feature: user management<a class="headerlink" href="#new-feature-user-management" title="Permanent link">#</a></h3>
-<p>User management in n8n allows you to invite people to work in your self-hosted n8n instance. It includes:</p>
+<p>User management in Doc² allows you to invite people to work in your self-hosted Doc² instance. It includes:</p>
 <ul>
 <li>Login and password management</li>
 <li>Adding and removing users</li>
@@ -17105,7 +17105,7 @@
 <h3 id="bugfixes">Bugfixes<a class="headerlink" href="#bugfixes" title="Permanent link">#</a></h3>
 <ul>
 <li>The Google Calendar node now correctly applies timezones when creating, updating, and scheduling all day events.</li>
-<li>Fixed a bug that occasionally caused n8n to crash, or shut down workflows unexpectedly.</li>
+<li>Fixed a bug that occasionally caused Doc² to crash, or shut down workflows unexpectedly.</li>
 <li>You can now use long credential type names with Postgres.</li>
 </ul>
 <h3 id="contributors_4">Contributors<a class="headerlink" href="#contributors_4" title="Permanent link">#</a></h3>
@@ -17481,11 +17481,11 @@
 <ul>
 <li>Added frontend for value surveys</li>
 <li>Fixed an issue preventing the recommendation logic from working as expected after selecting a work area</li>
-<li>Fixed an issue where a wrong exit code was sent when running n8n on an unsupported version of Node.js</li>
+<li>Fixed an issue where a wrong exit code was sent when running Doc² on an unsupported version of Node.js</li>
 <li>Fixed an issue where node options would disappear on hovering when a node is not selected</li>
-<li>Fixed an issue where the execution id was missing when running n8n in queue mode</li>
+<li>Fixed an issue where the execution id was missing when running Doc² in queue mode</li>
 <li>Fixed an issue where execution data was missing when waiting for a webhook in queue mode</li>
-<li>Improved error handling when the n8n port is already in use</li>
+<li>Improved error handling when the Doc² port is already in use</li>
 <li>Improved diagnostic events</li>
 <li>Removed toast notification on webhook deletion, added toast notification after node is copied</li>
 <li>Removed default trigger tooltip for polling trigger nodes</li>
@@ -17516,7 +17516,7 @@
 <li>Added a plus (+) connector to end nodes</li>
 <li>Allowed opening workflows and executions in a new window when using Ctrl + Click</li>
 <li>Enforced type checking for all node parameters</li>
-<li>Fixed a build issue in the custom n8n docker image</li>
+<li>Fixed a build issue in the custom Doc² docker image</li>
 <li>Fixed a memory leak in the UI which could occur when renaming nodes or navigate to another workflow</li>
 <li>Improved stability of internal test workflows</li>
 <li>Improved expression security</li>
@@ -17818,7 +17818,7 @@
 </ul>
 <h3 id="core-functionality_34">Core Functionality<a class="headerlink" href="#core-functionality_34" title="Permanent link">#</a></h3>
 <ul>
-<li>Fixed startup behavior when running n8n in scaled mode (i.e. <code>skipWebhoooksDeregistrationOnShutdown</code> is enabled).</li>
+<li>Fixed startup behavior when running Doc² in scaled mode (i.e. <code>skipWebhoooksDeregistrationOnShutdown</code> is enabled).</li>
 <li>Fixed behavior around handling empty response bodies.</li>
 <li>Fixed an issue with handling of refresh tokens.</li>
 </ul>
@@ -17957,7 +17957,7 @@
 <strong>Release date:</strong> 2021-08-23</p>
 <h3 id="core-functionality_42">Core Functionality<a class="headerlink" href="#core-functionality_42" title="Permanent link">#</a></h3>
 <ul>
-<li>Fixed an issue where if n8n was shutdown during database migration while upgrading versions, errors would result upon next startup.</li>
+<li>Fixed an issue where if Doc² was shutdown during database migration while upgrading versions, errors would result upon next startup.</li>
 </ul>
 <h2 id="n8n01350">n8n@0.135.0<a class="headerlink" href="#n8n01350" title="Permanent link">#</a></h2>
 <p>For a comprehensive list of changes, check out the <a href="https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0">commits</a> for this version.<br />
@@ -18260,7 +18260,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 </ul>
 <h3 id="bug-fixes_41">Bug fixes<a class="headerlink" href="#bug-fixes_41" title="Permanent link">#</a></h3>
 <ul>
-<li><a href="/integrations/nodes/n8n-nodes-base.mySql/">MySQL:</a> Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.</li>
+<li><a href="/integrations/nodes/n8n-nodes-base.mySql/">MySQL:</a> Fixed an issue where Doc² was unable to save data due to collation, resulting in workflows ending with Unknown status.</li>
 </ul>
 <h3 id="contributors_44">Contributors<a class="headerlink" href="#contributors_44" title="Permanent link">#</a></h3>
 <p><a href="https://github.com/smamudhan">Amudhan Manivasagam</a>, <a href="https://github.com/caarlos0">Carlos Alexandro Becker</a>, <a href="https://github.com/umireon">Kaito Udagawa</a></p>
@@ -18560,7 +18560,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 </ul>
 <h3 id="core-functionality_68">Core Functionality<a class="headerlink" href="#core-functionality_68" title="Permanent link">#</a></h3>
 <ul>
-<li>The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the <a href="https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170">breaking changes</a> page</li>
+<li>The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the Doc² Trigger and the Workflow Trigger node. For more details, check out the entry in the <a href="https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170">breaking changes</a> page</li>
 <li>Added the functionality to open the New Credentials dropdown by default</li>
 </ul>
 <h3 id="bug-fixes_50">Bug fixes<a class="headerlink" href="#bug-fixes_50" title="Permanent link">#</a></h3>
@@ -18816,7 +18816,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 <li>Separated webhook from the core to scale webhook separately</li>
 <li>Fixed an issue with current execution query for unsaved running workflows</li>
 <li>Fixed an issue with the regex that detected node names</li>
-<li>n8n now generates a unified execution ID instead of two separate IDs for currently running and saved executions</li>
+<li>Doc² now generates a unified execution ID instead of two separate IDs for currently running and saved executions</li>
 </ul>
 <h2 id="n8n01070">n8n@0.107.0<a class="headerlink" href="#n8n01070" title="Permanent link">#</a></h2>
 <p>For a comprehensive list of changes, check out the <a href="https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0">commits</a> for this version.<br />
@@ -19417,7 +19417,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 <li>Postmark Trigger: Fixed parameters for the node</li>
 <li>The default space between nodes has been increased to two units</li>
 <li>Expression support has been added to the credentials</li>
-<li>Passwords for your n8n instance can now be hashed</li>
+<li>Passwords for your Doc² instance can now be hashed</li>
 </ul>
 <h2 id="n8n0810">n8n@0.81.0<a class="headerlink" href="#n8n0810" title="Permanent link">#</a></h2>
 <p>For a comprehensive list of changes, check out the <a href="https://github.com/n8n-io/n8n/compare/n8n@0.80.0...n8n@0.81.0">commits</a> for this version.<br />
@@ -19474,7 +19474,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 <li>Webhook</li>
 <li>Removed Test-Webhook also in case checkExists fails</li>
 <li>HTTP Request node does not overwrite accept header if it's already set</li>
-<li>Add rawBody to every request so that n8n does not give an error if body is missing</li>
+<li>Add rawBody to every request so that Doc² does not give an error if body is missing</li>
 </ul>
 <h2 id="n8n0790">n8n@0.79.0<a class="headerlink" href="#n8n0790" title="Permanent link">#</a></h2>
 <p>For a comprehensive list of changes, check out the <a href="https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3">commits</a> for this version.<br />
@@ -19618,7 +19618,7 @@ The features that introduced the breaking changes have been flagged below.</p>
 <li>Webflow</li>
 <li>Zendesk</li>
 <li>Added Postgres SSL support</li>
-<li>It is now possible to deploy n8n under a subfolder</li>
+<li>It is now possible to deploy Doc² under a subfolder</li>
 </ul>
 <h2 id="n8n0700">n8n@0.70.0<a class="headerlink" href="#n8n0700" title="Permanent link">#</a></h2>
 <p>For a comprehensive list of changes, check out the <a href="https://github.com/n8n-io/n8n/compare/n8n@0.69.1...n8n@0.70.0">commits</a> for this version.<br />

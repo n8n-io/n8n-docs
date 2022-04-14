@@ -70,6 +70,7 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
+    - Webhook: doc2/webhook.md
   - Workflow:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md

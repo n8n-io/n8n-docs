@@ -1,6 +1,6 @@
 # Doc² Docs
 
-This repository hosts the documentation for [n8n](https://n8n.io/), an extendable workflow automation tool which enables you to connect anything to everything via its open, [fair-code](https://faircode.io/) model. The documentation is live at [docs.n8n.io](https://doc.cloudintegration.eu/).
+This repository hosts the documentation for [polydocs](https://polydocs.io/), an extendable workflow automation tool which enables you to connect anything to everything via its open, The documentation is live at [docs.polydocs.io](https://docs.polydocs.io/).
 
 
 ## Previewing and building the documentation locally
@@ -13,7 +13,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 ### Steps
 
 ```bash
-git clone https://github.com/n8n-io/n8n-docs.git
+git clone https://github.com/Fellow-Consulting-AG/docapp-docs/
 cd docapp-docs
 pip install -r requirements.txt
 

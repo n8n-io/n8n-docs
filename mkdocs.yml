@@ -24,6 +24,7 @@ extra_javascript:
   - _extra/javascript/extra.js
 extra:
   generator: false
+  copyright: Copyright &copy; 2022 Polydocs GmbH
   social:
     - icon: fontawesome/brands/linkedin 
       link: https://www.linkedin.com/company/645725/

@@ -11,6 +11,7 @@ theme:
   palette:
       scheme: light
   features:
+    - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky

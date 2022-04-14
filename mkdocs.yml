@@ -2,7 +2,7 @@ site_name: Doc² Documentation
 theme:
   name: material
   custom_dir: overrides
-  favicon: _images/favicon.ico
+  favicon: _images/polydocs_Logo.svg
   font:
     text: Open Sans
   language: en
@@ -53,47 +53,55 @@ plugins:
   - literate-nav
 nav: 
   - Using DOC²:
-    - Welcome: index.md
-    - Try it out: quickstart.md
-    - Editor UI: editor-ui.md
+    - Welcome: doc2/index.md
+    - Try it out: doc2/quickstart.md
+    - Editor UI: doc2/editor-ui.md
     - Understand workflows: 
-      - Overview: workflows/index.md
-      - Workflows: workflows/workflows.md
-      - Connections: workflows/connections.md
-      - Nodes: workflows/nodes.md
-      - Items: workflows/items.md
+      - Overview: doc2/workflows/index.md
+      - Workflows: doc2/workflows/workflows.md
+      - Connections: doc2/workflows/connections.md
+      - Nodes: doc2/workflows/nodes.md
+      - Items: doc2/workflows/items.md
     - Flow logic:
-      - Overview: flow-logic/index.md
-      - Merging: flow-logic/merging.md
-      - Looping: flow-logic/looping.md
-      - Error handling: flow-logic/error-handling.md
+      - Overview: doc2/flow-logic/index.md
+      - Merging: doc2/flow-logic/merging.md
+      - Looping: doc2/flow-logic/looping.md
+      - Error handling: doc2/flow-logic/error-handling.md
     - Mapping and transforming data:
-      - Overview: data/index.md
-      - Data structure: data/data-structure.md
-      - Transforming data: data/transforming-data.md
-      - Using code: data/code.md
+      - Overview: doc2/data/index.md
+      - Data structure: doc2/data/data-structure.md
+      - Transforming data: doc2/data/transforming-data.md
+      - Using code: doc2/data/code.md
     - Code examples: 
-      - Overview: code-examples/index.md
+      - Overview: doc2/code-examples/index.md
       - Expressions: 
-        - Overview: code-examples/expressions/index.md
-        - Methods: code-examples/expressions/methods.md
-        - Variables: code-examples/expressions/variables.md
-        - Data and time with Luxon: code-examples/expressions/luxon.md
-        - JSON with JMESPath: code-examples/expressions/jmespath.md
+        - Overview: doc2/code-examples/expressions/index.md
+        - Methods: doc2/code-examples/expressions/methods.md
+        - Variables: doc2/code-examples/expressions/variables.md
+        - Data and time with Luxon: doc2/code-examples/expressions/luxon.md
+        - JSON with JMESPath: doc2/code-examples/expressions/jmespath.md
       - JavaScript for workflows:
-        - Overview: code-examples/javascript-functions/index.md
-        - Methods: code-examples/javascript-functions/methods.md
-        - Variables: code-examples/javascript-functions/variables.md
-        - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
-        - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
+        - Overview: doc2/code-examples/javascript-functions/index.md
+        - Methods: doc2/code-examples/javascript-functions/methods.md
+        - Variables: doc2/code-examples/javascript-functions/variables.md
+        - Get number of items returned by last node: doc2/code-examples/javascript-functions/number-items-last-node.md
+        - Check incoming data: doc2/code-examples/javascript-functions/check-incoming-data.md
     - Reference:
-      - Overview: reference/index.md
-      - Release notes: reference/release-notes.md
-      - CLI commands: reference/cli-commands.md
-      - Keyboard shortcuts: reference/keyboard-shortcuts.md
-      - Glossary: reference/glossary.md
-      - License: reference/license.md
-      - Data collection: reference/data-collection.md
+      - Overview: doc2/reference/index.md
+      - Release notes: doc2/reference/release-notes.md
+      - CLI commands: doc2/reference/cli-commands.md
+      - Keyboard shortcuts: doc2/reference/keyboard-shortcuts.md
+      - Glossary: doc2/reference/glossary.md
+      - License: doc2/reference/license.md
+      - Data collection: doc2/reference/data-collection.md
+  - Using FLOW²:
+    - Overview: flow2/index.md
+  - Using KV²:
+    - Overview: kv2/index.md
+  - Using TE²:
+    - Overview: te2/index.md
+  - Using OCR:
+    - Overview: ocr/index.md
   - Integrations: 
     - Overview: integrations/index.md
     - Core nodes: integrations/core-nodes/

@@ -56,47 +56,47 @@ nav:
     - Overview: doc2/index.md
   - Workflow:
     - Overview: workflow/index.md
-        - Try it out: workflow/quickstart.md
-      - Editor UI: workflow/editor-ui.md
-      - Understand workflows: 
-        - Overview: workflow/workflows/index.md
-        - Workflows: workflow/workflows/workflows.md
-        - Connections: workflow/workflows/connections.md
-        - Nodes: workflow/workflows/nodes.md
-        - Notes: workflow/workflows/workflow-notes.md
-        - Items: workflow/workflows/items.md
-      - Flow logic:
-        - Overview: workflow/flow-logic/index.md
-        - Merging: workflow/flow-logic/merging.md
-        - Looping: workflow/flow-logic/looping.md
-        - Error handling: workflow/flow-logic/error-handling.md
-      - Mapping and transforming data:
-        - Overview: workflow/data/index.md
-        - Data structure: workflow/data/data-structure.md
-        - Transforming data: workflow/data/transforming-data.md
-        - Using code: workflow/data/code.md
-      - Code examples: 
-        - Overview: workflow/code-examples/index.md
-        - Expressions: 
-          - Overview: workflow/code-examples/expressions/index.md
-          - Methods: workflow/code-examples/expressions/methods.md
-          - Variables: workflow/code-examples/expressions/variables.md
-          - Data and time with Luxon: workflow/code-examples/expressions/luxon.md
-          - JSON with JMESPath: workflow/code-examples/expressions/jmespath.md
-        - JavaScript for workflows:
-          - Overview: workflow/code-examples/javascript-functions/index.md
-          - Methods: workflow/code-examples/javascript-functions/methods.md
-          - Variables: workflow/code-examples/javascript-functions/variables.md
-          - Get number of items returned by last node: workflow/code-examples/javascript-functions/number-items-last-node.md
-          - Check incoming data: workflow/code-examples/javascript-functions/check-incoming-data.md
-      - Reference:
-        - Overview: workflow/reference/index.md
-        - Release notes: workflow/reference/release-notes.md
-        - CLI commands: workflow/reference/cli-commands.md
-        - Keyboard shortcuts: workflow/reference/keyboard-shortcuts.md
-        - Glossary: workflow/reference/glossary.md
-        - License: workflow/reference/license.md
-        - Data collection: workflow/reference/data-collection.md
+    - Try it out: workflow/quickstart.md
+    - Editor UI: workflow/editor-ui.md
+    - Understand workflows: 
+      - Overview: workflow/workflows/index.md
+      - Workflows: workflow/workflows/workflows.md
+      - Connections: workflow/workflows/connections.md
+      - Nodes: workflow/workflows/nodes.md
+      - Notes: workflow/workflows/workflow-notes.md
+      - Items: workflow/workflows/items.md
+    - Flow logic:
+      - Overview: workflow/flow-logic/index.md
+      - Merging: workflow/flow-logic/merging.md
+      - Looping: workflow/flow-logic/looping.md
+      - Error handling: workflow/flow-logic/error-handling.md
+    - Mapping and transforming data:
+      - Overview: workflow/data/index.md
+      - Data structure: workflow/data/data-structure.md
+      - Transforming data: workflow/data/transforming-data.md
+      - Using code: workflow/data/code.md
+    - Code examples: 
+      - Overview: workflow/code-examples/index.md
+      - Expressions: 
+        - Overview: workflow/code-examples/expressions/index.md
+        - Methods: workflow/code-examples/expressions/methods.md
+        - Variables: workflow/code-examples/expressions/variables.md
+        - Data and time with Luxon: workflow/code-examples/expressions/luxon.md
+        - JSON with JMESPath: workflow/code-examples/expressions/jmespath.md
+      - JavaScript for workflows:
+        - Overview: workflow/code-examples/javascript-functions/index.md
+        - Methods: workflow/code-examples/javascript-functions/methods.md
+        - Variables: workflow/code-examples/javascript-functions/variables.md
+        - Get number of items returned by last node: workflow/code-examples/javascript-functions/number-items-last-node.md
+        - Check incoming data: workflow/code-examples/javascript-functions/check-incoming-data.md
+    - Reference:
+      - Overview: workflow/reference/index.md
+      - Release notes: workflow/reference/release-notes.md
+      - CLI commands: workflow/reference/cli-commands.md
+      - Keyboard shortcuts: workflow/reference/keyboard-shortcuts.md
+      - Glossary: workflow/reference/glossary.md
+      - License: workflow/reference/license.md
+      - Data collection: workflow/reference/data-collection.md
     - Integrations: 
       - Overview: workflow/integrations/index.md
       - Core nodes: workflow/integrations/core-nodes/

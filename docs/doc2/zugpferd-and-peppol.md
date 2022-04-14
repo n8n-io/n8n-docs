@@ -21,7 +21,7 @@ In the following screen select either "Zugferd" or "Peppol BIS Billing 3.0" - de
 
 ![](/_images/doc2/image-34-1024x278.png)
 
-## **Zugferd:**
+## **Zugferd**
 
 You will end up in the following screen. Please enter the information like in following example:
 
@@ -29,7 +29,7 @@ You will end up in the following screen. Please enter the information like in fo
 
 When you are done, click on "CONFIRM".
 
-## **Peppol:**
+## **Peppol**
 
 You will end up in the following screen. Please enter the information like in following example:
 

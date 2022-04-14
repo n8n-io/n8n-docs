@@ -70,7 +70,9 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
+    - Tabel Train: doc2/table-train.md
     - Webhook: doc2/webhook.md
+    - ZUGFeRD: doc2/zugpferd-and-peppol.md
   - Workflow:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md

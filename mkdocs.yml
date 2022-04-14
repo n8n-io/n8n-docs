@@ -70,21 +70,39 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
-    - AI Indicator: doc2/ai-indicators.md
+    - Dashboard: 
+      - Overview: doc2/dashboard.md
+      - Manual Import: doc2/manual-import.md
+    - Document Validation:
+      - Overview: doc2/document-validation.md
+      - Master Data Validation: doc2/master-data-validation.md
+      - OCR View: doc2/ocr-view.md
+      - AI Indicator: doc2/ai-indicators.md
+      - Expressions: doc2/exception-filters.md
+    - Table: 
+      - Save and delete rules: doc2/save-rules-and-delete-rules.md
+      - Add new Column: doc2/add-new-table-column.md
     - Import:
       - Email: doc2/e-mail.md
-    - Table: 
-      - Add new Column: doc2/add-new-table-column.md
+    - Keyboard: doc2/keyboard.md
     - Setting: 
       - Company: doc2/company-information.md
+      - Modules: doc2/modules.md
+      - API: doc2/settings-api.md
+      - Users: doc2/settings-users.md
+      - Import: doc2/import.md
+
+
     - Table Train: doc2/table-train.md
     - PO Matching: 
       - Overview: doc2/po-matching.md
       - Delivery Note: doc2/po-matching-delivery-notes.md 
       - Invoices: doc2/po-matching-invoices.md
-
+      - Orders: doc2/po-matching-order-confirmation.md
     - Webhook: doc2/webhook.md
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
+    - SSO for Infor: doc2/settings-sso-settings.md
+    - Extracted fields: doc2/extracted-fields.md
   - Workflow:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md

@@ -5,4 +5,4 @@
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/kobotoolbox/).
 
-You can trigger a workflow in response to the  'On Form Submission' event in KoBo Tookbox.
+You can trigger a workflow in response to the  'On Form Submission' event in KoBo Toolbox.

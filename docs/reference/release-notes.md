@@ -11,7 +11,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 ### Node enhancements
 <br>
-[Magento 2 Node:](/integrations/nodes/n8n-nodes-base.magento2/) text="Added credential tests.
+[Magento 2 Node:](/integrations/nodes/n8n-nodes-base.magento2/) Added credential tests.
 [PayPal Node:](/integrations/nodes/n8n-nodes-base.payPal/) Added credential tests and updated the API URL.
 
 ### Bug fixes

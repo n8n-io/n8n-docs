@@ -54,6 +54,7 @@ plugins:
 nav: 
   - DOC²:
     - Overview: doc2/index.md
+    - OnBoarding: doc2/onboarding.md
   - Workflow:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md

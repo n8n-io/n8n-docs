@@ -32,6 +32,8 @@ markdown_extensions:
   - admonition
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
+  - md_in_html
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight

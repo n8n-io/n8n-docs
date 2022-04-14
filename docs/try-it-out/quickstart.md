@@ -41,19 +41,19 @@ Double click a node to explore its settings and how it processes data.
 
 Let's add a third node to message each customer and tell them their description:
 
-1. Click **Add node** ![Add node icon](/_images/try-it-out/quickstart/add-node.png).
+1. Click **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/quickstart/add-node.png)</span>.
 2. Search for `Customer Messenger`. n8n shows a list of nodes that match the search.
 3. Click **Customer Messenger (n8n training)** to add the node to the canvas.
 4. Make sure the **Set** node connects to **Customer Messenger**: close the **Customer Messenger** node, then drag the connector from the right side of **Set** to the left connection point on **Customer Messenger**.
 5. Double click the **Customer Messenger** node to open it.
 6. We're going to use [expressions](/code-examples/expressions/) to create the **Customer ID** and **Message**:
-    1. Next to **Customer ID**, click **Parameter options** > **Add Expression**. n8n opens the expressions editor for this field.
+    1. Next to **Customer ID**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Copy this expression into the editor:
         ```
         {{$json["customer_ID"]}}
         ```
     3. Close the expressions editor.
-    4. Next to **Message**, click **Parameter options** > **Add Expression**. n8n opens the expressions editor for this field.
+    4. Next to **Message**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     5. Copy this expression into the editor:
         ```
         {{ "Hi " + $json.customer_name + ",  Your description is " + $json.customer_description }}

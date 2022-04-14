@@ -70,8 +70,12 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
+    - Import:
+      - Email: doc2/e-mail.md
+    - Table: 
+      - Add new Column: doc2/add-new-table-column.md
     - Setting: 
-        - Company: doc2/company-information.md
+      - Company: doc2/company-information.md
     - Table Train: doc2/table-train.md
     - PO Matching: 
       - Overview: doc2/po-matching.md

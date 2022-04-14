@@ -8,7 +8,9 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
     * Configuring credentials
     * Representing your automation's logic
     * Using expressions
+    
     [TODO: Wondering if this should be in a third intro tutorial?]
+    
     * Working with the data flow in n8n
     * Handling errors
 

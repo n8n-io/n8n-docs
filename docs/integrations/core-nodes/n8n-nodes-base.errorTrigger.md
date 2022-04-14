@@ -36,7 +36,7 @@ This node will execute when an error occurs.
 
 ## FAQs
 
-### How to set an error workflow for an n8n workflow?
+### How to set an error workflow for an Doc² workflow?
 
 Let's say we want to get a notification every time **Workflow A** fails. Create a new workflow, **Workflow B**. Add an Error Trigger node and set **Workflow B** as the error workflow for **Workflow A** by following these steps.
 - Open **Workflow A**.

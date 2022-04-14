@@ -1,12 +1,12 @@
 # Configuration
 
-It is possible to change some of the n8n defaults via special environment variables.
+It is possible to change some of the Doc² defaults via special environment variables.
 
 For a full list of available configurations see [Environment Variables](/hosting/environment-variables/).
 
 ## How to set
 
-Where you set these environment variables depends on how you are [running](/) n8n, via npm or Docker.
+Where you set these environment variables depends on how you are [running](/) Doc², via npm or Docker.
 
 ### npm
 
@@ -32,7 +32,7 @@ Or using the `-e` flag from the command line:
 
 ```bash
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e N8N_BASIC_AUTH_ACTIVE="true" \
 	-e N8N_BASIC_AUTH_USER="<user>" \
@@ -42,7 +42,7 @@ docker run -it --rm \
 
 ### Configuration via file
 
-It is also possible to configure n8n using a configuration file.
+It is also possible to configure Doc² using a configuration file.
 
 Only the values that should be different from the default need to be defined in your configuration file. If needed multiple files can also be supplied. For example, you can have some generic base settings and some specific ones depending on the environment.
 
@@ -118,7 +118,7 @@ The following environment variables support file input:
 ### Base URL
 
 !!! warning " Keep in mind"
-    This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence, it does not get used in combination with the default n8n docker image. By default, `/` gets used, meaning that it uses the root-domain.
+    This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence, it does not get used in combination with the default Doc² docker image. By default, `/` gets used, meaning that it uses the root-domain.
 
 
 Tells the frontend how to reach the REST API of the backend.
@@ -165,7 +165,7 @@ export EXECUTIONS_TIMEOUT_MAX=7200
 
 ### Custom nodes location
 
-Every user can add custom nodes that get loaded by n8n on startup. The default
+Every user can add custom nodes that get loaded by Doc² on startup. The default
 location is in the subfolder `.n8n/custom` of the user who started n8n.
 Additional folders can be defined with an environment variable.
 
@@ -223,8 +223,8 @@ export N8N_USER_FOLDER=/home/jim/n8n
 ### Webhook URL
 
 The webhook URL will normally be created automatically by combining
-`N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. However, if n8n runs behind a
-reverse proxy that would not work. That's because n8n runs internally
+`N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. However, if Doc² runs behind a
+reverse proxy that would not work. That's because Doc² runs internally
 on port 5678 but is exposed to the web via the reverse proxy on port 443. In
 that case, it is important to set the webhook URL manually so that it can be
 displayed correctly in the Editor UI and even more important is that the correct
@@ -236,7 +236,7 @@ export WEBHOOK_URL=https://n8n.example.com/
 
 ### Prometheus
 
-In order to collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
+In order to collect and expose metrics, Doc² uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
 The `/metrics` endpoint is disabled by default, but it is possible to enable it using the `N8N_METRICS` environment variable.
 
@@ -250,4 +250,4 @@ It is also possible to overwrite the prefix of the metric names by setting the `
 export N8N_METRICS_PREFIX=n8n_
 ```
 
-**Note:** At the moment, n8n does not support metrics for webhooks.
+**Note:** At the moment, Doc² does not support metrics for webhooks.

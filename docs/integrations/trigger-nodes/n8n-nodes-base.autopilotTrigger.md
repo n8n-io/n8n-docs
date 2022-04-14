@@ -68,7 +68,7 @@ This node will store the data coming from the previous node in a table in Airtab
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID under the Introduction section.
-4. In n8n, paste the ID of the base in the ***Base ID*** field.
+4. In Doc², paste the ID of the base in the ***Base ID*** field.
 5. Enter the table name in the ***Table*** name field.
 6. Click on ***Execute Node*** to run the node.
 

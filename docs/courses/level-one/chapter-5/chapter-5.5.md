@@ -1,6 +1,6 @@
 # 5. Calculating Booked Orders
 
-In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the *Function* node.
+In this step of the workflow you will learn how Doc² data is structured and how to add custom JavaScript code to perform calculations using the *Function* node.
 
 The next step in Nathan’s workflow is to calculate two values from the booked orders:
 
@@ -10,7 +10,7 @@ The next step in Nathan’s workflow is to calculate two values from the booked 
 To calculate data and add more functionality to your workflows you can use the **Function node**, which lets you write custom JavaScript code.
 
 !!! warning " Function vs Function Item"
-    n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](/data/code/).
+    Doc² also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](/data/code/).
 
 
 Before going into the setup of the Function node, you should first learn the [data structure](/data/data-structure/) of n8n. This is important if you want to:
@@ -20,21 +20,21 @@ Before going into the setup of the Function node, you should first learn the [da
 - use the Function or Function Item node
 - get the most out of n8n
 
-In n8n, the data that is passed between nodes is an array of objects with the following structure:
+In Doc², the data that is passed between nodes is an array of objects with the following structure:
 
 ```json
 [
     {
    	 // Each item has to contain a "json" property. But it can be an empty object like {}.
    	 // Any kind of JSON data is allowed. So arrays and the data being deeply nested is fine.
-   	 json: { // The actual data n8n operates on (required)
+   	 json: { // The actual data Doc² operates on (required)
    		 // This data is only an example it could be any kind of JSON data
    		 jsonKeyName: 'keyValue',
    		 anotherJsonKey: {
    			 lowerLevelJsonKey: 1
    		 }
    	 },
-   	 // Binary data of item. The most items in n8n do not contain any (optional)
+   	 // Binary data of item. The most items in Doc² do not contain any (optional)
    	 binary: {
    		 // The key-name "binaryKeyName" is only an example. Any kind of key-name is possible.
    		 binaryKeyName: {
@@ -82,4 +82,4 @@ Now execute the node and you should see the following results:
 
 **Nathan 🙋**: Now, how do I send the calculations for the booked orders to my team's Discord channel?
 
-**You 👩‍🔧**: There's an n8n node for that – I'll set it up in the next step.
+**You 👩‍🔧**: There's an Doc² node for that – I'll set it up in the next step.

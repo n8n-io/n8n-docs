@@ -3,19 +3,19 @@
 ## .env File
 A special file which contains configuration information in the form of [environment variables](#environment-variables).
 
-n8n uses the .env file to control how n8n works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](/hosting/configuration/#configuration-via-file) for more details.
+n8n uses the .env file to control how Doc² works. You can set items such as username and password for the editor or your timezone using this file. See the [n8n docs](/hosting/configuration/#configuration-via-file) for more details.
 
 To learn more about the *.env* file, read [Manage Environment Variables in your NodeJS Application with dotenv](https://itnext.io/manage-environment-variables-in-your-nodejs-application-with-dotenv-520914a9254b).
 
 ## Account
 Service which allows a user to connect to a product. User's identity is confirmed through shared [credentials](#Credentials). Also known as a *user account*.
 
-Many of the [nodes](#Node) in n8n require you to have an account with the service for which the node was built. For example, Typeform.
+Many of the [nodes](#Node) in Doc² require you to have an account with the service for which the node was built. For example, Typeform.
 
 ## API
 An acronym for *Application Programming Interface*, it is a framework for sharing text information by providing a specifically formatted [URL](#URL) to retrieve desired information.
 
-APIs are a critical part of many n8n [nodes](#Node) and [workflows](#Workflow). The nodes talk to the API that is provided by a service on the internet. n8n [workflows](#Workflow) allow these APIs to talk to each other.
+APIs are a critical part of many Doc² [nodes](#Node) and [workflows](#Workflow). The nodes talk to the API that is provided by a service on the internet. Doc² [workflows](#Workflow) allow these APIs to talk to each other.
 
 For a more detailed understanding of APIs, see [What is API: Definition, Types, Specifications, Documentation](https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/).
 
@@ -63,7 +63,7 @@ n8n has created a [docker image](/hosting/installation/docker/) so that users wh
 For more information, read [Docker overview](https://docs.docker.com/get-started/overview/) and [A Docker Tutorial for Beginners](https://docker-curriculum.com/).
 
 ## Editor UI
-In n8n, this is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
+In Doc², this is the web interface used to create [workflows](#Workflow). It is accessed through a web browser at a designated website address.
 
 To learn more about user interfaces, see [User interface](https://en.wikipedia.org/wiki/User_interface).
 
@@ -81,7 +81,7 @@ For more information, see [What are encryption keys and how do they work? 🔐](
 ## Environment Variables
 Environment variables are predetermined values that typically get used to provide the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key and `user` is the value.
 
-n8n uses environment variables that help you configure your self-hosted n8n instance. You can use environment variables to set [username](#username) and [password](#password) for your n8n instance, configure the timezone, and a lot more. Refer to the [configuration](/hosting/configuration/) page to learn more about the environment variables used in n8n.
+n8n uses environment variables that help you configure your self-hosted Doc² instance. You can use environment variables to set [username](#username) and [password](#password) for your Doc² instance, configure the timezone, and a lot more. Refer to the [configuration](/hosting/configuration/) page to learn more about the environment variables used in n8n.
 
 ## Execution
 A completed run of a [workflow](#Workflow) from start to finish.
@@ -107,7 +107,7 @@ n8n is licensed under the fair-code model. See [faircode.io](https://faircode.io
 ## Function
 In programming, a set of reusable commands designed to be run together and launched by other commands in the code. It may or may not receive input from the command that launches it.
 
-Many of the nodes in n8n behave like functions, receiving specific input to generate a specific output.
+Many of the nodes in Doc² behave like functions, receiving specific input to generate a specific output.
 
 To learn more about *functions*, see [Computer Programming - Functions](https://www.tutorialspoint.com/computer_programming/computer_programming_functions.htm).
 
@@ -121,14 +121,14 @@ If you want to learn more about *IP addresses*, see [What Is an IP Address?](htt
 ## JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.
 
-While n8n is written in TypeScript, the final code generated is JavaScript and the [Function node](/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
+While Doc² is written in TypeScript, the final code generated is JavaScript and the [Function node](/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
 
 To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
 
 ## JSON
 An open standard file and data format commonly used with [JavaScript](#JavaScript). It is easy for humans to read and for computers to parse.
 
-The majority of data that is transferred from one [node](#Node) to another in n8n is most likely in the JSON format.
+The majority of data that is transferred from one [node](#Node) to another in Doc² is most likely in the JSON format.
 
 For further reading, please see [Introducing JSON](https://www.json.org/json-en.html).
 
@@ -167,7 +167,7 @@ Find out more at [About npm](https://docs.npmjs.com/about-npm).
 ## npx
 A program that will download, run, then delete a [JavaScript](#JavaScript) [Packages](#Package). Often used for quickly testing what a package will do without completely installing it.
 
-You can [try out n8n without installing it](/hosting/installation/npm/) to your system using npx.
+You can [try out Doc² without installing it](/hosting/installation/npm/) to your system using npx.
 
 For more information about *npx*, see [npx documentation](https://docs.npmjs.com/cli/v7/commands/npx).
 
@@ -187,16 +187,16 @@ For more information, see [software package](https://www.techopedia.com/definiti
 ## Parameter
 Data that is passed to a program or script which is used for processing and directly effects the output or results generated.
 
-Many n8n [nodes](#Node) accept parameters to customize their output.
+Many Doc² [nodes](#Node) accept parameters to customize their output.
 
-The n8n [CLI](#CLI) also accepts parameters so that it knows how to properly execute.
+The Doc² [CLI](#CLI) also accepts parameters so that it knows how to properly execute.
 
 For more information, see [Functions, procedures nad modules](https://www.bbc.co.uk/bitesize/guides/z9hykqt/revision/4).
 
 ## Password
 A secret string of characters provided to prove one's identity. Often used to gain access to restricted applications and systems.
 
-The n8n [Editor UI](#editor-ui) can be password protected so that only authorized users can access the interface.
+The Doc² [Editor UI](#editor-ui) can be password protected so that only authorized users can access the interface.
 
 n8n also stores passwords as a part of [credentials](#Credentials) for some services.
 
@@ -212,14 +212,14 @@ See *[API](#API)*
 ## Root User
 In *NIX operating system, the user [account](#Account) that has no restrictions placed upon it within the system. The root user is typically only used for performing maintenance and upgrade tasks as improperly run applications using the root user account can cause significant damage to the system.
 
-For the protection of the system, it is generally not recommended that n8n be run by the root user.
+For the protection of the system, it is generally not recommended that Doc² be run by the root user.
 
 For more information about *root*, see [root Definition](http://www.linfo.org/root.html).
 
 ## SSL
 An acronym for *Secure Socket Layer*, it is the primary way that web based services are secured. A SSL [certificate](#Certificate) is often used on websites to encrypt the information that is travelling between a web server and a web page.
 
-n8n uses SSL certificates to secure the n8n [UI](#UI) so that any information that is passed between the n8n server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](/hosting/configuration/) the SSL installation.
+n8n uses SSL certificates to secure the Doc² [UI](#UI) so that any information that is passed between the Doc² server and the user's web browser is encrypted and cannot be spied upon when it is travelling between the two. It is possible to [customize](/hosting/configuration/) the SSL installation.
 
 For further reading, see [SSL and SSL Certificates Explained For Beginners](http://www.steves-internet-guide.com/ssl-certificates-explained/).
 
@@ -233,14 +233,14 @@ For more information, see [token](https://whatis.techtarget.com/definition/token
 ## Trigger
 A specific type of [node](#Node) that starts a [workflow](#Workflow) when it receives data from a source outside of the workflow itself.
 
-A good example of a [trigger node](/integrations/#trigger-nodes) in n8n is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
+A good example of a [trigger node](/integrations/#trigger-nodes) in Doc² is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
 
 For more information about *triggers*, see [Event Driven Programming](https://en.wikipedia.org/wiki/Event-driven_programming).
 
 ## Tunnel
 An encrypted session between two systems used to secure data transmission.
 
-n8n [uses a tunnel](/hosting/installation/npm/#n8n-with-tunnel) to allow external users to access n8n installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
+n8n [uses a tunnel](/hosting/installation/npm/#n8n-with-tunnel) to allow external users to access Doc² installations that are behind firewalls, typically for triggering [webhooks](#Webhook). This setup is recommended for testing use only.
 
 For further reading, see [VPN Tunnels explained: what are they and how can they keep your internet data secure](https://www.techradar.com/vpn/vpn-tunnels-explained-how-to-keep-your-internet-data-secure).
 
@@ -254,7 +254,7 @@ Read more at [Typescript](https://www.typescriptlang.org/).
 ## UI
 An acronym for *User Interface*, it is the method or tool a person uses to interact with a computer system and its software.
 
-n8n has a web based UI, meaning that you program and interact with n8n using a web browser.
+n8n has a web based UI, meaning that you program and interact with Doc² using a web browser.
 
 Learn more at [user interface (UI)](https://searchapparchitecture.techtarget.com/definition/user-interface-UI).
 
@@ -263,7 +263,7 @@ An acronym for *Universal Resource Locator*, it is a string of characters that r
 
 n8n's [Editor UI](#editor-ui) is accessed via an URL entered into a web browser (often https://localhost:5678).
 
-Some [nodes](#Node) in n8n access resources on the internet using an URL.
+Some [nodes](#Node) in Doc² access resources on the internet using an URL.
 
 Read more at [What is a URL?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL).
 
@@ -290,7 +290,7 @@ Read more at [Computer Programming - Variables](https://www.tutorialspoint.com/c
 ## Webhook
 A service that listens for data input from an external source used to trigger an action in a system. Webhooks allow external systems to provide real-time alerts and updates to the system that does not limit the updates to regular polling intervals. Webhooks are often referenced by push notifications.
 
-n8n has the ability to create [webhooks](/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the n8n system itself.
+n8n has the ability to create [webhooks](/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the Doc² system itself.
 
 To learn more about *webhooks*, see [What's a Webhook?](https://sendgrid.com/blog/whats-webhook/).
 

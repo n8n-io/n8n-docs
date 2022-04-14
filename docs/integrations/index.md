@@ -1,6 +1,6 @@
 # Integrations
 
-In n8n, integrations are called nodes.
+In Doc², integrations are called nodes.
 
 Nodes are the building blocks of workflows in n8n. They are an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively.
 
@@ -21,11 +21,11 @@ These nodes do the actual work. They can add, remove, and edit the data in the f
 
 ## Credentials
 
-External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a very long multi-line private key and can be saved in n8n as credentials.
+External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a very long multi-line private key and can be saved in Doc² as credentials.
 
-Nodes in n8n can then request that credential information. As an additional layer of security credentials can only be accessed by node types which specifically have the right to do so.
+Nodes in Doc² can then request that credential information. As an additional layer of security credentials can only be accessed by node types which specifically have the right to do so.
 
-To make sure that the data is secure, it gets saved to the database encrypted. A random personal encryption key is used which gets automatically generated on the first run of n8n and then saved under `~/.n8n/config`.
+To make sure that the data is secure, it gets saved to the database encrypted. A random personal encryption key is used which gets automatically generated on the first run of Doc² and then saved under `~/.n8n/config`.
 
 ## Requesting new integrations or integration features
 
@@ -40,5 +40,5 @@ what we can do. Request a new feature [here](https://community.n8n.io/c/feature-
 ## Where to go next?
 
 1. If you are looking to create your own node, head over to the [Creating Nodes](/integrations/creating-nodes/) section.
-2. If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out our node libraries: [core nodes](/integrations/core-nodes/), [nodes](/integrations/core-nodes/), and [trigger nodes](/integrations/core-nodes/).
+2. If you'd like to learn more about the different nodes in Doc², their functionalities and example usage, check out our node libraries: [core nodes](/integrations/core-nodes/), [nodes](/integrations/core-nodes/), and [trigger nodes](/integrations/core-nodes/).
 3. If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/credentials/) section.

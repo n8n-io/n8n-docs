@@ -23,7 +23,7 @@ Create a [Twist](https://twist.com/) account.
 8. Select 'General integration' from the ***Integration type*** dropdown list.
 9. Click on the ***Create my integration*** button.
 10. Click on ***OAuth Authentication*** from the left sidebar.
-11. Copy the 'OAuth Callback URL' provided in the Twist OAuth2 API credentials in n8n and paste it in the ***OAuth 2 redirect URL*** field on your Twist integration page.
+11. Copy the 'OAuth Callback URL' provided in the Twist OAuth2 API credentials in Doc² and paste it in the ***OAuth 2 redirect URL*** field on your Twist integration page.
 12. Click on the ***Update integration*** button.
 13. Use the ***Client ID*** and ***Client Secret*** with your Twist node credentials in n8n.
 14. Click on the circle button in the OAuth section to connect a Twist account to n8n.
@@ -43,5 +43,5 @@ ngrok http 5678
 ```sh
 export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
-3. Start your n8n instance.
+3. Start your Doc² instance.
 4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.

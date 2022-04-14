@@ -47,7 +47,7 @@ This gives access to the static workflow data.
 It is possible to save data directly with the workflow. This data should, however, be very small.
 A common use case is to for example to save a timestamp of the last item that got processed from
 an RSS-Feed or database. It will always return an object. Properties can then read, delete or
-set on that object. When the workflow execution succeeds, n8n will check automatically if the data
+set on that object. When the workflow execution succeeds, Doc² will check automatically if the data
 has changed and will save it, if necessary.
 
 There are two types of static data. The "global" and the "node" one. Global static data is the

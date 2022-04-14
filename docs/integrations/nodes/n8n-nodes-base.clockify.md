@@ -78,7 +78,7 @@ This node will create a new tag in Clockify.
 5. Click on ***Execute Node*** to run the node.
 
 
-In the screenshot below, you will notice that the node creates a new tag called `docs` in the n8n workspace in Clockify.
+In the screenshot below, you will notice that the node creates a new tag called `docs` in the Doc² workspace in Clockify.
 
 ![Using the Clockify node to create a tag](/_images/integrations/nodes/clockify/clockify1_node.png)
 

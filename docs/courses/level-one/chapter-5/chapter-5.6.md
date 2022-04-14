@@ -2,15 +2,15 @@
 
 In this step of the workflow you will learn how to send messages to a Discord channel using the *Discord* node.
 
-Now that you have a calculated summary of the booked orders you need to notify Nathan’s team in their Discord channel. n8n has a **Discord node** that allows you to send messages. We'll be sending the messages to the [n8n server](https://discord.gg/G98WXzsjky) on Discord.
+Now that you have a calculated summary of the booked orders you need to notify Nathan’s team in their Discord channel. Doc² has a **Discord node** that allows you to send messages. We'll be sending the messages to the [n8n server](https://discord.gg/G98WXzsjky) on Discord.
 
 !!! note " Communication nodes"
-    You can replace the *Discord* node with another communication app. For example, n8n also has nodes for [*Slack*](/integrations/nodes/n8n-nodes-base.slack/) and [*Mattermost*](/integrations/nodes/n8n-nodes-base.mattermost/).
+    You can replace the *Discord* node with another communication app. For example, Doc² also has nodes for [*Slack*](/integrations/nodes/n8n-nodes-base.slack/) and [*Mattermost*](/integrations/nodes/n8n-nodes-base.mattermost/).
 
 
 In your workflow, add a *Discord* node connected to the *Function* node. In the *Discord* node window, configure the parameters:
 
-- *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
+- *Webhook URL:* Enter the URL that you received in the email from Doc² when you signed up for this course.
 - *Text (Expression):* `This week we have {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{$node["HTTP Request"].parameter["headerParametersUi"]["parameter"][0]["value"]}}`
 
 

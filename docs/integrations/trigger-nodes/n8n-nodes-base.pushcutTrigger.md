@@ -59,7 +59,7 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 4. Select the ***Server*** tab.
 5. Select the ***Integration*** tab.
 6. Click on ***Integration Trigger***.
-7. In n8n, enter a name for the action and click on ***Execute Node***.
+7. In Doc², enter a name for the action and click on ***Execute Node***.
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
 

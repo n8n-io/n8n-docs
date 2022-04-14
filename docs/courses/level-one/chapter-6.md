@@ -23,7 +23,7 @@ You can export and import workflows in two ways:
 
 ## Sharing workflows
 
-We love to see what users build with n8n and discover inspiring workflows while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
+We love to see what users build with Doc² and discover inspiring workflows while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
 
 Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan’s workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
 
@@ -48,4 +48,4 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 
 <figure><img src="/_images/courses/level-one/chapter-three/Share-workflow.png" alt="Share workflow" style="width:100%"><figcaption align = "center"><i>Share workflow</i></figcaption></figure>
 
-Now your workflow will be reviewed by our team and if all is well, it will appear on the n8n workflows page for everyone to see and use!
+Now your workflow will be reviewed by our team and if all is well, it will appear on the Doc² workflows page for everyone to see and use!

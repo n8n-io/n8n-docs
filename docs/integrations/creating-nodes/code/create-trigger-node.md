@@ -47,11 +47,11 @@ n8n is built from four main packages:
 - editor-ui
 - nodes-base
 
-All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
+All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
 - The folder `nodes`, contains all the nodes in n8n.
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
-- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
+- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
 ![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
 
@@ -147,7 +147,7 @@ Let's see how the node looks in the UI by following these steps:
 3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
 	- The first command installs all dependencies of all the modules and links them together.
 	- The second command builds all the code.
-	- The third command starts n8n in development mode.
+	- The third command starts Doc² in development mode.
 
 ```bash
 lerna bootstrap --hoist
@@ -160,14 +160,14 @@ npm run dev
 
 **Notes**
 
-- On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
+- On startup, Doc² will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
 - The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 
 ## Creating the UI for the node
 
-Double-clicking on the Autofriend Trigger node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
+Double-clicking on the Autofriend Trigger node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, Doc² provides predefined JSON-based UI components that we can use to ask the user for different types of data.
 
 Autopilots's [docs](https://autopilot.docs.apiary.io/#reference/rest-hooks/register-rest-hook/register-a-rest-hook) mention that to create a hook, we need to provide the following pieces of information:
 
@@ -176,7 +176,7 @@ Autopilots's [docs](https://autopilot.docs.apiary.io/#reference/rest-hooks/regis
 
 In the `event` parameter, we provide the name of the event for which we want to be notified. For example, `contact_added`. As the name implies, by providing `contact_added` as the event, we will be notified every time a contact is added to Autofriend.
 
-In the `target_url` parameter, we provide the URL where Autofriend will notify us when the event defined in the event parameter takes place. We don't need to ask the user for this parameter as n8n provides us with a method to obtain it.
+In the `target_url` parameter, we provide the URL where Autofriend will notify us when the event defined in the event parameter takes place. We don't need to ask the user for this parameter as Doc² provides us with a method to obtain it.
 
 
 ### Adding the fields
@@ -224,7 +224,7 @@ Let’s make the Node Editor View ask for these parameters:
 },
 ```
 
-2. Stop the current n8n process by pressing `ctrl + c` in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -240,7 +240,7 @@ The node should now look like in the following image.
 
 Most REST APIs use some sort of authentication mechanism. Autofriend's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
-n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
+n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
@@ -282,7 +282,7 @@ export class AutofriendApi implements ICredentialType {
 ],
 ```
 
-8. Stop the current n8n process by pressing `ctrl + c` in the terminal in which you are running n8n.
+8. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running n8n.
 9. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -299,18 +299,18 @@ When you go to the Node Editor view, you should see the following.
 
 When a Trigger node is executed either in test or production mode, the following happens:
 
-### n8n persists all the webhooks defined in description.webhooks
+### Doc² persists all the webhooks defined in description.webhooks
 
 The persisted data will be used later to verify if the incoming requests to the n8n’s webhook endpoint are valid.
 
 The property webhooks implements the interface **IWebhookDescription**. The interface has four properties.
 
-1. **name:** The property name where n8n will look for the life cycle methods.
+1. **name:** The property name where Doc² will look for the life cycle methods.
 2. **httpMethod:** The HTTP method.
 3. **responseMode:** When the trigger will respond. When developing a trigger node, this property must be set to `onReceived`.
 4. **path:** The path added to the base URL.
 
-For example, for a Trigger node with the following `webhooks` property, n8n will create the following webhooks URLs.
+For example, for a Trigger node with the following `webhooks` property, Doc² will create the following webhooks URLs.
 
 ```typescript
 webhooks: [
@@ -335,13 +335,13 @@ These webhook URLs will be used as the notification URL (also known as the callb
 **Note:** In test mode, the webhooks are persisted in memory. In production mode, they are persisted in the database.
 
 
-### n8n executes the life cycle methods
+### Doc² executes the life cycle methods
 
 The life cycle methods allow us to create, delete, and check if the webhook exists in the external system.
 
 **Methods**
 
-- `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, n8n persists the webhook ID. If the webhook is not registered with the external system, the `create` method gets executed.
+- `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, Doc² persists the webhook ID. If the webhook is not registered with the external system, the `create` method gets executed.
 - `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
 - `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
@@ -466,8 +466,8 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 };
 ```
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
-5. Stop the current n8n process by pressing `ctrl + c` in the terminal where you are running n8n.
-6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the n8n Editor UI at [localhost:5678](http://localhost:5678/workflow).
+5. Stop the current Doc² process by pressing `ctrl + c` in the terminal where you are running n8n.
+6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the Doc² Editor UI at [localhost:5678](http://localhost:5678/workflow).
 7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](../credentials/autopilot).
 8. Go to the workflow editor, save your workflow, and execute the node.
 
@@ -481,7 +481,7 @@ The trigger node is now receiving events. Sometimes it might take a bit longer f
 
 You probably noticed that this time we did not run the project using `npm run dev`, but instead using `./packages/cli/bin/n8n start --tunnel`.
 
-Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that n8n receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and should not be used in production.
+Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that Doc² receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and should not be used in production.
 
 
 ## Summary
@@ -490,4 +490,4 @@ In this tutorial, we implemented one functionality of the Autofriend webhook API
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.

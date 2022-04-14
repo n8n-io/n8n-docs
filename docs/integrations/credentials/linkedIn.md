@@ -21,7 +21,7 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 6. Verify your application. You can find instructions on how to verify your LinkedIn application in the FAQs below.
 7. Enable APIs for your application. You can find instructions on how and which APIs to enable for your LinkedIn application in the FAQs below.
 8. Back in the LinkedIn application creation page, click on the ***Auth*** tab.
-9. Copy the 'OAuth Callback URL' provided in the LinkedIn OAuth2 API credentials in n8n and add it in the 'Authorized redirect URLs for your app' section in the LinkedIn application creation page.
+9. Copy the 'OAuth Callback URL' provided in the LinkedIn OAuth2 API credentials in Doc² and add it in the 'Authorized redirect URLs for your app' section in the LinkedIn application creation page.
 10. Use the displayed ***Client ID*** and the ***Client Secret*** with your LinkedIn OAuth API credentials in n8n.
 11. Click on the circle button in the OAuth section to connect a LinkedIn account to n8n.
 12. Click the ***Save*** button to save your credentials in n8n.
@@ -44,4 +44,4 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 2. Click the ***Select*** button next to the API you want to enable in the ***Products*** section.
 3. Click the checkbox to accept the terms and conditions and then click on the ***Add product*** button.
 
-**Note:** You will need to enable the ***Share on LinkedIn*** and ***Sign In with LinkedIn*** products to connect with n8n. If you would like to connect an organizational LinkedIn account to n8n, then you also additionally need to enable the ***Marketing Developer Platform*** product.
+**Note:** You will need to enable the ***Share on LinkedIn*** and ***Sign In with LinkedIn*** products to connect with n8n. If you would like to connect an organizational LinkedIn account to Doc², then you also additionally need to enable the ***Marketing Developer Platform*** product.

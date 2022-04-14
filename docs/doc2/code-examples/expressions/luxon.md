@@ -26,10 +26,10 @@ Note that these variables can return different time formats when cast as a strin
 
 ## Setting the timezone in n8n
 
-Luxon uses the n8n timezone. This value is either:
+Luxon uses the Doc² timezone. This value is either:
 
 * Default: `America/New York`
-* A custom timezone for your n8n instance, set using the `GENERIC_TIMEZONE` environment variable.
+* A custom timezone for your Doc² instance, set using the `GENERIC_TIMEZONE` environment variable.
 * A custome timezone for an individual workflow, configured in workflow settings.
 
 ## Common tasks
@@ -136,7 +136,7 @@ A detailed explanation of what the expression does:
 * `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
 * `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
 * `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code-examples/expressions/jmespath/) documentation. This gives you the number of days to Christmas, as a negative number.
+* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with Doc², refer to our [JMESpath](/code-examples/expressions/jmespath/) documentation. This gives you the number of days to Christmas, as a negative number.
 * `.toString().substring(1)` turns the number into a string and removes the `-`.
 * `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
 * `}}`: indicates the end of the expression.

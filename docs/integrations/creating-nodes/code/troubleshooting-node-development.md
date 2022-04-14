@@ -33,4 +33,4 @@ Ensure that the node is registered in the `packages/nodes-base/package.json` fil
 
 ### Changes to the description properties do not show in the UI on refreshing
 
-Every time a change is made to the description properties, you have to stop the current n8n process (ctrl + c) and run it again (npm run dev).
+Every time a change is made to the description properties, you have to stop the current Doc² process (ctrl + c) and run it again (npm run dev).

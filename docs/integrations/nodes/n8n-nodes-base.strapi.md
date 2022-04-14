@@ -44,7 +44,7 @@ We will use the Set node to set the title, content, and description for an entry
 3. Enter `Automate Strapi with n8n` in the ***Value*** field.
 4. Click on ***Add Value*** and select 'String' from the dropdown list.
 5. Enter `Content` in the ***Name*** field.
-6. Enter `Strapi is a headless CMS. We will use Strapi and n8n to automate our content creation workflows.` in the ***Value*** field.
+6. Enter `Strapi is a headless CMS. We will use Strapi and Doc² to automate our content creation workflows.` in the ***Value*** field.
 7. Click on ***Add Value*** and select 'String' from the dropdown list.
 8. Enter `Description` in the ***Name*** field.
 9. Enter `Learn how to automate Strapi with n8n.` in the ***Value*** field.

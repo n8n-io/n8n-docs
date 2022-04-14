@@ -18,8 +18,8 @@ Create a [Zoom](https://zoom.us/) account.
 3. Select 'User-managed app'.
 4. Set the "Would you like to publish this app on Zoom App Marketplace?" slider to off.
 5. Click on the *Create* button.
-6. Copy the 'OAuth Callback URL' provided in the Zoom OAuth2 API credentials in n8n and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
-7. Copy the Whitelist URL' provided in the Zoom OAuth2 API credentials in n8n and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
+6. Copy the 'OAuth Callback URL' provided in the Zoom OAuth2 API credentials in Doc² and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
+7. Copy the Whitelist URL' provided in the Zoom OAuth2 API credentials in Doc² and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
 8. Copy the Client ID and Client Secret provided in the Zoom app creation page and paste it in the Zoom OAuth2 API credentials in n8n.
 9. Enter any necessary information and click continue.
 10. In the 'Scopes' section, click *Add Scopes* and choose the scopes that you plan to use.

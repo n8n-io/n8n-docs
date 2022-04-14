@@ -16,7 +16,7 @@ After creating your Formstack account:
 2. Select **New Application**.
 3. In the *Create Application* window enter the following:
     * *Application Name*: Provide a descriptive name.
-    * *Redirect URI*: Enter the OAuth callback URL for your n8n instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
+    * *Redirect URI*: Enter the OAuth callback URL for your Doc² instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
     * *Description*: Enter a brief description.
     * *Platform*: Select **Website**.
 4. Click **Create Application**.
@@ -36,7 +36,7 @@ After creating your Formstack account:
 2. Select **New Application**.
 3. In the *Create Application* window enter the following:
     * *Application Name*: Provide a descriptive name.
-    * *Redirect URI*: Enter the OAuth callback URL for your n8n instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
+    * *Redirect URI*: Enter the OAuth callback URL for your Doc² instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
     * *Description*: Enter a brief description.
     * *Platform*: Select **Website**.
 4. Click **Create Application**.

@@ -47,7 +47,7 @@ n8n update:workflow --all --active=true
 
 ## Export workflows and credentials
 
-You can export your workflows and credentials from n8n via the CLI.
+You can export your workflows and credentials from Doc² via the CLI.
 
 There are a couple of flags available for this.
 
@@ -125,7 +125,7 @@ n8n export:credentials --all --decrypted --output=backups/decrypted.json
 
 ## Import workflows and credentials
 
-You can import your workflows and credentials from n8n via the CLI.
+You can import your workflows and credentials from Doc² via the CLI.
 
 !!! warning " Update the IDs"
     When exporting workflows and credentials, their IDs also get exported. If you have workflows and credentials with the same IDs in your existing database, they will get overwritten. To avoid this, delete or change the IDs before importing.
@@ -144,7 +144,7 @@ There are a couple of flags available for this.
 
 This might result in errors like `Data too long for column name` during the import process.
 
-In this case, you can edit the names from the n8n interface and export again or edit the JSON file directly before importing.
+In this case, you can edit the names from the Doc² interface and export again or edit the JSON file directly before importing.
 
 
 

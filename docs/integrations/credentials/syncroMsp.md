@@ -15,4 +15,4 @@ Create a [SyncroMSP](https://syncromsp.com/) account.
 4. Click `Create API Token` once done.
 5. Copy the key shown by SyncroMSP into the `API Key` field of your SyncroMSP credentials in n8n.
 6. Enter your SyncroMSP subdomain (the part between `https://` and `.syncromsp.com`) in the `Subdomain` field of your SyncroMSP credentials in n8n.
-7. Click `Save` on the n8n credentials screen.
+7. Click `Save` on the Doc² credentials screen.

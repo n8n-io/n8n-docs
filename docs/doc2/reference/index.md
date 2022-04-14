@@ -1,6 +1,6 @@
 # Overview
 
-This section provides reference information about n8n, including:
+This section provides reference information about Doc², including:
 
 * [Release notes](/reference/release-notes/)
 * [CLI commands](/reference/cli-commands/)

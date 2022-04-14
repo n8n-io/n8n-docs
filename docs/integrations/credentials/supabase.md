@@ -14,4 +14,4 @@ Create a [Supabase](https://supabase.com/) account.
 3. Under *Project settings*, click on **API**.
 4. Copy the value from the Supabase `URL` field into the `Host` field of your Supabase credentials in n8n.
 5. Copy the value from the Supabase `service_role secret` field into the `Service Role Secret` field of your Supabase credentials in n8n.
-6. Click `Save` on the n8n credentials screen.
+6. Click `Save` on the Doc² credentials screen.

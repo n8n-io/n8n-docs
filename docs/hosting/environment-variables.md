@@ -1,7 +1,7 @@
 # Environment Variables
 
 !!! note " Keep in mind"
-    You can provide a [configuration file](/hosting/configuration/#configuration-via-file) for n8n, and also append `_FILE` to certain variables to provide their configuration separately, indicated by "/`_FILE`" below.
+    You can provide a [configuration file](/hosting/configuration/#configuration-via-file) for Doc², and also append `_FILE` to certain variables to provide their configuration separately, indicated by "/`_FILE`" below.
 
 
 ## Credentials
@@ -61,20 +61,20 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DISABLE_UI` | `boolean` | Whether the UI should be disabled. |
 | `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates are enabled (true) or disabled (false) |
 | `N8N_TEMPLATES_HOST` | `string` | Defaults to https://api.n8n.io. Change this if creating your own workflow template library. |
-| `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the n8n database. By default a random key is generated on first launch. |
-| `N8N_USER_FOLDER` | `string` | Provide the path where n8n will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |
-| `N8N_PATH` | `string` | The path n8n is deployed to. Default is `/`. |
-| `N8N_HOST` | `string` | Host name where n8n can be reached. Default is `localhost`. |
-| `N8N_PORT` | `number` | The HTTP port where n8n can be reached. Default is `5678`. |
-| `N8N_LISTEN_ADDRESS` | `string` | The IP address n8n should listen on. Default is `0.0.0.0`. |
+| `N8N_ENCRYPTION_KEY` | `string` | Provide a custom key used to encrypt credentials in the Doc² database. By default a random key is generated on first launch. |
+| `N8N_USER_FOLDER` | `string` | Provide the path where Doc² will store user-specific data, such as database file and encryption key. By default, `.n8n` is used. |
+| `N8N_PATH` | `string` | The path Doc² is deployed to. Default is `/`. |
+| `N8N_HOST` | `string` | Host name where Doc² can be reached. Default is `localhost`. |
+| `N8N_PORT` | `number` | The HTTP port where Doc² can be reached. Default is `5678`. |
+| `N8N_LISTEN_ADDRESS` | `string` | The IP address Doc² should listen on. Default is `0.0.0.0`. |
 | `N8N_PROTOCOL` | `enum string`: `http`, `https` | The protocol used to reach n8n. Default is `http`. |
 | `N8N_SSL_KEY` | `string` | The SSL Key for HTTPS protocol. |
 | `N8N_SSL_CERT` | `string` | The SSL certificate for HTTPS protocol. |
-| `N8N_PERSONALIZATION_ENABLED` | `boolean` | Whether to ask users personalisation questions and then customise n8n accordingly. Default is `true`. |
+| `N8N_PERSONALIZATION_ENABLED` | `boolean` | Whether to ask users personalisation questions and then customise Doc² accordingly. Default is `true`. |
 | `N8N_VERSION_NOTIFICATIONS_ENABLED` | `boolean` | When enabled, notifications of new versions and security updates are provided. Default value is `true`. |
 | `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | `string` | The endpoint where version information is retrieved. By default `https://api.n8n.io/versions/` is used. |
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | `string` | The URL displayed in the New Versions panel for additional information. By default `https://docs.n8n.io/getting-started/installation/updating.html` is used. |
-| `N8N_DIAGNOSTICS_ENABLED` | `boolean` | Whether to share selected, anonymous [telemetry](/reference/data-collection/) with n8n |
+| `N8N_DIAGNOSTICS_ENABLED` | `boolean` | Whether to share selected, anonymous [telemetry](/reference/data-collection/) with Doc² |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | `string` | Telemetry config for the frontend. Default is `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io`. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | `string` | Telemetry config for the frontend. Default is `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch`. |
 | `N8N_AVAILABLE_BINARY_DATA_MODES` | `string` | A comma separated list of available binary data modes. Default is `filesystem`. |
@@ -88,7 +88,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | Defaults to user management enabled (false). Set to `true` to disable the [user management](/hosting/user-management/) feature. Note that n8n ignores this environment variable if you have already set up an owner account. |
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | Defaults to user management enabled (false). Set to `true` to disable the [user management](/hosting/user-management/) feature. Note that Doc² ignores this environment variable if you have already set up an owner account. |
 | `N8N_EMAIL_MODE` | string | smtp | Required |
 | `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
 | `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`. | Optional |
@@ -111,7 +111,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_ENDPOINT_WEBHOOK` | `string` | The path used for webhook endpoint. Default value is `webhook`. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | `string` | The path used for test-webhook endpoint. Default value is `webhook-test`. |
 | `N8N_ENDPOINT_WEBHOOK_WAIT` | `string` | The path used for waiting-webhook endpoint. Default value is `webhook-waiting`. |
-| `WEBHOOK_URL` | `string` | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/configuration/#webhook-url) for more details. |
+| `WEBHOOK_URL` | `string` | Used to manually provide the Webhook URL when running Doc² behind a reverse proxy. See [here](/hosting/configuration/#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | `boolean` | Disable production webhooks from main process. This helps ensures no HTTP traffic load to main process when using webhook-specific processes. Default value is `false`.  |
 | `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | `boolean` | Deregister webhooks on external services only when workflows are deactivated. Default value is `false`. |
 
@@ -179,8 +179,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 | :------- | :--- | :---------- |
 | `N8N_AUTH_EXCLUDE_ENDPOINTS` | `string` | Additional endpoints to exclude auth checks. Multiple endpoints can be provided separated by a colon ("`:`"). The endpoints should **not** start with a forward slash ("`/`"). |
 | `N8N_BASIC_AUTH_ACTIVE` | `boolean` | Whether basic auth should be activated for editor and REST-API access. Default value is `false`. |
-| `N8N_BASIC_AUTH_USER`/`_FILE` | `string` | The name of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_PASSWORD`/`_FILE` | `string` | The password of the n8n user for basic authentication. |
+| `N8N_BASIC_AUTH_USER`/`_FILE` | `string` | The name of the Doc² user for basic authentication. |
+| `N8N_BASIC_AUTH_PASSWORD`/`_FILE` | `string` | The password of the Doc² user for basic authentication. |
 | `N8N_BASIC_AUTH_HASH`/`_FILE` | `boolean` | Whether the basic authentication password is hashed. Default value is `false`. |
 | `N8N_JWT_AUTH_ACTIVE` | `boolean` | Whether JWT authentication should be activated for editor and REST-API access. Default value is `false`. |
 | `N8N_JWT_AUTH_HEADER`/`_FILE` | `string` | The request header containing a signed JWT. |

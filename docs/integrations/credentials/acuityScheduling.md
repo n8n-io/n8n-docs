@@ -18,7 +18,7 @@ Create an [Acuity Scheduling](https://acuityscheduling.com/) account.
 3. Enter your email address in the ***Email Address*** field.
 4. Enter your URL in the ***Website*** field.
 5. Enter a description in the ***Application Description*** field.
-6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Callback URIs*** section.
+6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste in the ***Callback URIs*** section.
 7. Click on the ***Register*** button.
 8. Use the provided ***Client ID*** and the ***Client Secret*** with your Acuity Scheduling OAuth2 API credentials in n8n.
 9. Click on the circle button in the OAuth section to connect your Acuity Scheduling account to n8n.

@@ -13,7 +13,7 @@ Create a [Line](https://line.me/en/) account.
 2. Click on your name on the top right corner and select 'Manage registered services' from the dropdown list.
 3. Click on the ***Add service*** button.
 4. Enter all the necessary information.
-5. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste it in the ***Callback URL*** field.
+5. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste it in the ***Callback URL*** field.
 6. Click on the ***Agree and continue*** button.
 7. Click on the ***Add*** button.
 8. Check your inbox for the verification email.

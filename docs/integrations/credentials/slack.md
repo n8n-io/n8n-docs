@@ -20,10 +20,10 @@ Create a [Slack](https://slack.com/) account.
 4. ***Select a workspace*** for your app from the dropdown list.
 5. Click on the ***Create App*** button.
 6. Scroll down to the ***App Credentials*** section.
-7. Copy and paste ***Client ID*** and ***Client Secret*** in the corresponding fields of your n8n credentials.
+7. Copy and paste ***Client ID*** and ***Client Secret*** in the corresponding fields of your Doc² credentials.
 8. On the Basic Information page, navigate to ***Building Apps for Slack*** > ***Add features and functionality*** > ***Permissions***.
 9. In the ***Redirect URLs*** section, click on ***Add New Redirect URL***.
-10. Copy the ***OAuth Callback URL*** provided in n8n and paste it here.
+10. Copy the ***OAuth Callback URL*** provided in Doc² and paste it here.
 11. Click on the ***Save URLs*** button.
 12. Scroll down to the ***Scopes*** section.
 13. Add the required scopes under the ***Bot Token Scopes*** section. You can refer to the list of scopes on the [Scopes and permissions](https://api.slack.com/scopes) documentation on Slack.
@@ -64,7 +64,7 @@ The following video demonstrates the steps to authenticate the Slack node on [n8
 
 8. From the ***OAuth Tokens for Your Workspace*** section click on the ***Install to Workspace*** button.
 9. Click on the ***Allow*** button.
-10. In n8n, enter the ***Access Token*** created above.
+10. In Doc², enter the ***Access Token*** created above.
 11. Click the ***Save*** button to save your credentials in n8n.
 
 <!---

@@ -46,11 +46,11 @@ n8n is built from four main packages:
 - editor-ui
 - nodes-base
 
-All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
+All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
 - The folder `nodes`, contains all the nodes in n8n.
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
-- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
+- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
 ![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
 
@@ -132,7 +132,7 @@ Let's see how the node looks in the UI by following these steps:
 3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
 	- The first command installs all dependencies of all the modules and links them together.
 	- The second command builds all the code.
-	- The third command starts n8n in development mode.
+	- The third command starts Doc² in development mode.
 
 	```bash
 	lerna bootstrap --hoist
@@ -144,14 +144,14 @@ Let's see how the node looks in the UI by following these steps:
 5. Open the ***Create Node*** menu, type `FriendGrid`, and click on it to add the node to the Editor UI.
 
 **Notes**
-- On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
+- On startup, Doc² will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
 - The property `description.color` is the company branding's hexadecimal color. This is usually available on the company's website under style guide. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 
 ## Creating the UI for the node
 
-Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
+Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, Doc² provides predefined JSON-based UI components that we can use to ask the user for different types of data.
 
 SendGrid's [docs](https://sendgrid.com/docs/api-reference/) mention that to create a contact, we need to provide the following pieces of information:
 
@@ -163,7 +163,7 @@ There are more parameters that can be provided to create a contact in FriendGrid
 
 ### Resources and operations
 
-Now, n8n requires a couple of parameters as well:
+Now, Doc² requires a couple of parameters as well:
 
 - resource - Required
 - operation - Required
@@ -237,7 +237,7 @@ Let’s make the Node Editor View ask for these parameters:
 },
 ```
 
-2. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -290,7 +290,7 @@ We can add them below the email parameter and set `required: false`. However, if
 	},
 	```
 
-2. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
 3. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -307,7 +307,7 @@ Now all our optional fields are presented in the UI and can be set individually 
 
 Most REST APIs use some sort of authentication mechanism. FriendGrid's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
-n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
+n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s FriendGrid API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
@@ -348,7 +348,7 @@ export class FriendGridApi implements ICredentialType {
 	},
 	```
 
-8. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+8. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
 9. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -411,12 +411,12 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		}
 	}
 
-	// Map data to n8n data
+	// Map data to Doc² data
 	return [this.helpers.returnJsonArray(responseData)];
 }
 ```
 
-3. Stop the current n8n process by pressing ctrl + c in the terminal in which you are running n8n.
+3. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
 4. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -512,7 +512,7 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 				}
 			}
 		}
-		// Map data to n8n data structure
+		// Map data to Doc² data structure
 		return [this.helpers.returnJsonArray(returnData)];
 	}
 	```
@@ -523,7 +523,7 @@ If you open the FriendGrid node, you should see the following.
 
 ![Output of the FriendGrid node]((/_images/integrations/creating-nodes/code/final-friendgrid.png)
 
-As showcased above, both the items were processed. That’s how all nodes in n8n work (with a few exceptions). They will automatically iterate over all the items and process them.
+As showcased above, both the items were processed. That’s how all nodes in Doc² work (with a few exceptions). They will automatically iterate over all the items and process them.
 
 Let’s go over the final version of the `execute` method. We are getting the items returned by the `this.getInputData()` function and iterating over all of them. Additionally, while doing so, we use the item index to get the correct parameter value using the function `this.getNodeParameters()`. For example, with the following input:
 
@@ -578,4 +578,4 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.

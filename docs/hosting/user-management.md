@@ -1,6 +1,6 @@
 # User management
 
-User management in n8n allows you to invite people to work in your n8n instance. It includes:
+User management in Doc² allows you to invite people to work in your Doc² instance. It includes:
 
 * Login and password management
 * Adding and removing users
@@ -16,12 +16,12 @@ User management is available for self-hosted n8n. It isn't currently available f
 
 There are two account types, owner and member. The account type affects the user permissions and access.
 
-* Owner: this is the account that set up user management. There is one owner account for each n8n instance. You can't transfer ownership.
+* Owner: this is the account that set up user management. There is one owner account for each Doc² instance. You can't transfer ownership.
   The owner can:
     * Add and remove users
     * See all workflows
     * Delete tags
-* Members: these are normal n8n users.
+* Members: these are normal Doc² users.
   Members can:
     * See all workflow tags, create new tags, and assign tags to their workflows. Members can't delete tags.
     * Change their own password.
@@ -35,8 +35,8 @@ There are two account types, owner and member. The account type affects the user
 
 There are three stages to set up user management in n8n:
 
-1. Configure your n8n instance to use your SMTP server.
-2. Start n8n and follow the setup steps in the app.
+1. Configure your Doc² instance to use your SMTP server.
+2. Start Doc² and follow the setup steps in the app.
 3. Invite users.
 
 ### Step one: SMTP
@@ -48,7 +48,7 @@ You need an SMTP server for user management to send invites and password resets.
 * SMTP password
 * SMTP sender name
 
-To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/)
+To set up SMTP with Doc², configure the SMTP environment variables for your Doc² instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/)
 
 | Variable | Type | Description | Required? |
 | -------- | ---- | ----------- | --------- |
@@ -62,7 +62,7 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
 
-If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
+If your Doc² instance is already running, you need to restart it to enable the new SMTP settings.
 
 !!! note "More configuration options"
     There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/environment-variables/) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
@@ -78,18 +78,18 @@ When you set up user management for the first time, you create an owner account.
 
 1. Open n8n. The app displays a signup screen.
 2. Enter your details. Your password must be at least eight characters, including at least one number and one capital letter.
-3. Click **Next**. n8n logs you in with your new owner account.
+3. Click **Next**. Doc² logs you in with your new owner account.
 
 ### Step three: invite users
 
-You can now invite other people to your n8n instance.
+You can now invite other people to your Doc² instance.
 
 1. Sign in with your owner account.
-2. Click your user icon > **Settings**. n8n opens your **Personal settings** page.
+2. Click your user icon > **Settings**. Doc² opens your **Personal settings** page.
 3. Click **Users** to go to the **Users** page.
 4. Click **Invite**.
 5. Enter the new user's email address.
-6. Click **Invite user**. n8n sends an email with a link for the new user to join.
+6. Click **Invite user**. Doc² sends an email with a link for the new user to join.
 
 ## Manage users
 
@@ -106,8 +106,8 @@ The **Users** page shows all users, including ones with pending invitations. You
 
 You don't have to use n8n's user management feature. You can:
 
-* Leave it enabled, but choose to skip the setup step. You can use n8n as normal. If you want to set up user management later, go to **Settings** > **Users**.
-* Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your n8n instance. You can't use this setting if you have already set up an owner account.
+* Leave it enabled, but choose to skip the setup step. You can use Doc² as normal. If you want to set up user management later, go to **Settings** > **Users**.
+* Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your Doc² instance. You can't use this setting if you have already set up an owner account.
 
 ## Best practices
 
@@ -116,13 +116,13 @@ This sections contains advice on best practices relating to user management in n
 * We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
 * Users must be careful not to edit the same workflow simultaneously. It is possible to do it, but the users will overwrite each other's changes.
 * To move workflows between accounts, export the workflow as JSON, then import it to the new account. Note that this action loses the workflow history.
-* Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, n8n generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
+* Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, Doc² generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
     * The path works for the first workflow that is run or activated.
     * Other workflows will error if they try to run with the same path.
-* If you run n8n behind a reverse proxy, set the following environment variables so that emails are generated with the correct URL:
+* If you run Doc² behind a reverse proxy, set the following environment variables so that emails are generated with the correct URL:
   * `N8N_HOST`
   * `N8N_PORT`
   * `N8N_PROTOCOL`
   * `N8N_EDITOR_BASE_URL`
   More information on these variables is available in [Environment variables](/hosting/environment-variables/).
-* You can't use n8n's user management with basic auth. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.
+* You can't use n8n's user management with basic auth. If your Doc² instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.

@@ -19,7 +19,7 @@ Create a [GitLab](https://gitlab.com/) account.
 3. Click on 'Settings'.
 4. Click on 'Applications' in the sidebar.
 5. Enter a name in the ***Name*** field.
-6. Copy the 'OAuth Callback URL' provided in the 'Gitlab OAuth2 API' credentials in n8n and paste it in the ***Redirect URI*** field in the GitLab app creation page.
+6. Copy the 'OAuth Callback URL' provided in the 'Gitlab OAuth2 API' credentials in Doc² and paste it in the ***Redirect URI*** field in the GitLab app creation page.
 7. Select any scopes you plan to use and then click on ***Save application***.
 8. Use the ***Application ID*** and ***Secret*** with your GitLab OAuth2 API credentials in n8n.
 9. Click on the circle button in the OAuth section to connect a GitLab account to n8n.

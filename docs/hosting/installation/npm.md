@@ -1,6 +1,6 @@
 # npm
 
-You can try n8n without installing it using npx.
+You can try Doc² without installing it using npx.
 
 From the terminal, run:
 
@@ -8,15 +8,15 @@ From the terminal, run:
 npx n8n
 ```
 
-This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
+This command will download everything that is needed to start n8n. You can then access Doc² and start building workflows by opening [http://localhost:5678](http://localhost:5678).
 
-If you want to install n8n globally, use npm:
+If you want to install Doc² globally, use npm:
 
 ```bash
-npm install n8n -g
+npm install Doc² -g
 ```
 
-After the installation, start n8n by running:
+After the installation, start Doc² by running:
 
 ```bash
 n8n
@@ -30,7 +30,7 @@ n8n start
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+Start Doc² with `--tunnel` by running:
 
 ```bash
 n8n start --tunnel
@@ -38,7 +38,7 @@ n8n start --tunnel
 
 ## Windows troubleshooting
 
-If you are experiencing issues running n8n with the typical flow of:
+If you are experiencing issues running Doc² with the typical flow of:
 
 ```powershell
 npx n8n

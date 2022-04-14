@@ -19,7 +19,7 @@ Create a [Webex by Cisco](https://www.webex.com/) account.
     * ***Contact Email***: Enter your email address.
     * ***Icon***: Provide an icon for your app or select one of the available defaults.
     * ***Description***: Enter a brief description of your app.
-    * ***Redirect URIs***: Enter the **OAuth Callback URL** from the n8n credentials modal.
+    * ***Redirect URIs***: Enter the **OAuth Callback URL** from the Doc² credentials modal.
     * ***Scopes***: Enable the following scopes:
         * `spark:rooms_read`
         * `spark:messages_write`

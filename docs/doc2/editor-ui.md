@@ -4,7 +4,7 @@ The Editor UI is the web interface used to create [workflows](/workflows/). It i
 
 ![Editor](/_images/editor-ui/editor_ui.png)
 
-From the Editor UI, you can access all your workflows and credentials, as well as the n8n documentation and forum.
+From the Editor UI, you can access all your workflows and credentials, as well as the Doc² documentation and forum.
 
 The Editor UI sidebar menu contains the following sections and operations:
 
@@ -33,7 +33,7 @@ This section includes the operations for creating and editing workflows.
 
 This section includes the operations for creating [credentials](/integrations/).
 
-Credentials are private pieces of information issued by apps/services to authenticate you as a user and allow you to connect and share information between the app/service and the n8n node.
+Credentials are private pieces of information issued by apps/services to authenticate you as a user and allow you to connect and share information between the app/service and the Doc² node.
 
 * **New**: Create new credentials
 * **Open**: Open the list of saved credentials
@@ -46,8 +46,8 @@ You can enabling logging of your failed, successful, and/or manually selected wo
 
 ## Help
 
-This section includes resources for using n8n and interacting with the community.
-* **Documentation**: Open the n8n documentation page
-* **Forum**: Open the n8n community forum
-* **Workflows**: Open the n8n public [workflows](https://n8n.io/workflows) page
-* **About n8n**: View information about n8n (version, source code, license)
+This section includes resources for using Doc² and interacting with the community.
+* **Documentation**: Open the Doc² documentation page
+* **Forum**: Open the Doc² community forum
+* **Workflows**: Open the Doc² public [workflows](https://n8n.io/workflows) page
+* **About n8n**: View information about Doc² (version, source code, license)

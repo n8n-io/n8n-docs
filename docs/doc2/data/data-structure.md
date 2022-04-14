@@ -1,6 +1,6 @@
 # Data structure
 
-In n8n, all data passed between nodes is an array of objects. It has the following structure:
+In Doc², all data passed between nodes is an array of objects. It has the following structure:
 
 ```json
 [
@@ -30,7 +30,7 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 ```
 
 !!! note "Skipping the 'json' key and array syntax"
-    From 0.166.0 onwards, n8n automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
+    From 0.166.0 onwards, Doc² automatically adds the `json` key if it is missing. It also automatically wraps your items in an array (`[]`) if needed.
 
 ## Data flow
 

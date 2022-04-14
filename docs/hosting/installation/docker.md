@@ -20,27 +20,27 @@ From your terminal, run:
 
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-v ~/.n8n:/home/node/.n8n \
 	n8nio/n8n
 ```
 
-This command will download all required n8n images and start your container, exposed on port `5678`. So that all your data is not lost when you stop the container, it also mounts a local directory, `.n8n`, to persist your data locally.
+This command will download all required Doc² images and start your container, exposed on port `5678`. So that all your data is not lost when you stop the container, it also mounts a local directory, `.n8n`, to persist your data locally.
 
-You can then access n8n by opening:
+You can then access Doc² by opening:
 [http://localhost:5678](http://localhost:5678)
 
 ## Using alternate databases
 
-By default n8n uses SQLite to save credentials, past executions and workflows.
+By default Doc² uses SQLite to save credentials, past executions and workflows.
 n8n also supports PostgresDB, MySQL and MariaDB, configurable via
 environment variables as detailed below.
 
-It is important to still persist data in the `/root/.n8n` folder as it contains n8n user data and even more importantly the encryption key
-for credentials. It is also the name of the webhook when the n8n tunnel is used. 
+It is important to still persist data in the `/root/.n8n` folder as it contains Doc² user data and even more importantly the encryption key
+for credentials. It is also the name of the webhook when the Doc² tunnel is used. 
 
-If no directory is found, n8n creates automatically one on
+If no directory is found, Doc² creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 !!! note " Keep in mind"
@@ -49,11 +49,11 @@ startup. In this case, existing credentials saved with a different encryption ke
 
 ### PostgresDB
 
-To use n8n with Postgres, provide the corresponding [configuration](/hosting/configuration/):
+To use Doc² with Postgres, provide the corresponding [configuration](/hosting/configuration/):
 
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e DB_TYPE=postgresdb \
 	-e DB_POSTGRESDB_DATABASE=<POSTGRES_DATABASE> \
@@ -71,11 +71,11 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 
 ### MySQL
 
-To use n8n with MySQL, provide the corresponding [configuration](/hosting/configuration/):
+To use Doc² with MySQL, provide the corresponding [configuration](/hosting/configuration/):
 
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e DB_TYPE=mysqldb \
 	-e DB_MYSQLDB_DATABASE=<MYSQLDB_DATABASE> \
@@ -90,7 +90,7 @@ docker run -it --rm \
 
 ## Setting timezone
 
-To define the timezone n8n should use, the environment variable `GENERIC_TIMEZONE` can be set. This gets used by schedule based nodes such as the Cron node.
+To define the timezone Doc² should use, the environment variable `GENERIC_TIMEZONE` can be set. This gets used by schedule based nodes such as the Cron node.
 
 The timezone of the system can also be set separately. This controls what
 some scripts and commands return like `$ date`. The system timezone can be set via the environment variable `TZ`.
@@ -99,7 +99,7 @@ Example using the same timezone for both:
 
 ```sh
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-e GENERIC_TIMEZONE="Europe/Berlin" \
 	-e TZ="Europe/Berlin" \
@@ -114,11 +114,11 @@ More information about Docker setup can be found in the README file of the [Dock
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+Start Doc² with `--tunnel` by running:
 
 ```bash
 docker run -it --rm \
-	--name n8n \
+	--name Doc² \
 	-p 5678:5678 \
 	-v ~/.n8n:/home/node/.n8n \
 	n8nio/n8n \

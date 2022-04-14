@@ -12,7 +12,7 @@ An example can be seen in the code of the [ReadBinaryFile-Node](https://github.c
 
 ## Write nodes in TypeScript
 
-All code of n8n is written in TypeScript and hence, the nodes should also be written in TypeScript. That makes development easier, faster, and avoids at least some bugs.
+All code of Doc² is written in TypeScript and hence, the nodes should also be written in TypeScript. That makes development easier, faster, and avoids at least some bugs.
 
 
 ## Use the built in request library
@@ -29,7 +29,7 @@ That is using the npm package [`request-promise-native`](https://github.com/requ
 
 ## Reuse parameter names
 
-When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId", call them "id". n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
+When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId", call them "id". Doc² can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
 
 ## Create an 'Additional Fields' parameter
 

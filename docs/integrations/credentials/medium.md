@@ -19,7 +19,7 @@ You can use these credentials to authenticate the following nodes with Medium.
 6. Click on the 'New application' button.
 7. Give your application a Name, and provide a Description.
 8. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
-9. Copy the 'OAuth Callback URL' provided in the Medium OAuth2 API credentials in n8n and paste it in the 'Callback URLs' field in the Medium application page.
+9. Copy the 'OAuth Callback URL' provided in the Medium OAuth2 API credentials in Doc² and paste it in the 'Callback URLs' field in the Medium application page.
 10. Click on 'Save' to generate the credentials.
 11. Copy and paste ***Client ID*** and ***Client Secret*** in the Medium OAuth2 API credentials in n8n.
 12. Click on the circle button in the OAuth section to connect a Medium account to n8n.

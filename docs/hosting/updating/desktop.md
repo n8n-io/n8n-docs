@@ -1,6 +1,6 @@
-# n8n Desktop App
+# Doc² Desktop App
 
-If you're using the n8n desktop app follow the below mentioned steps to update n8n.
+If you're using the Doc² desktop app follow the below mentioned steps to update n8n.
 
 ### For Windows
 

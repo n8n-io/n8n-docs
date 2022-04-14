@@ -95,7 +95,7 @@ The start node exists by default when you create a new workflow.
 
 ### How to fetch a binary file from a URL?
 
-1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://n8n.io/n8n-logo.png` to fetch the n8n logo.
+1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://n8n.io/n8n-logo.png` to fetch the Doc² logo.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. (Optional) Change the binary property value in the ***Binary Property*** field. Throughout the workflow, you can refer to the binary data with the value you set in this field.
 4. Click on ***Execute Node*** to run the node.

@@ -1,4 +1,4 @@
-site_name: Doc² Documentation
+site_name: Docs Documentation
 theme:
   name: material
   custom_dir: overrides
@@ -54,48 +54,69 @@ plugins:
 nav: 
   - DOC²:
     - Overview: doc2/index.md
-    - Try it out: doc2/quickstart.md
-    - Editor UI: doc2/editor-ui.md
+  - Workflow:
+    - Overview: workflow/index.md
+    - Try it out: workflow/quickstart.md
+    - Editor UI: workflow/editor-ui.md
     - Understand workflows: 
-      - Overview: doc2/workflows/index.md
-      - Workflows: doc2/workflows/workflows.md
-      - Connections: doc2/workflows/connections.md
-      - Nodes: doc2/workflows/nodes.md
-      - Items: doc2/workflows/items.md
+      - Overview: workflow/workflows/index.md
+      - Workflows: workflow/workflows/workflows.md
+      - Connections: workflow/workflows/connections.md
+      - Nodes: workflow/workflows/nodes.md
+      - Notes: workflow/workflows/workflow-notes.md
+      - Items: workflow/workflows/items.md
     - Flow logic:
-      - Overview: doc2/flow-logic/index.md
-      - Merging: doc2/flow-logic/merging.md
-      - Looping: doc2/flow-logic/looping.md
-      - Error handling: doc2/flow-logic/error-handling.md
+      - Overview: workflow/flow-logic/index.md
+      - Merging: workflow/flow-logic/merging.md
+      - Looping: workflow/flow-logic/looping.md
+      - Error handling: workflow/flow-logic/error-handling.md
     - Mapping and transforming data:
-      - Overview: doc2/data/index.md
-      - Data structure: doc2/data/data-structure.md
-      - Transforming data: doc2/data/transforming-data.md
-      - Using code: doc2/data/code.md
+      - Overview: workflow/data/index.md
+      - Data structure: workflow/data/data-structure.md
+      - Transforming data: workflow/data/transforming-data.md
+      - Using code: workflow/data/code.md
     - Code examples: 
-      - Overview: doc2/code-examples/index.md
+      - Overview: workflow/code-examples/index.md
       - Expressions: 
-        - Overview: doc2/code-examples/expressions/index.md
-        - Methods: doc2/code-examples/expressions/methods.md
-        - Variables: doc2/code-examples/expressions/variables.md
-        - Data and time with Luxon: doc2/code-examples/expressions/luxon.md
-        - JSON with JMESPath: doc2/code-examples/expressions/jmespath.md
+        - Overview: workflow/code-examples/expressions/index.md
+        - Methods: workflow/code-examples/expressions/methods.md
+        - Variables: workflow/code-examples/expressions/variables.md
+        - Data and time with Luxon: workflow/code-examples/expressions/luxon.md
+        - JSON with JMESPath: workflow/code-examples/expressions/jmespath.md
       - JavaScript for workflows:
-        - Overview: doc2/code-examples/javascript-functions/index.md
-        - Methods: doc2/code-examples/javascript-functions/methods.md
-        - Variables: doc2/code-examples/javascript-functions/variables.md
-        - Get number of items returned by last node: doc2/code-examples/javascript-functions/number-items-last-node.md
-        - Check incoming data: doc2/code-examples/javascript-functions/check-incoming-data.md
+        - Overview: workflow/code-examples/javascript-functions/index.md
+        - Methods: workflow/code-examples/javascript-functions/methods.md
+        - Variables: workflow/code-examples/javascript-functions/variables.md
+        - Get number of items returned by last node: workflow/code-examples/javascript-functions/number-items-last-node.md
+        - Check incoming data: workflow/code-examples/javascript-functions/check-incoming-data.md
     - Reference:
-      - Overview: doc2/reference/index.md
-      - Release notes: doc2/reference/release-notes.md
-      - CLI commands: doc2/reference/cli-commands.md
-      - Keyboard shortcuts: doc2/reference/keyboard-shortcuts.md
-      - Glossary: doc2/reference/glossary.md
-      - License: doc2/reference/license.md
-      - Data collection: doc2/reference/data-collection.md
-  - DOC² Workflow:
-    - Overview: doc2workflow/index.md
+      - Overview: workflow/reference/index.md
+      - Release notes: workflow/reference/release-notes.md
+      - CLI commands: workflow/reference/cli-commands.md
+      - Keyboard shortcuts: workflow/reference/keyboard-shortcuts.md
+      - Glossary: workflow/reference/glossary.md
+      - License: workflow/reference/license.md
+      - Data collection: workflow/reference/data-collection.md
+    - Integrations: 
+      - Overview: workflow/integrations/index.md
+      - Core nodes: workflow/integrations/core-nodes/
+      - Nodes: workflow/integrations/nodes/
+      - Trigger nodes: workflow/integrations/trigger-nodes/
+      - Credentials: workflow/integrations/credentials/
+      - Creating nodes:
+        - Overview: workflow/integrations/creating-nodes/index.md
+        - Code-based node building:
+          - Overview: workflow/integrations/creating-nodes/code/index.md
+          - Standards: workflow/integrations/creating-nodes/code/standards.md
+          - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
+          - Create an n8n-nodes-module: workflow/integrations/creating-nodes/code/create-n8n-nodes-module.md
+          - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
+          - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
+          - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md
+          - HTTP request helpers: workflow/integrations/creating-nodes/code/http-helpers.md
+          - Node linter: workflow/integrations/creating-nodes/code/node-linter.md
+          - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
+          - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
     - Overview: flow2/index.md
   - KV²:
@@ -104,26 +125,6 @@ nav:
     - Overview: te2/index.md
   - OCR:
     - Overview: ocr/index.md
-  - Integrations: 
-    - Overview: integrations/index.md
-    - Core nodes: integrations/core-nodes/
-    - Nodes: integrations/nodes/
-    - Trigger nodes: integrations/trigger-nodes/
-    - Credentials: integrations/credentials/
-    - Creating nodes:
-      - Overview: integrations/creating-nodes/index.md
-      - Code-based node building:
-        - Overview: integrations/creating-nodes/code/index.md
-        - Standards: integrations/creating-nodes/code/standards.md
-        - Create your first node: integrations/creating-nodes/code/create-first-node.md
-        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
-        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
-        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
-        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
-        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
-        - Node linter: integrations/creating-nodes/code/node-linter.md
-        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
-        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
   - Courses:
     - Overview: courses/index.md
     - Level one:

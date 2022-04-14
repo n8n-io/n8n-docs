@@ -1,6 +1,20 @@
-# Welcome
+# THE PLATFORM OF DIGITALIZATION
+## FOR BUSINESS PROCESS AUTOMATION - INCLUDING DOCUMENTS
 
-This is the documentation for Doc², the intelligent solution for digitizing Documents.
+## DIGITIZATION
+Digitization refers to creating a digital representation of physical objects or attributes. For instance, we scan a paper document and save it as a digital document (e.g., PDF). In other words, digitization is about converting
+something non-digital into a digital representation or artifact.
+
+## DIGITALIZATION
+
+Digitalization refers to enabling or improving processes by leveraging digital technologies and digitized
+data. Therefore, digitalization presumes digitization.
+Digitalization improves an existing business process or processes but doesn’t change or transform them. It takes a process from a human-driven event or series of events to softwaredriven.
+
+## DIGITAL TRANSFORMATION
+
+Digital transformation is about the entire transformation of the company. Digital transformation includes other changes brought about by digitalization. New business areas or
+business models can open along the way.
 
 Every business process starts, contains or ends with a document. Regardless of whether in paper form or already as a file. This is called unstructured data. Although the information is on or in the document, it cannot be automatically integrated into the work processes, as it is simply not recognized by all software.
 

@@ -81,7 +81,12 @@ nav:
       - Expressions: doc2/exception-filters.md
     - Table: 
       - Save and delete rules: doc2/save-rules-and-delete-rules.md
-      - Add new Column: doc2/add-new-table-column.md
+      - Train: 
+        - Define tables and columns: doc2/define-table-and-columns.md
+        - Add new Column: doc2/add-new-table-column.md
+        - Group function: doc2/group-function.md
+        - Advanced settings: doc2/advance-settings.md
+        - Manual row selection: doc2/manual-row-selection.md
     - Import:
       - Email: doc2/e-mail.md
     - Keyboard: doc2/keyboard.md

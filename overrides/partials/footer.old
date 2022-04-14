@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block footer %}
+
+            Polydocs GmbH
+
+{% endblock %}

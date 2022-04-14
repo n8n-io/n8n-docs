@@ -26,3 +26,32 @@ You can:
 * Drag notes behind nodes. You can use this to visually group nodes.
 * Resize notes by hovering over the edge of the note and dragging to resize.
 
+## Writing in Markdown
+
+Workflow notes support Markdown formatting. This section describes some common options.
+
+```
+The text in double asterisks will be **bold**
+
+The text in single asterisks will be *italic*
+
+Use # to indicate headings:
+# This is a top-level heading
+## This is a sub-heading
+### This is a smaller sub-heading
+
+You can add links:
+[Example](https://example.com/)
+
+Create lists with asterisks:
+
+* Item one
+* Item two
+
+Or created ordered lists with numbers:
+
+1. Item one
+2. Item two
+```
+
+For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.

@@ -1,5 +1,5 @@
 # Weird ones after IA launch
-/integrations/nodes/core-nodes/n8n-nodes-base.function/     /integrations/core-nodes/n8n-nodes-base.function/
+
 
 # Updated during IA work
 /getting-started/key-components/                     /workflows/
@@ -93,7 +93,7 @@
 /nodes/n8n-nodes-base.cockpit/		/integrations/nodes/n8n-nodes-base.cockpit/
 /nodes/n8n-nodes-base.coda/		/integrations/nodes/n8n-nodes-base.coda/
 /nodes/n8n-nodes-base.coinGecko/		/integrations/nodes/n8n-nodes-base.coinGecko/
-/nodes/n8n-nodes-base.compression/		/integrations/nodes/core-nodes/n8n-nodes-base.compression/
+/nodes/n8n-nodes-base.compression/		/integrations/core-nodes/n8n-nodes-base.compression/
 /nodes/n8n-nodes-base.contentful/		/integrations/nodes/n8n-nodes-base.contentful/
 /nodes/n8n-nodes-base.convertKit/		/integrations/nodes/n8n-nodes-base.convertKit/
 /nodes/n8n-nodes-base.convertKitTrigger/		/integrations/trigger-nodes/n8n-nodes-base.convertKitTrigger/
@@ -101,11 +101,12 @@
 /nodes/n8n-nodes-base.copperTrigger/		/integrations/trigger-nodes/n8n-nodes-base.copperTrigger/
 /nodes/n8n-nodes-base.cortex/		/integrations/nodes/n8n-nodes-base.cortex/
 /nodes/n8n-nodes-base.crateDb/		/integrations/nodes/n8n-nodes-base.crateDb/
-/nodes/n8n-nodes-base.cron/		/integrations/nodes/core-nodes/n8n-nodes-base.cron/
-/nodes/n8n-nodes-base.crypto/		/integrations/nodes/core-nodes/n8n-nodes-base.crypto/
+/nodes/n8n-nodes-base.cron/		/integrations/core-nodes/n8n-nodes-base.cron/
+/nodes/n8n-nodes-base.crypto/		/integrations/core-nodes/n8n-nodes-base.crypto/
 /nodes/n8n-nodes-base.customerIo/		/integrations/nodes/n8n-nodes-base.customerIo/
 /nodes/n8n-nodes-base.customerIoTrigger/		/integrations/trigger-nodes/n8n-nodes-base.customerIoTrigger/
-/nodes/n8n-nodes-base.dateTime/		/integrations/nodes/core-nodes/n8n-nodes-base.dateTime/
+/nodes/n8n-nodes-base.dateTime/		/integrations/core-nodes/n8n-nodes-base.dateTime/
+/nodes/n8n-nodes-base.datetime/     /integrations/nodes/n8n-nodes-base.dateTime/
 /nodes/n8n-nodes-base.deepL/		/integrations/nodes/n8n-nodes-base.deepL/
 /nodes/n8n-nodes-base.demio/		/integrations/nodes/n8n-nodes-base.demio/
 /nodes/n8n-nodes-base.dhl/		/integrations/nodes/n8n-nodes-base.dhl/
@@ -115,7 +116,7 @@
 /nodes/n8n-nodes-base.drift/		/integrations/nodes/n8n-nodes-base.drift/
 /nodes/n8n-nodes-base.dropbox/		/integrations/nodes/n8n-nodes-base.dropbox/
 /nodes/n8n-nodes-base.dropcontact/		/integrations/nodes/n8n-nodes-base.dropcontact/
-/nodes/n8n-nodes-base.editImage/		/integrations/nodes/core-nodes/n8n-nodes-base.editImage/
+/nodes/n8n-nodes-base.editImage/		/integrations/core-nodes/n8n-nodes-base.editImage/
 /nodes/n8n-nodes-base.egoi/		/integrations/nodes/n8n-nodes-base.egoi/
 /nodes/n8n-nodes-base.elasticsearch/		/integrations/nodes/n8n-nodes-base.elasticsearch/
 /nodes/n8n-nodes-base.elasticSecurity/		/integrations/nodes/n8n-nodes-base.elasticSecurity/
@@ -126,8 +127,8 @@
 /nodes/n8n-nodes-base.erpNext/		/integrations/nodes/n8n-nodes-base.erpNext/
 /nodes/n8n-nodes-base.errorTrigger/		/integrations/core-nodes/n8n-nodes-base.errorTrigger/
 /nodes/n8n-nodes-base.eventbriteTrigger/		/integrations/trigger-nodes/n8n-nodes-base.eventbriteTrigger/
-/nodes/n8n-nodes-base.executeCommand/		/integrations/nodes/core-nodes/n8n-nodes-base.executeCommand/
-/nodes/n8n-nodes-base.executeWorkflow/		/integrations/nodes/core-nodes/n8n-nodes-base.executeWorkflow/
+/nodes/n8n-nodes-base.executeCommand/		/integrations/core-nodes/n8n-nodes-base.executeCommand/
+/nodes/n8n-nodes-base.executeWorkflow/		/integrations/core-nodes/n8n-nodes-base.executeWorkflow/
 /nodes/n8n-nodes-base.facebookGraphApi/		/integrations/nodes/n8n-nodes-base.facebookGraphAPI/
 /nodes/n8n-nodes-base.facebookTrigger/		/integrations/trigger-nodes/n8n-nodes-base.facebookTrigger/
 /nodes/n8n-nodes-base.figmaTrigger/		/integrations/trigger-nodes/n8n-nodes-base.figmaTrigger/
@@ -139,9 +140,9 @@
 /nodes/n8n-nodes-base.freshdesk/		/integrations/nodes/n8n-nodes-base.freshdesk/
 /nodes/n8n-nodes-base.freshservice/		/integrations/nodes/n8n-nodes-base.freshservice/
 /nodes/n8n-nodes-base.freshworksCrm/		/integrations/nodes/n8n-nodes-base.freshworksCrm/
-/nodes/n8n-nodes-base.ftp/		/integrations/nodes/core-nodes/n8n-nodes-base.ftp/
-/nodes/n8n-nodes-base.function/		/integrations/nodes/core-nodes/n8n-nodes-base.function/
-/nodes/n8n-nodes-base.functionItem/		/integrations/nodes/core-nodes/n8n-nodes-base.functionItem/
+/nodes/n8n-nodes-base.ftp/		/integrations/core-nodes/n8n-nodes-base.ftp/
+/nodes/n8n-nodes-base.function/		/integrations/core-nodes/n8n-nodes-base.function/
+/nodes/n8n-nodes-base.functionItem/		/integrations/core-nodes/n8n-nodes-base.functionItem/
 /nodes/n8n-nodes-base.getResponse/		/integrations/nodes/n8n-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getResponseTrigger/		/integrations/trigger-nodes/n8n-nodes-base.getResponseTrigger/
 /nodes/n8n-nodes-base.ghost/		/integrations/nodes/n8n-nodes-base.ghost/
@@ -165,7 +166,8 @@
 /nodes/n8n-nodes-base.googleFirebaseCloudFirestore/		/integrations/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/
 /nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/		/integrations/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/
 /nodes/n8n-nodes-base.googlePerspective/		/integrations/nodes/n8n-nodes-base.googlePerspective/
-/nodes/n8n-nodes-base.googleSheets/		/integrations/nodes/n8n-nodes-base.googleSheets/
+/nodes/n8n-nodes-base.googleSheets/		/integrations/nodes/n8n-nodes-base.googleSheets/	
+/nodes/n8n-nodes-base.googlesheets/     /integrations/nodes/n8n-nodes-base.googleSheets/
 /nodes/n8n-nodes-base.googleSlides/		/integrations/nodes/n8n-nodes-base.googleSlides/
 /nodes/n8n-nodes-base.googleTasks/		/integrations/nodes/n8n-nodes-base.googleTasks/
 /nodes/n8n-nodes-base.googleTranslate/		/integrations/nodes/n8n-nodes-base.googleTranslate/
@@ -195,8 +197,8 @@
 /nodes/n8n-nodes-base.interval/		/integrations/core-nodes/n8n-nodes-base.interval/
 /nodes/n8n-nodes-base.invoiceNinja/		/integrations/nodes/n8n-nodes-base.invoiceNinja/
 /nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/trigger-nodes/n8n-nodes-base.invoiceNinjaTrigger/
-/nodes/n8n-nodes-base.itemLists/		/integrations/core-core-nodes/n8n-nodes-base.itemLists/
-/nodes/n8n-nodes-base.itemlists/        /integrations/core-core-nodes/n8n-nodes-base.itemLists/
+/nodes/n8n-nodes-base.itemLists/		/integrations/core-nodes/n8n-nodes-base.itemLists/
+/nodes/n8n-nodes-base.itemlists/        /integrations/core-nodes/n8n-nodes-base.itemLists/
 /nodes/n8n-nodes-base.iterable/		/integrations/nodes/n8n-nodes-base.iterable/
 /nodes/n8n-nodes-base.jenkins/		/integrations/nodes/n8n-nodes-base.jenkins/
 /nodes/n8n-nodes-base.jira/		/integrations/nodes/n8n-nodes-base.jira/
@@ -348,6 +350,7 @@
 /nodes/n8n-nodes-base.tapfiliate/		/integrations/nodes/n8n-nodes-base.tapfiliate/
 /nodes/n8n-nodes-base.telegram/		/integrations/nodes/n8n-nodes-base.telegram/
 /nodes/n8n-nodes-base.telegramTrigger/		/integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/
+/nodes/n8n-nodes-base.telegramtrigger/      /integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/
 /nodes/n8n-nodes-base.theHive/		/integrations/nodes/n8n-nodes-base.theHive/
 /nodes/n8n-nodes-base.theHiveTrigger/		/integrations/trigger-nodes/n8n-nodes-base.theHiveTrigger/
 /nodes/n8n-nodes-base.timescaleDb/		/integrations/nodes/n8n-nodes-base.timescaleDb/

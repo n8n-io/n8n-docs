@@ -52,8 +52,8 @@ plugins:
   - search
   - literate-nav
 nav: 
-  - Using DOC²:
-    - Welcome: doc2/index.md
+  - DOC²:
+    - Overview: doc2/index.md
     - Try it out: doc2/quickstart.md
     - Editor UI: doc2/editor-ui.md
     - Understand workflows: 
@@ -94,13 +94,15 @@ nav:
       - Glossary: doc2/reference/glossary.md
       - License: doc2/reference/license.md
       - Data collection: doc2/reference/data-collection.md
-  - Using FLOW²:
+  - DOC² Workflow:
+    - Overview: doc2workflow/index.md
+  - FLOW²:
     - Overview: flow2/index.md
-  - Using KV²:
+  - KV²:
     - Overview: kv2/index.md
-  - Using TE²:
+  - TE²:
     - Overview: te2/index.md
-  - Using OCR:
+  - OCR:
     - Overview: ocr/index.md
   - Integrations: 
     - Overview: integrations/index.md

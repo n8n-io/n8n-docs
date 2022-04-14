@@ -36,7 +36,7 @@ The only difference between a regular workflow and an Error Workflow is that the
 
 !!! example "Exercise"
 
-		In the previous chapters, you've built several small workflows. Now, pick one of them that you want to monitor. Create an Error Workflow that sends a message to a Slack channel if that workflow fails. Don't forget to set this Error Workflow in the settings of the monitored workflow.
+		In the previous chapters, you've built several small workflows. Now, pick one of them that you want to monitor. Create an Error Workflow that sends a message to a communication platform (for example, Slack, Discord, Telegram, or even email) if that workflow fails. Don't forget to set this Error Workflow in the settings of the monitored workflow.
 
 		<details>
 		<summary>Show me the solution</summary>
@@ -109,11 +109,11 @@ The *Stop and Error node* can only be added as the last node in a workflow.
 
 !!! info "When to throw errors"
 
-		Throwing exceptions with the *Stop and Error node* is useful for {verifying/controlling} the data (or assumptions about the data) from a node and returning custom error messages.
+		Throwing exceptions with the *Stop and Error node* is useful for verifying the data (or assumptions about the data) from a node and returning custom error messages.
 
-		If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers. In other words, assumptions about the incoming data are violated.
+		If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
 
 		Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
 
 
-<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopAndError.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopAndError.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>

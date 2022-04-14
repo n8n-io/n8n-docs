@@ -42,28 +42,26 @@ Notice that three of these modes require a **key** (Merge By Key, Keep Key Match
 
 !!! example "Exercise"
 
-		Add a *Merge node* that takes Input 1 from a *Customer Datastore node* and Input 2 from a *Function node*.
+	Build a workflow that merges data from the *Customer Datastore node* and *Function node*.
 
-		In the *Customer Datastore node*, run the operation Get All People.
+	* Add a *Merge node* that takes Input 1 from a *Customer Datastore node* and Input 2 from a *Function node*.
+	* In the *Customer Datastore node*, run the operation Get All People.
+	* In the *Function node*, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the information of two characters from the *Customer Database*. For example, Jay Gatsby's language would be English and country name would be United States.
+	* In the *Merge node*, try out different merge modes.
 
-		In the *Function node*, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`.
+	<details>
 
-		Fill out the values of these properties with the information of two characters from the *Customer Database*. For example, Jay Gatsby's language would be English and country name would be United States.
+	<summary>Show me the solution</summary>
 
-		In the *Merge node*, try out different merge modes.
+	The workflow for this exercise looks like this:
 
-		<details>
-		<summary>Show me the solution</summary>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow exercise for merging data</i></figcaption></figure>
 
-		The workflow for this exercise looks like this:
+	If you merge data with the option *Keep Key Matches* using the country code as the common key, the result should look like this:
 
-		<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow exercise for merging data</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep key matches</i></figcaption></figure>
 
-		If you merge data with the option *Keep Key Matches* using the country code as the common key, the result should look like this:
-
-		<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep key matches</i></figcaption></figure>
-
-		</details>
+	</details>
 
 ## Looping
 

@@ -30,6 +30,7 @@ markdown_extensions:
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
@@ -37,6 +38,8 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
   - pymdownx.inlinehilite
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets

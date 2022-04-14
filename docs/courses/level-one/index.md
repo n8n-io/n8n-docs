@@ -47,14 +47,12 @@ Completing the course should take around two hours. You do not have to complete 
 
 ## Do I get a certificate?
 
-Absolutely! We believe all good works deserve recognition. To get your certificate, you need to complete the following milestones:
+We believe all good works deserve recognition. If you successfully complete the course, we will email you a **recognition badge** that you can share with your peers to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
 
-✅ [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL<br/>
-✅ [Make an HTTP request](/courses/level-one/chapter-5/chapter-5.1/)<br/>
-✅ [Send the workflow results as a message via Discord](/courses/level-one/chapter-5/chapter-5.6/)<br/>
-✅ Pass the quiz (theory and practice) at the end of the course<br/>
-
-<figure style="text-align: center"><img src="/_images/courses/level-one/chapter-one/certificate.png" alt="Certificate" style="height: 70%; width:70%; border: 1px solid #000000;"></figure>
+- [x] [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL
+- [x] [Make an HTTP request](/courses/level-one/chapter-5/chapter-5.1/)
+- [x] [Send the workflow results as a message via Discord](/courses/level-one/chapter-5/chapter-5.6/)
+- [x] Pass the quiz (theory and practice) at the end of the course
 
 <div style="text-align:center;">
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let’s get started!</a></button>

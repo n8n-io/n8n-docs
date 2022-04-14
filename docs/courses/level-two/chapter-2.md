@@ -13,10 +13,9 @@ You're most likely familiar with HTML and XML.
 
 If you need to process HTML or XML data in your n8n workflows, use the [***HTML Extract node***](https://docs.n8n.io/nodes/n8n-nodes-base.htmlExtract/) or [***XML node***](https://docs.n8n.io/nodes/n8n-nodes-base.xml/#xml).
 
-- The *HTML Extract node* allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
-- The *XML node* allows you to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
+The *HTML Extract node* allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
-!!! example "Exercise (HTML)"
+!!! example "Exercise"
 
 		Use the *HTTP Request node* to make a GET request to the URL `https://www.daysoftheyear.com/days/mar/2022/`. Then, connect an *HTML Extract node* and configure it to extract the date of the returned events.
 
@@ -50,7 +49,9 @@ If you need to process HTML or XML data in your n8n workflows, use the [***HTML 
 		</details>
 
 
-!!! example "Exercise (XML)"
+The *XML node* allows you to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
+
+!!! example "Exercise"
 
 		In a [previous exercise](L2_chapter1.md/#exercise), you used an *HTTP Request node* to make a request to an API. Now, use the *XML node* to convert the JSON output to XML.
 
@@ -285,7 +286,7 @@ To read or write a binary file, you need to write the path (location) of the fil
 		- n8n cloud: `/home/node/.n8n/my_file.json`
 
 
-!!! example "Exercise (Binary to JSON)"
+!!! example "Exercise"
 
 		Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the *Move Binary Data node* to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
 
@@ -354,7 +355,7 @@ To read or write a binary file, you need to write the path (location) of the fil
 		</details>
 
 
-!!! example "Exercise (JSON to Binary)"
+!!! example "Exercise"
 
 		Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompoems` and move the returned data from JSON to binary. Then, write the new binary data to a file. Finally, to check that it worked out, read the generated binary file referencing it with an expression in the node.
 

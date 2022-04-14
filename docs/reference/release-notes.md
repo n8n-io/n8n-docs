@@ -150,7 +150,7 @@ Read more about the new license in [License](/reference/license/).
 ### Enhanced nodes
 
 * [HTTP Request Node:](/integrations/core-nodes/n8n-nodes-base.httpRequest/) Allow Delete requests with body.
-* [KoBoToolbox Node:](/integrations/nodes/n8n-nodes-base.kobo/) Add KoBoToolbox Regular and Trigger Node.
+* [KoBoToolbox Node:](/integrations/nodes/n8n-nodes-base.koBoToolbox/) Add KoBoToolbox Regular and Trigger Node.
 * [Mailjet Node:](/integrations/nodes/n8n-nodes-base.mailjet/) Add credential tests and support for sandbox, JSON parameters & variables.
 * [Mattermost Node:](/integrations/nodes/n8n-nodes-base.mattermost/) Add support for Channel search.
 

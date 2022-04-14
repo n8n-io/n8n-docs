@@ -3,7 +3,7 @@ title: "Company Information"
 date: "2022-04-11"
 ---
 
-### You will need this information filled for exporting documents in [Zugferd and Peppol](https://docs.cloudintegration.eu/docs/doc2app/settings/export/zugpferd-and-peppol/) format.
+### You will need this information filled for exporting documents in [Zugferd and Peppol](/doc2/zugpferd-and-peppol/) format.
 
 ![](/_images/doc2/DOC²_Settings_Company-Information-1024x293.png)
 

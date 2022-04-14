@@ -70,7 +70,12 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
-    - Tabel Train: doc2/table-train.md
+    - Table Train: doc2/table-train.md
+    - PO Matching: 
+      - Overview: doc2/po-matching.md
+      - Delivery Note: doc2/po-matching-delivery-notes.md 
+      - Invoices: doc2/po-matching-invoices.md
+
     - Webhook: doc2/webhook.md
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
   - Workflow:

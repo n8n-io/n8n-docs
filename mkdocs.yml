@@ -149,7 +149,8 @@ nav:
           - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
-    - Overview: flow2/index.md
+    - Overview: flow2/floc2.md
+    - OnBoarding: flow2/flow2-onboarding-guide.md
   - KV²:
     - Overview: kv2/index.md
   - TE²:

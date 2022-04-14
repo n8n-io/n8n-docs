@@ -251,7 +251,7 @@
 /nodes/n8n-nodes-base.mqttTrigger/		/integrations/trigger-nodes/n8n-nodes-base.mqttTrigger/
 /nodes/n8n-nodes-base.msg91/		/integrations/nodes/n8n-nodes-base.msg91/
 /nodes/n8n-nodes-base.mySql/		/integrations/nodes/n8n-nodes-base.mySql/
-/nodes/n8n-nodes-base.n8nTrainingCustomeMessenger/		/integrations/nodes/n8n-nodes-base.n8nTrainingCustomeMessenger/
+/nodes/n8n-nodes-base.n8nTrainingCustomerMessenger/		/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerMessenger/
 /nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/		/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/
 /nodes/n8n-nodes-base.n8nTrigger/		/integrations/core-nodes/n8n-nodes-base.n8nTrigger/
 /nodes/n8n-nodes-base.nasa/		/integrations/nodes/n8n-nodes-base.nasa/

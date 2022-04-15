@@ -190,23 +190,23 @@ nav:
     - Tutorial: te2/fellowte2-tutorial.md
   - OCR:
     - Overview: ocr/index.md
-  - Courses:
-    - Overview: courses/index.md
-    - Level one:
-      - Overview: courses/level-one/index.md
-      - Navigating the editor UI: courses/level-one/chapter-1.md
-      - Building a mini-workflow: courses/level-one/chapter-2.md
-      - Automating a (real-world) use case: courses/level-one/chapter-3.md
-      - Designing the workflow: courses/level-one/chapter-4.md
-      - Building the workflow:
-        - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-        - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-        - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-        - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-        - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-        - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-        - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-        - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-      - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
-      - Take the quiz and get your certificate: courses/level-one/chapter-7.md
+  # - Courses:
+  #   - Overview: courses/index.md
+  #   - Level one:
+  #     - Overview: courses/level-one/index.md
+  #     - Navigating the editor UI: courses/level-one/chapter-1.md
+  #     - Building a mini-workflow: courses/level-one/chapter-2.md
+  #     - Automating a (real-world) use case: courses/level-one/chapter-3.md
+  #     - Designing the workflow: courses/level-one/chapter-4.md
+  #     - Building the workflow:
+  #       - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+  #       - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+  #       - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+  #       - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+  #       - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+  #       - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+  #       - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+  #       - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+  #     - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
+  #     - Take the quiz and get your certificate: courses/level-one/chapter-7.md
   

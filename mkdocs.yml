@@ -30,9 +30,9 @@ markdown_extensions:
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
-  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
@@ -136,15 +136,19 @@ nav:
         - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
         - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
       - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
-      - Take the quiz and get your certificate: courses/level-one/chapter-7.md
+      - Test your knowledge: courses/level-one/chapter-7.md
     - Level two:
       - Overview: courses/level-two/index.md
       - Understanding the data structure: courses/level-two/chapter-1.md
       - Processing different data types: courses/level-two/chapter-2.md
       - Merging and splitting data: courses/level-two/chapter-3.md
       - Dealing with errors in workflows: courses/level-two/chapter-4.md
-      - Building a business workflow: courses/level-two/chapter-5.md
-      - Quiz: courses/level-two/chapter-6.md
+      - Automating a business workflow:
+        - Use case: courses/level-two/chapter-5/chapter-5.0.md
+        - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+        - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+        - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+      - Test your knowledge: courses/level-two/chapter-6.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md

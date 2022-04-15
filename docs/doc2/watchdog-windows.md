@@ -9,7 +9,7 @@ date: "2022-01-28"
 
 ## Select WatchPuppy configuration
 
-WatchPuppy supports multiple configuration options. Please check out [this](https://docs.cloudintegration.eu/docs/doc2app/import/watchpuppy-configuration/) page for information of the configurations.
+WatchPuppy supports multiple configuration options. Please check out [this](/doc2/doc2app/import/watchpuppy-configuration/) page for information of the configurations.
 
 ### Run WatchPuppy
 

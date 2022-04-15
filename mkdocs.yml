@@ -69,6 +69,14 @@ markdown_extensions:
   # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
   - toc:
       permalink: "#"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 plugins:
   - search
   - literate-nav
@@ -95,6 +103,17 @@ nav:
         - Manual row selection: doc2/manual-row-selection.md
     - Import:
       - Email: doc2/e-mail.md
+      - Fileshare Import:
+        - Watchdog: doc2/watchdog.md
+        - Windows: doc2/watchdog-windows.md
+        - Configuration: doc2/watchpuppy-configuration.md
+    - Export: 
+      - Export to Infor:
+        - Export to Infor ION and IDM: doc2/export-to-infor.md
+        - How to create a BOD mapping file: doc2/how-to-create-a-bod-mapping-file.md
+        - How to create a IDM mapping file: doc2/how-to-create-a-idm-mapping-file.md
+        - Export to Infor IDM: doc2/infor-idm.md
+        - Export to Infor ION and IDM: doc2/infor-ion.md
     - Keyboard: doc2/keyboard.md
     - Setting: 
       - Company: doc2/company-information.md
@@ -185,6 +204,9 @@ nav:
   - KV²:
     - Tutorial: kv2/fellowkv2-tutorial.md
     - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
+    - Restart Epheosft: 
+      - Cloud: kv2/how-to-restart-ephesoft-cloud-server.md
+      - OnPremise: kv2/how-to-restart-ephesoft-server.md
   - TE²:
     - Overview: te2/fellow-te2-plugin.md
     - Tutorial: te2/fellowte2-tutorial.md
@@ -209,4 +231,6 @@ nav:
   #       - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
   #     - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
   #     - Take the quiz and get your certificate: courses/level-one/chapter-7.md
+
+
   

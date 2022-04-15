@@ -31,4 +31,4 @@ As soon as the file has been processed, it receives the status "Ready for valida
 
 ![](/_images/doc2/image-28.png)
 
-Details about the validation process can be found here: [Document Validation](https://docs.cloudintegration.eu/docs/doc2app/document-validation/)
+Details about the validation process can be found here: [Document Validation](/doc2/doc2app/document-validation/)

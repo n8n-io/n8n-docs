@@ -113,7 +113,7 @@ exported successfully
 
 ![This image has an empty alt attribute; its file name is Attention-Warning.png](/_images/doc2/Attention-Warning.png)
 
-Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](https://docs.cloudintegration.eu/docs/doc2app/po-matching/po-matching-delivery-notes/).
+Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](/doc2/doc2app/po-matching/po-matching-delivery-notes/).
 
 * * *
 

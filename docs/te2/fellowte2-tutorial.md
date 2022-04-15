@@ -5,7 +5,7 @@ date: "2021-07-05"
 
 ### Prerequisites
 
-To work with this tutorial you have to complete [Installation & Configuration](https://docs.cloudintegration.eu/docs/fellow-te%c2%b2-plugin/installation-config/) Section for this Plugin.
+To work with this tutorial you have to complete [Installation & Configuration](/doc2/fellow-te%c2%b2-plugin/installation-config/) Section for this Plugin.
 
 * * *
 

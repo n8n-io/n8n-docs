@@ -25,7 +25,7 @@ date: "2021-11-24"
 
 ![](/_images/doc2/FLOW²_Metadata-types.png)
 
-[https://docs.cloudintegration.eu/docs/flow2/metadata/](https://docs.cloudintegration.eu/docs/flow2/metadata/)
+[/doc2/flow2/metadata/](/doc2/flow2/metadata/)
 
 ![](/_images/doc2/FLOW²_Quotas.png)
 

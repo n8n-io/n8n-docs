@@ -17,7 +17,7 @@ A popup window opens with DOC² and your document from the Batch Id.
 
 ![](/_images/doc2/External-Application-DOC²_EN-1024x640.png)
 
-If you have reached this point, you can continue with the detailed description (with videos) [here](https://docs.cloudintegration.eu/docs/doc2app/table-train/) (starting from point 6.)
+If you have reached this point, you can continue with the detailed description (with videos) [here](/doc2/doc2app/table-train/) (starting from point 6.)
 
 * * *
 

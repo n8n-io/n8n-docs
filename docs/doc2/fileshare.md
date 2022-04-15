@@ -3,8 +3,8 @@ title: "Fileshare Import"
 date: "2021-10-22"
 ---
 
-### [Watchdog Configuration](https://docs.cloudintegration.eu/docs/doc2app/settings/import/fileshare/watchdog-windows/)
+### [Watchdog Configuration](/doc2/doc2app/settings/import/fileshare/watchdog-windows/)
 
-### [Watchdog - for Windows](https://docs.cloudintegration.eu/docs/doc2app/settings/import/fileshare/watchdog-windows/)
+### [Watchdog - for Windows](/doc2/doc2app/settings/import/fileshare/watchdog-windows/)
 
-### [Watchdog - Linux](https://docs.cloudintegration.eu/docs/doc2app/settings/import/watchdog/)
+### [Watchdog - Linux](/doc2/doc2app/settings/import/watchdog/)

@@ -5,7 +5,7 @@ date: "2021-07-02"
 
 ### Prerequisites
 
-To work with this tutorial you have to complete [Installation & Configuration](https://docs.cloudintegration.eu/docs/fellowkv2-plugin/installation/) Section for this Plugin.
+To work with this tutorial you have to complete [Installation & Configuration](/doc2/fellowkv2-plugin/installation/) Section for this Plugin.
 
 * * *
 

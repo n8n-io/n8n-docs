@@ -37,4 +37,4 @@ In the rightmost column you will see the Actions button. If you click on it, all
 
 ![](/_images/doc2/Actions.png)
 
-Details on UI to check, edit and validate extracted fields of uploaded documents you will find [here](https://docs.cloudintegration.eu/docs/doc2app/doc%c2%b2-tutorial/ui/).
+Details on UI to check, edit and validate extracted fields of uploaded documents you will find [here](/doc2/doc2app/doc%c2%b2-tutorial/ui/).

@@ -31,7 +31,7 @@ Your dashboard will remain empty until the first documents have been exported fr
 
 ![](/_images/doc2/FLOW²_Dashboard-empty-1024x586.png)
 
-All steps for importing from DOC² can be found [here](https://docs.cloudintegration.eu/docs/doc2app/settings/export/export-to-flow2/).
+All steps for importing from DOC² can be found [here](/doc2/doc2app/settings/export/export-to-flow2/).
 
 After successful import you will see the documents on your dashboard under recently created.
 

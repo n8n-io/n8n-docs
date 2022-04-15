@@ -40,4 +40,4 @@ Now you can
 1. Upload a document in DOC², validate and export it.
 2. Go to FLOW² -> Documents -> recently created - here you will find the just validated and exported document
 
-All configurations required in FLOW² can be found [here](https://docs.cloudintegration.eu/docs/flow2/import-from-doc%c2%b2/)
+All configurations required in FLOW² can be found [here](/doc2/flow2/import-from-doc%c2%b2/)

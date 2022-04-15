@@ -9,13 +9,13 @@ date: "2021-11-22"
 
 ## Select WatchPuppy configuration
 
-WatchPuppy supports multiple configuration options. Please check out [this](https://docs.cloudintegration.eu/docs/doc2app/import/watchpuppy-configuration/) page for information of the configurations.
+WatchPuppy supports multiple configuration options. Please check out [this](/doc2/doc2app/import/watchpuppy-configuration/) page for information of the configurations.
 
 #### Run WatchPuppy
 
 \-> Navigate to the downloaded watchpuppy folder
 
-You have to pass the arguments that are marked as required on [this](https://docs.cloudintegration.eu/docs/doc2app/import/watchpuppy-configuration/) page.
+You have to pass the arguments that are marked as required on [this](/doc2/doc2app/import/watchpuppy-configuration/) page.
 
 ```
 ./watchpuppy -c idm -k demo-api-key -r ~/watchpuppy/read -e ~/watchpuppy/error -p ~/watchpuppy/processed --doc_types "INVOICE,DELIVERY_NOTE,ORDER_CONFIRMATION"

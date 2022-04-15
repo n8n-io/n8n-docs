@@ -127,4 +127,4 @@ Now go through every document type and use the box underneath for "Import Index 
 
 ##### FINAL Step 8: Re-start Transact Server
 
-see [Article](https://docs.cloudintegration.eu/docs/fellowkv2-plugin/how-to-restart-ephesoft-server/) ho to restart Transact
+see [Article](/doc2/fellowkv2-plugin/how-to-restart-ephesoft-server/) ho to restart Transact

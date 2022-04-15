@@ -15,7 +15,7 @@ There you will find the option "PURCHASE ORDER" with which you can switch PO mat
 
 ![](/_images/doc2/image-46.png)
 
-Furthermore you can define which documents should be matched via the option "Select PO Matching". There are three ways to match your purchase order. For details please check PO Matching documentation: [PO Matching](https://docs.cloudintegration.eu/docs/doc2app/po-matching/)  
+Furthermore you can define which documents should be matched via the option "Select PO Matching". There are three ways to match your purchase order. For details please check PO Matching documentation: [PO Matching](/doc2/doc2app/po-matching/)  
 
 ![](/_images/doc2/image-47.png)
 

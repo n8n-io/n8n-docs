@@ -1,6 +1,8 @@
 ---
 title: "Extracted fields"
 date: "2021-11-23"
+tags:
+  - Fields
 ---
 
 ## Document Type: Invoice

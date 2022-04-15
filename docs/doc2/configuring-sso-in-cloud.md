@@ -1,6 +1,8 @@
 ---
 title: "Configuring SSO in Infor Cloud"
 date: "2021-10-14"
+tags:
+  - Infor
 ---
 
 ## Step by step guide

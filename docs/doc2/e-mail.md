@@ -1,6 +1,9 @@
 ---
 title: "E-Mail"
 date: "2021-10-22"
+tags:
+  - E-Mail
+  - Import
 ---
 
 ### If you want to import documents from your email inbox, here are the steps you need to take:

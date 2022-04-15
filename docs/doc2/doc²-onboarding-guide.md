@@ -1,6 +1,8 @@
 ---
 title: "DOC² Onboarding Guide"
 date: "2021-11-17"
+tags:
+  - General
 ---
 
 This guide will help you learn the basics of DOC² get you up and running with an IPS that will max out your productivity.

@@ -1,6 +1,8 @@
 ---
 title: "Mapping of columns"
 date: "2022-02-18"
+tags:
+  - DOC²
 ---
 
 Once data is extracted from document you are able to map the extracted columns with the columns given by DOC².

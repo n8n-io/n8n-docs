@@ -1,6 +1,8 @@
 ---
 title: "Group function"
 date: "2022-02-24"
+tags:
+  - Tables
 ---
 
 Once a table has been extracted via DOC² and the columns have been mapped ([Mapping of columns](/doc2/doc2app/table-train/training-of-table-extraction/mapping-of-columns/)) the obtained data can be grouped to get a structured result set of all extracted data.

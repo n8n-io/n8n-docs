@@ -1,9 +1,6 @@
 ---
 title: "Limitations of Fellow KV² Plugin"
 date: "2021-11-05"
-tags:
-  - KV²
-  - Ephesoft
 ---
 
 **Version: 1.0.11**

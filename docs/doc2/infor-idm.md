@@ -1,6 +1,8 @@
 ---
 title: "Export to Infor IDM"
 date: "2021-10-22"
+tags:
+  - Infor
 ---
 
 #### Export to Infor Document Management without publishing the document values in a seperate BOD

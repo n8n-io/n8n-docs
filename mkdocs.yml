@@ -80,6 +80,8 @@ markdown_extensions:
 plugins:
   - search
   - literate-nav
+  - tags:
+      tags_file: tags.md
 nav: 
   - DOC²:
     - Overview: doc2/index.md

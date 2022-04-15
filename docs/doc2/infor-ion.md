@@ -1,6 +1,8 @@
 ---
 title: "Export to Infor ION and IDM"
 date: "2021-10-22"
+tags:
+  - Infor
 ---
 
 ####   

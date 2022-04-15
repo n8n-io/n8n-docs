@@ -3,7 +3,6 @@ title: "Installation & Config"
 date: "2021-07-02"
 tags:
   - KV²
-  - Ephesoft
 ---
 
 ### **How to install & configure Fellow KV² Plugin**

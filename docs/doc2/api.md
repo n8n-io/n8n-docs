@@ -1,6 +1,8 @@
 ---
 title: "WEBHOOK"
 date: "2021-10-22"
+tags:
+  - API
 ---
 
 Mit unten angehängtem Webhook können Sie Dokumente, mit einem POST Request, direkt an DOC² übergeben. Alle Parameter sind bereits ausgefüllt. Somit müssen Sie nur einen einfachen Call tätigen.

@@ -1,6 +1,8 @@
 ---
 title: "Company Information"
 date: "2022-04-11"
+tags:
+  - Settings
 ---
 
 ### You will need this information filled for exporting documents in [Zugferd and Peppol](/doc2/zugpferd-and-peppol/) format.

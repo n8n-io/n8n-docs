@@ -1,5 +1,11 @@
+---
+tags:
+  - Infor
+---
 
-#  :fontawesome-solid-file-export: Export to Infor 
+# Export to Infor :fontawesome-solid-file-export:
+
+
 
 ``` mermaid
 graph LR

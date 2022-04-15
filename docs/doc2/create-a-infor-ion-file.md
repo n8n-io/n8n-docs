@@ -1,6 +1,8 @@
 ---
 title: "How to create an Infor ION file"
 date: "2021-10-25"
+tags:
+  - Infor
 ---
 
 #### Step by step documentation how to create a Infor ION API file that is needed for the Infor export.

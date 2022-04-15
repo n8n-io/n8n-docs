@@ -1,6 +1,8 @@
 ---
 title: "LN_BODmapping"
 date: "2021-07-15"
+tags:
+  - Infor
 ---
 
 Open the menu behind the drop-down arrow on the left side and go to Folder Management

@@ -1,6 +1,8 @@
 ---
 title: "Define tables and columns"
 date: "2022-02-18"
+tags:
+  - Table
 ---
 
 **Define tables**

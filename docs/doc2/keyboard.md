@@ -1,6 +1,9 @@
 ---
 title: "Keyboard"
 date: "2021-11-07"
+tags:
+  - Doc²
+  - Keyboard
 ---
 
 There are two types of Keyboard functions described below:

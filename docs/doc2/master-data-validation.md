@@ -1,6 +1,9 @@
 ---
 title: "Master data validation"
 date: "2022-02-24"
+tags:
+  - DOC²
+  - Master data validation
 ---
 
 DOC² offers in the document validation overview the possibility to match supplier data extracted from the document with the master data from your ERP system (precondition: [your master data has been uploaded to DOC²](/doc2/doc2app/settings-master-data-validation/)) and to assign the document to the correct supplier without any manual work in the best case.

@@ -1,6 +1,9 @@
 ---
 title: "Export to FLOW²"
 date: "2021-11-23"
+tags:
+  - FLOW²
+  - Export 
 ---
 
 Step by Step guide how to export documents to FLOW²

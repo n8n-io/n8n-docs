@@ -1,6 +1,8 @@
 ---
 title: "Import"
 date: "2021-10-22"
+tags:
+  - Import
 ---
 
 #### Here you can find the import options and the corresponding links

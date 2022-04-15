@@ -1,6 +1,8 @@
 ---
 title: "Detect inside pages"
 date: "2021-07-06"
+tags:
+  - General
 ---
 
 In this part of the API, we are able to detect and extract special parts of your document. The section is split up in three different parts:

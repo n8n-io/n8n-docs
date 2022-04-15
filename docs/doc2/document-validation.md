@@ -1,6 +1,8 @@
 ---
 title: "Document Validation"
 date: "2021-10-29"
+tags:
+  - DOC²
 ---
 
 ### How to Validate a document

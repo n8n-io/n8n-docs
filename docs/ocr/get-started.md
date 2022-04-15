@@ -1,6 +1,8 @@
 ---
 title: "Getting Started"
 date: "2021-07-06"
+tags:
+  - OCR
 ---
 
 Welcome to the Fellow OCR Engine API!

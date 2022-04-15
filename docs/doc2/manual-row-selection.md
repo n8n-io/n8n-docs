@@ -1,6 +1,8 @@
 ---
 title: "Manual row selection"
 date: "2022-02-18"
+tags:
+  - DOC²
 ---
 
 It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns like in the example below:

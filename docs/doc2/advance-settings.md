@@ -1,6 +1,8 @@
 ---
 title: "Advanced settings"
 date: "2022-03-01"
+tags:
+  - Table
 ---
 
 In the table extraction view you will find the menu item "Advance Settings" in the upper action bar (make sure that the training mode is activated):

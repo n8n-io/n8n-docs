@@ -1,6 +1,8 @@
 ---
 title: "Deployment"
 date: "2021-11-24"
+tags:
+  - FLOW²
 ---
 
 ### How to deploy FLOW²

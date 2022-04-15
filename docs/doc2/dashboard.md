@@ -1,6 +1,8 @@
 ---
 title: "Dashboard"
 date: "2021-10-29"
+tags:
+  - General
 ---
 
 After logging in with your user you are redirected to the DASHBOARD homepage of DOC².

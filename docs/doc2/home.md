@@ -1,6 +1,9 @@
 ---
 title: "User Dashboard"
 date: "2021-11-24"
+tags:
+  - Doc²
+  - Generel
 ---
 
 After logging in with your user you are redirected to the DASHBOARD homepage of FLOW².

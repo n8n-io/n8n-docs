@@ -1,6 +1,8 @@
 ---
 title: "How to create a IDM mapping file"
 date: "2021-10-26"
+tags:
+  - Infor
 ---
 
 #### Step by step guide how to create a IDM mapping file.

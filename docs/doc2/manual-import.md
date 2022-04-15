@@ -1,6 +1,9 @@
 ---
 title: "Manual Import"
 date: "2021-10-22"
+tags:
+  - Doc²
+  - Import
 ---
 
 Documents can be imported manually into DOC² as described below.

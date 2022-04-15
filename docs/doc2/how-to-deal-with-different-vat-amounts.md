@@ -1,6 +1,8 @@
 ---
 title: "How to deal with different VAT amounts"
 date: "2021-07-05"
+tags:
+  - VAT
 ---
 
 ## If you have an invoice with two different VAT amounts, teach them as follows:

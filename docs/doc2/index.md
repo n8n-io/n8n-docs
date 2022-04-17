@@ -24,6 +24,8 @@ DOC² is the latest software and solution for document capture that was develope
 *   Saves time in the digital inbox
 *   Reduces errors caused by manual processing
 
+[Start now a free 30 days trail](https://polydocs.io/free-trail/){ .md-button .md-button--primary }
+
 #### **How do you use DOC²:**
 
 *   Scanning and Recognition of all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.)

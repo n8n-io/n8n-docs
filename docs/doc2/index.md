@@ -3,7 +3,7 @@
 ## Welcome to
 
 
-![Logo](/_images/doc2/doc2-1024x415.png)
+![Logo](/_images/doc2/doc2-1024x415.png){ loading=lazy }
 
 The intelligent solution for Digitizing Documents
 

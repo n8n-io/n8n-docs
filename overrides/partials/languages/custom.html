@@ -1,0 +1,14 @@
+<!-- Import translations for language and fallback -->
+{% import "partials/languages/de.html" as language %}
+{% import "partials/languages/en.html" as fallback %} 
+
+<!-- Define custom translations -->
+{% macro override(key) %}{{ {
+  "source.file.date.created": "Erstellt am", 
+  "source.file.date.updated": "Aktualisiert am"
+}[key] }}{% endmacro %}
+
+<!-- Re-export translations -->
+{% macro t(key) %}{{
+  override(key) or language(key) or fallback.t(key)
+}}{% endmacro %}

@@ -1,6 +1,8 @@
 ---
 title: "AI Indicators"
 date: "2022-03-23"
+description: Show how good a document trained to extract the data
+
 tags:
   - General
 ---

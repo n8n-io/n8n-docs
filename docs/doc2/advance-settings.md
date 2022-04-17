@@ -1,6 +1,8 @@
 ---
-title: "Advanced settings"
+title: "Advanced settings for table extraction"
+description: In DOC² there are different advanced setting available to extract a table. 
 date: "2022-03-01"
+icon: material/table-cog
 tags:
   - Table
 ---

@@ -1,5 +1,7 @@
 ---
 title: "Add new table column"
+description: In DOC² it is possible to select any extraction in a table and extract it to a new column
+icon: material/table-column-width
 date: "2022-02-24"
 tags:
   - Table

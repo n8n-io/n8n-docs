@@ -1,8 +1,11 @@
 ---
 title: "Export to Infor IDM"
+description: Export form DOC² to Infor IDM
+icon: material/application-export
 date: "2021-10-22"
 tags:
   - Infor
+  - IDM
 ---
 
 #### Export to Infor Document Management without publishing the document values in a seperate BOD

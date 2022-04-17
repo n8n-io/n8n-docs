@@ -18,19 +18,19 @@ In the Document View there are now two indicators for the quality of the extract
 - Extraction quality in percent per field and current document
 - Overall extraction quality including previous extractions of documents of the same type.
 
-![](/_images/doc2/image-51-1024x474.png)
+![](/_images/doc2/image-51-1024x474.png){ loading=lazy }
 
 **Extraction quality in percent per field and current document**
 
 For each field, a value is available on the right side, which indicates the quality of extraction for the current document. The display is a percentage value:
 
-![](/_images/doc2/image-52.png)
+![](/_images/doc2/image-52.png){ loading=lazy }
 
 **Overall extraction quality including previous extractions of documents of the same type**
 
 Furthermore, there is a graph that shows the quality of all previous extractions for a document type. This refers in each case to the extraction value with the lowest quality:
 
-![](/_images/doc2/image-53.png)
+![](/_images/doc2/image-53.png){ loading=lazy }
 
 **Technical Details:**
 

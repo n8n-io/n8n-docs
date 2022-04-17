@@ -15,35 +15,35 @@ tags:
 
 URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME](https://mingle-portal.eu1.inforcloudsuite.com/)\> followed by your personal extension
 
-![](/_images/doc2/infor-signin-1024x520.png)
+![](/_images/doc2/infor-signin-1024x520.png){ loading=lazy }
 
 a) Choose the option Cloud Identities and use your login details
 
-![](/_images/doc2/LogIn-infor-1024x640.png)
+![](/_images/doc2/LogIn-infor-1024x640.png){ loading=lazy }
 
 b) After login you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
 
-![](/_images/doc2/Welcome-to-infor-Ming.le_-1024x585.png)
+![](/_images/doc2/Welcome-to-infor-Ming.le_-1024x585.png){ loading=lazy }
 
-![](/_images/doc2/infor_Burger-Menu-1024x586.png)
+![](/_images/doc2/infor_Burger-Menu-1024x586.png){ loading=lazy }
 
 **2\. Open User Management for adding new Service Provider**
 
 On the right hand side of the bar menu, you will find the user menu and there you can access the user management
 
-![](/_images/doc2/infor_User-Management-1024x548.png)
+![](/_images/doc2/infor_User-Management-1024x548.png){ loading=lazy }
 
 a) Then you need to select in the left hand side menu the option **Security Administration** and **Service Provider**.
 
-![](/_images/doc2/infor_Service-Provider-1024x523.png)
+![](/_images/doc2/infor_Service-Provider-1024x523.png){ loading=lazy }
 
 b. You will see this window with the Service Providers.
 
-![](/_images/doc2/infor_Service-Provider_2-1-1024x479.png)
+![](/_images/doc2/infor_Service-Provider_2-1-1024x479.png){ loading=lazy }
 
 c. Now click on the “+” sign and add our DOC² as Service Provider. (View step 4)
 
-![](/_images/doc2/infor6.png)
+![](/_images/doc2/infor6.png){ loading=lazy }
 
 **3\. Access the SSO SERVICE PROVIDER SETTINGS in DOC²**
 
@@ -55,7 +55,7 @@ Here you will find all the information you need for the following steps
 
 c) Download the certificate
 
-![](/_images/doc2/DOC²_SSO-Service-Provider-Settings-1024x640.png)
+![](/_images/doc2/DOC²_SSO-Service-Provider-Settings-1024x640.png){ loading=lazy }
 
 **4\. Filling the Service Provider with the help of SSO Service Provider Settings in DOC²**
 
@@ -71,9 +71,9 @@ b) Then, enter the service provider DOC² again.
 
 c) Click on view the Identity Provider Information underneath.
 
-![](/_images/doc2/infor_Identity-Provider-Information-copy-1024x559.png)
+![](/_images/doc2/infor_Identity-Provider-Information-copy-1024x559.png){ loading=lazy }
 
-![](/_images/doc2/infor_Identity-Provider-Information-806x1024.png)
+![](/_images/doc2/infor_Identity-Provider-Information-806x1024.png){ loading=lazy }
 
 d) Export the **SAML METADATA.**
 
@@ -87,25 +87,25 @@ a) Click on IMPORT an then choose the METADATA file that you have already downlo
 
 b) Click on CONFIGURE
 
-![](/_images/doc2/DOC²_identity-service-provider-settings_completed-1024x316.png)
+![](/_images/doc2/DOC²_identity-service-provider-settings_completed-1024x316.png){ loading=lazy }
 
 This part is successfully completed when you see the following popup
 
-![](/_images/doc2/DOC²_File-successfully-saved.png)
+![](/_images/doc2/DOC²_File-successfully-saved.png){ loading=lazy }
 
 **6\. Add new Application in infor Ming.le**
 
 a) got to Admin settings and
 
-![](/_images/doc2/infor_Admin-Settings_Manage-Applications-1024x528.png)
+![](/_images/doc2/infor_Admin-Settings_Manage-Applications-1024x528.png){ loading=lazy }
 
 b) click on ADD APPLICATION top right
 
-![](/_images/doc2/infor_Add-Application.png)
+![](/_images/doc2/infor_Add-Application.png){ loading=lazy }
 
 c) fill out all fields like on following picture but with your own SSO Url, don't forget to choose icon and click on SAVE
 
-![](/_images/doc2/infor_Add-New-Application.png)
+![](/_images/doc2/infor_Add-New-Application.png){ loading=lazy }
 
 **And now the last step:**
 
@@ -113,4 +113,4 @@ c) fill out all fields like on following picture but with your own SSO Url, don'
 - Go back to the burger menu in infor and select the icon you just created.
 - And you are already on the dashboard of DOC².
 
-![](/_images/doc2/Sign-in-over-SSO-1024x640.png)
+![](/_images/doc2/Sign-in-over-SSO-1024x640.png){ loading=lazy }

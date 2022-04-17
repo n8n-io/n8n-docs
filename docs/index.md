@@ -1,5 +1,5 @@
 # THE PLATFORM OF DIGITALIZATION
-## FOR BUSINESS PROCESS AUTOMATION - INCLUDING DOCUMENTS
+## For Business Process Automation - Including Documents
 
 ## DIGITIZATION
 Digitization refers to creating a digital representation of physical objects or attributes. For instance, we scan a paper document and save it as a digital document (e.g., PDF). In other words, digitization is about converting

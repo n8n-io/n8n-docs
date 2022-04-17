@@ -1,8 +1,12 @@
 ---
 title: "Export to Infor ION and IDM"
+icon: material/application-export
+description: Export form DOC² to Infor IDM and Infor OS ( ION ) 
 date: "2021-10-22"
 tags:
   - Infor
+  - IDM
+  - Infor OS
 ---
 
 ####   

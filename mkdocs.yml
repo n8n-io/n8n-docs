@@ -1,4 +1,5 @@
-site_name: Docs Documentation
+site_name: Polydocs Documentation
+site_url: https://docs.polydocs.io
 theme:
   name: material
   custom_dir: overrides

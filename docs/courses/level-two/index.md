@@ -36,7 +36,7 @@ Completing the course should take around two hours. You do not have to complete 
 
 We believe all good works deserve recognition. If you successfully complete the course, we will email you a **badge** that you can share with your peers to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
 
-- [x] [Sign up](https://n8n-community.typeform.com/to/HQoQ7nXg) for the course to get your unique ID and webhook URL. If you had already signed up for the Level 1 course, you can use the same ID.
-- [x] Automatically generate and upload two spreadsheets.
+- [x] [Sign up](https://n8n-community.typeform.com/to/HQoQ7nXg) for the course to get your unique ID and other information you will need for the exercises.
 - [x] Automatically generate and email a PDF file.
+- [x] Automatically generate and upload two spreadsheets.
 - [x] Pass the quiz at the end of the course.

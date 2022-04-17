@@ -20,7 +20,7 @@ Merging data can involve:
 
 		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
-In n8n, you can merge data from two different nodes using the [***Merge node***](https://docs.n8n.io/nodes/n8n-nodes-base.merge/), which provides several merging modes:
+In n8n, you can merge data from two different nodes using the [***Merge node***](/integrations/core-nodes/n8n-nodes-base.merge/), which provides several merging modes:
 
 - Append
 - Keep Key Matches
@@ -68,13 +68,13 @@ Notice that three of these modes require a **key** (Merge By Key, Keep Key Match
 In some cases, you might need to perform the same operation on each element of an array / each data item (for example sending a message to every contact in your address book). In technical terms, you need to **iterate** through the data (with **loops**).
 
 
-n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](https://docs.n8n.io/getting-started/key-concepts/looping.html#node-exceptions) for which you need to build a loop into your workflow.
+n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions) for which you need to build a loop into your workflow.
 
-To [create a loop in an n8n workflow](https://docs.n8n.io/getting-started/key-concepts/looping.html#using-loops-in-n8n), you need to connect the output of one node to the input of a previous node, and add an *IF node* to check when to stop the loop.
+To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n), you need to connect the output of one node to the input of a previous node, and add an *IF node* to check when to stop the loop.
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the *Function node* multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [***Split in Batches node***](https://docs.n8n.io/nodes/n8n-nodes-base.splitInBatches/). This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the *Function node* multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [***Split in Batches node***](/integrations/core-nodes/n8n-nodes-base.splitInBatches/). This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 !!! warning "Execution of Split in Batches node"
 

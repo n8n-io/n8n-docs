@@ -1,6 +1,6 @@
 # Processing different data types
 
-In this chapter, you will learn how to process different types of data using [n8n core nodes](https://docs.n8n.io/getting-started/key-components/node.html#core-nodes).
+In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/nodes/).
 
 
 ## HTML and XML data
@@ -11,7 +11,7 @@ You're most likely familiar with HTML and XML.
 
     HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 
-If you need to process HTML or XML data in your n8n workflows, use the [***HTML Extract node***](https://docs.n8n.io/nodes/n8n-nodes-base.htmlExtract/) or [***XML node***](https://docs.n8n.io/nodes/n8n-nodes-base.xml/#xml).
+If you need to process HTML or XML data in your n8n workflows, use the [***HTML Extract node***](/integrations/core-nodes/n8n-nodes-base.htmlExtract/) or [***XML node***](/integrations/core-nodes/n8n-nodes-base.xml/).
 
 The *HTML Extract node* allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
@@ -53,7 +53,7 @@ The *XML node* allows you to convert XML to JSON and JSON to XML. This operation
 
 !!! example "Exercise"
 
-		In a [previous exercise](L2_chapter1.md/#exercise), you used an *HTTP Request node* to make a request to an API. Now, use the *XML node* to convert the JSON output to XML.
+		In a previous exercise, you used an *HTTP Request node* to make a request to an API. Now, use the *XML node* to convert the JSON output to XML.
 
 		<details>
 		<summary>Show me the solution</summary>
@@ -84,19 +84,19 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 
-If you need to convert date and time data to different formats, and calculate dates, use the [***Date & Time node***](https://docs.n8n.io/nodes/n8n-nodes-base.dateTime/).
+If you need to convert date and time data to different formats, and calculate dates, use the [***Date & Time node***](/integrations/core-nodes/n8n-nodes-base.dateTime/).
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the two trigger nodes:
 
-- [***Cron node***](https://docs.n8n.io/nodes/n8n-nodes-base.cron/) triggers the workflow at fixed dates and/or times (for example, every Monday at 9am).
-- [***Interval node***](https://docs.n8n.io/nodes/n8n-nodes-base.interval/) triggers the workflow in regular intervals of time (for example, every 10 minutes).
+- [***Cron node***](/integrations/core-nodes/n8n-nodes-base.cron/) triggers the workflow at fixed dates and/or times (for example, every Monday at 9am).
+- [***Interval node***](/integrations/core-nodes/n8n-nodes-base.interval/) triggers the workflow in regular intervals of time (for example, every 10 minutes).
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [***Wait node***](https://docs.n8n.io/nodes/n8n-nodes-base.wait/) after the node that you want to delay. The *Wait node* pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [***Wait node***](/integrations/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The *Wait node* pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
 
 !!! example "Exercise"
 
-		Build a workflow that adds five days to an input date. Then, if the calculated date occurred after today, the workflow waits 1 minute before [setting](https://docs.n8n.io/nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
+		Build a workflow that adds five days to an input date. Then, if the calculated date occurred after today, the workflow waits 1 minute before [setting](/integrations/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
 
 		<details>
 		<summary>Show me the solution</summary>
@@ -270,11 +270,11 @@ So far, you have mainly worked with text data. But what if you want to process d
 
 In n8n, you can process binary data with the following nodes:
 
-- [***Move Binary Data node***](https://docs.n8n.io/nodes/n8n-nodes-base.moveBinaryData/) to move data between binary and JSON properties.
-- [***Read Binary File node***](https://docs.n8n.io/nodes/n8n-nodes-base.readBinaryFile/) to read a file from the host machine that runs n8n.
-- [***Read Binary Files***](https://docs.n8n.io/nodes/n8n-nodes-base.readBinaryFiles/) to read multiple files from the host machine that runs n8n.
-- [***Write Binary File***](https://docs.n8n.io/nodes/n8n-nodes-base.writeBinaryFile/) to write a file to the host machine that runs n8n.
-- [***Spreadsheet File node***](https://docs.n8n.io/nodes/n8n-nodes-base.spreadsheetFile/) to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
+- [***Move Binary Data node***](/integrations/core-nodes/n8n-nodes-base.moveBinaryData/) to move data between binary and JSON properties.
+- [***Read Binary File node***](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) to read a file from the host machine that runs n8n.
+- [***Read Binary Files***](/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/) to read multiple files from the host machine that runs n8n.
+- [***Write Binary File***](/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/) to write a file to the host machine that runs n8n.
+- [***Spreadsheet File node***](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 

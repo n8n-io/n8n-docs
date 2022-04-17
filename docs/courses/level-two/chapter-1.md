@@ -47,7 +47,7 @@ The data that moves along from node to node in your workflow must be in a format
 
 	You can access the properties of an object using **dot notation** with the syntax `object.property`. For example, `turtles[1].color` gets the color of the second turtle.
 
-Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [**Items**](https://docs.n8n.io/getting-started/key-concepts/#item).
+Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [**Items**](/getting-started/key-concepts/#item).
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 
@@ -86,7 +86,9 @@ For example, the array of objects representing the Ninja turtles would look like
 You can also have nested pairs, for example if you want to define a primary and a secondary color. In this case, you need to further wrap the key-value pairs in curly braces `{}`.
 
 !!! info "n8n data structure video"
-	For a more detailed explanation of data structure in n8n, watch [this meetup talk](https://www.youtube.com/watch?v=mQHT3Unn4tY).
+	[This talk](https://www.youtube.com/watch?v=mQHT3Unn4tY) offers a more detailed explanation of data structure in n8n.
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/mQHT3Unn4tY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!! example "Exercise"
 
@@ -129,7 +131,7 @@ You can also have nested pairs, for example if you want to define a primary and 
 
 ## Referencing node data with the Function node
 
-Just like you can use [expressions](https://docs.n8n.io/nodes/expressions.html) to reference data from other nodes, you can also use some [methods and variables](https://docs.n8n.io/nodes/expressions.html#method-evaluateexpression-expression-string-itemindex-number) in the *Function node*.
+Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods](/code-examples/expressions/methods/) and [variables](/code-examples/expressions/variables/) in the *Function node*.
 
 !!! example "Exercise"
 
@@ -154,7 +156,7 @@ Just like you can use [expressions](https://docs.n8n.io/nodes/expressions.html) 
 
 ## Transforming data
 
-The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](https://docs.n8n.io/getting-started/key-concepts/transforming-data.html#transforming-data), so that each item can be processed individually.
+The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data/), so that each item can be processed individually.
 
 The two most common operations for data transformation are:
 
@@ -164,8 +166,8 @@ The two most common operations for data transformation are:
 There are several ways to transform data for the purposes mentioned above:
 
 - With the *HTTP Request node*, you can toggle the option `Split Into Items` to create multiple items from a single item. This is the easiest way to transform incoming web data with one click.
-- With the [*Item Lists node*](https://docs.n8n.io/nodes/n8n-nodes-base.itemLists), you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the *Function node*.
-- With the *Function node*, you can write [JavaScript functions to modify the data structure](https://docs.n8n.io/reference/javascript-code-snippets.html#modify-data-structure) of incoming data.
+- With the [*Item Lists node*](/integrations/core-nodes/n8n-nodes-base.itemLists), you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the *Function node*.
+- With the *Function node*, you can write JavaScript functions to modify the data structure of incoming data.
 
     - To create multiple items from a single item, you can use this JavaScript code:
 
@@ -192,7 +194,7 @@ There are several ways to transform data for the purposes mentioned above:
 
 !!! example "Exercise"
 
-    Use the *HTTP Request node* to make a GET request to the Poemist API `https://www.poemist.com/api/v1/randompoems`. Transform the incoming data with the `Split Into Items` option and [with the *Function node*](https://docs.n8n.io/reference/javascript-code-snippets.html#_1-create-multiple-items-from-a-single-item).
+    Use the *HTTP Request node* to make a GET request to the Poemist API `https://www.poemist.com/api/v1/randompoems`. Transform the incoming data with the `Split Into Items` option and with the *Function node*.
 
 	<details>
 	<summary>Show me the solution</summary>

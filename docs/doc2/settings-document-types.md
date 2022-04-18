@@ -1,6 +1,9 @@
 ---
 title: "Document Types"
 date: "2021-10-29"
+tags:
+  - DOC²
+  - Document Types
 ---
 
 In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu:

@@ -1,6 +1,10 @@
 ---
 title: "PO Matching - Invoices"
 date: "2022-01-24"
+tags:
+  - DOC²
+  - PO Matching 
+  - Invoices
 ---
 
 ## Create a purchase order in LN

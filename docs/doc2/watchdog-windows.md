@@ -1,6 +1,11 @@
 ---
 title: "Watchdog for Windows"
 date: "2022-01-28"
+tags:
+  - DOC²
+  - Watchdog
+  - Windows
+---
 ---
 
 ### Download watchpuppy here:

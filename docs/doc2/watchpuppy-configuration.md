@@ -1,6 +1,9 @@
 ---
 title: "Watchdog Configuration"
 date: "2022-01-28"
+tags:
+  - DOC²
+  - Watchdog
 ---
 
 WatchPuppy has multiple configuration options you can choose from.

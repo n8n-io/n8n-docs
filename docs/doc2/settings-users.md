@@ -1,6 +1,9 @@
 ---
 title: "Users"
 date: "2021-10-29"
+tags:
+  - DOC²
+  - Users
 ---
 
 Users can be managed via "SETTINGS -> Users". You can find the option as follows.

@@ -1,6 +1,10 @@
 ---
 title: "Training for Table Extraction"
 date: "2022-02-22"
+tags:
+  - DOC²
+  - Table
+---
 ---
 
 - [How to define tables and columns](/doc2/doc2app/table-train/training-of-table-extraction/define-table-and-columns/)

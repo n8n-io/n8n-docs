@@ -1,3 +1,11 @@
+---
+title: "DOC² - OnBoarding"
+date: "2022-01-24"
+tags:
+  - DOC²
+  - OnBoarding
+---
+
 # OnBoarding
 
 This guide will help you learn the basics of DOC² get you up and running with an IPS that will max out your productivity.

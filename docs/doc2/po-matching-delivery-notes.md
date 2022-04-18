@@ -1,6 +1,10 @@
 ---
 title: "PO Matching - Delivery Notes"
 date: "2022-01-24"
+tags:
+  - DOC²
+  - PO Matching 
+  - Delivery Notes
 ---
 
 +++DOCUMENTATION IN PROGRESS+++

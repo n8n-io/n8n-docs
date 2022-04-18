@@ -1,6 +1,9 @@
 ---
 title: "Amount Settings"
 date: "2021-10-29"
+tags:
+  - DOC²
+  - Amount Settings
 ---
 
 #### This section is mainly intended for those who process invoices of countries where rounding is a matter, since some documents contain rounding errors after the decimal point in certain amounts, since these were originally three digits but are shown on the invoice with only two decimal places.

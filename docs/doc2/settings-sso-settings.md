@@ -1,6 +1,9 @@
 ---
 title: "SSO Settings"
 date: "2021-10-29"
+tags:
+  - DOC²
+  - SSO
 ---
 
 * * *

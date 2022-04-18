@@ -1,6 +1,11 @@
 ---
-title: "Fellow KV² Tutorial"
+title: "Polydocs KV² Tutorial"
 date: "2021-07-02"
+icon: material/badge-account-horizontal
+description: Polydocs KV² Tutorial - How to use our Plugin with Ephesoft
+tags:
+  - KV²
+  - Tutorial
 ---
 
 ### Prerequisites

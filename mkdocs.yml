@@ -106,6 +106,7 @@ nav:
         - Group function: doc2/group-function.md
         - Advanced settings: doc2/advance-settings.md
         - Manual row selection: doc2/manual-row-selection.md
+        - Table Extraction: doc2/training-of-table-extraction.md
     - Import:
       - Email: doc2/e-mail.md
       - Fileshare Import:
@@ -119,6 +120,7 @@ nav:
         - How to create a IDM mapping file: doc2/how-to-create-a-idm-mapping-file.md
         - Export to Infor IDM: doc2/infor-idm.md
         - Export to Infor ION and IDM: doc2/infor-ion.md
+      - Export to Flow²: doc2/export-to-flow2.md
     - Keyboard: doc2/keyboard.md
     - Setting: 
       - Company: doc2/company-information.md
@@ -128,6 +130,9 @@ nav:
       - Import: doc2/import.md
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
+      - Merge Split PDF: doc2/merge-split-pdf.md
+      - SSO: 
+        - Infor SSO: doc2/configuring-sso-in-cloud.md
 
 
     - Table Train: doc2/table-train.md
@@ -140,6 +145,7 @@ nav:
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
+    - Limitation: doc2/limitations.md
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
@@ -212,11 +218,17 @@ nav:
     - Restart Epheosft: 
       - Cloud: kv2/how-to-restart-ephesoft-cloud-server.md
       - OnPremise: kv2/how-to-restart-ephesoft-server.md
+    - Installation: kv2/installation.md
+    - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
   - TE²:
     - Overview: te2/fellow-te2-plugin.md
     - Tutorial: te2/fellowte2-tutorial.md
+    - Epheosft External Application: te2/ephesoft-external-application.md
+    - Infor LN BOD Mapping: te2/ln_bodmapping.md
   - OCR²:
     - Overview: ocr/index.md
+    - Getting Started: ocr/get-started.md
+    - API: ocr/ocr-api.md
   # - Courses:
   #   - Overview: courses/index.md
   #   - Level one:

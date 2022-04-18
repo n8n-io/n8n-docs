@@ -1,6 +1,8 @@
 ---
 title: "E-Mail"
 date: "2021-10-22"
+icon: material/email-send
+description: DOC² Email Import - Automatic import documents over Emails
 tags:
   - E-Mail
   - Import

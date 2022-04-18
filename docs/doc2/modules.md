@@ -1,6 +1,10 @@
 ---
 title: "Modules"
 date: "2022-02-25"
+description: DOC² you can different modules 
+tags:
+  - DOC²
+  - Modules
 ---
 
 In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu.

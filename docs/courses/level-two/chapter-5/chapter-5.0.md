@@ -19,7 +19,7 @@ Now that we have an idea of what Nathan wants to automate, let’s list the step
 
 n8n provides core nodes for all these steps. This use case is somewhat complex and it will be made up of three separate workflows:
 
-1. A workflow that merges the company data with external information.
+1. A workflow that merges the company data with external notermation.
 2. A workflow that generates the reports.
 3. A workflow that monitors errors in the second workflow.
 

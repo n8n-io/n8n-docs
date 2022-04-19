@@ -4,7 +4,7 @@ Congratulations – you finished the n8n Course Level 2! You helped Nathan build
 
 You’ve come a long way throughout this course and learned a lot about workflow automation. Here’s what you can do next:
 
-* Test your knowledge of everything you've learned in this course with a **quiz**. The quiz consists of questions about the theoretical concepts and workflows covered in this course.
+* Test your knowledge of everything you've learned in this course with a quiz. The quiz consists of questions about the theoretical concepts and workflows covered in this course.
 
     - You need to have at least 80% correct answers.
     - You can take the quiz as many times as you want.
@@ -15,4 +15,4 @@ You’ve come a long way throughout this course and learned a lot about workflow
 </div>
 
 * Create new workflows for your work or personal use and share them with us. Don’t have any ideas? Find inspiration on the [workflows page](https://n8n.io/workflows) and on our [blog](https://n8n.io/blog/).
-* Dive deeper into n8n’s features by reading the [docs](/reference/).
+* Dive deeper into n8n's features by reading the [docs](/).

@@ -1,8 +1,17 @@
+
+---
+title: HubSpot
+description: You can use these credentials to authenticate the following nodes with HubSpot.
+tags:
+  - Workflow²
+  - HubSpot
+---
+
 # HubSpot
 
 You can use these credentials to authenticate the following nodes with HubSpot.
-- [HubSpot](/integrations/nodes/n8n-nodes-base.hubspot/)
-- [HubSpot Trigger](/integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/)
+- [HubSpot](/workflow/integrations/nodes/n8n-nodes-base.hubspot/)
+- [HubSpot Trigger](/workflow//integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/)
 
 ## Prerequisites
 

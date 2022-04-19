@@ -65,7 +65,6 @@ nav:
       - Connections: workflows/connections.md
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
-      - Workflow notes: workflows/workflow-notes.md
     - Flow logic:
       - Overview: flow-logic/index.md
       - Merging: flow-logic/merging.md

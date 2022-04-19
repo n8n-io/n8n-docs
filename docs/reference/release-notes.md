@@ -11,7 +11,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 ### Node enhancements
 <br>
-[Magento 2 Node:](/integrations/nodes/n8n-nodes-base.magento2/) text="Added credential tests.
+[Magento 2 Node:](/integrations/nodes/n8n-nodes-base.magento2/) Added credential tests.
 [PayPal Node:](/integrations/nodes/n8n-nodes-base.payPal/) Added credential tests and updated the API URL.
 
 ### Bug fixes
@@ -150,7 +150,7 @@ Read more about the new license in [License](/reference/license/).
 ### Enhanced nodes
 
 * [HTTP Request Node:](/integrations/core-nodes/n8n-nodes-base.httpRequest/) Allow Delete requests with body.
-* [KoBoToolbox Node:](/integrations/nodes/n8n-nodes-base.kobo/) Add KoBoToolbox Regular and Trigger Node.
+* [KoBoToolbox Node:](/integrations/nodes/n8n-nodes-base.koBoToolbox/) Add KoBoToolbox Regular and Trigger Node.
 * [Mailjet Node:](/integrations/nodes/n8n-nodes-base.mailjet/) Add credential tests and support for sandbox, JSON parameters & variables.
 * [Mattermost Node:](/integrations/nodes/n8n-nodes-base.mattermost/) Add support for Channel search.
 

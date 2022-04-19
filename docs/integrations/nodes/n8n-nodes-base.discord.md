@@ -2,7 +2,7 @@
 
 [Discord](https://discord.com/) is a voice, video, and text communications platform for groups. Discord allows users to programmatically send messages using webhooks.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     The Discord node does not require authentication, but you must have access to a channel's settings to use webhooks. You can find out how to create a webhook in Discord [here](/integrations/credentials/discord/).
 
 
@@ -27,8 +27,8 @@ The start node exists by default when you create a new workflow.
 ### 2. Discord node
 
 1. First of all, you'll have to create a webhook for the Discord node. You can find out how to do that [here](/integrations/credentials/discord/).
-2. Paste your webhook into the ***Webhook URL*** field.
-5. Enter your message in the ***Text*** field.
-6. Click on ***Execute Node*** to run the workflow.
+2. Paste your webhook into the **Webhook URL** field.
+5. Enter your message in the **Text** field.
+6. Click on **Execute Node** to run the workflow.
 
 ![Sending a message to a Discord channel using the Discord node](/_images/integrations/nodes/discord/discord_node.png)

@@ -1,5 +1,38 @@
 # Release notes
 
+## n8n@0.173.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173.0) for this version.<br />
+**Release date:** 2022-04-19
+
+### New features and nodes
+
+[Markdown node](/integrations/core-nodes/n8n-nodes-base.markdown/): added a new Markdown node to convert between Markdown and HTML.
+
+### Enhancements
+
+**editor**: you can now drag and drop nodes from the nodes panel onto the canvas.
+
+### Node enhancements
+
+* [Discord node](/integrations/nodes/n8n-nodes-base.discord/): additional fields now available when sending a message to Discord.
+* [GoogleBigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/): added support for service account authentication.
+* [Google Cloud Realtime Database node](/integrations/nodes/n8n-nodes-base.googleCloudRealtimDatabase/): you can now select a region.
+* [PagerDuty node](/integrations/nodes/n8n-nodes-base./): now supports more detail in incidents.
+* [Slack node](/integrations/nodes/n8n-nodes-base./): added support for blocks in Slack message update.
+
+### Bug fixes
+
+* **core**: make the email for user management case insensitive.
+* **core**: add `rawBody` for XML requests.
+* **editor**: fix a glitch that caused dropdowns to break after adding expressions.
+* **editor**: reset text input value when closed with `Esc`.
+* [Discourse node](/integrations/nodes/n8n-nodes-base.discourse/): fix an issue that was causing incomplete results when getting posts. Added a credentials test.
+* [Zendesk trigger node](/integrations/trigger-nodes/n8n-nodes-base.zendesk): remove deprecated targets, replace with webhooks.
+* [Zoho node](/integrations/nodes/n8n-nodes-base.zohoCrm): fix pagination issue.
+
+### Contributors
+
 ## n8n@0.172.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172.0) for this version.<br />

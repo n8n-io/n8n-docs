@@ -1,6 +1,7 @@
 ---
 title: "Watchdog for Windows"
 date: "2022-01-28"
+icon: material/microsoft-windows
 tags:
   - DOC²
   - Watchdog

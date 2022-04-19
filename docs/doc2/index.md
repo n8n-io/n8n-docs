@@ -11,7 +11,8 @@ Every business process starts, contains or ends with a document. Regardless of w
 
 DOC² is the latest software and solution for document capture that was developed by Fellow Consulting AG. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. No matter if paper or file. DOC² learns independently, the level of experience increases with each document. DOC² uses swarm intelligence for this.
 
-#### **The Advantages of DOC² at a glance:**
+
+### **The Advantages of DOC² at a glance:**
 
 *   Recognizes the required data - even handwritten information and information in tables reliably and is self-learning, even through corrections by the user
 *   With swarm intelligence, you benefit continuously from the experiences of other customers

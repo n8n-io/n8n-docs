@@ -1,6 +1,7 @@
 ---
 title: "SSO Settings"
 date: "2021-10-29"
+icon: material/sign-direction:
 tags:
   - DOC²
   - SSO

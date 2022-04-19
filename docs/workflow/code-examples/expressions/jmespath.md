@@ -1,3 +1,13 @@
+---
+title: "Code Example - Query JSON"
+description: Example to Query a JSON
+date: "2021-11-11"
+tags:
+  - Workflow²
+  - Expressions
+  - Code Example
+---
+
 # Query JSON with JMESPath
 
 [JMESPath](https://jmespath.org/) is a query language for JSON, allowing you to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html).

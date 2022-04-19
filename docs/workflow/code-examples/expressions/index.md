@@ -1,3 +1,12 @@
+---
+title: "Code Example"
+date: "2021-11-11"
+tags:
+  - Workflow²
+  - Expressions
+  - Code Example
+---
+
 # Expressions
 
 Expressions allow you to set node parameters dynamically based on data from:

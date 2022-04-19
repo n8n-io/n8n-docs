@@ -53,7 +53,10 @@ markdown_extensions:
       permalink: "#"
 plugins:
   - search
+  # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
+  # https://github.com/bharel/mkdocs-render-swagger-plugin
+  - render_swagger
 nav:
   - Using n8n:
     - Welcome: index.md
@@ -181,4 +184,8 @@ nav:
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+  - API:
+    - The n8n public API: api/index.md
+    - Endpoint reference using plugin: api/api-reference-1.md
+    - Endpoint reference using Swagger UI directly: api/api-reference-2.md
   - Contributing: contributing.md

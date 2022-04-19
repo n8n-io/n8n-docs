@@ -27,12 +27,24 @@
 /reference/telemetry.html                            /reference/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
-/reference/release-notes.html                        /reference/release-notes/
+/reference/release-notes.html                        /reference/release-notes/	
+/reference/server-setup.html                         /hosting/server-setups/  
 
 # The nodes library . . . may the odds be ever in your favour
 /credentials/* /integrations/credentials/:splat
 
-/nodes/creating-nodes/* /integrations/creating-nodes/code/:splat
+/nodes/creating-nodes/      /integrations/creating-nodes/
+/nodes/creating-nodes/general-guidelines.html        /integrations/creating-nodes/code/standards/
+/nodes/creating-nodes/create-node.html      /integrations/creating-nodes/code/create-first-node/
+/nodes/creating-nodes/create-n8n-nodes-module.html      /integrations/creating-nodes/code/create-n8n-nodes-module/
+/nodes/creating-nodes/create-trigger-node.html      /integrations/creating-nodes/code/create-trigger-node/
+/nodes/creating-nodes/node-dev-cli.html     /integrations/creating-nodes/code/node-dev-cli/
+/nodes/creating-nodes/node-elements.html      /integrations/creating-nodes/code/ui-elements/
+/nodes/creating-nodes/making-http-requests.html     /integrations/creating-nodes/code/http-helpers/
+/nodes/creating-nodes/node-linter.html      /integrations/creating-nodes/code/node-linter/
+/nodes/creating-nodes/node-review-checklist.html     /integrations/creating-nodes/code/review-checklist/
+/nodes/creating-nodes/troubleshooting.html     /integrations/creating-nodes/code/troubleshooting-node-development/
+
 
 /nodes/expressions/* /code-examples/expressions/:splat
 
@@ -153,6 +165,7 @@
 /nodes/n8n-nodes-base.errorTrigger/		/integrations/core-nodes/n8n-nodes-base.errorTrigger/
 /nodes/n8n-nodes-base.eventbriteTrigger/		/integrations/trigger-nodes/n8n-nodes-base.eventbriteTrigger/
 /nodes/n8n-nodes-base.executeCommand/		/integrations/core-nodes/n8n-nodes-base.executeCommand/
+/nodes/n8n-nodes-base.executecommand/       /integrations/core-nodes/n8n-nodes-base.executeCommand/
 /nodes/n8n-nodes-base.executeWorkflow/		/integrations/core-nodes/n8n-nodes-base.executeWorkflow/
 /nodes/n8n-nodes-base.facebookGraphApi/		/integrations/nodes/n8n-nodes-base.facebookGraphAPI/
 /nodes/n8n-nodes-base.facebookTrigger/		/integrations/trigger-nodes/n8n-nodes-base.facebookTrigger/
@@ -168,6 +181,7 @@
 /nodes/n8n-nodes-base.ftp/		/integrations/core-nodes/n8n-nodes-base.ftp/
 /nodes/n8n-nodes-base.function/		/integrations/core-nodes/n8n-nodes-base.function/
 /nodes/n8n-nodes-base.functionItem/		/integrations/core-nodes/n8n-nodes-base.functionItem/
+/nodes/n8n-nodes-base.functionitem/     /integrations/core-nodes/n8n-nodes-base.functionItem/
 /nodes/n8n-nodes-base.getResponse/		/integrations/nodes/n8n-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getResponseTrigger/		/integrations/trigger-nodes/n8n-nodes-base.getResponseTrigger/
 /nodes/n8n-nodes-base.ghost/		/integrations/nodes/n8n-nodes-base.ghost/
@@ -351,6 +365,7 @@
 /nodes/n8n-nodes-base.sms77/		/integrations/nodes/n8n-nodes-base.sms77/
 /nodes/n8n-nodes-base.snowflake/		/integrations/nodes/n8n-nodes-base.snowflake/
 /nodes/n8n-nodes-base.splitInBatches/		/integrations/core-nodes/n8n-nodes-base.splitInBatches/
+/nodes/n8n-nodes-base.splitinbatches/       /integrations/core-nodes/n8n-nodes-base.splitInBatches/
 /nodes/n8n-nodes-base.splunk/		/integrations/nodes/n8n-nodes-base.splunk/
 /nodes/n8n-nodes-base.spontit/		/integrations/nodes/n8n-nodes-base.spontit/
 /nodes/n8n-nodes-base.spotify/		/integrations/nodes/n8n-nodes-base.spotify/

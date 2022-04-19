@@ -265,6 +265,7 @@
 /nodes/n8n-nodes-base.mailjet/		/integrations/nodes/n8n-nodes-base.mailjet/
 /nodes/n8n-nodes-base.mailjetTrigger/		/integrations/trigger-nodes/n8n-nodes-base.mailjetTrigger/
 /nodes/n8n-nodes-base.mandrill/		/integrations/nodes/n8n-nodes-base.mandrill/
+/nodes/n8n-nodes-base.markdown/      /integrations/core-nodes/n8n-nodes-base.markdown/
 /nodes/n8n-nodes-base.marketstack/		/integrations/nodes/n8n-nodes-base.marketstack/
 /nodes/n8n-nodes-base.matrix/		/integrations/nodes/n8n-nodes-base.matrix/
 /nodes/n8n-nodes-base.mattermost/		/integrations/nodes/n8n-nodes-base.mattermost/

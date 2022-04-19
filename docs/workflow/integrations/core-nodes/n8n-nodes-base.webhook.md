@@ -1,6 +1,13 @@
+---
+title: Webhook
+description: The Webhook node is one of the most powerful nodes in Workflow².
+tags:
+  - Workflow²
+  - Webhook
+---
 # Webhook
 
-The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an Doc² workflow. This allows several different services to connect to Doc² and run a workflow when data is received.
+The Webhook node is one of the most powerful nodes in Workflow². It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an Doc² workflow. This allows several different services to connect to Doc² and run a workflow when data is received.
 
 !!! note " Keep in mind"
     1. When using the Webhook node on the localhost, ensure that Doc² is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).

@@ -1,3 +1,11 @@
+---
+title: XML
+
+tags:
+  - Workflow²
+  - XML
+---
+
 # XML
 
 The XML node is useful to convert data from and to XML.

@@ -1,3 +1,10 @@
+---
+
+tags:
+  - Workflow²
+
+---
+
 # Merging items
 
 You might want to merge items together in your workflows. For example when your data contains hundreds of items that you don't want to process individually. 

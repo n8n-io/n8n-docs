@@ -1,3 +1,12 @@
+---
+title: Function Item
+description: The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input.
+tags:
+  - Workflow²
+  - Function
+
+---
+
 # Function Item
 
 The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input.

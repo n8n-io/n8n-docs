@@ -1,4 +1,11 @@
-# Looping in n8n
+---
+
+tags:
+  - Workflow²
+
+---
+
+# Looping in Workflow²
 
 Looping enables you to repeatedly perform the same actions, stopping only after a set number of repetitions (e.g. fetch the 10 most recent items) or when a specific condition is met (e.g. no new items exist).
 

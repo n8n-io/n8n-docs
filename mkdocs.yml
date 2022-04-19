@@ -135,7 +135,7 @@ nav:
       - Merge Split PDF: doc2/merge-split-pdf.md
       - SSO: 
         - Infor SSO: doc2/configuring-sso-in-cloud.md
-
+      - Master Data Validation: doc2/settings-master-data-validation.md
 
     - Table Train: doc2/table-train.md
     - PO Matching: 

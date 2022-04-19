@@ -1,3 +1,12 @@
+---
+title: FTP
+description: The FTP node is useful to access and upload files to an FTP server.
+tags:
+  - Workflow²
+  - FTP
+
+---
+
 # FTP
 
 The FTP node is useful to access and upload files to an FTP server.

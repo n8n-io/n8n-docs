@@ -1,3 +1,12 @@
+---
+title: Date & Time
+description: The Date & Time node is used to manipulate date and time data and convert it to different formats.
+tags:
+  - Workflow²
+  - Date & Time
+
+---
+
 # Date & Time
 
 The Date & Time node is used to manipulate date and time data and convert it to different formats.

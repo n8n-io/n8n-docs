@@ -1,3 +1,12 @@
+---
+title: Function
+description: Using the function node, you can - Transform data from other node, Implement custom functionality
+tags:
+  - Workflow²
+  - Function
+
+---
+
 # Function
 
 Using the function node, you can:

@@ -1,3 +1,11 @@
+---
+title: Split In Batches
+description: The Split In Batches node saves the original incoming data, and with each iteration, it returns a predefined amount of data. This node can be used to loop through the data.
+tags:
+  - Workflow²
+  - Split In Batches
+---
+
 # Split In Batches
 
 The Split In Batches node saves the original incoming data, and with each iteration, it returns a predefined amount of data. This node can be used to loop through the data.

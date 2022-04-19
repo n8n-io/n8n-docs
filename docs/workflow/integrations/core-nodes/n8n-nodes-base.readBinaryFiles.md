@@ -1,9 +1,18 @@
+
+---
+title: Read Binary Files
+description: The Read Binary Files node is used to read multiple files from the host machine that runs Workflow².
+tags:
+  - Workflow²
+  - Read Binary Files
+---
+
 # Read Binary Files
 
-The Read Binary Files node is used to read multiple files from the host machine that runs n8n.
+The Read Binary Files node is used to read multiple files from the host machine that runs Workflow².
 
 !!! note " Keep in mind"
-    1. If you are running Doc² in Docker, your command will run on the Doc² container and not the Docker host.
+    1. If you are running Workflow² in Docker, your command will run on the Doc² container and not the Docker host.
 2. This node will look for files relative to the Doc² install path. It is recommended to use absolute file paths to prevent any errors.
 
 

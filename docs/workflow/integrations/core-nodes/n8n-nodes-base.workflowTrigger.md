@@ -1,3 +1,11 @@
+---
+title: Workflow Trigger
+description: The Workflow Trigger node gets triggered when a workflow is updated or activated.
+tags:
+  - Workflow²
+  - Workflow Trigger
+---
+
 # Workflow Trigger
 
 The Workflow Trigger node gets triggered when a workflow is updated or activated.

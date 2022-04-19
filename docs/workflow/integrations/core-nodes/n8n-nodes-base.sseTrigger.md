@@ -1,3 +1,11 @@
+---
+title: SSE Trigger
+description: Server-Sent Events (SSE) is a server push technology enabling a client to receive automatic updates from a server via HTTP connection.
+tags:
+  - Workflow²
+  - SSE Trigger
+---
+
 # SSE Trigger
 
 Server-Sent Events (SSE) is a server push technology enabling a client to receive automatic updates from a server via HTTP connection. The SSE Trigger node is used to receive server-sent events and is a trigger node.

@@ -1,3 +1,11 @@
+---
+title: Wait
+description: The Wait node is used to create a pause of any desired duration in your workflows.
+tags:
+  - Workflow²
+  - Wait
+---
+
 # Wait
 
 The Wait node is used to create a pause of any desired duration in your workflows. When the workflow is paused the execution data is offloaded to the database, and when the resume condition is met it is reloaded and the execution continues.

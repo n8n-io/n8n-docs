@@ -1,3 +1,11 @@
+---
+title: Spreadsheet File
+description: The Spreadsheet File node is used to access data from spreadsheet files.
+tags:
+  - Workflow²
+  - Spreadsheet File
+---
+
 # Spreadsheet File
 
 The Spreadsheet File node is used to access data from spreadsheet files.

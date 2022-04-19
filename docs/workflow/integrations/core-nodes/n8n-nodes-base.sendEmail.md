@@ -1,3 +1,11 @@
+---
+title: Send Email
+description: The Send Email node is used to send an email via an SMTP email server.
+tags:
+  - Workflow²
+  - Send Email
+---
+
 # Send Email
 
 The Send Email node is used to send an email via an SMTP email server.

@@ -1,3 +1,11 @@
+---
+title: Start
+description: The SSH node is useful for executing commands via the Secure Shell Protocol.
+tags:
+  - Workflow²
+  - SSH
+---
+
 # SSH
 
 The SSH node is useful for executing commands via the Secure Shell Protocol.

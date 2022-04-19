@@ -1,6 +1,14 @@
+---
+title: Activation Trigger
+description: The Activation Trigger node gets triggered when an event gets fired by Workflow² or a workflow.
+tags:
+  - Workflow²
+
+---
+
 # Activation Trigger
 
-The Activation Trigger node gets triggered when an event gets fired by Doc² or a workflow.
+The Activation Trigger node gets triggered when an event gets fired by Workflow² or a workflow.
 
 !!! warning
     The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the [n8n Trigger](/integrations/core-nodes/n8n-nodes-base.n8nTrigger/) and the [Workflow Trigger](/integrations/core-nodes/n8n-nodes-base.workflowTrigger/) node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.

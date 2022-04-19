@@ -1,6 +1,14 @@
+---
+title: Execute Command
+description: The Execute Command node is used to run shell commands on the host machine that runs Workflow²
+tags:
+  - Workflow²
+
+---
+
 # Execute Command
 
-The Execute Command node is used to run shell commands on the host machine that runs n8n.
+The Execute Command node is used to run shell commands on the host machine that runs Workflow².
 
 !!! note " Keep in mind"
     1. If you are running Doc² in Docker, your command will run on the Doc² container and not the Docker host.

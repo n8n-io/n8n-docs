@@ -1,3 +1,11 @@
+---
+title: RSS Read
+description: The RSS Read node is used to read data from RSS feeds published on the internet.
+tags:
+  - Workflow²
+  - RSS Read
+---
+
 # RSS Read
 
 The RSS Read node is used to read data from RSS feeds published on the internet.

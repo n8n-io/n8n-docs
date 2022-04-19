@@ -1,3 +1,10 @@
+---
+title: Write Binary File
+
+tags:
+  - Workflow²
+  - Write Binary File
+---
 # Write Binary File
 
 The Write Binary File node is used to write a file to the host machine that runs n8n.

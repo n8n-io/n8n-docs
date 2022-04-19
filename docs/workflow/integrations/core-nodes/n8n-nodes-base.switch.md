@@ -1,3 +1,11 @@
+---
+title: Switch
+description: The Switch node is used to route a workflow conditionally based on comparison operations.
+tags:
+  - Workflow²
+  - Switch
+---
+
 # Switch
 
 The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](/integrations/core-nodes/n8n-nodes-base.if/) node, but supports up to four conditional routes.

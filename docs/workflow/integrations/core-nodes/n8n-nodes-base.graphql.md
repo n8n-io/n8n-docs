@@ -1,3 +1,11 @@
+---
+title: GraphQL
+description: GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
+tags:
+  - Workflow²
+
+---
+
 # GraphQL
 
 [GraphQL](https://graphql.org/) is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.

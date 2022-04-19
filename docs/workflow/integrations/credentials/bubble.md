@@ -1,3 +1,10 @@
+---
+title: Bubble
+description: Use Bubble with Workflow²
+tags:
+  - Workflow²
+  - Bubble
+---
 # Bubble
 
 You can use these credentials to authenticate the following nodes with Bubble.

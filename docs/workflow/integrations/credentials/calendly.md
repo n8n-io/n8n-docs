@@ -1,7 +1,14 @@
+---
+title: Calendly
+description: Use Calendly with Workflow²
+tags:
+  - Workflow²
+  - Calendly
+---
 # Calendly
 
 You can use these credentials to authenticate the following nodes with Calendly.
-- [Calendly Trigger](/integrations/trigger-nodes/n8n-nodes-base.calendlyTrigger/)
+- [Calendly Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.calendlyTrigger/)
 
 ## Prerequisites
 

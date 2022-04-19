@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.173.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.0...n8n@0.173.1) for this version.<br />
+**Release date:** 2022-04-19
+
+Fixes a bug with the Discord node icon name.
+
 ## n8n@0.173.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173.0) for this version.<br />
@@ -32,6 +39,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 * [Zoho node](/integrations/nodes/n8n-nodes-base.zohoCrm): fix pagination issue.
 
 ### Contributors
+
+[Florian Metz](https://github.com/Timeraa)  
+[Francesco Pongiluppi](https://github.com/willywongi)  
+[Mark Steve Samson](https://github.com/marksteve)  
+[Mike Quinlan](https://github.com/mjquinlan2000)  
+
 
 ## n8n@0.172.0
 

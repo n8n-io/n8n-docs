@@ -89,6 +89,7 @@ nav:
   - DOC²:
     - Overview: doc2/index.md
     - OnBoarding: doc2/onboarding.md
+    - DOC² with Infor: doc2/infor.md
     - Dashboard: 
       - Overview: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
@@ -119,6 +120,7 @@ nav:
         - How to create a BOD mapping file: doc2/how-to-create-a-bod-mapping-file.md
         - How to create a IDM mapping file: doc2/how-to-create-a-idm-mapping-file.md
         - Export to Infor IDM: doc2/infor-idm.md
+        - Infor ION File: doc2/create-a-infor-ion-file.md
         - Export to Infor ION and IDM: doc2/infor-ion.md
       - Export to Flow²: doc2/export-to-flow2.md
     - Keyboard: doc2/keyboard.md

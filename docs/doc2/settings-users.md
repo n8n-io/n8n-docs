@@ -1,6 +1,7 @@
 ---
 title: "Users"
 date: "2021-10-29"
+icons: fontawesome/solid-user-plus
 tags:
   - DOC²
   - Users

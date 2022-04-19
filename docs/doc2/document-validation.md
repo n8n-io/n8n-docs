@@ -1,6 +1,7 @@
 ---
 title: "Document Validation"
 date: "2021-10-29"
+icon: material/file-document-outline
 tags:
   - DOC²
 ---

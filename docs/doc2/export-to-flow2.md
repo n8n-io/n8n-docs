@@ -1,6 +1,7 @@
 ---
 title: "Export to FLOW²"
 date: "2021-11-23"
+icon: material/database-export
 tags:
   - FLOW²
   - Export 

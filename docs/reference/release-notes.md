@@ -25,8 +25,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 * [Discord node](/integrations/nodes/n8n-nodes-base.discord/): additional fields now available when sending a message to Discord.
 * [GoogleBigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/): added support for service account authentication.
 * [Google Cloud Realtime Database node](/integrations/nodes/n8n-nodes-base.googleCloudRealtimDatabase/): you can now select a region.
-* [PagerDuty node](/integrations/nodes/n8n-nodes-base./): now supports more detail in incidents.
-* [Slack node](/integrations/nodes/n8n-nodes-base./): added support for blocks in Slack message update.
+* [PagerDuty node](/integrations/nodes/n8n-nodes-base.pagerDuty/): now supports more detail in incidents.
+* [Slack node](/integrations/nodes/n8n-nodes-base.slack/): added support for blocks in Slack message update.
 
 ### Bug fixes
 

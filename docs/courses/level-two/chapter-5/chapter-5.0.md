@@ -14,12 +14,12 @@ Now that we have an idea of what Nathan wants to automate, let’s list the step
 
 1. Get and combine data from all necessary sources.
 2. Sort the data and format the dates.
-3. Write binary data (spreadsheet and PDF).
+3. Write binary files.
 4. Send notifications via email and Discord.
 
 n8n provides core nodes for all these steps. This use case is somewhat complex and it will be made up of three separate workflows:
 
-1. A workflow that merges the company data with external notermation.
+1. A workflow that merges the company data with external information.
 2. A workflow that generates the reports.
 3. A workflow that monitors errors in the second workflow.
 
@@ -27,8 +27,8 @@ n8n provides core nodes for all these steps. This use case is somewhat complex a
 
 To build the workflows, you will need the following:
 
-* An [Airtable](https://airtable.com/) account and [credentials]().
-* A [Google](https://www.google.com/account/about/) account and [credentials]() to access Gmail and Google Drive.
+* An [Airtable](https://airtable.com/) account and [credentials](/integrations/credentials/airtable/).
+* A [Google](https://www.google.com/account/about/) account and [credentials](/integrations/credentials/google/) to access Gmail and Google Drive.
 * A [Discord](https://discord.com/) webhook URL.
 
 Next, you will build these three workflows with step-by-step instructions.

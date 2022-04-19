@@ -34,9 +34,9 @@ Completing the course should take around two hours. You do not have to complete 
 
 ## Do I get a certificate?
 
-We believe all good works deserve recognition. If you successfully complete the course, we will email you a **badge** that you can share with your peers to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
+We believe all good works deserve recognition. If you successfully complete the course, you will get a **badge** in your [community forum](http://community.n8n.io/) profile to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
 
-- [x] [Sign up](https://n8n-community.typeform.com/to/HQoQ7nXg) for the course to get your unique ID and other notermation you will need for the exercises.
-- [x] Automatically generate and email a PDF file.
-- [x] Automatically generate and upload two spreadsheets.
+- [x] [Sign up](https://n8n-community.typeform.com/to/HQoQ7nXg) for the course to get your unique ID and other information you will need for the exercises.
+- [x] Run an HTTP Request to get the data set.
+- [x] Automatically generate binary files and send notifications in Discord.
 - [x] Pass the quiz at the end of the course.

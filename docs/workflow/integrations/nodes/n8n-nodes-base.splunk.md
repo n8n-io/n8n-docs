@@ -3,7 +3,7 @@
 [Splunk](https://www.splunk.com/) produces software for searching, monitoring, and analyzing machine-generated data via a Web-style interface. It indexes and correlates information in a container that makes it searchable, and makes it possible to generate alerts, reports and visualizations.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/splunk/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/splunk/).
 
 
 ## Basic Operations

@@ -3,7 +3,7 @@
 [Jira](https://www.atlassian.com/software/jira) is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/jira/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/jira/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Jira Trigger node
 
-1. First of all, you'll have to enter credentials for the Jira Trigger node. You can find out how to do that [here](/integrations/credentials/jira/).
+1. First of all, you'll have to enter credentials for the Jira Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/jira/).
 2. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 3. Click on *Execute Node* to run the workflow.
 

@@ -3,7 +3,7 @@
 [Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/strava/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/strava/).
 
 
 ## Basic Operations
@@ -21,7 +21,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an activity in Strava. You can also find the [workflow](https://n8n.io/workflows/744) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Strava]()
 
 The final workflow should look like the following image.
@@ -36,7 +36,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create an activity with the name `Morning Run` in Strava. To create an activity with a different name, you can enter the name of your activity instead.
 
-1. First of all, you'll have to enter credentials for the Strava node. You can find out how to do that [here](/integrations/credentials/strava/).
+1. First of all, you'll have to enter credentials for the Strava node. You can find out how to do that [here](/workflow/integrations/credentials/strava/).
 2. Enter `Morning Run` in the ***Name*** field.
 3. Enter `Run` in the ***Type*** field.
 4. Select the date and time in the ***Start Date*** field.

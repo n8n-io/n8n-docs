@@ -3,14 +3,14 @@
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/pushcut/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/pushcut/).
 
 
 ## Example Usage
 
 This workflow allows you to send an SMS to a number whenever you go out. You can also find the [workflow](https://n8n.io/workflows/870) on n8n.io. This example usage workflow uses the following nodes.
 - [Pushcut Trigger]()
-- [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
 
 The final workflow should look like the following image.
 
@@ -22,7 +22,7 @@ Whenever you leave your house, Pushcut will send you a notification with an acti
 
 To create an action in the Pushcut app, follow the instructions mentioned in [FAQs](#how-to-configure-a-pushcut-action).
 
-1. First of all, you'll have to enter credentials for the Pushcut Trigger node. You can find out how to do that [here](/integrations/credentials/pushcut/).
+1. First of all, you'll have to enter credentials for the Pushcut Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/pushcut/).
 2. Enter an action name in the ***Action Name*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -34,7 +34,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will send an SMS to a specified phone number notifying the recipient that you are going out.
 
-1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/credentials/twilio/).
+1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/workflow/integrations/credentials/twilio/).
 2. Enter the Twilio phone number in the ***From*** field.
 4. Enter the receiver's phone number in the ***To*** field.
 5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

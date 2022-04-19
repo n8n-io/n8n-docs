@@ -3,7 +3,7 @@
 [Webflow](https://webflow.com) is an application that allows you to build responsive websites with browser-based visual editing software.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/webflow/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/webflow/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an item from Webflow. You can also find the [workflow](https://n8n.io/workflows/1048) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Webflow]()
 
 The final workflow should look like the following image.
@@ -33,7 +33,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new collection of the type `Team Members` in Webflow. If you want to create a collection with a different type, use that type instead.
 
-1. First of all, you'll have to enter credentials for the Webflow node. You can find out how to do that [here](/integrations/credentials/webflow/).
+1. First of all, you'll have to enter credentials for the Webflow node. You can find out how to do that [here](/workflow/integrations/credentials/webflow/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Select your site from the ***Site ID*** dropdown list.
 4. Select 'Team Members' from the ***Collection ID*** dropdown list.

@@ -3,7 +3,7 @@
 [Snowflake](https://snowflake.com) is a cloud data platform that provides a data warehouse-as-a-service designed for the cloud.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/snowflake/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/snowflake/).
 
 
 ## Basic Operations
@@ -15,8 +15,8 @@
 ## Example Usage
 
 This workflow allows you to create a table, insert, and update data in a table in Snowflake. You can also find the [workflow](https://n8n.io/workflows/824) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Snowflake]()
 
 The final workflow should look like the following image.
@@ -32,7 +32,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a table named `docs` with `id` and `name` columns.
 
-1. First of all, you'll have to enter credentials for the Snowflake node. You can find out how to do that [here](/integrations/credentials/snowflake/).
+1. First of all, you'll have to enter credentials for the Snowflake node. You can find out how to do that [here](/workflow/integrations/credentials/snowflake/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE docs (id INT, name STRING);`.
 4. Click on ***Execute Node*** to run the node.

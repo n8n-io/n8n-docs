@@ -3,7 +3,7 @@
 [Demio](https://demio.com) provides a simple, no-download webinar experience and all the marketing tools you need to generate better results.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/demio/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/demio/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to register your audience to an event on Demio via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/947) on n8n.io. This example usage workflow uses the following nodes.
-- [Typeform Trigger](/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [Demio]()
 
 The final workflow should look like the following image.
@@ -36,7 +36,7 @@ This example workflow uses a Typeform to collect name and email address. Create 
 |Let's start with your name. | Short Text |
 |What's your email address? | Email |
 
-1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/credentials/typeform/).
+1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/typeform/).
 2. Select your form from the ***Form*** dropdown list.
 3. Click on ***Execute Node*** to run the workflow.
 
@@ -48,7 +48,7 @@ In the screenshot below, you will notice that the Typeform Trigger node triggers
 
 This node will use the information from the previous node to register the user for an event on Demio. If you don't have an event on Demio, make sure to create one.
 
-1. First of all, you'll have to enter credentials for the Demio node. You can find out how to enter credentials for this node [here](/integrations/credentials/demio/).
+1. First of all, you'll have to enter credentials for the Demio node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/demio/).
 2. Select 'Register' from the ***Operation*** dropdown list.
 3. Select the event from the ***Event ID*** dropdown list.
 4. Click on the gears icon next to the ***First Name*** field and click on ***Add Expression***.

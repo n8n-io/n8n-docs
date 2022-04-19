@@ -1,8 +1,8 @@
 # Telegram
 
 You can use these credentials to authenticate the following nodes with Telegram.
-- [Telegram](/integrations/nodes/n8n-nodes-base.telegram/)
-- [Telegram Trigger](/integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/)
+- [Telegram](/workflow/integrations/nodes/n8n-nodes-base.telegram/)
+- [Telegram Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/)
 
 ## Prerequisites
 

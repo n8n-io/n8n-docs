@@ -3,7 +3,7 @@
 [Magento](https://www.magento.com/) is an e-commerce platform enabling retailers and brands to build engaging online shopping experiences.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/magento2/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/magento2/).
 
 
 ## Basic Operations

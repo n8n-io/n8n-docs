@@ -25,11 +25,11 @@ The Execute Command node has two properties:
 ## Example Usage
 
 This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow is triggered twice a day, and if the memory usage exceeds 80%, it will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [Execute Command]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 
 The final workflow should look like the following image.
@@ -85,7 +85,7 @@ In the screenshot below, you will notice that the node returns an output when th
 This node sends an SMS to the specified phone number when the usage of hard disk space  exceeds 80%.
 
 1. Create a Twilio node connected to the 'true' output of the IF node.
-2. You'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/credentials/twilio/).
+2. You'll have to enter credentials for the Twilio node. You can find out how to do that [here](/workflow/integrations/credentials/twilio/).
 3. Enter the Twilio phone number in the ***From*** field.
 4. Enter the receiver's phone number in the ***To*** field.
 5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
@@ -122,7 +122,7 @@ ls
 
 ### How to run the curl command in the Execute Command node?
 
-You can also use the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to make a cURL request.
+You can also use the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing Doc² image. The default Doc² Docker image uses Alpine Linux. You will have to install the curl package.
 1. Create a file named Dockerfile.

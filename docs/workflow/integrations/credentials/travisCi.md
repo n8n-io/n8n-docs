@@ -1,7 +1,7 @@
 # Travis CI
 
 You can use these credentials to authenticate the following nodes with Travis CI.
-- [Travis CI](/integrations/nodes/n8n-nodes-base.travisCI/)
+- [Travis CI](/workflow/integrations/nodes/n8n-nodes-base.travisCI/)
 
 ## Prerequisites
 

@@ -31,7 +31,7 @@ This section includes the operations for creating and editing workflows².
 
 ## Credentials
 
-This section includes the operations for creating [credentials](/integrations/).
+This section includes the operations for creating [credentials](/workflow/integrations/).
 
 Credentials are private pieces of information issued by apps/services to authenticate you as a user and allow you to connect and share information between the app/service and the Doc² node.
 

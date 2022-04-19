@@ -3,7 +3,7 @@
 [Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/autopilot/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/autopilot/).
 
 
 ## Events
@@ -20,8 +20,8 @@
 
 This workflow allows you to receive updates when a new contact gets added in Autopilot and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/991) on n8n.io. This example usage workflow would use the following node.
 - [Autopilot Trigger]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 
@@ -31,7 +31,7 @@ The final workflow should look like the following image.
 
  The Autopilot Trigger node will trigger the workflow when a new contact gets added in Autopilot.
 
-1. First of all, you'll have to enter credentials for the Autopilot Trigger node. You can find out how to do that [here](/integrations/credentials/autopilot/).
+1. First of all, you'll have to enter credentials for the Autopilot Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/autopilot/).
 2. Select 'Contact Added' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -65,7 +65,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will store the data coming from the previous node in a table in Airtable.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID under the Introduction section.
 4. In Doc², paste the ID of the base in the ***Base ID*** field.

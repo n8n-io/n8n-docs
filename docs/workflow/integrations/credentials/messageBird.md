@@ -1,7 +1,7 @@
 # MessageBird
 
 You can use these credentials to authenticate the following nodes with MessageBird.
-- [MessageBird](/integrations/nodes/n8n-nodes-base.messageBird/)
+- [MessageBird](/workflow/integrations/nodes/n8n-nodes-base.messageBird/)
 
 ## Prerequisites
 

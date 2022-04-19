@@ -3,7 +3,7 @@
 [Strapi](https://www.strapi.io/) is an open-source Headless CMS that gives developers the freedom to choose their tools and frameworks while also allowing editors to easily manage and distribute their content.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/strapi/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/strapi/).
 
 
 !!! warning " Strapi Version 4"
@@ -23,8 +23,8 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an entry in Strapi. You can also find the [workflow](https://n8n.io/workflows/779) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Strapi]()
 
 The final workflow should look like the following image.
@@ -58,7 +58,7 @@ In the screenshot below, you will notice that node sets the value for title, con
 
 This node will create an entry for the content type `posts`. If you have a different content type, use that content type instead.
 
-1. First of all, you'll have to enter credentials for the Strapi node. You can find out how to do that [here](/integrations/credentials/strapi/).
+1. First of all, you'll have to enter credentials for the Strapi node. You can find out how to do that [here](/workflow/integrations/credentials/strapi/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter `posts` in the ***Content Type*** field.
 4. Enter `Title, Content, Description` in the ***Columns*** field. If you want to add data for other columns, enter those column names.

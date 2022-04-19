@@ -3,7 +3,7 @@
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wise/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wise/).
 
 
 ## Events
@@ -16,9 +16,9 @@
 
 This workflow allows you to receive updates from Wise and add information of a transfer to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/993) on n8n.io. This example usage workflow would use the following nodes.
 - [Wise Trigger]()
-- [Wise](/integrations/nodes/n8n-nodes-base.wise/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Wise](/workflow/integrations/nodes/n8n-nodes-base.wise/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 
@@ -28,7 +28,7 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when the status of your transfer changes.
 
-1. First of all, you'll have to enter credentials for the Wise Trigger node. You can find out how to do that [here](/integrations/credentials/wise/).
+1. First of all, you'll have to enter credentials for the Wise Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/wise/).
 2. Select 'Personal' from the ***Profile*** dropdown list.
 3. Select 'Transfer State Changed' from the ***Event*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
@@ -83,7 +83,7 @@ In the screenshot below, you will notice that the node sets the values of `Trans
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrZQQCRtQPBYTmUe) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.

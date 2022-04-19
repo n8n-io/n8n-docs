@@ -1,7 +1,7 @@
 # Acuity Scheduling
 
 You can use these credentials to authenticate the following nodes with Acuity Scheduling.
-- [Acuity Scheduling Trigger](/integrations/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/)
+- [Acuity Scheduling Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/)
 
 ## Prerequisites
 

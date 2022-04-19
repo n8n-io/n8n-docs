@@ -1,7 +1,7 @@
 # Hunter
 
 You can use these credentials to authenticate the following nodes with Hunter.
-- [Hunter](/integrations/nodes/n8n-nodes-base.hunter/)
+- [Hunter](/workflow/integrations/nodes/n8n-nodes-base.hunter/)
 
 ## Prerequisites
 

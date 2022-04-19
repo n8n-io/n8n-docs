@@ -3,7 +3,7 @@
 [NASA](https://nasa.gov/) is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research. The NASA API makes NASA data, including imagery, accessible to application developers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/nasa/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/nasa/).
 
 
 ## Basic Operations
@@ -42,9 +42,9 @@
 ## Example Usage
 
 This workflow allows you to send the Astronomy Picture of the day daily to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/828) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [NASA]()
-- [Telegram](/integrations/nodes/n8n-nodes-base.telegram/)
+- [Telegram](/workflow/integrations/nodes/n8n-nodes-base.telegram/)
 
 The final workflow should look like the following image.
 
@@ -66,7 +66,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return the Astronomy Picture of the Day.
 
-1. First of all, you'll have to enter credentials for the NASA node. You can find out how to do that [here](/integrations/credentials/nasa/).
+1. First of all, you'll have to enter credentials for the NASA node. You can find out how to do that [here](/workflow/integrations/credentials/nasa/).
 2. Toggle ***Download Image*** to `false`. By setting this option to false the node will not return binary data.
 2. Click on ***Execute Node*** to run the node.
 
@@ -78,7 +78,7 @@ In the screenshot below, you will notice that the node returns data for the Astr
 
 This node will send the picture that we receive from the previous node to a channel.
 
-1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/integrations/credentials/telegram/).
+1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/workflow/integrations/credentials/telegram/).
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
 3. Enter a chat ID in the ***Chat ID*** field.
 4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.

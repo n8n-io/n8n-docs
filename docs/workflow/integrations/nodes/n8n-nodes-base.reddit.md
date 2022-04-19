@@ -3,7 +3,7 @@
 [Reddit](https://www.reddit.com) is a social news aggregation, web content rating, and discussion website.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/reddit/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/reddit/).
 
 
 ## Basic Operations
@@ -30,7 +30,7 @@
 ## Example Usage
 
 This workflow allows you to create a post a Reddit and add a comment to that post. You can also find the [workflow](https://n8n.io/workflows/928) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Reddit]()
 
 The final workflow should look like the following image.
@@ -45,7 +45,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a post under the subreddit `n8n`. If you want to create a post under a different subreddit, enter the name of that subreddit instead.
 
-1. First of all, you'll have to enter credentials for the Reddit node. You can find out how to do that [here](/integrations/credentials/reddit/).
+1. First of all, you'll have to enter credentials for the Reddit node. You can find out how to do that [here](/workflow/integrations/credentials/reddit/).
 2. Enter `n8n` in the ***Subreddit*** field.
 3. Enter a title in the ***Title*** field.
 4. Enter the content of the post in the ***Text*** field.

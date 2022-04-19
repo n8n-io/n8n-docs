@@ -8,7 +8,7 @@ tags:
 # Bannerbear
 
 You can use these credentials to authenticate the following nodes with Bannerbear.
-- [Bannerbear](/integrations/nodes/n8n-nodes-base.bannerbear/)
+- [Bannerbear](/workflow/integrations/nodes/n8n-nodes-base.bannerbear/)
 
 
 ## Prerequisites

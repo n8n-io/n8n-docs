@@ -9,8 +9,8 @@ The iCalendar node allows you to create event files that can be shared as an att
 ## Example Usage
 
 This workflow allows you to create an event file and send it as an attachment via email. You can also find the [workflow](https://n8n.io/workflows/1083) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Send Email](/integrations/core-nodes/n8n-nodes-base.sendEmail/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Send Email](/workflow/integrations/core-nodes/n8n-nodes-base.sendEmail/)
 
 The final workflow should look like the following image.
 
@@ -38,7 +38,7 @@ In the screenshot below, you will notice that the node creates the event file.
 
 This node will send the event file as an attachment.
 
-1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/integrations/credentials/sendEmail/).
+1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/workflow/integrations/credentials/sendEmail/).
 2. Enter the sender's email address in the ***From Email*** field.
 3. Enter the receiver's email address in the ***To Email*** field.
 4. Enter a subject in the ***Subject*** field.

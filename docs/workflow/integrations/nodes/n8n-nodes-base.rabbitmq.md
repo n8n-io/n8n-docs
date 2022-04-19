@@ -3,15 +3,15 @@
 [RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/rabbitmq/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/rabbitmq/).
 
 
 ## Example Usage
 
 This workflow allows you to send updates about the position of the ISS every minute to a queue using the RabbitMQ node. You can also find the [workflow](https://n8n.io/workflows/844) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [RabbitMQ]()
 
 The final workflow should look like the following image.
@@ -76,7 +76,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will send the data from the previous node to the `iss-position` queue in RabbitMQ. If you have created a queue with a different name in RabbitMQ, you can use that queue instead.
 
-1. First of all, you'll have to enter credentials for the RabbitMQ node. You can find out how to do that [here](/integrations/credentials/rabbitmq/).
+1. First of all, you'll have to enter credentials for the RabbitMQ node. You can find out how to do that [here](/workflow/integrations/credentials/rabbitmq/).
 2. Enter the name of the queue or topic in the ***Queue / Topic*** field.
 3. Click on ***Execute Node*** to run the node.
 

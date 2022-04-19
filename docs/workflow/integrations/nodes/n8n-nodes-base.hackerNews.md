@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to get articles from Hacker News. You can also find the [workflow](https://n8n.io/workflows/525) on this website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Hacker News]()
 
 The final workflow should look like the following image.

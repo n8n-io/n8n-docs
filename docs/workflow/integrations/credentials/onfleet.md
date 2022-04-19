@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with Onfleet:
 
-- [Onfleet](/integrations/nodes/n8n-nodes-base.onfleet/)
-- [Onfleet Trigger](/integrations/trigger-nodes/n8n-nodes-base.onfleetTrigger/)
+- [Onfleet](/workflow/integrations/nodes/n8n-nodes-base.onfleet/)
+- [Onfleet Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.onfleetTrigger/)
 
 1. Sign up for Onfleet and create an API key. Refer to Onfleet's documentation for more information:
     * [Creating an API key](https://support.onfleet.com/hc/en-us/articles/360045763292-API)

@@ -3,7 +3,7 @@
 [Google Cloud Natural Language](https://cloud.google.com/natural-language/) uses machine learning to reveal the structure and meaning of text. You can extract information about people, places, and events, and better understand social media sentiment and customer conversations.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -14,11 +14,11 @@
 ## Example Usage
 
 This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/786) on n8n.io. This example usage workflow uses the following nodes.
-- [Typeform Trigger](/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [Google Cloud Natural Language]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -29,7 +29,7 @@ The final workflow should look like the following image.
 This node will trigger the workflow when a feedback form is submitted. Make sure to create a feedback form for your event.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
-2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/credentials/typeform/).
+2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/typeform/).
 3. Select the event feedback form from the ***Form*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
 
@@ -40,7 +40,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will analyze the sentiment of the feedback that we got from the previous node. We will pass the analysis score to the next node in the workflow.
 
-1. First of all, you'll have to enter credentials for the Google Cloud Natural Language node. You can find out how to enter credentials for this node [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Cloud Natural Language node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/google/).
 2. Click on the gears icon next to the ***Content*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Nodes > Typeform Trigger > Output Data > JSON > What did you think about the event? You can also add the following expression: `{{$node["Typeform Trigger"].json["What did you think about the event?"]}}`. If you want to analyze the sentiment for a different question, select that question instead.
@@ -70,7 +70,7 @@ In the screenshot below, you will notice that the node checks if the score that 
 This node will send the feedback and the analysis score to the `Feedback` channel in Mattermost. If you have a different channel, use that instead.
 
 1. Create a Mattermost node connected to the 'true' output of the IF node.
-2. You'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/integrations/credentials/mattermost/).
+2. You'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/mattermost/).
 3. Select a channel from the ***Channel ID*** dropdown list.
 4. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 

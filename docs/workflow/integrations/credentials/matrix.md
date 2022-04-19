@@ -1,7 +1,7 @@
 # Matrix
 
 You can use these credentials to authenticate the following nodes with Matrix.
-- [Matrix](/integrations/nodes/n8n-nodes-base.matrix/)
+- [Matrix](/workflow/integrations/nodes/n8n-nodes-base.matrix/)
 
 ## Prerequisites
 

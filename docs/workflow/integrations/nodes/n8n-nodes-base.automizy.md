@@ -3,7 +3,7 @@
 [Automizy](https://automizy.com/) is an email marketing automation software that offers AI-powered Subject Line Tester, AB testing, and email automation.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/automizy/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/automizy/).
 
 
 ## Basic Operations
@@ -24,7 +24,7 @@
 ## Example Usage
 
 This workflow allows you to create a new list, add a new contact to that list, update the contact, and get all contacts in the list using the Automizy node. You can also find the [workflow](https://n8n.io/workflows/720) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Automizy]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new list called `n8n-docs` in Automizy.
 
-1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](/integrations/credentials/automizy/).
+1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](/workflow/integrations/credentials/automizy/).
 2. Select 'List' from the ***Resource*** dropdown list.
 3. Enter `n8n-docs` in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.

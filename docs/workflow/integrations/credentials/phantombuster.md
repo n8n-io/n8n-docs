@@ -1,7 +1,7 @@
 # Phantombuster
 
 You can use these credentials to authenticate the following nodes with Phantombuster.
-- [Phantombuster](/integrations/nodes/n8n-nodes-base.phantombuster/)
+- [Phantombuster](/workflow/integrations/nodes/n8n-nodes-base.phantombuster/)
 
 ## Prerequisites
 

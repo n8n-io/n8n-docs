@@ -3,7 +3,7 @@
 [Freshservice](https://www.freshservice.com/) is a cloud-based IT Service Management solution.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/freshservice/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/freshservice/).
 
 
 ## Basic operations
@@ -100,7 +100,7 @@
 
 This workflow allows you to fetch all Tickets with an Urgent status in Freshservice. This example usage workflow would use the following two nodes:
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Freshservice]()
 
 The final workflow should look like the following image.
@@ -113,7 +113,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Freshservice node
 
-1. First enter your credentials for the Freshservice node. You can find out how to do that [here](/integrations/credentials/freshservice/).
+1. First enter your credentials for the Freshservice node. You can find out how to do that [here](/workflow/integrations/credentials/freshservice/).
 2. Select **Ticket** from the *Resource* dropdown.
 3. Select **Get All** from the *Operation* dropdown.
 4. Enable the **Return All** toggle.

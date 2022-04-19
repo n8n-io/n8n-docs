@@ -3,7 +3,7 @@
 [ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/clickUp/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/clickUp/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. ClickUp Trigger node
 
-1. First of all, you'll have to enter credentials for the ClickUp Trigger node. You can find out how to do that [here](/integrations/credentials/clickUp/).
+1. First of all, you'll have to enter credentials for the ClickUp Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/clickUp/).
 2. Select your team from the *Team* dropdown list.
 3. Select the `*` option in the *Events* field to receive updates for all the events.
 4. Click on *Execute Node* to run the workflow.

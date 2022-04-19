@@ -3,7 +3,7 @@
 [Telegram](https://telegram.org) is a cloud-based instant messaging and voice-over-IP service.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/telegram/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/telegram/).
 
 
 ## Basic Operations
@@ -38,8 +38,8 @@
 ## Example Usage
 
 This workflow allows you to send a cocktail recipe to a specified chat ID every day via a Telegram bot. You can also find the [workflow](https://n8n.io/workflows/781) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Telegram]()
 
 The final workflow should look like the following image.
@@ -72,7 +72,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will send a message on Telegram with an image and the recipe of the cocktail that we got from the previous node.
 
-1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/integrations/credentials/telegram/).
+1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/workflow/integrations/credentials/telegram/).
 
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
 3. Enter the target chat ID in the ***Chat ID*** field. Refer to the [FAQs](#how-do-i-get-a-chat-id) to learn how to get the chat ID.
@@ -96,9 +96,9 @@ In the screenshot below, you will notice that the node sends a message on Telegr
 ### How can I send more than 30 messages per second?
 
 The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users) of sending only 30 messages per second. Follow the steps mentioned below to send more than 30 messages:
-1. Split In Batches node: Use the [Split in Batches](/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node to get at most 30 chat IDs from your database.
+1. Split In Batches node: Use the [Split in Batches](/workflow/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node to get at most 30 chat IDs from your database.
 2. Telegram node: Connect the Telegram node with the Split In Batches node. Use the ***Expression Editor*** to select the Chat IDs from the Split in Batches node.
-3. Function node: Connect the [Function](/integrations/core-nodes/n8n-nodes-base.function/) node with the Telegram node. Use the Function node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Split In Batches node.
+3. Function node: Connect the [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/) node with the Telegram node. Use the Function node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Split In Batches node.
 
 You can also use this [workflow](https://n8n.io/workflows/772).
 
@@ -114,7 +114,7 @@ You can also use this [workflow](https://n8n.io/workflows/772).
 
 There are two ways to get the Chat ID in Telegram.
 
-- Using the [Telegram Trigger](/integrations/trigger-nodes/n8n-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
+- Using the [Telegram Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
 - Using the `@RawDataBot`: The `@RawDataBot` returns the raw data of the chat with a Chat ID. Invite the `@RawDataBot` to your channel/group, and upon joining, it will output a Chat ID along with other information. Be sure to remove the `@RawDataBot` from your group/channel afterwards.
 
 

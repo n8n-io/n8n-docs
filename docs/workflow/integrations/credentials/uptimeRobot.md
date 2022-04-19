@@ -1,7 +1,7 @@
 # UptimeRobot
 
 You can use these credentials to authenticate the following nodes with UptimeRobot.
-- [UptimeRobot](/integrations/nodes/n8n-nodes-base.uptimeRobot/)
+- [UptimeRobot](/workflow/integrations/nodes/n8n-nodes-base.uptimeRobot/)
 
 ## Prerequisites
 

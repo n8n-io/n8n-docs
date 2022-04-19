@@ -3,7 +3,7 @@
 [QuickBooks](https://quickbooks.intuit.com) is an accounting software package developed by Intuit.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/quickbooks/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/quickbooks/).
 
 
 ## Basic Operations
@@ -64,7 +64,7 @@
 ## Example Usage
 
 This workflow allows you to create a customer and an invoice, and send the invoice to the customer. You can also find the [workflow](https://n8n.io/workflows/949) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [QuickBooks]()
 
 The final workflow should look like the following image.
@@ -79,7 +79,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new customer in QuickBooks.
 
-1. First of all, you'll have to enter credentials for the QuickBooks node. You can find out how to do that [here](/integrations/credentials/quickbooks/).
+1. First of all, you'll have to enter credentials for the QuickBooks node. You can find out how to do that [here](/workflow/integrations/credentials/quickbooks/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter a display name in the ***Display Name*** field.
 4. Click on the ***Add Field*** button and select 'Primary Email Address'.

@@ -1,7 +1,7 @@
 # Wekan
 
 You can use these credentials to authenticate the following nodes with Wekan.
-- [Wekan](/integrations/nodes/n8n-nodes-base.wekan/)
+- [Wekan](/workflow/integrations/nodes/n8n-nodes-base.wekan/)
 
 ## Prerequisites
 

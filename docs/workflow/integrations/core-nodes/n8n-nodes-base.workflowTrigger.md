@@ -26,7 +26,7 @@ The Workflow Trigger node gets triggered for the workflow that it gets added to.
 
 This workflow allows you to receive a message on Mattermost when a workflow is updated. You can also find the [workflow](https://n8n.io/workflows/1059) on n8n.io. This example usage workflow uses the following nodes.
 - [Workflow Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -48,7 +48,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will send a message in the `workflow` channel on Mattermost.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/mattermost/).
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 

@@ -1,7 +1,7 @@
 # Rocket.Chat
 
 You can use these credentials to authenticate the following nodes with Rocket.Chat.
-- [Rocket.Chat](/integrations/nodes/n8n-nodes-base.rocketchat/)
+- [Rocket.Chat](/workflow/integrations/nodes/n8n-nodes-base.rocketchat/)
 
 ## Prerequisites
 

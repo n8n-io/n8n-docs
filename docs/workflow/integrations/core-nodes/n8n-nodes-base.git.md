@@ -3,7 +3,7 @@
 [Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/git/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/git/).
 
 
 
@@ -26,7 +26,7 @@
 ## Example Usage
 
 This workflow allows you to add, commit, and push changes to a git repository. You can also find the [workflow](https://n8n.io/workflows/1115) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Git]()
 
 The final workflow should look like the following image.

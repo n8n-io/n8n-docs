@@ -1,7 +1,7 @@
 # uProc
 
 You can use these credentials to authenticate the following nodes with uProc.
-- [uProc](/integrations/nodes/n8n-nodes-base.uProc/)
+- [uProc](/workflow/integrations/nodes/n8n-nodes-base.uProc/)
 
 ## Prerequisites
 

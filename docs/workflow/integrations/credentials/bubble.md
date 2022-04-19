@@ -8,7 +8,7 @@ tags:
 # Bubble
 
 You can use these credentials to authenticate the following nodes with Bubble.
-- [Bubble](/integrations/nodes/n8n-nodes-base.bubble/)
+- [Bubble](/workflow/integrations/nodes/n8n-nodes-base.bubble/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [HaloPSA](https://halopsa.com/) is a intuitive PSA software. Standardise your processes and keep your customers at the center of every conversation.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/haloPSA/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/haloPSA/).
 
 
 ## Basic Operations
@@ -36,7 +36,7 @@
 ## Example Usage
 
 This workflow allows you to create a client in HaloPSA. This example workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [HaloPSA]()
 
 ![A workflow with the Harvest node](/_images/integrations/nodes/halopsa/workflow.png)
@@ -49,7 +49,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new client in HaloPSA.
 
-1. First of all, you'll have to enter credentials for the HaloPSA node. You can find out how to do that [here](/integrations/credentials/haloPSA/).
+1. First of all, you'll have to enter credentials for the HaloPSA node. You can find out how to do that [here](/workflow/integrations/credentials/haloPSA/).
 2. Select 'Client' in the ***Resource*** field.
 3. Select 'Create' in the ***Operation*** field.
 4. Enter the client name in the ***Name*** field.

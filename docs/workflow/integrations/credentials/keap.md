@@ -1,8 +1,8 @@
 # Keap
 
 You can use these credentials to authenticate the following nodes with Keap.
-- [Keap](/integrations/nodes/n8n-nodes-base.keap/)
-- [Keap Trigger](/integrations/trigger-nodes/n8n-nodes-base.keapTrigger/)
+- [Keap](/workflow/integrations/nodes/n8n-nodes-base.keap/)
+- [Keap Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.keapTrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [AMQP](https://www.amqp.org/) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. This node supports AMQP 1.0 compatible message brokers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/amqp/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/amqp/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. AMQP Trigger node
 
-1. First of all, you'll have to enter credentials for the AMQP Trigger node. You can find out how to do that [here](/integrations/credentials/amqp/).
+1. First of all, you'll have to enter credentials for the AMQP Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/amqp/).
 2. Enter the name of the queue or topic in the *Queue / Topic* field.
 3. Click on *Execute Node* to run the workflow.
 

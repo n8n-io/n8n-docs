@@ -3,7 +3,7 @@
 [Zendesk](https://www.zendesk.com/) is a support ticketing system, designed to help track, prioritize, and solve customer support interactions. More than just a help desk, Zendesk Support helps nurture customer relationships with personalized, responsive support across any channel.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/zendesk/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/zendesk/).
 
 
 ## Basic Operations
@@ -39,7 +39,7 @@
 ## Example Usage
 
 This workflow allows you to create a ticket in Zendesk. You can also find the [workflow](https://n8n.io/workflows/496) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Zendesk]()
 
 The final workflow should look like the following image.
@@ -52,6 +52,6 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Zendesk node
 
-1. First of all, you'll have to enter credentials for the Zendesk node. You can find out how to do that [here](/integrations/credentials/zendesk/).
+1. First of all, you'll have to enter credentials for the Zendesk node. You can find out how to do that [here](/workflow/integrations/credentials/zendesk/).
 2. Enter the description of the ticket in the *Description* field.
 3. Click on *Execute Node* to run the workflow.

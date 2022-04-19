@@ -3,7 +3,7 @@
 [Bitbucket](https://bitbucket.org/) is a web-based version control repository hosting service owned by Atlassian, for source code and development projects that use either Mercurial or Git revision control systems.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/bitbucket/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/bitbucket/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Bitbucket Trigger node
 
-1. First of all, you'll have to enter credentials for the Bitbucket Trigger node. You can find out how to do that [here](/integrations/credentials/bitbucket/).
+1. First of all, you'll have to enter credentials for the Bitbucket Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/bitbucket/).
 2. Select 'Repository' from the *Resource* dropdown list.
 3. Select the repository you want to receive updates for from the *Repository* dropdown list.
 4. Select the events you want to receive updates for from the *Events* dropdown list.

@@ -1,7 +1,7 @@
 # Vonage
 
 You can use these credentials to authenticate the following nodes with Vonage.
-- [Vonage](/integrations/nodes/n8n-nodes-base.vonage/)
+- [Vonage](/workflow/integrations/nodes/n8n-nodes-base.vonage/)
 
 ## Prerequisites
 

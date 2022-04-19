@@ -3,7 +3,7 @@
 [Plivo](https://www.plivo.com/) is a cloud communications platform as a service company that allows you to add SMS, MMS, and Voice calling functionality within your apps programmatically.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/plivo/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/plivo/).
 
 
 ## Basic Operations
@@ -18,8 +18,8 @@
 ## Example Usage
 
 This workflow allows you to send daily weather updates via an SMS message using the Plivo node. You can also find the [workflow](https://n8n.io/workflows/1005) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
 - [Plivo]()
 
 The final workflow should look like the following image.
@@ -42,7 +42,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/workflow/integrations/credentials/openWeatherMap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -54,7 +54,7 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 This node will send an SMS with the weather update, which was sent by the previous node.
 
-1. First of all, you'll have to enter credentials for the Plivo node. You can find out how to do that [here](/integrations/credentials/plivo/).
+1. First of all, you'll have to enter credentials for the Plivo node. You can find out how to do that [here](/workflow/integrations/credentials/plivo/).
 2. Enter a Plivo phone number in the ***From*** field.
 3. Enter the receiver's phone number in the ***To*** field.
 4. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

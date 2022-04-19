@@ -12,7 +12,7 @@ The Error Trigger node triggers a workflow when another workflow has an error. O
 ## Example Usage
 
 This workflow allows you to send an SMS when a workflow fails. You can also find the [workflow](https://n8n.io/workflows/665) on n8n.io. This example usage workflow would use the following nodes.
-- [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
 
 The final workflow should look like the following image.
 
@@ -24,7 +24,7 @@ This node will execute when an error occurs.
 
 ### 2. Twilio node (send: sms)
 
-1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/credentials/twilio/).
+1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/workflow/integrations/credentials/twilio/).
 2. Enter the Twilio phone number in the ***From*** field.
 3. Enter the receiver's phone number in the ***To*** field.
 4. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

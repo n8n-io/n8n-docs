@@ -3,7 +3,7 @@
 [Zoho CRM](https://www.zoho.com/crm/) is an online Sales CRM software that manages sales, marketing and support.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/zoho/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/zoho/).
 
 
 ## Basic Operations
@@ -83,7 +83,7 @@
 ## Example Usage
 
 This workflow allows you to get the data of all leads from Zoho CRM. You can also find the [workflow](https://n8n.io/workflows/552) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Zoho CRM]()
 
 The final workflow should look like the following image.
@@ -96,6 +96,6 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Zoho CRM node
 
-1. First of all, you'll have to enter credentials for the Zoho CRM node. You can find out how to do that [here](/integrations/credentials/zoho/).
+1. First of all, you'll have to enter credentials for the Zoho CRM node. You can find out how to do that [here](/workflow/integrations/credentials/zoho/).
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.

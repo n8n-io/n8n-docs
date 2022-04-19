@@ -9,7 +9,7 @@ tags:
 
 You can use these credentials to authenticate the following nodes:
 
-- [Action Network](/integrations/nodes/n8n-nodes-base.actionNetwork/)
+- [Action Network](/workflow/integrations/nodes/n8n-nodes-base.actionNetwork/)
 
 ## Prerequisites
 

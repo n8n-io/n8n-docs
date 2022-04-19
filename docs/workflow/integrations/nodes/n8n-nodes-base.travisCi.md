@@ -3,7 +3,7 @@
 [Travis CI](https://travis-ci.com) is a hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/travisCi/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/travisCi/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to trigger a build using the Travis CI node. You can also find the [workflow](https://n8n.io/workflows/658) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Travis CI]()
 
 The final workflow should look like the following image.
@@ -32,7 +32,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Travis CI node (trigger: build)
 
-1. First of all, you'll have to enter credentials for the Travis CI node. You can find out how to do that [here](/integrations/credentials/travisCi/).
+1. First of all, you'll have to enter credentials for the Travis CI node. You can find out how to do that [here](/workflow/integrations/credentials/travisCi/).
 2. Select 'Trigger' from the ***Operation*** dropdown list.
 3. Enter the repository name in the ***Slug*** field in the `ownerName/repositoryName` format.
 4. Enter the branch name in the ***Branch*** field.

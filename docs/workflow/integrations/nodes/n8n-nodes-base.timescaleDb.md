@@ -3,7 +3,7 @@
 [TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/timescaleDb/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/timescaleDb/).
 
 
 ## Basic Operations
@@ -15,9 +15,9 @@
 ## Example Usage
 
 This workflow allows you to receive updates of the position of the ISS every minute and insert it to a table using the TimscaleDB node. You can also find the [workflow](https://n8n.io/workflows/917) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [TimescaleDB]()
 
 The final workflow should look like the following image.
@@ -81,7 +81,7 @@ We will insert the data from the previous node to a table named `iss`. To create
 CREATE TABLE iss(latitude NUMERIC, longitude NUMERIC, timestamp NUMERIC);
 ```
 
-1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](/integrations/credentials/timescaleDb/).
+1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](/workflow/integrations/credentials/timescaleDb/).
 2. Enter `iss` in the ***Table*** field.
 3. Enter `latitude, longitude, timestamp` in the ***Columns*** field.
 4. Click on ***Execute Node*** to run the node.

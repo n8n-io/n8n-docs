@@ -3,7 +3,7 @@
 [Stackby](https://stackby.com/) is a real-time database and team collaboration platform.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/stackby/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/stackby/).
 
 
 ## Basic Operations
@@ -16,8 +16,8 @@
 ## Example Usage
 
 This workflow allows you to insert and retrieve data from a table in Stackby. You can also find the [workflow](https://n8n.io/workflows/934) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Stackby]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ This node will append the data that we set in the previous node to a table. Crea
 
 Copy the string of characters located after `/stack/` in your Stackby URL. This is your Stack ID. For example, if the URL is `https://stackby.com/stack/stabdcat4234324/`, the Stack ID will be `stabdcat4234324`.
 
-1. First of all, you'll have to enter credentials for the Stackby node. You can find out how to do that [here](/integrations/credentials/stackby/).
+1. First of all, you'll have to enter credentials for the Stackby node. You can find out how to do that [here](/workflow/integrations/credentials/stackby/).
 2. Paste the Stack ID in the ***Stack ID*** field.
 3. Enter the name of your table in the ***Table*** field.
 4. Enter `ID, Name` in the ***Columns*** field.

@@ -3,7 +3,7 @@
 [Google BigQuery](https://cloud.google.com/bigquery/) is a fully-managed, serverless data warehouse that enables scalable analysis over petabytes of data. It is a Platform as a Service that supports querying using ANSI SQL.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -18,9 +18,9 @@
 ## Example Usage
 
 This workflow allows you to send position updates of the ISS every minute to a table in Google BigQuery. You can also find the [workflow](https://n8n.io/workflows/1049) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Google BigQuery]()
 
 The final workflow should look like the following image.
@@ -85,7 +85,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will send the data from the previous node to the `position` table in Google BigQuery. If you have created a table with a different name, use that table instead.
 
-1. First of all, you'll have to enter credentials for the Google BigQuery node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google BigQuery node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select a project from the ***Project ID*** dropdown list.
 3. Select a dataset from the ***Dataset ID*** dropdown list.
 4. Select the table from `position` from the ***Table ID*** dropdown list. If you created a table with a different name, select that table instead.

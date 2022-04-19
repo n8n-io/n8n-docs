@@ -3,7 +3,7 @@
 [PostHog](https://posthog.com) is an open-source product analytics platform. It provides tools to improve your product, such as session recording, heatmaps, and feature flags.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/postHog/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/postHog/).
 
 
 ## Basic Operations
@@ -21,7 +21,7 @@
 ## Example Usage
 
 This workflow allows you to create an event in PostHog when a request is made to a webhook URL. You can also find the [workflow](https://n8n.io/workflows/968) on n8n.io. This example usage workflow uses the following nodes.
-- [Webhook](/integrations/core-nodes/n8n-nodes-base.webhook/)
+- [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/)
 - [PostHog]()
 
 The final workflow should look like the following image.
@@ -47,7 +47,7 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will create a new event in PostHog.
 
-1. First of all, you'll have to enter credentials for the PostHog node. You can find out how to do that [here](/integrations/credentials/postHog/).
+1. First of all, you'll have to enter credentials for the PostHog node. You can find out how to do that [here](/workflow/integrations/credentials/postHog/).
 2. Click on the gears icon next to the ***Event*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > query > event. You can also add the following expression: `{{$json["query"]["event"]}}`.

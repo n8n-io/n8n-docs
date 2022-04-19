@@ -23,7 +23,7 @@ Some third-party services have their own libraries on npm which make it easier t
 const response = await this.helpers.httpRequest(options);
 ```
 
-The full documentation and migration instructions from the deprecated `this.helpers.request` can be found [here](/integrations/creating-nodes/code/http-helpers/).
+The full documentation and migration instructions from the deprecated `this.helpers.request` can be found [here](/workflow/integrations/creating-nodes/code/http-helpers/).
 
 That is using the npm package [`request-promise-native`](https://github.com/request/request-promise-native) which is the basic npm `request` module but with promises. For a full set of `options` consider looking at [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
 

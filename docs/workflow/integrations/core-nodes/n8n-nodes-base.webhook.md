@@ -70,8 +70,8 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on n8n.io. This example usage workflow uses the following nodes.
 - [Webhook]()
-- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 
 The final workflow should look like the following image.
 
@@ -98,7 +98,7 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will return data about the current weather for the city that we received in the previous node.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/workflow/integrations/credentials/openWeatherMap/).
 2. Click on the gears icon next to the ***City*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Nodes > Webhook > Output Data > JSON > query > city. You can also add the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.
@@ -150,7 +150,7 @@ Here is a GIF demonstrating how to retrieve the test and production webhook URLs
 
 ### How to use the HTTP Request node to trigger the Webhook node?
 
-The [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
+The [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
 3. Select the appropriate method from the ***Request Method*** dropdown list. For example, if you have selected GET as the HTTP method in your Webhook node, select GET as the request method in the HTTP Request node.

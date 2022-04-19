@@ -3,7 +3,7 @@
 [Sentry.io](https://sentry.io) is a service that helps you monitor and fix crashes in realtime. Sentry’s platform helps every developer diagnose, fix, and optimize the performance of their code.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/sentryIo/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/sentryIo/).
 
 
 ## Basic Operations
@@ -43,7 +43,7 @@
 ## Example Usage
 
 This workflow allows you to create a release and get all releases using the Sentry.io node. You can also find the [workflow](https://n8n.io/workflows/643) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Sentry.io]()
 
 The final workflow should look like the following image.
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Sentry.io node (create: release)
 
-1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](/integrations/credentials/sentryIo/).
+1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](/workflow/integrations/credentials/sentryIo/).
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.

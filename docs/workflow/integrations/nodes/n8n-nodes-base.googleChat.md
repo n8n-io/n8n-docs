@@ -3,7 +3,7 @@
 [Google Chat](https://chat.google.com/) is a messaging platform.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations

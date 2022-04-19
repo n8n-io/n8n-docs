@@ -3,7 +3,7 @@
 [G Suite Admin](https://developers.google.com/admin-sdk) helps you administer domain and app resources, create reports, and manage subscriptions and alerts for your G Suite organization.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -24,7 +24,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a user using the G Suite Admin node. You can also find the [workflow](https://n8n.io/workflows/710) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [G Suite Admin]()
 
 The final workflow should look like the following image.
@@ -39,7 +39,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a user in G Suite with the following information:  first name, last name, password, domain, and username.
 
-1. First of all, you'll have to enter credentials for the G Suite Admin node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the G Suite Admin node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 3. Enter the first name of the user in the ***First Name*** field.
 4. Enter the last name of the user in the ***Last Name*** field.
 5. Enter a password for the user in the ***Password*** field.

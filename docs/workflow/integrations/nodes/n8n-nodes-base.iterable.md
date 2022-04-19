@@ -3,7 +3,7 @@
 [Iterable](https://iterable.com/) is a cross-channel platform that allows marketers to create, optimize, and measure every interaction throughout the customer journey.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/iterable/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/iterable/).
 
 
 ## Basic Operations
@@ -21,7 +21,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a user from Iterable. You can also find the [workflow](https://n8n.io/workflows/813) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Iterable]()
 
 The final workflow should look like the following image.
@@ -37,7 +37,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new user in Iterable.
 
-1. First of all, you'll have to enter credentials for the Iterable node. You can find out how to do that [here](/integrations/credentials/iterable/).
+1. First of all, you'll have to enter credentials for the Iterable node. You can find out how to do that [here](/workflow/integrations/credentials/iterable/).
 2. Select 'Email' in the ***Identifier*** field.
 3. Enter the email address in the ***Value*** field.
 4. Click on ***Execute Node*** to run the node.

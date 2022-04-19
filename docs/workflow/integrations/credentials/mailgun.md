@@ -1,7 +1,7 @@
 # Mailgun
 
 You can use these credentials to authenticate the following nodes with Mailgun.
-- [Mailgun](/integrations/nodes/n8n-nodes-base.mailgun/)
+- [Mailgun](/workflow/integrations/nodes/n8n-nodes-base.mailgun/)
 
 ## Prerequisites
 

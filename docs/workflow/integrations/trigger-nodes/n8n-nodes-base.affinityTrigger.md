@@ -3,7 +3,7 @@
 [Affinity](https://www.affinity.co/) is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/affinity/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/affinity/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Affinity Trigger node
 
-1. First of all, you'll have to enter credentials for the Affinity Trigger node. You can find out how to do that [here](/integrations/credentials/affinity/).
+1. First of all, you'll have to enter credentials for the Affinity Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/affinity/).
 2. Select 'list.created' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

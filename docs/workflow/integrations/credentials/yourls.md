@@ -1,7 +1,7 @@
 # Yourls
 
 You can use these credentials to authenticate the following nodes with Yourls.
-- [Yourls](/integrations/nodes/n8n-nodes-base.yourls/)
+- [Yourls](/workflow/integrations/nodes/n8n-nodes-base.yourls/)
 
 ## Prerequisites
 

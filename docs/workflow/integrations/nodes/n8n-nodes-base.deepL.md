@@ -3,7 +3,7 @@
 [DeepL](https://deepL.com) is a machine translation service that allows you to translate text to different languages.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/deepL/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/deepL/).
 
 
 ## Basic Operations
@@ -14,8 +14,8 @@
 ## Example Usage
 
 This workflow allows you to translate cocktail instructions to French. You can also find the [workflow](https://n8n.io/workflows/998) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [DeepL]()
 
 The final workflow should look like the following image.
@@ -41,7 +41,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will translate the cocktail instructions that we got from the previous node to French. To translate the instructions in your language, select your language instead.
 
-1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/integrations/credentials/deepL/).
+1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/workflow/integrations/credentials/deepL/).
 
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Current Nodes > Input Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$json["drinks"][0]["strInstructions"]}}`.

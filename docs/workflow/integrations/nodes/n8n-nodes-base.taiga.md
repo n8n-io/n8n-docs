@@ -3,7 +3,7 @@
 [Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/taiga/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/taiga/).
 
 
 ## Basic Operations
@@ -20,7 +20,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an issue on Taiga. You can also find the [workflow](https://n8n.io/workflows/685) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Taiga]()
 
 The final workflow should look like the following image.
@@ -34,7 +34,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Taiga node (create: issue)
 
-1. First of all, you'll have to enter credentials for the Taiga node. You can find out how to do that [here](/integrations/credentials/taiga/).
+1. First of all, you'll have to enter credentials for the Taiga node. You can find out how to do that [here](/workflow/integrations/credentials/taiga/).
 2. Select the project ID from the ***Project ID*** dropdown list.
 3. Enter the subject of the issue in the ***Subject*** field.
 4. Click on ***Execute Node*** to run the node.

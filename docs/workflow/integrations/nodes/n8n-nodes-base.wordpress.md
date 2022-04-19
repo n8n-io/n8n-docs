@@ -3,7 +3,7 @@
 [WordPress](https://wordpress.org/) is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wordpress/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wordpress/).
 
 
 ## Basic Operations
@@ -22,7 +22,7 @@
 ## Example Usage
 
 This workflow allows you to create and update a post in WordPress. You can also find the [workflow](https://n8n.io/workflows/668) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [WordPress]()
 
 The final workflow should look like the following image.
@@ -35,7 +35,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Wordpress node (create: post)
 
-1. First of all, you'll have to enter credentials for the WordPress node. You can find out how to do that [here](/integrations/credentials/wordpress/).
+1. First of all, you'll have to enter credentials for the WordPress node. You can find out how to do that [here](/workflow/integrations/credentials/wordpress/).
 2. Enter the title in the ***Title*** field.
 3. Click on ***Execute Node*** to run the workflow.
 

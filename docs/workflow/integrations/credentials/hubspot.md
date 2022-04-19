@@ -33,7 +33,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 4. Specify an app name in the **Public app name** field.
 5. Click on the 'Auth' tab.
 6. Use the provided **Client ID** and the **Client secret** with your HubSpot OAuth2 API credentials in n8n.
-7. If you are using the [HubSpot Trigger](/integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/) node, copy the **App ID** along with the information in the previous step.
+7. If you are using the [HubSpot Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/) node, copy the **App ID** along with the information in the previous step.
 8. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste in the **Redirect URL** section.
 9. In the Scopes section, select the following scopes in the **Find a scope** search box:
     * Trigger node:

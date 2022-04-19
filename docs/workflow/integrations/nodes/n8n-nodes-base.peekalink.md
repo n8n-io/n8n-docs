@@ -3,7 +3,7 @@
 [Peekalink](https://peekalink.io) is an API that allows developers to preview links on the web.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/peekalink/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/peekalink/).
 
 
 ## Basic Operations
@@ -14,10 +14,10 @@
 ## Example Usage
 
 This workflow allows you to check if preview for a link is available and return the link preview. You can also find the [workflow](https://n8n.io/workflows/935) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Peekalink]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -31,7 +31,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will check whether a preview for the specified link is available.
 
-1. First of all, you'll have to enter credentials for the Peekalink node. You can find out how to do that [here](/integrations/credentials/peekalink/).
+1. First of all, you'll have to enter credentials for the Peekalink node. You can find out how to do that [here](/workflow/integrations/credentials/peekalink/).
 2. Select 'Is available' from the ***Operation*** dropdown list.
 3. Enter a URL in the ***URL*** field.
 4. Click on ***Execute Node*** to run the node.

@@ -3,7 +3,7 @@
 [Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/pipedrive/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/pipedrive/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Pipedrive Trigger node
 
-1. First of all, you'll have to enter credentials for the Pipedrive Trigger node. You can find out how to do that [here](/integrations/credentials/pipedrive/).
+1. First of all, you'll have to enter credentials for the Pipedrive Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/pipedrive/).
 2. Click on *Execute Node* to run the workflow.
 
 !!! note " Activate workflow for production"

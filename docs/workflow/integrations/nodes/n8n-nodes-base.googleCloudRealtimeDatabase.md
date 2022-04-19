@@ -3,7 +3,7 @@
 [Google Cloud Realtime Database](https://firebase.google.com/docs/database/) is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -17,9 +17,9 @@
 ## Example Usage
 
 This workflow allows you to receive updates of the position of the ISS every minute and push it to a database using the Google Cloud Realtime Database node. You can also find the [workflow](https://n8n.io/workflows/787) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Google Cloud Realtime Database]()
 
 The final workflow should look like the following image.
@@ -80,7 +80,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will push the data from the previous node to the `iss` path in Google Cloud Realtime Database. If you have created a path with a different name, you can use that path instead.
 
-1. First of all, you'll have to enter credentials for the Google Cloud Realtime Database node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Cloud Realtime Database node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select a project from the ***Project ID*** dropdown list.
 3. Select 'Push' from the ***Operation*** dropdown list.
 4. Enter a path in the ***Object Path*** field.

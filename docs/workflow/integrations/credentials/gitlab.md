@@ -1,8 +1,8 @@
 # GitLab
 
 You can use these credentials to authenticate the following nodes with GitLab.
-- [GitLab](/integrations/nodes/n8n-nodes-base.gitlab/)
-- [GitLab Trigger](/integrations/trigger-nodes/n8n-nodes-base.gitlabTrigger/)
+- [GitLab](/workflow/integrations/nodes/n8n-nodes-base.gitlab/)
+- [GitLab Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.gitlabTrigger/)
 
 ## Prerequisites
 

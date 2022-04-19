@@ -3,7 +3,7 @@
 [Google Contacts](https://contacts.google.com/) is Google's contact management tool that is available in its free email service Gmail, as a standalone service, and as a part of Google's business-oriented suite of web apps Google Apps.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 
@@ -19,7 +19,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a contact from Google Contacts. You can also find the [workflow](https://n8n.io/workflows/637) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Contacts]()
 
 The final workflow should look like the following image.
@@ -33,7 +33,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Google Contacts node (create: contact)
 
-1. First of all, you'll have to enter credentials for the Google Contacts node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Contacts node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Enter the family name in the ***Family Name*** field.
 3. Enter the given name in the ***Given Name*** field.
 4. Click on ***Execute Node*** to run the node.

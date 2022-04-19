@@ -1,7 +1,7 @@
 # Twitter
 
 You can use these credentials to authenticate the following nodes with Twitter.
-- [Twitter](/integrations/nodes/n8n-nodes-base.twitter/)
+- [Twitter](/workflow/integrations/nodes/n8n-nodes-base.twitter/)
 
 ## Prerequisites
 

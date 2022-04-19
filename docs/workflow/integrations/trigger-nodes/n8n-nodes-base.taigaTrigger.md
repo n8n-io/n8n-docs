@@ -3,7 +3,7 @@
 [Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/taiga/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/taiga/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Taiga Trigger node
 
-1. First of all, you'll have to enter credentials for the Taiga Trigger node. You can find out how to do that [here](/integrations/credentials/taiga/).
+1. First of all, you'll have to enter credentials for the Taiga Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/taiga/).
 2. Select the project ID from the ***Project ID*** dropdown list.
 2. Click on ***Execute Node*** to run the node.
 

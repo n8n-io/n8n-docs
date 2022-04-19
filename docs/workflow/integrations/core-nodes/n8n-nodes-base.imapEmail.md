@@ -3,7 +3,7 @@
 The IMAP Email node is used to receive emails via an IMAP email server. This node is a trigger node.
 
 !!! note "🔑 Credential"
-    You can find authentication information for this node [here](/integrations/credentials/imap/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/imap/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@ The final workflow should look like the following image.
 
 ### 1. IMAP Email node
 
-1. First of all, you'll have to enter credentials for the IMAP Email node. You can find out how to do that [here](/integrations/credentials/imap/).
+1. First of all, you'll have to enter credentials for the IMAP Email node. You can find out how to do that [here](/workflow/integrations/credentials/imap/).
 2. Enter the name of the mailbox from which you want to receive emails in the ***Mailbox Name*** field.
 3. Click on ***Execute Node*** to run the workflow.
 

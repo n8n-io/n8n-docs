@@ -3,7 +3,7 @@
 [MySQL](https://www.mysql.com/) is an open-source relational database management system. MySQL has stand-alone clients that allow users to interact directly with a MySQL database using SQL, but more often MySQL is used with other programs to implement applications that need relational database capability.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mySql/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mySql/).
 
 
 ## Basic Operations
@@ -15,8 +15,8 @@
 ## Example Usage
 
 This workflow allows you to create a table and insert data in it on a MySQL database. You can also find the [workflow](https://n8n.io/workflows/598) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [MySQL]()
 
 The final workflow should look like the following image.
@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. MySQL node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the MySQL node. You can find out how to do that [here](/integrations/credentials/mySql/).
+1. First of all, you'll have to enter credentials for the MySQL node. You can find out how to do that [here](/workflow/integrations/credentials/mySql/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
 4. Click on ***Execute Node*** to run the node.

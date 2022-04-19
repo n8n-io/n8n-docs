@@ -3,7 +3,7 @@
 [ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/convertKit/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/convertKit/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. ConvertKit Trigger node
 
-1. First of all, you'll have to enter credentials for the ConvertKit Trigger node. You can find out how to do that [here](/integrations/credentials/convertKit/).
+1. First of all, you'll have to enter credentials for the ConvertKit Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/convertKit/).
 2. Select 'Form Subscribe' from the ***Event*** dropdown list.
 3. Select the form from the ***Form ID*** dropdown list.
 4. Click on ***Execute Node*** to run the node.

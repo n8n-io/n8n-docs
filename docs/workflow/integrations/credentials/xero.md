@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Xero.
 
-- [Xero](/integrations/nodes/n8n-nodes-base.xero/)
+- [Xero](/workflow/integrations/nodes/n8n-nodes-base.xero/)
 
 ## Prerequisites
 

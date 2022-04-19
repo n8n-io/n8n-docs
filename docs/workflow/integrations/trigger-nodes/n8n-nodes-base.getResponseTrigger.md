@@ -3,7 +3,7 @@
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/getResponse/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/getResponse/).
 
 
 ## Events
@@ -18,8 +18,8 @@
 
 This workflow allows you to receive updates when a customer gets subscribed to a list in GetResponse and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/933) on n8n.io. This example usage workflow would use the following nodes.
 - [GetResponse Trigger]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 
@@ -29,7 +29,7 @@ The final workflow should look like the following image.
 
 The GetResponse Trigger node will trigger the workflow when a customer is subscribed to a list in GetResponse.
 
-1. First of all, you'll have to enter credentials for the GetResponse Trigger node. You can find out how to do that [here](/integrations/credentials/getResponse/).
+1. First of all, you'll have to enter credentials for the GetResponse Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/getResponse/).
 2. Select 'Customer Subscribed' from the ***Events*** dropdown list.
 3. Select a list from the ***List IDs*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
@@ -61,7 +61,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will store the data coming from the previous node in a table in Airtable. Create a table like [this](https://airtable.com/shruNwTykzR3tkr6d) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID under the Introduction section.
 4. In Doc², paste the ID of the base in the ***Base ID*** field.

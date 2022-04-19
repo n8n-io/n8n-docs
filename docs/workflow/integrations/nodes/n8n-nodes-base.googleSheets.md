@@ -3,7 +3,7 @@
 [Google Sheets](https://www.google.com/sheets) is a web-based spreadsheet program that is part of Google's office software  suite within its Google Drive service.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -23,8 +23,8 @@
 ## Example Usage
 
 This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Google Sheets]()
 
 The final workflow should look like the following image.
@@ -38,7 +38,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Set node
 
-This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node, to get the data you want to add to the Google Sheets.
+This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node, to get the data you want to add to the Google Sheets.
 
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
@@ -74,7 +74,7 @@ In the screenshot below, you will notice that the Set node has created data that
 This Google Sheets node will add the data from the Set node in a new row to the Google Sheets that we will specify using the Spreadsheet ID.
 
 1. Select 'OAuth2' from the ***Authentication*** dropdown list.
-2.  First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to enter credentials for this node [here](/integrations/credentials/google/).
+2.  First of all, you'll have to enter credentials for the Google Sheets node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/google/).
 3. Select 'Append' from the ***Operation*** dropdown list.
 4. Paste the Spreadsheet ID you copied in the previous step, in the ***Spreadsheet ID*** field.
 5. In the ***Range*** field, enter the range of columns to append the data to your spreadsheet. Make sure that your range includes enough columns for all the data in the Set node. For this workflow, enter `A:D` in the ***Range*** field.
@@ -190,7 +190,7 @@ To change the format, click on ***Add Option*** and select 'Value Input Mode' fr
 
 ### How to append an array in the Google Sheets?
 
-To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Function node](/integrations/core-nodes/n8n-nodes-base.function/) to convert the array into JSON format.
+To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Function node](/workflow/integrations/core-nodes/n8n-nodes-base.function/) to convert the array into JSON format.
 
 ### How to return all the values with the Lookup operation?
 

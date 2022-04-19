@@ -3,7 +3,7 @@
 [Salesforce](https://www.salesforce.com/) is a cloud-based software company. It provides customer relationship management service and also sells a complementary suite of enterprise applications focused on customer service, marketing automation, analytics, and application development.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/salesforce/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/salesforce/).
 
 
 ## Basic Operations
@@ -89,7 +89,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and add a note to a lead in Salesforce. You can also find the [workflow](https://n8n.io/workflows/664) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Salesforce]()
 
 The final workflow should look like the following image.
@@ -102,7 +102,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Salesforce node (create: lead)
 
-1. First of all, you'll have to enter credentials for the Salesforce node. You can find out how to do that [here](/integrations/credentials/salesforce/).
+1. First of all, you'll have to enter credentials for the Salesforce node. You can find out how to do that [here](/workflow/integrations/credentials/salesforce/).
 2. Enter the name of the company in the ***Company*** field.
 3. Enter the last name of the contact person in the ***Last Name*** field.
 4. Click on ***Execute Node*** to run the node.

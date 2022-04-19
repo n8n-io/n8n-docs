@@ -1,8 +1,8 @@
 # Flow
 
 You can use these credentials to authenticate the following nodes with Flow.
-- [Flow](/integrations/nodes/n8n-nodes-base.flow/)
-- [Flow Trigger](/integrations/trigger-nodes/n8n-nodes-base.flowTrigger/)
+- [Flow](/workflow/integrations/nodes/n8n-nodes-base.flow/)
+- [Flow Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.flowTrigger/)
 
 ## Prerequisites
 

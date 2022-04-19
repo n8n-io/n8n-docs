@@ -3,7 +3,7 @@
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/pushcut/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/pushcut/).
 
 
 ## Basic Operations
@@ -14,8 +14,8 @@
 ## Example Usage
 
 This workflow allows you to send daily weather updates via a push notification using the Pushcut node. You can also find the [workflow](https://n8n.io/workflows/843) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
 - [Pushcut]()
 
 The final workflow should look like the following image.
@@ -38,7 +38,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/workflow/integrations/credentials/openWeatherMap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 This node will send a push notification with the weather update, which was sent by the previous node.
 
-1. First of all, you'll have to enter credentials for the Pushcut node. You can find out how to do that [here](/integrations/credentials/pushcut/).
+1. First of all, you'll have to enter credentials for the Pushcut node. You can find out how to do that [here](/workflow/integrations/credentials/pushcut/).
 2. Select a notification from the ***Notification Name*** dropdown list.
 3. Click on ***Add Field*** and select 'Title' from the dropdown list.
 4. Enter `Today's Weather Update` in the ***Title*** field.

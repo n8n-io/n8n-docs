@@ -3,7 +3,7 @@
 [Action Network](https://actionnetwork.org/) is an open platform that empowers individuals and groups to organize for progressive causes.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/actionNetwork/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/actionNetwork/).
 
 
 ## Basic operations
@@ -42,7 +42,7 @@
 ## Example
 
 This workflow allows you to create a new event in Action Network, then create a new person and mark them as having attended your event. This workflow uses the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [ActiveCampaign]()
 
 The final workflow should look like the following image.
@@ -55,7 +55,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Action Network node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/workflow/integrations/credentials/actionNetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Event** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
@@ -68,7 +68,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. Action Network1 node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/workflow/integrations/credentials/actionNetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Person** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
@@ -80,7 +80,7 @@ The start node exists by default when you create a new workflow.
 
 ### 4. Action Network2 node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/workflow/integrations/credentials/actionNetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Attendance** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.

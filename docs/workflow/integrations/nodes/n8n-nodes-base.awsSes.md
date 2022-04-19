@@ -3,7 +3,7 @@
 [AWS SES](https://aws.amazon.com/ses/) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/aws/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/aws/).
 
 
 ## Basic Operations
@@ -28,7 +28,7 @@
 ## Example Usage
 
 This workflow allows you to send an email using AWS SES. You can also find the [workflow](https://n8n.io/workflows/507) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [AWS SES]()
 
 The final workflow should look like the following image.
@@ -41,7 +41,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. AWS SNS node
 
-1. First of all, you'll have to enter credentials for the AWS SES node. You can find out how to do that [here](/integrations/credentials/aws/).
+1. First of all, you'll have to enter credentials for the AWS SES node. You can find out how to do that [here](/workflow/integrations/credentials/aws/).
 2. Enter a subject for your email in the *Subject* field.
 3. Enter your message in the *Body* field.
 4. Enter the email address from which you want to send the email in the *From Email* field.

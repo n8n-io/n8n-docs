@@ -1,8 +1,8 @@
 # Copper
 
 You can use these credentials to authenticate the following nodes with Copper.
-- [Copper](/integrations/nodes/n8n-nodes-base.copper/)
-- [Copper Trigger](/integrations/trigger-nodes/n8n-nodes-base.copperTrigger/)
+- [Copper](/workflow/integrations/nodes/n8n-nodes-base.copper/)
+- [Copper Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.copperTrigger/)
 
 ## Prerequisites
 

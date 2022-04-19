@@ -1,7 +1,7 @@
 # DeepL
 
 You can use these credentials to authenticate the following nodes with DeepL.
-- [DeepL](/integrations/nodes/n8n-nodes-base.deepL/)
+- [DeepL](/workflow/integrations/nodes/n8n-nodes-base.deepL/)
 
 
 ## Prerequisites

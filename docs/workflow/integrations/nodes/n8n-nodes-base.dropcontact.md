@@ -5,7 +5,7 @@
 
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/dropcontact/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/dropcontact/).
 
 
 ## Basic Operations
@@ -21,10 +21,10 @@
 This workflow allows you to find email and enrich your contact from a Google Sheet and add them to Lemlist. You can also find the [workflow](https://n8n.io/workflows/1304) on n8n.io. 
 
 This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Google Sheets node](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/)
 - [Dropcontact node]()
-- [Lemlist node](/integrations/nodes/n8n-nodes-base.lemlist/)
+- [Lemlist node](/workflow/integrations/nodes/n8n-nodes-base.lemlist/)
 
 ![A workflow with the GetResponse node](/_images/integrations/nodes/dropcontact/workflow.png)
 
@@ -35,7 +35,7 @@ The start node exists by default when you create a new workflow.
 
 This node will list all the records from Google Sheet. Create a sheet like [this](https://docs.google.com/spreadsheets/d/1jCyGrz01b7wdoujEHHZvw-JD5zszTMFqn8cvvSnLPrE/edit#gid=0) in your Google Drive.
 
-1. First of all, you'll have to enter credentials for the Google Sheet node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Sheet node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 
 2. Select the 'Sheet' option from the ***Ressource*** dropdown list.
 3. Select the 'Read' option from the ***Operation*** dropdown list.
@@ -52,7 +52,7 @@ In the screenshot below, you will notice that the node returns the information o
 
 This node will find the verified email address and enrich the contact.
 
-1. First of all, you'll have to enter credentials for the Dropcontact node. You can find out how to do that [here](/integrations/credentials/dropcontact/).
+1. First of all, you'll have to enter credentials for the Dropcontact node. You can find out how to do that [here](/workflow/integrations/credentials/dropcontact/).
 
 2. Select 'Contact' from the ***Resource*** dropdown list.
 3. Select 'Enrich' from the ***Operation*** dropdown list.
@@ -78,7 +78,7 @@ In the screenshot below, you will notice that the Dropcontact node has enriched 
 
 This node will create new leads for a campaign in Lemlist.
 
-1. First of all, you'll have to enter credentials for the Lemlist node. You can find out how to do that [here](/integrations/credentials/lemlist/).
+1. First of all, you'll have to enter credentials for the Lemlist node. You can find out how to do that [here](/workflow/integrations/credentials/lemlist/).
 2. Select 'Lead' from the ***Resource*** dropdown list.
 3. Select a campaign from the ***Campaign ID*** dropdown list.
 4. Click on the gears icon next to the ***Email*** field and click on 'Add Expression'.

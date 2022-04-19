@@ -3,7 +3,7 @@
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/notion/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/notion/).
 
 
 ## Basic Operations
@@ -39,7 +39,7 @@
 
 This workflow allows you to add a new user to your Notion database when an invite gets created via Calendly. You can also find the [workflow](https://n8n.io/workflows/1088) on n8n.io. This example usage workflow uses the following nodes.
 
-- [Calendly Trigger](/integrations/trigger-nodes/n8n-nodes-base.calendlytrigger/)
+- [Calendly Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.calendlytrigger/)
 - [Notion]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ The final workflow should look like the following image.
 
 The Calendly node will trigger the workflow when an invite gets created.
 
-1. First of all, you'll have to enter credentials for the Notion node. You can find out how to do that [here](/integrations/credentials/calendly/).
+1. First of all, you'll have to enter credentials for the Notion node. You can find out how to do that [here](/workflow/integrations/credentials/calendly/).
 2. Select 'invitee.created' from the ***Events*** dropdown list.
 3. Save your workflow so that the webhook gets registered.
 4. Click on ***Execute Node*** to run the node.
@@ -66,7 +66,7 @@ In the screenshot below, you will notice that the Calendly Trigger node triggers
 
 This node will create a new record using the information received from the previous node.
 
-1. First of all, you'll have to enter credentials for the Notion node. You can find out how to do that [here](/integrations/credentials/notion/).
+1. First of all, you'll have to enter credentials for the Notion node. You can find out how to do that [here](/workflow/integrations/credentials/notion/).
 
 2. Select 'Database Record' from the ***Resource*** dropdown list.
 3. Select the database from the ***Database ID*** dropdown list.

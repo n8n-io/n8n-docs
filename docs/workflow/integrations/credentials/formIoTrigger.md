@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Form.io Trigger](/integrations/trigger-nodes/n8n-nodes-base.formIoTrigger/)
+- [Form.io Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.formIoTrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [One Simple API](https://onesimpleapi.com/) is an API toolbox offering PDF generation, Currency Exchange, QR codes, Screenshots, and more.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/oneSimpleApi/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/oneSimpleApi/).
 
 
 ## Basic Operations

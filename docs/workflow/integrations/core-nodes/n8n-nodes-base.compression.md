@@ -20,9 +20,9 @@ The Compression node is useful to compress and decompress files. You can either 
 ## Example Usage
 
 This workflow allows you to compress binary files to zip format and upload them to Dropbox. You can also find the [workflow](https://n8n.io/workflows/908) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Dropbox](/integrations/nodes/n8n-nodes-base.dropbox/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Dropbox](/workflow/integrations/nodes/n8n-nodes-base.dropbox/)
 
 
 The final workflow should look like the following image.
@@ -36,7 +36,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request node (GET)
 
-This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
+This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
 1. Enter the URL of the image in the ***URL*** field. For example, `https://docs.n8n.io/assets/img/final-workflow.f380b957.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
@@ -49,7 +49,7 @@ In the screenshot below, you will notice that the HTTP Request node fetches the 
 
 ### 3. HTTP Request1 node (GET)
 
-This node fetches an image from a URL. You can also use the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
+This node fetches an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
 1. Enter the URL of the image in the ***URL*** field. For example, `https://n8n.io/n8n-logo.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
@@ -79,7 +79,7 @@ In the screenshot below, you will notice that the node compresses the files and 
 
 This node will upload the compressed file to your Dropbox account.
 
-1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](/integrations/credentials/dropbox/).
+1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](/workflow/integrations/credentials/dropbox/).
 2. Enter `/images.zip` in the ***File Path*** field.
 3. Toggle ***Binary Data*** to `true`. This option allows us to upload binary data from the previous node.
 4. Click on ***Execute Node*** to run the node.

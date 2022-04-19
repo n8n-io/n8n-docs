@@ -3,7 +3,7 @@
 [Invoice Ninja](https://www.invoiceninja.com/) is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/invoiceNinja/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/invoiceNinja/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Invoice Ninja Trigger node
 
-1. First of all, you'll have to enter credentials for the Invoice Ninja Trigger node. You can find out how to do that [here](/integrations/credentials/invoiceNinja/).
+1. First of all, you'll have to enter credentials for the Invoice Ninja Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/invoiceNinja/).
 2. Select the 'Invoice Created' option from the *Event* dropdown list to receive updates when a new invoice is created.
 3. Click on *Execute Node* to run the workflow.
 

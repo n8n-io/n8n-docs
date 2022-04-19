@@ -3,7 +3,7 @@
 [uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/uProc/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/uProc/).
 
 
 ## Basic Operations
@@ -450,9 +450,9 @@
 ## Example Usage
 
 This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [uProc]()
-- [Telegram](/integrations/nodes/n8n-nodes-base.telegram/)
+- [Telegram](/workflow/integrations/nodes/n8n-nodes-base.telegram/)
 
 The final workflow should look like the following image.
 
@@ -467,7 +467,7 @@ The start node exists by default when you create a new workflow.
 
 This node will return the screenshot of the Doc² website. If you want to get the screenshot of a different website, enter the domain of that website instead.
 
-1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/credentials/uProc/).
+1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/workflow/integrations/credentials/uProc/).
 2. Select 'Image' from the ***Resource*** dropdown list.
 3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
 4. Enter `https://n8n.io` in the ***URL*** field.
@@ -484,9 +484,9 @@ In the screenshot below, you will notice that the node returns a URL of the scre
 
 This node will send the screenshot that we received from the previous node.
 
-1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/integrations/credentials/telegram/).
+1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/workflow/integrations/credentials/telegram/).
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/integrations/nodes/n8n-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
+3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/workflow/integrations/nodes/n8n-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
 4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
 
 5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.

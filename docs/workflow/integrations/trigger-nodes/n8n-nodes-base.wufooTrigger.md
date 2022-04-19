@@ -3,7 +3,7 @@
 [Wufoo](https://wufoo.com) is an online form builder that helps you create custom HTML forms without writing code.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wufoo/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wufoo/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Wufoo Trigger node
 
-1. First of all, you'll have to enter credentials for the Wufoo Trigger node. You can find out how to do that [here](/integrations/credentials/wufoo/).
+1. First of all, you'll have to enter credentials for the Wufoo Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/wufoo/).
 2. Select a form from the ***Forms*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

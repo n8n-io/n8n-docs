@@ -1,7 +1,7 @@
 # Raindrop
 
 You can use these credentials to authenticate the following nodes with Raindrop.
-- [Raindrop](/integrations/nodes/n8n-nodes-base.raindrop/)
+- [Raindrop](/workflow/integrations/nodes/n8n-nodes-base.raindrop/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/postgres/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/postgres/).
 
 
 ## Basic Operations
@@ -16,8 +16,8 @@
 ## Example Usage
 
 This workflow allows you to run an SQL query on a Postgres instance. You can also find the [workflow](https://n8n.io/workflows/599) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Postgres]()
 
 The final workflow should look like the following image.
@@ -30,7 +30,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Postgres node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the Postgres node. You can find out how to do that [here](/integrations/credentials/postgres/).
+1. First of all, you'll have to enter credentials for the Postgres node. You can find out how to do that [here](/workflow/integrations/credentials/postgres/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
 4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.

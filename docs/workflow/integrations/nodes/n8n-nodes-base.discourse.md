@@ -3,7 +3,7 @@
 [Discourse](https://www.discourse.org/) is an open-source discussion platform that can be used as a mailing list, discussion forum, long-form chat room, and more.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/discourse/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/discourse/).
 
 
 
@@ -34,7 +34,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a post using the Discourse node. You can also find the [workflow](https://n8n.io/workflows/930) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Discourse]()
 
 The final workflow should look like the following image.
@@ -49,7 +49,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a post under the `Lounge` category. If you want to create a post under a different category, select that category instead.
 
-1. First of all, you'll have to enter credentials for the Discourse node. You can find out how to do that [here](/integrations/credentials/discourse/).
+1. First of all, you'll have to enter credentials for the Discourse node. You can find out how to do that [here](/workflow/integrations/credentials/discourse/).
 2. Enter a title for the post in the ***Title*** field.
 3. Enter the content of the post in the ***Content*** field.
 4. Click on ***Add Field*** and select 'Category ID' from the dropdown list.

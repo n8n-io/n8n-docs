@@ -3,7 +3,7 @@
 [Twist](https://twist.com) is a communication app that helps teams balance focused work with collaborative conversations.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/twist/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/twist/).
 
 
 ## Basic Operations
@@ -38,7 +38,7 @@
 ## Example Usage
 
 This workflow allows you to create and update a channel as well as send a message on Twist. You can also find the [workflow](https://n8n.io/workflows/826) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Twist]()
 
 The final workflow should look like the following image.
@@ -53,7 +53,7 @@ The start node exists by default when you create a new workflow.
 ### 2. Twist node (create: channel)
 
 This node will create a channel `n8n-docs` and add a user to the channel.
-1. First of all, you'll have to enter credentials for the Twist node. You can find out how to do that [here](/integrations/credentials/twist/).
+1. First of all, you'll have to enter credentials for the Twist node. You can find out how to do that [here](/workflow/integrations/credentials/twist/).
 
 2. Select 'Channel' from the ***Resource*** dropdown list.
 3. Select a workspace from the ***Workspace ID*** dropdown list.

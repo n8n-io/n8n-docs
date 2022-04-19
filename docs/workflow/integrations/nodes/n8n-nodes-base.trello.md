@@ -3,7 +3,7 @@
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/trello/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/trello/).
 
 
 ## Basic Operations
@@ -56,7 +56,7 @@
 ## Example Usage
 
 This workflow allows you to create a new card in Trello. You can also find the [workflow](https://n8n.io/workflows/461) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Trello]()
 
 The final workflow should look like the following image.
@@ -69,7 +69,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Trello node
 
-1. First of all, you'll have to enter credentials for the Trello node. You can find out how to do that [here](/integrations/credentials/trello/).
+1. First of all, you'll have to enter credentials for the Trello node. You can find out how to do that [here](/workflow/integrations/credentials/trello/).
 2. Enter the ID of the list in which you want to create a new card in the *List ID* field. You can find instructions on how to obtain the ID of the list in the FAQs below.
 3. Enter the name of the card in the *Name* field.
 4. Enter the description of the card in the *Description* field.

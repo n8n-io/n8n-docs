@@ -1,7 +1,7 @@
 # Dropcontact
 
 You can use these credentials to authenticate the following nodes with Dropcontact.
-- [Dropcontact](/integrations/nodes/n8n-nodes-base.dropcontact/)
+- [Dropcontact](/workflow/integrations/nodes/n8n-nodes-base.dropcontact/)
 
 ## Prerequisites
 

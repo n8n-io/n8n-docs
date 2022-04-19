@@ -3,7 +3,7 @@
 [YouTube](https://www.youtube.com) is an online video-sharing platform. YouTube allows users to upload, view, rate, share, add to playlists, report, comment on videos, and subscribe to other users.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -37,8 +37,8 @@
 ## Example Usage
 
 This workflow allows you to upload a video, create a playlist, and add the video to the playlist in YouTube. You can also find the [workflow](https://n8n.io/workflows/638) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/)
 - [YouTube]()
 
 The final workflow should look like the following image.
@@ -60,7 +60,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. YouTube node (upload: video)
 
-1. First of all, you'll have to enter credentials for the YouTube node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the YouTube node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select 'Video' from the ***Resource*** dropdown list.
 3. Select 'Upload' from the ***Operation*** dropdown list.
 4. Enter the title of the video in the ***Title*** field.

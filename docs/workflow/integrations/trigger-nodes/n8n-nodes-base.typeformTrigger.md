@@ -3,7 +3,7 @@
 [Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/typeform/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/typeform/).
 
 
 
@@ -11,9 +11,9 @@
 
 This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following nodes.
 - [Typeform Trigger]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
-- [Slack](/integrations/nodes/n8n-nodes-base.slack/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
+- [Slack](/workflow/integrations/nodes/n8n-nodes-base.slack/)
 
 The final workflow should look like the following image.
 
@@ -31,7 +31,7 @@ This example workflow uses a Typeform to collect name and email address. Create 
 |Let's start with your name. | Short Text |
 |What's your email address? | Email |
 
-1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/credentials/typeform/).
+1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/typeform/).
 2. Select your form from the ***Form*** dropdown list.
 3. Click on ***Execute Node*** to run the workflow.
 
@@ -62,7 +62,7 @@ In the screenshot below, you will notice that the node sets the values of `Name`
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shreoj1AmTE6S6Eep) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
@@ -76,7 +76,7 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 This node will send a message about the new form submission to a channel in a Slack workspace.
 
-1. First of all, you'll have to enter credentials for the Slack node. You can find out how to do that [here](/integrations/credentials/slack/).
+1. First of all, you'll have to enter credentials for the Slack node. You can find out how to do that [here](/workflow/integrations/credentials/slack/).
 2. Enter the name of a channel in the ***Channel*** field.
 3. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 4. Enter the following text in the ***Expression Editor***

@@ -3,7 +3,7 @@
 [Humantic AI](https://humantic.ai/) provides AI-driven behavior and personality assessment of a candidate.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/humanticAi/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/humanticAi/).
 
 
 ## Basic Operations
@@ -16,8 +16,8 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/784) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Humantic AI]()
 
 The final workflow should look like the following image.
@@ -32,7 +32,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new profile for a candidate in Humantic AI. We will create a new profile using the LinkedIn URL of a candidate.
 
-1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/credentials/humanticAi/).
+1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/workflow/integrations/credentials/humanticAi/).
 2. Enter the LinkedIn URL of the candidate in the ***User ID*** field.
 3. Click on ***Execute Node*** to run the node.
 

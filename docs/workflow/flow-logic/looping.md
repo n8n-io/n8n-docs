@@ -15,11 +15,11 @@ Looping is useful when you want to process multiple similar items, for example s
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point (or a single row in the output table of a node).
 
-The following image shows the output from the [Customer Datastore](/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) node, where each row is an individual item.
+The following image shows the output from the [Customer Datastore](/workflow/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) node, where each row is an individual item.
 
 ![The Customer Datastore node](/_images/flow-logic/looping/customer_datastore_node.png)
 
-**Nodes usually run once for each item**. For example, if you want to send the name and notes of the customers as a message on [Slack](/integrations/nodes/n8n-nodes-base.slack/), connect the Slack node to the Customer Datastore node, configure the parameters, and execute the node. You will receive 5 messages — one for each item.
+**Nodes usually run once for each item**. For example, if you want to send the name and notes of the customers as a message on [Slack](/workflow/integrations/nodes/n8n-nodes-base.slack/), connect the Slack node to the Customer Datastore node, configure the parameters, and execute the node. You will receive 5 messages — one for each item.
 
 This is how you can process multiple items without having to explicitly connect nodes in a loop.
 
@@ -31,7 +31,7 @@ This is how you can process multiple items without having to explicitly connect 
 
 For situations where you do not want a node to process all received items, for example sending a Slack message only to the first customer, you can do so by toggling the **Execute Once** parameter in the *Settings* tab of that node.
 
-This setting is helpful when the incoming data contains multiple items and you want to only process the first one. Using the [Customer Datastore](/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) and [Slack](/integrations/nodes/n8n-nodes-base.slack/) example from above, it would look like the following:
+This setting is helpful when the incoming data contains multiple items and you want to only process the first one. Using the [Customer Datastore](/workflow/integrations/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) and [Slack](/workflow/integrations/nodes/n8n-nodes-base.slack/) example from above, it would look like the following:
 
 ![Execute once enabled for the Slack node](/_images/flow-logic/looping/execute_once.png)
 
@@ -47,7 +47,7 @@ If a node receives input from multiple nodes, it will execute separately for eac
 
 ![Node taking inputs from two different nodes](/_images/flow-logic/looping/multiple_inputs.png)
 
-**Note**: The only exception to this is the [Merge](/integrations/core-nodes/n8n-nodes-base.merge/) node.
+**Note**: The only exception to this is the [Merge](/workflow/integrations/core-nodes/n8n-nodes-base.merge/) node.
 
 In the above image, notice that the Customer Datastore node gets executed twice, once for each input. To view the output for each input node, select the execution from the **Data of Execution** dropdown list:
 
@@ -61,13 +61,13 @@ When you have a loop in a workflow, the node gets executed multiple times. The n
 
 As discussed above, Doc² typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. You can learn more about these [here](#node-exceptions).
 
-To create a loop in an Doc² workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](/integrations/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. You now have a loop that iterates over each item.
+To create a loop in an Doc² workflow, connect the output of one node to the input of a previous node. Make sure you add an [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. You now have a loop that iterates over each item.
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
 ![Editor UI view of sample workflow](/_images/flow-logic/looping/example_workflow.png)
 
-You should use the [Split In Batches](/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you only want to process a specific group of returned items.
+You should use the [Split In Batches](/workflow/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you only want to process a specific group of returned items.
 
 **Note**: The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it is not necessary to add an IF node to stop the loop.
 
@@ -75,27 +75,27 @@ You should use the [Split In Batches](/integrations/core-nodes/n8n-nodes-base.sp
 
 There are a limited number of nodes and operations where you need to design a loop into your workflow:
 
-* [**Airtable**](/integrations/nodes/n8n-nodes-base.airtable/) node:
+* [**Airtable**](/workflow/integrations/nodes/n8n-nodes-base.airtable/) node:
 	* **List**: This operation executes only once, not for each incoming item.
-* [**Coda**](/integrations/nodes/n8n-nodes-base.coda/) node:
+* [**Coda**](/workflow/integrations/nodes/n8n-nodes-base.coda/) node:
 	* **Get All**: For the Table and View resources, this operation executes only once.
-* [**CrateDB**](/integrations/nodes/n8n-nodes-base.crateDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Execute Workflow**](/integrations/core-nodes/n8n-nodes-base.executeWorkflow/) node executes only once by default.
-* [**Function**](/integrations/core-nodes/n8n-nodes-base.function/) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node.
-* [**Google Cloud Firestore**](/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) node:
+* [**CrateDB**](/workflow/integrations/nodes/n8n-nodes-base.crateDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**Execute Workflow**](/workflow/integrations/core-nodes/n8n-nodes-base.executeWorkflow/) node executes only once by default.
+* [**Function**](/workflow/integrations/core-nodes/n8n-nodes-base.function/) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](/workflow/integrations/core-nodes/n8n-nodes-base.splitInBatches/) node.
+* [**Google Cloud Firestore**](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) node:
 	* **Get All**: For the Collection and Document resources, this operation executes only once.
-* [**Google Drive**](/integrations/nodes/n8n-nodes-base.googleDrive/) node:
+* [**Google Drive**](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) node:
 	* **List**: This operation executes only once, not for each incoming item.
-* [**Google Sheets**](/integrations/nodes/n8n-nodes-base.googleSheets/) node:
+* [**Google Sheets**](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) node:
 	* **Read**: This operation executes only once for the `Sheet` resource.
 	* **Update**: This operation updates multiple rows if they are in the same range. It does not iterate through additional ranges.
-* [**HTTP Request**](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
-* [**Microsoft SQL**](/integrations/nodes/n8n-nodes-base.microsoftSql/) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
-* [**Postgres**](/integrations/nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**QuestDB**](/integrations/nodes/n8n-nodes-base.questDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Read Binary Files**](/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
-* [**Redis**](/integrations/nodes/n8n-nodes-base.redis/) node:
+* [**HTTP Request**](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
+* [**Microsoft SQL**](/workflow/integrations/nodes/n8n-nodes-base.microsoftSql/) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
+* [**Postgres**](/workflow/integrations/nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**QuestDB**](/workflow/integrations/nodes/n8n-nodes-base.questDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**Read Binary Files**](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
+* [**Redis**](/workflow/integrations/nodes/n8n-nodes-base.redis/) node:
 	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
-* [**RSS**](/integrations/core-nodes/n8n-nodes-base.rssFeedRead/) nodes executes only once regardless of the number of items in the incoming data.
-* [**Spreadsheet**](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
-* [**TimescaleDB**](/integrations/nodes/n8n-nodes-base.timescaleDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**RSS**](/workflow/integrations/core-nodes/n8n-nodes-base.rssFeedRead/) nodes executes only once regardless of the number of items in the incoming data.
+* [**Spreadsheet**](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
+* [**TimescaleDB**](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

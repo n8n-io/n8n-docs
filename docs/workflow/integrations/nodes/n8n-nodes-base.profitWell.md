@@ -3,7 +3,7 @@
 [ProfitWell](https://www.profitwell.com/) provides real-time subscription financial metrics.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/profitWell/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/profitWell/).
 
 
 ## Basic Operations
@@ -16,9 +16,9 @@
 ## Example Usage
 
 This workflow allows you to send financial metrics monthly to a Mattermost channel. You can also find the [workflow](https://n8n.io/workflows/798) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [ProfitWell]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -41,7 +41,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return monthly financial metrics.
 
-1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/integrations/credentials/profitWell/).
+1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/workflow/integrations/credentials/profitWell/).
 2. Select 'Monthly' from the ***Type*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -53,7 +53,7 @@ In the screenshot below, you will notice that the node returns montly financial 
 
 This node will send a message with the metrics that we get from the previous node in the 'Monthly Metrics' channel in Mattermost. If you have a different channel, use that instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

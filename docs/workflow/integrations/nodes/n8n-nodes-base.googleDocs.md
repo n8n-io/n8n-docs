@@ -3,7 +3,7 @@
 [Google Docs](https://docs.google.com) is a web-based word processor that is part of Google's office software suite within its Google Drive service.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic operations 
@@ -16,7 +16,7 @@
 ## Example usage
 
 This workflow allows you to create a new Google Doc and add your desired text to it. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Docs]()
 
 The final workflow should look like the following image.
@@ -31,7 +31,7 @@ The Start node exists by default when you create a new workflow.
 
 The **Document** resource is selected by default. Configure the remaining parameters as follows:
 
-1. From the **Authentication** dropdown select your desired method and the corresponding [**Credentials**](/integrations/credentials/google/).
+1. From the **Authentication** dropdown select your desired method and the corresponding [**Credentials**](/workflow/integrations/credentials/google/).
 2. From the **Operation** dropdown select **Create**.
 3. From the **Drive** dropdown select which of your drives this file will be created in. My Drive is selected by default.
 4. From the **Folder** dropdown select which of you drive folders this file will be created in. The root folder (`/`) is selected by default.

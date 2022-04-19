@@ -3,7 +3,7 @@
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/clockify/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/clockify/).
 
 
 ## Basic Operations
@@ -34,7 +34,7 @@
 ## Example Usage
 
 This workflow allows you to create a project, tag, and time entry in Clockify. It also allows you to update the time entry in Clockify. You can also find the [workflow](https://n8n.io/workflows/701) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Clockify]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a private project with a custom color. It will also add a note to the project in Clockify.
 
-1. First of all, you'll have to enter credentials for the Clockify node. You can find out how to do that [here](/integrations/credentials/clockify/).
+1. First of all, you'll have to enter credentials for the Clockify node. You can find out how to do that [here](/workflow/integrations/credentials/clockify/).
 2. Select the ***Workspace ID*** from the dropdown list.
 3. Enter the name of the project in the ***Project Name*** field.
 4. Click on ***Add Field*** and select 'Color' from the dropdown list.

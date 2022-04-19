@@ -3,7 +3,7 @@
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/trello/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/trello/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Trello Trigger node
 
-1. First of all, you'll have to enter credentials for the Trello Trigger node. You can find out how to do that [here](/integrations/credentials/trello/).
+1. First of all, you'll have to enter credentials for the Trello Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/trello/).
 2. Enter the ID of the list in the *Model ID* field. You can find instructions on how to do that in the FAQs below.
 3. Click on *Execute Node* to run the workflow.
 

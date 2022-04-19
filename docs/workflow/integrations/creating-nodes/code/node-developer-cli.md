@@ -2,7 +2,7 @@
 
 Using the Node Dev CLI makes sense if you do not want to ever share the node that you create. For example, for internal systems or something very specific to your internal tooling. Also, the CLI only works if there are no additional dependencies required by the node as it does not support installing additional node modules.
 
-If that is not the case, it is best to do follow the [creating your first node](/integrations/creating-nodes/code/create-first-node/) tutorial or create your own custom node-package.
+If that is not the case, it is best to do follow the [creating your first node](/workflow/integrations/creating-nodes/code/create-first-node/) tutorial or create your own custom node-package.
 
 ## Create the first basic node
 
@@ -26,7 +26,7 @@ If you want to create multiple custom nodes which are either:
   - Require many or large dependencies
 
 !!! note
-    To learn how to develop and test n8n-nodes-module, refer to the [Create n8n-nodes-module](/integrations/creating-nodes/code/create-n8n-nodes-module/) documentation.
+    To learn how to develop and test n8n-nodes-module, refer to the [Create n8n-nodes-module](/workflow/integrations/creating-nodes/code/create-n8n-nodes-module/) documentation.
 
 
 It is best to create your own `n8n-nodes-module` which can be installed separately.

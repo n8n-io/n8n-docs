@@ -3,7 +3,7 @@
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wise/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wise/).
 
 
 ## Basic Operations
@@ -32,7 +32,7 @@
 ## Example Usage
 
 This workflow allows you to create a quote and a transfer, execute the transfer, and get the information of the transfer using the Wise node. You can also find the [workflow](https://n8n.io/workflows/992) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Wise]()
 
 The final workflow should look like the following image.
@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new quote in Wise.
 
-1. First of all, you'll have to enter credentials for the Wise node. You can find out how to do that [here](/integrations/credentials/wise/).
+1. First of all, you'll have to enter credentials for the Wise node. You can find out how to do that [here](/workflow/integrations/credentials/wise/).
 2. Select 'Quote' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select a profile from the ***Profile ID*** dropdown list.

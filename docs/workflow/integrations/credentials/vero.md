@@ -1,7 +1,7 @@
 # Vero
 
 You can use these credentials to authenticate the following nodes with Vero.
-- [Vero](/integrations/nodes/n8n-nodes-base.vero/)
+- [Vero](/workflow/integrations/nodes/n8n-nodes-base.vero/)
 
 ## Prerequisites
 

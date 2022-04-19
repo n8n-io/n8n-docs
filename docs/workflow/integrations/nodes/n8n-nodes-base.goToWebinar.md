@@ -3,7 +3,7 @@
 [GoToWebinar](https://www.gotomeeting.com/webinar) is a platform that helps you create and deliver online video conferences.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/goToWebinar/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/goToWebinar/).
 
 
 ## Basic Operations
@@ -40,7 +40,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a webinar. You can also find the [workflow](https://n8n.io/workflows/960) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [GoToWebinar]()
 
 The final workflow should look like the following image.
@@ -55,7 +55,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new webinar in GoToWebinar.
 
-1. First of all, you'll have to enter credentials for the GoToWebinar node. You can find out how to do that [here](/integrations/credentials/goToWebinar/).
+1. First of all, you'll have to enter credentials for the GoToWebinar node. You can find out how to do that [here](/workflow/integrations/credentials/goToWebinar/).
 2. Select 'Webinar' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter a subject in the ***Subject*** field.

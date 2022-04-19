@@ -3,7 +3,7 @@
 [Google Analytics](https://analytics.google.com) is a web analytics service offered by Google that lets you measure your advertising ROI as well as track your Flash, video, and social networking sites and applications.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -16,9 +16,9 @@
 ## Example Usage
 
 This workflow allows you to get analytical metrics of your website using the Goole Analytics node and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/892) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Analytics]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Airtable]/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
@@ -33,7 +33,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will retrieve the session metrics grouped by country for a given date range. You can select a different dimension, metric, and date range.
 
-1. First of all, you'll have to enter credentials for the Google Analytics node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Analytics node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select a view from the ***View ID*** dropdown list.
 3. Click on ***Add Field*** and select 'Dimensions'.
 4. Click on the ***Add Dimension*** button.
@@ -75,7 +75,7 @@ In the screenshot below, you will notice that the node sets the value for `Count
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrFIVzFaXgv7LekV) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.

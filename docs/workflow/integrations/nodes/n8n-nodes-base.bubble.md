@@ -3,7 +3,7 @@
 [Bubble](https://www.bubble.io/) lets you create interactive, multi-user apps for desktop and mobile web browsers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/bubble/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/bubble/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an object from Bubble. You can also find the [workflow](https://n8n.io/workflows/1041) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Bubble]()
 
 The final workflow should look like the following image.
@@ -33,7 +33,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new object of the type `Doc` in Bubble. If you want to create an object with a different type, use that type instead.
 
-1. First of all, you'll have to enter credentials for the Bubble node. You can find out how to do that [here](/integrations/credentials/bubble/).
+1. First of all, you'll have to enter credentials for the Bubble node. You can find out how to do that [here](/workflow/integrations/credentials/bubble/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter `Doc` in the ***Type Name*** field.
 4. Click on the ***Add Property*** button.

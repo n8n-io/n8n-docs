@@ -48,7 +48,7 @@ This is a [core concept](/workflows/connections/) in n8n.
 ## Credentials
 Unique pieces of information that identifies a user or a service. A common form of credentials is a [username](#Username) and [password](#Password) pair.
 
-n8n [stores encrypted credentials](/integrations/credentials/) so that it can automate tasks that require this information to run properly.
+n8n [stores encrypted credentials](/workflow/integrations/credentials/) so that it can automate tasks that require this information to run properly.
 
 For more information, see [Credentials](https://www.techopedia.com/definition/10259/credentials).
 
@@ -70,7 +70,7 @@ To learn more about user interfaces, see [User interface](https://en.wikipedia.o
 ## Encryption Key
 A piece of data, either string or binary, which is used to encode information so that it cannot be easily read. Encryption keys are often long string of seemingly random characters.
 
-n8n will sometimes use encryption keys for accessing [APIs](#API) when required. It also uses a [personal encryption key](/integrations/#credentials) to secure credentials.
+n8n will sometimes use encryption keys for accessing [APIs](#API) when required. It also uses a [personal encryption key](/workflow/integrations/#credentials) to secure credentials.
 
 For more information, see [What are encryption keys and how do they work? 🔐](https://medium.com/codeclan/what-are-encryption-keys-and-how-do-they-work-cc48c3053bd6)
 
@@ -121,7 +121,7 @@ If you want to learn more about *IP addresses*, see [What Is an IP Address?](htt
 ## JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.
 
-While Doc² is written in TypeScript, the final code generated is JavaScript and the [Function node](/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
+While Doc² is written in TypeScript, the final code generated is JavaScript and the [Function node](/workflow/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
 
 To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
 
@@ -135,14 +135,14 @@ For further reading, please see [Introducing JSON](https://www.json.org/json-en.
 ## Header
 Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.
 
-n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httprequest/).
+n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](/workflow/integrations/core-nodes/n8n-nodes-base.httprequest/).
 
 For further information, see [Request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header).
 
 ## Node
 The basic building block for n8n. Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
 
-For more information, see [Node Basics](/integrations/).
+For more information, see [Node Basics](/workflow/integrations/).
 
 ## NodeJS
 A package of [JavaScript](#JavaScript) file used to provide everything needed to run JavaScript code without a web browser.
@@ -233,7 +233,7 @@ For more information, see [token](https://whatis.techtarget.com/definition/token
 ## Trigger
 A specific type of [node](#Node) that starts a [workflow](#Workflow) when it receives data from a source outside of the workflow itself.
 
-A good example of a [trigger node](/integrations/#trigger-nodes) in Doc² is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
+A good example of a [trigger node](/workflow/integrations/#trigger-nodes) in Doc² is a [webhook](#Webhook). It listens for data coming into it and then starts a [workflow](#Workflow) when it sees data.
 
 For more information about *triggers*, see [Event Driven Programming](https://en.wikipedia.org/wiki/Event-driven_programming).
 
@@ -290,7 +290,7 @@ Read more at [Computer Programming - Variables](https://www.tutorialspoint.com/c
 ## Webhook
 A service that listens for data input from an external source used to trigger an action in a system. Webhooks allow external systems to provide real-time alerts and updates to the system that does not limit the updates to regular polling intervals. Webhooks are often referenced by push notifications.
 
-n8n has the ability to create [webhooks](/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the Doc² system itself.
+n8n has the ability to create [webhooks](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the Doc² system itself.
 
 To learn more about *webhooks*, see [What's a Webhook?](https://sendgrid.com/blog/whats-webhook/).
 

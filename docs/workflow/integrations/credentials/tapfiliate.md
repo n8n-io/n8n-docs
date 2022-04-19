@@ -1,7 +1,7 @@
 # Tapfiliate
 
 You can use these credentials to authenticate the following nodes with Tapfiliate.
-- [Tapfiliate](/integrations/nodes/n8n-nodes-base.tapfiliate/)
+- [Tapfiliate](/workflow/integrations/nodes/n8n-nodes-base.tapfiliate/)
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ tags:
 The SSH node is useful for executing commands via the Secure Shell Protocol.
 
 !!! note "🔑 Credential"
-    You can find authentication information for this node [here](/integrations/credentials/ssh/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/ssh/).
 
 
 ## Basic Operations
@@ -20,7 +20,7 @@ The SSH node is useful for executing commands via the Secure Shell Protocol.
 - Download a file
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
 
 ## Node Reference
 
@@ -37,7 +37,7 @@ The SSH node is useful for executing commands via the Secure Shell Protocol.
 ## Example Usage
 
 This workflow allows you to remotely connect to your computer via SSH. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [SSH]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. SSH node
 
-1. From the SSH Credentials dropdown, select ***Create New*** or an existing [credential](/integrations/credentials/ssh/).
+1. From the SSH Credentials dropdown, select ***Create New*** or an existing [credential](/workflow/integrations/credentials/ssh/).
 2. Select ***Password*** from the ***Authentication*** dropdown list.
 3. Select ***Command*** from the ***Resource*** dropdown list.
 4. The ***Execute*** option is automatically selected as the ***Operation***.

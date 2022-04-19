@@ -3,7 +3,7 @@
 [Baserow](https://baserow.io/) is an open source no-code database and Airtable alternative.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/baserow/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/baserow/).
 
 
 ## Basic operations
@@ -19,8 +19,8 @@
 
 This workflow allows you to create, find, and delete rows in Baserow default Customer table. This example workflow uses the following nodes.
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Baserow]()
 
 The final workflow should look like the following image:
@@ -52,7 +52,7 @@ We will use the Set node to set the values for the `name` and `id` fields of a n
 
 This node will create a row in the `Customers` table with the content from the previous node.
 
-1. Enter your credentials for the Baserow node. You can find out how to create credentials [here](/integrations/credentials/baserow/).
+1. Enter your credentials for the Baserow node. You can find out how to create credentials [here](/workflow/integrations/credentials/baserow/).
 2. Enter your Baserow instance URL (default value is for official version).
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter the Table ID in the ***Table ID*** field. For obtaining the Table ID, see the Database API page available from the database menu.

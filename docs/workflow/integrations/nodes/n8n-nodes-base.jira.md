@@ -3,7 +3,7 @@
 [Jira](https://www.atlassian.com/software/jira) is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/jira/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/jira/).
 
 
 ## Basic Operations
@@ -36,7 +36,7 @@
 ## Example Usage
 
 This workflow allows you to create a new issue in Jira. You can also find the [workflow](https://n8n.io/workflows/459) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Jira]()
 
 The final workflow should look like the following image.
@@ -49,7 +49,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Jira node
 
-1. First of all, you'll have to enter credentials for the Jira node. You can find out how to do that [here](/integrations/credentials/jira/).
+1. First of all, you'll have to enter credentials for the Jira node. You can find out how to do that [here](/workflow/integrations/credentials/jira/).
 2. Select your project from the dropdown list for the *Project* field.
 3. Select an issue type from the dropdown list for the *Issue Type* field.
 4. Enter the summary of the issue in the *Summary* field.

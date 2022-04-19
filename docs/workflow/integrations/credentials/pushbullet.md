@@ -1,7 +1,7 @@
 # Pushbullet
 
 You can use these credentials to authenticate the following nodes with Pushbullet.
-- [Pushbullet](/integrations/nodes/n8n-nodes-base.pushbullet/)
+- [Pushbullet](/workflow/integrations/nodes/n8n-nodes-base.pushbullet/)
 
 ## Prerequisites
 

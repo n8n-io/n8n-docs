@@ -3,7 +3,7 @@
 [Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wekan/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wekan/).
 
 
 ## Basic Operations
@@ -42,7 +42,7 @@
 ## Example Usage
 
 This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. It also allows you to create a card and update the list ID of the card, enabling you to move it from the `To Do` list to the `Done` list. You can also find the [workflow](https://n8n.io/workflows/728) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Wekan]()
 
 The final workflow should look like the following image.
@@ -59,7 +59,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a board called `Documentation` in Wekan. To create a board with a different name, you can enter the name of your board instead.
 
-1. First of all, you'll have to enter credentials for the Wekan node. You can find out how to do that [here](/integrations/credentials/wekan/).
+1. First of all, you'll have to enter credentials for the Wekan node. You can find out how to do that [here](/workflow/integrations/credentials/wekan/).
 
 2. Select 'Board' from the ***Resource*** dropdown list.
 3. Enter `Documentation` in the ***Title*** field.

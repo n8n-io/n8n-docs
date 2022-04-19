@@ -3,7 +3,7 @@
 [Beeminder](https://www.beeminder.com/) is a service that helps you to self-track and stick to your goals.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/beeminder/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/beeminder/).
 
 
 
@@ -19,7 +19,7 @@
 ## Example Usage
 
 This workflow allows you to add a datapoint to Beeminder when a new activity gets added to Strava. You can also find the [workflow](https://n8n.io/workflows/900) on n8n.io. This example usage workflow would use the following nodes.
-- [Strava Trigger](/integrations/trigger-nodes/n8n-nodes-base.stravatrigger/)
+- [Strava Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.stravatrigger/)
 - [Beeminder]()
 
 The final workflow should look like the following image.
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow whenever a new activity gets added to your Strava account.
 
-1. First of all, you'll have to enter credentials for the Strava Trigger node. You can find out how to do that [here](/integrations/credentials/strava/).
+1. First of all, you'll have to enter credentials for the Strava Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/strava/).
 2. Select 'created' from the ***Event*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -42,7 +42,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will create a datapoint for the goal `testing`. If you have created a goal with a different name, select that goal instead.
 
-1. First of all, you'll have to enter credentials for the Beeminder node. You can find out how to do that [here](/integrations/credentials/beeminder/).
+1. First of all, you'll have to enter credentials for the Beeminder node. You can find out how to do that [here](/workflow/integrations/credentials/beeminder/).
 2. Select a goal from the ***Goal Name*** dropdown list.
 3. Click on ***Add Field*** and select 'Comment'.
 4. Click on the gears icon next to the ***Comment*** field and click on ***Add Expression***.

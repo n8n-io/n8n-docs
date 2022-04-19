@@ -3,7 +3,7 @@
 [Emelia](https://emelia.io) is a cold-mailing tool.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/emelia/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/emelia/).
 
 
 ## Basic Operations
@@ -22,7 +22,7 @@
 ## Example Usage
 
 This workflow allows you to create a campaign, add a contact, and get the campaign from Emelia. You can also find the [workflow](https://n8n.io/workflows/961) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Emelia]()
 
 The final workflow should look like the following image.
@@ -37,7 +37,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new campaign in Emelia.
 
-1. First of all, you'll have to enter credentials for the Emelia node. You can find out how to do that [here](/integrations/credentials/emelia/).
+1. First of all, you'll have to enter credentials for the Emelia node. You can find out how to do that [here](/workflow/integrations/credentials/emelia/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter the campaign name in the ***Campaign Name*** field.
 4. Click on ***Execute Node*** to run the node.

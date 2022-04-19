@@ -1,8 +1,8 @@
 # GitHub
 
 You can use these credentials to authenticate the following nodes with GitHub.
-- [GitHub](/integrations/nodes/n8n-nodes-base.github/)
-- [GitHub Trigger](/integrations/trigger-nodes/n8n-nodes-base.githubTrigger/)
+- [GitHub](/workflow/integrations/nodes/n8n-nodes-base.github/)
+- [GitHub Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.githubTrigger/)
 
 
 ## Prerequisites

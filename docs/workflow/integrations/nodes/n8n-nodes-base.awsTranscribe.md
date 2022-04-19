@@ -3,7 +3,7 @@
 [AWS Transcribe](https://aws.amazon.com/transcribe/) is a service that recognizes speech in your audio or video and transcribes that speech into text.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/aws/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/aws/).
 
 
 ## Basic Operations
@@ -18,8 +18,8 @@
 ## Example Usage
 
 This workflow allows you to create transcription jobs for all your audio and video files stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1111) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [AWS S3](/integrations/nodes/n8n-nodes-base.awsS3/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [AWS S3](/workflow/integrations/nodes/n8n-nodes-base.awsS3/)
 - [AWS Transcribe]()
 
 The final workflow should look like the following image.
@@ -34,7 +34,7 @@ The start node exists by default when you create a new workflow.
 
 This node will retrieve all the files from an S3 bucket you specify.
 
-1. First of all, you'll have to enter credentials for the AWS S3 node. You can find out how to do that [here](/integrations/credentials/aws/).
+1. First of all, you'll have to enter credentials for the AWS S3 node. You can find out how to do that [here](/workflow/integrations/credentials/aws/).
 2. Select 'Get All' from the ***Operation*** dropdown list.
 3. Enter the bucket name in the ***Bucket Name*** field.
 4. Toggle ***Return All*** to `true`. This option will return information on all the files stored in the S3 bucket.

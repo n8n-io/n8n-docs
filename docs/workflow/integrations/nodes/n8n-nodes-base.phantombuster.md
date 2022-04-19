@@ -3,7 +3,7 @@
 [Phantombuster](https://www.phantombuster.com/) is a scraping platform that allows chain actions and data extraction on the web to generate business leads, marketing audiences, and overall growth.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/phantombuster/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/phantombuster/).
 
 
 ## Basic Operations
@@ -18,10 +18,10 @@
 ## Example Usage
 
 This workflow allows you to store the output of a phantom in Airtable. You can also find the [workflow](https://n8n.io/workflows/882) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Phantombuster]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 
@@ -35,7 +35,7 @@ The start node exists by default when you create a new workflow.
 
 Create and launch the [LinkedIn Profile Scraper](https://phantombuster.com/automations/linkedin/3112/linkedin-profile-scraper) in your Phantombuster account. This node will return the output of this phantom.
 
-1. First of all, you'll have to enter credentials for the Phantombuster node. You can find out how to do that [here](/integrations/credentials/phantombuster/).
+1. First of all, you'll have to enter credentials for the Phantombuster node. You can find out how to do that [here](/workflow/integrations/credentials/phantombuster/).
 2. Select 'Get Output' from the ***Operation*** dropdown list.
 3. Select a phantom from the ***Agent*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
@@ -72,7 +72,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shr6hP774ijrXFput) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.

@@ -3,7 +3,7 @@
 [ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/convertKit/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/convertKit/).
 
 
 ## Basic Operations
@@ -32,7 +32,7 @@
 ## Example Usage
 
 This workflow allows you to add a subscriber to a form, create a tag and add the subscriber to the tag using the ConvertKit node. You can also find the [workflow](https://n8n.io/workflows/642) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [ConvertKit]()
 
 The final workflow should look like the following image.
@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. ConvertKit node (addSubscriber: form)
 
-1. First of all, you'll have to enter credentials for the ConvertKit node. You can find out how to do that [here](/integrations/credentials/convertKit/).
+1. First of all, you'll have to enter credentials for the ConvertKit node. You can find out how to do that [here](/workflow/integrations/credentials/convertKit/).
 2. Select the form from the ***Form ID*** dropdown list.
 3. Enter the email address in the ***Email*** field.
 4. Click on ***Execute Node*** to run the node.

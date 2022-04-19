@@ -3,7 +3,7 @@
 [Kitemaker](https://www.kitemaker.co/) is a collaboration tool built for designers, engineers, and product managers in remote software development teams.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/kitemaker/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/kitemaker/).
 
 
 ## Basic Operations
@@ -23,7 +23,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a work item from Kitemaker. You can also find the [workflow](https://n8n.io/workflows/1048) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Kitemaker]()
 
 The final workflow should look like the following image.
@@ -38,7 +38,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a work item in Kitemaker.
 
-1. First of all, you'll have to enter credentials for the Kitemaker node. You can find out how to do that [here](/integrations/credentials/kitemaker/).
+1. First of all, you'll have to enter credentials for the Kitemaker node. You can find out how to do that [here](/workflow/integrations/credentials/kitemaker/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter a title in the ***Title*** field.
 4. Select 'In progress' from the ***Status ID*** dropdown list.

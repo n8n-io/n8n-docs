@@ -3,7 +3,7 @@
 [Shopify](https://www.shopify.com/) is an e-commerce platform that allows users to set up an online store and sell their products.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/shopify/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/shopify/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Shopify Trigger node
 
-1. First of all, you'll have to enter credentials for the Shopify Trigger node. You can find out how to do that [here](/integrations/credentials/shopify/).
+1. First of all, you'll have to enter credentials for the Shopify Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/shopify/).
 2. Select 'Orders create' from the *Topic* dropdown list.
 3. Click on *Execute Node* to run the workflow.
 

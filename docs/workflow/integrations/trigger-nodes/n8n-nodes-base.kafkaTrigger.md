@@ -3,7 +3,7 @@
 [Kafka](https://kafka.apache.org/) is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/kafka/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/kafka/).
 
 
 
@@ -11,9 +11,9 @@
 
 This workflow allows you to receive messages from a topic and send an SMS if the value of the temperature is greater than 50. You can also find the [workflow](https://n8n.io/workflows/814) on n8n.io. This example usage workflow would use the following nodes.
 - [Kafka Trigger]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Vonage](/integrations/nodes/n8n-nodes-base.vonage/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Vonage](/workflow/integrations/nodes/n8n-nodes-base.vonage/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -24,7 +24,7 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when a new message is sent to the topic `test_topic`. If you're using a different topic, use that instead. We are sending the message `{ "id": 1, "temp": 100 }` to `test_topic`.
 
-1. First of all, you'll have to enter credentials for the Kafka Trigger node. You can find out how to do that [here](/integrations/credentials/kafka/).
+1. First of all, you'll have to enter credentials for the Kafka Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/kafka/).
 2. Enter the name of the topic in the ***Topic*** field.
 3. Enter the group ID in the ***Group ID*** field.
 4. Click on ***Add Option*** and select 'JSON Parse Message'.
@@ -56,7 +56,7 @@ In the screenshot below, you will notice that the node returns output for **true
 This node sends an SMS to the specified phone number when the value of `temp` is greater than `50`.
 
 1. Create a Vonage node connected to the 'true' output of the IF node.
-2. You'll have to enter credentials for the Vonage node. You can find out how to do that [here](/integrations/credentials/vonage/).
+2. You'll have to enter credentials for the Vonage node. You can find out how to do that [here](/workflow/integrations/credentials/vonage/).
 3. Enter the name of the sender in the ***From*** field. If you're using a number, enter the number instead.
 4. Enter the receiver's phone number in the ***To*** field.
 5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

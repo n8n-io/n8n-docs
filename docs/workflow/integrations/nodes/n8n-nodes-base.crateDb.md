@@ -3,7 +3,7 @@
 [CrateDB](https://crate.io/) is an open-source distributed SQL database management system that integrates a fully searchable document-oriented data store based on a shared-nothing architecture, and is designed for high scalability.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/crateDb/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/crateDb/).
 
 
 ## Basic Operations
@@ -16,8 +16,8 @@
 ## Example Usage
 
 This workflow allows you to create a table and insert data into it in CrateDB. You can also find the [workflow](https://n8n.io/workflows/597) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [CrateDB]()
 
 The final workflow should look like the following image.
@@ -30,7 +30,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. CrateDB node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the CrateDB node. You can find out how to do that [here](/integrations/credentials/crateDb/).
+1. First of all, you'll have to enter credentials for the CrateDB node. You can find out how to do that [here](/workflow/integrations/credentials/crateDb/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name STRING);`.
 4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.

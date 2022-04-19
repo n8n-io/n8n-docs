@@ -9,7 +9,7 @@ tags:
 # Agile CRM
 
 You can use these credentials to authenticate the following nodes with Agile CRM.
-- [Agile CRM](/integrations/nodes/n8n-nodes-base.agileCrm/)
+- [Agile CRM](/workflow/integrations/nodes/n8n-nodes-base.agileCrm/)
 
 
 ## Prerequisites

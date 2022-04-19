@@ -3,7 +3,7 @@
 [Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/autopilot/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/autopilot/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@
 ## Example Usage
 
 This workflow allows you to create a new list, add a new contact to that list, update the contact, and get all contacts in the list using the Autopilot node. You can also find the [workflow](https://n8n.io/workflows/990) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Autopilot]()
 
 The final workflow should look like the following image.
@@ -43,7 +43,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new list called `n8n-docs` in Autopilot.
 
-1. First of all, you'll have to enter credentials for the Autopilot node. You can find out how to do that [here](/integrations/credentials/autopilot/).
+1. First of all, you'll have to enter credentials for the Autopilot node. You can find out how to do that [here](/workflow/integrations/credentials/autopilot/).
 2. Select 'List' from the ***Resource*** dropdown list.
 3. Enter `n8n-docs` in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.

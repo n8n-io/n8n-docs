@@ -1,7 +1,7 @@
 # GoToWebinar
 
 You can use these credentials to authenticate the following nodes with GoToWebinar.
-- [GoToWebinar](/integrations/nodes/n8n-nodes-base.goToWebinar/)
+- [GoToWebinar](/workflow/integrations/nodes/n8n-nodes-base.goToWebinar/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [Kafka](https://kafka.apache.org/) is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/kafka/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/kafka/).
 
 
 ## Basic Operations
@@ -13,9 +13,9 @@
 ## Example Usage
 
 This workflow allows you to send updates about the position of the ISS every minute to a topic in Kafka using the Kafka node. You can also find the [workflow](https://n8n.io/workflows/750) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Kafka]()
 
 The final workflow should look like the following image.
@@ -80,7 +80,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will send the data from the previous node to the `iss-position` topic in Kafka. If you have created a topic with a different name in Kafka, you can use that topic name instead.
 
-1. First of all, you'll have to enter credentials for the Kafka node. You can find out how to do that [here](/integrations/credentials/kafka/).
+1. First of all, you'll have to enter credentials for the Kafka node. You can find out how to do that [here](/workflow/integrations/credentials/kafka/).
 2. Enter the name of the topic in the ***Topic*** field.
 3. Click on ***Execute Node*** to run the node.
 

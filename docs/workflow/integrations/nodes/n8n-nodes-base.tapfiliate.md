@@ -3,7 +3,7 @@
 [Tapfiliate](https://tapfiliate.com) allows you to create, track, and grow your affiliate marketing programs.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/tapfiliate/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/tapfiliate/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@
 ## Example Usage
 
 This workflow allows you to create an affiliate, add metadata, and add the affiliate to a program. You can also find the [workflow](https://n8n.io/workflows/936) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Tapfiliate]()
 
 The final workflow should look like the following image.
@@ -42,7 +42,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create an affiliate in Tapfiliate.
 
-1. First of all, you'll have to enter credentials for the Tapfiliate node. You can find out how to do that [here](/integrations/credentials/tapfiliate/).
+1. First of all, you'll have to enter credentials for the Tapfiliate node. You can find out how to do that [here](/workflow/integrations/credentials/tapfiliate/).
 2. Enter an email address in the ***Email*** field.
 3. Enter the first name of the affiliate in the ***First Name*** field.
 4. Enter the last name of the affiliate in the ***Last Name*** field.

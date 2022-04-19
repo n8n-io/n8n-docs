@@ -3,7 +3,7 @@
 [FileMaker](https://www.claris.com/filemaker/) is an integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and service companies.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/fileMaker/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/fileMaker/).
 
 
 ## Basic Operations
@@ -20,7 +20,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and retrieve a record from FileMaker. You can also find the [workflow](https://n8n.io/workflows/1068) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [FileMaker]()
 
 The final workflow should look like the following image.
@@ -35,7 +35,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new record in FileMaker.
 
-1. First of all, you'll have to enter credentials for the FileMaker node. You can find out how to do that [here](/integrations/credentials/fileMaker/).
+1. First of all, you'll have to enter credentials for the FileMaker node. You can find out how to do that [here](/workflow/integrations/credentials/fileMaker/).
 2. Select 'Create Record' from the ***Action*** dropdown list.
 3. Select a layout from the ***Layout*** dropdown list.
 4. Click on the ***Add Field*** button.

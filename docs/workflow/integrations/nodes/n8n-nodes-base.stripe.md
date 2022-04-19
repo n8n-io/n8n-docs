@@ -3,7 +3,7 @@
 [Stripe](https://stripe.com/) offers payment processing software and application programming interfaces for e-commerce websites and mobile applications.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/stripe/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/stripe/).
 
 
 ## Basic operations
@@ -38,7 +38,7 @@
 ## Example
 
 This workflow allows you to create a new customer, create a card token, and associate this token as that customer's card. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Stripe]()
 
 The final workflow should look like the following image.
@@ -51,7 +51,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Stripe node
 
-1. First enter your Stripe API credentials. You can learn how to create that [here](/integrations/credentials/stripe/).
+1. First enter your Stripe API credentials. You can learn how to create that [here](/workflow/integrations/credentials/stripe/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select the entity you want to work with, **Customer** in this example.
     * **Operation**: Select the action to perform, **Create** in this example.

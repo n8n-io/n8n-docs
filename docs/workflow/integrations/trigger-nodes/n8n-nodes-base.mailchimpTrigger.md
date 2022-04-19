@@ -3,7 +3,7 @@
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mailchimp/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mailchimp/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Mailchimp Trigger node
 
-1. First of all, you'll have to enter credentials for the Mailchimp Trigger node. You can find out how to do that [here](/integrations/credentials/mailchimp/).
+1. First of all, you'll have to enter credentials for the Mailchimp Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/mailchimp/).
 2. Select the list you want to listen to from the *List* dropdown list.
 3. Select 'Subscribe' from the *Events* dropdown list.
 4. Select 'API', 'Admin', and 'User' from the *Sources* dropdown list.

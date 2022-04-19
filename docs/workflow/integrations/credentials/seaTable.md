@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [SeaTable](/integrations/nodes/n8n-nodes-base.seaTable/)
-- [SeaTable Trigger](/integrations/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
+- [SeaTable](/workflow/integrations/nodes/n8n-nodes-base.seaTable/)
+- [SeaTable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
 
 ## Prerequisites
 

@@ -24,7 +24,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 
 * [Discord node](/integrations/nodes/n8n-nodes-base.discord/): additional fields now available when sending a message to Discord.
 * [GoogleBigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/): added support for service account authentication.
-* [Google Cloud Realtime Database node](/integrations/nodes/n8n-nodes-base.googleCloudRealtimDatabase/): you can now select a region.
+* [Google Cloud Realtime Database node](/integrations/nodes/n8n-nodes-base.googleCloudRealtimeDatabase/): you can now select a region.
 * [PagerDuty node](/integrations/nodes/n8n-nodes-base.pagerDuty/): now supports more detail in incidents.
 * [Slack node](/integrations/nodes/n8n-nodes-base.slack/): added support for blocks in Slack message update.
 
@@ -35,7 +35,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 * **editor**: fix a glitch that caused dropdowns to break after adding expressions.
 * **editor**: reset text input value when closed with `Esc`.
 * [Discourse node](/integrations/nodes/n8n-nodes-base.discourse/): fix an issue that was causing incomplete results when getting posts. Added a credentials test.
-* [Zendesk trigger node](/integrations/trigger-nodes/n8n-nodes-base.zendesk): remove deprecated targets, replace with webhooks.
+* [Zendesk trigger node](/integrations/trigger-nodes/n8n-nodes-base.zendeskTrigger): remove deprecated targets, replace with webhooks.
 * [Zoho node](/integrations/nodes/n8n-nodes-base.zohoCrm): fix pagination issue.
 
 ### Contributors

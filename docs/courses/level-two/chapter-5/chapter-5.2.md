@@ -41,7 +41,9 @@ The second part of the workflow consists of five nodes:
 2. Use the [Move Binary Data node](/integrations/core-nodes/n8n-nodes-base.moveBinaryData/) to transform the incoming data from JSON to binary format. Note that you need to convert all data.
 3. Use the [Write Binary File node](/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/) to create and store files with the orders information. In the File Name field, use an expression to include the oder id in the file name, like this: `report_orderID{oder_id}.json` (you need to replace the `{order id}` with the reference the Move Binary Data node).
 4. Use the [Gmail node](/integrations/nodes/n8n-nodes-base.gmail/) (or another email node) to send the files via email to an address you have access to. Note that you need to add an attachment with the data property.
-5. Use the [Discord node](/integrations/nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two` with the Text: "I sent the file via email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
+5. Use the [Discord node](/integrations/nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
+    * Webhook URL: The webhook URL you received in the email when you signed up for this course.
+    * Text: "I sent the file via email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
 !!! question "Quiz questions"
 
@@ -59,8 +61,9 @@ The third part of the workflow consists of seven nodes:
 2. Use the [Set node](/integrations/core-nodes/n8n-nodes-base.set/) to set four values, referenced with expressions from the previous node: `customerEmail`, `customerRegion`, `customerSince`, and `orderPrice`.
 3. Use the [Date & Time node](/integrations/core-nodes/n8n-nodes-base.dateTime/) to change the date format of the field `customerSince` to the format MM/DD/YYYY.
 4. Use the [Spreadsheet File node](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.
-5. Use the [Discord node](/integrations/nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two` with the Text: <br/>
-    "I created the spreadsheet `{file name}`. My ID:" followed by your ID. The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
+5. Use the [Discord node](/integrations/nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
+    * Webhook URL: The webhook URL you received in the email when you signed up for this course.
+    * Text: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
 
 !!! question "Quiz questions"
 

@@ -4,7 +4,7 @@ Remember [our friend Nathan](/courses/level-one/chapter-3)?
 
 **Nathan 🙋:** Hello, it's me again. My manager was so impressed with my first workflow automation solution, that she entrusted me with more responsibility.<br/>
 **You 👩‍🔧:** More work and responsibility. Congratulations, I guess. What do you need to do now?<br/>
-**Nathan 🙋:** I got access to all sales data and am responsible for creating two reports: one for regional sales (as PDF) and one for orders prices (as spreadsheets). They are based on data from different sources and come in different formats.<br/>
+**Nathan 🙋:** I got access to all sales data and am responsible for creating two reports: one for regional sales and one for orders prices. They are based on data from different sources and come in different formats.<br/>
 **You 👩‍🔧:** Sounds like a lot of manual work–but the kind that can be automated. So let's do it!
 
 
@@ -28,7 +28,7 @@ n8n provides core nodes for all these steps. This use case is somewhat complex a
 To build the workflows, you will need the following:
 
 * An [Airtable](https://airtable.com/) account and [credentials](/integrations/credentials/airtable/).
-* A [Google](https://www.google.com/account/about/) account and [credentials](/integrations/credentials/google/) to access Gmail and Google Drive.
-* A [Discord](https://discord.com/) webhook URL.
+* A [Google](https://www.google.com/account/about/) account and [credentials](/integrations/credentials/google/) to access Gmail.
+* A [Discord](https://discord.com/) account and webhook URL (you receive this via email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

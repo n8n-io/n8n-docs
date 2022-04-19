@@ -1,3 +1,10 @@
+---
+title: Bannerbear
+
+tags:
+  - Workflow²
+  - Bannerbear
+---
 # Bannerbear
 
 You can use these credentials to authenticate the following nodes with Bannerbear.

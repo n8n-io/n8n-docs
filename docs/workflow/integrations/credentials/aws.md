@@ -1,3 +1,11 @@
+---
+title: AWS
+
+tags:
+  - Workflow²
+  - AWS
+---
+
 # AWS
 
 You can use these credentials to authenticate the following nodes with AWS.

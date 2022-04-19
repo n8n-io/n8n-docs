@@ -1,8 +1,15 @@
+---
+title: Baserow
+
+tags:
+  - Workflow²
+  - Baserow
+---
 # Baserow
 
 You can use these credentials to authenticate the following node:
 
-- [Baserow](/integrations/nodes/n8n-nodes-base.baserow/)
+- [Baserow](/workflow/integrations/nodes/n8n-nodes-base.baserow/)
 
 ## Prerequisites
 

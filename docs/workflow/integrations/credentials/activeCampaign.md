@@ -1,3 +1,11 @@
+---
+title: ActiveCampaign
+
+tags:
+  - Workflow²
+  - ActiveCampaign
+---
+
 # ActiveCampaign
 
 You can use these credentials to authenticate the following nodes with ActiveCampaign.

@@ -1,3 +1,11 @@
+---
+title: Agile CRM
+
+tags:
+  - Workflow²
+  - Agile CRM
+---
+
 # Agile CRM
 
 You can use these credentials to authenticate the following nodes with Agile CRM.

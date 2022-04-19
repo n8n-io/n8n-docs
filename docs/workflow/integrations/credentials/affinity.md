@@ -1,8 +1,16 @@
+---
+title: Affinity
+
+tags:
+  - Workflow²
+  - Affinity
+---
+
 # Affinity
 
 You can use these credentials to authenticate the following nodes with Affinity.
-- [Affinity](/integrations/nodes/n8n-nodes-base.affinity/)
-- [Affinity Trigger](/integrations/trigger-nodes/n8n-nodes-base.affinityTrigger/)
+- [Affinity](/workflow/integrations/nodes/n8n-nodes-base.affinity/)
+- [Affinity Trigger](//workflow/integrations/trigger-nodes/n8n-nodes-base.affinityTrigger/)
 
 
 

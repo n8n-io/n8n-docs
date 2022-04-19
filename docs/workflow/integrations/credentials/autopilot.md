@@ -1,8 +1,16 @@
+---
+title: Autopilot
+
+tags:
+  - Workflow²
+  - Autopilot
+---
+
 # Autopilot
 
 You can use these credentials to authenticate the following nodes with Autopilot.
-- [Autopilot](/integrations/nodes/n8n-nodes-base.autopilot/)
-- [Autopilot Trigger](/integrations/trigger-nodes/n8n-nodes-base.autopilotTrigger/)
+- [Autopilot](/workflow/integrations/nodes/n8n-nodes-base.autopilot/)
+- [Autopilot Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.autopilotTrigger/)
 
 ## Prerequisites
 

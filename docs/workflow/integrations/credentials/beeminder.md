@@ -1,3 +1,10 @@
+---
+title: Beeminder
+
+tags:
+  - Workflow²
+  - Beeminder
+---
 # Beeminder
 
 You can use these credentials to authenticate the following nodes with Beeminder.

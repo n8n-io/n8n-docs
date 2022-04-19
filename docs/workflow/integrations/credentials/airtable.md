@@ -1,8 +1,16 @@
+---
+title: Airtable
+
+tags:
+  - Workflow²
+  - Airtable
+---
+
 # Airtable
 
 You can use these credentials to authenticate the following nodes with Airtable.
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
-- [Airtable Trigger](/integrations/trigger-nodes/n8n-nodes-base.airtableTrigger/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
+- [Airtable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.airtableTrigger/)
 
 ## Prerequisites
 

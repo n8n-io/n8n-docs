@@ -1,8 +1,11 @@
 ---
-title: "Welcome Flow²"
+title: "Welcome FLOW²"
+description: Introduction to FLOW²
 date: "2021-11-25"
 tags: 
     - FLOW²
+    - Introduction
+    - Digitizing Documents
 ---
 # Welcome
 

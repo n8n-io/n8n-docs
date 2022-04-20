@@ -1,3 +1,11 @@
+---
+title: Set
+description: The Set node allows you to set workflow data. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
+tags:
+  - Workflow²
+  - Set
+---
+
 # Set
 
 The Set node allows you to set workflow data. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
@@ -6,7 +14,7 @@ The Set node allows you to set workflow data. This node can set completely new d
 ## Example Usage
 
 This workflow allows you to assign values to variables using the Set node. You can also find the [workflow](https://n8n.io/workflows/526) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Set]()
 
 

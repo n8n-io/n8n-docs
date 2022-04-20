@@ -3,7 +3,7 @@
 Stripe is a suite of payment APIs that powers commerce for online businesses.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/stripe/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/stripe/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Stripe Trigger node
 
-1. First of all, you'll have to enter credentials for the Stripe Trigger node. You can find out how to do that [here](/integrations/credentials/stripe/).
+1. First of all, you'll have to enter credentials for the Stripe Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/stripe/).
 2. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 3. Click on *Execute Node* to run the workflow.
 

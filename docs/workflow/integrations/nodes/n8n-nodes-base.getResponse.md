@@ -3,7 +3,7 @@
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/getResponse/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/getResponse/).
 
 
 
@@ -19,10 +19,10 @@
 ## Example Usage
 
 This workflow allows you to get all the contacts from GetResponse and check if they belong to a specific campaign. If they don't belong to the specified campaign, the workflow updates the campaign ID of the contacts using the GetResponse node. You can also find the [workflow](https://n8n.io/workflows/778) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [GetResponse]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -36,7 +36,7 @@ The start node exists by default when you create a new workflow.
 
 This node will retrieve all the contacts from GetResponse.
 
-1. First of all, you'll have to enter credentials for the GetResponse node. You can find out how to do that [here](/integrations/credentials/getResponse/).
+1. First of all, you'll have to enter credentials for the GetResponse node. You can find out how to do that [here](/workflow/integrations/credentials/getResponse/).
 2. Select 'GetAll' from the ***Operation*** dropdown list.
 3. Toggle ***Return All*** to true.
 5. Click on ***Execute Node*** to run the node.

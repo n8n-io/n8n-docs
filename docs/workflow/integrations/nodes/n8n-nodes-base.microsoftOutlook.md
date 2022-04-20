@@ -3,7 +3,7 @@
 [Microsoft Outlook](https://outlook.live.com/) is a personal information manager software system from Microsoft. Microsoft Outlook is an email client that includes calendaring, task managing, contact managing, note-taking, journal logging, and web browsing.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/microsoft/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/microsoft/).
 
 
 ## Basic Operations
@@ -40,9 +40,9 @@
 ## Example Usage
 
 This workflow allows you to create, add an attachment, and send a draft using the Microsoft Outlook node. You can also find the [workflow](https://n8n.io/workflows/867) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Microsoft Outlook]()
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 
 The final workflow should look like the following image.
 
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a draft message that we will send using the Microsoft Outlook node later in the workflow.
 
-1. First of all, you'll have to enter credentials for the Microsoft Outlook node. You can find out how to do that [here](/integrations/credentials/microsoft/).
+1. First of all, you'll have to enter credentials for the Microsoft Outlook node. You can find out how to do that [here](/workflow/integrations/credentials/microsoft/).
 2. Select 'Draft' from the ***Resource*** dropdown list.
 3. Enter the subject in the ***Subject*** field.
 4. Enter the following content in the ***Body Content*** field.

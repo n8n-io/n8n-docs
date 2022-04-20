@@ -3,7 +3,7 @@
 [Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/ciscoWebex/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/ciscoWebex/).
 
 
 ## Example usage
@@ -18,7 +18,7 @@ The final workflow should look like the following image.
 
 ### 1. Webex by Cisco Trigger node
 
-1. First enter your credentials for node. You can find out how to do that [here](/integrations/credentials/ciscoWebex/).
+1. First enter your credentials for node. You can find out how to do that [here](/workflow/integrations/credentials/ciscoWebex/).
 2. Select 'Meeting' from the *Resource* dropdown list.
 3. Select the events you want to receive updates for from the *Events* dropdown list.
 4. Click on *Execute Node* to run the workflow.

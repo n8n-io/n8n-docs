@@ -3,15 +3,15 @@
 [MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mqtt/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mqtt/).
 
 
 ## Example Usage
 
 This workflow allows you to send position updates of the ISS every minute to a topic in MQTT using the MQTT node. You can also find the [workflow](https://n8n.io/workflows/1069) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [MQTT]()
 
 The final workflow should look like the following image.
@@ -76,7 +76,7 @@ In the screenshot below, you will notice that the node uses the data from the pr
 
 This node will send the data from the previous node to the `iss-position` topic in MQTT. If you have created a topic with a different name in MQTT, you can use that topic name instead.
 
-1. First of all, you'll have to enter credentials for the MQTT node. You can find out how to do that [here](/integrations/credentials/mqtt/).
+1. First of all, you'll have to enter credentials for the MQTT node. You can find out how to do that [here](/workflow/integrations/credentials/mqtt/).
 2. Enter the name of the topic in the ***Topic*** field.
 3. Click on ***Execute Node*** to run the node.
 

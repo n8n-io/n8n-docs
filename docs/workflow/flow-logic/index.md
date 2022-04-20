@@ -1,7 +1,7 @@
 # Overview
 
-n8n allows you to represent complex logic in your workflows.
+Workflow² allows you to represent complex logic in your workflows.
 
-* [Merging](/flow-logic/merging/)
-* [Looping](/flow-logic/looping/)
-* [Error handling](/flow-logic/error-handling/)
+* [Merging](/workflow/flow-logic/merging/)
+* [Looping](/workflow/flow-logic/looping/)
+* [Error handling](/workflow/flow-logic/error-handling/)

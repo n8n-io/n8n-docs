@@ -1,8 +1,8 @@
 # Stripe
 
 You can use these credentials to authenticate the following nodes with Stripe.
-- [Stripe Trigger](/integrations/trigger-nodes/n8n-nodes-base.stripeTrigger/)
-- [Stripe](/integrations/nodes/n8n-nodes-base.stripe/)
+- [Stripe Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/)
+- [Stripe](/workflow/integrations/nodes/workflow-nodes-base.stripe/)
 
 ## Prerequisites
 

@@ -1,8 +1,8 @@
 # Shopify
 
 You can use these credentials to authenticate the following nodes with Shopify.
-- [Shopify](/integrations/nodes/n8n-nodes-base.shopify/)
-- [Shopify Trigger](/integrations/trigger-nodes/n8n-nodes-base.shopifyTrigger/)
+- [Shopify](/workflow/integrations/nodes/n8n-nodes-base.shopify/)
+- [Shopify Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.shopifyTrigger/)
 
 ## Prerequisites
 

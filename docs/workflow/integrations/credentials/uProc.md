@@ -1,7 +1,14 @@
+---
+title: uProc
+description: Use uProc with Workflow²
+tags:
+  - Workflow²
+  - uProc
+---
 # uProc
 
 You can use these credentials to authenticate the following nodes with uProc.
-- [uProc](/integrations/nodes/n8n-nodes-base.uProc/)
+- [uProc](/workflow/integrations/nodes/workflow-nodes-base.uproc/)
 
 ## Prerequisites
 

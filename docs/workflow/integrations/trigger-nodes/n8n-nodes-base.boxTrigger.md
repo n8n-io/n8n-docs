@@ -3,7 +3,7 @@
 [Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files that are uploaded to its servers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/box/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/box/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Box Trigger node
 
-1. First of all, you'll have to enter credentials for the Box Trigger node. You can find out how to do that [here](/integrations/credentials/box/).
+1. First of all, you'll have to enter credentials for the Box Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/box/).
 2. Select the events for which you want to receive updates for from the *Events* dropdown list.
 3. Select the type of item that will trigger an update from the *Target Type* dropdown list.
 4. Enter the target ID of the file/folder to be monitored for updates in the *Target ID* field.

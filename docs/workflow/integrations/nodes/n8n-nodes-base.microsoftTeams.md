@@ -3,7 +3,7 @@
 [Microsoft Teams](https://teams.microsoft.com/) is a business-oriented communication and collaboration platform that combines workplace chat, video meetings, file storage , and application integration.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/microsoft/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/microsoft/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@
 ## Example Usage
 
 This workflow allows you to create, update and send a message to a channel in Microsoft Teams. You can also find the [workflow](https://n8n.io/workflows/680) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Microsoft Teams]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Microsoft Teams node (create: channel)
 
-1. First of all, you'll have to enter credentials for the Microsoft Teams node. You can find out how to do that [here](/integrations/credentials/microsoft/).
+1. First of all, you'll have to enter credentials for the Microsoft Teams node. You can find out how to do that [here](/workflow/integrations/credentials/microsoft/).
 2. Select the team that you want to use from the ***Team ID*** dropdown list.
 3. Enter a name for the channel in the ***Name*** field.
 4. Click on ***Execute Node*** to run the node.

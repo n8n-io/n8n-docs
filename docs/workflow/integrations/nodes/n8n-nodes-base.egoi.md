@@ -3,7 +3,7 @@
 [E-goi](https://www.e-goi.com/) is an omnichannel marketing automation platform.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/egoi/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/egoi/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a contact using the E-goi node. You can also find the [workflow](https://n8n.io/workflows/852) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [E-goi]()
 
 The final workflow should look like the following image.
@@ -33,7 +33,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new contact in E-goi. We will add the first name of the contact along with their email.
 
-1. First of all, you'll have to enter credentials for the E-goi node. You can find out how to do that [here](/integrations/credentials/egoi/).
+1. First of all, you'll have to enter credentials for the E-goi node. You can find out how to do that [here](/workflow/integrations/credentials/egoi/).
 2. Select a list from the ***List ID*** field.
 3. Enter the email address in the ***Email*** field.
 3. Click on the ***Add Field*** button and select 'First Name' from the dropdown list.

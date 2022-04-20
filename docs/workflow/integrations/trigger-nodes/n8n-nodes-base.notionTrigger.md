@@ -3,16 +3,16 @@
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/notion/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/notion/).
 
 
 ## Example Usage
 
 This workflow allows you to receive a message on Mattermost when new meeting notes get added to the Notion. You can also find the [workflow](https://n8n.io/workflows/1089) on n8n.io. This example usage workflow would use the following nodes.
 - [Notion Trigger]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -22,7 +22,7 @@ The final workflow should look like the following image.
 
 The Notion Trigger node will trigger the workflow when new data gets added to Notion.
 
-1. First of all, you'll have to enter credentials for the Notion Trigger node. You can find out how to do that [here](/integrations/credentials/notion/).
+1. First of all, you'll have to enter credentials for the Notion Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/notion/).
 2. Click on ***Add Poll Time*** and select 'Every Hour' from the ***Mode*** dropdown list. This will check Notion every hour for new meeting notes.
 3. Select 'Page Added to Database' from the ***Event*** dropdown list.
 4. Select the database that contains the meeting notes from the ***Database*** dropdown list.
@@ -52,7 +52,7 @@ In the screenshot below, you will notice that the node checks the team that we r
 
 This node will send a message about the new data in the channel 'Marketing' in Mattermost. If you have a different channel, use that instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

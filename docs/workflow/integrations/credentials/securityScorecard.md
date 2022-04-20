@@ -1,7 +1,14 @@
+---
+title: SecurityScorecard
+description: Use SecurityScorecard with Workflow²
+tags:
+  - Workflow²
+  - SecurityScorecard
+---
 # SecurityScorecard
 
 You can use these credentials to authenticate the following nodes with SecurityScorecard.
-- [SecurityScorecard](/integrations/nodes/n8n-nodes-base.securityScorecard/)
+- [SecurityScorecard](/workflow/integrations/nodes/n8n-nodes-base.securityScorecard/)
 
 
 ## Prerequisites

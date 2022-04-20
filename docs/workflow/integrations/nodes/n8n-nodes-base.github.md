@@ -3,7 +3,7 @@
 [GitHub](https://github.com/) provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/github/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/github/).
 
 
 ## Basic Operations
@@ -45,7 +45,7 @@
 ## Example Usage
 
 This workflow allows you to get the community profile of a GitHub repository. You can also find the [workflow](https://n8n.io/workflows/450) on the website. This example usage workflow uses the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [GitHub]()
 
 The final workflow should look like the following image.
@@ -58,7 +58,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. GitHub node
 
-1. First of all, you'll have to enter credentials for the GitHub node. You can find out how to do that [here](/integrations/credentials/github/).
+1. First of all, you'll have to enter credentials for the GitHub node. You can find out how to do that [here](/workflow/integrations/credentials/github/).
 2. Select the 'Repository' option under the *Resource* field.
 3. Select the 'Get Profile' option under the *Operation* field.
 4. Enter the repository owner in the *Repository Owner* field.

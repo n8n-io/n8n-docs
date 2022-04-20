@@ -3,7 +3,7 @@
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/clockify/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/clockify/).
 
 
 **Note:** This node uses the workflow timezone setting to specify the range of time entries starting time. You have to configure the workflow timezone setting if you want this Trigger node to retrieve the right time entries.
@@ -20,7 +20,7 @@ The final workflow should look like the following image.
 
 ### 1. Clockify Trigger node
 
-1. First enter your credentials for the Clockify Trigger node. You can find out how to do that [here](/integrations/credentials/clockify/).
+1. First enter your credentials for the Clockify Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/clockify/).
 2. Select the *Workspace* you want to receive updates for using the dropdown list.
 3. Click on *Execute Node* to run the workflow.
 

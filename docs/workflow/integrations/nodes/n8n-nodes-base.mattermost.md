@@ -3,7 +3,7 @@
 [Mattermost](https://mattermost.org/) is an open-source, self-hostable online chat service with file sharing, search, and integrations. It is designed as an internal chat for organisations and companies.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mattermost/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mattermost/).
 
 
 ## Basic Operations
@@ -35,7 +35,7 @@
 ## Example Usage
 
 This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://n8n.io/workflows/832) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Mattermost]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new channel named `docs` in Mattermost. If you want to create a channel with a different name, enter that name instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 2. Select 'Channel' from the ***Resource*** dropdown list.
 3. Select a team from the ***Team ID*** dropdown list.
 4. Enter `Docs` in the ***Display Name*** field.

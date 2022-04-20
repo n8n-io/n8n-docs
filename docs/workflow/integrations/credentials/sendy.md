@@ -1,7 +1,14 @@
+---
+title: Sendy
+description: Use Sendy with Workflow²
+tags:
+  - Workflow²
+  - Sendy
+---
 # Sendy
 
 You can use these credentials to authenticate the following nodes with Sendy.
-- [Sendy](/integrations/nodes/n8n-nodes-base.sendy/)
+- [Sendy](/workflow/integrations/nodes/n8n-nodes-base.sendy/)
 
 ## Prerequisites
 

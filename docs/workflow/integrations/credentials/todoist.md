@@ -1,7 +1,7 @@
 # Todoist
 
 You can use these credentials to authenticate the following nodes with Todoist.
-- [Todoist](/integrations/nodes/n8n-nodes-base.todoist/)
+- [Todoist](/workflow/integrations/nodes/workflow-nodes-base.todoist/)
 
 ## Prerequisites
 

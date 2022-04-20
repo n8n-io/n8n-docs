@@ -1,4 +1,4 @@
-n8n provides the following methods:
+Workflow² provides the following methods:
 
 - `$evaluateExpression`: evaluates a string as an expression.
 - `$items`: returns items from a given node

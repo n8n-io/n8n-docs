@@ -1,7 +1,14 @@
+---
+title: Send Email
+description: Use Send Email with Workflow²
+tags:
+  - Workflow²
+  - Send Email
+---
 # Send Email
 
 You can use these credentials to authenticate the following nodes with SMTP.
-- [Send Email](/integrations/core-nodes/n8n-nodes-base.sendEmail/)
+- [Send Email](/workflow/integrations/core-nodes/n8n-nodes-base.sendEmail/)
 
 ## Prerequisites
 

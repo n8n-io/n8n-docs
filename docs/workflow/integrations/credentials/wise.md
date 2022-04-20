@@ -1,8 +1,15 @@
+---
+title: Wise
+description: Use Wise with Workflow²
+tags:
+  - Workflow²
+  - Wise
+---
 # Wise
 
 You can use these credentials to authenticate the following nodes with Wise.
-- [Wise](/integrations/nodes/n8n-nodes-base.wise/)
-- [Wise Trigger](/integrations/trigger-nodes/n8n-nodes-base.wiseTrigger/)
+- [Wise](/workflow/integrations/nodes/workflow-nodes-base.wise/)
+- [Wise Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.wiseTrigger/)
 
 ## Prerequisites
 

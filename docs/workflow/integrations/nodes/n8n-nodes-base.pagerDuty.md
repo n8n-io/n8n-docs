@@ -3,7 +3,7 @@
 [PagerDuty](https://www.pagerduty.com/) is a cloud computing company that produces a SaaS incident response platform for IT departments.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/pagerDuty/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/pagerDuty/).
 
 
 ## Basic Operations
@@ -26,7 +26,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get an incident on PagerDuty. You can also find the [workflow](https://n8n.io/workflows/411) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [PagerDuty]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. PagerDuty node (create: incident)
 
-1. First of all, you'll have to enter credentials for the PagerDuty node. You can find out how to do that [here](/integrations/credentials/pagerDuty/).
+1. First of all, you'll have to enter credentials for the PagerDuty node. You can find out how to do that [here](/workflow/integrations/credentials/pagerDuty/).
 2. Enter the title of the incident in the ***Title*** field.
 3. Select the ***Service ID*** from the dropdown list.
 4. Enter your email in the ***Email*** field.

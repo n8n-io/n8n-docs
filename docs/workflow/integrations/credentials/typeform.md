@@ -1,7 +1,14 @@
+---
+title: Typeform
+description: Use Typeform with Workflow²
+tags:
+  - Workflow²
+  - Typeform
+---
 # Typeform
 
 You can use these credentials to authenticate the following nodes with Typeform.
-- [Typeform Trigger](/integrations/trigger-nodes/n8n-nodes-base.typeFormTrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeFormTrigger/)
 
 ## Prerequisites
 

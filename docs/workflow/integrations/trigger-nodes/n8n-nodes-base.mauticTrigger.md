@@ -3,14 +3,14 @@
 [Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mautic/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mautic/).
 
 
 ## Example Usage
 
 This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on n8n.io. This example usage workflow would use the following node.
 - [Mautic Trigger]()
-- [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 
 The final workflow should look like the following image.
 
@@ -20,7 +20,7 @@ The final workflow should look like the following image.
 
 The Mautic Trigger node will trigger the workflow when a Mautic form is submitted.
 
-1. First of all, you'll have to enter credentials for the Mautic Trigger node. You can find out how to do that [here](/integrations/credentials/mautic/).
+1. First of all, you'll have to enter credentials for the Mautic Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/mautic/).
 2. Select 'Form Submit Event' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -32,7 +32,7 @@ In the screenshot below, you will notice that the node returns the data that was
 
 This node sends a registration confirmation SMS to the users who filled out the Mautic form. We get the phone number of the submitter from the previous node.
 
-1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/credentials/twilio/).
+1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/workflow/integrations/credentials/twilio/).
 
 3. Enter the Twilio phone number in the ***From*** field.
 4. Click on the gears icon next to the ***To*** field and click on ***Add Expression***.

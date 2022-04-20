@@ -3,7 +3,7 @@
 [QuestDB](https://questdb.io/) is an open-source NewSQL relational database designed to process time-series data, faster. QuestDB’s stack is engineered from scratch, zero-GC Java and dependency-free. It supports a a Java API, SQL via HTTP and the PostgreSQL wire protocol.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/questDb/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/questDb/).
 
 
 ## Basic Operations
@@ -14,8 +14,8 @@
 ## Example Usage
 
 This workflow allows you to create a table and insert data into it in QuestDB. You can also find the [workflow](https://n8n.io/workflows/592) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [QuestDB]()
 
 The final workflow should look like the following image.
@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. QuestDB node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the QuestDB node. You can find out how to do that [here](/integrations/credentials/questDb/).
+1. First of all, you'll have to enter credentials for the QuestDB node. You can find out how to do that [here](/workflow/integrations/credentials/questDb/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name STRING);`.
 4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.

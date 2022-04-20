@@ -3,7 +3,7 @@
 [SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/securityScorecard/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/securityScorecard/).
 
 
 ## Basic Operations
@@ -37,7 +37,7 @@
 ## Example Usage
 
 This workflow allows you to generate, retrieve, and download a report using the SecurityScorecard node. You can also find the [workflow](https://n8n.io/workflows/920) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [SecurityScorecard]()
 
 The final workflow should look like the following image.
@@ -52,7 +52,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will generate a full scorecard report for a company that we specify.
 
-1. First of all, you'll have to enter credentials for the SecurityScorecard node. You can find out how to do that [here](/integrations/credentials/securityScorecard/).
+1. First of all, you'll have to enter credentials for the SecurityScorecard node. You can find out how to do that [here](/workflow/integrations/credentials/securityScorecard/).
 2. Select 'Report' from the ***Resource*** dropdown list.
 3. Select 'Generate' from the ***Operation*** dropdown list.
 4. Select 'Full Scorecard' from the ***Report*** dropdown list.

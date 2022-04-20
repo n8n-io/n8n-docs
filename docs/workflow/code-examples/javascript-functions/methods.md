@@ -44,7 +44,7 @@ const allItems = $items("IF", 1, 0);
 
 ### $item(index: number, runIndex?: number)
 
-This method allows you to return an item at a specific index. The index is zero-based. Hence, `$item(0)` will return the first item, `$item(1)` the second one, and so on. Refer to [this](/integrations/core-nodes/n8n-nodes-base.function/) documentation to learn more.
+This method allows you to return an item at a specific index. The index is zero-based. Hence, `$item(0)` will return the first item, `$item(1)` the second one, and so on. Refer to [this](/workflow/integrations/core-nodes/n8n-nodes-base.function/) documentation to learn more.
 
 Example:
 

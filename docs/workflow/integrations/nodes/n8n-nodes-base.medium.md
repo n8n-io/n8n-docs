@@ -3,7 +3,7 @@
 [Medium](https://www.medium.com/) is an online publishing platform and home to a diverse array of stories, ideas, and perspectives. It empowers writers to share their work and ideas with the readers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/medium/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/medium/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 
 This workflow allows you to post an article to a publication on Medium. You can also find the [workflow](https://n8n.io/workflows/594) on the website. This example usage workflow uses the following two nodes.
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Medium]()
 
 The final workflow should look like the following image.
@@ -31,7 +31,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Medium node
 
-1. First of all, you'll have to enter credentials for the Medium node. You can find out how to do that [here](/integrations/credentials/medium/).
+1. First of all, you'll have to enter credentials for the Medium node. You can find out how to do that [here](/workflow/integrations/credentials/medium/).
 2. Toggle ***Publication*** to true.
 3. Select the publication from the ***Publication ID*** dropdown list.
 4. Enter the title in the ***Title*** field.

@@ -3,7 +3,7 @@
 [Monica CRM](https://www.monicahq.com/) is an open-source web application to organize and record your interactions with your loved ones.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/monicaCrm/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/monicaCrm/).
 
 
 ## Basic operations
@@ -77,7 +77,7 @@
 ## Example usage
 
 This workflow allows you to create a new contact in Monica CRM. This example usage workflow would use the following three nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Monica CRM]()
 
 The final workflow should look like the following image.
@@ -90,7 +90,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Monica CRM node
 
-1. First enter your credentials for the Monica CRM node. You can find out how to do that [here](/integrations/credentials/monicaCrm/).
+1. First enter your credentials for the Monica CRM node. You can find out how to do that [here](/workflow/integrations/credentials/monicaCrm/).
 2. Select *Contact* from the *Resource* dropdown list.
 3. Select *Create* from the *Operation* dropdown list.
 3. Enter the *First Name* of your new contact.

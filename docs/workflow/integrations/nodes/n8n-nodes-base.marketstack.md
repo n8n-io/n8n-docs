@@ -3,7 +3,7 @@
 [Marketstack](https://marketstack.com/) is a REST API that provides stock market data in JSON format. 
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/marketstack/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/marketstack/).
 
 
 ## Basic operations
@@ -19,7 +19,7 @@
 
 This workflow allows you to get the past week's end of day data for a desired stock symbol. This example usage workflow uses the following two nodes.
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Marketstack]()
 
 The final workflow should look like the following image.
@@ -32,7 +32,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Marketstack node
 
-1. First enter your credentials for the Marketstack node. You can find out how to do that [here](/integrations/credentials/marketstack/).
+1. First enter your credentials for the Marketstack node. You can find out how to do that [here](/workflow/integrations/credentials/marketstack/).
 2. Select **End-of-Day Data** from the *Resource* dropdown.
 3. The **Get All** *Operation* is selected by default.
 4. Enter your desired ticker symbol, `AI` in our example.

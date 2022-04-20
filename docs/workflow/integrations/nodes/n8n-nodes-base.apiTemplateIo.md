@@ -3,7 +3,7 @@
 [APITemplate.io](https://apitemplate.io) allows you to auto-generate images and PDF documents.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/apiTemplateIo/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/apiTemplateIo/).
 
 
 ## Basic Operations
@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on n8n.io. This example usage workflow would use the following nodes.
-- [Typeform Trigger](/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [APITemplate.io]()
 
 The final workflow should look like the following image.
@@ -37,7 +37,7 @@ This node will trigger the workflow when a form is submitted. Make sure to creat
 - Item Price (Number)
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
-2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/credentials/typeform/).
+2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/typeform/).
 3. Select the invoice form from the ***Form*** dropdown list.
 4. Toggle ***Simplify Answers*** to `false`. By setting this option to false, the node returns the values for the fields with duplicate names.
 5. Click on ***Execute Node*** to run the node.
@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will generate an invoice using the information from the previous node. Create an invoice template in APITemplate.io, if you don't already have one.
 
-1. First of all, you'll have to enter credentials for the APITemplate.io node. You can find out how to do that [here](/integrations/credentials/apiTemplateIo/).
+1. First of all, you'll have to enter credentials for the APITemplate.io node. You can find out how to do that [here](/workflow/integrations/credentials/apiTemplateIo/).
 2. Select 'PDF' from the ***Resource*** dropdown list.
 3. Select your invoice template from the ***Template ID*** dropdown list.
 4. Toggle ***JSON Parameters*** to `true`. By setting this option to true, the node allows us to write custom JSON data.

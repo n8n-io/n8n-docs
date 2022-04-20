@@ -3,7 +3,7 @@
 [ERPNext](https://erpnext.com) is an open-source integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and services companies.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/erpnext/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/erpnext/).
 
 
 ## Basic Operations
@@ -19,7 +19,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and retrieve a document from ERPNext. You can also find the [workflow](https://n8n.io/workflows/961) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [ERPNext]()
 
 The final workflow should look like the following image.
@@ -34,7 +34,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new document in ERPNext.
 
-1. First of all, you'll have to enter credentials for the ERPNext node. You can find out how to do that [here](/integrations/credentials/erpnext/).
+1. First of all, you'll have to enter credentials for the ERPNext node. You can find out how to do that [here](/workflow/integrations/credentials/erpnext/).
 2. Select 'Item' from the ***DocType*** dropdown list.
 3. Click on the ***Add Property*** button.
 4. Select 'Item Name' from the ***Field*** dropdown list.

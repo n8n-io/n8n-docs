@@ -1,17 +1,22 @@
+---
+title: Box
+
+tags:
+  - Workflow²
+  - Box
+---
+
 # Box
 
 You can use these credentials to authenticate the following nodes with Box.
-- [Box](/integrations/nodes/n8n-nodes-base.box/)
-- [Box Trigger](/integrations/trigger-nodes/n8n-nodes-base.boxTrigger/)
+- [Box](/workflow/integrations/nodes/n8n-nodes-base.box/)
+- [Box Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.boxTrigger/)
 
 ## Prerequisites
 
 Create a [Box](https://www.box.com/) account.
 
 ## Using OAuth
-
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Box account to n8n.
 
 
 1. Access the [Box Developers Console](https://app.box.com/developers/console).

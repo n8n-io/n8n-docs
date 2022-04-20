@@ -3,7 +3,7 @@
 [MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mqtt/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mqtt/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. MQTT Trigger node
 
-1. First of all, you'll have to enter credentials for the MQTT Trigger node. You can find out how to do that [here](/integrations/credentials/mqtt/).
+1. First of all, you'll have to enter credentials for the MQTT Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/mqtt/).
 2. Enter the name of the topic in the ***Topics*** field.
 3. Click on ***Execute Node*** to run the workflow.
 

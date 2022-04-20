@@ -3,7 +3,7 @@
 [Dropbox](https://dropbox.com) is a cloud-based file storage and sharing service, accessible through multiple devices.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/dropbox/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/dropbox/).
 
 
 ## Basic Operations
@@ -26,9 +26,9 @@
 ## Example Usage
 
 This workflow allows you to create a folder in Dropbox, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/615) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Dropbox]()
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 
 The final workflow should look like the following image.
 
@@ -40,7 +40,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Dropbox node (create: folder)
 
-1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](/integrations/credentials/dropbox/).
+1. First of all, you'll have to enter credentials for the Dropbox node. You can find out how to do that [here](/workflow/integrations/credentials/dropbox/).
 2. Select 'Folder' from the ***Resource*** dropdown list.
 3. Enter the name of the new folder in the ***Folder*** field.
 4. Click on ***Execute Node*** to run the workflow.

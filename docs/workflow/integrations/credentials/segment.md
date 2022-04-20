@@ -1,7 +1,14 @@
+---
+title: Segment
+description: Use Segment with Workflow²
+tags:
+  - Workflow²
+  - Segment
+---
 # Segment
 
 You can use these credentials to authenticate the following nodes with Segment.
-- [Segment](/integrations/nodes/n8n-nodes-base.segment/)
+- [Segment](/workflow/integrations/nodes/n8n-nodes-base.segment/)
 
 ## Prerequisites
 

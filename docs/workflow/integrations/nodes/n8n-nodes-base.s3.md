@@ -3,7 +3,7 @@
 S3 is an object storage service that allows you to block public access to all of your objects at the bucket or the account level with S3 Block Public Access. S3 maintains compliance programs, such as PCI-DSS, HIPAA/HITECH, FedRAMP, EU Data Protection Directive, and FISMA, to help you meet regulatory requirements.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/s3/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/s3/).
 
 
 ## Basic Operations
@@ -24,13 +24,13 @@ S3 is an object storage service that allows you to block public access to all of
     * Delete a folder
     * Get all folders
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
 
 ## Example Usage
 
 This workflow allows you to upload a file to an S3 compatible server and get a list of all the files in a bucket using the S3 node. You can also find the [workflow](https://n8n.io/workflows/674) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [S3]()
 
 The final workflow should look like the following image.
@@ -53,7 +53,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. S3 node (upload: file)
 
-1. First of all, you'll have to enter credentials for the S3 node. You can find out how to do that [here](/integrations/credentials/s3/).
+1. First of all, you'll have to enter credentials for the S3 node. You can find out how to do that [here](/workflow/integrations/credentials/s3/).
 2. Select 'Upload' from the ***Operation*** dropdown list.
 3. Enter the bucket name in the ***Bucket Name*** field.
 4. Click on the gears icon next to the ***File Name*** field and click on ***Add Expression***.

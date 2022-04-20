@@ -1,7 +1,7 @@
 # Stackby
 
 You can use these credentials to authenticate the following nodes with Stackby.
-- [Stackby](/integrations/nodes/n8n-nodes-base.stackby/)
+- [Stackby](/workflow/integrations/nodes/workflow-nodes-base.stackby/)
 
 ## Prerequisites
 

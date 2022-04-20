@@ -1,7 +1,14 @@
+---
+title: Clearbit
+description: Use Clearbit with Workflow²
+tags:
+  - Workflow²
+  - Clearbit
+---
 # Clearbit
 
 You can use these credentials to authenticate the following nodes with Clearbit.
-- [Clearbit](/integrations/nodes/n8n-nodes-base.clearbit/)
+- [Clearbit](/workflow/integrations/nodes/n8n-nodes-base.clearbit/)
 
 
 ## Prerequisites

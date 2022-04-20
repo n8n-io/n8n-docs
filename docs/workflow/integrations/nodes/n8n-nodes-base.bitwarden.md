@@ -3,7 +3,7 @@
 [Bitwarden](https://www.bitwarden.com/) is an open-source password management solution for individuals, teams, and business organizations.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/bitwarden/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/bitwarden/).
 
 
 
@@ -36,7 +36,7 @@
 ## Example Usage
 
 This workflow allows you to create a group, add members to the group, and get the members of the group in Bitwarden. You can also find the [workflow](https://n8n.io/workflows/1001) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Bitwarden]()
 
 The final workflow should look like the following image.
@@ -51,7 +51,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new group called `documentation` in Bitwarden.
 
-1. First of all, you'll have to enter credentials for the Bitwarden node. You can find out how to do that [here](/integrations/credentials/bitwarden/).
+1. First of all, you'll have to enter credentials for the Bitwarden node. You can find out how to do that [here](/workflow/integrations/credentials/bitwarden/).
 2. Select 'Group' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `documentation` in the ***Name*** field.

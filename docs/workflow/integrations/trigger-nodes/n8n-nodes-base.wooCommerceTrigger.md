@@ -3,7 +3,7 @@
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/wooCommerce/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/wooCommerce/).
 
 
 ## Events
@@ -25,7 +25,7 @@
 
 This workflow allows you to send a message on Mattermost when an order is created in WooCommerce. You can also find the [workflow](https://n8n.io/workflows/848) on n8n.io. This example usage workflow would use the following nodes.
 - [WooCommerce Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -35,7 +35,7 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when an order is created in your WooCommerce store.
 
-1. First of all, you'll have to enter credentials for the WooCommerce Trigger node. You can find out how to do that [here](/integrations/credentials/wooCommerce/).
+1. First of all, you'll have to enter credentials for the WooCommerce Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/wooCommerce/).
 2. Select 'order.created' from the ***Event*** dropdown list. This will trigger the workflow when a user sends a message.
 3. Click on ***Execute Node*** to run the node.
 
@@ -47,7 +47,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will send a message to a Mattermost channel sharing the details of the order that was created in WooCommerce.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 2. Select the channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to ***Message*** field.
 4. Enter the following message in the ***Expression*** editor

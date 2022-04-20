@@ -1,8 +1,8 @@
 # Pipedrive
 
 You can use these credentials to authenticate the following nodes with Pipedrive.
-- [Pipedrive](/integrations/nodes/n8n-nodes-base.pipedrive/)
-- [Pipedrive Trigger](/integrations/trigger-nodes/n8n-nodes-base.pipedriveTrigger/)
+- [Pipedrive](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/)
+- [Pipedrive Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.pipedriveTrigger/)
 
 ## Prerequisites
 

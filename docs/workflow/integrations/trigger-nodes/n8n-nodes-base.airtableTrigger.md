@@ -3,14 +3,14 @@
 [Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/airtable/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/airtable/).
 
 
 ## Example Usage
 
 This workflow allows you to receive a Mattermost message when new data gets added to Airtable. You can also find the [workflow](https://n8n.io/workflows/799) on n8n.io. This example usage workflow would use the following nodes.
 - [Airtable Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -20,7 +20,7 @@ The final workflow should look like the following image.
 
 The Airtable Trigger node will trigger the workflow when new data gets added to Airtable.
 
-1. First of all, you'll have to enter credentials for the Airtable Trigger node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Click on ***Add Poll Time*** and select 'Every Minute' from the ***Mode*** dropdown list. This will check Airtable every minute for new data entries.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the table name in the ***Table*** field.
@@ -35,7 +35,7 @@ In the screenshot below, you will notice that the node returns the new data from
 
 This node will send a message about the new data in the channel 'Information Updated' in Mattermost. If you have a different channel, use that instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

@@ -3,7 +3,7 @@
 [AWS Textract](https://aws.amazon.com/textract/) is a service that extracts printed text, handwriting, and data from any document.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/aws/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/aws/).
 
 
 ## Basic Operations
@@ -13,8 +13,8 @@
 ## Example Usage
 
 This workflow allows you to extract data from a an invoice stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1282) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [AWS S3](/integrations/nodes/n8n-nodes-base.awsS3/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [AWS S3](/workflow/integrations/nodes/n8n-nodes-base.awsS3/)
 - [AWS Textract]()
 
 The final workflow looks like the following image.
@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 
 This node will retrieve an image file with a receipt from an S3 bucket.
 
-1. Choose your credentials for the AWS S3 node. See [here](/integrations/credentials/aws/) for information on how to create these credentials.
+1. Choose your credentials for the AWS S3 node. See [here](/workflow/integrations/credentials/aws/) for information on how to create these credentials.
 2. Enter the bucket name in the ***Bucket Name*** field.
 3. Enter the file key in the ***File Key*** field.
 4. Click on ***Execute Node*** to run the node.

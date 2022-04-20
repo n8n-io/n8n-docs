@@ -16,33 +16,33 @@ Once configured, you can use your credentials to authenticate the following node
 
 | Node | OAuth | Service Account |
 | :--- | :---: | :-------------: |
-| [G Suite Admin](/integrations/nodes/n8n-nodes-base.gSuiteAdmin/) | :white_check_mark: | :x: |
-| [Gmail](/integrations/nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
-| [Google Analytics](/integrations/nodes/n8n-nodes-base.googleAnalytics/) | :white_check_mark: | :x: |
-| [Google BigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/) | :white_check_mark: | :x: |
-| [Google Books](/integrations/nodes/n8n-nodes-base.googleBooks/) | :white_check_mark: | :white_check_mark: |
-| [Google Calendar](/integrations/nodes/n8n-nodes-base.googleCalendar/) | :white_check_mark: | :x: |
-| [Google Chat](/integrations/nodes/n8n-nodes-base.googleChat/) | :x: | :white_check_mark: |
-| [Google Contacts](/integrations/nodes/n8n-nodes-base.googleContacts/) | :white_check_mark: | :x: |
-| [Google Cloud Firestore](/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) | :white_check_mark: | :x: |
-| [Google Cloud Natural Language](/integrations/nodes/n8n-nodes-base.googleCloudNaturalLanguage/) | :white_check_mark: | :x: |
-| [Google Cloud Realtime Database](/integrations/nodes/n8n-nodes-base.googleCloudRealtimeDatabase/) | :white_check_mark: | :x: |
-| [Google Docs](/integrations/nodes/n8n-nodes-base.googleDocs/) | :white_check_mark: | :white_check_mark: |
-| [Google Drive](/integrations/nodes/n8n-nodes-base.googleDrive/) | :white_check_mark: | :white_check_mark: |
-| [Google Drive Trigger](/integrations/trigger-nodes/n8n-nodes-base.googleDriveTrigger/) | :white_check_mark: | :white_check_mark: |
-| [Google Perspective](/integrations/nodes/n8n-nodes-base.googlePerspective/) | :white_check_mark: | :x: |
-| [Google Sheets](/integrations/nodes/n8n-nodes-base.googleSheets/) | :white_check_mark: | :white_check_mark: |
-| [Google Slides](/integrations/nodes/n8n-nodes-base.googleSlides/) | :white_check_mark: | :white_check_mark: |
-| [Google Tasks](/integrations/nodes/n8n-nodes-base.googleTasks/) | :white_check_mark: | :x: |
-| [Google Translate](/integrations/nodes/n8n-nodes-base.googleTranslate/) | :white_check_mark: | :white_check_mark: |
-| [YouTube](/integrations/nodes/n8n-nodes-base.youTube/) | :white_check_mark: | :x: |
+| [G Suite Admin](/workflow/integrations/nodes/n8n-nodes-base.gSuiteAdmin/) | :white_check_mark: | :x: |
+| [Gmail](/workflow/integrations/nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
+| [Google Analytics](/workflow/integrations/nodes/n8n-nodes-base.googleAnalytics/) | :white_check_mark: | :x: |
+| [Google BigQuery](/workflow/integrations/nodes/n8n-nodes-base.googleBigQuery/) | :white_check_mark: | :x: |
+| [Google Books](/workflow/integrations/nodes/n8n-nodes-base.googleBooks/) | :white_check_mark: | :white_check_mark: |
+| [Google Calendar](/workflow/integrations/nodes/n8n-nodes-base.googleCalendar/) | :white_check_mark: | :x: |
+| [Google Chat](/workflow/integrations/nodes/n8n-nodes-base.googleChat/) | :x: | :white_check_mark: |
+| [Google Contacts](/workflow/integrations/nodes/n8n-nodes-base.googleContacts/) | :white_check_mark: | :x: |
+| [Google Cloud Firestore](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) | :white_check_mark: | :x: |
+| [Google Cloud Natural Language](/workflow/integrations/nodes/n8n-nodes-base.googleCloudNaturalLanguage/) | :white_check_mark: | :x: |
+| [Google Cloud Realtime Database](/workflow/integrations/nodes/n8n-nodes-base.googleCloudRealtimeDatabase/) | :white_check_mark: | :x: |
+| [Google Docs](/workflow/integrations/nodes/n8n-nodes-base.googleDocs/) | :white_check_mark: | :white_check_mark: |
+| [Google Drive](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) | :white_check_mark: | :white_check_mark: |
+| [Google Drive Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.googleDriveTrigger/) | :white_check_mark: | :white_check_mark: |
+| [Google Perspective](/workflow/integrations/nodes/n8n-nodes-base.googlePerspective/) | :white_check_mark: | :x: |
+| [Google Sheets](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) | :white_check_mark: | :white_check_mark: |
+| [Google Slides](/workflow/integrations/nodes/n8n-nodes-base.googleSlides/) | :white_check_mark: | :white_check_mark: |
+| [Google Tasks](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/) | :white_check_mark: | :x: |
+| [Google Translate](/workflow/integrations/nodes/n8n-nodes-base.googleTranslate/) | :white_check_mark: | :white_check_mark: |
+| [YouTube](/workflow/integrations/nodes/workflow-nodes-base.youTube/) | :white_check_mark: | :x: |
 
 !!! note "⛅️ Note for n8n.cloud users"
     For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:
-* [Google Calendar](/integrations/nodes/n8n-nodes-base.googleCalendar/)
-* [Google Contacts](/integrations/nodes/n8n-nodes-base.googleContacts/)
-* [Google Sheets](/integrations/nodes/n8n-nodes-base.googleSheets/)
-* [Google Tasks](/integrations/nodes/n8n-nodes-base.googleTasks/)
+* [Google Calendar](/workflow/integrations/nodes/n8n-nodes-base.googleCalendar/)
+* [Google Contacts](/workflow/integrations/nodes/n8n-nodes-base.googleContacts/)
+* [Google Sheets](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/)
+* [Google Tasks](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/)
 
 
 ## Using OAuth

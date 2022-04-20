@@ -3,7 +3,7 @@
 [Grist](https://getgrist.com/) combines the flexibility of a spreadsheet with the robustness of a database to organize your data, your way.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/grist/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/grist/).
 
 
 ## Basic operations
@@ -17,7 +17,7 @@
 
 This workflow allows you to insert and update data from a table in Grist. You can also find the [workflow](https://n8n.io/workflows/818) on n8n.io. This example usage workflow uses the following nodes:
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Grist]()
 
 The final workflow should look like the following:
@@ -36,7 +36,7 @@ This workflow assumes there is a document with a table in your Grist workspace.
 
 This node will create a new record in a table.
 
-1. First enter your credentials for the Grist node. You can find out how to do that [here](/integrations/credentials/grist/).
+1. First enter your credentials for the Grist node. You can find out how to do that [here](/workflow/integrations/credentials/grist/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter that ID of your document into the ***Document ID*** field.
 4. Enter the ID of your table in the ***Table ID*** field.

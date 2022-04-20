@@ -3,7 +3,7 @@
 [Mailcheck](https://www.mailcheck.co/) is an application that allows you to clean your subscription list from bounces and enrich data with customers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mailcheck/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mailcheck/).
 
 
 ## Basic Operations
@@ -14,10 +14,10 @@
 ## Example Usage
 
 This workflow allows you to validate emails stored in Airtable using the Mailcheck node. You can also find the [workflow](https://n8n.io/workflows/1055) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Airtable]/integrations/nodes/n8n-nodes-base.airtable/)
 - [Mailcheck]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 
 The final workflow should look like the following image.
 
@@ -31,7 +31,7 @@ The Start node exists by default when you create a new workflow.
 
 Create a table like [this](https://airtable.com/shrDUFXWoHCuJjYjT) in your Airtable base. The Airtable node will list all the records from a table.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select the 'List' option from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
@@ -45,7 +45,7 @@ In the screenshot below, you will notice that the node returns all the records f
 
 This node will check the emails that got returned by the previous node.
 
-1. First of all, you'll have to enter credentials for the Mailcheck node. You can find out how to do that [here](/integrations/credentials/mailcheck/).
+1. First of all, you'll have to enter credentials for the Mailcheck node. You can find out how to do that [here](/workflow/integrations/credentials/mailcheck/).
 
 2. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > fields > email. You can also add the following expression: `{{$json["fields"]["Email"]}}`.

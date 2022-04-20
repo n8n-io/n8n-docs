@@ -1,3 +1,11 @@
+---
+title: GraphQL
+description: GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
+tags:
+  - Workflow²
+
+---
+
 # GraphQL
 
 [GraphQL](https://graphql.org/) is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
@@ -10,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to get information about the five most recent SpaceX launches from [spacex.land](https://spacex.land/). You can also find the [workflow](https://n8n.io/workflows/558) on the website. This example usage workflow uses the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [GraphQL]()
 
 The final workflow should look like the following image.

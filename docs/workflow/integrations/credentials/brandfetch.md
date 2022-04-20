@@ -1,7 +1,14 @@
+---
+title: Brandfetch
+description: Use Brandfetch with Workflow²
+tags:
+  - Workflow²
+  - Brandfetch
+---
 # Brandfetch
 
 You can use these credentials to authenticate the following nodes with Brandfetch.
-- [Brandfetch](/integrations/nodes/n8n-nodes-base.Brandfetch/)
+- [Brandfetch](/workflow/integrations/nodes/n8n-nodes-base.Brandfetch/)
 
 ## Prerequisites
 

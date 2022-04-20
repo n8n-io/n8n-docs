@@ -3,7 +3,7 @@
 [Home Assistant](https://www.home-assistant.io/) is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/homeAssistant/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/homeAssistant/).
 
 
 ## Basic operations
@@ -32,7 +32,7 @@
 ## Example
 
 This workflow allows you to retrieve your current Home Assistant configuration details. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Home Assistant]()
 
 The final workflow should look like the following image.
@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Home Assistant node
 
-1. First select your credentials for the Home Assistant node. You can find out how to create credentials [here](/integrations/credentials/homeAssistant/).
+1. First select your credentials for the Home Assistant node. You can find out how to create credentials [here](/workflow/integrations/credentials/homeAssistant/).
 2. From the **Resource** dropdown select **Config**.
 3. From the **Operation** dropdown select **Get**.
 4. Click on **Execute Node** to run the workflow.

@@ -1,3 +1,10 @@
+---
+title: Workflow 
+description: A workflow is a collection of nodes connected together to automate a process.
+tags:
+  - Workflow²
+
+---
 # Workflow²
 
 A workflow is a collection of nodes connected together to automate a process. 
@@ -15,8 +22,6 @@ Active workflows enable the Trigger and Webhook nodes to receive data whenever a
 All the newly created workflows are deactivated by default. 
 
 ## Sharing a workflow
-
-Workflows² are saved in JSON format. You can export your workflows as JSON files or import JSON files into your Doc² library. Feel free to [share your workflows](/contributing/#contribute-a-workflow) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
 
 You can export a workflow as a JSON file in two ways:
 
@@ -58,7 +63,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
-You can also use the [Error Trigger node](/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+You can also use the [Error Trigger node](/workflow/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
 
 ## Workflow templates
 
@@ -81,18 +86,3 @@ Templates provide:
 !!! note "Workflow templates are available in 0.165.0 and above"
     Workflow templates are available on all flavors of n8n. If you can't access workflow templates in Doc², check that your Doc² version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of Doc² with templates disabled.
 
-
-### Add your workflow to the library
-
-You can submit your own workflows to n8n's template library.
-
-1. In Doc², download your workflow JSON: 
-    1. Open the workflow
-    2. Click **Workflows** > **Download**.
-2. [Log in](https://n8n.io/login) to your Doc² dashboard.
-3. Click **Share New Workflow**.
-4. Enter your workflow details:
-    * **Name**: this should be descriptive but simple. It will appear on the website and in app.
-    * **Description**: tell users what the workflow does. Include any configuration or setup steps.
-    * **Workflow code**: copy in the workflow JSON that you downloaded.
-5. Click **Publish Workflow to Share**. Doc² reviews all workflows before publishing them.

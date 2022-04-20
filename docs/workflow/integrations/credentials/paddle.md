@@ -1,7 +1,7 @@
 # Paddle
 
 You can use these credentials to authenticate the following nodes with Paddle.
-- [Paddle](/integrations/nodes/n8n-nodes-base.paddle/)
+- [Paddle](/workflow/integrations/nodes/n8n-nodes-base.paddle/)
 
 ## Prerequisites
 

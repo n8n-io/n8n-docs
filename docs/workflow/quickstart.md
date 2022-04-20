@@ -48,7 +48,7 @@ For your first workflow, let's build something to take one tedious task off you 
     You can find this complete workflow [here](https://n8n.io/workflows/1153) courtesy of n8n's own [Tephlon](https://t5n.xyz/).
 
 
-1. Open the Nodes Panel by click the orange `+` sign, then search and find the [Gmail node](/integrations/nodes/n8n-nodes-base.gmail/). Click on it to add it to your canvas:
+1. Open the Nodes Panel by click the orange `+` sign, then search and find the [Gmail node](/workflow/integrations/nodes/n8n-nodes-base.gmail/). Click on it to add it to your canvas:
     ![Add Gmail node](/_images/quickstart/add_gmail_node.png)
 
 2. When you add the Gmail node to the canvas, its configuration modal opens automatically:
@@ -68,7 +68,7 @@ For your first workflow, let's build something to take one tedious task off you 
     * Navigate to *APIs & Services* > *Library*, search for Gmail and select *Enable*.
 
     !!! note " Keep in mind"
-        We go through a quick credential flow for Google in this example, but you can learn all about Doc² credentials for Google services [here](/integrations/credentials/google/).
+        We go through a quick credential flow for Google in this example, but you can learn all about Doc² credentials for Google services [here](/workflow/integrations/credentials/google/).
 
 6. Return to your Doc² tab and in the new credentials modal enter the *Client ID* and *Client Secret* obtained from your Google Cloud Console. A *Sign in with Google* button appears.
     ![Gmail Credentials modal](/_images/quickstart/credentials_modal2.png)
@@ -85,7 +85,7 @@ For your first workflow, let's build something to take one tedious task off you 
     * *Add Field* > *Format*: Select **IDs** so that we fetch only the message ID instead of its entire contents.
     * *Add Field* > *Query*: This is where we use [Gmail Search Operators](https://support.google.com/mail/answer/7190?hl=en) to find the messages we want to delete. Here we use `-in:chats unsubscribe` to identify all messages not in chats that contain the word "unsubscribe".
 
-10. Next, let's add a [Split in Batches node](/integrations/core-nodes/n8n-nodes-base.splitInBatches/) after the Gmail node. This will break up the cleanup operation into chucks so avoid hitting any API rate limits. Let's configure it to use batches of 100 messages at a time:
+10. Next, let's add a [Split in Batches node](/workflow/integrations/core-nodes/n8n-nodes-base.splitInBatches/) after the Gmail node. This will break up the cleanup operation into chucks so avoid hitting any API rate limits. Let's configure it to use batches of 100 messages at a time:
     ![Split in Batches node](/_images/quickstart/batches_node.png)
 
 11. Now let's add another Gmail node to perform the delete operation:
@@ -99,12 +99,12 @@ For your first workflow, let's build something to take one tedious task off you 
 
 ![Workflow](/_images/quickstart/workflow.png)
 
-You've build your fist automation workflow and cleaned up a cluttered inbox in the process. Don't forget you can edit the query to find more messages to cleanup, and also set this workflow to run automatically using the [Cron node](/integrations/core-nodes/n8n-nodes-base.cron/).
+You've build your fist automation workflow and cleaned up a cluttered inbox in the process. Don't forget you can edit the query to find more messages to cleanup, and also set this workflow to run automatically using the [Cron node](/workflow/integrations/core-nodes/n8n-nodes-base.cron/).
 
 ## What's next?
 
 Do you enjoy automating workflows? Here's what you can do next:
 
-- See all Doc² [nodes](/integrations/) and try out new workflows.
+- See all Doc² [nodes](/workflow/integrations/) and try out new workflows.
 - Check out the [hosting](/hosting/) section to learn more about options for installing and running n8n.
 - Read our [blog](https://n8n.io/blog/) and discover what others are doing with n8n.

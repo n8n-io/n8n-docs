@@ -1,8 +1,8 @@
 # Strava
 
 You can use these credentials to authenticate the following nodes with Strava.
-- [Strava](/integrations/nodes/n8n-nodes-base.strava/)
-- [Strava Trigger](/integrations/trigger-nodes/n8n-nodes-base.stravaTrigger/)
+- [Strava](/workflow/integrations/nodes/workflow-nodes-base.strava/)
+- [Strava Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.stravaTrigger/)
 
 ## Prerequisites
 

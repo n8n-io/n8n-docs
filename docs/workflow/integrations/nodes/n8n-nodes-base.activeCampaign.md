@@ -3,7 +3,7 @@
 [ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/activeCampaign/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/activeCampaign/).
 
 
 ## Basic Operations
@@ -72,7 +72,7 @@
 ## Example Usage
 
 This workflow allows you to create a contact in ActiveCampaign. You can also find the [workflow](https://n8n.io/workflows/412) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [ActiveCampaign]()
 
 The final workflow should look like the following image.
@@ -85,7 +85,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. ActiveCampaign node
 
-1. First of all, you'll have to enter credentials for the ActiveCampaign node. You can find out how to do that [here](/integrations/credentials/activeCampaign/).
+1. First of all, you'll have to enter credentials for the ActiveCampaign node. You can find out how to do that [here](/workflow/integrations/credentials/activeCampaign/).
 2. Enter the email of the contact in the *Email* field.
 3. Toggle the *Update if exists* option to yes.
 4. Under the *Additional Fields* section, click on the *Add Field* button and select *First Name*.

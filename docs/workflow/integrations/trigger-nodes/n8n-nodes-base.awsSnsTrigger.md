@@ -3,7 +3,7 @@
 [AWS SNS](https://aws.amazon.com/sns/) is a notification service provided as part of Amazon Web Services. It provides a low-cost infrastructure for the mass delivery of messages, predominantly to mobile users.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/aws/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/aws/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. AWS SNS Trigger node
 
-1. First of all, you'll have to enter credentials for the AWS SNS Trigger node. You can find out how to do that [here](/integrations/credentials/aws/).
+1. First of all, you'll have to enter credentials for the AWS SNS Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/aws/).
 2. Select the topic you want to listen for in the *Topic* dropdown list.
 3. Click on *Execute Node* to run the workflow.
 

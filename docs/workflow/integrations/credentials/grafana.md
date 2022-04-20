@@ -1,7 +1,7 @@
 # Grafana
 
 You can use these credentials to authenticate the following nodes with Grafana.
-- [Grafana](/integrations/nodes/n8n-nodes-base.grafana/)
+- [Grafana](/workflow/integrations/nodes/n8n-nodes-base.grafana/)
 
 ## Prerequisites
 

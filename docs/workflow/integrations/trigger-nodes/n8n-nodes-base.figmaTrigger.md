@@ -3,7 +3,7 @@
 [Figma](https://www.figma.com/) is a prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/figma/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/figma/).
 
 
 !!! warning " Supported Figma Plans"

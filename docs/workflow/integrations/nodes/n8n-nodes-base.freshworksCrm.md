@@ -3,7 +3,7 @@
 [Freshworks CRM](https://www.freshworks.com/freshsales-crm/) is a cloud-based customer relationship management (CRM) solution that helps businesses manage their interactions with existing and potential customers.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/freshworksCrm/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/freshworksCrm/).
 
 
 ## Basic operations
@@ -50,7 +50,7 @@
 
 This workflow allows you to fetch all Contacts in Freshworks CRM that you have yet to contact. This example usage workflow would use the following two nodes:
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Freshworks CRM]()
 
 The final workflow should look like the following image.
@@ -63,7 +63,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Freshworks CRM node
 
-1. First enter your credentials for the Freshworks CRM node. You can find out how to do that [here](/integrations/credentials/freshworksCrm/).
+1. First enter your credentials for the Freshworks CRM node. You can find out how to do that [here](/workflow/integrations/credentials/freshworksCrm/).
 2. Select **Contact** from the *Resource* dropdown.
 3. Select **Get All** from the *Operation* dropdown.
 4. Select **Never Contacted** from the *View* dropdown.

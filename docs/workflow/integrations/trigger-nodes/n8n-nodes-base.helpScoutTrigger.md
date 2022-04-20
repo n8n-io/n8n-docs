@@ -3,7 +3,7 @@
 [Help Scout](https://www.helpscout.com/) is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/helpScout/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/helpScout/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Help Scout Trigger node
 
-1. First of all, you'll have to enter credentials for the Help Scout Trigger node. You can find out how to do that [here](/integrations/credentials/helpScout/).
+1. First of all, you'll have to enter credentials for the Help Scout Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/helpScout/).
 2. Select 'Customer - Created' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

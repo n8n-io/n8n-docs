@@ -1,6 +1,14 @@
+---
+title: Switch
+description: The Switch node is used to route a workflow conditionally based on comparison operations.
+tags:
+  - Workflow²
+  - Switch
+---
+
 # Switch
 
-The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](/integrations/core-nodes/n8n-nodes-base.if/) node, but supports up to four conditional routes.
+The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/) node, but supports up to four conditional routes.
 
 ## Node Reference
 
@@ -31,11 +39,11 @@ You can route a workflow when none of the specified conditions are met using ***
 ## Example Usage
 
 This workflow executes four different Set nodes based on the output given by a Switch node. You can also find the [workflow](https://n8n.io/workflows/688) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Function](/integrations/core-nodes/n8n-nodes-base.function/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/)
 - [Switch]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [NoOp](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [NoOp](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 
 The final workflow should look like the following image.

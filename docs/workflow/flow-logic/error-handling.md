@@ -1,3 +1,10 @@
+---
+
+tags:
+  - Workflow²
+
+---
+
 ## Error workflow
 
 For each workflow, an optional Error Workflow can be set in the Workflow Settings. It gets executed if the original execution fails. That makes it possible to, for instance, inform the user via Email or Slack if something goes wrong. The same Error Workflow can be set on multiple workflows.

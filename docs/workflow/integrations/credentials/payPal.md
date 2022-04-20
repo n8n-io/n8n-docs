@@ -1,8 +1,8 @@
 # PayPal
 
 You can use these credentials to authenticate the following nodes with PayPal.
-- [PayPal](/integrations/nodes/n8n-nodes-base.payPal/)
-- [PayPal Trigger](/integrations/trigger-nodes/n8n-nodes-base.payPalTrigger/)
+- [PayPal](/workflow/integrations/nodes/n8n-nodes-base.payPal/)
+- [PayPal Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.payPalTrigger/)
 
 ## Prerequisites
 

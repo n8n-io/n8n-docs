@@ -1,8 +1,17 @@
+---
+title: AMQP
+
+tags:
+  - Workflow²
+  - AMQP
+---
+
+
 # AMQP
 
 You can use these credentials to authenticate the following nodes with AMQP.
-- [AMQP Sender](/integrations/nodes/n8n-nodes-base.amqp/)
-- [AMQP Trigger](/integrations/trigger-nodes/n8n-nodes-base.amqpTrigger/)
+- [AMQP Sender](/workflow/integrations/nodes/n8n-nodes-base.amqp/)
+- [AMQP Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.amqpTrigger/)
 
 ## Prerequisites
 

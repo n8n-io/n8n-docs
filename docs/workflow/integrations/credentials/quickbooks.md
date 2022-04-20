@@ -1,7 +1,7 @@
 # QuickBooks
 
 You can use these credentials to authenticate the following nodes with QuickBooks.
-- [QuickBooks](/integrations/nodes/n8n-nodes-base.quickbooks/)
+- [QuickBooks](/workflow/integrations/nodes/n8n-nodes-base.quickbooks/)
 
 ## Prerequisites
 

@@ -1,7 +1,14 @@
+---
+title: UptimeRobot
+description: Use UptimeRobot with Workflow²
+tags:
+  - Workflow²
+  - UptimeRobot
+---
 # UptimeRobot
 
 You can use these credentials to authenticate the following nodes with UptimeRobot.
-- [UptimeRobot](/integrations/nodes/n8n-nodes-base.uptimeRobot/)
+- [UptimeRobot](/workflow/integrations/nodes/workflow-nodes-base.uptimeRobot/)
 
 ## Prerequisites
 

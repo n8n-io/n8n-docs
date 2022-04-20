@@ -23,11 +23,11 @@
 ## Example Usage
 
 This workflow allows you to get the price of BTC in EUR using the CoinGecko node and send an SMS when the price is greater than or equal to €9000. You can also find the [workflow](https://n8n.io/workflows/704) on n8n.io. This example usage workflow would use the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [CoinGecko]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -79,7 +79,7 @@ In the screenshot below, you will notice that the node returns an output for **t
 This node sends an SMS to a number when the price is greater than or equal to 9000.
 
 1. Connect this node with the **true** output of the IF node.
-2. You'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/credentials/twilio/).
+2. You'll have to enter credentials for the Twilio node. You can find out how to do that [here](/workflow/integrations/credentials/twilio/).
 3. Enter the Twilio phone number in the ***From*** field.
 4. Enter the receiver's phone number in the ***To*** field.
 5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

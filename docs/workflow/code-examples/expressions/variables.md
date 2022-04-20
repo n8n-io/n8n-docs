@@ -20,6 +20,6 @@ $workflow.name
 
 ### $resumeWebhookUrl
 
-The webhook URL to call to resume a [waiting](/integrations/core-nodes/n8n-nodes-base.wait/) workflow.
+The webhook URL to call to resume a [waiting](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) workflow.
 
-See the [Wait > On webhook call](/integrations/core-nodes/n8n-nodes-base.wait/#webhook-call) documentation to learn more.
+See the [Wait > On webhook call](/workflow/integrations/core-nodes/n8n-nodes-base.wait/#webhook-call) documentation to learn more.

@@ -3,7 +3,7 @@
 [Nextcloud](https://nextcloud.com/) is a free and open-source suite of client-server software for creating and using file hosting services.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/nextCloud/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/nextCloud/).
 
 
 ## Basic Operations
@@ -32,9 +32,9 @@
 ## Example Usage
 
 This workflow allows you to create a folder in Nextcloud, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/620) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Nextcloud]()
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 
 The final workflow should look like the following image.
 
@@ -46,7 +46,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Nextcloud node (create: folder)
 
-1. First of all, you'll have to enter credentials for the Nextcloud node. You can find out how to do that [here](/integrations/credentials/nextCloud/).
+1. First of all, you'll have to enter credentials for the Nextcloud node. You can find out how to do that [here](/workflow/integrations/credentials/nextCloud/).
 2. Select the 'Folder' option from the ***Resource*** dropdown list.
 3. Enter a folder name in the ***Folder*** field.
 4. Click on ***Execute Node*** to run the node.

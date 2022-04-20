@@ -84,7 +84,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/) is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/workflow/integrations/core-nodes/n8n-nodes-base.start/) is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Start-node.png" alt="Start node" style="width:30%"><figcaption align = "center"><i>Start node</i></figcaption></figure>
 

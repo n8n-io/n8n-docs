@@ -3,7 +3,7 @@
 [Microsoft To Do](https://todo.microsoft.com) is a cloud-based task management application. It allows users to manage their tasks from a smartphone, tablet, and computer.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/microsoft/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/microsoft/).
 
 
 ## Basic Operations
@@ -30,7 +30,7 @@
 ## Example Usage
 
 This workflow allows you to create, update and get a task in Microsoft To Do. You can also find the [workflow](https://n8n.io/workflows/1114) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Microsoft To Do]()
 
 The final workflow should look like the following image.
@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a task with the importance level `High` in the Tasks list. You can select a different list and the importance level.
 
-1. First of all, you'll have to enter credentials for the Microsoft To Do node. You can find out how to do that [here](/integrations/credentials/microsoft/).
+1. First of all, you'll have to enter credentials for the Microsoft To Do node. You can find out how to do that [here](/workflow/integrations/credentials/microsoft/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Select a list from the ***List ID*** dropdown list.
 4. Enter a subject in the ***Subject*** field.

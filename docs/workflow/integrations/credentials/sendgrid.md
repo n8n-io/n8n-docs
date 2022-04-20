@@ -1,7 +1,14 @@
+---
+title: SendGrid
+description: Use SendGrid with Workflow²
+tags:
+  - Workflow²
+  - SendGrid
+---
 # SendGrid
 
 You can use these credentials to authenticate the following nodes with SendGrid.
-- [SendGrid](/integrations/nodes/n8n-nodes-base.sendGrid/)
+- [SendGrid](/workflow/integrations/nodes/n8n-nodes-base.sendGrid/)
 
 
 ## Prerequisites

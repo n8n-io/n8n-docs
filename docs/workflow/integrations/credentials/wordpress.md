@@ -1,7 +1,7 @@
 # WordPress
 
 You can use these credentials to authenticate the following nodes with WordPress.
-- [WordPress](/integrations/nodes/n8n-nodes-base.wordPress/)
+- [WordPress](/workflow/integrations/nodes/workflow-nodes-base.wordpress/)
 
 ## Prerequisites
 

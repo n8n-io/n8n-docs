@@ -3,7 +3,7 @@
 [Brandfetch](https://www.Brandfetch.com/) is a brand search engine that helps you find logos, colors, fonts, images, and more.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/brandfetch/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/brandfetch/).
 
 
 
@@ -18,10 +18,10 @@
 ## Example Usage
 
 This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/835) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Brandfetch]()
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 
@@ -35,7 +35,7 @@ The start node exists by default when you create a new workflow.
 
 This node will fetch the URL of the logo and icon of n8n. If you want the logo and icon of a different company, enter the domain name of that company instead.
 
-1. First of all, you'll have to enter credentials for the Brandfetch node. You can find out how to do that [here](/integrations/credentials/brandfetch/).
+1. First of all, you'll have to enter credentials for the Brandfetch node. You can find out how to do that [here](/workflow/integrations/credentials/brandfetch/).
 2. Enter `n8n.io` in the ***Domain*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -84,7 +84,7 @@ In the screenshot below, you will notice that the node sets the value of `Name`,
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrPVVaVZuHofrDVw) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.

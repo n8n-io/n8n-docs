@@ -1,9 +1,17 @@
+---
+title: Activation Trigger
+description: The Activation Trigger node gets triggered when an event gets fired by Workflow² or a workflow.
+tags:
+  - Workflow²
+
+---
+
 # Activation Trigger
 
-The Activation Trigger node gets triggered when an event gets fired by Doc² or a workflow.
+The Activation Trigger node gets triggered when an event gets fired by Workflow² or a workflow.
 
 !!! warning
-    The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the [n8n Trigger](/integrations/core-nodes/n8n-nodes-base.n8nTrigger/) and the [Workflow Trigger](/integrations/core-nodes/n8n-nodes-base.workflowTrigger/) node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
+    The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the [n8n Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.n8nTrigger/) and the [Workflow Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.workflowTrigger/) node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
 
 
 !!! note " Keep in mind"
@@ -23,7 +31,7 @@ The Activation Trigger node gets triggered for the workflow that it gets added t
 
 This workflow allows you to receive a message on Mattermost when a workflow is updated. You can also find the [workflow](https://n8n.io/workflows/1033) on n8n.io. This example usage workflow uses the following nodes.
 - [Activation Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -45,7 +53,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will send a message in the `workflow` channel on Mattermost.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/mattermost/).
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 

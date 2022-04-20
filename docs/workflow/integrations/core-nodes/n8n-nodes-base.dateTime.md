@@ -1,3 +1,12 @@
+---
+title: Date & Time
+description: The Date & Time node is used to manipulate date and time data and convert it to different formats.
+tags:
+  - Workflow²
+  - Date & Time
+
+---
+
 # Date & Time
 
 The Date & Time node is used to manipulate date and time data and convert it to different formats.
@@ -33,7 +42,7 @@ You can also specify a custom format by setting the *Custom Format* toggle to 'O
 ## Example Usage
 
 This workflow allows you to convert a date from one format to another using the Date & Time node. You can also find the [workflow](https://n8n.io/workflows/575) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Date & Time]()
 
 

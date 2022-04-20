@@ -3,7 +3,7 @@
 [SurveyMonkey](https://www.surveymonkey.com/) is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/surveyMonkey/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/surveyMonkey/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. SurveyMonkey Trigger node
 
-1. First of all, you'll have to enter credentials for the SurveyMonkey Trigger node. You can find out how to do that [here](/integrations/credentials/surveyMonkey/).
+1. First of all, you'll have to enter credentials for the SurveyMonkey Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/surveyMonkey/).
 2. Select the 'Survey' option from the *Type* dropdown list.
 3. Select 'Response Created' from the *Event* dropdown list.
 4. Select the surveys you want to receive updates for from the *Survey IDs* dropdown list.

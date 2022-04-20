@@ -3,7 +3,7 @@
 [Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -30,9 +30,9 @@
 ## Example Usage
 
 This workflow allows you to download a file from Google Drive. You can also find the [workflow](https://n8n.io/workflows/515) on the website. This example usage workflow uses the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Drive]()
-- [Write Binary File](/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/)
+- [Write Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/)
 
 The final workflow should look like the following image.
 
@@ -44,7 +44,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Google Sheets node
 
-1. First of all, you'll have to enter credentials for the Google Drive node. You can find out how to do that [here](/integrations/credentials/google/), in the section 'Google Drive / Sheets API'.
+1. First of all, you'll have to enter credentials for the Google Drive node. You can find out how to do that [here](/workflow/integrations/credentials/google/), in the section 'Google Drive / Sheets API'.
 2. Select the authentication method you plan to use from the *Authentication* dropdown list.
 3. Select 'Download' from the *Operation* dropdown list.
 4. Copy the string of characters located between `/d/` and `/edit` in your Google Drive URL. Paste that string in the *File ID* field.

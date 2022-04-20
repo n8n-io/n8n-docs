@@ -3,7 +3,7 @@
 [Google Books](https://books.google.com) is a service from Google to browse, buy, or borrow books online.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -24,7 +24,7 @@
 ## Example Usage
 
 This workflow allows you to get a volume and add it to your bookshelf using the Google Books node. You can also find the [workflow](https://n8n.io/workflows/771) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Books]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ The Start node exists by default when you create a new workflow.
 This node will retrieve a volume from Google Books.
 
 1. Select 'OAuth2' from the ***Authentication*** dropdown list.
-2. Enter credentials for the Google Books node. You can find out how to enter credentials for this node [here](/integrations/credentials/google/).
+2. Enter credentials for the Google Books node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/google/).
 3. Enter the ID of a volume in the ***Volume ID*** field.
 4. Click on ***Execute Node*** to run the workflow.
 

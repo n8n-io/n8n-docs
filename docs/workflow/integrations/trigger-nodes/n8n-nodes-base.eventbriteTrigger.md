@@ -3,7 +3,7 @@
 [Eventbrite](https://www.eventbrite.com/) is an event management and ticketing website. The service allows users to browse, create, and promote local events.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/eventbrite/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/eventbrite/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Eventbrite Trigger node
 
-1. First of all, you'll have to enter credentials for the Eventbrite Trigger node. You can find out how to do that [here](/integrations/credentials/eventbrite/).
+1. First of all, you'll have to enter credentials for the Eventbrite Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/eventbrite/).
 2. Select the profile that contains your event from the *Organization* dropdown list.
 3. Select the event you want to receive updates for from the *Event* dropdown list.
 4. Select the actions that you want to receive updates for from the *Actions* dropdown list.

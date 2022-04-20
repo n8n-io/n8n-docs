@@ -132,10 +132,9 @@ nav:
       - Import: doc2/import.md
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
-      - Merge Split PDF: doc2/merge-split-pdf.md
       - SSO: 
         - Infor SSO: doc2/configuring-sso-in-cloud.md
-
+      - Master Data Validation: doc2/settings-master-data-validation.md
 
     - Table Train: doc2/table-train.md
     - PO Matching: 
@@ -212,8 +211,13 @@ nav:
           - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
-    - Overview: flow2/flow2.md
-    - OnBoarding: flow2/flow2-onboarding-guide.md
+    - Getting Started: flow2/introduction.md
+    - Onboarding Guide: flow2/flow2-onboarding-guide.md
+    - Deployment: flow2/deployment.md
+    - User Dashboard: flow2/home.md
+    - System Setup: flow2/settings-system-setup.md
+    - Metadata: flow2/metadata.md
+    - Import from Doc²: flow2/import-from-doc2.md
   - KV²:
     - Tutorial: kv2/fellowkv2-tutorial.md
     - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
@@ -228,8 +232,12 @@ nav:
     - Epheosft External Application: te2/ephesoft-external-application.md
     - Infor LN BOD Mapping: te2/ln_bodmapping.md
   - OCR²:
-    - Overview: ocr/index.md
+    - Overview: ocr/overview.md
+    - Installation & Config: ocr/installation-config.md
     - Getting Started: ocr/get-started.md
+    - OCR Server Process: ocr/ocrserverprocess.md
+    - Detect inside pages: ocr/detect-inside-pages.md
+    - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
   # - Courses:
   #   - Overview: courses/index.md

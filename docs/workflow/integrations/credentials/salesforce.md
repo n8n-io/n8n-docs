@@ -1,16 +1,19 @@
+---
+title: Salesforce
+description: Use Salesforce with Workflow²
+tags:
+  - Workflow²
+  - Salesforce
+---
 # Salesforce
 
 You can use these credentials to authenticate the following nodes with Salesforce.
-- [Salesforce](/integrations/nodes/n8n-nodes-base.salesforce/)
+- [Salesforce](/workflow/integrations/nodes/n8n-nodes-base.salesforce/)
 
 ## Prerequisites
 
 Create a [Salesforce](https://www.salesforce.com/) account.
 
-## Using OAuth
-
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
 
 
 1. Access your Salesforce Dashboard.

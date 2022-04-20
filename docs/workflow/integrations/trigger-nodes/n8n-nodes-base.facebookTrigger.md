@@ -3,7 +3,7 @@
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/facebookApp/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/facebookApp/).
 
 
 ## Object
@@ -24,7 +24,7 @@
 
 This workflow allows you to receive a Mattermost message when a user updates their profile on Facebook. You can also find the [workflow](https://n8n.io/workflows/785) on n8n.io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -34,7 +34,7 @@ The final workflow should look like the following image.
 
 The Facebook Trigger node will trigger the workflow when a user updates their profile on Facebook.
 
-1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](/integrations/credentials/facebookApp/).
+1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/facebookApp/).
 2. Select 'User' from the ***Object*** dropdown list.
 3. Enter your app ID in the ***App ID*** field.
 3. Click on ***Execute Node*** to run the node.
@@ -47,7 +47,7 @@ In the screenshot below, you will notice that the node returns the updated infor
 
 This node will send a message of the updated information in the channel `Information Updated` in Mattermost. If you have a different channel, use that instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to do that [here](/workflow/integrations/credentials/mattermost/).
 
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.

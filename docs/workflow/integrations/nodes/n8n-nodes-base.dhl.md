@@ -10,7 +10,7 @@ The [DHL Shipment Tracking](https://developer.dhl.com/api-reference/shipment-tra
 - DHL eCommerce Solutions (Asia-Pacific, US, Canada, EU)
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/dhl/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/dhl/).
 
 
 ## Basic Operations

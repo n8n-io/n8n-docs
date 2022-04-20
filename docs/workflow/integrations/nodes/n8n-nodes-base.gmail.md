@@ -3,7 +3,7 @@
 [Gmail](https://www.gmail.com) is an email service developed by Google. Users can access Gmail on the web and using third-party programs that synchronize email content through POP or IMAP protocols.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -31,7 +31,7 @@
 ## Example Usage
 
 This workflow allows you to get all messages with a certain label, remove the label from the messages, and add a new label to the messages. You can also find the [workflow](https://n8n.io/workflows/621) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Gmail]()
 
 The final workflow should look like the following image.
@@ -46,7 +46,7 @@ The start node exists by default when you create a new workflow.
 
 This node will return ten messages with the label `n8n` from Gmail. If you want to return all the messages toggle ***Return All*** to `true`.
 
-1. First of all, you'll have to enter credentials for the Gmail node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Gmail node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select 'Message' from the ***Resource*** dropdown list.
 3. Select 'Get All' from the ***Operation*** dropdown list.
 4. Click on the ***Add Field*** button and select 'Format' from the dropdown list.

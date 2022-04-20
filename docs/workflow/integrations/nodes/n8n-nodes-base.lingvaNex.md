@@ -3,7 +3,7 @@
 [LingvaNex](https://lingvanex.com) is a service that translates text, web pages, text on images, documents between English and over 112 other languages.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/lingvaNex/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/lingvaNex/).
 
 
 ## Basic Operations
@@ -13,8 +13,8 @@
 ## Example Usage
 
 This workflow allows you to translate cocktail instructions to Italian. You can also find the [workflow](https://n8n.io/workflows/797) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [LingvaNex]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will translate the cocktail instructions that we got from the previous node to Italian. To translate the instructions in your language, select your language instead.
 
-1. First of all, you'll have to enter credentials for the LingvaNex node. You can find out how to do that [here](/integrations/credentials/lingvaNex/).
+1. First of all, you'll have to enter credentials for the LingvaNex node. You can find out how to do that [here](/workflow/integrations/credentials/lingvaNex/).
 
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strInstructions"]}}`.

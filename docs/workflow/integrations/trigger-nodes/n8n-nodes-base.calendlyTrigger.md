@@ -3,7 +3,7 @@
 [Calendly](https://calendly.com/) is an automated scheduling software that is designed to make the process of finding meeting times easy.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/calendly/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/calendly/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Calendly Trigger node
 
-1. First of all, you'll have to enter credentials for the Calendly Trigger node. You can find out how to do that [here](/integrations/credentials/calendly/).
+1. First of all, you'll have to enter credentials for the Calendly Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/calendly/).
 2. Select the events you want to receive updates for from the *Events* dropdown list.
 3. Click on *Execute Node* to run the workflow.
 

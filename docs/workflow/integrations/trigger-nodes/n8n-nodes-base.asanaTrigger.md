@@ -3,7 +3,7 @@
 [Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/asana/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/asana/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Asana Trigger node
 
-1. First of all, you'll have to enter credentials for the Asana Trigger node. You can find out how to do that [here](/integrations/credentials/asana/).
+1. First of all, you'll have to enter credentials for the Asana Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/asana/).
 2. Enter the name of the resource in the ***Resource*** field.
 3. Enter the name of the workspace in the ***Workspace*** field.
 4. Click on ***Execute Node*** to run the node.

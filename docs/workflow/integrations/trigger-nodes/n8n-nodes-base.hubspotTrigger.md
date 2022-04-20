@@ -3,7 +3,7 @@
 [HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 
 !!! note "🔑 Credentials"
-    For this node, you will have to retrieve the App ID and Client secret from the 'Using OAuth' section as well as the Developer API Key from the 'Using Developer API Key' section. You can find authentication information for this node [here](/integrations/credentials/hubspot/).
+    For this node, you will have to retrieve the App ID and Client secret from the 'Using OAuth' section as well as the Developer API Key from the 'Using Developer API Key' section. You can find authentication information for this node [here](/workflow/integrations/credentials/hubspot/).
 
 
 !!! note "Webhooks"
@@ -22,7 +22,7 @@ The final workflow should look like the following image.
 
 ### 1. HubSpot Trigger node
 
-1. First of all, you'll have to enter credentials for the HubSpot Trigger node. You can find out how to do that [here](/integrations/credentials/hubspot/).
+1. First of all, you'll have to enter credentials for the HubSpot Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/hubspot/).
 2. Enter the HubSpot App ID in the ***App ID*** field. You can find out how to obtain the ***App ID*** in the link above.
 3. Click on ***Execute Node*** to run the workflow.
 

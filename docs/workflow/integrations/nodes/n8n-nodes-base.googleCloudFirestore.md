@@ -3,7 +3,7 @@
 [Google Cloud Firestore](https://firebase.google.com/docs/firestore/) is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud. It keeps your data in-sync across client apps through real-time listeners and offers offline support for mobile and web.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -21,8 +21,8 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a document in the Google Cloud Firestore. You can also find the [workflow](https://n8n.io/workflows/839) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Google Cloud Firestore]()
 
 The final workflow should look like the following image.
@@ -53,7 +53,7 @@ In the screenshot below, you will notice that node sets the value for name and i
 
 This node will create a new document in a collection in Google Cloud Firestore with the data from the previous node.
 
-1. First of all, you'll have to enter credentials for the Google Cloud Firestore node. You can find out how to do that [here](/integrations/credentials/google/).
+1. First of all, you'll have to enter credentials for the Google Cloud Firestore node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Select a project from the ***Project ID*** dropdown list.
 4. Enter the name of your collection in the ***Collection*** field.

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-* [Grist](/integrations/nodes/n8n-nodes-base.grist/).
+* [Grist](/workflow/integrations/nodes/n8n-nodes-base.grist/).
 
 ## Prerequisites
 

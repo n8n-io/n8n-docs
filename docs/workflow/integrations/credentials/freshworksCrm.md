@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshworks CRM](/integrations/nodes/n8n-nodes-base.freshworksCrm/)
+- [Freshworks CRM](/workflow/integrations/nodes/n8n-nodes-base.freshworksCrm/)
 
 ## Prerequisites
 

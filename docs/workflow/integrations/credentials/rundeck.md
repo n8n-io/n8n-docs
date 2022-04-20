@@ -1,7 +1,7 @@
 # Rundeck
 
 You can use these credentials to authenticate the following nodes with Rundeck.
-- [Rundeck](/integrations/nodes/n8n-nodes-base.rundeck/)
+- [Rundeck](/workflow/integrations/nodes/n8n-nodes-base.rundeck/)
 
 ## Prerequisites
 

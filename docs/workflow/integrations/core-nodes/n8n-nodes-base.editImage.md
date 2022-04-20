@@ -4,7 +4,7 @@ The Edit Image node is used to manipulate and edit images.
 
 !!! note " Keep in mind"
     1. If you are not running Doc² on Docker, you'll need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html).
-2. You will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Edit Image node.
+2. You will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Edit Image node.
 
 
 ## Node Reference
@@ -37,8 +37,8 @@ You can also specify a file format using the *Format* field in the *Add Option* 
 ## Example Usage
 
 This workflow allows you to add text to an image downloaded from the internet using the Edit Image node. You can also find the [workflow](https://n8n.io/workflows/591) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Edit Image]()
 
 

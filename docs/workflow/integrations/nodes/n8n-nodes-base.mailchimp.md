@@ -3,7 +3,7 @@
 [Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mailchimp/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mailchimp/).
 
 
 ## Basic Operations
@@ -31,7 +31,7 @@
 
 This workflow allows you to add a new member to a list in Mailchimp. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Mailchimp]()
 
 The final workflow should look like the following image.
@@ -44,7 +44,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Mailchimp node
 
-1. First of all, you'll have to enter credentials for the Mailchimp node. You can find out how to do that [here](/integrations/credentials/mailchimp/).
+1. First of all, you'll have to enter credentials for the Mailchimp node. You can find out how to do that [here](/workflow/integrations/credentials/mailchimp/).
 4. Select the Mailchimp list from the *List* dropdown list.
 5. Enter the email address in the *Email* field.
 6. Select the status from the *Status* dropdown list.

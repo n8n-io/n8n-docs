@@ -3,7 +3,7 @@
 [Microsoft Dynamics CRM](https://dynamics.microsoft.com/en-us/) is a is a customer relationship management application developed by Microsoft.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/microsoft/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/microsoft/).
 
 
 ## Basic Operations

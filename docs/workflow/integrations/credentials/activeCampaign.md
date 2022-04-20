@@ -1,8 +1,16 @@
+---
+title: ActiveCampaign
+
+tags:
+  - Workflow²
+  - ActiveCampaign
+---
+
 # ActiveCampaign
 
 You can use these credentials to authenticate the following nodes with ActiveCampaign.
-- [ActiveCampaign](/integrations/nodes/n8n-nodes-base.activeCampaign/)
-- [Active Campaign Trigger](/integrations/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/)
+- [ActiveCampaign](/workflow/integrations/nodes/n8n-nodes-base.activeCampaign/)
+- [Active Campaign Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/)
 
 
 ## Prerequisites

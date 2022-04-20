@@ -3,7 +3,7 @@
 [GitHub](https://github.com/) provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/github/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/github/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. GitHub Trigger node
 
-1. First of all, you'll have to enter credentials for the GitHub Trigger node. You can find out how to do that [here](/integrations/credentials/github/).
+1. First of all, you'll have to enter credentials for the GitHub Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/github/).
 2. Enter the repository owner in the *Repository Owner* field.
 3. Enter the repository name in the *Repository Name* field.
 4. Select the `*` option in the *Events* field to receive updates when any event is triggered.

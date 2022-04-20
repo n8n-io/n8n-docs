@@ -3,7 +3,7 @@
 [ServiceNow](https://www.servicenow.com/) is a cloud computing platform to help companies manage digital workflows for their operations.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/serviceNow/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/serviceNow/).
 
 
 ## Basic operations
@@ -43,7 +43,7 @@
 
 This workflow allows you to get the 50 most recent incidents and view only the desired fields. This example usage workflow uses the following nodes:
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [ServiceNow]()
 
 The final workflow should look like the following image.
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. ServiceNow node
 
-1. First enter credentials, you can find out how to do that [here](/integrations/credentials/serviceNow/).
+1. First enter credentials, you can find out how to do that [here](/workflow/integrations/credentials/serviceNow/).
 2. Select **Incident** from the ***Resource*** dropdown.
 3. Select **Get All** from the ***Operation*** dropdown.
 4. Click ***Add Option*** and select **Fields**.

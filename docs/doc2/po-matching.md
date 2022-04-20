@@ -1,9 +1,11 @@
 ---
 title: "PO Matching"
+description: PO Matching for Infor
 date: "2022-01-24"
 tags:
   - DOC²
   - PO Matching
+  - Infor
 ---
 
 

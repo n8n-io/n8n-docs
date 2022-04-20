@@ -3,7 +3,7 @@
 [Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/airtable/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/airtable/).
 
 
 ## Basic Operations
@@ -18,8 +18,8 @@
 ## Example Usage
 
 This workflow allows you to insert and update data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/818) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Airtable]()
 
 The final workflow should look like the following image.
@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node sets the value for `ID` a
 
 This node will append the data that we set in the previous node to a table. Create a table like [this](https://airtable.com/shrN2yLZyKEETq1xj) in your Airtable base.
 
-1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
+1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/workflow/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.

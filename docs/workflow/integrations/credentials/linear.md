@@ -1,7 +1,7 @@
 # Linear
 
 You can use these credentials to authenticate the following nodes with Linear.
-- [Linear Trigger](/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/)
+- [Linear Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/)
 
 ## Prerequisites
 

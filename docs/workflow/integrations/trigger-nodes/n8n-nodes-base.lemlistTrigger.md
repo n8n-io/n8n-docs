@@ -3,7 +3,7 @@
 [Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/lemlist/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/lemlist/).
 
 
 ## Events
@@ -20,7 +20,7 @@
 
 This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/984) on n8n.io. This example usage workflow would use the following node.
 - [Lemlist Trigger]()
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 
 The Lemlist Trigger node will trigger the workflow when a lead sends a reply to the campaign `Docs campaign`. If you have a different campaign, use that instead.
 
-1. First of all, you'll have to enter credentials for the Lemlist Trigger node. You can find out how to do that [here](/integrations/credentials/lemlist/).
+1. First of all, you'll have to enter credentials for the Lemlist Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/lemlist/).
 2. Select 'Email Replied' from the ***Events*** dropdown list.
 3. Click on ***Add Field*** and select 'Campaign ID'.
 4. Select 'Docs campaign' from the ***Campaign ID*** dropdown list.
@@ -44,7 +44,7 @@ In the screenshot below, you will notice that the node returns the information o
 
 This node will send a message to the `Leads` channel in Mattermost. If you have a different channel, use that instead.
 
-1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/integrations/credentials/mattermost/).
+1. First of all, you'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/mattermost/).
 2. Select a channel from the ***Channel ID*** dropdown list.
 3. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 

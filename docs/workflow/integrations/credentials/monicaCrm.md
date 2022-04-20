@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Monica CRM](/integrations/nodes/n8n-nodes-base.monicaCrm/)
+- [Monica CRM](/workflow/integrations/nodes/n8n-nodes-base.monicaCrm/)
 
 ## Prerequisites
 

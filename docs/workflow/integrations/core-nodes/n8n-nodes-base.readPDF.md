@@ -1,9 +1,18 @@
+
+---
+title: Read PDF
+description: The Read PDF node is used to read data from PDF documents and extract its content as text.
+tags:
+  - Workflow²
+  - Read PDF
+---
+
 # Read PDF
 
 The Read PDF node is used to read data from PDF documents and extract its content as text.
 
 !!! note " Keep in mind"
-    You will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Read PDF node.
+    You will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Read PDF node.
 
 
 ## Node Reference
@@ -15,8 +24,8 @@ The Read PDF node has one property:
 ## Example Usage
 
 This workflow allows you to read a PDF file using the Read PDF node. You can also find the [workflow](https://n8n.io/workflows/585) on the website. This example usage workflow would use the following three nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/)
 - [PDF Read]()
 
 

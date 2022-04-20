@@ -3,7 +3,7 @@
 [SendGrid](https://SendGrid.co) provides a cloud-based service that assists businesses with email delivery.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/sendgrid/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/sendgrid/).
 
 
 ## Basic Operations
@@ -25,7 +25,7 @@
 ## Example Usage
 
 This workflow allows you to create, update and get a contact using the SendGrid node. You can also find the [workflow](https://n8n.io/workflows/901) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [SendGrid]()
 
 The final workflow should look like the following image.
@@ -40,7 +40,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a contact in SendGrid.
 
-1. First of all, you'll have to enter credentials for the SendGrid node. You can find out how to do that [here](/integrations/credentials/sendgrid/).
+1. First of all, you'll have to enter credentials for the SendGrid node. You can find out how to do that [here](/workflow/integrations/credentials/sendgrid/).
 2. Select 'Contact' from the ***Resource*** dropdown list.
 3. Select 'Create/Update' from the ***Operation*** dropdown list.
 4. Enter an email address in the ***Email*** field.

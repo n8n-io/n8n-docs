@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [SSH](/integrations/core-nodes/n8n-nodes-base.ssh/)
+- [SSH](/workflow/integrations/core-nodes/n8n-nodes-base.ssh/)
 
 ## Prerequisites
 

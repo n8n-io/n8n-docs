@@ -3,7 +3,7 @@
 [Coda](https://coda.io/) is a new type of document that blends the flexibility of documents, the power of spreadsheets, and the utility of applications into a single new canvas.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/coda/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/coda/).
 
 
 ## Basic Operations
@@ -34,8 +34,8 @@
 ## Example Usage
 
 This workflow allows you to insert data into a new row for a table in Coda. You can also find the [workflow](https://n8n.io/workflows/482) on the website. This example usage workflow would use the following three nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Coda]()
 
 The final workflow should look like the following image.
@@ -57,7 +57,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. Coda node
 
-1. First of all, you'll have to enter credentials for the Coda node. You can find out how to do that [here](/integrations/credentials/coda/).
+1. First of all, you'll have to enter credentials for the Coda node. You can find out how to do that [here](/workflow/integrations/credentials/coda/).
 2. Select the name of your document from the *Doc* dropdown list.
 3. Select the name of your table from the *Table* dropdown list.
 4. Click on *Execute Node* to run the workflow.

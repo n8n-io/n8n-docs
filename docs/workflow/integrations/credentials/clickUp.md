@@ -1,8 +1,15 @@
+---
+title: ClickUp
+description: Use ClickUp with Workflow²
+tags:
+  - Workflow²
+  - ClickUp
+---
 # ClickUp
 
 You can use these credentials to authenticate the following nodes with ClickUp.
-- [ClickUp](/integrations/nodes/n8n-nodes-base.clickUp/)
-- [ClickUp Trigger](/integrations/trigger-nodes/n8n-nodes-base.clickUpTrigger/)
+- [ClickUp](/workflow/integrations/nodes/n8n-nodes-base.clickUp/)
+- [ClickUp Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.clickUpTrigger/)
 
 ## Prerequisites
 

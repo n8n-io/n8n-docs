@@ -8,6 +8,6 @@ Data represents units of information that are collected by and transmitted throu
 
 This section covers: 
 
-* [Data structure](/data/data-structure/)
-* [Transforming data](/data/transforming-data/)
-* [Using code](/data/code/)
+* [Data structure](/workflow/data/data-structure/)
+* [Transforming data](/workflow//data/transforming-data/)
+* [Using code](/workflow//data/code/)

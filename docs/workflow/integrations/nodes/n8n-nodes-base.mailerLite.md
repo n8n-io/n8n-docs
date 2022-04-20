@@ -3,7 +3,7 @@
 [MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/mailerLite/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/mailerLite/).
 
 
 ## Basic Operations
@@ -17,7 +17,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a subscriber using the MailerLite node. You can also find the [workflow](https://n8n.io/workflows/751) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [MailerLite]()
 
 The final workflow should look like the following image.
@@ -32,7 +32,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new subscriber in MailerLite. We will add the name of the subscriber along with their email.
 
-1. First of all, you'll have to enter credentials for the MailerLite node. You can find out how to do that [here](/integrations/credentials/mailerLite/).
+1. First of all, you'll have to enter credentials for the MailerLite node. You can find out how to do that [here](/workflow/integrations/credentials/mailerLite/).
 
 2. Enter the email address in the ***Email*** field.
 3. Click on the ***Add Field*** button and select 'Name' from the dropdown list.

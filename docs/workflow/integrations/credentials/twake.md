@@ -1,7 +1,7 @@
 # Twake
 
 You can use these credentials to authenticate the following nodes with Twake.
-- [Twake](/integrations/nodes/n8n-nodes-base.twake/)
+- [Twake](/workflow/integrations/nodes/workflow-nodes-base.twake/)
 
 ## Prerequisites
 

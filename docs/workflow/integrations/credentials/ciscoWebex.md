@@ -1,9 +1,16 @@
+---
+title: Webex by Cisco
+
+tags:
+  - Workflow²
+  - Webex by Cisco
+---
 # Webex by Cisco
 
 You can use these credentials to authenticate the following nodes:
 
-- [Webex by Cisco](/integrations/nodes/n8n-nodes-base.ciscoWebex/)
-- [Webex by Cisco Trigger](/integrations/trigger-nodes/n8n-nodes-base.ciscoWebexTrigger/)
+- [Webex by Cisco](/workflow/integrations/nodes/n8n-nodes-base.ciscoWebex/)
+- [Webex by Cisco Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.ciscoWebexTrigger/)
 
 ## Prerequisites
 

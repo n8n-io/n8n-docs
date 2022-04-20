@@ -1,6 +1,15 @@
+
+---
+title: Respond to Webhook
+description: The *Respond to Webhook* node can be used in workflows with a Webhook
+tags:
+  - Workflow²
+  - Respond to Webhook
+---
+
 # Respond to Webhook
 
-The *Respond to Webhook* node can be used in workflows with a [Webhook](/integrations/core-nodes/n8n-nodes-base.webhook/) node. It allows controlling the response to incoming webhooks. In the Webhook node, the **Using 'Respond to Webhook' node** option would need to be selected in the **Response** dropdown for the *Respond to Webhook* node to work.
+The *Respond to Webhook* node can be used in workflows with a [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) node. It allows controlling the response to incoming webhooks. In the Webhook node, the **Using 'Respond to Webhook' node** option would need to be selected in the **Response** dropdown for the *Respond to Webhook* node to work.
 
 !!! note "Expressions"
     When using [expressions](/code-examples/expressions/), the *Respond to Webhook* node will only run for the first item in the input data
@@ -34,7 +43,7 @@ When using the *Respond to Webhook* node, workflows will behave as follows:
 
 This workflow allows serves an HTML page when receiving a GET requests. You can find the complete workflow [here on n8n.io](https://n8n.io/workflows/1306). The example workflow uses the following nodes:
 
-- [Webhook](/integrations/core-nodes/n8n-nodes-base.webhook/)
+- [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/)
 - [Respond to Webhook]()
 
 ![The workflow using the Respond to Webhook node](/_images/integrations/core-nodes/respondtowebhook/workflow.png)

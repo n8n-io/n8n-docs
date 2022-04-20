@@ -3,7 +3,7 @@
 [NocoDB](https://www.nocodb.com/) is an open source Airtable alternative. It works by connecting to any relational database and transforming them into a spreadsheet interface.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/nocoDb/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/nocoDb/).
 
 
 ## Basic operations
@@ -18,7 +18,7 @@
 ## Example usage
 
 This workflow allows you to get all rows in your table. This example usage workflow would use the following two nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [NocoDB]()
 
 The final workflow should look like the following image.
@@ -31,7 +31,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. NocoDB node
 
-1. First enter your credentials for the NocoDB node. You can find out how to do that [here](/integrations/credentials/nocoDb/).
+1. First enter your credentials for the NocoDB node. You can find out how to do that [here](/workflow/integrations/credentials/nocoDb/).
 2. The **Row** ***Resource*** is selected by default.
 3. Select **Get All** from the ***Operation*** dropdown.
 4. Enter the NocoDB **Project ID**.

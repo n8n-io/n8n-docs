@@ -3,7 +3,7 @@
 [Orbit](https://orbit.love) is a platform for managing and growing communities.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/orbit/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/orbit/).
 
 
 ## Basic Operations
@@ -30,7 +30,7 @@
 ## Example Usage
 
 This workflow allows you to create a new member and update their information in Orbit using the Orbit node. It also allows you to create a note and a post for the new member in Orbit. You can also find the [workflow](https://n8n.io/workflows/765) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Orbit]()
 
 The final workflow should look like the following image.
@@ -46,7 +46,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new member in a workspace in Orbit. We will use the GitHub identity to create a new member.
 
-1. First of all, you'll have to enter credentials for the Orbit node. You can find out how to do that [here](/integrations/credentials/orbit/).
+1. First of all, you'll have to enter credentials for the Orbit node. You can find out how to do that [here](/workflow/integrations/credentials/orbit/).
 2. Select 'Upsert' from the ***Operation*** dropdown list.
 3. Select the workspace where you want to create a new member from the ***Workspace*** dropdown list.
 4. Click on the ***Add Identity*** button.

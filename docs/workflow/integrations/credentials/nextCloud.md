@@ -1,7 +1,7 @@
 # Nextcloud
 
 You can use these credentials to authenticate the following nodes with Nextcloud.
-- [Nextcloud](/integrations/nodes/n8n-nodes-base.nextCloud/)
+- [Nextcloud](/workflow/integrations/nodes/n8n-nodes-base.nextCloud/)
 
 ## Prerequisites
 

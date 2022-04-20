@@ -3,7 +3,7 @@
 [Sendy](https://sendy.co) is a self-hosted email newsletter application that lets you send trackable emails via AWS SES.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/sendy/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/sendy/).
 
 
 ## Basic Operations
@@ -20,7 +20,7 @@
 ## Example Usage
 
 This workflow allows you to add a subscriber to a list and create and send a campaign using the Sendy node. You can also find the [workflow](https://n8n.io/workflows/727) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Sendy]()
 
 The final workflow should look like the following image.
@@ -36,7 +36,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will add a subscriber to a list in Sendy. If you don't already have a list in Sendy, make sure to create one.
 
-1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](/integrations/credentials/sendy/).
+1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](/workflow/integrations/credentials/sendy/).
 2. Enter the subscriber's email address in the ***Email*** field.
 3. In your Sendy dashboard, click on 'View all lists' and copy the ID of the list to which you want to add the subscriber. Paste this list ID in the List ID field in n8n.
 4. Click on the ***Add Field*** button and select 'Name'.

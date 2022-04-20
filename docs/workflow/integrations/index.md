@@ -39,6 +39,6 @@ what we can do. Request a new feature [here](https://community.n8n.io/c/feature-
 
 ## Where to go next?
 
-1. If you are looking to create your own node, head over to the [Creating Nodes](/integrations/creating-nodes/) section.
-2. If you'd like to learn more about the different nodes in Doc², their functionalities and example usage, check out our node libraries: [core nodes](/integrations/core-nodes/), [nodes](/integrations/core-nodes/), and [trigger nodes](/integrations/core-nodes/).
-3. If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/credentials/) section.
+1. If you are looking to create your own node, head over to the [Creating Nodes](/workflow/integrations/creating-nodes/) section.
+2. If you'd like to learn more about the different nodes in Doc², their functionalities and example usage, check out our node libraries: [core nodes](/workflow/integrations/core-nodes/), [nodes](/workflow/integrations/core-nodes/), and [trigger nodes](/workflow/integrations/core-nodes/).
+3. If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/workflow/integrations/credentials/) section.

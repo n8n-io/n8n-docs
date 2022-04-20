@@ -3,7 +3,7 @@
 [Pushover](https://www.pushover.net/) is a simple push notification service that integrates easily into web apps, network monitors, shell scripts, servers, and anything else that needs to send alerts to your Android, iPhone, iPad, and Desktop.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/pushover/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/pushover/).
 
 
 ## Basic Operations
@@ -14,8 +14,8 @@
 ## Example Usage
 
 This workflow allows you to send daily weather updates via a push notification using the Pushover node. You can also find the [workflow](https://n8n.io/workflows/740) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/core-nodes/n8n-nodes-base.cron/)
-- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/)
+- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
 - [Pushover]()
 
 The final workflow should look like the following image.
@@ -38,7 +38,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/workflow/integrations/credentials/openWeatherMap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node returns data about the cu
 
 This node will send a push notification with the weather update, which was sent by the previous node.
 
-1. First of all, you'll have to enter credentials for the Pushover node. You can find out how to do that [here](/integrations/credentials/pushover/).
+1. First of all, you'll have to enter credentials for the Pushover node. You can find out how to do that [here](/workflow/integrations/credentials/pushover/).
 2. Enter a user key in the ***User Key*** field. You can obtain your user key from the [Pushover Dashboard](https://www.pushover.net/).
 3. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 

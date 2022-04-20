@@ -3,7 +3,7 @@
 [Toggl](https://toggl.com/) is a time tracking app that offers online time tracking and reporting services through their website along with mobile and desktop applications.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/toggl/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/toggl/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. Toggl Trigger node
 
-1. First of all, you'll have to enter credentials for the Toggl Trigger node. You can find out how to do that [here](/integrations/credentials/toggl/).
+1. First of all, you'll have to enter credentials for the Toggl Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/toggl/).
 2. Click on *Execute Node* to run the workflow.
 
 **Note:** This node uses polling to get new time entries. You'll have to use the *Add Poll Time* button if you want this Trigger node to run regularly to retrieve new time entries.

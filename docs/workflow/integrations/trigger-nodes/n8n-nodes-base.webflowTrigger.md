@@ -3,7 +3,7 @@
 [Webflow](https://webflow.com) is an application that allows you to build responsive websites with browser-based visual editing software.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/webflow/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/webflow/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Webflow Trigger node
 
-1. First of all, you'll have to enter credentials for the Webflow Trigger node. You can find out how to do that [here](/integrations/credentials/webflow/).
+1. First of all, you'll have to enter credentials for the Webflow Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/webflow/).
 2. Select your website from the ***Site*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

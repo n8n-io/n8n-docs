@@ -3,7 +3,7 @@
 [Cortex](https://github.com/TheHive-Project/CortexDocs) offers a powerful observable (URL, file, IP, etc) analysis mechanism. It allows you to analyze collected observables using a single tool, respond to threats, and interact with the constituency and other teams.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/cortex/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/cortex/).
 
 
 ## Basic Operations
@@ -19,7 +19,7 @@
 ## Example Usage
 
 This workflow allows you to analyze a URL and get the job details using the Cortex node. You can also find the [workflow](https://n8n.io/workflows/809) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Cortex]()
 
 The final workflow should look like the following image.
@@ -34,7 +34,7 @@ The start node exists by default when you create a new workflow.
 
 This node will analyze a URL. If you want to analyze a different observable type, select that instead.
 
-1. First of all, you'll have to enter credentials for the Cortex node. You can find out how to do that [here](/integrations/credentials/cortex/).
+1. First of all, you'll have to enter credentials for the Cortex node. You can find out how to do that [here](/workflow/integrations/credentials/cortex/).
 2. Select 'Abuse_Finder_3_0' from the ***Analyzer Type*** dropdown list.
 3. Select 'URL' from the ***Observable Type*** dropdown list.
 4. Enter the URL you want to analyze in the ***Observable Value*** field.

@@ -3,7 +3,7 @@
 [Matrix](https://matrix.org) is an open standard for interoperable, decentralized, real-time communication over IP.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/matrix/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/matrix/).
 
 
 ## Basic Operations
@@ -29,10 +29,10 @@
 ## Example Usage
 
 This workflow allows you to create a room, invite members from a different room, and send a message to the room that we created using the Matrix node. You can also find the [workflow](https://n8n.io/workflows/724) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Matrix]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -46,7 +46,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new room called `n8n` on the Matrix server.
 
-1. First of all, you'll have to enter credentials for the Matrix node. You can find out how to do that [here](/integrations/credentials/matrix/).
+1. First of all, you'll have to enter credentials for the Matrix node. You can find out how to do that [here](/workflow/integrations/credentials/matrix/).
 
 2. Select 'Room' from the ***Resource*** dropdown list.
 3. Enter `n8n` in the ***Room Name*** field. You can also enter a different name for the room.

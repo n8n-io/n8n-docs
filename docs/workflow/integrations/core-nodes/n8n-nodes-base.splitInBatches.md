@@ -1,3 +1,11 @@
+---
+title: Split In Batches
+description: The Split In Batches node saves the original incoming data, and with each iteration, it returns a predefined amount of data. This node can be used to loop through the data.
+tags:
+  - Workflow²
+  - Split In Batches
+---
+
 # Split In Batches
 
 The Split In Batches node saves the original incoming data, and with each iteration, it returns a predefined amount of data. This node can be used to loop through the data.
@@ -15,10 +23,10 @@ The Split In Batches node saves the original incoming data, and with each iterat
 ## Example Usage
 
 This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Function](/integrations/core-nodes/n8n-nodes-base.function/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/)
 - [Split In Batches]()
-- [RSS Feed Read](/integrations/core-nodes/n8n-nodes-base.rssFeedRead/)
+- [RSS Feed Read](/workflow/integrations/core-nodes/n8n-nodes-base.rssFeedRead/)
 
 The final workflow should look like the following image.
 

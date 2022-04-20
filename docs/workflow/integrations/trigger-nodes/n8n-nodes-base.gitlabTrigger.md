@@ -3,7 +3,7 @@
 [GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/gitlab/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/gitlab/).
 
 
 
@@ -19,7 +19,7 @@ The final workflow should look like the following image.
 
 ### 1. GitLab Trigger node
 
-1. First of all, you'll have to enter credentials for the GitLab Trigger node. You can find out how to do that [here](/integrations/credentials/gitlab/).
+1. First of all, you'll have to enter credentials for the GitLab Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/gitlab/).
 2. Enter the repository owner in the *Repository Owner* field.
 3. Enter the repository name in the *Repository Name* field.
 4. Select the `*` option in the *Events* field to receive updates when any event is triggered.

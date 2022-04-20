@@ -3,7 +3,7 @@
 [Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/postmark/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/postmark/).
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ The final workflow should look like the following image.
 
 ### 1. Postmark Trigger node
 
-1. First of all, you'll have to enter credentials for the Postmark Trigger node. You can find out how to do that [here](/integrations/credentials/postmark/).
+1. First of all, you'll have to enter credentials for the Postmark Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/postmark/).
 2. Select 'Bounce' from the ***Events*** dropdown list.
 3. Select 'Open' from the ***Events*** dropdown list.
 4. Toggle the ***Include Content*** field to true.

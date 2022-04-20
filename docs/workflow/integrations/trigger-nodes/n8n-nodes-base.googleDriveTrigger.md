@@ -3,7 +3,7 @@
 [Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 !!! note " Manual Executions vs. Activation"
@@ -15,7 +15,7 @@
 This workflow sends out email notifications when a new file has been uploaded to Google Drive. It uses two nodes:
 
 - [Google Drive Trigger]()
-- [Send Email](/integrations/core-nodes/n8n-nodes-base.sendEmail/)
+- [Send Email](/workflow/integrations/core-nodes/n8n-nodes-base.sendEmail/)
 
 The final workflow should look like the image below.
 
@@ -23,7 +23,7 @@ The final workflow should look like the image below.
 
 ### 1. Google Drive Trigger node
 
-1. Enter valid credentials for the Google Drive Trigger node. You can find out how to do so [here](/integrations/credentials/google/).
+1. Enter valid credentials for the Google Drive Trigger node. You can find out how to do so [here](/workflow/integrations/credentials/google/).
 2. Select the `Changes involving a Specific Folder` option in the ***Trigger On*** field.
 3. Paste the URL of a Google Drive folder in the ***Folder URL or ID*** field.
 4. Select `File Created` in the ***Watch For*** field.
@@ -35,7 +35,7 @@ In the screenshot below you can see the file returned by the node.
 
 ### 2. Send Email node
 
-1. Enter valid credentials for the Send Email node. You can find out how to do so [here](/integrations/credentials/sendEmail/).
+1. Enter valid credentials for the Send Email node. You can find out how to do so [here](/workflow/integrations/credentials/sendEmail/).
 2. Enter valid emails in the ***From Email*** and ***To Email*** fields.
 3. Enter `File Created` in the ***Subject*** field.
 4. Click on the gear icon next to the ***Text*** field and choose ***Add Expression***.

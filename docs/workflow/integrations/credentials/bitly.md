@@ -1,7 +1,15 @@
+---
+title: Bitly
+
+tags:
+  - Workflow²
+  - Bitly
+---
+
 # Bitly
 
 You can use these credentials to authenticate the following nodes with Bitly.
-- [Bitly](/integrations/nodes/n8n-nodes-base.bitly/)
+- [Bitly](/workflow/integrations/nodes/n8n-nodes-base.bitly/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 [Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite, targeted towards small and medium-sized businesses.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/copper/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/copper/).
 
 
 ## Basic Operations
@@ -52,7 +52,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a person from Copper. You can also find the [workflow](https://n8n.io/workflows/1021) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Copper]()
 
 The final workflow should look like the following image.
@@ -67,7 +67,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new person in Copper.
 
-1. First of all, you'll have to enter credentials for the Copper node. You can find out how to do that [here](/integrations/credentials/copper/).
+1. First of all, you'll have to enter credentials for the Copper node. You can find out how to do that [here](/workflow/integrations/credentials/copper/).
 2. Select 'Person' from the ***Resource*** dropdown list.
 3. Enter the name of the lead in the ***Name*** field.
 4. Click on the ***Add Field*** button and select 'Emails' from the dropdown list.

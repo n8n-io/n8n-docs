@@ -1,7 +1,14 @@
+---
+title: Vonage
+description: Use Vonage with Workflow²
+tags:
+  - Workflow²
+  - Vonage
+---
 # Vonage
 
 You can use these credentials to authenticate the following nodes with Vonage.
-- [Vonage](/integrations/nodes/n8n-nodes-base.vonage/)
+- [Vonage](/workflow/integrations/nodes/workflow-nodes-base.vonage/)
 
 ## Prerequisites
 

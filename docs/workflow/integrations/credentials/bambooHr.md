@@ -1,7 +1,14 @@
+---
+title: BambooHR
+
+tags:
+  - Workflow²
+  - BambooHR
+---
 # BambooHR
 
 You can use these credentials to authenticate the following nodes with BambooHR.
-- [BambooHR](/integrations/nodes/n8n-nodes-base.bambooHr/)
+- [BambooHR](/workflow/integrations/nodes/n8n-nodes-base.bambooHr/)
 
 ## Prerequisites
 

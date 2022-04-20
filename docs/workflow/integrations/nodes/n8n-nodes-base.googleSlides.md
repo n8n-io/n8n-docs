@@ -3,7 +3,7 @@
 [Google Slides](https://www.google.com/slides) is a web-based presentation program that is part of Google's office software suite within its Google Drive service. It allows you to create, edit, and collaborate.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/google/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/google/).
 
 
 ## Basic Operations
@@ -20,7 +20,7 @@
 ## Example Usage
 
 This workflow allows you to get all the slides from a presentation and get the thumbnails for the pages. You can also find the [workflow](https://n8n.io/workflows/1035) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Slides]()
 
 The final workflow should look like the following image.
@@ -43,7 +43,7 @@ The Start node exists by default when you create a new workflow.
 This Google Slides node will get all the slides from a presentation.
 
 1. Select 'OAuth2' from the ***Authentication*** dropdown list.
-2.  First of all, you'll have to enter credentials for the Google Slides node. You can find out how to enter credentials for this node [here](/integrations/credentials/google/).
+2.  First of all, you'll have to enter credentials for the Google Slides node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/google/).
 3. Select 'Get Slides' from the ***Operation*** dropdown list.
 4. Paste the Presentation ID you copied in the previous step, in the ***Presentation ID*** field.
 5. Toggle ***Return All*** to `true`.

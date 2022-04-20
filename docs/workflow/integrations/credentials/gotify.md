@@ -1,7 +1,7 @@
 # Gotify
 
 You can use these credentials to authenticate the following nodes with Gotify.
-- [Gotify](/integrations/nodes/n8n-nodes-base.gotify/)
+- [Gotify](/workflow/integrations/nodes/n8n-nodes-base.gotify/)
 
 ## Prerequisites
 

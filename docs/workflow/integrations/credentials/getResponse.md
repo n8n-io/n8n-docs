@@ -1,8 +1,8 @@
 # GetResponse
 
 You can use these credentials to authenticate the following nodes with GetResponse.
-- [GetResponse](/integrations/nodes/n8n-nodes-base.getResponse/)
-- [GetResponse Trigger](/integrations/trigger-nodes/n8n-nodes-base.getResponseTrigger/)
+- [GetResponse](/workflow/integrations/nodes/n8n-nodes-base.getResponse/)
+- [GetResponse Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.getResponseTrigger/)
 
 ## Prerequisites
 

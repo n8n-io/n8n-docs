@@ -3,7 +3,7 @@
 [Invoice Ninja](https://www.invoiceninja.com/) is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/invoiceNinja/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/invoiceNinja/).
 
 
 ## Basic Operations
@@ -45,7 +45,7 @@
 
 This workflow allows you to get multiple clients' data from Invoice Ninja. You can also find the [workflow](https://n8n.io/workflows/534) on this website. This example usage workflow uses the following two nodes.
 
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Invoice Ninja]()
 
 The final workflow should look like the following image.
@@ -58,6 +58,6 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Invoice Ninja node
 
-1. First of all, you'll have to enter credentials for the Invoice Ninja node. You can find out how to do that [here](/integrations/credentials/invoiceNinja/).
+1. First of all, you'll have to enter credentials for the Invoice Ninja node. You can find out how to do that [here](/workflow/integrations/credentials/invoiceNinja/).
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.

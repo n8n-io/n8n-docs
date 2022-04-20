@@ -1,6 +1,9 @@
 ---
 title: "FLOW² Onboarding Guide"
+description: "Onboarding Guide for FLOW²"
 date: "2021-11-23"
+tags: 
+    - FLOW²
 ---
 
 This guide will help you learn the basics of FLOW² get you up and running with an IPS that will max out your productivity.

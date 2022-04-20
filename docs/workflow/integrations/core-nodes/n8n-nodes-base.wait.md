@@ -1,3 +1,11 @@
+---
+title: Wait
+description: The Wait node is used to create a pause of any desired duration in your workflows.
+tags:
+  - Workflow²
+  - Wait
+---
+
 # Wait
 
 The Wait node is used to create a pause of any desired duration in your workflows. When the workflow is paused the execution data is offloaded to the database, and when the resume condition is met it is reloaded and the execution continues.
@@ -42,7 +50,7 @@ When the workflow executes, the resume URL is generated and the webhook(s) in yo
 
 ### Reference
 
-See the [Webhook node](/integrations/core-nodes/n8n-nodes-base.webhook/) documentation to learn more about the Authentication, Method, and Response parameters when configuring the Wait node to resume on a webhook call.
+See the [Webhook node](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) documentation to learn more about the Authentication, Method, and Response parameters when configuring the Wait node to resume on a webhook call.
 
 In addition to the parameters shared with the Webhook mode, the Wait node has the following additional configuration options:
 
@@ -66,10 +74,10 @@ For our example here, we assume there is an existing workflow/webpage where new 
 
 This example workflow uses the following nodes.
 - [Wait]()
-- [Webhook](/integrations/core-nodes/n8n-nodes-base.webhook/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
-- [Send Email](/integrations/core-nodes/n8n-nodes-base.sendEmail/)
-- [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
+- [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Send Email](/workflow/integrations/core-nodes/n8n-nodes-base.sendEmail/)
+- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 

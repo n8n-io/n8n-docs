@@ -3,7 +3,7 @@
 [Ghost](https://www.ghost.org/) is an open-source, professional publishing platform built on a Node.js technology stack.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/ghost/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/ghost/).
 
 
 ## Basic Operations
@@ -28,7 +28,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a post in Ghost. You can also find the [workflow](https://n8n.io/workflows/825) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Ghost]()
 
 The final workflow should look like the following image.
@@ -44,7 +44,7 @@ The start node exists by default when you create a new workflow.
 This node will create a new post with the title `Running ghost with n8n!`. If you want to create a post with a different title, use that instead.
 
 1. Select 'Admin API' from the ***Source*** dropdown list.
-2. You'll have to enter credentials for the Ghost node. You can find out how to do that [here](/integrations/credentials/ghost/).
+2. You'll have to enter credentials for the Ghost node. You can find out how to do that [here](/workflow/integrations/credentials/ghost/).
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `Running ghost with n8n!` in the ***Title*** field.
 5. Enter the HTML content in the ***Content*** field.

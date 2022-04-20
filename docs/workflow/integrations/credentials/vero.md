@@ -1,7 +1,14 @@
+---
+title: Vero
+description: Use Vero with Workflow²
+tags:
+  - Workflow²
+  - Vero
+---
 # Vero
 
 You can use these credentials to authenticate the following nodes with Vero.
-- [Vero](/integrations/nodes/n8n-nodes-base.vero/)
+- [Vero](/workflow/integrations/nodes/workflow-nodes-base.vero/)
 
 ## Prerequisites
 

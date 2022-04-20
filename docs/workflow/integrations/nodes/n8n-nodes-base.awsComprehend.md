@@ -3,7 +3,7 @@
 [AWS Comprehend](https://aws.amazon.com/comprehend/) is a natural language processing (NLP) service that uses machine learning to find insights and relationships in a text.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/aws/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/aws/).
 
 
 ## Basic Operations
@@ -17,11 +17,11 @@
 ## Example Usage
 
 This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/965) on n8n.io. This example usage workflow uses the following nodes.
-- [Typeform Trigger](/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [AWS Comprehend]()
-- [IF](/integrations/core-nodes/n8n-nodes-base.if/)
-- [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
-- [No Operation, do nothing](/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 
@@ -32,7 +32,7 @@ The final workflow should look like the following image.
 This node will trigger the workflow when a feedback form is submitted. Make sure to create a feedback form for your event.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
-2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/credentials/typeform/).
+2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/typeform/).
 3. Select the event feedback form from the ***Form*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
 
@@ -44,7 +44,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will analyze the sentiment of the feedback that we got from the previous node. We will pass the analysis score to the next node in the workflow.
 
-1. First of all, you'll have to enter credentials for the AWS Comprehend node. You can find out how to enter credentials for this node [here](/integrations/credentials/aws/).
+1. First of all, you'll have to enter credentials for the AWS Comprehend node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/aws/).
 2. Select 'Detect Sentiment' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 
@@ -75,7 +75,7 @@ In the screenshot below, you will notice that the node checks the sentiment that
 This node will send the feedback and the analysis score to the `feedback` channel in Mattermost. If you have a different channel, use that instead.
 
 1. Create a Mattermost node connected to the 'true' output of the IF node.
-2. You'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/integrations/credentials/mattermost/).
+2. You'll have to enter credentials for the Mattermost node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/mattermost/).
 3. Select a channel from the ***Channel ID*** dropdown list.
 4. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 

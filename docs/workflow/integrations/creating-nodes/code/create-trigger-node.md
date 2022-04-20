@@ -490,4 +490,4 @@ In this tutorial, we implemented one functionality of the Autofriend webhook API
 
 ## Next steps
 
-Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/workflow/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.

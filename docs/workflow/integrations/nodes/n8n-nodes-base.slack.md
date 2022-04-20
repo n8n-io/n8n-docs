@@ -3,7 +3,7 @@
 [Slack](https://slack.com) is a business communication platform offering many IRC-style features, including persistent chat rooms (channels), private groups, and direct messaging.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/slack/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/slack/).
 
 
 ## Basic Operations
@@ -60,9 +60,9 @@
 ## Example Usage
 
 This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file to the channel. You can also find the [workflow](https://n8n.io/workflows/811) on n8n.io This example usage workflow uses the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Slack]()
-- [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 
 The final workflow should look like the following image.
 
@@ -77,7 +77,7 @@ The Start node exists by default when you create a new workflow.
 This node will create a new channel in your Slack workspace. This operation requires the `channel:manage` scope. Add this scope under the ***Bot Token Scopes*** section on Slack. You can refer to the [FAQs](#how-to-add-oauth-scopes-to-a-slack-app) to learn how to add scopes.
 
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
-2. You'll have to enter credentials for the Slack node. You can find out how to enter credentials for this node [here](/integrations/credentials/slack/).
+2. You'll have to enter credentials for the Slack node. You can find out how to enter credentials for this node [here](/workflow/integrations/credentials/slack/).
 3. Select 'Channel' from the ***Resource*** dropdown list.
 4. Enter a channel name in the ***Channel*** field.
 5. Click on ***Execute Node*** to run the node.
@@ -126,7 +126,7 @@ In the screenshot below, you will notice that node sends a message with an attac
 
 ### 5. HTTP Request node (GET)
 
-This node will fetch a file from a URL. You can also use the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
+This node will fetch a file from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
 1. Enter the URL of a file in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.

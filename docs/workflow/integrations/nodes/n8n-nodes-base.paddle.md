@@ -3,7 +3,7 @@
 [Paddle](https://www.paddle.com/) is an all-in-one SaaS Commerce platform for software and SaaS companies to run and grow their business.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/paddle/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/paddle/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@
 ## Example Usage
 
 This workflow allows you to create a coupon on Paddle. You can also find the [workflow](https://n8n.io/workflows/659) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Paddle]()
 
 The final workflow should look like the following image.
@@ -41,7 +41,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Paddle node (create: coupon)
 
-1. First of all, you'll have to enter credentials for the Paddle node. You can find out how to do that [here](/integrations/credentials/paddle/).
+1. First of all, you'll have to enter credentials for the Paddle node. You can find out how to do that [here](/workflow/integrations/credentials/paddle/).
 2. Enter the discount amount in the ***Discount Amount*** field.
 3. Click on the ***Add Field*** button and select 'Coupon Code' from the dropdown list.
 4. Enter the coupon code in the ***Coupon Code*** field.

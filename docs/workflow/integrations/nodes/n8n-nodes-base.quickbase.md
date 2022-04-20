@@ -3,7 +3,7 @@
 [Quick Base](https://www.quickbase.com/) is a low-code application development platform. It allows you to connect data, integrate your systems in real-time, and orchestrate automated workflows using simple business logic.
 
 !!! note "🔑 Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/quickbase/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/quickbase/).
 
 
 ## Basic Operations
@@ -26,8 +26,8 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get all records in Quick Base. You can also find the [workflow](https://n8n.io/workflows/805) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Quick Base]()
 
 The final workflow should look like the following image.
@@ -63,7 +63,7 @@ This node will create a new record in a table.
 2. Copy the string of characters located between `db/` and `?a=td` in your Quick Base URL. This string is the Table ID that we will use in the Quick Base node.
 
 #### Configure the Quick Base node
-1. First of all, you'll have to enter credentials for the Quick Base node. You can find out how to do that [here](/integrations/credentials/quickbase/).
+1. First of all, you'll have to enter credentials for the Quick Base node. You can find out how to do that [here](/workflow/integrations/credentials/quickbase/).
 2. Paste the Table ID you copied in the previous step, in the ***Table ID*** field.
 3. Enter `name,age` in the ***Columns*** field.
 4. Click on ***Execute Node*** to run the node.

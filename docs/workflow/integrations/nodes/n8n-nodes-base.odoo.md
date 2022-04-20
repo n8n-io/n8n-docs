@@ -3,7 +3,7 @@
 [Odoo](https://www.odoo.com/) is a suite of open-source business apps covering functionality such as: CRM, eCommerce, accounting, inventory, point of sale, project management.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/credentials/odoo/).
+    You can find authentication information for this node [here](/workflow/integrations/credentials/odoo/).
 
 
 ## Operations

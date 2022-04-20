@@ -4,6 +4,7 @@ description: Manual File Import to DOC²
 date: "2021-10-22"
 tags:
   - Doc²
+  - Dashboard
   - Import
 ---
 

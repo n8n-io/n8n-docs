@@ -132,7 +132,6 @@ nav:
       - Import: doc2/import.md
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
-      - Merge Split PDF: doc2/merge-split-pdf.md
       - SSO: 
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
@@ -228,8 +227,12 @@ nav:
     - Epheosft External Application: te2/ephesoft-external-application.md
     - Infor LN BOD Mapping: te2/ln_bodmapping.md
   - OCR²:
-    - Overview: ocr/index.md
+    - Overview: ocr/overview.md
+    - Installation & Config: ocr/installation-config.md
     - Getting Started: ocr/get-started.md
+    - OCR Server Process: ocr/ocrserverprocess.md
+    - Detect inside pages: ocr/detect-inside-pages.md
+    - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
   # - Courses:
   #   - Overview: courses/index.md

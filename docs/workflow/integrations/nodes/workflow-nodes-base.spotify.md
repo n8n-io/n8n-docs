@@ -1,3 +1,10 @@
+---
+title: Spotify
+description: Use Spotify with Workflow²
+tags:
+  - Workflow²
+  - Spotify
+---
 # Spotify
 
 [Spotify](https://www.spotify.com/) is a music streaming service containing millions of music tracks and podcasts. Spotify allows users to create and manage their own playlists, explore new music through recommendation services, and listen to songs on demand.

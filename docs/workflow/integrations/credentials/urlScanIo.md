@@ -1,3 +1,10 @@
+---
+title: urlscan.io
+description: Use urlscan.io with Workflow²
+tags:
+  - Workflow²
+  - urlscan.io
+---
 # urlscan.io
 
 You can use these credentials to authenticate the following nodes with UptimeRobot.

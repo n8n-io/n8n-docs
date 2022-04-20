@@ -1,3 +1,10 @@
+---
+title: Typeform
+description: Use Typeform with Workflow²
+tags:
+  - Workflow²
+  - Typeform
+---
 # Typeform
 
 You can use these credentials to authenticate the following nodes with Typeform.

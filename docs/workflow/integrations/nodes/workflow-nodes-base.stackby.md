@@ -1,3 +1,10 @@
+---
+title: Stackby
+description: Use Stackby with Workflow²
+tags:
+  - Workflow²
+  - Stackby
+---
 # Stackby
 
 [Stackby](https://stackby.com/) is a real-time database and team collaboration platform.

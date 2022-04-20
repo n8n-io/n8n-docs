@@ -1,3 +1,10 @@
+---
+title: Twitter
+description: Use Twitter with Workflow²
+tags:
+  - Workflow²
+  - Twitter
+---
 # Twitter
 
 You can use these credentials to authenticate the following nodes with Twitter.

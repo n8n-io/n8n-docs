@@ -528,7 +528,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing custom headers from being ignored.
 * [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Fixed a bug preventing all items from being returned in some situations.
 * [Microsoft OneDrive:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOneDrive/) Fixed a bug preventing more than 200 items from being returned.
-* [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
+* [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
 
 ### Contributors 
 
@@ -1358,7 +1358,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 * [Nextcloud:](/workflow/integrations/nodes/n8n-nodes-base.nextCloud/) Fixed issue where List operation on an empty Folder returned an error.
-* [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
+* [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
 
 ### Contributors 
 [Jacob Burrell](https://github.com/jacobburrell), [Лебедев Иван](https://github.com/X-pech)
@@ -1599,7 +1599,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource.
+* [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource.
 
 ### Core Functionality 
 - Implemented new design of the Nodes Panel, adding categories and subcategories, along with improved search. For full details, see the [commits](https://github.com/n8n-io/n8n/commit/0470740737c5ee199447a68b7277c43be2042976).
@@ -1663,7 +1663,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 * [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added a feature to fetch data from the Pipedrive API, added Search operation to the Deals resource, and added custom fields option
-* [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Added My Data resource
+* [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added My Data resource
 
 ### Core Functionality 
 - Fixed issues with NodeViewNew navigation handling
@@ -1793,7 +1793,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Google Cloud Firestore:](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
 * [IMAP Email:](/workflow/integrations/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
 * [Paddle:](/workflow/integrations/nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
-* [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
+* [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
 
 ### Core Functionality 

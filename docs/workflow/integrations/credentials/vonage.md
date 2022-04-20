@@ -1,3 +1,10 @@
+---
+title: Vonage
+description: Use Vonage with Workflow²
+tags:
+  - Workflow²
+  - Vonage
+---
 # Vonage
 
 You can use these credentials to authenticate the following nodes with Vonage.

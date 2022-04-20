@@ -1,3 +1,10 @@
+---
+title: UpLead
+description: Use UpLead with Workflow²
+tags:
+  - Workflow²
+  - UpLead
+---
 # UpLead
 
 You can use these credentials to authenticate the following nodes with UpLead.

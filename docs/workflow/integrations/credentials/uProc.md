@@ -1,3 +1,10 @@
+---
+title: uProc
+description: Use uProc with Workflow²
+tags:
+  - Workflow²
+  - uProc
+---
 # uProc
 
 You can use these credentials to authenticate the following nodes with uProc.

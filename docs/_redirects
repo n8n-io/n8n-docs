@@ -325,11 +325,11 @@
 /nodes/n8n-nodes-base.splitInBatches/		/integrations/core-nodes/n8n-nodes-base.splitInBatches/
 /nodes/n8n-nodes-base.splunk/		/integrations/nodes/n8n-nodes-base.splunk/
 /nodes/n8n-nodes-base.spontit/		/integrations/nodes/n8n-nodes-base.spontit/
-/nodes/n8n-nodes-base.spotify/		/integrations/nodes/n8n-nodes-base.spotify/
+/nodes/workflow-nodes-base.spotify/		/integrations/nodes/workflow-nodes-base.spotify/
 /nodes/n8n-nodes-base.spreadsheetFile/		/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/
 /nodes/n8n-nodes-base.sseTrigger/		/integrations/core-nodes/n8n-nodes-base.sseTrigger/
 /nodes/n8n-nodes-base.ssh/		/integrations/core-nodes/n8n-nodes-base.ssh/
-/nodes/n8n-nodes-base.stackby/		/integrations/nodes/n8n-nodes-base.stackby/
+/nodes/workflow-nodes-base.stackby/		/integrations/nodes/workflow-nodes-base.stackby/
 /nodes/n8n-nodes-base.start/		/integrations/core-nodes/n8n-nodes-base.start/
 /nodes/n8n-nodes-base.stopAndError/		/integrations/core-nodes/n8n-nodes-base.stopAndError/
 /nodes/workflow-nodes-base.storyblok/		/integrations/nodes/workflow-nodes-base.storyblok/

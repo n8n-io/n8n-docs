@@ -1,3 +1,10 @@
+---
+title: Wekan
+description: Use Wekan with Workflow²
+tags:
+  - Workflow²
+  - Wekan
+---
 # Wekan
 
 You can use these credentials to authenticate the following nodes with Wekan.

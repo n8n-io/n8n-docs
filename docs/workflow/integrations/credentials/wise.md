@@ -1,3 +1,10 @@
+---
+title: Wise
+description: Use Wise with Workflow²
+tags:
+  - Workflow²
+  - Wise
+---
 # Wise
 
 You can use these credentials to authenticate the following nodes with Wise.

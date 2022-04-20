@@ -1,3 +1,10 @@
+---
+title: Action Network
+description: Use Action Network with Workflow²
+tags:
+  - Workflow²
+  - Action Network
+---
 # Action Network
 
 [Action Network](https://actionnetwork.org/) is an open platform that empowers individuals and groups to organize for progressive causes.

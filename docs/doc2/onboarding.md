@@ -1,9 +1,13 @@
 ---
 title: "DOC² - OnBoarding"
+description: This guide will help you learn the basics of DOC² get you up and running with an IPS that will max out your productivity.
 date: "2022-01-24"
 tags:
   - DOC²
   - OnBoarding
+  - Guide
+  - Initial Setup
+  - Understanding Document Review
 ---
 
 # OnBoarding

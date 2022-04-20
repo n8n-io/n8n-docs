@@ -1,5 +1,6 @@
 ---
 title: "PO Matching - Delivery Notes"
+description: If quantity of the ordered item(s) does not match the quantity on the invoice you need to start the match with received Delivery Note by uploading it in DOC²
 date: "2022-01-24"
 tags:
   - DOC²

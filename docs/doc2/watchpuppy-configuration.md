@@ -1,8 +1,9 @@
 ---
 title: "Watchdog Configuration"
-description: WatchPuppy has multiple configuration options you can choose from
+description: Fileshare Import - WatchPuppy has multiple configuration options you can choose from
 date: "2022-01-28"
 tags:
+  - Fileshare Import
   - Watchdog
   - IDM
   - LN

@@ -1,3 +1,11 @@
+---
+title: Connection
+description: A connection establishes a link between nodes to route data through the workflow².
+tags:
+  - Workflow²
+  - Connection
+---
+
 # Connection
 
 A connection establishes a link between nodes to route data through the workflow². A connection between two nodes passes data from one node's output to another node's input. Each node can have one or multiple connections.

@@ -1,3 +1,10 @@
+---
+title: Workflow notes
+description: Workflow notes allow you to annotate and comment on your workflows.
+tags:
+  - Workflow²
+  - Workflow notes
+---
 # Workflow notes
 
 Workflow notes allow you to annotate and comment on your workflows.

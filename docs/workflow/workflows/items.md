@@ -1,3 +1,11 @@
+---
+title: Items 
+description: Data sent from one node to another is sent as an array of JSON objects. Each element in this collection is called an **Item**. A node performs its action on each item of incoming data.
+tags:
+  - Workflow²
+  - Items
+
+---
 # Items
 
 Data sent from one node to another is sent as an array of JSON objects. Each element in this collection is called an **Item**. A node performs its action on each item of incoming data.

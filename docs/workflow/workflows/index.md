@@ -1,6 +1,6 @@
 # Overview
 
-Learn about the key components of an automation in n8n:
+Learn about the key components of an automation in Workflow²:
 
 * [Workflows](/workflows/workflows/)
 * [Connections](/workflows/connections/)

@@ -35,7 +35,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Slides](/workflow/integrations/nodes/n8n-nodes-base.googleSlides/) | :white_check_mark: | :white_check_mark: |
 | [Google Tasks](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/) | :white_check_mark: | :x: |
 | [Google Translate](/workflow/integrations/nodes/n8n-nodes-base.googleTranslate/) | :white_check_mark: | :white_check_mark: |
-| [YouTube](/workflow/integrations/nodes/n8n-nodes-base.youTube/) | :white_check_mark: | :x: |
+| [YouTube](/workflow/integrations/nodes/workflow-nodes-base.youTube/) | :white_check_mark: | :x: |
 
 !!! note "⛅️ Note for n8n.cloud users"
     For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:

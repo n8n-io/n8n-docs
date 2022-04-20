@@ -35,7 +35,7 @@ This is a small bug fix release.
 
 * **core**: fix issue with current executions not displaying.<br>
 * **core**: fix an issue causing Doc² to falsely skip some authentication.<br>
-* [WooCommerce Node:](/workflow/integrations/nodes/n8n-nodes-base.wooCommerce) Fix a pagination issue with the GetAll operation.
+* [WooCommerce Node:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce) Fix a pagination issue with the GetAll operation.
 
 ## n8n@0.171.0 
 
@@ -100,14 +100,14 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 * [HTTP Request Node:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Add support for OPTIONS method.
 * [Jira Node:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Add Simplify Output option to Issue > Get.
 * [Reddit Node:](/workflow/integrations/nodes/n8n-nodes-base.reddit/) Add possibility to query saved posts.
-* [Zendesk Node:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Add ticket status On-hold.
+* [Zendesk Node:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Add ticket status On-hold.
 
 ### Bug fixes
 
 * **core:** Add logs and error catches for possible failures in queue mode.<br>
 * [AWS Lambda Node:](/workflow/integrations/nodes/n8n-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
 * [Supabase Node:](/workflow/integrations/nodes/n8n-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
-* [Xero Node:](/workflow/integrations/nodes/n8n-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
+* [Xero Node:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
 * [Wise Node:](/workflow/integrations/nodes/n8n-nodes-base.wise/) Fix issue when executing a transfer.
 
 ### Contributors
@@ -261,7 +261,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 * [Redis Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
 * [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added support for publish operations.
 * [Strapi:](/workflow/integrations/nodes/n8n-nodes-base.strapi/) Added support for Strapi 4.
-* [WordPress:](/workflow/integrations/nodes/n8n-nodes-base.wordpress/) Added status as an option to getAll post requests.
+* [WordPress:](/workflow/integrations/nodes/workflow-nodes-base.wordpress/) Added status as an option to getAll post requests.
 
 
 ### Bugfixes
@@ -410,7 +410,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [HaloPSA](/workflow/integrations/nodes/n8n-nodes-base.haloPSA/)
 * [Linear Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/)
-* [Zammad](/workflow/integrations/nodes/n8n-nodes-base.zammad/)
+* [Zammad](/workflow/integrations/nodes/workflow-nodes-base.zammad/)
 
 ### Enhanced nodes 
 
@@ -850,7 +850,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
 * [ServiceNow:](/workflow/integrations/nodes/n8n-nodes-base.serviceNow/) Fixed incorrect mapping of incident urgency and impact values.
 * [Start:](/workflow/integrations/core-nodes/n8n-nodes-base.start/) Fixed an issue causing the node to be disabled in a new workflow.
-* [Xero:](/workflow/integrations/nodes/n8n-nodes-base.xero/) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
+* [Xero:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
 
 ## n8n@0.149.0
 
@@ -866,7 +866,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Added Circle Primitive to Draw operation. Also added Composite operation.
-* [Zendesk:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Added check for API credentials validity.
+* [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added check for API credentials validity.
 * [Zulip:](/workflow/integrations/nodes/workflow-nodes-base.zulip/) Added additional field Role to the Update operation of the User resource.
 
 ### Core Functionality 
@@ -906,7 +906,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Added User Group resource.
 * [Todoist:](/workflow/integrations/nodes/n8n-nodes-base.todoist/) Added Update operation to Task resource.
 * [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Improved descriptions of available Respond options.
-* [WooCommerce:](/workflow/integrations/nodes/n8n-nodes-base.wooCommerce/) Added password field to Crate operation of Customer resource.
+* [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added password field to Crate operation of Customer resource.
 
 ### Core Functionality 
 
@@ -919,7 +919,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Stripe:](/workflow/integrations/nodes/n8n-nodes-base.stripe/) Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected.
-* [Zendesk:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Fixed an issue preventing the additional field External ID from being evaulated correctly.
+* [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Fixed an issue preventing the additional field External ID from being evaulated correctly.
 
 ### Contributors 
 
@@ -1020,7 +1020,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed an issue with pagination when loading more than 1,000 channels.
 * [Strapi:](/workflow/integrations/nodes/n8n-nodes-base.strapi/) Fixed an issue using the Where option of the Get All operation.
-* [WooCommerce:](/workflow/integrations/nodes/n8n-nodes-base.wooCommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
+* [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
 ### Contributors 
 
@@ -1033,7 +1033,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 * [Nextcloud:](/workflow/integrations/nodes/n8n-nodes-base.nextCloud/) Added Share operation to the File and Folder resources.
-* [Zendesk:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
+* [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
 
 ### Core Functionality 
 - Improved the autofill behaviour on Google Chrome when entering credentials.
@@ -1218,7 +1218,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [MQTT Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.mqttTrigger/) Added SSL/TLS support to authentication.
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added File Extension option to the Document resource. Added Type field to Task resource.
 * [Sms77:](/workflow/integrations/nodes/n8n-nodes-base.sms77/) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
-* [Zendesk:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
+* [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
 
 ### Core Functionality 
 
@@ -1229,7 +1229,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 * [Hubspot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed issue with 'RequestAllItems' API.
-* [Wordpress:](/workflow/integrations/nodes/n8n-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
+* [Wordpress:](/workflow/integrations/nodes/workflow-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors 
 [André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
@@ -1400,7 +1400,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Home Assistant:](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/) Added Event resource.
 * [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added Deal Product resource.
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Document resource with Upload operation.
-* [WooCommerce:](/workflow/integrations/nodes/n8n-nodes-base.woocommerce/) Added Customer resource.
+* [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added Customer resource.
 
 
 ### Core Functionality 
@@ -1794,7 +1794,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [IMAP Email:](/workflow/integrations/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
 * [Paddle:](/workflow/integrations/nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
 * [Spotify:](/workflow/integrations/nodes/n8n-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
-* [WooCommerce:](/workflow/integrations/nodes/n8n-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
+* [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
 
 ### Core Functionality 
 - Added await to hooks to fix issues with the `Unknown` status of the workflows
@@ -1891,7 +1891,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning empty rows
 * [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed issues with the Post resource
 * [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Fixed an issue with the node not returning an error
-* [Xero:](/workflow/integrations/nodes/n8n-nodes-base.xero/) Fixed an issue with the Create operation for the Contact resource
+* [Xero:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fixed an issue with the Create operation for the Contact resource
 
 ### Contributors 
 
@@ -1922,7 +1922,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
 * [Sentry.io:](/workflow/integrations/nodes/n8n-nodes-base.sentryIo/) Added Delete and Update operations to Project, Release, and Team resources
 * [TimescaleDB:](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) Added the Mode option that allows you to execute queries as transactions
-* [Zendesk Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
+* [Zendesk Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
 
 ### Core Functionality 
 - The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the Doc² Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page

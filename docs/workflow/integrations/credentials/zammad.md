@@ -1,7 +1,7 @@
 # Zammad
 
 You can use these credentials to authenticate the following nodes with Zammad.
-- [Zammad](/workflow/integrations/nodes/n8n-nodes-base.zammad/)
+- [Zammad](/workflow/integrations/nodes/workflow-nodes-base.zammad/)
 
 ## Prerequisites
 

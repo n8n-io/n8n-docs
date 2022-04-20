@@ -5,7 +5,8 @@ date: "2021-04-17"
 
 tags:
   - FLOW²
-  - Generel
+  - Homepage
+  - Dashboard
 ---
 
 After logging in with your user you are redirected to the DASHBOARD homepage of FLOW².

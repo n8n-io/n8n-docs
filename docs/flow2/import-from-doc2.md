@@ -1,8 +1,11 @@
 ---
 title: "Import from DOC²"
+description: How to import documents from DOC²
 date: "2021-11-25"
 tags: 
     - FLOW²
+    - DOC²
+    - Import documents
 ---
 
 ### To import documents from DOC² you need to add the desired document type and create a workflow for it first.

@@ -1,3 +1,10 @@
+---
+title: Webflow
+description: Use Webflow with Workflow²
+tags:
+  - Workflow²
+  - Webflow
+---
 # Webflow
 
 [Webflow](https://webflow.com) is an application that allows you to build responsive websites with browser-based visual editing software.

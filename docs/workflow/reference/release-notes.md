@@ -108,7 +108,7 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 * [AWS Lambda Node:](/workflow/integrations/nodes/n8n-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
 * [Supabase Node:](/workflow/integrations/nodes/n8n-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
 * [Xero Node:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
-* [Wise Node:](/workflow/integrations/nodes/n8n-nodes-base.wise/) Fix issue when executing a transfer.
+* [Wise Node:](/workflow/integrations/nodes/workflow-nodes-base.wise/) Fix issue when executing a transfer.
 
 ### Contributors
 
@@ -306,7 +306,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 * [Baserow:](/workflow/integrations/nodes/n8n-nodes-base.baserow/) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing Digest Authentication to fail in some scenarios.
-* [Wise:](/workflow/integrations/nodes/n8n-nodes-base.wise/) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
+* [Wise:](/workflow/integrations/nodes/workflow-nodes-base.wise/) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
 
 ### Contributors 
 
@@ -417,7 +417,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added Reference option to the Get operation of the File resource.
 * [Twilio:](/workflow/integrations/nodes/n8n-nodes-base.twilio/) Added Status Callbacks option.
-* [uProc:](/workflow/integrations/nodes/n8n-nodes-base.uproc/) Sanitized Data Webhook field description.
+* [uProc:](/workflow/integrations/nodes/workflow-nodes-base.uproc/) Sanitized Data Webhook field description.
 
 ### Core Functionality 
 
@@ -1109,7 +1109,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Grist](/workflow/integrations/nodes/n8n-nodes-base.grist/)
 * [SeaTable](/workflow/integrations/nodes/n8n-nodes-base.seaTable/)
 * [SeaTable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
-* [urlscan.io](/workflow/integrations/nodes/n8n-nodes-base.urlScanIo/)
+* [urlscan.io](/workflow/integrations/nodes/workflow-nodes-base.urlScanIo/)
 
 ### Core Functionality 
 - Performance improvements in Editor UI
@@ -1184,7 +1184,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Baserow:](/workflow/integrations/nodes/n8n-nodes-base.baserow/) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
 * [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added support for Notes on Leads.
-* [Wekan:](/workflow/integrations/nodes/n8n-nodes-base.wekan/) Added Sort field to the Card resource.
+* [Wekan:](/workflow/integrations/nodes/workflow-nodes-base.wekan/) Added Sort field to the Card resource.
 
 
 ### Core Functionality 
@@ -1720,7 +1720,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [AWS Transcribe](/workflow/integrations/nodes/n8n-nodes-base.awsTranscribe/)
 * [SSH](/workflow/integrations/core-nodes/n8n-nodes-base.ssh/)
-* [UptimeRobot](/workflow/integrations/nodes/n8n-nodes-base.uptimeRobot/)
+* [UptimeRobot](/workflow/integrations/nodes/workflow-nodes-base.uptimeRobot/)
 
 ### Enhanced nodes 
 
@@ -1824,7 +1824,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Mailjet:](/workflow/integrations/nodes/n8n-nodes-base.mailjet/) Added Reply To parameter
 * [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added the Increment operation
 * [Spreadsheet File:](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) Added the Header Row option
-* [Webflow Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.webflowTrigger/) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
+* [Webflow Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.webflowTrigger/) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
 
 ### Core Functionality 
 - Implemented timeout for subworkflows
@@ -1952,7 +1952,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 * [Google BigQuery](/workflow/integrations/nodes/n8n-nodes-base.googleBigQuery/)
-* [Webflow](/workflow/integrations/nodes/n8n-nodes-base.webflow/)
+* [Webflow](/workflow/integrations/nodes/workflow-nodes-base.webflow/)
 
 ### Enhanced nodes 
 

@@ -1,3 +1,10 @@
+---
+title: Vonage
+description: Use Vonage with Workflow²
+tags:
+  - Workflow²
+  - Vonage
+---
 # Vonage
 
 [Vonage](https://vonage.com/) provides unified communications, contact centers, and programmable communications APIs.

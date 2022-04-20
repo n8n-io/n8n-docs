@@ -1,3 +1,10 @@
+---
+title: Wise
+description: Use Wise with Workflow²
+tags:
+  - Workflow²
+  - Wise
+---
 # Wise
 
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.

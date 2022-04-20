@@ -1,8 +1,8 @@
 # Webflow
 
 You can use these credentials to authenticate the following nodes with Webflow.
-- [Webflow](/workflow/integrations/nodes/n8n-nodes-base.webflow/)
-- [Webflow Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.webflowTrigger/)
+- [Webflow](/workflow/integrations/nodes/workflow-nodes-base.webflow/)
+- [Webflow Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.webflowTrigger/)
 
 ## Prerequisites
 

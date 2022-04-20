@@ -1,3 +1,10 @@
+---
+title: Wekan
+description: Use Wekan with Workflow²
+tags:
+  - Workflow²
+  - Wekan
+---
 # Wekan
 
 [Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.

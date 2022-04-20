@@ -1,3 +1,10 @@
+---
+title: Vero
+description: Use Vero with Workflow²
+tags:
+  - Workflow²
+  - Vero
+---
 # Vero
 
 [Vero](https://www.getvero.com/) is a messaging platform that helps manage real-time data to create a better customer experience.

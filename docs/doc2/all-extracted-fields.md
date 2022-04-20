@@ -1,6 +1,13 @@
 ---
 title: "All extracted fields"
 date: "2021-07-05"
+
+description: Shows the quality of the extraction using graphical indicators
+
+tags:
+  - General
+  - DOC²
+  - KV²
 ---
 
 ### 1 Invoice Details

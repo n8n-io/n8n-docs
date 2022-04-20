@@ -360,8 +360,8 @@
 /nodes/n8n-nodes-base.twist/		/integrations/nodes/n8n-nodes-base.twist/
 /nodes/n8n-nodes-base.twitter/		/integrations/nodes/n8n-nodes-base.twitter/
 /nodes/n8n-nodes-base.typeformTrigger/		/integrations/trigger-nodes/n8n-nodes-base.typeformTrigger/
-/nodes/n8n-nodes-base.unleashedSoftware/		/integrations/nodes/n8n-nodes-base.unleashedSoftware/
-/nodes/n8n-nodes-base.uplead/		/integrations/nodes/n8n-nodes-base.uplead/
+/nodes/workflow-nodes-base.unleashedSoftware/		/integrations/nodes/workflow-nodes-base.unleashedSoftware/
+/nodes/workflow-nodes-base.uplead/		/integrations/nodes/workflow-nodes-base.uplead/
 /nodes/workflow-nodes-base.uproc/		/integrations/nodes/workflow-nodes-base.uproc/
 /nodes/workflow-nodes-base.uptimeRobot/		/integrations/nodes/workflow-nodes-base.uptimeRobot/
 /nodes/workflow-nodes-base.urlScanIo/		/integrations/nodes/workflow-nodes-base.urlScanIo/

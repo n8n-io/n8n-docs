@@ -1,7 +1,7 @@
 # Unleashed Software
 
 You can use these credentials to authenticate the following nodes with Unleashed Software.
-- [Unleashed Software](/workflow/integrations/nodes/n8n-nodes-base.unleashedSoftware/)
+- [Unleashed Software](/workflow/integrations/nodes/workflow-nodes-base.unleashedSoftware/)
 
 ## Prerequisites
 

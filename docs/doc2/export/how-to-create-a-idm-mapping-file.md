@@ -1,8 +1,13 @@
 ---
 title: "How to create a IDM mapping file"
+description: Step by step guide how to create a IDM mapping file.
 date: "2021-10-26"
 tags:
+  - DOC²
+  - Export
   - Infor
+  - IDM
+  - Mapping
 ---
 
 #### Step by step guide how to create a IDM mapping file.

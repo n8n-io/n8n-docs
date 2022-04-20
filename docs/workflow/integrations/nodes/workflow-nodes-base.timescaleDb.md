@@ -1,3 +1,10 @@
+---
+title: TimescaleDB
+description: Use TimescaleDB with Workflow²
+tags:
+  - Workflow²
+  - TimescaleDB
+---
 # TimescaleDB
 
 [TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.

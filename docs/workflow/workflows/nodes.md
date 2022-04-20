@@ -49,7 +49,7 @@ Trigger nodes can be app or core nodes.
 
 * **Core Trigger nodes** start the workflow at a specific time, at a time interval, or on a webhook call. For example, to get all users from a Postgres database every 10 minutes, use the Interval Trigger node with the Postgres node.
 
-* **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramtrigger/) can be used to trigger a workflow when a message is sent in a Telegram chat.
+* **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](/workflow/integrations/trigger-nodes/workflow-nodes-base.telegramtrigger/) can be used to trigger a workflow when a message is sent in a Telegram chat.
 
 ![Telegram trigger](/_images/workflows/nodes/telegram_trigger.png)
 

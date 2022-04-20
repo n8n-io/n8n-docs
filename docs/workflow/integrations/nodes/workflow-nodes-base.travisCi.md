@@ -1,3 +1,10 @@
+---
+title: Travis CI
+description: Use Travis CI with Workflow²
+tags:
+  - Workflow²
+  - Travis CI
+---
 # Travis CI
 
 [Travis CI](https://travis-ci.com) is a hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.

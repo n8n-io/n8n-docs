@@ -1,3 +1,10 @@
+---
+title: Supabase
+description: Use Supabase with Workflow²
+tags:
+  - Workflow²
+  - Supabase
+---
 # Supabase
 
 [Supabase](https://supabase.com/) is an open source Firebase alternative.

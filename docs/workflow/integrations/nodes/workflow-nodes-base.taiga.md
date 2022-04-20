@@ -1,3 +1,10 @@
+---
+title: Taiga
+description: Use Taiga with Workflow²
+tags:
+  - Workflow²
+  - Taiga
+---
 # Taiga
 
 [Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.

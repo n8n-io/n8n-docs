@@ -98,4 +98,4 @@ There are a limited number of nodes and operations where you need to design a lo
 	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
 * [**RSS**](/workflow/integrations/core-nodes/n8n-nodes-base.rssFeedRead/) nodes executes only once regardless of the number of items in the incoming data.
 * [**Spreadsheet**](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
-* [**TimescaleDB**](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**TimescaleDB**](/workflow/integrations/nodes/workflow-nodes-base.timescaleDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

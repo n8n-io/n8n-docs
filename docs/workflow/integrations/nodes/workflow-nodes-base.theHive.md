@@ -1,3 +1,10 @@
+---
+title: TheHive
+description: Use TheHive with Workflow²
+tags:
+  - Workflow²
+  - TheHive
+---
 # TheHive
 
 [TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.

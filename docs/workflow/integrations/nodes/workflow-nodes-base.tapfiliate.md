@@ -1,3 +1,10 @@
+---
+title: Tapfiliate
+description: Use Tapfiliate with Workflow²
+tags:
+  - Workflow²
+  - Tapfiliate
+---
 # Tapfiliate
 
 [Tapfiliate](https://tapfiliate.com) allows you to create, track, and grow your affiliate marketing programs.

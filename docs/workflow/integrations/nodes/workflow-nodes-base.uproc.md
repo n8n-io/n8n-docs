@@ -459,7 +459,7 @@ tags:
 This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [uProc]()
-- [Telegram](/workflow/integrations/nodes/n8n-nodes-base.telegram/)
+- [Telegram](/workflow/integrations/nodes/workflow-nodes-base.telegram/)
 
 The final workflow should look like the following image.
 
@@ -493,7 +493,7 @@ This node will send the screenshot that we received from the previous node.
 
 1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/workflow/integrations/credentials/telegram/).
 2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/workflow/integrations/nodes/n8n-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
+3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/workflow/integrations/nodes/workflow-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
 4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
 
 5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.

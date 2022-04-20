@@ -1,8 +1,8 @@
 # Taiga
 
 You can use these credentials to authenticate the following nodes with Taiga.
-- [Taiga](/workflow/integrations/nodes/n8n-nodes-base.taiga/)
-- [Taiga Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.taigaTrigger/)
+- [Taiga](/workflow/integrations/nodes/workflow-nodes-base.taiga/)
+- [Taiga Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.taigaTrigger/)
 
 ## Prerequisites
 

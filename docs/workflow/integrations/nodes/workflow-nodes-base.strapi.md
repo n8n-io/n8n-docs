@@ -1,3 +1,10 @@
+---
+title: Strapi
+description: Use Strapi with Workflow²
+tags:
+  - Workflow²
+  - Strapi
+---
 # Strapi
 
 [Strapi](https://www.strapi.io/) is an open-source Headless CMS that gives developers the freedom to choose their tools and frameworks while also allowing editors to easily manage and distribute their content.

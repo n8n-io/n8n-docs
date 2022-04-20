@@ -1,3 +1,10 @@
+---
+title: Strava
+description: Use Strava with Workflow²
+tags:
+  - Workflow²
+  - Strava
+---
 # Strava
 
 [Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.

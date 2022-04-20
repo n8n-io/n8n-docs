@@ -67,7 +67,7 @@ You can now download binary data from individual nodes in your workflow.
 * [Microsoft Teams Node:](/workflow/integrations/nodes/n8n-nodes-base.microsoftteams/) Add chat message support.
 * [Mocean Node:](/workflow/integrations/nodes/n8n-nodes-base.mocean/) Add 'Delivery Report URL' option and credential tests.
 * [ServiceNow Node:](/workflow/integrations/nodes/n8n-nodes-base.serviceNow/) Add basicAuth support and fix getColumns loadOptions.
-* [Strava Node:](/workflow/integrations/nodes/n8n-nodes-base.strava/) Add 'Get Streams' operation.
+* [Strava Node:](/workflow/integrations/nodes/workflow-nodes-base.strava/) Add 'Get Streams' operation.
 
 
 ### Bug fixes
@@ -106,7 +106,7 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 * **core:** Add logs and error catches for possible failures in queue mode.<br>
 * [AWS Lambda Node:](/workflow/integrations/nodes/n8n-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
-* [Supabase Node:](/workflow/integrations/nodes/n8n-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
+* [Supabase Node:](/workflow/integrations/nodes/workflow-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
 * [Xero Node:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
 * [Wise Node:](/workflow/integrations/nodes/workflow-nodes-base.wise/) Fix issue when executing a transfer.
 
@@ -161,7 +161,7 @@ Read more about the new license in [License](/reference/license/).
 ### Bug fixes
 
 * [GitHub node:](/workflow/integrations/nodes/n8n-nodes-base.github/) Fix credential tests and File List operation.
-* [Telegram node:](/workflow/integrations/nodes/n8n-nodes-base.telegram/) Fix sending binary data when disable notification is set.
+* [Telegram node:](/workflow/integrations/nodes/workflow-nodes-base.telegram/) Fix sending binary data when disable notification is set.
 
 ### Contributors
 
@@ -260,7 +260,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 * [MongoDB:](/workflow/integrations/nodes/n8n-nodes-base.mongoDb/) Added the aggregate operation.
 * [Redis Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
 * [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added support for publish operations.
-* [Strapi:](/workflow/integrations/nodes/n8n-nodes-base.strapi/) Added support for Strapi 4.
+* [Strapi:](/workflow/integrations/nodes/workflow-nodes-base.strapi/) Added support for Strapi 4.
 * [WordPress:](/workflow/integrations/nodes/workflow-nodes-base.wordpress/) Added status as an option to getAll post requests.
 
 
@@ -349,7 +349,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 
 * [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed a bug causing API requests to use an incorrect workspace identifier.
-* [TheHive:](/workflow/integrations/nodes/n8n-nodes-base.theHive/)  Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
+* [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/)  Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
 
 ### Contributors 
 
@@ -378,7 +378,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Grist:](/workflow/integrations/nodes/n8n-nodes-base.grist/) Added support for self-hosted Grist instances.
-* [Telegram Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/) Added new Extra Large option to Image Size field.
+* [Telegram Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.telegramTrigger/) Added new Extra Large option to Image Size field.
 * [Webhook:](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
 
 ### Core Functionality 
@@ -571,7 +571,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Box:](/workflow/integrations/nodes/n8n-nodes-base.box/) Fixed a bug causing some files to be corrupted during download.
 * [Philips Hue:](/workflow/integrations/nodes/n8n-nodes-base.philipsHue/) Fixed a bug preventing the node from connecting to Philips Hue.
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed a bug preventing filters on date and datetime fields from working as expected.
-* [Supabase:](/workflow/integrations/nodes/n8n-nodes-base.supabase/) Fixed an errorneous documentation link.
+* [Supabase:](/workflow/integrations/nodes/workflow-nodes-base.supabase/) Fixed an errorneous documentation link.
 
 ### Contributors 
 
@@ -586,8 +586,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Microsoft Graph Security](/workflow/integrations/nodes/n8n-nodes-base.microsoftGraphSecurity/)
-* [SyncroMSP](/workflow/integrations/nodes/n8n-nodes-base.syncroMsp/)
-* [Supabase](/workflow/integrations/nodes/n8n-nodes-base.supabase/)
+* [SyncroMSP](/workflow/integrations/nodes/workflow-nodes-base.syncroMsp/)
+* [Supabase](/workflow/integrations/nodes/workflow-nodes-base.supabase/)
 
 ### Enhanced nodes 
 
@@ -707,7 +707,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Todoist:](/workflow/integrations/nodes/n8n-nodes-base.todoist/) Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail.
+* [Todoist:](/workflow/integrations/nodes/workflow-nodes-base.todoist/) Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail.
 
 ### Contributors 
 
@@ -772,7 +772,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [Telegram Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramTrigger/) Added support for downloading images to channel_post updates.
+* [Telegram Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.telegramTrigger/) Added support for downloading images to channel_post updates.
 
 ### Core Functionality 
 
@@ -881,7 +881,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Google Tasks:](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
-* [Stripe Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.stripeTrigger/) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
+* [Stripe Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
 * [Toggl Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.togglTrigger/) Updated the API URL used by the node.
 
 ### Contributors 
@@ -904,7 +904,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Lemlist:](/workflow/integrations/nodes/n8n-nodes-base.lemlist/) Added additional fields to Create operation of Lead resource.
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Added User Group resource.
-* [Todoist:](/workflow/integrations/nodes/n8n-nodes-base.todoist/) Added Update operation to Task resource.
+* [Todoist:](/workflow/integrations/nodes/workflow-nodes-base.todoist/) Added Update operation to Task resource.
 * [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Improved descriptions of available Respond options.
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added password field to Crate operation of Customer resource.
 
@@ -918,7 +918,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Stripe:](/workflow/integrations/nodes/n8n-nodes-base.stripe/) Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected.
+* [Stripe:](/workflow/integrations/nodes/workflow-nodes-base.stripe/) Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected.
 * [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Fixed an issue preventing the additional field External ID from being evaulated correctly.
 
 ### Contributors 
@@ -1019,7 +1019,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed an issue with pagination when loading more than 1,000 channels.
-* [Strapi:](/workflow/integrations/nodes/n8n-nodes-base.strapi/) Fixed an issue using the Where option of the Get All operation.
+* [Strapi:](/workflow/integrations/nodes/workflow-nodes-base.strapi/) Fixed an issue using the Where option of the Get All operation.
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
 ### Contributors 
@@ -1128,7 +1128,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Telegram:](/workflow/integrations/nodes/n8n-nodes-base.telegram/) Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations.
+* [Telegram:](/workflow/integrations/nodes/workflow-nodes-base.telegram/) Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations.
 
 ### Core Functionality 
 - Fixed startup behavior when running Doc² in scaled mode (i.e. `skipWebhoooksDeregistrationOnShutdown` is enabled).
@@ -1427,7 +1427,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 * [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added Lead resource. Added Search operation to Organization resource.
-* [Taiga Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.taigaTrigger/) Added Resource and Operations filters.
+* [Taiga Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.taigaTrigger/) Added Resource and Operations filters.
 
 
 ### Core Functionality 
@@ -1463,8 +1463,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Kafka Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.kafkaTrigger/) Added Read Messages From Beginning option.
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Sandbox Environment Type for OAuth2 credentials.
-* [Taiga:](/workflow/integrations/nodes/n8n-nodes-base.taiga/) Added Epic, Task, and User Story operations.
-* [TheHive:](/workflow/integrations/nodes/n8n-nodes-base.theHive/) Added Custom Fields option to the available Additional Fields.
+* [Taiga:](/workflow/integrations/nodes/workflow-nodes-base.taiga/) Added Epic, Task, and User Story operations.
+* [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/) Added Custom Fields option to the available Additional Fields.
 
 ### Core Functionality 
 - Fixed an issue where failed workflows were displayed as "running".
@@ -1499,13 +1499,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 * [Home Assistant](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/)
-* [Stripe](/workflow/integrations/nodes/n8n-nodes-base.stripe/)
+* [Stripe](/workflow/integrations/nodes/workflow-nodes-base.stripe/)
 
 ### Enhanced nodes 
 
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
 * [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Added Contact Segment resource.
-* [Telegram:](/workflow/integrations/nodes/n8n-nodes-base.telegram/) Added Delete operation to the Message resource.
+* [Telegram:](/workflow/integrations/nodes/workflow-nodes-base.telegram/) Added Delete operation to the Message resource.
 
 ### Core Functionality 
 - Performance improvement for loading of historical executions (> 3mil) when using Postgres.
@@ -1630,7 +1630,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added the functionlaity to log the request to the browser console for testing
 * [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Added the Include Time parameter date field types
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
-* [Todoist:](/workflow/integrations/nodes/n8n-nodes-base.todoist/) Added the Description option to the Task resource
+* [Todoist:](/workflow/integrations/nodes/workflow-nodes-base.todoist/) Added the Description option to the Task resource
 
 ### Core Functionality 
 - Implemented the functionality to display the error details in a toast message for trigger nodes
@@ -1774,7 +1774,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Keap:](/workflow/integrations/nodes/n8n-nodes-base.keap/) Fixed an issue with the data type of the Order Title field
 * [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed an issue with the activity type in Post operation
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed an issue with the Get Profile operation
-* [Strava:](/workflow/integrations/nodes/n8n-nodes-base.strava/) Fixed an issue with the paging parameter
+* [Strava:](/workflow/integrations/nodes/workflow-nodes-base.strava/) Fixed an issue with the paging parameter
 
 ### Contributors 
 
@@ -1875,7 +1875,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Postgres:](/workflow/integrations/nodes/n8n-nodes-base.postgres/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [QuestDB:](/workflow/integrations/nodes/n8n-nodes-base.questDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [QuickBase:](/workflow/integrations/nodes/n8n-nodes-base.quickbase/) Added option to use Field IDs
-* [TimescaleDB:](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [TimescaleDB:](/workflow/integrations/nodes/workflow-nodes-base.timescaleDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [Twist:](/workflow/integrations/nodes/workflow-nodes-base.twist/) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
 
 ### Core Functionality 
@@ -1921,7 +1921,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [QuestDB:](/workflow/integrations/nodes/n8n-nodes-base.questDb/) Added the Mode option that allows you to execute queries as transactions
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
 * [Sentry.io:](/workflow/integrations/nodes/n8n-nodes-base.sentryIo/) Added Delete and Update operations to Project, Release, and Team resources
-* [TimescaleDB:](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) Added the Mode option that allows you to execute queries as transactions
+* [TimescaleDB:](/workflow/integrations/nodes/workflow-nodes-base.timescaleDb/) Added the Mode option that allows you to execute queries as transactions
 * [Zendesk Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
 
 ### Core Functionality 
@@ -1993,7 +1993,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 * [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added Release resource
-* [TheHive:](/workflow/integrations/nodes/n8n-nodes-base.theHive/) Added support to fetch observable data types
+* [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/) Added support to fetch observable data types
 * [RabbitMQ:](/workflow/integrations/nodes/n8n-nodes-base.rabbitmq/) Added header parameters
 
 ### Core Functionality 

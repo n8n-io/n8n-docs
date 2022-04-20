@@ -1,3 +1,10 @@
+---
+title: Todoist
+description: Use Todoist with Workflow²
+tags:
+  - Workflow²
+  - Todoist
+---
 # Todoist
 
 [Todoist](https://todoist.com/) is a task management software that can be used for small teams, individuals and professionals to manage anything from a shopping list to major projects at work.

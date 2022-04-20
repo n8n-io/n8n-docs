@@ -19,7 +19,7 @@
 ## Example Usage
 
 This workflow allows you to add a datapoint to Beeminder when a new activity gets added to Strava. You can also find the [workflow](https://n8n.io/workflows/900) on n8n.io. This example usage workflow would use the following nodes.
-- [Strava Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.stravatrigger/)
+- [Strava Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.stravatrigger/)
 - [Beeminder]()
 
 The final workflow should look like the following image.

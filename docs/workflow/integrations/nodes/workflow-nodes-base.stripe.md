@@ -1,3 +1,10 @@
+---
+title: Stripe
+description: Use Stripe with Workflow²
+tags:
+  - Workflow²
+  - Stripe
+---
 # Stripe
 
 [Stripe](https://stripe.com/) offers payment processing software and application programming interfaces for e-commerce websites and mobile applications.

@@ -1,3 +1,10 @@
+---
+title: SyncroMSP
+description: Use SyncroMSP with Workflow²
+tags:
+  - Workflow²
+  - SyncroMSP
+---
 # SyncroMSP
 
 [SyncroMSP](https://syncromsp.com/) is a cloud-based remote monitoring and management platform (RMM).

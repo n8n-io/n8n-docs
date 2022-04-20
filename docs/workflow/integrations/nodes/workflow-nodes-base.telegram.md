@@ -1,3 +1,10 @@
+---
+title: Telegram
+description: Use Telegram with Workflow²
+tags:
+  - Workflow²
+  - Telegram
+---
 # Telegram
 
 [Telegram](https://telegram.org) is a cloud-based instant messaging and voice-over-IP service.
@@ -114,7 +121,7 @@ You can also use this [workflow](https://n8n.io/workflows/772).
 
 There are two ways to get the Chat ID in Telegram.
 
-- Using the [Telegram Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
+- Using the [Telegram Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
 - Using the `@RawDataBot`: The `@RawDataBot` returns the raw data of the chat with a Chat ID. Invite the `@RawDataBot` to your channel/group, and upon joining, it will output a Chat ID along with other information. Be sure to remove the `@RawDataBot` from your group/channel afterwards.
 
 

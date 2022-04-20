@@ -1,7 +1,7 @@
 # Zoom
 
 You can use these credentials to authenticate the following nodes with Zoom.
-- [Zoom](/workflow/integrations/nodes/n8n-nodes-base.zoom/)
+- [Zoom](/workflow/integrations/nodes/workflow-nodes-base.zoom/)
 
 ## Prerequisites
 

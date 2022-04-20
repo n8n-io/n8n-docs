@@ -18,7 +18,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 **core**: Luxon now applies the correct timezone. Refer to [Luxon](/code-examples/expressions/luxon/) for more information.<br>
 **core**: fixed an issue with localization that was preventing i18n files from loading.<br>
-[Action Network Node:](/workflow/integrations/nodes/n8n-nodes-base.actionNetwork/) Fix a pagination issue and add credentials test.
+[Action Network Node:](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/) Fix a pagination issue and add credentials test.
 
 ### Contributors
 
@@ -867,7 +867,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Added Circle Primitive to Draw operation. Also added Composite operation.
 * [Zendesk:](/workflow/integrations/nodes/n8n-nodes-base.zendesk/) Added check for API credentials validity.
-* [Zulip:](/workflow/integrations/nodes/n8n-nodes-base.zulip/) Added additional field Role to the Update operation of the User resource.
+* [Zulip:](/workflow/integrations/nodes/workflow-nodes-base.zulip/) Added additional field Role to the Update operation of the User resource.
 
 ### Core Functionality 
 
@@ -1534,7 +1534,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Airtable:](/workflow/integrations/nodes/n8n-nodes-base.airtable/) Added Bulk Size option to all Operations.
 * [Box:](/workflow/integrations/nodes/n8n-nodes-base.box/) Added Share operation to File and Folder resources.
 * [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Last Name field to Update operation on Contact resource.
-* [Zoho CRM:](/workflow/integrations/nodes/n8n-nodes-base.zohoCrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
+* [Zoho CRM:](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality 
 - Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
@@ -1566,7 +1566,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Action Network](/workflow/integrations/nodes/n8n-nodes-base.actionNetwork/)
+* [Action Network](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/)
 * [Google Docs](/workflow/integrations/nodes/n8n-nodes-base.googleDocs/)
 
 ### Enhanced nodes 
@@ -1834,7 +1834,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Google Cloud Firestore:](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) Fixed an issue with parsing null value
 * [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Key Row parameter
-* [HubSpot:](/workflow/integrations/nodes/n8n-nodes-base.zohoCrm/) Fixed an issue with the authentication
+* [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/) Fixed an issue with the authentication
 
 ### Contributors 
 

@@ -1,3 +1,10 @@
+---
+title: SendGrid
+description: Use SendGrid with Workflow²
+tags:
+  - Workflow²
+  - SendGrid
+---
 # SendGrid
 
 You can use these credentials to authenticate the following nodes with SendGrid.

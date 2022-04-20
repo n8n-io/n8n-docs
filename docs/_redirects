@@ -38,7 +38,7 @@
 /nodes/node-basics/ /integrations/
 /nodes/creating-nodes/		/integrations/creating-nodes/
 /nodes/credentials/		/integrations/credentials/
-/nodes/n8n-nodes-base.actionNetwork/		/integrations/nodes/n8n-nodes-base.actionNetwork/
+/nodes/workflow-nodes-base.actionNetwork/		/integrations/nodes/workflow-nodes-base.actionNetwork/
 /nodes/n8n-nodes-base.activationTrigger/		/integrations/core-nodes/n8n-nodes-base.activationTrigger/
 /nodes/n8n-nodes-base.activeCampaign/		/integrations/nodes/n8n-nodes-base.activeCampaign/
 /nodes/n8n-nodes-base.activeCampaignTrigger/		/integrations/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/
@@ -388,9 +388,9 @@
 /nodes/n8n-nodes-base.zammad/		/integrations/nodes/n8n-nodes-base.zammad/
 /nodes/n8n-nodes-base.zendesk/		/integrations/nodes/n8n-nodes-base.zendesk/
 /nodes/n8n-nodes-base.zendeskTrigger/		/integrations/trigger-nodes/n8n-nodes-base.zendeskTrigger/
-/nodes/n8n-nodes-base.zohoCrm/		/integrations/nodes/n8n-nodes-base.zohoCrm/
-/nodes/n8n-nodes-base.zoom/		/integrations/nodes/n8n-nodes-base.zoom/
-/nodes/n8n-nodes-base.zulip/		/integrations/nodes/n8n-nodes-base.zulip/
+/nodes/workflow-nodes-base.zohoCrm/		/integrations/nodes/workflow-nodes-base.zohoCrm/
+/nodes/workflow-nodes-base.zoom/		/integrations/nodes/workflow-nodes-base.zoom/
+/nodes/workflow-nodes-base.zulip/		/integrations/nodes/workflow-nodes-base.zulip/
 /nodes/nodes-library/		/integrations/
 /nodes/		/integrations/nodes/
 

@@ -1,7 +1,7 @@
 # Zulip
 
 You can use these credentials to authenticate the following nodes with Zulip.
-- [Zulip](/workflow/integrations/nodes/n8n-nodes-base.zulip/)
+- [Zulip](/workflow/integrations/nodes/workflow-nodes-base.zulip/)
 
 ## Prerequisites
 

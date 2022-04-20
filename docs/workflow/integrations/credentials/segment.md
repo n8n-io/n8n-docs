@@ -1,3 +1,10 @@
+---
+title: Segment
+description: Use Segment with Workflow²
+tags:
+  - Workflow²
+  - Segment
+---
 # Segment
 
 You can use these credentials to authenticate the following nodes with Segment.

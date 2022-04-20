@@ -1,7 +1,7 @@
 # Zoho
 
 You can use these credentials to authenticate the following nodes with Zoho.
-- [Zoho CRM](/workflow/integrations/nodes/n8n-nodes-base.zohoCRM/)
+- [Zoho CRM](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/)
 
 ## Prerequisites
 

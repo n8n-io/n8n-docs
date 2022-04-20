@@ -1,3 +1,10 @@
+---
+title: SeaTable
+description: Use SeaTable with Workflow²
+tags:
+  - Workflow²
+  - SeaTable
+---
 # SeaTable
 
 You can use these credentials to authenticate the following nodes:

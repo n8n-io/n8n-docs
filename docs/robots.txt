@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://docs.polydocs.io/sitemap.xml

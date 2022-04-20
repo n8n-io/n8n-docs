@@ -5,7 +5,6 @@ icon: material/table-column-width
 date: "2022-02-24"
 tags:
   - Table
-  - DOC²
 ---
 
 DOC² offers the possibility to manually create columns for extracted documents. This is necessary when there is a need to manually map columns to rows (fields) on the extracted document. When this is necessary and how it works you will learn here: [Manual row selection](/doc2/doc2app/table-train/training-of-table-extraction/manual-row-selection/)

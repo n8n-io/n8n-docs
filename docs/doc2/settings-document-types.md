@@ -1,8 +1,10 @@
 ---
 title: "Document Types"
+description: Here you will find all documents available in DOC² as invoice, credit note, delivery note, order confirmation and many more 
 date: "2021-10-29"
 tags:
   - DOC²
+  - Settings
   - Document Types
 ---
 

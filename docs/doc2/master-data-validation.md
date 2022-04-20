@@ -1,10 +1,10 @@
 ---
 title: "Master data validation"
-description: DOC² offers the possibility to upload your master data. This has the advantage that an automatic mapping of e.g. supplier data from your ERP system can be made during the extraction of documents. 
+description: DOC² offers in the document validation overview the possibility to match supplier data extracted from the document with the master data from your ERP system (precondition: your master data has been uploaded to DOC²) and to assign the document to the correct supplier without any manual work in the best case. 
 date: "2022-02-24"
 tags:
   - DOC²
-  - Settings
+  - Document Validation
   - Master data validation
 ---
 

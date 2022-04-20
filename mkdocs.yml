@@ -212,11 +212,9 @@ nav:
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
     - Getting Started: flow2/introduction.md
-    - FLOW² Onboarding Guide: flow2/flow2-onboarding-guide.md
+    - Onboarding Guide: flow2/flow2-onboarding-guide.md
     - Deployment: flow2/deployment.md
     - User Dashboard: flow2/home.md
-    - Overview: flow2/flow2.md
-    - OnBoarding: flow2/flow2-onboarding-guide.md
     - System Setup: flow2/settings-system-setup.md
     - Metadata: flow2/metadata.md
     - Import from Doc²: flow2/import-from-doc2.md

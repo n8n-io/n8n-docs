@@ -1,4 +1,10 @@
-
+---
+title: Making HTTP Requests
+description: While creating nodes it is very commonn to call external APIs or make HTTP requests to other services.
+tags:
+  - Workflow²
+  - HTTP Requests
+---
 # Making HTTP Requests
 
 While creating nodes it is very commonn to call external APIs or make HTTP requests to other services.

@@ -1,9 +1,14 @@
 ---
 title: "Watchdog Configuration"
+description: WatchPuppy has multiple configuration options you can choose from
 date: "2022-01-28"
 tags:
-  - DOC²
   - Watchdog
+  - IDM
+  - LN
+  - FLOW²
+  - Local Export
+  - DOC² Upload
 ---
 
 WatchPuppy has multiple configuration options you can choose from.

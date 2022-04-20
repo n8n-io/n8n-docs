@@ -1,10 +1,15 @@
 ---
 title: "Save and delete rules"
+description: As soon as a document has been trained in DOC² and all rules for the extraction of the tables have been stored for this document, they have to be saved so that no manual training is necessary for future imports. Instead, the documents and their tables are extracted fully automatically by DOC² and the data is brought into the structure defined by the training. Rules for documents can also be deleted using the "DELETE RULES" button. This may be necessary if rules have been saved incorrectly or in a qualitatively unsatisfactory way. This allows a document to be retrained. ATTENTION: Deleting rules will affect all documents with the same or similar format. And these documents must then be completely re-trained. This means that deleting the rules should be done with great care.
 date: "2022-02-24"
 tags:
   - DOC²
+  - Table Extraction
   - Rules
+  - Save
+  - Delete
 ---
+
 
 As soon as a document has been trained in DOC² and all rules for the extraction of the tables have been stored for this document, they have to be saved so that no manual training is necessary for future imports. Instead, the documents and their tables are extracted fully automatically by DOC² and the data is brought into the structure defined by the training.
 

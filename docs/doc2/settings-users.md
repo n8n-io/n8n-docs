@@ -1,10 +1,13 @@
 ---
 title: "Users"
+description: How to add a user and reset the password
 date: "2021-10-29"
 icons: fontawesome/solid-user-plus
 tags:
   - DOC²
+  - Settings
   - Users
+  - Password
 ---
 
 Users can be managed via "SETTINGS -> Users". You can find the option as follows.

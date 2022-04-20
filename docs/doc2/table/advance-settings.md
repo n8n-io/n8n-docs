@@ -5,6 +5,7 @@ date: "2022-03-01"
 icon: material/table-cog
 tags:
   - Table
+  - DOC²
 ---
 
 In the table extraction view you will find the menu item "Advance Settings" in the upper action bar (make sure that the training mode is activated):

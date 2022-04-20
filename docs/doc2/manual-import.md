@@ -1,6 +1,5 @@
 ---
 title: "Manual Import"
-icon: material/file-import
 description: Manual File Import to DOC²
 date: "2021-10-22"
 tags:

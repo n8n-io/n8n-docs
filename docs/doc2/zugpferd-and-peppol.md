@@ -1,6 +1,13 @@
 ---
 title: "Zugferd and Peppol"
+description: Export and Download documents as ZugferdPDF and Peppol BIS Billing
 date: "2022-03-03"
+tags:
+  - DOC²
+  - Export
+  - Download
+  - Zugferd
+  - Peppol
 ---
 
 Export setting can be managed via "SETTINGS -> Export". You can find the option as follows.

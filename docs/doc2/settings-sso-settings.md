@@ -1,9 +1,11 @@
 ---
 title: "SSO Settings"
+description: you will find all the details you need for SSO configuration here
 date: "2021-10-29"
 icon: material/sign-direction:
 tags:
   - DOC²
+  - Settings
   - SSO
 ---
 

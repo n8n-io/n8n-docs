@@ -1,8 +1,10 @@
 ---
 title: "Webhook"
+description: Exporting data via a webhook
 date: "2021-10-22"
 tags:
   - DOC²
+  - Export
   - Webhook
 ---
 

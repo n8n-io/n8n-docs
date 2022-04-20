@@ -87,62 +87,63 @@ plugins:
       tags_file: tags.md
 nav: 
   - DOC²:
-    - Overview: doc2/index.md
+    - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
     - DOC² with Infor: doc2/infor.md
     - Dashboard: 
       - Overview: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
     - Document Validation:
-      - Overview: doc2/document-validation.md
+      - Document Validation: doc2/document-validation.md
       - Master Data Validation: doc2/master-data-validation.md
       - OCR View: doc2/ocr-view.md
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
     - Table: 
-      - Save and delete rules: doc2/save-rules-and-delete-rules.md
+      - Table Extraction: doc2/table/table-train.md
+      - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
       - Train: 
-        - Define tables and columns: doc2/define-table-and-columns.md
-        - Add new Column: doc2/add-new-table-column.md
-        - Group function: doc2/group-function.md
-        - Advanced settings: doc2/advance-settings.md
-        - Manual row selection: doc2/manual-row-selection.md
-        - Table Extraction: doc2/training-of-table-extraction.md
-    - Import:
-      - Email: doc2/e-mail.md
-      - Fileshare Import:
-        - Watchdog: doc2/watchdog.md
-        - Windows: doc2/watchdog-windows.md
-        - Configuration: doc2/watchpuppy-configuration.md
-    - Export: 
-      - Export to Infor:
-        - Export to Infor ION and IDM: doc2/export-to-infor.md
-        - How to create a BOD mapping file: doc2/how-to-create-a-bod-mapping-file.md
-        - How to create a IDM mapping file: doc2/how-to-create-a-idm-mapping-file.md
-        - Export to Infor IDM: doc2/infor-idm.md
-        - Infor ION File: doc2/create-a-infor-ion-file.md
-        - Export to Infor ION and IDM: doc2/infor-ion.md
-      - Export to Flow²: doc2/export-to-flow2.md
+        - Define tables and columns: doc2/table/define-table-and-columns.md
+        - Add new Column: doc2/table/add-new-table-column.md
+        - Group function: doc2/table/group-function.md
+        - Advanced settings: doc2/table/advance-settings.md
+        - Manual row selection: doc2/table/manual-row-selection.md
+        - Table Extraction: doc2/table/training-of-table-extraction.md
     - Keyboard: doc2/keyboard.md
     - Setting: 
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
-      - Import: doc2/import.md
+      - Import:
+        - Overview: doc2/import.md
+        - Email: doc2/e-mail.md
+        - Fileshare Import:
+          - Watchdog: doc2/watchdog.md
+          - Windows: doc2/watchdog-windows.md
+          - Configuration: doc2/watchpuppy-configuration.md
+        - Webhook: doc2/webhook.md
+      - Export: 
+        - Export to Infor:
+          - Export to Infor ION and IDM: doc2/export/export-to-infor.md
+          - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md
+          - How to create a IDM mapping file: doc2/export/how-to-create-a-idm-mapping-file.md
+          - Export to Infor IDM: doc2/export/infor-idm.md
+          - Infor ION File: doc2/export/create-a-infor-ion-file.md
+          - Export to Infor ION and IDM: doc2/export/infor-ion.md
+        - Export to Flow²: doc2/export/export-to-flow2.md
+      
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
       - SSO: 
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
-
-    - Table Train: doc2/table-train.md
     - PO Matching: 
-      - Overview: doc2/po-matching.md
-      - Delivery Note: doc2/po-matching-delivery-notes.md 
-      - Invoices: doc2/po-matching-invoices.md
-      - Orders: doc2/po-matching-order-confirmation.md
-    - Webhook: doc2/webhook.md
+      - Overview: doc2/pomatching/po-matching.md
+      - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md 
+      - Invoices: doc2/pomatching/po-matching-invoices.md
+      - Orders: doc2/pomatching/po-matching-order-confirmation.md
+    
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
@@ -219,6 +220,7 @@ nav:
     - Metadata: flow2/metadata.md
     - Import from Doc²: flow2/import-from-doc2.md
   - KV²:
+    - Getting Started: kv2/getting-started.md
     - Tutorial: kv2/fellowkv2-tutorial.md
     - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
     - Restart Epheosft: 

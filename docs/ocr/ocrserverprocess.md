@@ -3,17 +3,17 @@ title: "OCR Server Process"
 date: "2021-07-05"
 ---
 
-![](/_images/doc2/image-9-1024x50.png)
+![](/_images/ocr/image-9-1024x50.png)
 
 This Process step is designed for the upload of your pdf document. When you open it up, you are asked to post and then to "try it out" in the top right corner.
 
-![](/_images/doc2/image-10-1024x143.png)
+![](/_images/ocr/image-10-1024x143.png)
 
 After doing so, you are able to choose different parameters for the OCR transformation. These parameters define the quality of our server as they indicate various functionalities of it.
 
 ## Parameters
 
-![](/_images/doc2/image-11.png)
+![](/_images/ocr/image-11.png)
 
 The parameters show the name, the description and a field for either true/false, a number to be typed in, or a three digit langauage code to be chosen.
 
@@ -45,7 +45,7 @@ We will now explain the various parameters:
 
 ## How do you want to receive your document?
 
-![](/_images/doc2/image-13-1024x94.png)
+![](/_images/ocr/image-13-1024x94.png)
 
 Email
 
@@ -53,7 +53,7 @@ If you want your transformed document sent to you by E-Mail, you can type in you
 
 ## Upload your document
 
-![](/_images/doc2/image-14-1024x77.png)
+![](/_images/ocr/image-14-1024x77.png)
 
 choose your file
 
@@ -63,22 +63,22 @@ You are now asked to upload the document, that needs to be transformed. Please u
 
 After that, please hit EXECUTE. The following screen will be visible for you.
 
-![](/_images/doc2/image-15-1024x431.png)
+![](/_images/ocr/image-15-1024x431.png)
 
 You are now supposed to copy the download\_id, if you have not chosen to get the document sent to you via E-Mail.
 
 Just copy this **download\_id** as well as the **filename** and paste it under the next row of the whole Server called "Download with Link". After that, please press execute.
 
-![](/_images/doc2/image-17-1024x397.png)
+![](/_images/ocr/image-17-1024x397.png)
 
 ## Download file
 
-![](/_images/doc2/image-18-1024x475.png)
+![](/_images/ocr/image-18-1024x475.png)
 
 You are now able to download the file or even copy the Request URL and type it into a new tab.
 
 ## Done!
 
-![](/_images/doc2/image-19-1024x122.png)
+![](/_images/ocr/image-19-1024x122.png)
 
 **_Your document is now OCR'd!_**

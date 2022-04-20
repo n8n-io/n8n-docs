@@ -1,3 +1,9 @@
+---
+title: "Welcome Flow²"
+date: "2021-11-25"
+tags: 
+    - FLOW²
+---
 # Welcome
 
 This is the documentation for FLOW², the intelligent solution for digitizing Documents.

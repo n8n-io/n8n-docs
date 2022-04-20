@@ -1,6 +1,9 @@
 ---
 title: "Metadata"
 date: "2021-11-23"
+tags: 
+    - FLOW²
+    - Metadata
 ---
 
 Metadata is key information used for classification and easy access of the document management system to the documents. The information relates to the relevant content of the file. It can be an invoice number, the date of a document or the type of document, e.g. "incoming invoice".

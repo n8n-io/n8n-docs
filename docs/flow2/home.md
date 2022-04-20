@@ -1,11 +1,11 @@
 ---
 title: "User Dashboard"
 icon: material/home
-description: User Dashboard is the start in DOC²
+description: User Dashboard is the start in FLOW²
 date: "2021-04-17"
 
 tags:
-  - Doc²
+  - FLOW²
   - Generel
 ---
 

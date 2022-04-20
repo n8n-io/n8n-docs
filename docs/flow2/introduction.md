@@ -1,6 +1,8 @@
 ---
 title: "Getting Started"
 date: "2022-03-17"
+tags: 
+    - FLOW²
 ---
 
 ![](/_images/doc2/flow2-1024x286.png)

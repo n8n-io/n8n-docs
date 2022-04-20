@@ -1,6 +1,9 @@
 ---
 title: "System Setup"
 date: "2021-11-24"
+tags: 
+    - FLOW²
+    - System Setup
 ---
 
 ### Here you can configure all aspects of the system.

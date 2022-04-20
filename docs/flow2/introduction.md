@@ -1,8 +1,10 @@
 ---
 title: "Getting Started"
+description: FLOW² is a document management system (DMS)
 date: "2022-03-17"
 tags: 
     - FLOW²
+    - Getting Started
 ---
 
 ![](/_images/doc2/flow2-1024x286.png)

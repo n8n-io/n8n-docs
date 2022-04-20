@@ -1,7 +1,6 @@
 ---
 title: "Keyboard"
 description: Keyboard Support in DOC²
-icon: material/keyboard-outline
 date: "2021-11-07"
 tags:
   - Doc²

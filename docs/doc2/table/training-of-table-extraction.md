@@ -1,9 +1,12 @@
 ---
 title: "Training for Table Extraction"
+description: Here you can find all important information about the training for table extraction
 date: "2022-02-22"
 tags:
   - DOC²
+  - Training
   - Table
+  - Important Information
 ---
 ---
 

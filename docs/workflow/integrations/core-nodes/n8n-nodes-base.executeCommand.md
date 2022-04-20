@@ -28,7 +28,7 @@ This workflow allows you to execute a command that returns the percentage of the
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [Execute Command]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
-- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 - [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 

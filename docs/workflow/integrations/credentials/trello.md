@@ -1,8 +1,8 @@
 # Trello
 
 You can use these credentials to authenticate the following nodes with Trello.
-- [Trello](/workflow/integrations/nodes/n8n-nodes-base.trello/)
-- [Trello Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.trelloTrigger/)
+- [Trello](/workflow/integrations/nodes/workflow-nodes-base.trello/)
+- [Trello Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.trelloTrigger/)
 
 ## Prerequisites
 

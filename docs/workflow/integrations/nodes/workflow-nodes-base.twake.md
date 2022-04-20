@@ -1,3 +1,10 @@
+---
+title: Twake
+description: Use Twake with Workflow²
+tags:
+  - Workflow²
+  - Twake
+---
 # Twake
 
 [Twake](https://twake.app/) is an open-source collaborative workspace. It can be self-hosted and easily integrated into your teams. Twake offers features for collaboration like team chat, team calendar, video call, todo list, and storage space.

@@ -26,7 +26,7 @@ This workflow allows you to get the price of BTC in EUR using the CoinGecko node
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [CoinGecko]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
-- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 - [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
 
 The final workflow should look like the following image.

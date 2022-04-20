@@ -33,7 +33,7 @@
 
 This workflow allows you to receive updates when a new activity gets created in Strava using the Strava Trigger node. It also allows you to tweet about the activity that was created in Strava using the Twitter node. You can also find the [workflow](https://n8n.io/workflows/745) on n8n.io. This example usage workflow would use the following node.
 - [Strava Trigger]()
-- [Twitter](/workflow/integrations/nodes/n8n-nodes-base.twitter/)
+- [Twitter](/workflow/integrations/nodes/workflow-nodes-base.twitter/)
 
 The final workflow should look like the following image.
 

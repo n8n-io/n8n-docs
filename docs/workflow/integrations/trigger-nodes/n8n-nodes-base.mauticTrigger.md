@@ -10,7 +10,7 @@
 
 This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on n8n.io. This example usage workflow would use the following node.
 - [Mautic Trigger]()
-- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 
 The final workflow should look like the following image.
 

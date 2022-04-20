@@ -10,7 +10,7 @@
 
 This workflow allows you to send an SMS to a number whenever you go out. You can also find the [workflow](https://n8n.io/workflows/870) on n8n.io. This example usage workflow uses the following nodes.
 - [Pushcut Trigger]()
-- [Twilio](/workflow/integrations/nodes/n8n-nodes-base.twilio/)
+- [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 
 The final workflow should look like the following image.
 

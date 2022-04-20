@@ -416,7 +416,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added Reference option to the Get operation of the File resource.
-* [Twilio:](/workflow/integrations/nodes/n8n-nodes-base.twilio/) Added Status Callbacks option.
+* [Twilio:](/workflow/integrations/nodes/workflow-nodes-base.twilio/) Added Status Callbacks option.
 * [uProc:](/workflow/integrations/nodes/workflow-nodes-base.uproc/) Sanitized Data Webhook field description.
 
 ### Core Functionality 
@@ -1004,7 +1004,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Microsoft OneDrive:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOneDrive/) Added functionality to create folder hierarchy automatically upon subfolder creation.
 * [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added All Users option to Get All operation of Activity resource.
 * [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
-* [Twitter:](/workflow/integrations/nodes/n8n-nodes-base.twitter/) Added Tweet Mode additional field to the Search operation of Tweet resource.
+* [Twitter:](/workflow/integrations/nodes/workflow-nodes-base.twitter/) Added Tweet Mode additional field to the Search operation of Tweet resource.
 
 ### Core Functionality 
 
@@ -1766,7 +1766,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 * [GraphQL:](/workflow/integrations/core-nodes/n8n-nodes-base.graphql/) Added Header Auth authentication method
-* [Twilio:](/workflow/integrations/nodes/n8n-nodes-base.twilio/) Added API Key authentication method
+* [Twilio:](/workflow/integrations/nodes/workflow-nodes-base.twilio/) Added API Key authentication method
 
 ### Bug fixes 
 
@@ -1876,7 +1876,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [QuestDB:](/workflow/integrations/nodes/n8n-nodes-base.questDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [QuickBase:](/workflow/integrations/nodes/n8n-nodes-base.quickbase/) Added option to use Field IDs
 * [TimescaleDB:](/workflow/integrations/nodes/n8n-nodes-base.timescaleDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [Twist:](/workflow/integrations/nodes/n8n-nodes-base.twist/) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
+* [Twist:](/workflow/integrations/nodes/workflow-nodes-base.twist/) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
 
 ### Core Functionality 
 - Implemented the native `fs/promise` library where possible

@@ -1,52 +1,15 @@
 # Try it out
-
-This page will help you get up and running with Doc², taking you from installation to building and executing your first workflow.
-
-To ensure you can follow along with the steps below, be sure to first:
-
-* Download and install [Docker Desktop](https://docs.docker.com/get-docker/)
-    * Linux users, you'll have to install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually
-* [Register](https://discord.com/register) for a Discord account
-
-!!! note " Doc² desktop app"
-    Install our [desktop app](/hosting/installation/desktop-app/) if you want to start faster and skip a technical setup. 
+    
 
 
-## Install n8n
+Start with Workflow² and activate the workflow module
 
-1. Now that your have Docker installed, let's start by pulling the latest Doc² image. Open your Terminal window and run:
-    ```sh
-    docker pull n8nio/n8n
-    ```
+![Start](/_images/quickstart/start.png)
 
-    ![Terminal window for Docker pull command](/_images/quickstart/docker_pull.png)
-
-2. Open the Docker Desktop application and select **Images** from the left-hand pane. The Doc² image downloaded above should be visible here:
-
-    ![Docker Desktop images view](/_images/quickstart/docker_desktop_image.png)
-
-3. Click **Run** and a modal window appears with some **Optional Settings**:
-    * **Container Name**: Enter a name for your Doc² container. If left blank Docker will generate a random name for you.
-    * **Ports**
-        * **Local Host**: Enter `5678`. This is the port on your local machine where Doc² will be available once running.
-        * **Container Port**: The default container port for n8n. Cannot be edited.
-    * **Volumes**:
-        * **Host Path**: Select a local directory that will be available to your Doc² Docker application. Here we use a folder `n8n` located on the `/Desktop`.
-        * **Container Path**: Provide the path of that directory where it will be accessible from inside the Docker container. Here we use `/n8n`.
-
-    ![Docker optional settings](/_images/quickstart/image_settings.png)
-
-4. Click **Run** to start your Doc² container. 
-
-You can now access Doc² by navigating your browser to `localhost:5678`.
 
 ## Build your first workflow
 
 For your first workflow, let's build something to take one tedious task off you plate: cleaning up a cluttered Gmail inbox.
-
-!!! note " Keep in mind"
-    You can find this complete workflow [here](https://n8n.io/workflows/1153) courtesy of n8n's own [Tephlon](https://t5n.xyz/).
-
 
 1. Open the Nodes Panel by click the orange `+` sign, then search and find the [Gmail node](/workflow/integrations/nodes/n8n-nodes-base.gmail/). Click on it to add it to your canvas:
     ![Add Gmail node](/_images/quickstart/add_gmail_node.png)
@@ -105,6 +68,4 @@ You've build your fist automation workflow and cleaned up a cluttered inbox in t
 
 Do you enjoy automating workflows? Here's what you can do next:
 
-- See all Doc² [nodes](/workflow/integrations/) and try out new workflows.
-- Check out the [hosting](/hosting/) section to learn more about options for installing and running n8n.
-- Read our [blog](https://n8n.io/blog/) and discover what others are doing with n8n.
+- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows.

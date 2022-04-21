@@ -89,7 +89,6 @@ nav:
   - DOC²:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
-    - DOC² with Infor: doc2/infor.md
     - Deployment: doc2/deployment.md
     - Dashboard: 
       - Dashboard: doc2/dashboard.md
@@ -102,21 +101,22 @@ nav:
       - Expressions: doc2/exception-filters.md
     - Table: 
       - Table Extraction: doc2/table/table-train.md
-      - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
       - Train: 
+        - Table Extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md
         - Group function: doc2/table/group-function.md
-        - Advanced settings: doc2/table/advance-settings.md
         - Manual row selection: doc2/table/manual-row-selection.md
-        - Table Extraction: doc2/table/training-of-table-extraction.md
+        - Advanced settings: doc2/table/advance-settings.md    
+        - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
-    - Setting: 
+    - DOC² with Infor: doc2/infor.md
+    - Settings: 
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
-      - Import:
+      - All Import Options:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
         - Webhook: doc2/api.md

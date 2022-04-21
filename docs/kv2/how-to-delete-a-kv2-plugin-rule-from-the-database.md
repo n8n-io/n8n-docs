@@ -1,6 +1,13 @@
 ---
 title: "How to delete a KV²Plugin rule from the Database"
+description: If you implemented and saved a wrong rule just don't worry! It's easy to delete it only with one command line through Ephesoft from the database!
 date: "2021-07-13"
+tags:
+ - KV²
+ - Plugin
+ - Ephesoft
+ - delete rules
+ - Database
 ---
 
 If you implemented and saved a wrong rule just don't worry! It's easy to delete it only with one command line through Ephesoft from the database!

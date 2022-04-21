@@ -1,11 +1,13 @@
 ---
 title: "Export to FLOW²"
+description: Step by Step guide how to export documents to FLOW²
 date: "2021-11-23"
 icon: material/database-export
 tags:
-  - FLOW²
-  - Export 
   - DOC²
+  - Settings
+  - Export
+  - FLOW² 
 ---
 
 Step by Step guide how to export documents to FLOW²

@@ -1,8 +1,12 @@
 ---
 title: "How to deal with different VAT amounts"
+description: If you have an invoice with two different VAT amounts, this is how to train them
 date: "2021-07-05"
 tags:
-  - VAT
+ - KV²
+ - Plugin
+ - Ephesoft
+ - VAT
 ---
 
 ## If you have an invoice with two different VAT amounts, teach them as follows:

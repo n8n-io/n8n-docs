@@ -1,11 +1,13 @@
 ---
 title: "Dashboard"
+description: After logging in with your user you are redirected to the DASHBOARD homepage of DOC². This is the main page and overview where you can capture, work, and manage the imported documents.
 date: "2021-10-29"
 description: Explanation of how to use the Dashboard
 tags:
-  - General
-  - Dashboard
   - DOC²
+  - Dashboard
+  - Homepage
+  - Overview
 ---
 
 After logging in with your user you are redirected to the DASHBOARD homepage of DOC².

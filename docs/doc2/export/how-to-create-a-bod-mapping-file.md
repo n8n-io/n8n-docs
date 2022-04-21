@@ -1,9 +1,13 @@
 ---
 title: "How to create a BOD mapping file"
+description: Step by step guide how to create a BOD mapping file.
 date: "2021-10-28"
 tags:
-  - Infor
   - DOC²
+  - Export
+  - Infor
+  - BOD
+  - Mapping
 ---
 
 #### Step by step guide how to create a BOD mapping file.

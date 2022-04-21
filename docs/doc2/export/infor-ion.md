@@ -1,12 +1,15 @@
 ---
 title: "Export to Infor ION and IDM"
+description: Step by Step guide how to export documents from DOC² to Infor Document Management (IDM) with publishing the values in a seperate Sync.CaptureDocument BOD.
 icon: material/application-export
-description: Export form DOC² to Infor IDM and Infor OS ( ION ) 
 date: "2021-10-22"
 tags:
+  - DOC²
+  - Export
   - Infor
-  - IDM
   - Infor OS
+  - ION
+  - IDM
 ---
 
 ####   

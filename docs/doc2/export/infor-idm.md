@@ -1,9 +1,11 @@
 ---
 title: "Export to Infor IDM"
-description: Export form DOC² to Infor IDM
+description: Step by Step guide how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
 icon: material/application-export
 date: "2021-10-22"
 tags:
+  - DOC²
+  - Export
   - Infor
   - IDM
   - DOC²

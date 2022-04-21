@@ -1,7 +1,11 @@
 ---
 title: "How to create an Infor ION file"
+description: Step by step documentation how to create a Infor ION API file that is needed for the Infor export.
 date: "2021-10-25"
 tags:
+  - DOC²
+  - Settings
+  - Export
   - Infor
   - DOC²
 ---

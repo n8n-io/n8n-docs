@@ -90,8 +90,9 @@ nav:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
     - DOC² with Infor: doc2/infor.md
+    - Deployment: doc2/deployment.md
     - Dashboard: 
-      - Overview: doc2/dashboard.md
+      - Dashboard: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
     - Document Validation:
       - Document Validation: doc2/document-validation.md
@@ -147,7 +148,6 @@ nav:
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
-    - Limitation: doc2/limitations.md
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md

@@ -1,3 +1,13 @@
+---
+title: "TE² Installation & Config"
+description: How to install & configure TE² Plugin 
+date: "2021-07-05"
+tags:
+  - TE²
+  - Plugin
+  - Ephesoft
+  - Table Extraction
+---
 
 # How to install & configure TE² Plugin
 

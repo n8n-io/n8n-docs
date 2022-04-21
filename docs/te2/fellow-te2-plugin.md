@@ -10,7 +10,7 @@ tags:
   - Repository
 ---
 
-Welcome to Fellow TE² Plugin for Ephesoft Transact!
+Welcome to TE² Plugin for Ephesoft Transact!
 
 
 

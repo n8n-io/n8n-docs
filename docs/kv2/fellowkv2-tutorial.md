@@ -15,7 +15,7 @@ To work with this tutorial you have to complete [Installation & Configuration](/
 
 * * *
 
-### How To Use Fellow KV² Plugin
+### How To Use KV² Plugin
 
 ##### **Step 0: Log-in**
 
@@ -73,7 +73,7 @@ With this process you are not only validating your document but also training t
 
 ## Usage of Fellows Feedback and Support Function
 
-Fellow KV² Plugin comes with an integrated Feedback Function where you can send us Support to each Document Validation.  
+KV² Plugin comes with an integrated Feedback Function where you can send us Support to each Document Validation.  
 The Feedback Function can be found in tab #5 of the Ephesoft Validation UI (it is usually the last tab).
 
 ![](/_images/doc2/Bildschirmfoto-2021-07-12-um-17.01.16-2-1024x477.png)

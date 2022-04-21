@@ -90,6 +90,7 @@ nav:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
     - DOC² with Infor: doc2/infor.md
+    - Deployment: doc2/deployment.md
     - Dashboard: 
       - Dashboard: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md

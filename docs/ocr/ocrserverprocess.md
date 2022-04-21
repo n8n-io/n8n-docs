@@ -1,6 +1,10 @@
 ---
 title: "OCR Server Process"
+description: Shows a documentation how to process OCR Server
 date: "2021-07-05"
+tags:
+  - OCR
+  - Server
 ---
 
 ![](/_images/ocr/image-9-1024x50.png)

@@ -212,6 +212,7 @@ nav:
           - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
+    - Introduction: flow2/index.md
     - Getting Started: flow2/introduction.md
     - Onboarding Guide: flow2/flow2-onboarding-guide.md
     - Deployment: flow2/deployment.md

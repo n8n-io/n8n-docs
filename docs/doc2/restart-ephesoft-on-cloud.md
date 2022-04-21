@@ -4,7 +4,7 @@ description: This task must be performed by system Administrator.
 Go to your Ephesoft Cloud Configadmin page.
 date: "2021-07-02"
 tags:
-  - Fellow KV² Plugin
+  - KV² Plugin
   - Restart
   - Ephesoft
   - Cloud

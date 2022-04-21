@@ -1,9 +1,16 @@
 ---
-title: "Fellow TE² Plugin"
+title: "TE² Plugin"
+description: The TE² Plugin is a cloud-based repository solution for Ephesoft Transact software which is focused on extracting autonomously and automatically the line items in a table. Through the cloud-based Table Extraction Repository, you access a pool of rules from all users of the plugin.
 date: "2021-07-05"
+tags:
+  - TE²
+  - Plugin
+  - Ephesoft
+  - Table Extraction
+  - Repository
 ---
 
-Welcome to Fellow TE² Plugin for Ephesoft Transact!
+Welcome to TE² Plugin for Ephesoft Transact!
 
 
 
@@ -11,7 +18,7 @@ Welcome to Fellow TE² Plugin for Ephesoft Transact!
 <iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/Nmr-R3jb0Fw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The FellowTE² Plugin is a cloud-based repository solution for Ephesoft Transact software which is focused on extracting autonomously and automatically the line items in a table.
+The TE² Plugin is a cloud-based repository solution for Ephesoft Transact software which is focused on extracting autonomously and automatically the line items in a table.
 
 Through the cloud-based Fellow Table Extraction Repository, you access a pool of rules from all users of the plugin.
 
@@ -25,7 +32,7 @@ It is important that the column caption is recognized and can be assigned to the
 
 ![Table](/_images/te/Tabel.png)
 
-(2) The standard schema for mapping columns is configured by Fellow Consulting AG. That means that standard columns like position, description, amount, etc. are included in this mapping file:
+(2) The standard schema for mapping columns is configured by PolyDocs GmbH i. Gr. That means that standard columns like position, description, amount, etc. are included in this mapping file:
 
 - Position
 - Item number

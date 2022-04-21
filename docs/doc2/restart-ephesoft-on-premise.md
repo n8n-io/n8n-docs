@@ -3,7 +3,7 @@ title: "Restart Ephesoft On Premise"
 description: To restart Ephesoft Transact on Premise open the Task Manager of the Ephesoft server machine.
 date: "2021-07-02"
 tags:
-  - Fellow KV² Plugin
+  - KV² Plugin
   - Restart
   - Ephesoft
   - On Prem

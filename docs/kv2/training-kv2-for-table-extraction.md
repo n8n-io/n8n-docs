@@ -1,6 +1,13 @@
 ---
 title: "Training KV2 for Table Extraction"
+description: The function explained in this documentation is used for extracting the table from all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.)
 date: "2021-12-16"
+tags:
+  - KV²
+  - Plugin
+  - Ephesoft
+  - Training
+  - Table Extraction
 ---
 
 The function explained in this documentation is used for extracting the table from all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.). The extraction of data from tables can be achieved by following the steps described below:

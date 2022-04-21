@@ -1,7 +1,10 @@
 ---
 title: "Getting Started"
+description: How do you use DOC²
+date: "2021-10-14"
 tags:
   - DOC²
+  - Start
 ---
 
 

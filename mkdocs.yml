@@ -105,6 +105,7 @@ nav:
         - Table Extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md
+        - Mapping of Columns: doc2/mapping-of-columns.md
         - Group function: doc2/table/group-function.md
         - Manual row selection: doc2/table/manual-row-selection.md
         - Advanced settings: doc2/table/advance-settings.md    

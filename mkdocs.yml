@@ -235,7 +235,7 @@ nav:
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
     - Epheosft External Application: te2/ephesoft-external-application.md
-    - Infor LN BOD Mapping: te2/ln_bodmapping.md
+    - Infor OS BOD Mapping: te2/ln_bodmapping.md
   - OCR²:
     - Overview: ocr/overview.md
     - Installation & Config: ocr/installation-config.md

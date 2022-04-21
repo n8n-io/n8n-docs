@@ -1,20 +1,23 @@
 ---
-title: "Limitations of Fellow KV² Plugin"
+title: "Limitations of KV² Plugin"
+description: The KV² Plugin faces some small limitations for the correct extraction of header and footer fields. In this documentation you will find a list with the main limitations, the reason for it and the proposed "solution". 
 date: "2021-11-05"
 tags:
   - KV²
+  - Plugin
   - Ephesoft
+  - Limitations
 ---
 
 **Version: 1.0.11**
 
-The Fellow KV² Plugin faces some small limitations for the correct extraction of header and footer fields. In this documentation you will find a list with the main limitations, the reason for it and the proposed "solution" for the user.
+The KV² Plugin faces some small limitations for the correct extraction of header and footer fields. In this documentation you will find a list with the main limitations, the reason for it and the proposed "solution" for the user.
 
 ## 1\. Processing of multiple pages
 
 **Description of the limitation**
 
-For this case we are going to use the example with invoices. The Fellow KV² Plugin is capable of self-learning and training from different document types, which also means that different supplier invoice templates are trained.
+For this case we are going to use the example with invoices. The KV² Plugin is capable of self-learning and training from different document types, which also means that different supplier invoice templates are trained.
 
 The main issue displayed here is when a "trained" supplier has invoices fluctuating from one to multiple pages. The reason for that is because even if the supplier has been already "trained" by the user, the extraction might fail if the trained extraction rules are presented on another page. See process underneath:
 

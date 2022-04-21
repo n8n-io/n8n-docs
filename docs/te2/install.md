@@ -1,10 +1,10 @@
 
 # How to install & configure TE² Plugin
 
-Fellow TE² Plugin is installed directly in Ephesoft Transact. The installation process is same for instances set up in Cloud or On Premise.
+TE² Plugin is installed directly in Ephesoft Transact. The installation process is same for instances set up in Cloud or On Premise.
 
 Prerequisites
-Download the Fellow TE² Plugin from here
+Download the TE² Plugin from here
 You must have Administration rights in Ephesoft Transact.
 You must have set up working Batch Class or install Fellows default Batch Class for Plugin usage if no Batch Class is set up in your Ephesoft System, yet. (Contact us to get the Fellow default Batch Class)
 
@@ -48,7 +48,7 @@ Open the menu bar on the left and click “Batch Class Management” and open th
 
 ### Step 2: 
 
-Associate Fellow TE² Plugin with a Batch Class (FELLOW_TABLE2_EXTRACT)
+Associate TE² Plugin with a Batch Class (FELLOW_TABLE2_EXTRACT)
 Click Modules and then Extraction on left side of Batch Class Configuration Screen. It will show all the Extraction modules configured for this Batch Class.
 Find FELLOW_TABLE2_EXTRACT in “Associated Plugins” column and move it to “Selected Plugins” by click the right arrow button as shown in picture below.
 
@@ -58,7 +58,7 @@ In the “Selected Plugins” column keep the plugin FELLOW_TABLE2_EXTRACT on th
 
 ### Step 3: 
 
-Configure Fellow TE² Plugin (FELLOW_TABLE2_EXTRACT)
+Configure TE² Plugin (FELLOW_TABLE2_EXTRACT)
 Expand the “Extraction” folder in the left menu and select the newly added FELLOW_TABLE2_EXTRACT module.
 
 ![TE² - Table Extraction for Ephesoft Transact - 7 ](/_images/te/Ephesoft7.png)

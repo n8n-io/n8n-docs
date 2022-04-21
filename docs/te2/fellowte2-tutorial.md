@@ -9,7 +9,7 @@ To work with this tutorial you have to complete [Installation & Configuration](/
 
 * * *
 
-### How To Use Fellow KV² Plugin
+### How To Use KV² Plugin
 
 ##### **Step 0: Log-in**
 

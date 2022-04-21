@@ -15,7 +15,7 @@ Every business process starts, contains or ends with a document. Regardless of w
 
 ## What is FLOW²?
 
-FLOW² is the latest software and solution for document capture that was developed by Fellow Consulting AG. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. No matter if paper or file. FLOW² learns independently, the level of experience increases with each document. FLOW² uses swarm intelligence for this.
+FLOW² is the latest software and solution for document capture that was developed by Polydocs GmbH. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. No matter if paper or file. FLOW² learns independently, the level of experience increases with each document. FLOW² uses swarm intelligence for this.
 
 The Advantages of FLOW² at a glance:
 

@@ -22,7 +22,7 @@ KV² Plugin is installed directly in Ephesoft Transact. The installation process
 ![](/_images/doc2/zipfiles.png)
 
 - You must have Administration rights in Ephesoft Transact.
-- You must have set up working Batch Class or install Fellows default Batch Class for Plugin usage if no Batch Class is set up in your Ephesoft System, yet. (Contact us to get the Fellow default Batch Class)
+- You must have set up working Batch Class or install Polydocs GmbH default Batch Class for Plugin usage if no Batch Class is set up in your Ephesoft System, yet. (Contact us to get the Polydocs GmbH default Batch Class)
 
 ### Installation
 

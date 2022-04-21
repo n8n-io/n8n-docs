@@ -17,7 +17,7 @@ FLOW² does not work in Tenant. All customer use the same cluster. Our Kubernete
 
 To access the system:
 
-1. Contact your Fellow Consulting representative or reach out to [support@fellow-consulting.de](mailto:support@fellow-consulting.de) to create a Organisation.
+1. Contact your Polydocs GmbH or reach out to [support@fellow-consulting.de](mailto:support@fellow-consulting.de) to create a Organisation.
 2. Log in with the credentials provided in your onboarding email.
 
 **Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot your password?** link.

@@ -20,7 +20,7 @@ Welcome to TE² Plugin for Ephesoft Transact!
 
 The TE² Plugin is a cloud-based repository solution for Ephesoft Transact software which is focused on extracting autonomously and automatically the line items in a table.
 
-Through the cloud-based Fellow Table Extraction Repository, you access a pool of rules from all users of the plugin.
+Through the cloud-based Polydocs GmbH Table Extraction Repository, you access a pool of rules from all users of the plugin.
 
 ![KV Repository](/_images/kv2/FellowKV_Repository-4.png)
 

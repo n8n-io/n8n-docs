@@ -10,7 +10,7 @@ tags:
 
 ### **Prerequisites**
 
-<table><tbody><tr><td><strong>Required Information</strong></td><td><strong>Description</strong></td></tr><tr><td>Login Details to Cloud</td><td>Credentials are mandatory for accessing the Infor Cloud environment.<br>The user should have the roles "Infor-SystemAdministrator" and "UserAdmin".</td></tr><tr><td>Config Admin Details (DOC²)</td><td>You should have received an email from Fellow Consulting with the login details for the DOC² SSO Settings page.<br><br>You will need login and password.<br></td></tr><tr><td>Certificate</td><td>You can download the certificate in DOC² under SSO Service Provider Settings</td></tr></tbody></table>
+<table><tbody><tr><td><strong>Required Information</strong></td><td><strong>Description</strong></td></tr><tr><td>Login Details to Cloud</td><td>Credentials are mandatory for accessing the Infor Cloud environment.<br>The user should have the roles "Infor-SystemAdministrator" and "UserAdmin".</td></tr><tr><td>Config Admin Details (DOC²)</td><td>You should have received an email from Polydocs GmbH with the login details for the DOC² SSO Settings page.<br><br>You will need login and password.<br></td></tr><tr><td>Certificate</td><td>You can download the certificate in DOC² under SSO Service Provider Settings</td></tr></tbody></table>
 
 **1\. Get access to the Cloud and check your access**
 

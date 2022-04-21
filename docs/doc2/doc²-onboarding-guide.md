@@ -19,7 +19,7 @@ DOC² does not work in Tenant. All customer use the same cluster. Our Kubernetes
 
 To access the system:
 
-1. Contact your Fellow Consulting representative or reach out to [support@fellow-consulting.de](mailto:support@fellow-consulting.de) to create a Organisation.
+1. Contact your Polydocs GmbH representative or reach out to [support@fellow-consulting.de](mailto:support@fellow-consulting.de) to create a Organisation.
 2. Go to the [App](https://doc2app.cloudintegration.eu/). We recommend bookmarking this URL for future reference.
 3. Log in with the credentials provided in your onboarding email.
 

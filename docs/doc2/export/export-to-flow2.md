@@ -5,6 +5,7 @@ icon: material/database-export
 tags:
   - FLOW²
   - Export 
+  - DOC²
 ---
 
 Step by Step guide how to export documents to FLOW²

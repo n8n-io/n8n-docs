@@ -1,8 +1,11 @@
 ---
 title: "Dashboard"
 date: "2021-10-29"
+description: Explanation of how to use the Dashboard
 tags:
   - General
+  - Dashboard
+  - DOC²
 ---
 
 After logging in with your user you are redirected to the DASHBOARD homepage of DOC².

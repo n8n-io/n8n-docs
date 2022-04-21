@@ -4,6 +4,7 @@ description: Documentation for Export DOC² to Infor OS
 icon: material/export
 tags:
   - Infor
+  - DOC²
 ---
 
 # Export to Infor :fontawesome-solid-file-export:

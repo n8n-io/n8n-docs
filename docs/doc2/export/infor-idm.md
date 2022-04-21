@@ -6,6 +6,7 @@ date: "2021-10-22"
 tags:
   - Infor
   - IDM
+  - DOC²
 ---
 
 #### Export to Infor Document Management without publishing the document values in a seperate BOD

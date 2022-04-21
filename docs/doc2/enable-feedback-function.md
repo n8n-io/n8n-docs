@@ -1,6 +1,11 @@
 ---
 title: "Enable Feedback Function"
 date: "2021-07-05"
+description: This documentation should explain how to enable the Feedback Function within the Fellow Ephesoft Plugins
+tags:
+  - DOC²
+  - Feedback
+  - Fellow Ephesoft Plugins
 ---
 
 This documentation should explain how to enable the Feedback Function within the Fellow Ephesoft Plugins.

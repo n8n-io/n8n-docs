@@ -3,6 +3,7 @@ title: "How to create a BOD mapping file"
 date: "2021-10-28"
 tags:
   - Infor
+  - DOC²
 ---
 
 #### Step by step guide how to create a BOD mapping file.

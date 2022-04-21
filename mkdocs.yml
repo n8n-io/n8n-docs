@@ -119,6 +119,7 @@ nav:
       - Import:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
+        - Webhook: doc2/api.md
         - Fileshare Import:
           - Watchdog: doc2/watchdog.md
           - Windows: doc2/watchdog-windows.md

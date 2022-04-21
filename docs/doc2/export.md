@@ -3,8 +3,12 @@ title: "Export"
 date: "2021-10-22"
 description: This documentation explains how to export to other environments
 tags:
-  - Export
   - DOC²
+  - Export
+  - Infor
+  - Webhook
+  - FLOW²
+  
 ---
 
 #### Here you can find the export options and the corresponding articles.

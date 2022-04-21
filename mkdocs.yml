@@ -125,7 +125,8 @@ nav:
           - Windows: doc2/watchdog-windows.md
           - Configuration: doc2/watchpuppy-configuration.md
         - Webhook: doc2/webhook.md
-      - Export: 
+      - All Export Options: 
+        - Export: doc2/export.md
         - Export to Infor:
           - Export to Infor ION and IDM: doc2/export/export-to-infor.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md

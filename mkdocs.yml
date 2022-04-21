@@ -225,7 +225,7 @@ nav:
       - Tutorial: kv2/fellowkv2-tutorial.md
       - All Extracted Fields: kv2/all-extracted-fields.md
     - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
-    - Restart Epheosft: 
+    - Restart Ephesoft: 
       - Cloud: kv2/how-to-restart-ephesoft-cloud-server.md
       - OnPremise: kv2/how-to-restart-ephesoft-server.md
     - Installation: kv2/installation.md

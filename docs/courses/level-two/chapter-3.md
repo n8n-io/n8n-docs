@@ -14,9 +14,9 @@ Merging data can involve:
 
 !!! note "One-way vs. two-way sync"
 
-		In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When notermation changes in that main system, it automatically changes in the secondary system; but if notermation changes in the secondary system, the changes are not reflected in the main system.
+		In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
 
-		In a two-way sync, data is synchronized in both directions (between both systems). When notermation changes in either of the two systems, it automatically changes in the other one as well.
+		In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
 		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
@@ -46,7 +46,7 @@ Build a workflow that merges data from the Customer Datastore node and Function 
 
 * Add a Merge node that takes Input 1 from a Customer Datastore node and Input 2 from a Function node.
 * In the Customer Datastore node, run the operation Get All People.
-* In the Function node, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the notermation of two characters from the Customer Database. For example, Jay Gatsby's language would be English and country name would be United States.
+* In the Function node, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the information of two characters from the Customer Database. For example, Jay Gatsby's language would be English and country name would be United States.
 * In the Merge node, try out different merge modes.
 
 ??? note "Show me the solution"

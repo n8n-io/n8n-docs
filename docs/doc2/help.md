@@ -1,6 +1,9 @@
 ---
 title: "Getting Started"
 date: "2021-10-14"
+tags:
+  - Start
+  - DOC²
 ---
 
 ## Welcome to

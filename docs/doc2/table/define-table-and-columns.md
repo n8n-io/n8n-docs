@@ -1,8 +1,10 @@
 ---
 title: "Define tables and columns"
+description: In DOC² table extraction view the tables and columns for a document can be defined
 date: "2022-02-18"
 tags:
   - Table
+  - DOC²
 ---
 
 **Define tables**

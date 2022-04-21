@@ -8,6 +8,7 @@ tags:
   - Export
   - Infor
   - IDM
+  - DOC²
 ---
 
 #### Export to Infor Document Management without publishing the document values in a seperate BOD

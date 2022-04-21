@@ -1,8 +1,10 @@
 ---
 title: "DOC² Onboarding Guide"
 date: "2021-11-17"
+description: Explanation of how to start using DOC²
 tags:
   - General
+  - DOC²
 ---
 
 This guide will help you learn the basics of DOC² get you up and running with an IPS that will max out your productivity.

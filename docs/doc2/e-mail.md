@@ -6,6 +6,7 @@ description: DOC² Email Import - Automatic import documents over Emails
 tags:
   - E-Mail
   - Import
+  - DOC²
 ---
 
 ### If you want to import documents from your email inbox, here are the steps you need to take:

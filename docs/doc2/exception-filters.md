@@ -1,8 +1,13 @@
 ---
 title: "Exception filters"
 date: "2022-03-30"
+description: This documentation explains how to use exception filters
 tags:
   - Generel
+  - Exception
+  - Filter
+  - DOC²
+
 ---
 
 Basically, documents in DOC² are classified/defined via AI and regex. In a few exceptions, however, you need an additional negative filter (exception filter) that allows you to exclude certain things. The exception filters are important to achieve the best results.

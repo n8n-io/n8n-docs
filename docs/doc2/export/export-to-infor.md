@@ -6,6 +6,7 @@ tags:
   - DOC²
   - Export
   - Infor
+  - DOC²
 ---
 
 # Export to Infor :fontawesome-solid-file-export:

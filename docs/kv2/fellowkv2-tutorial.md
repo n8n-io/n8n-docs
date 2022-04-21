@@ -1,10 +1,12 @@
 ---
 title: "Polydocs KV² Tutorial"
-date: "2021-07-02"
 description: Polydocs KV² Tutorial - How to use our Plugin with Ephesoft
+date: "2021-07-02"
 tags:
   - KV²
   - Tutorial
+  - Plugin
+  - Ephesoft
 ---
 
 ### Prerequisites

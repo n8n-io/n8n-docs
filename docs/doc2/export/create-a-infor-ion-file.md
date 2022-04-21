@@ -7,6 +7,7 @@ tags:
   - Settings
   - Export
   - Infor
+  - DOC²
 ---
 
 #### Step by step documentation how to create a Infor ION API file that is needed for the Infor export.

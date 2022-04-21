@@ -1,8 +1,10 @@
 ---
 title: "Extracted fields"
 date: "2021-11-23"
+description: This documentation shows extracted fields/Mapping
 tags:
   - Fields
+  - DOC²
 ---
 
 ## Document Type: Invoice

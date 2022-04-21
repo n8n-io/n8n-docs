@@ -1,8 +1,10 @@
 ---
 title: "Import"
 date: "2021-10-22"
+description: This documentation shows overviews about import functionalities
 tags:
   - Import
+  - DOC²
 ---
 
 #### Here you can find the import options and the corresponding links

@@ -222,7 +222,7 @@ nav:
   - KV²:
     - Getting Started: kv2/getting-started.md
     - Tutorial: 
-      - Tutorial: kv2/fellowkv2-tutorial.md
+      - Tutorial: kv2/kv2-tutorial.md
       - All Extracted Fields: kv2/all-extracted-fields.md
     - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
     - Restart Ephesoft: 

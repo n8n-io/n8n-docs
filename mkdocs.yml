@@ -120,10 +120,10 @@ nav:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
         - Webhook: doc2/api.md
-        - Fileshare Import:
+        - Fileshare: doc2/fileshare.md
+          - Configuration: doc2/watchpuppy-configuration.md
           - Watchdog: doc2/watchdog.md
           - Windows: doc2/watchdog-windows.md
-          - Configuration: doc2/watchpuppy-configuration.md
         - Webhook: doc2/webhook.md
       - All Export Options: 
         - Export: doc2/export.md

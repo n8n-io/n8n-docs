@@ -1,18 +1,22 @@
 ---
 title: "Installation & Config"
+description: How to install & configure KV² Plugin
 date: "2021-07-02"
 tags:
   - KV²
+  - Plugin
   - Ephesoft
+  - Installation
+  - Configuration
 ---
 
-### **How to install & configure Fellow KV² Plugin**
+### **How to install & configure KV² Plugin**
 
-Fellow KV² Plugin is installed directly in Ephesoft Transact. The installation process is same for instances set up in **Cloud** or **On Premise**.
+KV² Plugin is installed directly in Ephesoft Transact. The installation process is same for instances set up in **Cloud** or **On Premise**.
 
 #### Prerequisites
 
-- Download the Fellow KV² Plugin from [here](https://www.fellow-consulting.de/fellowkv-plugin/)  
+- Download the KV² Plugin from [here](https://www.fellow-consulting.de/fellowkv-plugin/)  
     _**Note**: Fellow KV² Plugin consist of two zip files!_
 
 ![](/_images/doc2/zipfiles.png)

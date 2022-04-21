@@ -3,7 +3,11 @@ title: KV² - Getting Started
 description: Welcome to KV² Plugin for Ephesoft Transact!
 tags:
   - KV²
----
+  - Plugin
+  - Ephesoft
+  - Digitizing documents
+  
+  ---
 # Getting Started
 
 Welcome to KV² Plugin for Ephesoft Transact!

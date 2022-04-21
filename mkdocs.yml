@@ -119,12 +119,14 @@ nav:
       - Import:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
+        - Webhook: doc2/api.md
         - Fileshare Import:
           - Watchdog: doc2/watchdog.md
           - Windows: doc2/watchdog-windows.md
           - Configuration: doc2/watchpuppy-configuration.md
         - Webhook: doc2/webhook.md
-      - Export: 
+      - All Export Options: 
+        - Export: doc2/export.md
         - Export to Infor:
           - Export to Infor ION and IDM: doc2/export/export-to-infor.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md
@@ -212,6 +214,7 @@ nav:
           - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
+    - Introduction: flow2/index.md
     - Getting Started: flow2/introduction.md
     - Onboarding Guide: flow2/flow2-onboarding-guide.md
     - Deployment: flow2/deployment.md

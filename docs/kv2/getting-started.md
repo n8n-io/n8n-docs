@@ -6,8 +6,7 @@ tags:
   - Plugin
   - Ephesoft
   - Digitizing documents
-  
-  ---
+---
 # Getting Started
 
 Welcome to KV² Plugin for Ephesoft Transact!

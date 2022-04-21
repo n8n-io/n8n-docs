@@ -1,10 +1,12 @@
 ---
 title: "PO Matching - Invoices"
+description: Creating purchase order in LN, Uploading invoice in DOC², Checking the receipt of the invoice in LN
 date: "2022-01-24"
 tags:
   - DOC²
   - PO Matching 
-  - Invoices
+  - Invoice
+  - LN
 ---
 
 ## Create a purchase order in LN

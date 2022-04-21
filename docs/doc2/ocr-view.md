@@ -1,5 +1,6 @@
 ---
 title: "OCR View"
+description: In the document view you have the possibility to open the OCR view for a document. This allows you to display the document in the pure OCR view without any formatting or similar.
 date: "2022-03-21"
 tags:
   - DOC²

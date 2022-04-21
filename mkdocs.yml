@@ -91,7 +91,7 @@ nav:
     - OnBoarding: doc2/onboarding.md
     - DOC² with Infor: doc2/infor.md
     - Dashboard: 
-      - Overview: doc2/dashboard.md
+      - Dashboard: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
     - Document Validation:
       - Document Validation: doc2/document-validation.md

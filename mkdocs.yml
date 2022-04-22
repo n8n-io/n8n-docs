@@ -237,7 +237,7 @@ nav:
     - Restart Ephesoft: 
       - Cloud: kv2/restart-ephesoft-on-cloud.md
       - OnPremise: kv2/restart-ephesoft-on-premise.md
-    - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
+    - Limitations: kv2/limitations-for-fellow-kv2-plugin.md
     - Feedback: kv2/enable-feedback-function.md
   - TE²:
     - Getting Started: te2/fellow-te2-plugin.md

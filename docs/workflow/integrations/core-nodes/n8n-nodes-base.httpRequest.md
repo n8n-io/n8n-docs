@@ -1,6 +1,6 @@
 # HTTP Request
 
-The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests which can be used to query data from apps and services.
+The HTTP Request node is one of the most versatile nodes in Workflow². It allows you to make HTTP requests which can be used to query data from apps and services.
 
 !!! note "🔑 Credential"
     You can find authentication information for this node [here](/workflow/integrations/credentials/httpRequest/).
@@ -41,7 +41,7 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 
 ## Example Usage
 
-This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [HTTP Request]()
 

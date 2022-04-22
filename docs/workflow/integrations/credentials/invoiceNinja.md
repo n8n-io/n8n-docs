@@ -14,6 +14,6 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/) account.
 2. Click on Settings in the bottom left.
 3. Scroll down to API keys.
 4. Add new token.
-5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
+5. Use the key and your instance URL with Invoice Ninja node credentials in Workflow².
 
 ![Getting Invoice Ninja credentials](/_images/integrations/credentials/invoiceninja/using-access-token.gif)

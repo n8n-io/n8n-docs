@@ -13,9 +13,9 @@ Create a DeepL [developer](https://www.deepl.com/pro/change-plan#developer) acco
 1. Open your DeepL [account](https://www.deepl.com/pro-account) page.
 2. Scroll down to the ***Authentication Key for DeepL API*** section.
 3. Copy the displayed 'API Key'.
-4. Enter the name for your credentials in the ***Credentials Name*** field in the 'DeepL API' credentials in n8n.
-5. Paste the API key in the ***API Key*** field in the 'DeepL API' credentials in n8n.
-6. Click on the ***Create*** button to create your credentials in n8n.
+4. Enter the name for your credentials in the ***Credentials Name*** field in the 'DeepL API' credentials in Workflow².
+5. Paste the API key in the ***API Key*** field in the 'DeepL API' credentials in Workflow².
+6. Click on the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

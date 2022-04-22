@@ -9,8 +9,8 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Dropbox account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Dropbox account to Workflow².
 
 
 1. Access the [Dropbox app creation](https://www.dropbox.com/developers/apps/create) page.
@@ -23,8 +23,8 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 8. Click on the ***Settings*** tab.
 9. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste in the ***Redirect URIs*** field under the ***OAuth 2*** section.
 10. Click on the ***Add*** button.
-11. Enter the provided ***App key*** and the ***App secret*** in the ***Client ID*** and ***Client Secret*** field, respectively, in your Dropbox OAuth2 API credentials in n8n.
-12. Click on the circle button in the OAuth section to connect your Dropbox account to n8n.
+11. Enter the provided ***App key*** and the ***App secret*** in the ***Client ID*** and ***Client Secret*** field, respectively, in your Dropbox OAuth2 API credentials in Workflow².
+12. Click on the circle button in the OAuth section to connect your Dropbox account to Workflow².
 13. Click on the ***Save*** button to save your credentials.
 
 ![Getting Dropbox credentials](/_images/integrations/credentials/dropbox/using-oauth.gif)
@@ -41,6 +41,6 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 8. Click on the ***Settings*** tab.
 9. Scroll down to the ***OAuth 2*** section and select 'No expiration' from the ***Access token expiration*** dropdown list.
 10. Click on the ***Generate*** button.
-11. Use the displayed ***Generated access token*** with your Dropbox credentials in n8n.
+11. Use the displayed ***Generated access token*** with your Dropbox credentials in Workflow².
 
 ![Getting Dropbox credentials](/_images/integrations/credentials/dropbox/using-access-token.gif)

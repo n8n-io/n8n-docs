@@ -13,6 +13,6 @@ Create a [Mailgun](https://www.mailgun.com/) account.
 2. Click on Settings on the left panel.
 3. Click on API Keys.
 4. Click on the eye icon to uncover your API key.
-5. Use the API key with Mailgun node credentials in n8n.
+5. Use the API key with Mailgun node credentials in Workflow².
 
 ![Getting Mailgun credentials](/_images/integrations/credentials/mailgun/using-access-token.gif)

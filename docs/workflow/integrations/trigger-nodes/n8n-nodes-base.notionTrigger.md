@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive a message on Mattermost when new meeting notes get added to the Notion. You can also find the [workflow](https://n8n.io/workflows/1089) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to receive a message on Mattermost when new meeting notes get added to the Notion. You can also find the [workflow](https://n8n.io/workflows/1089) on Workflow².io. This example usage workflow would use the following nodes.
 - [Notion Trigger]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
 - [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)

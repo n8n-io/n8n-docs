@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-This workflow allows you to extract information from an image of a receipt using the Mindee node. You can also find the [workflow](https://n8n.io/workflows/702) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to extract information from an image of a receipt using the Mindee node. You can also find the [workflow](https://n8n.io/workflows/702) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Mindee]()

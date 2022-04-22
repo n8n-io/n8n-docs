@@ -13,6 +13,6 @@ Create a [Stripe](https://stripe.com/) account.
 1. Access your Stripe dashboard.
 2. Click on the developers button in the left panel.
 3. Click on API keys.
-4. Use the secret key with your Stripe node credentials in n8n.
+4. Use the secret key with your Stripe node credentials in Workflow².
 
 ![Getting Stripe credentials](/_images/integrations/credentials/stripe/using-access-token.gif)

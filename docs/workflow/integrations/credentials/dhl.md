@@ -16,4 +16,4 @@ You can use these credentials to authenticate the following nodes with DHL.
 5. Below ***Add API to app***, click the ***Plus (+)*** button next to the entry for `Shipment Tracking - Unified`.
 6. Click on the ***Add app*** button.
 7. Back on the apps page, click on your newly created app.
-8. Click the ***Show key*** link to reveal your access token. Use the token with your DHL credentials in n8n.
+8. Click the ***Show key*** link to reveal your access token. Use the token with your DHL credentials in Workflow².

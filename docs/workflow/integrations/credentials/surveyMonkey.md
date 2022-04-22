@@ -17,7 +17,7 @@ Create a [SurveyMonkey](https://surveymonkey.com/) account.
 5. Click on My Apps in the top panel.
 6. Create a new app, fill in details.
 7. Once created, go to settings.
-8. Use the client ID and client secret with your SurveyMonkey OAuth API credentials in n8n.
+8. Use the client ID and client secret with your SurveyMonkey OAuth API credentials in Workflow².
 
 ## Using Access Token
 
@@ -28,6 +28,6 @@ Create a [SurveyMonkey](https://surveymonkey.com/) account.
 5. Click on My Apps in the top panel.
 6. Create a new app, fill in details.
 7. Once created, go to settings.
-8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in n8n.
+8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in Workflow².
 
 ![Getting SurveyMonkey credentials](/_images/integrations/credentials/surveymonkey/getting-credentials.gif)

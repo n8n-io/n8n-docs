@@ -4,13 +4,13 @@ In this guide, you’ll learn to create a custom n8n-nodes-module that can be in
 
 Consider creating n8n-nodes-module if any of the following conditions satisfy your needs:
 - The nodes are only for yourself, your organization, or a small group of people.
-- The nodes require external dependencies that are not already available in n8n.
+- The nodes require external dependencies that are not already available in Workflow².
 
-**NOTE:** n8n-nodes-module can only be installed in self-hosted Doc² instances. This functionality is currently not available on n8n.cloud or the desktop app. There are plans to introduce this functionality in the future.
+**NOTE:** n8n-nodes-module can only be installed in self-hosted Doc² instances. This functionality is currently not available ondoc2app.cloudintegration.eu or the desktop app. There are plans to introduce this functionality in the future.
 
 ## Prerequisites
 
-You may already be familiar with creating nodes in n8n. If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.n8n.io/nodes/creating-nodes/create-node.html) tutorial.
+You may already be familiar with creating nodes in Workflow². If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.n8n.io/nodes/creating-nodes/create-node.html) tutorial.
 
 Install the following tools:
 
@@ -397,7 +397,7 @@ npm link
 
 **NOTE:** If you get permission errors, run the command as a root user with `sudo`, for example `sudo npm link`.
 
-In the terminal, open the folder where you installed n8n. Run the following command to install the locally published module.
+In the terminal, open the folder where you installed Workflow². Run the following command to install the locally published module.
 
 ```bash
 # "Install" the above locally published module
@@ -416,17 +416,17 @@ You will now be able to test and use your newly created n8n-nodes-module.
 
 As mentioned, the n8n-nodes-module is an npm package. To make it available to others, you can publish it to the npm registry. Refer to the [Publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) guide to learn about publishing packages.
 
-Following the steps mentioned above, you can create multiple nodes within a single n8n-nodes-module. You can also create nodes that require dependencies that are not present in n8n. When creating an n8n-nodes-module make sure that you follow the following guidelines:
+Following the steps mentioned above, you can create multiple nodes within a single n8n-nodes-module. You can also create nodes that require dependencies that are not present in Workflow². When creating an n8n-nodes-module make sure that you follow the following guidelines:
 
 - The name of the module should start with `n8n-nodes-`.
 - The `package.json` file has to contain a key `n8n` with the paths to nodes and credentials.
-- The module has to be installed alongside n8n.
+- The module has to be installed alongside Workflow².
 
 ## Use the n8n-nodes-module in production
 
 Once you test and publish your n8n-nodes-module you would want to use it in your production environment.
 
-If you’re running Doc² via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
+If you’re running Doc² via Docker, you will have to create a Docker image with the node module installed in Workflow². Follow the steps below to create your Docker image:
 
 1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
 2. Add the following command in your Dockerfile before the font installation command.
@@ -485,4 +485,4 @@ EXPOSE 5678/tcp
 
 You will now be able to use your n8n-nodes-module in Docker.
 
-If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside n8n. Doc² will find the module and load it automatically.
+If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside Workflow². Doc² will find the module and load it automatically.

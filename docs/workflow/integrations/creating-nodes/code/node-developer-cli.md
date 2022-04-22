@@ -48,7 +48,7 @@ the above can be found here:
 
 ### Setup to use n8n-nodes-module
 
-To use a custom `n8n-nodes-module`, it needs to be installed alongside n8n.
+To use a custom `n8n-nodes-module`, it needs to be installed alongside Workflow².
 For example like this:
 
 ```bash

@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a billing plan is activated in PayPal. You can also find the [workflow](https://n8n.io/workflows/653) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a billing plan is activated in PayPal. You can also find the [workflow](https://n8n.io/workflows/653) on Workflow².io. This example usage workflow would use the following node.
 - [PayPal Trigger]()
 
 The final workflow should look like the following image.

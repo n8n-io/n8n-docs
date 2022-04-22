@@ -27,4 +27,4 @@ After becoming an Action Network partner:
 
 ![API & Sync Page](/_images/integrations/credentials/actionnetwork/action_network_api_key.png)
 
-5. Copy your new key and use it with your Action Network node credentials in n8n.
+5. Copy your new key and use it with your Action Network node credentials in Workflow².

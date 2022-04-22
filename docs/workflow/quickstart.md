@@ -26,8 +26,8 @@ For your first workflow, let's build something to take one tedious task off you 
     * Navigate to *APIs & Services* > *Credentials*.
     * Click *+ CREATE CREDENTIALS* and select *OAuth client ID*.
     * Select *Web Application* from the *Application type* dropdown.
-    * Click *+Add URI* and enter the *OAuth Callback URL* you copied from n8n.
-    * Click *Create* to save your new credentials. A corresponding *Client ID* and *Client Secret* are now available. Copy these to use in n8n.
+    * Click *+Add URI* and enter the *OAuth Callback URL* you copied from Workflow².
+    * Click *Create* to save your new credentials. A corresponding *Client ID* and *Client Secret* are now available. Copy these to use in Workflow².
     * Navigate to *APIs & Services* > *Library*, search for Gmail and select *Enable*.
 
     !!! note " Keep in mind"

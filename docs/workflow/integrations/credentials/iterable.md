@@ -15,6 +15,6 @@ Create an [Iterable](https://iterable.com) account.
 4. Enter a name in the ***Name*** field.
 5. Click on the ***Create*** button.
 6. Click on the ***Copy*** button to copy the API key.
-7. Use this ***API key*** with your Iterable node credentials in n8n.
+7. Use this ***API key*** with your Iterable node credentials in Workflow².
 
 ![Getting Iterable credentials](/_images/integrations/credentials/iterable/using-api-key.gif)

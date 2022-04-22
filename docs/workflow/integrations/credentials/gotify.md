@@ -20,7 +20,7 @@ Install [Gotify](https://gotify.net/docs/install) on your server.
 7. Click on the ***CREATE CLIENT*** button.
 8. Enter a name for the client in the ***Name*** field.
 9. Click on the ***CREATE*** button.
-10. Use the App Token, Client Token, and the Host URL with your Gotify API credentials in n8n.
-11. Click the ***Save*** button to save your credentials in n8n.
+10. Use the App Token, Client Token, and the Host URL with your Gotify API credentials in Workflow².
+11. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting Gotify credentials](/_images/integrations/credentials/gotify/using-api.gif)

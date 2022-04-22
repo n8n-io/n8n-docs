@@ -10,6 +10,6 @@ Create an user account on a Postgres server.
 ## Using Database Connection
 
 1. Retrieve your Postgres credentials and connection parameters.
-2. Use the credentials and connection parameters with your Postgres node credentials in n8n.
+2. Use the credentials and connection parameters with your Postgres node credentials in Workflow².
 
 ![Getting Postgres credentials](/_images/integrations/credentials/postgres/using-database-connection.gif)

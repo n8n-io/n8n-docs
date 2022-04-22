@@ -24,10 +24,10 @@ Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams) organisat
 5. Enter your master password in the ***Master password*** field.
 6. Click on the ***View API key*** button.
 7. Copy the displayed client id.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Bitwarden API' credentials in n8n.
-9. Paste the client id in the ***Client ID*** field in the 'Bitwarden API' credentials in n8n.
+8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Bitwarden API' credentials in Workflow².
+9. Paste the client id in the ***Client ID*** field in the 'Bitwarden API' credentials in Workflow².
 10. Copy the client secret from Bitwarden.
-11. Paste the client secret in the ***Client Secret*** field in the 'Bitwarden API' credentials in n8n.
+11. Paste the client secret in the ***Client Secret*** field in the 'Bitwarden API' credentials in Workflow².
 12. Click on the ***Create*** button to create your credentials.
 
 **Note:** If you're hosting Bitwarden on your server, select 'Self-hosted' from the ***Environment*** dropdown list. You also need to enter the domain of your hosted instance in the ***Self-hosted domain*** field.

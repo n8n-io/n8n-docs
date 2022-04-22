@@ -15,7 +15,7 @@
 
 ## Example Usage
 
-This workflow allows you to send daily weather updates via a message using the Gotify node. You can also find the [workflow](https://n8n.io/workflows/774) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to send daily weather updates via a message using the Gotify node. You can also find the [workflow](https://n8n.io/workflows/774) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
 - [Gotify]()

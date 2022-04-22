@@ -23,12 +23,12 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 7. Click on the ***Add*** button.
 8. Click on the app you created to get the ***Client ID*** and the ***Client Secret***.
 9. Copy the displayed ***Client ID***.
-10. Enter a name for your credentials in the ***Credentials Name*** field in the 'GetResponse OAuth2 API' credentials in n8n.
-11. Paste the Client ID in the ***Client ID*** field in the 'GetResponse OAuth2 API' credentials in n8n.
+10. Enter a name for your credentials in the ***Credentials Name*** field in the 'GetResponse OAuth2 API' credentials in Workflow².
+11. Paste the Client ID in the ***Client ID*** field in the 'GetResponse OAuth2 API' credentials in Workflow².
 12. Copy the ***Client secret key*** from GetResponse.
-13. Paste it in the ***Client Secret*** field in the 'GetResponse OAuth2 API' credentials in n8n.
-14. Click on the circle button in the OAuth section to connect a GetResponse account to n8n.
-15. Click on the ***Save*** button to save your credentials in n8n.
+13. Paste it in the ***Client Secret*** field in the 'GetResponse OAuth2 API' credentials in Workflow².
+14. Click on the circle button in the OAuth section to connect a GetResponse account to Workflow².
+15. Click on the ***Save*** button to save your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 
@@ -45,9 +45,9 @@ The following video demonstrates the steps mentioned above.
 5. Enter a name for your key.
 6. Click on the ***Generate*** button.
 7. Copy the displayed ***API key***.
-8. Enter a name for your credentials in the ***Credentials Name*** field in the 'GetResponse API' credentials in n8n.
-9. Paste the API key in the ***API Key*** field in the 'GetResponse API' credentials in n8n.
-10. Click the ***Create*** button to create your credentials in n8n.
+8. Enter a name for your credentials in the ***Credentials Name*** field in the 'GetResponse API' credentials in Workflow².
+9. Paste the API key in the ***API Key*** field in the 'GetResponse API' credentials in Workflow².
+10. Click the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

@@ -38,7 +38,7 @@ You can route a workflow when none of the specified conditions are met using ***
 
 ## Example Usage
 
-This workflow executes four different Set nodes based on the output given by a Switch node. You can also find the [workflow](https://n8n.io/workflows/688) on n8n.io. This example usage workflow would use the following nodes.
+This workflow executes four different Set nodes based on the output given by a Switch node. You can also find the [workflow](https://n8n.io/workflows/688) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/)
 - [Switch]()

@@ -37,7 +37,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Translate](/workflow/integrations/nodes/n8n-nodes-base.googleTranslate/) | :white_check_mark: | :white_check_mark: |
 | [YouTube](/workflow/integrations/nodes/workflow-nodes-base.youTube/) | :white_check_mark: | :x: |
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
     For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:
 * [Google Calendar](/workflow/integrations/nodes/n8n-nodes-base.googleCalendar/)
 * [Google Contacts](/workflow/integrations/nodes/n8n-nodes-base.googleContacts/)
@@ -67,7 +67,7 @@ From your Doc² instance:
 7. Enter your new ***Client ID*** and ***Client Secret*** from Google Cloud Console in the Doc² Credentials modal.
 8. Enter a ***Credentials Name***.
 9. Click on the ***Sign in with Google*** button to complete your Google authentication.
-10. ***Save*** your new credentials in n8n.
+10. ***Save*** your new credentials in Workflow².
 
 Now you must [enable](#enable-apis) each Google service (e.g. Sheets, Drive, etc.) API that you want to use.
 

@@ -11,4 +11,4 @@ Create a [Linear](https://linear.app/) account.
 
 1. Open the [Linear API settings](https://linear.app/settings/api).
 2. Click on the **Create key** button.
-3. Copy the key into **API Key** field of the credentials screen in n8n.
+3. Copy the key into **API Key** field of the credentials screen in Workflow².

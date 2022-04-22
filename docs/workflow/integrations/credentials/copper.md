@@ -15,10 +15,10 @@ Create a [Copper](https://www.copper.com/) account.
 3. Click on ***Integrations*** and select ***API Keys***.
 4. Click on the ***GENERATE API KEY*** button.
 5. Copy the displayed API key.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Copper API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Copper API' credentials in n8n.
-8. Enter the email address in the ***Email*** field in the 'Copper API' credentials in n8n.
-9. Click the ***Create*** button to create your credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Copper API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'Copper API' credentials in Workflow².
+8. Enter the email address in the ***Email*** field in the 'Copper API' credentials in Workflow².
+9. Click the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

@@ -16,7 +16,7 @@
 
 ## Example Usage
 
-This workflow allows you to send an SMS using the Mocean node. You can also find the [workflow](https://n8n.io/workflows/667) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to send an SMS using the Mocean node. You can also find the [workflow](https://n8n.io/workflows/667) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Mocean]()
 

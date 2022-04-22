@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all the contacts from GetResponse and check if they belong to a specific campaign. If they don't belong to the specified campaign, the workflow updates the campaign ID of the contacts using the GetResponse node. You can also find the [workflow](https://n8n.io/workflows/778) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to get all the contacts from GetResponse and check if they belong to a specific campaign. If they don't belong to the specified campaign, the workflow updates the campaign ID of the contacts using the GetResponse node. You can also find the [workflow](https://n8n.io/workflows/778) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [GetResponse]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)

@@ -9,8 +9,8 @@ Create a [Raindrop](https://raindrop.io/) account.
 
 ## Using OAuth
 
-<!-- !!! tip ⛅️ Note for n8n.cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Raindrop account to n8n.
+<!-- !!! tip ⛅️ Note fordoc2app.cloudintegration.eu users
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Raindrop account to Workflow².
  -->
 
 1. Open the [Raindrop dashboard](https://app.raindrop.io/my/0) page.
@@ -23,15 +23,15 @@ Create a [Raindrop](https://raindrop.io/) account.
 8. Under the ***For Developers*** section, select the app that you created.
 9. Enter a description in the ***Description*** field.
 10. Enter a URL in the ***Site*** field.
-11. Copy the 'OAuth Callback URL' provided in the 'Raindrop OAuth2 API' credentials in n8n.
+11. Copy the 'OAuth Callback URL' provided in the 'Raindrop OAuth2 API' credentials in Workflow².
 12. Paste the URL in the ***Redirect URI*** field and click on the ***Save*** button.
 13. Copy the displayed ***Client ID***.
-14. Enter a name for your credentials in the ***Credentials Name*** field in the 'Raindrop OAuth2 API' credentials in n8n.
-15. Paste the client ID in the ***Client ID*** field in the 'Raindrop OAuth2 API' credentials in n8n.
+14. Enter a name for your credentials in the ***Credentials Name*** field in the 'Raindrop OAuth2 API' credentials in Workflow².
+15. Paste the client ID in the ***Client ID*** field in the 'Raindrop OAuth2 API' credentials in Workflow².
 16. Copy the displayed ***Client secret*** from the Raindrop.
-17. Paste the client secret in the ***Client Secret*** field in the 'Raindrop OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a Raindrop account to n8n.
-19. Click the ***Save*** button to save your credentials in n8n.
+17. Paste the client secret in the ***Client Secret*** field in the 'Raindrop OAuth2 API' credentials in Workflow².
+18. Click on the circle button in the OAuth section to connect a Raindrop account to Workflow².
+19. Click the ***Save*** button to save your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

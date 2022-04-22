@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on Workflow².io. This example usage workflow would use the following node.
 - [Mautic Trigger]()
 - [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 
@@ -41,7 +41,7 @@ This node sends a registration confirmation SMS to the users who filled out the 
 7. Enter the following message in the ***Expression*** field.
 ```
 Hey, {{$node["Mautic Trigger"].json["mautic.form_on_submit"][0]["submission"]["results"]["first_name"]}} 👋
-Thank you for signing up for the Webinar - Getting Started with n8n. The webinar will start at 1800 CEST on 31st October 2020.
+Thank you for signing up for the Webinar - Getting Started with Workflow². The webinar will start at 1800 CEST on 31st October 2020.
 See you there!
 ```
 8. Click on ***Execute Node*** to run the node.

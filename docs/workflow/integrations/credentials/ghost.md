@@ -14,7 +14,7 @@ Create a [Ghost](https://ghost.org/) account.
 3. Click on ***+ Add custom integration*** under the ***CUSTOM INTEGRATIONS*** section.
 4. Enter a name for the integration in the ***Name*** field.
 5. Click on the ***Create*** button.
-6. Use this ***URL*** and ***Admin API Key*** with your Ghost node credentials in n8n.
+6. Use this ***URL*** and ***Admin API Key*** with your Ghost node credentials in Workflow².
 
 ## Using Content API
 
@@ -23,6 +23,6 @@ Create a [Ghost](https://ghost.org/) account.
 3. Click on ***+ Add custom integration*** under the ***CUSTOM INTEGRATIONS*** section.
 4. Enter a name for the integration in the ***Name*** field.
 5. Click on the ***Create*** button.
-6. Use this ***URL*** and ***Content API Key*** with your Ghost node credentials in n8n.
+6. Use this ***URL*** and ***Content API Key*** with your Ghost node credentials in Workflow².
 
 ![Getting Ghost credentials](/_images/integrations/credentials/ghost/using-api.gif)

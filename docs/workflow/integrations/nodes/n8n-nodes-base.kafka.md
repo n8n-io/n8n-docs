@@ -12,7 +12,7 @@
 
 ## Example Usage
 
-This workflow allows you to send updates about the position of the ISS every minute to a topic in Kafka using the Kafka node. You can also find the [workflow](https://n8n.io/workflows/750) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to send updates about the position of the ISS every minute to a topic in Kafka using the Kafka node. You can also find the [workflow](https://n8n.io/workflows/750) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)

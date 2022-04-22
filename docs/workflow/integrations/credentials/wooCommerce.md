@@ -18,6 +18,6 @@ Install the [WooCommerce](https://woocommerce.com/) plugin on your WordPress web
 6. Enter the necessary details.
 7. Select 'Read/Write' from the ***Permissions*** dropdown list.
 8. Click on the ***Generate API Key*** button.
-9. Use your WooCommerce website URL, Consumer key & Consumer secret with your WooCommerce node credentials in n8n.
+9. Use your WooCommerce website URL, Consumer key & Consumer secret with your WooCommerce node credentials in Workflow².
 
 ![Getting WooCommerce credentials](/_images/integrations/credentials/woocommerce/using-access-token.gif)

@@ -41,7 +41,7 @@
 
 ## Example Usage
 
-This workflow allows you to send the Astronomy Picture of the day daily to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/828) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to send the Astronomy Picture of the day daily to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/828) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [NASA]()
 - [Telegram](/workflow/integrations/nodes/workflow-nodes-base.telegram/)

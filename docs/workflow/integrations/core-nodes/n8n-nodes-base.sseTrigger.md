@@ -16,7 +16,7 @@ Server-Sent Events (SSE) is a server push technology enabling a client to receiv
 
 ## Example Usage
 
-This workflow allows you to receive server-sent events using the SSE Trigger node. You can also find the [workflow](https://n8n.io/workflows/639) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive server-sent events using the SSE Trigger node. You can also find the [workflow](https://n8n.io/workflows/639) on Workflow².io. This example usage workflow would use the following node.
 - [SSE Trigger]()
 
 The final workflow should look like the following image.

@@ -13,6 +13,6 @@ Create a [SyncroMSP](https://syncromsp.com/) account.
 2. Click on the `+ New Token` button.
 3. On the `Custom Permissions` tab, enter a name for your new token and adjust the permissions to match your requirements.
 4. Click `Create API Token` once done.
-5. Copy the key shown by SyncroMSP into the `API Key` field of your SyncroMSP credentials in n8n.
-6. Enter your SyncroMSP subdomain (the part between `https://` and `.syncromsp.com`) in the `Subdomain` field of your SyncroMSP credentials in n8n.
+5. Copy the key shown by SyncroMSP into the `API Key` field of your SyncroMSP credentials in Workflow².
+6. Enter your SyncroMSP subdomain (the part between `https://` and `.syncromsp.com`) in the `Subdomain` field of your SyncroMSP credentials in Workflow².
 7. Click `Save` on the Doc² credentials screen.

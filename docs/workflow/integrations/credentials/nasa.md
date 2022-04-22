@@ -9,6 +9,6 @@ You can use these credentials to authenticate the following nodes with NASA.
 2. Scroll down to the ***Generate API Key*** section.
 3. Enter the required information.
 3. Click on the ***Signup*** button.
-4. Use this ***API Key*** with your NASA node credentials in n8n.
+4. Use this ***API Key*** with your NASA node credentials in Workflow².
 
 ![Getting NASA credentials](/_images/integrations/credentials/nasa/using-api.gif)

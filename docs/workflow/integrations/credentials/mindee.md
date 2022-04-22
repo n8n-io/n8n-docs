@@ -16,6 +16,6 @@ Create a [Mindee](https://mindee.com) account.
 5. Click on the ***Add key*** button.
 6. Enter a name for the token.
 7. Click on ***Add new key***.
-8. Use this API key with your Mindee node credentials in n8n.
+8. Use this API key with your Mindee node credentials in Workflow².
 
 ![Getting Mindee credentials](/_images/integrations/credentials/mindee/using-api-key.gif)

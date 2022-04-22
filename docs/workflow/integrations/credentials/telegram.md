@@ -12,4 +12,4 @@ Create a [Telegram](https://telegram.org/) account.
 
 1. Start a chat with the [Botfather](https://telegram.me/BotFather).
 2. Enter `/newbot` and reply with your new bot's display name and username.
-3. Copy the bot token and use it in the Telegram node credentials in n8n.
+3. Copy the bot token and use it in the Telegram node credentials in Workflow².

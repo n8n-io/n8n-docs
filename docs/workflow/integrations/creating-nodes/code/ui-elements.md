@@ -1,6 +1,6 @@
 # Node UI Elements
 
-n8n provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in n8n.
+n8n provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in Workflow².
 
 [[toc]]
 

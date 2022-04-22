@@ -24,7 +24,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get an item from Webflow. You can also find the [workflow](https://n8n.io/workflows/1048) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get an item from Webflow. You can also find the [workflow](https://n8n.io/workflows/1048) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Webflow]()
 

@@ -19,7 +19,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all the slides from a presentation and get the thumbnails for the pages. You can also find the [workflow](https://n8n.io/workflows/1035) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to get all the slides from a presentation and get the thumbnails for the pages. You can also find the [workflow](https://n8n.io/workflows/1035) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Slides]()
 

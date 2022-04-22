@@ -9,4 +9,4 @@ Create a [Toggl](https://toggl.com/) account.
 
 ## Using Username and Password
 
-1. Use your Toggle username and password with your node credentials in n8n.
+1. Use your Toggle username and password with your node credentials in Workflow².

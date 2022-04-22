@@ -15,7 +15,7 @@
 
 ## Example Usage
 
-This workflow allows you to get analytical metrics of your website using the Goole Analytics node and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/892) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to get analytical metrics of your website using the Goole Analytics node and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/892) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Google Analytics]()
 - [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)

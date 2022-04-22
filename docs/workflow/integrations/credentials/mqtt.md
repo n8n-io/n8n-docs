@@ -10,6 +10,6 @@ You need to have a MQTT broker installed.
 
 ## Using MQTT
 
-Use your Protocol, Host, Port, Username, and Password as the MQTT Trigger credential data in n8n.
+Use your Protocol, Host, Port, Username, and Password as the MQTT Trigger credential data in Workflow².
 
 Optionally, you can enable SSL and provide a CA or Client certificate.

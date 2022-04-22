@@ -21,7 +21,7 @@ From urlscan.io:
 1. Navigate to your **Settings&API** page.
 2. Under the API Keys section click **+ Create new API key**.
 3. Enter a description for your new API key as prompted and click **+ Create API key**.
-4. Copy the new API key for use in n8n.
+4. Copy the new API key for use in Workflow².
 
 From n8n:
 

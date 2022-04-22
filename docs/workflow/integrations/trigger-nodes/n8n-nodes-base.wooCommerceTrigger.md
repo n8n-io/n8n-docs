@@ -23,7 +23,7 @@
 
 ## Example Usage
 
-This workflow allows you to send a message on Mattermost when an order is created in WooCommerce. You can also find the [workflow](https://n8n.io/workflows/848) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to send a message on Mattermost when an order is created in WooCommerce. You can also find the [workflow](https://n8n.io/workflows/848) on Workflow².io. This example usage workflow would use the following nodes.
 - [WooCommerce Trigger]()
 - [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 

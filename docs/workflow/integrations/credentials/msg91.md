@@ -14,4 +14,4 @@ Create a [MSG91](https://msg91.com/) account.
 3. Click on 'Authkey' in the left panel.
 4. Click on *Create New*.
 5. Enter the details and click on the *Add* button.
-6. Use the token in your MSG91 node credentials in n8n.
+6. Use the token in your MSG91 node credentials in Workflow².

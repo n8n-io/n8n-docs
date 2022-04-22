@@ -24,7 +24,7 @@ Create a [SendGrid](https://SendGrid.com/) account.
 5. Enter the name of the key in the ***API Key Name*** field.
 6. Click on the ***Create & View*** button.
 7. Click on the displayed API key to copy the key.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'SendGrid API' credentials in n8n.
+8. Enter the name for your credentials in the ***Credentials Name*** field in the 'SendGrid API' credentials in Workflow².
 9. Paste the 'API Key' in the ***API Key*** field.
 10. Click on the ***Create*** button to save your credentials.
 

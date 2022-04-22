@@ -14,9 +14,9 @@ Create a [Mailcheck](https://app.mailcheck.co/) account.
 3. Enter a key name in the ***Enter the key name*** field.
 4. Click on the ***Create Key*** button.
 5. Click on the ***Copy*** button to copy the API key.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Mailcheck API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Mailcheck API' credentials in n8n.
-8. Click on the ***Create*** button to create your credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Mailcheck API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'Mailcheck API' credentials in Workflow².
+8. Click on the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

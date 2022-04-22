@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes with Mattermos
 5. Enter a description in the ***Token Description*** field.
 6. Click on the ***Save*** button.
 7. Click on the ***Yes, Create*** button.
-8. Use this ***Acess Token*** with your Mattermost node credentials in n8n.
+8. Use this ***Acess Token*** with your Mattermost node credentials in Workflow².
 
 ![Generating Access Token](/_images/integrations/credentials/mattermost/using-access-token.gif)
 

@@ -18,7 +18,7 @@ DOC² Workflow helps you to connect any app with an API with any other, and mani
 ## Where to start
 ## Up and running
 
-Jump right in to building workflows with the Quickstart guide, or see the hosting section to learn about the options to get started with n8n.
+Jump right in to building workflows with the Quickstart guide, or see the hosting section to learn about the options to get started with Workflow².
 
 
 ## Learn the basics

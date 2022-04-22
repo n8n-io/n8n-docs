@@ -29,7 +29,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get an entry in Strapi. You can also find the [workflow](https://n8n.io/workflows/779) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get an entry in Strapi. You can also find the [workflow](https://n8n.io/workflows/779) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Strapi]()
@@ -54,7 +54,7 @@ We will use the Set node to set the title, content, and description for an entry
 6. Enter `Strapi is a headless CMS. We will use Strapi and Doc² to automate our content creation workflows.` in the ***Value*** field.
 7. Click on ***Add Value*** and select 'String' from the dropdown list.
 8. Enter `Description` in the ***Name*** field.
-9. Enter `Learn how to automate Strapi with n8n.` in the ***Value*** field.
+9. Enter `Learn how to automate Strapi with Workflow².` in the ***Value*** field.
 10. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that node sets the value for title, content, and description.

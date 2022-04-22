@@ -1,6 +1,6 @@
 # Creating Your First Trigger Node
 
-Today, you will learn how to create your first trigger node for n8n.
+Today, you will learn how to create your first trigger node for Workflow².
 
 ## Prerequisites
 You have knowledge of:
@@ -49,7 +49,7 @@ n8n is built from four main packages:
 
 All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
-- The folder `nodes`, contains all the nodes in n8n.
+- The folder `nodes`, contains all the nodes in Workflow².
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
@@ -224,7 +224,7 @@ Let’s make the Node Editor View ask for these parameters:
 },
 ```
 
-2. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running Workflow².
 3. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -282,7 +282,7 @@ export class AutofriendApi implements ICredentialType {
 ],
 ```
 
-8. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running n8n.
+8. Stop the current Doc² process by pressing `ctrl + c` in the terminal in which you are running Workflow².
 9. Run again, by entering the following in the terminal.
 ```bash
 npm run dev
@@ -342,7 +342,7 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 **Methods**
 
 - `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, Doc² persists the webhook ID. If the webhook is not registered with the external system, the `create` method gets executed.
-- `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
+- `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in Workflow².
 - `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
 ![Lifecycle flowchart](/_images/integrations/creating-nodes/code/lifecycle.png)
@@ -466,7 +466,7 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 };
 ```
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
-5. Stop the current Doc² process by pressing `ctrl + c` in the terminal where you are running n8n.
+5. Stop the current Doc² process by pressing `ctrl + c` in the terminal where you are running Workflow².
 6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the Doc² Editor UI at [localhost:5678](http://localhost:5678/workflow).
 7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](../credentials/autopilot).
 8. Go to the workflow editor, save your workflow, and execute the node.

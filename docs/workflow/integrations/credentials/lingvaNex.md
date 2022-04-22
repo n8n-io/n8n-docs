@@ -14,8 +14,8 @@ Create a [LingvaNex](https://lingvanex.com) account.
 3. Click on ***Payment / Subscription***. Note that you can use the limited Translation API without having to subscribe or add a payment method.
 4. Scroll to the ***Translation API*** section.
 5. Copy the displayed API key.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'LingvaNex API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'LingvaNex API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'LingvaNex API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'LingvaNex API' credentials in Workflow².
 8. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

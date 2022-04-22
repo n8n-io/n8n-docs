@@ -14,6 +14,6 @@ Create a [Pushover](https://pushover.net) account.
 3. Enter the name of your application in the ***Name*** field.
 4. Read the 'Terms of Services' and the 'Guide to Being Friendly to our API' and, if you agree to them, check the checkbox.
 5. Click on the ***Create Application*** button.
-6. Use this ***API Key*** with your Pushover node credentials in n8n.
+6. Use this ***API Key*** with your Pushover node credentials in Workflow².
 
 ![Getting Pushover credentials](/_images/integrations/credentials/pushover/using-api-key.gif)

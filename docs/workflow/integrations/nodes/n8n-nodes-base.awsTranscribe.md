@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to create transcription jobs for all your audio and video files stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1111) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create transcription jobs for all your audio and video files stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1111) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [AWS S3](/workflow/integrations/nodes/n8n-nodes-base.awsS3/)
 - [AWS Transcribe]()

@@ -14,9 +14,9 @@ Create a [Tapfiliate](https://tapfiliate.com/) account.
 3. Select 'Profile Settings' from the dropdown list.
 4. Scroll down to the ***API Key*** section.
 5. Copy the displayed ***API Key***.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Tapfiliate API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Tapfiliate API' credentials in n8n.
-8. Click the ***Create*** button to create your credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Tapfiliate API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'Tapfiliate API' credentials in Workflow².
+8. Click the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

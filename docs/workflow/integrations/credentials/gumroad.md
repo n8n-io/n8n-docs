@@ -15,6 +15,6 @@ Create a [Gumroad](https://gumroad.com/) account.
 4. Click on the Advanced tab.
 5. Scroll down and fill out the required fields and create a new application..
 6. From here, you have access the ability to generate an access token.
-7. Use provided access token with your Gumroad node credentials in n8n.
+7. Use provided access token with your Gumroad node credentials in Workflow².
 
 ![Getting Gumroad credentials](/_images/integrations/credentials/gumroad/using-access-token.gif)

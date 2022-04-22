@@ -28,7 +28,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create and update a post in WordPress. You can also find the [workflow](https://n8n.io/workflows/668) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create and update a post in WordPress. You can also find the [workflow](https://n8n.io/workflows/668) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [WordPress]()
 

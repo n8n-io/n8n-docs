@@ -14,13 +14,13 @@ You can use these credentials to authenticate the following nodes with Emelia.
 3. Scroll down to the bottom of the page and click on ***API Access***.
 4. Click on the ***Generate Keys*** button.
 5. Copy the displayed API Secret.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'ERPNext API' credentials in n8n.
-7. Paste the API Secret in the ***API Secret*** field in the 'ERPNext API' credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'ERPNext API' credentials in Workflow².
+7. Paste the API Secret in the ***API Secret*** field in the 'ERPNext API' credentials in Workflow².
 8. Copy the API Key from ERPNext.
 **Note:** You might have to refresh the ERPNext window to view the API Key.
-9. Paste the API Key in the ***API Key*** field in the 'ERPNext API' credentials in n8n.
-10. Enter the subdomain of your ERPNext account in the ***Subdomain*** field in the 'ERPNext API' credentials in n8n. Refer to the [FAQs](#how-to-find-the-subdomain-of-an-erpnext-account) to learn how to get your subdomain.
-11. Click on the ***Create*** button to create your credentials in n8n.
+9. Paste the API Key in the ***API Key*** field in the 'ERPNext API' credentials in Workflow².
+10. Enter the subdomain of your ERPNext account in the ***Subdomain*** field in the 'ERPNext API' credentials in Workflow². Refer to the [FAQs](#how-to-find-the-subdomain-of-an-erpnext-account) to learn how to get your subdomain.
+11. Click on the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

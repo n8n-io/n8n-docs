@@ -29,7 +29,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a new member and update their information in Orbit using the Orbit node. It also allows you to create a note and a post for the new member in Orbit. You can also find the [workflow](https://n8n.io/workflows/765) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a new member and update their information in Orbit using the Orbit node. It also allows you to create a note and a post for the new member in Orbit. You can also find the [workflow](https://n8n.io/workflows/765) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Orbit]()
 

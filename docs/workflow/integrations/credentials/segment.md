@@ -21,6 +21,6 @@ Create a [Segment](https://segment.com/) account.
 3. Click on Add Source.
 4. Select Node.js.
 5. Copy write key.
-6. Use session write key for your Segment node credentials in n8n.
+6. Use session write key for your Segment node credentials in Workflow².
 
 ![Getting Segment credentials](/_images/integrations/credentials/segment/using-access-token.gif)

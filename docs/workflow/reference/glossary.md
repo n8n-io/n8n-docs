@@ -25,7 +25,7 @@ For a more detailed understanding of APIs, see [What is API: Definition, Types, 
 ## Certificate
 A file or character string that is used to encrypt and decrypt information between two entities (e.g. computers, applications, users, etc.). It is used to ensure that anyone who intercepts the information between the two entities will not be able to read the information.
 
-n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the certificate](/hosting/configuration/) that you use in n8n.
+n8n uses certificates to keep user information safe when working in the [Editor UI](#editor-ui). You can also [customize the certificate](/hosting/configuration/) that you use in Workflow².
 
 For further information, see [What are certificates?](https://www.youtube.com/watch?v=LRMBZhdFjDI).
 
@@ -36,14 +36,14 @@ For further information, see [What are certificates?](https://www.youtube.com/wa
 ## CLI
 An acronym for *Command Line Interface*, it is a text-based form of processing computer commands.
 
-It is possible to [start a workflow or change its status](/reference/cli-commands/) using the CLI in n8n.
+It is possible to [start a workflow or change its status](/reference/cli-commands/) using the CLI in Workflow².
 
 To learn more, see [What is Command Line Interface (CLI)?](https://www.w3schools.com/whatis/whatis_cli.asp).
 
 ## Connection
 A link between two or more [nodes](#Node) that allows data to flow from one node to another.
 
-This is a [core concept](/workflows/connections/) in n8n.
+This is a [core concept](/workflows/connections/) in Workflow².
 
 ## Credentials
 Unique pieces of information that identifies a user or a service. A common form of credentials is a [username](#Username) and [password](#Password) pair.
@@ -58,7 +58,7 @@ For more information, see [Credentials](https://www.techopedia.com/definition/10
 ## Docker
 A system to build, run and share applications with all of the services bundled to support the application in one package.
 
-n8n has created a [docker image](/hosting/installation/docker/) so that users who have a docker environment can quickly install and run n8n.
+n8n has created a [docker image](/hosting/installation/docker/) so that users who have a docker environment can quickly install and run Workflow².
 
 For more information, read [Docker overview](https://docs.docker.com/get-started/overview/) and [A Docker Tutorial for Beginners](https://docker-curriculum.com/).
 
@@ -81,7 +81,7 @@ For more information, see [What are encryption keys and how do they work? 🔐](
 ## Environment Variables
 Environment variables are predetermined values that typically get used to provide the ability to configure your program from outside of your application. An environment variable consists of a key-value pair. For example, `N8N_BASIC_AUTH_USER=user`. Here, `N8N_BASIC_AUTH_USER` is the key and `user` is the value.
 
-n8n uses environment variables that help you configure your self-hosted Doc² instance. You can use environment variables to set [username](#username) and [password](#password) for your Doc² instance, configure the timezone, and a lot more. Refer to the [configuration](/hosting/configuration/) page to learn more about the environment variables used in n8n.
+n8n uses environment variables that help you configure your self-hosted Doc² instance. You can use environment variables to set [username](#username) and [password](#password) for your Doc² instance, configure the timezone, and a lot more. Refer to the [configuration](/hosting/configuration/) page to learn more about the environment variables used in Workflow².
 
 ## Execution
 A completed run of a [workflow](#Workflow) from start to finish.
@@ -140,7 +140,7 @@ n8n has the ability to send custom header information to many [APIs](#API), spec
 For further information, see [Request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header).
 
 ## Node
-The basic building block for n8n. Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
+The basic building block for Workflow². Each [node](#Node) is designed with a specific purpose of receiving, processing or outputting data.
 
 For more information, see [Node Basics](/workflow/integrations/).
 

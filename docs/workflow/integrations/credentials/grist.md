@@ -14,7 +14,7 @@ From Grist:
 
 1. Navigate to your **Profile Settings**.
 2. In the *Api key* section click **Create**.
-3. Copy the generated API key for use in n8n.
+3. Copy the generated API key for use in Workflow².
 
 From n8n:
 

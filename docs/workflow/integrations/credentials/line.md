@@ -20,8 +20,8 @@ Create a [Line](https://line.me/en/) account.
 9. Click on the link under the ***LINE Notify Registration URL*** in your email.
 10. On the LINE Notify page, click on the ***My services*** button.
 11. Click on the new service you created.
-12. Use the provided ***Client ID*** and ***Client Secret*** with your Line Notify OAuth2 API credentials in n8n.
-13. Click on the circle button in the OAuth section to connect a Line account to n8n.
-14. Click the ***Save*** button to save your credentials in n8n.
+12. Use the provided ***Client ID*** and ***Client Secret*** with your Line Notify OAuth2 API credentials in Workflow².
+13. Click on the circle button in the OAuth section to connect a Line account to Workflow².
+14. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting Line credentials](/_images/integrations/credentials/line/using-oauth.gif)

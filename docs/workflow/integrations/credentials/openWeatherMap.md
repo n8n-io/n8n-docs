@@ -12,6 +12,6 @@ Create a [OpenWeatherMap](https://openweathermap.org/) account.
 1. Access your OpenWeatherMap [account page](https://home.openweathermap.org/api_keys).
 2. In the 'Create key' section, type a name and click on the *Generate* button.
 3. Copy the API Key that you just generated.
-4. Use this API key with your OpenWeatherMap API node credentials in n8n.
+4. Use this API key with your OpenWeatherMap API node credentials in Workflow².
 
 ![Getting OpenWeatherMap API credentials](/_images/integrations/credentials/openweathermap/using-access-token.gif)

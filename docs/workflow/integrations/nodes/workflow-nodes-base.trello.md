@@ -91,7 +91,7 @@ The start node exists by default when you create a new workflow.
 2. If the list doesn't have any cards, add a card to the list.
 3. Open the card, add '.json' at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
-5. Copy `idList`and paste it in the *List ID* field in n8n.
+5. Copy `idList`and paste it in the *List ID* field in Workflow².
 
 
 

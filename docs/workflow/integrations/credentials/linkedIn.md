@@ -9,8 +9,8 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your LinkedIn account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your LinkedIn account to Workflow².
 
 
 1. Access the [LinkedIn app creation page](https://www.linkedin.com/developers/apps/new).
@@ -22,9 +22,9 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 7. Enable APIs for your application. You can find instructions on how and which APIs to enable for your LinkedIn application in the FAQs below.
 8. Back in the LinkedIn application creation page, click on the ***Auth*** tab.
 9. Copy the 'OAuth Callback URL' provided in the LinkedIn OAuth2 API credentials in Doc² and add it in the 'Authorized redirect URLs for your app' section in the LinkedIn application creation page.
-10. Use the displayed ***Client ID*** and the ***Client Secret*** with your LinkedIn OAuth API credentials in n8n.
-11. Click on the circle button in the OAuth section to connect a LinkedIn account to n8n.
-12. Click the ***Save*** button to save your credentials in n8n.
+10. Use the displayed ***Client ID*** and the ***Client Secret*** with your LinkedIn OAuth API credentials in Workflow².
+11. Click on the circle button in the OAuth section to connect a LinkedIn account to Workflow².
+12. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting LinkedIn credentials](/_images/integrations/credentials/linkedin/using-oauth.gif)
 
@@ -44,4 +44,4 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 2. Click the ***Select*** button next to the API you want to enable in the ***Products*** section.
 3. Click the checkbox to accept the terms and conditions and then click on the ***Add product*** button.
 
-**Note:** You will need to enable the ***Share on LinkedIn*** and ***Sign In with LinkedIn*** products to connect with n8n. If you would like to connect an organizational LinkedIn account to Doc², then you also additionally need to enable the ***Marketing Developer Platform*** product.
+**Note:** You will need to enable the ***Share on LinkedIn*** and ***Sign In with LinkedIn*** products to connect with Workflow². If you would like to connect an organizational LinkedIn account to Doc², then you also additionally need to enable the ***Marketing Developer Platform*** product.

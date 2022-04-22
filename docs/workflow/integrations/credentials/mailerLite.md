@@ -14,6 +14,6 @@ Create a [MailerLite](https://MailerLite.com) account.
 2. Click on the profile icon on the top right corner.
 3. Select 'Integrations' from the dropdown list.
 4. Click on 'Developer API' in the ***MailerLite API*** section.
-5. Copy the ***API key*** that is displayed and use it with your MailerLite node credentials in n8n.
+5. Copy the ***API key*** that is displayed and use it with your MailerLite node credentials in Workflow².
 
 ![Getting MailerLite credentials](/_images/integrations/credentials/mailerlite/using-api-key.gif)

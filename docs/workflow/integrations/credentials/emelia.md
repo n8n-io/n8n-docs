@@ -14,9 +14,9 @@ Create a [Emelia](https://emelia.io) account.
 2. Click on the avatar on the top-right and select 'API Keys'.
 3. Click on the ***Generate new API key*** button.
 4. Click on the menu icon and select 'Copy API Key' from the dropdown list.
-5. Enter a name for your credentials in the ***Credentials Name*** field in the 'Emelia API' credentials in n8n.
-6. Paste the API key in the ***API Key*** field in the 'Emelia API' credentials in n8n.
-7. Click the ***Create*** button to create your credentials in n8n.
+5. Enter a name for your credentials in the ***Credentials Name*** field in the 'Emelia API' credentials in Workflow².
+6. Paste the API key in the ***API Key*** field in the 'Emelia API' credentials in Workflow².
+7. Click the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

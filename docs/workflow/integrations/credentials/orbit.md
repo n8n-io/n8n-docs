@@ -12,7 +12,7 @@ Create an [Orbit](https://app.orbit.love/) account.
 1. Access the [Account Settings page](https://app.orbit.love/user/edit).
 2. Scroll down to the ***API Token*** section.
 3. Click on the ***Copy*** button to copy the API Token.
-4. Use this ***API Token*** in with your Orbit node credentials in n8n.
+4. Use this ***API Token*** in with your Orbit node credentials in Workflow².
 
 ![Getting Orbit credentials](/_images/integrations/credentials/orbit/using-api.gif)
 

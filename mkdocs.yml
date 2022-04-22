@@ -240,7 +240,7 @@ nav:
     - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
     - Feedback: doc2/enable-feedback-function.md
   - TE²:
-    - Getting Starteds: te2/fellow-te2-plugin.md
+    - Getting Started: te2/fellow-te2-plugin.md
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
     - Ephesoft External Application: te2/ephesoft-external-application.md

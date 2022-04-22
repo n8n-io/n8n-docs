@@ -10,6 +10,6 @@ Create an user account on a MySQL server.
 ## Using Database Connection
 
 1. Retrieve your MySQL credentials and connection parameters.
-2. Use the credentials and connection parameters with your MySQL node credentials in n8n.
+2. Use the credentials and connection parameters with your MySQL node credentials in Workflow².
 
 ![Getting MySQL credentials](/_images/integrations/credentials/mySql/using-database-connection.gif)

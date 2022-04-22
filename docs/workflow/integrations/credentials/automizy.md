@@ -20,4 +20,4 @@ Create an [Automizy](https://automizy.com/) account.
 2. Click on ***Settings*** in the bottom left corner and select 'API Token'.
 3. Click on the ***CREATE TOKEN*** button.
 4. Click on the ***COPY & CLOSE*** button to copy the API token.
-5. Use this API token with your Auotmizy node credentials in n8n.
+5. Use this API token with your Auotmizy node credentials in Workflow².

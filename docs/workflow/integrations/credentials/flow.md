@@ -15,6 +15,6 @@ Create a [Flow](https://www.getflow.com/) account.
 3. Click on Account Preferences.
 4. Click on the *Create a Personal Access Token* button.
 5. As you generate your access token, you will also receive an organisation ID.
-6. Use provided access token and organisation ID with your Flow node credentials in n8n.
+6. Use provided access token and organisation ID with your Flow node credentials in Workflow².
 
 ![Getting Flow credentials](/_images/integrations/credentials/flow/using-access-token.gif)

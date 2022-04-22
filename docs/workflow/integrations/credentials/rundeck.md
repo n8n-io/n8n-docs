@@ -14,6 +14,6 @@ Create a [Rundeck](https://www.rundeck.com/) account.
 3. Click on 'Profile'.
 4. Next to 'User API Tokens', click on the plus button and generate a new token.
 5. Click on 'Show Token' to reveal the token you generated.
-5. Use the API token with your Rundeck node credentials in n8n.
+5. Use the API token with your Rundeck node credentials in Workflow².
 
 ![Getting Rundeck credentials](/_images/integrations/credentials/rundeck/using-access-token.gif)

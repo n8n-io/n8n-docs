@@ -10,8 +10,8 @@ Create a [Pipedrive](https://pipedrive.com/) account.
 
 ## Using OAuth
 
-<!-- !!! tip ⛅️ Note for n8n.cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Pipedrive account to n8n.
+<!-- !!! tip ⛅️ Note fordoc2app.cloudintegration.eu users
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Pipedrive account to Workflow².
  -->
 
 1. Create a [Developer Sandbox Account](https://pipedrive.readme.io/docs/developer-sandbox-account).
@@ -22,18 +22,18 @@ Create a [Pipedrive](https://pipedrive.com/) account.
 6. Select either 'Yes' or 'No' when asked if you would like to publish your app on the Pipedrive marketplace.
 7. Click on the ***Next*** button.
 8. Enter the name of the app in the ***App name*** field.
-9. Copy the 'OAuth Callback URL' provided in the 'Pipedrive OAuth2 API' credentials in n8n.
+9. Copy the 'OAuth Callback URL' provided in the 'Pipedrive OAuth2 API' credentials in Workflow².
 10. On the Pipedrive app creation page, scroll down to the ***OAuth & Access scopes*** section and paste the URL in the ***Callback URL*** field.
 11. Based on your use-case, select the scopes from the ***Access scopes*** section.
 12. Scroll up and click on the ***Save*** button on the top.
 13. Select your app from the 'Marketplace manager'
 14. Scroll down to ***OAuth & Access scopes*** section and copy the ***Client ID***.
-15. Enter the name for your credentials in the ***Credentials Name*** field in the 'Pipedrive OAuth2 API' credentials in n8n.
-16. Paste the client ID in the ***Client ID*** field in the 'Pipedrive OAuth2 API' credentials in n8n.
+15. Enter the name for your credentials in the ***Credentials Name*** field in the 'Pipedrive OAuth2 API' credentials in Workflow².
+16. Paste the client ID in the ***Client ID*** field in the 'Pipedrive OAuth2 API' credentials in Workflow².
 17. On the Pipedrive application page, click on the ***Show*** button next to ***Client Secret***.
 18. Copy the ***Client Secret***.
-19. Paste the client secret in the ***Client Secret*** field in the 'Pipedrive OAuth2 API' credentials in n8n.
-20. Click on the circle button in the OAuth section to connect a Pipedrive account to n8n.
+19. Paste the client secret in the ***Client Secret*** field in the 'Pipedrive OAuth2 API' credentials in Workflow².
+20. Click on the circle button in the OAuth section to connect a Pipedrive account to Workflow².
 21. Click on the ***Save*** button to save your credentials.
 
 The following video demonstrates the steps mentioned above.
@@ -49,8 +49,8 @@ The following video demonstrates the steps mentioned above.
 3. Select 'Personal preferences' from the dropdown list.
 4. Click on the ***API*** tab.
 5. Click on the ***Copy*** button to copy the API Token.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Pipedrive API' credentials in n8n.
-7. Paste the API token in the ***API Token*** field in the 'Pipedrive API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Pipedrive API' credentials in Workflow².
+7. Paste the API token in the ***API Token*** field in the 'Pipedrive API' credentials in Workflow².
 8. Click on the ***Create*** button to save your credentials.
 
 The following video demonstrates the steps mentioned above.

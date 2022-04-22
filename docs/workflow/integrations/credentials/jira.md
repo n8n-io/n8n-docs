@@ -16,4 +16,4 @@ Create a [Jira](https://www.JIRA.com/) account.
 4. Click on Security tab.
 5. Click on Manage API Tokens.
 6. Create API token.
-7. Use the API token with Jira node credentials in n8n. Your email and the domain under which the Jira account is under must also be included.
+7. Use the API token with Jira node credentials in Workflow². Your email and the domain under which the Jira account is under must also be included.

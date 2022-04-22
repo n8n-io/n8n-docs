@@ -17,8 +17,8 @@ Create a [Webflow](https://webflow.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Webflow account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Webflow account to Workflow².
 
 
 1. Access your Webflow dashboard.
@@ -32,8 +32,8 @@ Create a [Webflow](https://webflow.com/) account.
 9. Enter the homepage URL of your application in the ***Application Homepage*** field.
 10. Click on the ***Create*** button.
 11. Click on the ***View Details*** button to get the ***Client Id*** and ***Client Secret***.
-12. Use these credentials with your 'Webflow OAuth2 API' credentials in n8n.
-13. Click on the circle button in the OAuth section of Doc² to connect a Webflow account to n8n.
+12. Use these credentials with your 'Webflow OAuth2 API' credentials in Workflow².
+13. Click on the circle button in the OAuth section of Doc² to connect a Webflow account to Workflow².
 14. Click on the ***Save*** button to save your credentials.
 
 ![Getting Webflow OAuth credentials](/_images/integrations/credentials/webflow/using-oauth.gif)
@@ -46,6 +46,6 @@ Create a [Webflow](https://webflow.com/) account.
 4. Click on Project Settings.
 5. Click on the Integrations tab.
 6. Scroll down and click generate API token.
-7. Use the api token with your Webflow node credentials in n8n.
+7. Use the api token with your Webflow node credentials in Workflow².
 
 ![Getting Webflow credentials](/_images/integrations/credentials/webflow/using-access-token.gif)

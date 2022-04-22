@@ -13,7 +13,7 @@
 
 ## Example Usage
 
-This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/786) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/786) on Workflow².io. This example usage workflow uses the following nodes.
 - [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [Google Cloud Natural Language]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)

@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes with Rocket.Ch
 3. Click on My Account.
 4. Click on Personal Access Tokens from the panel on the left.
 5. Enter a name for your Personal access token and click on the *Add* button.
-6. Copy the *Token* and enter that in the *Auth Key* field in n8n.
-7. Copy the *User Id* and enter that in the *User Id* field in n8n.
+6. Copy the *Token* and enter that in the *Auth Key* field in Workflow².
+7. Copy the *User Id* and enter that in the *User Id* field in Workflow².
 
 ![Getting Rocket.Chat credentials](/_images/integrations/credentials/rocketchat/using-access-token.gif)

@@ -18,6 +18,6 @@ Create a [Vonage](https://vonage.com) account.
 
 1. Access the [Vonage API dashboard](https://dashboard.nexmo.com/).
 2. Copy the ***API key*** and the ***API Secret*** from the dashboard.
-3. Use this ***API Key*** and ***API Secret*** with your Vonage node credentials in n8n.
+3. Use this ***API Key*** and ***API Secret*** with your Vonage node credentials in Workflow².
 
 ![Getting Vonage credentials](/_images/integrations/credentials/vonage/using-api.gif)

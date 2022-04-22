@@ -19,7 +19,7 @@ The Read PDF node is used to read data from PDF documents and extract its conten
 
 The Read PDF node has one property:
 
-1. *Binary Property* field: This field specifies the name of the data property used to read the PDF file in n8n.
+1. *Binary Property* field: This field specifies the name of the data property used to read the PDF file in Workflow².
 
 ## Example Usage
 

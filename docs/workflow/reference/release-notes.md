@@ -1327,7 +1327,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [QuickBooks:](/workflow/integrations/nodes/n8n-nodes-base.quickbooks/) Added the Transaction resource and Get Report operation.
 
 ### Core Functionality 
-- Integrated [Nodelinter](/workflow/integrations/creating-nodes/code/node-linter/) in n8n.
+- Integrated [Nodelinter](/workflow/integrations/creating-nodes/code/node-linter/) in Workflow².
 - Fix to add a trailing slash (`/`) to all webhook URLs for proper functionality.
 
 ### Bug fixes 
@@ -2276,7 +2276,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
 - Google Drive: Fixed the default value for the Send Notification Email option
 - Added support for expressions to credentials
-- Removed support for MongoDB as a database for n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
+- Removed support for MongoDB as a database for Workflow². For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
 
 ## n8n@0.103.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
@@ -2585,7 +2585,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Bug Fixes
-- Google Translate: Fixed an issue with the rendering of the image in n8n.io
+- Google Translate: Fixed an issue with the rendering of the image in Workflow².io
 
 ## n8n@0.89.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.1...n8n@0.89.2) for this version.<br />
@@ -2674,7 +2674,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
 - ClickUp Trigger: Fixed issue with creating credentials
 - Pipedrive Trigger: Fixed issue with adding multiple webhooks to Pipedrive
-- The link.fish Scrape node has been removed from n8n. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
+- The link.fish Scrape node has been removed from Workflow². For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
 
 ## n8n@0.86.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.0...n8n@0.86.1) for this version.<br />

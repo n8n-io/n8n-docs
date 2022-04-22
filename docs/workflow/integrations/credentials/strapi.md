@@ -21,6 +21,6 @@ Install [Strapi](https://strapi.io/documentation/v3.x/getting-started/installati
 10. Click on ***ON*** for the ***Confirmed*** field.
 11. Select the role that you set the permissions for in the previous steps from the ***Role*** dropdown list.
 12. Click on the ***Save*** button.
-13. Use this email, password, and the URL of your Strapi instance with your Strapi node credentials in n8n.
+13. Use this email, password, and the URL of your Strapi instance with your Strapi node credentials in Workflow².
 
 ![Getting Strapi credentials](/_images/integrations/credentials/strapi/using-api.gif)

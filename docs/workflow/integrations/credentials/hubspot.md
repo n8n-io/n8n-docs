@@ -19,8 +19,8 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your HubSpot account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your HubSpot account to Workflow².
 
 
 !!! warning "⚠ HubSpot old accounts"
@@ -32,7 +32,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 3. Click on the **Create app** button in the top right.
 4. Specify an app name in the **Public app name** field.
 5. Click on the 'Auth' tab.
-6. Use the provided **Client ID** and the **Client secret** with your HubSpot OAuth2 API credentials in n8n.
+6. Use the provided **Client ID** and the **Client secret** with your HubSpot OAuth2 API credentials in Workflow².
 7. If you are using the [HubSpot Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/) node, copy the **App ID** along with the information in the previous step.
 8. Copy your OAuth Callback URL from the 'Create New Credentials' screen in Doc² and paste in the **Redirect URL** section.
 9. In the Scopes section, select the following scopes in the **Find a scope** search box:
@@ -59,7 +59,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
         * forms,
         * tickets,
 11. Click on the **Save** button to save your settings in HubSpot.
-12. Back in Doc², click on the circle button in the OAuth section to connect your HubSpot account to n8n.
+12. Back in Doc², click on the circle button in the OAuth section to connect your HubSpot account to Workflow².
 13. Click the **Save** button to save your credentials.
 
 
@@ -69,13 +69,13 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 2. Click on the gear icon on the top right.
 3. Click on **Integrations** and then **API key**.
 4. Click on the **Create key** button.
-5. Use the key with HubSpot node credentials in n8n.
+5. Use the key with HubSpot node credentials in Workflow².
 
 
 ## Using APP Token
 
 1. Follow the instructions in the [Private Apps Documentation](https://developers.hubspot.com/docs/api/private-apps) to get your access token.
-2. Set the access token as the key in your HubSpot credentials in n8n.
+2. Set the access token as the key in your HubSpot credentials in Workflow².
 
 
 ## Using Developer API Key (for HubSpot Trigger node)
@@ -84,4 +84,4 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 2. Click on **Apps** in the top bar.
 3. Click on the **Get HubSpot API key** button.
 4. Click on the **Show key** button.
-5. Use the displayed Developer API key with your HubSpot Trigger node credentials in n8n.
+5. Use the displayed Developer API key with your HubSpot Trigger node credentials in Workflow².

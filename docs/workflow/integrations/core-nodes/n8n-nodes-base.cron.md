@@ -27,7 +27,7 @@ The 'Every X' option allows you to specify the workflow to be triggered every x 
 
 ### How to generate a custom Cron expression?
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the ***Cron Expression*** field in n8n.
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the ***Cron Expression*** field in Workflow².
 
 ### Why there are six asterisks (*) in the Cron Expression?
 

@@ -14,7 +14,7 @@ Create a [Spontit](https://www.spontit.com/) account.
 3. Click on ***+ Create New Key*** to generate a new API Key.
 4. Click on the ***PROFILE*** tab on the navigation menu.
 5. Copy the displayed username.
-6. Use this ***API Key*** and ***Username*** with your Spontit credentials in n8n.
+6. Use this ***API Key*** and ***Username*** with your Spontit credentials in Workflow².
 
 ![Getting Spontit credentials](/_images/integrations/credentials/spontit/using-api-key.gif)
 

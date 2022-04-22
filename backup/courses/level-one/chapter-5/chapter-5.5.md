@@ -13,7 +13,7 @@ To calculate data and add more functionality to your workflows you can use the *
     Doc² also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](/data/code/).
 
 
-Before going into the setup of the Function node, you should first learn the [data structure](/data/data-structure/) of n8n. This is important if you want to:
+Before going into the setup of the Function node, you should first learn the [data structure](/data/data-structure/) of Workflow². This is important if you want to:
 
 - create your own node
 - write custom expressions

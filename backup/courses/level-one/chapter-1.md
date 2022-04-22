@@ -1,12 +1,12 @@
 # Navigating the Editor UI
 
-In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in n8n.
+In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in Workflow².
 
 
 
 ## Getting started
 
-First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/), choose the option that best suits your skills and needs.
+First of all, you need to get Workflow². There are different [ways to set up n8n](/hosting/options/), choose the option that best suits your skills and needs.
 
 **This course was developed on Doc² version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
 
@@ -29,7 +29,7 @@ Under the Doc² logo in the upper left corner you will notice a round arrow icon
 
 There are four main sections in the left menu:
 
-- *Admin Panel*: Only for users on n8n.cloud, used to access the management Dashboard.
+- *Admin Panel*: Only for users ondoc2app.cloudintegration.eu, used to access the management Dashboard.
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions, which are complete runs of a workflow from the first to the last node.

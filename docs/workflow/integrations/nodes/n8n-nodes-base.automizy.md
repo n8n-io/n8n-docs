@@ -23,7 +23,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a new list, add a new contact to that list, update the contact, and get all contacts in the list using the Automizy node. You can also find the [workflow](https://n8n.io/workflows/720) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a new list, add a new contact to that list, update the contact, and get all contacts in the list using the Automizy node. You can also find the [workflow](https://n8n.io/workflows/720) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Automizy]()
 

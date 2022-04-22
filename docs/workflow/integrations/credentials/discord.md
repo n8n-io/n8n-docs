@@ -22,7 +22,7 @@ Create a [Discord](https://www.discord.com/) account.
 1. Access this [Discord Developer Portal](https://discord.com/developers/applications).
 2. Click on "New Application".
 3. Enter the name and click "Create".
-4. Use Client Secret and Client ID in your Discord node credentials in n8n.
+4. Use Client Secret and Client ID in your Discord node credentials in Workflow².
 5. Enter Doc² provided redirect URL in the configuration. ![Redirect URL Explanation here](/).
 
 

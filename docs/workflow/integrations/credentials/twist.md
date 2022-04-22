@@ -25,9 +25,9 @@ Create a [Twist](https://twist.com/) account.
 10. Click on ***OAuth Authentication*** from the left sidebar.
 11. Copy the 'OAuth Callback URL' provided in the Twist OAuth2 API credentials in Doc² and paste it in the ***OAuth 2 redirect URL*** field on your Twist integration page.
 12. Click on the ***Update integration*** button.
-13. Use the ***Client ID*** and ***Client Secret*** with your Twist node credentials in n8n.
-14. Click on the circle button in the OAuth section to connect a Twist account to n8n.
-15. Click the ***Save*** button to save your credentials in n8n.
+13. Use the ***Client ID*** and ***Client Secret*** with your Twist node credentials in Workflow².
+14. Click on the circle button in the OAuth section to connect a Twist account to Workflow².
+15. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting Twist credentials](/_images/integrations/credentials/twist/using-oauth.gif)
 

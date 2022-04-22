@@ -13,6 +13,6 @@ Create a [ProfitWell](https://www.profitwell.com/) account.
 2. Click on the gears icon on the left panel and select 'Integrations'.
 3. Click on the ***API KEYS/DEV KIT*** tab.
 4. Copy the ***YOUR PRIVATE KEY*** displayed.
-5. Use this ***Private Key*** with your ProfitWell node credentials in n8n.
+5. Use this ***Private Key*** with your ProfitWell node credentials in Workflow².
 
 ![Getting ProfitWell credentials](/_images/integrations/credentials/profitwell/using-api.gif)

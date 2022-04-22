@@ -1,6 +1,6 @@
 # Creating Your First Node
 
-Today, you will learn how to create your first node for n8n.
+Today, you will learn how to create your first node for Workflow².
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ n8n is built from four main packages:
 
 All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
-- The folder `nodes`, contains all the nodes in n8n.
+- The folder `nodes`, contains all the nodes in Workflow².
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
@@ -237,7 +237,7 @@ Let’s make the Node Editor View ask for these parameters:
 },
 ```
 
-2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running Workflow².
 3. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -290,7 +290,7 @@ We can add them below the email parameter and set `required: false`. However, if
 	},
 	```
 
-2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
+2. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running Workflow².
 3. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -348,7 +348,7 @@ export class FriendGridApi implements ICredentialType {
 	},
 	```
 
-8. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
+8. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running Workflow².
 9. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -416,7 +416,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-3. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running n8n.
+3. Stop the current Doc² process by pressing ctrl + c in the terminal in which you are running Workflow².
 4. Run again, by entering the following in the terminal.
 	```bash
 	npm run dev
@@ -428,7 +428,7 @@ If everything went well, you should see the following.
 
 ![Creating a contact in FriendGrid with n8n](/_images/integrations/creating-nodes/code/create-contact-friendgrid.png)
 
-Now we can successfully create contacts in FriendGrid from n8n.
+Now we can successfully create contacts in FriendGrid from Workflow².
 
 ## Processing multiples items
 

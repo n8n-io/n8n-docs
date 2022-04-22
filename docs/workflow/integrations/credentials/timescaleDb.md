@@ -10,4 +10,4 @@ An available instance of TimescaleDB.
 ## Using Database Connection
 
 1. Retrieve your TimescaleDB credentials and connection parameters.
-2. Use the credentials and connection parameters with your TimescaleDB node credentials in n8n.
+2. Use the credentials and connection parameters with your TimescaleDB node credentials in Workflow².

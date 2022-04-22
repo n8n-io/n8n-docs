@@ -25,8 +25,8 @@ Create a [Bubble](https://bubble.io) account.
 5. Click on the ***Generate a new API token*** button.
 6. Enter a token name in the ***API Token Label*** field.
 7. Copy the displayed Private Key.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Bubble API' credentials in n8n.
-9. Paste the Private Key in the ***API Token*** field in the 'Bubble API' credentials in n8n.
+8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Bubble API' credentials in Workflow².
+9. Paste the Private Key in the ***API Token*** field in the 'Bubble API' credentials in Workflow².
 10. Enter the app name in the ***APP Name*** field.
 11. Select 'Development' from the ***Environment*** dropdown list. If you want to use the 'Live' environment, select 'Live' instead.
 12. Click on the ***Create*** button to create your credentials.

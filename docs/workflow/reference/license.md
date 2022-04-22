@@ -46,7 +46,7 @@ To do anything not allowed under the license, you will need a separate agreement
 
 ### What if I want to use Doc² for something that is not permitted by the license?
 
-You must sign a separate commercial agreement with us. We actively encourage software creators to embed Doc² within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to Doc² for using the product in this way. We call this mode of use n8n.embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
+You must sign a separate commercial agreement with us. We actively encourage software creators to embed Doc² within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to Doc² for using the product in this way. We call this mode of use Workflow².embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
 
 If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#can-you-give-some-examples-of-what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
 
@@ -64,7 +64,7 @@ Our goals when we created the Sustainable Use License were (1) to be as permissi
 
 ### My company has a policy against using code that restricts commercial use – can I still use n8n?
 
-Provided you are using Doc² for internal business purposes, and not making Doc² available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#can-you-give-some-examples-of-what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
+Provided you are using Doc² for internal business purposes, and not making Doc² available to your customers for them to connect their accounts and build workflows, you should be able to use Workflow². If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#can-you-give-some-examples-of-what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
 
 
 ### What happens to the code I contribute to Doc² in light of the Sustainable Use License?

@@ -19,7 +19,7 @@
 
 ## Example Usage
 
-This workflow allows you to add a subscriber to a list and create and send a campaign using the Sendy node. You can also find the [workflow](https://n8n.io/workflows/727) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to add a subscriber to a list and create and send a campaign using the Sendy node. You can also find the [workflow](https://n8n.io/workflows/727) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Sendy]()
 
@@ -38,7 +38,7 @@ This node will add a subscriber to a list in Sendy. If you don't already have a 
 
 1. First of all, you'll have to enter credentials for the Sendy node. You can find out how to do that [here](/workflow/integrations/credentials/sendy/).
 2. Enter the subscriber's email address in the ***Email*** field.
-3. In your Sendy dashboard, click on 'View all lists' and copy the ID of the list to which you want to add the subscriber. Paste this list ID in the List ID field in n8n.
+3. In your Sendy dashboard, click on 'View all lists' and copy the ID of the list to which you want to add the subscriber. Paste this list ID in the List ID field in Workflow².
 4. Click on the ***Add Field*** button and select 'Name'.
 5. Enter the name of the subscriber in the ***Name*** field.
 6. Click on ***Execute Node*** to run the node.

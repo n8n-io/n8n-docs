@@ -9,8 +9,8 @@ Create a [Intuit developer](https://developer.intuit.com/) account.
 
 ## Using OAuth
 
-<!-- !!! tip ⛅️ Note for n8n.cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your QuickBooks account to n8n.
+<!-- !!! tip ⛅️ Note fordoc2app.cloudintegration.eu users
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your QuickBooks account to Workflow².
  -->
 
 1. Open the Intuit Developer [dashboard](https://developer.intuit.com/app/developer/dashboard) page.
@@ -21,17 +21,17 @@ Create a [Intuit developer](https://developer.intuit.com/) account.
 6. Click on the ***Create app*** button.
 7. Click on ***Keys & OAuth*** under the ***Development*** section.
 8. Scroll down to the ***Redirect URIs*** section and click on the ***Add URI*** button.
-9. Copy the 'OAuth Callback URL' provided in the 'QuickBooks OAuth2 API' credentials in n8n.
+9. Copy the 'OAuth Callback URL' provided in the 'QuickBooks OAuth2 API' credentials in Workflow².
 10. Paste the URL in the ***Link*** field.
 11. Click on the ***Save*** button.
 12. Copy the displayed ***Client ID***.
-13. Enter a name for your credentials in the ***Credentials Name*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
-14. Paste the client ID in the ***Client ID*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
+13. Enter a name for your credentials in the ***Credentials Name*** field in the 'QuickBooks OAuth2 API' credentials in Workflow².
+14. Paste the client ID in the ***Client ID*** field in the 'QuickBooks OAuth2 API' credentials in Workflow².
 15. Copy the displayed ***Client Secret*** from the Keys page.
-16. Paste the client secret in the ***Client Secret*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
-17. Select 'Sandbox' from the ***Environment*** dropdown list in the 'QuickBooks OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a QuickBooks account to n8n.
-19. Click the ***Save*** button to save your credentials in n8n.
+16. Paste the client secret in the ***Client Secret*** field in the 'QuickBooks OAuth2 API' credentials in Workflow².
+17. Select 'Sandbox' from the ***Environment*** dropdown list in the 'QuickBooks OAuth2 API' credentials in Workflow².
+18. Click on the circle button in the OAuth section to connect a QuickBooks account to Workflow².
+19. Click the ***Save*** button to save your credentials in Workflow².
 
 **Note:** To build the application in production, you will have to fulfill all the requirements mentioned by Intuit. You can learn more on Intuit's [documentation](https://developer.intuit.com/app/developer/qbo/docs/go-live).
 

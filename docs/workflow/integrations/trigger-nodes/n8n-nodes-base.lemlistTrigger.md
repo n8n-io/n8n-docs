@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/984) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/984) on Workflow².io. This example usage workflow would use the following node.
 - [Lemlist Trigger]()
 - [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 

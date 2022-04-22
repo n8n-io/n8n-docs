@@ -19,8 +19,8 @@ Create a [Notion](https://notion.so) account.
 7. Click on the ***Submit*** button.
 8. Click on ***Show*** next to the ***Internal Integration Token*** field.
 9. Click on ***Copy*** to copy the displayed token.
-10. Enter the name for your credentials in the ***Credentials Name*** field in the 'Notion API' credentials in n8n.
-11. Paste the token in the ***API Key*** field in the 'Notion API' credentials in n8n.
+10. Enter the name for your credentials in the ***Credentials Name*** field in the 'Notion API' credentials in Workflow².
+11. Paste the token in the ***API Key*** field in the 'Notion API' credentials in Workflow².
 12. Click on the ***Create*** button to create your credentials.
 
 **Note:** Share the specific pages with the app for those pages to be accessed using the API.

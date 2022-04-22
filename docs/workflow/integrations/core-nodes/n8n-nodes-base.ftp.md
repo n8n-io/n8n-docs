@@ -33,7 +33,7 @@ The FTP node is useful to access and upload files to an FTP server.
 
 ## Example Usage
 
-This workflow allows you to upload a file to an FTP server and get a list of all files using the FTP node. You can also find the [workflow](https://n8n.io/workflows/663) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to upload a file to an FTP server and get a list of all files using the FTP node. You can also find the [workflow](https://n8n.io/workflows/663) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [FTP]()

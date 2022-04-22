@@ -20,8 +20,8 @@ Create an [APITemplate.io](https://apitemplate.io/) account.
 1. Open your APITemplate.io [dashboard](https://app.apitemplate.io).
 2. Click on ***API Integration*** on the left sidebar.
 3. Click on the ***Copy text*** button to copy the API key.
-4. Enter a name for your credentials in the ***Credentials Name*** field in the 'APITemplate.io API' credentials in n8n.
-5. Paste the API key in the ***API Key*** field in the 'APITemplate.io API' credentials in n8n.
+4. Enter a name for your credentials in the ***Credentials Name*** field in the 'APITemplate.io API' credentials in Workflow².
+5. Paste the API key in the ***API Key*** field in the 'APITemplate.io API' credentials in Workflow².
 6. Click on the ***Create*** button to create the credentials.
 
 

@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when an email is bounced or opened using the Postmark Trigger Node. You can also find the [workflow](https://n8n.io/workflows/660) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when an email is bounced or opened using the Postmark Trigger Node. You can also find the [workflow](https://n8n.io/workflows/660) on Workflow².io. This example usage workflow would use the following node.
 - [Postmark Trigger]()
 
 The final workflow should look like the following image.

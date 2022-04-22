@@ -17,17 +17,17 @@ Create a [Zendesk](https://zendesk.com/) account.
 5. Click on the ***Add OAuth client*** button.
 6. Enter the client name in the ***Client Name*** field.
 7. Enter a description in the ***Description*** field.
-8. Copy the 'OAuth Callback URL' provided in the 'Zendesk OAuth2 API' credentials in n8n.
+8. Copy the 'OAuth Callback URL' provided in the 'Zendesk OAuth2 API' credentials in Workflow².
 9. Paste it in the ***Redirect URLs*** field on the Zendesk API credentials page.
 10. Click on the ***Save*** button.
 11. Click on the ***OK*** button on the ***Please store the secret that will appear*** pop-up.
 12. Scroll down to the ***Secret*** section and copy the displayed ***Secret***.
-13. Paste this secret in the ***Client Secret*** field in the 'Zendesk OAuth2 API' credentials in n8n.
+13. Paste this secret in the ***Client Secret*** field in the 'Zendesk OAuth2 API' credentials in Workflow².
 14. Copy the ***Unique identifier*** from the Zendesk API credentials page.
-15. Paste it in the ***Client ID*** field in the 'Zendesk OAuth2 API' credentials in n8n.
-16. Enter your Zendesk subdomain in the ***Subdomain*** field in the 'Zendesk OAuth2 API' credentials in n8n. Refer to the [FAQs](#how-do-i-get-my-zendesk-subdomain) to learn more about subdomain.
-17. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a Zendesk account to n8n.
+15. Paste it in the ***Client ID*** field in the 'Zendesk OAuth2 API' credentials in Workflow².
+16. Enter your Zendesk subdomain in the ***Subdomain*** field in the 'Zendesk OAuth2 API' credentials in Workflow². Refer to the [FAQs](#how-do-i-get-my-zendesk-subdomain) to learn more about subdomain.
+17. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk OAuth2 API' credentials in Workflow².
+18. Click on the circle button in the OAuth section to connect a Zendesk account to Workflow².
 19. Click on the ***Save*** button to save your credentials.
 
 The following video demonstrates the steps mentioned above.
@@ -46,7 +46,7 @@ The following video demonstrates the steps mentioned above.
 6. Enter a description in the ***API token description*** field.
 7. Click on the ***Copy*** button to copy the API token.
 8. Click on the ***Save*** button.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk API' credentials in n8n.
+9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk API' credentials in Workflow².
 10. Enter your Zendesk subdomain in the ***Subdomain*** field. Refer to the [FAQs](#how-do-i-get-my-zendesk-subdomain) to learn more about subdomain.
 11. Enter your Zendesk email address in the ***Email*** field.
 12. Paste the ***API token*** in the ***API Token*** field.

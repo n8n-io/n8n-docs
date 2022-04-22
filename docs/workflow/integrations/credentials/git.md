@@ -9,10 +9,10 @@ Create an account on [GitHub](https://github.com), [GitLab](https://about.gitlab
 
 ## Using Username and Password
 
-1. Enter a name for your credentials in the ***Credentials Name*** field in the 'Git' credentials in n8n.
-2. Enter your GitHub, GitLab (or similar platforms) username in the ***Username*** field in the 'Git' credentials in n8n.
-3. Enter your GitHub, GitLab (or similar platforms) password in the ***Password*** field in the 'Git' credentials in n8n.
-4. Click the ***Create*** button to create your credentials in n8n.
+1. Enter a name for your credentials in the ***Credentials Name*** field in the 'Git' credentials in Workflow².
+2. Enter your GitHub, GitLab (or similar platforms) username in the ***Username*** field in the 'Git' credentials in Workflow².
+3. Enter your GitHub, GitLab (or similar platforms) password in the ***Password*** field in the 'Git' credentials in Workflow².
+4. Click the ***Create*** button to create your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

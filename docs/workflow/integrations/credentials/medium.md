@@ -21,9 +21,9 @@ You can use these credentials to authenticate the following nodes with Medium.
 8. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
 9. Copy the 'OAuth Callback URL' provided in the Medium OAuth2 API credentials in Doc² and paste it in the 'Callback URLs' field in the Medium application page.
 10. Click on 'Save' to generate the credentials.
-11. Copy and paste ***Client ID*** and ***Client Secret*** in the Medium OAuth2 API credentials in n8n.
-12. Click on the circle button in the OAuth section to connect a Medium account to n8n.
-13. Click the ***Save*** button to save your credentials in n8n.
+11. Copy and paste ***Client ID*** and ***Client Secret*** in the Medium OAuth2 API credentials in Workflow².
+12. Click on the circle button in the OAuth section to connect a Medium account to Workflow².
+13. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting Medium OAuth credentials](/_images/integrations/credentials/medium/using-oauth.gif)
 
@@ -35,7 +35,7 @@ You can use these credentials to authenticate the following nodes with Medium.
 4. Select 'Integration tokens' from the menu on the left.
 5. Enter a description for your token in the field.
 6. Click on the 'Get integration token' button.
-7. Copy and paste ***Token*** in the Medium API credentials in n8n.
-8. Click the ***Save*** button to save your credentials in n8n.
+7. Copy and paste ***Token*** in the Medium API credentials in Workflow².
+8. Click the ***Save*** button to save your credentials in Workflow².
 
 ![Getting Medium Access Token](/_images/integrations/credentials/medium/using-access-token.gif)

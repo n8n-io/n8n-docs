@@ -11,8 +11,8 @@ Create a [GitHub](https://github.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to Workflow².
 
 
 1. Open your GitHub [dashboard](https://github.com).
@@ -25,13 +25,13 @@ Create a [GitHub](https://github.com/) account.
 8. Copy the ***OAuth Callback URL*** from Doc² and paste it in the ***Authorization callback URL*** field.
 9. Click on the ***Register application*** button.
 10. Copy the displayed 'Client ID'.
-11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github OAuth2 API' credentials in n8n.
-12. Paste the client ID in the ***Client ID*** field in the 'Github OAuth2 API' credentials in n8n.
+11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github OAuth2 API' credentials in Workflow².
+12. Paste the client ID in the ***Client ID*** field in the 'Github OAuth2 API' credentials in Workflow².
 13. On your application page, click on the ***Generate a new client secret*** button.
 14. Copy the displayed 'Client Secret'.
-15. Paste the client secret in the ***Client Secret*** field in the 'Github OAuth2 API' credentials in n8n.
-16. Click on the circle button in the OAuth section to connect a GitHub account to n8n.
-17. Click the ***Save*** button to save your credentials in n8n.
+15. Paste the client secret in the ***Client Secret*** field in the 'Github OAuth2 API' credentials in Workflow².
+16. Click on the circle button in the OAuth section to connect a GitHub account to Workflow².
+17. Click the ***Save*** button to save your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 
@@ -57,10 +57,10 @@ The following video demonstrates the steps to authenticate the GitHub node on [n
 8. Select the relevant scopes from the ***Select scopes*** section.
 9. Scroll down to the bottom and click on the ***Generate token*** button.
 10. Copy the displayed 'Personal access token'.
-11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github API' credentials in n8n.
-12. Enter your GitHub username in the ***User*** field in the 'Github API' credentials in n8n.
-13. Paste the access token in the ***Access Token*** field in the 'Github API' credentials in n8n.
-14. Click the ***Create*** button to save your credentials in n8n.
+11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Github API' credentials in Workflow².
+12. Enter your GitHub username in the ***User*** field in the 'Github API' credentials in Workflow².
+13. Paste the access token in the ***Access Token*** field in the 'Github API' credentials in Workflow².
+14. Click the ***Create*** button to save your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 

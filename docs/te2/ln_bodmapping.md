@@ -21,9 +21,9 @@ Open Shared Folders, choose your Batch Class and click on ln-mapping-files
 
 
 
-![TE² - Infor BOD Mapping - 2 ](/_images/te/image-28.png)
+![TE² - Infor BOD Mapping - 2 ](/_images/te/image-32.png)
 
 now open LN\_SupplierInvoice\_BODmappings.properties by clicking on the type icon
 
-![](/_images/doc2/image-35.png)
+
 

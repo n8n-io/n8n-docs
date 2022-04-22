@@ -21,7 +21,7 @@ Create a [Beeminder](https://Beeminder.io/account) account.
 3. Select 'ACCOUNT SETTINGS' from the dropdown list.
 4. Scroll up and click on the ***APPS & API*** tab.
 5. Copy the ***Auth Token*** displayed in the ***API*** section.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Beeminder API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Beeminder API' credentials in Workflow².
 7. Enter your username in the ***User*** field.
 8. Paste the Auth Token in the ***Auth Token*** field.
 9. Click on the ***Save*** button to save your credentials.

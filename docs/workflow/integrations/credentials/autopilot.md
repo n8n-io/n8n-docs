@@ -23,8 +23,8 @@ Create an [Autopilot](https://app.autopilothq.com) account.
 3. Click on ***Autopilot API***.
 4. Click on the ***Generate*** button to create the API key.
 5. Copy the displayed API key.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Autopilot API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Autopilot API' credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Autopilot API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'Autopilot API' credentials in Workflow².
 8. Click on the ***Create*** button to create the credentials.
 
 The following video demonstrates the steps mentioned above.

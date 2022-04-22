@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a form submission occurs in your Webflow website. You can also find the [workflow](https://n8n.io/workflows/651) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a form submission occurs in your Webflow website. You can also find the [workflow](https://n8n.io/workflows/651) on Workflow².io. This example usage workflow would use the following node.
 - [Webflow Trigger]()
 
 The final workflow should look like the following image.

@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a customer is created in Help Scout. You can also find the [workflow](https://n8n.io/workflows/669) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a customer is created in Help Scout. You can also find the [workflow](https://n8n.io/workflows/669) on Workflow².io. This example usage workflow would use the following node.
 - [Help Scout Trigger]()
 
 The final workflow should look like the following image.

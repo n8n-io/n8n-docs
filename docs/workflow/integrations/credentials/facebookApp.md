@@ -21,6 +21,6 @@ Create a [Facebook](https://www.facebook.com/) account.
 8. Access the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
 9. Select your app from the ***Facebook App*** dropdown list on the right sidebar.
 10. Select 'Get App Token' from the ***User or Page*** dropdown list on the right sidebar.
-11. Use the app secret and the generated access token with your Facebook node credentials in n8n.
+11. Use the app secret and the generated access token with your Facebook node credentials in Workflow².
 
 ![Getting Facebook App credentials](/_images/integrations/credentials/facebookapp/using-app-access-token.gif)

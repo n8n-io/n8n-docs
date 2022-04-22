@@ -22,8 +22,8 @@ Create an [UptimeRobot](https://uptimeRobot.com/) account.
 4. Click on ***Create the main API key*** under the ***Main API Key*** section.
 4. Click on ***Create the main API key*** button.
 5. Copy the displayed API key.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'UptimeRobot API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'UptimeRobot API' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'UptimeRobot API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'UptimeRobot API' credentials in Workflow².
 8. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

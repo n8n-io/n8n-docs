@@ -13,6 +13,6 @@ Create a [JotForm](https://www.jotform.com/) account.
 2. Click on the ***API*** tab on the left.
 3. Click on the ***Create New Key*** button.
 4. Change the Permissions to 'Full Access'.
-5. Use the key with JotForm node credentials in n8n.
+5. Use the key with JotForm node credentials in Workflow².
 
 ![Getting JotForm credentials](/_images/integrations/credentials/jotform/using-access-token.gif)

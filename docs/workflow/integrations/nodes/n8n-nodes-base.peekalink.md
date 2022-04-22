@@ -13,7 +13,7 @@
 
 ## Example Usage
 
-This workflow allows you to check if preview for a link is available and return the link preview. You can also find the [workflow](https://n8n.io/workflows/935) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to check if preview for a link is available and return the link preview. You can also find the [workflow](https://n8n.io/workflows/935) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Peekalink]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)

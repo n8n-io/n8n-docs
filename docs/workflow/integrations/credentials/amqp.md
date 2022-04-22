@@ -19,6 +19,6 @@ You need to have a AMQP 1.0 compatible message broker installed.
 
 ## Using ActiveMQ connection
 
-Use your Hostname, Port, User, and Password as the AMQP Sender credential data in n8n.
+Use your Hostname, Port, User, and Password as the AMQP Sender credential data in Workflow².
 
 **Note:** The default username for ActiveMQ is `admin` and the default password is `admin`.

@@ -32,11 +32,11 @@ Create an [AWS](https://aws.amazon.com/) account.
 3. Click on the ***Create New Access Key*** button, under the ***Access keys (access key ID and secret access key)*** section
 4. Click on the ***Show Access Key*** button.
 5. Copy the displayed Access Key ID.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'AWS' credentials in n8n.
-7. Paste the Access Key ID in the ***Access Key ID*** field in the 'AWS' credentials in n8n.
+6. Enter the name for your credentials in the ***Credentials Name*** field in the 'AWS' credentials in Workflow².
+7. Paste the Access Key ID in the ***Access Key ID*** field in the 'AWS' credentials in Workflow².
 8. Copy the secret access key from your AWS console.
-9. Paste the secret access key in the ***Secret Access Key*** field in the 'AWS' credentials in n8n.
-10. Click the ***Create*** button to save your credentials in n8n.
+9. Paste the secret access key in the ***Secret Access Key*** field in the 'AWS' credentials in Workflow².
+10. Click the ***Create*** button to save your credentials in Workflow².
 
 **Note:** If you're running your AWS instance in a different region, please update the ***Region*** field accordingly.
 

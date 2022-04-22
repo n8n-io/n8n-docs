@@ -17,8 +17,8 @@ Create a [ClickUp](https://www.clickup.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to Workflow².
 
 
 1. Open your ClickUp [dashboard](https://app.clickup.com).
@@ -27,16 +27,16 @@ Create a [ClickUp](https://www.clickup.com/) account.
 4. Click on ***ClickUp API***.
 5. Click on the ***+ Create an App*** button under the ***ClikcUp API*** section.
 6. Enter the name of your app in the ***App Name*** field.
-7. Copy the 'OAuth Callback URL' provided in the 'ClickUp OAuth2 API' credentials in n8n.
+7. Copy the 'OAuth Callback URL' provided in the 'ClickUp OAuth2 API' credentials in Workflow².
 8. Paste it in the ***Redirect URL(s)*** field.
 9. Click on the ***Create App*** button.
 10. Copy the displayed client ID.
-11. Enter a name for your credentials in the ***Credentials Name*** field in the 'ClickUp OAuth2 API' credentials in n8n.
-12. Paste the client ID in the ***Client ID*** field in the 'ClickUp OAuth2 API' credentials in n8n.
+11. Enter a name for your credentials in the ***Credentials Name*** field in the 'ClickUp OAuth2 API' credentials in Workflow².
+12. Paste the client ID in the ***Client ID*** field in the 'ClickUp OAuth2 API' credentials in Workflow².
 13. Copy the client secret from ClickUp.
-14. Paste the client secret in the ***Client Secret*** field in the 'ClickUp OAuth2 API' credentials in n8n.
-15. Click on the circle button in the OAuth section to connect a ClickUp account to n8n.
-16. Click the ***Save*** button to save your credentials in n8n.
+14. Paste the client secret in the ***Client Secret*** field in the 'ClickUp OAuth2 API' credentials in Workflow².
+15. Click on the circle button in the OAuth section to connect a ClickUp account to Workflow².
+16. Click the ***Save*** button to save your credentials in Workflow².
 
 The following video demonstrates the steps mentioned above.
 
@@ -57,8 +57,8 @@ The following video demonstrates the steps to authenticate the ClickUp node on [
 3. Click on ***Apps*** under your user profile.
 4. Click on the ***Generate*** button under the ***API Token*** section.
 5. Click on the ***Copy*** button to copy the token.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'ClickUp API' credentials in n8n.
-7. Paste the token in the ***Access Token*** field in the 'ClickUp API' credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'ClickUp API' credentials in Workflow².
+7. Paste the token in the ***Access Token*** field in the 'ClickUp API' credentials in Workflow².
 8. Click on the ***Create*** button to create the credentials.
 
 <div class="video-container">

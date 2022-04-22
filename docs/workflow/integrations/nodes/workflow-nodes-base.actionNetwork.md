@@ -66,7 +66,7 @@ The start node exists by default when you create a new workflow.
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Event** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
-    * **Origin System**: Enter where this event originated. n8n.io in our example.
+    * **Origin System**: Enter where this event originated. Workflow².io in our example.
     * **Title**: Enter the name of your event, July Meetup in our example here.
 3. Enable the **Simple** toggle to return an easier to view response as opposed to the complete raw data.
 4. Use the **Additional Fields** to enter any further details about your event. Here we provided the Start Date.

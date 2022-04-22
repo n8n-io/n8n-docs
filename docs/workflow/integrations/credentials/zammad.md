@@ -19,4 +19,4 @@ You can use these credentials to authenticate the following nodes with Zammad.
 2. Click your avatar in the lower left corner, then click on **Profile**
 3. Select **Token Access** and click **Create**
 4. Enter a name for your new token and pick all required permissions. Click **Create** once done.
-5. Copy the token shown into the **Access Token** field in n8n. Enter the URL of your Zammad instance in the **Base URL** field.
+5. Copy the token shown into the **Access Token** field in Workflow². Enter the URL of your Zammad instance in the **Base URL** field.

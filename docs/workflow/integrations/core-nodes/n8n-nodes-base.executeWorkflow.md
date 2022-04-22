@@ -1,6 +1,6 @@
 # Execute Workflow
 
-The Execute Workflow node is used to run a different workflow on the host machine that runs n8n.
+The Execute Workflow node is used to run a different workflow on the host machine that runs Workflow².
 
 ## Node Reference
 
@@ -16,7 +16,7 @@ The Execute Workflow node has two properties:
 
 ## Example Usage
 
-This workflow allows you to execute another workflow on the host machine using the Execute Workflow node. You can also find the [workflow](https://n8n.io/workflows/588) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to execute another workflow on the host machine using the Execute Workflow node. You can also find the [workflow](https://n8n.io/workflows/588) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Execute Workflow]()
 

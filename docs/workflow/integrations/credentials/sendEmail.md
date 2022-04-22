@@ -17,4 +17,4 @@ Create an email account on a service with SMTP support.
 ## Using SMTP
 
 1. Retrieve your login credentials and SMTP connection parameters.
-2. Use the login credentials and SMTP connection parameters with your Send Email node credentials in n8n.
+2. Use the login credentials and SMTP connection parameters with your Send Email node credentials in Workflow².

@@ -24,7 +24,7 @@ The Workflow Trigger node gets triggered for the workflow that it gets added to.
 
 ## Example Usage
 
-This workflow allows you to receive a message on Mattermost when a workflow is updated. You can also find the [workflow](https://n8n.io/workflows/1059) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to receive a message on Mattermost when a workflow is updated. You can also find the [workflow](https://n8n.io/workflows/1059) on Workflow².io. This example usage workflow uses the following nodes.
 - [Workflow Trigger]()
 - [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
 

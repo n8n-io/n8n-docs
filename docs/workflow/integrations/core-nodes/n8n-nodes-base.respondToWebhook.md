@@ -41,7 +41,7 @@ When using the *Respond to Webhook* node, workflows will behave as follows:
 
 ## Example Usage
 
-This workflow allows serves an HTML page when receiving a GET requests. You can find the complete workflow [here on n8n.io](https://n8n.io/workflows/1306). The example workflow uses the following nodes:
+This workflow allows serves an HTML page when receiving a GET requests. You can find the complete workflow [here on Workflow².io](https://n8n.io/workflows/1306). The example workflow uses the following nodes:
 
 - [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/)
 - [Respond to Webhook]()

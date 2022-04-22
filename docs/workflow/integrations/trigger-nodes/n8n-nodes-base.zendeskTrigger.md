@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates for support in Zendesk. You can also find the [workflow](https://n8n.io/workflows/648) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates for support in Zendesk. You can also find the [workflow](https://n8n.io/workflows/648) on Workflow².io. This example usage workflow would use the following node.
 - [Zendesk Trigger]()
 
 The final workflow should look like the following image.

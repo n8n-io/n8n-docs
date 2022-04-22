@@ -27,9 +27,9 @@ Create a [Wise](https://wise.com/) account.
 8. Click on ***Reveal key*** to reveal the newly generated API key.
 9. Enter your Wise account password in the ***Please enter your password*** field.
 10. Copy the displayed API key.
-11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Wise API' credentials in n8n.
-12. Paste the API key in the ***API Token*** field in the 'Wise API' credentials in n8n.
-13. If you're using a Wise sandbox account, select 'Test' from the ***Environment*** dropdown list in the 'Wise API' credentials in n8n.
+11. Enter the name for your credentials in the ***Credentials Name*** field in the 'Wise API' credentials in Workflow².
+12. Paste the API key in the ***API Token*** field in the 'Wise API' credentials in Workflow².
+13. If you're using a Wise sandbox account, select 'Test' from the ***Environment*** dropdown list in the 'Wise API' credentials in Workflow².
 14. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

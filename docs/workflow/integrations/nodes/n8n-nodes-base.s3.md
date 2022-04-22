@@ -28,7 +28,7 @@ S3 is an object storage service that allows you to block public access to all of
 
 ## Example Usage
 
-This workflow allows you to upload a file to an S3 compatible server and get a list of all the files in a bucket using the S3 node. You can also find the [workflow](https://n8n.io/workflows/674) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to upload a file to an S3 compatible server and get a list of all the files in a bucket using the S3 node. You can also find the [workflow](https://n8n.io/workflows/674) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [S3]()

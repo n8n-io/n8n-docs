@@ -14,7 +14,7 @@ Create a [Contentful](https://www.contentful.com/) account.
 3. Click on ***API keys***.
 4. Click on the ***Add API key*** button in the top right.
 5. Enter a name for the API key in the ***Name*** field and click ***Save***.
-6. Use the displayed ***Space ID***, ***Content Delivery API - access token***, and ***Content Preview API - access token*** with your Contentful node API credentials in n8n.
+6. Use the displayed ***Space ID***, ***Content Delivery API - access token***, and ***Content Preview API - access token*** with your Contentful node API credentials in Workflow².
 7. Click on the ***Save*** button to save your credentials.
 
 ![Getting Contentful credentials](/_images/integrations/credentials/contentful/using-api-key.gif)

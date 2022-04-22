@@ -29,7 +29,7 @@ Of course, since many users take this course and build the same workflow, there 
 
 To share a workflow, follow these steps:
 
-1. Sign in to[ n8n.io](https://n8n.io/login).
+1. Sign in to[ Workflow².io](https://n8n.io/login).
 2. Click on the **_+ Share New Workflow_** button.
 3. Enter the name of your workflow in the **_Name_** field.
 The name should be descriptive for the purpose of the workflow and easy for other users to understand.

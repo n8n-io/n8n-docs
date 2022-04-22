@@ -12,6 +12,6 @@ Create an [sms77](https://sms77.io/) account.
 1. Access your sms77 dashboard.
 2. Click on the gear icon in the bottom left.
 3. Click on the HTTP API tab.
-4. Use the API key provided with your sms77 node credentials in n8n.
+4. Use the API key provided with your sms77 node credentials in Workflow².
 
 ![Getting sms77 credentials](/_images/integrations/credentials/sms77/using-access-token.gif)

@@ -38,7 +38,7 @@ For this specific example, the List ID would be the Model ID.
 2. If the list doesn't have any cards, add a card to the list.
 3. Open the card, add '.json' at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
-5. Copy `idList`and paste it in the *Model ID* field in n8n.
+5. Copy `idList`and paste it in the *Model ID* field in Workflow².
 
 
 ### What is the Model ID?

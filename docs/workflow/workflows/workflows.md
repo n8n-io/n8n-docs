@@ -51,7 +51,7 @@ The following settings are available:
 * **Save Manual Executions**: If executions started from the Editor UI should be saved.
 * **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
 * **Timeout Workflow**: Toggle to enable setting a duration after which the current workflow execution should be cancelled.
-* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (e.g. 3 minutes for Start level).
+* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. Fordoc2app.cloudintegration.eu users a maximum available timeout is enforced for each plan (e.g. 3 minutes for Start level).
 
 ## Failed workflows
 
@@ -84,5 +84,5 @@ Templates provide:
 5. Click **Save** to add the workflow to your workflows.
 
 !!! note "Workflow templates are available in 0.165.0 and above"
-    Workflow templates are available on all flavors of n8n. If you can't access workflow templates in Doc², check that your Doc² version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of Doc² with templates disabled.
+    Workflow templates are available on all flavors of Workflow². If you can't access workflow templates in Doc², check that your Doc² version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of Doc² with templates disabled.
 

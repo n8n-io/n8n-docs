@@ -17,7 +17,7 @@ Create a [Quick Base](https://www.quickbase.com/) account.
 6. Select an app from the ***Assign token to apps*** dropdown list.
 7. Click on the ***Save*** button.
 8. Copy the string of characters located between `https://` and `/db` in your Quick Base URL. This string is the hostname.
-9. Use this ***Hostname*** and ***User Token*** with your Quick Base node credentials in n8n.
+9. Use this ***Hostname*** and ***User Token*** with your Quick Base node credentials in Workflow².
 
 ![Getting Quick Base credentials](/_images/integrations/credentials/quickbase/using-api.gif)
 

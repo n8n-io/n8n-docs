@@ -19,7 +19,7 @@ From your Magento [admin](https://docs.magento.com/user-guide/stores/admin.html)
 5. Select **Save** to confirm your selections.
 6. From the **Integrations** page, click **Activate** for the new Doc² integration.
 7. Select **Allow** to display a dialog screen with the credentials.
-8. Copy the **Access Token** value to use in n8n.
+8. Copy the **Access Token** value to use in Workflow².
 
 From n8n:
 

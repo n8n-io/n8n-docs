@@ -21,6 +21,6 @@ Create a [Salesmate](https://salesmate.io/) account.
 3. Click on My Account.
 4. Click on Access Key in the left panel.
 5. Copy the session key.
-6. Use session key and domain name for your Salesmate node credentials in n8n.
+6. Use session key and domain name for your Salesmate node credentials in Workflow².
 
 ![Getting Salesmate credentials](/_images/integrations/credentials/salesmate/using-access-token.gif)

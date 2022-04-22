@@ -21,7 +21,7 @@ Create a [Clockify](https://www.clockify.com/) account.
 2. Click on your profile.
 3. Click on "Profile Settings".
 4. Scroll down and click on "Generate" under API.
-5. Use selected API key in your Clockify node credentials in n8n.
+5. Use selected API key in your Clockify node credentials in Workflow².
 
 
 ![Getting Clockify credentials](/_images/integrations/credentials/clockify/using-access-token.gif)

@@ -22,7 +22,7 @@ The Split In Batches node saves the original incoming data, and with each iterat
 
 ## Example Usage
 
-This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/)
 - [Split In Batches]()

@@ -18,17 +18,17 @@ Create a [Customer.io](https://customer.io/) account.
 6. Select a workspace from the ***Workspace*** dropdown list.
 7. Click on the ***Create Tracking API Key*** button.
 8. Copy the displayed 'Site ID'.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Customer.io API' credentials in n8n.
-10. Paste the Site ID in the ***Tracking Site ID*** field in the 'Customer.io API' credentials in n8n.
+9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Customer.io API' credentials in Workflow².
+10. Paste the Site ID in the ***Tracking Site ID*** field in the 'Customer.io API' credentials in Workflow².
 11. Copy the 'API Key' from the Manage API Credentials page.
-12. Paste the API key in the ***Tracking API Key*** field in the 'Customer.io API' credentials in n8n.
+12. Paste the API key in the ***Tracking API Key*** field in the 'Customer.io API' credentials in Workflow².
 13. Click on the ***App API Keys*** tab on the Manage API Credentials page.
 14. Click on the ***Create App API Key*** button.
 15. Enter a name for the App API Key in the ***Name*** field.
 16. Select a workspace from the ***Workspace*** dropdown list.
 17. Click on the ***Create App API Key*** button.
 18. Copy the displayed API key.
-19. Paste the API key in the ***App API Key*** field in the 'Customer.io API' credentials in n8n.
+19. Paste the API key in the ***App API Key*** field in the 'Customer.io API' credentials in Workflow².
 20. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

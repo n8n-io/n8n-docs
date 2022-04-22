@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a subscriber unsubscribes in Customer.io. You can also find the [workflow](https://n8n.io/workflows/645) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a subscriber unsubscribes in Customer.io. You can also find the [workflow](https://n8n.io/workflows/645) on Workflow².io. This example usage workflow would use the following node.
 - [Customer.io Trigger]()
 
 The final workflow should look like the following image.

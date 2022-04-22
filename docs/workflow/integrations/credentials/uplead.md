@@ -20,6 +20,6 @@ Create an [UpLead](https://uplead.com/) account.
 2. Click on your name in the bottom left.
 3. Click on Profile.
 4. Scroll down and click on the *Generate New API Key*.
-5. Use the API Key with your UpLead node credentials in n8n.
+5. Use the API Key with your UpLead node credentials in Workflow².
 
 ![Getting UpLead credentials](/_images/integrations/credentials/uplead/using-access-token.gif)

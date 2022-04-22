@@ -11,10 +11,10 @@ Create a [Plivo](https://console.plivo.com/accounts/register/) account.
 
 1. Open your Plivo [console](https://console.plivo.com/dashboard/).
 2. Copy the displayed Auth ID under the ***Account and Payments*** section.
-3. Enter a name for your credentials in the ***Credentials Name*** field in the 'Plivo API' credentials in n8n.
-4. Paste the Auth ID in the ***Auth ID*** field in the 'Plivo API' credentials in n8n.
+3. Enter a name for your credentials in the ***Credentials Name*** field in the 'Plivo API' credentials in Workflow².
+4. Paste the Auth ID in the ***Auth ID*** field in the 'Plivo API' credentials in Workflow².
 5. Copy the Auth Token displayed on your Plivo console.
-6. Paste the Auth Token in the ***Auth Token*** field in the 'Plivo API' credentials in n8n.
+6. Paste the Auth Token in the ***Auth Token*** field in the 'Plivo API' credentials in Workflow².
 7. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

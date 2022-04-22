@@ -23,7 +23,7 @@ Create an [ActiveCampaign](https://www.activecampaign.com/) account.
 2. Click on the gears icon on the bottom left to open the Settings.
 3. Click on the Developer option under the Settings panel.
 4. In the Developer Settings, copy the 'Key' and 'URL' under the ‘API Access’ panel.
-5. Use these credentials with your ActiveCampaign node credentials in n8n.
+5. Use these credentials with your ActiveCampaign node credentials in Workflow².
 
 
 ![Getting ActiveCampaign credentials](/_images/integrations/credentials/activecampaign/using-access-token.gif)

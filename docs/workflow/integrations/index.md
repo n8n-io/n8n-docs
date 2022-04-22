@@ -2,7 +2,7 @@
 
 In Doc², integrations are called nodes.
 
-Nodes are the building blocks of workflows in n8n. They are an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively.
+Nodes are the building blocks of workflows in Workflow². They are an entry point for retrieving data, a function to process data or an exit for sending data. The data process includes filtering, recomposing and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create simple and complex workflows with them intuitively.
 
 ## Node types
 

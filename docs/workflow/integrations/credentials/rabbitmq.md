@@ -10,4 +10,4 @@ You need to have a RabbitMQ broker installed.
 
 ## Using RabbitMQ
 
-Use your Hostname, Port, Username, Password, and Vhost as the RabbitMQ credential data in n8n.
+Use your Hostname, Port, Username, Password, and Vhost as the RabbitMQ credential data in Workflow².

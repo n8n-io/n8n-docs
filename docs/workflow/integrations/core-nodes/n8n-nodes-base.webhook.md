@@ -19,7 +19,7 @@ Webhook nodes can be used as triggers for workflows when we want to receive data
 While building or testing a workflow, we recommend that you use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the Editor UI, which is useful for debugging. Make sure that you click on the *Execute Node* button to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
 
-🎥 The following playlist will help you learn how to use the Webhook node in n8n.
+🎥 The following playlist will help you learn how to use the Webhook node in Workflow².
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed//videoseries?list=PLlET0GsrLUL5niZQDjW56b_AxpvnEZyps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -68,7 +68,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 ## Example Usage
 
-This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on Workflow².io. This example usage workflow uses the following nodes.
 - [Webhook]()
 - [OpenWeatherMap](/workflow/integrations/nodes/n8n-nodes-base.openWeatherMap/)
 - [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
@@ -144,7 +144,7 @@ To get these URLs, follow the steps mentioned below.
 2. If you want the Test URL, click on the ***Test*** tab.
 3. To copy the URL, click on the displayed URL.
 
-Here is a GIF demonstrating how to retrieve the test and production webhook URLs in n8n.
+Here is a GIF demonstrating how to retrieve the test and production webhook URLs in Workflow².
 
 ![Retrieving the Test and Production URLs from the Webhook node](/_images/integrations/core-nodes/webhook/webhook-url.gif)
 

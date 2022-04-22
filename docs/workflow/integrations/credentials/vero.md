@@ -19,6 +19,6 @@ Create a [Vero](https://getvero.com/) account.
 1. Access your Vero dashboard.
 2. Click on the cog icon in the bottom left.
 3. Scroll down to see your Auth token.
-4. Use the auth token with your Vero node credentials in n8n.
+4. Use the auth token with your Vero node credentials in Workflow².
 
 ![Getting Vero credentials](/_images/integrations/credentials/vero/using-access-token.gif)

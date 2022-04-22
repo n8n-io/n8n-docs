@@ -34,7 +34,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://n8n.io/workflows/832) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://n8n.io/workflows/832) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Mattermost]()
 
@@ -105,7 +105,7 @@ To find the Channel ID in Mattermost, follow the steps mentioned below.
 
 1. Select the channel from the left sidebar.
 2. Click on the channel name on the top and select 'View Info' from the dropdown list.
-3. Use the displayed ***ID*** in n8n.
+3. Use the displayed ***ID*** in Workflow².
 
 
 

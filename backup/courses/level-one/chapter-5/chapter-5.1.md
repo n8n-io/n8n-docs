@@ -13,10 +13,10 @@ The first thing we need to do is get data from ABCorp’s old data warehouse.
 
 In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan’s company. Nathan mentioned that it’s not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
-That’s all we need to access the data via the [***HTTP Request node***](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)in n8n.
+That’s all we need to access the data via the [***HTTP Request node***](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)in Workflow².
 
 !!! note "No node for that service?"
-    The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don’t have a dedicated node in n8n.
+    The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don’t have a dedicated node in Workflow².
 
 
 Now, in your Editor UI, add an *HTTP Request node* like you learned in the [lesson *Adding nodes*](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.

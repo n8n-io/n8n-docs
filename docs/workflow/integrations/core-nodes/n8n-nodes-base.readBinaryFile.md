@@ -1,6 +1,6 @@
 # Read Binary File
 
-The Read Binary File node is used to read a file from the host machine that runs n8n.
+The Read Binary File node is used to read a file from the host machine that runs Workflow².
 
 !!! note " Keep in mind"
     1. If you are running Doc² in Docker, your command will run on the Doc² container and not the Docker host.

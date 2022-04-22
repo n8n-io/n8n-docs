@@ -14,7 +14,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a table, insert, and update data in a table in Snowflake. You can also find the [workflow](https://n8n.io/workflows/824) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create a table, insert, and update data in a table in Snowflake. You can also find the [workflow](https://n8n.io/workflows/824) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
 - [Snowflake]()

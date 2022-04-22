@@ -17,6 +17,6 @@ Create a [Facebook](https://www.facebook.com/) account.
 4. Access the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
 5. Select your app under the *Facebook App* dropdown list on the right sidebar.
 6. Click on the 'Generate Access Token' button and login with your facebook account.
-6. Use generated access token with your Facebook node credentials in n8n.
+6. Use generated access token with your Facebook node credentials in Workflow².
 
 ![Getting Facebook credentials](/_images/integrations/credentials/facebookgraphapi/using-access-token.gif)

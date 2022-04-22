@@ -22,7 +22,7 @@
 
 ## Example Usage
 
-This workflow allows you to get the price of BTC in EUR using the CoinGecko node and send an SMS when the price is greater than or equal to €9000. You can also find the [workflow](https://n8n.io/workflows/704) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to get the price of BTC in EUR using the CoinGecko node and send an SMS when the price is greater than or equal to €9000. You can also find the [workflow](https://n8n.io/workflows/704) on Workflow².io. This example usage workflow would use the following nodes.
 - [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
 - [CoinGecko]()
 - [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)

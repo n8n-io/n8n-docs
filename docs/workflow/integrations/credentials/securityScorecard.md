@@ -22,8 +22,8 @@ Create a [SecurityScorecard](https://securityscorecard.com/) account.
 3. Click on ***Generate new API token***.
 4. Click on the ***Confirm*** button.
 5. Copy the generated API key.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'SecurityScorecard API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Security Scorecard API' credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'SecurityScorecard API' credentials in Workflow².
+7. Paste the API key in the ***API Key*** field in the 'Security Scorecard API' credentials in Workflow².
 8. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

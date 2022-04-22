@@ -14,8 +14,8 @@ Create a [Oura](https://www.ouraring.com/) account.
 3. Enter a note for the new Personal Access Token you are about to generate.
 4. Click on the ***Create Personal Access Token*** to create the Personal Access Token.
 5. Copy the displayed Personal Access Token.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Oura API' credentials in n8n.
-7. Paste the Personal Access Token in the ***Personal Access Token*** field in the 'Oura API' credentials in n8n.
+6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Oura API' credentials in Workflow².
+7. Paste the Personal Access Token in the ***Personal Access Token*** field in the 'Oura API' credentials in Workflow².
 8. Click on the ***Create*** button to create your credentials.
 
 

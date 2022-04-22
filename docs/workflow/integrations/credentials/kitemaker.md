@@ -16,8 +16,8 @@ Create an account on [Kitemaker](https://www.kitemaker.co/).
 5. Enter a name for your token in the ***Personal access token name*** field.
 6. Click on the ***Create token*** button.
 7. Copy the displayed token.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Kitemaker API' credentials in n8n.
-9. Paste the token in the ***Personal Access Token*** field in the 'Kitemaker API' credentials in n8n.
+8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Kitemaker API' credentials in Workflow².
+9. Paste the token in the ***Personal Access Token*** field in the 'Kitemaker API' credentials in Workflow².
 10. Click on the ***Create*** button to create your credentials.
 
 The following video demonstrates the steps mentioned above.

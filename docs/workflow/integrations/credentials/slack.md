@@ -10,8 +10,8 @@ Create a [Slack](https://slack.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
+!!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
+    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to Workflow².
 
 
 1. Open the [Slack API](https://api.slack.com/) page.
@@ -27,8 +27,8 @@ Create a [Slack](https://slack.com/) account.
 11. Click on the ***Save URLs*** button.
 12. Scroll down to the ***Scopes*** section.
 13. Add the required scopes under the ***Bot Token Scopes*** section. You can refer to the list of scopes on the [Scopes and permissions](https://api.slack.com/scopes) documentation on Slack.
-14. Click on the circle button in the OAuth section to connect a Slack account to n8n.
-15. Click the ***Save*** button to save your credentials in n8n.
+14. Click on the circle button in the OAuth section to connect a Slack account to Workflow².
+15. Click the ***Save*** button to save your credentials in Workflow².
 16. Return to the Slack OAuth & Permissions page, scroll up to the ***OAuth Tokens for Your Workspace*** section and click on ***Install to Workspace*** button.
 17. Click on the ***Allow*** button.
 
@@ -65,7 +65,7 @@ The following video demonstrates the steps to authenticate the Slack node on [n8
 8. From the ***OAuth Tokens for Your Workspace*** section click on the ***Install to Workspace*** button.
 9. Click on the ***Allow*** button.
 10. In Doc², enter the ***Access Token*** created above.
-11. Click the ***Save*** button to save your credentials in n8n.
+11. Click the ***Save*** button to save your credentials in Workflow².
 
 <!---
 The following video demonstrates the steps mentioned above.

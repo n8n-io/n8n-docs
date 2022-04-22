@@ -10,7 +10,7 @@ Create an email account on a service with IMAP support.
 ## Using IMAP
 
 1. Retrieve your login credentials and IMAP connection parameters.
-2. Use the login credentials and IMAP connection parameters with your IMAP Email node credentials in n8n.
+2. Use the login credentials and IMAP connection parameters with your IMAP Email node credentials in Workflow².
 3. Click on the ***Save*** button to save your credentials.
 
 
@@ -53,7 +53,7 @@ Create an email account on a service with IMAP support.
 6. Enter the name of the app in the ***Enter custom name*** field.
 7. Click on the ***Generate*** button.
 8. Copy the displayed password.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in n8n.
+9. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in Workflow².
 10. Enter your email address in the ***User*** field.
 11. Paste the password you copied earlier in the ***Password*** field.
 12. Enter `imap.mail.yahoo.com` in the ***Host*** field.
@@ -68,7 +68,7 @@ The following video demonstrates the steps mentioned above.
 
 ## Using Outlook.com
 
-1. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in n8n.
+1. Enter the name for your credentials in the ***Credentials Name*** field in the 'IMAP' credentials in Workflow².
 2. Enter your email address in the ***User*** field.
 3. Enter your account password in the ***Password*** field.
 4. Enter `outlook.office365.com` in the ***Host*** field.

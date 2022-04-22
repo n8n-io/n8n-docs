@@ -24,9 +24,14 @@ Documents can be uploaded to DOC² via file browser or drag and drop. Furthermor
 
 ![](/_images/doc2/image-25.png)
 
-![](/_images/doc2/image-26.png)
+![](/_images/doc2/doc2_manual-import.png)
 
 - Alternatively, drag and drop your files onto the DOC² import window as shown in the video below:
+
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/Wwg86UY8JbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 As soon as the files have been uploaded, they have the initial status "Running". During this time the upload is processed. Editing the file is not possible in this status. Depending on the size and complexity of the file, processing may take a while:
 

@@ -34,7 +34,7 @@ To access the system:
 
 After logging in, you'll need to add users to your tenant. When you add a user, they'll receive an onboarding email with a username and temporary password.
 
-You can add users from **Settings** > **Users**. For help, refer to [Adding Users](/doc2/doc2app/settings-users/).
+You can add users from **Settings** > **Users**. For help, refer to [Adding Users](/doc2/settings-users/).
 
 ## **Understanding Document Review**
 

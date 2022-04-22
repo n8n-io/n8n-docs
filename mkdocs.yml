@@ -226,13 +226,13 @@ nav:
     - Import from Doc²: flow2/import-from-doc2.md
   - KV²:
     - Getting Started: kv2/getting-started.md
+    - Installation: kv2/installation.md
+    - Tutorial: kv2/kv2-tutorial.md
     - How To: 
-      - Tutorial: kv2/kv2-tutorial.md
       - Training KV² for Table Extraction: kv2/training-kv2-for-table-extraction.md
       - Different VAT amounts: kv2/how-to-deal-with-different-vat-amounts.md
       - All Extracted Fields: kv2/all-extracted-fields.md
       - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
-    - Installation: kv2/installation.md
     - Restart Ephesoft: 
       - Cloud: kv2/restart-ephesoft-on-cloud.md
       - OnPremise: kv2/restart-ephesoft-on-premise.md

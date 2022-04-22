@@ -238,14 +238,14 @@ nav:
       - Cloud: kv2/restart-ephesoft-on-cloud.md
       - OnPremise: kv2/restart-ephesoft-on-premise.md
     - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
-    - Feedback: kv2/enable-feedback-function.md
+    - Feedback Function: kv2/enable-feedback-function.md
   - TE²:
     - Getting Started: te2/fellow-te2-plugin.md
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
     - Ephesoft External Application: te2/ephesoft-external-application.md
     - Infor LN BOD Mapping: te2/ln_bodmapping.md
-    - Feedback: te2/enable-feedback-function.md
+    - Feedback Function: te2/enable-feedback-function.md
   - OCR²:
     - Overview: ocr/overview.md
     - Installation & Config: ocr/installation-config.md

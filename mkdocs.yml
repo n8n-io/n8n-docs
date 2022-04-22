@@ -152,6 +152,7 @@ nav:
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
+    - Feedback: doc2/enable-feedback-function.md
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
@@ -236,13 +237,15 @@ nav:
     - Restart Ephesoft: 
       - Cloud: kv2/restart-ephesoft-on-cloud.md
       - OnPremise: kv2/restart-ephesoft-on-premise.md
-    - Limitations: kv2/limitations-for-fellow-kv2-plugin.md
+    - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
+    - Feedback: doc2/enable-feedback-function.md
   - TE²:
     - Getting Started: te2/fellow-te2-plugin.md
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
     - Ephesoft External Application: te2/ephesoft-external-application.md
     - Infor LN BOD Mapping: te2/ln_bodmapping.md
+    - Feedback: doc2/enable-feedback-function.md
   - OCR²:
     - Overview: ocr/overview.md
     - Installation & Config: ocr/installation-config.md

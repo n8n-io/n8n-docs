@@ -238,7 +238,7 @@ nav:
       - OnPremise: kv2/restart-ephesoft-on-premise.md
     - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
   - TE²:
-    - Overview: te2/fellow-te2-plugin.md
+    - Getting Starteds: te2/fellow-te2-plugin.md
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
     - Ephesoft External Application: te2/ephesoft-external-application.md

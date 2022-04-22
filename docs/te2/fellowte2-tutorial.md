@@ -1,6 +1,12 @@
 ---
-title: "FellowTE² Tutorial"
+title: "TE² Tutorial"
+description: How To Use TE² Plugin
 date: "2021-07-05"
+tags:
+  - TE²
+  - Plugin
+  - Ephesoft
+  - Table Extraction
 ---
 
 ### Prerequisites
@@ -58,7 +64,7 @@ The default schema can recognize values listed in table below. If any field whic
 
 ![](/_images/doc2/image-43-1024x732.png)
 
-FellowTE² plugin backend intelligence is executing and optimizing the data/ table view which can then be validated or corrected by user if needed. Even if most tables are recognized and can be executed there are some limitations in the technology, meaning that certain kinds of tables cannot be recognized.
+TE² plugin backend intelligence is executing and optimizing the data/ table view which can then be validated or corrected by user if needed. Even if most tables are recognized and can be executed there are some limitations in the technology, meaning that certain kinds of tables cannot be recognized.
 
 The following characteristics are some reasons on why tables can not be extracted:
 
@@ -67,7 +73,7 @@ The following characteristics are some reasons on why tables can not be extracte
 3. Table grid overlapping.
 4. Too much distance between the column headers and the actual lines.
 
-In any case, tables will be analysed by Fellow Consulting in order to determine possibility and viability of the table extraction.
+In any case, tables will be analysed by PolyDocs GmbH i. Gr. in order to determine possibility and viability of the table extraction.
 
 Examples:
 

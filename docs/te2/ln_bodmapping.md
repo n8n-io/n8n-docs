@@ -3,6 +3,8 @@ title: "Infor BOD Mapping"
 description: Infor OS Mapping for Infor LN and Infor M3
 date: "2021-07-15"
 tags:
+  - TE²
+  - Plugin
   - Infor
   - Infor LN
   - Infor M3

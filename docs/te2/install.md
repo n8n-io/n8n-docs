@@ -1,3 +1,13 @@
+---
+title: "TE² Installation & Config"
+description: How to install & configure TE² Plugin 
+date: "2021-07-05"
+tags:
+  - TE²
+  - Plugin
+  - Ephesoft
+  - Table Extraction
+---
 
 # How to install & configure TE² Plugin
 
@@ -6,7 +16,7 @@ TE² Plugin is installed directly in Ephesoft Transact. The installation process
 Prerequisites
 Download the TE² Plugin from here
 You must have Administration rights in Ephesoft Transact.
-You must have set up working Batch Class or install Fellows default Batch Class for Plugin usage if no Batch Class is set up in your Ephesoft System, yet. (Contact us to get the Fellow default Batch Class)
+You must have set up working Batch Class or install Polydocs GmbH default Batch Class for Plugin usage if no Batch Class is set up in your Ephesoft System, yet. (Contact us to get the Polydocs GmbH default Batch Class)
 
 ## Installation
 

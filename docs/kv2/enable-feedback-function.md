@@ -1,14 +1,14 @@
 ---
 title: "Enable Feedback Function"
 date: "2021-07-05"
-description: This documentation should explain how to enable the Feedback Function within the Fellow Ephesoft Plugins
+description: This documentation should explain how to enable the Feedback Function within the Ephesoft Plugins
 tags:
   - DOC²
   - Feedback
-  - Fellow Ephesoft Plugins
+  - Ephesoft Plugins
 ---
 
-This documentation should explain how to enable the Feedback Function within the Fellow Ephesoft Plugins.
+This documentation should explain how to enable the Feedback Function within the Ephesoft Plugins.
 
 The Feedback Function allows the clients to send Feedback to each single Test, directly while performing the Test. Feedback is created and sent during the validation process. For each “Validation” where user enters Feedback we have a ticket created automatically in our Ticket system [Zammad](https://support.cloudintegration.eu/#ticket/view/all_open). The Ticket contains information about the result (Feedback Type), Reporter Email Address and Feedback (Textfield) which are set by tester during validation, as well as a copy of the tested document, which is automatically linked to the ticket.
 

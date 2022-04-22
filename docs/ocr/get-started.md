@@ -5,7 +5,7 @@ tags:
   - OCR
 ---
 
-Welcome to the Fellow OCR Engine API!
+Welcome to the OCR Engine API!
 
 The purpose of our OCR Engine is the transformation of regular pdf documents into OCR'd PDF documents.
 

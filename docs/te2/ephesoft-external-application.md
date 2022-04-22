@@ -1,6 +1,14 @@
 ---
 title: "Ephesoft - External Application"
+description: DOC² as External Application for Ephesoft to train tables
 date: "2022-02-11"
+tags:
+  - TE²
+  - Plugin
+  - Ephesoft
+  - Training
+  - Table Extraction
+  - External Application
 ---
 
 Upload your document in Ephesoft

@@ -89,7 +89,6 @@ nav:
   - DOC²:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
-    - DOC² with Infor: doc2/infor.md
     - Deployment: doc2/deployment.md
     - Dashboard: 
       - Dashboard: doc2/dashboard.md
@@ -102,29 +101,34 @@ nav:
       - Expressions: doc2/exception-filters.md
     - Table: 
       - Table Extraction: doc2/table/table-train.md
-      - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
       - Train: 
+        - Table Extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md
+        - Mapping of Columns: doc2/mapping-of-columns.md
         - Group function: doc2/table/group-function.md
-        - Advanced settings: doc2/table/advance-settings.md
         - Manual row selection: doc2/table/manual-row-selection.md
-        - Table Extraction: doc2/table/training-of-table-extraction.md
+        - Advanced settings: doc2/table/advance-settings.md    
+        - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
-    - Setting: 
+    - DOC² with Infor: doc2/infor.md
+    - Settings: 
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
-      - Import:
+      - All Import Options:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
-        - Fileshare Import:
+        - Webhook: doc2/api.md
+        - Fileshare Import: 
+          - Fileshare: doc2/fileshare.md
+          - Configuration: doc2/watchpuppy-configuration.md
           - Watchdog: doc2/watchdog.md
           - Windows: doc2/watchdog-windows.md
-          - Configuration: doc2/watchpuppy-configuration.md
         - Webhook: doc2/webhook.md
-      - Export: 
+      - All Export Options: 
+        - Export: doc2/export.md
         - Export to Infor:
           - Export to Infor ION and IDM: doc2/export/export-to-infor.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md
@@ -148,6 +152,7 @@ nav:
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
+
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
@@ -212,6 +217,7 @@ nav:
           - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
           - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
+    - Introduction: flow2/index.md
     - Getting Started: flow2/introduction.md
     - Onboarding Guide: flow2/flow2-onboarding-guide.md
     - Deployment: flow2/deployment.md
@@ -221,21 +227,25 @@ nav:
     - Import from Doc²: flow2/import-from-doc2.md
   - KV²:
     - Getting Started: kv2/getting-started.md
-    - Tutorial: 
-      - Tutorial: kv2/fellowkv2-tutorial.md
-      - All Extracted Fields: kv2/all-extracted-fields.md
-    - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
-    - Restart Epheosft: 
-      - Cloud: kv2/how-to-restart-ephesoft-cloud-server.md
-      - OnPremise: kv2/how-to-restart-ephesoft-server.md
     - Installation: kv2/installation.md
-    - Limitation: kv2/limitations-for-fellow-kv2-plugin.md
+    - Tutorial: kv2/kv2-tutorial.md
+    - How To: 
+      - Training KV² for Table Extraction: kv2/training-kv2-for-table-extraction.md
+      - Different VAT amounts: kv2/how-to-deal-with-different-vat-amounts.md
+      - All Extracted Fields: kv2/all-extracted-fields.md
+      - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
+    - Restart Ephesoft: 
+      - Cloud: kv2/restart-ephesoft-on-cloud.md
+      - OnPremise: kv2/restart-ephesoft-on-premise.md
+    - Limitations: kv2/limitations-for-fellow-kv2-plugin.md
+    - Feedback Function: kv2/enable-feedback-function.md
   - TE²:
-    - Overview: te2/fellow-te2-plugin.md
+    - Getting Started: te2/fellow-te2-plugin.md
     - Installation: te2/install.md
     - Tutorial: te2/fellowte2-tutorial.md
-    - Epheosft External Application: te2/ephesoft-external-application.md
-    - Infor OS BOD Mapping: te2/ln_bodmapping.md
+    - Ephesoft External Application: te2/ephesoft-external-application.md
+    - Infor LN BOD Mapping: te2/ln_bodmapping.md
+    - Feedback Function: te2/enable-feedback-function.md
   - OCR²:
     - Overview: ocr/overview.md
     - Installation & Config: ocr/installation-config.md

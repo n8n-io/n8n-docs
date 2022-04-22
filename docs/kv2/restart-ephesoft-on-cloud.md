@@ -1,7 +1,6 @@
 ---
 title: "Restart Ephesoft on Cloud"
-description: This task must be performed by system Administrator.
-Go to your Ephesoft Cloud Configadmin page.
+description: This task must be performed by system Administrator. Go to your Ephesoft Cloud Configadmin page.
 date: "2021-07-02"
 tags:
   - KV² Plugin

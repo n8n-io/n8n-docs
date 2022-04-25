@@ -2,7 +2,7 @@
 
 Sticky notes allow you to annotate and comment on your workflows.
 
-We encourage using sticky notes heavily, especially on template workflows, to help other users understand your workflow.
+n8n recommends using sticky notes heavily, especially on template workflows, to help other users understand your workflow.
 
 ## Create a note
 

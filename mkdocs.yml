@@ -34,18 +34,25 @@ markdown_extensions:
   - pymdownx.superfences
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
   - pymdownx.inlinehilite
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
-  - pymdownx.snippets  
+  - pymdownx.snippets
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - tables
   # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
   - toc:
@@ -53,15 +60,15 @@ markdown_extensions:
 plugins:
   - search
   - literate-nav
-nav: 
-  - Using n8n: 
+nav:
+  - Using n8n:
     - Welcome: index.md
     - Try it out: 
       - Overview: try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
     - Editor UI: editor-ui.md
-    - Understand workflows: 
+    - Understand workflows:
       - Overview: workflows/index.md
       - Workflows: workflows/workflows.md
       - Connections: workflows/connections.md
@@ -77,9 +84,9 @@ nav:
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
-    - Code examples: 
+    - Code examples:
       - Overview: code-examples/index.md
-      - Expressions: 
+      - Expressions:
         - Overview: code-examples/expressions/index.md
         - Methods: code-examples/expressions/methods.md
         - Variables: code-examples/expressions/variables.md
@@ -99,7 +106,7 @@ nav:
       - Glossary: reference/glossary.md
       - License: reference/license.md
       - Data collection: reference/data-collection.md
-  - Integrations: 
+  - Integrations:
     - Overview: integrations/index.md
     - Core nodes: integrations/core-nodes/
     - Nodes: integrations/nodes/
@@ -137,8 +144,20 @@ nav:
         - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
         - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
       - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
-      - Take the quiz and get your certificate: courses/level-one/chapter-7.md
-  - Hosting n8n: 
+      - Test your knowledge: courses/level-one/chapter-7.md
+    - Level two:
+      - Overview: courses/level-two/index.md
+      - Understanding the data structure: courses/level-two/chapter-1.md
+      - Processing different data types: courses/level-two/chapter-2.md
+      - Merging and splitting data: courses/level-two/chapter-3.md
+      - Dealing with errors in workflows: courses/level-two/chapter-4.md
+      - Automating a business workflow:
+        - Use case: courses/level-two/chapter-5/chapter-5.0.md
+        - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+        - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+        - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+      - Test your knowledge: courses/level-two/chapter-6.md
+  - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md
     - Installation:
@@ -171,4 +190,4 @@ nav:
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
-  - Contributing: contributing.md 
+  - Contributing: contributing.md

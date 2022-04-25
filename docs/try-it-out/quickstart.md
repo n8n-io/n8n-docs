@@ -9,7 +9,7 @@ You will:
 * Add a node and configure it using expressions.
 * Run your first workflow
 
-## Step one: install and run n8n
+## Step one: Install and run n8n
 
 n8n is available as a Cloud service, desktop app, npm module, and Docker image. For this quickstart, use the Desktop app.
 
@@ -18,15 +18,15 @@ n8n is available as a Cloud service, desktop app, npm module, and Docker image. 
 
 
 1. [Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip) or [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip).
-2. Once the download is complete, extract the files.
-3. Run the installer. There are no configuration steps.
+2. Once the download finishes, extract the files.
+3. Run the installer. It has no configuration steps.
 4. Once installation is complete, n8n Desktop opens automatically in the **Workflow templates** view. There may be a small lag between installation completing and the app opening.
 
-## Step two: open a workflow template
+## Step two: Open a workflow template
 
 We've created a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
-1. On the **Workflow templates** view, search for "Very quick quickstart".
+1. On the **Workflow templates** view, search for `Very quick quickstart`.
 2. Click the **Very quick quickstart** template to preview it.
 3. Click **Use this workflow** to open the template in your own editor.
 
@@ -37,16 +37,16 @@ This is a simple workflow. It:
 
 Double click a node to explore its settings and how it processes data.
 
-## Step three: add a node
+## Step three: Add a node
 
-Let's add a third node to message each customer and tell them their description:
+Add a third node to message each customer and tell them their description:
 
 1. Click **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/quickstart/add-node.png)</span>.
 2. Search for `Customer Messenger`. n8n shows a list of nodes that match the search.
 3. Click **Customer Messenger (n8n training)** to add the node to the canvas.
 4. Make sure the **Set** node connects to **Customer Messenger**: close the **Customer Messenger** node, then drag the connector from the right side of **Set** to the left connection point on **Customer Messenger**.
 5. Double click the **Customer Messenger** node to open it.
-6. We're going to use [expressions](/code-examples/expressions/) to create the **Customer ID** and **Message**:
+6. You're going to use [expressions](/code-examples/expressions/) to create the **Customer ID** and **Message**:
     1. Next to **Customer ID**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Copy this expression into the editor:
         ```
@@ -64,8 +64,8 @@ Let's add a third node to message each customer and tell them their description:
 
 ## What's next?
 
-* Read our [longer try it out tutorial](/try-it-out/longer-introduction/) for a more complex workflow, and an introduction to more features and n8n concepts.
-* Take our [courses](/courses/).
+* Read n8n's [longer try it out tutorial](/try-it-out/longer-introduction/) for a more complex workflow, and an introduction to more features and n8n concepts.
+* Take the [courses](/courses/).
 * Explore [hosting options](/hosting/options/).
 * Check out example workflows: the [n8n blog](https://n8n.io/blog/tag/tutorial/) contains tutorials around popular examples, while the workflow templates gives you a community-sourced library of inspiration and starting points.
 

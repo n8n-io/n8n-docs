@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.174.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.1...n8n@0.174.0) for this version.<br />
+**Release date:** 2022-04-25
+
+This release adds Sticky Notes, a new feature that allows you to annotate and comment on your workflows. Refer to the [Sticky notes](/workflows/sticky-notes/) for more information.
+
 ## n8n@0.173.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.0...n8n@0.173.1) for this version.<br />

@@ -1,5 +1,51 @@
 # Release notes
 
+## n8n@0.173.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.0...n8n@0.173.1) for this version.<br />
+**Release date:** 2022-04-19
+
+Fixes a bug with the Discord node icon name.
+
+## n8n@0.173.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173.0) for this version.<br />
+**Release date:** 2022-04-19
+
+### New features and nodes
+
+[Markdown node](/integrations/core-nodes/n8n-nodes-base.markdown/): added a new Markdown node to convert between Markdown and HTML.
+
+### Enhancements
+
+**editor**: you can now drag and drop nodes from the nodes panel onto the canvas.
+
+### Node enhancements
+
+* [Discord node](/integrations/nodes/n8n-nodes-base.discord/): additional fields now available when sending a message to Discord.
+* [GoogleBigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/): added support for service account authentication.
+* [Google Cloud Realtime Database node](/integrations/nodes/n8n-nodes-base.googleCloudRealtimeDatabase/): you can now select a region.
+* [PagerDuty node](/integrations/nodes/n8n-nodes-base.pagerDuty/): now supports more detail in incidents.
+* [Slack node](/integrations/nodes/n8n-nodes-base.slack/): added support for blocks in Slack message update.
+
+### Bug fixes
+
+* **core**: make the email for user management case insensitive.
+* **core**: add `rawBody` for XML requests.
+* **editor**: fix a glitch that caused dropdowns to break after adding expressions.
+* **editor**: reset text input value when closed with `Esc`.
+* [Discourse node](/integrations/nodes/n8n-nodes-base.discourse/): fix an issue that was causing incomplete results when getting posts. Added a credentials test.
+* [Zendesk trigger node](/integrations/trigger-nodes/n8n-nodes-base.zendeskTrigger): remove deprecated targets, replace with webhooks.
+* [Zoho node](/integrations/nodes/n8n-nodes-base.zohoCrm): fix pagination issue.
+
+### Contributors
+
+[Florian Metz](https://github.com/Timeraa)  
+[Francesco Pongiluppi](https://github.com/willywongi)  
+[Mark Steve Samson](https://github.com/marksteve)  
+[Mike Quinlan](https://github.com/mjquinlan2000)  
+
+
 ## n8n@0.172.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172.0) for this version.<br />

@@ -1,16 +1,14 @@
-# Take the Quiz and Get Your Certificate
+# Test your knowledge
 
-Congratulations – you finished the n8n Course Level I! You were able to help Nathan build a business use case workflow, saving him hours of tedious work and making him more productive. You’ve come a long way throughout this course and learned a lot about workflow automation.
+Congratulations – you finished the n8n Course Level 1! You helped Nathan build a business use case workflow, saving him hours of tedious work and making him more productive.
 
-## Certification quiz
+You’ve come a long way throughout this course and learned a lot about workflow automation. Here’s what you can do next:
 
-You're almost there! The last step before earning your certificate - after [signing-up](https://n8n-community.typeform.com/to/PDEMrevI) and completing the [course milestones](/courses/level-one/#do-i-get-a-certificate) - is passing the quiz.
+* Test your knowledge of everything you've learned in this course with a **quiz**. The quiz consists of questions about the theoretical concepts and workflows covered in this course.
 
-The quiz consists of two parts: theory and practice. Remember:
-
-- You need to have at least 80% correct answers in each part.
-- There is no time limit.
-- You can take the quiz as many times as you want.
+    - You need to have at least 80% correct answers in each part.
+    - You can take the quiz as many times as you want.
+    - There is no time limit on answering the quiz questions.
 
 <br/>
 <div style="text-align:center;">
@@ -18,10 +16,5 @@ The quiz consists of two parts: theory and practice. Remember:
 </div>
 
 
-## What's next?
-
-So, where do you go from here? Here’s what you can do next:
-
 * Create new workflows for your work or personal use and share them with us. Don’t have any ideas? Find inspiration on our [blog](https://n8n.io/blog/), [YouTube channel](https://www.youtube.com/c/n8n-io), [community forum](https://community.n8n.io), and [Discord server](https://discord.gg/vWwMVThRta).
-* Dive deeper into n8n’s settings by reading the docs.
-* Take the n8n Level II course. [Subscribe](https://n8n.io/blog/#subscribe) to our newsletter to find out when it’s released.
+* Take the n8n [Course Level 2](/courses/level-two/).

@@ -1,34 +1,34 @@
-# Sticky notes
+# Sticky Notes
 
-Sticky notes allow you to annotate and comment on your workflows.
+Sticky Notes allow you to annotate and comment on your workflows.
 
-n8n recommends using sticky notes heavily, especially on template workflows, to help other users understand your workflow.
+n8n recommends using Sticky Notes heavily, especially on template workflows, to help other users understand your workflow.
 
-## Create a note
+## Create a Sticky Note
 
-Sticky notes are a type of core node. To add a new note:
+Sticky Notes are a core node. To add a new Sticky Note:
 
 1. Open the nodes panel.
 2. Search for `note`.
-3. Click the **Note** node. n8n adds a new note to the canvas.
+3. Click the **Sticky Note** node. n8n adds a new Sticky Note to the canvas.
 
-## Edit a note
+## Edit a Sticky Note
 
-1. Double click the note you want to edit.
+1. Double click the Sticky Note you want to edit.
 2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
 3. Click away from the note, or press `Esc`, to stop editing.
 
-## Note positioning
+## Sticky Note positioning
 
 You can:
 
-* Drag a note anywhere on the canvas.
-* Drag notes behind nodes. You can use this to visually group nodes.
-* Resize notes by hovering over the edge of the note and dragging to resize.
+* Drag a Sticky Note anywhere on the canvas.
+* Drag Sticky Notes behind nodes. You can use this to visually group nodes.
+* Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
 
 ## Writing in Markdown
 
-Sticky notes support Markdown formatting. This section describes some common options.
+Sticky Notes support Markdown formatting. This section describes some common options.
 
 ```
 The text in double asterisks will be **bold**

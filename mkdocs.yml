@@ -30,7 +30,7 @@ extra:
   generator: false
   copyright: Copyright &copy; 2022 Polydocs GmbH
   social:
-    - icon: fontawesome/brands/linkedin 
+    - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/645725/
   analytics:
     provider: google
@@ -46,7 +46,7 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="https://docs.google.com/forms/d/e/1FAIpQLScEh_N3lX4JFfvE1fdtImtSv2eVjcEGjlPzsH5usNfN4uNOIg/viewform?usp=pp_url&entry.1764397339=[Feedback]+{title}+-+{url}" target=_blank>feedback form</a>.
 markdown_extensions:
@@ -64,10 +64,10 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
   - pymdownx.inlinehilite
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
-  - pymdownx.snippets  
+  - pymdownx.snippets
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - tables
   # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
   - toc:
@@ -85,12 +85,12 @@ plugins:
   - literate-nav
   - tags:
       tags_file: tags.md
-nav: 
+nav:
   - DOC²:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
     - Deployment: doc2/deployment.md
-    - Dashboard: 
+    - Dashboard:
       - Dashboard: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
     - Document Validation:
@@ -99,20 +99,20 @@ nav:
       - OCR View: doc2/ocr-view.md
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
-    - Table: 
+    - Table:
       - Table Extraction: doc2/table/table-train.md
-      - Train: 
+      - Train:
         - Table Extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md
         - Mapping of Columns: doc2/mapping-of-columns.md
         - Group function: doc2/table/group-function.md
         - Manual row selection: doc2/table/manual-row-selection.md
-        - Advanced settings: doc2/table/advance-settings.md    
+        - Advanced settings: doc2/table/advance-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: doc2/infor.md
-    - Settings: 
+    - Settings:
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
@@ -121,13 +121,13 @@ nav:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
         - Webhook: doc2/api.md
-        - Fileshare Import: 
+        - Fileshare Import:
           - Fileshare: doc2/fileshare.md
           - Configuration: doc2/watchpuppy-configuration.md
           - Watchdog: doc2/watchdog.md
           - Windows: doc2/watchdog-windows.md
         - Webhook: doc2/webhook.md
-      - All Export Options: 
+      - All Export Options:
         - Export: doc2/export.md
         - Export to Infor:
           - Export to Infor ION and IDM: doc2/export/export-to-infor.md
@@ -137,18 +137,18 @@ nav:
           - Infor ION File: doc2/export/create-a-infor-ion-file.md
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
         - Export to Flow²: doc2/export/export-to-flow2.md
-      
+
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
-      - SSO: 
+      - SSO:
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
-    - PO Matching: 
+    - PO Matching:
       - Overview: doc2/pomatching/po-matching.md
-      - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md 
+      - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md
       - Invoices: doc2/pomatching/po-matching-invoices.md
       - Orders: doc2/pomatching/po-matching-order-confirmation.md
-    
+
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
@@ -157,7 +157,7 @@ nav:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
     - Editor UI: workflow/editor-ui.md
-    - Understand workflows: 
+    - Understand workflows:
       - Overview: workflow/workflows/index.md
       - Workflows: workflow/workflows/workflows.md
       - Connections: workflow/workflows/connections.md
@@ -174,9 +174,9 @@ nav:
       - Data structure: workflow/data/data-structure.md
       - Transforming data: workflow/data/transforming-data.md
       - Using code: workflow/data/code.md
-    - Code examples: 
+    - Code examples:
       - Overview: workflow/code-examples/index.md
-      - Expressions: 
+      - Expressions:
         - Overview: workflow/code-examples/expressions/index.md
         - Methods: workflow/code-examples/expressions/methods.md
         - Variables: workflow/code-examples/expressions/variables.md
@@ -196,7 +196,7 @@ nav:
       - Glossary: workflow/reference/glossary.md
       - License: workflow/reference/license.md
       - Data collection: workflow/reference/data-collection.md
-    - Integrations: 
+    - Integrations:
       - Overview: workflow/integrations/index.md
       - Core nodes: workflow/integrations/core-nodes/
       - Nodes: workflow/integrations/nodes/
@@ -229,12 +229,12 @@ nav:
     - Getting Started: kv2/getting-started.md
     - Installation: kv2/installation.md
     - Tutorial: kv2/kv2-tutorial.md
-    - How To: 
+    - How To:
       - Training KV² for Table Extraction: kv2/training-kv2-for-table-extraction.md
       - Different VAT amounts: kv2/how-to-deal-with-different-vat-amounts.md
       - All Extracted Fields: kv2/all-extracted-fields.md
-      - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md 
-    - Restart Ephesoft: 
+      - Rules: kv2/how-to-delete-a-kv2-plugin-rule-from-the-database.md
+    - Restart Ephesoft:
       - Cloud: kv2/restart-ephesoft-on-cloud.md
       - OnPremise: kv2/restart-ephesoft-on-premise.md
     - Limitations: kv2/limitations-for-fellow-kv2-plugin.md
@@ -254,6 +254,9 @@ nav:
     - Detect inside pages: ocr/detect-inside-pages.md
     - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
+  - WF² Examples:
+    - Replace Keys: example/replace.md
+
   # - Courses:
   #   - Overview: courses/index.md
   #   - Level one:
@@ -275,4 +278,3 @@ nav:
   #     - Take the quiz and get your certificate: courses/level-one/chapter-7.md
 
 
-  

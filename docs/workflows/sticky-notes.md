@@ -1,12 +1,12 @@
-# Workflow notes
+# Sticky notes
 
-Workflow notes allow you to annotate and comment on your workflows.
+Sticky notes allow you to annotate and comment on your workflows.
 
-We encourage using workflow notes heavily, especially on template workflows, to help other users understand your workflow.
+We encourage using sticky notes heavily, especially on template workflows, to help other users understand your workflow.
 
 ## Create a note
 
-Workflow notes are a type of core node. To add a new note:
+Sticky notes are a type of core node. To add a new note:
 
 1. Open the nodes panel.
 2. Search for `note`.
@@ -28,7 +28,7 @@ You can:
 
 ## Writing in Markdown
 
-Workflow notes support Markdown formatting. This section describes some common options.
+Sticky notes support Markdown formatting. This section describes some common options.
 
 ```
 The text in double asterisks will be **bold**

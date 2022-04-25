@@ -69,7 +69,7 @@ nav:
       - Connections: workflows/connections.md
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
-      - Sticky notes: workflows/sticky-notes.md
+      - Sticky Notes: workflows/sticky-notes.md
     - Flow logic:
       - Overview: flow-logic/index.md
       - Merging: flow-logic/merging.md

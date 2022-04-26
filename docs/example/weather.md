@@ -10,7 +10,7 @@ tags:
 
 # Weather
 
-Example to show how to remove Keys in a JSON
+Example for a Webhook and reply with the Weather in the City
 
 ![Workflow Example](/_images/example/weather.png)
 

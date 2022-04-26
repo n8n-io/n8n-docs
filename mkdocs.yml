@@ -256,6 +256,8 @@ nav:
     - API: ocr/ocr-api.md
   - WF² Examples:
     - Replace Keys: example/replace.md
+    - Weather: example/weather.md
+
 
   # - Courses:
   #   - Overview: courses/index.md

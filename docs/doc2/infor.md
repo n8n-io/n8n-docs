@@ -1,6 +1,6 @@
 ---
 title: "DOC² - Infor Use Cases"
-description: Different Use Cases DOC² with Infor 
+description: Different Use Cases DOC² with Infor
 date: "2022-01-24"
 tags:
   - DOC²
@@ -12,9 +12,9 @@ tags:
 
 ## Different Use Cases
 
-### Only Invoice 
+### Only Invoice
 
-This is the most easy use case. 95% of call Ephesoft ( IDM Capture ) customer use this use case. 
+This is the most easy use case. 95% of call Ephesoft ( IDM Capture ) customer use this use case.
 
 ``` mermaid
 graph LR
@@ -37,7 +37,7 @@ graph LR
   C -->|Optional| T[Table Extract];
   T -->C;
   Infor[Infor] --> |Master Data Validation| C;
-  C --> D[Convert to ZUGFeRD]; 
+  C --> D[Convert to ZUGFeRD];
   D --> F[Send to Infor];
   F --> Z;
   B ---->|No| Z[End];
@@ -49,7 +49,7 @@ graph LR
 graph LR
   A[Start] --> B{Classification?};
   B -->|Invoice| Extract[Extract];
-  B -->|Delivery Note| Extract;  
+  B -->|Delivery Note| Extract;
   Extract -->|Optional| T[Table Extract];
   T -->Extract;
   Infor --> |Master Data Validation| Extract;
@@ -90,3 +90,43 @@ graph LR
   Infor --> End;
 
 ```
+
+# Add Infor ION API
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/N64jzntUMao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+# Add Connection Points in Infor OS
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/ZMVqpRRkv48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+# Add Connection Points in Infor OS
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/sYST3GLn1IY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+# Purchase Order
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/fkJrEDuG5Nw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+# Delivery Note
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/4KsliipUFx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+# Invoice
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/k9z586vsLZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

@@ -11,29 +11,20 @@ You will:
 
 ## Step one: Install and run n8n
 
-n8n is available as a Cloud service, desktop app, npm module, and Docker image. For this quickstart, use the Desktop app.
-
-!!! note "Linux users"
-    This guide uses the n8n desktop app, which is available for Windows and Mac. If you're on Linux, sign up for a free [Cloud](/hosting/installation/cloud/) trial, or use [npm](/hosting/installation/npm/).
-
-
-1. [Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip) or [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip).
-2. Once the download finishes, extract the files.
-3. Run the installer. It has no configuration steps.
-4. Once installation is complete, n8n Desktop opens automatically in the **Workflow templates** view. There may be a small lag between installation completing and the app opening.
+--8<-- "_snippets/try-it-out/install-run-n8n.md"
 
 ## Step two: Open a workflow template
 
-We've created a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
+n8n provides a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
 1. On the **Workflow templates** view, search for `Very quick quickstart`.
 2. Click the **Very quick quickstart** template to preview it.
 3. Click **Use this workflow** to open the template in your own editor.
 
-This is a simple workflow. It:
+This is a basic workflow. It:
 
 1. Gets example data from the **Customer Datastore** node.
-2. Uses the **Set** node to extract just the data we want, and assign that data to variables. In this example, we use the customer name, ID, and description.
+2. Uses the **Set** node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
 
 Double click a node to explore its settings and how it processes data.
 
@@ -62,7 +53,7 @@ Add a third node to message each customer and tell them their description:
 8. Click **Execute workflow**. n8n runs the workflow.
 
 
-## What's next?
+## Next steps
 
 * Read n8n's [longer try it out tutorial](/try-it-out/longer-introduction/) for a more complex workflow, and an introduction to more features and n8n concepts.
 * Take the [courses](/courses/).

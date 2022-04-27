@@ -10,6 +10,18 @@ tags:
   - Peppol
 ---
 
+# Import ZUGFeRD to Doc²
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/e9ekKDj0rMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+# Export ZUGFeRD to IDM
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/JUzkgCYdBU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Export setting can be managed via "SETTINGS -> Export". You can find the option as follows.
 
 From the Dashboard navigate to "SETTINGS":

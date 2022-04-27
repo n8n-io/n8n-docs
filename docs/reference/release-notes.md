@@ -1,5 +1,42 @@
 # Release notes
 
+## n8n@0.174.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.1...n8n@0.174.0) for this version.<br />
+**Release date:** 2022-04-25
+
+### New features
+
+This release adds Sticky Notes, a new feature that allows you to annotate and comment on your workflows. Refer to the [Sticky Notes](/workflows/sticky-notes/) for more information.
+
+### Enhancements
+
+* **core**: allow external OAuth connection. This enhancement adds support for connecting OAuth apps without access to n8n.
+* All AWS nodes now support AWS temporary credentials.
+* [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets/): Added upsert support.
+* [Microsoft Teams node](/integrations/nodes/n8n-nodes-base.microsoftTeams/): adds several enhancements:
+    * An option to limit groups to "member of", rather than retrieving the whole directory.
+    * An option to get all tasks from a plan instead of just a group member.
+    * Autocompletion for plans, buckets, labels, and members in update fields for tasks.
+* [MongoDB node](/integrations/nodes/n8n-nodes-base.mongoDb/): you can now parse dates using dot notation.
+
+### Bug fixes
+
+
+* [Calendly trigger node](/integrations/trigger-nodes/n8n-nodes-base.calendlyTrigger/): updated the logo.
+* [Microsoft OneDrive node](/integrations/nodes/n8n-nodes-base.microsoftOneDrive/): fixed an issue that was preventing upload of files with special characters in the file name.
+* [QuickBooks node](/integrations/nodes/n8n-nodes-base.quickbooks/): fixed a pagination issue.
+
+### Contributors
+
+[Basit Ali](https://github.com/BasitAli)  
+[Cody Stamps](https://github.com/crstamps2)  
+[Luiz Eduardo de Oliveira](https://github.com/luizeof)  
+[Oliver Trajceski](https://github.com/SchnapsterDog)  
+[pemontto](https://github.com/pemontto)  
+[Ryan Goggin](https://github.com/Goggin)
+
+
 ## n8n@0.173.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.0...n8n@0.173.1) for this version.<br />

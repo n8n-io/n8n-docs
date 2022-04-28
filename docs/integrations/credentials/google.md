@@ -2,7 +2,7 @@
 
 There are two authentication methods available for Google services nodes, [OAuth2](https://developers.google.com/identity/protocols/oauth2) and the [Service Account](https://developers.google.com/identity/protocols/oauth2#serviceaccount) authentication. Refer to the official Google documentation to learn which is appropriate for your case case.
 
-Note that while all nodes are [compatible](#compatible-nodes) with OAuth2 authentication, only some also support Service Account authentication.
+Note that while most nodes are [compatible](#compatible-nodes) with OAuth2 authentication, only some also support Service Account authentication.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ From your [Google Cloud Console](https://console.cloud.google.com) dashboard:
 1. Click on the hamburger menu and select ***APIs & Services > Credentials***.
 2. Click on ***+ CREATE CREDENTIALS*** and select ***OAuth client ID***.
 
-    !!! tip ❗️ Note for new users
+    !!! note "Note for new users"
         If you're creating OAuth credentials for the first time, you will have to [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162).
     
 

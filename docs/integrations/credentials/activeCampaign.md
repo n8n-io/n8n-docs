@@ -1,6 +1,7 @@
 # ActiveCampaign
 
 You can use these credentials to authenticate the following nodes with ActiveCampaign.
+
 - [ActiveCampaign](/integrations/nodes/n8n-nodes-base.activeCampaign/)
 - [Active Campaign Trigger](/integrations/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/)
 

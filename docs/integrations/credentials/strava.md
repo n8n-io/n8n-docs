@@ -1,6 +1,7 @@
 # Strava
 
 You can use these credentials to authenticate the following nodes with Strava.
+
 - [Strava](/integrations/nodes/n8n-nodes-base.strava/)
 - [Strava Trigger](/integrations/trigger-nodes/n8n-nodes-base.stravaTrigger/)
 

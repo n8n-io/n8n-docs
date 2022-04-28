@@ -1,6 +1,7 @@
 # Microsoft
 
 You can use these credentials to authenticate the following nodes with Microsoft.
+
 - [Microsoft Dynamics CRM](/integrations/nodes/n8n-nodes-base.microsoftDynamicsCrm/)
 - [Microsoft Excel](/integrations/nodes/n8n-nodes-base.microsoftExcel/)
 - [Microsoft Graph Security](/integrations/nodes/n8n-nodes-base.microsoftGraphSecurity/)
@@ -15,7 +16,7 @@ Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Microsoft account to n8n.
 
 

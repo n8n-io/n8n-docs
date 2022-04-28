@@ -1,6 +1,7 @@
 # Medium
 
 You can use these credentials to authenticate the following nodes with Medium.
+
 - [Medium](/integrations/nodes/n8n-nodes-base.medium/)
 
 ## Prerequisites

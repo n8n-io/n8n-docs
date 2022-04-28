@@ -1,6 +1,7 @@
 # Lemlist
 
 You can use these credentials to authenticate the following nodes with Lemlist.
+
 - [Lemlist](/integrations/nodes/n8n-nodes-base.lemlist/)
 - [Lemlist Trigger](/integrations/trigger-nodes/n8n-nodes-base.lemlistTrigger/)
 

@@ -1,6 +1,7 @@
 # ServiceNow
 
 You can use these credentials to authenticate the following nodes with serviceNow.
+
 - [ServiceNow](/integrations/nodes/n8n-nodes-base.serviceNow/)
 
 ## Prerequisites

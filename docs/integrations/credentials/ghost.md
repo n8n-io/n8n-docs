@@ -1,6 +1,7 @@
 # Ghost
 
 You can use these credentials to authenticate the following nodes with Ghost.
+
 - [Ghost](/integrations/nodes/n8n-nodes-base.ghost/)
 
 ## Prerequisites

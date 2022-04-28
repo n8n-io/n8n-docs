@@ -1,6 +1,7 @@
 # Sentry.io
 
 You can use these credentials to authenticate the following nodes with Sentry.io.
+
 - [Sentry.io](/integrations/nodes/n8n-nodes-base.sentryIo/)
 
 ## Prerequisites
@@ -9,7 +10,7 @@ Create a [Sentry.io](https://sentry.io/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Sentry.io account to n8n.
 
 

@@ -1,6 +1,7 @@
 # Bitly
 
 You can use these credentials to authenticate the following nodes with Bitly.
+
 - [Bitly](/integrations/nodes/n8n-nodes-base.bitly/)
 
 ## Prerequisites
@@ -9,7 +10,7 @@ Create a [Bitly](https://www.bitly.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Bitly account to n8n.
 
 

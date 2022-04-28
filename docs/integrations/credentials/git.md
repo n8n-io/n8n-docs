@@ -1,6 +1,7 @@
 # Git
 
 You can use these credentials to authenticate the following nodes with Git.
+
 - [Git](/integrations/core-nodes/n8n-nodes-base.git/)
 
 ## Prerequisites

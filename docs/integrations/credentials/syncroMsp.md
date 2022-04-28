@@ -1,6 +1,7 @@
 # SyncroMSP
 
 You can use these credentials to authenticate the following nodes with SyncroMSP.
+
 - [SyncroMSP](/integrations/nodes/n8n-nodes-base.syncroMsp/)
 
 ## Prerequisites

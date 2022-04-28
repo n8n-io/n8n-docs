@@ -1,6 +1,7 @@
 # E-goi
 
 You can use these credentials to authenticate the following nodes with E-goi.
+
 - [E-goi](/integrations/nodes/n8n-nodes-base.egoi/)
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 # Mautic
 
 You can use these credentials to authenticate the following nodes with Mautic.
+
 - [Mautic](/integrations/nodes/n8n-nodes-base.mautic/)
 - [Mautic Trigger](/integrations/trigger-nodes/n8n-nodes-base.mauticTrigger/)
 

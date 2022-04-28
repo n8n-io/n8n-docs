@@ -1,6 +1,7 @@
 # Wufoo
 
 You can use these credentials to authenticate the following nodes with Wufoo.
+
 - [Wufoo Trigger](/integrations/trigger-nodes/n8n-nodes-base.wufooTrigger/)
 
 ## Prerequisites

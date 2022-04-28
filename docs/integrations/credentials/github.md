@@ -1,6 +1,7 @@
 # GitHub
 
 You can use these credentials to authenticate the following nodes with GitHub.
+
 - [GitHub](/integrations/nodes/n8n-nodes-base.github/)
 - [GitHub Trigger](/integrations/trigger-nodes/n8n-nodes-base.githubTrigger/)
 
@@ -11,7 +12,7 @@ Create a [GitHub](https://github.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
 
 

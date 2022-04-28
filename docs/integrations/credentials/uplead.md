@@ -1,6 +1,7 @@
 # UpLead
 
 You can use these credentials to authenticate the following nodes with UpLead.
+
 - [UpLead](/integrations/nodes/n8n-nodes-base.upLead/)
 
 ## Prerequisites

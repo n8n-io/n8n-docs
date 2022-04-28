@@ -1,6 +1,7 @@
 # Jira
 
 You can use these credentials to authenticate the following nodes with Jira.
+
 - [Jira](/integrations/nodes/n8n-nodes-base.jira/)
 - [Jira Trigger](/integrations/trigger-nodes/n8n-nodes-base.jiraTrigger/)
 

@@ -1,6 +1,7 @@
 # LinkedIn
 
 You can use these credentials to authenticate the following nodes with LinkedIn.
+
 - [LinkedIn](/integrations/nodes/n8n-nodes-base.linkedIn/)
 
 ## Prerequisites
@@ -9,7 +10,7 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your LinkedIn account to n8n.
 
 

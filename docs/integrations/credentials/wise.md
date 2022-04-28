@@ -1,6 +1,7 @@
 # Wise
 
 You can use these credentials to authenticate the following nodes with Wise.
+
 - [Wise](/integrations/nodes/n8n-nodes-base.wise/)
 - [Wise Trigger](/integrations/trigger-nodes/n8n-nodes-base.wiseTrigger/)
 

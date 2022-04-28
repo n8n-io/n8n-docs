@@ -1,6 +1,7 @@
 # Philips Hue
 
 You can use these credentials to authenticate the following nodes with Philips Hue.
+
 - [Philips Hue](/integrations/nodes/n8n-nodes-base.philipsHue/)
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 # MongoDB
 
 You can use these credentials to authenticate the following nodes with MongoDB.
+
 - [MongoDB](/integrations/nodes/n8n-nodes-base.mongoDb/)
 
 ## Prerequisites

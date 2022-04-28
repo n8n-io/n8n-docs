@@ -1,6 +1,7 @@
 # Keap
 
 You can use these credentials to authenticate the following nodes with Keap.
+
 - [Keap](/integrations/nodes/n8n-nodes-base.keap/)
 - [Keap Trigger](/integrations/trigger-nodes/n8n-nodes-base.keapTrigger/)
 
@@ -10,7 +11,7 @@ Create a [Keap](https://keap.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Keap account to n8n.
 
 

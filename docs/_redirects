@@ -32,7 +32,8 @@
 
 # The nodes library . . . may the odds be ever in your favour
 
-/nodes/n8n-nodes-base.function/nconst/      /integrations/core-nodes/n8n-nodes-base.function/
+/credentials/smtp/  /integrations/credentials/sendemail/
+/credentials/facebookGraphApp   /integrations/credentials/facebookapp
 
 /credentials/* /integrations/credentials/:splat
 
@@ -41,7 +42,7 @@
 /nodes/creating-nodes/create-node.html      /integrations/creating-nodes/code/create-first-node/
 /nodes/creating-nodes/create-n8n-nodes-module.html      /integrations/creating-nodes/code/create-n8n-nodes-module/
 /nodes/creating-nodes/create-trigger-node.html      /integrations/creating-nodes/code/create-trigger-node/
-/nodes/creating-nodes/node-dev-cli.html     /integrations/creating-nodes/code/node-dev-cli/
+/nodes/creating-nodes/node-dev-cli.html     /integrations/creating-nodes/code/node-developer-cli/
 /nodes/creating-nodes/node-elements.html      /integrations/creating-nodes/code/ui-elements/
 /nodes/creating-nodes/making-http-requests.html     /integrations/creating-nodes/code/http-helpers/
 /nodes/creating-nodes/node-linter.html      /integrations/creating-nodes/code/node-linter/
@@ -251,9 +252,9 @@
 /nodes/n8n-nodes-base.googledrive/		/integrations/nodes/n8n-nodes-base.googleDrive/
 /nodes/n8n-nodes-base.googleDriveTrigger/		/integrations/trigger-nodes/n8n-nodes-base.googleDriveTrigger/
 /nodes/n8n-nodes-base.googledrivetrigger/		/integrations/trigger-nodes/n8n-nodes-base.googleDriveTrigger/
-/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/		/integrations/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/
-/nodes/n8n-nodes-base.googlefirebasecloudfirestore/		/integrations/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/
-/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/		/integrations/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/
+/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/		/integrations/nodes/n8n-nodes-base.googleCloudFirestore/
+/nodes/n8n-nodes-base.googlefirebasecloudfirestore/		/integrations/nodes/n8n-nodes-base.googleCloudFirestore/
+/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/		/integrations/nodes/n8n-nodes-base.googleCloudRealtimeDatabase/
 /nodes/n8n-nodes-base.googlefirebaserealtimedatabase/		/integrations/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/
 /nodes/n8n-nodes-base.googlePerspective/		/integrations/nodes/n8n-nodes-base.googlePerspective/
 /nodes/n8n-nodes-base.googleperspective/		/integrations/nodes/n8n-nodes-base.googlePerspective/
@@ -320,10 +321,15 @@
 /nodes/n8n-nodes-base.keapTrigger/		/integrations/trigger-nodes/n8n-nodes-base.keapTrigger/
 /nodes/n8n-nodes-base.keaptrigger/		/integrations/trigger-nodes/n8n-nodes-base.keapTrigger/
 /nodes/n8n-nodes-base.kitemaker/		/integrations/nodes/n8n-nodes-base.kitemaker/
+/nodes/n8n-nodes-base.koBoToolbox/      /integrations/nodes/n8n-nodes-base.koBoToolbox/
+/nodes/n8n-nodes-base.kobotoolbox/      /integrations/nodes/n8n-nodes-base.koBoToolbox/
+/nodes/n8n-nodes-base.koBoToolboxTrigger/  /integrations/trigger-nodes/n8n-nodes-base.koBoToolboxTrigger/
+/nodes/n8n-nodes-base.kobotoolboxtrigger/  /integrations/trigger-nodes/n8n-nodes-base.koBoToolboxTrigger/
 /nodes/n8n-nodes-base.lemlist/		/integrations/nodes/n8n-nodes-base.lemlist/
 /nodes/n8n-nodes-base.lemlistTrigger/		/integrations/trigger-nodes/n8n-nodes-base.lemlistTrigger/
 /nodes/n8n-nodes-base.lemlisttrigger/		/integrations/trigger-nodes/n8n-nodes-base.lemlistTrigger/
 /nodes/n8n-nodes-base.line/		/integrations/nodes/n8n-nodes-base.line/
+/nodes/n8n-nodes-base.linear/       /integrations/nodes/n8n-nodes-base.linear/
 /nodes/n8n-nodes-base.linearTrigger/		/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/
 /nodes/n8n-nodes-base.lineartrigger/		/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/
 /nodes/n8n-nodes-base.lingvaNex/		/integrations/nodes/n8n-nodes-base.lingvaNex/
@@ -581,6 +587,7 @@
 /nodes/n8n-nodes-base.workabletrigger/		/integrations/trigger-nodes/n8n-nodes-base.workableTrigger/
 /nodes/n8n-nodes-base.workflowTrigger/		/integrations/core-nodes/n8n-nodes-base.workflowTrigger/
 /nodes/n8n-nodes-base.workflowtrigger/		/integrations/core-nodes/n8n-nodes-base.workflowTrigger/
+/nodes/n8n-nodes-base.Workflowtrigger/		/integrations/core-nodes/n8n-nodes-base.workflowTrigger/
 /nodes/n8n-nodes-base.writeBinaryFile/		/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/
 /nodes/n8n-nodes-base.writebinaryfile/		/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/
 /nodes/n8n-nodes-base.wufooTrigger/		/integrations/trigger-nodes/n8n-nodes-base.wufooTrigger/

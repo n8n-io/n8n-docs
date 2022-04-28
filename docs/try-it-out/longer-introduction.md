@@ -27,8 +27,8 @@ Create a blank workflow:
 
 n8n provides two ways to start a workflow:
 
-* Manually, by selecting **Execute workflow**.
-* Automatically, using a trigger node as the first node. The triger node runs the workflow in response to an external event, or based on your settings.
+* Manually, by selecting **Execute workflow**, or from the CLI if you installed n8n with npm or Docker.
+* Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
 For this tutorial, use the [Cron trigger](/integrations/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
 

@@ -39,10 +39,7 @@ Add a third node to message each customer and tell them their description:
 5. Double click the **Customer Messenger** node to open it.
 6. You're going to use [expressions](/code-examples/expressions/) to create the **Customer ID** and **Message**:
     1. Next to **Customer ID**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
-    2. Copy this expression into the editor:
-        ```
-        {{$json["customer_ID"]}}
-        ```
+    2. Select **Current Node** > **Input Data** > **JSON** > **customer_ID**. n8n adds the expression to the **Expression** editor, and displays a sample output.
     3. Close the expressions editor.
     4. Next to **Message**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     5. Copy this expression into the editor:

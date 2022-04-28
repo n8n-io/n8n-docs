@@ -1,6 +1,7 @@
 # Microsoft SQL
 
 You can use these credentials to authenticate the following nodes with Microsoft SQL.
+
 - [Microsoft SQL](/integrations/nodes/n8n-nodes-base.microsoftSQL/)
 
 ## Prerequisites

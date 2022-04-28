@@ -1,6 +1,7 @@
 # MailerLite
 
 You can use these credentials to authenticate the following nodes with MailerLite.
+
 - [MailerLite](/integrations/nodes/n8n-nodes-base.mailerLite/)
 - [MailerLite Trigger](/integrations/trigger-nodes/n8n-nodes-base.mailerLiteTrigger/)
 

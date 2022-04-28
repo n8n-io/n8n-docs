@@ -1,6 +1,7 @@
 # monday.com
 
 You can use these credentials to authenticate the following nodes with monday.com.
+
 - [monday.com](/integrations/nodes/n8n-nodes-base.mondayCom/)
 
 ## Prerequisites

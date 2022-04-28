@@ -5,11 +5,13 @@ If you want to contribute to this repository - thank you! Before you start, have
 ## Documenting nodes
 
 * **Nodes and trigger nodes:** Create a directory with the name of the node at `docs/integrations/nodes/` or `docs/integrations/trigger-nodes/` containing:
+
   - A text file named `n8n-nodes-base.<node-name>.md` describing the functionality of the relevant node.
 * **Credentials:** Create a document with the name of the node at `docs/integrations/credentials/` containing:
   - A text file with the node name describing how to obtain credentials for the relevant node.
 
 A standard node doc includes the following parts:
+
 * Node description
   - Describe briefly the purpose and function of the node.
 * Operations

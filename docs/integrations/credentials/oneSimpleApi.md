@@ -1,6 +1,7 @@
 # One Simple API
 
 You can use these credentials to authenticate the following nodes with Nextcloud.
+
 - [One Simple API](/integrations/nodes/n8n-nodes-base.oneSimpleApi/)
 
 ## Prerequisites

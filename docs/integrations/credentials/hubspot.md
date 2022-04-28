@@ -1,6 +1,7 @@
 # HubSpot
 
 You can use these credentials to authenticate the following nodes with HubSpot.
+
 - [HubSpot](/integrations/nodes/n8n-nodes-base.hubspot/)
 - [HubSpot Trigger](/integrations/trigger-nodes/n8n-nodes-base.hubSpotTrigger/)
 
@@ -10,7 +11,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your HubSpot account to n8n.
 
 

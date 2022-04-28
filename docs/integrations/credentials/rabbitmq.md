@@ -1,6 +1,7 @@
 # RabbitMQ
 
 You can use these credentials to authenticate the following nodes with RabbitMQ.
+
 - [RabbitMQ](/integrations/nodes/n8n-nodes-base.rabbitmq/)
 - [RabbitMQ Trigger](/integrations/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/)
 

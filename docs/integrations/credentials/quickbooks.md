@@ -1,6 +1,7 @@
 # QuickBooks
 
 You can use these credentials to authenticate the following nodes with QuickBooks.
+
 - [QuickBooks](/integrations/nodes/n8n-nodes-base.quickbooks/)
 
 ## Prerequisites
@@ -9,7 +10,7 @@ Create a [Intuit developer](https://developer.intuit.com/) account.
 
 ## Using OAuth
 
-<!-- !!! tip ⛅️ Note for n8n.cloud users
+<!-- !!! tip  Note for n8n.cloud users
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your QuickBooks account to n8n.
  -->
 

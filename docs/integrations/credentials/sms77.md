@@ -1,6 +1,7 @@
 # sms77
 
 You can use these credentials to authenticate the following nodes with sms77.
+
 - [sms77](/integrations/nodes/n8n-nodes-base.sms77/)
 
 ## Prerequisites

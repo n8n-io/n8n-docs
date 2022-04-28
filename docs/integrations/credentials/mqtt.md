@@ -1,6 +1,7 @@
 # MQTT
 
 You can use these credentials to authenticate the following nodes with MQTT.
+
 - [MQTT](/integrations/nodes/n8n-nodes-base.mqtt/)
 - [MQTT Trigger](/integrations/trigger-nodes/n8n-nodes-base.mqttTrigger/)
 

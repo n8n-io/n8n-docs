@@ -1,6 +1,7 @@
 # Invoice Ninja
 
 You can use these credentials to authenticate the following nodes with Invoice Ninja.
+
 - [Invoice Ninja](/integrations/nodes/n8n-nodes-base.invoiceNinja/)
 - [Invoice Ninja Trigger](/integrations/trigger-nodes/n8n-nodes-base.invoiceNinjaTrigger/)
 

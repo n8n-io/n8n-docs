@@ -1,6 +1,7 @@
 # Taiga
 
 You can use these credentials to authenticate the following nodes with Taiga.
+
 - [Taiga](/integrations/nodes/n8n-nodes-base.taiga/)
 - [Taiga Trigger](/integrations/trigger-nodes/n8n-nodes-base.taigaTrigger/)
 

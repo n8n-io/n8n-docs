@@ -1,6 +1,7 @@
 # Postgres
 
 You can use these credentials to authenticate the following nodes with Postgres.
+
 - [Postgres](/integrations/nodes/n8n-nodes-base.postgres/)
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 # Affinity
 
 You can use these credentials to authenticate the following nodes with Affinity.
+
 - [Affinity](/integrations/nodes/n8n-nodes-base.affinity/)
 - [Affinity Trigger](/integrations/trigger-nodes/n8n-nodes-base.affinityTrigger/)
 

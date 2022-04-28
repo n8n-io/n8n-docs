@@ -1,6 +1,7 @@
 # Mindee
 
 You can use these credentials to authenticate the following nodes with Mindee.
+
 - [Mindee](/integrations/nodes/n8n-nodes-base.mindee/)
 
 ## Prerequisites

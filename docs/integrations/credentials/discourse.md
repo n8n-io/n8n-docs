@@ -1,6 +1,7 @@
 # Discourse
 
 You can use these credentials to authenticate the following nodes with Discourse.
+
 - [Discourse](/integrations/nodes/n8n-nodes-base.discourse/)
 
 

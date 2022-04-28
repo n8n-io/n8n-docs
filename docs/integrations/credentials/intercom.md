@@ -1,6 +1,7 @@
 # Intercom
 
 You can use these credentials to authenticate the following nodes with Intercom.
+
 - [Intercom](/integrations/nodes/n8n-nodes-base.intercom/)
 
 

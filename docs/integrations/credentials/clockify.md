@@ -1,6 +1,7 @@
 # Clockify
 
 You can use these credentials to authenticate the following nodes with Clockify.
+
 - [Clockify](/integrations/nodes/n8n-nodes-base.clockify/)
 - [Clockify Trigger](/integrations/trigger-nodes/n8n-nodes-base.clockifyTrigger/)
 

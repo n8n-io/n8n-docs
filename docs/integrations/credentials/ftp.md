@@ -1,6 +1,7 @@
 # FTP
 
 You can use these credentials to authenticate the following nodes with FTP.
+
 - [FTP](/integrations/core-nodes/n8n-nodes-base.ftp/)
 
 ## Prerequisites

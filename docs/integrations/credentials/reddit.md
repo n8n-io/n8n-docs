@@ -1,6 +1,7 @@
 # Reddit
 
 You can use these credentials to authenticate the following nodes with Reddit.
+
 - [Reddit](/integrations/nodes/n8n-nodes-base.reddit/)
 
 

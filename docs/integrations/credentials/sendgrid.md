@@ -1,6 +1,7 @@
 # SendGrid
 
 You can use these credentials to authenticate the following nodes with SendGrid.
+
 - [SendGrid](/integrations/nodes/n8n-nodes-base.sendGrid/)
 
 

@@ -4,6 +4,10 @@
 
 It covers everything from setup to usage and development. It is a work in progress and all contributions are welcome.
 
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/RzhBpku_cQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 ## What is Workflow²?
 

@@ -112,6 +112,7 @@ nav:
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: doc2/infor.md
+    - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md

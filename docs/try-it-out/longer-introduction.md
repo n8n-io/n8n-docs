@@ -11,6 +11,185 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
     * Representing logic in an n8n workflow
     * Using expressions
 
+<n8n-demo workflow='{
+  "name": "Quickstart test",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "custom",
+              "cronExpression": "0 9 * * 1"
+            }
+          ]
+        }
+      },
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        420,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "donkiSolarFlare",
+        "additionalFields": {
+          "startDate": "={{$today.plus({days: -7}).toFormat(\"yyyy-MM-dd\")}}"
+        }
+      },
+      "name": "NASA",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        640,
+        620
+      ],
+      "credentials": {
+        "nasaApi": {
+          "id": "5",
+          "name": "NASA account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"classType\"]}}",
+              "operation": "regex",
+              "value2": "[ABC]"
+            }
+          ]
+        }
+      },
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        860,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "https://www.toptal.com/developers/postbin/1651063625300-2016451240051",
+        "responseFormat": "string",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flareSize",
+              "value": "=There was a solar flare of class {{$json[\"classType\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "https://www.toptal.com/developers/postbin/1651063625300-2016451240051",
+        "responseFormat": "string",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flareSize",
+              "value": "=There was a solar flare of class {{$json[\"classType\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "content": "# Test"
+      },
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        440,
+        440
+      ]
+    }
+  ],
+  "connections": {
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "NASA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NASA": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": 16
+}'></n8n-demo>
+
 
 ## Step one: Install and run n8n
 
@@ -62,7 +241,7 @@ The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact
     3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/quickstart/parameter-options.png)</span> > **Add Expression**. n8n opens the **Edit Expression** modal.
     4. In the **Expression** field, enter the following expression:
     ```js
-    {{$today.plus({days: -7}).toFormat('yyyy-MM-dd')}}
+    {{$today.plus({days: -7}).toFormat("yyyy-MM-dd")}}
     ```
     This generates a date in the correct format, seven days before the current date.
 

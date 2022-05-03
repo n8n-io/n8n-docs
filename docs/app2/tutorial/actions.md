@@ -1,6 +1,13 @@
 ---
-sidebar_position: 6
+title: "Insight² Action"
+description: Adding Action in Insight²
+date: "2021-07-05"
+tags:
+  - Insight²
+  - Action
+
 ---
+
 
 # Adding actions
 
@@ -9,8 +16,8 @@ ToolJet supports several actions that can be invoked as the handler for any `eve
 ## To add actions
 
 To attach an action for component events, click on the component's handle, and then click on the `Add handler` button on the
-inspector panel available on the right side.  
-  
+inspector panel available on the right side.
+
 To attach an action for query events, select the query, go to the `advanced` tab and then click on the `Add handler` button.
 
 ## Available actions

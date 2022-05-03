@@ -1,5 +1,49 @@
 # Release notes
 
+## n8n@0.175.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.175.0...n8n@0.175.1) for this version.<br />
+**Release date:** 2022-05-03
+
+This is a bug fix release.
+
+### Bug fixes
+
+Fixes a bug in the editor UI related to node versioning.
+
+## n8n@0.175.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.174.0...n8n@0.175.0) for this version.<br />
+**Release date:** 2022-05-02
+
+This release adds support for node versioning, along with node enhancements and bug fixes.
+
+### Enhancements
+
+0.175.0 adds support for a lightweight method of node versioning. One node can contain multiple versions, allowing small version increments without code duplication. To use this feature, change the `version` parameter in your node to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which version n8n displays). You can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
+
+### Node enhancements
+
+* [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets/): n8n now handles header names formatted as JSON paths.
+* [Microsoft Dynamics CRM node](/integrations/nodes/n8n-nodes-base.microsoftDynamicsCrm/): add support for regions other than North America.
+* [Telegram node](/integrations/nodes/n8n-nodes-base.telegram/): add support for querying chat administrators.
+
+### Bug fixes
+
+* **core**: fixed an issue that was causing n8n to apply authentication checks, even when user management was disabled.
+* **core**: n8n now skips credentials checks for disabled nodes.
+* **editor**: fix a bug affecting touchscreen monitors.
+* [HubSpot node](/integrations/nodes/n8n-nodes-base.hubspot/): fix for search operators.
+* [SendGrid node](/integrations/nodes/n8n-nodes-base.sendGrid/): fixed an issue with sending attachments.
+* [Wise node](/integrations/nodes/n8n-nodes-base.wise/): respect the time parameter on `get: exchangeRate`.
+
+### Contributors
+
+[Jack Rudenko](https://github.com/erudenko)  
+[MC Naveen](https://github.com/mcnaveen)  
+[vcrwr](https://github.com/vcrwr)
+
+
 ## n8n@0.174.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.1...n8n@0.174.0) for this version.<br />

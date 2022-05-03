@@ -1,13 +1,14 @@
 ---
-title: "How to create an Infor ION file"
+title: How to create an Infor ION file
 description: Step by step documentation how to create a Infor ION API file that is needed for the Infor export.
-date: "2021-10-25"
+date: 2022-04-24
+hero: How to create an Infor ION file
+og_title: DOC² - How to create an Infor ION file
 tags:
   - DOC²
   - Settings
   - Export
   - Infor
-  - DOC²
 ---
 
 #### Step by step documentation how to create a Infor ION API file that is needed for the Infor export.
@@ -17,7 +18,7 @@ tags:
 - An admin user für InforOS with the security roles "ION Desk Admin", "ION API Admin", "IDM Admin".
 - A InforOS user that can be used as service account that has permission to create documents in IDM with the security roles "IDM-AdvancedUser", "Infor-SuiteUser" and "MingleEnterprise".
 
-1. Open InforOS with a admin user and change to the "Infor ION API" Screen.  
+1. Open InforOS with a admin user and change to the "Infor ION API" Screen.
     Click on "Authorized Apps" and then on the "+"
 
 ![](/_images/doc2/image-14.png)

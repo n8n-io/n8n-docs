@@ -27,6 +27,13 @@ extra_css:
 extra_javascript:
   - _extra/javascript/extra.js
 extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
   generator: false
   copyright: Copyright &copy; 2022 Polydocs GmbH
   social:

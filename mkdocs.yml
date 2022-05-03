@@ -258,7 +258,10 @@ nav:
   - WF² Examples:
     - Replace Keys: example/replace.md
     - Weather: example/weather.md
-  - App
+  - Insight²:
+    - Action: app2/tutorial/action.md
+    - Datasource: app2/tutorial/adding-a-datasource.md
+    - Widget: app2/tutorial/adding-widget.md
 
   # - Courses:
   #   - Overview: courses/index.md

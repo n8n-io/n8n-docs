@@ -1,6 +1,6 @@
 # Xata
 
-[Xata](https://xata.io/) is a serveless database
+[Xata](https://xata.io/) is a serveless database with the usability of a spreadsheet
 
 !!! note "🔑 Credentials"
     You can find authentication information for this node [here](/integrations/credentials/xata/).

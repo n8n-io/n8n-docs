@@ -93,7 +93,7 @@ Add the If node:
 
 6. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
-## Step six: Output data from your workflow
+## Step six: Output data from your workflow [TODO: refactor this when we have the Postbin node]
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page. 
 

@@ -20,9 +20,7 @@ This release adds support for node versioning, along with node enhancements and 
 
 ### Enhancements
 
-0.175.0 introduces basic node versioning. One node can contain multiple versions, allowing small version increments without code duplication.
-
-To add versioning to your nodes, add the `typeVersion` parameter.
+0.175.0 adds support for a lightweight method of node versioning. One node can contain multiple versions, allowing small version increments without code duplication. To use this feature, change the `version` parameter in your node to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which version n8n displays). You can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
 
 ### Node enhancements
 

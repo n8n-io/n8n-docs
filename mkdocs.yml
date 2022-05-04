@@ -193,4 +193,5 @@ nav:
     - The n8n public API: api/index.md
     - Endpoint reference using plugin: api/api-reference-1.md
     - Endpoint reference using Swagger UI directly: api/api-reference-2.md
+    - Redoc: api/api-reference-4.md
   - Contributing: contributing.md

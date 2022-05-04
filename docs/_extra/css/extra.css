@@ -24,6 +24,16 @@
 
 }
 
+.n8n-new-features {
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-foreground-base);
+    padding: 1em;
+}
+
+.n8n-new-features > h3 {
+    margin-top: 0;
+}
+
 /* preserve the logo and site title on page scroll */
 
 .md-header__topic:first-child {

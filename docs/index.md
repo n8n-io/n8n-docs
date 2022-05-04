@@ -14,11 +14,36 @@ n8n (pronounced n-eight-n) helps you to connect any app with an API with any oth
 
 ## Where to start
 
-### Up and running
+<div class="grid cards" markdown>
 
-Jump right in to building workflows with the [Quickstart](/quickstart/) guide, or see the [hosting](/hosting/) section to learn about the [options](/hosting/options/) to get started with n8n.
+-   __Quickstarts__
 
-### Learn the basics
+    Jump in with n8n's quickstart guides.
 
-Read [Understand workflows](/workflows/) to learn the building blocks of automations in n8n, [Flow logic](/flow-logic/) for guidance on representing your automation's logic in n8n, or take the [course](/courses/) for in-depth guidance and examples.
+    [:octicons-arrow-right-24: Try it out](/quickstart/)
 
+-   __Hosting__
+
+    ---
+
+    Choose the right n8n for you.
+
+    [:octicons-arrow-right-24: Hosting options](/hosting/options/)
+
+
+-   __Explore integrations__
+
+    ---
+
+    Browse n8n's integrations library.
+
+    [:octicons-arrow-right-24: Hosting options](/integrations/)
+
+-   __Take a course__
+
+    ---
+
+    n8n's courses provide in-depth examples and walkthroughs.
+
+    [:octicons-arrow-right-24: Hosting options](/courses/)    
+</div>

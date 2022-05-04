@@ -1,6 +1,7 @@
 # Mailcheck
 
 You can use these credentials to authenticate the following nodes with Mailcheck.
+
 - [Mailcheck](/integrations/nodes/n8n-nodes-base.mailcheck/)
 
 ## Prerequisites

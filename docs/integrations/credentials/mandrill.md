@@ -1,6 +1,7 @@
 # Mandrill
 
 You can use these credentials to authenticate the following nodes with Mandrill.
+
 - [Mandrill](/integrations/nodes/n8n-nodes-base.mandrill/)
 
 ## Prerequisites

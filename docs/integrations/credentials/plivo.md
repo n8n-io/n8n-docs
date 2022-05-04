@@ -1,6 +1,7 @@
 # Plivo
 
 You can use these credentials to authenticate the following nodes with Plivo.
+
 - [Plivo](/integrations/nodes/n8n-nodes-base.plivo/)
 
 ## Prerequisites

@@ -1,6 +1,7 @@
 # Twist
 
 You can use these credentials to authenticate the following nodes with Twist.
+
 - [Twist](/integrations/nodes/n8n-nodes-base.twist/)
 
 ## Prerequisites

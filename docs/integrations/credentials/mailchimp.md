@@ -1,6 +1,7 @@
 # Mailchimp
 
 You can use these credentials to authenticate the following nodes with Mailchimp.
+
 - [Mailchimp](/integrations/nodes/n8n-nodes-base.mailchimp/)
 - [Mailchimp Trigger](/integrations/trigger-nodes/n8n-nodes-base.mailchimpTrigger/)
 
@@ -10,7 +11,7 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 
 ## Using OAuth
 
-!!! note "⛅️ Note for n8n.cloud users"
+!!! note "Note for n8n.cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
 
 

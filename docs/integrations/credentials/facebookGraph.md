@@ -1,6 +1,7 @@
 # Facebook Graph API
 
 You can use these credentials to authenticate the following nodes with Facebook.
+
 - [Facebook Graph API](/integrations/nodes/n8n-nodes-base.facebookGraphAPI/)
 
 **Note:** If you want to create credentials for the [Facebook Trigger](/integrations/trigger-nodes/n8n-nodes-base.facebookTrigger/) node, follow the instructions mentioned in the [Facebook App](/integrations/credentials/facebookApp/) credentials documentation.

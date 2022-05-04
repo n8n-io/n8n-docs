@@ -1,6 +1,7 @@
 # Oura
 
 You can use these credentials to authenticate the following nodes with Oura.
+
 - [Oura](/integrations/nodes/n8n-nodes-base.oura/)
 
 ## Prerequisites

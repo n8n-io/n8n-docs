@@ -10,7 +10,7 @@ There are a several ways in which you can contribute to n8n, depending on your s
 - Follow us on [Twitter](https://twitter.com/n8n_io), [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/).
 - Upvote n8n on [AlternativeTo](https://alternativeto.net/software/n8n-io/) and [Alternative.me](https://alternative.me/n8n-io).
 - Add n8n to your stack on [Stackshare](https://stackshare.io/n8n).
-- Write a review about n8n on [G2](https://www.g2.com/products/n8n/reviews) and [Slant](https://www.slant.co/improve/options/37977/~n8n-review).
+- Write a review about n8n on [G2](https://www.g2.com/products/n8n/reviews), [Slant](https://www.slant.co/improve/options/37977/~n8n-review), and [Capterra](https://www.capterra.com/p/198028/n8n-io/).
 
 ## Help out the community 🤝
 
@@ -96,6 +96,6 @@ Do you know someone who would be a great fit for one of our [open positions](htt
 Here's how this works:
 
 1. **Search**: Have a look at the description and requirements of each role, and consider if someone you know would be a great fit.
-2. **Referral**: Once you’ve identified a potential candidate, send an email to [Leoni](mailto:leoni@n8n.io) with the subject line *Employee referral - [job title]* and a short description of the person you’re referring (and the reason why). Also, tell your referral to apply for the job through our [careers page](https://n8n.io/careers).
+2. **Referral**: Once you’ve identified a potential candidate, send an email to [Jobs at n8n](mailto:jobs@n8n.io) with the subject line *Employee referral - [job title]* and a short description of the person you’re referring (and the reason why). Also, tell your referral to apply for the job through our [careers page](https://n8n.io/careers).
 3. **Evaluation**: We'll screen the application and inform you about the next steps of the hiring process.
 4. **Reward**: As soon as your referral has successfully finished the probationary period, we'll reward you for your efforts by transferring the €1,000 to your bank account.

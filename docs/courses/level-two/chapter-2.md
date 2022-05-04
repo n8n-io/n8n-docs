@@ -13,7 +13,7 @@ You're most likely familiar with HTML and XML.
 
 If you need to process HTML or XML data in your n8n workflows, use the [HTML Extract node](/integrations/core-nodes/n8n-nodes-base.htmlExtract/) or [XML node](/integrations/core-nodes/n8n-nodes-base.xml/).
 
-The HTML Extract node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured notermation from a website (web-scraping).
+The HTML Extract node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
 ### Exercise
 
@@ -260,7 +260,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ## Binary data
 
-So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful notermation, so it needs to be converted into a readable form.
+So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 
@@ -284,7 +284,7 @@ To read or write a binary file, you need to write the path (location) of the fil
 
 Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Move Binary Data node to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
 
-??? note "Show me the solution"</summary>"
+??? note "Show me the solution"
 
 	In the HTTP Request node, you should see the PDF file in JSON, Table, and Binary view, like this:
 

@@ -1,6 +1,7 @@
 # Strapi
 
 You can use these credentials to authenticate the following nodes with Strapi.
+
 - [Strapi](/integrations/nodes/n8n-nodes-base.strapi/)
 
 ## Prerequisites

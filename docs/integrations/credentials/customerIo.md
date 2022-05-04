@@ -1,6 +1,7 @@
 # Customer.io
 
 You can use these credentials to authenticate the following nodes with Customer.io.
+
 - [Customer.io](/integrations/nodes/n8n-nodes-base.customerIo/)
 - [Customer.io Trigger](/integrations/trigger-nodes/n8n-nodes-base.customerIoTrigger/)
 

@@ -1,6 +1,7 @@
 # Clearbit
 
 You can use these credentials to authenticate the following nodes with Clearbit.
+
 - [Clearbit](/integrations/nodes/n8n-nodes-base.clearbit/)
 
 

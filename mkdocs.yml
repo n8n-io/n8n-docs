@@ -35,6 +35,10 @@ markdown_extensions:
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
@@ -68,6 +72,7 @@ nav:
       - Connections: workflows/connections.md
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
+      - Sticky Notes: workflows/sticky-notes.md
     - Flow logic:
       - Overview: flow-logic/index.md
       - Merging: flow-logic/merging.md

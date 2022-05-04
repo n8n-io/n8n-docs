@@ -161,6 +161,7 @@ nav:
     - SSO for Infor: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
 
+
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
@@ -265,6 +266,7 @@ nav:
   - WF² Examples:
     - Replace Keys: example/replace.md
     - Weather: example/weather.md
+    - Approval with Doc²: example/approval.md
   - Insight²:
     - Action: app2/tutorial/actions.md
     - Datasource: app2/tutorial/adding-a-datasource.md

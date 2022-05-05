@@ -44,7 +44,7 @@ For this tutorial, use the [Cron trigger](/integrations/core-nodes/n8n-nodes-bas
 
 The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
 
-1. Select the **Add node** connector <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> on the Cron node.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Cron node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
 3. Select **NASA** to add the node to the canvas. n8n opens the node.
 4. To access the NASA APIs, you need to set up credentials:
@@ -76,7 +76,7 @@ n8n supports complex logic in workflows. In this tutorial, use the [If node](/in
 
 Add the If node:
 
-1. Select the **Add node** connector <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> on the NASA node.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the NASA node.
 2. Search for **If**. n8n shows a list of nodes that match the search.
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. Select **Add condition** > **String**.
@@ -95,7 +95,7 @@ Add the If node:
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page. 
 
-1. On the If node, select the **Add node** connector <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> labelled **true**.
+1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labelled **true**.
 2. Search for **HTTP Request**. n8n shows a list of nodes that match the search.
 3. Select **HTTP Request** to add the node to the canvas.
 4. Change **Request Method** to **Post**.
@@ -115,7 +115,7 @@ The last step of the workflow is to send the two reports about solar flares. For
     4. Close the expressions editor to return to the node.
 12. Close the HTTP Request node to return to the canvas.
 13. Add another HTTP Request node, to handle the **false** output path from the If node:
-    1. Hover over the HTTP Request node, then select **Copy** to duplicate the first HTTP Request node.
+    1. Hover over the HTTP Request node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/try-it-out/duplicate-node.png)</span> to duplicate the first HTTP Request node.
     2. Drag the **false** connector from the If node to the left side of the new HTTP Request node.
 14. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 15. Go back to your Postbin bin. Refresh the page to see the output.

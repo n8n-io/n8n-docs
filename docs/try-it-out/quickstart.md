@@ -36,7 +36,7 @@ Run the workflow to check it's working, and load in data for the next steps: sel
 
 Add a third node to message each customer and tell them their description. The customer messenger
 
-1. Click **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span>.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Set node.
 2. Search for `Customer Messenger`. n8n shows a list of nodes that match the search.
 3. Click **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. You're going to use [expressions](/code-examples/expressions/) to map in the **Customer ID** and create the **Message**:

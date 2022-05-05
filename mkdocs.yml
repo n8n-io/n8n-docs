@@ -30,13 +30,13 @@ markdown_extensions:
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
-  - pymdownx.superfences
-  - pymdownx.details
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+  - md_in_html
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   # https://github.com/Neoteroi/mkdocs-plugins
   - neoteroi.spantable
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -44,6 +44,8 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
+  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -195,8 +197,8 @@ nav:
       - Configuring queue mode: hosting/scaling/queue-mode.md
   - API:
     - The n8n public API: api/index.md
+    - Authentication: api/authentication.md
     - Endpoint reference using plugin: api/api-reference-1.md
     - Endpoint reference using Swagger UI directly: api/api-reference-2.md
-    - Plugin with style: api/api-reference-3.md
     - Redoc: api/api-reference-4.md
   - Contributing: contributing.md

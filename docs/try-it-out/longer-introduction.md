@@ -84,13 +84,12 @@ Add the If node:
     1. Next to **Value 1**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
     3. Close the expressions editor to return to the node.
-    4. In **Operation**, select **Regex Match**. [TODO: change to avoid regex - try using less than, or failing that just one class]
-    5. In **Value 2**, enter **[ABC]**.
-
-    !!! note "Regex"
-        Regex is short for regular expression. A [regular expression](https://en.wikipedia.org/wiki/Regular_expression) is a sequence of characters that match a pattern. To create your own regex patterns, try [regex101](https://regex101.com/).
-
+    4. In **Operation**, select **Contains**.
+    5. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
 6. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
+
+!!! note "Weeks without large solar flares"
+    In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
 
 ## Step six: Output data from your workflow [TODO: refactor this when we have the Postbin node]
 

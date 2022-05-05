@@ -35,6 +35,8 @@ markdown_extensions:
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
+  # https://github.com/Neoteroi/mkdocs-plugins
+  - neoteroi.spantable
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -59,6 +61,8 @@ plugins:
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
+  # https://github.com/Neoteroi/mkdocs-plugins
+  - neoteroi.mkdocsoad
   # https://github.com/bharel/mkdocs-render-swagger-plugin
   - render_swagger
 nav:
@@ -193,5 +197,6 @@ nav:
     - The n8n public API: api/index.md
     - Endpoint reference using plugin: api/api-reference-1.md
     - Endpoint reference using Swagger UI directly: api/api-reference-2.md
+    - Plugin with style: api/api-reference-3.md
     - Redoc: api/api-reference-4.md
   - Contributing: contributing.md

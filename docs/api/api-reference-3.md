@@ -1,1 +1,1 @@
-[OAD(https://raw.githubusercontent.com/n8n-io/n8n/feature/n8n-public-api/packages/cli/src/PublicApi/v1/openapi.yml)]
+[OAD(./docs/api//openapi-yaml/openapi.yml)]

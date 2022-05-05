@@ -18,9 +18,17 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.174.0...n8n@0.175
 
 This release adds support for node versioning, along with node enhancements and bug fixes.
 
-### Enhancements
+
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Node versioning
 
 0.175.0 adds support for a lightweight method of node versioning. One node can contain multiple versions, allowing small version increments without code duplication. To use this feature, change the `version` parameter in your node to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which version n8n displays). You can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
+
+</div>
 
 ### Node enhancements
 
@@ -51,7 +59,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.1...n8n@0.174
 
 ### New features
 
+<div class="n8n-new-features" markdown>
+
+#### Sticky Notes
+
 This release adds Sticky Notes, a new feature that allows you to annotate and comment on your workflows. Refer to the [Sticky Notes](/workflows/sticky-notes/) for more information.
+</div>
 
 ### Enhancements
 
@@ -93,9 +106,15 @@ Fixes a bug with the Discord node icon name.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173.0) for this version.<br />
 **Release date:** 2022-04-19
 
-### New features and nodes
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Markdown node
 
 [Markdown node](/integrations/core-nodes/n8n-nodes-base.markdown/): added a new Markdown node to convert between Markdown and HTML.
+
+</div>
 
 ### Enhancements
 

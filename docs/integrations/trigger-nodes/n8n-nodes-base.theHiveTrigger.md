@@ -1,3 +1,4 @@
+# The Hive trigger
 
 [TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
 

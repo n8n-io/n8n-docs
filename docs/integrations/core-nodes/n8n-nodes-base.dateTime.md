@@ -2,7 +2,7 @@
 
 The Date & Time node is used to manipulate date and time data and convert it to different formats.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Make sure that the timezone is set correctly for the n8n instance (or the workflow).
 
 

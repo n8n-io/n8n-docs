@@ -2,7 +2,7 @@
 
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/wooCommerce/).
 
 
@@ -24,6 +24,7 @@
 ## Example Usage
 
 This workflow allows you to send a message on Mattermost when an order is created in WooCommerce. You can also find the [workflow](https://n8n.io/workflows/848) on n8n.io. This example usage workflow would use the following nodes.
+
 - [WooCommerce Trigger]()
 - [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
 
@@ -60,6 +61,6 @@ In the screenshot below, you will notice that the node sends a message to the `S
 
 ![Using the Mattermost node to send the information of the order to a channel](/_images/integrations/trigger-nodes/woocommercetrigger/mattermost_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the WooCommerce Trigger node.
 

@@ -2,7 +2,7 @@
 
 [AWS Rekognition](https://aws.amazon.com/rekognition/) allows you to add image and video analysis to your applications. With AWS Rekognition, you can identify faces, labels, and celebrities in images.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 

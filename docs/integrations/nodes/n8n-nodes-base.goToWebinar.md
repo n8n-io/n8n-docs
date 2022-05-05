@@ -2,7 +2,7 @@
 
 [GoToWebinar](https://www.gotomeeting.com/webinar) is a platform that helps you create and deliver online video conferences.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/goToWebinar/).
 
 

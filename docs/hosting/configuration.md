@@ -117,7 +117,7 @@ The following environment variables support file input:
 
 ### Base URL
 
-!!! warning " Keep in mind"
+!!! warning "Keep in mind"
     This variable only gets used when the `n8n-editor-ui` package gets built manually. Hence, it does not get used in combination with the default n8n docker image. By default, `/` gets used, meaning that it uses the root-domain.
 
 

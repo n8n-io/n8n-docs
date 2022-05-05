@@ -2,7 +2,7 @@
 
 [WordPress](https://wordpress.org/) is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/wordpress/).
 
 

@@ -2,13 +2,14 @@
 
 [RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/rabbitmq/).
 
 
 ## Example Usage
 
 This workflow allows you to receive messages from a queue and send an SMS if the value of the temperature is greater than 50. You can also find the [workflow](https://n8n.io/workflows/845) on n8n.io. This example usage workflow would use the following nodes.
+
 - [RabbitMQ Trigger]()
 - [IF](/integrations/core-nodes/n8n-nodes-base.if/)
 - [Vonage](/integrations/nodes/n8n-nodes-base.vonage/)
@@ -80,6 +81,6 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/trigger-nodes/rabbitmqtrigger/noop_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the RabbitMQ Trigger node.
 

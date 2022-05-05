@@ -2,7 +2,7 @@
 
 [Twist](https://twist.com) is a communication app that helps teams balance focused work with collaborative conversations.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/twist/).
 
 

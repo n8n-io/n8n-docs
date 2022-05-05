@@ -2,7 +2,7 @@
 
 The Cron node is useful to schedule the workflows to run periodically at fixed dates, times, or intervals. This works in a similar way to the [cron](https://en.wikipedia.org/wiki/Cron) software utility in Unix-like systems. This core node is a Trigger node.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     1. If a workflow is using the Cron node as a trigger, make sure that you save and activate the workflow.
 2. Make sure that the timezone is set correctly for the n8n instance (or the workflow).
 

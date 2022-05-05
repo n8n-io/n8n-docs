@@ -2,7 +2,7 @@
 
 [Mindee](https://mindee.com) develops API-based products for instantly extracting information from any kind of image and transforming it into usable data.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mindee/).
 
 

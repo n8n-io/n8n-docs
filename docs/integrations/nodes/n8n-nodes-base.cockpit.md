@@ -2,7 +2,7 @@
 
 [Cockpit](https://getcockpit.com/) is a headless CMS with an API-first approach that puts content first. It is designed to simplify the process of publication by separating content management from content consumption on the client side.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/cockpit/).
 
 

@@ -2,7 +2,7 @@
 
 [Phantombuster](https://www.phantombuster.com/) is a scraping platform that allows chain actions and data extraction on the web to generate business leads, marketing audiences, and overall growth.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/phantombuster/).
 
 

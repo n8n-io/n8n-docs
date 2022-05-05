@@ -2,7 +2,7 @@
 
 [Drift](https://www.drift.com/) is a tool for managing conversations, engaging with customers, and collaborating with teammates.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/drift/).
 
 

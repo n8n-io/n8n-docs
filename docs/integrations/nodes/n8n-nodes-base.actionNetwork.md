@@ -2,7 +2,7 @@
 
 [Action Network](https://actionnetwork.org/) is an open platform that empowers individuals and groups to organize for progressive causes.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/actionNetwork/).
 
 

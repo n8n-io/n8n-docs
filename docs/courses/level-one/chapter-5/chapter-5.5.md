@@ -9,7 +9,7 @@ The next step in Nathan’s workflow is to calculate two values from the booked 
 
 To calculate data and add more functionality to your workflows you can use the **Function node**, which lets you write custom JavaScript code.
 
-!!! warning " Function vs Function Item"
+!!! warning "Function vs Function Item"
     n8n also provides a **Function Item node**, which should not be confused with the Function node. The Function Item node is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](/data/code/).
 
 
@@ -66,7 +66,7 @@ return [{json:{totalBooked, bookedSum}}];
 Notice the format in which we return the results of the calculation:
 `return [{json:{totalBooked, bookedSum}}]`
 
-!!! warning " Data structure error"
+!!! warning "Data structure error"
     If you don’t use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
 
 

@@ -2,7 +2,7 @@
 
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/trello/).
 
 
@@ -10,6 +10,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates for changes in the specified list in Trello. You can also find the [workflow](https://n8n.io/workflows/491) on the website. This example usage workflow would use the following node.
+
 - [Trello Trigger]()
 
 The final workflow should look like the following image.
@@ -23,7 +24,7 @@ The final workflow should look like the following image.
 2. Enter the ID of the list in the *Model ID* field. You can find instructions on how to do that in the FAQs below.
 3. Click on *Execute Node* to run the workflow.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Trello Trigger node.
 
 

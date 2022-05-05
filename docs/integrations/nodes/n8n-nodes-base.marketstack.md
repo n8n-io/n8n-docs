@@ -2,7 +2,7 @@
 
 [Marketstack](https://marketstack.com/) is a REST API that provides stock market data in JSON format. 
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/marketstack/).
 
 

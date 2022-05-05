@@ -2,7 +2,7 @@
 
 [Telegram](https://telegram.org/) is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/telegram/).
 
 
@@ -22,6 +22,7 @@
 ## Example Usage
 
 This workflow allows you to receive messages using the Telegram Trigger node and send an image of a cocktail when a message is received. You can also find the [workflow](https://n8n.io/workflows/782) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Telegram Trigger]()
 - [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/)
 - [Telegram](/integrations/nodes/n8n-nodes-base.telegram/)
@@ -75,7 +76,7 @@ In the screenshot below, you will notice that the node sends a reply to the mess
 
 ![Using the Telegram node to send a message with an image and instruction of a cocktail](/_images/integrations/trigger-nodes/telegramtrigger/telegram_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Telegram Trigger node.
 
 

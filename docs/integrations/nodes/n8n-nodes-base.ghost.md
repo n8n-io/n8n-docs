@@ -2,7 +2,7 @@
 
 [Ghost](https://www.ghost.org/) is an open-source, professional publishing platform built on a Node.js technology stack.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/ghost/).
 
 

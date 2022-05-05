@@ -2,7 +2,7 @@
 
 [Workable](https://www.workable.com/) is a recruiting platform.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/workable/).
 
 

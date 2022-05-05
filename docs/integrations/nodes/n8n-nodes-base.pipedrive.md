@@ -2,7 +2,7 @@
 
 [Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/pipedrive/).
 
 

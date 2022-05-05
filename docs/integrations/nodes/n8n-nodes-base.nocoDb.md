@@ -2,7 +2,7 @@
 
 [NocoDB](https://www.nocodb.com/) is an open source Airtable alternative. It works by connecting to any relational database and transforming them into a spreadsheet interface.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/nocoDb/).
 
 

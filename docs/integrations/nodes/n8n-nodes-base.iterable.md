@@ -2,7 +2,7 @@
 
 [Iterable](https://iterable.com/) is a cross-channel platform that allows marketers to create, optimize, and measure every interaction throughout the customer journey.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/iterable/).
 
 

@@ -2,7 +2,7 @@
 
 [Freshdesk](https://freshdesk.com/) is a customer support software also classified as a ticketing software or a helpdesk that allows companies to effectively manage their customer care and support function.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/freshdesk/).
 
 

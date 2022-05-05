@@ -2,7 +2,7 @@
 
 [Contentful](https://www.contentful.com/) provides a content infrastructure for digital teams to power content in websites, apps, and devices. It offers a central hub for structured content, powerful management and delivery APIs, and a customizable web app.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/contentful/).
 
 

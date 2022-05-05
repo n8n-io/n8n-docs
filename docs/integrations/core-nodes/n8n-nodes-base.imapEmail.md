@@ -2,7 +2,7 @@
 
 The IMAP Email node is used to receive emails via an IMAP email server. This node is a trigger node.
 
-!!! note "🔑 Credential"
+!!! note "Credential"
     You can find authentication information for this node [here](/integrations/credentials/imap/).
 
 

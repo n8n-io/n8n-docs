@@ -2,7 +2,7 @@
 
 [Humantic AI](https://humantic.ai/) provides AI-driven behavior and personality assessment of a candidate.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/humanticAi/).
 
 

@@ -2,7 +2,7 @@
 
 [MSG91](https://msg91.com/) is an enterprise SMS Solution providing Bulk SMS, Transactional SMS API, Regional SMS, OTP Verification APIs, Promotional SMS via powerful, and a robust SMS Gateway.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/msg91/).
 
 

@@ -2,7 +2,7 @@
 
 [Reddit](https://www.reddit.com) is a social news aggregation, web content rating, and discussion website.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/reddit/).
 
 

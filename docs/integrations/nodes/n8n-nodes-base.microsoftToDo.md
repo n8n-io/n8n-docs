@@ -2,7 +2,7 @@
 
 [Microsoft To Do](https://todo.microsoft.com) is a cloud-based task management application. It allows users to manage their tasks from a smartphone, tablet, and computer.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 

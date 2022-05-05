@@ -2,7 +2,7 @@
 
 [Yourls](http://yourls.org/) is a free and open-source software that allows you to run your URL shortening service.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/yourls/).
 
 

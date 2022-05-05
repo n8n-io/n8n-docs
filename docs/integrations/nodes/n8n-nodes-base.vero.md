@@ -2,7 +2,7 @@
 
 [Vero](https://www.getvero.com/) is a messaging platform that helps manage real-time data to create a better customer experience.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/vero/).
 
 

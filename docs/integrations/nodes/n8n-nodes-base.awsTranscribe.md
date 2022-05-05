@@ -2,7 +2,7 @@
 
 [AWS Transcribe](https://aws.amazon.com/transcribe/) is a service that recognizes speech in your audio or video and transcribes that speech into text.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 

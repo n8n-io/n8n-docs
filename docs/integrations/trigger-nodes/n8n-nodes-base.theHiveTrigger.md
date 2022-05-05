@@ -5,6 +5,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates when an event occurs in TheHive. You can also find the [workflow](https://n8n.io/workflows/810) on the website. This example usage workflow would use the following node.
+
 - [TheHive Trigger]()
 
 The final workflow should look like the following image.
@@ -16,10 +17,10 @@ The final workflow should look like the following image.
 This node will trigger the workflow whenever a new event occurs in TheHive. To trigger the workflow for a specific event, select that event instead.
 
 1. First of all, you'll have to add the webhook URL in TheHive instance configuration. Refer to the [FAQs](#how-to-configure-a-webhook-in-thehive) to learn how to configure a webhook in TheHive.
-2. Select the `*` from the ***Events*** dropdown list. This will trigger the workflow for all the events.
-3. Click on ***Execute Node*** to run the node.
+2. Select the `*` from the **Events** dropdown list. This will trigger the workflow for all the events.
+3. Click on **Execute Node** to run the node.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the TheHive Trigger node.
 
 

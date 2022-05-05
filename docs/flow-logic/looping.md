@@ -16,7 +16,7 @@ The following image shows the output from the [Customer Datastore](/integrations
 
 This is how you can process multiple items without having to explicitly connect nodes in a loop.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Your data must be in the proper structure for n8n to process it as described here. See [Transforming Data](/data/transforming-data/) to learn more.
 
 

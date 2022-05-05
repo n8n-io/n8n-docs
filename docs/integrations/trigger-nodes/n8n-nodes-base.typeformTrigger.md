@@ -2,7 +2,7 @@
 
 [Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/typeform/).
 
 
@@ -10,6 +10,7 @@
 ## Example Usage
 
 This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following nodes.
+
 - [Typeform Trigger]()
 - [Set](/integrations/core-nodes/n8n-nodes-base.set/)
 - [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
@@ -91,7 +92,7 @@ In the screenshot below, you will notice that the node sends a message with the 
 
 ![Using the Slack node to send a message to channel](/_images/integrations/trigger-nodes/typeformtrigger/slack_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Typeform Trigger node.
 
 

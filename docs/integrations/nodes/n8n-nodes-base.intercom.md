@@ -2,7 +2,7 @@
 
 [Intercom](https://www.intercom.com/) is a company that produces a messaging platform which allows businesses to communicate with prospective and existing customers within their app, on their website, through social media, or via email.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/intercom/).
 
 

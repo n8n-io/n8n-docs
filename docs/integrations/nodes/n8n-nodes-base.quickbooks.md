@@ -2,7 +2,7 @@
 
 [QuickBooks](https://quickbooks.intuit.com) is an accounting software package developed by Intuit.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/quickbooks/).
 
 

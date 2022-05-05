@@ -2,7 +2,7 @@
 
 [Google Docs](https://docs.google.com) is a web-based word processor that is part of Google's office software suite within its Google Drive service.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

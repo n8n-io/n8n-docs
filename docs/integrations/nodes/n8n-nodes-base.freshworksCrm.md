@@ -2,7 +2,7 @@
 
 [Freshworks CRM](https://www.freshworks.com/freshsales-crm/) is a cloud-based customer relationship management (CRM) solution that helps businesses manage their interactions with existing and potential customers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/freshworksCrm/).
 
 

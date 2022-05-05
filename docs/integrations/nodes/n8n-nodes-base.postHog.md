@@ -2,7 +2,7 @@
 
 [PostHog](https://posthog.com) is an open-source product analytics platform. It provides tools to improve your product, such as session recording, heatmaps, and feature flags.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/postHog/).
 
 
@@ -59,6 +59,6 @@ In the screenshot below, you will notice that the node creates a new event in Po
 
 ![Using the PostHog node to create a new event](/_images/integrations/nodes/posthog/posthog_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 

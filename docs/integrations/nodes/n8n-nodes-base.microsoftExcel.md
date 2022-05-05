@@ -2,7 +2,7 @@
 
 [Microsoft Excel](https://office.live.com/start/excel.aspx) is a spreadsheet developed by Microsoft. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 

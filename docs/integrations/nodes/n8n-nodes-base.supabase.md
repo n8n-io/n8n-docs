@@ -2,7 +2,7 @@
 
 [Supabase](https://supabase.com/) is an open source Firebase alternative.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/supabase/).
 
 

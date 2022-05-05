@@ -2,7 +2,7 @@
 
 [Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/chargebee/).
 
 
@@ -10,6 +10,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates for events in Chargebee. You can also find the [workflow](https://n8n.io/workflows/486) on the website. This example usage workflow would use the following node.
+
 - [Chargebee Trigger]()
 
 The final workflow should look like the following image.
@@ -23,7 +24,7 @@ The final workflow should look like the following image.
 2. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 3. Click on *Execute Node* to run the workflow.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Chargebee Trigger node.
 
 

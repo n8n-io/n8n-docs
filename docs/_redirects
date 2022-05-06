@@ -1,4 +1,5 @@
-/integrations/nodes/nodes/n8n-nodes-base.function/     /integrations/core-nodes/n8n-nodes-base.function/
-/getting-started/key-components/                     /workflows/
-/getting-started/key-components/connection.html      /workflows/connections/
-/testing/                                            https://polydocs.io/
+# Redirects from what the browser requests to what we serve
+/home              /
+/blog/my-post.php  /blog/my-post
+/news              /blog
+/cuties            https://www.petsofnetlify.com

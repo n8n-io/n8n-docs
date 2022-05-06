@@ -2,7 +2,7 @@
 
 [APITemplate.io](https://apitemplate.io) allows you to auto-generate images and PDF documents.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/apiTemplateIo/).
 
 
@@ -88,6 +88,6 @@ In the screenshot below, you will notice that the node creates an invoice using 
 
 ![Using the APITemplate.io node to create an invoice](/_images/integrations/nodes/apitemplateio/apitemplate.io_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Typeform Trigger node.
 

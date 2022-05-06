@@ -2,7 +2,7 @@
 
 [Raindrop](https://raindrop.io) is a bookmarking tool that allows you to organize your bookmarks.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/raindrop/).
 
 

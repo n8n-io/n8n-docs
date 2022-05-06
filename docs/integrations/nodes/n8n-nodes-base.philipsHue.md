@@ -2,7 +2,7 @@
 
 [Philips Hue](https://www.philips-hue.com/) is a line of smart color-changing LED lamps and bulbs that can be controlled wirelessly.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/philipsHue/).
 
 

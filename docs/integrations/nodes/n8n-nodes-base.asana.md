@@ -2,7 +2,7 @@
 
 [Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/asana/).
 
 

@@ -6,7 +6,7 @@ The Merge node is useful to merge data of multiple streams, once data of both st
 
 ### Mode
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     The items passed into Input 1 of the Merge node will take precedence. For example, if 5 items are received in Input 1 and 10 items are received in Input 2, the Merge node will only process 5 items. The remaining 5 items from Input 2 will not be processed.
 
 

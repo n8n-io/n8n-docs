@@ -2,7 +2,7 @@
 
 [Kafka](https://kafka.apache.org/) is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/kafka/).
 
 
@@ -10,6 +10,7 @@
 ## Example Usage
 
 This workflow allows you to receive messages from a topic and send an SMS if the value of the temperature is greater than 50. You can also find the [workflow](https://n8n.io/workflows/814) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Kafka Trigger]()
 - [IF](/integrations/core-nodes/n8n-nodes-base.if/)
 - [Vonage](/integrations/nodes/n8n-nodes-base.vonage/)
@@ -81,6 +82,6 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/trigger-nodes/kafkatrigger/noop_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Kafka Trigger node.
 

@@ -2,7 +2,7 @@
 
 [Todoist](https://todoist.com/) is a task management software that can be used for small teams, individuals and professionals to manage anything from a shopping list to major projects at work.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/todoist/).
 
 

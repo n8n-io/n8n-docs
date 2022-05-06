@@ -2,7 +2,7 @@
 
 [Bubble](https://www.bubble.io/) lets you create interactive, multi-user apps for desktop and mobile web browsers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/bubble/).
 
 

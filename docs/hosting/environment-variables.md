@@ -1,6 +1,6 @@
 # Environment Variables
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     You can provide a [configuration file](/hosting/configuration/#configuration-via-file) for n8n, and also append `_FILE` to certain variables to provide their configuration separately, indicated by "/`_FILE`" below.
 
 

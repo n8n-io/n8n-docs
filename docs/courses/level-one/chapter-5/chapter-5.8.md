@@ -24,7 +24,7 @@ The *Workflow Executions* window displays a table with the following information
 * _Mode:_ How the workflow was triggered (trigger or webhook)
 * _Running Time:_ The duration it took the workflow to execute
 
-!!! note " Workflow execution status"
+!!! note "Workflow execution status"
     In the *Workflow Executions* window you can filter the displayed executions by workflow and by status (*All*, *Error*, *Running*, or *Success*).\
 The information displayed here depends on what workflows and executions you set up in *Workflow Settings* to be saved.
 

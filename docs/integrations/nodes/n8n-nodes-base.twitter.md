@@ -2,7 +2,7 @@
 
 [Twitter](https://twitter.com/) is a microblogging and social networking service on which users post and interact with messages known as "tweets".
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/twitter/).
 
 

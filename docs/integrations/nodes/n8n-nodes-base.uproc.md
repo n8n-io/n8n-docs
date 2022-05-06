@@ -2,7 +2,7 @@
 
 [uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/uProc/).
 
 

@@ -13,7 +13,7 @@ In your workflow, replace the *Start node* with the *Cron node* and configure it
 
 <figure><img src="/_images/courses/level-one/chapter-two/Cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
 
-!!! warning " Keep in mind"
+!!! warning "Keep in mind"
     To ensure accurate scheduling with the Cron node, be sure the timezone is set correctly for your n8n instance (or the workflow).
 
 

@@ -2,7 +2,7 @@
 
 [Travis CI](https://travis-ci.com) is a hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/travisCi/).
 
 

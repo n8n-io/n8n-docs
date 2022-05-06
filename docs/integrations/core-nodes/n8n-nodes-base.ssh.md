@@ -2,7 +2,7 @@
 
 The SSH node is useful for executing commands via the Secure Shell Protocol.
 
-!!! note "🔑 Credential"
+!!! note "Credential"
     You can find authentication information for this node [here](/integrations/credentials/ssh/).
 
 

@@ -2,7 +2,7 @@
 
 [monday.com](https://monday.com/) is a work operating system that enables organizations to manage tasks, projects, and team work.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mondayCom/).
 
 

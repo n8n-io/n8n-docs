@@ -2,7 +2,7 @@
 
 [Harvest](https://www.getharvest.com/) is a web-based time tracking tool that helps with its simple time tracking, fast online invoicing, and powerful reporting software.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/harvest/).
 
 

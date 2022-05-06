@@ -2,7 +2,7 @@
 
 [Google Chat](https://chat.google.com/) is a messaging platform.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

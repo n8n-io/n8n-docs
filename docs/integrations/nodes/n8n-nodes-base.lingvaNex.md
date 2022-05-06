@@ -2,7 +2,7 @@
 
 [LingvaNex](https://lingvanex.com) is a service that translates text, web pages, text on images, documents between English and over 112 other languages.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/lingvaNex/).
 
 

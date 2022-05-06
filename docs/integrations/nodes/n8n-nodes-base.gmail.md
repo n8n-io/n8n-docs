@@ -2,7 +2,7 @@
 
 [Gmail](https://www.gmail.com) is an email service developed by Google. Users can access Gmail on the web and using third-party programs that synchronize email content through POP or IMAP protocols.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

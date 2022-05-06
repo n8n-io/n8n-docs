@@ -78,7 +78,7 @@ Based on their function, nodes can be classified into two types:
 - **Regular Nodes** add, remove, and edit data, as well as request and send external data.
 - **Trigger Nodes** start a workflow and supply the initial data.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Cron and Interval nodes) or adding JavaScript functions (e.g. Function and Function Item nodes). We refer to these as *Core Nodes*.
 
 

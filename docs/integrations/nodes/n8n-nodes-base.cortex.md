@@ -2,7 +2,7 @@
 
 [Cortex](https://github.com/TheHive-Project/CortexDocs) offers a powerful observable (URL, file, IP, etc) analysis mechanism. It allows you to analyze collected observables using a single tool, respond to threats, and interact with the constituency and other teams.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/cortex/).
 
 

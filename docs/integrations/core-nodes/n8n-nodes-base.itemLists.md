@@ -66,7 +66,7 @@ When using the *Remove Duplicates* operation, configure the following parameters
 
 The Sort operation allows you to organize lists of in a desired ordering, or generate a random selection if desired (i.e. assign tasks to users randomly).
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) to learn more.
 
 

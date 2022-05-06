@@ -2,7 +2,7 @@
 
 [Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files that are uploaded to its servers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/box/).
 
 
@@ -10,6 +10,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates when events occur in Box. You can also find the [workflow](https://n8n.io/workflows/560) on the website. This example usage workflow would use the following node.
+
 - [Box Trigger]()
 
 The final workflow should look like the following image.
@@ -25,7 +26,7 @@ The final workflow should look like the following image.
 4. Enter the target ID of the file/folder to be monitored for updates in the *Target ID* field.
 5. Click on *Execute Node* to run the workflow.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Box Trigger node.
 
 

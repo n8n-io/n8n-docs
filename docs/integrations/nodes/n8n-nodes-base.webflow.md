@@ -2,7 +2,7 @@
 
 [Webflow](https://webflow.com) is an application that allows you to build responsive websites with browser-based visual editing software.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/webflow/).
 
 

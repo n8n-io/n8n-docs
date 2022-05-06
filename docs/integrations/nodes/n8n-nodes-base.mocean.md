@@ -2,7 +2,7 @@
 
 [Mocean](https://www.moceanapi.com/) makes sending and receiving SMS easy. It also has voice API which allows you to make outbound and inbound calls.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mocean/).
 
 

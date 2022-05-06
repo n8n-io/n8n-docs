@@ -2,7 +2,7 @@
 
 [AWS S3](https://aws.amazon.com/s3/) is a service offered by Amazon Web Services that provides object storage through a web service interface.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 

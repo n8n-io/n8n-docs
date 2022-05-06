@@ -2,7 +2,7 @@
 
 The Execute Command node is used to run shell commands on the host machine that runs n8n.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     1. If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
 2. This node will execute the command in the default shell of the host machine. For example, this will be PowerShell on Windows and zsh on macOS.
 

@@ -2,7 +2,7 @@
 
 The FTP node is useful to access and upload files to an FTP server.
 
-!!! note "🔑 Credential"
+!!! note "Credential"
     You can find authentication information for this node [here](/integrations/credentials/ftp/).
 
 

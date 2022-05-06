@@ -2,7 +2,7 @@
 
 [Microsoft OneDrive](https://onedrive.live.com/) is a file hosting service and synchronization service operated by Microsoft.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 

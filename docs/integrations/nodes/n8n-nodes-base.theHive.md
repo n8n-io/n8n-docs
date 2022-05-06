@@ -2,7 +2,7 @@
 
 [TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/theHive/).
 
 

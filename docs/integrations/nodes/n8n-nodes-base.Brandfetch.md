@@ -2,7 +2,7 @@
 
 [Brandfetch](https://www.Brandfetch.com/) is a brand search engine that helps you find logos, colors, fonts, images, and more.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/brandfetch/).
 
 

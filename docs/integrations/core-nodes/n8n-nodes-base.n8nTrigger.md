@@ -42,6 +42,6 @@ In the screenshot below, you will notice that the node sends a message to Matter
 
 ![Using the Mattermost node to send a message to a channel](/_images/integrations/core-nodes/n8ntrigger/mattermost_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the n8n Trigger node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow.
 

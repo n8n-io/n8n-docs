@@ -2,7 +2,7 @@
 
 [Google Slides](https://www.google.com/slides) is a web-based presentation program that is part of Google's office software suite within its Google Drive service. It allows you to create, edit, and collaborate.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

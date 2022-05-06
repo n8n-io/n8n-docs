@@ -2,13 +2,14 @@
 
 [Affinity](https://www.affinity.co/) is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/affinity/).
 
 
 ## Example Usage
 
 This workflow allows you to receive updates when a new list is created in Affinity. You can also find the [workflow](https://n8n.io/workflows/672) on n8n.io. This example usage workflow would use the following node.
+
 - [Affinity Trigger]()
 
 The final workflow should look like the following image.
@@ -21,6 +22,6 @@ The final workflow should look like the following image.
 2. Select 'list.created' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Affinity Trigger node.
 

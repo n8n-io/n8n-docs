@@ -2,7 +2,7 @@
 
 [Monica CRM](https://www.monicahq.com/) is an open-source web application to organize and record your interactions with your loved ones.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/monicaCrm/).
 
 

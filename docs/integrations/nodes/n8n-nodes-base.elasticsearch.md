@@ -2,7 +2,7 @@
 
 [Elasticsearch](https://www.elastic.co/) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/elasticsearch/).
 
 

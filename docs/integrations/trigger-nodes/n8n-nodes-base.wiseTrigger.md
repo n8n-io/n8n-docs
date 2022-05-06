@@ -2,7 +2,7 @@
 
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/wise/).
 
 
@@ -15,6 +15,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates from Wise and add information of a transfer to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/993) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Wise Trigger]()
 - [Wise](/integrations/nodes/n8n-nodes-base.wise/)
 - [Set](/integrations/core-nodes/n8n-nodes-base.set/)
@@ -93,6 +94,6 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 ![Using the Airtable node to insert data into an Airtable table](/_images/integrations/trigger-nodes/wisetrigger/airtable_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Wise Trigger node.
 

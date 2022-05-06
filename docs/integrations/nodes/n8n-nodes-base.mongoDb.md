@@ -2,7 +2,7 @@
 
 [MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mongoDb/).
 
 

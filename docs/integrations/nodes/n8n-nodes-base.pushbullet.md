@@ -2,7 +2,7 @@
 
 [Pushbullet](https://www.pushbullet.com/) connects your devices and allows you to see your phone's notifications on your computer, transfer links, and files between devices.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/pushbullet/).
 
 

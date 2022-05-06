@@ -2,7 +2,7 @@
 
 [MISP](https://www.misp-project.org/) is an open source threat intelligence platform. The project develops utilities and documentation for more effective threat intelligence. 
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/misp/).
 
 

@@ -2,7 +2,7 @@
 
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/getResponse/).
 
 
@@ -17,6 +17,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates when a customer gets subscribed to a list in GetResponse and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/933) on n8n.io. This example usage workflow would use the following nodes.
+
 - [GetResponse Trigger]()
 - [Set](/integrations/core-nodes/n8n-nodes-base.set/)
 - [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
@@ -72,6 +73,6 @@ In the screenshot below, you will notice that the node adds the information of t
 
 ![Using the Airtable node to append the information of a customer](/_images/integrations/trigger-nodes/getresponsetrigger/airtable_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the GetResponse Trigger node.
 

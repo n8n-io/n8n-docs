@@ -2,7 +2,7 @@
 
 [Hacker News](https://news.ycombinator.com/) is a social news website focusing on computer science and entrepreneurship.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     The Hacker News node does not require authentication.
 
 

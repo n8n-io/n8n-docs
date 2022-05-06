@@ -2,7 +2,7 @@
 
 [NASA](https://nasa.gov/) is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research. The NASA API makes NASA data, including imagery, accessible to application developers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/nasa/).
 
 
@@ -94,6 +94,6 @@ In the screenshot below, you will notice that the node sends the image with a ca
 
 ![Using the Telegram node to send the Astronomy Picture of the Day](/_images/integrations/nodes/nasa/telegram_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

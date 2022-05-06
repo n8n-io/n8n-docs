@@ -2,7 +2,7 @@
 
 [Tapfiliate](https://tapfiliate.com) allows you to create, track, and grow your affiliate marketing programs.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/tapfiliate/).
 
 

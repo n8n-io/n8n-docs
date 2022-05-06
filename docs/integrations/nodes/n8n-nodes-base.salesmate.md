@@ -2,7 +2,7 @@
 
 [Salesmate](https://www.salesmate.io/) is a cloud-based CRM solution that caters to small and midsize businesses across various industries. Key features include contact management, sales pipeline management, email marketing and internal chat and phone integration.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/salesmate/).
 
 

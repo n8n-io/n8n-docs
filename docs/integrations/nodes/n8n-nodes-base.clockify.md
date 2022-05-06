@@ -2,7 +2,7 @@
 
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/clockify/).
 
 

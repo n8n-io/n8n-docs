@@ -2,7 +2,7 @@
 
 [Google Perspective](https://www.perspectiveapi.com/) is a free API that uses machine learning to identify "toxic" comments, making it easier to host better conversations online.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

@@ -42,7 +42,7 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 ### Start Redis
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
 
 
@@ -101,7 +101,7 @@ Redis is used as the message broker, and the database is used to persist data, s
 
 ## Webhook processors
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
 
 
@@ -166,7 +166,7 @@ The setting that controls this behavior is `endpoint.skipWebhoooksDeregistration
 export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ```
 
-!!! warning " Keep in mind"
+!!! warning "Keep in mind"
     Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
 
 

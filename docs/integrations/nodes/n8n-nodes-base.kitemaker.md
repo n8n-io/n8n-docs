@@ -2,7 +2,7 @@
 
 [Kitemaker](https://www.kitemaker.co/) is a collaboration tool built for designers, engineers, and product managers in remote software development teams.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/kitemaker/).
 
 

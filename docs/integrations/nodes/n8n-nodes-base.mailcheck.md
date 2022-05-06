@@ -2,7 +2,7 @@
 
 [Mailcheck](https://www.mailcheck.co/) is an application that allows you to clean your subscription list from bounces and enrich data with customers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mailcheck/).
 
 

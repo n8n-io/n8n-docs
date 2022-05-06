@@ -2,7 +2,7 @@
 
 [Google Analytics](https://analytics.google.com) is a web analytics service offered by Google that lets you measure your advertising ROI as well as track your Flash, video, and social networking sites and applications.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

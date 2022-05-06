@@ -2,7 +2,7 @@
 
 [Demio](https://demio.com) provides a simple, no-download webinar experience and all the marketing tools you need to generate better results.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/demio/).
 
 
@@ -62,6 +62,6 @@ In the screenshot below, you will notice that the node registers the user for an
 
 ![Using the Demio node to register a user for an event](/_images/integrations/nodes/demio/demio_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
 

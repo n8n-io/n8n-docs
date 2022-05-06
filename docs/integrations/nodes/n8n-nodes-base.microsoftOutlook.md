@@ -2,7 +2,7 @@
 
 [Microsoft Outlook](https://outlook.live.com/) is a personal information manager software system from Microsoft. Microsoft Outlook is an email client that includes calendaring, task managing, contact managing, note-taking, journal logging, and web browsing.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 

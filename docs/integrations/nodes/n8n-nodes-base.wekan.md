@@ -2,7 +2,7 @@
 
 [Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/wekan/).
 
 

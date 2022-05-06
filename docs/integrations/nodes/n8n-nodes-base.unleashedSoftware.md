@@ -2,7 +2,7 @@
 
 [Unleashed Software](https://www.unleashedsoftware.com) is a cloud app that gives product businesses the freedom to better make, manage and move products by enabling them to achieve complete clarity and control over suppliers, production, warehouses, and sales.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/unleashedSoftware/).
 
 

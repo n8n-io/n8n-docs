@@ -2,7 +2,7 @@
 
 [Bitwarden](https://www.bitwarden.com/) is an open-source password management solution for individuals, teams, and business organizations.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/bitwarden/).
 
 

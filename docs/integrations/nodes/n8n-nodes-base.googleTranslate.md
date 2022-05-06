@@ -2,7 +2,7 @@
 
 [Google Translate](https://translate.google.com/) is a free multilingual translation service developed by Google to translate text and websites from one language into another.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

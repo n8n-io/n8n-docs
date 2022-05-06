@@ -2,7 +2,7 @@
 
 [Discourse](https://www.discourse.org/) is an open-source discussion platform that can be used as a mailing list, discussion forum, long-form chat room, and more.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/discourse/).
 
 

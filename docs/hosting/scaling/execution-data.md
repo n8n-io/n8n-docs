@@ -52,7 +52,7 @@ n8n:
 </code-block>
 </code-group>
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     These settings can also be configured on an individual workflow basis via the [workflow settings](/workflows/workflows/#workflow-settings).
 
 
@@ -92,5 +92,5 @@ n8n:
 </code-block>
 </code-group>
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     If you are running n8n using the default SQLite database, the disk-space of any pruned data is not automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.

@@ -2,7 +2,7 @@
 
 The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     1. When using the Webhook node on the localhost, ensure that n8n is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
 2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don’t forget that the data flowing through the webhook won’t be visible in the Editor UI with the Production webhook.
 
@@ -122,7 +122,7 @@ In the screenshot below, you will notice that the node sets the values of `temp`
 
 Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature and description as the response in the browser.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 
 

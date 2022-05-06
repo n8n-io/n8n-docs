@@ -2,7 +2,7 @@
 
 [ProfitWell](https://www.profitwell.com/) provides real-time subscription financial metrics.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/profitWell/).
 
 
@@ -72,6 +72,6 @@ In the screenshot below, you will notice that the node sends a message with the 
 ![Using the Mattermost node to send a message with the metrics ](/_images/integrations/nodes/profitwell/mattermost_node.png)
 
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

@@ -2,7 +2,7 @@
 
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/facebookGraph/).
 
 

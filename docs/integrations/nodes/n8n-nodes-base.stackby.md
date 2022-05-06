@@ -2,7 +2,7 @@
 
 [Stackby](https://stackby.com/) is a real-time database and team collaboration platform.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/stackby/).
 
 

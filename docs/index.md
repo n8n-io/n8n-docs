@@ -25,13 +25,13 @@ It covers everything from setup to usage and development. It is a work in progre
 
     Browse n8n's integrations library.
 
-    [:octicons-arrow-right-24: Hosting options](/integrations/)
+    [:octicons-arrow-right-24: Find your apps](/integrations/)
 
 -   __Take a course__
 
     n8n's courses provide in-depth examples and walkthroughs.
 
-    [:octicons-arrow-right-24: Hosting options](/courses/)    
+    [:octicons-arrow-right-24: Start learning](/courses/)    
 </div>
 
 ## About n8n

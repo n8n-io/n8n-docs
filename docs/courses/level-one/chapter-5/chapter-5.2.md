@@ -23,7 +23,7 @@ Now your table should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/Orders-table.png" alt="Orders table in Airtable" style="width:100%"><figcaption align = "center"><i>Orders table in Airtable</i></figcaption></figure>
 
-Now that the table is prepared let’s return to the workflow in the Editor UI.
+Now that the table is prepared let's return to the workflow in the Editor UI.
 
 Add an ***Airtable node*** connected to the HTTP Request node.
 

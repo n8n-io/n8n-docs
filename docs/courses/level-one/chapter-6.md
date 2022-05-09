@@ -9,7 +9,7 @@ In this chapter you will learn how to export and import workflows, as well as sh
 Workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else or import a workflow from someone else.
 
 !!! warning "Sharing credentials"
-    Note that the exported JSON file of your workflow will contain your credentials as well. If you don’t want to share your credentials (recommended), delete them from the JSON file.
+    Note that the exported JSON file of your workflow will contain your credentials as well. If you don't want to share your credentials (recommended), delete them from the JSON file.
 
 
 You can export and import workflows in two ways:
@@ -25,7 +25,7 @@ You can export and import workflows in two ways:
 
 We love to see what users build with n8n and discover inspiring workflows while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
 
-Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan’s workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
+Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan's workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
 
 To share a workflow, follow these steps:
 

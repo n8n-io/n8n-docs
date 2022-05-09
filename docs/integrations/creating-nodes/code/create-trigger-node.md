@@ -62,7 +62,7 @@ All these packages are under the `/packages` folder in the main n8n folder. We w
 2. Create a folder called `Autofriend` (the folder names are PascalCase).
 3. Within the Autofriend folder, create a file called `AutofriendTrigger.node.ts` (YourNodeNameTrigger.node.ts).
 4. Download and add the Autofriend [icon](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Autopilot/autopilot.svg) to the folder. Name it `autopilot.svg`.
-	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node’s folder.
+	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node's folder.
 	- An SVG is preferable. In case you have to use a PNG, make sure that it is compressed. A good tool for that is [tinypng](https://tinypng.com).
 	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/logos/tree/master/logos).
 5. Paste the following code in the `AutofriendTrigger.node.ts` file.
@@ -162,7 +162,7 @@ npm run dev
 
 - On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
-- The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
+- The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company's branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 
 ## Creating the UI for the node
@@ -181,7 +181,7 @@ In the `target_url` parameter, we provide the URL where Autofriend will notify u
 
 ### Adding the fields
 
-Let’s make the Node Editor View ask for these parameters:
+Let's make the Node Editor View ask for these parameters:
 1. Add the following under `description.properties` in `packages/nodes-base/nodes/Autofriend/AutofriendTrigger.node.ts.`.
 
 ```typescript
@@ -242,7 +242,7 @@ Most REST APIs use some sort of authentication mechanism. Autofriend's REST API 
 
 n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
 
-With that in mind, let’s create the UI to ask for the user’s Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
+With that in mind, let's create the UI to ask for the user's Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
 1. Go to `packages/nodes-base/credentials`.
 2. Within the credentials folder, create a file named `AutofriendApi.credentials.ts`.
@@ -301,7 +301,7 @@ When a Trigger node is executed either in test or production mode, the following
 
 ### n8n persists all the webhooks defined in description.webhooks
 
-The persisted data will be used later to verify if the incoming requests to the n8n’s webhook endpoint are valid.
+The persisted data will be used later to verify if the incoming requests to the n8n's webhook endpoint are valid.
 
 The property webhooks implements the interface **IWebhookDescription**. The interface has four properties.
 
@@ -352,7 +352,7 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 
 Every time the external system notifies us about a change, by making an HTTP Request to the URL we previously registered in the `create` method, the `execute` method is called. Within this method, we have access to the request object and everything it contains. For example, body, headers, querystring, etc. The data the method returns is the data we want the rest of the workflow to have access to.
 
-Let’s see how this would look for our current use-case:
+Let's see how this would look for our current use-case:
 
 1. Go to `packages/nodes-base/nodes/Autofriend`, create a file named `GenericFunctions.ts`, and paste the following code.
 

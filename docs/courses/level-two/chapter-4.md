@@ -30,7 +30,7 @@ The only difference between a regular workflow and an Error Workflow is that the
 
 	- You don't need to activate workflows that use the Error Workflow node.
 	- A workflow that uses the *Error Trigger node* uses itself as the error workflow.
-	- The Error Trigger node is designed to get triggered only when the monitored workflow gets executed automatically. This means you can’t test this (to see the result of) an error workflow while executing the monitored workflow manually.
+	- The Error Trigger node is designed to get triggered only when the monitored workflow gets executed automatically. This means you can't test this (to see the result of) an error workflow while executing the monitored workflow manually.
 	- You can set the same Error Workflow for multiple workflows.
 
 

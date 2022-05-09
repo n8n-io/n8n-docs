@@ -1,11 +1,12 @@
 ---
 title: "Manual row selection"
 date: "2022-02-18"
-description: In DOC² rows can be selected manually 
+description: It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns. Here is how rows can be selected manually in DOC². 
 tags:
   - DOC²
   - Row
   - Selection
+  - manually
   - Table Extraction
 ---
 

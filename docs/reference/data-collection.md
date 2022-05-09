@@ -22,7 +22,7 @@ n8n collects selected usage and performance data to help us diagnose problems an
     - OS, RAM, and CPUs
     - Anonymous instance ID
 
-## What we don’t collect
+## What we don't collect
 
 We do not collect private or sensitive information, such as:
 

@@ -2,7 +2,7 @@
 
 In this step of the workflow you will learn how to select and set data before transferring it to Airtable using the *Set* node.
 
-The next step in Nathan’s workflow is to insert the *employeeName* and *orderId* of all *processing* orders into Airtable.
+The next step in Nathan's workflow is to insert the *employeeName* and *orderId* of all *processing* orders into Airtable.
 
 For this, you need to use the [**Set node**](/integrations/core-nodes/n8n-nodes-base.set/), which allows you to select and set the data you want to be transferred from one app/service to another.
 
@@ -31,7 +31,7 @@ Next, we need to insert these values into Airtable. Go to your Airtable account 
 
 Remember to update the Airtable node configuration to point to this new table.
 
-Once that’s done, execute the *Airtable* node in the workflow and you should see the records inserted in the table.
+Once that's done, execute the *Airtable* node in the workflow and you should see the records inserted in the table.
 
 At this stage, it looks like this:
 

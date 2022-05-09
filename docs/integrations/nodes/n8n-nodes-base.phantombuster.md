@@ -74,7 +74,7 @@ This node will append the data that we set in the previous node to a table. Crea
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
-3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
 5. Click on ***Execute Node*** to run the node.
 

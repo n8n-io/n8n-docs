@@ -45,7 +45,7 @@ This is the default setting for n8n. When running n8n in the `regular` mode, eve
 
 ### Queue
 
-`Queue` mode is designed for handling very high workloads. In this mode you run multiple instances of n8n: one ‘main’ instance coordinates, and other ‘worker’ instances actually process the executions. You can also add dedicated instances to handle incoming webhooks.
+`Queue` mode is designed for handling very high workloads. In this mode you run multiple instances of n8n: one ‘main' instance coordinates, and other ‘worker' instances actually process the executions. You can also add dedicated instances to handle incoming webhooks.
 
 `Queue` mode requires more setup than `regular` mode, but provides great scalability and stability with minimal latency.
 

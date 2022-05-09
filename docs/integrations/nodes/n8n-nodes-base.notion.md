@@ -55,7 +55,7 @@ The Calendly node will trigger the workflow when an invite gets created.
 3. Save your workflow so that the webhook gets registered.
 4. Click on ***Execute Node*** to run the node.
 
-**Note:** Since you’ll be using the test webhook while building the workflow, the node only stays active for 120 seconds. After you click on the ***Execute Node*** button, create an invite via Calendly.
+**Note:** Since you'll be using the test webhook while building the workflow, the node only stays active for 120 seconds. After you click on the ***Execute Node*** button, create an invite via Calendly.
 
 In the screenshot below, you will notice that the Calendly Trigger node triggers the workflow when an invite is created.
 

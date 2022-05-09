@@ -22,7 +22,7 @@ The Airtable Trigger node will trigger the workflow when new data gets added to 
 
 1. First of all, you'll have to enter credentials for the Airtable Trigger node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Click on ***Add Poll Time*** and select 'Every Minute' from the ***Mode*** dropdown list. This will check Airtable every minute for new data entries.
-3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the table name in the ***Table*** field.
 5. Enter a trigger field name in the ***Trigger Field*** field. If you don't have a 'Created Time' or 'Last modified time' field in your table, please create one.
 6. Click on ***Execute Node*** to run the node.

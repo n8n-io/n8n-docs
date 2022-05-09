@@ -10,10 +10,10 @@ tags:
 ---
 ---
 
-- [How to define tables and columns](/doc2/doc2app/table-train/training-of-table-extraction/define-table-and-columns/)
-- [Advanced settings](/doc2/doc2app/table-train/training-of-table-extraction/advance-settings/)
-- [Mapping of columns](/doc2/doc2app/table-train/training-of-table-extraction/mapping-of-columns/)
-- [Group function](/doc2/doc2app/table-train/training-of-table-extraction/group-function/)
-- [Manual row selection](/doc2/doc2app/table-train/training-of-table-extraction/manual-row-selection/)
-- [Add new table column](/doc2/doc2app/table-train/training-of-table-extraction/add-new-table-column/)
-- [Save and delete rules](/doc2/doc2app/table-train/training-of-table-extraction/save-rules-and-delete-rules/)
+- [How to define tables and columns](/doc2/table/define-table-and-columns/)
+- [Advanced settings](/doc2/table/advance-settings/)
+- [Mapping of columns](/doc2/mapping-of-columns/)
+- [Group function](/doc2/table/group-function/)
+- [Manual row selection](/doc2/table/manual-row-selection/)
+- [Add new table column](/doc2/table/add-new-table-column/)
+- [Save and delete rules](/doc2/table/save-rules-and-delete-rules/)

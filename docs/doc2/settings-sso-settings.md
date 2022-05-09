@@ -9,6 +9,7 @@ tags:
   - SSO
 ---
 
+
 * * *
 
 - Once you have received your Login Details from us, you will find all the details you need for SSO configuration here.
@@ -25,4 +26,4 @@ Here you will find all the information you need for the following steps
 
 ![](/_images/doc2/DOC²_Identity-Service-Provider-Settings_EN-1024x319.png)
 
-The step by step guide to configure SSO in Infor Cloud can be found [here](/doc2/doc2app/configuring-sso-in-cloud/).
+The step by step guide to configure SSO in Infor Cloud can be found [here](/doc2/configuring-sso-in-cloud/#infor).

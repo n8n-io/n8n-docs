@@ -60,7 +60,7 @@ The entries will appear in the overview. They can be edited or deleted via the a
 
 ![](/_images/doc2/image-39-1024x315.png)
 
-In addition you need to enter your **Company Information**. You will find the menu in the [settings overview](https://docs.cloudintegration.eu/?post_type=docs&p=1644).
+In addition you need to enter your **Company Information**. You will find the menu in the [settings overview](/doc2/company-information/).
 
 * * *
 

@@ -1,6 +1,6 @@
 ---
 title: "How to create a IDM mapping file"
-description: Step by step guide how to create a IDM mapping file.
+description: This is a step by step guide how to create a IDM mapping file. In the first block the document type gets mapped. In the second block you can define static values which will be used in the mapping file. In the third block you can define static values that will be transferred to IDM.
 date: "2021-10-26"
 tags:
   - DOC²
@@ -44,7 +44,7 @@ SV_FileNameSeparator=_
 SV_ACLString=Public
 ```
 
-In the third block you can define static values that will be transfered to IDM.
+In the third block you can define static values that will be transferred to IDM.
 
 It will be use to set the EntityType, AccountingEntity and GroupAccountingEntity in IDM.
 

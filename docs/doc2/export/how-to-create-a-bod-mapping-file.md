@@ -1,6 +1,6 @@
 ---
 title: "How to create a BOD mapping file"
-description: Step by step guide how to create a BOD mapping file.
+description: This is a step by step guide how to create a BOD mapping file. You will find all values and fields that would need an adjustment in the first, second and third block for different document types in DOC² and the BOD.
 date: "2021-10-28"
 tags:
   - DOC²

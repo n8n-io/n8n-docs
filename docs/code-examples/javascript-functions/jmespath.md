@@ -28,9 +28,6 @@ jmespath.search(object, searchString);
 !!! warning "Search parameter order"
     The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) follow the pattern `search(searchString, object)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/), which n8n uses, supports `search(object, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
 
-!!! note "Array or object"
-
-
 
 ## Common tasks
 

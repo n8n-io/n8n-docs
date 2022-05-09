@@ -1,6 +1,6 @@
 ---
 title: "Users"
-description: How to add a user and reset the password
+description: How to add a user and reset the password. Users can be managed in User Settings. Find all options here.
 date: "2021-10-29"
 icons: fontawesome/solid-user-plus
 tags:

@@ -1,10 +1,11 @@
 ---
 title: "Getting Started"
-description: FLOW² is a document management system (DMS)
+description: FLOW² is the latest software and solution for document capture that was developed by Polydocs GmbH. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. 
 date: "2022-03-17"
 tags: 
     - FLOW²
     - Getting Started
+    - document management system (DMS)
 ---
 
 ![](/_images/doc2/flow2-1024x286.png)

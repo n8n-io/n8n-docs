@@ -1,6 +1,6 @@
 ---
 title: "Export to FLOW²"
-description: Step by Step guide how to export documents to FLOW²
+description: This is a step by step guide how to configure export in DOC² to FLOW².
 date: "2021-11-23"
 icon: material/database-export
 tags:
@@ -47,4 +47,4 @@ Now you can
 1. Upload a document in DOC², validate and export it.
 2. Go to FLOW² -> Documents -> recently created - here you will find the just validated and exported document
 
-All configurations required in FLOW² can be found [here](/doc2/flow2/import-from-doc%c2%b2/)
+All configurations required in FLOW² can be found [here](/flow2/import-from-doc2/)

@@ -4,6 +4,7 @@ description: You can use these credentials to authenticate the following nodes w
 tags:
   - Workflow²
   - RabbitMQ
+  - Prerequisites RabbitMQ
 ---
 # RabbitMQ
 

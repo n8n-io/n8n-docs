@@ -1,3 +1,10 @@
+---
+title: RabbitMQ
+description: You can use these credentials to authenticate the following nodes with RabbitMQ. Find the Prerequisites and how using RabbitMQ.
+tags:
+  - Workflow²
+  - RabbitMQ
+---
 # RabbitMQ
 
 You can use these credentials to authenticate the following nodes with RabbitMQ.

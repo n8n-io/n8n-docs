@@ -1,3 +1,12 @@
+---
+title: RabbitMQ
+description: RabbitMQ is an open-source message broker that accepts and forwards messages. This workflow allows you to send updates about the position of the ISS every minute to a queue using the RabbitMQ node. You can also find the workflow on Workflow².io. This example usage workflow uses the following nodes. - Cron - HTTP Request - Set - RabbitMQ
+tags:
+  - Workflow²
+  - RabbitMQ
+  - Cron
+  - HTTP Request
+---
 # RabbitMQ
 
 [RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.

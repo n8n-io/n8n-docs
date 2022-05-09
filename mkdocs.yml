@@ -1,7 +1,7 @@
 site_name: Polydocs Documentation
 site_url: https://docs.polydocs.io
 site_author: Daniel Jordan
-site_description: Documentation for DOC², Workflow²
+site_description: Documentation for DOC², Workflow², Export
 theme:
   name: material
   custom_dir: overrides

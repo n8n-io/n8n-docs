@@ -1,6 +1,6 @@
 ---
 title: WooCommerce
-description: Use WooCommerce with Workflow²
+description: WooCommerce is a customizable, open-source e-commerce plugin for WordPress. Find all Basic Operations and Examples for Usage.
 tags:
   - Workflow²
   - WooCommerce

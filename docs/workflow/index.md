@@ -1,3 +1,14 @@
+---
+title: Welcome to Workflow²
+description: What is Workflow²? DOC² Workflow helps you to connect any app with an API with any other, and manipulate its data with little or no code.
+tags:
+  - Workflow
+  - DOC²
+  - Demonstration
+  - Learn the basics
+---
+
+
 # Welcome
 
 

@@ -1,11 +1,12 @@
 ---
 title: "Restart Ephesoft on Cloud"
-description: This task must be performed by system Administrator. Go to your Ephesoft Cloud Configadmin page.
+description: This task must be performed by system Administrator. Go to your Ephesoft Cloud Configadmin page. Restart Transact process can take up to 5 minutes.
 date: "2021-07-02"
 tags:
   - KV² Plugin
   - Restart
   - Ephesoft
+  - Transact
   - Cloud
 ---
 

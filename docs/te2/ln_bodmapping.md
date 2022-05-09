@@ -1,11 +1,13 @@
 ---
 title: "Infor BOD Mapping"
-description: Infor OS Mapping for Infor LN and Infor M3
+description: On this page you will find the necessary configuration in Ephesoft to insert the Infor OS Mapping for Infor LN and Infor M3
 date: "2021-07-15"
 tags:
   - TE²
   - Plugin
+  - Ephesoft
   - Infor
+  - Mapping
   - Infor LN
   - Infor M3
   - Infor CloudSuite

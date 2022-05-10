@@ -1,6 +1,6 @@
 ---
 title: "Modules"
-description: DOC² you can different modules 
+description: You will find different modules in DOC² settings.These modules are important when you like to deal with PO Matching and use the table extraction functionality. 
 date: "2022-02-25"
 tags:
   - DOC²

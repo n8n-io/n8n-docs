@@ -1,6 +1,6 @@
 ---
 title: "TE² Tutorial"
-description: How To Use TE² Plugin
+description: This is a step by step guide how to use our TE² Plugin after you have installed and configured it. You will find all steps in Ephesoft that have do be proceeded to get to the table view.
 date: "2021-07-05"
 tags:
   - TE²

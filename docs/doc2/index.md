@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: How do you use DOC²
+description: The intelligent solution for Digitizing Documents. Every business process starts, contains or ends with a document. The Advantages of DOC² at a glance.
 date: "2021-10-14"
 tags:
   - DOC²

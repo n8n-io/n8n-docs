@@ -1,6 +1,6 @@
 ---
 title: "Watchdog Configuration"
-description: Fileshare Import - WatchPuppy has multiple configuration options you can choose from
+description: Watchdog has multiple configuration options you can choose from. You will find the required arguments for Export to Infor IDM + LN, to FLOW² + DOC² as well as the local export on this page.
 date: "2022-01-28"
 tags:
   - Fileshare Import
@@ -12,7 +12,9 @@ tags:
   - DOC² Upload
 ---
 
-WatchPuppy has multiple configuration options you can choose from.
+# Watchdog Configuration
+
+Watchdog has multiple configuration options you can choose from.
 
 ## IDM + LN Export
 

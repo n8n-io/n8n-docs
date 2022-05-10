@@ -132,7 +132,7 @@ nav:
         - Fileshare Import:
           - Fileshare: doc2/fileshare.md
           - Configuration: doc2/watchpuppy-configuration.md
-          - Watchdog: doc2/watchdog.md
+          - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md
         - Webhook: doc2/webhook.md
       - All Export Options:

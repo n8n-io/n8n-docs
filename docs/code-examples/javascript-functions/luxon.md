@@ -81,6 +81,9 @@ Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.g
 
 You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
 
+!!! note "A difference between Luxon DateTime and JavaScript Date"
+    With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
+
 If you have a date in a supported standard technical format: 
 
 Luxon provides functions to handle the conversion. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.

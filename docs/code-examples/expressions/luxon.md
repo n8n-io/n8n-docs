@@ -23,15 +23,6 @@ Note that these variables can return different time formats when cast as a strin
 // For example "Today's date is 1646834498755"
 ```
 
-When performing operations in expressions using these variables, they return an object. Use `toISO()` to get just the date and time. For example:
-
-```js
-{{$today.minus({days: 7})}}
-// On 9th May 2022, this returns [Object: "2022-05-02T00:00:00.000+01:00"]
-{{$today.minus({days: 7}).toISO()}}
-// On 9th May 2022, this returns 2022-05-02T00:00:00.000+01:00
-```
-
 ## Setting the timezone in n8n
 
 Luxon uses the n8n timezone. This value is either:
@@ -92,6 +83,9 @@ Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.g
 ### Convert date string to Luxon
 
 You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
+
+!!! note "A difference between Luxon DateTime and JavaScript Date"
+    With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
 
 If you have a date in a supported standard technical format: 
 

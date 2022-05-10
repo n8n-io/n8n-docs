@@ -4,7 +4,7 @@
 
 ## The `$jmespath()` method
 
-n8n provides a custom method, `$jmespath()`, for use in expressions. It allows you to perform a search on a JSON object using the JMESPath query language.
+n8n provides a custom method, `$jmespath()`. It allows you to perform a search on a JSON object using the JMESPath query language.
 
 The basic syntax is: 
 
@@ -14,7 +14,7 @@ $jmespath(object, searchString)
 ```
 
 
-To help understand what the method does, here is the equivalent JavaScript. Note that you must use the custom method, not the JavaScript approach, because expressions must be single-line:
+To help understand what the method does, here is the equivalent longer JavaScript:
 
 
 ```js
@@ -67,9 +67,9 @@ Extract the city:
 
 ```js
 // With JMESPath
-{{$json.body.city}}
+$json.body.city
 // Without JMESPath
-{{$json['body']['city']}}
+$json['body']['city']
 ```
 
 
@@ -79,16 +79,16 @@ Get the first dog in `dogs[]`:
 
 ```js
 // With JMESPath
-{{$json.body.dogs[0]}}
+$json.body.dogs[0]
 // Without JMESPath
-{{$json['body']['dogs'][0]}}
+$json['body']['dogs'][0]
 ```
 
 ### Apply a JMESPath expression to a collection of elements with projections
 
 From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections):
 
-> Projections are one of the key features of JMESPath. It allows you to apply an expression to a collection of elements. There are five kinds of projections:
+> Projections are one of the key features of JMESPath. It allows you to apply an expression to a collection of elements. JMESPath supports five kinds of projections:
 > 
 > * List Projections
 > * Slice Projections
@@ -146,8 +146,18 @@ Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections)
 
 
 ```js
-{{$jmespath($json.body.people, "[*].first" )}}
-// Returns ["James", "Jacob", "Jayden"]
+$jmespath($json.body.people, "[*].first" )
+/* Returns:
+[
+  {
+    "firstNames": [
+      "James",
+      "Jacob",
+      "Jayden"
+    ]
+  }
+]
+*/
 ```
 
 
@@ -155,16 +165,36 @@ Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections) of 
 
 
 ```js
-{{$jmespath($json.body.people, "[:2].first")}}
-// Returns ["James", "Jacob"]
+$jmespath($json.body.people, "[:2].first")
+/* Returns:
+[
+  {
+    "firstNames": [
+      "James",
+      "Jacob",
+      "Jayden"
+    ]
+  }
+]
+*/
 ```
 
 Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections):
 
 
 ```js
-{{$jmespath($json.body.dogs, "*.age")}}
-// Returns [7,5]
+$jmespath($json.body.dogs, "*.age")
+/* Returns:
+[
+  {
+    "firstNames": [
+      "James",
+      "Jacob",
+      "Jayden"
+    ]
+  }
+]
+*/
 ```
 
 
@@ -220,8 +250,27 @@ Use multiselect list to get the first and last names and create new lists contai
 
 
 ```js
-{{$jmespath($json.body.people, "[].[first, last]")}}
-// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
+$jmespath($json.body.people, "[].[first, last]")
+/* Returns:
+[
+  {
+    "fullNames": [
+      [
+        "James",
+        "Green"
+      ],
+      [
+        "Jacob",
+        "Jones"
+      ],
+      [
+        "Jayden",
+        "Smith"
+      ]
+    ]
+  }
+]
+*/
 ```
 
 

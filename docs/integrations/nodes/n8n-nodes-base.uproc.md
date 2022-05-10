@@ -464,7 +464,7 @@
 - Convert a string to Base64 encoded value
 - Discover banned English words in an email body or subject
 - Get field names by analyzing the field value provided
-- Get HTML code From Markdown
+- Get HTML code from Markdown
 - Get Markdown text from HTML
 - Get text without HTML
 - Get spin string

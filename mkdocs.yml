@@ -128,13 +128,11 @@ nav:
       - All Import Options:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
-        - Webhook: doc2/api.md
         - Fileshare Import:
           - Fileshare: doc2/fileshare.md
           - Configuration: doc2/watchpuppy-configuration.md
           - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md
-        - Webhook: doc2/webhook.md
       - All Export Options:
         - Export: doc2/export.md
         - Export to Infor:
@@ -144,7 +142,9 @@ nav:
           - Export to Infor IDM: doc2/export/infor-idm.md
           - Infor ION File: doc2/export/create-a-infor-ion-file.md
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
+        - Webhook: doc2/webhook.md
         - Export to Flow²: doc2/export/export-to-flow2.md
+        
 
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md

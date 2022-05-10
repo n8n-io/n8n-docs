@@ -142,7 +142,7 @@ nav:
           - Export to Infor IDM: doc2/export/infor-idm.md
           - Infor ION File: doc2/export/create-a-infor-ion-file.md
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
-        - Webhook: doc2/webhook.md
+        - Webhook: doc2/export/webhook.md
         - Export to Flow²: doc2/export/export-to-flow2.md
         
 

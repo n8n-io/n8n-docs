@@ -1,7 +1,7 @@
 ---
 title: "Export"
 date: "2021-10-22"
-description: This documentation explains how to export to other environments
+description: On this page you will find links to documentations explaining how to export documents from DOC² to other environments as Infor and FLOW² and via Webhook.
 tags:
   - DOC²
   - Export

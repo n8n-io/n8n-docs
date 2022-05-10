@@ -115,7 +115,7 @@ nav:
         - Mapping of Columns: doc2/mapping-of-columns.md
         - Group function: doc2/table/group-function.md
         - Manual row selection: doc2/table/manual-row-selection.md
-        - Advanced settings: doc2/table/advance-settings.md
+        - Advanced settings: doc2/table/advanced-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: doc2/infor.md

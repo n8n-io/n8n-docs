@@ -24,7 +24,7 @@
 - Check if an email has a valid format
 - Check if an email domain belongs to a disposable email service
 - Check if email belongs to free service provider like Gmail, Hotmail
-- Check email is catchall
+- Check if email is catchall
 - Discover if an email exists in the Robinson list (only Spain)
 - Check if email belongs to a system or role-based account
 - Check if an email is a spam trap

@@ -386,7 +386,7 @@
 - Check if a GTIN barcode of 13 digits has a valid format
 - Check if a GTIN barcode of 14 digits has a valid format
 - Check if a GTIN barcode of 8 digits has a valid format
-- Check VIN Number is valid
+- Check if VIN Number is valid
 - Allows checking if an ISBN book exists
 - Allows checking if an ISBN10/13 code has a valid format
 - Allows checking if an ISBN10 code has a valid format

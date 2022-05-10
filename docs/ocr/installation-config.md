@@ -1,6 +1,13 @@
 ---
 title: "Installation & Config"
 date: "2021-07-06"
+description: How to install & configure OCR API - OCR API is installed directly in Ephesoft Transact. The installation process is same for instances set up in Cloud or On Premise.
+tags:
+  - OCR²
+  - Installation
+  - Configuration
+  - OCR API
+  - Ephesoft Transact
 ---
 
 (TBD)

@@ -1,6 +1,6 @@
 ---
 title: "User Dashboard"
-description: User Dashboard is the start in FLOW²
+description: The dashboard homepage of FLOW² is the main page and overview where you can find recently accessed and recently created documents as well as your applied favorites.
 date: "2021-04-17"
 
 tags:

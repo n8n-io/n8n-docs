@@ -1,6 +1,6 @@
 ---
 title: "Watchdog for Windows"
-description: Fileshare Import - Watchdog for Windows
+description: This is how to configure Watchdog for Windows for easy Fileshare Import of your local documents to DOC².
 date: "2022-01-28"
 icon: material/microsoft-windows
 tags:
@@ -10,6 +10,8 @@ tags:
   - Windows
 ---
 ---
+
+# Watchdog for Windows
 
 ### Download watchpuppy here:
 

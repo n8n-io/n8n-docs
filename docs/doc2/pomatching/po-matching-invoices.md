@@ -1,6 +1,6 @@
 ---
 title: "PO Matching - Invoices"
-description: Creating purchase order in LN, Uploading invoice in DOC², Checking the receipt of the invoice in LN
+description: This is a step by step guide how to create a purchase order in LN, Upload the invoice in DOC², handle two different scenarios and check the receipt of the invoice in LN.
 date: "2022-01-24"
 tags:
   - DOC²
@@ -8,6 +8,8 @@ tags:
   - Invoice
   - LN
 ---
+
+# PO Matching - Invoices
 
 ## Create a purchase order in LN
 

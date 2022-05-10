@@ -1,6 +1,6 @@
 ---
 title: "SSO Settings"
-description: you will find all the details you need for SSO configuration here
+description: The details you need for SSO configuration can be found in SSO Service Provider Settings of DOC².
 date: "2021-10-29"
 icon: material/sign-direction:
 tags:
@@ -9,6 +9,7 @@ tags:
   - SSO
 ---
 
+# SSO Settings
 
 * * *
 

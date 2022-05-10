@@ -141,7 +141,7 @@
 
 **Finance**
 
-- Check crypto wallet is valid
+- Check if crypto wallet is valid
 - Discover if a BIC number has a valid format
 - Discover if an account number has a valid format
 - Check if credit card number checksum is valid

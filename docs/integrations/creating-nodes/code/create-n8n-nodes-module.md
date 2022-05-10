@@ -1,6 +1,6 @@
 # Creating n8n-nodes-module
 
-In this guide, you’ll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
+In this guide, you'll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
 
 Consider creating n8n-nodes-module if any of the following conditions satisfy your needs:
 - The nodes are only for yourself, your organization, or a small group of people.
@@ -36,7 +36,7 @@ npm install n8n
 
 ## Create custom n8n-nodes-module
 
-You can create multiple n8n-nodes-modules. Each individual n8n-nodes-module should get created in a separate folder since they are different npm packages. A single n8n-nodes-module can contain multiple nodes. If you’re creating multiple nodes in the same module, as a best practice create each node in a separate folder.
+You can create multiple n8n-nodes-modules. Each individual n8n-nodes-module should get created in a separate folder since they are different npm packages. A single n8n-nodes-module can contain multiple nodes. If you're creating multiple nodes in the same module, as a best practice create each node in a separate folder.
 
 In this tutorial, you will create an n8n-nodes-module for the OpenWeatherMap API. You will name it ***n8n-nodes-weather***.
 
@@ -382,7 +382,7 @@ Add the newly created node and the credential to the package.json file. Add `"di
 
 ## Develop and test the module
 
-Once you’ve created the n8n-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
+Once you've created the n8n-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
 
 ```bash
 # Install dependencies
@@ -426,7 +426,7 @@ Following the steps mentioned above, you can create multiple nodes within a sing
 
 Once you test and publish your n8n-nodes-module you would want to use it in your production environment.
 
-If you’re running n8n via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
+If you're running n8n via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
 
 1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
 2. Add the following command in your Dockerfile before the font installation command.
@@ -485,4 +485,4 @@ EXPOSE 5678/tcp
 
 You will now be able to use your n8n-nodes-module in Docker.
 
-If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside n8n. n8n will find the module and load it automatically.
+If you're running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside n8n. n8n will find the module and load it automatically.

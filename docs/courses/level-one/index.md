@@ -55,5 +55,5 @@ We believe all good works deserve recognition. If you successfully complete the 
 - [x] Pass the quiz (theory and practice) at the end of the course
 
 <div style="text-align:center;">
-	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let’s get started!</a></button>
+	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let's get started!</a></button>
 </div>

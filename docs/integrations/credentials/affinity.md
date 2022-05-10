@@ -17,7 +17,7 @@ Create an [Affinity](https://www.affinity.co/) account.
 2. Open hamburger menu on the top left.
 3. Click on Settings.
 4. Click on API.
-5. Click on 'Generate an API Key’ button.
+5. Click on 'Generate an API Key' button.
 6. Use the API key with your Affinity node credentials in n8n.
 
 

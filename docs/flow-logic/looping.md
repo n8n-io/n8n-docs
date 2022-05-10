@@ -2,7 +2,7 @@
 
 Looping enables you to repeatedly perform the same actions, stopping only after a set number of repetitions (e.g. fetch the 10 most recent items) or when a specific condition is met (e.g. no new items exist).
 
-Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In n8n this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn’t true.
+Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In n8n this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn't true.
 
 ## Using loops in n8n
 
@@ -86,7 +86,7 @@ There are a limited number of nodes and operations where you need to design a lo
 * [**Microsoft SQL**](/integrations/nodes/n8n-nodes-base.microsoftSql/) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
 * [**Postgres**](/integrations/nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
 * [**QuestDB**](/integrations/nodes/n8n-nodes-base.questDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Read Binary Files**](/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/) node will fetch the files from the specified path only once. This node doesn’t execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
+* [**Read Binary Files**](/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/) node will fetch the files from the specified path only once. This node doesn't execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
 * [**Redis**](/integrations/nodes/n8n-nodes-base.redis/) node:
 	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
 * [**RSS**](/integrations/core-nodes/n8n-nodes-base.rssFeedRead/) nodes executes only once regardless of the number of items in the incoming data.

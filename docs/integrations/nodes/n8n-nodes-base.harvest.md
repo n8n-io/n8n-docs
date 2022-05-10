@@ -56,7 +56,7 @@
     * Create a time entry via duration
     * Create a time entry via start and end time
     * Delete a time entry
-    * Delete a time entry’s external reference.
+    * Delete a time entry's external reference.
     * Get data of a time entry
     * Get data of all time entries
     * Restart a time entry

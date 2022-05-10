@@ -1,6 +1,6 @@
 # Sentry.io
 
-[Sentry.io](https://sentry.io) is a service that helps you monitor and fix crashes in realtime. Sentry’s platform helps every developer diagnose, fix, and optimize the performance of their code.
+[Sentry.io](https://sentry.io) is a service that helps you monitor and fix crashes in realtime. Sentry's platform helps every developer diagnose, fix, and optimize the performance of their code.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/sentryIo/).

@@ -1,10 +1,11 @@
 ---
 title: "Define tables and columns"
-description: In DOC² table extraction view the tables and columns for a document can be defined
+description: In this documentation you will find a guideline how to define tables and columns on a document via the table extraction view by activating the Training Mode.
 date: "2022-02-18"
 tags:
-  - Table
   - DOC²
+  - Table
+  - Columns
 ---
 
 **Define tables**

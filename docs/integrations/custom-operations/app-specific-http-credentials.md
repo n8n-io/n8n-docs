@@ -6,7 +6,7 @@ For example: you create an Asana credential, for use with the Asana node. Later,
 
 ## Supported integrations
 
-??? info "Typed HTTP credentials are available for these platforms"
+??? info "App-specific HTTP credentials are available for these APIs"
 
     * Action Network API
     * AcuityScheduling OAuth2 API

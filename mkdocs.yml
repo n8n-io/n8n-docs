@@ -35,7 +35,7 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   # https://github.com/Neoteroi/mkdocs-plugins
-  - neoteroi.spantable
+  # - neoteroi.spantable
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
@@ -64,7 +64,7 @@ plugins:
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
   # https://github.com/Neoteroi/mkdocs-plugins
-  - neoteroi.mkdocsoad
+  # - neoteroi.mkdocsoad
   # https://github.com/bharel/mkdocs-render-swagger-plugin
   - render_swagger
 nav:

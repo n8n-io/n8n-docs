@@ -1,6 +1,6 @@
 ---
 title: "KV² Tutorial"
-description: This is a step by step guide how to use our KV² Plugin after you have installed and configured it. You will find all steps in Ephesoft to train the correct values and use the feedback function if you need help.s
+description: This is a step by step guide how to use our KV² Plugin after you installed and configured it. You will find all steps in Ephesoft to train the correct values.
 date: "2021-07-02"
 tags:
   - KV²

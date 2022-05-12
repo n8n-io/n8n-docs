@@ -6,7 +6,9 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You must use the authentication method required by the app or service you want to query. The following authentication methods are available:
+You must use the authentication method required by the app or service you want to query.
+
+The following generic authentication methods are available:
 
 * Basic Auth
 * Digest Auth
@@ -16,6 +18,8 @@ You must use the authentication method required by the app or service you want t
 * None
 
 You can learn more about HTTP authentication [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#see_also).
+
+You can use [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials.md) to perform [custom operations](/integrations/custom-operations/) with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials/) for more information.
 
 ## Using Basic Auth / Digest Auth
 
@@ -57,3 +61,9 @@ Read more about [OAuth1](https://oauth.net/1/).
 3. Click **Create** to save your credentials.
 
 Read more about [OAuth2](https://oauth.net/2/).
+
+## Using an existing credential type
+
+--8<-- "_snippets/integrations/app-specific-http-how-to.md"
+
+Refer to [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials/) for more information.

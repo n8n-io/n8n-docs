@@ -1,13 +1,11 @@
 ---
 title: "Training for Table Extraction"
-description: Here you can find all important information about the training for table extraction
+description: Here you will find an overview of all the important points about the training for table extraction. From how to define tables and columns to advanced settings.
 date: "2022-02-22"
 tags:
   - DOC²
   - Training
   - Table
-  - Important Information
----
 ---
 
 - [How to define tables and columns](/doc2/table/define-table-and-columns/)

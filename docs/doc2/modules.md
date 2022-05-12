@@ -1,6 +1,6 @@
 ---
 title: "Modules"
-description: DOC² you can different modules 
+description: You will find different modules in DOC² settings.These modules are important when you like to deal with PO Matching and use the table extraction functionality. 
 date: "2022-02-25"
 tags:
   - DOC²
@@ -23,7 +23,7 @@ There you will find the option "PURCHASE ORDER" with which you can switch PO mat
 
 ![](/_images/doc2/image-46.png)
 
-Furthermore you can define which documents should be matched via the option "Select PO Matching". There are three ways to match your purchase order. For details please check PO Matching documentation: [PO Matching](/doc2/doc2app/po-matching/)  
+Furthermore you can define which documents should be matched via the option "Select PO Matching". There are three ways to match your purchase order. For details please check PO Matching documentation: [PO Matching](/doc2/pomatching/po-matching/)  
 
 ![](/_images/doc2/image-47.png)
 

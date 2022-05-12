@@ -1,16 +1,18 @@
 ---
 title: "Import"
-description: This documentation shows overviews about import functionalities
+description: This is an overview about all the possible import functionalities in DOC². Often used are E-Mail import and manual import.
 date: "2021-10-22"
 tags:
   - Import
   - DOC²
+  - E-Mail
+  - manual Import
 ---
 
 #### Here you can find the import options and the corresponding links
 
-- [E-Mail](/doc2/doc2app/import/e-mail/)
-- [Manual Import](/doc2/doc2app/import/manual-import/)
-- [Logic Apps](/doc2/doc2app/settings/import/logic-apps/)
-- [API](https://docs.cloudintegration.eu/?post_type=docs&p=592)
-- [Microsoft Teams](/doc2/doc2app/import/microsoft-teams/)
+- [E-Mail](/doc2/e-mail/)
+- [Manual Import](/doc2/manual-import/)
+- [Logic Apps](/doc2/)
+- [API](/doc2/)
+- [Microsoft Teams](/doc2/)

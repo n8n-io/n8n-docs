@@ -9,8 +9,8 @@ tags:
   
 ---
 
-### [Watchdog Configuration](/doc2/doc2app/settings/import/fileshare/watchdog-windows/)
+### [Watchdog Configuration](/doc2/watchpuppy-configuration/)
 
-### [Watchdog - for Windows](/doc2/doc2app/settings/import/fileshare/watchdog-windows/)
+### [Watchdog - for Windows](/doc2/watchdog-windows/)
 
-### [Watchdog - Linux](/doc2/doc2app/settings/import/watchdog/)
+### [Watchdog - Linux](/doc2/watchdog/#linux)

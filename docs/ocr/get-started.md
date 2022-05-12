@@ -1,8 +1,11 @@
 ---
 title: "Getting Started"
+description: Optical Character Recognition (OCR) describes the conversion of handwritten, typed or printed documents into machine-encoded text.
 date: "2021-07-06"
 tags:
   - OCR
+  - extract 
+  - metadata
 ---
 
 Welcome to the OCR Engine API!

@@ -1,7 +1,7 @@
 site_name: Polydocs Documentation
 site_url: https://docs.polydocs.io
 site_author: Daniel Jordan
-site_description: Documentation for DOC², Workflow²
+site_description: Documentation for DOC², Workflow², Export
 theme:
   name: material
   custom_dir: overrides
@@ -115,7 +115,7 @@ nav:
         - Mapping of Columns: doc2/mapping-of-columns.md
         - Group function: doc2/table/group-function.md
         - Manual row selection: doc2/table/manual-row-selection.md
-        - Advanced settings: doc2/table/advance-settings.md
+        - Advanced settings: doc2/table/advanced-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: doc2/infor.md
@@ -128,13 +128,11 @@ nav:
       - All Import Options:
         - Overview: doc2/import.md
         - Email: doc2/e-mail.md
-        - Webhook: doc2/api.md
         - Fileshare Import:
           - Fileshare: doc2/fileshare.md
           - Configuration: doc2/watchpuppy-configuration.md
-          - Watchdog: doc2/watchdog.md
+          - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md
-        - Webhook: doc2/webhook.md
       - All Export Options:
         - Export: doc2/export.md
         - Export to Infor:
@@ -144,7 +142,9 @@ nav:
           - Export to Infor IDM: doc2/export/infor-idm.md
           - Infor ION File: doc2/export/create-a-infor-ion-file.md
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
+        - Webhook: doc2/export/webhook.md
         - Export to Flow²: doc2/export/export-to-flow2.md
+        
 
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md

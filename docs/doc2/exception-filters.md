@@ -1,7 +1,7 @@
 ---
 title: "Exception filters"
 date: "2022-03-30"
-description: This documentation explains how to use exception filters
+description: This documentation explains how to use exception filters. The exception filters are important to achieve the best results.
 tags:
   - Generel
   - Exception

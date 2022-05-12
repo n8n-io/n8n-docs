@@ -2,7 +2,7 @@
 title: "E-Mail"
 date: "2021-10-22"
 icon: material/email-send
-description: DOC² Email Import - Automatic import documents over Emails
+description: DOC² Email Import. If you want to import documents from your email inbox automatically, here are the steps you need to take.
 tags:
   - E-Mail
   - Import

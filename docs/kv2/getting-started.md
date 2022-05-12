@@ -1,6 +1,6 @@
 ---
 title: KV² - Getting Started
-description: Welcome to KV² Plugin for Ephesoft Transact!
+description: Welcome to KV² Plugin for Ephesoft Transact! One time installed, the solution can be used and trained from day one, with no need to configure the batch class for extraction rules.
 tags:
   - KV²
   - Plugin

@@ -1,6 +1,6 @@
 ---
 title: "SSO Settings"
-description: you will find all the details you need for SSO configuration here
+description: The details you need for SSO configuration can be found in SSO Service Provider Settings of DOC².
 date: "2021-10-29"
 icon: material/sign-direction:
 tags:
@@ -8,6 +8,8 @@ tags:
   - Settings
   - SSO
 ---
+
+# SSO Settings
 
 * * *
 
@@ -25,4 +27,4 @@ Here you will find all the information you need for the following steps
 
 ![](/_images/doc2/DOC²_Identity-Service-Provider-Settings_EN-1024x319.png)
 
-The step by step guide to configure SSO in Infor Cloud can be found [here](/doc2/doc2app/configuring-sso-in-cloud/).
+The step by step guide to configure SSO in Infor Cloud can be found [here](/doc2/configuring-sso-in-cloud/#infor).

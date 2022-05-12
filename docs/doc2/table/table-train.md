@@ -1,6 +1,6 @@
 ---
 title: "Table Extraction"
-description: With DOC² it is possible to extract tables from PDF-Files. That will be done via the "Line Items" functionality. It is used for extracting the tables from all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.)
+description: With DOC² it is possible to extract tables from PDF-Files. That will be done via the Line Items functionality. It is used for extracting the tables from all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.)
 date: "2021-11-11"
 tags:
   - DOC²

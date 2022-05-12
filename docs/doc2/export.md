@@ -1,7 +1,7 @@
 ---
 title: "Export"
 date: "2021-10-22"
-description: This documentation explains how to export to other environments
+description: On this page you will find links to documentations explaining how to export documents from DOC² to other environments as Infor and FLOW² and via Webhook.
 tags:
   - DOC²
   - Export
@@ -13,6 +13,6 @@ tags:
 
 #### Here you can find the export options and the corresponding articles.
 
-- [Webhook](/doc2/doc2app/export/webhook/)
-- [infor](/doc2/doc2app/export/infor/)
-- [FLOW²](/doc2/doc2app/export/export-to-flow%c2%b2/)
+- [Webhook](/doc2/webhook)
+- [infor](/doc2/export/export-to-infor/)
+- [FLOW²](/doc2/export/export-to-flow2/)

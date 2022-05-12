@@ -1,6 +1,6 @@
 ---
 title: "Watchdog for Linux"
-description: Fileshare Import - Watchdog for Linux
+description: This is how to configure Watchdog for Linux for easy Fileshare Import of your local documents to DOC².
 date: "2021-11-22"
 tags:
   - DOC²
@@ -8,6 +8,8 @@ tags:
   - Watchdog
   - Linux
 ---
+
+# Watchdog for Linux
 
 ### Download watchpuppy here:
 

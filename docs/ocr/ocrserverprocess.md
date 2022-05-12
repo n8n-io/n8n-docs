@@ -1,6 +1,6 @@
 ---
 title: "OCR Server Process"
-description: Shows a documentation how to process OCR Server
+description: This is a documentation how to process the OCR Server. First Process step is designed for the upload of your pdf document. 
 date: "2021-07-05"
 tags:
   - OCR

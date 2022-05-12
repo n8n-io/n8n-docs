@@ -1,10 +1,15 @@
 ---
 title: "Configuring SSO in Infor Cloud"
 date: "2021-10-14"
-description: Shows how to configure SSO in Infor Cloud
+description: This is a step by step guide how to configure SSO in Infor Cloud. Starting with the prerequisites, getting access to the cloud and checking it to add a new service provider.
 tags:
   - Infor
+  - SSO
+  - Cloud
+  - new service provider
 ---
+
+# Configuring SSO in Infor Cloud
 
 ## Step by step guide
 

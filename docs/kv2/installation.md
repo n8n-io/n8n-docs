@@ -1,6 +1,6 @@
 ---
 title: "Installation & Config"
-description: In this documentation you will learn how to install and configure the KV² plugin. This is done directly in Ephesoft Transact.s
+description: In this documentation you will learn how to install and configure the KV² plugin. This is done directly in Ephesoft Transact.
 date: "2021-07-02"
 tags:
   - KV²

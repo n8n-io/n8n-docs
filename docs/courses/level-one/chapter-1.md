@@ -63,7 +63,7 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
     - Place two fingers on your touchpad and slide
 
 
-Don’t worry about workflow execution and activation for now, we will explain these concepts later on in the course.
+Don't worry about workflow execution and activation for now, we will explain these concepts later on in the course.
 
 ## Nodes
 
@@ -78,7 +78,7 @@ Based on their function, nodes can be classified into two types:
 - **Regular Nodes** add, remove, and edit data, as well as request and send external data.
 - **Trigger Nodes** start a workflow and supply the initial data.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Cron and Interval nodes) or adding JavaScript functions (e.g. Function and Function Item nodes). We refer to these as *Core Nodes*.
 
 
@@ -88,9 +88,9 @@ The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/) is the defaul
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Start-node.png" alt="Start node" style="width:30%"><figcaption align = "center"><i>Start node</i></figcaption></figure>
 
-The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don’t use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
+The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 
-You’ve probably figured out already that the *Start node* is a Core Trigger node. Apart from it, there are over 290 other Regular and Trigger nodes for various functions, apps, and services.
+You've probably figured out already that the *Start node* is a Core Trigger node. Apart from it, there are over 290 other Regular and Trigger nodes for various functions, apps, and services.
 
 ### Finding nodes
 
@@ -112,13 +112,13 @@ If you want to get a specific node, type in the name of the node, app, or servic
 
 To add a new node to the Editor UI, click on the node you want in the nodes panel. The new node will automatically be connected to the selected node on the canvas.
 
-To review, here’s a walkthrough of the Editor UI touching on all the settings you’ve learned so far:
+To review, here's a walkthrough of the Editor UI touching on all the settings you've learned so far:
 
 <figure><img src="/_images/courses/level-one/chapter-one/Editor-UI-walkthrough.gif" alt="Editor UI walkthrough" style="width:100%"><figcaption align = "center"><i>Editor UI walkthrough</i></figcaption></figure>
 
 ### Node buttons
 
-If you hover on a node, you’ll notice that four icons appear on top:
+If you hover on a node, you'll notice that four icons appear on top:
 
 - Delete the node
 - Deactivate/Activate the node

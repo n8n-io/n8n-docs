@@ -2,7 +2,7 @@
 
 [FileMaker](https://www.claris.com/filemaker/) is an integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and service companies.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/fileMaker/).
 
 

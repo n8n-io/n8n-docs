@@ -2,7 +2,7 @@
 
 [DeepL](https://deepL.com) is a machine translation service that allows you to translate text to different languages.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/deepL/).
 
 

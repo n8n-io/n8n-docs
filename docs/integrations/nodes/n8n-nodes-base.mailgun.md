@@ -2,7 +2,7 @@
 
 [Mailgun](https://www.mailgun.com/) is a developer-friendly email sending platform that provides API-based email services that are easy to use.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mailgun/).
 
 

@@ -2,7 +2,7 @@
 
 [TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/timescaleDb/).
 
 
@@ -90,7 +90,7 @@ In the screenshot below, you will notice that the node inserts the data from the
 
 ![Using the TimescaleDB node to insert the data to a table](/_images/integrations/nodes/timescaledb/timescaledb_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 
 

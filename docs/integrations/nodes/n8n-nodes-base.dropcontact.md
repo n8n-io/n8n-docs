@@ -4,7 +4,7 @@
 
 
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/dropcontact/).
 
 

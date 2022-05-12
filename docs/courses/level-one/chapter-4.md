@@ -1,17 +1,17 @@
 # Designing the Workflow
 
-Now that we have an idea of what Nathan wants to automate, let’s enumerate the steps he needs to take to achieve this:
+Now that we have an idea of what Nathan wants to automate, let's enumerate the steps he needs to take to achieve this:
 
 1. Get the relevant data (order id, order status, order value, employee name) from the data warehouse
 2. Filter the orders by their status (processing or booked)
 3. Calculate the total value of all the booked orders
-4. Notify the team members about the booked orders in the company’s Discord channel
+4. Notify the team members about the booked orders in the company's Discord channel
 5. Insert the details about the processing orders in Airtable for follow-up
 6. Schedule this workflow to run every Monday morning
 
-Nathan’s workflow involves sending data from the company’s data warehouse to two external services: Discord and Airtable. In between, the data has to be wrangled with general functions (conditional filtering, calculation, scheduling).
+Nathan's workflow involves sending data from the company's data warehouse to two external services: Discord and Airtable. In between, the data has to be wrangled with general functions (conditional filtering, calculation, scheduling).
 
-n8n provides integrations for all these steps, so Nathan’s workflow in n8n would look like this:
+n8n provides integrations for all these steps, so Nathan's workflow in n8n would look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/Finished-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
 

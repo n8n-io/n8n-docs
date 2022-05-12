@@ -2,7 +2,7 @@
 
 [PayPal](https://paypal.com) is a digital payment service that supports online funds transfers and that customers can use when shopping online.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/payPal/).
 
 

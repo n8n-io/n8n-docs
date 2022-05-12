@@ -2,7 +2,7 @@
 
 [sms77](https://www.sms77.io/) is a full service messaging provider that helps improve communication with a powerful API and comprehensive products like Voice, SMS, and Text2Speech.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/sms77/).
 
 

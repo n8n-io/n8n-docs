@@ -2,7 +2,7 @@
 
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/facebookApp/).
 
 
@@ -23,6 +23,7 @@
 ## Example Usage
 
 This workflow allows you to receive a Mattermost message when a user updates their profile on Facebook. You can also find the [workflow](https://n8n.io/workflows/785) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Facebook Trigger]()
 - [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
 
@@ -58,5 +59,5 @@ In the screenshot below, you will notice that the node sends a message about the
 
 ![Using the Mattermost node to send a message of the updated information](/_images/integrations/trigger-nodes/facebooktrigger/mattermost_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Facebook Trigger node.

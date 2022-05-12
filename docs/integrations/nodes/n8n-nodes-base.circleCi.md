@@ -2,7 +2,7 @@
 
 [CircleCI](https://circleci.com/) is a continuous integration and delivery platform helps teams release quality code, faster.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/circleCi/).
 
 

@@ -2,7 +2,7 @@
 
 Congratulations – you finished the n8n Course Level 1! You helped Nathan build a business use case workflow, saving him hours of tedious work and making him more productive.
 
-You’ve come a long way throughout this course and learned a lot about workflow automation. Here’s what you can do next:
+You've come a long way throughout this course and learned a lot about workflow automation. Here's what you can do next:
 
 * Test your knowledge of everything you've learned in this course with a **quiz**. The quiz consists of questions about the theoretical concepts and workflows covered in this course.
 
@@ -16,5 +16,5 @@ You’ve come a long way throughout this course and learned a lot about workflow
 </div>
 
 
-* Create new workflows for your work or personal use and share them with us. Don’t have any ideas? Find inspiration on our [blog](https://n8n.io/blog/), [YouTube channel](https://www.youtube.com/c/n8n-io), [community forum](https://community.n8n.io), and [Discord server](https://discord.gg/vWwMVThRta).
+* Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on our [blog](https://n8n.io/blog/), [YouTube channel](https://www.youtube.com/c/n8n-io), [community forum](https://community.n8n.io), and [Discord server](https://discord.gg/vWwMVThRta).
 * Take the n8n [Course Level 2](/courses/level-two/).

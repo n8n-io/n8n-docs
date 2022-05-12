@@ -2,7 +2,7 @@
 
 [Plivo](https://www.plivo.com/) is a cloud communications platform as a service company that allows you to add SMS, MMS, and Voice calling functionality within your apps programmatically.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/plivo/).
 
 
@@ -67,6 +67,6 @@ In the screenshot below, you will notice that the node sends an SMS to the phone
 
 ![Using the Plivo node to send weather updates via SMS](/_images/integrations/nodes/plivo/plivo_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

@@ -2,7 +2,7 @@
 
 [SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/securityScorecard/).
 
 

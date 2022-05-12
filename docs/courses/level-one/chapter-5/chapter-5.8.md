@@ -4,7 +4,7 @@ In this step of the workflow you will learn how to activate your workflow and ch
 
 Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all newly created workflows are deactivated.
 
-To activate your workflow toggle the *Active* button on the top right corner of the Editor UI. Nathan’s workflow will now be executed automatically every Monday at 9 am.
+To activate your workflow toggle the *Active* button on the top right corner of the Editor UI. Nathan's workflow will now be executed automatically every Monday at 9 am.
 
 <figure><img src="/_images/courses/level-one/chapter-two/Activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
 
@@ -24,7 +24,7 @@ The *Workflow Executions* window displays a table with the following information
 * _Mode:_ How the workflow was triggered (trigger or webhook)
 * _Running Time:_ The duration it took the workflow to execute
 
-!!! note " Workflow execution status"
+!!! note "Workflow execution status"
     In the *Workflow Executions* window you can filter the displayed executions by workflow and by status (*All*, *Error*, *Running*, or *Success*).\
 The information displayed here depends on what workflows and executions you set up in *Workflow Settings* to be saved.
 

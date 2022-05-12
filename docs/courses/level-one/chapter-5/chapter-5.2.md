@@ -23,11 +23,11 @@ Now your table should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/Orders-table.png" alt="Orders table in Airtable" style="width:100%"><figcaption align = "center"><i>Orders table in Airtable</i></figcaption></figure>
 
-Now that the table is prepared let’s return to the workflow in the Editor UI.
+Now that the table is prepared let's return to the workflow in the Editor UI.
 
 Add an ***Airtable node*** connected to the HTTP Request node.
 
-!!! note " Spreadsheet nodes"
+!!! note "Spreadsheet nodes"
     You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/nodes/n8n-nodes-base.googleSheets/) and [*Spreadsheet File*](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/).
 
 

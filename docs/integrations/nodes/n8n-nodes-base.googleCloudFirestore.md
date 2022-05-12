@@ -2,7 +2,7 @@
 
 [Google Cloud Firestore](https://firebase.google.com/docs/firestore/) is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud. It keeps your data in-sync across client apps through real-time listeners and offers offline support for mobile and web.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

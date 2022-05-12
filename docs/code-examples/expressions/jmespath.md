@@ -31,7 +31,7 @@ jmespath.search(object, searchString);
 
 ## Common tasks
 
-This section provides examples for some common operations. Many more examples, and detailed guidance, are available in [JMESPath's own documentation](https://jmespath.org/tutorial.html).
+This section provides examples for some common operations. More examples, and detailed guidance, are available in [JMESPath's own documentation](https://jmespath.org/tutorial.html).
 
 ### A shorter way to write basic operations
 

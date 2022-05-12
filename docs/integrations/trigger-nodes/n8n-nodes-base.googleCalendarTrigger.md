@@ -2,7 +2,7 @@
 
 [Google Calendar](https://www.google.com/calendar/) is a time-management and scheduling calendar service developed by Google.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

@@ -2,7 +2,7 @@
 
 [Clearbit](https://clearbit.com/) provides powerful products, and data APIs like contact enrichment, lead generation, financial compliance, and more to help businesses grow.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/clearbit/).
 
 

@@ -2,7 +2,7 @@
 
 [Quick Base](https://www.quickbase.com/) is a low-code application development platform. It allows you to connect data, integrate your systems in real-time, and orchestrate automated workflows using simple business logic.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/quickbase/).
 
 

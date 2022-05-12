@@ -2,7 +2,7 @@
 
 [RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/rabbitmq/).
 
 
@@ -84,6 +84,6 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 ![Using the RabbitMQ node to send the data to a queue](/_images/integrations/nodes/rabbitmq/rabbitmq_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

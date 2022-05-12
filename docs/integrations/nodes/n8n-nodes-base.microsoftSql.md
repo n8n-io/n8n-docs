@@ -2,7 +2,7 @@
 
 [Microsoft SQL](https://www.microsoft.com/en-us/sql-server) is a relational database management system. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoftSql/).
 
 

@@ -2,7 +2,7 @@
 
 [MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mqtt/).
 
 
@@ -84,6 +84,6 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 ![Using the MQTT node to send the data to a topic](/_images/integrations/nodes/mqtt/mqtt_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

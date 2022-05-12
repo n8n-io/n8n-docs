@@ -11,7 +11,6 @@ n8n uses Luxon to provide two custom variables:
 
 Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
 
-
 ``` js
 {{$now}}
 // Returns [Object: "<ISO formatted timestamp>"]
@@ -34,7 +33,7 @@ Luxon uses the n8n timezone. This value is either:
 
 ## Common tasks
 
-This section provides examples for some common operations. Many more examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
+This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
 
 ### Get n days from today
 
@@ -51,7 +50,7 @@ In the expressions editor, enter:
 
 On the 23rd June 2019, this returns `[Object: "2019-06-16T00:00:00.000+00:00"]`.
 
-This example uses n8n's custom variable `$today` for convenience. It is the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
+This example uses n8n's custom variable `$today` for convenience. It's the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
 
 
 For more detailed information and examples, refer to:
@@ -85,11 +84,14 @@ Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.g
 
 You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
 
+!!! note "A difference between Luxon DateTime and JavaScript Date"
+    With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
+
 If you have a date in a supported standard technical format: 
 
 Luxon provides functions to handle the conversion. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
 
-If you have a date as a string that does not use a standard format: 
+If you have a date as a string that doesn't use a standard format: 
 
 Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing). To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) that describe the format.
 
@@ -109,14 +111,14 @@ To get the time between two dates, use Luxon's diffs feature. This subtracts one
 For example, get the number of months between two dates:
 
 ```js
-{{DateTime.fromISO('201-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()}}
+{{DateTime.fromISO('2019-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()}}
 ```
 
 This returns `[Object: {"months":1}]`.
 
 Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs) for more information.
 
-### A longer example: how many days to Christmas?
+### A longer example: How many days to Christmas?
 
 This example brings together several Luxon features, uses JMESPath, and does some basic string manipulation. 
 

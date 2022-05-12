@@ -2,7 +2,7 @@
 
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/wooCommerce/).
 
 

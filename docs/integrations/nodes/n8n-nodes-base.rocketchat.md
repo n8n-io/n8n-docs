@@ -2,7 +2,7 @@
 
 [Rocket.Chat](https://rocket.chat/) is a free and open source team chat collaboration platform that allows users to communicate securely in real-time across devices.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/rocketchat/).
 
 

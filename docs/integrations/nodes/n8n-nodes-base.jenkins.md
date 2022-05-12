@@ -2,7 +2,7 @@
 
 [Jenkins](https://www.jenkins.io/) is an open source automation server that provides hundreds of plugins to support building, deploying and automating any project.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/jenkins/).
 
 

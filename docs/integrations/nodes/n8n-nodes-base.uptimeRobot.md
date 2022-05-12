@@ -2,7 +2,7 @@
 
 [UptimeRobot](https://uptimerobot.com/) is an uptime monitoring service. It monitors your website every 5 mins. You can set an HTTP/S, ping, port, keyword, or heartbeat monitor and get notifications to your email, phone, Telegram, Slack, Twitter, etc.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/uptimeRobot/).
 
 

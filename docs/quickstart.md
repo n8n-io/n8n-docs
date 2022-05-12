@@ -8,7 +8,7 @@ To ensure you can follow along with the steps below, be sure to first:
     * Linux users, you'll have to install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually
 * [Register](https://discord.com/register) for a Discord account
 
-!!! note " n8n desktop app"
+!!! note "n8n desktop app"
     Install our [desktop app](/hosting/installation/desktop-app/) if you want to start faster and skip a technical setup. 
 
 
@@ -44,7 +44,7 @@ You can now access n8n by navigating your browser to `localhost:5678`.
 
 For your first workflow, let's build something to take one tedious task off you plate: cleaning up a cluttered Gmail inbox.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     You can find this complete workflow [here](https://n8n.io/workflows/1153) courtesy of n8n's own [Tephlon](https://t5n.xyz/).
 
 
@@ -67,7 +67,7 @@ For your first workflow, let's build something to take one tedious task off you 
     * Click *Create* to save your new credentials. A corresponding *Client ID* and *Client Secret* are now available. Copy these to use in n8n.
     * Navigate to *APIs & Services* > *Library*, search for Gmail and select *Enable*.
 
-    !!! note " Keep in mind"
+    !!! note "Keep in mind"
         We go through a quick credential flow for Google in this example, but you can learn all about n8n credentials for Google services [here](/integrations/credentials/google/).
 
 6. Return to your n8n tab and in the new credentials modal enter the *Client ID* and *Client Secret* obtained from your Google Cloud Console. A *Sign in with Google* button appears.

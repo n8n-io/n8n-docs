@@ -2,7 +2,7 @@
 
 [Zoom](https://zoom.us/) is a communications technology company that provides videotelephony and online chat services through a cloud-based peer-to-peer software platform and is used for teleconferencing, telecommuting, distance education, and social relations.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/zoom/).
 
 

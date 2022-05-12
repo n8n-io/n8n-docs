@@ -2,7 +2,7 @@
 
 [ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/activeCampaign/).
 
 

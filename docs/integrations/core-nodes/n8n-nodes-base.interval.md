@@ -2,7 +2,7 @@
 
 The Interval node is used to trigger the workflow to run in regular intervals of time. This node is a Trigger node.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     If a workflow is using the Interval node as a trigger, make sure that you save and activate the workflow.
 
 

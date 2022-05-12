@@ -2,7 +2,7 @@
 
 [OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/openWeatherMap/).
 
 

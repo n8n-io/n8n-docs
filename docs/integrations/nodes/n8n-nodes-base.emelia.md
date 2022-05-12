@@ -2,7 +2,7 @@
 
 [Emelia](https://emelia.io) is a cold-mailing tool.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/emelia/).
 
 

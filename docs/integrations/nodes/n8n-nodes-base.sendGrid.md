@@ -2,7 +2,7 @@
 
 [SendGrid](https://SendGrid.co) provides a cloud-based service that assists businesses with email delivery.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/sendgrid/).
 
 

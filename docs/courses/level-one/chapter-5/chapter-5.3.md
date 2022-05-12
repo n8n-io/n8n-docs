@@ -6,7 +6,7 @@ To insert only processing orders into Airtable we need to filter our data by *or
 
 This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/core-nodes/n8n-nodes-base.if/), which splits a workflow conditionally based on comparison operations.
 
-!!! note " IF vs Switch"
+!!! note "IF vs Switch"
     If you need to filter data on more than two conditional routes that are possible with the *IF* node (true and false), use the [*Switch node*](/integrations/core-nodes/n8n-nodes-base.switch/). The *Switch node* is similar to the *IF* node, but supports up to four conditional routes.
 
 

@@ -2,7 +2,7 @@
 
 [Sendy](https://sendy.co) is a self-hosted email newsletter application that lets you send trackable emails via AWS SES.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/sendy/).
 
 

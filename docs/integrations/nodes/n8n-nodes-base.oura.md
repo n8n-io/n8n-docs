@@ -2,7 +2,7 @@
 
 [Oura](https://www.ouraring.com/) is a wellness ring and app that helps you keep track of your activities and sleep.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/oura/).
 
 
@@ -82,7 +82,7 @@ This node will append the data that we set in the previous node to a table. Crea
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
-3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
 5. Click on ***Execute Node*** to run the node.
 
@@ -90,6 +90,6 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 ![Using the Airtable node to insert data into an Airtable table](/_images/integrations/nodes/oura/airtable_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

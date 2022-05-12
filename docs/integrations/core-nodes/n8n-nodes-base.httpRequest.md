@@ -2,7 +2,7 @@
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests which can be used to query data from apps and services.
 
-!!! note "🔑 Credential"
+!!! note "Credential"
     You can find authentication information for this node [here](/integrations/credentials/httpRequest/).
 
 

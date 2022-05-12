@@ -2,7 +2,7 @@
 
 [Segment](https://segment.com/) is a customer data platform (CDP) that helps you collect, clean, and control your customer data.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/segment/).
 
 

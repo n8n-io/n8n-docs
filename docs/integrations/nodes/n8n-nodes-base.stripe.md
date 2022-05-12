@@ -2,7 +2,7 @@
 
 [Stripe](https://stripe.com/) offers payment processing software and application programming interfaces for e-commerce websites and mobile applications.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/stripe/).
 
 

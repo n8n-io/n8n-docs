@@ -2,7 +2,7 @@
 
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/pushcut/).
 
 
@@ -65,6 +65,6 @@ In the screenshot below, you will notice that the node sends a push notification
 
 ![Using the Pushcut node to send weather updates via a push notification](/_images/integrations/nodes/pushcut/pushcut_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

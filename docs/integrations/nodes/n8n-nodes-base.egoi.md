@@ -2,7 +2,7 @@
 
 [E-goi](https://www.e-goi.com/) is an omnichannel marketing automation platform.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/egoi/).
 
 

@@ -24,7 +24,7 @@ n8n
 n8n start
 ```
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Windows users remember to change into the `.n8n` directory of your Home folder (`~/.n8n`) before running `n8n start`.
 
 

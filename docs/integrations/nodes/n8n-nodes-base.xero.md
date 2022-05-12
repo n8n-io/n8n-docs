@@ -2,7 +2,7 @@
 
 Xero offers an online cloud-based SaaS accounting software platform for small and medium-sized businesses.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/xero/).
 
 

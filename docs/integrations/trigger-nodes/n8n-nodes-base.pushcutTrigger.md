@@ -2,13 +2,14 @@
 
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/pushcut/).
 
 
 ## Example Usage
 
 This workflow allows you to send an SMS to a number whenever you go out. You can also find the [workflow](https://n8n.io/workflows/870) on n8n.io. This example usage workflow uses the following nodes.
+
 - [Pushcut Trigger]()
 - [Twilio](/integrations/nodes/n8n-nodes-base.twilio/)
 
@@ -63,6 +64,6 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pushcut Trigger node.
 

@@ -2,7 +2,7 @@
 
 [Bannerbear](https://www.bannerbear.com/) is an API-based image generation service that automatically generates variations of graphic templates.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/bannerbear/).
 
 

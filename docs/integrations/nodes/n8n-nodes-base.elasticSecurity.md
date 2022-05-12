@@ -2,7 +2,7 @@
 
 [Elastic Security](https://www.elastic.co/security) helps security teams stop threats and at cloud scale, assisting with prevention, detection, and response.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/elasticSecurity/).
 
 

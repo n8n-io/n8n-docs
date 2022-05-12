@@ -2,7 +2,7 @@
 
 [MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mailerLite/).
 
 
@@ -23,6 +23,7 @@
 ## Example Usage
 
 This workflow allows you to receive updates when a subscriber is added to a group in MailerLite and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/759) on n8n.io. This example usage workflow would use the following node.
+
 - [MailerLite Trigger]()
 - [Set](/integrations/core-nodes/n8n-nodes-base.set/)
 - [Airtable](/integrations/nodes/n8n-nodes-base.airtable/)
@@ -68,7 +69,7 @@ This node will store the data coming from the previous node in a table in Airtab
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Select 'Append' from the ***Operation*** dropdown list.
-3. Enter the base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID under the Introduction section.
+3. Enter the base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID under the Introduction section.
 4. In n8n, paste the ID of the base in the ***Base ID*** field.
 5. Enter the table name in the ***Table*** name field.
 6. Click on ***Execute Node*** to run the node.
@@ -77,6 +78,6 @@ In the screenshot below, you will notice that the node adds the information of t
 
 ![Using the Airtable node to append the information of a subscriber](/_images/integrations/trigger-nodes/mailerlitetrigger/airtable_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the MailerLite Trigger node.
 

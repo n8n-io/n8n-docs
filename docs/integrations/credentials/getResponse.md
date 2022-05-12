@@ -11,7 +11,7 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 
 ## Using OAuth
 
-!!! note " Callback URL with GetResponse"
+!!! note "Callback URL with GetResponse"
     **Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept the localhost callback URL. Refer to the [FAQs](#_1-how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
 
 

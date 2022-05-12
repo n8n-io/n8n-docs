@@ -2,7 +2,7 @@
 
 [Automizy](https://automizy.com/) is an email marketing automation software that offers AI-powered Subject Line Tester, AB testing, and email automation.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/automizy/).
 
 

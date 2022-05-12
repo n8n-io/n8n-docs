@@ -2,11 +2,11 @@
 
 [Figma](https://www.figma.com/) is a prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/figma/).
 
 
-!!! warning " Supported Figma Plans"
+!!! warning "Supported Figma Plans"
     Figma does not support webhooks on the free "Starter" plan. Your team would need to be on the "Professional" plan to use this node.
 
 

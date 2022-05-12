@@ -2,7 +2,7 @@
 
 [OpenThesaurus](https://www.openthesaurus.de/) is a free German dictionary for synonyms.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     The OpenThesaurus node does not require authentication.
 
 

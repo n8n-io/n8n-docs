@@ -2,7 +2,7 @@
 
 [Zoho CRM](https://www.zoho.com/crm/) is an online Sales CRM software that manages sales, marketing and support.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/zoho/).
 
 

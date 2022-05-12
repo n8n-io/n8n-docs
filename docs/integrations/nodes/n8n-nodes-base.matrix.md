@@ -2,7 +2,7 @@
 
 [Matrix](https://matrix.org) is an open standard for interoperable, decentralized, real-time communication over IP.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/matrix/).
 
 

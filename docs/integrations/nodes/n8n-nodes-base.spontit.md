@@ -2,7 +2,7 @@
 
 [Spontit](https://www.spontit.com/) enables you to send push notifications without your app or website. You can create different channels and send push notifications to specific followers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/spontit/).
 
 
@@ -63,5 +63,5 @@ In the screenshot below, you will notice that the node sends a push notification
 
 ![Using the Spontit node to send weather updates via a push notification](/_images/integrations/nodes/spontit/spontit_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.

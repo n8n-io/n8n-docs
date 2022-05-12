@@ -2,7 +2,7 @@
 
 [Storyblok](https://www.storyblok.com/) is a headless content management system with a visual editor. It provides developers with all the flexibility they need to build reliable and fast websites, while giving content creators with no coding skills the ability to edit content independently of the developer.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/storyblok/).
 
 

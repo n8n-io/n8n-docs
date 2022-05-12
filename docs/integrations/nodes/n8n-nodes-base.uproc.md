@@ -2,18 +2,20 @@
 
 [uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/uProc/).
 
 
 ## Basic Operations
 
 **Audio**
+
 - Get advanced human audio file by provided text and language
 - Get an audio file by provided text and language
 
 
 **Communication**
+
 - Discover if a domain has a social network presence
 - Discover if an email is valid, hard bounce, soft bounce, spam-trap, free, temporary, and recipient exists
 - Discover if the email recipient exists, returning email status
@@ -22,6 +24,7 @@
 - Check if an email has a valid format
 - Check if an email domain belongs to a disposable email service
 - Check if email belongs to free service provider like Gmail, Hotmail
+- Check if email is catchall
 - Discover if an email exists in the Robinson list (only Spain)
 - Check if email belongs to a system or role-based account
 - Check if an email is a spam trap
@@ -52,9 +55,11 @@
 - Fix the international prefix of a phone based on the ISO code of a country
 - Get GDPR compliant emails list by domain for your Email Marketing campaigns in Europe
 - Discover if mobile exist via real-time HLR query
+- Get personal email by social network profile
 - Get portability data about a landline or mobile number, only for Spain
 - Extract results from a LinkedIn search (employees in a company)
 - Get members in a LinkedIn group
+- Get 'Search LinkedIn Contacts' URL
 - Extract the last 80 connections from your LinkedIn profile
 - Extract the last 80 invitations sent from your LinkedIn
 - Get users who comment on a post on LinkedIn
@@ -85,9 +90,12 @@
 - Get an email by contact's LinkedIn profile URI
 - Discover an email by company's name and prospect's full name
 - Discover an email by company's website or domain and prospect's full name
+- Get email by firstname, lastname, and company
+- Get parsed and validated phone
 
 
 **Company**
+
 - Discover if a CIF card number is valid
 - Check if a company is a debtor by TaxID
 - Check if the ISIN number is valid
@@ -120,9 +128,20 @@
 - Get a company's sales data by a company's name
 - Get a company's sales data by a company's tax ID (CIF)
 - Get a company's Twitter profile by name without manually searching on Google or Twitter
+- Get decision maker by search engine
+- Get decision makers by search engine
+- Get Facebook URI by company's domain
+- Get GitHub URI by company's domain
+- Get Instagram URI by company's domain
+- Get LinkedIn URI by company's domain
+- Get Pinterest URI by company's domain
+- Get Twitter URI by company's domain
+- Get YouTube URI by company's domain
 
 
 **Finance**
+
+- Check if crypto wallet is valid
 - Discover if a BIC number has a valid format
 - Discover if an account number has a valid format
 - Check if credit card number checksum is valid
@@ -143,6 +162,7 @@
 - Get to search data bank information by IBAN account number
 - Get country VAT by address
 - Get country VAT by coordinates
+- Get Swift code lookup
 - Get VAT by IP address
 - Get VAT value by country ISO code
 - Get VAT by phone number, with worldwide coverage
@@ -150,6 +170,7 @@
 
 
 **Geographical**
+
 - Check if a country's ISO code exists
 - Discover if the distance between two coordinates is equal to another
 - Discover if the distance(in kilometers) between two coordinates is greater than the given input
@@ -161,6 +182,7 @@
 - Discover if a zipcode number prefix exists (only for Spain)
 - Discover if a zipcode number has a valid format (only for Spain)
 - Get cartesian coordinates(X, Y, Z/WGS84) by Latitude and Longitude
+- Get location by parameters
 - Get multiple cities by phone prefix (only for Spain)
 - Get multiple cities by partial initial text (only for Spain)
 - Get multiple cities by zip code prefix (only for Spain)
@@ -205,6 +227,7 @@
 - Allow normalizing a country by removing non allowed characters
 - Allow normalizing a province by removing non allowed characters
 - Allow normalizing a zipcode by removing non allowed characters
+- Get normalized country
 - Parse postal address into separated fields, getting a basic resolution
 - Discover the province name from an IP address
 - Get the first province by a name prefix (only for Spain)
@@ -225,9 +248,12 @@
 - Discover the zip code if you have an IP address
 - Get the first zipcode by prefix, only for Spain
 - Get multiple zip codes by prefix, with worldwide coverage
+- Get time data by coordinates
+- Get time data by postal address
 
 
 **Image**
+
 - Get QR code decoded content by an image URL
 - It allows discovering all geographical and technical EXIF metadata present in a photographic JPEG image
 - Get an encoded barcode by number and a required standard
@@ -235,9 +261,11 @@
 - Generate a new image by URL and text
 - Discover logo (favicon) used in a domain
 - Generate a screenshot by URL provided using Chrome browser
+- Get OCR text from image
 
 
 **Internet**
+
 - Check if a domain exists
 - Check if a domain has a DNS record
 - Check if a  domain has the given IP address assigned
@@ -253,9 +281,12 @@
 - Check if an URL exists
 - Check that an URL has a valid format
 - Get full SSL certificate data by a domain (or website) and monitor your certificate status
+- Get feed entries by domain
+- Get last feed entry by domain
 - Get text data from web, pdf or image allowing to filter some elements by regular expressions or field names
 - Decode URL to recover original
 - Get valid, existing, and default URL when accessing a domain using a web browser
+- Get long version of shortened URL
 - Discover device features by a user agent
 - Get the network name of and IP address
 - Get the domain record by its type
@@ -283,6 +314,7 @@
 
 
 **Personal**
+
 - Check if age is between two numbers
 - Check if date returns an age between 20 and 29
 - Check if date returns an age between 40 and 49
@@ -317,6 +349,8 @@
 - Get LinkedIn employee profile URI by first name, last name, and company
 - Discover the letter of a DNI card number
 - Get first personal name matching by prefix and gender from INE data source (only for Spain)
+- Get LinkedIn URI by email
+- Get LinkedIn URI by phone
 - Allow normalizing a DNI number by removing non allowed characters
 - Allow normalizing an NIE number by removing non allowed characters
 - Normalize name by removing non allowed characters
@@ -339,6 +373,7 @@
 
 
 **Product**
+
 - Check if an ASIN code exists on the Amazon Marketplace
 - Check if an ASIN code has a valid format
 - Check if an EAN code exists on Amazon Marketplace
@@ -351,6 +386,7 @@
 - Check if a GTIN barcode of 13 digits has a valid format
 - Check if a GTIN barcode of 14 digits has a valid format
 - Check if a GTIN barcode of 8 digits has a valid format
+- Check if VIN Number is valid
 - Allows checking if an ISBN book exists
 - Allows checking if an ISBN10/13 code has a valid format
 - Allows checking if an ISBN10 code has a valid format
@@ -369,9 +405,14 @@
 - Get all books by title
 - Get EAN code by ASIN code
 - Get product data on a UPC on Amazon Marketplace
+- Get ISBN10 code by ISBN13 code
+- Get ISBN13 code by ISBN10 code
+- Get data By VIN number
+
 
 
 **Security**
+
 - Check if a Luhn number is valid
 - Check if a password is strong
 - Check if a UUID number is valid
@@ -380,6 +421,7 @@
 
 
 **Text**
+
 - Check if a string only contains alphabets
 - Check if a string is alphanumeric
 - Check if a string is boolean
@@ -422,6 +464,10 @@
 - Convert a string to Base64 encoded value
 - Discover banned English words in an email body or subject
 - Get field names by analyzing the field value provided
+- Get HTML code from Markdown
+- Get Markdown text from HTML
+- Get text without HTML
+- Get spin string
 - Format a string using a format pattern
 - Generate random string using a regular expression as a pattern
 - Return the largest item in a list

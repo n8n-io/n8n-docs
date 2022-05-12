@@ -2,7 +2,7 @@
 
 [Nextcloud](https://nextcloud.com/) is a free and open-source suite of client-server software for creating and using file hosting services.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/nextCloud/).
 
 

@@ -8,7 +8,7 @@ The Wait node can be set to resume on the following conditions:
 * [**At specified time**](#specified-time)
 * [**On webhook call**](#webhook-call)
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     For the time-based resume operations, note that:
 * For wait times less than 65 seconds, execution data is not offloaded to the database to resume later but rather the process continues to run and execution resumes after the specified interval passes.
 * The n8n server time is always used regardless of the timezone setting. Workflow timezone settings, and any changes made to them, do not affect the Wait node interval or specified time. 

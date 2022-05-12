@@ -2,7 +2,7 @@
 
 [Google Books](https://books.google.com) is a service from Google to browse, buy, or borrow books online.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

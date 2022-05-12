@@ -2,7 +2,7 @@
 
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/getResponse/).
 
 

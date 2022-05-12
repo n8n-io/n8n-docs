@@ -2,7 +2,7 @@
 
 [Google Tasks](https://tasks.google.com) is a task management service developed by Google. It keeps track of your daily tasks, organize multiple lists, and track important deadlines.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/google/).
 
 

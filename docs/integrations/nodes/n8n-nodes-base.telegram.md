@@ -2,7 +2,7 @@
 
 [Telegram](https://telegram.org) is a cloud-based instant messaging and voice-over-IP service.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/telegram/).
 
 
@@ -87,7 +87,7 @@ In the screenshot below, you will notice that the node sends a message on Telegr
 
 ![Using the Telegram node to send a message with an image and instruction of a cocktail](/_images/integrations/nodes/telegram/telegram_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 
 

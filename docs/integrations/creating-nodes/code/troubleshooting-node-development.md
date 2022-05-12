@@ -13,7 +13,7 @@ Ensure that the name in the credentials array matches the name used in the prope
 
 ### Error message: 'There was a problem loading init data: API-Server can not be reached. It is probably down'
 
-- Ensure that the node’s file name, class’s name, and node’s folder name matches the path added to `packages/nodes-base/package.json`.
+- Ensure that the node's file name, class's name, and node's folder name matches the path added to `packages/nodes-base/package.json`.
 - Ensure the names used in the `displayOptions` property are names used by UI elements in the node.
 
 ### Node icon doesn't show up in the Create Node menu and the Editor UI

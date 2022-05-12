@@ -2,7 +2,7 @@
 
 [Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/airtable/).
 
 
@@ -22,7 +22,7 @@ The Airtable Trigger node will trigger the workflow when new data gets added to 
 
 1. First of all, you'll have to enter credentials for the Airtable Trigger node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Click on ***Add Poll Time*** and select 'Every Minute' from the ***Mode*** dropdown list. This will check Airtable every minute for new data entries.
-3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the table name in the ***Table*** field.
 5. Enter a trigger field name in the ***Trigger Field*** field. If you don't have a 'Created Time' or 'Last modified time' field in your table, please create one.
 6. Click on ***Execute Node*** to run the node.
@@ -51,6 +51,6 @@ In the screenshot below, you will notice that the node sends a message in Matter
 
 ![Using the Mattermost node to send a message of the new data](/_images/integrations/trigger-nodes/airtabletrigger/mattermost_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Airtable Trigger node.
 

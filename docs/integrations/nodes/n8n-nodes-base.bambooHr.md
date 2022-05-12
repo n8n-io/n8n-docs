@@ -2,7 +2,7 @@
 
 [BambooHR](https://www.bamboohr.com/) provides human resources software as a service.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/bambooHr/).
 
 

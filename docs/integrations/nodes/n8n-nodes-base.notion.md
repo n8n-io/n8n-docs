@@ -2,7 +2,7 @@
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/notion/).
 
 
@@ -55,7 +55,7 @@ The Calendly node will trigger the workflow when an invite gets created.
 3. Save your workflow so that the webhook gets registered.
 4. Click on ***Execute Node*** to run the node.
 
-**Note:** Since you’ll be using the test webhook while building the workflow, the node only stays active for 120 seconds. After you click on the ***Execute Node*** button, create an invite via Calendly.
+**Note:** Since you'll be using the test webhook while building the workflow, the node only stays active for 120 seconds. After you click on the ***Execute Node*** button, create an invite via Calendly.
 
 In the screenshot below, you will notice that the Calendly Trigger node triggers the workflow when an invite is created.
 
@@ -87,6 +87,6 @@ In the screenshot below, you will notice that the node creates a new record from
 
 ![Using the Notion node to add a new record in Notion](/_images/integrations/nodes/notion/notion_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Calendly Trigger node.
 

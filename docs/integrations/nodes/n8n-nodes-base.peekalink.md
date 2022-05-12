@@ -2,7 +2,7 @@
 
 [Peekalink](https://peekalink.io) is an API that allows developers to preview links on the web.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/peekalink/).
 
 

@@ -2,7 +2,7 @@
 
 [Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/ciscoWebex/).
 
 

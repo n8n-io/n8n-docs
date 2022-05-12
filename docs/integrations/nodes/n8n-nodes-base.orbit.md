@@ -2,7 +2,7 @@
 
 [Orbit](https://orbit.love) is a platform for managing and growing communities.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/orbit/).
 
 

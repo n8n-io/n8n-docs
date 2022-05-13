@@ -1,16 +1,16 @@
-# Creating n8n-nodes-module
+# Creating WF-nodes-module
 
-In this guide, you’ll learn to create a custom n8n-nodes-module that can be installed separately alongside your Doc² instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when Doc² starts.
+In this guide, you’ll learn to create a custom WF-nodes-module that can be installed separately alongside your Doc² instance. The WF-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when Doc² starts.
 
-Consider creating n8n-nodes-module if any of the following conditions satisfy your needs:
+Consider creating WF-nodes-module if any of the following conditions satisfy your needs:
 - The nodes are only for yourself, your organization, or a small group of people.
 - The nodes require external dependencies that are not already available in Workflow².
 
-**NOTE:** n8n-nodes-module can only be installed in self-hosted Doc² instances. This functionality is currently not available ondoc2app.cloudintegration.eu or the desktop app. There are plans to introduce this functionality in the future.
+**NOTE:** WF-nodes-module can only be installed in self-hosted Doc² instances. This functionality is currently not available ondoc2app.cloudintegration.eu or the desktop app. There are plans to introduce this functionality in the future.
 
 ## Prerequisites
 
-You may already be familiar with creating nodes in Workflow². If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.n8n.io/nodes/creating-nodes/create-node.html) tutorial.
+You may already be familiar with creating nodes in Workflow². If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.polydocs.io/nodes/creating-nodes/create-node.html) tutorial.
 
 Install the following tools:
 
@@ -28,15 +28,10 @@ Install the following tools:
 	npm i
 	```
 
-- Install n8n: Create a new folder and install Doc² using the command:
 
-```bash
-npm install n8n
-```
+## Create custom wf-nodes-module
 
-## Create custom n8n-nodes-module
-
-You can create multiple n8n-nodes-modules. Each individual n8n-nodes-module should get created in a separate folder since they are different npm packages. A single n8n-nodes-module can contain multiple nodes. If you’re creating multiple nodes in the same module, as a best practice create each node in a separate folder.
+You can create multiple wf-nodes-modules. Each individual wf-nodes-module should get created in a separate folder since they are different npm packages. A single wf-nodes-module can contain multiple nodes. If you’re creating multiple nodes in the same module, as a best practice create each node in a separate folder.
 
 In this tutorial, you will create an n8n-nodes-module for the OpenWeatherMap API. You will name it ***n8n-nodes-weather***.
 

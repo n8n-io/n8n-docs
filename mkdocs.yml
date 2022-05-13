@@ -144,7 +144,7 @@ nav:
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
         - Webhook: doc2/export/webhook.md
         - Export to Flow²: doc2/export/export-to-flow2.md
-        
+
 
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
@@ -217,7 +217,7 @@ nav:
           - Overview: workflow/integrations/creating-nodes/code/index.md
           - Standards: workflow/integrations/creating-nodes/code/standards.md
           - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
-          - Create an n8n-nodes-module: workflow/integrations/creating-nodes/code/create-n8n-nodes-module.md
+          - Create an Wf Nodes module: workflow/integrations/creating-nodes/code/create-wf-nodes-module.md
           - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
           - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
           - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md

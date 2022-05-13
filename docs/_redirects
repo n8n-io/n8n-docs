@@ -397,3 +397,6 @@
 # Old redirects
 
 /reference/changelog.html   /reference/release-notes/
+
+
+/workflow/integrations/creating-nodes/code/create-n8n-nodes-module/ /workflow/integrations/creating-nodes/code/create-wf-nodes-module/

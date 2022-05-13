@@ -1,12 +1,14 @@
 ---
 title: "TE² Installation & Config"
-description: How to install & configure TE² Plugin 
+description: In this documentation you will learn how to install and configure the TE² plugin. This is done directly in Ephesoft Transact. 
 date: "2021-07-05"
 tags:
   - TE²
+  - Table Extraction
   - Plugin
   - Ephesoft
-  - Table Extraction
+  - Installation
+  - Configuration
 ---
 
 # How to install & configure TE² Plugin

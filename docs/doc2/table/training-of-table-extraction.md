@@ -9,7 +9,7 @@ tags:
 ---
 
 - [How to define tables and columns](/doc2/table/define-table-and-columns/)
-- [Advanced settings](/doc2/table/advance-settings/)
+- [Advanced settings](/doc2/table/advanced-settings/)
 - [Mapping of columns](/doc2/mapping-of-columns/)
 - [Group function](/doc2/table/group-function/)
 - [Manual row selection](/doc2/table/manual-row-selection/)

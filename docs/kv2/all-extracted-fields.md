@@ -1,13 +1,10 @@
 ---
 title: "All extracted fields"
+description: Here you will find all extracted fields from invoice details, calculation details and recipient details to vendor details.
 date: "2021-07-05"
-
-description: Shows the quality of the extraction using graphical indicators
-
 tags:
-  - General
-  - DOC²
   - KV²
+  - Extracted Fields 
 ---
 
 ### 1 Invoice Details
@@ -16,7 +13,7 @@ tags:
 
 ### 2 Calculation Details
 
-<table><tbody><tr><td><strong>Field Name</strong></td><td><strong>Description</strong></td></tr><tr><td>Tax Rate Full</td><td>If there are multiple tax rates on the invoice, select the higher of the two here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Full</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Full</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Taxe Rate Reduced</td><td>If there are multiple tax rates on the invoice, select the lower of the two here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Reduced</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Reduced</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Rate Free</td><td>For a tax-free invoice enter 0 here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Free</td><td>For a tax-free invoice, enter the total amount here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Free</td><td>For a tax-free invoice enter 0 here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr></tbody></table>
+<table><tbody><tr><td><strong>Field Name</strong></td><td><strong>Description</strong></td></tr><tr><td>Tax Rate Full</td><td>If there are multiple tax rates on the invoice, select the higher of the two here<br>see example <a href="/kv2/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Full</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Full</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Taxe Rate Reduced</td><td>If there are multiple tax rates on the invoice, select the lower of the two here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Reduced</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Reduced</td><td>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Rate Free</td><td>For a tax-free invoice enter 0 here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Net Amount Free</td><td>For a tax-free invoice, enter the total amount here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr><tr><td>Tax Amount Free</td><td>For a tax-free invoice enter 0 here<br>see example <a href="/doc2/fellowkv2-plugin/fellowkv2-tutorial/how-to-deal-with-different-vat-amounts/">here</a><br></td></tr></tbody></table>
 
 ### 3 Recipient Details
 

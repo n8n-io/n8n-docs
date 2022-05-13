@@ -29,7 +29,7 @@ tags:
 
 ![](/_images/doc2/FLOW²_Metadata-types.png)
 
-[/doc2/flow2/metadata/](/doc2/flow2/metadata/)
+[/doc2/flow2/metadata/](/flow2/metadata/#here-you-can-configure-all-aspects-of-the-system)
 
 ![](/_images/doc2/FLOW²_Quotas.png)
 

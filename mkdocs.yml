@@ -133,6 +133,7 @@ nav:
           - Configuration: doc2/watchpuppy-configuration.md
           - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md
+        - Webhook: doc2/api.md
       - All Export Options:
         - Export: doc2/export.md
         - Export to Infor:

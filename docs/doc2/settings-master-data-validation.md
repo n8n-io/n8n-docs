@@ -12,7 +12,7 @@ DOC² offers the possibility to upload your master data. This has the advantage 
 
 For example, the VAT number or supplier name extracted from the document can be used to identify the supplier data record from your ERP system (from the supplier data uploaded to DOC²).
 
-For more detailed information please refer to the following documentation: [Master data validation](/doc2/doc2app/document-validation/master-data-validation/)
+For more detailed information please refer to the following documentation: [Master data validation](/doc2/master-data-validation/)
 
 To upload master data to DOC², please navigate to the settings from the dashboard:
 

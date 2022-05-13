@@ -1,6 +1,6 @@
 ---
 title: "How to deal with different VAT amounts"
-description: If you have an invoice with two different VAT amounts, this is how to train them
+description: This documentation provides information on how to train an invoice with two different VAT amounts in Ephesoft. Your batch class must be suitable for this.
 date: "2021-07-05"
 tags:
  - KV²

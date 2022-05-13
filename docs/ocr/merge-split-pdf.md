@@ -1,6 +1,10 @@
 ---
 title: "Merge/Split PDF"
+description: The last to functionalities and sections of the API allow you to either merge or split PDF documents of your choice. The splitting part is very easy to use.
 date: "2021-07-06"
+tags:
+  - API
+  - PDF
 ---
 
 The last to functionalities and sections of the API allow you to either merge or split PDF documents of your choice.

@@ -1,6 +1,6 @@
 ---
 title: "Manual Import"
-description: Manual File Import to DOC²
+description: This is a step by step guide how to import documents manually in DOC². From uploading documents over all processed status until they are ready for validation.
 date: "2021-10-22"
 tags:
   - Doc²
@@ -41,4 +41,4 @@ As soon as the file has been processed, it receives the status "Ready for valida
 
 ![](/_images/doc2/image-28.png)
 
-Details about the validation process can be found here: [Document Validation](/doc2/doc2app/document-validation/)
+Details about the validation process can be found here: [Document Validation](/doc2/document-validation/)

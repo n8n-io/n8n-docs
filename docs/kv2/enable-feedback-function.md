@@ -1,11 +1,11 @@
 ---
 title: "Enable Feedback Function"
 date: "2021-07-05"
-description: This documentation should explain how to enable the Feedback Function within the Ephesoft Plugins
+description: This is how to enable the Feedback Function within the Ephesoft Plugins. Feedback is created and sent during the validation process of a document.
 tags:
-  - DOC²
-  - Feedback
   - Ephesoft Plugins
+  - Help
+  - Feedback
 ---
 
 This documentation should explain how to enable the Feedback Function within the Ephesoft Plugins.

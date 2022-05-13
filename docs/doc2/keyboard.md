@@ -1,6 +1,6 @@
 ---
 title: "Keyboard"
-description: In this documentation you will find Keyboard Support in DOC². You can use the Enter and Arrow-Down-Key as shortcuts.
+description: In this documentation you will find Keyboard Support in DOC². You can use the Enter and Arrow-Down-Key as shortcuts without using your mouse.
 date: "2021-11-07"
 tags:
   - Doc²

@@ -1,8 +1,7 @@
 ---
 title: "User Dashboard"
-description: The dashboard homepage of FLOW² is the main page and overview where you can find recently accessed and recently created documents as well as your applied favorites.
+description: The dashboard homepage of FLOW² is the main page and overview to find recently accessed and recently created documents as well as your applied favorites.
 date: "2021-04-17"
-
 tags:
   - FLOW²
   - Homepage

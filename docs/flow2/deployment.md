@@ -1,6 +1,6 @@
 ---
 title: "Deployment"
-description: How to deploy FLOW²
+description: This is a documentation how to deploy FLOW², the intelligent solution for digitizing documents. All you need is internet connection and your login credentials.
 date: "2021-11-24"
 tags:
   - FLOW²

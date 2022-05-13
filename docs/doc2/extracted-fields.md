@@ -62,5 +62,4 @@ IF\_IBAN\_EXTRACTED=AccountNumber
 IF\_VAT\_NO\_EXTRACTED=VATRegNo  
 IF\_ACCOUNTING\_ENTITY=AccountingEntityID  
 IF\_CORRELATION\_ID=AlternateDocumentID
-
  #IF\_VENDOR\_IBAN=BankAccount

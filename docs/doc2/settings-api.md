@@ -1,6 +1,6 @@
 ---
 title: "API"
-description: API Integration
+description: API Integration offers capabilities and services that connect applications, processes, people, and devices. This is where to find your API Key in DOC².
 date: "2021-10-29"
 icons: material/api
 tags:

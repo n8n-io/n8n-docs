@@ -1,10 +1,12 @@
 ---
 title: "Extracted fields"
 date: "2021-11-23"
-description: This documentation shows extracted fields/Mapping
+description: In this documentation you will find all extracted fields of document type invoice and the index field mapping for FLOW². 
 tags:
   - Fields
   - DOC²
+  - Mapping
+  - FLOW²
 ---
 
 ## Document Type: Invoice
@@ -61,4 +63,4 @@ IF\_VAT\_NO\_EXTRACTED=VATRegNo
 IF\_ACCOUNTING\_ENTITY=AccountingEntityID  
 IF\_CORRELATION\_ID=AlternateDocumentID
 
-#IF\_VENDOR\_IBAN=BankAccount
+ #IF\_VENDOR\_IBAN=BankAccount

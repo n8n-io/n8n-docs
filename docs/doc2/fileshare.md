@@ -1,7 +1,7 @@
 ---
 title: "Fileshare Import"
+description: This page gives you an overview of the fileshare import options for common operating systems an how to configure them for multiple export options.
 date: "2021-10-22"
-description: This documentation shows how fileshare import works
 tags:
   - DOC²
   - Import
@@ -13,4 +13,4 @@ tags:
 
 ### [Watchdog - for Windows](/doc2/watchdog-windows/)
 
-### [Watchdog - Linux](/doc2/watchdog/#linux)
+### [Watchdog - Linux](/doc2/watchdog-linux/)

@@ -1,6 +1,6 @@
 ---
 title: "Ephesoft - External Application"
-description: DOC² as External Application for Ephesoft to train tables
+description: In this documentation you will find how to use DOC² as External Application for Ephesoft to easily train tables step by step.
 date: "2022-02-11"
 tags:
   - TE²
@@ -17,7 +17,7 @@ as soon as the document is Ready For Validation open the Batch Id
 
 ![](/_images/doc2/Ephesoft_open-Batch-1024x584.png)
 
-in the next step, select **More** from the upper green boxes, then **External Application** and finally **DOC_²_**
+in the next step, select **More** from the upper green boxes, then **External Application** and finally **DOC²**
 
 ![](/_images/doc2/Ephsoft_External-Application-1024x583.png)
 

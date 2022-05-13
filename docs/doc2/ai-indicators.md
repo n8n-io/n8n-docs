@@ -1,10 +1,9 @@
 ---
 title: "AI Indicators"
+description: In the documentation you will find options to display the quality of the extraction using graphical indicators. The so-called AI indicator.
 date: "2022-03-23"
-description: Shows the quality of the extraction using graphical indicators
-
 tags:
-  - General
+  - AI
   - DOC²
 ---
 

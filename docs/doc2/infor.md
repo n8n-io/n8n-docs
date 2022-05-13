@@ -1,6 +1,6 @@
 ---
 title: "DOC² - Infor Use Cases"
-description: Different Use Cases DOC² with Infor
+description: Here you will find different use cases how processes of your different document types look like and are going to be integrated to Infor. 
 date: "2022-01-24"
 tags:
   - DOC²

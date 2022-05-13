@@ -8,6 +8,7 @@ tags:
   - Ephesoft
   - Training
   - Table Extraction
+  - DOC²
   - External Application
 ---
 

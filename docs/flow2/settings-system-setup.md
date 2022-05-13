@@ -1,6 +1,6 @@
 ---
 title: "System Setup"
-description: System Setup for FLOW²
+description: This page is showing you how you get to system set up options. You find all important topics as document types, metadata types, users, settings and much more.
 date: "2021-11-24"
 tags: 
     - FLOW²

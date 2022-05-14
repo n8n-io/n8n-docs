@@ -1,5 +1,29 @@
 # Release notes
 
+## n8n@0.176.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.175.1...n8n@0.176.0) for this version.<br />
+**Release date:** 2022-05-10
+
+This release contains bug fixes and node enhancements.
+
+### Node enhancements
+
+* [Pipedrive node](/integrations/nodes/n8n-nodes-base.pipedrive/): adds support for filters to the Organization: Get All operation. 
+* [Pushover node](/integrations/nodes/n8n-nodes-base.pushover/): adds an HTML formatting option, and a credential test.
+* [UProc node](/integrations/nodes/n8n-nodes-base.uproc/): adds new tools.
+
+### Bug fixes
+
+* **core**: a fix for filtering the executions list by waiting status.
+* **core**: improved webhook error messages.
+* [Edit Image node](/integrations/core-nodes/n8n-nodes-base.editImage/): node now works correctly with the binary-data-mode 'filesystem'.
+
+### Contributors
+
+[Albert Kiskorov](https://github.com/Albatrosicks)  
+[Miquel Colomer](https://github.com/mcolomer)
+
 ## n8n@0.175.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.175.0...n8n@0.175.1) for this version.<br />

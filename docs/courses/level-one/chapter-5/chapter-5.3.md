@@ -27,7 +27,7 @@ To select this value, click on the wheel icon “Add Expression” on the right 
 - *Value 2:* processing
 
 !!! warning "Data Type"
-    Make sure to select the correct data type (boolean, data & time, number, or string) of the referenced data in *Add Condition*.
+    Make sure to select the correct data type (boolean, date & time, number, or string) of the referenced data in *Add Condition*.
 
 
 Now execute the IF node and have a look at the resulting data, which should look like this:

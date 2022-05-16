@@ -1,6 +1,6 @@
 ---
-title: "Welcome FLOW²"
-description: Introduction to FLOW²
+title: "Welcome to FLOW²"
+description: In this documentation you get to know what FLOW², the intelligent solution for digitizing Documents, is about and which advantages you can take from.
 date: "2021-11-25"
 tags: 
     - FLOW²

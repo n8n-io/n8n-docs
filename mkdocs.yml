@@ -1,7 +1,7 @@
 site_name: Polydocs Documentation
 site_url: https://docs.polydocs.io
 site_author: Daniel Jordan
-site_description: Documentation for DOC², Workflow², Export
+site_description: On these pages you will learn a lot about our different software helping you with digitization, digitalization and the digital transformation in your company.
 theme:
   name: material
   custom_dir: overrides

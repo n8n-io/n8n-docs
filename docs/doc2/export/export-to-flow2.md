@@ -1,6 +1,6 @@
 ---
 title: "Export to FLOW²"
-description: This is a step by step guide how to configure settings in DOC² to export documents to FLOW².
+description: This is a step by step guide how to add integration in export settings of DOC² to be able to export your documents to FLOW².
 date: "2021-11-23"
 icon: material/database-export
 tags:

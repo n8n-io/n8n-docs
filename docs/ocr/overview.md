@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 date: "2021-07-05"
-description: This part will give you an overview over the OCR server API we are offering connected to the cloudintegration.eu platform. We will explain all 5 different parts the OCR Server consists of in detail. 
+description: This documentation will give you an overview over the OCR server API we are offering connected to the cloudintegration.eu platform.
 tags:
   - OCR Server
   - API

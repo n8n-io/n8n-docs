@@ -13,7 +13,7 @@ The first thing we need to do is get data from ABCorp's old data warehouse.
 
 In the previous chapter, we used a regular node for a specific app (Hacker News). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan's company. Nathan mentioned that it's not possible to directly export the data, however the data warehouse has a couple of API endpoints.
 
-That's all we need to access the data via the [***HTTP Request node***](/integrations/core-nodes/n8n-nodes-base.httpRequest/)in n8n.
+That's all we need to access the data via the [***HTTP Request node***](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank"} in n8n.
 
 !!! note "No node for that service?"
     The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
@@ -33,7 +33,7 @@ This option will output each element of an array as its own item.
   - *Name:* `unique_id`
   - *Value:* your_unique_id
 
-**Note:** In case you don't already have your Unique ID, please sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to obtain it.
+**Note:** In case you don't already have your Unique ID, please sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank"} to obtain it.
 
 Since you selected *Header Authentication*, now you need to enter your credentials in order to be able to access the data.
 
@@ -47,7 +47,7 @@ In the left panel, click on *Create New* in the box next to the parameter *Crede
 
 !!! note "Credentials naming"
     You can name your credentials however you want. It's good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
-  
+
 
 - *Name:* `api_key`
 - *Value:* `j[vKYdY68H(:WFb`

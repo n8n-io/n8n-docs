@@ -1,6 +1,6 @@
 # Understanding the data structure
 
-In this chapter, you will learn about the data structure of n8n and how to use the [Function node](/integrations/nodes/n8n-nodes-base.function/) to transform data and simulate node outputs.
+In this chapter, you will learn about the data structure of n8n and how to use the [Function node](/integrations/nodes/n8n-nodes-base.function/){:target="_blank"} to transform data and simulate node outputs.
 
 
 ## Data structure of n8n
@@ -47,7 +47,7 @@ The data that moves along from node to node in your workflow must be in a format
 
 	You can access the properties of an object using dot notation with the syntax `object.property`. For example, `turtles[1].color` gets the color of the second turtle.
 
-Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [Items](/getting-started/key-concepts/#item).
+Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [Items](/getting-started/key-concepts/#item){:target="_blank"}.
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 
@@ -131,7 +131,7 @@ In a Function node, create an array of objects named `myContacts` that contains 
 
 ## Referencing node data with the Function node
 
-Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods](/code-examples/expressions/methods/) and [variables](/code-examples/expressions/variables/) in the Function node.
+Just like you can use [expressions](/code-examples/expressions/){:target="_blank"} to reference data from other nodes, you can also use some [methods](/code-examples/expressions/methods/){:target="_blank"} and [variables](/code-examples/expressions/variables/){:target="_blank"} in the Function node.
 
 ### Exercise
 
@@ -152,7 +152,7 @@ Let's build on the previous exercise, in which you used the Function node to cre
 
 ## Transforming data
 
-The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data/), so that each item can be processed individually.
+The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data/){:target="_blank"}, so that each item can be processed individually.
 
 The two most common operations for data transformation are:
 
@@ -162,7 +162,7 @@ The two most common operations for data transformation are:
 There are several ways to transform data for the purposes mentioned above:
 
 - With the HTTP Request node, you can toggle the option `Split Into Items` to create multiple items from a single item. This is the easiest way to transform incoming web data with one click.
-- With the [Item Lists node](/integrations/core-nodes/n8n-nodes-base.itemLists), you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Function node.
+- With the [Item Lists node](/integrations/core-nodes/n8n-nodes-base.itemLists){:target="_blank"}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Function node.
 - With the Function node, you can write JavaScript functions to modify the data structure of incoming data:
 
     To create multiple items from a single item, you can use this JavaScript code:
@@ -218,7 +218,7 @@ Use the HTTP Request node to make a GET request to the Poemist API `https://www.
 			}
 		});
 	```
-	
+
 	The result should look like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Function node with code to transform items</i></figcaption></figure>

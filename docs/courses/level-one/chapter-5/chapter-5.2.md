@@ -8,7 +8,7 @@ At this point, your workflow should look like this:
 
 If we are going to insert data into Airtable, we first need to set up a table there. To do this:
 
-1. [Create an Airtable account](https://airtable.com/signup).
+1. [Create an Airtable account](https://airtable.com/signup){:target="_blank"}.
 2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
 
 	<figure><img src="/_images/courses/level-one/chapter-two/Create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
@@ -28,19 +28,19 @@ Now that the table is prepared let's return to the workflow in the Editor UI.
 Add an ***Airtable node*** connected to the HTTP Request node.
 
 !!! note "Spreadsheet nodes"
-    You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/nodes/n8n-nodes-base.googleSheets/) and [*Spreadsheet File*](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/).
+    You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/nodes/n8n-nodes-base.googleSheets/){:target="_blank"} and [*Spreadsheet File*](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/){:target="_blank"}.
 
 
 In the *Airtable node* window, configure the following parameters:
 
 - *Airtable API:*
 	- *Name:* The name of your credentials (e.g. airtable_api)
-	- *API Key:* Your [API key](/integrations/credentials/airtable/).
+	- *API Key:* Your [API key](/integrations/credentials/airtable/){:target="_blank"}.
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
 - *Operation:* Append
 This operation will append the new data to the table.
 - *Base ID:* The ID of the beginner_course base.
-To get the base Base ID, go to [Airtable's API page](https://airtable.com/api) and click on the base you want to use. The Base ID will be listed in the introduction.
+To get the base Base ID, go to [Airtable's API page](https://airtable.com/api){:target="_blank"} and click on the base you want to use. The Base ID will be listed in the introduction.
 - *Table:* orders
 
 Now execute the *Airtable* node and you should get the following result:

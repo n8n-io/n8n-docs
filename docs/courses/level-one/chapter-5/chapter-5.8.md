@@ -37,7 +37,7 @@ You can customize your workflows and executions, or overwrite some of the global
 
 In the *Workflow Settings* window you can configure six settings:
 
-* _[Error Workflow](/flow-logic/error-handling/):_ A workflow to run in case the execution of the current workflow fails.
+* _[Error Workflow](/flow-logic/error-handling/){:target="_blank"}:_ A workflow to run in case the execution of the current workflow fails.
 * _Timezone:_ The timezone to use in the current workflow. If not set, the global Timezone (by default "New York") is used. This setting is particularly important for the Cron node, as you want to make sure that the workflow gets executed at the right time.
 * _Save Data Error Execution:_ If the Execution data of the workflow should be saved when it fails.
 * _Save Data Success Execution:_ If the Execution data of the workflow should be saved when it succeeds.

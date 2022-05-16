@@ -12,9 +12,9 @@ You've come a long way throughout this course and learned a lot about workflow a
 
 <br/>
 <div style="text-align:center;">
-	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="https://n8n-community.typeform.com/to/JMoBXeGA" style="color: #fff;">Take the quiz!</a></button>
+	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="https://n8n-community.typeform.com/to/JMoBXeGA" target="_blank" style="color: #fff;">Take the quiz!</a></button>
 </div>
 
 
-* Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on our [blog](https://n8n.io/blog/), [YouTube channel](https://www.youtube.com/c/n8n-io), [community forum](https://community.n8n.io), and [Discord server](https://discord.gg/vWwMVThRta).
+* Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on our [blog](https://n8n.io/blog/){:target="_blank"}, [YouTube channel](https://www.youtube.com/c/n8n-io){:target="_blank"}, [community forum](https://community.n8n.io){:target="_blank"}, and [Discord server](https://discord.gg/vWwMVThRta){:target="_blank"}.
 * Take the n8n [Course Level 2](/courses/level-two/).

@@ -4,10 +4,10 @@ In this step of the workflow you will learn how to filter data using conditional
 
 To insert only processing orders into Airtable we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* is not *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
 
-This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/core-nodes/n8n-nodes-base.if/), which splits a workflow conditionally based on comparison operations.
+This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/core-nodes/n8n-nodes-base.if/){:target="_blank"}, which splits a workflow conditionally based on comparison operations.
 
 !!! note "IF vs Switch"
-    If you need to filter data on more than two conditional routes that are possible with the *IF* node (true and false), use the [*Switch node*](/integrations/core-nodes/n8n-nodes-base.switch/). The *Switch node* is similar to the *IF* node, but supports up to four conditional routes.
+    If you need to filter data on more than two conditional routes that are possible with the *IF* node (true and false), use the [*Switch node*](/integrations/core-nodes/n8n-nodes-base.switch/){:target="_blank"}. The *Switch node* is similar to the *IF* node, but supports up to four conditional routes.
 
 
 Back to your workflow, remove the connection between the *HTTP Request* node and the *Airtable* node. Add an *IF* node connected to the *HTTP Request* node.

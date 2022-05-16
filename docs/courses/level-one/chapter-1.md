@@ -6,7 +6,7 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/), choose the option that best suits your skills and needs.
+First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank"}, choose the option that best suits your skills and needs.
 
 **This course was developed on n8n version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
 
@@ -18,7 +18,7 @@ Now that you have the Editor UI open, you'll learn how to navigate it.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/) represents the web interface used to create [workflows](/workflows/workflows/). Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the n8n documentation and forum.
+The [Editor UI](/editor-ui/){:target="_blank"} represents the web interface used to create [workflows](/workflows/workflows/){:target="_blank"}. Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the n8n documentation and forum.
 
 ### Left-side panel
 
@@ -84,7 +84,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/) is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank"} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Start-node.png" alt="Start node" style="width:30%"><figcaption align = "center"><i>Start node</i></figcaption></figure>
 

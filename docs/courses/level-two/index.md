@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the n8n Course Level 2!
+Welcome to the **n8n Course Level 2**!
 
 ## Is this course right for me?
 
@@ -9,7 +9,7 @@ This course is for you if you:
 - Want to automate somewhat complex business processes.
 - Want to dive deeper into n8n after taking the [Level 1 course](/courses/level-one/).
 
-## What will I learn?
+## What will I learn in this course?
 
 The focus in this course is on working with data. You will learn how to:
 
@@ -19,24 +19,28 @@ The focus in this course is on working with data. You will learn how to:
 - Use functions and JavaScript code in the [Function node](/integrations/core-nodes/n8n-nodes-base.function).
 - Deal with error workflows and workflow errors.
 
-You will learn all this by completing short practical exercises after the theoretical explanations, and building a business workflow with step-by-step instructions.
+You will learn all this by completing short practical exercises after the theoretical explanations, and building a business workflow following instructions.
 
 ## What do I need to get started?
 
 To follow along this course (at a comfortable pace) you will need the following:
 
-- [n8n set up](/hosting/options/). This course was developed on n8n version 0.161.
-- Basic knowledge of n8n. We strongly recommend taking our Level 1 course prior to this one.
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/), [n8n.cloud](/hosting/installation/cloud/), or the [desktop app](/hosting/installation/desktop-app/).
+- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg) to get your unique ID and other credentials you will need in the course.
+- **Basic n8n skills**. We strongly recommend taking the [Level 1 course](/courses/level-one/) prior to this one.
+- **Basic JavaScript understanding**.
 
-## How long does it take to complete the course?
+## How long does the course take?
 
-Completing the course should take around two hours. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
+Completing the course should take around **two hours**. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
 
-## Do I get a certificate?
+## How do I complete the course?
 
-We believe all good works deserve recognition. If you successfully complete the course, you will get a **badge** in your [community forum](http://community.n8n.io/) profile to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
+There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] [Sign up](https://n8n-community.typeform.com/to/HQoQ7nXg) for the course to get your unique ID and other information you will need for the exercises.
-- [x] Run an HTTP Request to get the data set.
-- [x] Automatically generate binary files and send notifications in Discord.
-- [x] Pass the quiz at the end of the course.
+- [x] Building the [main workflow](/courses/level-two/chapter-5/)
+- [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg) at the end of the course
+
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify).
+
+If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2) in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.

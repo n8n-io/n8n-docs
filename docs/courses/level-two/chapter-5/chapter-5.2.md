@@ -15,6 +15,7 @@ The first part of the workflow consists of five nodes:
 1. Use the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank"} to get data from the API endpoint that stores company data. Configure the following node parameters:
 
       * **Authentication**: Header Auth
+      * **Credentials for Header Auth**: The Header Auth name and Header Auth value you received in the email when you signed up for this course.
       * **URL**: The Dataset URL you received in the email when you signed up for this course.
       * **Options > Add Option > Split Into Items**: toggle to true.
       * **Headers > Add Header**:

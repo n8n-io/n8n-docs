@@ -1,3 +1,13 @@
+---
+title: Postgres
+description: You can use these credentials to authenticate the following nodes with Postgres. Find the Prerequisites and how using database connection.
+tags:
+  - Workflow²
+  - Postgres
+  - Prerequisites Postgres
+  - Using Database Connection
+---
+
 # Postgres
 
 You can use these credentials to authenticate the following nodes with Postgres.

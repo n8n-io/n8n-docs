@@ -1,3 +1,12 @@
+---
+title: Kafka
+description: You can use these credentials to authenticate the following nodes with Kafka and Kafka Trigger. Find the Prerequisites and how using Kafka.
+tags:
+  - Workflow²
+  - Kafka
+  - Prerequisites
+---
+
 # Kafka
 
 You can use these credentials to authenticate the following nodes with Kafka.

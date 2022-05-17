@@ -1,4 +1,15 @@
+---
+title: Netlify
+description: You can use these credentials to authenticate the following nodes with Netlify and Netlify Trigger. Find the Prerequisites and how using access token.
+tags:
+  - Workflow²
+  - Netlify
+  - Prerequisites 
+  - Access Token
+---
+
 # Netlify
+
 
 You can use these credentials to authenticate the following nodes:
 

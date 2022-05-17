@@ -13,13 +13,15 @@
     * Delete a file
     * Download a file
     * Get a file
+    * Rename a file
     * Search a file
     * Share a file
     * Upload a file up to 4MB in size
 * Folder
     * Create a folder
     * Delete a folder
-    * Get items inside a folder
+    * Get Children (get items inside a folder)
+    * Rename a folder
     * Search a folder
     * Share a folder
 

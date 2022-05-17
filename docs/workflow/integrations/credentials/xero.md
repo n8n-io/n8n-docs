@@ -1,3 +1,13 @@
+---
+title: Xero
+description: You can use these credentials to authenticate the following nodes with Xero. Find the Prerequisites and how using OAuth.
+tags:
+  - Workflow²
+  - Xero
+  - Prerequisites Xero
+  - Using OAuth
+---
+
 # Xero
 
 You can use these credentials to authenticate the following nodes with Xero.

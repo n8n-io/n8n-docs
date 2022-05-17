@@ -4,7 +4,7 @@
 
  
 
-View the [commits &#129109;](https://github.com/n8n-io/n8n/compare/n8n@0.176.0...n8n@0.177.0){:target="_blank" .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.176.0...n8n@0.177.0){:target="_blank" .external-link} for this version.<br />
 **Release date:** 2022-05-17
 
 This release contains node enhancements, an improved welcome experience, and bug fixes.
@@ -15,7 +15,7 @@ This release contains node enhancements, an improved welcome experience, and bug
 
 #### Improved welcome experience
 
-A new [introductory video &#129109;](https://youtu.be/RpjQTGKm-ok){:target="_blank" .external-link}, automatically displayed for new users.
+A new [introductory video](https://youtu.be/RpjQTGKm-ok){:target="_blank" .external-link}, automatically displayed for new users.
 
 #### Automatically convert Luxon dates to strings
 

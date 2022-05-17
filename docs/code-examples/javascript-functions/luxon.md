@@ -113,7 +113,7 @@ let readableSevenDaysAgo = $today.minus({days: 7}).toLocaleString({month: 'long'
 
 On 23rd June 2019, this returns "16 June 2019".
 
-Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans) for more information.
+Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans){:target="_blank" .external-link} for more information.
 
 
 ### Get the time between two dates

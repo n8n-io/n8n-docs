@@ -8,7 +8,9 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank"}, choose the option that best suits your skills and needs.
 
-**This course was developed on n8n version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
+!!! warning "n8n version"
+
+    This course was developed on n8n version 0.175.1. In other versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.
 
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 
@@ -85,8 +87,6 @@ Based on their function, nodes can be classified into two types:
 ### Start node
 
 The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank"} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
-
-<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Start-node.png" alt="Start node" style="width:30%"><figcaption align = "center"><i>Start node</i></figcaption></figure>
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 

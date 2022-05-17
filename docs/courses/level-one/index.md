@@ -10,7 +10,6 @@ This course is for you if you:
 
 - Want to automate things in your personal life
 - Are looking for quick ways to automate common business processes
-- Plan to become an n8n partner
 
 ## What will I learn in this course?
 

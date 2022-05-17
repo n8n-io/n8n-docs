@@ -58,13 +58,11 @@ The configuration of the settings for the *Hacker News node* looks like this:
 
 !!! note "Renaming a node"
     You can rename the node with a name that's more descriptive for your use case. There are two ways to do this:
-    - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click on the ✔ symbol to save the node under the new name.
 
-<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node.gif" alt="Renaming a node from the window" style="width:100%"><figcaption align = "center"><i>Renaming a node from the window</i></figcaption></figure>
+    - Select the node you want to rename and at the same time press the F2 key on your keyboard.
+    - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click *Rename* to save the node under the new name.
 
-- Select the node you want to rename and at the same time press the F2 key on your keyboard.
-
-<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node-keyboard.png" alt="Renaming a node from the keyboard" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 
 
 ## 3. Save the workflow
@@ -111,7 +109,7 @@ This field displays the number of items (records) that are returned by the node 
 
 
 !!! warning "Error in nodes"
-    A red warning icon on the top right corner of a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
+    A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
 
 <figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 

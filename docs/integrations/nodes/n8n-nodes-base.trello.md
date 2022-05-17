@@ -18,6 +18,11 @@
     * Delete a board
     * Get the data of a board
     * Update a board
+* Board Member
+    * Add
+    * Get All
+    * Invite
+    * Remove
 * Card
     * Create a new card
     * Delete a card

@@ -105,6 +105,7 @@ nav:
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
+        - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
     - Reference:
       - Overview: reference/index.md

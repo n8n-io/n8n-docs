@@ -1,3 +1,14 @@
+---
+title: Mindee
+description: You can use these credentials to authenticate the following nodes with Mindee. Find the Prerequisites and how using API Key.
+tags:
+  - Workflow²
+  - Mindee
+  - Prerequisites Mindee
+  - Using API Key
+---
+
+
 # Mindee
 
 You can use these credentials to authenticate the following nodes with Mindee.

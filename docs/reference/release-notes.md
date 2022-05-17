@@ -43,8 +43,8 @@ n8n now automatically converts Luxon DateTime objects to strings.
 
 ### Contributors
 
-[Cristobal Schlaubitz Garcia &#129109;](https://github.com/CxGarcia){:target="_blank" .external-link}  
-[Yann Jouanique &#129109;](https://github.com/Yann-J){:target="_blank" .external-link}
+[Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target="_blank" .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target="_blank" .external-link}
 
 ## n8n@0.176.0
 

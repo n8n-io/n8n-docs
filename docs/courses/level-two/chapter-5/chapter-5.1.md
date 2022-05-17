@@ -2,7 +2,7 @@
 
 The company's customer data is stored in Airtable. It contains information about the customers' ID, country, email, and join date, but lacks data about their respective region and subregion. You need to fill in these last two fields in order to create the reports for regional sales.
 
-To accomplish this task, you first need to make a copy of this [customers table](https://airtable.com/shrZBXHXWvQ57LHuX){:target="_blank"} in your Airtable account.
+To accomplish this task, you first need to make a copy of this [customers table](https://airtable.com/shrZBXHXWvQ57LHuX){:target="_blank" .external-link} in your Airtable account.
 
 <iframe class="airtable-embed" src="https://airtable.com/embed/shrNX9tjPkVLABbNz?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 

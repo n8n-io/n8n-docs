@@ -282,7 +282,7 @@ To read or write a binary file, you need to write the path (location) of the fil
 
 ### Exercise
 
-Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Move Binary Data node to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64){:target="_blank"} encoding.
+Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Move Binary Data node to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64){:target="_blank" .external-link} encoding.
 
 ??? note "Show me the solution"
 

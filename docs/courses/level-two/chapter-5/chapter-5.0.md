@@ -29,6 +29,6 @@ To build the workflows, you will need the following:
 
 * An [Airtable](https://airtable.com/){:target="_blank"} account and [credentials](/integrations/credentials/airtable/){:target="_blank"}.
 * A [Google](https://www.google.com/account/about/){:target="_blank"} account and [credentials](/integrations/credentials/google/){:target="_blank"} to access Gmail.
-* A [Discord](https://discord.com/){:target="_blank"} account and webhook URL (you receive this via email when you sign up for this course).
+* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this via email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

@@ -41,6 +41,6 @@ There are two milestones in this course that test your knowledge of what you hav
 - [x] Building the [main workflow](/courses/level-two/chapter-5/){:target="_blank"}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank"} at the end of the course
 
-You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank"}.
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}.
 
 If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2){:target="_blank"} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.

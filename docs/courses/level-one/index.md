@@ -45,12 +45,12 @@ Completing the course should take around **two hours**. You do not have to compl
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.0)
-- [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA) at the end of the course
+- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank"}
+- [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
 
 You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank"}.
 
-If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank"} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
+If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank" .external-link} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 
 <div style="text-align:center;">
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let's get started!</a></button>

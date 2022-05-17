@@ -14,5 +14,5 @@ You've come a long way throughout this course and learned a lot about workflow a
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="https://n8n-community.typeform.com/to/r9hDbytg" target="_blank" style="color: #fff;">Take the quiz!</a></button>
 </div>
 
-* Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on the [workflows page](https://n8n.io/workflows){:target="_blank"} and on our [blog](https://n8n.io/blog/){:target="_blank"}.
+* Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on the [workflows page](https://n8n.io/workflows){:target="_blank" .external-link} and on our [blog](https://n8n.io/blog/){:target="_blank" .external-link}.
 * Dive deeper into n8n's features by reading the [docs](/){:target="_blank"}.

@@ -1,3 +1,13 @@
+---
+title: Strapi
+description: You can use these credentials to authenticate the following nodes with Strapi. Find the Prerequisites and how using API.s
+tags:
+  - Workflow²
+  - Strapi
+  - Prerequisites Strapi
+  - Using API
+---
+
 # Strapi
 
 You can use these credentials to authenticate the following nodes with Strapi.

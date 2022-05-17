@@ -54,7 +54,7 @@ Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 strin
 {{DateTime.fromISO('2019-06-23T00:00:00.00')}}
 ```
 
-Luxon's API documentation has more information on [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso).
+Luxon's API documentation has more information on [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso){:target="_blank" .external-link}.
 
 Luxon provides functions to handle conversions for a range of formats. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
 

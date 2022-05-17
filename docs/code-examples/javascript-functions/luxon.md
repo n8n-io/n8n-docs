@@ -69,7 +69,7 @@ For example, you have n8n's founding date, 23rd June 2019, formatted as '23-06-2
 let newFormat = DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")
 ```
 
-When using ad-hoc parsing, note Luxon's warning about [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations). If you see unexpected results, try their [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging) guide.
+When using ad-hoc parsing, note Luxon's warning about [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations){:target="_blank" .external-link}. If you see unexpected results, try their [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging){:target="_blank" .external-link} guide.
 
 ### Get n days from today
 

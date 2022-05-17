@@ -37,7 +37,7 @@ Be aware of the following:
 
 ## Common tasks
 
-This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
+This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon){:target="_blank" .external-link}.
 
 ### Convert date string to Luxon
 

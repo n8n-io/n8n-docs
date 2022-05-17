@@ -26,14 +26,12 @@ Now, in your Editor UI, add an *HTTP Request node* like you learned in the [less
 In the left panel, select:
 
 - *Authentication:* Header Auth
-- *URL:* `https://internal.users.n8n.cloud/webhook/custom-erp`
+- *URL:* The Dataset URL your received in the email when you signed up for this course.
 - *Options > Add Option > Split Into Items:* toggle to true.
 This option will output each element of an array as its own item.
 - *Headers > Add Header:*
   - *Name:* `unique_id`
-  - *Value:* your_unique_id
-
-**Note:** In case you don't already have your Unique ID, please sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank"} to obtain it.
+  - *Value:* The Unique ID your received in the email when you signed up for this course.
 
 Since you selected *Header Authentication*, now you need to enter your credentials in order to be able to access the data.
 
@@ -43,14 +41,14 @@ Since you selected *Header Authentication*, now you need to enter your credentia
 
 In the left panel, click on *Create New* in the box next to the parameter *Credentials*. This will open the Credentials window where you need to add the following information in the *Connection* tab:
 
-- *Credentials Name* in the top left corner, next to the node logo. By default, the name of the credentials is `Header Auth account`, but you can can rename to `beginner_course`, for example.
+- *Credentials Name*: By default, the name of the credentials is `Header Auth account`, but you can can rename to `beginner_course`, for example.
 
 !!! note "Credentials naming"
     You can name your credentials however you want. It's good practice to give them descriptive names for the app/service, type, and purpose of the credential. A naming convention will make it easier for you to keep track of and identify your credentials.
 
 
-- *Name:* `api_key`
-- *Value:* `j[vKYdY68H(:WFb`
+- *Name:* The Header Auth name your received in the email when you signed up for this course.
+- *Value:* The Header Auth value your received in the email when you signed up for this course.
 
 Click on the *Save* button in the top right corner to save your credentials. Your *Credentials Connection* window should look like this:
 

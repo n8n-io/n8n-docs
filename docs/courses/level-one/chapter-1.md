@@ -26,10 +26,7 @@ The [Editor UI](/editor-ui/){:target="_blank"} represents the web interface used
 
 Under the n8n logo in the upper left corner you will notice a round arrow icon. Click on it to open the left-side menu, which contains the core functionalities and settings for managing workflows.
 
-<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
-
-
-There are four main sections in the left menu:
+The panel contains the following sections:
 
 - *Admin Panel*: Only for users on n8n.cloud, used to access the management Dashboard.
 - *Workflows*: Contains operations for creating and editing workflows.
@@ -37,33 +34,36 @@ There are four main sections in the left menu:
 - *Executions*: Contains information about your workflow executions, which are complete runs of a workflow from the first to the last node.
 - *Help*: Contains resources around n8n product and community.
 
+<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
+
 ### Top bar
 
-The top bar of the Editor UI contains four pieces of information:
-
-<figure><img src="/_images/courses/level-one/chapter-one/Editor-UI-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
+The top bar of the Editor UI contains the following information:
 
 - The text that appears in the top left is the *name* of the current workflow. You can edit this name anytime.
 - Next to it, you have the option to add a *tag*. Tags help you organize your workflows by use case, domain, or whatever is relevant for you.
 - In the top right there is an orange *Save* button that saves the current workflow.
 - Next to it, there is a *toggle* button used to activate or deactivate the current workflow.
 
+<figure><img src="/_images/courses/level-one/chapter-one/Editor-UI-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
+
 ### Canvas
 
-The *canvas* is the gray grid background in the Editor UI. On the canvas, there are five buttons and a node with different functionalities:
+The *canvas* is the gray grid background in the Editor UI. On the canvas, there are several icons and a node with different functionalities:
+
+- Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and reset the canvas to the original resolution.
+- A button to *Execute Workflow*. When you click on it, all nodes on the canvas are executed.
+- A button with a *+* sign inside. This button opens the nodes panel.
+- A button with a note icon inside. This button adds a [sticky note](/workflows/sticky-notes){:target="_blank" .external} to the canvas.
+- A square with a green play icon inside. This is the *Start node*. You will learn more about nodes in the [next section](#nodes).
 
 <figure><img src="/_images/courses/level-one/chapter-one/Workflow-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 
-- In the bottom left corner of the canvas there are three small icons used to zoom in (**+**) or out (**-**) of the canvas, and reset (**←**) the canvas to the original resolution.
-- At the bottom center of the canvas there is an orange *Execute Workflow* button. When you click on it all nodes on the canvas are executed.
-- On the top right corner of the canvas there is an orange circle with a *+* sign inside. This button opens the nodes panel.
-- In the center of the canvas, there is a square with a green play icon inside. This is the *Start node*. You will learn more about nodes in the [next section](#nodes).
-
 !!! note "Moving the canvas"
     You can move the workflow canvas around in two ways:
+
     - Click **Ctrl + Left Mouse Button** on the canvas and move it around
     - Place two fingers on your touchpad and slide
-
 
 Don't worry about workflow execution and activation for now, we will explain these concepts later on in the course.
 
@@ -100,17 +100,19 @@ You can find all available nodes in the nodes panel on the right side of the Edi
 - Click the gray dot on the right side of an existing node on the canvas (the node to which you want to add another one) and pull the connection line to the right.
 - Click the Tab key on your keyboard.
 
-The nodes panel looks like this:
-
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Nodes-panel.png" alt="Nodes panel" style="width:50%"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 
 In the nodes panel, notice that the nodes are grouped in three tabs: All, Regular, and Trigger. In addition, nodes are also grouped by their functionality domain (like Analytics or Sales). This makes it easier to find the nodes you need.
 
 If you want to get a specific node, type in the name of the node, app, or service in the search field and select the respective tab.
 
+
 ### Adding nodes
 
-To add a new node to the Editor UI, click on the node you want in the nodes panel. The new node will automatically be connected to the selected node on the canvas.
+There are two ways to add nodes to your canvas:
+
+- Click on the node you want in the nodes panel. The new node will automatically be connected to the selected node on the canvas.
+- Drag and drop the node from the nodes panel to the canvas.
 
 To review, here's a walkthrough of the Editor UI touching on all the settings you've learned so far:
 
@@ -129,7 +131,7 @@ If you hover on a node, you'll notice that four icons appear on top:
 
 
 !!! note "Moving a workflow"
-    To move a workflow around the canvas, select all nodes (**Ctrl + A**), click and hold on a node then drag it to any point you want on the canvas.
+    To move a workflow around the canvas, select all nodes with your mouse or by clicking **Ctrl + A**, click and hold on a node, then drag it to any point you want on the canvas.
 
 
 ## Summary

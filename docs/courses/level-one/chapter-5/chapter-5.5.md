@@ -15,10 +15,10 @@ To calculate data and add more functionality to your workflows you can use the *
 
 Before going into the setup of the Function node, you should first learn the [data structure](/data/data-structure/){:target="_blank"} of n8n. This is important if you want to:
 
-- create your own node
-- write custom expressions
-- use the Function or Function Item node
-- get the most out of n8n
+- Create your own node.
+- Write custom expressions.
+- Use the Function or Function Item node.
+- Get the most out of n8n.
 
 In n8n, the data that is passed between nodes is an array of objects with the following structure:
 

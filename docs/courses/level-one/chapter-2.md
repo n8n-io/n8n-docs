@@ -1,10 +1,6 @@
 # Building a Mini-workflow
 
-In this lesson you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
-
-A simple, yet useful, automation is getting articles from Hacker News so that you're up to date with the tech world. More specifically, let's say you want to get the latest 10 articles related to automation.
-
-You can build a workflow for this use case in 4 steps:
+In this lesson, you will build a small workflow that gets 10 articles about automation from Hacker News. The workflow consists of four steps:
 
 [1. Add the Hacker News node](#_1-add-the-hacker-news-node)<br/>
 [2. Configure the Hacker News node](#_2-configure-the-hacker-news-node)<br/>
@@ -111,7 +107,7 @@ This field displays the number of items (records) that are returned by the node 
 !!! warning "Error in nodes"
     A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
 
-<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
+<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 
 
 ## Summary

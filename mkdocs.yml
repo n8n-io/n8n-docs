@@ -18,6 +18,8 @@ theme:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
+  - _extra/css/mkdocsoad.css
+  - _extra/css/spantable.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
@@ -35,7 +37,7 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   # https://github.com/Neoteroi/mkdocs-plugins
-  # - neoteroi.spantable
+  - neoteroi.spantable
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
@@ -64,7 +66,8 @@ plugins:
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
   # https://github.com/Neoteroi/mkdocs-plugins
-  # - neoteroi.mkdocsoad
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
   # https://github.com/bharel/mkdocs-render-swagger-plugin
   - render_swagger
 nav:
@@ -204,5 +207,6 @@ nav:
     - Authentication: api/authentication.md
     - Endpoint reference using plugin: api/api-reference-1.md
     - Endpoint reference using Swagger UI directly: api/api-reference-2.md
+    - Sleeker plugin: api/api-reference-3.md
     - Redoc: api/api-reference-4.md
   - Contributing: contributing.md

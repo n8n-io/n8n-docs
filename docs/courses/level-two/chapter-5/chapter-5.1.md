@@ -8,9 +8,9 @@ To accomplish this task, you first need to make a copy of this [customers table]
 
 Next, you have to build a small workflow that merges data from Airtable and a REST API.
 
-1. Use the [Airtable node](/integrations/nodes/n8n-nodes-base.airtable/){:target="_blank"} to list the data in the Airtable table named `customers`.
-2. use the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank"} to get data from the REST Countries API: `https://restcountries.com/v3.1/all`. This will return data about world countries. Note that the incoming data needs to be split into items.
-3. Use the [Merge node](/integrations/core-nodes/n8n-nodes-base.merge/){:target="_blank"} to merge data from Airtable and the Countries API by country name (the common key), represented as `customerCountry` in Airtable and `name.common` in the Countries API, respectively.
+1. Use the [Airtable node](/integrations/nodes/n8n-nodes-base.airtable/){:target="_blank" .external} to list the data in the Airtable table named `customers`.
+2. use the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank" .external} to get data from the REST Countries API: `https://restcountries.com/v3.1/all`. This will return data about world countries. Note that the incoming data needs to be split into items.
+3. Use the [Merge node](/integrations/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from Airtable and the Countries API by country name (the common key), represented as `customerCountry` in Airtable and `name.common` in the Countries API, respectively.
 4. Use the Airtable node to update the fields `region` and `subregion` in Airtable with the data from the Countries API.
 
 The workflow should look like this:

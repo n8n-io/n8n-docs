@@ -32,9 +32,9 @@ You will build two workflows:
 
 ## What do I need to get started?
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank"}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank"}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank"}.
-- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank"} to get your unique ID and other credentials you will need in the course.
-- Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank"} would be helpful, but is not necessary.
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
+- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
+- Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but is not necessary.
 
 ## How long does the course take?
 
@@ -44,10 +44,10 @@ Completing the course should take around **two hours**. You do not have to compl
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank"}
+- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
 
-You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank"}.
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank" .external}.
 
 If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank" .external-link} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 

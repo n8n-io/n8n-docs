@@ -5,7 +5,7 @@ In this step of the workflow you will learn how to send messages to a Discord ch
 Now that you have a calculated summary of the booked orders, you need to notify Nathan's team in their Discord channel. For this workflow, you will send messages to the [n8n server](https://discord.gg/G98WXzsjky){:target="_blank" .external} on Discord.
 
 !!! note "Communication nodes"
-    You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/nodes/n8n-nodes-base.slack/){:target="_blank"} and [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/){:target="_blank" .external}.
+    You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/nodes/n8n-nodes-base.slack/){:target="_blank" .external} and [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/){:target="_blank" .external}.
 
 
 In your workflow, add a Discord node connected to the Function node. In the Discord node window, configure the parameters:

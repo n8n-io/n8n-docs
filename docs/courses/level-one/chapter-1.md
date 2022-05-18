@@ -6,7 +6,7 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank"}, choose the option that best suits your skills and needs.
+First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank" .external}, choose the option that best suits your skills and needs.
 
 !!! warning "n8n version"
 
@@ -20,7 +20,7 @@ Next, you'll learn how to navigate the Editor UI.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/){:target="_blank"} represents the web interface where you build [workflows](/workflows/workflows/){:target="_blank"}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
+The [Editor UI](/editor-ui/){:target="_blank" .external} represents the web interface where you build [workflows](/workflows/workflows/){:target="_blank" .external}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
 
 ### Left-side panel
 
@@ -86,7 +86,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank"} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 

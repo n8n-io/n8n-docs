@@ -15,4 +15,4 @@ You've come a long way throughout this course and learned a lot about workflow a
 </div>
 
 * Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on the [workflows page](https://n8n.io/workflows){:target="_blank" .external-link} and on our [blog](https://n8n.io/blog/){:target="_blank" .external-link}.
-* Dive deeper into n8n's features by reading the [docs](/){:target="_blank"}.
+* Dive deeper into n8n's features by reading the [docs](/){:target="_blank" .external}.

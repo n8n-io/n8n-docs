@@ -2,10 +2,10 @@
 
 In this lesson, you will build a small workflow that gets 10 articles about automation from Hacker News. The workflow consists of four steps:
 
-[1. Add the Hacker News node](#_1-add-the-hacker-news-node)<br/>
-[2. Configure the Hacker News node](#_2-configure-the-hacker-news-node)<br/>
-[3. Save the workflow](#_3-save-the-workflow)<br/>
-[4. Execute the node](#_4-execute-the-node)<br/>
+[1. Add the Hacker News node](#1-add-the-hacker-news-node)<br/>
+[2. Configure the Hacker News node](#2-configure-the-hacker-news-node)<br/>
+[3. Save the workflow](#3-save-the-workflow)<br/>
+[4. Execute the node](#4-execute-the-node)<br/>
 
 ## 1. Add the Hacker News node
 
@@ -16,7 +16,9 @@ Open the nodes panel, search for the *Hacker News* node, and click on it to add 
 When you add a new node to the Editor UI, the node will be automatically activated and open a window with two tabs on the left side: ***Parameters*** and ***Settings***.
 
 !!! note "Parameters vs Settings"
-    *Parameters* are different for each node, depending on its functionality. *Settings* are the same for all nodes.
+
+	*Parameters* are different for each node, depending on its functionality.<br />
+	*Settings* are the same for all nodes.
 
 
 ### Parameters

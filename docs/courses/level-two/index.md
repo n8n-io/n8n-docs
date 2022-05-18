@@ -38,7 +38,7 @@ Completing the course should take around **two hours**. You do not have to compl
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-two/chapter-5/){:target="_blank" .external}
+- [x] Building the [main workflow](/courses/level-two/chapter-5/chapter-5.0/){:target="_blank" .external}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank" .external} at the end of the course
 
 You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}.

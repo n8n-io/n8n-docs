@@ -1,5 +1,51 @@
 # Release notes
 
+## n8n@0.177.0
+
+ 
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.176.0...n8n@0.177.0){:target="_blank" .external-link} for this version.<br />
+**Release date:** 2022-05-17
+
+This release contains node enhancements, an improved welcome experience, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Improved welcome experience
+
+A new [introductory video](https://youtu.be/RpjQTGKm-ok){:target="_blank" .external-link}, automatically displayed for new users.
+
+#### Automatically convert Luxon dates to strings
+
+n8n now automatically converts Luxon DateTime objects to strings.
+
+</div>
+
+
+### Node enhancements
+
+* [Google Drive Node](/integrations/nodes/n8n-nodes-base.googleDrive/){:target="_blank"}: Drive upload, delete, and share operations now support shared Drives.
+* [Microsoft OneDrive](/integrations/nodes/n8n-nodes-base.microsoftOneDrive/){:target="_blank"}: Add the rename operation for files and folders.
+* [Trello](/integrations/nodes/n8n-nodes-base.trello/){:target="_blank"}: Add support for operations relating to board members.
+
+### Bug fixes
+
+* **core:** Fix call to `/executions-current` with unsaved workflow.
+* **core:** Fix issue with fixedCollection having all default values.
+* [Edit Image Node](/integrations/core-nodes/n8n-nodes-base.editImage/){:target="_blank"}: Fix font selection.
+* [Ghost Node](/integrations/nodes/n8n-nodes-base.ghost/){:target="_blank"}: Fix post tags and add credential tests.
+* [Google Calendar Node](/integrations/nodes/n8n-nodes-base.googleCalendar/){:target="_blank"}: Make it work with public calendars and clean up.
+* [KoBoToolbox Node](/integrations/nodes/n8n-nodes-base.koBoToolbox/){:target="_blank"}: Fix query and sort + use question name in attachments.
+* [Mailjet Trigger Node](/integrations/nodes/n8n-nodes-base.mailjet/){:target="_blank"}: Fix issue that node couldn't get activated.
+* [Pipedrive Node](/integrations/nodes/n8n-nodes-base.pipedrive/){:target="_blank"}: Fix resolve properties when using multi option field.
+
+### Contributors
+
+[Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target="_blank" .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target="_blank" .external-link}
+
 ## n8n@0.176.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.175.1...n8n@0.176.0) for this version.<br />

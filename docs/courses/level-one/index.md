@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the n8n Certification Course Level 1!
+Welcome to the **n8n Course Level 1**!
 
 ## Is this course right for me?
 
@@ -10,9 +10,10 @@ This course is for you if you:
 
 - Want to automate things in your personal life
 - Are looking for quick ways to automate common business processes
-- Plan to become an n8n partner
 
-## What will I learn?
+## What will I learn in this course?
+
+We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice of building workflows step by step.
 
 By the end of this course you will know:
 
@@ -28,31 +29,27 @@ You will build two workflows:
 - A two-node workflow to get articles from Hacker News
 - A seven-node workflow to help your client get records from a data warehouse, filter them, make calculations, and notify team members about the results
 
-## How will I learn?
-
-We believe in learning by doing. You can expect some theoretical information about the basic concepts and components of n8n, followed by practice of building workflows step by step.
-
 
 ## What do I need to get started?
 
-Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID and a Webhook URL that you'll need in the course. Then all you need is:
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
+- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
+- Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but is not necessary.
 
-- A computer with macOS, Windows, or Linux
-- Some basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/) are nice-to-haves
-- Eagerness to learn about the power of low-code automation
+## How long does the course take?
 
-## How long does it take to complete the course?
+Completing the course should take around **two hours**. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
 
-Completing the course should take around two hours. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
+## How do I complete the course?
 
-## Do I get a certificate?
+There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-We believe all good works deserve recognition. If you successfully complete the course, we will email you a **recognition badge** that you can share with your peers to showcase your n8n skills. To get your n8n badge, you need to complete the following milestones:
+- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external}
+- [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
 
-- [x] [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL
-- [x] [Make an HTTP request](/courses/level-one/chapter-5/chapter-5.1/)
-- [x] [Send the workflow results as a message via Discord](/courses/level-one/chapter-5/chapter-5.6/)
-- [x] Pass the quiz (theory and practice) at the end of the course
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank" .external}.
+
+If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank" .external-link} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 
 <div style="text-align:center;">
 	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let's get started!</a></button>

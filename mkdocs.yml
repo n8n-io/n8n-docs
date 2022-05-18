@@ -115,8 +115,8 @@ nav:
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
     - HTTP node credentials: 
-      - Overview: integrations/http-credentials/index.md
-      - App-specific HTTP credentials: integrations/http-credential/app-specific-http-credentials.md
+      - Overview: integrations/custom-operations/index.md
+      - App-specific HTTP credentials: integrations/custom-operations/app-specific-http-credentials.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:

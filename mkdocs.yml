@@ -168,9 +168,9 @@ nav:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
       - Cloud: hosting/installation/cloud.md
-    - Configuration: hosting/configuration.md
-    - User management: hosting/user-management.md
+    - Configuration: hosting/configuration.md    
     - Environment variables: hosting/environment-variables.md
+    - User management: hosting/user-management.md
     - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Server setups:

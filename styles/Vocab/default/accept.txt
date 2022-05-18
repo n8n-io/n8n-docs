@@ -1,1 +1,6 @@
+backend
+Cron
 n8n
+namespace
+onboarding
+URL

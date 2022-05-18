@@ -10,9 +10,9 @@ To activate your workflow toggle the *Active* button on the top right corner of 
 
 **Workflow Executions**
 
-An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
+An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
 
-To see the execution log, click on the icon with three lines in the left panel, which will open the *Workflow Executions* window.
+To see the execution log, in your Editor UI click on *Executions* in the left panel. This will open the *Workflow Executions* window.
 
 <figure><img src="/_images/courses/level-one/chapter-two/Execution-list.png" alt="Workflow Execution List" style="width:100%"><figcaption align = "center"><i>Workflow Execution List</i></figcaption></figure>
 
@@ -31,11 +31,11 @@ The information displayed here depends on what workflows and executions you set 
 
 **Workflow Settings**
 
-You can customize your workflows and executions, or overwrite some of the global default settings in *Workflow Settings*. These settings are located in the left panel, under the *Workflows* section.
+You can customize your workflows and executions, or overwrite some of the global default settings in *Workflow Settings*. These settings are located in the left panel of the Editor UI, under the *Workflows* section.
 
 <figure><img src="/_images/courses/level-one/chapter-two/Workflow-setting.png" alt="Workflow Settings" style="width:100%"><figcaption align = "center"><i>Workflow Settings</i></figcaption></figure>
 
-In the *Workflow Settings* window you can configure six settings:
+In the *Workflow Settings* window you can configure the following settings:
 
 * _[Error Workflow](/flow-logic/error-handling/){:target="_blank"}:_ A workflow to run in case the execution of the current workflow fails.
 * _Timezone:_ The timezone to use in the current workflow. If not set, the global Timezone (by default "New York") is used. This setting is particularly important for the Cron node, as you want to make sure that the workflow gets executed at the right time.

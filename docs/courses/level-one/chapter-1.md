@@ -16,22 +16,22 @@ Once you have n8n running, open the Editor UI in a browser window. It should loo
 
 <figure><img src="/_images/courses/level-one/chapter-one/Editor-UI.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
-Now that you have the Editor UI open, you'll learn how to navigate it.
+Next, you'll learn how to navigate the Editor UI.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/){:target="_blank"} represents the web interface used to create [workflows](/workflows/workflows/){:target="_blank"}. Think of it as a canvas where the artist in you will create automations. From the Editor UI you can access all your workflows and credentials, as well as the n8n documentation and forum.
+The [Editor UI](/editor-ui/){:target="_blank"} represents the web interface where you build [workflows](/workflows/workflows/){:target="_blank"}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
 
 ### Left-side panel
 
-Under the n8n logo in the upper left corner you will notice a round arrow icon. Click on it to open the left-side menu, which contains the core functionalities and settings for managing workflows.
+In the upper left corner, click on the round arrow icon. This will open the left-side menu, which contains the core functionalities and settings for managing workflows.
 
 The panel contains the following sections:
 
-- *Admin Panel*: Only for users on n8n.cloud, used to access the management Dashboard.
+- *Admin Panel*: Access the management Dashboard (for n8n.cloud users).
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
-- *Executions*: Contains information about your workflow executions, which are complete runs of a workflow from the first to the last node.
+- *Executions*: Contains information about your workflow executions.
 - *Help*: Contains resources around n8n product and community.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
@@ -40,10 +40,10 @@ The panel contains the following sections:
 
 The top bar of the Editor UI contains the following information:
 
-- The text that appears in the top left is the *name* of the current workflow. You can edit this name anytime.
-- Next to it, you have the option to add a *tag*. Tags help you organize your workflows by use case, domain, or whatever is relevant for you.
-- In the top right there is an orange *Save* button that saves the current workflow.
-- Next to it, there is a *toggle* button used to activate or deactivate the current workflow.
+- *Name* of the current workflow. By default, a new workflow is named "My Workflow", but can edit this name anytime.
+- *Tag* of the current workflow. Tags help you organize your workflows by category, use case, or whatever is relevant for you. Tags are optional.
+- *Save* button that saves the current workflow.
+- *Toggle* button that activates or deactivates the current workflow. By default, workflows are deactivated.
 
 <figure><img src="/_images/courses/level-one/chapter-one/Editor-UI-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

@@ -214,7 +214,7 @@ export N8N_USER_FOLDER=/home/jim/n8n
 
 ### Webhook URL
 
-n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy that won't work. That's because n8n runs internally
+n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally
 on port 5678 but is exposed to the web using the reverse proxy on port 443. In
 that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
 

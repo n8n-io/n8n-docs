@@ -9,7 +9,7 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 ## Node Reference
 
 - **Authentication:** there are two options for authentication:
-	- Select **Existing Credential Type** to use app-specific HTTP credentials. This allows you to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+	- Select **Existing Credential Type** to use predefined credential types. This allows you to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
 	- Select **Generic Credential Type** to set up authentication using one of the following methods.
 		- Basic Auth
 		- Digest Auth

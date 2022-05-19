@@ -10,9 +10,9 @@ You must use the authentication method required by the app or service you want t
 
 ### Existing credential types
 
-n8n recommends uing this option whenever it's available.  It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
+n8n recommends using this option whenever there's a credential type available for the service you want to connect to.  It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
 
-You can use [App-specific HTTP credentials](/integrations/custom-operations/) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [App-specific HTTP credentials](/integrations/custom-operations/) for more information.
+You can use [Predefined credential types](/integrations/custom-operations/#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations/) for more information.
 
 ### Generic authentication
 

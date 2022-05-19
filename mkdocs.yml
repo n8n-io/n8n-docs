@@ -114,7 +114,7 @@ nav:
     - Nodes: integrations/nodes/
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
-    - Custom API operations: integrations/custom-operations.md
+    - Custom API actions for existing nodes: integrations/custom-operations.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:

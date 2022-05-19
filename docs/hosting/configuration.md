@@ -120,7 +120,7 @@ The following environment variables support file input:
     This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default is `/`, meaning that it uses the root-domain.
 
 
-Tells the frontend how to reach the REST API of the back-end.
+Tells the front end how to reach the REST API of the back end.
 
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/

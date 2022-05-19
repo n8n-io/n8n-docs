@@ -117,7 +117,7 @@ The following environment variables support file input:
 ### Base URL
 
 !!! warning "Requires manual UI build"
-    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default it`/`, meaning that it uses the root-domain.
+    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default is `/`, meaning that it uses the root-domain.
 
 
 Tells the frontend how to reach the REST API of the back-end.

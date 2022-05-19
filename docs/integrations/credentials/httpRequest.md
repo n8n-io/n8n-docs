@@ -8,6 +8,14 @@ You can use these credentials to authenticate the following nodes:
 
 You must use the authentication method required by the app or service you want to query.
 
+### Existing credential types
+
+n8n recommends uing this option whenever it's available.  It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
+
+You can use [App-specific HTTP credentials](/integrations/custom-operations/) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [App-specific HTTP credentials](/integrations/custom-operations/) for more information.
+
+### Generic authentication
+
 The following generic authentication methods are available:
 
 * Basic Auth
@@ -19,7 +27,12 @@ The following generic authentication methods are available:
 
 You can learn more about HTTP authentication [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#see_also).
 
-You can use [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials.md) to perform [custom operations](/integrations/custom-operations/) with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials/) for more information.
+
+## Using an existing credential type
+
+--8<-- "_snippets/integrations/app-specific-http-how-to.md"
+
+Refer to [Custom API operations](/integrations/custom-operations/) for more information.
 
 ## Using Basic Auth / Digest Auth
 
@@ -62,8 +75,3 @@ Read more about [OAuth1](https://oauth.net/1/).
 
 Read more about [OAuth2](https://oauth.net/2/).
 
-## Using an existing credential type
-
---8<-- "_snippets/integrations/app-specific-http-how-to.md"
-
-Refer to [App-specific HTTP credentials](/integrations/custom-operations/app-specific-http-credentials/) for more information.

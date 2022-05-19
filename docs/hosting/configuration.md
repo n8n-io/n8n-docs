@@ -174,7 +174,7 @@ export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"
 
 ### Use built-in and external modules in Function-Nodes
 
-For security reasons, ithe Function node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
+For security reasons, the Function node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
 
 - `NODE_FUNCTION_ALLOW_BUILTIN`: For built-in modules
 - `NODE_FUNCTION_ALLOW_EXTERNAL`: For external modules sourced from n8n/node_modules directory. External module support is disabled when an environment variable isn't set.

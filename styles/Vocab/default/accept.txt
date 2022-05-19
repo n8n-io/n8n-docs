@@ -1,5 +1,7 @@
 backend
 Cron
+Enum
+enum
 n8n
 namespace
 onboarding

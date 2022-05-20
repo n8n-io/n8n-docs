@@ -14,7 +14,7 @@ To ensure you can follow along with the steps below, be sure to first:
 
 ## Install n8n
 
-1. Now that your have Docker installed, let's start by pulling the latest n8n image. Open your Terminal window and run:
+1. Now that you have Docker installed, let's start by pulling the latest n8n image. Open your Terminal window and run:
     ```sh
     docker pull n8nio/n8n
     ```

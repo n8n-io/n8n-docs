@@ -11,7 +11,7 @@ tags:
 
 ### Prerequisites
 
-To work with this tutorial you have to complete [Installation & Configuration](/doc2/fellowkv2-plugin/installation/) Section for this Plugin.
+To work with this tutorial you have to complete [Installation & Configuration](/kv2/installation/) Section for this Plugin.
 
 * * *
 

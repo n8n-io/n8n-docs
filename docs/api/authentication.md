@@ -2,9 +2,6 @@
 
 n8n uses API keys to authenticate API calls.
 
-[TODO: do you need user management set up in order to use keys?]
-
-
 ## Create an API key
 
 1. Log in to n8n.

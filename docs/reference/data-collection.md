@@ -55,3 +55,10 @@ export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 
 See [configuration](/hosting/configuration/) for more info on how to set environment variables.
 
+## Documentation telemetry
+
+n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+
+[Change cookie settings](#__consent){ .md-button }
+
+

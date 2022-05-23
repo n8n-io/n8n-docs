@@ -7,6 +7,7 @@
 Redoc doesn't change outer page styles
 -->
 <style>
+
   body {
     margin: 0;
     padding: 0;
@@ -14,11 +15,38 @@ Redoc doesn't change outer page styles
 
   .md-main__inner  {
       width: 100%;
+      margin-top: 0;
   }
 
   .md-grid {
       max-width: 100%;
   }
+
+  .md-content__inner {
+    padding: 0;
+    margin: 0;
+  }
+
+  .md-content__inner > p {
+    margin: 0;
+  }
+
+  .md-content__inner:before {
+    height: 0;
+  }
+
+  .md-typeset ol li:last-child, .md-typeset ul li:last-child {
+    margin-bottom: invalid;
+  }
+
+  [dir=ltr] .md-typeset ol li, [dir=ltr] .md-typeset ul li {
+    margin-left: 0;
+  }
+
+  [dir=ltr] .md-typeset ol, [dir=ltr] .md-typeset ul {
+    margin-left: 0;
+  }
+
 </style>
 
 {% endblock %}

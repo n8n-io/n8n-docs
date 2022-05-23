@@ -6,5 +6,5 @@ hide:
 ---
 
 
-<redoc theme='{"typography": {"font-family":"Open sans", "headings":{"fontFamily":"Open sans"}}}' spec-url="openapi.yml"></redoc>
+<redoc theme='{"typography": {"font-family":"Open sans", "headings":{"fontFamily":"Open sans"}}}' spec-url="/api/openapi.yml"></redoc>
 <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script>

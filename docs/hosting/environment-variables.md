@@ -10,7 +10,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `CREDENTIALS_OVERWRITE_DATA`<br>/`_FILE` | * | - | Overwrites for credentials. |
+| `CREDENTIALS_OVERWRITE_DATA`<br>/`_FILE` | * | - | Overwrites for credentials.<br>**Type**: * <br>**Default**: - |
 | `CREDENTIALS_OVERWRITE_ENDPOINT` | String | - | The API endpoint to fetch credentials. |
 | `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | The default name for credentials. |
 
@@ -87,19 +87,21 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## User management and SMTP
 
-| Variable | Type  | Description | 
-| :------- | :--- | :---------- | 
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean |  Set to `true` to disable the [user management](/hosting/user-management/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.<br>**Default:** `false`<br>**Required?** Optional | 
-| `N8N_EMAIL_MODE` | String | `smtp` | 
-| `N8N_SMTP_HOST` | String | _your_SMTP_server_name_ | 
-| `N8N_SMTP_PORT` | Number |  _your_SMTP_server_port_ | 
-| `N8N_SMTP_USER` | String | _your_SMTP_username_ |
-| `N8N_SMTP_PASS` | String |  _your_SMTP_password_ | 
-| `N8N_SMTP_SENDER` | String | You can select the sender name from the sender addresses. Example: `N8N _contact@n8n.com_`| 
-| `N8N_SMTP_SSL` | Boolean |  Whether to use SSL for SMTP (true) or not (false). |  
-| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | Full path to your HTML email template. This overrides the default template for invite emails. | 
-| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | Full path to your HTML email template. This overrides the default template for password reset emails. | 
-| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | Set a specific JWT secret. By default, n8n generates one on start. | 
+Refer to [User management](/hosting/user-management/) for more information on setting up user management and emails.
+
+| Variable | Type | Default | Description | 
+| :------- | :--- | :------ | :---------- | 
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/user-management/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.| 
+| `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
+| `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ | 
+| `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ | 
+| `N8N_SMTP_USER` | String | - | _your_SMTP_username_ |
+| `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ | 
+| `N8N_SMTP_SENDER` | String | - |You can select the sender name from the sender addresses. Example: `N8N _contact@n8n.com_`| 
+| `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |  
+| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. | 
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. | 
+| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. | 
 
 
 ## Endpoints

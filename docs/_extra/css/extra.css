@@ -138,7 +138,9 @@
 } */
 
 
-
+.md-typeset table:not([class]) td:first-of-type {
+    white-space: pre;
+}
 
 
 

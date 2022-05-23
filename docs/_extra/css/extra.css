@@ -137,6 +137,14 @@
     border-left: 1px solid var(--color-primary);
 } */
 
+
+.md-typeset table:not([class]) td:first-of-type {
+    white-space: pre;
+}
+
+
+
+
 /* Ensure manage settings button is visible */
 .md-typeset .md-consent__controls .md-button {
     background-color: var(--md-primary-fg-color);

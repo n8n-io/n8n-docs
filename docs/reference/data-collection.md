@@ -8,7 +8,7 @@ n8n collects selected usage and performance data to help diagnose problems and i
 - The graph of a workflow (types of nodes used and how they're connected)
 - From node parameters:
     - The 'resource' and 'operation' that a node is set to (if applicable)
-    - The URL for HTTP request nodes, with personal data anonymized.
+    - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
 - The number of workflow executions and their status
 - Details on how the UI is used (for example, navigation, nodes panel searches)
 - Diagnostic information

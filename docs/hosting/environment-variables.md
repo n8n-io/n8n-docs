@@ -128,7 +128,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `EXECUTIONS_PROCESS` | Enum string: `main`, `own` | `own` | Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
-| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue. .<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
+| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | The maximum run time (in seconds) before stopping a workflow execution. Set to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) for an individual workflow. |
 | `EXECUTIONS_DATA_SAVE_ON_ERROR` | Enum string: `all`, `none` | `all` | Whether n8n saves execution data on error. |

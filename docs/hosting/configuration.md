@@ -117,10 +117,10 @@ The following environment variables support file input:
 ### Base URL
 
 !!! warning "Requires manual UI build"
-    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default it`/`, meaning that it uses the root-domain.
+    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default is `/`, meaning that it uses the root-domain.
 
 
-Tells the frontend how to reach the REST API of the back-end.
+Tells the front end how to reach the REST API of the back end.
 
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
@@ -174,7 +174,7 @@ export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"
 
 ### Use built-in and external modules in Function-Nodes
 
-For security reasons, ithe Function node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
+For security reasons, the Function node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
 
 - `NODE_FUNCTION_ALLOW_BUILTIN`: For built-in modules
 - `NODE_FUNCTION_ALLOW_EXTERNAL`: For external modules sourced from n8n/node_modules directory. External module support is disabled when an environment variable isn't set.
@@ -214,7 +214,7 @@ export N8N_USER_FOLDER=/home/jim/n8n
 
 ### Webhook URL
 
-n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy that won't work. That's because n8n runs internally
+n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally
 on port 5678 but is exposed to the web using the reverse proxy on port 443. In
 that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
 

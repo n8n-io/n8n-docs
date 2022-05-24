@@ -3,7 +3,7 @@
 The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
 
 !!! note "Keep in mind"
-    1. When using the Webhook node on the localhost, ensure that n8n is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
+    1. When using the Webhook node on the localhost, ensure that n8n is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel){:target="_blank" .external} or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel){:target="_blank" .external}.
     2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don't forget that the data flowing through the webhook won't be visible in the Editor UI with the Production webhook.
 
 Webhook nodes can be used as triggers for workflows when you want to receive data and run a workflow based on the data. The Webhook node also supports returning the data generated at the end of a workflow. This makes it very useful to build a workflow to process data and return the results, like an API endpoint.
@@ -25,48 +25,48 @@ Make sure that you click on the *Execute Node* button to register the webhook be
 To use the Webhook node, you need to configure the following parameters:
 
 1. **Webhook URLs**
-    - **Production URL**: A Production webhook is only registered when a workflow has been activated (via the Activate toggle on the top right of the page). You will never see its data in the Editor UI. To save the executions, you can either set that as a global default or specify that on a per-workflow basis in the [workflow settings](/workflows/workflows/#workflow-settings). You will then see the data from the workflow under 'Past Executions'.
+    - **Production URL**: A Production webhook is only registered when a workflow has been activated (via the Activate toggle on the top right of the page). You will never see its data in the Editor UI. To save the executions, you can either set that as a global default or specify that on a per-workflow basis in the [workflow settings](/workflows/workflows/#workflow-settings){:target="_blank" .external}. You will then see the data from the workflow under 'Past Executions'.
 
     - **Test URL**: A Test webhook is only registered in the time between executing a workflow via the UI and until the first call gets made (when it displays "waiting for Webhook call"). After the Test webhook gets called for the first time, it displays the data in the Editor UI, and then gets deactivated.
 
 2. **Authentication:** The Webhook node supports two methods of authenticating a request that it receives.
-    - [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) — A method of authentication where the specified username and password must be passed along with the request.
-    - [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) — A method of authentication where the specified header parameter must be passed along with the request. This method can be used when you want to authenticate using an API key or an access token, for example.
+    - [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target="_blank" .external-link} — A method of authentication where the specified username and password must be passed along with the request.
+    - [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target="_blank" .external-link} — A method of authentication where the specified header parameter must be passed along with the request. This method can be used when you want to authenticate using an API key or an access token, for example.
     - **None** — This option allows you to use the Webhook node without authentication.
 
     !!! note  "Keep in mind"
         The **Credential Data** required for Header Auth credentials will vary on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` would be `Authorization` and the `Value` would be `Bearer <token>`.
 
 
-3. **HTTP Method:** The Webhook node supports receiving six types of [HTTP Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
+3. **HTTP Method:** The Webhook node supports receiving six types of [HTTP Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target="_blank" .external-link}.
 
-    - [**DELETE Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE) — DELETE requests are typically used to delete data from a resource.
-    - [**GET Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) — GET requests are typically used to request data from a resource. This type of request is typically used to retrieve data from a service.
-    - [**HEAD Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD) — HEAD requests are typically used to request headers (information) from a resource, not the data itself.
-    - [**PATCH Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH) — PATCH requests are typically used to make partial modifications to data from a resource.
-    - [**POST Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) — POST requests are typically used to send data to a resource for a create/update operation. This type of request is typically used to send data to a service.
-    - [**PUT Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT) — PUT requests are typically used to create a new resource.
+    - [**DELETE Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE){:target="_blank" .external-link} — DELETE requests are typically used to delete data from a resource.
+    - [**GET Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET){:target="_blank" .external-link} — GET requests are typically used to request data from a resource. This type of request is typically used to retrieve data from a service.
+    - [**HEAD Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD){:target="_blank" .external-link} — HEAD requests are typically used to request headers (information) from a resource, not the data itself.
+    - [**PATCH Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH){:target="_blank" .external-link} — PATCH requests are typically used to make partial modifications to data from a resource.
+    - [**POST Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST){:target="_blank" .external-link} — POST requests are typically used to send data to a resource for a create/update operation. This type of request is typically used to send data to a service.
+    - [**PUT Request**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT){:target="_blank" .external-link} — PUT requests are typically used to create a new resource.
 
 4. **Path:** By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. You can also manually specify a URL path if necessary. A good example would be if you were using n8n to prototype an API, and wanted consistent endpoint URLs.
 
 5. **Respond:** This dropdown list allows you to select between three response modes.
     - **Immediately** — When this option is selected, the Webhook node will return the specified response code as soon as the node executes, along with the message “Workflow got started.”.
     - **When last node finishes** — When this option is selected, the Webhook node will return the specified response code along with the data output from the last node executed in the workflow.
-    - **Using 'Respond to Webhook node'** — When this option is selected, the Webhook node will return the response defined in the [Respond to Webhook node](/integrations/core-nodes/n8n-nodes-base.respondToWebhook/).
+    - **Using 'Respond to Webhook node'** — When this option is selected, the Webhook node will return the response defined in the [Respond to Webhook node](/integrations/core-nodes/n8n-nodes-base.respondToWebhook/){:target="_blank" .external}.
 
-6. **Response Code:** Allows you to customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) that the Webhook node will return upon successful execution.
+6. **Response Code:** Allows you to customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target="_blank" .external-link} that the Webhook node will return upon successful execution.
 
-### **Optional Parameters**
+### **Optional parameters**
 The Webhook node also supports several optional methods that can be used during configuration.
 
-- [**Response Headers**](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) — This option allows you to specify additional headers in the Webhook response.
-- **Raw Body** — This option is used to specify when the Webhook node will receive data in a RAW format, such as JSON or XML.
 - **Binary Data** — This option is available only when the Webhook node is set to receive POST requests. Setting this to 'true' lets the Webhook node know that it will receive binary data (such as an image/audio). You can use this option when you expect to receive a file via your Webhook node.
-- **Ignore Bots**
+- **Ignore Bots** — Setting this to 'true' makes the Webhook node ignore requests from bots like link previewers and web crawlers.
+- **Property Name** — This option is available only when the Response Data property is set to 'First Entry JSON'. It is used to specify the name of the property to return the data of, instead of the entire JSON.
+- **Raw Body** — This option is used to specify when the Webhook node will receive data in a RAW format, such as JSON or XML.
 - **Response Content-Type**
-- **Property Name**
+- [**Response Headers**](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target="_blank" .external-link} — This option allows you to specify additional headers in the Webhook response.
 
-### **Conditional Parameters**
+### **Conditional parameters**
 The Webhook node also supports several other parameters, that are used only in certain configurations.
 
 - **Response Data:** This option is available only when set to respond when ‘Last node finishes'. It allows you to choose which data to return:
@@ -77,11 +77,11 @@ The Webhook node also supports several other parameters, that are used only in c
 
 ## Example Usage
 
-This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on n8n.io. This example usage workflow uses the following nodes:
+This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807){:target="_blank" .external} on n8n.io. This example usage workflow uses the following nodes:
 
 - [Webhook]()
-- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [OpenWeatherMap](/integrations/nodes/n8n-nodes-base.openWeatherMap/){:target="_blank" .external}
+- [Set](/integrations/core-nodes/n8n-nodes-base.set/){:target="_blank" .external}
 
 The final workflow should look like the following image.
 
@@ -91,53 +91,45 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow. We will make a GET request to the Test URL and pass on a query parameter `city`. We will use the value of this query parameter in the next node in the workflow.
 
-1. Click on ***Webhook URLs*** and select the 'Test' tab.
-2. Copy the displayed URL. We will make a GET request to this URL later on.
-3. From ***Respond***, select 'When last node finishes'. This will return the data from the last executed node.
-4. Select 'All Entries' from the ***Response Data***. This will return all the entries of the last executed node.
-5. Save the workflow to register the webhook.
-6. Click on ***Execute Node*** to run the node.
-7. In a new browser tab, paste the URL you copied in the previous step and append it with `?city=Berlin`. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?city=Berlin`. We are passing a query parameter `city` and assigning it the value `Berlin`.
-8. Press Enter (or Return) to make a request to the Test Webhook URL.
+1. From ***Webhook URLs***, select the 'Test' tab and copy the displayed URL. We will make a GET request to this URL later on.
+2. From ***Respond***, select 'When last node finishes'.
+3. From ***Response Data***, select 'All Entries'.
+4. Save the workflow to register the webhook.
+5. Click on ***Execute Node*** to run the node.
+6. In a new browser tab, paste the Test URL you copied in the previous step and append `?city=Berlin` to it. This query will request data for a specific value (`Berlin`) from a query parameter (`city`). The URL should look like this:`https://your-n8n.url/webhook/path?city=Berlin`.
+7. Press Enter (or Return) to make a request to the Test Webhook URL.
 
 In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.
 
 ![Using the Webhook node to trigger the workflow](/_images/integrations/core-nodes/webhook/webhook_node.png)
 
-### 2. OpenWeatherMap node (Current Weather)
+### 2. OpenWeatherMap node
 
 This node will return data about the current weather for the city that we received in the previous node.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/credentials/openWeatherMap/).
-2. Click on the gears icon next to the ***City*** field and click on ***Add Expression***.
-
-3. Select the following in the ***Variable Selector*** section: Nodes > Webhook > Output Data > JSON > query > city. You can also add the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.
-4. Click on ***Execute Node*** to run the node.
-
-In the screenshot below, you will notice that the node returns data about the current weather in Berlin.
+1. In the ***Credential for OpenWeatherMap API***, click on ***Create New*** and add your credentials (Access Token). Learn how to do that in the [node credentials docs](/integrations/credentials/openWeatherMap/){:target="_blank" .external}.
+2. In the ***City*** parameter, click on the gear icon next to the field and select ***Add Expression***.
+3. In the *Expression* box, write the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.<br>
+   You can also select this expression from the ***Variable Selector:*** Nodes > Webhook > Output Data > JSON > query > city.
+4. Click on ***Execute Node*** to run the node. The node will return data about the current weather in Berlin.
 
 ![Using the OpenWeatherMap node to get weather updates for Berlin](/_images/integrations/core-nodes/webhook/openweathermap_node.png)
 
 ### 3. Set node
 
-We will use the Set node to ensure that only the data that we set in this node gets returned to the workflow. We will set the value of `temp` and `description` in this node.
-
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
-2. Enter `temp` in the ***Name*** field.
-3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > main > temp. You can also add the following expression: `{{$node["OpenWeatherMap"].json["main"]["temp"]}}`.
-5. Click on ***Add Value*** and select 'String' from the dropdown list.
-6. Enter `description` in the ***Name*** field.
-7. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
-8. Select the following in the ***Variable Selector*** section: Nodes > OpenWeatherMap > Output Data > JSON > weather > [Item: 0] > description. You can also add the following expression: `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
-9. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
-10. Click on ***Execute Node*** to run the node.
-
-In the screenshot below, you will notice that the node sets the values of `temp` and `description`.
+2. In the ***Name*** field enter `weather`.
+3. In the ***Value*** field, click on ***Add Expression***.
+4. In the *Expression* box, write the following expression: The weather in `{{$node["OpenWeatherMap"].json["name"]}}`: `{{$node["OpenWeatherMap"].json["main"]["temp"]}}` °C with `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
+   You can also select the three expressions from the ***Variable Selector***.
+5.  Toggle ***Keep Only Set*** to `true`. This option ensures that only the data set in this node get passed on to the next nodes in the workflow.
+6.  Click on ***Execute Node*** to run the node.
 
 ![Using the Set node to set the values for temp and description](/_images/integrations/core-nodes/webhook/set_node.png)
 
 Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature and description as the response in the browser.
+
+![Webhook node response in browser](/_images/integrations/core-nodes/webhook/response_browser.png)
 
 !!! note "Activate workflow for production"
     This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
@@ -158,7 +150,7 @@ Here is a GIF demonstrating how to retrieve the test and production webhook URLs
 
 ### How to use the HTTP Request node to trigger the Webhook node?
 
-The [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps below.
+The [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank" .external} node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps below.
 
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
@@ -186,12 +178,12 @@ You can add route parameters to the webhook URL path. This is useful when you ar
 
 ### How to use cURL to trigger the Webhook node?
 
-You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.
+You can use [cURL](https://curl.se/){:target="_blank" .external-link} to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/){:target="_blank" .external-link} to install cURL on your machine.
 Based on your use-case, you can make an HTTP request with or without any parameters. You can also send files with the HTTP request using cURL.
 
 **Note:** In the following commands, replace `https://your-n8n.url/webhook/path` with your webhook URL.
 
-- #### Make an HTTP request without any parameters
+#### Make an HTTP request without any parameters
  To make a GET request without any parameters, use the following command in your terminal.
 
 ```sh
@@ -204,7 +196,7 @@ To make a POST request, use the following command.
 curl --request POST https://your-n8n.url/webhook/path
 ```
 
-- #### Make an HTTP request with body parameter
+#### Make an HTTP request with body parameter
 
 To make an HTTP request with a body parameter, use the following command.
 
@@ -212,7 +204,7 @@ To make an HTTP request with a body parameter, use the following command.
 curl --request GET https://your-n8n.url/webhook/path --data 'key=value'
 ```
 
-- #### Make an HTTP request with header parameter
+#### Make an HTTP request with header parameter
 
 To make an HTTP request with a header parameter, use the following command.
 
@@ -220,7 +212,7 @@ To make an HTTP request with a header parameter, use the following command.
 curl --request GET https://your-n8n.url/webhook/path --header 'key=value'
 ```
 
-- #### Make an HTTP request to send a file
+#### Make an HTTP request to send a file
 
 To send a file with the HTTP request, use the following command.
 
@@ -244,8 +236,3 @@ To send a response of type string, follow the steps below.
 9. Toggle ***Keep Only Set*** to `true`.
 
 When the Webhook gets called, it will send the string response that was set in the Set node.
-
-
-
-
-

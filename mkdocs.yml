@@ -118,6 +118,13 @@ nav:
     - Nodes: integrations/nodes/
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
+    - Community nodes:
+      - Overview: integrations/community-nodes/index.md
+      - Installation and management: integrations/community-nodes/installation.md
+      - Risks: integrations/community-nodes/risks.md
+      - Blocklist: integrations/community-nodes/blocklist.md
+      - Using community nodes: integrations/community-nodes/usage.md
+      - Submit your node: integrations/community-nodes/submit-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:

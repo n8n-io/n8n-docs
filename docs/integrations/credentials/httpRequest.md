@@ -30,7 +30,7 @@ You can learn more about HTTP authentication [here](https://developer.mozilla.or
 
 ## Using an existing credential type
 
---8<-- "_snippets/integrations/app-specific-http-how-to.md"
+--8<-- "_snippets/integrations/predefined-credential-type-how-to.md"
 
 Refer to [Custom API operations](/integrations/custom-operations/) for more information.
 

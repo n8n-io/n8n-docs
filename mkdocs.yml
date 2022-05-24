@@ -25,6 +25,10 @@ extra:
   analytics:
     provider: google
     property: UA-146470481-3
+  consent:
+    title: Cookie and analytics consent
+    description: 
+      We use cookies (and other similar technologies) to collect data in order to improve our site. You have the option to opt-in or opt-out of certain cookie tracking technologies. For more information on privacy and data management at n8n, refer to our <a href="https://n8n.io/legal/privacy" target="_blank">privacy policy</a>.
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list
@@ -115,6 +119,7 @@ nav:
     - Nodes: integrations/nodes/
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
+    - Custom API actions for existing nodes: integrations/custom-operations.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:
@@ -169,9 +174,9 @@ nav:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
       - Cloud: hosting/installation/cloud.md
-    - Configuration: hosting/configuration.md
-    - User management: hosting/user-management.md
+    - Configuration: hosting/configuration.md    
     - Environment variables: hosting/environment-variables.md
+    - User management: hosting/user-management.md
     - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Server setups:

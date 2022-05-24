@@ -578,4 +578,4 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.

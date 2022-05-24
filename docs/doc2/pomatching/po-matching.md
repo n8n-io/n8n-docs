@@ -14,7 +14,7 @@ There are three ways you can match your Purchase Order
 
 1. with the corresponding [invoice](/doc2/pomatching/po-matching-invoices/)
 2. with the corresponding [delivery note](/doc2/pomatching/po-matching-delivery-notes/)
-3. with the corresponding [order confirmation](/doc2/doc2app/po-matching/po-matching-order-confirmation/)
+3. with the corresponding [order confirmation](/doc2/pomatching/po-matching-order-confirmation/)
 
 #### Corresponding settings must be made in DOC²
 

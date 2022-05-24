@@ -156,7 +156,7 @@ nav:
       - Overview: doc2/pomatching/po-matching.md
       - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md
       - Invoices: doc2/pomatching/po-matching-invoices.md
-      - Orders: doc2/pomatching/po-matching-order-confirmation.md
+      - Order Confirmation: doc2/pomatching/po-matching-order-confirmation.md
 
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
     - SSO for Infor: doc2/settings-sso-settings.md

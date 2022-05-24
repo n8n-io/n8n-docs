@@ -1,8 +1,44 @@
 # Release notes
 
-## n8n@0.177.0
+## n8n@0.178.0
 
- 
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.177.0...n8n@0.178.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-05-24
+
+This release adds support for reusing existing credentials in the HTTP Request node, making it easier to do custom operation with APIs where n8n already has an integration.
+
+The release also includes improvements to the nodes view, giving better detail about incoming data, as well as some bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Credential reuse for custom API operations
+
+n8n supplies hundreds of nodes, allowing you to create workflows that link multiple products. However, some nodes don't include all the possible operations supported by a product's API. You can work around this by making a custom API call using the HTTP Request node.
+
+One of the most complex parts of setting up API calls is managing authentication. To simplify this, n8n now provides a way to use existential credential types (credentials associated with n8n nodes) in the HTTP Request node.
+
+For more information, refer to [Custom API operations](/integrations/custom-operations/){:target=_blank}.
+
+#### Node details view
+
+An improved node view, showing more detail about node inputs.
+
+</div>
+
+### Node enhancements
+
+[Salesforce Node](/integrations/nodes/n8n-nodes-base.salesforce){:target=_blank}: Add the **Country** field.
+
+### Bug fixes
+
+* **Editor UI**: don't display the dividing line unless necessary.
+* **Editor UI**: don't display the 'Welcome' sticky in template workflows.
+* [Slack Node](/integrations/nodes/n8n-nodes-base.slack){:target=_blank}: Fix the kick operation for the channel resource. 
+
+
+## n8n@0.177.0 
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.176.0...n8n@0.177.0){:target="_blank" .external-link} for this version.<br />
 **Release date:** 2022-05-17

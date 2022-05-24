@@ -118,6 +118,7 @@ nav:
     - Nodes: integrations/nodes/
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
+    - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - Overview: integrations/community-nodes/index.md
       - Installation and management: integrations/community-nodes/installation.md

@@ -7,3 +7,9 @@ Risks include:
 * Data security: any Community Node that you use has access to data in your workflows.
 
 ## Report bad Community Nodes
+
+<!-- vale off -->
+
+You can report bad Community Nodes to [security@n8n.io](mailto: security@n8n.io)
+
+<!-- vale on -->

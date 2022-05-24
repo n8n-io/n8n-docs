@@ -14,10 +14,12 @@ To install a Community Node:
     2. Browse the list of results. You can filter the results or add more keywords.
     3. Once you find the package you want, make a note of the package name. If you want to install a specific version, make a note of the version number as well.
     4. Return to n8n.
-4. Enter the npm package name, and version number if required. For example, consider a Community Node designed to access a weather API called "Stormz." The package is named n8n-node-stormz, and has three major versions.
-    * To install the latest version of a package called n8n-node-weather: enter `n8n-node-stormz` in **Enter npm package name**.
-    * Install version 2.3: enter `n8n-node-stormz@2.3` in **Enter npm package name**.
+4. Enter the npm package name, and version number if required. For example, consider a Community Node designed to access a weather API called "Storms." The package name is n8n-node-storms, and it has three major versions.
+    * To install the latest version of a package called n8n-node-weather: enter `n8n-node-storms` in **Enter npm package name**.
+    * Install version 2.3: enter `n8n-node-storms@2.3` in **Enter npm package name**.
+    <!-- vale off -->
 5. Agree to the [risks](/integrations/community-nodes/risks/) of using Community Nodes: select **I understand the risks of installing unverified code from a public source.**
+<!-- vale on -->
 6. Select **Install**. n8n installs the node, and returns to the **Community Nodes** list in **Settings**.
 
 !!! note "Nodes on the blocklist"

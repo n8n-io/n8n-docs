@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.178.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.178.1...n8n@0.178.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-05-25
+
+This is a bug fix release. It solves an issue with loading parameters when making custom operations calls.
+
 ## n8n@0.178.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.178.0...n8n@0.178.1){:target=_blank .external-link} for this version.<br />

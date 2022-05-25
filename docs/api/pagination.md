@@ -8,16 +8,18 @@ For example, say you want to get all active workflows, 150 at a time.
 
 Get the first page:
 
-```bash
+```shell
 # For a self-hosted n8n instance
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v1/workflows?active=true&limit=150' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
+  -H 'X-N8N-API-KEY: <your-api-key>'
 
 # For n8n Cloud
 curl -X 'GET' \
   '<your-cloud-instance>/api/v1/workflows?active=true&limit=150' \
-  -H 'accept: application/json'
+  -H 'accept: application/json' \
+  -H 'X-N8N-API-KEY: <your-api-key>'
 ```
 
 The response is in JSON format, and includes a `nextCursor` value. This is an example response.

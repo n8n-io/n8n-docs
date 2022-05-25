@@ -4,5 +4,6 @@ Enum
 enum
 n8n
 namespace
+npm
 onboarding
 URL

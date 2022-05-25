@@ -1,60 +1,71 @@
 # General Guidelines
 
-Please make sure that everything works correctly and that no unnecessary code gets added. It is important to follow the following guidelines:
+Please make sure that everything works and that no unnecessary code gets added. It's' important to follow the following guidelines:
 
-## Do not change incoming data
+## Don't change incoming data
 
-Never change the incoming data a node receives (which can be queried with `this.getInputData()`) as it gets shared by all nodes. If data has to get added, changed or deleted it has to be cloned and the new data returned. If that is not done, sibling nodes which execute after the current one will operate on the altered data and would process different data than they were supposed to.
-It is however not needed to always clone all the data. If a node for, example only, changes only the binary data but not the JSON data, a new item can be created which reuses the reference to the JSON item.
+Never change the incoming data a node receives (data accessible with `this.getInputData()`) as all nodes share it. If you need to add, change, or delete data, clone the incoming data and return the new data. If you don't do this, sibling nodes that execute after the current one will operate on the altered data and process incorrect data.
 
-An example can be seen in the code of the [ReadBinaryFile-Node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ReadBinaryFile.node.ts#L69-L83).
+It's not necessary to always clone all the data. For example, if a node changes the binary data but not the JSON data, you can create a new item that reuses the reference to the JSON item.
+
+You can see an example in the code of the [ReadBinaryFile-Node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ReadBinaryFile.node.ts#L69-L83).
 
 
 ## Write nodes in TypeScript
 
-All code of n8n is written in TypeScript and hence, the nodes should also be written in TypeScript. That makes development easier, faster, and avoids at least some bugs.
-
+All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
 
 ## Use the built in request library
 
-Some third-party services have their own libraries on npm which make it easier to create an integration. It can be quite tempting to use them. The problem with those is that you add another dependency and not only one, you add but also all the dependencies of the dependencies. This means more and more code gets added, has to get loaded, can introduce security vulnerabilities, bugs, and so on. So please use the built-in module which can be used like this:
+Some third-party services have their own libraries on npm, which make it easier to create an integration. The problem with these packages is that you add another dependency (plus all the dependencies of the dependencies). This adds more and more code, which has to be loaded, can introduce security vulnerabilities, bugs, and so on. Instead, use the built-in module:
 
 ```typescript
 const response = await this.helpers.httpRequest(options);
 ```
 
-The full documentation and migration instructions from the deprecated `this.helpers.request` can be found [here](/integrations/creating-nodes/code/http-helpers/).
+This uses the npm package [`request-promise-native`](https://github.com/request/request-promise-native), which is the basic npm `request` module but with promises. For a full set of options refer to [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
 
-That is using the npm package [`request-promise-native`](https://github.com/request/request-promise-native) which is the basic npm `request` module but with promises. For a full set of `options` consider looking at [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback).
+Refer to [HTTP helpers](/integrations/creating-nodes/code/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.
+
 
 ## Reuse parameter names
 
-When a node can perform multiple operations like edit and delete some kind of entity, for both operations, it would need an entity-id. Do not call them "editId" and "deleteId", call them "id". n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that is the case, the "displayOptions" can be used. By keeping the same name, the value can be kept if a user switches the operation from "edit" to "delete".
+When a node can perform multiple operations, such as editing and deleting an entity, use an entity ID for both operations. Call them `id`, not `editId` and `deleteId`. n8n can handle multiple parameters with the same name without a problem as long as only one is visible. To make sure that's the case, use `displayOptions`. By keeping the same name, n8n can keep the value can if a user switches the operation from `edit` to `delete`.
+
+[TODO: I have no clue what this means. Need an example.]
 
 ## Create an 'Additional Fields' parameter
 
-Some nodes may need a lot of options. Add only the very important ones to the top level and for all others, create an 'Additional Fields' parameter where they can be added if needed. This ensures that the interface stays clean and does not unnecessarily confuse people. A good example of that would be the XML node.
+Some nodes have a lot of options. Add important ones to the top level. For all others, create an 'Additional Fields' parameter where users can set them if needed. This ensures that the interface stays clean and reduces user confusion. A good example of that would be the XML node.
 
 ## Follow existing parameter naming guideline
 
-There is not much of a guideline yet but if your node can do multiple things, call the parameter which sets the behavior either "mode" (like "Merge" and "XML" node) or "operation" like the most other ones. If these operations can be done on different resources (like "User" or "Order) create a "resource" parameter (like "Pipedrive" and "Trello" node).
+If your node can perform multiple operations, call the parameter that sets the operation `Operation`. If your node can do these operations on more than one resource, create a `Resource` parameter.
+
+[TODO: add example]
+
 
 ## Node icons
 
-Check existing node icons as a reference when you create own ones. The resolution of an icon should be 60x60px and saved as PNG.
+Check existing node icons as a reference when you create your own. The icon resolution should be 60x60px. Save it as a PNG.
 
 ## Node versions
 
-n8n now supports node versioning and it's a blast! You can make changes to existing nodes without breaking the existing behavior by introducing a new version. You can check an example of a versioned node by browsing the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).
+n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version. As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).
 
-Node versioning in a glimpse:
+Node versioning summary:
 
-- The main node file should now extend `NodeVersionedType` instead of `INodeType`
-- The main node file now only contains a base description containing the `defaultVersion` (usually the latest) and a list of versions
-- We recommend you use `v1`, `v2`, etc. for version folder names
-- A new code separation has been created and can be seen in the Mattermost node above. Highlights:  
-    * `actions` folder with description and implementation of each possible action  
-    * `methods` is an optional folder with the loading dynamic parameters' functions  
-    * `transport` is a folder with all the communication implementation
+- The main node file should extend `NodeVersionedType` instead of `INodeType`.
+- The main node file only contains a base description containing the `defaultVersion` (usually the latest) and a list of versions.
+- n8n recommends using `v1`, `v2`, and so on for version folder names.
+- Code separation:  
+    * `actions` folder with description and implementation of each possible action.  
+    * `methods` is an optional folder with the loading dynamic parameters' functions.  
+    * `transport` is a folder with all the communication implementation.
 
-**Note:** For the `actions` folder we recommend using `resources` and `operations` names as subfolders hierarchically. For the implementation an description you can use separate files. Our recommendation is to use `execute.ts` and `description.ts` as file names. This make browsing through the code a lot easier. This can be simplified for nodes that have a less complicated structure.
+[TODO: mattermost node doesn't follow the below best practices. Do we have an example that does?]
+
+!!! note "Recommended sub-folders in the `actions` folder"
+     In the `actions` folder, n8n recommends using `resources` and `operations` as the names of the sub-folders. For the implementation and description you can use separate files. Use `execute.ts` and `description.ts` as file names. This make browsing through the code a lot easier. You can simplify this for nodes that have a less complicated structure.
+
+[TODO: keep in mind this one doc took you 50mins and is nowhere near done]

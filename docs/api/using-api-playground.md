@@ -17,7 +17,7 @@ For n8n Cloud users, the API playground path contains your cloud instance URL:
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell
-/api/credentials/schema/{credentialTypeId}
+/api/credentials/schema/{credentialType}
 ```
 
 !!! warning "Real data"

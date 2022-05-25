@@ -2,13 +2,13 @@
 
 n8n supplies hundreds of nodes, allowing you to create workflows that link multiple products. However, some nodes don't include all the possible operations supported by a product's API. You can work around this by making a custom API call using the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node.
 
-One of the most complex parts of setting up API calls is managing authentication. To simplify this, n8n provides a way to use existing credential types (credentials associated with n8n nodes).
+One of the most complex parts of setting up API calls is managing authentication. To simplify this, n8n simplifies authentication for services with an existing node.
 
 ## Predefined credential types
 
-A predefined credential type is a credential associated with a particular platform. You can use predefined credential types instead of generic credentials in the HTTP Request node.
+A predefined credential type is a credential that already exists in n8n. You can use predefined credential types instead of generic credentials in the HTTP Request node.
 
-For example: you create an Asana credential, for use with the Asana node. Later, you want to perform an operation that isn't supported by the Asana node, using Asana's API. You can use your existing Asana credential in the HTTP Request node to perform the operation.
+For example: you create an Asana credential, for use with the Asana node. Later, you want to perform an operation that isn't supported by the Asana node, using Asana's API. You can use your existing Asana credential in the HTTP Request node to perform the operation, without additional authentication setup.
 
 ### Using predefined credential types
 

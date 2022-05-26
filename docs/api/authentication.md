@@ -23,13 +23,13 @@ For example, say you want to get all active workflows. Your curl request will lo
 ```shell
 # For a self-hosted n8n instance
 curl -X 'GET' \
-  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v1/workflows?active=true' \
+  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 
 # For n8n Cloud
 curl -X 'GET' \
-  '<your-cloud-instance>/api/v1/workflows?active=true' \
+  '<your-cloud-instance>/api/v<version-number>/workflows?active=true' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 ```

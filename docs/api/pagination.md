@@ -11,13 +11,13 @@ Get the first page:
 ```shell
 # For a self-hosted n8n instance
 curl -X 'GET' \
-  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v1/workflows?active=true&limit=150' \
+  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 
 # For n8n Cloud
 curl -X 'GET' \
-  '<your-cloud-instance>/api/v1/workflows?active=true&limit=150' \
+  '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 ```
@@ -41,11 +41,11 @@ Then to request the next page:
 ```bash
 # For a self-hosted n8n instance
 curl -X 'GET' \
-  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v1/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
+  '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'
 
 # For n8n Cloud
 curl -X 'GET' \
-  '<your-cloud-instance>/api/v1/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
+  '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'
 ```

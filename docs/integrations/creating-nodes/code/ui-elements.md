@@ -1,8 +1,8 @@
 # Node UI Elements
 
-n8n provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in n8n.
+n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.
 
-[[toc]]
+
 
 ## String
 
@@ -21,7 +21,10 @@ Basic configuration
 },
 ```
 
-<img src="./images/string.png" width="350">
+
+
+![String](/_images/integrations/creating-nodes/code/string.png)
+
 
 Variation for inputting passwords
 
@@ -40,7 +43,8 @@ Variation for inputting passwords
 },
 ```
 
-<img src="./images/password.png" width="350">
+![Password](/_images/integrations/creating-nodes/code/password.png)
+
 
 Variation with multiple rows
 
@@ -58,7 +62,8 @@ Variation with multiple rows
 },
 ```
 
-<img src="./images/multiple-rows.png" width="350">
+![Multiple rows](/_images/integrations/creating-nodes/code/multiple-rows.png)
+
 
 
 ## Number
@@ -83,7 +88,8 @@ Basic configuration
 },
 ```
 
-<img src="./images/number.png" width="350">
+![Number](/_images/integrations/creating-nodes/code/number.png)
+
 
 Variation with decimal points
 
@@ -101,7 +107,8 @@ Variation with decimal points
 },
 ```
 
-<img src="./images/decimal.png" width="350">
+![Decimal](/_images/integrations/creating-nodes/code/decimal.png)
+
 
 
 ## Collection
@@ -140,7 +147,8 @@ The `collection` type is used to input a collection of fields. For example, addi
 },
 ```
 
-<img src="./images/collection.png" width="350">
+![Collection](/_images/integrations/creating-nodes/code/collection.png)
+
 
 
 ## Datetime
@@ -157,7 +165,8 @@ The `dateTime` type provides a calendar from which you can pick a specific date 
 },
 ```
 
-<img src="./images/datetime.png" width="350">
+![Datetime](/_images/integrations/creating-nodes/code/datetime.png)
+
 
 
 ## Boolean
@@ -174,7 +183,7 @@ The `boolean` type is used to input a value that is either true or false. It is 
 },
 ```
 
-<img src="./images/boolean.png" width="350">
+![Boolean](/_images/integrations/creating-nodes/code/boolean.png)
 
 
 ## Color
@@ -190,7 +199,8 @@ The `color` type provides a color palette from which a specific color can be sel
 },
 ```
 
-<img src="./images/color.png" width="300">
+![Color](/_images/integrations/creating-nodes/code/color.png)
+
 
 
 ## Options
@@ -217,7 +227,7 @@ The `options` type is used to provide options from which a single one has to be 
 },
 ```
 
-<img src="./images/options.png" width="350">
+![Options](/_images/integrations/creating-nodes/code/options.png)
 
 
 ## Multi Options
@@ -244,7 +254,7 @@ The `multiOptions` type is used to provide options from which many can be select
 },
 ```
 
-<img src="./images/multioptions.png" width="350">
+![Multioptions](/_images/integrations/creating-nodes/code/multioptions.png)
 
 
 ## Fixed Collection
@@ -286,7 +296,9 @@ The `fixedCollection? type is used to present groups of fields that are semantic
 },
 ```
 
-<img src="./images/fixed-collection.png" width="350">
+![Fixed collection](/_images/integrations/creating-nodes/code/fixed-collection.png)
+
+
 
 
 ## JSON
@@ -303,4 +315,5 @@ The `json` type is used to input data formatted as JSON.
 },
 ```
 
-<img src="./images/json.png" width="350">
+![JSON](/_images/integrations/creating-nodes/code/json.png)
+

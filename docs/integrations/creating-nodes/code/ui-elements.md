@@ -1,29 +1,25 @@
-# Node UI Elements
+# Node user interface elements
 
-n8n provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in n8n.
-
-[[toc]]
+n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.
 
 ## String
 
-The `string` type is used to input string values.
-
-Basic configuration
+Basic configuration:
 
 ```typescript
 {
-	displayName: Name, // The value the user would see in the UI
-	name: name, // The name use to reference the element UI within the code
+	displayName: Name, // The value the user sees in the UI
+	name: name, // The name used to reference the element UI within the code
 	type: string,
 	required: true, // Whether the field is required or not
-	default: 'n8n', // Value that would be set by default
+	default: 'n8n',
 	description: 'The name of the user',
-},
+}
 ```
 
-<img src="./images/string.png" width="350">
+![String](/_images/integrations/creating-nodes/code/string.png)
 
-Variation for inputting passwords
+String field for inputting passwords:
 
 ```typescript
 {
@@ -36,13 +32,13 @@ Variation for inputting passwords
 	},
 	default: '',
 	description: `User's password`,
-
-},
+}
 ```
 
-<img src="./images/password.png" width="350">
+![Password](/_images/integrations/creating-nodes/code/password.png)
 
-Variation with multiple rows
+
+String field with more than one row:
 
 ```typescript
 {
@@ -55,17 +51,14 @@ Variation with multiple rows
 	},
 	default: '',
 	description: 'Description',
-},
+}
 ```
 
-<img src="./images/multiple-rows.png" width="350">
-
+![Multiple rows](/_images/integrations/creating-nodes/code/multiple-rows.png)
 
 ## Number
 
-The `number` type is used to input numbers.
-
-Basic configuration
+Basic configuration:
 
 ```typescript
 {
@@ -80,12 +73,12 @@ Basic configuration
 	},
 	default: 10,
 	description: 'Your current age',
-},
+}
 ```
 
-<img src="./images/number.png" width="350">
+![Number](/_images/integrations/creating-nodes/code/number.png)
 
-Variation with decimal points
+Number field with decimal points:
 
 ```typescript
 {
@@ -98,15 +91,14 @@ Variation with decimal points
 	},
 	default: 10.00,
 	description: 'Your current amount',
-},
+}
 ```
 
-<img src="./images/decimal.png" width="350">
-
+![Decimal](/_images/integrations/creating-nodes/code/decimal.png)
 
 ## Collection
 
-The `collection` type is used to input a collection of fields. For example, additional fields (or optional fields).
+Use the `collection` type when you need to display optional fields.
 
 ```typescript
 {
@@ -137,15 +129,15 @@ The `collection` type is used to input a collection of fields. For example, addi
 			default: '',
 		},
 	],
-},
+}
 ```
 
-<img src="./images/collection.png" width="350">
+![Collection](/_images/integrations/creating-nodes/code/collection.png)
 
 
-## Datetime
+## DateTime
 
-The `dateTime` type provides a calendar from which you can pick a specific date and time.
+The `dateTime` type provides a date picker.
 
 ```typescript
 {
@@ -154,15 +146,14 @@ The `dateTime` type provides a calendar from which you can pick a specific date 
 	type: 'dateTime',
 	default: '',
 	description: 'The date and time when the file was last modified',
-},
+}
 ```
 
-<img src="./images/datetime.png" width="350">
-
+![DateTime](/_images/integrations/creating-nodes/code/datetime.png)
 
 ## Boolean
 
-The `boolean` type is used to input a value that is either true or false. It is shown as a toggle that can be either on or off.
+The `boolean` type adds a toggle for entering true or false.
 
 ```typescript
 {
@@ -171,15 +162,14 @@ The `boolean` type is used to input a value that is either true or false. It is 
 	type: 'boolean',
 	default: true, // Initial state of the toggle
 	description: 'Whether to wait for the image or not',
-},
+}
 ```
 
-<img src="./images/boolean.png" width="350">
-
+![Boolean](/_images/integrations/creating-nodes/code/boolean.png)
 
 ## Color
 
-The `color` type provides a color palette from which a specific color can be selected.
+The `color` type provides a color selector.
 
 ```typescript
 {
@@ -187,15 +177,14 @@ The `color` type provides a color palette from which a specific color can be sel
 	name: 'backgroundColor',
 	type: 'color',
 	default: '', // Initially selected color
-},
+}
 ```
 
-<img src="./images/color.png" width="300">
-
+![Color](/_images/integrations/creating-nodes/code/color.png)
 
 ## Options
 
-The `options` type is used to provide options from which a single one has to be selected.
+The `options` type adds an options list. Users can select a single value.
 
 ```typescript
 {
@@ -214,15 +203,14 @@ The `options` type is used to provide options from which a single one has to be 
 	],
 	default: 'image', // The initially selected option
 	description: 'Resource to consume',
-},
+}
 ```
 
-<img src="./images/options.png" width="350">
+![Options](/_images/integrations/creating-nodes/code/options.png)
 
+## Multi options
 
-## Multi Options
-
-The `multiOptions` type is used to provide options from which many can be selected.
+The `multiOptions` type adds an options list. Users can select more than one value.
 
 ```typescript
 {
@@ -241,15 +229,15 @@ The `multiOptions` type is used to provide options from which many can be select
 	],
 	default: [], // Initially selected options
 	description: 'The events to be monitored',
-},
+}
 ```
 
-<img src="./images/multioptions.png" width="350">
+![Multi-options](/_images/integrations/creating-nodes/code/multioptions.png)
 
 
-## Fixed Collection
+## Fixed collection
 
-The `fixedCollection? type is used to present groups of fields that are semantically related.
+Use the `fixedCollection` type to group fields that are semantically related.
 
 ```typescript
 {
@@ -283,15 +271,12 @@ The `fixedCollection? type is used to present groups of fields that are semantic
 			],
 		},
 	],
-},
+}
 ```
 
-<img src="./images/fixed-collection.png" width="350">
-
+![Fixed collection](/_images/integrations/creating-nodes/code/fixed-collection.png)
 
 ## JSON
-
-The `json` type is used to input data formatted as JSON.
 
 ```typescript
 {
@@ -300,7 +285,7 @@ The `json` type is used to input data formatted as JSON.
 	type: 'json',
 	default: '',
 	description: '',
-},
+}
 ```
 
-<img src="./images/json.png" width="350">
+![JSON](/_images/integrations/creating-nodes/code/json.png)

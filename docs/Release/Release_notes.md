@@ -9,7 +9,7 @@ tags:
 
 # 1.14
 
-- Fixed: Header line disappearing when activating training mode in TE2 (via Ephesoft)
+- **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
 - Fixed: TE - Calculations details are not extracted
 - Fixed: Extracted columns dont show on page 2
 - Added: Column selection should not be enable after selecting the tick

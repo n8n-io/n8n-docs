@@ -1,10 +1,8 @@
 ---
 title: "Changelog"
-description:
+description: Change log for Polydocs Apps
 tags:
-  - TE²
-  - Ephesoft
-
+  - Change Log
 ---
 
 

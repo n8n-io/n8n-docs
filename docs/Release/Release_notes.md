@@ -124,7 +124,7 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Document Checkboxes aren't working
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** colors will be populated based on the closest match to the already defined colors list
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Checkbox Paar is not correct
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Account search for Medi Order based on the Customer Number
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Account search for Company Order based on the Customer Number
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** PO The Header of both tables are always german
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Invoice Number at Delivery Note doc type - change to Order Number
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Title in PO is wrong - Should be based on the doc type

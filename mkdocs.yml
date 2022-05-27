@@ -93,8 +93,7 @@ plugins:
   - tags:
       tags_file: tags.md
 nav:
-  - Changelog:
-    - Version 1.14: CBXChangelog/cbxchangelog.md
+  - Changelog: Release/Release_notes.md
   - DOC²:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md

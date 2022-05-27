@@ -26,7 +26,7 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE - Table is not extracted correctly
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Search PO Matching can we use a like
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table Column Sort for PO Line Table as Done in TEv3
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table data editable and show errors without having to enable table training mode
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table data editable and show errors without   having to enable table training mode
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE² V2 STAGE - Ungroup button "hidden"
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** No mapping on hide/show for amount fields
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Watcher exported document should be opened in exported/finished mode
@@ -55,7 +55,7 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Number are not extracted all
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** KOMISSION (NACHNAME, VORNAME) / MAßNUMMER
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Zugpferd Export UI
-- Added: PO table sort
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** PO table sort
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Auftragsbestätigung gets to Rechnung
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Allow more than 10 pages in PDF in Doc²
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Document restart alert if it takes more than 5 minutes
@@ -147,7 +147,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Issue with column selection - looses selection
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE3 column selection near the edge is difficult
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Dashboard Pagination Issue
-- Fixed: table data edit mode -> column selected but no indication on table which row is selected
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** table data edit mode -> column selected but no indication on table which row is selected
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** gettexttable column background color remain purple on firefox
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Click on column send call for gettexttable without selection
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Error on upload we add unit

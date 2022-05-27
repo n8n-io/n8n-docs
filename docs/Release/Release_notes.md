@@ -1,10 +1,8 @@
 ---
 title: "Changelog"
-description: 
+description: Change log for Polydocs Apps
 tags:
-  - TE²
-  - Ephesoft
-
+  - Change Log
 ---
 
 
@@ -15,9 +13,9 @@ tags:
 :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**
 
 
+# Release Notes
 
-
-# 1.14
+## 1.14
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculations details are not extracted
@@ -95,7 +93,7 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Calc is wrong
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Supplierer Match not working
 
-# 1.13
+## 1.13
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Rules are not working
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Button delete rule is not working
@@ -175,13 +173,13 @@ tags:
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Calc MwSt.
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Free Tax is mapped wrong
 
-# 1.10
+## 1.10
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Add browser support for Safari
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Option to refresh user settings in Account Settings
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Missing link to IDM
 
-# 1.9
+## 1.9
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** edit export config is not working
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Doc2Landing - No Back by Table
@@ -191,7 +189,7 @@ tags:
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Calc Fields Optional Due Date
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Button for auto Detecting Tables
 
-# 1.8
+## 1.8
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Can not check config files or download here
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** WatchDog - Logik Error Fix

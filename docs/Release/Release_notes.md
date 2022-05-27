@@ -18,11 +18,11 @@ tags:
 ## 1.14
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculations details are not extracted
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: Extracted columns dont show on page 2
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculation details are not extracted
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: Extracted columns don't show on page 2
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Column selection should not be enable after selecting the tick
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE - Table is not extracted correctly
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Search PO Matching can we use a like
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Search PO Matching can we use alike
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table Column Sort for PO Line Table as Done in TEv3
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table data editable and show errors without   having to enable table training mode
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE² V2 STAGE - Ungroup button "hidden"
@@ -38,7 +38,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Correct translation for NOCOLUMNSFOUND for es-es and fr
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table training
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Error when we test with Swiss Format
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE3 Row area keeps changing
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Row area keeps changing
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** all reformat api call send difference of format_options
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Ability to make line item table from PO Table
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Only 10 pages of a PDF are displayed

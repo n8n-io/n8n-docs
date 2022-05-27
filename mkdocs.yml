@@ -13,6 +13,7 @@ theme:
   logo: _images/polydocs_Icon.svg
   palette:
       scheme: light
+      primary: indigo
   features:
     - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs

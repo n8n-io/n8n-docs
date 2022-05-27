@@ -7,37 +7,21 @@ tags:
 
 ---
 
-<div class="mdx-switch">
-  <button data-md-color-primary="red"><code>red</code></button>
-  <button data-md-color-primary="pink"><code>pink</code></button>
-  <button data-md-color-primary="purple"><code>purple</code></button>
-  <button data-md-color-primary="deep-purple"><code>deep purple</code></button>
-  <button data-md-color-primary="indigo"><code>indigo</code></button>
-  <button data-md-color-primary="blue"><code>blue</code></button>
-  <button data-md-color-primary="light-blue"><code>light blue</code></button>
-  <button data-md-color-primary="cyan"><code>cyan</code></button>
-  <button data-md-color-primary="teal"><code>teal</code></button>
-  <button data-md-color-primary="green"><code>green</code></button>
-  <button data-md-color-primary="light-green"><code>light green</code></button>
-  <button data-md-color-primary="lime"><code>lime</code></button>
-  <button data-md-color-primary="yellow"><code>yellow</code></button>
-  <button data-md-color-primary="amber"><code>amber</code></button>
-  <button data-md-color-primary="orange"><code>orange</code></button>
-  <button data-md-color-primary="deep-orange"><code>deep orange</code></button>
-  <button data-md-color-primary="brown"><code>brown</code></button>
-  <button data-md-color-primary="grey"><code>grey</code></button>
-  <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
-  <button data-md-color-primary="black"><code>black</code></button>
-  <button data-md-color-primary="white"><code>white</code></button>
-</div>
+
+:fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**
+
+:fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**
+
+:fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**
+
 
 
 
 # 1.14
 
-- **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
-- Fixed: TE - Calculations details are not extracted
-- Fixed: Extracted columns dont show on page 2
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculations details are not extracted
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: Extracted columns dont show on page 2
 - Added: Column selection should not be enable after selecting the tick
 - Fixed: TE - Table is not extracted correctly
 - Added: Search PO Matching can we use a like

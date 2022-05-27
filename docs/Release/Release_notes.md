@@ -8,16 +8,20 @@ tags:
 ---
 
 
-:fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } Fixed
+:fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**
 
-:fontawesome-solid-spray-can-sparkles:{ style="color: #03900c" }  New feature
+:fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**
 
+:fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**
+
+
+<i class="fa-solid fa-award-simple"></i>
 
 # 1.14
 
-- **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } Fixed: TE - Calculations details are not extracted
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } Fixed: Extracted columns dont show on page 2
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculations details are not extracted
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: Extracted columns dont show on page 2
 - Added: Column selection should not be enable after selecting the tick
 - Fixed: TE - Table is not extracted correctly
 - Added: Search PO Matching can we use a like

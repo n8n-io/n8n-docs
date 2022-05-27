@@ -93,6 +93,7 @@ plugins:
   - tags:
       tags_file: tags.md
 nav:
+  - Changelog: Release/Release_notes.md
   - DOC²:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md

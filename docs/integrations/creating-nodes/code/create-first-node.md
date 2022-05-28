@@ -18,7 +18,7 @@ Install the following tools:
 	node -v
 	npm -v
 ```
-**NOTE:** Use node version `14.x` and npm version `6.x`. If using npm version `7+`, you must enable legacy peer dependencies by setting: `npm config set legacy-peer-deps true`.
+**NOTE:** n8n recommends using node version `14.x` and npm version `6.x`.
 
 - **Lerna:** You can install lerna globally with the following command:
 	```bash
@@ -578,4 +578,4 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.

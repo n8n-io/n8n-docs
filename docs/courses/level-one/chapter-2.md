@@ -1,15 +1,11 @@
 # Building a Mini-workflow
 
-In this lesson you will apply what you learned in the previous lesson by building your first workflow, consisting of the *Start node* and a Regular node.
+In this lesson, you will build a small workflow that gets 10 articles about automation from Hacker News. The workflow consists of four steps:
 
-A simple, yet useful, automation is getting articles from Hacker News so that you're up to date with the tech world. More specifically, let's say you want to get the latest 10 articles related to automation.
-
-You can build a workflow for this use case in 4 steps:
-
-[1. Add the Hacker News node](#_1-add-the-hacker-news-node)<br/>
-[2. Configure the Hacker News node](#_2-configure-the-hacker-news-node)<br/>
-[3. Save the workflow](#_3-save-the-workflow)<br/>
-[4. Execute the node](#_4-execute-the-node)<br/>
+[1. Add the Hacker News node](#1-add-the-hacker-news-node)<br/>
+[2. Configure the Hacker News node](#2-configure-the-hacker-news-node)<br/>
+[3. Save the workflow](#3-save-the-workflow)<br/>
+[4. Execute the node](#4-execute-the-node)<br/>
 
 ## 1. Add the Hacker News node
 
@@ -20,7 +16,9 @@ Open the nodes panel, search for the *Hacker News* node, and click on it to add 
 When you add a new node to the Editor UI, the node will be automatically activated and open a window with two tabs on the left side: ***Parameters*** and ***Settings***.
 
 !!! note "Parameters vs Settings"
-    *Parameters* are different for each node, depending on its functionality. *Settings* are the same for all nodes.
+
+	*Parameters* are different for each node, depending on its functionality.<br />
+	*Settings* are the same for all nodes.
 
 
 ### Parameters
@@ -58,13 +56,11 @@ The configuration of the settings for the *Hacker News node* looks like this:
 
 !!! note "Renaming a node"
     You can rename the node with a name that's more descriptive for your use case. There are two ways to do this:
-    - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click on the ✔ symbol to save the node under the new name.
 
-<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node.gif" alt="Renaming a node from the window" style="width:100%"><figcaption align = "center"><i>Renaming a node from the window</i></figcaption></figure>
+    - Select the node you want to rename and at the same time press the F2 key on your keyboard.
+    - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click *Rename* to save the node under the new name.
 
-- Select the node you want to rename and at the same time press the F2 key on your keyboard.
-
-<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node-keyboard.png" alt="Renaming a node from the keyboard" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 
 
 ## 3. Save the workflow
@@ -111,9 +107,9 @@ This field displays the number of items (records) that are returned by the node 
 
 
 !!! warning "Error in nodes"
-    A red warning icon on the top right corner of a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
+    A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
 
-<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
+<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 
 
 ## Summary

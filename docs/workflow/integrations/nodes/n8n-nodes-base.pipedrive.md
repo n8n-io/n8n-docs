@@ -1,3 +1,14 @@
+---
+title: Pipedrive
+description: Pipedrive is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
+tags:
+  - Workflow²
+  - Pipedrive
+  - Basic Operations
+  - Example Usage
+---
+
+
 # Pipedrive
 
 [Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.

@@ -1,3 +1,14 @@
+---
+title: Pipedrive
+description: Discord is a voice, video, and text communications platform for groups. Discord allows users to programmatically send messages using webhooks.
+tags:
+  - Workflow²
+  - Discord
+  - Basic Operations
+  - Example Usage
+---
+
+
 # Discord
 
 [Discord](https://discord.com/) is a voice, video, and text communications platform for groups. Discord allows users to programmatically send messages using webhooks.

@@ -28,7 +28,7 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 ### Bug fixes
 
 * **Core**: fixed migrations on non-public Postgres schema.
-* **Core**: mitigated possible XSS vulnerability when importing workflow templates.
+* **Core**: Mitigated possible XSS vulnerability when importing workflow templates.
 * **Editor UI**: fixed erroneous hover state detection close to the sticky note button.
 * **Editor UI**: fixed display behavior of credentials assigned to versioned nodes.
 * [Discord node](/integrations/nodes/n8n-nodes-base.discord){:target=_blank}: fixed rate limit handling.

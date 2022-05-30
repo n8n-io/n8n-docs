@@ -33,7 +33,7 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 * **Editor UI**: fixed display behavior of credentials assigned to versioned nodes.
 * [Discord node](/integrations/nodes/n8n-nodes-base.discord){:target=_blank}: Fixed rate limit handling.
 * [Gmail node](/integrations/nodes/n8n-nodes-base.gmail){:target=_blank}: Fixed sending attachments in filesystem data mode.
-* [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets){:target=_blank}: fixed an error preventing the *Use Header Names as JSON Paths* option from working as expected.
+* [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets){:target=_blank}: Fixed an error preventing the *Use Header Names as JSON Paths* option from working as expected.
 * [Nextcloud node](/integrations/nodes/n8n-nodes-base.nextCloud){:target=_blank}: updated the node so the list:folder operation works with Nextcloud version 24.
 * [YouTube node](/integrations/nodes/n8n-nodes-base.youTube){:target=_blank}: fixed problem with uploading large files.
 

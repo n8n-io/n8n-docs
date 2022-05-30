@@ -58,4 +58,4 @@ The Advantages of DOC² at a glance:
      only invoices are processed, but all types of documents. Regardless of whether it is waybills, membership applications, medical prescriptions and many more.
 
 
-[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+[:octicons-heart-fill-24:{ .heart } Sign up for a 30 days free trail ](https://app.polydocs.io){ .md-button .md-button--primary }

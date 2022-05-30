@@ -30,7 +30,7 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 * **Core**: fixed migrations on non-public Postgres schema.
 * **Core**: mitigated possible XSS vulnerability when importing workflow templates.
 * **Editor UI**: fixed erroneous hover state detection close to the sticky note button.
-* **Editor UI**: fixed display behaviour of credentials assigned to versioned nodes.
+* **Editor UI**: fixed display behavior of credentials assigned to versioned nodes.
 * [Discord node](/integrations/nodes/n8n-nodes-base.discord){:target=_blank}: fixed rate limit handling.
 * [Gmail node](/integrations/nodes/n8n-nodes-base.gmail){:target=_blank}: fixed sending attachments in filesystem data mode.
 * [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets){:target=_blank}: fixed an error preventing the *Use Header Names as JSON Paths* option from working as expected.

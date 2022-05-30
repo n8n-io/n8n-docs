@@ -1,3 +1,14 @@
+---
+title: Cron
+description: The Cron node is useful to schedule the workflows to run periodically at fixed dates, times, or intervals. You will find how to configure the node here.
+tags:
+  - Workflow²
+  - Cron
+  - Node Reference
+  - FAQs
+---
+
+
 # Cron
 
 The Cron node is useful to schedule the workflows to run periodically at fixed dates, times, or intervals. This works in a similar way to the [cron](https://en.wikipedia.org/wiki/Cron) software utility in Unix-like systems. This core node is a Trigger node.

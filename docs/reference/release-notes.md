@@ -21,7 +21,7 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 
 ### Node enhancements
 
-* [RabbitMQ Trigger node](/integrations/nodes/n8n-nodes-base.rabbitmqTrigger/): made message acknowledgement and parallel processing configurable.
+* [RabbitMQ Trigger node](/integrations/nodes/n8n-nodes-base.rabbitmqTrigger/): Made message acknowledgement and parallel processing configurable.
 * [ServiceNow node](/integrations/nodes/n8n-nodes-base.serviceNow/): Added support for attachments.
 * [Todoist node](/integrations/nodes/n8n-nodes-base.todoist/): Added support for specifying the parent task when adding and listing tasks.
 

@@ -1,7 +1,7 @@
 ---
 title: "Manual row selection"
 date: "2022-02-18"
-description: It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns. Here is how rows can be selected manually in DOC². 
+description: It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns. Here is how rows can be selected manually in DOC².
 tags:
   - DOC²
   - Row
@@ -10,11 +10,15 @@ tags:
   - Table Extraction
 ---
 
+# Manual row selection
+
 It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns like in the example below:
 
 ![](/_images/doc2/image-10-1024x606.png)
 
 On the screenshot you can see that the table and columns have already been defined. Having a detailed look on the highlighted information (PRAEF) you will recognize that the text is written through columns "Bezeichnung", "Menge", "ME" and "Preis in EUR".
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
 In that case it is not possible for the system to automatically define to which column the information belongs.
 

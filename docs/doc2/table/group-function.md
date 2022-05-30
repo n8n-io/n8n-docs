@@ -1,6 +1,6 @@
 ---
 title: "Group function to extract data from tables"
-description: The group function is one of the most important feature to extract data form tables. Once a table has been extracted via DOC² and the columns have been mapped the obtained data can be grouped to get a structured result set of all extracted data. 
+description: The group function is one of the most important feature to extract data form tables. Once a table has been extracted via DOC² and the columns have been mapped the obtained data can be grouped to get a structured result set of all extracted data.
 date: "2022-02-24"
 icon: material/group
 tags:
@@ -9,9 +9,13 @@ tags:
   - DOC²
 ---
 
+# Group function to extract data from tables
+
 Once a table has been extracted via DOC² and the columns have been mapped ([Mapping of columns](/doc2/mapping-of-columns/) the obtained data can be grouped to get a structured result set of all extracted data.
 
-What does this mean in detail?
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+
+## What does this mean in detail?
 
 All documents from order confirmations to invoices can vary enormously in complexity from company to company. For example, in documents, information may be presented in tables in some columns across multiple rows and in other columns across only one row.
 

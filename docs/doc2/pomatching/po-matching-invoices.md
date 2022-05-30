@@ -4,7 +4,7 @@ description: This is a step by step guide how to create a purchase order in LN, 
 date: "2022-01-24"
 tags:
   - DOC²
-  - PO Matching 
+  - PO Matching
   - Invoice
   - LN
 ---
@@ -14,6 +14,9 @@ tags:
 ## Create a purchase order in LN
 
 Open LN and go to Purchase Order Intake Workbench
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+
 
 ![](/_images/doc2/LN_PO-Intake-Workbench.png)
 
@@ -25,8 +28,8 @@ and add a new one by choosing the + symbol
 
 ![](/_images/doc2/LN_PO_new-1024x149.png)
 
-Now you can create the document and the corresponding table and its values.  
-  
+Now you can create the document and the corresponding table and its values.
+
 First add the Business Partner via the search function (the magnifying glas), clicking out of the marked field, fills the rest of them with the stored data.
 
 ![](/_images/doc2/LN_PO_Business-Partner-1024x402.png)

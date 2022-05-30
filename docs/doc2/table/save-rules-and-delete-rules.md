@@ -10,6 +10,10 @@ tags:
   - Delete
 ---
 
+# Save and delete rules
+
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
 As soon as a document has been trained in DOC² and all rules for the extraction of the tables have been stored for this document, they have to be saved so that no manual training is necessary for future imports. Instead, the documents and their tables are extracted fully automatically by DOC² and the data is brought into the structure defined by the training.
 

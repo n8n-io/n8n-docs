@@ -5,6 +5,10 @@
 Digitization refers to creating a digital representation of physical objects or attributes. For instance, we scan a paper document and save it as a digital document (e.g., PDF). In other words, digitization is about converting
 something non-digital into a digital representation or artifact.
 
+![Sign up 30 days for free](https://media.giphy.com/media/rbdnbV6BwNPAlfD4dJ/giphy.gif)
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+
 ## Digitalization
 
 Digitalization refers to enabling or improving processes by leveraging digital technologies and digitized
@@ -52,3 +56,6 @@ The Advantages of DOC² at a glance:
 
   -  With the help of deep learning algorithms, not only simple header data of a document can be recorded, but also complicated structures such as tables. Of course, not
      only invoices are processed, but all types of documents. Regardless of whether it is waybills, membership applications, medical prescriptions and many more.
+
+
+[:octicons-heart-fill-24:{ .heart } Sign up for a 30 days free trail ](https://app.polydocs.io){ .md-button .md-button--primary }

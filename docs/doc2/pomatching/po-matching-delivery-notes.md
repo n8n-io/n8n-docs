@@ -4,7 +4,7 @@ description: If quantity of the ordered item(s) does not match the quantity on t
 date: "2022-01-24"
 tags:
   - DOC²
-  - PO Matching 
+  - PO Matching
   - Delivery Notes
 ---
 
@@ -13,6 +13,9 @@ tags:
 If quantity of the ordered item(s) does not match the quantity on the invoice you need to start the match with received Delivery Note.
 
 ## Upload the Delivery Note in DOC2
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+
 
 ![](/_images/doc2/DOC²_Dashboard_DeliveryNote-1024x501.png)
 
@@ -28,10 +31,10 @@ Or by choosing PO Matching in the lower right corner when you have opened the do
 
 ![](/_images/doc2/DOC²_Matching_Overview-1024x556.png)
 
-The matches can now be corrected:  
-  
-The “x” would delete the match on the invoice.  
-  
+The matches can now be corrected:
+
+The “x” would delete the match on the invoice.
+
 A new match from the purchase order can be added to the delivery note by dragging and dropping the appropriate data row(s).
 
 ![](/_images/doc2/Screenshot-2022-01-28-at-11.25.58-1024x640.png)

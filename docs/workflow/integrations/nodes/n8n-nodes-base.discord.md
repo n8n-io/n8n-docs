@@ -1,5 +1,5 @@
 ---
-title: Pipedrive
+title: Discord
 description: Discord is a voice, video, and text communications platform for groups. Discord allows users to programmatically send messages using webhooks.
 tags:
   - Workflow²

@@ -5,6 +5,8 @@
 Digitization refers to creating a digital representation of physical objects or attributes. For instance, we scan a paper document and save it as a digital document (e.g., PDF). In other words, digitization is about converting
 something non-digital into a digital representation or artifact.
 
+![Sign up 30 days for free](https://media.giphy.com/media/rbdnbV6BwNPAlfD4dJ/giphy.gif)
+
 [Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
 ## Digitalization

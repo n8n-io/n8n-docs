@@ -1,3 +1,14 @@
+---
+title: License
+description: n8n is fair-code licensed under the Sustainable Use License. In this section you will find all frequently asked questions concerning the license
+tags:
+  - Workflow²
+  - License
+  - FAQ
+  - n8n
+---
+
+
 # License
 
 n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md)

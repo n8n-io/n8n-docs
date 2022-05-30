@@ -4,7 +4,7 @@ description: n8n is fair-code licensed under the Sustainable Use License. In thi
 tags:
   - Workflow²
   - License
-  - FAQ
+  - FAQs
   - n8n
 ---
 

@@ -18,3 +18,6 @@ See how easy you can use DOC² with Workflow²
 
 
 More Videos you find here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [__YouTube__](https://www.youtube.com/channel/UC19DwHXz5nwU2KBdtNr734g)
+
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }

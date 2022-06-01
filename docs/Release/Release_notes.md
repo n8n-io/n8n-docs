@@ -15,6 +15,17 @@ tags:
 
 # Release Notes
 
+## 1.15
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Privacy Settings - after accepting them once they are not showing up again
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Invalid Authorization Code when login
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added Link to Changelog
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login - Implementation of language switch
+
+
+
+
+
+
 ## 1.14
 
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)

@@ -2,10 +2,10 @@
 
 The *Respond to Webhook* node allows controlling the response to incoming webhooks.
 
-This node can be used in workflows with a [Webhook node](/integrations/core-nodes/n8n-nodes-base.webhook/). To do this, in the Webhook node select the option **Using 'Respond to Webhook' node** from the **Response** operation.
+This node can be used in workflows with a [Webhook node](/integrations/core-nodes/n8n-nodes-base.webhook/){:target="_blank"}. To do this, in the Webhook node select the option **Using 'Respond to Webhook' node** from the **Response** operation.
 
 !!! note "Expressions"
-    When using [expressions](/code-examples/expressions/), the Respond to Webhook node will only run for the first item in the input data.
+    When using [expressions](/code-examples/expressions/){:target="_blank"}, the Respond to Webhook node will only run for the first item in the input data.
 
 
 ## Node reference
@@ -26,7 +26,7 @@ The node has a **Respond With** parameter that supports the following modes:
 
 The node has the following options:
 
-- **Response Code** — Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to be used.
+- **Response Code** — Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target="_blank" .external} to be used.
 - **Response Headers** — Define the response headers to be sent.
 
 ## Workflow behavior
@@ -40,7 +40,7 @@ Workflows that include this node behave as follows:
 
 ## Example usage
 
-[This workflow](https://n8n.io/workflows/1306) serves an HTML page when a GET request is made.
+[This workflow](https://n8n.io/workflows/1306){:target="_blank"} serves an HTML page when a GET request is made.
 
 ### 1. Webhook node
 
@@ -56,7 +56,7 @@ This node triggers the workflow when it receives incoming requests (for example,
 This node defines the response to the request received in the previous step.
 
 1. From the **Respond With** dropdown list, select **Text**.
-2. In the **Response Body** field, enter the HTML code for the page you want to display (for example, the [Bootstrap Starter template](https://getbootstrap.com/docs/5.1/getting-started/introduction/#starter-template)).
+2. In the **Response Body** field, enter the HTML code for the page you want to display (for example, the [Bootstrap Starter template](https://getbootstrap.com/docs/5.1/getting-started/introduction/#starter-template){:target="_blank" .external}).
 3. Select **Add Option** > **Response Headers** > **Add Response Header** to add a header to the response with the following values:
    - **Name:** `Content-Type`
    - **Value:** `text/html; charset=UTF-8`

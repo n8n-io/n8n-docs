@@ -108,7 +108,7 @@ docker run -it --rm \
 
 ## Further reading
 
-More information about Docker setup can be found in the README file of the [Docker Image](https://github.com/n8n-io/n8n/blob/master/docker/_images/n8n/).
+More information about Docker setup can be found in the README file of the [Docker Image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
 
 
 

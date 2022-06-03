@@ -15,7 +15,7 @@ This workflow allows you to receive updates for events in Cal.
 
 The final workflow should look like the following image.
 
-![A workflow with the Cal Trigger node](/_images/integrations/trigger-nodes/calendlytrigger/workflow.png)
+![A workflow with the Cal Trigger node](/_images/integrations/trigger-nodes/caltrigger/workflow.png)
 
 
 ### 1. Cal Trigger node

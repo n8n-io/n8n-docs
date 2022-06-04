@@ -10,6 +10,8 @@
 
 * SMS
     * Send SMS/MMS/WhatsApp message
+* Call
+    * Make a phone call using text-to-speech to say a message
 
 ## Example Usage
 
@@ -31,7 +33,7 @@ The start node exists by default when you create a new workflow.
 2. Enter the phone number from which you'll be sending the message in the *From* field.
 3. Enter the phone number to which you'll be sending the message in the *To* field.
 4. In case you want to send a Whatsapp message, toggle the *To Whatsapp* button.
-5. Enter you message in the *Message* field.
+5. Enter your message in the *Message* field.
 6. Click on *Execute Node* to run the workflow.
 
 

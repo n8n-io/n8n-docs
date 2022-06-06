@@ -21,7 +21,7 @@ From n8n:
 
 1. Enter a descriptive **Credentials Name**.
 2. In the **Credentials Data** section enter the following:
-    * ***API Token***: The authentication token for your NocoDB project.
+    * **API Token**: The authentication token for your NocoDB project.
     * **Host**: The host of your NocoDB instance, for example `http://localhost:8080`.
 3. Click **Create** to save your new credentials.
 

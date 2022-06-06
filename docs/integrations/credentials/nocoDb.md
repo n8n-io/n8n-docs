@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 From NocoDB Project:
 
-1. Click the rightmost button and click ***Copy auth token***.
+1. Click the rightmost button and click **Copy auth token**.
 
 ![NocoDB Auth](/_images/integrations/nodes/nocodb/xc-auth.png)
 

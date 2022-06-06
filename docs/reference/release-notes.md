@@ -5,9 +5,7 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.178.2...n8n@0.179.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-05-30
 
-This release adds support for reusing existing credentials in the HTTP Request node, making it easier to do custom operation with APIs where n8n already has an integration.
-
-The release also includes improvements to the nodes view, giving better detail about incoming data, as well as some bug fixes.
+This release features a new node for PostBin, as well as various node enhancements and bug fixes.
 
 ### New nodes
 

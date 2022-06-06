@@ -31,7 +31,7 @@ From NocoDB Project: Enable [API Access](https://docs.nocodb.com/developer-resou
 
 From n8n:
 
-1. Enter a descriptive ***Credentials Name***.
+1. Enter a descriptive **Credentials Name**.
 2. In the ***Credentials Data*** section enter the following:
     * ***API Token***: The authentication token for your NocoDB project, obtained when enabling API access (above).
     * ***Host***: The host of your NocoDB instance, for example `http://localhost:8080`.

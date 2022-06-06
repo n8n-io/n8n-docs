@@ -2,7 +2,7 @@
 
 [UpLead](https://www.uplead.com/) helps increase sales by quickly finding, connecting, and engaging with qualified prospects.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/uplead/).
 
 

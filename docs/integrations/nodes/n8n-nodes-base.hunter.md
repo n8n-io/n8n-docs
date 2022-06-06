@@ -2,7 +2,7 @@
 
 [Hunter](https://hunter.io/) is a company that produces a platform that helps find and verify professional email addresses.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/hunter/).
 
 

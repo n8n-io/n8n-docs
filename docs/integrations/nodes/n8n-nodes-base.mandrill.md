@@ -2,7 +2,7 @@
 
 [Mandrill](https://mandrillapp.com/) is a transactional email service developed by MailChimp.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/mandrill/).
 
 

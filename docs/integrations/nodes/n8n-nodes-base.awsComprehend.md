@@ -2,7 +2,7 @@
 
 [AWS Comprehend](https://aws.amazon.com/comprehend/) is a natural language processing (NLP) service that uses machine learning to find insights and relationships in a text.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 
@@ -95,6 +95,6 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/nodes/awscomprehend/noop_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
 

@@ -18,7 +18,7 @@ Install the following tools:
 	node -v
 	npm -v
 ```
-**NOTE:** Use node version `14.x` and npm version `6.x`. If using npm version `7+`, you must enable legacy peer dependencies by setting: `npm config set legacy-peer-deps true`.
+**NOTE:** n8n recommends using node version `14.x` and npm version `6.x`.
 
 - **Lerna:** You can install lerna globally with the following command:
 	```bash
@@ -63,7 +63,7 @@ All these packages are under the `/packages` folder in the main n8n folder. We w
 4. Download and add the FriendGrid [icon](https://symbols.getvecta.com/stencil_95/59_sendgrid-icon.5e86042b30.svg) to the folder. Name it `friendGrid.svg`.
 	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node’s folder.
 	- An SVG is preferable. In case you have to use a PNG, make sure that it is compressed. A good tool for that is [tinypng](https://tinypng.com).
-	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/logos/tree/master/logos).
+	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/log's/tree/master/logos).
 5. Paste the following code in the `FriendGrid.node.ts` file.
 
 ```typescript
@@ -148,7 +148,7 @@ Let's see how the node looks in the UI by following these steps:
 - The property `description.name` uses camelCase.
 - The property `description.color` is the company branding's hexadecimal color. This is usually available on the company's website under style guide. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
-
+'
 ## Creating the UI for the node
 
 Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.
@@ -303,7 +303,7 @@ The node should now look like in the following image.
 
 Now all our optional fields are presented in the UI and can be set individually depending on the user’s use-case.
 
-## Creating the UI for credentials
+## Creating the UI for credentials'
 
 Most REST APIs use some sort of authentication mechanism. FriendGrid's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
@@ -311,7 +311,7 @@ n8n gives you the ability to ask for sensitive information using credentials. In
 
 With that in mind, let’s create the UI to ask for the user’s FriendGrid API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
-1. Go to `packages/nodes-base/credentials`.
+1. Go to `packages/nod's-base/credentials`.'
 2. Within the credentials folder, create a file named `FriendGridApi.credentials.ts`.
 3. Paste the following code.
 
@@ -525,9 +525,9 @@ If you open the FriendGrid node, you should see the following.
 
 As showcased above, both the items were processed. That’s how all nodes in n8n work (with a few exceptions). They will automatically iterate over all the items and process them.
 
-Let’s go over the final version of the `execute` method. We are getting the items returned by the `this.getInputData()` function and iterating over all of them. Additionally, while doing so, we use the item index to get the correct parameter value using the function `this.getNodeParameters()`. For example, with the following input:
+Let’s go over the final version of the `execute` method' We are getting the items returned by the `this.getInputData()` function and iterating over all of them. Additionally, while doing so, we use the item index to get the correct parameter value using the function `this.getNodeParameters()`. For example, with the following input:
 
-```javascript
+```'avascript
 [
   {
     json: {
@@ -559,7 +559,7 @@ We used the `this.helpers.request(options)` method to make the HTTP Request that
 
 We then used the `this.helpers.returnJsonArray()` method to map the API’s output data to n8n's data structure. The node then ends up returning the data like the following:
 
-```javascript
+```javascript'
 [
    {
       json:{
@@ -578,4 +578,4 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.

@@ -2,7 +2,7 @@
 
 [Emelia](https://emelia.io) is a cold-mailing tool.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/emelia/).
 
 
@@ -17,7 +17,8 @@
 
 ## Example Usage
 
-This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/1039) on n8n.io. This example usage workflow would use the following node.
+This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/1039) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Emelia Trigger]()
 - [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
 
@@ -53,6 +54,6 @@ In the screenshot below, you will notice that the node sends a message with a re
 
 ![Using the Mattermost node to send a message](/_images/integrations/trigger-nodes/emeliatrigger/mattermost_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Emelia Trigger node.
 

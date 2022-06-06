@@ -2,7 +2,7 @@
 
 [SIGNL4](https://www.signl4.com/) is a plug-and-play cloud solution produced by Derdack. It automatically notifies teams on their mobile devices in case of critical events.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/signl4/).
 
 

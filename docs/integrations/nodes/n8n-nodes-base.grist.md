@@ -2,7 +2,7 @@
 
 [Grist](https://getgrist.com/) combines the flexibility of a spreadsheet with the robustness of a database to organize your data, your way.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/grist/).
 
 

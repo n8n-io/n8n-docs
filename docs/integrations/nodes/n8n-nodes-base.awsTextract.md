@@ -2,7 +2,7 @@
 
 [AWS Textract](https://aws.amazon.com/textract/) is a service that extracts printed text, handwriting, and data from any document.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 

@@ -2,7 +2,7 @@
 
 [ServiceNow](https://www.servicenow.com/) is a cloud computing platform to help companies manage digital workflows for their operations.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/serviceNow/).
 
 

@@ -2,7 +2,7 @@
 
 [Agile CRM](https://www.agilecrm.com/) is a CRM with Sales, Marketing and Service automation in single platform. It has sales tracking, contact management, marketing automation, web analytics, two-way emails, telephony, and a helpdesk.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/agileCrm/).
 
 

@@ -2,7 +2,7 @@
 
 [Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/lemlist/).
 
 
@@ -45,7 +45,7 @@ This node will list all the records from Airtable. Create a table like [this](ht
 
 1. First of all, you'll have to enter credentials for the Airtable node. You can find out how to do that [here](/integrations/credentials/airtable/).
 2. Select the 'List' option from the ***Operation*** dropdown list.
-3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You’ll find the Base ID there.
+3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
 5. Click on the gears icon next to the ***Table*** field and click on ***Add Expression***.
 6. Click on ***Execute Node*** to run the node.

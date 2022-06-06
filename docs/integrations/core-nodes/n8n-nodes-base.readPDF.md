@@ -2,7 +2,7 @@
 
 The Read PDF node is used to read data from PDF documents and extract its content as text.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     You will need to use an additional node such as the [Read Binary File](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Read PDF node.
 
 

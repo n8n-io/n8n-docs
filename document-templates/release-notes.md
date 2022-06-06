@@ -1,7 +1,5 @@
 ## n8n@<version-number>
 
- 
-
 View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>) for this version.<br />
 **Release date:** _yyyy-MM-dd_
 
@@ -39,4 +37,4 @@ _Description of new feature. Link to new node doc._
 
 ### Contributors
 
-_List contributors. Do not use a bulleted list here._
+_List external contributors. Do not use a bulleted list here._

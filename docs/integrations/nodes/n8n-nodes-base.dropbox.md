@@ -2,7 +2,7 @@
 
 [Dropbox](https://dropbox.com) is a cloud-based file storage and sharing service, accessible through multiple devices.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/dropbox/).
 
 

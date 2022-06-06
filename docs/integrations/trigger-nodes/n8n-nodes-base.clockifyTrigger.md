@@ -2,7 +2,7 @@
 
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/clockify/).
 
 
@@ -11,6 +11,7 @@
 ## Example Usage
 
 This workflow allows you to get new time entries from Clockify. You can also find the [workflow](https://n8n.io/workflows/536) on the website. This example usage workflow would use the following node.
+
 - [Clockify Trigger]()
 
 The final workflow should look like the following image.
@@ -26,6 +27,6 @@ The final workflow should look like the following image.
 
 **Note:** This node uses polling to get new time entries. You have to use the *Add Poll Time* button if you want this Trigger node to run and retrieve new time entries regularly.
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
 

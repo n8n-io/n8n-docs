@@ -2,7 +2,7 @@
 
 [Line](https://line.me/en/) is a mobile messenger app that allows you to make free voice calls and send messages.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/line/).
 
 
@@ -61,6 +61,6 @@ In the screenshot below, you will notice that the node sends a notification with
 
 ![Using the Line node to send weather updates via a notification](/_images/integrations/nodes/line/line_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
 

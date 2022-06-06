@@ -2,7 +2,7 @@
 
 [Paddle](https://www.paddle.com/) is an all-in-one SaaS Commerce platform for software and SaaS companies to run and grow their business.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/paddle/).
 
 

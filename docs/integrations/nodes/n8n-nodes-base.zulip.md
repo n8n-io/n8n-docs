@@ -2,7 +2,7 @@
 
 [Zulip](https://zulipchat.com/) is an open source chat and collaborative software. In Zulip, communication occurs in streams (which are like channels in IRC).
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/zulip/).
 
 

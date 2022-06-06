@@ -2,7 +2,7 @@
 
 [MessageBird](https://www.messagebird.com/) is a cloud communications platform that connects enterprises to their global customers.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/messageBird/).
 
 

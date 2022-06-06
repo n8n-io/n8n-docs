@@ -1,6 +1,6 @@
 # Automating a business workflow
 
-Remember [our friend Nathan](/courses/level-one/chapter-3)?
+Remember [our friend Nathan](/courses/level-one/chapter-3){:target="_blank" .external}?
 
 **Nathan 🙋:** Hello, it's me again. My manager was so impressed with my first workflow automation solution, that she entrusted me with more responsibility.<br/>
 **You 👩‍🔧:** More work and responsibility. Congratulations, I guess. What do you need to do now?<br/>
@@ -10,7 +10,7 @@ Remember [our friend Nathan](/courses/level-one/chapter-3)?
 
 ## Workflow design
 
-Now that we have an idea of what Nathan wants to automate, let’s list the steps he needs to take to achieve this:
+Now that we have an idea of what Nathan wants to automate, let's list the steps he needs to take to achieve this:
 
 1. Get and combine data from all necessary sources.
 2. Sort the data and format the dates.
@@ -27,8 +27,8 @@ n8n provides core nodes for all these steps. This use case is somewhat complex a
 
 To build the workflows, you will need the following:
 
-* An [Airtable](https://airtable.com/) account and [credentials](/integrations/credentials/airtable/).
-* A [Google](https://www.google.com/account/about/) account and [credentials](/integrations/credentials/google/) to access Gmail.
-* A [Discord](https://discord.com/) account and webhook URL (you receive this via email when you sign up for this course).
+* An [Airtable](https://airtable.com/){:target="_blank" .external} account and [credentials](/integrations/credentials/airtable/){:target="_blank" .external}.
+* A [Google](https://www.google.com/account/about/){:target="_blank" .external} account and [credentials](/integrations/credentials/google/){:target="_blank" .external} to access Gmail.
+* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this via email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

@@ -1,6 +1,6 @@
 # Creating n8n-nodes-module
 
-In this guide, you’ll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
+In this guide, you'll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
 
 Consider creating n8n-nodes-module if any of the following conditions satisfy your needs:
 - The nodes are only for yourself, your organization, or a small group of people.
@@ -36,7 +36,7 @@ npm install n8n
 
 ## Create custom n8n-nodes-module
 
-You can create multiple n8n-nodes-modules. Each individual n8n-nodes-module should get created in a separate folder since they are different npm packages. A single n8n-nodes-module can contain multiple nodes. If you’re creating multiple nodes in the same module, as a best practice create each node in a separate folder.
+You can create multiple n8n-nodes-modules. Each individual n8n-nodes-module should get created in a separate folder since they are different npm packages. A single n8n-nodes-module can contain multiple nodes. If you're creating multiple nodes in the same module, as a best practice create each node in a separate folder.
 
 In this tutorial, you will create an n8n-nodes-module for the OpenWeatherMap API. You will name it ***n8n-nodes-weather***.
 
@@ -382,7 +382,7 @@ Add the newly created node and the credential to the package.json file. Add `"di
 
 ## Develop and test the module
 
-Once you’ve created the n8n-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
+Once you've created the n8n-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
 
 ```bash
 # Install dependencies
@@ -426,63 +426,68 @@ Following the steps mentioned above, you can create multiple nodes within a sing
 
 Once you test and publish your n8n-nodes-module you would want to use it in your production environment.
 
-If you’re running n8n via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
+If you're running n8n via Docker, you will have to create a Docker image with the node module installed in n8n. Follow the steps below to create your Docker image:
 
 1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
 2. Add the following command in your Dockerfile before the font installation command.
 
-```Dockerfile
-RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-weather
-```
+	```Dockerfile
+	RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-weather
+	```
 
-Your Dockerfile should be as follow:
+	Your Dockerfile should look like this:
 
-```Dockerfile
-FROM node:14.15-alpine
+	```Dockerfile
+	FROM node:16-alpine
 
-# ARG N8N_VERSION
+	ARG N8N_VERSION
 
-RUN if [ -z "$N8N_VERSION" ] ; then echo "The N8N_VERSION argument is missing!" ; exit 1; fi
+	RUN if [ -z "$N8N_VERSION" ] ; then echo "The N8N_VERSION argument is missing!" ; exit 1; fi
 
-# Update everything and install needed dependencies
-RUN apk add --update graphicsmagick tzdata git tini su-exec
+	# Update everything and install needed dependencies
+	RUN apk add --update graphicsmagick tzdata git tini su-exec
 
-# # Set a custom user to not have n8n run as root
-USER root
+	# Set a custom user to not have n8n run as root
+	USER root
 
-# Install n8n and the also temporary all the packages
-# it needs to build it correctly.
-RUN apk --update add --virtual build-dependencies python build-base ca-certificates && \
-	npm_config_user=root npm install -g full-icu n8n && ls -a && \
-	apk del build-dependencies \
-	&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root;
+	# Install n8n and the packages it needs to build it correctly.
+	RUN apk --update add --virtual build-dependencies python3 build-base ca-certificates && \
+		npm config set python "$(which python3)" && \
+		npm_config_user=root npm install -g full-icu n8n@${N8N_VERSION} && \
+		apk del build-dependencies \
+		&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root;
 
-# Install n8n-nodes-weather module
-RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-weather
+	# Install your n8n-nodes-module. Replace <n8n-nodes-module> with the name of your module
+	RUN cd /usr/local/lib/node_modules/n8n && npm install <n8n-nodes-module>
 
-# Install fonts
-RUN apk --no-cache add --virtual fonts msttcorefonts-installer fontconfig && \
-	update-ms-fonts && \
-	fc-cache -f && \
-	apk del fonts && \
-	find  /usr/share/fonts/truetype/msttcorefonts/ -type l -exec unlink {} \; \
-	&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root
+	# Install fonts
+	RUN apk --no-cache add --virtual fonts msttcorefonts-installer fontconfig && \
+		update-ms-fonts && \
+		fc-cache -f && \
+		apk del fonts && \
+		find  /usr/share/fonts/truetype/msttcorefonts/ -type l -exec unlink {} \; \
+		&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root
 
-ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
+	ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
 
-WORKDIR /data
+	WORKDIR /data
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
+	COPY docker-entrypoint.sh /docker-entrypoint.sh
+	ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 
-EXPOSE 5678/tcp
-```
+	EXPOSE 5678/tcp
+	```
 
-**NOTE:** Replace n8n-nodes-weather with the name of your n8n-nodes-module
+3. Download the [docker-entrypoint.sh](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/docker-entrypoint.sh) file, and place it in the same directory as your Dockerfile.
 
-3. Build your Docker image using the `docker build .` command.
+4. Build your Docker image:
 
-You will now be able to use your n8n-nodes-module in Docker.
+	```Dockerfile
+	# Replace <n8n-version-number> with the n8n release version number. 
+	# For example, N8N_VERSION=0.177.0
+	docker build --build-arg N8N_VERSION=<n8n-version-number> --tag=customizedn8n .
+	```
 
-If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside n8n. n8n will find the module and load it automatically.
+You can now use your n8n-nodes-module in Docker.
+
+If you're running either by installing it globally or using PM2, make sure that you install your n8n-nodes-module inside n8n. n8n will find the module and load it automatically.

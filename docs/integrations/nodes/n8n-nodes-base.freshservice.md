@@ -2,7 +2,7 @@
 
 [Freshservice](https://www.freshservice.com/) is a cloud-based IT Service Management solution.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/freshservice/).
 
 

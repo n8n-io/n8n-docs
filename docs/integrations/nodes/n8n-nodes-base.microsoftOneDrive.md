@@ -2,7 +2,7 @@
 
 [Microsoft OneDrive](https://onedrive.live.com/) is a file hosting service and synchronization service operated by Microsoft.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 
@@ -13,13 +13,15 @@
     * Delete a file
     * Download a file
     * Get a file
+    * Rename a file
     * Search a file
     * Share a file
     * Upload a file up to 4MB in size
 * Folder
     * Create a folder
     * Delete a folder
-    * Get items inside a folder
+    * Get Children (get items inside a folder)
+    * Rename a folder
     * Search a folder
     * Share a folder
 

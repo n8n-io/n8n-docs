@@ -143,3 +143,18 @@
     max-height: 25px;
     vertical-align: middle;
 }
+
+.md-typeset table:not([class]) td:first-of-type {
+    white-space: pre;
+}
+
+
+
+
+/* Ensure manage settings button is visible */
+.md-typeset .md-consent__controls .md-button {
+    background-color: var(--md-primary-fg-color);
+    border-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+

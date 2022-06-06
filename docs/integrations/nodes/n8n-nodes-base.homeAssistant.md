@@ -2,7 +2,7 @@
 
 [Home Assistant](https://www.home-assistant.io/) is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/homeAssistant/).
 
 

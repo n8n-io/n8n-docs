@@ -7,7 +7,7 @@ But don't panic. We will show you some ways in which you can troubleshoot the is
 
 ## Checking failed workflows
 
-When one of your workflows fails, it's helpful to check the execution log by clicking on [**Executions**](/editor-ui/#executions) in the left-side panel. The executions log shows you a list of the latest execution time, status, mode, and running time of your saved workflows.
+When one of your workflows fails, it's helpful to check the execution log by clicking on [**Executions**](/editor-ui/#executions){:target="_blank" .external} in the left-side panel. The executions log shows you a list of the latest execution time, status, mode, and running time of your saved workflows.
 
 To investigate a specific workflow from the list, click on the folder icon on the row of the respective workflow.
 
@@ -20,9 +20,9 @@ This will open the workflow in read-only mode, where you can see the execution o
 
 ## Catching erroring workflows
 
-To catch failed workflows, create a separate [Error Workflow](/workflows/workflows/#failed-workflows) with the [Error Trigger node](/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which gets executed if the main execution fails.
+To catch failed workflows, create a separate [Error Workflow](/workflows/workflows/#failed-workflows){:target="_blank" .external} with the [Error Trigger node](/integrations/core-nodes/n8n-nodes-base.errorTrigger/){:target="_blank" .external}, which gets executed if the main execution fails.
 
-Then, you can take further actions by connecting other nodes, for example sending notifications via email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/) of the respective workflow.
+Then, you can take further actions by connecting other nodes, for example sending notifications via email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/){:target="_blank" .external} of the respective workflow.
 
 The only difference between a regular workflow and an Error Workflow is that the latter contains an Error Trigger node. Make sure to create this node before you set a workflow as Error Workflow.
 
@@ -30,7 +30,7 @@ The only difference between a regular workflow and an Error Workflow is that the
 
 	- You don't need to activate workflows that use the Error Workflow node.
 	- A workflow that uses the *Error Trigger node* uses itself as the error workflow.
-	- The Error Trigger node is designed to get triggered only when the monitored workflow gets executed automatically. This means you can’t test this (to see the result of) an error workflow while executing the monitored workflow manually.
+	- The Error Trigger node is designed to get triggered only when the monitored workflow gets executed automatically. This means you can't test this (to see the result of) an error workflow while executing the monitored workflow manually.
 	- You can set the same Error Workflow for multiple workflows.
 
 
@@ -101,7 +101,7 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 ## Throwing exceptions in workflows
 
-Another way of troubleshooting workflows is to include a [Stop and Error node](/integrations/core-nodes/n8n-nodes-base.stopAndError/) in your workflow. This node throws an error, which can be set to one of two error types: an error message or an error object. The error message returns a custom message about the error, while the error object returns the type of error.
+Another way of troubleshooting workflows is to include a [Stop and Error node](/integrations/core-nodes/n8n-nodes-base.stopAndError/){:target="_blank" .external} in your workflow. This node throws an error, which can be set to one of two error types: an error message or an error object. The error message returns a custom message about the error, while the error object returns the type of error.
 
 The Stop and Error node can only be added as the last node in a workflow.
 

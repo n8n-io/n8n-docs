@@ -26,22 +26,19 @@ We encourage anyone who wants to use the Sustainable Use License. If you are bui
 
 ### Can you give some examples of what is and isn't allowed under the license in the context of n8n's product?
 
+Our license restricts use to "internal business purposes". In practice that means all use is allowed unless you are selling a product, service or module in which the value derives entirely or substantially, from n8n functionality. Here are some examples where we would consider that to be the case:
+
+* White-labeling n8n, and offering it to your customers for money.
+* Hosting n8n and charging people money to access it.
+
+
 All of the following examples are allowed under our license: 
 
-* Using n8n to sync the data you control as a company, for example from a CRM to an internal database 
-* Using n8n workflows to create backend logic for a product, with other code handling all interfaces with your users
-* Creating an n8n node for your product, or any other integration between your product and n8n
-* Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n
-* Supporting n8n, for example by setting it up or maintaining it on an internal company server
-
-These examples would not be allowed under our license, meaning you would need to [contact us](https://n8n.io/embed) to create a separate agreement:
-
-* Using credentials of your customers in workflows (for example, to send your customers Slack notifications based on events in your system)
-* Using the source code to provide embedded one-click integrations to your users' other services
-* Hosting n8n and charging people money to access it
-* Bundling n8n with another product, and distributing it for money
-
-To do anything not allowed under the license, you will need a separate agreement with us.
+* Using n8n to sync the data you control as a company, for example from a CRM to an internal database .
+* Using n8n workflows to create backend logic for a product.
+* Creating an n8n node for your product, or any other integration between your product and n8n.
+* Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n.
+* Supporting n8n, for example by setting it up or maintaining it on an internal company server.
 
 
 ### What if I want to use n8n for something that is not permitted by the license?

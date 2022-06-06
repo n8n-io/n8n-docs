@@ -2,7 +2,7 @@
 
 [Baserow](https://baserow.io/) is an open source no-code database and Airtable alternative.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/baserow/).
 
 

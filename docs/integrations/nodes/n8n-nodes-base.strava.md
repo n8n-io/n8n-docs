@@ -2,7 +2,7 @@
 
 [Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/strava/).
 
 

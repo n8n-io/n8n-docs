@@ -2,13 +2,14 @@
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/notion/).
 
 
 ## Example Usage
 
 This workflow allows you to receive a message on Mattermost when new meeting notes get added to the Notion. You can also find the [workflow](https://n8n.io/workflows/1089) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Notion Trigger]()
 - [IF](/integrations/core-nodes/n8n-nodes-base.if/)
 - [Mattermost](/integrations/nodes/n8n-nodes-base.mattermost/)
@@ -77,6 +78,6 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/trigger-nodes/notiontrigger/noop_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Notion Trigger node.
 

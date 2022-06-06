@@ -42,7 +42,7 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 ### Start Redis
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
 
 
@@ -65,10 +65,10 @@ You can also set the following optional configurations:
 
 | Via configuration file | Via environment variables | Description |
 | ------ | ------ | ----- |
-| `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn’t require a password. If you’re using a password, configure it variable. |
+| `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
-| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n’s main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. | 
+| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. | 
 
 Now you can start your n8n instance and it will connect to your Redis instance.
 
@@ -101,7 +101,7 @@ Redis is used as the message broker, and the database is used to persist data, s
 
 ## Webhook processors
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
 
 
@@ -166,7 +166,7 @@ The setting that controls this behavior is `endpoint.skipWebhoooksDeregistration
 export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ```
 
-!!! warning " Keep in mind"
+!!! warning "Keep in mind"
     Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
 
 

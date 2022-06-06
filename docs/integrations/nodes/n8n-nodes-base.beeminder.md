@@ -2,7 +2,7 @@
 
 [Beeminder](https://www.beeminder.com/) is a service that helps you to self-track and stick to your goals.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/beeminder/).
 
 
@@ -55,6 +55,6 @@ In the screenshot below, you will notice that the node creates a datapoint in Be
 
 ![Using the Beeminder node to create a datapoint for a goal](/_images/integrations/nodes/beeminder/beeminder_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
 

@@ -2,7 +2,7 @@
 
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/trello/).
 
 
@@ -18,6 +18,11 @@
     * Delete a board
     * Get the data of a board
     * Update a board
+* Board Member
+    * Add
+    * Get All
+    * Invite
+    * Remove
 * Card
     * Create a new card
     * Delete a card

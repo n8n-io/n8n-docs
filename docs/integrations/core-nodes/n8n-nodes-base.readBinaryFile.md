@@ -2,7 +2,7 @@
 
 The Read Binary File node is used to read a file from the host machine that runs n8n.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     1. If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
 
     2. This node will look for files relative to the n8n install path. It is recommended to use absolute file paths to prevent any errors.

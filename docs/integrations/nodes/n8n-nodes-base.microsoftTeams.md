@@ -2,7 +2,7 @@
 
 [Microsoft Teams](https://teams.microsoft.com/) is a business-oriented communication and collaboration platform that combines workplace chat, video meetings, file storage , and application integration.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/microsoft/).
 
 

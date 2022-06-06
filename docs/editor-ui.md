@@ -47,6 +47,7 @@ You can enabling logging of your failed, successful, and/or manually selected wo
 ## Help
 
 This section includes resources for using n8n and interacting with the community.
+
 * **Documentation**: Open the n8n documentation page
 * **Forum**: Open the n8n community forum
 * **Workflows**: Open the n8n public [workflows](https://n8n.io/workflows) page

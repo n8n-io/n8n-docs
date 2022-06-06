@@ -2,7 +2,7 @@
 
 [Zammad](https://zammad.com/) is a free helpdesk and issue tracking system.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/zammad/).
 
 

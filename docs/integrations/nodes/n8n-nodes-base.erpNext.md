@@ -2,7 +2,7 @@
 
 [ERPNext](https://erpnext.com) is an open-source integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and services companies.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/erpnext/).
 
 

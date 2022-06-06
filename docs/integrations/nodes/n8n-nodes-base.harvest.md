@@ -2,7 +2,7 @@
 
 [Harvest](https://www.getharvest.com/) is a web-based time tracking tool that helps with its simple time tracking, fast online invoicing, and powerful reporting software.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/harvest/).
 
 
@@ -56,7 +56,7 @@
     * Create a time entry via duration
     * Create a time entry via start and end time
     * Delete a time entry
-    * Delete a time entry’s external reference.
+    * Delete a time entry's external reference.
     * Get data of a time entry
     * Get data of all time entries
     * Restart a time entry

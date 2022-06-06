@@ -10,7 +10,7 @@
 
 Before proceeding ensure that you have installed [Docker Desktop](https://docs.docker.com/get-docker/).
 
-!!! note " Linux Users "
+!!! note "Linux Users "
     Docker Desktop is only available for Mac and Windows. You must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
 
 
@@ -43,7 +43,7 @@ for credentials. It is also the name of the webhook when the n8n tunnel is used.
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     Persisting the `/root/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/#deployment).
 
 
@@ -108,7 +108,7 @@ docker run -it --rm \
 
 ## Further reading
 
-More information about Docker setup can be found in the README file of the [Docker Image](https://github.com/n8n-io/n8n/blob/master/docker/_images/n8n/).
+More information about Docker setup can be found in the README file of the [Docker Image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
 
 
 

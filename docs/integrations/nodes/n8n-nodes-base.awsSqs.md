@@ -2,7 +2,7 @@
 
 [AWS SQS](https://aws.amazon.com/sqs/) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/aws/).
 
 
@@ -88,5 +88,5 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 ![Using the AWS SQS node to send the data to a queue](/_images/integrations/nodes/awssqs/awssqs_node.png)
 
-!!! note " Activate workflow for production"
+!!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.

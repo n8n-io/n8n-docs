@@ -2,7 +2,7 @@
 
 [Vonage](https://vonage.com/) provides unified communications, contact centers, and programmable communications APIs.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/vonage/).
 
 

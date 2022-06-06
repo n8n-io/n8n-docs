@@ -2,7 +2,7 @@
 
 The Error Trigger node triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors. This triggers the error workflow.
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     1. If a workflow is using the Error Trigger node, you don't have to activate the workflow.
 2. If you want to receive error messages for a workflow, make sure that you select the 'Error Workflow' in the ***Workflow Settings*** for the workflow.
 3. If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow.

@@ -2,7 +2,7 @@
 
 [LinkedIn](https://www.linkedin.com/) is an employment-oriented online service. It is mainly used for professional networking, including employers posting jobs and job seekers posting their CVs.
 
-!!! note "🔑 Credentials"
+!!! note "Credentials"
     You can find authentication information for this node [here](/integrations/credentials/linkedIn/).
 
 
@@ -11,7 +11,7 @@
 * Post
     * Create a new post
 
-!!! note " Keep in mind"
+!!! note "Keep in mind"
     If posting as an Organization enter only the organization number in the URN field. For example, `03262013` not `urn:li:company:03262013`.
 
 

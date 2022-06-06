@@ -23,8 +23,8 @@ n8n provides a quickstart template using training nodes. This allows you to work
 
 This is a basic workflow. It:
 
-1. Gets example data from the **Customer Datastore** node.
-2. Uses the **Set** node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
+1. Gets example data from the Customer Datastore node.
+2. Uses the Set node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
 
 Double click a node to explore its settings and how it processes data.
 

@@ -80,7 +80,7 @@ Add the If node:
 2. Search for **If**. n8n shows a list of nodes that match the search.
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. Select **Add condition** > **String**.
-5. You need to check the value of the `classType` propperty in the NASA data. To do this:
+5. You need to check the value of the `classType` property in the NASA data. To do this:
     1. Next to **Value 1**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
     3. Close the expressions editor to return to the node.
@@ -91,38 +91,36 @@ Add the If node:
 !!! note "Weeks without large solar flares"
     In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
 
-## Step six: Output data from your workflow [TODO: refactor this when we have the Postbin node]
+## Step six: Output data from your workflow
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page. 
 
 1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labelled **true**.
-2. Search for **HTTP Request**. n8n shows a list of nodes that match the search.
-3. Select **HTTP Request** to add the node to the canvas.
-4. Change **Request Method** to **Post**.
-5. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**.
-6. Copy the POST url from the curl example. It looks similar to `https://www.toptal.com/developers/postbin/1651063625300-2016451240051`.
-7. In n8n, paste your Postbin URL into **URL**.
-8. Change **Response Format** to **String**.
-9. Now, configure the data to send to Postbin. In **Body Parameters**, select **Add Parameter**.
-10. In **Name**, enter **flareSize**.
-11. For the **Value**, use an expression to get the exact solar flare classification and write a message: 
-    1. Select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor.
-    2. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
-    3. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
+2. Search for **Postbin**. n8n shows a list of nodes that match the search.
+3. Select **Postbin** to add the node to the canvas.
+4. Change **Resource** to **Request**.
+5. In **Operation**, select **Send**.
+6. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**.
+7. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
+8. In n8n, paste your Postbin ID into **Bin ID**.
+9. Change **Response Format** to **String**.
+10. Now, configure the data to send to Postbin. Next to **Bin Content**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**.
+11. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
+12. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js
     There was a solar flare of class {{$json["classType"]}}
     ```
-    4. Close the expressions editor to return to the node.
-12. Close the HTTP Request node to return to the canvas.
-13. Add another HTTP Request node, to handle the **false** output path from the If node:
-    1. Hover over the HTTP Request node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/try-it-out/duplicate-node.png)</span> to duplicate the first HTTP Request node.
-    2. Drag the **false** connector from the If node to the left side of the new HTTP Request node.
+13. Close the expressions editor to return to the node.
+14. Close the Postbin node to return to the canvas.
+15. Add another Postbin node, to handle the **false** output path from the If node:
+    1. Hover over the Postbin node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/try-it-out/duplicate-node.png)</span> to duplicate the first Postbin node.
+    2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 14. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 15. Go back to your Postbin bin. Refresh the page to see the output.
 16. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
 
 !!! note "Time limit"
-    Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the URL in the HTTP Request nodes, if you exceed this time limit.
+    Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.
 
 
 ## Next steps

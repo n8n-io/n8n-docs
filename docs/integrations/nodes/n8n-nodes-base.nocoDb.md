@@ -36,7 +36,7 @@ The start node exists by default when you create a new workflow.
 1. First enter your credentials for the NocoDB node. You can find out how to do that [here](/integrations/credentials/nocoDb/).
 2. Select NocoDB version your project using.
 3. The **Row** ***Resource*** is selected by default.
-4. Select **Get All** from the ***Operation*** dropdown.
+4. Select **Get All** from the **Operation** dropdown.
 5. Enter the NocoDB **Project Name**. (Project ID for older versions)
 6. Enter the name of the targeted **Table**.
 7. Click on **Execute Node** to run the workflow.

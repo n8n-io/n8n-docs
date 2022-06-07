@@ -270,6 +270,11 @@ nav:
     - Replace Keys: example/replace.md
     - Weather: example/weather.md
     - Approval with Doc²: example/approval.md
+    - Doc2 to GDrive:
+      - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md
+      - Configure Doc2StatusTrigger Node: example/export-to-gdrive/configure-doc2-status-trigger.md
+      - Configure Google Drive Node: example/export-to-gdrive/configure-gdrive-node.md
+      - Activate Workflow: example/export-to-gdrive/activate-workflow.md
   - Insight²:
     - Action: app2/tutorial/actions.md
     - Datasource: app2/tutorial/adding-a-datasource.md

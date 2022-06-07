@@ -25,7 +25,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. MariaDB node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the MariaDB node. In order to do that, on the mariaDB options menu, select "Create New" in the "credential for MariaDB" options field. Fill the requirement informations to connect to the MariaDB database. 
+1. First of all, you'll have to enter credentials for the MariaDB node. In order to do that, on the MariaDB options menu, select **Create New** in the **Credential for MariaDB** options field. Fill the required information to connect to the MariaDB database. 
 
 <center>
 ![Create new mariaDB credentials](/_images/integrations/nodes/mariadb/mariaDB_credentials.png)

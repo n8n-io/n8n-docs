@@ -110,75 +110,74 @@ In declarative style:
 
 // Create the FriendGrid class
 export class FriendGrid implements INodeType {
-    description: INodeTypeDescription = {
-        displayName: 'FriendGrid',
-        name: 'friendGrid',
+  description: INodeTypeDescription = {
+    displayName: 'FriendGrid',
+    name: 'friendGrid',
+    . . .
+    // Set up the basic request configuration
+    requestDefaults: {
+        baseURL: 'https://api.sendgrid.com/v3/marketing'
+    },
+    properties: [
+        {
+        displayName: 'Resource',
         . . .
-        // Set up the basic request configuration
-        requestDefaults: {
-			baseURL: 'https://api.sendgrid.com/v3/marketing'
-		},
-        properties: [
-            {
-                displayName: 'Resource',
-                . . .
+        },
+        {
+        displayName: 'Operation',
+        name: 'operation',
+        type: 'options',
+        displayOptions: {
+            show: {
+            resource: [
+                'contact',
+            ],
             },
+        },
+        options: [
             {
-                displayName: 'Operation',
-                name: 'operation',
-                type: 'options',
-                displayOptions: {
-                    show: {
-                        resource: [
-                            'contact',
-                        ],
-                    },
-                },
-                options: [
-                    {
-                        name: 'Create',
-                        value: 'create',
-                        description: 'Create a contact',
-                        // Add the routing object
-                        routing: { 
-                            request: {
-                                method: 'POST',
-                                url: '=/contacts',
-                                send: {
-                                    type: 'body',
-                                    properties: {
-                                        email: {{$parameter["email"]}}
-                                    }
-                                }
-                            }
-                        },
-                        // Handle the response to contact creation
-                        output: {
-                            postReceive: [
-                                {
-                                    type: 'set',
-                                    properties: {
-                                        value: '={{ { "success": $response } }}'
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                ],
-                default: 'create',
-                description: 'The operation to perform.',
+            name: 'Create',
+            value: 'create',
+            description: 'Create a contact',
+            // Add the routing object
+            routing: { 
+                request: {
+                method: 'POST',
+                url: '=/contacts',
+                send: {
+                    type: 'body',
+                    properties: {
+                    email: {{$parameter["email"]}}
+                    }
+                }
+                }
             },
-            {
-                displayName: 'Email',
-                . . .
-            },
-            {
-                displayName: 'Additional Fields',
-                // Sets up optional fields
+            // Handle the response to contact creation
+            output: {
+                postReceive: [
+                {
+                    type: 'set',
+                    properties: {
+                    value: '={{ { "success": $response } }}'
+                    }
+                }
+                ]
+            }
             },
         ],
-    }
-
-    // No execute method needed
+        default: 'create',
+        description: 'The operation to perform.',
+        },
+        {
+        displayName: 'Email',
+        . . .
+        },
+        {
+        displayName: 'Additional Fields',
+        // Sets up optional fields
+        },
+    ],
+  }
+  // No execute method needed
 }
 ```

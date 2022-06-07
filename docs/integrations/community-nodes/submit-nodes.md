@@ -7,9 +7,9 @@ Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-    * View the [starter node](https://github.com/n8n-io/n8n-nodes-starter).
-    * Refer to the documentation on [building your own nodes](/integrations/creating-nodes/).
-    * Make sure your node follows the [standards](#standards) for community nodes.
+* View the [starter node](https://github.com/n8n-io/n8n-nodes-starter).
+* Refer to the documentation on [building your own nodes](/integrations/creating-nodes/).
+* Make sure your node follows the [standards](#standards) for community nodes.
 
 ## Standards
 

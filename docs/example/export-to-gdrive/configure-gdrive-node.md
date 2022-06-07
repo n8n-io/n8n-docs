@@ -1,6 +1,6 @@
 ---
 title: Configuring Google Drive node
-descpriton: Here we will check how to configure google drive node to export document from Doc2 to Google Drive
+description: Here we will check how to configure google drive node to export document from Doc2 to Google Drive
 tags:
   - Workflow²
   - Example
@@ -21,24 +21,38 @@ Click **Add New** for the Credentials for Google, it will open a dialog as shown
 
 ![Doc2AppStatusTrigger Sample](/_images/example/gdrive/image17.png)
 
-Copy the OAuth Redirect URL and use this to create new google OAuth2.0 app as shown in the tutorial below
+Copy the **OAuth Redirect URL** and use this to create new google OAuth2.0 app as shown in the tutorial below.
 
 [Setting up OAuth 2.0](https://support.google.com/cloud/answer/6158849?hl=en)
 
-Copy the Client ID and Client Secret for newly created app and add it to the Google Drive account connection screen as show above
+![OAuth 2.0 (Screen 1)](/_images/example/gdrive/image20.png)
+
+![OAuth 2.0 (Screen 2)](/_images/example/gdrive/image21.png)
+
+![OAuth 2.0 (Screen 3)](/_images/example/gdrive/image22.png)
+
+![OAuth 2.0 (Screen 4)](/_images/example/gdrive/image23.png)
+
+Copy the **Client ID** and **Client Secret** for newly created oauth client and add it to the Google Drive module connection screen as show above
 
 Select **File** for the Resource option and **Upload** as operation.
 
-Set {{JSON.stringify($node["Status Trigger"].json)}} for the File Content
+For the file content we will send the full extracted JSON returned from previous module.
 
-Set {{$node["Status Trigger"].json["filename"].replace('.pdf','.json') }} for the File Name.
+To convert the json response to string we are going to use below expression for file content
 
-Click execute Node and you should see output like below.
+```json
+{{JSON.stringify($node["Status Trigger"].json)}}
+```
+
+For the filename we will extract the filename from json returned from previous module.
+
+```json
+{{$node["Status Trigger"].json["filename"].replace('.pdf','.json') }}
+```
+
+Click **Execute** button and you should see output like below.
 
 ![Google Drive Node Success](/_images/example/gdrive/image18.png)
 
-## Activate the workflow
-
-Click **Execute Workflow** button on main screen and test by exporting another sample document.
-
-![Final](/_images/example/gdrive/image19.png)
+This means that document has been uploaded to Google Drive successfully.

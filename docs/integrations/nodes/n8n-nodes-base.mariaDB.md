@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 4. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 5. Enter `name` in the **Name** field.
 6. Enter the value for the name in the ***Value*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on **Execute Node** to run the node.
 
 <center>
 ![Using the Set node to set data to be inserted by the MariaDB node](/_images/integrations/nodes/mariadb/set_node.png)

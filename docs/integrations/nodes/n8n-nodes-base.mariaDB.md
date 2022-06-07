@@ -29,7 +29,6 @@ The start node exists by default when you create a new workflow.
 
 <center>
 ![Create new mariaDB credentials](/_images/integrations/nodes/mariadb/mariaDB_credentials.png)
-</center>
 
 2. Select **Execute Query** from the **Operation** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.

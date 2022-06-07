@@ -17,7 +17,9 @@ Basic configuration:
 }
 ```
 
+
 ![String](/_images/integrations/creating-nodes/code/string.png)
+
 
 String field for inputting passwords:
 
@@ -55,6 +57,8 @@ String field with more than one row:
 ```
 
 ![Multiple rows](/_images/integrations/creating-nodes/code/multiple-rows.png)
+
+
 
 ## Number
 
@@ -95,6 +99,8 @@ Number field with decimal points:
 ```
 
 ![Decimal](/_images/integrations/creating-nodes/code/decimal.png)
+
+
 
 ## Collection
 
@@ -149,7 +155,9 @@ The `dateTime` type provides a date picker.
 }
 ```
 
-![DateTime](/_images/integrations/creating-nodes/code/datetime.png)
+![Datetime](/_images/integrations/creating-nodes/code/datetime.png)
+
+
 
 ## Boolean
 
@@ -181,6 +189,8 @@ The `color` type provides a color selector.
 ```
 
 ![Color](/_images/integrations/creating-nodes/code/color.png)
+
+
 
 ## Options
 
@@ -232,7 +242,7 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multi-options](/_images/integrations/creating-nodes/code/multioptions.png)
+![Multioptions](/_images/integrations/creating-nodes/code/multioptions.png)
 
 
 ## Fixed collection
@@ -276,6 +286,9 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](/_images/integrations/creating-nodes/code/fixed-collection.png)
 
+
+
+
 ## JSON
 
 ```typescript
@@ -289,3 +302,4 @@ Use the `fixedCollection` type to group fields that are semantically related.
 ```
 
 ![JSON](/_images/integrations/creating-nodes/code/json.png)
+

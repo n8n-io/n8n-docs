@@ -186,13 +186,8 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 $jmespath($json.body.dogs, "*.age")
 /* Returns:
 [
-  {
-    "firstNames": [
-      "James",
-      "Jacob",
-      "Jayden"
-    ]
-  }
+    7,
+    5
 ]
 */
 ```

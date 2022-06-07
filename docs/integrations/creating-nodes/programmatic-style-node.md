@@ -179,7 +179,7 @@ You might say that you can “Add a contact” and you are right, but we try to 
 
 Let’s make the Node Editor View ask for these parameters:
 
-1. 'dd the following under `description.properties` in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
+1. Add the following under `description.properties` in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
 
 ```typescript
 {

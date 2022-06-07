@@ -1,5 +1,7 @@
-
 # Making HTTP Requests
+
+!!! note "Programmatic style only"
+	The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
 
 While creating nodes it is very commonn to call external APIs or make HTTP requests to other services.
 

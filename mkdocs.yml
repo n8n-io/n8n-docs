@@ -10,6 +10,8 @@ theme:
   palette:
       scheme: light
   features:
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky
@@ -121,18 +123,17 @@ nav:
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
-      - Code-based node building:
-        - Overview: integrations/creating-nodes/code/index.md
-        - Standards: integrations/creating-nodes/code/standards.md
-        - Create your first node: integrations/creating-nodes/code/create-first-node.md
-        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
-        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
-        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
-        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
-        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
-        - Node linter: integrations/creating-nodes/code/node-linter.md
-        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
-        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
+      - Choose a node building style: integrations/creating-nodes/choose-node-method.md
+      - Standards: integrations/creating-nodes/standards.md
+      - Build a declarative-style node: integrations/creating-nodes/declarative-style-node.md
+      - Build a programmatic-style node: integrations/creating-nodes/programmatic-style-node.md
+      - Build a trigger node: integrations/creating-nodes/create-trigger-node.md
+      - Node UI elements: integrations/creating-nodes/ui-elements.md      
+      - Node linter: integrations/creating-nodes/node-linter.md
+      - Node review checklist: integrations/creating-nodes/review-checklist.md
+      - Troubleshooting: integrations/creating-nodes/troubleshooting-node-development.md
+      - HTTP request helpers: integrations/creating-nodes/http-helpers.md
+      - Create an n8n-nodes-module: integrations/creating-nodes/create-n8n-nodes-module.md
   - Courses:
     - Overview: courses/index.md
     - Level one:

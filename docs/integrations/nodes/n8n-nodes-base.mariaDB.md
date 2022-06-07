@@ -18,7 +18,6 @@ This workflow allows you to create a table and insert data in it on a MariaDB da
 The final workflow should look like the following image.
 
 ![A workflow with the MariaDB node](/_images/integrations/nodes/mariadb/workflow.png)
-</center>
 
 ### 1. Start node
 

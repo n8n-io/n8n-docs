@@ -145,8 +145,11 @@ export class FriendGrid implements INodeType {
                             request: {
                                 method: 'POST',
                                 url: '=/contacts',
-                                body: {
-                                    email: {{$parameter["email"]}}
+                                send: {
+                                    type: 'body',
+                                    properties: {
+                                        email: {{$parameter["email"]}}
+                                    }
                                 }
                             }
                         },
@@ -156,7 +159,7 @@ export class FriendGrid implements INodeType {
                                 {
                                     type: 'set',
                                     properties: {
-                                        // TODO - how would this look in this example?
+                                        value: '={{ { "success": $response } }}'
                                     }
                                 }
                             ]

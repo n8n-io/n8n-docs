@@ -35,7 +35,6 @@ The start node exists by default when you create a new workflow.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
 4. Click on ***Execute Node*** to run the node.
 
-<center>
 ![Using the MariaDB node to create a table](/_images/integrations/nodes/mariadb/mariadb_node.png)
 </center>
 

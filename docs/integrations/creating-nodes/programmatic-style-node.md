@@ -52,7 +52,7 @@ All these packages are under the `/packages` folder in the main n8n folder. We w
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
 
-![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
+![n8n folder structure](/_images/integrations/creating-nodes/n8n-folder-structure.png)
 
 
 ## Creating the node
@@ -112,7 +112,7 @@ export class FriendGrid implements INodeType {
 
 Your directory structure should now look like the following.
 
-![FriendGrid's directory structure](/_images/integrations/creating-nodes/code/friendgrid-directory-structure.png)
+![FriendGrid's directory structure](/_images/integrations/creating-nodes/friendgrid-directory-structure.png)
 
 
 ## Adding the node to Editor UI
@@ -121,7 +121,7 @@ n8n uses the properties set in the property `description` to render the node in 
 
 Check the following figure to see how the properties affect the looks of the node.
 
-![FriendGrid's appearance in Editor UI](/_images/integrations/creating-nodes/code/friendgrid-appearance.png)
+![FriendGrid's appearance in Editor UI](/_images/integrations/creating-nodes/friendgrid-appearance.png)
 
 **Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
@@ -246,7 +246,7 @@ Let’s make the Node Editor View ask for these parameters:
 
 The node should now look like in the following image.
 
-![FriendGrid's required fields](/_images/integrations/creating-nodes/code/friendgrid-required-fields.png)
+![FriendGrid's required fields](/_images/integrations/creating-nodes/friendgrid-required-fields.png)
 
 ### Adding optional fields
 
@@ -299,7 +299,7 @@ We can add them below the email parameter and set `required: false`. However, if
 
 The node should now look like in the following image.
 
-![FriendGrid's all fields](/_images/integrations/creating-nodes/code/friendgrid-all-fields.png)
+![FriendGrid's all fields](/_images/integrations/creating-nodes/friendgrid-all-fields.png)
 
 Now all our optional fields are presented in the UI and can be set individually depending on the user’s use-case.
 
@@ -356,9 +356,9 @@ export class FriendGridApi implements ICredentialType {
 
 When you go to the Node Editor view, you should see the following.
 
-![FriendGrid's create credentials](/_images/integrations/creating-nodes/code/friendgrid-create-credentials.png)
+![FriendGrid's create credentials](/_images/integrations/creating-nodes/friendgrid-create-credentials.png)
 
-![FriendGrid's credentials](/_images/integrations/creating-nodes/code/friendgrid-credentials.png)
+![FriendGrid's credentials](/_images/integrations/creating-nodes/friendgrid-credentials.png)
 
 
 ## Mapping the UI fields to the API
@@ -426,7 +426,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 
 If everything went well, you should see the following.
 
-![Creating a contact in FriendGrid with n8n](/_images/integrations/creating-nodes/code/create-contact-friendgrid.png)
+![Creating a contact in FriendGrid with n8n](/_images/integrations/creating-nodes/create-contact-friendgrid.png)
 
 Now we can successfully create contacts in FriendGrid from n8n.
 
@@ -456,11 +456,11 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 
 3. Execute the Function node. We're using the function node for testing, but you can think of it as any node that is returning “two people” (or more). These two people need to be added to FriendGrid as contacts.
 
-	![Output of the Function node](/_images/integrations/creating-nodes/code/function-node-output.png)
+	![Output of the Function node](/_images/integrations/creating-nodes/function-node-output.png)
 
 4. Add a FriendGrid node to the workflow and connect it to the Function node. Add an expression in the ***Email*** field of the FriendGrid node and reference the ***name*** property that the Function node outputs.
 
-	![Using expressions in the FriendGrid node](/_images/integrations/creating-nodes/code/expressions-friendgrid.png)
+	![Using expressions in the FriendGrid node](/_images/integrations/creating-nodes/expressions-friendgrid.png)
 
 5. Replace the existing `execute` method with the following:
 
@@ -521,7 +521,7 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 
 If you open the FriendGrid node, you should see the following.
 
-![Output of the FriendGrid node]((/_images/integrations/creating-nodes/code/final-friendgrid.png)
+![Output of the FriendGrid node]((/_images/integrations/creating-nodes/final-friendgrid.png)
 
 As showcased above, both the items were processed. That’s how all nodes in n8n work (with a few exceptions). They will automatically iterate over all the items and process them.
 

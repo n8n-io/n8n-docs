@@ -53,7 +53,7 @@ All these packages are under the `/packages` folder in the main n8n folder. We w
 - The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
 
-![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
+![n8n folder structure](/_images/integrations/creating-nodes/n8n-folder-structure.png)
 
 
 ## Creating the node
@@ -127,7 +127,7 @@ export class AutofriendTrigger implements INodeType {
 
 Your directory structure should now look like the following.
 
-![Autofriend's directory structure](/_images/integrations/creating-nodes/code/autopilot-directory-structure.png)
+![Autofriend's directory structure](/_images/integrations/creating-nodes/autopilot-directory-structure.png)
 
 
 ## Adding the node to Editor UI
@@ -136,7 +136,7 @@ n8n uses the properties set in the property `description` to render the node in 
 
 Check the following figure to see how the properties affect the looks of the node.
 
-![Autofriend's appearance in Editor UI](/_images/integrations/creating-nodes/code/autopilot-appearance.png)
+![Autofriend's appearance in Editor UI](/_images/integrations/creating-nodes/autopilot-appearance.png)
 
 **Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
@@ -233,7 +233,7 @@ npm run dev
 
 The node should now look like in the following image.
 
-![Autofriend's required fields](/_images/integrations/creating-nodes/code/autofriend-fields.png)
+![Autofriend's required fields](/_images/integrations/creating-nodes/autofriend-fields.png)
 
 
 ## Creating the UI for credentials
@@ -290,9 +290,9 @@ npm run dev
 
 When you go to the Node Editor view, you should see the following.
 
-![Autofriend's create credentials](/_images/integrations/creating-nodes/code/autofriend-create-credentials.png)
+![Autofriend's create credentials](/_images/integrations/creating-nodes/autofriend-create-credentials.png)
 
-![Autofriend's credentials](/_images/integrations/creating-nodes/code/autofriend-credentials.png)
+![Autofriend's credentials](/_images/integrations/creating-nodes/autofriend-credentials.png)
 
 
 ## Understanding the life cycle for the webhook method
@@ -345,7 +345,7 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 - `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
 - `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
-![Lifecycle flowchart](/_images/integrations/creating-nodes/code/lifecycle.png)
+![Lifecycle flowchart](/_images/integrations/creating-nodes/lifecycle.png)
 
 
 ### Wait for new events to trigger the workflow
@@ -471,11 +471,11 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](../credentials/autopilot).
 8. Go to the workflow editor, save your workflow, and execute the node.
 
-![Executed node](/_images/integrations/creating-nodes/code/executed-node.png)
+![Executed node](/_images/integrations/creating-nodes/executed-node.png)
 
 9. Log into Autopilot and update a contact. Keep in mind that this should be done within two minutes after you executed the node. After that time frame, the webhook will be unregistered automatically and you will not be able to receive the event. If it takes you longer than that, please execute the node and update the contact again.
 
-![Executed node with results](/_images/integrations/creating-nodes/code/executed-node-with-results.png)
+![Executed node with results](/_images/integrations/creating-nodes/executed-node-with-results.png)
 
 The trigger node is now receiving events. Sometimes it might take a bit longer for the payload to arrive.
 

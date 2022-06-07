@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 2. Click on the ***Add Value*** button and select 'Number' from the dropdown list.
 3. Enter `id` in the ***Name*** field.
 4. Click on the ***Add Value*** button and select 'String' from the dropdown list.
-5. Enter `name` in the ***Name*** field.
+5. Enter `name` in the **Name** field.
 6. Enter the value for the name in the ***Value*** field.
 7. Click on ***Execute Node*** to run the node.
 

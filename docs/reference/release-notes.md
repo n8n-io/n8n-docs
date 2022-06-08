@@ -1,5 +1,56 @@
 # Release notes
 
+## n8n@0.180.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.179.0...n8n@0.180.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-07
+
+This release adds a new node for Cal.com, support for tags in workflow import and export, UI improvements, node enhancements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Tags in workflow import and export
+
+When importing or exporting a workflow, the JSON can now include workflow tags.
+
+#### Improved handling of activation errors
+
+n8n now supports running an error workflow in response to an activation error.
+
+</div>
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Cal.com trigger
+
+This release adds a new trigger node for Cal.com. Refer to the [Cal trigger documentation](/integrations/trigger-nodes/n8n-nodes-base.caltrigger/){:target=_blank} for more guidance.
+
+</div>
+
+### Node enhancements
+
+* [GitHub node](/integrations/nodes/n8n-nodes-base.github/){:target=_blank}: add the Get All operation to the Organization resource.
+* [QuickBooks node](/integrations/nodes/n8n-nodes-base.quickbooks/){:target=_blank}: add a new optional field for tax items.
+
+### Bug fixes
+
+* Restore support for `window` in expressions.
+* Fix to the `user-management:reset` command.
+* Resolve crashes in queue mode.
+* Correct delete button hover spacing.
+* Resolve a bug causing stuck loading states.
+* [EmailReadImap node](/integrations/core/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
+* [Hubspot node](/integrations/nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
+
+### Contributors
+
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}  
+[Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
+
 ## n8n@0.179.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.178.2...n8n@0.179.0){:target=_blank .external-link} for this version.<br />

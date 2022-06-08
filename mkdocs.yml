@@ -133,7 +133,7 @@ nav:
       - Node review checklist: integrations/creating-nodes/review-checklist.md
       - Troubleshooting: integrations/creating-nodes/troubleshooting-node-development.md
       - HTTP request helpers: integrations/creating-nodes/http-helpers.md
-      - Create an n8n-nodes-module: integrations/creating-nodes/create-n8n-nodes-module.md
+      - Install private nodes: integrations/creating-nodes/install-private-nodes.md
   - Courses:
     - Overview: courses/index.md
     - Level one:

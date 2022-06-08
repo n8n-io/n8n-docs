@@ -128,14 +128,14 @@ export class FriendGrid implements INodeType {
         name: 'operation',
         type: 'options',
         displayOptions: {
-            show: {
+          show: {
             resource: [
                 'contact',
             ],
-            },
+          },
         },
         options: [
-            {
+          {
             name: 'Create',
             value: 'create',
             description: 'Create a contact',

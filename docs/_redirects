@@ -8,7 +8,7 @@
 /integrations/creating-nodes/code/review-checklist/   /integrations/creating-nodes/review-checklist/
 /integrations/creating-nodes/code/troubleshooting-node-development/   /integrations/creating-nodes/troubleshooting-node-development/
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/http-helpers/
-/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/create-n8n-nodes-module/
+/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/install-private-nodes/
 
 # TODO: figure out where to redirect node cli
 

@@ -11,7 +11,7 @@ tags:
 
 ### How to Validate a document
 
-After you have uploaded a document as described on /doc2/doc2app/doc%c2%b2-tutorial/dashboard/, perform the following steps to validate it:
+After you have uploaded a document as described on (https://docs.polydocs.io/doc2/dashboard/), perform the following steps to validate it:
 
 1. Go to HOME where you will find the DASHBOARD with uploaded documents
 

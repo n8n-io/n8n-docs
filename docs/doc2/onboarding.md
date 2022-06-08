@@ -28,7 +28,7 @@ To access the system:
 2.  Go to the [App](https://app.polydocs.io/). We recommend bookmarking this URL for future reference.
 3.  Log in with the credentials provided in your onboarding email.
 
-**Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot your password?** link.
+**Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot password?** link.
 
 ### Step 2\. Adding Users
 

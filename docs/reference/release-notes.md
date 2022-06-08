@@ -2,7 +2,7 @@
 
 ## n8n@0.180.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.179.0...n8n@0.180.0) for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.179.0...n8n@0.180.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-06-07
 
 This release adds a new node for Cal.com, support for tags in workflow import and export, UI improvements, node enhancements, and bug fixes.
@@ -27,14 +27,14 @@ n8n now supports running an error workflow in response to an activation error.
 
 #### Cal.com trigger
 
-This release adds a new trigger node for Cal.com. Refer to the [Cal trigger documentation](/integrations/trigger-nodes/n8n-nodes-base.caltrigger/) for more guidance.
+This release adds a new trigger node for Cal.com. Refer to the [Cal trigger documentation](/integrations/trigger-nodes/n8n-nodes-base.caltrigger/){:target=_blank} for more guidance.
 
 </div>
 
 ### Node enhancements
 
-* [GitHub node](/integrations/nodes/n8n-nodes-base.github/): add the Get All operation to the Organization resource.
-* [QuickBooks node](/integrations/nodes/n8n-nodes-base.quickbooks/): add a new optional field for tax items.
+* [GitHub node](/integrations/nodes/n8n-nodes-base.github/){:target=_blank}: add the Get All operation to the Organization resource.
+* [QuickBooks node](/integrations/nodes/n8n-nodes-base.quickbooks/){:target=_blank}: add a new optional field for tax items.
 
 ### Bug fixes
 
@@ -43,12 +43,12 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](/integrations/core/n8n-nodes-base.imapEmail): improve error handling.
-* [Hubspot node](/integrations/nodes/n8n-nodes-base.hubspot/): fix contact loading.
+* [EmailReadImap node](/integrations/core/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
+* [Hubspot node](/integrations/nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
 
-[Mark Steve Samson](https://github.com/marksteve)
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}
 
 ## n8n@0.179.0
 

@@ -48,7 +48,8 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 
 ### Contributors
 
-[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}  
+[Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
 
 ## n8n@0.179.0
 

@@ -20,6 +20,32 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Invalid Authorization Code when login
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added Link to Changelog
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login - Implementation of language switch
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added SugarCRM Node Icon to Workflow²
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Customization of permissions for users - User ist not able to switch products on and off - only Admin can
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Warning before turning off/deleting Workflow - manual input required
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Adding new domain for Workflow² / Moving the domain for Workflow² from Modules to Apps
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors on displaying PO Matching Screen
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: to UI (Translations, Colours and position of Icons, Buttons, Cloud while uploading documents)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for e-mail notifications and e-mail verification
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors uploading documents
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Clarification FORCE OCR functionality when headers of tables are not being extracted (instead numbers got extracted)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (admin/user, Reset Password)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for email notifications - registration, Add user, send confirmation email again
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Document Approval - Invalid Document 
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Error while uploading documents
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Building functionality with safari browser
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Link to Apps when using Workflow²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with LinkedIn
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: embed SSL certificate
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: TE²: cosmetic repairs UI
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Zugferd Export - Pdf with xml attachment
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Length of password
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implemenation of HELP Links to documentation in DOC²
+
+
+
 
 
 

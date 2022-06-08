@@ -30,7 +30,7 @@ To access the system:
 
 **Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot password?** link.
 
-### Step 2\. Adding Users
+### Step 2\: Adding Users
 
 After logging in, you'll need to add users to your tenant. When you add a user, they'll receive an onboarding email with a username and temporary password.
 

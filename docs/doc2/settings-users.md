@@ -58,4 +58,4 @@ You will immediately receive an email with a link to reset the password. The lin
 As soon as the new password has been entered and confirmed, it can be used for login from now on.
 
 
-[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+[Sign up for a 30 days free trail](https://polydocs.io/free-trail/){ .md-button .md-button--primary }

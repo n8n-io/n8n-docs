@@ -1,7 +1,11 @@
+@font-face {
+    font-family: "Moderat-Regular-Web";
+    src: url("./Moderat-Regular-Web/Moderat-Regular.woff");
 
+}
 :root {
-    --color-primary: hsl( 6.9, 100%, 67.6% );
-    --color-primary-shade-1: hsl( 6.9, 100%, 62% );
+    --color-primary: hsl(170, 69%, 35%);
+    --color-primary-shade-1: hsl(170, 69%, 30%);
 
     --color-text-base: #58585F;
     --color-text-dark: #555555;
@@ -13,16 +17,24 @@
 
     --color-foreground-base: #dbdfe7;
 
-
-    --color-green-500: #20B69E;
-    --color-green-600: #176363;
-    --color-black: #101330;
-    --color-grey-900: #40425E;
-    --color-red-500: #EA4B71;
-    --color-red-600: #BF2F52;
-    --color-red-600-muted: rgba(191, 47, 81, 0.5);
+    /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/?h=font#additional-fonts */
+    --md-text-font: "Moderat-Regular-Web";
 
 }
+
+.md-typeset {
+    font-size: 0.9rem;
+}
+
+.md-nav {
+    font-size: 0.8rem;
+}
+
+.md-tabs__link {
+    font-size: 0.8rem;
+}
+
+
 
 .n8n-new-features {
     background-color: var(--color-background-light);

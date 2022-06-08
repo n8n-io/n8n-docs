@@ -44,7 +44,7 @@ As soon as the user is created it can be edited afterwards via the user overview
 
 ## How to reset the password
 
-Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on "FORGOT PASSWORD":
+Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on "FORGOT PASSWORD?":
 
 ![](/_images/doc2/Users_6.png)
 

@@ -20,7 +20,7 @@ In the settings navigate to "Users":
 
 ![](/_images/doc2/image-37-1024x298.png)
 
-Direktlink: [https://doc2app.cloudintegration.eu/#/settings/user](https://doc2app.cloudintegration.eu/#/settings/user)
+Direktlink: [https://app.polydocs.io/settings/user](https://app.polydocs.io/settings/user)
 
 ## How to add a user
 
@@ -43,7 +43,7 @@ As soon as the user is created it can be edited afterwards via the user overview
 
 ## How to reset the password
 
-Go to the DOC² log-in page ([https://doc2app.cloudintegration.eu/#/](https://doc2app.cloudintegration.eu/#/)) and click on "FORGOT PASSWORD?":
+Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) and click on "FORGOT PASSWORD?":
 
 ![](/_images/doc2/Reset-Password-1024x531.png)
 

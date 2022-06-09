@@ -54,6 +54,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in classifying the correct document type
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Email notification when uploaded/imported documents are Ready For Validation can be enabled/disabled in Settings Email Notification
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: error on validation screen after adjusting field settings for Zugferd doctype invoice
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Page division of one pdf by barcode
 
 
 

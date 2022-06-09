@@ -24,7 +24,7 @@ This release introduces the public API.
 
 #### The n8n public API
 
-This release introduces the n8n public REST API. Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. The API includes a built-in Swagger UI playground Refer to the [API documentation](/api/) for more information.
+This release introduces the n8n public REST API. Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. The API includes a built-in Swagger UI playground. Refer to the [API documentation](/api/){:target=_blank} for more information.
 
 </div>
 

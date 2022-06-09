@@ -1,10 +1,10 @@
 ---
 title: Configuring Google Drive node
-description: Here we will check how to configure google drive node to export document from Doc2 to Google Drive
+description: Here we will check how to configure google drive node to export document from DOC² to Google Drive
 tags:
   - Workflow²
   - Example
-  - Doc2Export
+  - DOC²Export
   - Google Drive
 
 ---

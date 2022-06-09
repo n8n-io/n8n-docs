@@ -63,6 +63,7 @@ markdown_extensions:
       permalink: "#"
 plugins:
   - search
+  # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
 nav:
   - Using n8n:
@@ -197,4 +198,10 @@ nav:
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+  - API:
+    - The n8n public API: api/index.md
+    - Authentication: api/authentication.md
+    - Pagination: api/pagination.md
+    - Using the API playground: api/using-api-playground.md
+    - API reference: api/api-reference.md
   - Contributing: contributing.md

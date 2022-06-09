@@ -43,6 +43,9 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Zugferd Export - Pdf with xml attachment
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Length of password
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implemenation of HELP Links to documentation in DOC²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with google
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with Microsoft
+
 
 
 

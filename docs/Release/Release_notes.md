@@ -20,7 +20,7 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Invalid Authorization Code when login
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added Link to Changelog
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login - Implementation of language switch
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added SugarCRM Node Icon to Workflow²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added [SugarCRM](/workflow/integrations/nodes/workflow-nodes-base.sugarcrm/) Node Icon to Workflow²
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Customization of permissions for users - User ist not able to switch products on and off - only Admin can
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Warning before turning off/deleting Workflow - manual input required
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Adding new domain for Workflow² / Moving the domain for Workflow² from Modules to Apps
@@ -33,7 +33,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for email notifications - registration, Add user, send confirmation email again
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Document Approval - Invalid Document 
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Document Approval - Invalid Document
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Error while uploading documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Building functionality with safari browser
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Link to Apps when using Workflow²

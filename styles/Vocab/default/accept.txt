@@ -3,6 +3,8 @@ Cron
 Dockerfile
 Enum
 enum
+GIMP
+invalid
 n8n
 namespace
 npm

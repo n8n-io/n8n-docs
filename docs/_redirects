@@ -338,6 +338,7 @@
 /nodes/workflow-nodes-base.stravaTrigger/		/workflow/integrations/trigger-nodes/workflow-nodes-base.stravaTrigger/
 /nodes/workflow-nodes-base.stripe/		/workflow/integrations/nodes/workflow-nodes-base.stripe/
 /nodes/workflow-nodes-base.stripeTrigger/		/workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/
+/nodes/workflow-nodes-base.sugarcrm/		/workflow/integrations/workflow-nodes-base.sugarcrm/
 /nodes/workflow-nodes-base.supabase/		/workflow/integrations/nodes/workflow-nodes-base.supabase/
 /nodes/n8n-nodes-base.surveyMonkeyTrigger/		/workflow/integrations/trigger-nodes/n8n-nodes-base.surveyMonkeyTrigger/
 /nodes/n8n-nodes-base.switch/		/workflow/integrations/core-nodes/n8n-nodes-base.switch/
@@ -375,7 +376,7 @@
 /nodes/workflow-nodes-base.wise/		/workflow/integrations/nodes/workflow-nodes-base.wise/
 /nodes/workflow-nodes-base.wiseTrigger/		/workflow/integrations/trigger-nodes/workflow-nodes-base.wiseTrigger/
 /nodes/workflow-nodes-base.wooCommerce/		/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/
-/nodes/workflow-nodes-base.wooCommerceTrigger/		/workflow/integrations/trigger-nodes/workflow-nodes-base.wooCommerceTrigger/
+/nodes/workflow-nodes-base.wooCommerceTrigger/		/workflow/integrations/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
 /nodes/workflow-nodes-base.wordpress/		/workflow/integrations/nodes/workflow-nodes-base.wordpress/
 /nodes/n8n-nodes-base.workableTrigger/		/workflow/integrations/trigger-nodes/n8n-nodes-base.workableTrigger/
 /nodes/n8n-nodes-base.workflowTrigger/		/workflow/integrations/core-nodes/n8n-nodes-base.workflowTrigger/

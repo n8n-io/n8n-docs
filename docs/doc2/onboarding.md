@@ -20,17 +20,17 @@ First, let's cover how to access and configure your system.
 
 DOC² does not work in Tenant. All customer use the same cluster. Our Kubernetes Cluster is hosted in Frankfurt / Germany.
 
-[https://doc2app.cloudintegration.eu/](https://doc2app.cloudintegration.eu/)
+[https://app.polydocs.io/](https://app.polydocs.io/)
 
 To access the system:
 
 1.  Contact your Polydocs GmbH representative or reach out to [support@polydocs.io](mailto: support@polydocs.io) to create a Organisation.
-2.  Go to the [App](https://doc2app.cloudintegration.eu/). We recommend bookmarking this URL for future reference.
+2.  Go to the [App](https://app.polydocs.io/). We recommend bookmarking this URL for future reference.
 3.  Log in with the credentials provided in your onboarding email.
 
-**Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot your password?** link.
+**Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot password?** link.
 
-### Step 2\. Adding Users
+### Step 2\: Adding Users
 
 After logging in, you'll need to add users to your tenant. When you add a user, they'll receive an onboarding email with a username and temporary password.
 

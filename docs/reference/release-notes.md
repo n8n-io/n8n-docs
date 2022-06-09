@@ -1,15 +1,18 @@
 # Release notes
 
+## n8n@0.181.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.1...n8n@0.181.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-09
+
+This is a bug fix release. It resolves an issue that was sometimes causing nodes to error when they didn't return data.
+
 ## n8n@0.181.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.0...n8n@0.181.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-06-09
 
-This is a bug fix release.
-
-### Bug fixes
-
-Fixes two issues with multi-input nodes.
+This is a bug fix release. It fixes two issues with multi-input nodes.
 
 ## n8n@0.181.0
 

@@ -250,7 +250,7 @@
 /nodes/n8n-nodes-base.mqttTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.mqttTrigger/
 /nodes/n8n-nodes-base.msg91/        /workflow/integrations/nodes/workflow-nodes-base.msg91/
 /nodes/n8n-nodes-base.mySql/        /workflow/integrations/nodes/workflow-nodes-base.mySql/
-/nodes/n8n-nodes-base.n8nTrainingCustomeMessenger/        /workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomeMessenger/
+/nodes/n8n-nodes-base.n8nTrainingCustomeMessenger/        /workflow/integrations/nodes/workflow-nodes-base.workflowtrainingtustomemessenger/
 /nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/        /workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomerDatastore/
 /nodes/n8n-nodes-base.n8nTrigger/        /workflow/integrations/core-nodes/workflow-nodes-base.workflowTrigger/
 /nodes/n8n-nodes-base.nasa/        /workflow/integrations/nodes/workflow-nodes-base.nasa/
@@ -338,7 +338,7 @@
 /nodes/workflow-nodes-base.stravaTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.stravaTrigger/
 /nodes/workflow-nodes-base.stripe/        /workflow/integrations/nodes/workflow-nodes-base.stripe/
 /nodes/workflow-nodes-base.stripeTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/
-/nodes/workflow-nodes-base.sugarcrm/        /workflow/integrations/workflow-nodes-base.sugarcrm/
+/nodes/workflow-nodes-base.sugarcrm/        /workflow/integrations/nodes/workflow-nodes-base.sugarcrm/
 /nodes/workflow-nodes-base.supabase/        /workflow/integrations/nodes/workflow-nodes-base.supabase/
 /nodes/n8n-nodes-base.surveyMonkeyTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.surveyMonkeyTrigger/
 /nodes/n8n-nodes-base.switch/        /workflow/integrations/core-nodes/workflow-nodes-base.switch/

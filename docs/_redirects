@@ -92,7 +92,7 @@
 /nodes/n8n-nodes-base.cockpit/        /workflow/integrations/nodes/workflow-nodes-base.cockpit/
 /nodes/n8n-nodes-base.coda/        /workflow/integrations/nodes/workflow-nodes-base.coda/
 /nodes/n8n-nodes-base.coinGecko/        /workflow/integrations/nodes/workflow-nodes-base.coinGecko/
-/nodes/n8n-nodes-base.compression/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.compression/
+/nodes/n8n-nodes-base.compression/        /workflow/integrations/core-nodes/workflow-nodes-base.compression/
 /nodes/n8n-nodes-base.contentful/        /workflow/integrations/nodes/workflow-nodes-base.contentful/
 /nodes/n8n-nodes-base.convertKit/        /workflow/integrations/nodes/workflow-nodes-base.convertKit/
 /nodes/n8n-nodes-base.convertKitTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.convertKitTrigger/
@@ -100,11 +100,11 @@
 /nodes/n8n-nodes-base.copperTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.copperTrigger/
 /nodes/n8n-nodes-base.cortex/        /workflow/integrations/nodes/workflow-nodes-base.cortex/
 /nodes/n8n-nodes-base.crateDb/        /workflow/integrations/nodes/workflow-nodes-base.crateDb/
-/nodes/n8n-nodes-base.cron/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.cron/
-/nodes/n8n-nodes-base.crypto/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.crypto/
+/nodes/n8n-nodes-base.cron/        /workflow/integrations/core-nodes/workflow-nodes-base.cron/
+/nodes/n8n-nodes-base.crypto/        /workflow/integrations/core-nodes/workflow-nodes-base.crypto/
 /nodes/n8n-nodes-base.customerIo/        /workflow/integrations/nodes/workflow-nodes-base.customerIo/
 /nodes/n8n-nodes-base.customerIoTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.customerIoTrigger/
-/nodes/n8n-nodes-base.dateTime/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.dateTime/
+/nodes/n8n-nodes-base.dateTime/        /workflow/integrations/core-nodes/workflow-nodes-base.dateTime/
 /nodes/n8n-nodes-base.deepL/        /workflow/integrations/nodes/workflow-nodes-base.deepL/
 /nodes/n8n-nodes-base.demio/        /workflow/integrations/nodes/workflow-nodes-base.demio/
 /nodes/n8n-nodes-base.dhl/        /workflow/integrations/nodes/workflow-nodes-base.dhl/
@@ -125,8 +125,8 @@
 /nodes/n8n-nodes-base.erpNext/        /workflow/integrations/nodes/workflow-nodes-base.erpNext/
 /nodes/n8n-nodes-base.errorTrigger/        /workflow/integrations/core-nodes/workflow-nodes-base.errorTrigger/
 /nodes/n8n-nodes-base.eventbriteTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.eventbriteTrigger/
-/nodes/n8n-nodes-base.executeCommand/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.executeCommand/
-/nodes/n8n-nodes-base.executeWorkflow/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.executeWorkflow/
+/nodes/n8n-nodes-base.executeCommand/        /workflow/integrations/core-nodes/workflow-nodes-base.executeCommand/
+/nodes/n8n-nodes-base.executeWorkflow/        /workflow/integrations/core-nodes/workflow-nodes-base.executeWorkflow/
 /nodes/n8n-nodes-base.facebookGraphApi/        /workflow/integrations/nodes/workflow-nodes-base.facebookGraphAPI/
 /nodes/n8n-nodes-base.facebookTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.facebookTrigger/
 /nodes/n8n-nodes-base.figmaTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.figmaTrigger/
@@ -138,9 +138,9 @@
 /nodes/n8n-nodes-base.freshdesk/        /workflow/integrations/nodes/workflow-nodes-base.freshdesk/
 /nodes/n8n-nodes-base.freshservice/        /workflow/integrations/nodes/workflow-nodes-base.freshservice/
 /nodes/n8n-nodes-base.freshworksCrm/        /workflow/integrations/nodes/workflow-nodes-base.freshworksCrm/
-/nodes/n8n-nodes-base.ftp/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.ftp/
-/nodes/n8n-nodes-base.function/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.function/
-/nodes/n8n-nodes-base.functionItem/        /workflow/integrations/nodes/core-nodes/workflow-nodes-base.functionItem/
+/nodes/n8n-nodes-base.ftp/        /workflow/integrations/core-nodes/workflow-nodes-base.ftp/
+/nodes/n8n-nodes-base.function/        /workflow/integrations/core-nodes/workflow-nodes-base.function/
+/nodes/n8n-nodes-base.functionItem/        /workflow/integrations/core-nodes/workflow-nodes-base.functionItem/
 /nodes/n8n-nodes-base.getResponse/        /workflow/integrations/nodes/workflow-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getResponseTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.getResponseTrigger/
 /nodes/n8n-nodes-base.ghost/        /workflow/integrations/nodes/workflow-nodes-base.ghost/

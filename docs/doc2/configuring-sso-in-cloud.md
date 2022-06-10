@@ -53,7 +53,7 @@ c. Now click on the “+” sign and add our DOC² as Service Provider. (View st
 
 **3\. Access the SSO SERVICE PROVIDER SETTINGS in DOC²**
 
-a) Log in on URL (https://doc2app.cloudintegration.eu/#/) with the login details you received from us.
+a) Log in on URL [https://app.polydocs.io/](https://app.polydocs.io/) with the login details you received from us.
 
 b) Go to SETTINGS (on top bar) and choose SSO Settings down at the bottom of the list.
 

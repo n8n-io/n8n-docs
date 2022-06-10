@@ -1,10 +1,10 @@
 ---
-title: Configuring Doc2App Status Trigger node
-description: Here we will check how to add and configure doc2app status trigger node
+title: Configuring DOC² App Status Trigger node
+description: Here we will check how to add and configure DOC² app status trigger node
 tags:
   - Workflow²
   - Example
-  - Doc2Export
+  - DOC²Export
   - Google Drive
 
 ---
@@ -36,7 +36,7 @@ Add the Doc2API key to the credentials and select **Pending Export** for the sta
 
 ![Doc2App Status Trigger Configured](/_images/example/gdrive/image14.png)
 
-Click the **Listen for Event** button to listen for exported doccuments
+Click the **Listen for Event** button to listen for exported documents
 
 Open **Doc2App**, upload a sample document, validate and export it.
 

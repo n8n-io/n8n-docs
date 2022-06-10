@@ -1,10 +1,10 @@
 ---
 title: Activate Workflow
-description: Doc2 to Google Drive document export example
+description: DOC² to Google Drive document export example
 tags:
   - Workflow²
   - Example
-  - Doc2Export
+  - DOC²Export
   - Google Drive
 
 ---

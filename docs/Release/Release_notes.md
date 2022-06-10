@@ -29,7 +29,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for e-mail notifications and e-mail verification
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors uploading documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Clarification FORCE OCR functionality when headers of tables are not being extracted (instead numbers got extracted)
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (admin/user, Reset Password)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (admin/user,Reset/Forgot Password)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for email notifications - registration, Add user, send confirmation email again
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api
@@ -43,6 +43,22 @@ tags:
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Zugferd Export - Pdf with xml attachment
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Length of password
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implemenation of HELP Links to documentation in DOC²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with google
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with Microsoft
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: issues with restarted documents got stuck on status restarted
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in training specific fields
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: confirm e-mail and password with Enter when logging in
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed button to activate/deactivate N8N from Settings Modules  to APPS
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed dropdown 'Origin' on Field validation page to 'Amount & Date Format'
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: TE - Missing Training Mode Button
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in classifying the correct document type
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Email notification when uploaded/imported documents are Ready For Validation can be enabled/disabled in Settings Email Notification
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: error on validation screen after adjusting field settings for Zugferd doctype invoice
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Page division of one pdf by barcode
+
+
+
+
 
 
 

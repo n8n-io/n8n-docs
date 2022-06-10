@@ -114,7 +114,7 @@
 /nodes/n8n-nodes-base.drift/		/workflow/integrations/nodes/n8n-nodes-base.drift/
 /nodes/n8n-nodes-base.dropbox/		/workflow/integrations/nodes/n8n-nodes-base.dropbox/
 /nodes/n8n-nodes-base.dropcontact/		/workflow/integrations/nodes/n8n-nodes-base.dropcontact/
-/nodes/n8n-nodes-base.editImage/		/workflow/integrations/nodes/core-nodes/n8n-nodes-base.editImage/
+/nodes/n8n-nodes-base.editImage/		/workflow/integrations/core-nodes/n8n-nodes-base.editImage/
 /nodes/n8n-nodes-base.egoi/		/workflow/integrations/nodes/n8n-nodes-base.egoi/
 /nodes/n8n-nodes-base.elasticsearch/		/workflow/integrations/nodes/n8n-nodes-base.elasticsearch/
 /nodes/n8n-nodes-base.elasticSecurity/		/workflow/integrations/nodes/n8n-nodes-base.elasticSecurity/
@@ -394,6 +394,7 @@
 /nodes/workflow-nodes-base.zulip/		/workflow/integrations/nodes/workflow-nodes-base.zulip/
 /nodes/nodes-library/		/workflow/integrations/
 /nodes/		/workflow/integrations/nodes/
+
 
 # Old redirects
 

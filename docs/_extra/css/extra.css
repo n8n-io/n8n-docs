@@ -6,20 +6,66 @@
 :root {
     --color-primary: hsl(170, 69%, 35%);
     --color-primary-shade-1: hsl(170, 69%, 30%);
-
-    --color-text-base: #58585F;
+    --color-text-base: #58585F; 
     --color-text-dark: #555555;
-
     --color-background-base: #f2f4f8;
-    --color-background-dark: #2e2e32;
+    --color-background-dark: #101330;
     --color-background-darker: hsl( 240, 4.2%, 14% );
-    --color-background-light: hsl( 220, 27.3%, 96%);
-
+    --color-background-light: #f2f4f8;
     --color-foreground-base: #dbdfe7;
 
     /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/?h=font#additional-fonts */
     --md-text-font: "Moderat-Regular-Web";
 
+
+}
+
+
+
+  /* light mode */
+
+[data-md-color-scheme="light"] {
+--md-default-fg-color--light: var(--color-text-dark);
+--md-typeset-color: var(--color-text-base);
+--md-typeset-a-color: var(--color-primary);
+--md-accent-fg-color: var(--color-primary-shade-1);
+--md-footer-bg-color: var(--color-background-base);
+--md-footer-fg-color: var(--color-text-base);
+--md-footer-bg-color--dark: var(--color-background-dark);
+--md-primary-bg-color: var(--color-text-dark);
+--md-primary-fg-color: var(--color-background-dark);
+}
+
+[data-md-color-scheme="light"] .md-tabs__link--active {
+    font-weight: 600;
+}
+
+[data-md-color-scheme="light"] .md-header[data-md-state=shadow] {
+    box-shadow: none;
+}
+
+[data-md-color-scheme="light"] .md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    font-weight: 600;
+}
+
+[data-md-color-scheme="light"] .md-header{
+    box-shadow: none;
+    background-color: var(--color-background-dark);
+    color: white;
+}
+[data-md-color-scheme="light"] .md-tabs{
+    background-color: var(--color-background-dark);
+    color: white; 
+}
+
+[data-md-color-scheme="light"] .md-search__input {
+    border: 1px solid var(--color-foreground-base);
+    background-color: white;
+} 
+
+[data-md-color-scheme="light"] .md-search__input::placeholder {
+    color: var(--color-text-dark);
+    opacity: 1;
 }
 
 .md-typeset {
@@ -34,7 +80,15 @@
     font-size: 0.8rem;
 }
 
+/* Ensure manage settings button is visible */
+.md-typeset .md-consent__controls .md-button {
+    background-color: var(--md-primary-fg-color);
+    border-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
 
+
+/* new features box on release notes */ 
 
 .n8n-new-features {
     background-color: var(--color-background-light);
@@ -58,53 +112,18 @@
     opacity: 1;
 }
 
-/* light mode */
-[data-md-color-scheme="light"] .md-tabs__link--active {
-    font-weight: 600;
+/* better table behaviour */
+
+.md-typeset table:not([class]) td:first-of-type {
+    white-space: pre;
 }
 
-[data-md-color-scheme="light"] .md-header[data-md-state=shadow] {
-    box-shadow: none;
-}
-
-[data-md-color-scheme="light"] .md-typeset h1, .md-typeset h2, .md-typeset h3 {
-    font-weight: 600;
-}
-
-[data-md-color-scheme="light"] .md-header{
-    box-shadow: none;
-    background-color: var(--color-background-light);
-}
-[data-md-color-scheme="light"] .md-tabs{
-    background-color: var(--color-background-light);
-
-}
-
-[data-md-color-scheme="light"] .md-search__input {
-    border: 1px solid var(--color-foreground-base);
-    background-color: white;
-} 
-
-[data-md-color-scheme="light"] .md-search__input::placeholder {
-    color: var(--color-text-dark);
-    opacity: 1;
-}
 /* border on TOC */
 /* [data-md-color-scheme="light"] .md-nav--secondary {
     border-left: 1px solid var(--color-primary);
 } */
 
-[data-md-color-scheme="light"] {
-    --md-default-fg-color--light: var(--color-text-dark);
-    --md-typeset-color: var(--color-text-base);
-    --md-typeset-a-color: var(--color-primary);
-    --md-accent-fg-color: var(--color-primary-shade-1);
-    --md-footer-bg-color: var(--color-background-base);
-    --md-footer-fg-color: var(--color-text-base);
-    --md-footer-bg-color--dark: var(--color-background-dark);
-    --md-primary-bg-color: var(--color-text-dark);
-    --md-primary-fg-color: var(--color-background-light);
-  }
+
 
 /* dark mode */  
 /* [data-md-color-scheme="dark"] .md-header{
@@ -150,17 +169,10 @@
 } */
 
 
-.md-typeset table:not([class]) td:first-of-type {
-    white-space: pre;
-}
 
 
 
 
-/* Ensure manage settings button is visible */
-.md-typeset .md-consent__controls .md-button {
-    background-color: var(--md-primary-fg-color);
-    border-color: var(--md-primary-fg-color);
-    color: var(--md-primary-bg-color);
-}
+
+
 

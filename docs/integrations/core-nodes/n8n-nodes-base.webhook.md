@@ -10,7 +10,7 @@ Webhook nodes can be used as triggers for workflows when you want to receive dat
 
 While building or testing a workflow, we recommend that you use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the Editor UI, which is useful for debugging.
 
-Make sure that you click on the *Execute Node* button to register the webhook before sending the data to the test webhook. **The test webhook stays active for 120 seconds.** This means that you need to send the data to the Webhook node within this time window, otherwise you need to execute the node again.
+Make sure that you select the *Execute Node* button to register the webhook before sending the data to the test webhook. **The test webhook stays active for 120 seconds.** This means that you need to send the data to the Webhook node within this time window, otherwise you need to execute the node again.
 
 
 🎥 The following playlist will help you learn how to use the Webhook node in n8n.
@@ -95,7 +95,7 @@ This node will trigger the workflow. We will make a GET request to the Test URL 
 2. From ***Respond***, select 'When last node finishes'.
 3. From ***Response Data***, select 'All Entries'.
 4. Save the workflow to register the webhook.
-5. Click on ***Execute Node*** to run the node.
+5. Select ***Execute Node*** to run the node.
 6. In a new browser tab, paste the Test URL you copied in the previous step and append `?city=Berlin` to it. This query will request data for a specific value (`Berlin`) from a query parameter (`city`). The URL should look like this:`https://your-n8n.url/webhook/path?city=Berlin`.
 7. Press Enter (or Return) to make a request to the Test Webhook URL.
 
@@ -107,23 +107,23 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will return data about the current weather for the city that we received in the previous node.
 
-1. In the ***Credential for OpenWeatherMap API***, click on ***Create New*** and add your credentials (Access Token). Learn how to do that in the [node credentials docs](/integrations/credentials/openWeatherMap/){:target="_blank" .external}.
-2. In the ***City*** parameter, click on the gear icon next to the field and select ***Add Expression***.
+1. In the ***Credential for OpenWeatherMap API***, select ***Create New*** and add your credentials (Access Token). Learn how to do that in the [node credentials docs](/integrations/credentials/openWeatherMap/){:target="_blank" .external}.
+2. In the ***City*** parameter, select the gear icon next to the field and select ***Add Expression***.
 3. In the *Expression* box, write the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.<br>
    You can also select this expression from the ***Variable Selector:*** Nodes > Webhook > Output Data > JSON > query > city.
-4. Click on ***Execute Node*** to run the node. The node will return data about the current weather in Berlin.
+4. Select ***Execute Node*** to run the node. The node will return data about the current weather in Berlin.
 
 ![Using the OpenWeatherMap node to get weather updates for Berlin](/_images/integrations/core-nodes/webhook/openweathermap_node.png)
 
 ### 3. Set node
 
-1. Click on ***Add Value*** and select 'String' from the dropdown list.
+1. Select ***Add Value*** and select 'String' from the dropdown list.
 2. In the ***Name*** field enter `weather`.
-3. In the ***Value*** field, click on ***Add Expression***.
+3. In the ***Value*** field, select ***Add Expression***.
 4. In the *Expression* box, write the following expression: The weather in `{{$node["OpenWeatherMap"].json["name"]}}`: `{{$node["OpenWeatherMap"].json["main"]["temp"]}}` °C with `{{$node["OpenWeatherMap"].json["weather"][0]["description"]}}`.
    You can also select the three expressions from the ***Variable Selector***.
-5.  Toggle ***Keep Only Set*** to `true`. This option ensures that only the data set in this node get passed on to the next nodes in the workflow.
-6.  Click on ***Execute Node*** to run the node.
+5. Toggle ***Keep Only Set*** to `true`. This option ensures that only the data set in this node get passed on to the next nodes in the workflow.
+6. Select ***Execute Node*** to run the node.
 
 ![Using the Set node to set the values for temp and description](/_images/integrations/core-nodes/webhook/set_node.png)
 
@@ -132,7 +132,7 @@ Save the workflow and execute it again by clicking on the ***Execute Workflow***
 ![Webhook node response in browser](/_images/integrations/core-nodes/webhook/response_browser.png)
 
 !!! note "Activate workflow for production"
-    This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
+    This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then select the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 
 
 
@@ -142,7 +142,7 @@ Save the workflow and execute it again by clicking on the ***Execute Workflow***
 
 In the node parameters section, in the Webhook URLs toggle, you will find the Test URL and the Production URL.
 
-By default, the node displays the Test URL. If you want the Production URL, click on the ***Test*** tab. Click on the displayed URL to copy it.
+By default, the node displays the Test URL. If you want the Production URL, select the ***Test*** tab. Select the displayed URL to copy it.
 
 Here is a GIF demonstrating how to retrieve the test and production webhook URLs in n8n.
 
@@ -227,10 +227,10 @@ To send a response of type string, follow the steps below.
 
 1. Select 'When last node finishes' from the ***Respond*** dropdown list.
 2. Select 'First Entry JSON' from the ***Response Data*** dropdown list.
-3. Click on 'Add Option' and select 'Property Name' from the dropdown list.
+3. Select 'Add Option' and select 'Property Name' from the dropdown list.
 4. Enter the name of the property that contains the response.
 5. Connect a Set node to the Webhook node.
-6. In the Set node, click on 'Add Value' and select 'String'.
+6. In the Set node, select 'Add Value' and select 'String'.
 7. Enter the name of the property in the ***Name*** field. The name should match the property name from step 4.
 8. Enter the string value in the ***Value*** field.
 9. Toggle ***Keep Only Set*** to `true`.

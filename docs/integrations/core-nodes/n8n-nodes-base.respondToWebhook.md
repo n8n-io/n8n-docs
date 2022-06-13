@@ -34,9 +34,9 @@ The node has the following options:
 Workflows that include this node behave as follows:
 
 - If a workflow has two Respond to Webhook nodes, and the second node is executed after the first one, the second node is ignored.
-- When the workflow finishes without executing the Respond to Webhook node, a standard message is returned with a 200 status.
-- If the workflow errors before the first Respond to Webhook node gets executed, an error message is returned with a 500 status.
-- If there is no webhook set up, the Respond to Webhook node node is ignored in the execution.
+- When the workflow finishes without executing the Respond to Webhook node, it returns a standard message with a 200 status.
+- If the workflow errors before the first Respond to Webhook node gets executed, it returns an error message with a 500 status.
+- If there is no webhook set up, the workflow execution ignores the Respond to Webhook node.
 
 ## Example usage
 
@@ -44,11 +44,11 @@ Workflows that include this node behave as follows:
 
 ### 1. Webhook node
 
-This node triggers the workflow when it receives incoming requests (for example, when the webhook URL is opened in a browser).
+This node triggers the workflow when it receives incoming requests (for example, when you open the webhook URL in a browser).
 
 1. In the **Path** field, enter a human-readable value (for example, `my-form`).
 2. From the **Respond** dropdown list, select **Using 'Respond to Webhook' node**.
-3. Click on **Execute Node** to run the node.
+3. Select **Execute Node** to run the node.
 4. In a new browser tab, open the URL shown in the **Test URL** field under **Webhook URLs**.
 
 ### 2. Respond to Webhook node
@@ -60,5 +60,5 @@ This node defines the response to the request received in the previous step.
 3. Select **Add Option** > **Response Headers** > **Add Response Header** to add a header to the response with the following values:
    - **Name:** `Content-Type`
    - **Value:** `text/html; charset=UTF-8`
-4. Close the **Respond to Webhook** modal and click on **Execute Workflow**.
+4. Close the **Respond to Webhook** modal and select **Execute Workflow**.
 5. Open the **Test URL** from the Webhook node in a new browser tab. The browser should now show the page defined in the **Response Body** field of the Respond to Webhook node.

@@ -203,4 +203,11 @@ nav:
     - Pagination: api/pagination.md
     - Using the API playground: api/using-api-playground.md
     - API reference: api/api-reference.md
+  - Embed:
+    - n8n Embed: embed/index.md
+    - Prerequisites: embed/prerequisites.md
+    - Deployment: embed/deployment.md
+    - Configuration: embed/configuration.md
+    - Workflow management: embed/managing-workflows.md
+    - Workflows templates: embed/workflow-templates.md
   - Contributing: contributing.md

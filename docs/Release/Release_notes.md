@@ -62,7 +62,10 @@ tags:
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Implementation of Workflow Nodes for DOC² (assign employee, extract invoice, status trigger)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**:  TE² - select new locale for table_train_v3
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Button to enable or disable export configuration
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Confirmation Box for all delete buttonss
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Confirmation Box for all delete buttons
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Updated structure to handle multiple OCRs
+
+
 
 
 

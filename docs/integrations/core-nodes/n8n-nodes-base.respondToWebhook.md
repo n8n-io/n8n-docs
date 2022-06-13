@@ -40,7 +40,7 @@ Workflows that include this node behave as follows:
 
 ## Example usage
 
-[This workflow](https://n8n.io/workflows/1306){:target="_blank"} serves an HTML page when a GET request is made.
+[This workflow](https://n8n.io/workflows/1306){:target="_blank"} serves an HTML page in response to a GET request.
 
 ### 1. Webhook node
 

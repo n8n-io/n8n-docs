@@ -25,6 +25,6 @@ To make your node available to the n8n community node repository, you must:
 If you have submitted a pull request to n8n with a new node, you may need to release it as a community node instead.
 
 1. Clone the [starter repository](https://github.com/n8n-io/n8n-nodes-starter).
-2. Replace the example node and credentials with your own
+2. Replace the example nodes and credentials with your own
 3. Update the `package.json` file to reflect your changes.
 4. Publish the package to npm.

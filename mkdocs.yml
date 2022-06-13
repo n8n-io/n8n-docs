@@ -3,8 +3,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: _images/favicon.ico
-  font:
-    text: Open Sans
+  font: false
   language: en
   logo: _images/n8n-docs-icon.svg
   palette:

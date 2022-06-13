@@ -1,8 +1,19 @@
 @font-face {
     font-family: "Moderat-Regular-Web";
     src: url("./Moderat-Regular-Web/Moderat-Regular.woff");
-
 }
+@font-face {
+    font-family: "Moderat-Regular-Web";
+    src: url("./Moderat-Bold-Web/Moderat-Bold.woff");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Moderat-Regular-Web";
+    src: url("./Moderat-Regular-Italic-Web/Moderat-Regular-Italic.woff");
+    font-style: italic;
+}
+
+
 :root {
     --color-primary: hsl(170, 69%, 35%);
     --color-primary-shade-1: hsl(170, 69%, 30%);
@@ -84,7 +95,7 @@
 .md-typeset .md-consent__controls .md-button {
     background-color: var(--md-primary-fg-color);
     border-color: var(--md-primary-fg-color);
-    color: var(--md-primary-bg-color);
+    color: var(--color-background-light);
 }
 
 

@@ -60,5 +60,5 @@ This node defines the response to the request received in the previous step.
 3. Select **Add Option** > **Response Headers** > **Add Response Header** to add a header to the response with the following values:
    - **Name:** `Content-Type`
    - **Value:** `text/html; charset=UTF-8`
-4. Close the *Respond to Webhook* modal and click on **Execute Workflow**.
+4. Close the **Respond to Webhook** modal and click on **Execute Workflow**.
 5. Open the **Test URL** from the *Webhook* node in a new browser tab. The browser should now show the page defined in the **Response Body** field of the Respond to Webhook node.

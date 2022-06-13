@@ -18,4 +18,4 @@ The Enter Key will work for Exporting the document if there is no exception in t
 
 **Arrow-Down-Key**:
 
-The Arrow-Down-key will be Accepting the data in the fields which has validation required or any other exception.
+The Arrow-Down-key will be accepting the data in the fields which has validation required or any other exception.

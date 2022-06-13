@@ -61,4 +61,4 @@ This node defines the response to the request received in the previous step.
    - **Name:** `Content-Type`
    - **Value:** `text/html; charset=UTF-8`
 4. Close the **Respond to Webhook** modal and click on **Execute Workflow**.
-5. Open the **Test URL** from the *Webhook* node in a new browser tab. The browser should now show the page defined in the **Response Body** field of the Respond to Webhook node.
+5. Open the **Test URL** from the Webhook node in a new browser tab. The browser should now show the page defined in the **Response Body** field of the Respond to Webhook node.

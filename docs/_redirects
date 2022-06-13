@@ -376,7 +376,7 @@
 /nodes/workflow-nodes-base.wise/        /workflow/integrations/nodes/workflow-nodes-base.wise/
 /nodes/workflow-nodes-base.wiseTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.wiseTrigger/
 /nodes/workflow-nodes-base.wooCommerce/        /workflow/integrations/nodes/workflow-nodes-base.wooCommerce/
-/nodes/workflow-nodes-base.wooCommerceTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.wooCommerceTrigger/
+/nodes/n8n-nodes-base.wooCommerceTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.wooCommerceTrigger/
 /nodes/workflow-nodes-base.wordpress/        /workflow/integrations/nodes/workflow-nodes-base.wordpress/
 /nodes/n8n-nodes-base.workableTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.workableTrigger/
 /nodes/n8n-nodes-base.workflowTrigger/        /workflow/integrations/core-nodes/workflow-nodes-base.workflowTrigger/

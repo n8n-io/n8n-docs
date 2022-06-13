@@ -55,6 +55,21 @@ tags:
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Email notification when uploaded/imported documents are Ready For Validation can be enabled/disabled in Settings Email Notification
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: error on validation screen after adjusting field settings for Zugferd doctype invoice
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Page division of one pdf by barcode
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: redirecting document restarted on third page to first page of all uploaded documents
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: redirect to dashboard instead of success page after export
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: General Settings for documents
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: fields show up empty even though data is recognized
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Implementation of Workflow Nodes for DOC² (assign employee, extract invoice, status trigger)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**:  TE² - select new locale for table_train_v3
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Button to enable or disable export configuration
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Confirmation Box for all delete buttonss
+
+
+
+
+
+
+
 
 
 

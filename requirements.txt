@@ -1,1 +1,4 @@
+essentials-openapi==1.0.2
 mkdocs-literate-nav==0.4.1
+mkdocs-render-swagger-plugin==0.0.3
+neoteroi-mkdocs==0.0.5

@@ -18,7 +18,7 @@ The node has a **Respond With** parameter that supports the following modes:
 
 - **First Incoming Item** - Respond with the first incoming item's JSON.
 - **Text** - Respond with the text defined in the **Response Body** field.
-- **JSON** — Respond with a JSON object defined in the **Response Body** field.
+- **JSON** - Respond with a JSON object defined in the **Response Body** field.
 - **Binary** — Respond with a binary file defined in the **Response Data Source** field.
 - **No Data** — Don't send a response payload.
 

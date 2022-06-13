@@ -26,7 +26,7 @@ The node has a **Respond With** parameter that supports the following modes:
 
 The node has the following options:
 
-- **Response Code** — Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target="_blank" .external} to be used.
+- **Response Code** - Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target="_blank" .external} to be used.
 - **Response Headers** — Define the response headers to be sent.
 
 ## Workflow behavior

@@ -29,7 +29,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for e-mail notifications and e-mail verification
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors uploading documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Clarification FORCE OCR functionality when headers of tables are not being extracted (instead numbers got extracted)
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (admin/user,Reset/Forgot Password)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (verify Email, admin/user,Reset/Forgot Password)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for email notifications - registration, Add user, send confirmation email again
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api

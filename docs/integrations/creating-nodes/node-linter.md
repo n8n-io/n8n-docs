@@ -3,6 +3,7 @@
 [Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files to ensure n8n recommended best practices are followed when developing new nodes.
 
 This includes rules for:
+
 * Alphabetization of node parameters and options
 * Casing for display names and descriptions
 * Default values per parameter type

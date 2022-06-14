@@ -3,15 +3,15 @@
 !!! note "Programmatic style only"
 	The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
 
-While creating nodes it is very commonn to call external APIs or make HTTP requests to other services.
+It's common to call external APIs or make HTTP requests to other services from a node.
 
 This plays a major role during node development, maintenance, and improvements.
 
-We provide a very flexible helper for making HTTP requests that abstracts away most of the complexity with a simple to use interface.
+n8n provides a flexible helper for making HTTP requests that abstracts away most of the complexity.
 
 ## How to use
 
-In the node code, inside the `execute` function you can easily call:
+Call the helper inside the `execute` function:
 
 ```typescript
 const response = await this.helpers.httpRequest(options);
@@ -49,16 +49,16 @@ Where `options` is an object in this format:
 }	
 ```
 
-Where `url` is the only mandatory field. The default method is `GET`.
+`url` is required. The other fields are optional. The default method is `GET`.
 
 Some notes about the possible fields:
 
-- **body**: You can use a regular Javascript Object for JSON payload, a Buffer for file uploads, an instance of FormData for `multipart/form-data` and `URLSearchParams` for `application/x-www-form-urlencoded`.
-- **headers**: A simple key-value pair.  
-	* If `body` is an instance of `FormData` then `content-type: multipart/form-data` is injected automatically.  
-	* If `body` is an instance of `URLSearchParams`, then `content-type: application/x-www-form-urlencoded` is added.  
-	* To override this behavior, you can set any `content-type` header you wish and it won't be overridden.
-- **arrayFormat**: If your query string contains an array of data, let's say `const qs = {IDs: [15,17]}`, the values set to `arrayFormat` define how it will be sent.  
+- `body`: you can use a regular JavaScript object for JSON payload, a buffer for file uploads, an instance of FormData for `multipart/form-data`, and `URLSearchParams` for `application/x-www-form-urlencoded`.
+- `headers`: a key-value pair.  
+	* If `body` is an instance of `FormData` then n8n adds `content-type: multipart/form-data` automatically.  
+	* If `body` is an instance of `URLSearchParams`, then n8n adds `content-type: application/x-www-form-urlencoded`.  
+	* To override this behavior, set a `content-type` header.
+- `arrayFormat`: if your query string contains an array of data, such as `const qs = {IDs: [15,17]}`, the value of `arrayFormat` defines how n8n sends it.  
 	* `indices` (default): `{ a: ['b', 'c'] }` will be formatted as `a[0]=b&a[1]=c`  
 	* `brackets`: `{ a: ['b', 'c'] }` will be formatted as `a[]=b&a[]=c`  
 	* `repeat`: `{ a: ['b', 'c'] }` will be formatted as `a=b&a=c`  

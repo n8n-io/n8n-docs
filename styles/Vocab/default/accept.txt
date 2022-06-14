@@ -5,8 +5,10 @@ Enum
 enum
 GIMP
 invalid
+Lemlist
 n8n
 namespace
 npm
 onboarding
+Trello
 URL

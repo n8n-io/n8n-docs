@@ -167,6 +167,9 @@ nav:
 
   - Workflow²:
     - Overview: workflow/index.md
+    - What's new:
+      - New Order Workflow: workflow/workflow_mautic1.md
+      - New Customer Workflow: workflow/workflow_mautic2.md
     - Try it out: workflow/quickstart.md
     - Editor UI: workflow/editor-ui.md
     - Understand workflows:

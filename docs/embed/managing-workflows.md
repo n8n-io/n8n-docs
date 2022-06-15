@@ -1,13 +1,13 @@
-# Workflow management
+# Workflow management in Embed
 
 When managing an embedded n8n deployment, spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
 
 | Solution | Pros | Cons |
 | -------- | ---- | ---- |
-| Create a workflow for each user | No limitation on how workflow is started (can use any trigger) | Requires managing multiple workflows. |
-| Create a single workflow, and pass it user credentials when executing | Simplified workflow management (i.e. only need to change one workflow). | To run the workflow, your product must call it |
+| Create a workflow for each user | No limitation on how workflow starts (can use any trigger) | Requires managing multiple workflows. |
+| Create a single workflow, and pass it user credentials when executing | Simplified workflow management (only need to change one workflow). | To run the workflow, your product must call it |
 
-Below we cover the steps for both approaches.
+
 
 !!! warning
     The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
@@ -30,7 +30,7 @@ Here you need to capture all credentials for any node/service this user must aut
 After all relevant credential details have been obtained, you can proceed to create the relevant service credentials in n8n. This can be done via the Editor UI or API call.
 
 
-#### Via Editor UI
+#### Using the Editor UI
 
 1. From the menu select **Credentials** > **New**.
 1. Use the drop-down to select the **Credential type** to create, for example *Airtable*.
@@ -39,7 +39,7 @@ After all relevant credential details have been obtained, you can proceed to cre
     ![Create New Credentials modal](/_images/embed/managing-workflows/create_new_credentials2.png)
 1. Click **Create** to finish and save.
 
-#### Via API
+#### Using the API
 
 The frontend API used by the Editor UI can also be called to achieve the same result. The API endpoint is in the format: `https://<n8n-domain>/rest/credentials`.
 
@@ -92,7 +92,7 @@ Best practice is to have a “base” workflow that you then duplicate and custo
 
 You can duplicate and customize your template workflow using either the Editor UI or API call.
 
-#### Via Editor UI
+#### Using the Editor UI
 
 1. From the menu select **Workflows** > **Open** to open the template workflow to be duplicated.
 
@@ -103,7 +103,7 @@ You can duplicate and customize your template workflow using either the Editor U
 
 1. **Save** this workflow set it to **Active** using the toggle in the top-right corner.
 
-#### Via API
+#### Using the API
 
 1. Fetch the JSON of the template workflow using the endpoint: `https://<n8n-domain>/rest/workflows/<workflow_id>`
 ``` 

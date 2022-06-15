@@ -2,7 +2,7 @@
 
 ## Authentication
 
-n8n can be secured via Basic Authentication by setting the following environment variables:
+You can secure n8n using Basic Authentication by setting the following environment variables:
 
 ```sh
 export N8N_BASIC_AUTH_ACTIVE=true
@@ -12,23 +12,23 @@ export N8N_BASIC_AUTH_PASSWORD=<PASSWORD>
 
 ### Credential overwrites
 
-To offer easy OAuth login to users, it is possible to overwrite credentials on a global basis. This credential data will not be visible to users but is used automatically by the backend.
+To offer OAuth login to users, it's possible to overwrite credentials on a global basis. This credential data isn't visible to users but the backend uses it automatically.
 
-In the Editor UI, all overwritten fields are hidden by default. So users are able to authenticate via OAuth by pressing the “connect” button on the credentials.
+In the Editor UI, n8n hides all overwritten fields by default. This means that users are able to authenticate using  OAuth by pressing the "connect" button on the credentials.
 
-Credential overwrites can be applied in two different ways: via Environment Variable and via REST API.
+n8n offers two ways to apply credential overwrites: using Environment Variable and using the REST API.
 
 #### Using environment variables
 
-Credential overwrites can be set via environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
+Credential overwrites can be set using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
 !!! warning
-    Even though this is possible, it is not recommended. Environment variables can be easily read in n8n, so the data would leak to users.
+    Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
 
 
 #### Using REST APIs
 
-The recommended way is to load the data via a custom REST endpoint. This endpoint can be made available by setting the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
+The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
 
 !!! note
     The endpoints can be called just one at a time for security reasons.
@@ -57,7 +57,7 @@ For example:
     }
     ```
 
-3. Then apply it to the instance by sending it via curl:
+3. Then apply it to the instance by sending it using curl:
 
     ```sh
     curl -H "Content-Type: application/json" --data @oauth-credentials.json http://localhost:5678/send-credentials
@@ -85,7 +85,7 @@ There are many [environment variables configurable in n8n](https://docs.n8n.io/r
 
 ## Backend hooks
 
-It is possible to define external hooks that are executed by n8n whenever a specific operation is performed. They can be used, for example, to log data, change data, or forbid an action by throwing an error.
+It's possible to define external hooks that n8n executes whenever a specific operation runs. You can use these to, for example, to log data, change data, or forbid an action by throwing an error.
 
 ### Available hooks
 
@@ -111,7 +111,7 @@ It is possible to define external hooks that are executed by n8n whenever a spec
 ### Registering hooks
 
 Hooks are set by registering a hook file that contains the hook functions. 
-Hook registration is done via the environment variable `EXTERNAL_HOOK_FILES`. 
+Hook registration is done using the environment variable `EXTERNAL_HOOK_FILES`. 
 
 The variable can be set to a single file: 
 
@@ -154,12 +154,12 @@ module.exports = {
 ### Hook functions
 
 A hook or a hook file can contain multiple hook functions, with all functions executed one after another.
-If the parameters of the hook function are objects, it is possible to change the data of that parameter to change the behavior of n8n.
-Additionally, the database can also be accessed in any hook function via `this.dbCollections` (see above).
+If the parameters of the hook function are objects, it's possible to change the data of that parameter to change the behavior of n8n.
+Additionally, the database can also be accessed in any hook function using `this.dbCollections` (see above).
 
 ## Frontend external hooks
 
-Like backend external hooks, it is possible to define external hooks in the frontend code that get executed by n8n whenever a specific operation is performed. They can be used, for example, to log data and change data.
+Like backend external hooks, it's possible to define external hooks in the frontend code that get executed by n8n whenever a specific operation is performed. They can be used, for example, to log data and change data.
 
 ### Available hooks
 
@@ -238,5 +238,5 @@ window.n8nExternalHooks = {
 
 Multiple hook functions can be defined per hook. Each hook function is invoked with the following arguments arguments:
 
-* `store`: The vuex store object. Can be used to modify/get data from the store.
-* `metadata`: Object that contains any data provided by the hook. To see exactly what is passed, search for the hook in the `editor-ui` package.
+* `store`: The Vuex store object. Can be used to change or get data from the store.
+* `metadata`: Object that contains any data provided by the hook. To see exactly what's passed, search for the hook in the `editor-ui` package.

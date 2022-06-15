@@ -11,13 +11,15 @@ tags:
 
 #### This section is mainly intended for those who process invoices of countries where rounding is a matter, since some documents contain rounding errors after the decimal point in certain amounts, since these were originally three digits but are shown on the invoice with only two decimal places.
 
-![](/_images/doc2/Settings_Amount_1.png)
-
 * * *
 
 Here is an example to illustrate:
 
 ![](/_images/doc2/Settings_Amount_2.png)
+
+* * *
+
+![](/_images/doc2/Settings_Amount_1.png)
 
 
 

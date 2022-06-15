@@ -270,7 +270,7 @@ nav:
     - Replace Keys: example/replace.md
     - Weather: example/weather.md
     - Approval with Doc²: example/approval.md
-		- New Order Workflow: example/workflow_mautic1.md
+    - New Order Workflow: example/workflow_mautic1.md
     - New Customer Workflow: example/workflow_mautic2.md
     - Doc² to Google Drive:
       - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md

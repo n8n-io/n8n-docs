@@ -9,15 +9,15 @@ tags:
   - DOC²
 ---
 
-### If you want to import documents from your email inbox, here are the steps you need to take:
+### If you want to import documents from a specific email folder, here are the steps you need to take:
 
 Go to settings on top bar an choose Import in the selection
 
-![](/_images/doc2/DOC²_Settings_Import-1024x556.png)
+![](/_images/doc2/AllImportOptions_Email_1.png)
 
 As you can see there is no email account for the import set up yet
 
-![](/_images/doc2/DOC²_Import-Settings-1-1024x555.png)
+![](/_images/doc2/AllImportOptions_Email_2.png)
 
 Click on the Deactivated Button to open the Email import settings
 
@@ -27,16 +27,16 @@ What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or
 
 This example is for a google email account:
 
-![](/_images/doc2/DOC²_EmailImportSettings-1024x556.png)
+![](/_images/doc2/AllImportOptions_Email_3.png)
 
 After you have entered all required fields of your respective provider save the data
 
-![](/_images/doc2/DOC²_EmailImportSettings_save-1024x591.png)
+![](/_images/doc2/AllImportOptions_Email_4.png)
 
 You can test the login by pressing the button of the same name. If all data are correct you will get a corresponding feedback.
 
-![](/_images/doc2/DOC²_EmailImportSettings_testlogin-1024x589.png)
+![](/_images/doc2/AllImportOptions_Email_5.png)
 
 After you click the Import button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
 
-![](/_images/doc2/DOC²_Dashboard_Documents-from-mailbox-1024x554.png)
+![](/_images/doc2/AllImportOptions_Email_6.png)

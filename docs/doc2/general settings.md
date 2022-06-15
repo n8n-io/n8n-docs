@@ -11,3 +11,5 @@ tags:
 ---
 
 Here is a brief overview of the individual settings that can be made under general settings as well as important information that you can get here. 
+
+![](/_images/doc2/General Settings_1.png)

@@ -3,7 +3,6 @@ title: "General Settings"
 date: "2022-06-15"
 description: In this section you will find general settings for processing documents and the most important information about the duration of your subscription.
 tags:
-  - Settings
   - DOC²
   - Document Split Settings
   - Amount Settings

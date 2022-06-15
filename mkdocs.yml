@@ -167,9 +167,6 @@ nav:
 
   - Workflow²:
     - Overview: workflow/index.md
-    - What's new:
-      - New Order Workflow: workflow/workflow_mautic1.md
-      - New Customer Workflow: workflow/workflow_mautic2.md
     - Try it out: workflow/quickstart.md
     - Editor UI: workflow/editor-ui.md
     - Understand workflows:
@@ -273,6 +270,8 @@ nav:
     - Replace Keys: example/replace.md
     - Weather: example/weather.md
     - Approval with Doc²: example/approval.md
+		- New Order Workflow: example/workflow_mautic1.md
+    - New Customer Workflow: example/workflow_mautic2.md
     - Doc2 to GDrive:
       - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md
       - Configure Doc2StatusTrigger Node: example/export-to-gdrive/configure-doc2-status-trigger.md

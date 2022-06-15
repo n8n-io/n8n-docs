@@ -4,7 +4,7 @@ description: A nice example of how to use the combined power of Workflow² and M
 tags:
   - Workflow²
   - MAUTIC
-  - Demonstration
+  - How-To
 ---
 
 # MAUTIC Workflow Documentation (new order)

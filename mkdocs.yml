@@ -123,6 +123,7 @@ nav:
     - DOC² with Infor: doc2/infor.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
+      - General Settings: doc2/general settings
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md

@@ -272,7 +272,7 @@ nav:
     - Approval with Doc²: example/approval.md
 		- New Order Workflow: example/workflow_mautic1.md
     - New Customer Workflow: example/workflow_mautic2.md
-    - Doc2 to GDrive:
+    - Doc² to Google Drive:
       - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md
       - Configure Doc2StatusTrigger Node: example/export-to-gdrive/configure-doc2-status-trigger.md
       - Configure Google Drive Node: example/export-to-gdrive/configure-gdrive-node.md

@@ -15,9 +15,11 @@ tags:
 
 * * *
 
+Here is an example to illustrate:
+
 ![](/_images/doc2/DOC²_amounts-swiss-invoice.png)
 
-Here is an example to illustrate:
+
 
 ![](/_images/doc2/DOC²-_Amount-Settings_on.png)
 

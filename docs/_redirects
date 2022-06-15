@@ -33,7 +33,7 @@
 
 /nodes/creating-nodes/*        /workflow/integrations/creating-nodes/code/:splat
 
-/nodes/expressions/*        /code-examples/expressions/:splat
+/nodes/expressions/*        /workflow/code-examples/expressions/:splat
 
 /nodes/node-basics/        /workflow/integrations/
 /nodes/creating-nodes/        /workflow/integrations/creating-nodes/

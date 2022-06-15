@@ -35,7 +35,7 @@ After you have entered all required fields of your respective provider save the 
 
 You can test the login by pressing the button of the same name. If all data are correct you will get a corresponding feedback.
 
-![](/_images/doc2/DOC²_EmailImportSettings_testlogin-1024x589.png)
+![](docs/_images/doc2/AllImportOptions_Email_5.png)
 
 After you click the Import button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
 

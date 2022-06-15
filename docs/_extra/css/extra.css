@@ -111,6 +111,10 @@
     margin-top: 0;
 }
 
+.n8n-new-features + .n8n-new-features {
+    margin-top: 1em;
+}
+
 /* preserve the logo and site title on page scroll */
 
 .md-header__topic:first-child {

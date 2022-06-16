@@ -58,8 +58,6 @@ String field with more than one row:
 
 ![Multiple rows](/_images/integrations/creating-nodes/multiple-rows.png)
 
-
-
 ## Number
 
 Basic configuration:
@@ -99,8 +97,6 @@ Number field with decimal points:
 ```
 
 ![Decimal](/_images/integrations/creating-nodes/decimal.png)
-
-
 
 ## Collection
 
@@ -189,8 +185,6 @@ The `color` type provides a color selector.
 ```
 
 ![Color](/_images/integrations/creating-nodes/color.png)
-
-
 
 ## Options
 
@@ -285,9 +279,6 @@ Use the `fixedCollection` type to group fields that are semantically related.
 ```
 
 ![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
-
-
-
 
 ## JSON
 

@@ -1,3 +1,4 @@
+Asana
 backend
 Cron
 Dockerfile
@@ -12,3 +13,9 @@ npm
 onboarding
 Trello
 URL
+Pipedrive
+Postbin
+Postgres
+Twilio
+URL
+Vuex

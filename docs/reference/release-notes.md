@@ -1,5 +1,39 @@
 # Release notes
 
+## n8n@0.182.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.2...n8n@0.182.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-14
+
+This release contains enhancements to the Twilio and Wise integrations, and adds support for a new grant type for OAuth2. It also includes some bug fixes.
+
+### New features
+
+Added support for the client_credentials grant type for OAuth2.
+
+### Node enhancements
+
+* [Twilio node](/integrations/nodes/n8n-nodes-base.twilio/){:target=_blank}: added the ability to make a voice call using TTS.
+* [Wise node](/integrations/nodes/n8n-nodes-base.wise/){:target=_blank}: added support for downloading statements as JSON, CSV, or PDF.
+
+### Bug fixes
+
+* Core: fixes an issue that was causing parameters to get lost in some edge cases.
+* Core: fixes an issue with combined expressions not resolving if one expression was invalid.
+* Core: fixed an issue that was causing the public API to fail to build on Windows.
+* Editor: ensure errors display correctly.
+* [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target=_blank}: better handling for requests that return null.
+* [Pipedrive node](/integrations/nodes/n8n-nodes-base.pipedrive/){:target=_blank}: fixes a limits issue with the GetAll operation on the Lead resource.
+* [Postbin node](/integrations/nodes/n8n-nodes-base.postbin/){:target=_blank}: remove a false error.
+
+### Contributors
+
+[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}  
+[Erick Friis](https://github.com/efriis){:target=_blank .external-link}  
+[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}  
+[Shaun](https://github.com/simshaun){:target=_blank .external-link}  
+[Valentin Mocanu](https://github.com/rontav){:target=_blank .external-link}
+
 ## n8n@0.181.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.1...n8n@0.181.2){:target=_blank .external-link} for this version.<br />

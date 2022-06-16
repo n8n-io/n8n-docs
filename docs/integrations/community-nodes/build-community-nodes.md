@@ -1,3 +1,3 @@
-# Submit your node to the community node repository
+# Building community nodes
 
 --8<-- "_snippets/integrations/submit-community-node.md"

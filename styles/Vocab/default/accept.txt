@@ -1,3 +1,4 @@
+Asana
 backend
 Cron
 Enum
@@ -6,4 +7,9 @@ n8n
 namespace
 npm
 onboarding
+Pipedrive
+Postbin
+Postgres
+Twilio
 URL
+Vuex

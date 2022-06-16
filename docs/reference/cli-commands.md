@@ -38,6 +38,10 @@ n8n execute --file <WORKFLOW_FILE>
 
 You can change the active status of a workflow using the CLI.
 
+!!! note "Restart required"
+    These commands operate on your n8n database. If you execute them
+	while n8n is running, the changes don't take effect until you restart n8n.
+
 Set the active status of a workflow by its ID to false:
 
 ```bash

@@ -1,5 +1,133 @@
 # Release notes
 
+## n8n@0.182.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.2...n8n@0.182.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-14
+
+This release contains enhancements to the Twilio and Wise integrations, and adds support for a new grant type for OAuth2. It also includes some bug fixes.
+
+### New features
+
+Added support for the client_credentials grant type for OAuth2.
+
+### Node enhancements
+
+* [Twilio node](/integrations/nodes/n8n-nodes-base.twilio/){:target=_blank}: added the ability to make a voice call using TTS.
+* [Wise node](/integrations/nodes/n8n-nodes-base.wise/){:target=_blank}: added support for downloading statements as JSON, CSV, or PDF.
+
+### Bug fixes
+
+* Core: fixes an issue that was causing parameters to get lost in some edge cases.
+* Core: fixes an issue with combined expressions not resolving if one expression was invalid.
+* Core: fixed an issue that was causing the public API to fail to build on Windows.
+* Editor: ensure errors display correctly.
+* [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target=_blank}: better handling for requests that return null.
+* [Pipedrive node](/integrations/nodes/n8n-nodes-base.pipedrive/){:target=_blank}: fixes a limits issue with the GetAll operation on the Lead resource.
+* [Postbin node](/integrations/nodes/n8n-nodes-base.postbin/){:target=_blank}: remove a false error.
+
+### Contributors
+
+[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}  
+[Erick Friis](https://github.com/efriis){:target=_blank .external-link}  
+[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}  
+[Shaun](https://github.com/simshaun){:target=_blank .external-link}  
+[Valentin Mocanu](https://github.com/rontav){:target=_blank .external-link}
+
+## n8n@0.181.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.1...n8n@0.181.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-09
+
+This is a bug fix release. It resolves an issue that was sometimes causing nodes to error when they didn't return data.
+
+## n8n@0.181.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.0...n8n@0.181.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-09
+
+This is a bug fix release. It fixes two issues with multi-input nodes.
+
+## n8n@0.181.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.180.0...n8n@0.181.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-08
+
+This release introduces the public API.
+
+### New feature highlights
+
+<div class="n8n-new-features" markdown>
+
+#### The n8n public API
+
+This release introduces the n8n public REST API. Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. The API includes a built-in Swagger UI playground. Refer to the [API documentation](/api/){:target=_blank} for more information.
+
+</div>
+
+### Other new features
+
+* **Core**: you can now block user access to environment variables using the `N8N_BLOCK_ENV_ACCESS_IN_NODE` variable.
+
+### Bug fixes
+
+* **Core**: properly resolve expressions in declarative style nodes.
+
+## n8n@0.180.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.179.0...n8n@0.180.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-07
+
+This release adds a new node for Cal.com, support for tags in workflow import and export, UI improvements, node enhancements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Tags in workflow import and export
+
+When importing or exporting a workflow, the JSON can now include workflow tags.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Improved handling of activation errors
+
+n8n now supports running an error workflow in response to an activation error.
+
+</div>
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Cal.com trigger
+
+This release adds a new trigger node for Cal.com. Refer to the [Cal trigger documentation](/integrations/trigger-nodes/n8n-nodes-base.caltrigger/){:target=_blank} for more guidance.
+
+</div>
+
+### Node enhancements
+
+* [GitHub node](/integrations/nodes/n8n-nodes-base.github/){:target=_blank}: add the Get All operation to the Organization resource.
+* [QuickBooks node](/integrations/nodes/n8n-nodes-base.quickbooks/){:target=_blank}: add a new optional field for tax items.
+
+### Bug fixes
+
+* Restore support for `window` in expressions.
+* Fix to the `user-management:reset` command.
+* Resolve crashes in queue mode.
+* Correct delete button hover spacing.
+* Resolve a bug causing stuck loading states.
+* [EmailReadImap node](/integrations/core/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
+* [Hubspot node](/integrations/nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
+
+### Contributors
+
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}  
+[Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
+
 ## n8n@0.179.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.178.2...n8n@0.179.0){:target=_blank .external-link} for this version.<br />

@@ -188,6 +188,7 @@ Refer to [User management](/hosting/user-management/) for more information on se
 | `N8N_BASIC_AUTH_USER`<br>/`_FILE` | String | - | The name of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_PASSWORD`<br>/`_FILE` | String | - | The password of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_HASH`<br>/`_FILE` | Boolean | `false` | Whether to hash the basic authentication password. |
+| `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the function node (false) or not (true). |
 | `N8N_JWT_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate JWT authentication for editor and REST-API access. |
 | `N8N_JWT_AUTH_HEADER`<br>/`_FILE` | String | - | The request header containing a signed JWT. |
 | `N8N_JWT_AUTH_HEADER_VALUE_PREFIX`<br>/`_FILE` | String | - | Optional. The request header value prefix to strip. |

@@ -140,7 +140,7 @@ nav:
       - Node review checklist: integrations/creating-nodes/review-checklist.md
       - Troubleshooting: integrations/creating-nodes/troubleshooting-node-development.md
       - HTTP request helpers: integrations/creating-nodes/http-helpers.md
-      - Build community nodes: integrations/creating-nodes/submit-nodes.md
+      - Build community nodes: integrations/creating-nodes/build-community-nodes.md
       - Install private nodes: integrations/creating-nodes/install-private-nodes.md
   - Courses:
     - Overview: courses/index.md

@@ -18,8 +18,8 @@ You will:
 n8n provides a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
 1. On the **Workflow templates** view, search for `Very quick quickstart`.
-2. Click the **Very quick quickstart** template to preview it.
-3. Click **Use this workflow** to open the template in your own editor.
+2. Select the **Very quick quickstart** template to preview it.
+3. Select **Use this workflow** to open the template in your own editor.
 
 This is a basic workflow. It:
 
@@ -34,22 +34,22 @@ Run the workflow to check it's working, and load in data for the next steps: sel
 
 ## Step four: Add a node
 
-Add a third node to message each customer and tell them their description. The customer messenger
+Add a third node to message each customer and tell them their description. TheCustomer Messenger node allows you to send a message to fake recipients.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Set node.
-2. Search for `Customer Messenger`. n8n shows a list of nodes that match the search.
-3. Click **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
+2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
+3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. You're going to use [expressions](/code-examples/expressions/) to map in the **Customer ID** and create the **Message**:
-    1. Next to **Customer ID**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
+    1. Next to **Customer ID**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Select **Current Node** > **Input Data** > **JSON** > **customer_ID**. n8n adds the expression to the **Expression** editor, and displays a sample output.
     3. Close the expressions editor.
-    4. Next to **Message**, click **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
+    4. Next to **Message**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     5. Copy this expression into the editor:
         ```
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}
         ```
 5. Close the expressions editor, then close the **Customer Messenger** node.
-6. Click **Execute workflow**. n8n runs the workflow.
+6. Select **Execute workflow**. n8n runs the workflow.
 
 The complete workflow should look like this:
 

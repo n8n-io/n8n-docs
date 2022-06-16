@@ -51,7 +51,7 @@ The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact
     1. Select the  **Credential for NASA API** dropdown.
     2. Select **- Create New -**. n8n opens the credentials view.
     3. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form in **Generate API Key**. NASA generates the key and displays it.
-    4. Copy the key, and paste it into **API Key**.
+    4. Copy the key, and paste it into **API Key** in n8n.
     5. Select **Save**.
     6. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
 5. In **Resource**, select **DONKI Solar Flare**. This resource returns a report about recent solar flares.
@@ -68,7 +68,9 @@ The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact
     !!! note "Date and time in n8n"
         n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code-examples/expressions/luxon/). 
 
-7. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
+7. Close the **Edit Expression** modal to return to the NASA node.
+8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
+9. Close the NASA node to return to the workflow canvas.
 
 ## Step five: Add logic with the If node
 
@@ -83,6 +85,10 @@ Add the If node:
 5. You need to check the value of the `classType` property in the NASA data. To do this:
     1. Next to **Value 1**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
     2. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
+
+    !!! note "Make sure you ran the NASA node in the previous section"
+        If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
+
     3. Close the expressions editor to return to the node.
     4. In **Operation**, select **Contains**.
     5. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
@@ -103,10 +109,9 @@ The last step of the workflow is to send the two reports about solar flares. For
 6. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**.
 7. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 8. In n8n, paste your Postbin ID into **Bin ID**.
-9. Change **Response Format** to **String**.
-10. Now, configure the data to send to Postbin. Next to **Bin Content**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**.
-11. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
-12. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
+9. Now, configure the data to send to Postbin. Next to **Bin Content**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**.
+10. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
+11. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js
     There was a solar flare of class {{$json["classType"]}}
     ```

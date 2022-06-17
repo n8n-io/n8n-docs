@@ -15,7 +15,7 @@ Here is a brief overview of the individual settings that can be made under gener
 ![](/_images/doc2/General Settings_1.png)
 
 * Document Split Settings
-* Amount Settings
+* [Amount Settings](/doc2/settings-amount-settings/)
 * Other Settings
 * Subscription
 

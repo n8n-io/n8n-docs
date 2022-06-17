@@ -50,8 +50,10 @@ On exports using [Watchdog](../fileshare.md), you will have to pick "ONPREM" on 
 ![](/_images/doc2/ExportToInforIDM_4_ZUGfERD_OnPrem.png)
 
 Depending on which you choose, the screen will look accordingly
-![](/_images/doc2/ExportToInforIDM_5_Cloud.png)
-![](/_images/doc2/ExportToInforIDM_5_OnPrem.png)
+![](/_images/doc2/ExportToInforIDM_5_PDF_Cloud.png)
+![](/_images/doc2/ExportToInforIDM_5_ZUGfERD_Cloud.png)
+![](/_images/doc2/ExportToInforIDM_5_PDF_OnPrem.png)
+![](/_images/doc2/ExportToInforIDM_5_ZUGfERD_OnPrem.png)
 
 Click on the IDM Mapping file section and choose the IDM Mapping file you want to use for the export.
 You find a example of the IDM mapping file on this page: [How to create a IDM mapping file](/doc2/export/how-to-create-a-idm-mapping-file/)

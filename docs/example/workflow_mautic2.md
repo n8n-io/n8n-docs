@@ -62,3 +62,7 @@ the part .json["first_name"] is then again as already explained above.
 ![Next](/_images/workflows/workflows/mauticworkflow_new_customer8.png)
 
 ![Next](/_images/workflows/workflows/mauticworkflow_new_customer9.png)
+
+
+You can download the workflow as javascriptfile <a href="downloadables/newcustomermautic.js" download>here</a> and add it on your Workflow² instanz using drag&drop,
+or by opening the file in an editor and copy&paste the code directly into Workflow².

@@ -76,3 +76,6 @@ There we specify Contact and Send Email, set which email should be sent by MAUTI
 ![Next](/_images/workflows/workflows/mauticworkflow_new_order10.png)
 
 
+
+You can download the workflow as javascriptfile <a href="downloadables/newordermautic.js" download>here</a> and add it on your Workflow² instanz using drag&drop,
+or by opening the file in an editor and copy&paste the code directly into Workflow².

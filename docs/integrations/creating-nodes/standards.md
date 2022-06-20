@@ -71,7 +71,7 @@ export const ExampleNode implements INodeType {
 
 ### Node icons
 
-Check existing node icons as a reference when you create your own. The icon resolution should be 60x60px if using PNG. You can also embed an SVG. 
+Check existing node icons as a reference when you create your own. n8n recommends using an SVG, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. 
 
 !!! note "Don't reference Font Awesome"
     If you want to use a Font Awesome icon in your node, download and embed the image.

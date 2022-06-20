@@ -81,11 +81,12 @@ nav:
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
       - Error handling: flow-logic/error-handling.md
-    - Mapping and transforming data:
+    - Data:
       - Overview: data/index.md
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
+      - Data pinning: data/data-pinning.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:

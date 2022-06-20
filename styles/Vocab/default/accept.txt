@@ -9,6 +9,7 @@ invalid
 Lemlist
 n8n
 namespace
+Nodelinter
 npm
 onboarding
 Trello

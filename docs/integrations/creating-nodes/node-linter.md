@@ -1,12 +1,12 @@
 # Nodelinter
 
-[Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files to ensure n8n recommended best practices are followed when developing new nodes.
+[Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files. It helps you to follow n8n recommended best practices when developing new nodes.
 
 This includes rules for:
 
 * Alphabetization of node parameters and options
 * Casing for display names and descriptions
-* Default values per parameter type
+* Default values for each parameter type
 * Required and optional key-value pairs
 
 See the full linting list [here](https://github.com/n8n-io/nodelinter/blob/master/src/lintings.ts) for more details.
@@ -21,8 +21,8 @@ You can run Nodelinter from the `packages/nodes-base` directory as follows:
 npm run nodelinter -- --<options>
 ```
 
-!!! note "Keep in mind"
-Be sure to run Nodelinter and verify your code before submitting a pull request.
+!!! note "Lint before submitting nodes"
+    Run Nodelinter and verify your code before submitting a node to the community nodes repository.
 
 
 ## Options
@@ -30,16 +30,16 @@ Be sure to run Nodelinter and verify your code before submitting a pull request.
 | Option            | Description                                        | Example |
 | ----------------- | -------------------------------------------------- | -------- |
 | `--target`        | Path of the file or directory to lint              | Lint a single file:<br>`--target=nodes/Stripe/Stripe.node.ts` <br><br>Lint all files in a directory:<br>`--target=nodes/Stripe` |
-| `--config`        | Path of the [custom config](#custom-config) to use | `--config=/Users/john/Documents/myConfig.json` |
+| `--config`        | Path of the [custom configuration](#custom-configuration) to use | `--config=/Users/john/Documents/myConfig.json` |
 | `--patterns`      | Lintable file patterns                             | `--patterns:.node.ts,Description.ts` |
-| `--print`         | Print output to JSON<br><br>A custom filename can optionally be specified. | `--print=myLintOutput` |
+| `--print`         | Print output to JSON<br><br>You can specify a custom filename. | `--print=myLintOutput` |
 | `--errors-only`   | Enable error logs only                             |
 | `--warnings-only` | Enable warning logs only                           |
 | `--infos-only`    | Enable info logs only                              |
 
-### Custom config
+### Custom configuration
 
-The Nodelinter [default config](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts) can be overridden to, for example, change the areas and issues linted.
+The Nodelinter [default configuration](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts) can be overridden to, for example, change the areas and issues linted.
 
 To do so create a JSON file containing the key values you want to override. For example:
 

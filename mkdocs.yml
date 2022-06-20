@@ -3,8 +3,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: _images/favicon.ico
-  font:
-    text: Open Sans
+  font: false
   language: en
   logo: _images/n8n-docs-icon.svg
   palette:
@@ -25,13 +24,20 @@ extra:
   analytics:
     provider: google
     property: UA-146470481-3
+  consent:
+    title: Cookie and analytics consent
+    description: 
+      We use cookies (and other similar technologies) to collect data in order to improve our site. You have the option to opt-in or opt-out of certain cookie tracking technologies. For more information on privacy and data management at n8n, refer to our <a href="https://n8n.io/legal/privacy" target="_blank">privacy policy</a>.
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   - pymdownx.details
@@ -59,11 +65,15 @@ markdown_extensions:
       permalink: "#"
 plugins:
   - search
+  # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
 nav:
   - Using n8n:
     - Welcome: index.md
-    - Try it out: quickstart.md
+    - Try it out: 
+      - Overview: try-it-out/index.md
+      - A very quick quickstart: try-it-out/quickstart.md
+      - A longer introduction: try-it-out/longer-introduction.md
     - Editor UI: editor-ui.md
     - Understand workflows:
       - Overview: workflows/index.md
@@ -114,6 +124,7 @@ nav:
     - Nodes: integrations/nodes/
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
+    - Custom API actions for existing nodes: integrations/custom-operations.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:
@@ -168,9 +179,9 @@ nav:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
       - Cloud: hosting/installation/cloud.md
-    - Configuration: hosting/configuration.md
-    - User management: hosting/user-management.md
+    - Configuration: hosting/configuration.md    
     - Environment variables: hosting/environment-variables.md
+    - User management: hosting/user-management.md
     - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Server setups:
@@ -192,4 +203,17 @@ nav:
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+  - API:
+    - The n8n public API: api/index.md
+    - Authentication: api/authentication.md
+    - Pagination: api/pagination.md
+    - Using the API playground: api/using-api-playground.md
+    - API reference: api/api-reference.md
+  - Embed:
+    - n8n Embed: embed/index.md
+    - Prerequisites: embed/prerequisites.md
+    - Deployment: embed/deployment.md
+    - Configuration: embed/configuration.md
+    - Workflow management: embed/managing-workflows.md
+    - Workflows templates: embed/workflow-templates.md
   - Contributing: contributing.md

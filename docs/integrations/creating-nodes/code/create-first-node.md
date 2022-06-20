@@ -179,7 +179,7 @@ You might say that you can “Add a contact” and you are right, but we try to 
 
 Let’s make the Node Editor View ask for these parameters:
 
-1. 'dd the following under `description.properties` in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
+1. Add the following under `description.properties` in `packages/nodes-base/nodes/FriendGrid/FriendGrid.node.ts`.
 
 ```typescript
 {
@@ -578,4 +578,4 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 
 ## Next steps
 
-Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.

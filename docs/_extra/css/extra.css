@@ -183,6 +183,12 @@
     border-left: 1px solid var(--color-primary);
 } */
 
+.inline-image {
+    display:inline-block;
+    max-width: 25px;
+    max-height: 25px;
+    vertical-align: middle;
+}
 
 
 

@@ -338,7 +338,7 @@
 /nodes/workflow-nodes-base.stravaTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.stravaTrigger/
 /nodes/workflow-nodes-base.stripe/        /workflow/integrations/nodes/workflow-nodes-base.stripe/
 /nodes/workflow-nodes-base.stripeTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/
-/nodes/workflow-nodes-base.sugarcrm/        /workflow/integrations/nodes/workflow-nodes-base.sugarcrm/
+/nodes/n8n-nodes-base.sugarCrm/        /workflow/integrations/nodes/workflow-nodes-base.sugarcrm/
 /nodes/workflow-nodes-base.supabase/        /workflow/integrations/nodes/workflow-nodes-base.supabase/
 /nodes/n8n-nodes-base.surveyMonkeyTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.surveyMonkeyTrigger/
 /nodes/n8n-nodes-base.switch/        /workflow/integrations/core-nodes/workflow-nodes-base.switch/

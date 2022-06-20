@@ -48,7 +48,7 @@ Add a third node to message each customer and tell them their description. The C
         ```
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}
         ```
-5. Close the expressions editor, then close the **Customer Messenger** node by clicking outside the node or selecting Back to canvas.
+5. Close the expressions editor, then close the **Customer Messenger** node by clicking outside the node or selecting **Back to canvas**.
 6. Select **Execute workflow**. n8n runs the workflow.
 
 The complete workflow should look like this:

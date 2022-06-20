@@ -120,9 +120,12 @@ The last step of the workflow is to send the two reports about solar flares. For
 15. Add another Postbin node, to handle the **false** output path from the If node:
     1. Hover over the Postbin node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/try-it-out/duplicate-node.png)</span> to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
-16. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
-15. Go back to your Postbin bin. Refresh the page to see the output.
-16. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
+
+## Test the workflow
+
+1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
+2. Go back to your Postbin bin. Refresh the page to see the output.
+3. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
 
 !!! note "Time limit"
     Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.

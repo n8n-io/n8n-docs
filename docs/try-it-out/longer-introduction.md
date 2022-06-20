@@ -101,7 +101,7 @@ Add the If node:
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page. 
 
-1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labelled **true**.
+1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labeled **true**.
 2. Search for **Postbin**. n8n shows a list of nodes that match the search.
 3. Select **Postbin** to add the node to the canvas.
 4. Change **Resource** to **Request**.

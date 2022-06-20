@@ -34,7 +34,7 @@ Select **Execute workflow** to run the workflow to check it's working, and load 
 
 ## Step four: Add a node
 
-Add a third node to message each customer and tell them their description. TheCustomer Messenger node allows you to send a message to fake recipients.
+Add a third node to message each customer and tell them their description. The Customer Messenger node allows you to send a message to fake recipients.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Set node.
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.

@@ -8,14 +8,7 @@ You can use these credentials to authenticate the following nodes with Orbit.
 
 Create an [Orbit](https://app.orbit.love/) account.
 
-There are two types of API Token available:
-
-- User API Tokens are scoped to your Orbit user account, and actions performed using it will be attributed to you.
-- Workspace API Tokens are scope to your Orbit workspace and are shared between workspace owners. Actions performed using it will not be attributed to any one indivudual.
-
-## Which API Token to use
-
-We recommend using a Workspace API Token for n8n as this gives you more control over key management and revocation. Use a User API Token if you specifically want activities created by n8n to be attributed to an individual team member.
+There are two types of API Token available. Read more about them in the [Orbit Knowledge Base](https://orbit.love/knowledge-base/api-tokens).
 
 ## Using a User API Token
 

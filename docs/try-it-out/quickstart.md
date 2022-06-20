@@ -30,7 +30,7 @@ Double click a node to explore its settings and how it processes data.
 
 ## Step three: Run the workflow
 
-Run the workflow to check it's working, and load in data for the next steps: select **Execute workflow**.
+Select **Execute workflow** to run the workflow to check it's working, and load in data for the next steps.
 
 ## Step four: Add a node
 

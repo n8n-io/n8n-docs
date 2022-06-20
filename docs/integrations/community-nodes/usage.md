@@ -4,7 +4,7 @@ To use community nodes, you first need to [install](/integrations/community-node
 
 ## Adding community nodes to your workflow
 
-After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. To show which nodes are community nodes and which are built-in, n8n marks community nodes with a **Package** icon [TODO: add icon].
+After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. To show which nodes are community nodes and which are built-in, n8n marks community nodes with a **Package** <span class="inline-image">![Package icon](/_images/common-icons/package.png)</span> icon.
 
 ## Community nodes with duplicate names
 

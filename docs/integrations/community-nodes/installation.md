@@ -30,7 +30,7 @@ To install a community node:
 To uninstall a community node:
 
 1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** .
+2. On the node you want to install, select **Options** <span class="inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png)</span>.
 3. Select **Uninstall package**.
 4. Select **Uninstall Package** in the confirmation modal.
 

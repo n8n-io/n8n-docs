@@ -130,18 +130,27 @@ nav:
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
-      - Choose a node building style: integrations/creating-nodes/choose-node-method.md
-      - Standards: integrations/creating-nodes/standards.md
-      - Build a declarative-style node: integrations/creating-nodes/declarative-style-node.md
-      - Build a programmatic-style node: integrations/creating-nodes/programmatic-style-node.md
-      - Build a trigger node: integrations/creating-nodes/create-trigger-node.md
-      - Node UI elements: integrations/creating-nodes/ui-elements.md      
-      - Node linter: integrations/creating-nodes/node-linter.md
-      - Node review checklist: integrations/creating-nodes/review-checklist.md
-      - Troubleshooting: integrations/creating-nodes/troubleshooting-node-development.md
-      - HTTP request helpers: integrations/creating-nodes/http-helpers.md
-      - Build community nodes: integrations/creating-nodes/build-community-nodes.md
-      - Install private nodes: integrations/creating-nodes/install-private-nodes.md
+      - Plan your node:
+        - Overview: integrations/creating-nodes/plan/index.md
+        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+      - Build your node:
+        - Overview: integrations/creating-nodes/build/index.md
+        - Standards: integrations/creating-nodes/build/standards.md
+        - Build a declarative-style node: integrations/creating-nodes/build/declarative-style-node.md
+        - Build a programmatic-style node: integrations/creating-nodes/build/programmatic-style-node.md
+        - Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md
+        - Node UI elements: integrations/creating-nodes/build/ui-elements.md 
+        - HTTP request helpers: integrations/creating-nodes/build/http-helpers.md        
+      - Test your node:
+        - Overview: integrations/creating-nodes/test/index.md
+        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
+        - Node linter: integrations/creating-nodes/test/node-linter.md
+        - Node review checklist: integrations/creating-nodes/test/review-checklist.md
+        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
+      - Use your node:
+        - Overview: integrations/creating-nodes/use/index.md
+        - Submit community nodes: integrations/creating-nodes/use/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/use/install-private-nodes.md
   - Courses:
     - Overview: courses/index.md
     - Level one:

@@ -7,7 +7,7 @@ something non-digital into a digital representation or artifact.
 
 ![Sign up 30 days for free](https://media.giphy.com/media/rbdnbV6BwNPAlfD4dJ/giphy.gif)
 
-[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+[Sign up for a 30 days free trial](https://app.polydocs.io){ .md-button .md-button--primary }
 
 ## Digitalization
 

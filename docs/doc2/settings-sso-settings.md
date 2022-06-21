@@ -1,8 +1,6 @@
 ---
 title: "SSO Settings"
 description: All the details you need for SSO configuration can be found in SSO Service Provider Settings of DOC². From needed Entity ID, SSO URL to the Certificate.
-date: "2021-10-29"
-icon: material/sign-direction:
 tags:
   - DOC²
   - Settings

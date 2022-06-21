@@ -162,7 +162,7 @@ nav:
       - Order Confirmation: doc2/pomatching/po-matching-order-confirmation.md
 
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
-    - SSO for Infor: doc2/settings-sso-settings.md
+    - SSO Settings: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
 
 

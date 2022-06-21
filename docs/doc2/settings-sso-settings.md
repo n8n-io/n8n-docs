@@ -8,7 +8,6 @@ tags:
 ---
 # SSO Settings
 
-* * *
 
 - Once you have received your Login Details from us, you will find all the details you need for SSO configuration here.
 

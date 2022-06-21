@@ -1,5 +1,42 @@
 # Release notes
 
+## n8n@0.183.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.182.1...n8n@0.183.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-21
+
+This release contains node enhancements and bug fixes, as well as an improved trigger nodes panel.
+
+### New features
+
+Enhancements to the **Trigger** panel. When adding a trigger node, n8n will now suggest nodes based on your activity.
+
+### Node enhancements
+
+* [HubSpot node](/integrations/nodes/n8n-nodes-base.hubspot){:target=_blank}: you can now assign a stage on ticket update.
+* [Todoist node](/integrations/nodes/n8n-nodes-base.todoist){:target=_blank}: it's now possible to move tasks between sections.
+* [Twake node](/integrations/nodes/n8n-nodes-base.twake){:target=_blank}: updated icon, credential test added, and added support for custom operations.
+
+### Bug fixes
+
+* Core: don't allow OPTIONS requests from any source.
+* Core: GET `/workflows/:id` now returns tags.
+* Core: ensure predefined credentials show up in the HTTP Request node.
+* Core: return the correct error message on Axios error.
+* Core: updates to the expressions allow-list and deny-list.
+
+### Contributors
+
+[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}  
+[Rahimli Rahim](https://github.com/rahimlis){:target=_blank .external-link}
+
+## n8n@0.182.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.182.0...n8n@0.182.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-16
+
+This is a bug fix release. It resolves an issue with restarting waiting executions.
+
 ## n8n@0.182.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.181.2...n8n@0.182.0){:target=_blank .external-link} for this version.<br />

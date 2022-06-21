@@ -13,7 +13,7 @@ tags:
 
 **To access the SSO SERVICE PROVIDER SETTINGS in DOC²**
 
-1. Log in on URL [https://app.polydocs.io/](https://app.polydocs.io/) with the login details you received from us.
+1\. Log in on URL [https://app.polydocs.io/](https://app.polydocs.io/) with the login details you received from us.
 
 2\. Go to SETTINGS (on top bar) and choose SSO Settings down at the bottom of the list.
 

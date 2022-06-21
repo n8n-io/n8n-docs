@@ -9,7 +9,7 @@ This release contains node enhancements and bug fixes, as well as an improved tr
 
 ### New features
 
-Enhancements to the **Trigger** panel. When adding a trigger node, n8n will now suggest nodes based on your activity.
+Enhancements to the **Trigger** inputs panel: When using a trigger node, you will now see an **INPUT** view that gives guidance on how to load data into your trigger.
 
 ### Node enhancements
 

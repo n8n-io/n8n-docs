@@ -11,12 +11,16 @@ You can use this when working with data from external sources, to avoid having t
 [TODO: this doc was drafted before some UI was implemented. Do a final test with a later preview build, to ensure everything is covered and up to date]
 
 
+
 ## Pin data
 
 To pin data in a node:
 
 1. Run the node to load data.
 2. In the **OUTPUT** view, select **Pin data** <span class="inline-image">![Pin data icon](/_images/data/data-pinning/data-pinning-button.png)</span>. When data pinning is active, the button changes to show this <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png)</span>.
+
+!!! note "Nodes that output binary data"
+    You can't pin data if the output data includes binary data.
 
 
 ## Unpin data

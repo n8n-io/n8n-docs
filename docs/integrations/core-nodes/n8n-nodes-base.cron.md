@@ -4,7 +4,7 @@ The Cron node is useful to schedule the workflows to run periodically at fixed d
 
 !!! note "Keep in mind"
     1. If a workflow is using the Cron node as a trigger, make sure that you save and activate the workflow.
-2. Make sure that the timezone is set correctly for the n8n instance (or the workflow).
+    2. Make sure that the timezone is set correctly for the n8n instance (or the workflow).
 
 
 

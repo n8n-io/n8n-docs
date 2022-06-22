@@ -12,7 +12,7 @@ It covers everything from setup to usage and development. It is a work in progre
 
     Jump in with n8n's quickstart guides.
 
-    [:octicons-arrow-right-24: Try it out](/quickstart/)
+    [:octicons-arrow-right-24: Try it out](/try-it-out/)
 
 -   __Hosting__
 

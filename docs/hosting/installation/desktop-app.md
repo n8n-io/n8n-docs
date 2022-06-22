@@ -3,6 +3,7 @@
 The n8n desktop app is the fastest way to try n8n on Windows or Mac computers (support for Linux is coming soon). Download the app from the link below:
 
 [Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip)
+
 [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip)
 
 !!! note "Keep in mind"

@@ -1,5 +1,7 @@
 # Build a declarative-style node
 
+This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
+
 ## Prerequisites
 
 You need the following installed on your development machine:

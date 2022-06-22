@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Creating nodes overhaul
 
 /integrations/creating-nodes/code/create-first-node/   /integrations/creating-nodes/programmatic-style-node/
@@ -11,6 +12,15 @@
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/install-private-nodes/
 
 # TODO: figure out where to redirect node cli
+=======
+
+# Quickstart overhaul
+
+/quickstart/      /try-it-out/
+
+
+# Weird ones after IA launch
+>>>>>>> main
 
 
 # Updated during IA work

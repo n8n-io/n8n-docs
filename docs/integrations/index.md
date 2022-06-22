@@ -6,15 +6,15 @@ Nodes are the building blocks of workflows in n8n. They are an entry point for r
 
 ## Node types
 
-There are two main node types in n8n: Trigger nodes and Regular nodes.
+There are two main node types in n8n: trigger nodes and regular nodes.
 
 
-### Trigger Nodes
+### Trigger nodes
 
 The Trigger nodes start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute. This is because the other trigger nodes would not have any input as they are the nodes from which the execution of the workflow starts.
 
 
-### Regular Nodes
+### Regular nodes
 
 These nodes do the actual work. They can add, remove, and edit the data in the flow as well as request and send data to external APIs. They can do everything possible with Node.js in general.
 

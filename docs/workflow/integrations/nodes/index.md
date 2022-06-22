@@ -7,6 +7,7 @@ tags:
   - Brandfetch
 ---
 
+# Overview
 ##This section provides information about n8n's nodes.
 
 * [Brandfetch](/workflow/integrations/nodes/workflow-nodes-base.Brandfetch/)
@@ -256,7 +257,3 @@ tags:
 
 
 
-
-# Overview
-
-This section provides information about n8n's nodes.

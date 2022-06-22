@@ -7,6 +7,8 @@ tags:
   - Brandfetch
 ---
 
+##This section provides information about n8n's nodes.
+
 * [Brandfetch](/workflow/integrations/nodes/workflow-nodes-base.Brandfetch/)
 * [Action Network](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/)
 * [ActiveCampaign](/workflow/integrations/nodes/workflow-nodes-base.activeCampaign/)

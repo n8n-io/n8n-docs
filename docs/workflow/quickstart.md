@@ -1,3 +1,11 @@
+---
+title: Welcome to Workflow²
+description: What is Workflow²? DOC² Workflow helps you to connect any app with an API with any other, and manipulate its data with little or no code.
+tags:
+  - DOC²
+  - Workflow
+---
+
 # Try it out
     
 
@@ -70,4 +78,4 @@ You've build your fist automation workflow and cleaned up a cluttered inbox in t
 
 Do you enjoy automating workflows? Here's what you can do next:
 
-- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows.
+- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows. Find more examples [here]

@@ -12,7 +12,6 @@ tags:
 # Welcome
 
 
-
 It covers everything from setup to usage and development. It is a work in progress and all contributions are welcome.
 
 <div class="video-container">

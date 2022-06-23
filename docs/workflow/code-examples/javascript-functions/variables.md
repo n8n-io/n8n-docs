@@ -35,3 +35,9 @@ $workflow.id
 // String. The workflow name.
 $workflow.name
 ```
+
+### $resumeWebhookURL
+
+The weebhook URL to call to resume a [waiting](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) workflow.
+
+See the [Wait > On weebhook call](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) documentation to learn more.

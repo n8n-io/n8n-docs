@@ -21,7 +21,7 @@ and after activating Workflow² by clicking the button, go to VISIT WORKFLOW²
 
 For your first workflow, let's build something to take one tedious task off you plate: cleaning up a cluttered Gmail inbox.
 
-1. Open the Nodes Panel by click the orange `+` sign, then search and find the [Gmail node](/workflow/integrations/nodes/n8n-nodes-base.gmail/). Click on it to add it to your canvas:
+1. Open the Nodes Panel by click the orange `+` sign, then search and find the [Gmail node](/workflow/integrations/nodes/workflow-nodes-base.gmail/). Click on it to add it to your canvas:
     ![Add Gmail node](/_images/quickstart/add_gmail_node.png)
 
 2. When you add the Gmail node to the canvas, its configuration modal opens automatically:

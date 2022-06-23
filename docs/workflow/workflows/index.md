@@ -9,7 +9,8 @@ tags:
 
 Learn about the key components of an automation in Workflow²:
 
-* [Workflows](/workflows/workflows/)
-* [Connections](/workflows/connections/)
-* [Nodes](/workflows/nodes/)
-* [Items](/workflows/items/)
+* [Workflows](/workflow/workflows/workflows/)
+* [Connections](/workflow/workflows/connections/)
+* [Nodes](/workflow/workflows/nodes/)
+* [Notes](/workflow/workflows/workflow-notes/)
+* [Items](/workflow/workflows/items/)

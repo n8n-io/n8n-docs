@@ -19,11 +19,12 @@ Example to show how to rename Keys in a JSON
 
 ## How to use this workflow
 
-Instructions
-- Copy the workflow 👉
-- Navigate to your Workflow editor
-- Click anywhere in the Workflow² window
-- Paste the code (ctrl + v or cmd + v)
+**Instructions**
+
+1. Copy the workflow 👉
+2. Navigate to your Workflow editor
+3. Click anywhere in the Workflow² window
+4. Paste the code (ctrl + v or cmd + v)
 
 
 

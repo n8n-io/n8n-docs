@@ -151,7 +151,7 @@ The `dateTime` type provides a date picker.
 }
 ```
 
-![Datetime](/_images/integrations/creating-nodes/datetime.png)
+![DateTime](/_images/integrations/creating-nodes/datetime.png)
 
 
 

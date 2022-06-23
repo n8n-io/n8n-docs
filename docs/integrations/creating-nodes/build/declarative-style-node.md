@@ -10,7 +10,11 @@ You need the following installed on your development machine:
 
 ## Build your node
 
-1. [TODO: Clone starter or start npm package from scratch?]
+1. n8n provides a starter repo for node development. Clone the repo:
+    ```
+    git clone https://github.com/n8n-io/n8n-nodes-starter.git
+    ```
+
 
 ## Test your node
 

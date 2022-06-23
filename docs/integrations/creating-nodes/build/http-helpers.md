@@ -58,39 +58,39 @@ Some notes about the possible fields:
 	* If `body` is an instance of `FormData` then n8n adds `content-type: multipart/form-data` automatically.  
 	* If `body` is an instance of `URLSearchParams`, then n8n adds `content-type: application/x-www-form-urlencoded`.  
 	* To override this behavior, set a `content-type` header.
-- `arrayFormat`: if your query string contains an array of data, such as `const qs = {IDs: [15,17]}`, the value of `arrayFormat` defines how n8n sends it.  
-	* `indices` (default): `{ a: ['b', 'c'] }` will be formatted as `a[0]=b&a[1]=c`  
-	* `brackets`: `{ a: ['b', 'c'] }` will be formatted as `a[]=b&a[]=c`  
-	* `repeat`: `{ a: ['b', 'c'] }` will be formatted as `a=b&a=c`  
-	* `comma`: `{ a: ['b', 'c'] }` will be formatted as `a=b,c`
+- `arrayFormat`: if your query string contains an array of data, such as `const qs = {IDs: [15,17]}`, the value of `arrayFormat` defines how n8n formats it.  
+	* `indices` (default):  `{ a: ['b', 'c'] }` as `a[0]=b&a[1]=c`  
+	* `brackets`: `{ a: ['b', 'c'] }` as `a[]=b&a[]=c`  
+	* `repeat`: `{ a: ['b', 'c'] }` as `a=b&a=c`  
+	* `comma`: `{ a: ['b', 'c'] }` as `a=b,c`
 - **auth**: Used for Basic auth. Provide `username` and `password`.
-- **disableFollowRedirect**: By default, we'll follow redirects. You can set this to false to prevent this from happening
+- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to false to prevent this from happening
 - **skipSslCertificateValidation**: Used for calling HTTPS services without proper certificate
-- **returnFullResponse**: Instead of returning only the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
-- **encoding**: We usually detect the content type correctly but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
+- **returnFullResponse**: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
+- **encoding**: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
 
 ## Deprecation of the previous helper
 
-The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library which was deprecated.
+The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. Now deprecated.
 
-In an effort to keep maximum compatibility, we made a transparent conversion to another library called `axios`.
+To minimise incompatibility, n8n made a transparent conversion to another library called `axios`.
 
-If you are having issues, please report them in our [Community Forums](https://community.n8n.io/) or on [Github](https://github.com/n8n-io/n8n/issues).
+If you are having issues, please report them in the [Community Forums](https://community.n8n.io/) or on [GitHub](https://github.com/n8n-io/n8n/issues).
 
 Also, you can temporarily enable n8n to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
 
-**Please note:** This behavior is permanent and we will be removing the `request-promise` library entirely in the future so please report any errors you have so we can fix them.
+**Please note:** This behavior is permanent. n8n will remove the `request-promise` library entirely in the future.
 
 ## Migration guide to the new helper
 
-As mentioned above, the previous helper is deprecated and will be replaced in the future. The new helper is much more robust, library agnostic, and easier to use.
+The new helper is much more robust, library agnostic, and easier to use.
 
-New nodes should all use the new helper, and if you have built custom nodes we strongly suggest you migrate to the new helper. Here are the main considerations when migrating:
+New nodes should all use the new helper. You should strongly consider migrating existing custom nodes to the new helper. Here are the main considerations when migrating:
 
-- Only `url` is accepted. Previously `uri` was also accepted
-- `encoding: null` now must be `encoding: arrayBuffer`
+- Accepts `url`. Doesn't accept `uri`.
+- `encoding: null` now must be `encoding: arrayBuffer`.
 - `rejectUnauthorized: false` is now `skipSslCertificateValidation: true`
-- Use `body` according to `content-type` headers to clarify what is being sent
+- Use `body` according to `content-type` headers to clarify the payload.
 - `resolveWithFullResponse` is now `returnFullResponse` and has similar behavior
 
 ## Example

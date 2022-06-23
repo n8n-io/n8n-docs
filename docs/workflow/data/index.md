@@ -21,5 +21,5 @@ Data represents units of information that are collected by and transmitted throu
 This section covers: 
 
 * [Data structure](/workflow/data/data-structure/)
-* [Transforming data](/workflow//data/transforming-data/)
-* [Using code](/workflow//data/code/)
+* [Transforming data](/workflow/data/transforming-data/)
+* [Using code](/workflow/data/code/)

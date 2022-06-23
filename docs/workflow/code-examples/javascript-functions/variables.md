@@ -38,6 +38,6 @@ $workflow.name
 
 ### $resumeWebhookURL
 
-The weebhook URL to call to resume a [waiting](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) workflow.
+The weebhook URL to call to resume a [waiting](/workflow/integrations/core-nodes/workflow-nodes-base.wait/#time-interval) workflow.
 
-See the [Wait > On weebhook call](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) documentation to learn more.
+See the [Wait > On weebhook call](/workflow/integrations/core-nodes/workflow-nodes-base.wait/#webhook-call) documentation to learn more.

@@ -5,7 +5,8 @@ n8n has two node-building styles:
 * Declarative: a JSON-based approach. This is simpler to write, and is the recommended option for most cases.
 * Programmatic: this style is more verbose. You must use the programmatic style for:
     * Trigger nodes
-    * Any node that isn't REST-based. This includes nodes that need to call a GraphQL API, data transformation nodes, and nodes that use external dependencies.
+    * Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
+    * Any node that needs to transform incoming data.
 
 The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the parameters object.
 

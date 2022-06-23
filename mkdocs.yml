@@ -146,7 +146,8 @@ nav:
         - Build a programmatic-style node: integrations/creating-nodes/build/programmatic-style-node.md
         - Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md
         - Node UI elements: integrations/creating-nodes/build/ui-elements.md 
-        - HTTP request helpers: integrations/creating-nodes/build/http-helpers.md        
+        - HTTP request helpers: integrations/creating-nodes/build/http-helpers.md  
+        - Node categories: integrations/creating-nodes/build/node-categories.md      
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md

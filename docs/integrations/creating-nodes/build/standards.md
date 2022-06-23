@@ -71,28 +71,11 @@ export const ExampleNode implements INodeType {
 
 ### Node icons
 
-Check existing node icons as a reference when you create your own. n8n recommends using an SVG, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. 
+--8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-!!! note "Don't reference Font Awesome"
-    If you want to use a Font Awesome icon in your node, download and embed the image.
+### Write nodes in TypeScript
 
-### Node versions
-
-n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version. As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}.
-
-Node versioning summary:
-
-- The main node file should extend `NodeVersionedType` instead of `INodeType`.
-- The main node file should only contain a base description including the `defaultVersion` (usually the latest) and a list of versions.
-- n8n recommends using `v1`, `v2`, and so on for version folder names.
-- Code separation:  
-    * `actions` folder with description and implementation of each possible action.  
-    * `methods` is an optional folder with the loading dynamic parameters' functions.  
-    * `transport` is a folder with all the communication implementation.
-
-!!! note "Recommended sub-folders in the `actions` folder"
-     In the `actions` folder, n8n recommends using `resources` and `operations` as the names of the sub-folders. For the implementation and description you can use separate files. Use `execute.ts` and `description.ts` as file names. This make browsing through the code a lot easier. You can simplify this for nodes that have a less complicated structure.
-
+All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
 
 ## Guidelines for the programmatic style
 
@@ -107,9 +90,7 @@ It's not necessary to always clone all the data. For example, if a node changes 
 You can see an example in the code of the [ReadBinaryFile-Node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ReadBinaryFile.node.ts#L69-L83){:target=_blank .external-link}.
 
 
-### Write nodes in TypeScript
 
-All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
 
 ### Use the built in request library
 

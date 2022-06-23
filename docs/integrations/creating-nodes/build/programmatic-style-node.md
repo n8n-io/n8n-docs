@@ -523,13 +523,13 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 
 If you open the FriendGrid node, you should see the following.
 
-![Output of the FriendGrid node]((/_images/integrations/creating-nodes/final-friendgrid.png)
+![Output of the FriendGrid node](/_images/integrations/creating-nodes/final-friendgrid.png)
 
 As showcased above, both the items were processed. That’s how all nodes in n8n work (with a few exceptions). They will automatically iterate over all the items and process them.
 
 Let’s go over the final version of the `execute` method' We are getting the items returned by the `this.getInputData()` function and iterating over all of them. Additionally, while doing so, we use the item index to get the correct parameter value using the function `this.getNodeParameters()`. For example, with the following input:
 
-```'avascript
+```javascript
 [
   {
     json: {
@@ -561,7 +561,7 @@ We used the `this.helpers.request(options)` method to make the HTTP Request that
 
 We then used the `this.helpers.returnJsonArray()` method to map the API’s output data to n8n's data structure. The node then ends up returning the data like the following:
 
-```javascript'
+```javascript
 [
    {
       json:{

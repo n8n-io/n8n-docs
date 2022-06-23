@@ -131,6 +131,7 @@ nav:
       - Risks: integrations/community-nodes/risks.md
       - Blocklist: integrations/community-nodes/blocklist.md
       - Using community nodes: integrations/community-nodes/usage.md
+      - Troubleshooting: integrations/community-nodes/troubleshooting.md
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md

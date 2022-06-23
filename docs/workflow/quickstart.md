@@ -78,4 +78,4 @@ You've build your fist automation workflow and cleaned up a cluttered inbox in t
 
 Do you enjoy automating workflows? Here's what you can do next:
 
-- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows. Find more examples [here](/example/workflows/)
+- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows. Find more examples [here](/example/workflows/).

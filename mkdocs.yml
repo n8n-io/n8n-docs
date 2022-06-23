@@ -169,6 +169,7 @@ nav:
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
+    - WF² Examples:
     - WF² Examples: workflow/workflows/examples.md
       - Rename Keys: example/rename.md
       - Weather: example/weather.md

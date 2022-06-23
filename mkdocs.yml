@@ -169,7 +169,7 @@ nav:
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
-    - WF² Examples:
+    - WF² Examples: workflow/workflows/examples.md
       - Replace Keys: example/replace.md
       - Weather: example/weather.md
       - Approval with Doc²: example/approval.md

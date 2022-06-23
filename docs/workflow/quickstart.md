@@ -58,24 +58,24 @@ For your first workflow, let's build something to take one tedious task off you 
     * *Add Field* > *Format*: Select **IDs** so that we fetch only the message ID instead of its entire contents.
     * *Add Field* > *Query*: This is where we use [Gmail Search Operators](https://support.google.com/mail/answer/7190?hl=en) to find the messages we want to delete. Here we use `-in:chats unsubscribe` to identify all messages not in chats that contain the word "unsubscribe".
 
-10. Next, let's add a [Split in Batches node](/workflow/integrations/core-nodes/n8n-nodes-base.splitInBatches/) after the Gmail node. This will break up the cleanup operation into chucks so avoid hitting any API rate limits. Let's configure it to use batches of 100 messages at a time:
+10. Next, let's add a [Split in Batches node](/workflow/integrations/core-nodes/workflow-nodes-base.splitInBatches/) after the Gmail node. This will break up the cleanup operation into chucks so avoid hitting any API rate limits. Let's configure it to use batches of 100 messages at a time:
     ![Split in Batches node](/_images/quickstart/batches_node.png)
 
 11. Now let's add another Gmail node to perform the delete operation:
     ![Gmail node](/_images/quickstart/gmail_node2.png)
     * *Resource*: Select **Message** as we will be deleting any message passed to this node.
     * *Operation*: Select **Delete**.
-    * *Message ID*: Use the gears button to enter an [expression](/code-examples/expressions/). This enables the ID of each message from the first Gmail node to be dynamically passed to this node. From the *Edit Expression* window, use the menu to find and select the message ID in the *Output Data*:
+    * *Message ID*: Use the gears button to enter an [expression](/workflow/code-examples/expressions/). This enables the ID of each message from the first Gmail node to be dynamically passed to this node. From the *Edit Expression* window, use the menu to find and select the message ID in the *Output Data*:
     ![Edit Expression](/_images/quickstart/expression_editor.png)
 
 12. Lastly, let's ensure your nodes are properly connected in the workflow. The final result should look like this:
 
 ![Workflow](/_images/quickstart/workflow.png)
 
-You've build your fist automation workflow and cleaned up a cluttered inbox in the process. Don't forget you can edit the query to find more messages to cleanup, and also set this workflow to run automatically using the [Cron node](/workflow/integrations/core-nodes/n8n-nodes-base.cron/).
+You've build your fist automation workflow and cleaned up a cluttered inbox in the process. Don't forget you can edit the query to find more messages to cleanup, and also set this workflow to run automatically using the [Cron node](/workflow/integrations/core-nodes/workflow-nodes-base.cron/).
 
 ## What's next?
 
 Do you enjoy automating workflows? Here's what you can do next:
 
-- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows. Find more examples [here]
+- See all Workflow² [nodes](/workflow/integrations/) and try out new workflows. Find more examples [here](/example/workflows/)

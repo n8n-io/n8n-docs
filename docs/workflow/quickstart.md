@@ -2,9 +2,9 @@
     
 
 
-Start with Workflow² and activate the workflow module
+Go to APPS and after activating Workflow² by clicking the button and go to VISIT WORKFLOW²
 
-![Start](/_images/quickstart/start.png)
+![Start](/_images/workflows/workflows/WF_TryItOut_1.png)
 
 
 ## Build your first workflow

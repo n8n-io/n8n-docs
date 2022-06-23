@@ -81,7 +81,7 @@ Note that:
 
 ### Step 3: Create the node
 
-Every node must have a base file. In this example, the file is `OpenWeatherMap.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality across modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
+Every node must have a base file. In this example, the file is `OpenWeatherMap.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
 
 
 

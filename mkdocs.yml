@@ -147,7 +147,9 @@ nav:
         - Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md
         - Node UI elements: integrations/creating-nodes/build/ui-elements.md 
         - HTTP request helpers: integrations/creating-nodes/build/http-helpers.md  
-        - Node categories: integrations/creating-nodes/build/node-categories.md      
+        - Node categories: integrations/creating-nodes/build/node-categories.md
+        - File structure: integrations/creating-nodes/build/node-file-structure.md
+        - Versioning: integrations/creating-nodes/build/node-versioning.md      
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md

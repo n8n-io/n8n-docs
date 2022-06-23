@@ -170,14 +170,14 @@ nav:
     - Overview: workflow/index.md
     - Try it out: workflow/quickstart.md
     - WF² Examples:
-    - WF² Examples: workflow/workflows/examples.md
-      - Rename Keys: example/rename.md
-      - Weather: example/weather.md
-      - Approval with Doc²: example/approval.md
-      - Doc² to Excel: example/export-excel.md
-      - New Order Workflow: example/workflow_mautic1.md
-      - New Customer Workflow: example/workflow_mautic2.md
-      - Doc² to Google Drive:
+      - WF² Examples: workflow/workflows/examples.md
+        - Rename Keys: example/rename.md
+        - Weather: example/weather.md
+        - Approval with Doc²: example/approval.md
+        - Doc² to Excel: example/export-excel.md
+        - New Order Workflow: example/workflow_mautic1.md
+        - New Customer Workflow: example/workflow_mautic2.md
+        - Doc² to Google Drive:
         - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md
         - Configure Doc2StatusTrigger Node: example/export-to-gdrive/configure-doc2-status-trigger.md
         - Configure Google Drive Node: example/export-to-gdrive/configure-gdrive-node.md

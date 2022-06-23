@@ -9,7 +9,7 @@ tags:
 
 If you enjoyed creating your first workflow and have successfully completed the first challenge, here are some more examples for practice:
 
- * [Rename Keys](/example/replace/) 
+ * [Rename Keys](/example/rename/) 
  * [Weather](/example/weather/)
  * [Approval with DOC²](/example/approval/)
  * [DOC² to Excel](/example/export-excel/)

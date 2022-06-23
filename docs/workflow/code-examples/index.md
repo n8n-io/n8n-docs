@@ -8,10 +8,12 @@ There are two places in Doc² where you need to use code:
 This section covers:
 
 #Expressions:
+
     * [Introduction to expressions in n8n](/workflow//code-examples/expressions/).
     * Built in [methods](/workflow//code-examples/expressions/methods/) and [variables](/workflow//code-examples/expressions/variables/).
     * Supported libraries: [Luxon](/workflow//code-examples/expressions/luxon/) (for data and time) and [JMESPath](/workflow//code-examples/expressions/jmespath/) (for working with JSON).
 #JavaScript:
+
     * [Introduction to JavaScript in n8n](/workflow//code-examples/javascript-functions/).
     * Built in [methods](/workflow//code-examples/javascript-functions/methods/) and [variables](/code-examples/javascript-functions/variables/).
     * [Checking incoming data](/workflow//code-examples/javascript-functions/check-incoming-data/).

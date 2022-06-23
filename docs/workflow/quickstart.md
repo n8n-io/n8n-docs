@@ -3,7 +3,6 @@
 
 
 Go to APPS 
-
 ![APPS](/_images/workflows/workflows/WF_TryItOut_0.png)
 and after activating Workflow² by clicking the button, go to VISIT WORKFLOW²
 

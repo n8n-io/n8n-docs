@@ -1,10 +1,10 @@
 ---
-title: Replace JSON Key
+title: Rename JSON Key
 descpriton: This is a Sample Workflow for demonstrating Rename Keys Node
 tags:
   - Workflow²
   - Example
-  - Replace
+  - Rename
 
 ---
 
@@ -12,7 +12,7 @@ tags:
 
 # Rename Keys
 
-Example to show how to remove Keys in a JSON
+Example to show how to rename Keys in a JSON
 
 ![Workflow Example](/_images/example/Example-JSON.png)
 

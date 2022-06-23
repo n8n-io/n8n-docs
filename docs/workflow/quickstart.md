@@ -2,7 +2,7 @@
     
 
 
-Go to APPS and after activating Workflow² by clicking the button and go to VISIT WORKFLOW²
+Go to APPS and after activating Workflow² by clicking the button, go to VISIT WORKFLOW²
 
 ![Start](/_images/workflows/workflows/WF_TryItOut_1.png)
 

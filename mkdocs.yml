@@ -175,7 +175,7 @@ nav:
       - Rename Keys: example/rename.md
       - Weather: 
         - example/weather/index.md
-        - Weather: example/weather/weather.md
+        - Weather in the City: example/weather/weather.md
         - Rain: example/weather/weather_rain.md
       - Approval with Doc²: example/approval.md
       - Doc² to Excel: example/export-excel.md

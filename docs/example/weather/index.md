@@ -9,5 +9,5 @@ tags:
   - Cron
 ---
 
-- [Weather](/example/weather/weather/)
+- [Weather in the City](/example/weather/weather/)
 - [Rain](/example/weather/weather_rain/)

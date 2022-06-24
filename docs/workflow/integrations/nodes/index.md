@@ -4,11 +4,10 @@ description: In this section you will find countless nodes of n8n. Starting with
 tags:
   - Workflow
   - nodes
-  - Brandfetch
 ---
 
 # Overview
-##This section provides information about n8n's nodes.
+### This section provides information about a variety of n8n's nodes.
 
 * [Brandfetch](/workflow/integrations/nodes/workflow-nodes-base.Brandfetch/)
 * [Action Network](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/)

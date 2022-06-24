@@ -1,5 +1,5 @@
 ---
-title: Start
+title: SSH
 description: The SSH node is useful for executing commands via the Secure Shell Protocol.
 tags:
   - Workflow²

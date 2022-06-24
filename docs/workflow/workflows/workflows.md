@@ -44,7 +44,7 @@ On each workflow, it is possible to set some custom settings and overwrite some 
 
 The following settings are available:
 
-* **Error Workflow**: Select a workflow to trigger if the current workflow fails. See [Error Workflow](/flow-logic/error-handling/) for more details.
+* **Error Workflow**: Select a workflow to trigger if the current workflow fails. See [Error Workflow](/workflow/flow-logic/error-handling/) for more details.
 * **Timezone**: Sets the timezone to be used in the workflow. The default timezone is EDT (New York). The Timezone setting is particularly important for the Cron Trigger node.
 * **Save Data Error Execution**: If the execution data of the workflow should be saved when the workflow fails.
 * **Save Data Success Execution**: If the execution data of the workflow should be saved when the workflow succeeds.
@@ -63,7 +63,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
-You can also use the [Error Trigger node](/workflow/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+You can also use the [Error Trigger node](/workflow/integrations/core-nodes/workflow-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
 
 ## Workflow templates
 

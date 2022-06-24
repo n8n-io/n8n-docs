@@ -1,4 +1,3 @@
-
 ---
 title: Read Binary Files
 description: The Read Binary Files node is used to read multiple files from the host machine that runs Workflow².

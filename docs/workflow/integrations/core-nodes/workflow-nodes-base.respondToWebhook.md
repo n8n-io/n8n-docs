@@ -1,4 +1,3 @@
-
 ---
 title: Respond to Webhook
 description: The *Respond to Webhook* node can be used in workflows with a Webhook

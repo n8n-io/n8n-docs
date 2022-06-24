@@ -1,6 +1,6 @@
 ---
 title: "Export Doc2 to Google Drive"
-description: Doc2 to Google Drive document export example.
+description: Doc2 to Google Drive document export example
 date: "2022-06-07"
 tags:
   - Workflow²

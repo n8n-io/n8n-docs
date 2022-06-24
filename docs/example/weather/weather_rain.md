@@ -4,6 +4,7 @@ descpriton: Sample Workflow to query the weather by Webhook
 tags:
   - Workflow²
   - Example
+  - Weather
   - Cron
 
 ---

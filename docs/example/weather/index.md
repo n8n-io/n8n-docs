@@ -1,11 +1,12 @@
 ---
-title: "Example for a Webhook and reply with the Weather in the City"
-description: Example for a Webhook and reply with the Weather in the City
+title: "Workflows for Weather Forecast"
+description: Here are two workflow examples for the weather forecast
 tags:
   - Workflow²
   - Example
-  - Webhook
   - Weather
+  - Webhook
+  - Cron
 ---
 
 - [Weather](/example/weather/weather/)

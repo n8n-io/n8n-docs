@@ -468,7 +468,7 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
 5. Stop the current Doc² process by pressing `ctrl + c` in the terminal where you are running Workflow².
 6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the Doc² Editor UI at [localhost:5678](http://localhost:5678/workflow).
-7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](../credentials/autopilot).
+7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](/workflow/integrations/credentials/autopilot/).
 8. Go to the workflow editor, save your workflow, and execute the node.
 
 ![Executed node](/_images/integrations/creating-nodes/code/executed-node.png)
@@ -490,4 +490,4 @@ In this tutorial, we implemented one functionality of the Autofriend webhook API
 
 ## Next steps
 
-Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/workflow/integrations/creating-nodes/code/node-review-checklist/). Make sure you complete the checklist before creating a pull request.
+Once you have created the node and want to contribute to Doc², please check the [Node Review Checklist](/workflow/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.

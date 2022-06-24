@@ -10,7 +10,7 @@ Consider creating WF-nodes-module if any of the following conditions satisfy you
 
 ## Prerequisites
 
-You may already be familiar with creating nodes in Workflow². If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](https://docs.polydocs.io/nodes/creating-nodes/create-node.html) tutorial.
+You may already be familiar with creating nodes in Workflow². If you are unfamiliar with how to create Doc² nodes, you can learn about it following the instructions mentioned in the [Creating Your First Node](/workflow/integrations/creating-nodes/code/create-first-node/) tutorial.
 
 Install the following tools:
 

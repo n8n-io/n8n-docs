@@ -12,7 +12,7 @@ See the full linting list [here](https://github.com/n8n-io/nodelinter/blob/maste
 
 ## Installation and Usage
 
-Nodelinter is a dependency of the `nodes-base` package and available upon [installing](/hosting/installation/) Workflow².
+Nodelinter is a dependency of the `nodes-base` package and available upon [activating](https://app.polydocs.io/) Workflow².
 
 You can run Nodelinter from the `packages/nodes-base` directory as follows:
 

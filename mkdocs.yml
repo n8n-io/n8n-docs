@@ -234,7 +234,7 @@ nav:
       - Trigger nodes: workflow/integrations/trigger-nodes/
       - Credentials: workflow/integrations/credentials/
       - Creating nodes:
-        - Overview: workflow/integrations/creating-nodes/index.md
+        - Creating nodes: workflow/integrations/creating-nodes/index.md
         - Code-based node building:
           - Overview: workflow/integrations/creating-nodes/code/index.md
           - Standards: workflow/integrations/creating-nodes/code/standards.md

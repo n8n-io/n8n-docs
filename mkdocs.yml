@@ -235,17 +235,16 @@ nav:
       - Credentials: workflow/integrations/credentials/
       - Creating nodes:
         - workflow/integrations/creating-nodes/index.md
-          - Code-based node building:
-          - Standards: workflow/integrations/creating-nodes/code/standards.md
-          - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
-          - Create an Wf Nodes module: workflow/integrations/creating-nodes/code/create-wf-nodes-module.md
-          - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
-          - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
-          - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md
-          - HTTP request helpers: workflow/integrations/creating-nodes/code/http-helpers.md
-          - Node linter: workflow/integrations/creating-nodes/code/node-linter.md
-          - Node review checklist: workflow/integrations/creating-nodes/code/review-checklist.md
-          - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
+        - Standards: workflow/integrations/creating-nodes/code/standards.md
+        - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
+        - Create an Wf Nodes module: workflow/integrations/creating-nodes/code/create-wf-nodes-module.md
+        - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
+        - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
+        - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md
+        - Making HTTP Requests: workflow/integrations/creating-nodes/code/http-helpers.md
+        - Nodelinter: workflow/integrations/creating-nodes/code/node-linter.md
+        - Node Review Checklist: workflow/integrations/creating-nodes/code/review-checklist.md
+        - Troubleshooting: workflow/integrations/creating-nodes/code/troubleshooting-node-development.md
   - FLOW²:
     - Introduction: flow2/index.md
     - Getting Started: flow2/introduction.md

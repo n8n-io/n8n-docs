@@ -12,7 +12,6 @@ tags:
 
 Learn how to build your own custom nodes.
 
-- [Code-based node building](/workflow/integrations/creating-nodes/code/)
 - [Standards](/workflow/integrations/creating-nodes/code/standards/)
 - [Create your first node](/workflow/integrations/creating-nodes/code/create-first-node/)
 - [Creating WF-nodes-module](/workflow/integrations/creating-nodes/code/create-wf-nodes-module/)

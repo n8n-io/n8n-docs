@@ -1,4 +1,3 @@
-
 ---
 title: Read PDF
 description: The Read PDF node is used to read data from PDF documents and extract its content as text.

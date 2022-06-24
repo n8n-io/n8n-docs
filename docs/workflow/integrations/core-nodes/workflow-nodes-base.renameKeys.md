@@ -1,4 +1,3 @@
-
 ---
 title: Rename Keys
 description: The Rename Keys node is used to rename the keys of a key-value pair in Workflow².

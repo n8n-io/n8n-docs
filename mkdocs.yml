@@ -173,8 +173,10 @@ nav:
     - WF² Examples:
       - example/workflows/index.md
       - Rename Keys: example/rename.md
-      - Weather: example/weather.md
-        - Rain: example/weather_rain.md
+      - Weather: 
+        - example/weather/index.md
+        - Weather: example/weather/weather.md
+        - Rain: example/weather/weather_rain.md
       - Approval with Doc²: example/approval.md
       - Doc² to Excel: example/export-excel.md
       - New Order Workflow: example/workflow_mautic1.md

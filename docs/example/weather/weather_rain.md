@@ -10,18 +10,19 @@ tags:
 
 # Weather
 
-Example for a cron job workflow to send the weather by Email if it rains
+Example of a cronjob workflow to send a weather forecast by email when it rains
 
 ![Workflow Example](/_images/example/weather_rain.png)
 
 
 ## How to use this workflow
 
-Instructions
-- Copy the workflow 👉
-- Navigate to your Workflow editor
-- Click anywhere in the Workflow² window
-- Paste the code (ctrl + v or cmd + v)
+**Instructions**
+
+1. Copy the workflow
+2. Navigate to your Workflow editor
+3. Click anywhere in the Workflow² window
+4. Paste the code (ctrl + v or cmd + v)
 
 
 

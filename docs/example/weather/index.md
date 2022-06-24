@@ -8,5 +8,5 @@ tags:
   - Weather
 ---
 
-- [Weather](/example/export-to-gdrive/create-blank-workflow/)
-- [Rain](/example/export-to-gdrive/configure-doc2-status-trigger/)
+- [Weather](/example/weather/weather/)
+- [Rain](/example/weather/weather_rain/)

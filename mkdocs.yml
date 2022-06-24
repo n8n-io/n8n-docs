@@ -237,7 +237,7 @@ nav:
         - workflow/integrations/creating-nodes/index.md
         - Standards: workflow/integrations/creating-nodes/code/standards.md
         - Create your first node: workflow/integrations/creating-nodes/code/create-first-node.md
-        - Create an Wf Nodes module: workflow/integrations/creating-nodes/code/create-wf-nodes-module.md
+        - Creating WF-nodes-module: workflow/integrations/creating-nodes/code/create-wf-nodes-module.md
         - Create a trigger node: workflow/integrations/creating-nodes/code/create-trigger-node.md
         - Use the node developer CLI: workflow/integrations/creating-nodes/code/node-developer-cli.md
         - Node UI elements: workflow/integrations/creating-nodes/code/ui-elements.md

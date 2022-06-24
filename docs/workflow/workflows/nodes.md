@@ -24,7 +24,7 @@ Core nodes are functions or services that can be used to control how workflows a
 
 Use the Start node when you want to manually trigger the workflow with the `Execute Workflow` button at the bottom of the Editor UI. This way of starting the workflow is useful when creating and testing new workflows.
 
-If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) or the [Webhook node](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/). You can also read about [creating nodes](/workflow/integrations/creating-nodes/) and make a node for your desired application.
+If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) or the [Webhook node](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/). You can also read about [creating nodes](/workflow/integrations/creating-nodes/) and make a node for your desired application.
 
 
 ## Regular nodes

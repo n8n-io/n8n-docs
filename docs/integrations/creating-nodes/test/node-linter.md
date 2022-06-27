@@ -1,5 +1,7 @@
 # Nodelinter
 
+[TODO: update this to reflect using nodelinter from within the starter rather than assuming n8n install availability https://github.com/n8n-io/nodelinter]
+
 [Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files. It helps you to follow n8n recommended best practices when developing new nodes.
 
 This includes rules for:
@@ -39,7 +41,7 @@ npm run nodelinter -- --<options>
 
 ### Custom configuration
 
-The Nodelinter [default configuration](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts) can be overridden to, for example, change the areas and issues linted.
+The Nodelinter [default configuration](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts){:target=_blank .external-link} can be overridden. For example, you can change the areas or issues linted.
 
 To do so create a JSON file containing the key values you want to override. For example:
 

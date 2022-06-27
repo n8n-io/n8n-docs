@@ -16,8 +16,8 @@ You can test your node as you build it by running it in a local n8n instance.
   npm link <node-name>
   ```
 
-  !!! note "Check your directory"
-      Make sure you run `npm link <node-name>` in the main directory where you installed n8n. This is probably in the `node_modules` directory within your Node.js installation, if you installed n8n globally.
+    !!! note "Check your directory"
+        Make sure you run `npm link <node-name>` in the main directory where you installed n8n. This is probably in the `node_modules` directory within your Node.js installation, if you installed n8n globally.
     
 4. Start n8n:
   ```

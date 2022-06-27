@@ -140,6 +140,7 @@ nav:
         - Overview: integrations/creating-nodes/plan/index.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
+        - Versioning: integrations/creating-nodes/plan/node-versioning.md 
       - Build your node:
         - Overview: integrations/creating-nodes/build/index.md        
         - Build a declarative-style node: integrations/creating-nodes/build/declarative-style-node.md
@@ -159,10 +160,11 @@ nav:
         - Overview: integrations/creating-nodes/reference/index.md
         - Standards: integrations/creating-nodes/reference/standards.md 
         - Node UI elements: integrations/creating-nodes/reference/ui-elements.md 
-        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md  
-        - Versioning: integrations/creating-nodes/reference/node-versioning.md 
+        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md
         - File structure: integrations/creating-nodes/reference/node-file-structure.md
-        - Codex files: integrations/creating-nodes/reference/node-codex-files.md         
+        - Base files: integrations/creating-nodes/reference/node-base-files.md
+        - Codex files: integrations/creating-nodes/reference/node-codex-files.md  
+        - Credentials files: integrations/creating-nodes/reference/credentials-files.md       
   - Courses:
     - Overview: courses/index.md
     - Level one:

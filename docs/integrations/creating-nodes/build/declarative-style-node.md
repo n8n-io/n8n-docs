@@ -78,12 +78,8 @@ For more information on these parameters, refer to [Node codex files](/integrati
 
 Every node must have a base file. In this example, the file is `OpenWeatherMap.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
 
-### Step 4: Set up authentication
 
-The OpenWeatherMap API requires users to
-
-
-### Step : Add an icon
+### Step 4: Add an icon
 
 Copy and paste this SVG into `openweathermap.svg`:
 
@@ -92,6 +88,10 @@ Copy and paste this SVG into `openweathermap.svg`:
 ```
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
+
+### Step 5: Set up authentication
+
+The OpenWeatherMap API requires users to
 
 
 ## Test your node

@@ -19,6 +19,8 @@ As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree
 
 Node versioning summary:
 
-- The main node file should extend `NodeVersionedType` instead of `INodeType`.
-- The main node file should contain a base description including the `defaultVersion` (usually the latest) and a list of versions. It shouldn't contain anything else.
+- The base node file should extend `NodeVersionedType` instead of `INodeType`.
+- The base node file should contain a description including the `defaultVersion` (usually the latest) and a list of versions. It shouldn't contain anything else.
 - n8n recommends using `v1`, `v2`, and so on, for version folder names.
+
+[TODO: add more info on how node versioning will affect end users and encourage good versioning]

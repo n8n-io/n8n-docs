@@ -10,10 +10,10 @@ You need the following installed on your development machine:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [OpenWeatherMap API](https://openweathermap.org/api){:target=_blank .external-link}.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Phots.
 
 !!! note "Existing node"
-    n8n has a built-in OpenWeatherMap node. To avoid clashing with the existing node, you'll give your version a different name.
+    n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
 
 ### Step 1: Set up the project
 
@@ -22,8 +22,8 @@ n8n provides a starter repository for node development. Using the starter ensure
 Clone the repository, navigate into the directory, and install dependencies:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-nodes-starter.git
-cd n8n-nodes-starter
+git clone https://github.com/n8n-io/n8n-nodes-starter.git n8n-nodes-nasa-pics
+cd n8n-nodes-nasa-pics
 npm i
 ```
 
@@ -36,22 +36,72 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-* `nodes/OpenWeatherMap`
-* `nodes/OpenWeatherMap/OpenWeatherMap.node.json`
-* `nodes/OpenWeatherMap/OpenWeatherMap.node.ts`
-* `nodes/OpenWeatherMap/openweathermap.svg`
-* `credentials/OpenWeatherMap.credentials.ts`
+* `nodes/nasapics`
+* `nodes/nasapics/nasapics.node.json`
+* `nodes/nasapics/nasapics.node.ts`
+* `nodes/nasapics/nasapics.svg`
+* `credentials/nasapics.credentials.ts`
 
+### Step 2: Update the npm package details
 
-### Step 2: Add node metadata
+Your npm package details are in the `package.json` at the root of the project. Update this file to include the following information:
 
-Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `OpenWeatherMap.node.json`.
+```json
+{
+	// All node names must start with "n8n-nodes-"
+  "name": "n8n-nodes-nasapics",
+  "version": "0.1.0",
+  "description": "n8n node to call NASA's nasapics and Mars Rover Photo services.",
+  "keywords": [
+		// This keyword is required for community nodes
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://n8n.io",
+  "author": {
+    "name": "<your-name>",
+    "email": "<your-email>"
+  },
+  "repository": {
+    "type": "git",
+		// Change the git remote to your own repository
+		// Add the new URL here
+    "url": "git+<your-repo-url>"
+  },
+  "main": "index.js",
+  "scripts": {
+		// don't change
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "credentials": [
+      "dist/credentials/nasapics.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/nasapics/nasapics.node.js"
+    ]
+  },
+  "devDependencies": {
+		// don't change
+  },
+  "dependencies": {
+    // don't change
+  }
+}
+
+```
+
+### Step 3: Add node metadata
+
+Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `nasapics.node.json`.
 
 Add the following:
 
 ```json
 {
-	"node": "n8n-nodes-base.openweatherapi",
+	"node": "n8n-nodes-base.nasapics",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
@@ -74,24 +124,112 @@ Add the following:
 
 For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/reference/node-codex-files/).
 
-### Step 3: Create the node
+### Step 4: Create the node
 
-Every node must have a base file. In this example, the file is `OpenWeatherMap.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
+Every node must have a base file. In this example, the file is `nasapics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
 
+#### Step 4.1: Lint configuration and imports
 
-### Step 4: Add an icon
+Start by [TODO: do we always want them to disable that linting?] disabling one of the linter warnings, and adding the import statements:
 
-Copy and paste this SVG into `openweathermap.svg`:
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+```js
+/* eslint-disable n8n-nodes-base/filesystem-wrong-node-filename */
+import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
+
+#### Step 4.2: Create the main class
+
+The node must export an interface that implements INodeType. This interface must include a `description` object [TODO: think this is also an interface? Technical terminology halp!], which in turn contains the `properties` array.
+
+```js
+export class nasapics implements INodeType {
+	description: INodeTypeDescription = {
+		// Basic node details will go here
+		properties: [
+			// Resources and operations will go here
+		]
+	};
+}
+```
+
+#### Step 4.3: Add node details
+
+All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
+
+```js
+		displayName: 'nasapics',
+		name: 'nasapics',
+		icon: 'file:nasapics.svg',
+		group: ['transform'],
+		version: 1,
+		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+		description: 'Get data from NASAs API',
+		defaults: {
+			name: 'nasapics',
+			color: '#0b3d91',
+		},
+		inputs: ['main'],
+		outputs: ['main'],
+		credentials: [
+			{
+				name: 'nasapicsApi',
+				required: true,
+			},
+		],
+		requestDefaults: {
+			baseURL: 'https://api.nasa.gov/',
+			url: '',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+		},
+```
+
+#### Step 4.4: Add resource
+
+The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `nasapics.node.ts`. Add the `properties` array, with the resource object:
+
+```js
+properties: [
+	{
+		displayName: 'Resource',
+		name: 'resource',
+		type: 'options',
+		noDataExpression: true,
+		options: [
+			{
+				name: 'Astronomy Picture of the Day',
+				value: 'astronomyPictureOfTheDay',
+			},
+			{
+				name: 'Mars Rover Photos',
+				value: 'marsRoverPhotos'
+			}
+		],
+		default: 'astronomyPictureOfTheDay',
+	},
+	// Operations will go here
+
+],
+```
+
+`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
+
+#### Step 4.5: Add operations
+
+The operations object defines the available operations on a resource.
+
+### Step 5: Add an icon
+
+Copy and paste the NASA SVG logo from [here](view-source:https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`.
+
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-### Step 5: Set up authentication
+### Step 6: Set up authentication
 
-The OpenWeatherMap API requires users to
+The NASA API requires users to authenticate with an API key.
 
 
 ## Test your node

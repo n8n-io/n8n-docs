@@ -1,5 +1,7 @@
 # Node versioning
 
+[TODO: decide if this should be in Plan or in Reference. Maybe split]
+
 n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version. 
 
 !!! note "Versioning type restricted by node style"

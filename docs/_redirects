@@ -1,18 +1,16 @@
-<<<<<<< HEAD
 # Creating nodes overhaul
 
-/integrations/creating-nodes/code/create-first-node/   /integrations/creating-nodes/programmatic-style-node/
-/integrations/creating-nodes/code/standards/   /integrations/creating-nodes/standards/
-/integrations/creating-nodes/code/create-trigger-node/   /integrations/creating-nodes/create-trigger-node/
-/integrations/creating-nodes/code/ui-elements/   /integrations/creating-nodes/ui-elements/
-/integrations/creating-nodes/code/node-linter/   /integrations/creating-nodes/node-linter/
-/integrations/creating-nodes/code/review-checklist/   /integrations/creating-nodes/review-checklist/
-/integrations/creating-nodes/code/troubleshooting-node-development/   /integrations/creating-nodes/troubleshooting-node-development/
-/integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/http-helpers/
-/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/install-private-nodes/
+/integrations/creating-nodes/code/create-first-node/   /integrations/creating-nodes/build/
+/integrations/creating-nodes/code/standards/   /integrations/creating-nodes/referencestandards/
+/integrations/creating-nodes/code/create-trigger-node/   /integrations/creating-nodes/build/create-trigger-node/
+/integrations/creating-nodes/code/ui-elements/   /integrations/creating-nodes/reference/ui-elements/
+/integrations/creating-nodes/code/node-linter/   /integrations/creating-nodes/test/node-linter/
+/integrations/creating-nodes/code/review-checklist/   /integrations/creating-nodes/test/review-checklist/
+/integrations/creating-nodes/code/troubleshooting-node-development/   /integrations/creating-nodes/test/troubleshooting-node-development/
+/integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/reference/http-helpers/
+/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/use/install-private-nodes/
 
 # TODO: figure out where to redirect node cli
-=======
 
 # Quickstart overhaul
 
@@ -20,7 +18,6 @@
 
 
 # Weird ones after IA launch
->>>>>>> main
 
 
 # Updated during IA work

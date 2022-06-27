@@ -139,17 +139,12 @@ nav:
       - Plan your node:
         - Overview: integrations/creating-nodes/plan/index.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
       - Build your node:
-        - Overview: integrations/creating-nodes/build/index.md
-        - Standards: integrations/creating-nodes/build/standards.md
+        - Overview: integrations/creating-nodes/build/index.md        
         - Build a declarative-style node: integrations/creating-nodes/build/declarative-style-node.md
         - Build a programmatic-style node: integrations/creating-nodes/build/programmatic-style-node.md
-        - Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md
-        - Node UI elements: integrations/creating-nodes/build/ui-elements.md 
-        - HTTP request helpers: integrations/creating-nodes/build/http-helpers.md  
-        - Node categories: integrations/creating-nodes/build/node-categories.md
-        - File structure: integrations/creating-nodes/build/node-file-structure.md
-        - Versioning: integrations/creating-nodes/build/node-versioning.md      
+        - Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md    
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
@@ -160,6 +155,14 @@ nav:
         - Overview: integrations/creating-nodes/use/index.md
         - Submit community nodes: integrations/creating-nodes/use/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/use/install-private-nodes.md
+      - Reference:
+        - Overview: integrations/creating-nodes/reference/index.md
+        - Standards: integrations/creating-nodes/reference/standards.md 
+        - Node UI elements: integrations/creating-nodes/reference/ui-elements.md 
+        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md  
+        - Versioning: integrations/creating-nodes/reference/node-versioning.md 
+        - File structure: integrations/creating-nodes/reference/node-file-structure.md
+        - Codex files: integrations/creating-nodes/reference/node-codex-files.md         
   - Courses:
     - Overview: courses/index.md
     - Level one:

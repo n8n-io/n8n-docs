@@ -43,9 +43,9 @@ Now create the following directories and files:
 * `credentials/OpenWeatherMap.credentials.ts`
 
 
-### Step 2: Add node configuration
+### Step 2: Add node metadata
 
-Your node configuration goes in the JSON file at the root of your node. In this example: `OpenWeatherMap.node.json`.
+Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `OpenWeatherMap.node.json`.
 
 Add the following:
 
@@ -72,18 +72,15 @@ Add the following:
 }
 ```
 
-Note that:
-
-* `node` must always start with `n8n-nodes-base.`.
-* `nodeVersion` is [TODO: how does this interact with our versioning?]
-* `codexVersion` refers to the n8n [TODO: what even is this?]
-* The `resources` section should contain links to your node documentation. n8n automatically adds help links to credentials and nodes in the GUI.
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/reference/node-codex-files/).
 
 ### Step 3: Create the node
 
 Every node must have a base file. In this example, the file is `OpenWeatherMap.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
 
+### Step 4: Set up authentication
 
+The OpenWeatherMap API requires users to
 
 
 ### Step : Add an icon

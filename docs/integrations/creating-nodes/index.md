@@ -10,4 +10,10 @@ This section includes:
 * How to [share your node](/integrations/creating-nodes/use/submit-community-nodes/) with the community, or use it as a [private node](/integrations/creating-nodes/use/install-private-nodes/).
 * [Reference material](/integrations/creating-nodes/reference/), including [guidance on standards](/integrations/creating-nodes/reference/standards/) and information on the individual files that make up a node.
 
-This section assumes basic programming knowledge. You should be able to manage your own development environment, and have some knowledge of JavaScript. It assumes that you have some familiarity with npm.
+## Technical difficulty
+
+This section assumes the following:
+
+* Some familiarity with JavaScript and TypeScript.
+* Ability to manage your own development environment, including git.
+* Knowledge of npm, including creating and submitting packages.

@@ -13,7 +13,8 @@ You can test your node as you build it by running it in a local n8n instance.
 3. Install the node into your local n8n instance:
   ```shell
   # In the directory where you installed n8n
-  npm link <node-name>
+  # node-package-name is the name from the package.json
+  npm link <node-package-name>
   ```
 
     !!! note "Check your directory"

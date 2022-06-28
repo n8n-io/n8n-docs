@@ -136,6 +136,7 @@ The operations object defines the available operations on a resource.
 * `noDataExpression`: Boolean. [TODO: what is this?]
 
 
+
 ## Declarative-style parameters
 
 ### version
@@ -143,6 +144,54 @@ The operations object defines the available operations on a resource.
 Number or array. If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 
 n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+
+### routing
+
+`routing` is an object used within an `options` array in an `operations` object. It contains the details of the API call.
+
+The code example below comes from the [Declarative-style tutorial](/integrations/creating-nodes/build/declarative-style-node/). It sets up an integration with a NASA API. It shows how to use `requestDefaults` to set up the basic API call details, and `routing` to add information for each operation.
+
+```js
+description: INodeTypeDescription = {
+  // Other node info here
+  requestDefaults: {
+			baseURL: 'https://api.nasa.gov',
+			url: '',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+		},
+    properties: [
+      // Resources here
+      {
+        displayName: 'Operation'
+        // Other operation details
+        options: [
+          {
+            name: 'Get'
+            value: 'get',
+            description: '',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/planetary/apod'
+              }
+            }
+          }
+        ]
+      }
+    ]
+}
+```
+
+### routing.output
+
+### routing.request
+
+### routing.send
+
+
 
 ## Programmatic-style parameters
 

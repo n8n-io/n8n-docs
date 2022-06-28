@@ -1,86 +1,27 @@
-# Nodelinter
+# `eslint-plugin-n8n-nodes-base`
 
-[TODO: update this to reflect using nodelinter from within the starter / as a standalone dependency rather than assuming n8n install availability https://github.com/n8n-io/nodelinter]
+[`eslint-plugin-n8n-nodes-base`](https://github.com/ivov/eslint-plugin-n8n-nodes-base) statically analyzes ("lints") the source code of n8n nodes and credentials in the official repository and in community packages. The linter helps to detect and autofix issues to help you follow best practices.
 
-[Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files. It helps you to follow n8n recommended best practices when developing new nodes.
+`eslint-plugin-n8n-nodes-base` contains a [collection of rules](https://github.com/ivov/eslint-plugin-n8n-nodes-base#ruleset) for node files (`*.node.ts`), resource description files (`*Description.ts`), credential files (`*.credentials.ts`), and the `package.json` of a community package.
 
-This includes rules for:
+## Setup
 
-* Alphabetization of node parameters and options
-* Casing for display names and descriptions
-* Default values for each parameter type
-* Required and optional key-value pairs
+Run `npm install` in the starter project to install all dependencies. Once the installation finishes, the linter will be available to you. If using VSCode, install the [ESLint VSCode extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). For other IDEs, refer to their ESLint integrations.
 
-See the full linting list [here](https://github.com/n8n-io/nodelinter/blob/master/src/lintings.ts) for more details.
+Be aware that `eslint-plugin-n8n-nodes-base` is configured in [`.eslintrc.js`](https://github.com/n8n-io/n8n-nodes-starter/blob/master/.eslintrc.js), but please do not edit this config file.
 
-## Installation and Usage
+## Usage
 
-Nodelinter is a dependency of the `nodes-base` package and available upon [installing](/hosting/installation/) n8n.
+### Linting
 
-You can run Nodelinter from the `packages/nodes-base` directory as follows:
+The linter runs automatically after installing dependencies and before publishing the package to npm.
 
-```sh
-npm run nodelinter -- --<options>
-```
+VSCode also runs the linter in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
 
-!!! note "Lint before submitting nodes"
-    Run Nodelinter and verify your code before submitting a node to the community nodes repository.
+To lint manually, run `npm run lint` to view all detected issues in your console. To lint and **autofix** manually, run `npm run lintfix`, so that violations of rules [marked as autofixable](https://github.com/ivov/eslint-plugin-n8n-nodes-base#ruleset) will be fixed for you.
 
+### Exceptions
 
-## Options
+Instead of fixing a rule violation, you can also make an exception for it, so the linter does not flag it.
 
-| Option            | Description                                        | Example |
-| ----------------- | -------------------------------------------------- | -------- |
-| `--target`        | Path of the file or directory to lint              | Lint a single file:<br>`--target=nodes/Stripe/Stripe.node.ts` <br><br>Lint all files in a directory:<br>`--target=nodes/Stripe` |
-| `--config`        | Path of the [custom configuration](#custom-configuration) to use | `--config=/Users/john/Documents/myConfig.json` |
-| `--patterns`      | Lintable file patterns                             | `--patterns:.node.ts,Description.ts` |
-| `--print`         | Print output to JSON<br><br>You can specify a custom filename. | `--print=myLintOutput` |
-| `--errors-only`   | Enable error logs only                             |
-| `--warnings-only` | Enable warning logs only                           |
-| `--infos-only`    | Enable info logs only                              |
-
-### Custom configuration
-
-The Nodelinter [default configuration](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts){:target=_blank .external-link} can be overridden. For example, you can change the areas or issues linted.
-
-To do so create a JSON file containing the key values you want to override. For example:
-
-```json
-{
-  "target": "/Users/john/n8n/packages/nodes-base/nodes/Notion/Notion.node.ts",
-  "patterns": [".node.ts"],
-  "sortMethod": "lineNumber",
-  "lintings": {
-    "PARAM_DESCRIPTION_MISSING_WHERE_OPTIONAL": {
-      "enabled": false
-    },
-    "NAME_WITH_NO_CAMELCASE": {
-      "enabled": false
-    }
-  }
-}
-```
-
-Name this file `nodelinter.config.json` and place it anywhere in your `nodes-base` directory and it will be automatically detected. Alternatively, you can specify the custom config file and location using the `--config` option.
-
-## Lint exceptions
-
-You can create exceptions for individual lines of code from any or all linting rules as follows:
-
-```
-// nodelinter-ignore-next-line <LINTING_NAME> <LINTING_NAME>
-```
-
-If no specific linting name is provided that line will be excepted from all rules. For example:
-
-Exception for one rule:
-```
-// nodelinter-ignore-next-line PARAM_DESCRIPTION_WITH_EXCESS_WHITESPACE
-description: 'Time zone used in the response.    The default is the time zone of the calendar.',
-```
-
-Exception for all rules:
-```
-// nodelinter-ignore-next-line
-description: 'Time zone used in the response.    The default is the time zone of the calendar.',
-```
+To make a lint exception, hover over the issue and click on `Quick fix` (or `cmd+.` in macOS) and select `Disable {rule} for this line`. Only except a line where you have good reason to. If you think the linter is misdetecting an issue, please [report it in the linter repo](https://github.com/ivov/eslint-plugin-n8n-nodes-base/issues).

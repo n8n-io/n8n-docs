@@ -240,6 +240,7 @@ Add the following to the `properties` array, after the `resource` object:
 		{
 			name: 'Get',
 			value: 'get',
+			action: 'Get a single picture of the day',
 			description: 'Get the Astronomy Picture of the day',
 			routing: {
 				request: {
@@ -271,7 +272,7 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '/mars-photos/api/v1/curiosity/photos'
+					url: '/mars-photos/api/v1/{{roverName}}/photos'
 				}
 			}
 		}

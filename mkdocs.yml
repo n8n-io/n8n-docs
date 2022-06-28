@@ -164,7 +164,7 @@ nav:
         - File structure: integrations/creating-nodes/reference/node-file-structure.md
         - Base files: integrations/creating-nodes/reference/node-base-files.md
         - Codex files: integrations/creating-nodes/reference/node-codex-files.md  
-        - Credentials files: integrations/creating-nodes/reference/credentials-files.md       
+        - Credentials files: integrations/creating-nodes/reference/credentials-files.md    
   - Courses:
     - Overview: courses/index.md
     - Level one:

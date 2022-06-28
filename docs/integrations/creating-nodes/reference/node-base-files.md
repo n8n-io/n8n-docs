@@ -134,6 +134,7 @@ The operations object defines the available operations on a resource.
 * `name`: String. This should always be `option`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. [TODO: what is this?]
+* `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
 
 
 
@@ -196,6 +197,16 @@ description: INodeTypeDescription = {
 ## Programmatic-style parameters
 
 
+
+
+
+### defaultVersion
+
+Number. Use `defaultVersion` when using the full versioning approach.
+
+n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+
+
 ### version
 
 Number or array. Use `version` when using the light versioning approach.
@@ -204,10 +215,12 @@ If you have one version of your node, this can be a number. If you want to suppo
 
 n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
 
+## Programmatic-style: The execute() method
 
-### defaultVersion
+The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object.
 
-Number. Use `defaultVersion` when using the full versioning approach.
+The `execute()` method creates and returns an instance of `INodeExecutionData`.
 
-n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+!!! warning "Paired items"
+    You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/reference/paired-items/).
 

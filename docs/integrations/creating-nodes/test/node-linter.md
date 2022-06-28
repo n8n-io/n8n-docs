@@ -1,6 +1,6 @@
 # Nodelinter
 
-[TODO: update this to reflect using nodelinter from within the starter rather than assuming n8n install availability https://github.com/n8n-io/nodelinter]
+[TODO: update this to reflect using nodelinter from within the starter / as a standalone dependency rather than assuming n8n install availability https://github.com/n8n-io/nodelinter]
 
 [Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your n8n node files. It helps you to follow n8n recommended best practices when developing new nodes.
 

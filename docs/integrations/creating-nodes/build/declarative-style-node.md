@@ -165,7 +165,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Get data from NASAs API',
 		defaults: {
-			name: 'nasapics',
+			name: 'NASA Pics',
 			color: '#0b3d91',
 		},
 		inputs: ['main'],
@@ -300,7 +300,7 @@ Add the following to `NasaPicsApi.credentials.ts`:
 
 ```js
 import {
-	IAuthenticateQueryAuth,
+	IAuthenticateGeneric,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -318,12 +318,12 @@ export class NasaPicsApi implements ICredentialType {
 		},
 	];
 	authenticate = {
-		type: 'queryAuth',
+		type: 'generic',
 		properties: {
 			key: 'api_key',
 			value: '={{$credentials.apiKey}}',
 		},
-	} as IAuthenticateQueryAuth;
+	} as IAuthenticateGeneric;
 }
 ```
 

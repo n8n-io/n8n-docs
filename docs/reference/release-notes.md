@@ -1,17 +1,6 @@
 # Release notes
 
-## n8n@0.184.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2022-06-29
-
-This release includes:
-
-* A new way of setting up node authentication and handling authentication types, which simplifies node building.
-* Enhancements to the Clockify node.
-* Bug fixes.
-
-### New features
+## [TODO: in com nodes release]
 
 <div class="n8n-new-features" markdown>
 
@@ -55,11 +44,20 @@ export class AsanaApi implements ICredentialType {
 	};
 }
 ```
-
-
 </div>
 
-Other new features:
+## n8n@0.184.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-29
+
+This release includes:
+
+* New core features
+* Enhancements to the Clockify node.
+* Bug fixes.
+
+### New features
 
 * You can now access `getBinaryDataBuffer` in the pre-send method.
 * n8n now exposes the item index being processed by a node.

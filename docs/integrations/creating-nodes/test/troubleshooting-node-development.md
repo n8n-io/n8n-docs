@@ -36,9 +36,7 @@ Check that the name in the credentials array matches the name used in the proper
 
 ### Node doesn't show up in the Add Node menu
 
-Check that you registered the node in the `packages/nodes-base/package.json` file.
-
-[TODO: does this still apply with new way of adding nodes?]
+Check that you registered the node in the `package.json` file in your project.
 
 <!-- vale off -->
 ### Changes to the description properties don't show in the UI on refreshing

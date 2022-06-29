@@ -76,28 +76,28 @@ String. A short description of the node. n8n uses this in the GUI.
 
 ### defaults
 
-Object. [TODO: what is this actually for?]
+Object. Contains essential brand and name settings.
 
 The object can include:
 
-* `name`: [TODO]
-* `color`: Hex color code.
+* `name`: String. Used as the node name on the canvas if the `displayName` is too long.
+* `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
 
 ### inputs
 
-[TODO: always seems to be main? Whut?]
+Array of strings. Names the input connectors. Controls how many connectors the node has on the input side.
 
 ### outputs
 
-[TODO: always seems to be main? Whut?]
+Array of strings. Names the output connectors. Controls how many connectors the node has on the output side.
 
 ### credentials
 
-Array of object. This parameter tells n8n the credential options. Each object defines an authentication type [TODO: is this changing with the current auth type overhaul?].
+Array of object. This parameter tells n8n the credential options. Each object defines an authentication type.
 
 The object must include:
 
-* `name`: the credential name. Must match the prefix of the credential file. For example, `asanaAPI` links to `AsanaApi.credential.ts`. [TODO: except they don't have to match case - in fact they usually don't. Why?]
+* `name`: the credential name. Must match the prefix of the credential file. For example, `AsanaAPI` links to the `name` property in `AsanaApi.credential.ts`. [TODO: double check exact name]
 * `required`: boolean. Specify whether authentication is required to use this node.
 
 ### requestDefaults
@@ -107,11 +107,11 @@ Object. Set up the basic information for API calls to the service this node inte
 This object must include:
 
 * `baseURL`: The API base URL.
-* `url`: [TODO: this always seems included, but often empty. Whut?]
 
 You can also add:
 
-* `headers`: an object describing the API call headers, such as content type. [TODO: query about the starter - why quotes on Content-Type but not on Accept? https://github.com/n8n-io/n8n-nodes-starter/blob/master/nodes/HttpBin/HttpBin.node.ts#L29]
+* `headers`: an object describing the API call headers, such as content type.
+* `url`: string. Appended to the `baseURL`. You can usually leave this out. It's more common to provide this in the `operations`.
 
 ### properties
 
@@ -124,7 +124,7 @@ A resource object includes the following parameters:
 * `displayName`: String. This should always be `Resource`.
 * `name`: String. This should always be `resource`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
-* `noDataExpression`: Boolean. [TODO: what is this?]
+* `noDataExpression`: Boolean. Must always be `true`. [TODO: ask Ivan what it actually does - affects frontend somehow]
 
 #### Operations
 
@@ -133,10 +133,14 @@ The operations object defines the available operations on a resource.
 * `displayName`: String. This should always be `Options`.
 * `name`: String. This should always be `option`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
-* `noDataExpression`: Boolean. [TODO: what is this?]
+* `noDataExpression`: Boolean. [TODO: what is this? see above]
 * `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
 
+### methods
 
+#### loadOptions
+
+JavaScript function. [TODO: see gmail node - message > manage label as example]
 
 ## Declarative-style parameters
 

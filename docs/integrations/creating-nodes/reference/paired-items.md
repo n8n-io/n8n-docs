@@ -3,7 +3,7 @@
 !!! note "Programmatic-style nodes only"
     The information in this document applies to programmatic-style nodes. If you're using declarative style, n8n handles paired items for you automatically.
 
-An n8n node operation consumes input items and produces output items. In most cases [TODO: exceptions?], n8n generates an output item from a single input item. 
+An n8n node operation consumes input items and produces output items. n8n generates an output item from a single input item, except in the Merge node, or any other node that combines or sums items.
 
 To ensure that n8n works, it needs to know which input item a given output item comes from. If this information is missing, expressions on other nodes may break.
 

@@ -1,5 +1,91 @@
 # Release notes
 
+## n8n@0.184.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-29
+
+This release includes:
+
+* A new way of setting up node authentication and handling authentication types, which simplifies node building.
+* Enhancements to the Clockify node.
+* Bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Simplify authentication setup for node creators
+
+This release introduces a simpler way of handling authorization when building a node. All credentials should now contain an `authenticate` property that dictates how the credential is used in a request.
+n8n has also simplified authentication types: instead of specifiying an authentication type and using the correct interface, you can now set the type as `"generic"`, and use the `IAuthenticateGeneric` interface. 
+
+You can use this approach for any authentication method where data is sent in the header, body, or query string. This includes methods like bearer and basic auth. You can't use this method for more complex authentication types that require multiple calls, or for methods that don't pass authentication data. This includes OAuth.
+
+For an example of the new authentication syntax, refer to n8n's [Asana node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-link}.
+
+```js
+// in AsanaApi.credentials.ts 
+import {
+	IAuthenticateGeneric,
+	ICredentialType,
+	INodeProperties,
+} from 'n8n-workflow';
+
+export class AsanaApi implements ICredentialType {
+	name = 'asanaApi';
+	displayName = 'Asana API';
+	documentationUrl = 'asana';
+	properties: INodeProperties[] = [
+		{
+			displayName: 'Access Token',
+			name: 'accessToken',
+			type: 'string',
+			default: '',
+		},
+	];
+
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.accessToken}}',
+			},
+		},
+	};
+}
+```
+
+
+</div>
+
+Other new features:
+
+* You can now access `getBinaryDataBuffer` in the pre-send method.
+* n8n now exposes the item index being processed by a node.
+* Migrated the expressions templating engine to [n8n's fork of riot-tmpl](https://github.com/n8n-io/tmpl){:target=_blank .external-link}.
+
+
+### Node enhancements
+
+[Clockify node](/integrations/nodes/n8n-nodes-base.clockify/): added three new resources: Client, User, and Workspace. Also added support for custom API calls.
+
+
+### Bug fixes
+
+* Core: fixed an error with logging circular links in JSON.
+* Editor UI: now display the full text of long error messages.
+* Editor UI: fix for an issue with credentials rendering when the node has no parameters.
+* [Cortex node](/integrations/nodes/n8n-nodes-base.cortex/): fix an issue preventing all analyzers being returned.
+* [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/): ensure all OAuth2 credentials work with this node.
+* [LinkedIn node](/integrations/nodes/n8n-nodes-base.linkedIn/): fix an issue with image preview.
+* [Salesforce node](/integrations/nodes/n8n-nodes-base.salesforce/): fix an issue that was causing the lead status to not use the new name when name is updated.
+* Fixed an issue with required/optional parameters.
+
+### Contributors
+
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+
 ## n8n@0.183.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.182.1...n8n@0.183.0){:target=_blank .external-link} for this version.<br />

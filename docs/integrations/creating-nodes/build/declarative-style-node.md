@@ -272,7 +272,7 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '/mars-photos/api/v1/{{roverName}}/photos'
+					url: '/mars-photos/api/v1/={{roverName}}/photos'
 				}
 			}
 		}
@@ -320,8 +320,10 @@ export class NasaPicsApi implements ICredentialType {
 	authenticate = {
 		type: 'generic',
 		properties: {
-			key: 'api_key',
-			value: '={{$credentials.apiKey}}',
+			qs: {
+				'api_key': '={{$credentials.apiKey}}'
+			}
+
 		},
 	} as IAuthenticateGeneric;
 }

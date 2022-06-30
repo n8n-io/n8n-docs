@@ -29,4 +29,4 @@ Object.
 
 #### qs
 
-Object. Stands for "query string".
+Object. Stands for "query string."

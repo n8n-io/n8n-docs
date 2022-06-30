@@ -15,7 +15,7 @@ The node base file follows this basic structure:
 2. Create a class for the node
 3. Within the node class, create a `description` object, which defines the node.
 
-A programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
+detailsA programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
 
 ### Outline structure for a declarative-style node
 
@@ -97,8 +97,8 @@ Array of object. This parameter tells n8n the credential options. Each object de
 
 The object must include:
 
-* `name`: the credential name. Must match the prefix of the credential file. For example, `AsanaAPI` links to the `name` property in `AsanaApi.credential.ts`. [TODO: double check exact name]
-* `required`: boolean. Specify whether authentication is required to use this node.
+* `name`: the credential name. Must match the `name` property in the credential file. For example, `name: 'asanaApi'` in  in [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} links to `name = 'asanaApi'` in [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}.
+* `required`: Boolean. Specify whether authentication is required to use this node.
 
 ### requestDefaults
 
@@ -124,7 +124,7 @@ A resource object includes the following parameters:
 * `displayName`: String. This should always be `Resource`.
 * `name`: String. This should always be `resource`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
-* `noDataExpression`: Boolean. Must always be `true`. [TODO: ask Ivan what it actually does - affects frontend somehow]
+* `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
 
 #### Operations
 
@@ -133,7 +133,7 @@ The operations object defines the available operations on a resource.
 * `displayName`: String. This should always be `Options`.
 * `name`: String. This should always be `option`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
-* `noDataExpression`: Boolean. [TODO: what is this? see above]
+* `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
 * `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
 
 ### methods

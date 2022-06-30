@@ -115,9 +115,9 @@ You can also add:
 
 ### properties
 
-Array of objects. This contains the resource and operations objects that define node behaviors.
+Array of objects. This contains the resource and operations objects that define node behaviors, as well as objects to set up mandatory and optional fields that can receive user input.
 
-#### Resource
+#### Resource objects
 
 A resource object includes the following parameters:
 
@@ -126,7 +126,7 @@ A resource object includes the following parameters:
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
 
-#### Operations
+#### Operations objects
 
 The operations object defines the available operations on a resource.
 
@@ -135,6 +135,8 @@ The operations object defines the available operations on a resource.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
 * `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
+
+#### Additional fields objects
 
 ### methods
 
@@ -146,13 +148,13 @@ JavaScript function. [TODO: see gmail node - message > manage label as example]
 
 ### version
 
-Number or array. If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
+Number or array. If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
 n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
 
 ### routing
 
-`routing` is an object used within an `options` array in an `operations` object. It contains the details of the API call.
+`routing` is an object used within an `options` array in operations and input field objects. It contains the details of the API call.
 
 The code example below comes from the [Declarative-style tutorial](/integrations/creating-nodes/build/declarative-style-node/). It sets up an integration with a NASA API. It shows how to use `requestDefaults` to set up the basic API call details, and `routing` to add information for each operation.
 
@@ -199,9 +201,6 @@ description: INodeTypeDescription = {
 
 
 ## Programmatic-style parameters
-
-
-
 
 
 ### defaultVersion

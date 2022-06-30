@@ -9,7 +9,7 @@ This checklist helps you build a node that meets the standards for submission to
 
 ## Development
 
-<input type="checkbox"> If you're' creating a node requested by a community member, make sure to comment on the feature request in the [community forum](https://community.n8n.io/c/feature-requests/5).</input><br>
+<input type="checkbox"> If you're creating a node requested by a community member, make sure to comment on the feature request in the [community forum](https://community.n8n.io/c/feature-requests/5).</input><br>
 <input type="checkbox"> Add complementary operations to each resource (for example, create, delete)</input><br>
 <input type="checkbox"> Programmatic-style only. Check the node works with more than one input item.</input><br> 
 <input type="checkbox"> Ensure the parameters have the correct type.</input><br>

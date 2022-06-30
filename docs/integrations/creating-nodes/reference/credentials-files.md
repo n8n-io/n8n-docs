@@ -4,11 +4,17 @@ The credentials file defines the authorization methods for the node. The setting
 
 
 
-## Dependencies
+## Structure of the credentials file
+
+
+
+## Parameters
 
 ### properties
 
 Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. Options are:
+
+[TODO: is this true? Or are properties the metadata? Am not seeing auth in our examples either. And qs is in authenticate not properties]
 
 #### auth
 

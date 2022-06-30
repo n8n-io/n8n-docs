@@ -10,7 +10,7 @@ You need the following installed on your development machine:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Phots.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code manageable, the node won't implement every available option for the Mars Rover Photos endpoint.
 
 !!! note "Existing node"
     n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -272,18 +272,83 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '/mars-photos/api/v1/={{roverName}}/photos'
+					url: '={{ "/mars-photos/api/v1/" + roverName + "/photos" }}'
 				}
 			}
 		}
 	],
 	default: 'get'
+},
+{
+	displayName: 'Rover name',
+	description: 'Choose which Mars Rover to get a photo from',
+	required: true,
+	name: 'roverName',
+	type: 'options',
+	options: [
+		{name: 'Curiosity', value: 'curiosity'},
+		{name: 'Opportunity', value: 'opportunity'},
+		{name: 'Perseverance', value: 'perseverance'},
+		{name: 'Spirit', value: 'spirit'}
+	],
+	default: 'curiosity',
+	displayOptions: {
+		show: {
+			resource: [
+				'marsRoverPhotos'
+			]
+		}
+	}
 }
 ```
 
-#### Step 4.6: Additional fields
+This code creates two operations, one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
+
+#### Step 4.6: Optional fields
 
 Most APIs, including the NASA API that you're using in this example, have optional fields you can use to refine your query.
+
+To avoid overwhelming users, n8n displays these under **Additional Fields** in the UI.
+
+For this tutorial, you'll add one additional field, to allow users to pick a date to use with the APOD endpoint. Add the following to the properties array:
+
+```js
+{
+	displayName: 'Additional Fields',
+	name: 'additionalFields',
+	type: 'collection',
+	default: {},
+	placeholder: 'Add Field',
+	displayOptions: {
+		show: {
+			resource: [
+				'astronomyPictureOfTheDay'
+			],
+			operation: [
+				'get'
+			]
+		}
+	},
+	options: [
+		{
+			displayName: 'Date',
+			name: 'apodDate',
+			type: 'dateTime',
+			default: '',
+			routing: {
+				request: {
+					// You've already set up the URL. qs appends the value of the field as a query string
+					qs: {
+						date: '={{ new Date($value).toISOString().substr(0,10) }}'
+					}
+				}
+			}		
+		}
+	],									
+}
+```
+
+Your completed base file should look like this [TODO: link].
 
 ### Step 5: Add an icon
 
@@ -328,7 +393,6 @@ export class NasaPicsApi implements ICredentialType {
 	} as IAuthenticateGeneric;
 }
 ```
-
 
 
 ## Test your node

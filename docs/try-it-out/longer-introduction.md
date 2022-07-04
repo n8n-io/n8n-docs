@@ -121,7 +121,7 @@ The last step of the workflow is to send the two reports about solar flares. For
     1. Hover over the Postbin node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/try-it-out/duplicate-node.png)</span> to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
-## Test the workflow
+## Step seven: Test the workflow
 
 1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 2. Go back to your Postbin bin. Refresh the page to see the output.

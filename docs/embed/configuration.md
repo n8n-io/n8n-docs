@@ -85,7 +85,7 @@ There are many [environment variables configurable in n8n](https://docs.n8n.io/r
 
 ## Backend hooks
 
-It's possible to define external hooks that n8n executes whenever a specific operation runs. You can use these to, for example, to log data, change data, or forbid an action by throwing an error.
+It's possible to define external hooks that n8n executes whenever a specific operation runs. You can use these, for example, to log data, change data, or forbid an action by throwing an error.
 
 ### Available hooks
 

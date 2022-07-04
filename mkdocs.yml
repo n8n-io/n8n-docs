@@ -143,30 +143,26 @@ nav:
         - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
       - Build your node:
         - Overview: integrations/creating-nodes/build/index.md        
-        - Build a declarative-style node: integrations/creating-nodes/build/declarative-style-node.md
-        #- Build a programmatic-style node: integrations/creating-nodes/build/programmatic-style-node.md
-        #- Build a trigger node: integrations/creating-nodes/build/create-trigger-node.md    
+        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - Reference:
+          - Overview: integrations/creating-nodes/build/reference/index.md
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 
+          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
+          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+          - Base files: integrations/creating-nodes/build/reference/node-base-files.md
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
+          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
         - Node linter: integrations/creating-nodes/test/node-linter.md
-        - Node review checklist: integrations/creating-nodes/test/review-checklist.md
         - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
-      - Use your node:
-        - Overview: integrations/creating-nodes/use/index.md
-        - Submit community nodes: integrations/creating-nodes/use/submit-community-nodes.md
-        - Install private nodes: integrations/creating-nodes/use/install-private-nodes.md
-      - Reference:
-        - Overview: integrations/creating-nodes/reference/index.md
-        - Standards: integrations/creating-nodes/reference/standards.md 
-        - Node UI elements: integrations/creating-nodes/reference/ui-elements.md 
-        - Versioning: integrations/creating-nodes/reference/node-versioning.md 
-        - File structure: integrations/creating-nodes/reference/node-file-structure.md
-        - Base files: integrations/creating-nodes/reference/node-base-files.md
-        - Codex files: integrations/creating-nodes/reference/node-codex-files.md  
-        - Credentials files: integrations/creating-nodes/reference/credentials-files.md    
-        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md
-        - Paired items: integrations/creating-nodes/reference/paired-items.md
+      - Deploy your node:
+        - Overview: integrations/creating-nodes/deploy/index.md
+        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md

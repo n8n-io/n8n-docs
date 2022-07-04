@@ -7,9 +7,9 @@ n8n has two node-building styles:
     * Trigger nodes
     * Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
     * Any node that needs to transform incoming data.
-    * If you want to use full versioning. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information on types of versioning.
+    * If you want to use full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on types of versioning.
 
-The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/reference/node-base-files/) for more information on node parameters and the `execute()` method.
+The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for more information on node parameters and the `execute()` method.
 
 Compare these code snippets. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
 

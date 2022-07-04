@@ -9,7 +9,7 @@ n8n needs to know which input item a given output item comes from. If this infor
 
 You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key. 
 
-A simplified `execute()` function returning some input data and its paired input item key:
+For example, assume there's a node that integrates with a ticket system such as JIRA or Trello, and you want to get a list of tickets by ID. Here is a simplified `execute()` function returning some output data and its paired input item key:
 
 ```js
 async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -19,16 +19,15 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 	let responseData;
 
 	for (let i = 0; i < items.length; i++) {
-		returnData.push(
-			...responseData.map(json => {
-				return {
-					json,
-					pairedItem: {
-						item: i,
-					},
-				}
-			})
-		);
-	}
+		const ticketId = this.getNodeParameter('ticketId', i);
+    responseData = await someApiRequest.call(this, 'GET', `/tickets/${ticketId}`);
+		returnData.push({
+				json: responseData,
+				pairedItem: {
+								item: i,
+				},
+			});
+    }
+  return returnData;
 }
 ```

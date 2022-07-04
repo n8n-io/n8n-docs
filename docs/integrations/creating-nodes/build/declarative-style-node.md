@@ -127,7 +127,7 @@ Add the following:
 }
 ```
 
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/reference/node-codex-files/).
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
 
 ### Step 4: Create the node
 
@@ -218,7 +218,7 @@ properties: [
 ],
 ```
 
-`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
+`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 
 #### Step 4.5: Add operations
 

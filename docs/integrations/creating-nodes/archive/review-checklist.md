@@ -15,7 +15,7 @@ This checklist helps you build a node that meets the standards for submission to
 <input type="checkbox"> Ensure the parameters have the correct type.</input><br>
 <input type="checkbox"> Mind the defaults: if the service has a default as true, keep it as true. Changing default values can break the existing workflows of the users.</input><br>
 <input type="checkbox"> Check if the node disposes of everything. In particular, the node has closed all connections.</input><br>
-<input type="checkbox"> Check your code using the [node linter](/integrations/creating-nodes/reference/node-linter/).</input><br>
+<input type="checkbox"> Check your code using the [node linter](/integrations/creating-nodes/build/reference/node-linter/).</input><br>
 
 ## Testing
 

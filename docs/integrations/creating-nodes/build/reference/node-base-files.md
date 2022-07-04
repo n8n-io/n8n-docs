@@ -158,7 +158,7 @@ A resource object includes the following parameters:
 
 * `displayName`: String. This should always be `Resource`.
 * `name`: String. This should always be `resource`.
-* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
 
 #### Operations objects
@@ -167,7 +167,7 @@ The operations object defines the available operations on a resource.
 
 * `displayName`: String. This should always be `Options`.
 * `name`: String. This should always be `option`.
-* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
 * `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
 
@@ -197,7 +197,7 @@ displayOption: {
 }
 ```
 
-For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/reference/ui-elements/).
+For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/build/reference/ui-elements/).
 
 
 
@@ -318,7 +318,7 @@ _Number_ | _Optional_
 
 Use `defaultVersion` when using the full versioning approach.
 
-n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information.
+n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
 
 ### methods
 
@@ -364,7 +364,7 @@ Use `version` when using the light versioning approach.
 
 If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 
-n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information.
+n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
 
 ## Programmatic-style: The execute() method
 
@@ -373,5 +373,5 @@ The main difference between the declarative and programmatic styles is how they 
 The `execute()` method creates and returns an instance of `INodeExecutionData`.
 
 !!! warning "Paired items"
-    You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/reference/paired-items/).
+    You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items/).
 

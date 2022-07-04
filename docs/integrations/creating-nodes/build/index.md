@@ -2,7 +2,8 @@
 
 This section provides tutorials on building nodes. It covers:
 
-* [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node/)
+* [Tutorial: Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node/)
+* [Reference](/integrations/creating-nodes/build/reference/) material on [file structure](/integrations/creating-nodes/build/reference/node-file-structure/), parameter definitions for [base](/integrations/creating-nodes/build/reference/node-base-files/), [codex](/integrations/creating-nodes/build/reference/node-codex-files/), and [credentials](/integrations/creating-nodes/build/reference/credentials-files/) files, [node UI elements](/integrations/creating-nodes/build/reference/ui-elements/), and more.
 
 More tutorials coming soon.
 

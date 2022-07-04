@@ -1,6 +1,6 @@
 # Risks when using community nodes
 
-Using community nodes has some risks. You are installing unverified code from a public source into your n8n instance.
+Using community nodes means you are installing unverified code from a public source into your n8n instance. This has some risks.
 
 Risks include:
 

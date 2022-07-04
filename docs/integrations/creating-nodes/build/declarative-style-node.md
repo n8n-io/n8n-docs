@@ -8,6 +8,11 @@ You need the following installed on your development machine:
 
 --8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
 
+You need some understanding of:
+
+- JavaScript/TypeScript
+- REST APIs
+
 ## Build your node
 
 In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code manageable, the node won't implement every available option for the Mars Rover Photos endpoint.

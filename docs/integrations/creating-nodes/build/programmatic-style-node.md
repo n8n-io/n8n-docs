@@ -1,24 +1,20 @@
-# Creating Your First Node
+# Build a programmatic-style node
 
-Today, you will learn how to create your first node for n8n.
+This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
 
 ## Prerequisites
 
-You have knowledge of:
+You need the following installed on your development machine:
+
+--8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
+
+You need some understanding of:
 
 - JavaScript/TypeScript
 - REST APIs
 - Expressions in n8n
 
-Install the following tools:
-
-- **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
-- **Node.js and npm:** You can find instructions how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
-	```bash
-	node -v
-	npm -v
-```
-**NOTE:** n8n recommends using node version `14.x` and npm version `6.x`.
+[TODO: do we still need lerna when working out of the starter?]
 
 - **Lerna:** You can install lerna globally with the following command:
 	```bash

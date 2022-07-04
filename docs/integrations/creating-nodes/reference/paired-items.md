@@ -7,16 +7,28 @@ An n8n node operation consumes input items and produces output items. n8n genera
 
 n8n needs to know which input item a given output item comes from. If this information is missing, expressions in other nodes may break.
 
-You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key:
+You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key. 
 
+A simplified `execute()` function returning some input data and its paired input item key:
 
-
-[TODO: https://n8nio.slack.com/archives/C0353SYUN1K/p1656427464953149]
 ```js
-[{
-	json: {
-		...
-	},
-	pairedItem: 3 // The index of the corresponding input item
-}]
+async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+
+	const items = this.getInputData();
+	const returnData: INodeExecutionData[] = [];
+	let responseData;
+
+	for (let i = 0; i < items.length; i++) {
+		returnData.push(
+			...responseData.map(json => {
+				return {
+					json,
+					pairedItem: {
+						item: i,
+					},
+				}
+			})
+		);
+	}
+}
 ```

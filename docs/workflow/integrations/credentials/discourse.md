@@ -1,7 +1,7 @@
 # Discourse
 
 You can use these credentials to authenticate the following nodes with Discourse.
-- [Discourse](/workflow/integrations/nodes/n8n-nodes-base.discourse/)
+- [Discourse](/workflow/integrations/nodes/workflow-nodes-base.discourse/)
 
 
 ## Prerequisites

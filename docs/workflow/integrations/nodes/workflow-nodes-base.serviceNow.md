@@ -43,7 +43,7 @@
 
 This workflow allows you to get the 50 most recent incidents and view only the desired fields. This example usage workflow uses the following nodes:
 
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [ServiceNow]()
 
 The final workflow should look like the following image.

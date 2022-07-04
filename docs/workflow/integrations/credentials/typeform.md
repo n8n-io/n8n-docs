@@ -8,7 +8,7 @@ tags:
 # Typeform
 
 You can use these credentials to authenticate the following nodes with Typeform.
-- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeFormTrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.typeFormTrigger/)
 
 ## Prerequisites
 

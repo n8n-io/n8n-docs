@@ -45,7 +45,7 @@ tags:
 ## Example Usage
 
 This workflow allows you to create and update a channel as well as send a message on Twist. You can also find the [workflow](https://n8n.io/workflows/826) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Twist]()
 
 The final workflow should look like the following image.

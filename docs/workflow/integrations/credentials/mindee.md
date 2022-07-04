@@ -12,7 +12,7 @@ tags:
 # Mindee
 
 You can use these credentials to authenticate the following nodes with Mindee.
-- [Mindee](/workflow/integrations/nodes/n8n-nodes-base.mindee/)
+- [Mindee](/workflow/integrations/nodes/workflow-nodes-base.mindee/)
 
 ## Prerequisites
 

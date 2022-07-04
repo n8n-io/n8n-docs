@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Slack](/workflow/integrations/nodes/n8n-nodes-base.slack/)
+- [Slack](/workflow/integrations/nodes/workflow-nodes-base.slack/)
 
 ## Prerequisites
 

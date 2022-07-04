@@ -1,8 +1,8 @@
 # Notion
 
 You can use these credentials to authenticate the following nodes with Notion.
-- [Notion](/workflow/integrations/nodes/n8n-nodes-base.notion/)
-- [Notion Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.notionTrigger/)
+- [Notion](/workflow/integrations/nodes/workflow-nodes-base.notion/)
+- [Notion Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.notionTrigger/)
 
 ## Prerequisites
 

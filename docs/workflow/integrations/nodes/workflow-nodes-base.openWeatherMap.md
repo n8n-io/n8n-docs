@@ -14,7 +14,7 @@
 ## Example Usage
 
 This workflow allows you to get the current weather data for a city. You can also find the [workflow](https://n8n.io/workflows/460) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [OpenWeatherMap]()
 
 The final workflow should look like the following image.

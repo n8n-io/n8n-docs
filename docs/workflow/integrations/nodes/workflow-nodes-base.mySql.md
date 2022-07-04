@@ -15,8 +15,8 @@
 ## Example Usage
 
 This workflow allows you to create a table and insert data in it on a MySQL database. You can also find the [workflow](https://n8n.io/workflows/598) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [MySQL]()
 
 The final workflow should look like the following image.

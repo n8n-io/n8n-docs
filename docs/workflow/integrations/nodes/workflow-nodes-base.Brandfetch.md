@@ -18,10 +18,10 @@
 ## Example Usage
 
 This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/835) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Brandfetch]()
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 

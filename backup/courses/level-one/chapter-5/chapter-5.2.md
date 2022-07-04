@@ -28,7 +28,7 @@ Now that the table is prepared let’s return to the workflow in the Editor UI.
 Add an ***Airtable node*** connected to the HTTP Request node.
 
 !!! note " Spreadsheet nodes"
-    You can replace the *Airtable* node with another spreadsheet app/service. For example, Doc² also has nodes for [*Google Sheets*](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) and [*Spreadsheet File*](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/).
+    You can replace the *Airtable* node with another spreadsheet app/service. For example, Doc² also has nodes for [*Google Sheets*](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) and [*Spreadsheet File*](/workflow/integrations/core-nodes/workflow-nodes-base.spreadsheetFile/).
 
 
 In the *Airtable node* window, configure the following parameters:

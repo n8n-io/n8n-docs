@@ -1,6 +1,6 @@
 # Item Lists
 
-The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to easily modify the structure for further processing without the need to use [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/) nodes and write custom JavaScript.
+The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to easily modify the structure for further processing without the need to use [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/) nodes and write custom JavaScript.
 
 ## Operations
 

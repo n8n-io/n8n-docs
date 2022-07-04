@@ -17,8 +17,8 @@
 ## Example usage
 
 This workflow allows you to insert an item into your DynamoDB database. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/)
 - [AWS DynamoDB]()
 
 The final workflow should look like the following image.

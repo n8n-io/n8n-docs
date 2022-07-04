@@ -19,8 +19,8 @@
 
 This workflow allows you to create, find, and delete rows in Baserow default Customer table. This example workflow uses the following nodes.
 
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Baserow]()
 
 The final workflow should look like the following image:

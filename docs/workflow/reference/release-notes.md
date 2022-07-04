@@ -11,8 +11,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 ### Node enhancements
 <br>
-[Magento 2 Node:](/workflow/integrations/nodes/n8n-nodes-base.magento2/) text="Added credential tests.
-[PayPal Node:](/workflow/integrations/nodes/n8n-nodes-base.payPal/) Added credential tests and updated the API URL.
+[Magento 2 Node:](/workflow/integrations/nodes/workflow-nodes-base.magento2/) text="Added credential tests.
+[PayPal Node:](/workflow/integrations/nodes/workflow-nodes-base.payPal/) Added credential tests and updated the API URL.
 
 ### Bug fixes
 
@@ -61,22 +61,22 @@ You can now download binary data from individual nodes in your workflow.
 
 ### Enhanced nodes
 
-* [Emelia Node:](/workflow/integrations/nodes/n8n-nodes-base.emelia/) Add Campaign > Duplicate functionality.
-* [FTP Node:](/workflow/integrations/core-nodes/n8n-nodes-base.ftp/) Add option to recursively create directories on rename.
-* [Mautic Node:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Add credential test and allow trailing slash in host.
-* [Microsoft Teams Node:](/workflow/integrations/nodes/n8n-nodes-base.microsoftteams/) Add chat message support.
-* [Mocean Node:](/workflow/integrations/nodes/n8n-nodes-base.mocean/) Add 'Delivery Report URL' option and credential tests.
-* [ServiceNow Node:](/workflow/integrations/nodes/n8n-nodes-base.serviceNow/) Add basicAuth support and fix getColumns loadOptions.
+* [Emelia Node:](/workflow/integrations/nodes/workflow-nodes-base.emelia/) Add Campaign > Duplicate functionality.
+* [FTP Node:](/workflow/integrations/core-nodes/workflow-nodes-base.ftp/) Add option to recursively create directories on rename.
+* [Mautic Node:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Add credential test and allow trailing slash in host.
+* [Microsoft Teams Node:](/workflow/integrations/nodes/workflow-nodes-base.microsoftteams/) Add chat message support.
+* [Mocean Node:](/workflow/integrations/nodes/workflow-nodes-base.mocean/) Add 'Delivery Report URL' option and credential tests.
+* [ServiceNow Node:](/workflow/integrations/nodes/workflow-nodes-base.serviceNow/) Add basicAuth support and fix getColumns loadOptions.
 * [Strava Node:](/workflow/integrations/nodes/workflow-nodes-base.strava/) Add 'Get Streams' operation.
 
 
 ### Bug fixes
 
 * **core:** Fix crash on webhook when last node did not return data
-* [EmailReadImap Node:](/workflow/integrations/core-nodes/n8n-nodes-base.imapEmail/) Fix issue that crashed process if node was configured wrong.
-* [Google Tasks Node:](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/) Fix 'Show Completed' option and hide title field where not needed.
-* [NocoDB Node:](/workflow/integrations/nodes/n8n-nodes-base.nocoDb/) Fix pagination.
-* [Salesforce Node:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fix issue that 'status' did not get used for Case => Create & Update
+* [EmailReadImap Node:](/workflow/integrations/core-nodes/workflow-nodes-base.imapEmail/) Fix issue that crashed process if node was configured wrong.
+* [Google Tasks Node:](/workflow/integrations/nodes/workflow-nodes-base.googleTasks/) Fix 'Show Completed' option and hide title field where not needed.
+* [NocoDB Node:](/workflow/integrations/nodes/workflow-nodes-base.nocoDb/) Fix pagination.
+* [Salesforce Node:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fix issue that 'status' did not get used for Case => Create & Update
 
 ### Contributors
 
@@ -96,16 +96,16 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 ### Enhanced nodes
 
-* [Crypto Node:](/workflow/integrations/core-nodes/n8n-nodes-base.crypto/) Add Generate operation to generate random values.
-* [HTTP Request Node:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Add support for OPTIONS method.
-* [Jira Node:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Add Simplify Output option to Issue > Get.
-* [Reddit Node:](/workflow/integrations/nodes/n8n-nodes-base.reddit/) Add possibility to query saved posts.
+* [Crypto Node:](/workflow/integrations/core-nodes/workflow-nodes-base.crypto/) Add Generate operation to generate random values.
+* [HTTP Request Node:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Add support for OPTIONS method.
+* [Jira Node:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Add Simplify Output option to Issue > Get.
+* [Reddit Node:](/workflow/integrations/nodes/workflow-nodes-base.reddit/) Add possibility to query saved posts.
 * [Zendesk Node:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Add ticket status On-hold.
 
 ### Bug fixes
 
 * **core:** Add logs and error catches for possible failures in queue mode.<br>
-* [AWS Lambda Node:](/workflow/integrations/nodes/n8n-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
+* [AWS Lambda Node:](/workflow/integrations/nodes/workflow-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
 * [Supabase Node:](/workflow/integrations/nodes/workflow-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
 * [Xero Node:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
 * [Wise Node:](/workflow/integrations/nodes/workflow-nodes-base.wise/) Fix issue when executing a transfer.
@@ -145,14 +145,14 @@ Read more about the new license in [License](/reference/license/).
 
 ### New nodes
 
-* [Linear Node:](/workflow/integrations/nodes/n8n-nodes-base.linear/) Add Linear Node.
+* [Linear Node:](/workflow/integrations/nodes/workflow-nodes-base.linear/) Add Linear Node.
 
 ### Enhanced nodes
 
-* [HTTP Request Node:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Allow Delete requests with body.
-* [KoBoToolbox Node:](/workflow/integrations/nodes/n8n-nodes-base.kobo/) Add KoBoToolbox Regular and Trigger Node.
-* [Mailjet Node:](/workflow/integrations/nodes/n8n-nodes-base.mailjet/) Add credential tests and support for sandbox, JSON parameters & variables.
-* [Mattermost Node:](/workflow/integrations/nodes/n8n-nodes-base.mattermost/) Add support for Channel search.
+* [HTTP Request Node:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Allow Delete requests with body.
+* [KoBoToolbox Node:](/workflow/integrations/nodes/workflow-nodes-base.kobo/) Add KoBoToolbox Regular and Trigger Node.
+* [Mailjet Node:](/workflow/integrations/nodes/workflow-nodes-base.mailjet/) Add credential tests and support for sandbox, JSON parameters & variables.
+* [Mattermost Node:](/workflow/integrations/nodes/workflow-nodes-base.mattermost/) Add support for Channel search.
 
 ### Other improvements
 
@@ -160,7 +160,7 @@ Read more about the new license in [License](/reference/license/).
 
 ### Bug fixes
 
-* [GitHub node:](/workflow/integrations/nodes/n8n-nodes-base.github/) Fix credential tests and File List operation.
+* [GitHub node:](/workflow/integrations/nodes/workflow-nodes-base.github/) Fix credential tests and File List operation.
 * [Telegram node:](/workflow/integrations/nodes/workflow-nodes-base.telegram/) Fix sending binary data when disable notification is set.
 
 ### Contributors
@@ -243,7 +243,7 @@ Additionally, Regex is now labelled Regex Match.
 
 Added a Redis Trigger node, so you can now start workflows based on a Redis event.
 
-* [Redis Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
+* [Redis Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.redisTrigger/) Added a Redis Trigger node.
 
 ### Core functionality
 
@@ -255,11 +255,11 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 ### Nodes
 
 
-* [Facebook Graph API:](/workflow/integrations/nodes/n8n-nodes-base.facebookGraphApi/) Added suport for Facebook Graph API 13.
-* [Hubspot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Added suport for private app token authentication.
-* [MongoDB:](/workflow/integrations/nodes/n8n-nodes-base.mongoDb/) Added the aggregate operation.
-* [Redis Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
-* [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added support for publish operations.
+* [Facebook Graph API:](/workflow/integrations/nodes/workflow-nodes-base.facebookGraphApi/) Added suport for Facebook Graph API 13.
+* [Hubspot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Added suport for private app token authentication.
+* [MongoDB:](/workflow/integrations/nodes/workflow-nodes-base.mongoDb/) Added the aggregate operation.
+* [Redis Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.redisTrigger/) Added a Redis Trigger node.
+* [Redis:](/workflow/integrations/nodes/workflow-nodes-base.redis/) Added support for publish operations.
 * [Strapi:](/workflow/integrations/nodes/workflow-nodes-base.strapi/) Added support for Strapi 4.
 * [WordPress:](/workflow/integrations/nodes/workflow-nodes-base.wordpress/) Added status as an option to getAll post requests.
 
@@ -287,12 +287,12 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 ### New nodes 
 
 
-* [Odoo](/workflow/integrations/nodes/n8n-nodes-base.odoo/)
+* [Odoo](/workflow/integrations/nodes/workflow-nodes-base.odoo/)
 
 ### Enhanced nodes 
 
 
-* [Function:](/workflow/integrations/core-nodes/n8n-nodes-base.function/) Added support for items without a JSON key.
+* [Function:](/workflow/integrations/core-nodes/workflow-nodes-base.function/) Added support for items without a JSON key.
 
 ### Core functionality 
 
@@ -304,8 +304,8 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 ### Bug fixes 
 
 
-* [Baserow:](/workflow/integrations/nodes/n8n-nodes-base.baserow/) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing Digest Authentication to fail in some scenarios.
+* [Baserow:](/workflow/integrations/nodes/workflow-nodes-base.baserow/) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed a bug causing Digest Authentication to fail in some scenarios.
 * [Wise:](/workflow/integrations/nodes/workflow-nodes-base.wise/) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
 
 ### Contributors 
@@ -326,15 +326,15 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 
 
-* [Onfleet](/workflow/integrations/nodes/n8n-nodes-base.onfleet/)
+* [Onfleet](/workflow/integrations/nodes/workflow-nodes-base.onfleet/)
 
 ### Enhanced nodes 
 
 
-* [Asana:](/workflow/integrations/nodes/n8n-nodes-base.asana/) Added Create operation to the Project resource.
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Added Edit Contact Points, Edit Do Not Contact List, Send Email operations to Contact resource. Also added new Segment Email resource.
-* [Notion (Beta):](/workflow/integrations/nodes/n8n-nodes-base.notion/) Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource.
+* [Asana:](/workflow/integrations/nodes/workflow-nodes-base.asana/) Added Create operation to the Project resource.
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Added Edit Contact Points, Edit Do Not Contact List, Send Email operations to Contact resource. Also added new Segment Email resource.
+* [Notion (Beta):](/workflow/integrations/nodes/workflow-nodes-base.notion/) Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource.
 
 ### Core functionality 
 
@@ -348,7 +348,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 ### Bug fixes 
 
 
-* [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed a bug causing API requests to use an incorrect workspace identifier.
+* [Orbit:](/workflow/integrations/nodes/workflow-nodes-base.orbit/) Fixed a bug causing API requests to use an incorrect workspace identifier.
 * [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/)  Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
 
 ### Contributors 
@@ -372,14 +372,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Google Chat](/workflow/integrations/nodes/n8n-nodes-base.googleChat/)
+* [Google Chat](/workflow/integrations/nodes/workflow-nodes-base.googleChat/)
 
 ### Enhanced nodes 
 
 
-* [Grist:](/workflow/integrations/nodes/n8n-nodes-base.grist/) Added support for self-hosted Grist instances.
+* [Grist:](/workflow/integrations/nodes/workflow-nodes-base.grist/) Added support for self-hosted Grist instances.
 * [Telegram Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.telegramTrigger/) Added new Extra Large option to Image Size field.
-* [Webhook:](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
+* [Webhook:](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
 
 ### Core Functionality 
 
@@ -408,14 +408,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [HaloPSA](/workflow/integrations/nodes/n8n-nodes-base.haloPSA/)
-* [Linear Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.linearTrigger/)
+* [HaloPSA](/workflow/integrations/nodes/workflow-nodes-base.haloPSA/)
+* [Linear Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.linearTrigger/)
 * [Zammad](/workflow/integrations/nodes/workflow-nodes-base.zammad/)
 
 ### Enhanced nodes 
 
 
-* [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added Reference option to the Get operation of the File resource.
+* [GitHub:](/workflow/integrations/nodes/workflow-nodes-base.github/) Added Reference option to the Get operation of the File resource.
 * [Twilio:](/workflow/integrations/nodes/workflow-nodes-base.twilio/) Added Status Callbacks option.
 * [uProc:](/workflow/integrations/nodes/workflow-nodes-base.uproc/) Sanitized Data Webhook field description.
 
@@ -430,10 +430,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Function:](/workflow/integrations/core-nodes/n8n-nodes-base.function/) Fixed a bug leaving the code editor size unchanged after resizing the window.
-* [Function Item:](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) Fixed a bug leaving the code editor size unchanged after resizing the window.
-* [IF:](/workflow/integrations/core-nodes/n8n-nodes-base.if/) Removed the empty sections left after removing a condition.
-* [Item Lists:](/workflow/integrations/core-nodes/n8n-nodes-base.itemLists/) Fixed an erroneous placeholder text.
+* [Function:](/workflow/integrations/core-nodes/workflow-nodes-base.function/) Fixed a bug leaving the code editor size unchanged after resizing the window.
+* [Function Item:](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) Fixed a bug leaving the code editor size unchanged after resizing the window.
+* [IF:](/workflow/integrations/core-nodes/workflow-nodes-base.if/) Removed the empty sections left after removing a condition.
+* [Item Lists:](/workflow/integrations/core-nodes/workflow-nodes-base.itemLists/) Fixed an erroneous placeholder text.
 
 ### Contributors 
 
@@ -447,7 +447,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added new List operation to File resource.
+* [GitHub:](/workflow/integrations/nodes/workflow-nodes-base.github/) Added new List operation to File resource.
 
 ### Core Functionality 
 
@@ -464,7 +464,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [XML:](/workflow/integrations/core-nodes/n8n-nodes-base.xml/) Fixed a bug causing the node to alter incoming data.
+* [XML:](/workflow/integrations/core-nodes/workflow-nodes-base.xml/) Fixed a bug causing the node to alter incoming data.
 
 ### Contributors 
 
@@ -494,12 +494,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Airtable:](/workflow/integrations/nodes/n8n-nodes-base.airtable/) Improved field description.
-* [Airtable Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.airtableTrigger/) Improved field description.
-* [erpNext:](/workflow/integrations/nodes/n8n-nodes-base.erpNext/) Prevented the node from throwing an error when no data is found.
-* [Gmail:](/workflow/integrations/nodes/n8n-nodes-base.gmail/) Fixed a bug causing the BCC field to be ignored.
-* [Move Binary Data:](/workflow/integrations/core-nodes/n8n-nodes-base.moveBinaryData/) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
-* [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed a typo in the Type field.
+* [Airtable:](/workflow/integrations/nodes/workflow-nodes-base.airtable/) Improved field description.
+* [Airtable Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.airtableTrigger/) Improved field description.
+* [erpNext:](/workflow/integrations/nodes/workflow-nodes-base.erpNext/) Prevented the node from throwing an error when no data is found.
+* [Gmail:](/workflow/integrations/nodes/workflow-nodes-base.gmail/) Fixed a bug causing the BCC field to be ignored.
+* [Move Binary Data:](/workflow/integrations/core-nodes/workflow-nodes-base.moveBinaryData/) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
+* [Slack:](/workflow/integrations/nodes/workflow-nodes-base.slack/) Fixed a typo in the Type field.
 
 ### Contributors 
 
@@ -513,7 +513,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [BambooHR](/workflow/integrations/nodes/n8n-nodes-base.bambooHr/)
+* [BambooHR](/workflow/integrations/nodes/workflow-nodes-base.bambooHr/)
 
 ### Core Functionality 
 
@@ -525,9 +525,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing custom headers from being ignored.
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Fixed a bug preventing all items from being returned in some situations.
-* [Microsoft OneDrive:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOneDrive/) Fixed a bug preventing more than 200 items from being returned.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed a bug causing custom headers from being ignored.
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Fixed a bug preventing all items from being returned in some situations.
+* [Microsoft OneDrive:](/workflow/integrations/nodes/workflow-nodes-base.microsoftOneDrive/) Fixed a bug preventing more than 200 items from being returned.
 * [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
 
 ### Contributors 
@@ -551,12 +551,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Jenkins](/workflow/integrations/nodes/n8n-nodes-base.jenkins/)
+* [Jenkins](/workflow/integrations/nodes/workflow-nodes-base.jenkins/)
 
 ### Enhanced nodes 
 
 
-* [GraphQL:](/workflow/integrations/core-nodes/n8n-nodes-base.graphql/) Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth.
+* [GraphQL:](/workflow/integrations/core-nodes/workflow-nodes-base.graphql/) Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth.
 
 ### Core Functionality 
 
@@ -568,9 +568,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Box:](/workflow/integrations/nodes/n8n-nodes-base.box/) Fixed a bug causing some files to be corrupted during download.
-* [Philips Hue:](/workflow/integrations/nodes/n8n-nodes-base.philipsHue/) Fixed a bug preventing the node from connecting to Philips Hue.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed a bug preventing filters on date and datetime fields from working as expected.
+* [Box:](/workflow/integrations/nodes/workflow-nodes-base.box/) Fixed a bug causing some files to be corrupted during download.
+* [Philips Hue:](/workflow/integrations/nodes/workflow-nodes-base.philipsHue/) Fixed a bug preventing the node from connecting to Philips Hue.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fixed a bug preventing filters on date and datetime fields from working as expected.
 * [Supabase:](/workflow/integrations/nodes/workflow-nodes-base.supabase/) Fixed an errorneous documentation link.
 
 ### Contributors 
@@ -585,18 +585,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Microsoft Graph Security](/workflow/integrations/nodes/n8n-nodes-base.microsoftGraphSecurity/)
+* [Microsoft Graph Security](/workflow/integrations/nodes/workflow-nodes-base.microsoftGraphSecurity/)
 * [SyncroMSP](/workflow/integrations/nodes/workflow-nodes-base.syncroMsp/)
 * [Supabase](/workflow/integrations/nodes/workflow-nodes-base.supabase/)
 
 ### Enhanced nodes 
 
 
-* [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Added Transparent operation.
-* [Kafka:](/workflow/integrations/nodes/n8n-nodes-base.kafka/) Added Use Schema Registry option.
-* [Kafka Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.kafkaTrigger/) Added Use Schema Registry option.
-* [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added database field to credentials.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Account Number field.
+* [Edit Image:](/workflow/integrations/core-nodes/workflow-nodes-base.editImage/) Added Transparent operation.
+* [Kafka:](/workflow/integrations/nodes/workflow-nodes-base.kafka/) Added Use Schema Registry option.
+* [Kafka Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.kafkaTrigger/) Added Use Schema Registry option.
+* [Redis:](/workflow/integrations/nodes/workflow-nodes-base.redis/) Added database field to credentials.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Account Number field.
 
 ### Core Functionality 
 
@@ -607,9 +607,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Fixed a bug causing two items to be returned.
-* [iCalendar:](/workflow/integrations/core-nodes/n8n-nodes-base.iCal/) Fixed a bug preventing dates in January from working as expected.
-* [Merge:](/workflow/integrations/core-nodes/n8n-nodes-base.merge/) Fixed causing empty binary data to overwrite other binary data on merge.
+* [Edit Image:](/workflow/integrations/core-nodes/workflow-nodes-base.editImage/) Fixed a bug causing two items to be returned.
+* [iCalendar:](/workflow/integrations/core-nodes/workflow-nodes-base.iCal/) Fixed a bug preventing dates in January from working as expected.
+* [Merge:](/workflow/integrations/core-nodes/workflow-nodes-base.merge/) Fixed causing empty binary data to overwrite other binary data on merge.
 
 ### Contributors 
 
@@ -632,12 +632,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [Function:](/workflow/integrations/core-nodes/n8n-nodes-base.function/) The node now prevents unsupported data from being returned.
-* [Function Item:](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) The node now prevents unsupported data from being returned.
-* [HubSpot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Added Engagement resource with Create, Delete, Get, and Get All operations.
-* [Notion (Beta):](/workflow/integrations/nodes/n8n-nodes-base.notion/) Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity.
-* [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Added new Ignore Bots option.
-* [Webhook:](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) Added new Ignore Bots option.
+* [Function:](/workflow/integrations/core-nodes/workflow-nodes-base.function/) The node now prevents unsupported data from being returned.
+* [Function Item:](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) The node now prevents unsupported data from being returned.
+* [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Added Engagement resource with Create, Delete, Get, and Get All operations.
+* [Notion (Beta):](/workflow/integrations/nodes/workflow-nodes-base.notion/) Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity.
+* [Wait:](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) Added new Ignore Bots option.
+* [Webhook:](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/) Added new Ignore Bots option.
 
 ### Core Functionality 
 
@@ -646,7 +646,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug where using Digest Auth would fail.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed a bug where using Digest Auth would fail.
 
 ### Contributors 
 
@@ -660,10 +660,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [GitLab Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.gitlabTrigger/) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Added support for downloading and converting native Google files.
-* [Kitemaker:](/workflow/integrations/nodes/n8n-nodes-base.kitemaker/) Added Space ID field to Create operation of Work Item resource.
-* [Raindrop:](/workflow/integrations/nodes/n8n-nodes-base.raindrop/) Added Parse Metadata option to Create, Update operations of the Bookmark resource.
+* [GitLab Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.gitlabTrigger/) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Added support for downloading and converting native Google files.
+* [Kitemaker:](/workflow/integrations/nodes/workflow-nodes-base.kitemaker/) Added Space ID field to Create operation of Work Item resource.
+* [Raindrop:](/workflow/integrations/nodes/workflow-nodes-base.raindrop/) Added Parse Metadata option to Create, Update operations of the Bookmark resource.
 
 ### Core Functionality 
 
@@ -696,7 +696,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [Plivo:](/workflow/integrations/nodes/n8n-nodes-base.plivo/) Added user agent to all API requests.
+* [Plivo:](/workflow/integrations/nodes/workflow-nodes-base.plivo/) Added user agent to all API requests.
 
 ### Core Functionality 
 
@@ -721,17 +721,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Figma Trigger (Beta)](/workflow/integrations/trigger-nodes/n8n-nodes-base.figmaTrigger/)
-* [Workable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.workableTrigger/)
+* [Figma Trigger (Beta)](/workflow/integrations/trigger-nodes/workflow-nodes-base.figmaTrigger/)
+* [Workable Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.workableTrigger/)
 
 ### Enhanced nodes 
 
 
-* [Google Contacts:](/workflow/integrations/nodes/n8n-nodes-base.googleContacts/) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added support for query-based authentication.
-* [Home Assistant:](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/) Added support for loading possible options in the Domain, Service, and Entity ID fields.
-* [One Simple API:](/workflow/integrations/nodes/n8n-nodes-base.oneSimpleApi/) Added support for Social Profile resources.
-* [PagerDuty:](/workflow/integrations/nodes/n8n-nodes-base.pagerDuty/) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
+* [Google Contacts:](/workflow/integrations/nodes/workflow-nodes-base.googleContacts/) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Added support for query-based authentication.
+* [Home Assistant:](/workflow/integrations/nodes/workflow-nodes-base.homeAssistant/) Added support for loading possible options in the Domain, Service, and Entity ID fields.
+* [One Simple API:](/workflow/integrations/nodes/workflow-nodes-base.oneSimpleApi/) Added support for Social Profile resources.
+* [PagerDuty:](/workflow/integrations/nodes/workflow-nodes-base.pagerDuty/) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
 
 ### Core Functionality 
 
@@ -749,11 +749,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [APITemplate.io:](/workflow/integrations/nodes/n8n-nodes-base.apiTemplateIo/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
-* [HubSpot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot OAuth2 API.
-* [HubSpot Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.hubspotTrigger/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API.
-* [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed a typo preventing the value in the amount field of from being saved.
+* [APITemplate.io:](/workflow/integrations/nodes/workflow-nodes-base.apiTemplateIo/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
+* [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot OAuth2 API.
+* [HubSpot Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.hubspotTrigger/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API.
+* [Jira Software:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fixed a typo preventing the value in the amount field of from being saved.
 
 ### Contributors 
 
@@ -767,7 +767,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Google Calendar Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/)
+* [Google Calendar Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.googleCalendarTrigger/)
 
 ### Enhanced nodes 
 
@@ -790,9 +790,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Google BigQuery:](/workflow/integrations/nodes/n8n-nodes-base.googleBigQuery/) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
-* [RabbitMQ Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/) Added Trigger to the name of the trigger node.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed a typo affecting the Type field of the Opportunity resource.
+* [Google BigQuery:](/workflow/integrations/nodes/workflow-nodes-base.googleBigQuery/) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
+* [RabbitMQ Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.rabbitmqTrigger/) Added Trigger to the name of the trigger node.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fixed a typo affecting the Type field of the Opportunity resource.
 
 ### Contributors 
 
@@ -806,8 +806,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [DHL](/workflow/integrations/nodes/n8n-nodes-base.dhl/)
-* [Grafana](/workflow/integrations/nodes/n8n-nodes-base.grafana/)
+* [DHL](/workflow/integrations/nodes/workflow-nodes-base.dhl/)
+* [Grafana](/workflow/integrations/nodes/workflow-nodes-base.grafana/)
 
 ### Core Functionality 
 
@@ -819,7 +819,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Fixed an issue preventing the Composite operation from working correctly in some cases.
+* [Edit Image:](/workflow/integrations/core-nodes/workflow-nodes-base.editImage/) Fixed an issue preventing the Composite operation from working correctly in some cases.
 
 ### Contributors 
 
@@ -833,7 +833,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes 
 
 
-* [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Added Components as an additional field.
+* [Jira Software:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Added Components as an additional field.
 
 ### Core Functionality 
 
@@ -847,9 +847,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
-* [ServiceNow:](/workflow/integrations/nodes/n8n-nodes-base.serviceNow/) Fixed incorrect mapping of incident urgency and impact values.
-* [Start:](/workflow/integrations/core-nodes/n8n-nodes-base.start/) Fixed an issue causing the node to be disabled in a new workflow.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
+* [ServiceNow:](/workflow/integrations/nodes/workflow-nodes-base.serviceNow/) Fixed incorrect mapping of incident urgency and impact values.
+* [Start:](/workflow/integrations/core-nodes/workflow-nodes-base.start/) Fixed an issue causing the node to be disabled in a new workflow.
 * [Xero:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
 
 ## n8n@0.149.0
@@ -860,12 +860,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [One Simple API](/workflow/integrations/nodes/n8n-nodes-base.oneSimpleApi/)
+* [One Simple API](/workflow/integrations/nodes/workflow-nodes-base.oneSimpleApi/)
 
 ### Enhanced nodes 
 
 
-* [Edit Image:](/workflow/integrations/core-nodes/n8n-nodes-base.editImage/) Added Circle Primitive to Draw operation. Also added Composite operation.
+* [Edit Image:](/workflow/integrations/core-nodes/workflow-nodes-base.editImage/) Added Circle Primitive to Draw operation. Also added Composite operation.
 * [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added check for API credentials validity.
 * [Zulip:](/workflow/integrations/nodes/workflow-nodes-base.zulip/) Added additional field Role to the Update operation of the User resource.
 
@@ -879,10 +879,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Google Tasks:](/workflow/integrations/nodes/n8n-nodes-base.googleTasks/) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
+* [Google Tasks:](/workflow/integrations/nodes/workflow-nodes-base.googleTasks/) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
 * [Stripe Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.stripeTrigger/) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
-* [Toggl Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.togglTrigger/) Updated the API URL used by the node.
+* [Toggl Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.togglTrigger/) Updated the API URL used by the node.
 
 ### Contributors 
 
@@ -896,16 +896,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Dropcontact](/workflow/integrations/nodes/n8n-nodes-base.dropcontact/)
-* [Respond to Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.respondToWebhook/)
+* [Dropcontact](/workflow/integrations/nodes/workflow-nodes-base.dropcontact/)
+* [Respond to Webhook](/workflow/integrations/core-nodes/workflow-nodes-base.respondToWebhook/)
 
 ### Enhanced nodes 
 
 
-* [Lemlist:](/workflow/integrations/nodes/n8n-nodes-base.lemlist/) Added additional fields to Create operation of Lead resource.
-* [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Added User Group resource.
+* [Lemlist:](/workflow/integrations/nodes/workflow-nodes-base.lemlist/) Added additional fields to Create operation of Lead resource.
+* [Slack:](/workflow/integrations/nodes/workflow-nodes-base.slack/) Added User Group resource.
 * [Todoist:](/workflow/integrations/nodes/workflow-nodes-base.todoist/) Added Update operation to Task resource.
-* [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Improved descriptions of available Respond options.
+* [Wait:](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) Improved descriptions of available Respond options.
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added password field to Crate operation of Customer resource.
 
 ### Core Functionality 
@@ -942,7 +942,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Local File Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.localFileTrigger/)
+* [Local File Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.localFileTrigger/)
 
 ### Core Functionality 
 
@@ -957,14 +957,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [Microsoft Dynamics CRM](/workflow/integrations/nodes/n8n-nodes-base.microsoftDynamicsCrm/)
+* [Microsoft Dynamics CRM](/workflow/integrations/nodes/workflow-nodes-base.microsoftDynamicsCrm/)
 
 ### Enhanced nodes 
 
 
-* [Agile CRM:](/workflow/integrations/nodes/n8n-nodes-base.agileCrm/) Added Filters to Get All operation of Contact and Company resources.
-* [Date & Time:](/workflow/integrations/core-nodes/n8n-nodes-base.dateTime/) Ensuring the return values are always of type string.
-* [IF:](/workflow/integrations/core-nodes/n8n-nodes-base.if/) Added support for moment types to Date & Time condition.
+* [Agile CRM:](/workflow/integrations/nodes/workflow-nodes-base.agileCrm/) Added Filters to Get All operation of Contact and Company resources.
+* [Date & Time:](/workflow/integrations/core-nodes/workflow-nodes-base.dateTime/) Ensuring the return values are always of type string.
+* [IF:](/workflow/integrations/core-nodes/workflow-nodes-base.if/) Added support for moment types to Date & Time condition.
 
 ### Core Functionality 
 
@@ -977,7 +977,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
 
 ### Contributors 
 
@@ -991,19 +991,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 
-* [AWS Textract](/workflow/integrations/nodes/n8n-nodes-base.awsTextract/)
-* [Google Drive Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.googleDriveTrigger/)
+* [AWS Textract](/workflow/integrations/nodes/workflow-nodes-base.awsTextract/)
+* [Google Drive Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.googleDriveTrigger/)
 
 ### Enhanced nodes 
 
 
-* [Bitbucket Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.bitbucketTrigger/) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
-* [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added check for API credentials validity.
-* [Home Assistant:](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/) Added check for credentials validity.
-* [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Added check for credentials validity.
-* [Microsoft OneDrive:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOneDrive/) Added functionality to create folder hierarchy automatically upon subfolder creation.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added All Users option to Get All operation of Activity resource.
-* [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
+* [Bitbucket Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.bitbucketTrigger/) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
+* [GitHub:](/workflow/integrations/nodes/workflow-nodes-base.github/) Added check for API credentials validity.
+* [Home Assistant:](/workflow/integrations/nodes/workflow-nodes-base.homeAssistant/) Added check for credentials validity.
+* [Jira Software:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Added check for credentials validity.
+* [Microsoft OneDrive:](/workflow/integrations/nodes/workflow-nodes-base.microsoftOneDrive/) Added functionality to create folder hierarchy automatically upon subfolder creation.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added All Users option to Get All operation of Activity resource.
+* [Slack:](/workflow/integrations/nodes/workflow-nodes-base.slack/) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
 * [Twitter:](/workflow/integrations/nodes/workflow-nodes-base.twitter/) Added Tweet Mode additional field to the Search operation of Tweet resource.
 
 ### Core Functionality 
@@ -1017,8 +1017,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes 
 
 
-* [Jira Software:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
-* [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed an issue with pagination when loading more than 1,000 channels.
+* [Jira Software:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
+* [Slack:](/workflow/integrations/nodes/workflow-nodes-base.slack/) Fixed an issue with pagination when loading more than 1,000 channels.
 * [Strapi:](/workflow/integrations/nodes/workflow-nodes-base.strapi/) Fixed an issue using the Where option of the Get All operation.
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
@@ -1032,7 +1032,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Nextcloud:](/workflow/integrations/nodes/n8n-nodes-base.nextCloud/) Added Share operation to the File and Folder resources.
+* [Nextcloud:](/workflow/integrations/nodes/workflow-nodes-base.nextCloud/) Added Share operation to the File and Folder resources.
 * [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
 
 ### Core Functionality 
@@ -1040,8 +1040,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Airtable:](/workflow/integrations/nodes/n8n-nodes-base.airtable/) Fixed an issue with the sort field.
-* [Cron:](/workflow/integrations/core-nodes/n8n-nodes-base.cron/) Set the version of the cron library to 1.7.2.
+* [Airtable:](/workflow/integrations/nodes/workflow-nodes-base.airtable/) Fixed an issue with the sort field.
+* [Cron:](/workflow/integrations/core-nodes/workflow-nodes-base.cron/) Set the version of the cron library to 1.7.2.
 
 ### Contributors 
 [Jonathan Bennetts](https://github.com/Joffcom)
@@ -1052,8 +1052,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added support for getting activities from deal ID.
-* [Facebook Graph API:](/workflow/integrations/nodes/n8n-nodes-base.facebookGraphApi/) Added support for Facebook Graph API versions 11 and 12.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added support for getting activities from deal ID.
+* [Facebook Graph API:](/workflow/integrations/nodes/workflow-nodes-base.facebookGraphApi/) Added support for Facebook Graph API versions 11 and 12.
 
 ### Core Functionality 
 - Fixed a build issue affecting a number of AWS nodes.
@@ -1061,7 +1061,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [ FTP:](/workflow/integrations/core-nodes/n8n-nodes-base.ftp/) Fixed error when opening FTP/SFTP credentials.
+* [ FTP:](/workflow/integrations/core-nodes/workflow-nodes-base.ftp/) Fixed error when opening FTP/SFTP credentials.
 
 ### Contributors 
 [Rodrigo Correia](https://github.com/rodrigoscdc)
@@ -1072,7 +1072,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Stop and Error](/workflow/integrations/core-nodes/n8n-nodes-base.stopAndError/)
+* [Stop and Error](/workflow/integrations/core-nodes/workflow-nodes-base.stopAndError/)
 
 ### Core Functionality 
 - Fixed overlapping buttons when viewing on mobile.
@@ -1086,9 +1086,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Fixed 'Ignore response code' flag.
-* [Rundeck:](/workflow/integrations/nodes/n8n-nodes-base.rundeck/) Fixed issue with async loading of credentials.
-* [SeaTable:](/workflow/integrations/nodes/n8n-nodes-base.seaTable/) Fixed issue when entering a Baser URI with a trailing slash.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Fixed 'Ignore response code' flag.
+* [Rundeck:](/workflow/integrations/nodes/workflow-nodes-base.rundeck/) Fixed issue with async loading of credentials.
+* [SeaTable:](/workflow/integrations/nodes/workflow-nodes-base.seaTable/) Fixed issue when entering a Baser URI with a trailing slash.
 
 ### Contributors 
 [Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
@@ -1106,9 +1106,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Grist](/workflow/integrations/nodes/n8n-nodes-base.grist/)
-* [SeaTable](/workflow/integrations/nodes/n8n-nodes-base.seaTable/)
-* [SeaTable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
+* [Grist](/workflow/integrations/nodes/workflow-nodes-base.grist/)
+* [SeaTable](/workflow/integrations/nodes/workflow-nodes-base.seaTable/)
+* [SeaTable Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.seaTableTrigger/)
 * [urlscan.io](/workflow/integrations/nodes/workflow-nodes-base.urlScanIo/)
 
 ### Core Functionality 
@@ -1124,7 +1124,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Splunk](/workflow/integrations/nodes/n8n-nodes-base.splunk/)
+* [Splunk](/workflow/integrations/nodes/workflow-nodes-base.splunk/)
 
 ### Enhanced nodes 
 
@@ -1151,22 +1151,22 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Elastic Security](/workflow/integrations/nodes/n8n-nodes-base.elasticSecurity/)
-* [Misp](/workflow/integrations/nodes/n8n-nodes-base.misp/)
-* [Netlify](/workflow/integrations/nodes/n8n-nodes-base.netlify/)
-* [Netlify Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.netlifyTrigger/)
+* [Elastic Security](/workflow/integrations/nodes/workflow-nodes-base.elasticSecurity/)
+* [Misp](/workflow/integrations/nodes/workflow-nodes-base.misp/)
+* [Netlify](/workflow/integrations/nodes/workflow-nodes-base.netlify/)
+* [Netlify Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.netlifyTrigger/)
 
 ### Enhanced nodes 
 
-* [HubSpot Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.hubspotTrigger/) Authentication method changed to OAuth2.
-* [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Added improved status messages for Wait behavior.
+* [HubSpot Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.hubspotTrigger/) Authentication method changed to OAuth2.
+* [Wait:](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) Added improved status messages for Wait behavior.
 
 ### Core Functionality 
 - Updated node design to include support for versioned nodes.
 
 ### Bug fixes 
 
-* [SendGrid:](/workflow/integrations/nodes/n8n-nodes-base.sendGrid/) Fixed issue with adding contacts to lists.
+* [SendGrid:](/workflow/integrations/nodes/workflow-nodes-base.sendGrid/) Fixed issue with adding contacts to lists.
 
 ### Contributors 
 [Matías Aguirre](https://github.com/omab)
@@ -1177,13 +1177,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Item Lists](/workflow/integrations/core-nodes/n8n-nodes-base.itemLists/)
-* [Magento 2](/workflow/integrations/nodes/n8n-nodes-base.magento2/)
+* [Item Lists](/workflow/integrations/core-nodes/workflow-nodes-base.itemLists/)
+* [Magento 2](/workflow/integrations/nodes/workflow-nodes-base.magento2/)
 
 ### Enhanced nodes 
 
-* [Baserow:](/workflow/integrations/nodes/n8n-nodes-base.baserow/) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added support for Notes on Leads.
+* [Baserow:](/workflow/integrations/nodes/workflow-nodes-base.baserow/) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added support for Notes on Leads.
 * [Wekan:](/workflow/integrations/nodes/workflow-nodes-base.wekan/) Added Sort field to the Card resource.
 
 
@@ -1194,8 +1194,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Lemlist:](/workflow/integrations/nodes/n8n-nodes-base.lemlist/) Fixed issue where events were not sent in the correct property.
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Fixed issue listed unnamed databases.
+* [Lemlist:](/workflow/integrations/nodes/workflow-nodes-base.lemlist/) Fixed issue where events were not sent in the correct property.
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed issue listed unnamed databases.
 
 ### Contributors 
 [bramknuever](https://github.com/bramknuever), [Chris Magnuson](https://github.com/ChrisMagnuson)
@@ -1206,18 +1206,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Freshservice](/workflow/integrations/nodes/n8n-nodes-base.freshservice/)
+* [Freshservice](/workflow/integrations/nodes/workflow-nodes-base.freshservice/)
 
 ### Enhanced nodes 
 
-* [Clockify:](/workflow/integrations/nodes/n8n-nodes-base.clockify/) Added Task resource.
-* [Hubspot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Added Campaign Contact resource.
-* [MongoDB:](/workflow/integrations/nodes/n8n-nodes-base.mongoDb/) Added ability to query documents by '_id'.
-* [MQTT:](/workflow/integrations/nodes/n8n-nodes-base.mqtt/) Added SSL/TLS support to authentication.
-* [MQTT Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.mqttTrigger/) Added SSL/TLS support to authentication.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added File Extension option to the Document resource. Added Type field to Task resource.
-* [Sms77:](/workflow/integrations/nodes/n8n-nodes-base.sms77/) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
+* [Clockify:](/workflow/integrations/nodes/workflow-nodes-base.clockify/) Added Task resource.
+* [Hubspot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Added Campaign Contact resource.
+* [MongoDB:](/workflow/integrations/nodes/workflow-nodes-base.mongoDb/) Added ability to query documents by '_id'.
+* [MQTT:](/workflow/integrations/nodes/workflow-nodes-base.mqtt/) Added SSL/TLS support to authentication.
+* [MQTT Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.mqttTrigger/) Added SSL/TLS support to authentication.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added File Extension option to the Document resource. Added Type field to Task resource.
+* [Sms77:](/workflow/integrations/nodes/workflow-nodes-base.sms77/) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
 * [Zendesk:](/workflow/integrations/nodes/workflow-nodes-base.zendesk/) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
 
 ### Core Functionality 
@@ -1228,7 +1228,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Hubspot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed issue with 'RequestAllItems' API.
+* [Hubspot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Fixed issue with 'RequestAllItems' API.
 * [Wordpress:](/workflow/integrations/nodes/workflow-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors 
@@ -1240,7 +1240,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Added handling of Rich Text when simplifying data.
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Added handling of Rich Text when simplifying data.
 
 ### Core Functionality 
 - General UI design improvements.
@@ -1249,9 +1249,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [FTP:](/workflow/integrations/core-nodes/n8n-nodes-base.ftp/) Fixed issue where incorrect paths were displayed when using the node.
-* [Wait:](/workflow/integrations/core-nodes/n8n-nodes-base.wait/) Fixed issue when receiving multiple files using On Webhook Call operation.
-* [Webhook:](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) Fixed issue when receiving multiple files.
+* [FTP:](/workflow/integrations/core-nodes/workflow-nodes-base.ftp/) Fixed issue where incorrect paths were displayed when using the node.
+* [Wait:](/workflow/integrations/core-nodes/workflow-nodes-base.wait/) Fixed issue when receiving multiple files using On Webhook Call operation.
+* [Webhook:](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/) Fixed issue when receiving multiple files.
 
 
 ## n8n@0.135.3
@@ -1295,9 +1295,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Form.io Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.formIoTrigger/)
-* [Formstack Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.formstackTrigger/)
-* [Wait](/workflow/integrations/core-nodes/n8n-nodes-base.wait/)
+* [Form.io Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.formIoTrigger/)
+* [Formstack Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.formstackTrigger/)
+* [Wait](/workflow/integrations/core-nodes/workflow-nodes-base.wait/)
 
 ### Core Functionality 
 - In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
@@ -1307,7 +1307,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Interval:](/workflow/integrations/core-nodes/n8n-nodes-base.interval/) Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error.
+* [Interval:](/workflow/integrations/core-nodes/workflow-nodes-base.interval/) Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error.
 
 ### Contributors 
 [Aniruddha Adhikary](https://github.com/aniruddha-adhikary), [lublak](https://github.com/lublak), [parthibanbalaji](https://github.com/parthibanbalaji)
@@ -1319,12 +1319,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [AWS DynamoDB:](/workflow/integrations/nodes/n8n-nodes-base.awsDynamoDb/) Added Scan option to Item > Get All operation.
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Added File Name option to File > Update operation.
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website.
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Added Timezone option when inserting Date fields.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID.
-* [QuickBooks:](/workflow/integrations/nodes/n8n-nodes-base.quickbooks/) Added the Transaction resource and Get Report operation.
+* [AWS DynamoDB:](/workflow/integrations/nodes/workflow-nodes-base.awsDynamoDb/) Added Scan option to Item > Get All operation.
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Added File Name option to File > Update operation.
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website.
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Added Timezone option when inserting Date fields.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID.
+* [QuickBooks:](/workflow/integrations/nodes/workflow-nodes-base.quickbooks/) Added the Transaction resource and Get Report operation.
 
 ### Core Functionality 
 - Integrated [Nodelinter](/workflow/integrations/creating-nodes/code/node-linter/) in Workflow².
@@ -1332,9 +1332,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [AWS SES:](/workflow/integrations/nodes/n8n-nodes-base.awsSes/) Fixed issue where special characters in the message were not encoded.
-* [Baserow:](/workflow/integrations/nodes/n8n-nodes-base.baserow/) Fixed issue where Create operation inserted null values.
-* [Hubspot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed issue when sending context parameter.
+* [AWS SES:](/workflow/integrations/nodes/workflow-nodes-base.awsSes/) Fixed issue where special characters in the message were not encoded.
+* [Baserow:](/workflow/integrations/nodes/workflow-nodes-base.baserow/) Fixed issue where Create operation inserted null values.
+* [Hubspot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Fixed issue when sending context parameter.
 
 ### Contributors 
 [calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1)
@@ -1345,19 +1345,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Monica CRM](/workflow/integrations/nodes/n8n-nodes-base.monicaCrm/)
+* [Monica CRM](/workflow/integrations/nodes/workflow-nodes-base.monicaCrm/)
 
 ### Enhanced nodes 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added Follow All Redirects option.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Record Type ID field.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Added Follow All Redirects option.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Record Type ID field.
 
 ### Core Functionality 
 - Fixed UI lag when editing large workflows.
 
 ### Bug fixes 
 
-* [Nextcloud:](/workflow/integrations/nodes/n8n-nodes-base.nextCloud/) Fixed issue where List operation on an empty Folder returned an error.
+* [Nextcloud:](/workflow/integrations/nodes/workflow-nodes-base.nextCloud/) Fixed issue where List operation on an empty Folder returned an error.
 * [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
 
 ### Contributors 
@@ -1369,7 +1369,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Interval:](/workflow/integrations/core-nodes/n8n-nodes-base.interval/) Fixed issue with infinite executions.
+* [Interval:](/workflow/integrations/core-nodes/workflow-nodes-base.interval/) Fixed issue with infinite executions.
 
 ### Contributors 
 [Лебедев Иван](https://github.com/X-pech)
@@ -1387,19 +1387,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Freshworks CRM](/workflow/integrations/nodes/n8n-nodes-base.freshworksCrm/)
-* [Google Perspective](/workflow/integrations/nodes/n8n-nodes-base.googlePerspective/)
-* [Marketstack](/workflow/integrations/nodes/n8n-nodes-base.marketstack/)
-* [NocoDB](/workflow/integrations/nodes/n8n-nodes-base.nocoDb/)
+* [Freshworks CRM](/workflow/integrations/nodes/workflow-nodes-base.freshworksCrm/)
+* [Google Perspective](/workflow/integrations/nodes/workflow-nodes-base.googlePerspective/)
+* [Marketstack](/workflow/integrations/nodes/workflow-nodes-base.marketstack/)
+* [NocoDB](/workflow/integrations/nodes/workflow-nodes-base.nocoDb/)
 
 
 ### Enhanced nodes 
 
-* [Facebook Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.facebookTrigger/) Added Fields parameter.
-* [Gmail:](/workflow/integrations/nodes/n8n-nodes-base.gmail/) Added Sender Name parameter.
-* [Home Assistant:](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/) Added Event resource.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added Deal Product resource.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Document resource with Upload operation.
+* [Facebook Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.facebookTrigger/) Added Fields parameter.
+* [Gmail:](/workflow/integrations/nodes/workflow-nodes-base.gmail/) Added Sender Name parameter.
+* [Home Assistant:](/workflow/integrations/nodes/workflow-nodes-base.homeAssistant/) Added Event resource.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added Deal Product resource.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Document resource with Upload operation.
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added Customer resource.
 
 
@@ -1420,13 +1420,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Webex by Cisco](/workflow/integrations/nodes/n8n-nodes-base.ciscoWebex/)
-* [Webex by Cisco Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.ciscoWebexTrigger/)
+* [Webex by Cisco](/workflow/integrations/nodes/workflow-nodes-base.ciscoWebex/)
+* [Webex by Cisco Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.ciscoWebexTrigger/)
 
 
 ### Enhanced nodes 
 
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added Lead resource. Added Search operation to Organization resource.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added Lead resource. Added Search operation to Organization resource.
 * [Taiga Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.taigaTrigger/) Added Resource and Operations filters.
 
 
@@ -1438,7 +1438,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Spreadsheet File:](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) Fixed issue when saving dates.
+* [Spreadsheet File:](/workflow/integrations/core-nodes/workflow-nodes-base.spreadsheetFile/) Fixed issue when saving dates.
 
 ### Contributors 
 [Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
@@ -1455,14 +1455,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [AWS DynamoDB](/workflow/integrations/nodes/n8n-nodes-base.awsDynamoDb/)
-* [Elasticsearch](/workflow/integrations/nodes/n8n-nodes-base.elasticsearch/)
-* [ServiceNow](/workflow/integrations/nodes/n8n-nodes-base.serviceNow/)
+* [AWS DynamoDB](/workflow/integrations/nodes/workflow-nodes-base.awsDynamoDb/)
+* [Elasticsearch](/workflow/integrations/nodes/workflow-nodes-base.elasticsearch/)
+* [ServiceNow](/workflow/integrations/nodes/workflow-nodes-base.serviceNow/)
 
 ### Enhanced nodes 
 
-* [Kafka Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.kafkaTrigger/) Added Read Messages From Beginning option.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Sandbox Environment Type for OAuth2 credentials.
+* [Kafka Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.kafkaTrigger/) Added Read Messages From Beginning option.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Sandbox Environment Type for OAuth2 credentials.
 * [Taiga:](/workflow/integrations/nodes/workflow-nodes-base.taiga/) Added Epic, Task, and User Story operations.
 * [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/) Added Custom Fields option to the available Additional Fields.
 
@@ -1472,7 +1472,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Fixed issue when filtering field data type.
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed issue when filtering field data type.
 
 ### Contributors 
 [Michael Hirschler](https://github.com/mvhirsch), [Mika Luhta](https://github.com/mluhta), [Pierre Lanvin](https://github.com/planvin)
@@ -1483,11 +1483,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Baserow](/workflow/integrations/nodes/n8n-nodes-base.baserow/)
+* [Baserow](/workflow/integrations/nodes/workflow-nodes-base.baserow/)
 
 ### Bug fixes 
 
-* [SSH:](/workflow/integrations/core-nodes/n8n-nodes-base.ssh/) Fixed issue with access rights when downloading files.
+* [SSH:](/workflow/integrations/core-nodes/workflow-nodes-base.ssh/) Fixed issue with access rights when downloading files.
 
 ### Contributors 
 [Jérémie Pardou-Piquemal](https://github.com/jrmi)
@@ -1498,13 +1498,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Home Assistant](/workflow/integrations/nodes/n8n-nodes-base.homeAssistant/)
+* [Home Assistant](/workflow/integrations/nodes/workflow-nodes-base.homeAssistant/)
 * [Stripe](/workflow/integrations/nodes/workflow-nodes-base.stripe/)
 
 ### Enhanced nodes 
 
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Added Contact Segment resource.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Added Contact Segment resource.
 * [Telegram:](/workflow/integrations/nodes/workflow-nodes-base.telegram/) Added Delete operation to the Message resource.
 
 ### Core Functionality 
@@ -1514,7 +1514,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Microsoft SQL:](/workflow/integrations/nodes/n8n-nodes-base.microsoftSql/) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
+* [Microsoft SQL:](/workflow/integrations/nodes/workflow-nodes-base.microsoftSql/) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
 
 ### Contributors 
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
@@ -1531,9 +1531,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Airtable:](/workflow/integrations/nodes/n8n-nodes-base.airtable/) Added Bulk Size option to all Operations.
-* [Box:](/workflow/integrations/nodes/n8n-nodes-base.box/) Added Share operation to File and Folder resources.
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Last Name field to Update operation on Contact resource.
+* [Airtable:](/workflow/integrations/nodes/workflow-nodes-base.airtable/) Added Bulk Size option to all Operations.
+* [Box:](/workflow/integrations/nodes/workflow-nodes-base.box/) Added Share operation to File and Folder resources.
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Last Name field to Update operation on Contact resource.
 * [Zoho CRM:](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality 
@@ -1542,8 +1542,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with handling 0 value that resulted in empty cells.
-* [SSH:](/workflow/integrations/core-nodes/n8n-nodes-base.ssh/) Fixed an issue with setting passphrases.
+* [Google Sheets:](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) Fixed an issue with handling 0 value that resulted in empty cells.
+* [SSH:](/workflow/integrations/core-nodes/workflow-nodes-base.ssh/) Fixed an issue with setting passphrases.
 
 ### Contributors 
 [flybluewolf](https://github.com/flybluewolf), [Kaito Udagawa](https://github.com/umireon)
@@ -1557,8 +1557,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Microsoft SQL:](/workflow/integrations/nodes/n8n-nodes-base.microsoftSQL/) Fixed an issue with handling of Boolean values when inserting.
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Fixed an issue with the node icon.
+* [Microsoft SQL:](/workflow/integrations/nodes/workflow-nodes-base.microsoftSQL/) Fixed an issue with handling of Boolean values when inserting.
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Fixed an issue with the node icon.
 
 ## n8n@0.126.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.125.0...n8n@0.126.0) for this version.<br />
@@ -1567,15 +1567,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes 
 
 * [Action Network](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/)
-* [Google Docs](/workflow/integrations/nodes/n8n-nodes-base.googleDocs/)
+* [Google Docs](/workflow/integrations/nodes/workflow-nodes-base.googleDocs/)
 
 ### Enhanced nodes 
 
-* [AWS S3:](/workflow/integrations/nodes/n8n-nodes-base.awsS3/) Added Delete operation to the Bucket Resource.
-* [Google Analytics:](/workflow/integrations/nodes/n8n-nodes-base.googleAnalytics/) Added Dimension Filters to the available Additional Fields.
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added Split Into Items option.
-* [MQTT:](/workflow/integrations/nodes/n8n-nodes-base.mqtt/) Added mqqts protocol for MQTT credentials.
-* [QuickBooks:](/workflow/integrations/nodes/n8n-nodes-base.quickbooks/) Added Purchase resource with Get and Get All operations.
+* [AWS S3:](/workflow/integrations/nodes/workflow-nodes-base.awsS3/) Added Delete operation to the Bucket Resource.
+* [Google Analytics:](/workflow/integrations/nodes/workflow-nodes-base.googleAnalytics/) Added Dimension Filters to the available Additional Fields.
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Added Split Into Items option.
+* [MQTT:](/workflow/integrations/nodes/workflow-nodes-base.mqtt/) Added mqqts protocol for MQTT credentials.
+* [QuickBooks:](/workflow/integrations/nodes/workflow-nodes-base.quickbooks/) Added Purchase resource with Get and Get All operations.
 
 
 ### Core Functionality 
@@ -1585,10 +1585,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Ghost:](/workflow/integrations/nodes/n8n-nodes-base.ghost/) Fixed an issue with the Get All operation functionality.
-* [Google Analytics:](/workflow/integrations/nodes/n8n-nodes-base.googleAnalytics/) Fixed an issue that caused an error when attempting to sort with no data present.
-* [Microsoft SQL:](/workflow/integrations/nodes/n8n-nodes-base.microsoftSQL/) Fixed an issue when escaping single quotes and mapping empty fields.
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Fixed an issue with pagination of databases and users.
+* [Ghost:](/workflow/integrations/nodes/workflow-nodes-base.ghost/) Fixed an issue with the Get All operation functionality.
+* [Google Analytics:](/workflow/integrations/nodes/workflow-nodes-base.googleAnalytics/) Fixed an issue that caused an error when attempting to sort with no data present.
+* [Microsoft SQL:](/workflow/integrations/nodes/workflow-nodes-base.microsoftSQL/) Fixed an issue when escaping single quotes and mapping empty fields.
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed an issue with pagination of databases and users.
 
 ### Contributors 
 [calvintwr](https://github.com/calvintwr), [Jan Baykara](https://github.com/janbaykara)
@@ -1606,7 +1606,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [MySQL:](/workflow/integrations/nodes/n8n-nodes-base.mySql/) Fixed an issue where Doc² was unable to save data due to collation, resulting in workflows ending with Unknown status.
+* [MySQL:](/workflow/integrations/nodes/workflow-nodes-base.mySql/) Fixed an issue where Doc² was unable to save data due to collation, resulting in workflows ending with Unknown status.
 
 ### Contributors 
 [Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
@@ -1626,10 +1626,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Added APP Properties and Properties options to the Upload operation of the File resource
-* [HTTP Request:](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) Added the functionlaity to log the request to the browser console for testing
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Added the Include Time parameter date field types
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Added APP Properties and Properties options to the Upload operation of the File resource
+* [HTTP Request:](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) Added the functionlaity to log the request to the browser console for testing
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Added the Include Time parameter date field types
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
 * [Todoist:](/workflow/integrations/nodes/workflow-nodes-base.todoist/) Added the Description option to the Task resource
 
 ### Core Functionality 
@@ -1638,7 +1638,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Jira:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource
+* [Jira:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource
 
 ### Contributors 
 
@@ -1657,12 +1657,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Git](/workflow/integrations/core-nodes/n8n-nodes-base.git/)
-* [Microsoft To Do](/workflow/integrations/nodes/n8n-nodes-base.microsoftToDo/)
+* [Git](/workflow/integrations/core-nodes/workflow-nodes-base.git/)
+* [Microsoft To Do](/workflow/integrations/nodes/workflow-nodes-base.microsoftToDo/)
 
 ### Enhanced nodes 
 
-* [Pipedrive:](/workflow/integrations/nodes/n8n-nodes-base.pipedrive/) Added a feature to fetch data from the Pipedrive API, added Search operation to the Deals resource, and added custom fields option
+* [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Added a feature to fetch data from the Pipedrive API, added Search operation to the Deals resource, and added custom fields option
 * [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added My Data resource
 
 ### Core Functionality 
@@ -1671,7 +1671,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [ASW Transcribe:](/workflow/integrations/nodes/n8n-nodes-base.awsTranscribe/) Fixed issues with options
+* [ASW Transcribe:](/workflow/integrations/nodes/workflow-nodes-base.awsTranscribe/) Fixed issues with options
 
 ### Contributors 
 
@@ -1689,7 +1689,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Fixed an issue with parsing the last edited time
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed an issue with parsing the last edited time
 
 ## n8n@0.122.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.1...n8n@0.122.2) for this version.<br />
@@ -1697,8 +1697,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [Function:](/workflow/integrations/core-nodes/n8n-nodes-base.function/) Added console.log support for writing to browser console
-* [Function Item:](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) Added console.log support for writing to browser console
+* [Function:](/workflow/integrations/core-nodes/workflow-nodes-base.function/) Added console.log support for writing to browser console
+* [Function Item:](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) Added console.log support for writing to browser console
 
 ### Core Functionality 
 - Fixed an issue that enables clicks on tags
@@ -1718,15 +1718,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [AWS Transcribe](/workflow/integrations/nodes/n8n-nodes-base.awsTranscribe/)
-* [SSH](/workflow/integrations/core-nodes/n8n-nodes-base.ssh/)
+* [AWS Transcribe](/workflow/integrations/nodes/workflow-nodes-base.awsTranscribe/)
+* [SSH](/workflow/integrations/core-nodes/workflow-nodes-base.ssh/)
 * [UptimeRobot](/workflow/integrations/nodes/workflow-nodes-base.uptimeRobot/)
 
 ### Enhanced nodes 
 
-* [DeepL:](/workflow/integrations/nodes/n8n-nodes-base.deepL/) Added support for Free API
-* [Function:](/workflow/integrations/core-nodes/n8n-nodes-base.function/) Added the functionality to log console.log messages to the browser console
-* [Function Item:](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) Added the functionality to log console.log messages to the browser console
+* [DeepL:](/workflow/integrations/nodes/workflow-nodes-base.deepL/) Added support for Free API
+* [Function:](/workflow/integrations/core-nodes/workflow-nodes-base.function/) Added the functionality to log console.log messages to the browser console
+* [Function Item:](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) Added the functionality to log console.log messages to the browser console
 
 ### Core Functionality 
 - Changed `bcrypt` library from `@node-rs/bcrypt` to `bcryptjs`
@@ -1737,9 +1737,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Fixed an issue with the Drive resource
-* [Notion:](/workflow/integrations/nodes/n8n-nodes-base.notion/) Fixed an issue with the filtering fields type and fixed an issue with the link option
-* [Switch:](/workflow/integrations/core-nodes/n8n-nodes-base.switch/) Fixed an issue with the Expression mode
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Fixed an issue with the Drive resource
+* [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed an issue with the filtering fields type and fixed an issue with the link option
+* [Switch:](/workflow/integrations/core-nodes/workflow-nodes-base.switch/) Fixed an issue with the Expression mode
 
 ### Contributors 
 
@@ -1760,20 +1760,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Notion](/workflow/integrations/nodes/n8n-nodes-base.notion/)
-* [Notion Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.notionTrigger/)
+* [Notion](/workflow/integrations/nodes/workflow-nodes-base.notion/)
+* [Notion Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.notionTrigger/)
 
 ### Enhanced nodes 
 
-* [GraphQL:](/workflow/integrations/core-nodes/n8n-nodes-base.graphql/) Added Header Auth authentication method
+* [GraphQL:](/workflow/integrations/core-nodes/workflow-nodes-base.graphql/) Added Header Auth authentication method
 * [Twilio:](/workflow/integrations/nodes/workflow-nodes-base.twilio/) Added API Key authentication method
 
 ### Bug fixes 
 
-* [HubSpot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed an issue with pagination for Deals resource
-* [Keap:](/workflow/integrations/nodes/n8n-nodes-base.keap/) Fixed an issue with the data type of the Order Title field
-* [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed an issue with the activity type in Post operation
-* [Slack:](/workflow/integrations/nodes/n8n-nodes-base.slack/) Fixed an issue with the Get Profile operation
+* [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Fixed an issue with pagination for Deals resource
+* [Keap:](/workflow/integrations/nodes/workflow-nodes-base.keap/) Fixed an issue with the data type of the Order Title field
+* [Orbit:](/workflow/integrations/nodes/workflow-nodes-base.orbit/) Fixed an issue with the activity type in Post operation
+* [Slack:](/workflow/integrations/nodes/workflow-nodes-base.slack/) Fixed an issue with the Get Profile operation
 * [Strava:](/workflow/integrations/nodes/workflow-nodes-base.strava/) Fixed an issue with the paging parameter
 
 ### Contributors 
@@ -1786,13 +1786,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [iCalendar](/workflow/integrations/core-nodes/n8n-nodes-base.iCal/)
+* [iCalendar](/workflow/integrations/core-nodes/workflow-nodes-base.iCal/)
 
 ### Enhanced nodes 
 
-* [Google Cloud Firestore:](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-* [IMAP Email:](/workflow/integrations/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
-* [Paddle:](/workflow/integrations/nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
+* [Google Cloud Firestore:](/workflow/integrations/nodes/workflow-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
+* [IMAP Email:](/workflow/integrations/core-nodes/workflow-nodes-base.imapEmail/) Added the Force reconnect option
+* [Paddle:](/workflow/integrations/nodes/workflow-nodes-base.paddle/) Added the Use Sandbox environment API parameter
 * [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
 * [WooCommerce:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
 
@@ -1804,9 +1804,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Clockify Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.clockifyTrigger/) Fixed an issue that occurred when the node returned an empty array
-* [Google Cloud Firestore:](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) Fixed an issue with parsing empty document, and an issue with the detection of date
-* [HubSpot:](/workflow/integrations/nodes/n8n-nodes-base.hubspot/) Fixed an issue with the Return All option
+* [Clockify Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.clockifyTrigger/) Fixed an issue that occurred when the node returned an empty array
+* [Google Cloud Firestore:](/workflow/integrations/nodes/workflow-nodes-base.googleCloudFirestore/) Fixed an issue with parsing empty document, and an issue with the detection of date
+* [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.hubspot/) Fixed an issue with the Return All option
 
 ### Contributors 
 
@@ -1818,12 +1818,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes 
 
-* [AWS Comprehend:](/workflow/integrations/nodes/n8n-nodes-base.awsComprehend/) Added the Detect Entities operation
-* [AWS Lambda:](/workflow/integrations/nodes/n8n-nodes-base.awsLambda/) Added the ability to list functions recursively if the number of functions exceeds 50
-* [Google Analytics:](/workflow/integrations/nodes/n8n-nodes-base.googleAnalytics/) Added pagination to the Report resource
-* [Mailjet:](/workflow/integrations/nodes/n8n-nodes-base.mailjet/) Added Reply To parameter
-* [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Added the Increment operation
-* [Spreadsheet File:](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) Added the Header Row option
+* [AWS Comprehend:](/workflow/integrations/nodes/workflow-nodes-base.awsComprehend/) Added the Detect Entities operation
+* [AWS Lambda:](/workflow/integrations/nodes/workflow-nodes-base.awsLambda/) Added the ability to list functions recursively if the number of functions exceeds 50
+* [Google Analytics:](/workflow/integrations/nodes/workflow-nodes-base.googleAnalytics/) Added pagination to the Report resource
+* [Mailjet:](/workflow/integrations/nodes/workflow-nodes-base.mailjet/) Added Reply To parameter
+* [Redis:](/workflow/integrations/nodes/workflow-nodes-base.redis/) Added the Increment operation
+* [Spreadsheet File:](/workflow/integrations/core-nodes/workflow-nodes-base.spreadsheetFile/) Added the Header Row option
 * [Webflow Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.webflowTrigger/) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
 
 ### Core Functionality 
@@ -1832,8 +1832,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Google Cloud Firestore:](/workflow/integrations/nodes/n8n-nodes-base.googleCloudFirestore/) Fixed an issue with parsing null value
-* [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Key Row parameter
+* [Google Cloud Firestore:](/workflow/integrations/nodes/workflow-nodes-base.googleCloudFirestore/) Fixed an issue with parsing null value
+* [Google Sheets:](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) Fixed an issue with the Key Row parameter
 * [HubSpot:](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/) Fixed an issue with the authentication
 
 ### Contributors 
@@ -1860,21 +1860,21 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Kitemaker](/workflow/integrations/nodes/n8n-nodes-base.kitemaker/)
-* [MQTT](/workflow/integrations/nodes/n8n-nodes-base.mqtt/)
+* [Kitemaker](/workflow/integrations/nodes/workflow-nodes-base.kitemaker/)
+* [MQTT](/workflow/integrations/nodes/workflow-nodes-base.mqtt/)
 
 ### Enhanced nodes 
 
-* [CrateDB:](/workflow/integrations/nodes/n8n-nodes-base.crateDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [ERPNext:](/workflow/integrations/nodes/n8n-nodes-base.erpNext/) Added support for self-hosted ERPNext instances
-* [FTP:](/workflow/integrations/core-nodes/n8n-nodes-base.ftp/) Added the functionality to delete folders
-* [Google Calendar:](/workflow/integrations/nodes/n8n-nodes-base.googleCalendar/) Added the Continue on Fail functionality
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Added the functionality to add file name when downloading files
-* [Gmail:](/workflow/integrations/nodes/n8n-nodes-base.gmail/) Added functionality to handle multiple binary properties
-* [Microsoft Outlook:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOutlook/) Added Is Read and Move option to the Message resource
-* [Postgres:](/workflow/integrations/nodes/n8n-nodes-base.postgres/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [QuestDB:](/workflow/integrations/nodes/n8n-nodes-base.questDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [QuickBase:](/workflow/integrations/nodes/n8n-nodes-base.quickbase/) Added option to use Field IDs
+* [CrateDB:](/workflow/integrations/nodes/workflow-nodes-base.crateDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [ERPNext:](/workflow/integrations/nodes/workflow-nodes-base.erpNext/) Added support for self-hosted ERPNext instances
+* [FTP:](/workflow/integrations/core-nodes/workflow-nodes-base.ftp/) Added the functionality to delete folders
+* [Google Calendar:](/workflow/integrations/nodes/workflow-nodes-base.googleCalendar/) Added the Continue on Fail functionality
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Added the functionality to add file name when downloading files
+* [Gmail:](/workflow/integrations/nodes/workflow-nodes-base.gmail/) Added functionality to handle multiple binary properties
+* [Microsoft Outlook:](/workflow/integrations/nodes/workflow-nodes-base.microsoftOutlook/) Added Is Read and Move option to the Message resource
+* [Postgres:](/workflow/integrations/nodes/workflow-nodes-base.postgres/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [QuestDB:](/workflow/integrations/nodes/workflow-nodes-base.questDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [QuickBase:](/workflow/integrations/nodes/workflow-nodes-base.quickbase/) Added option to use Field IDs
 * [TimescaleDB:](/workflow/integrations/nodes/workflow-nodes-base.timescaleDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [Twist:](/workflow/integrations/nodes/workflow-nodes-base.twist/) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
 
@@ -1885,12 +1885,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [GetResponse Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.getResponseTrigger/) Fixed an issue with error handling
-* [GitHub Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.githubTrigger/) Fixed an issue with error handling
-* [GitLab Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.gitlabTrigger/) Fixed an issue with error handling
-* [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning empty rows
-* [Orbit:](/workflow/integrations/nodes/n8n-nodes-base.orbit/) Fixed issues with the Post resource
-* [Redis:](/workflow/integrations/nodes/n8n-nodes-base.redis/) Fixed an issue with the node not returning an error
+* [GetResponse Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.getResponseTrigger/) Fixed an issue with error handling
+* [GitHub Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.githubTrigger/) Fixed an issue with error handling
+* [GitLab Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.gitlabTrigger/) Fixed an issue with error handling
+* [Google Sheets:](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning empty rows
+* [Orbit:](/workflow/integrations/nodes/workflow-nodes-base.orbit/) Fixed issues with the Post resource
+* [Redis:](/workflow/integrations/nodes/workflow-nodes-base.redis/) Fixed an issue with the node not returning an error
 * [Xero:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fixed an issue with the Create operation for the Contact resource
 
 ### Contributors 
@@ -1909,18 +1909,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Mailcheck](/workflow/integrations/nodes/n8n-nodes-base.mailcheck/)
-* [n8n Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.n8nTrigger/)
-* [Workflow Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.workflowTrigger/)
+* [Mailcheck](/workflow/integrations/nodes/workflow-nodes-base.mailcheck/)
+* [n8n Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.n8nTrigger/)
+* [Workflow Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.workflowTrigger/)
 
 ### Enhanced nodes 
 
-* [CrateDB:](/workflow/integrations/nodes/n8n-nodes-base.crateDb/) Added the Mode option that allows you to execute queries as transactions
-* [Nextcloud:](/workflow/integrations/nodes/n8n-nodes-base.nextcloud/) Added Delete, Get, Get All, and Update operation to the User resource
-* [Postgres:](/workflow/integrations/nodes/n8n-nodes-base.postgres/) Added the Mode option that allows you to execute queries as transactions
-* [QuestDB:](/workflow/integrations/nodes/n8n-nodes-base.questDb/) Added the Mode option that allows you to execute queries as transactions
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
-* [Sentry.io:](/workflow/integrations/nodes/n8n-nodes-base.sentryIo/) Added Delete and Update operations to Project, Release, and Team resources
+* [CrateDB:](/workflow/integrations/nodes/workflow-nodes-base.crateDb/) Added the Mode option that allows you to execute queries as transactions
+* [Nextcloud:](/workflow/integrations/nodes/workflow-nodes-base.nextcloud/) Added Delete, Get, Get All, and Update operation to the User resource
+* [Postgres:](/workflow/integrations/nodes/workflow-nodes-base.postgres/) Added the Mode option that allows you to execute queries as transactions
+* [QuestDB:](/workflow/integrations/nodes/workflow-nodes-base.questDb/) Added the Mode option that allows you to execute queries as transactions
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
+* [Sentry.io:](/workflow/integrations/nodes/workflow-nodes-base.sentryIo/) Added Delete and Update operations to Project, Release, and Team resources
 * [TimescaleDB:](/workflow/integrations/nodes/workflow-nodes-base.timescaleDb/) Added the Mode option that allows you to execute queries as transactions
 * [Zendesk Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
 
@@ -1930,9 +1930,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning multiple empty rows
-* [Intercom:](/workflow/integrations/nodes/n8n-nodes-base.intercom/) Fixed an issue with the User operation in the Company resource
-* [Mautic:](/workflow/integrations/nodes/n8n-nodes-base.mautic/) Fixed an issue with sending the lastActive parameter
+* [Google Sheets:](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning multiple empty rows
+* [Intercom:](/workflow/integrations/nodes/workflow-nodes-base.intercom/) Fixed an issue with the User operation in the Company resource
+* [Mautic:](/workflow/integrations/nodes/workflow-nodes-base.mautic/) Fixed an issue with sending the lastActive parameter
 
 ### Contributors 
 
@@ -1951,18 +1951,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Google BigQuery](/workflow/integrations/nodes/n8n-nodes-base.googleBigQuery/)
+* [Google BigQuery](/workflow/integrations/nodes/workflow-nodes-base.googleBigQuery/)
 * [Webflow](/workflow/integrations/nodes/workflow-nodes-base.webflow/)
 
 ### Enhanced nodes 
 
-* [Date & Time:](/workflow/integrations/core-nodes/n8n-nodes-base.dateTime/) Added Calculate a Date action that allows you to add or subtract time from a date
-* [GitLab:](/workflow/integrations/nodes/n8n-nodes-base.gitlab/) Added Get, Get All, Update, and Delete operations to the Release resource
-* [Microsoft OneDrive:](/workflow/integrations/nodes/n8n-nodes-base.microsoftOneDrive/) Added Delete operation to the Folder resource
-* [Monday:](/workflow/integrations/nodes/n8n-nodes-base.mondayCom/) Added support for OAuth2 authentication
-* [MongoDB:](/workflow/integrations/nodes/n8n-nodes-base.mongoDb/) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
-* [MySQL:](/workflow/integrations/nodes/n8n-nodes-base.mySql/) Added support for insert modifiers and added support for SSL
-* [RabbitMQ:](/workflow/integrations/nodes/n8n-nodes-base.rabbitmq/) Added the functionality to close the connection after use and added support for AMPQS
+* [Date & Time:](/workflow/integrations/core-nodes/workflow-nodes-base.dateTime/) Added Calculate a Date action that allows you to add or subtract time from a date
+* [GitLab:](/workflow/integrations/nodes/workflow-nodes-base.gitlab/) Added Get, Get All, Update, and Delete operations to the Release resource
+* [Microsoft OneDrive:](/workflow/integrations/nodes/workflow-nodes-base.microsoftOneDrive/) Added Delete operation to the Folder resource
+* [Monday:](/workflow/integrations/nodes/workflow-nodes-base.mondayCom/) Added support for OAuth2 authentication
+* [MongoDB:](/workflow/integrations/nodes/workflow-nodes-base.mongoDb/) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
+* [MySQL:](/workflow/integrations/nodes/workflow-nodes-base.mySql/) Added support for insert modifiers and added support for SSL
+* [RabbitMQ:](/workflow/integrations/nodes/workflow-nodes-base.rabbitmq/) Added the functionality to close the connection after use and added support for AMPQS
 
 ### Core Functionality 
 
@@ -1973,10 +1973,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [AWS SQS:](/workflow/integrations/nodes/n8n-nodes-base.awsSqs/) Fixed an issue with API version and casing
-* [IMAP:](/workflow/integrations/core-nodes/n8n-nodes-base.imapEmail/) Fixed re-connection issue
-* [Keap:](/workflow/integrations/nodes/n8n-nodes-base.keap/) Fixed an issue with the Opt In Reason parameter
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed an issue with loading custom fields
+* [AWS SQS:](/workflow/integrations/nodes/workflow-nodes-base.awsSqs/) Fixed an issue with API version and casing
+* [IMAP:](/workflow/integrations/core-nodes/workflow-nodes-base.imapEmail/) Fixed re-connection issue
+* [Keap:](/workflow/integrations/nodes/workflow-nodes-base.keap/) Fixed an issue with the Opt In Reason parameter
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fixed an issue with loading custom fields
 
 ### Contributors 
 
@@ -1988,13 +1988,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [Google Slides](/workflow/integrations/nodes/n8n-nodes-base.googleSlides/)
+* [Google Slides](/workflow/integrations/nodes/workflow-nodes-base.googleSlides/)
 
 ### Enhanced nodes 
 
-* [GitHub:](/workflow/integrations/nodes/n8n-nodes-base.github/) Added Release resource
+* [GitHub:](/workflow/integrations/nodes/workflow-nodes-base.github/) Added Release resource
 * [TheHive:](/workflow/integrations/nodes/workflow-nodes-base.theHive/) Added support to fetch observable data types
-* [RabbitMQ:](/workflow/integrations/nodes/n8n-nodes-base.rabbitmq/) Added header parameters
+* [RabbitMQ:](/workflow/integrations/nodes/workflow-nodes-base.rabbitmq/) Added header parameters
 
 ### Core Functionality 
 
@@ -2005,9 +2005,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Jira:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Fixed an issue with loading issue types with classic project type
-* [RabbitMQ Trigger:](/workflow/integrations/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/) Fixed an issue with the node reusing the same item
-* [SendGrid:](/workflow/integrations/nodes/n8n-nodes-base.sendGrid/) Fixed an issue with the dynamic field generation
+* [Jira:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Fixed an issue with loading issue types with classic project type
+* [RabbitMQ Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.rabbitmqTrigger/) Fixed an issue with the node reusing the same item
+* [SendGrid:](/workflow/integrations/nodes/workflow-nodes-base.sendGrid/) Fixed an issue with the dynamic field generation
 
 ### Contributors 
 
@@ -2019,18 +2019,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes 
 
-* [AWS SQS](/workflow/integrations/nodes/n8n-nodes-base.awsSqs/)
-* [Copper](/workflow/integrations/nodes/n8n-nodes-base.copper/)
-* [ERPNext](/workflow/integrations/nodes/n8n-nodes-base.erpNext/)
-* [Oura](/workflow/integrations/nodes/n8n-nodes-base.oura/)
+* [AWS SQS](/workflow/integrations/nodes/workflow-nodes-base.awsSqs/)
+* [Copper](/workflow/integrations/nodes/workflow-nodes-base.copper/)
+* [ERPNext](/workflow/integrations/nodes/workflow-nodes-base.erpNext/)
+* [Oura](/workflow/integrations/nodes/workflow-nodes-base.oura/)
 
 ### Enhanced nodes 
 
-* [Google Drive:](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) Added support for creating folders for shared drives
-* [Google Sheets:](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) Added Create and Remove operation to the Sheet resource
-* [Harvest:](/workflow/integrations/nodes/n8n-nodes-base.harvest/) Added Update operation to the Task resource
-* [Jira:](/workflow/integrations/nodes/n8n-nodes-base.jira/) Added Reporter field to the Issue resource
-* [Postgres:](/workflow/integrations/nodes/n8n-nodes-base.postgres/) Added support for type casting
+* [Google Drive:](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) Added support for creating folders for shared drives
+* [Google Sheets:](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) Added Create and Remove operation to the Sheet resource
+* [Harvest:](/workflow/integrations/nodes/workflow-nodes-base.harvest/) Added Update operation to the Task resource
+* [Jira:](/workflow/integrations/nodes/workflow-nodes-base.jira/) Added Reporter field to the Issue resource
+* [Postgres:](/workflow/integrations/nodes/workflow-nodes-base.postgres/) Added support for type casting
 
 ### Core Functionality 
 
@@ -2038,10 +2038,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes 
 
-* [Bitwarden:](/workflow/integrations/nodes/n8n-nodes-base.bitwarden/) Fixed an issue with the Update operation of the Group resource
-* [Cortex:](/workflow/integrations/nodes/n8n-nodes-base.cortex/) Fixed an issue where only the last item got returned
-* [Invoice Ninja:](/workflow/integrations/nodes/n8n-nodes-base.invoiceNinja/) Fixed an issue with the Project parameter
-* [Salesforce:](/workflow/integrations/nodes/n8n-nodes-base.salesforce/) Fixed an issue with the Get All operation of the Custom Object resource
+* [Bitwarden:](/workflow/integrations/nodes/workflow-nodes-base.bitwarden/) Fixed an issue with the Update operation of the Group resource
+* [Cortex:](/workflow/integrations/nodes/workflow-nodes-base.cortex/) Fixed an issue where only the last item got returned
+* [Invoice Ninja:](/workflow/integrations/nodes/workflow-nodes-base.invoiceNinja/) Fixed an issue with the Project parameter
+* [Salesforce:](/workflow/integrations/nodes/workflow-nodes-base.salesforce/) Fixed an issue with the Get All operation of the Custom Object resource
 
 ### Contributors 
 

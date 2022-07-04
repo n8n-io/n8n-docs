@@ -100,7 +100,7 @@
 
 This workflow allows you to fetch all Tickets with an Urgent status in Freshservice. This example usage workflow would use the following two nodes:
 
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Freshservice]()
 
 The final workflow should look like the following image.

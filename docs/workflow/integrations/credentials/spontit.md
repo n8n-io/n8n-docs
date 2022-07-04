@@ -1,7 +1,7 @@
 # Spontit
 
 You can use these credentials to authenticate the following nodes with Spontit.
-- [Spontit](/workflow/integrations/nodes/n8n-nodes-base.spontit/)
+- [Spontit](/workflow/integrations/nodes/workflow-nodes-base.spontit/)
 
 ## Prerequisites
 

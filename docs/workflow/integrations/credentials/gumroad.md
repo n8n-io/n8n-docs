@@ -1,7 +1,7 @@
 # Gumroad
 
 You can use these credentials to authenticate the following nodes with Gumroad.
-- [Gumroad Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.gumroadTrigger/)
+- [Gumroad Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.gumroadTrigger/)
 
 ## Prerequisites
 

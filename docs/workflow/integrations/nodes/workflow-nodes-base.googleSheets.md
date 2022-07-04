@@ -23,8 +23,8 @@
 ## Example Usage
 
 This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Google Sheets]()
 
 The final workflow should look like the following image.
@@ -38,7 +38,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Set node
 
-This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node, to get the data you want to add to the Google Sheets.
+This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) node, to get the data you want to add to the Google Sheets.
 
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.
@@ -190,7 +190,7 @@ To change the format, click on ***Add Option*** and select 'Value Input Mode' fr
 
 ### How to append an array in the Google Sheets?
 
-To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Function node](/workflow/integrations/core-nodes/n8n-nodes-base.function/) to convert the array into JSON format.
+To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Function node](/workflow/integrations/core-nodes/workflow-nodes-base.function/) to convert the array into JSON format.
 
 ### How to return all the values with the Lookup operation?
 

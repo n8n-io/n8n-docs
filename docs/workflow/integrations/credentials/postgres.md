@@ -11,7 +11,7 @@ tags:
 # Postgres
 
 You can use these credentials to authenticate the following nodes with Postgres.
-- [Postgres](/workflow/integrations/nodes/n8n-nodes-base.postgres/)
+- [Postgres](/workflow/integrations/nodes/workflow-nodes-base.postgres/)
 
 ## Prerequisites
 

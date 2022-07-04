@@ -1,7 +1,7 @@
 # CrateDB
 
 You can use these credentials to authenticate the following nodes with CrateDB.
-- [CrateDB](/workflow/integrations/nodes/n8n-nodes-base.crateDb/)
+- [CrateDB](/workflow/integrations/nodes/workflow-nodes-base.crateDb/)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 # Quick Base
 
 You can use these credentials to authenticate the following nodes with Quick Base.
-- [Quick Base](/workflow/integrations/nodes/n8n-nodes-base.quickbase/)
+- [Quick Base](/workflow/integrations/nodes/workflow-nodes-base.quickbase/)
 
 ## Prerequisites
 

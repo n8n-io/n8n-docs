@@ -13,8 +13,8 @@
 ## Example Usage
 
 This workflow allows you to translate cocktail instructions to Italian. You can also find the [workflow](https://n8n.io/workflows/797) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [LingvaNex]()
 
 The final workflow should look like the following image.

@@ -15,7 +15,7 @@ The Read Binary File node is used to read a file from the host machine that runs
 ## Example Usage
 
 This workflow allows you to read a file from the host machine using the Read Binary File node. You can also find the [workflow](https://n8n.io/workflows/577) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Read Binary File]()
 
 

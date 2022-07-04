@@ -8,8 +8,8 @@ tags:
 # Chargebee
 
 You can use these credentials to authenticate the following nodes with Chargebee.
-- [Chargebee](/workflow/integrations/nodes/n8n-nodes-base.chargebee/)
-- [Chargebee Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.chargebeeTrigger/)
+- [Chargebee](/workflow/integrations/nodes/workflow-nodes-base.chargebee/)
+- [Chargebee Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.chargebeeTrigger/)
 
 ## Prerequisites
 

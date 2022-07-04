@@ -77,7 +77,7 @@
 ## Example usage
 
 This workflow allows you to create a new contact in Monica CRM. This example usage workflow would use the following three nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Monica CRM]()
 
 The final workflow should look like the following image.

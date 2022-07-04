@@ -28,8 +28,6 @@ Example to show how to rename Keys in a JSON
 4. Paste the code (ctrl + v or cmd + v)
 
 
-
-
 ``` Javascript
 {
   "nodes": [

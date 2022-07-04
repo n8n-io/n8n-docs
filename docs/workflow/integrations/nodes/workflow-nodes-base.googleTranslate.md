@@ -14,7 +14,7 @@
 ## Example Usage
 
 This workflow allows you to translate text from English to German using the Google Translate node. You can also find the [workflow](https://n8n.io/workflows/743) on the website. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Google Translate]()
 
 The final workflow should look like the following image.

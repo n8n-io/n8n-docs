@@ -1,7 +1,7 @@
 # Oura
 
 You can use these credentials to authenticate the following nodes with Oura.
-- [Oura](/workflow/integrations/nodes/n8n-nodes-base.oura/)
+- [Oura](/workflow/integrations/nodes/workflow-nodes-base.oura/)
 
 ## Prerequisites
 

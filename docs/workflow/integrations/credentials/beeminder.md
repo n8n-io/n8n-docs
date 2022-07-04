@@ -8,7 +8,7 @@ tags:
 # Beeminder
 
 You can use these credentials to authenticate the following nodes with Beeminder.
-- [Beeminder](/workflow/integrations/nodes/n8n-nodes-base.beeminder/)
+- [Beeminder](/workflow/integrations/nodes/workflow-nodes-base.beeminder/)
 
 ## Prerequisites
 

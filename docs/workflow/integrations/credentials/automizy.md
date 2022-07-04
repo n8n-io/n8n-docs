@@ -8,7 +8,7 @@ tags:
 # Automizy
 
 You can use these credentials to authenticate the following nodes with Automizy.
-- [Automizy](/workflow/integrations/nodes/n8n-nodes-base.automizy/)
+- [Automizy](/workflow/integrations/nodes/workflow-nodes-base.automizy/)
 
 ## Prerequisites
 

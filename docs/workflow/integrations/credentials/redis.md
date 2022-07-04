@@ -1,7 +1,7 @@
 # Redis
 
 You can use these credentials to authenticate the following nodes with Redis.
-- [Redis](/workflow/integrations/nodes/n8n-nodes-base.redis/)
+- [Redis](/workflow/integrations/nodes/workflow-nodes-base.redis/)
 
 ## Prerequisites
 

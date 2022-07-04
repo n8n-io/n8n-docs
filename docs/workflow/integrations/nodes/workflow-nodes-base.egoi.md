@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a contact using the E-goi node. You can also find the [workflow](https://n8n.io/workflows/852) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [E-goi]()
 
 The final workflow should look like the following image.

@@ -9,7 +9,7 @@ tags:
 # Coda
 
 You can use these credentials to authenticate the following nodes with Coda.
-- [Coda](/workflow/integrations/nodes/n8n-nodes-base.coda/)
+- [Coda](/workflow/integrations/nodes/workflow-nodes-base.coda/)
 
 ## Prerequisites
 

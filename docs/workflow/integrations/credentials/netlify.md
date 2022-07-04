@@ -13,8 +13,8 @@ tags:
 
 You can use these credentials to authenticate the following nodes:
 
-- [Netlify](/workflow/integrations/nodes/n8n-nodes-base.netlify/)
-- [Netlify Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.netlifyTrigger/)
+- [Netlify](/workflow/integrations/nodes/workflow-nodes-base.netlify/)
+- [Netlify Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.netlifyTrigger/)
 
 ## Prerequisites
 

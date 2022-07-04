@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Odoo:
 
-- [Odoo](/workflow/integrations/nodes/n8n-nodes-base.odoo/)
+- [Odoo](/workflow/integrations/nodes/workflow-nodes-base.odoo/)
 
 1. Sign up for Odoo and create an API key or password. Refer to Odoo's documentation for more information: [External API](https://www.odoo.com/documentation/15.0/developer/misc/api/odoo.html). Note that some Odoo modules and settings require API keys, not passwords.
 2. In Doc², create a new credential. You can either:

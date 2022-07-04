@@ -9,7 +9,7 @@ tags:
 
 You can use these credentials to authenticate the following node:
 
-- [Baserow](/workflow/integrations/nodes/n8n-nodes-base.baserow/)
+- [Baserow](/workflow/integrations/nodes/workflow-nodes-base.baserow/)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 # Orbit
 
 You can use these credentials to authenticate the following nodes with Orbit.
-- [Orbit](/workflow/integrations/nodes/n8n-nodes-base.orbit/)
+- [Orbit](/workflow/integrations/nodes/workflow-nodes-base.orbit/)
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ tags:
 The Activation Trigger node gets triggered when an event gets fired by Workflow² or a workflow.
 
 !!! warning
-    The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the [n8n Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.n8nTrigger/) and the [Workflow Trigger](/workflow/integrations/core-nodes/n8n-nodes-base.workflowTrigger/) node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
+    The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the [n8n Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.n8nTrigger/) and the [Workflow Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.workflowTrigger/) node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
 
 
 !!! note " Keep in mind"
@@ -31,7 +31,7 @@ The Activation Trigger node gets triggered for the workflow that it gets added t
 
 This workflow allows you to receive a message on Mattermost when a workflow is updated. You can also find the [workflow](https://n8n.io/workflows/1033) on Workflow².io. This example usage workflow uses the following nodes.
 - [Activation Trigger]()
-- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/workflow-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 

@@ -1,7 +1,7 @@
 # PagerDuty
 
 You can use these credentials to authenticate the following nodes with PagerDuty.
-- [PagerDuty](/workflow/integrations/nodes/n8n-nodes-base.pagerDuty/)
+- [PagerDuty](/workflow/integrations/nodes/workflow-nodes-base.pagerDuty/)
 
 ## Prerequisites
 

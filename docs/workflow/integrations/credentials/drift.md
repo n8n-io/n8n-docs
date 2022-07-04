@@ -1,7 +1,7 @@
 # Drift
 
 You can use these credentials to authenticate the following nodes with Drift.
-- [Drift](/workflow/integrations/nodes/n8n-nodes-base.drift/)
+- [Drift](/workflow/integrations/nodes/workflow-nodes-base.drift/)
 
 ## Prerequisites
 

@@ -9,8 +9,8 @@ tags:
 # Asana
 
 You can use these credentials to authenticate the following nodes with Asana.
-- [Asana](/workflow/integrations/nodes/n8n-nodes-base.asana/)
-- [Asana Trigger](/workflwo/integrations/trigger-nodes/n8n-nodes-base.asanaTrigger/)
+- [Asana](/workflow/integrations/nodes/workflow-nodes-base.asana/)
+- [Asana Trigger](/workflwo/integrations/trigger-nodes/workflow-nodes-base.asanaTrigger/)
 
 
 ## Prerequisites

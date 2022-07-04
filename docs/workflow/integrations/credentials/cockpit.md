@@ -8,7 +8,7 @@ tags:
 # Cockpit
 
 You can use these credentials to authenticate the following nodes with Cockpit.
-- [Cockpit](/workflow/integrations/nodes/n8n-nodes-base.cockpit/)
+- [Cockpit](/workflow/integrations/nodes/workflow-nodes-base.cockpit/)
 
 ## Prerequisites
 

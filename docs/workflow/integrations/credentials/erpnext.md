@@ -1,7 +1,7 @@
 # ERPNext
 
 You can use these credentials to authenticate the following nodes with Emelia.
-- [ERPNext](/workflow/integrations/nodes/n8n-nodes-base.erpNext/)
+- [ERPNext](/workflow/integrations/nodes/workflow-nodes-base.erpNext/)
 
 ## Prerequisites
 

@@ -121,7 +121,7 @@ If you want to learn more about *IP addresses*, see [What Is an IP Address?](htt
 ## JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.
 
-While Doc² is written in TypeScript, the final code generated is JavaScript and the [Function node](/workflow/integrations/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
+While Doc² is written in TypeScript, the final code generated is JavaScript and the [Function node](/workflow/integrations/core-nodes/workflow-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
 
 To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
 
@@ -135,7 +135,7 @@ For further reading, please see [Introducing JSON](https://www.json.org/json-en.
 ## Header
 Section of an HTTP request message that defines allows extra information to be passed between the transmitter and receiver.
 
-n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](/workflow/integrations/core-nodes/n8n-nodes-base.httprequest/).
+n8n has the ability to send custom header information to many [APIs](#API), specifically in the [HTTP Request node](/workflow/integrations/core-nodes/workflow-nodes-base.httprequest/).
 
 For further information, see [Request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header).
 
@@ -290,7 +290,7 @@ Read more at [Computer Programming - Variables](https://www.tutorialspoint.com/c
 ## Webhook
 A service that listens for data input from an external source used to trigger an action in a system. Webhooks allow external systems to provide real-time alerts and updates to the system that does not limit the updates to regular polling intervals. Webhooks are often referenced by push notifications.
 
-n8n has the ability to create [webhooks](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the Doc² system itself.
+n8n has the ability to create [webhooks](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/) that can be used to start workflows and receive data from systems outside of the Doc² system itself.
 
 To learn more about *webhooks*, see [What's a Webhook?](https://sendgrid.com/blog/whats-webhook/).
 

@@ -25,11 +25,11 @@ The Execute Command node has two properties:
 ## Example Usage
 
 This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow is triggered twice a day, and if the memory usage exceeds 80%, it will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on Workflow².io. This example usage workflow would use the following nodes.
-- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [Execute Command]()
-- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
 - [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
-- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/workflow-nodes-base.noOp/)
 
 
 The final workflow should look like the following image.
@@ -122,7 +122,7 @@ ls
 
 ### How to run the curl command in the Execute Command node?
 
-You can also use the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to make a cURL request.
+You can also use the [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing Doc² image. The default Doc² Docker image uses Alpine Linux. You will have to install the curl package.
 1. Create a file named Dockerfile.

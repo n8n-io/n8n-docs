@@ -1,7 +1,7 @@
 # E-goi
 
 You can use these credentials to authenticate the following nodes with E-goi.
-- [E-goi](/workflow/integrations/nodes/n8n-nodes-base.egoi/)
+- [E-goi](/workflow/integrations/nodes/workflow-nodes-base.egoi/)
 
 ## Prerequisites
 

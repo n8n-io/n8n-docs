@@ -17,8 +17,8 @@
 This workflow allows you to receive updates from Wise and add information of a transfer to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/993) on Workflow².io. This example usage workflow would use the following nodes.
 - [Wise Trigger]()
 - [Wise](/workflow/integrations/nodes/workflow-nodes-base.wise/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 

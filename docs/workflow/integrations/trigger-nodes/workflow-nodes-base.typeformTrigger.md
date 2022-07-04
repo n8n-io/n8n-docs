@@ -11,9 +11,9 @@
 
 This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following nodes.
 - [Typeform Trigger]()
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
-- [Slack](/workflow/integrations/nodes/n8n-nodes-base.slack/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)
+- [Slack](/workflow/integrations/nodes/workflow-nodes-base.slack/)
 
 The final workflow should look like the following image.
 

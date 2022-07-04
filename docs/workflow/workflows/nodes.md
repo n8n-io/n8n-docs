@@ -35,7 +35,7 @@ Regular nodes perform an action, like fetching data or creating an entry in a ca
 
 ### Example
 
-A [Google Sheets node](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/) can be used to retrieve or write data to a Google Sheet.
+A [Google Sheets node](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/) can be used to retrieve or write data to a Google Sheet.
 
 ![Sheets_node](/_images/workflows/nodes/Google_sheets.png)
 

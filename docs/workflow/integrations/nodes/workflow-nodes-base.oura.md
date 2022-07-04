@@ -18,10 +18,10 @@
 ## Example Usage
 
 This workflow allows you to get activity summary from Oura and store the output in Airtable. You can also find the [workflow](https://n8n.io/workflows/882) on Workflow².io. This example usage workflow uses the following nodes.
-- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [Oura]()
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
-- [Airtable](/workflow/integrations/nodes/n8n-nodes-base.airtable/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
+- [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)
 
 The final workflow should look like the following image.
 

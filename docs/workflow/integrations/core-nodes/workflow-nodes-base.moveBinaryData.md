@@ -3,7 +3,7 @@
 The Move Binary Data node is useful to move data between binary and JSON properties.
 
 !!! note " Hint"
-    If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](/workflow/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/) node.
+    If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](/workflow/integrations/core-nodes/workflow-nodes-base.spreadsheetFile/) node.
 
 
 ## Node Reference
@@ -35,9 +35,9 @@ The Move Binary Data node is useful to move data between binary and JSON propert
 ## Example Usage
 
 This workflow allows you to store the JSON data received from the [CocktailDB API](https://www.thecocktaildb.com/) to your machine. You can also find the [workflow](https://n8n.io/workflows/652) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Write Binary Data](/workflow/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
+- [Write Binary Data](/workflow/integrations/core-nodes/workflow-nodes-base.writeBinaryFile/)
 
 The final workflow should look like the following image.
 

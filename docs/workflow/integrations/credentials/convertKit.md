@@ -1,8 +1,8 @@
 # ConvertKit
 
 You can use these credentials to authenticate the following nodes with ConvertKit.
-- [ConvertKit](/workflow/integrations/nodes/n8n-nodes-base.convertKit/)
-- [ConvertKit Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.convertKitTrigger/)
+- [ConvertKit](/workflow/integrations/nodes/workflow-nodes-base.convertKit/)
+- [ConvertKit Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.convertKitTrigger/)
 
 ## Prerequisites
 

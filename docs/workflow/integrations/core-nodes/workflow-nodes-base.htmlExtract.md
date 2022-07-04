@@ -27,8 +27,8 @@ The property can either contain a string or an array of strings.
 ## Example Usage
 
 This workflow allows you to extract titles and URLs of all the articles from the  [Hackernoon](https://hackernoon.com/) homepage using the HTML Extract node. You can also find the [workflow](https://n8n.io/workflows/434) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [HTML Extract]()
 
 The final workflow should look like the following image.

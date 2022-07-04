@@ -36,7 +36,7 @@
 ## Example Usage
 
 This workflow allows you to create a client in HaloPSA. This example workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HaloPSA]()
 
 ![A workflow with the Harvest node](/_images/integrations/nodes/halopsa/workflow.png)

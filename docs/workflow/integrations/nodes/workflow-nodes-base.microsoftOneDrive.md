@@ -26,7 +26,7 @@
 ## Example Usage
 
 This workflow allows you to create a folder in Microsoft OneDrive. You can also find the [workflow](https://n8n.io/workflows/565) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Microsoft OneDrive]()
 
 The final workflow should look like the following image.

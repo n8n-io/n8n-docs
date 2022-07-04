@@ -8,7 +8,7 @@ tags:
 # Sendy
 
 You can use these credentials to authenticate the following nodes with Sendy.
-- [Sendy](/workflow/integrations/nodes/n8n-nodes-base.sendy/)
+- [Sendy](/workflow/integrations/nodes/workflow-nodes-base.sendy/)
 
 ## Prerequisites
 

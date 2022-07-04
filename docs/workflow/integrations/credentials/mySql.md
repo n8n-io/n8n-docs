@@ -1,7 +1,7 @@
 # MySQL
 
 You can use these credentials to authenticate the following nodes with MySQL.
-- [MySQL](/workflow/integrations/nodes/n8n-nodes-base.mySql/)
+- [MySQL](/workflow/integrations/nodes/workflow-nodes-base.mySql/)
 
 ## Prerequisites
 

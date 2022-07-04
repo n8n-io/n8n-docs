@@ -17,7 +17,7 @@ The Send Email node is used to send an email via an SMTP email server.
 !!! note " Keep in mind"
     1. Before sending, ensure that you have already created email addresses that are approved for sending on your SMTP service.
 2. The Send Email node merely sends an email via your SMTP server and plays no part in email deliverability.
-3. To attach a file, you will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/) node to pass a file as a data property.
+3. To attach a file, you will need to use an additional node such as the [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node or the [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) node to pass a file as a data property.
 
 
 ## Basic Operations
@@ -38,7 +38,7 @@ The Send Email node is used to send an email via an SMTP email server.
 ## Example Usage
 
 This workflow allows you to send an email using the Send Email node. You can also find the [workflow](https://n8n.io/workflows/584) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Send Email]()
 
 The final workflow should look like the following image.

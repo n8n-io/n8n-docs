@@ -1,8 +1,8 @@
 # Help Scout
 
 You can use these credentials to authenticate the following nodes with Help Scout.
-- [Help Scout](/workflow/integrations/nodes/n8n-nodes-base.helpScout/)
-- [Help Scout Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.helpScoutTrigger/)
+- [Help Scout](/workflow/integrations/nodes/workflow-nodes-base.helpScout/)
+- [Help Scout Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.helpScoutTrigger/)
 
 ## Prerequisites
 

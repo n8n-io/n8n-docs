@@ -42,7 +42,7 @@ The HTTP Request node is one of the most versatile nodes in Workflow². It allow
 ## Example Usage
 
 This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request]()
 
 The final workflow should look like the following image.
@@ -106,7 +106,7 @@ The start node exists by default when you create a new workflow.
 
 Depending on your use-case, you might want to send a binary file to an API endpoint. To do that, follow the steps mentioned below.
 
-1. Connect the HTTP Request node with a node that has previously fetched the binary file. This node can be an HTTP Request node, [Read Binary File](/workflow/integrations/core-nodes/n8n-nodes-base.readBinaryFile/) node, [Google Drive](/workflow/integrations/nodes/n8n-nodes-base.googleDrive/) node or any such node.
+1. Connect the HTTP Request node with a node that has previously fetched the binary file. This node can be an HTTP Request node, [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node, [Google Drive](/workflow/integrations/nodes/workflow-nodes-base.googleDrive/) node or any such node.
 2. Select 'POST' from the ***Request Method*** dropdown list (**Note:** Refer to the API documentation of your API to make sure that you have selected the correct HTTP request method).
 3. Enter the URL where you want to send the binary file in the ***URL*** field.
 4. Toggle ***JSON/RAW Parameters*** to `true`.

@@ -31,7 +31,7 @@
 ## Example Usage
 
 This workflow allows you to create a new contact in Agile CRM. You can also find the [workflow](https://n8n.io/workflows/474) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Agile CRM]()
 
 The final workflow should look like the following image.

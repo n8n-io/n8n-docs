@@ -1,8 +1,8 @@
 # Lemlist
 
 You can use these credentials to authenticate the following nodes with Lemlist.
-- [Lemlist](/workflow/integrations/nodes/n8n-nodes-base.lemlist/)
-- [Lemlist Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.lemlistTrigger/)
+- [Lemlist](/workflow/integrations/nodes/workflow-nodes-base.lemlist/)
+- [Lemlist Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.lemlistTrigger/)
 
 ## Prerequisites
 

@@ -4,7 +4,7 @@
 
 A function is a block of code designed to perform a certain task. In Workflow², you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.
 
-The [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/) and [Function Item](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) nodes are the most powerful in Workflow². Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
+The [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/) and [Function Item](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) nodes are the most powerful in Workflow². Both nodes work very similarly, they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
 
 The code of the **Function node** gets executed only once. The node receives the full items (JSON and binary data) as an array and expects an array of items as a return value. The items returned can be totally different from the incoming ones. So it is not only possible to remove and edit existing items, but also to add or return totally new ones.
 

@@ -1,7 +1,7 @@
 # Peekalink
 
 You can use these credentials to authenticate the following nodes with Peekalink.
-- [Peekalink](/workflow/integrations/nodes/n8n-nodes-base.peekalink/)
+- [Peekalink](/workflow/integrations/nodes/workflow-nodes-base.peekalink/)
 
 ## Prerequisites
 

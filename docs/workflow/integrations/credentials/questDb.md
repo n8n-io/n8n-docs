@@ -1,7 +1,7 @@
 # QuestDB
 
 You can use these credentials to authenticate the following nodes with QuestDB.
-- [QuestDB](/workflow/integrations/nodes/n8n-nodes-base.questDB/)
+- [QuestDB](/workflow/integrations/nodes/workflow-nodes-base.questDB/)
 
 ## Prerequisites
 

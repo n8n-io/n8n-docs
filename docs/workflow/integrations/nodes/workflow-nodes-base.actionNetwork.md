@@ -49,7 +49,7 @@ tags:
 ## Example
 
 This workflow allows you to create a new event in Action Network, then create a new person and mark them as having attended your event. This workflow uses the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [ActiveCampaign]()
 
 The final workflow should look like the following image.

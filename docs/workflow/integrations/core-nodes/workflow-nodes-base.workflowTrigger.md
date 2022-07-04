@@ -11,7 +11,7 @@ The Doc² Trigger node gets triggered when the Doc² instance is started or rest
 
 This workflow allows you to receive a message on Mattermost when your Doc² instance starts. You can also find the [workflow](https://n8n.io/workflows/1058) on Workflow².io. This example usage workflow uses the following nodes.
 - [n8n Trigger]()
-- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/workflow-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 

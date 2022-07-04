@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Magento 2](/workflow/integrations/nodes/n8n-nodes-base.magento2/)
+- [Magento 2](/workflow/integrations/nodes/workflow-nodes-base.magento2/)
 
 ## Prerequisites
 

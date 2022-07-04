@@ -7,4 +7,4 @@
 
 This node starts a workflow upon new submissions of a specified form. The trigger node handles the creation/deletion of the hook, so you don't need to do any setup in KoBo Toolbox.
 
-It works the same way as the Get Submission operation in the [KoBoToolbox](/integrations/nodes/n8n-nodes-base.koBoToolbox/) node, including supporting the same reformatting options.
+It works the same way as the Get Submission operation in the [KoBoToolbox](/integrations/nodes/workflow-nodes-base.koBoToolbox/) node, including supporting the same reformatting options.

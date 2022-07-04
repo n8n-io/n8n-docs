@@ -34,7 +34,7 @@
 ## Example Usage
 
 This workflow allows you to create a project, tag, and time entry in Clockify. It also allows you to update the time entry in Clockify. You can also find the [workflow](https://n8n.io/workflows/701) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Clockify]()
 
 The final workflow should look like the following image.

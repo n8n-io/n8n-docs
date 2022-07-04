@@ -17,7 +17,7 @@ The Execute Workflow node has two properties:
 ## Example Usage
 
 This workflow allows you to execute another workflow on the host machine using the Execute Workflow node. You can also find the [workflow](https://n8n.io/workflows/588) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Execute Workflow]()
 
 The final workflow should look like the following image.

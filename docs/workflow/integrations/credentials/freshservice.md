@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshservice](/workflow/integrations/nodes/n8n-nodes-base.freshservice/)
+- [Freshservice](/workflow/integrations/nodes/workflow-nodes-base.freshservice/)
 
 ## Prerequisites
 

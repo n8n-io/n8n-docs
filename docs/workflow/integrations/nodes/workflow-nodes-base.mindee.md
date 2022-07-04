@@ -19,8 +19,8 @@
 ## Example Usage
 
 This workflow allows you to extract information from an image of a receipt using the Mindee node. You can also find the [workflow](https://n8n.io/workflows/702) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Mindee]()
 
 The final workflow should look like the following image.
@@ -34,7 +34,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request (GET)
 
-This example workflow uses the HTTP Request node to make a GET request to download the image of a receipt. You can also use other nodes, for example, the [Box](/workflow/integrations/nodes/n8n-nodes-base.box/) node, to get the images of the receipts you want to use.
+This example workflow uses the HTTP Request node to make a GET request to download the image of a receipt. You can also use other nodes, for example, the [Box](/workflow/integrations/nodes/workflow-nodes-base.box/) node, to get the images of the receipts you want to use.
 
 1. Enter the URL of the image in the ***URL*** field. For example, `https://miro.medium.com/max/1400/0*1T9GkAb93w5NSMsf`.
 2. Select 'File' from the ***Response Format*** dropdown list.

@@ -23,7 +23,7 @@
 ## Example usage
 
 This workflow allows you to get all documents for a selected index. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Elasticsearch]()
 
 The final workflow should look like the following image.

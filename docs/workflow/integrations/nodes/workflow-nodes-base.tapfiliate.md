@@ -34,7 +34,7 @@ tags:
 ## Example Usage
 
 This workflow allows you to create an affiliate, add metadata, and add the affiliate to a program. You can also find the [workflow](https://n8n.io/workflows/936) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Tapfiliate]()
 
 The final workflow should look like the following image.

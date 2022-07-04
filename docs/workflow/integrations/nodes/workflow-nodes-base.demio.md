@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to register your audience to an event on Demio via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/947) on Workflow².io. This example usage workflow uses the following nodes.
-- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.typeformtrigger/)
 - [Demio]()
 
 The final workflow should look like the following image.

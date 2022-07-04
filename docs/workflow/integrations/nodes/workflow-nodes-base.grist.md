@@ -17,7 +17,7 @@
 
 This workflow allows you to insert and update data from a table in Grist. You can also find the [workflow](https://n8n.io/workflows/818) on Workflow².io. This example usage workflow uses the following nodes:
 
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Grist]()
 
 The final workflow should look like the following:

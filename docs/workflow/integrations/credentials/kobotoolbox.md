@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes:
 
-* [KoBo Toolbox trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.koBoToolboxTrigger/)
-* [KoBo Toolbox](/workflow/integrations/nodes/n8n-nodes-base.koBoToolbox/)
+* [KoBo Toolbox trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.koBoToolboxTrigger/)
+* [KoBo Toolbox](/workflow/integrations/nodes/workflow-nodes-base.koBoToolbox/)
 
 KoBo Toolbox uses an API key for authentication:
 

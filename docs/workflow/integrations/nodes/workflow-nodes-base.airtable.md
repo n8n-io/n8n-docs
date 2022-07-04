@@ -18,8 +18,8 @@
 ## Example Usage
 
 This workflow allows you to insert and update data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/818) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Airtable]()
 
 The final workflow should look like the following image.

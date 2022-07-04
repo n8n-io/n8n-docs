@@ -1,7 +1,7 @@
 # SIGNL4
 
 You can use these credentials to authenticate the following nodes with SIGNL4.
-- [SIGNL4](/workflow/integrations/nodes/n8n-nodes-base.signl4/)
+- [SIGNL4](/workflow/integrations/nodes/workflow-nodes-base.signl4/)
 
 ## Prerequisites
 

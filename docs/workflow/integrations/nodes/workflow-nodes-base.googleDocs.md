@@ -16,7 +16,7 @@
 ## Example usage
 
 This workflow allows you to create a new Google Doc and add your desired text to it. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Google Docs]()
 
 The final workflow should look like the following image.

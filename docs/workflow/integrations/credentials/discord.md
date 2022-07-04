@@ -1,6 +1,6 @@
 # Discord
 You can follow these instructions to create a webhook in Discord to use with the following nodes.
-- [Discord](/workflow/integrations/nodes/n8n-nodes-base.discord/)
+- [Discord](/workflow/integrations/nodes/workflow-nodes-base.discord/)
 
 
 ## Prerequisites

@@ -52,7 +52,7 @@
 ## Example Usage
 
 This workflow allows you to create, update, and get a person from Copper. You can also find the [workflow](https://n8n.io/workflows/1021) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Copper]()
 
 The final workflow should look like the following image.

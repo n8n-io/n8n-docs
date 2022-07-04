@@ -9,9 +9,9 @@
 ## Example Usage
 
 This workflow allows you to send position updates of the ISS every minute to a topic in MQTT using the MQTT node. You can also find the [workflow](https://n8n.io/workflows/1069) on Workflow².io. This example usage workflow uses the following nodes.
-- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [MQTT]()
 
 The final workflow should look like the following image.

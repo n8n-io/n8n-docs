@@ -8,7 +8,7 @@ tags:
 # Salesmate
 
 You can use these credentials to authenticate the following nodes with Salesmate.
-- [Salesmate](/workflow/integrations/nodes/n8n-nodes-base.salesmate/)
+- [Salesmate](/workflow/integrations/nodes/workflow-nodes-base.salesmate/)
 
 ## Prerequisites
 

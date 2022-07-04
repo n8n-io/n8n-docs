@@ -8,7 +8,7 @@ tags:
 # Clearbit
 
 You can use these credentials to authenticate the following nodes with Clearbit.
-- [Clearbit](/workflow/integrations/nodes/n8n-nodes-base.clearbit/)
+- [Clearbit](/workflow/integrations/nodes/workflow-nodes-base.clearbit/)
 
 
 ## Prerequisites

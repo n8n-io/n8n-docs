@@ -1,7 +1,7 @@
 # Reddit
 
 You can use these credentials to authenticate the following nodes with Reddit.
-- [Reddit](/workflow/integrations/nodes/n8n-nodes-base.reddit/)
+- [Reddit](/workflow/integrations/nodes/workflow-nodes-base.reddit/)
 
 
 ## Prerequisites

@@ -1,7 +1,7 @@
 # Disqus
 
 You can use these credentials to authenticate the following nodes with Disqus.
-- [Disqus](/workflow/integrations/nodes/n8n-nodes-base.disqus/)
+- [Disqus](/workflow/integrations/nodes/workflow-nodes-base.disqus/)
 
 ## Prerequisites
 

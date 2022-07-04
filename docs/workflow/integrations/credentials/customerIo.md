@@ -1,8 +1,8 @@
 # Customer.io
 
 You can use these credentials to authenticate the following nodes with Customer.io.
-- [Customer.io](/workflow/integrations/nodes/n8n-nodes-base.customerIo/)
-- [Customer.io Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.customerIoTrigger/)
+- [Customer.io](/workflow/integrations/nodes/workflow-nodes-base.customerIo/)
+- [Customer.io Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.customerIoTrigger/)
 
 ## Prerequisites
 

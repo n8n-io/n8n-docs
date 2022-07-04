@@ -19,7 +19,7 @@
 
 This workflow allows you to get the past week's end of day data for a desired stock symbol. This example usage workflow uses the following two nodes.
 
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Marketstack]()
 
 The final workflow should look like the following image.

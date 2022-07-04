@@ -1,7 +1,7 @@
 # Line
 
 You can use these credentials to authenticate the following nodes with Line.
-- [Line](/workflow/integrations/nodes/n8n-nodes-base.line/)
+- [Line](/workflow/integrations/nodes/workflow-nodes-base.line/)
 
 ## Prerequisites
 

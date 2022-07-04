@@ -1,8 +1,8 @@
 # MQTT
 
 You can use these credentials to authenticate the following nodes with MQTT.
-- [MQTT](/workflow/integrations/nodes/n8n-nodes-base.mqtt/)
-- [MQTT Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.mqttTrigger/)
+- [MQTT](/workflow/integrations/nodes/workflow-nodes-base.mqtt/)
+- [MQTT Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.mqttTrigger/)
 
 ## Prerequisites
 

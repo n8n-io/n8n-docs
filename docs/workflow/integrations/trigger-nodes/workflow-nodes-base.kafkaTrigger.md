@@ -11,9 +11,9 @@
 
 This workflow allows you to receive messages from a topic and send an SMS if the value of the temperature is greater than 50. You can also find the [workflow](https://n8n.io/workflows/814) on Workflow².io. This example usage workflow would use the following nodes.
 - [Kafka Trigger]()
-- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
+- [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
 - [Vonage](/workflow/integrations/nodes/workflow-nodes-base.vonage/)
-- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/workflow-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 

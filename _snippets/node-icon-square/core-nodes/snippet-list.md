@@ -13,7 +13,7 @@
 --8<-- "_snippets/node-icon-square/core-nodes/html-extract.html"
 --8<-- "_snippets/node-icon-square/core-nodes/http-request.html"
 --8<-- "_snippets/node-icon-square/core-nodes/icalendar.html"
---8<-- "_snippets/node-icon-square/core-nodes/n8n-nodes-base.if.html"
+--8<-- "_snippets/node-icon-square/core-nodes/workflow-nodes-base.if.html"
 --8<-- "_snippets/node-icon-square/core-nodes/imap-email.html"
 --8<-- "_snippets/node-icon-square/core-nodes/interval.html"
 --8<-- "_snippets/node-icon-square/core-nodes/item-lists.html"

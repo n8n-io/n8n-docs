@@ -29,10 +29,10 @@
 ## Example Usage
 
 This workflow allows you to create a room, invite members from a different room, and send a message to the room that we created using the Matrix node. You can also find the [workflow](https://n8n.io/workflows/724) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Matrix]()
-- [IF](/workflow/integrations/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/workflow/integrations/core-nodes/n8n-nodes-base.noOp/)
+- [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
+- [No Operation, do nothing](/workflow/integrations/core-nodes/workflow-nodes-base.noOp/)
 
 The final workflow should look like the following image.
 

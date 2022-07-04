@@ -21,10 +21,10 @@
 This workflow allows you to find email and enrich your contact from a Google Sheet and add them to Lemlist. You can also find the [workflow](https://n8n.io/workflows/1304) on Workflow².io. 
 
 This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Google Sheets node](/workflow/integrations/nodes/n8n-nodes-base.googleSheets/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Google Sheets node](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/)
 - [Dropcontact node]()
-- [Lemlist node](/workflow/integrations/nodes/n8n-nodes-base.lemlist/)
+- [Lemlist node](/workflow/integrations/nodes/workflow-nodes-base.lemlist/)
 
 ![A workflow with the GetResponse node](/_images/integrations/nodes/dropcontact/workflow.png)
 

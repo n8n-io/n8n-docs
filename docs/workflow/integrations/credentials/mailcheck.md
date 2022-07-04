@@ -1,7 +1,7 @@
 # Mailcheck
 
 You can use these credentials to authenticate the following nodes with Mailcheck.
-- [Mailcheck](/workflow/integrations/nodes/n8n-nodes-base.mailcheck/)
+- [Mailcheck](/workflow/integrations/nodes/workflow-nodes-base.mailcheck/)
 
 ## Prerequisites
 

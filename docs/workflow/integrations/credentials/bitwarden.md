@@ -9,7 +9,7 @@ tags:
 # Bitwarden
 
 You can use these credentials to authenticate the following nodes with Bitwarden.
-- [Bitwarden](/workflow/integrations/nodes/n8n-nodes-base.bitwarden/)
+- [Bitwarden](/workflow/integrations/nodes/workflow-nodes-base.bitwarden/)
 
 ## Prerequisites
 

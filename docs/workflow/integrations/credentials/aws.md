@@ -10,16 +10,16 @@ tags:
 
 You can use these credentials to authenticate the following nodes with AWS.
 
-- [AWS DynamoDB](/workflow/integrations/nodes/n8n-nodes-base.awsDynamoDb/)
-- [AWS Lambda](/workflow/integrations/nodes/n8n-nodes-base.awsLambda/)
-- [AWS Rekognition](/workflow/integrations/nodes/n8n-nodes-base.awsRekognition/)
-- [AWS S3](/workflow/integrations/nodes/n8n-nodes-base.awsS3/)
-- [AWS SES](/workflow/integrations/nodes/n8n-nodes-base.awsSes/)
-- [AWS SNS](/workflow/integrations/nodes/n8n-nodes-base.awsSns/)
-- [AWS SNS Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.awsSnsTrigger/)
-- [AWS SQS](/workflow/integrations/nodes/n8n-nodes-base.awsSqs/)
-- [AWS Textract](/workflow/integrations/nodes/n8n-nodes-base.awsTextract/)
-- [AWS Transcribe](/workflow/integrations/nodes/n8n-nodes-base.awsTranscribe/)
+- [AWS DynamoDB](/workflow/integrations/nodes/workflow-nodes-base.awsDynamoDb/)
+- [AWS Lambda](/workflow/integrations/nodes/workflow-nodes-base.awsLambda/)
+- [AWS Rekognition](/workflow/integrations/nodes/workflow-nodes-base.awsRekognition/)
+- [AWS S3](/workflow/integrations/nodes/workflow-nodes-base.awsS3/)
+- [AWS SES](/workflow/integrations/nodes/workflow-nodes-base.awsSes/)
+- [AWS SNS](/workflow/integrations/nodes/workflow-nodes-base.awsSns/)
+- [AWS SNS Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.awsSnsTrigger/)
+- [AWS SQS](/workflow/integrations/nodes/workflow-nodes-base.awsSqs/)
+- [AWS Textract](/workflow/integrations/nodes/workflow-nodes-base.awsTextract/)
+- [AWS Transcribe](/workflow/integrations/nodes/workflow-nodes-base.awsTranscribe/)
 
 ## Prerequisites
 

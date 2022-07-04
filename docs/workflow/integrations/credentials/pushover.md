@@ -1,7 +1,7 @@
 # Pushover
 
 You can use these credentials to authenticate the following nodes with Pushover.
-- [Pushover](/workflow/integrations/nodes/n8n-nodes-base.pushover/)
+- [Pushover](/workflow/integrations/nodes/workflow-nodes-base.pushover/)
 
 ## Prerequisites
 

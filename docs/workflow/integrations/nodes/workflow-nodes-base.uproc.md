@@ -457,7 +457,7 @@ tags:
 ## Example Usage
 
 This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [uProc]()
 - [Telegram](/workflow/integrations/nodes/workflow-nodes-base.telegram/)
 

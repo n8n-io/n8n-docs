@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on Workflow².io. This example usage workflow would use the following nodes.
-- [Typeform Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.typeformtrigger/)
+- [Typeform Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.typeformtrigger/)
 - [APITemplate.io]()
 
 The final workflow should look like the following image.

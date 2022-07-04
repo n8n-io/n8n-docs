@@ -40,9 +40,9 @@
 ## Example Usage
 
 This workflow allows you to create, add an attachment, and send a draft using the Microsoft Outlook node. You can also find the [workflow](https://n8n.io/workflows/867) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Microsoft Outlook]()
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 
 The final workflow should look like the following image.
 

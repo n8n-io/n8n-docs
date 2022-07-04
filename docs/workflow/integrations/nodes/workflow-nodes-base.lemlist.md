@@ -27,8 +27,8 @@
 ## Example Usage
 
 This workflow allows you to list emails from Airtable and create corresponding leads in Lemlist. You can also find the [workflow](https://n8n.io/workflows/983) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Airtable]/integrations/nodes/n8n-nodes-base.airtable/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Airtable]/integrations/nodes/workflow-nodes-base.airtable/)
 - [Lemlist]()
 
 The final workflow should look like the following image.

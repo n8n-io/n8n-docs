@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Marketstack](/workflow/integrations/nodes/n8n-nodes-base.marketstack/)
+- [Marketstack](/workflow/integrations/nodes/workflow-nodes-base.marketstack/)
 
 ## Prerequisites
 

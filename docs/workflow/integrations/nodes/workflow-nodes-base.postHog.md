@@ -21,7 +21,7 @@
 ## Example Usage
 
 This workflow allows you to create an event in PostHog when a request is made to a webhook URL. You can also find the [workflow](https://n8n.io/workflows/968) on Workflow².io. This example usage workflow uses the following nodes.
-- [Webhook](/workflow/integrations/core-nodes/n8n-nodes-base.webhook/)
+- [Webhook](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/)
 - [PostHog]()
 
 The final workflow should look like the following image.

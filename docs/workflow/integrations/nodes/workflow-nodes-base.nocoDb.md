@@ -18,7 +18,7 @@
 ## Example usage
 
 This workflow allows you to get all rows in your table. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [NocoDB]()
 
 The final workflow should look like the following image.

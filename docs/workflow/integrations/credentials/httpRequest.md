@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [HTTP Request](/workflow/integrations/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 
 ## Prerequisites
 

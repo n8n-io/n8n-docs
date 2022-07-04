@@ -9,8 +9,8 @@ tags:
 
 You can use these credentials to authenticate the following nodes:
 
-- [SeaTable](/workflow/integrations/nodes/n8n-nodes-base.seaTable/)
-- [SeaTable Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
+- [SeaTable](/workflow/integrations/nodes/workflow-nodes-base.seaTable/)
+- [SeaTable Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.seaTableTrigger/)
 
 ## Prerequisites
 

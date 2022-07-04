@@ -8,7 +8,7 @@ tags:
 # Salesforce
 
 You can use these credentials to authenticate the following nodes with Salesforce.
-- [Salesforce](/workflow/integrations/nodes/n8n-nodes-base.salesforce/)
+- [Salesforce](/workflow/integrations/nodes/workflow-nodes-base.salesforce/)
 
 ## Prerequisites
 

@@ -18,7 +18,7 @@
 ## Example Usage
 
 This workflow allows you to turn on a light and set its brightness using the Philips Hue node. You can also find the [workflow](https://n8n.io/workflows/666) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Philips Hue]()
 
 The final workflow should look like the following image.

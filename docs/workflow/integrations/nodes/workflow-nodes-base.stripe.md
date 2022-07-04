@@ -45,7 +45,7 @@ tags:
 ## Example
 
 This workflow allows you to create a new customer, create a card token, and associate this token as that customer's card. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Stripe]()
 
 The final workflow should look like the following image.

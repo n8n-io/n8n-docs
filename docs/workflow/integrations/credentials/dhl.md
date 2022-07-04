@@ -1,7 +1,7 @@
 # DHL
 
 You can use these credentials to authenticate the following nodes with DHL.
-- [DHL](/workflow/integrations/nodes/n8n-nodes-base.dhl/)
+- [DHL](/workflow/integrations/nodes/workflow-nodes-base.dhl/)
 
 ## Prerequisites
 

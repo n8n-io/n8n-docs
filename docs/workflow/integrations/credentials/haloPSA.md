@@ -1,7 +1,7 @@
 # HaloPSA
 
 You can use these credentials to authenticate the following nodes with HaloPSA.
-- [HaloPSA](/workflow/integrations/nodes/n8n-nodes-base.haloPSA/)
+- [HaloPSA](/workflow/integrations/nodes/workflow-nodes-base.haloPSA/)
 
 ## Prerequisites
 

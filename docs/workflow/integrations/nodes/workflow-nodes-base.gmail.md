@@ -31,7 +31,7 @@
 ## Example Usage
 
 This workflow allows you to get all messages with a certain label, remove the label from the messages, and add a new label to the messages. You can also find the [workflow](https://n8n.io/workflows/621) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Gmail]()
 
 The final workflow should look like the following image.

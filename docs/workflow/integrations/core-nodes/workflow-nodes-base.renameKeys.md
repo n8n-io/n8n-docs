@@ -23,8 +23,8 @@ There are two properties in the Rename Keys node.
 ## Example Usage
 
 This workflow allows you to rename a key using the Rename Keys node. You can also find the [workflow](https://n8n.io/workflows/582) on the website. This example usage workflow would use the following three nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Rename Keys]()
 
 

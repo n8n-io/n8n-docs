@@ -1,7 +1,7 @@
 # Toggl
 
 You can use these credentials to authenticate the following nodes with Toggl.
-- [Toggl Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.togglTrigger/)
+- [Toggl Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.togglTrigger/)
 
 ## Prerequisites
 

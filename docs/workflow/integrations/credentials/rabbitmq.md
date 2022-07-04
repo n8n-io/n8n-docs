@@ -9,8 +9,8 @@ tags:
 # RabbitMQ
 
 You can use these credentials to authenticate the following nodes with RabbitMQ.
-- [RabbitMQ](/workflow/integrations/nodes/n8n-nodes-base.rabbitmq/)
-- [RabbitMQ Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/)
+- [RabbitMQ](/workflow/integrations/nodes/workflow-nodes-base.rabbitmq/)
+- [RabbitMQ Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.rabbitmqTrigger/)
 
 ## Prerequisites
 

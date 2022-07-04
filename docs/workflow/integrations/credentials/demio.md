@@ -1,7 +1,7 @@
 # Demio
 
 You can use these credentials to authenticate the following nodes with Demio.
-- [Demio](/workflow/integrations/nodes/n8n-nodes-base.demio/)
+- [Demio](/workflow/integrations/nodes/workflow-nodes-base.demio/)
 
 
 ## Prerequisites

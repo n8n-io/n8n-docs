@@ -39,7 +39,7 @@
 
 This workflow allows you to add a new user to your Notion database when an invite gets created via Calendly. You can also find the [workflow](https://n8n.io/workflows/1088) on Workflow².io. This example usage workflow uses the following nodes.
 
-- [Calendly Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.calendlytrigger/)
+- [Calendly Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.calendlytrigger/)
 - [Notion]()
 
 The final workflow should look like the following image.

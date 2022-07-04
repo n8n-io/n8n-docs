@@ -8,7 +8,7 @@ tags:
 # Bitbucket
 
 You can use these credentials to authenticate the following nodes with Bitbucket.
-- [Bitbucket Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.bitbucketTrigger/)
+- [Bitbucket Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.bitbucketTrigger/)
 
 
 ## Prerequisites

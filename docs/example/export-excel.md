@@ -74,7 +74,7 @@ In this example we trigger the result from Doc² and write the result to excel a
     },
     {
       "parameters": {
-        "functionCode": "// Code here will run only once, no matter how many input items there are.\n// More info and help: https://docs.polydocs.io/workflow/integrations/core-nodes/n8n-nodes-base.function\n// Tip: You can use luxon for dates and $jmespath for querying JSON structures\n\n// Loop over inputs and add a new field called 'myNewField' to the JSON of each one\n//for (item of items) {\n//  item.json.myNewField = 1;\n//}\n\n// You can write logs to the browser console\nconsole.log('Done!');\n\nreturn items[0].json.fields_compact;\n\n"
+        "functionCode": "// Code here will run only once, no matter how many input items there are.\n// More info and help: https://docs.polydocs.io/workflow/integrations/core-nodes/workflow-nodes-base.function\n// Tip: You can use luxon for dates and $jmespath for querying JSON structures\n\n// Loop over inputs and add a new field called 'myNewField' to the JSON of each one\n//for (item of items) {\n//  item.json.myNewField = 1;\n//}\n\n// You can write logs to the browser console\nconsole.log('Done!');\n\nreturn items[0].json.fields_compact;\n\n"
       },
       "name": "Function",
       "type": "n8n-nodes-base.function",

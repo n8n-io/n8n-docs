@@ -16,9 +16,9 @@
 ## Example Usage
 
 This workflow allows you to send financial metrics monthly to a Mattermost channel. You can also find the [workflow](https://n8n.io/workflows/798) on Workflow².io. This example usage workflow uses the following nodes.
-- [Cron](/workflow/integrations/core-nodes/n8n-nodes-base.cron/)
+- [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [ProfitWell]()
-- [Mattermost](/workflow/integrations/nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/workflow/integrations/nodes/workflow-nodes-base.mattermost/)
 
 The final workflow should look like the following image.
 

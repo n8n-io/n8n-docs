@@ -1,7 +1,7 @@
 # FileMaker
 
 You can use these credentials to authenticate the following nodes with FileMaker.
-- [FileMaker](/workflow/integrations/nodes/n8n-nodes-base.filemaker/)
+- [FileMaker](/workflow/integrations/nodes/workflow-nodes-base.filemaker/)
 
 ## Prerequisites
 

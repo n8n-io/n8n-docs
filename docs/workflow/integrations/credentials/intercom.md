@@ -1,7 +1,7 @@
 # Intercom
 
 You can use these credentials to authenticate the following nodes with Intercom.
-- [Intercom](/workflow/integrations/nodes/n8n-nodes-base.intercom/)
+- [Intercom](/workflow/integrations/nodes/workflow-nodes-base.intercom/)
 
 
 ## Prerequisites

@@ -9,8 +9,8 @@ tags:
 # Box
 
 You can use these credentials to authenticate the following nodes with Box.
-- [Box](/workflow/integrations/nodes/n8n-nodes-base.box/)
-- [Box Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.boxTrigger/)
+- [Box](/workflow/integrations/nodes/workflow-nodes-base.box/)
+- [Box Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.boxTrigger/)
 
 ## Prerequisites
 

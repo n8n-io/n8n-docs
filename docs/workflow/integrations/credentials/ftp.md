@@ -1,7 +1,7 @@
 # FTP
 
 You can use these credentials to authenticate the following nodes with FTP.
-- [FTP](/workflow/integrations/core-nodes/n8n-nodes-base.ftp/)
+- [FTP](/workflow/integrations/core-nodes/workflow-nodes-base.ftp/)
 
 ## Prerequisites
 

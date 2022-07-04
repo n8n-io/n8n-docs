@@ -13,7 +13,7 @@
 ## Example usage
 
 This workflow allows you to analyze a comment for profanity. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Google Perspective]()
 
 The final workflow should look like the following image.

@@ -6,4 +6,4 @@ In Doc², you can write custom JavaScript code snippets to add, remove, and upda
     We are using Set node for illustrating expressions here. However, you can use the code snippets as an expression in any node. To do that, click on the gears icon next to a field and click on ***Add Expression***.
 
 
-For each section, we'll share code snippets that can be used in the function node as well as the expressions. You can read more about [Expressions](/code-examples/expressions/) and adding code snippets to the [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/) node in our documentation.
+For each section, we'll share code snippets that can be used in the function node as well as the expressions. You can read more about [Expressions](/code-examples/expressions/) and adding code snippets to the [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/) node in our documentation.

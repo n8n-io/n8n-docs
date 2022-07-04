@@ -1,7 +1,7 @@
 # Kitemaker
 
 You can use these credentials to authenticate the following nodes with Kitemaker.
-- [Kitemaker](/workflow/integrations/nodes/n8n-nodes-base.kitemaker/)
+- [Kitemaker](/workflow/integrations/nodes/workflow-nodes-base.kitemaker/)
 
 ## Prerequisites
 

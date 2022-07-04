@@ -1,7 +1,7 @@
 # MSG91
 
 You can use these credentials to authenticate the following nodes with MSG91.
-- [MSG91](/workflow/integrations/nodes/n8n-nodes-base.msg91/)
+- [MSG91](/workflow/integrations/nodes/workflow-nodes-base.msg91/)
 
 ## Prerequisites
 

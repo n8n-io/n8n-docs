@@ -34,8 +34,8 @@
 ## Example Usage
 
 This workflow allows you to insert data into a new row for a table in Coda. You can also find the [workflow](https://n8n.io/workflows/482) on the website. This example usage workflow would use the following three nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/workflow/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Coda]()
 
 The final workflow should look like the following image.

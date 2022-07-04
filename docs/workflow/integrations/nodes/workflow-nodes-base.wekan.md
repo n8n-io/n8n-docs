@@ -49,7 +49,7 @@ tags:
 ## Example Usage
 
 This workflow allows you to create a board and two lists called `To Do` and `Done` using the Wekan node. It also allows you to create a card and update the list ID of the card, enabling you to move it from the `To Do` list to the `Done` list. You can also find the [workflow](https://n8n.io/workflows/728) on Workflow².io. This example usage workflow uses the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Wekan]()
 
 The final workflow should look like the following image.

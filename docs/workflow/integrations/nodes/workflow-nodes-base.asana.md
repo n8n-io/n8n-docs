@@ -41,7 +41,7 @@
 ## Example Usage
 
 This workflow allows you to create a new task in Asana. You can also find the [workflow](https://n8n.io/workflows/478) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Asana]()
 
 The final workflow should look like the following image.

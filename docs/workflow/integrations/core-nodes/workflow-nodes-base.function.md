@@ -15,7 +15,7 @@ Using the function node, you can:
 * Implement custom functionality
 
 !!! note "Function node and function item node"
-    Note that the Function node is different from the [Function Item](/workflow/integrations/core-nodes/n8n-nodes-base.functionItem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
+    Note that the Function node is different from the [Function Item](/workflow/integrations/core-nodes/workflow-nodes-base.functionItem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
 
 
 The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
@@ -63,7 +63,7 @@ In Doc², all data passed between nodes is an array of objects. It has the follo
 ## Example usage
 
 This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Function]()
 
 

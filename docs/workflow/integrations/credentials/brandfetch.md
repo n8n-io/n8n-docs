@@ -8,7 +8,7 @@ tags:
 # Brandfetch
 
 You can use these credentials to authenticate the following nodes with Brandfetch.
-- [Brandfetch](/workflow/integrations/nodes/n8n-nodes-base.Brandfetch/)
+- [Brandfetch](/workflow/integrations/nodes/workflow-nodes-base.Brandfetch/)
 
 ## Prerequisites
 

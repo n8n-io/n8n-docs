@@ -16,8 +16,8 @@
 ## Example Usage
 
 This workflow allows you to insert and retrieve data from a table in Stackby. You can also find the [workflow](https://n8n.io/workflows/934) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/core-nodes/n8n-nodes-base.start/)
-- [Set](/integrations/core-nodes/n8n-nodes-base.set/)
+- [Start](/integrations/core-nodes/workflow-nodes-base.start/)
+- [Set](/integrations/core-nodes/workflow-nodes-base.set/)
 - [Stackby]()
 
 The final workflow should look like the following image.

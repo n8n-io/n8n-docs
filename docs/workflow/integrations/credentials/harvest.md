@@ -1,7 +1,7 @@
 # Harvest
 
 You can use these credentials to authenticate the following nodes with Harvest.
-- [Harvest](/workflow/integrations/nodes/n8n-nodes-base.harvest/)
+- [Harvest](/workflow/integrations/nodes/workflow-nodes-base.harvest/)
 
 ## Prerequisites
 

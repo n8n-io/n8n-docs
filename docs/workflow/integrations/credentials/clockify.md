@@ -8,8 +8,8 @@ tags:
 # Clockify
 
 You can use these credentials to authenticate the following nodes with Clockify.
-- [Clockify](/workflow/integrations/nodes/n8n-nodes-base.clockify/)
-- [Clockify Trigger](/workflow/integrations/trigger-nodes/n8n-nodes-base.clockifyTrigger/)
+- [Clockify](/workflow/integrations/nodes/workflow-nodes-base.clockify/)
+- [Clockify Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.clockifyTrigger/)
 
 ## Prerequisites
 

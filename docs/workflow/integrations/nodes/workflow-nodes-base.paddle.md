@@ -27,7 +27,7 @@
 ## Example Usage
 
 This workflow allows you to create a coupon on Paddle. You can also find the [workflow](https://n8n.io/workflows/659) on Workflow².io. This example usage workflow would use the following nodes.
-- [Start](/workflow/integrations/core-nodes/n8n-nodes-base.start/)
+- [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Paddle]()
 
 The final workflow should look like the following image.

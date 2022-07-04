@@ -12,7 +12,7 @@ tags:
 The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input.
 
 !!! note " Keep in mind"
-    Please note that the Function Item node is different from the [Function](/workflow/integrations/core-nodes/n8n-nodes-base.function/) node. Check out [this](/data/code/) page to learn about the difference between the two.
+    Please note that the Function Item node is different from the [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/) node. Check out [this](/data/code/) page to learn about the difference between the two.
 
 
 The Function Item node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.

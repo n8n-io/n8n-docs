@@ -17,152 +17,141 @@ tags:
 
 ## 1.15
 
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Invalid Authorization Code when login
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added Link to Changelog
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login - Implementation of language switch
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added [SugarCRM](/workflow/integrations/nodes/workflow-nodes-base.sugarcrm/) Node Icon to Workflow²
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Customization of permissions for users - User ist not able to switch products on and off - only Admin can
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Warning before turning off/deleting Workflow - manual input required
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Adding new domain for Workflow² / Moving the domain for Workflow² from Modules to Apps
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors on displaying PO Matching Screen
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: to UI (Translations, Colours and position of Icons, Buttons, Cloud while uploading documents)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for e-mail notifications and e-mail verification
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors uploading documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Clarification FORCE OCR functionality when headers of tables are not being extracted (instead numbers got extracted)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in User registration (verify Email, admin/user,Reset/Forgot Password)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: for email notifications - registration, Add user, send confirmation email again
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Document Approval - Invalid Document
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Error while uploading documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Building functionality with safari browser
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Link to Apps when using Workflow²
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with LinkedIn
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: embed SSL certificate
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: TE²: cosmetic repairs UI
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Zugferd Export - Pdf with xml attachment
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Length of password
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implemenation of HELP Links to documentation in DOC²
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with google
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with Microsoft
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: issues with restarted documents got stuck on status restarted
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in training specific fields
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: confirm e-mail and password with Enter when logging in
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed button to activate/deactivate N8N from Settings Modules  to APPS
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed dropdown 'Origin' on Field validation page to 'Amount & Date Format'
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: TE - Missing Training Mode Button
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in classifying the correct document type
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Email notification when uploaded/imported documents are Ready For Validation can be enabled/disabled in Settings Email Notification
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: error on validation screen after adjusting field settings for Zugferd doctype invoice
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Page division of one pdf by barcode
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: redirecting document restarted on third page to first page of all uploaded documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: redirect to dashboard instead of success page after export
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: General Settings for documents
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: fields show up empty even though data is recognized
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Implementation of Workflow Nodes for DOC² (assign employee, extract invoice, status trigger)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**:  TE² - select new locale for table_train_v3
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Button to enable or disable export configuration
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Confirmation Box for all delete buttons
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Updated structure to handle multiple OCRs
 
 
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Invalid Authorization Code when login
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors on displaying PO Matching Screen
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: errors uploading documents
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Lack of access to the field settings
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Document Approval - Invalid Document
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Error while uploading documents
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Zugferd Export - Pdf with xml attachment
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: issues with restarted documents got stuck on status restarted
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: TE - Missing Training Mode Button
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: error on validation screen after adjusting field settings for Zugferd doctype invoice
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: redirecting document restarted on third page to first page of all uploaded documents
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: fields show up empty even though data is recognized
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added Link to Changelog
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login - Implementation of language switch
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Added [SugarCRM](/workflow/integrations/nodes/workflow-nodes-base.sugarcrm/) Node Icon to Workflow²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Warning before turning off/deleting Workflow - manual input required
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Broken pages: Implementation of solution using provided normalized coordinates by api
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Link to Apps when using Workflow²
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with LinkedIn
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with google
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Login with Microsoft
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Email notification when uploaded/imported documents are Ready For Validation can be enabled/disabled in Settings/Email Notification
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Page division of one pdf by barcode
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: General Settings for documents
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Implementation of Workflow Nodes for DOC² (assign employee, extract invoice, status trigger)
 
 
 ## 1.14
 
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: TE - Calculation details are not extracted
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **Fixed**: Extracted columns don't show on page 2
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Column selection should not be enable after selecting the tick
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE - Table is not extracted correctly
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Search PO Matching can we use alike
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table Column Sort for PO Line Table as Done in TEv3
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table data editable and show errors without   having to enable table training mode
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE² V2 STAGE - Ungroup button "hidden"
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** No mapping on hide/show for amount fields
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Watcher exported document should be opened in exported/finished mode
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Remove delete rules button from the field validation screen
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Correct translation for NOCOLUMNSFOUND for es-es and fr
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Only 10 pages of a PDF are displayed
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Allow more than 10 pages in PDF in Doc²
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** PO image component and its functionality
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** languages drop down is not appearing
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Total is trainded wrong
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Number value Formatting
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table - Quantity bug
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** More table extraction settings
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table Train - Error in Group mapping needs to be set again
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** export configuration update
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** zammad customer is ticket autor
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Advance Settings on Table extraction view
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Supplierer Match not working
+
+
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Header line disappearing when activating training mode in TE2 (via Ephesoft)
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: TE - Calculation details are not extracted
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Extracted columns don't show on page 2
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE - Table is not extracted correctly
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Document Export table data
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Click on cancel changes the language
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Issue with Restore extracted columns
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Error when we test with Swiss Format
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Row area keeps changing
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE Can't find the Table
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Table Extraction Error
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Number are not extracted all
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Auftragsbestätigung gets to Rechnung
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** After addition of two new fields, the existing tests are breaking
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** DOC² TableExtraction, can't delete a columns
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Supplier: IDG, DOC² doesn't work but TE² does?!
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Amount Formatting Issues
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Button Visibility issue on Some invoice
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Checkbox extraction not working correctly
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** The document fields and table is not mapped which was already exported
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** [Extraction View] Mapped Columns
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Calc is wrong
+
+
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Column selection should not be enable after selecting the tick
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Search PO Matching can we use alike
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table data editable and show errors without   having to enable table training mode
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** No mapping on hide/show for amount fields
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** trash icon on field validation and delete rules button
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Add Training mode flag for all api calls on TE3
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Set istabletraining_doc attribute to true when sending call from table training page
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Remove delete rules button from the field validation screen
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Issue with Restore extracted columns
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Correct translation for NOCOLUMNSFOUND for es-es and fr
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table training
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Error when we test with Swiss Format
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE V3 Row area keeps changing
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** all reformat api call send difference of format_options
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Ability to make line item table from PO Table
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Only 10 pages of a PDF are displayed
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** AI Indicator button for training mode
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** TE Can't find the Table
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Translation on Stage missing: "Auftragsdaten"
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Table Extraction Error
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Overlay for Custom Color
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Show number by fields
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Delete a Custom Table Column
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** table Extraction new flow implementation
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Number are not extracted all
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** KOMISSION (NACHNAME, VORNAME) / MAßNUMMER
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Zugpferd Export UI
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** PO table sort
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Auftragsbestätigung gets to Rechnung
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Allow more than 10 pages in PDF in Doc²
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Document restart alert if it takes more than 5 minutes
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Keystrokes Hints Tooltip
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** PO image component and its functionality
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** languages drop down is not appearing
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Doc² Export Flow²
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** PO - Help
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** After addition of two new fields, the existing tests are breaking
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** DOC² TableExtraction, can't delete a columns
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Supplier: IDG, DOC² doesn't work but TE² does?!
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Total is trainded wrong
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Amount Formatting Issues
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Button Visibility issue on Some invoice
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** " Full " row should show if all other fields are empty
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Setting - Master Data Validation
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Number value Formatting
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** PEPPOL BIS Billing 3.0
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Checkbox extraction not working correctly
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Option to switch table extraction version
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Auftrag - Accept / Recject PO Update
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table - Quantity bug
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Kommission
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Infor Table Export
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** More table extraction settings
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Save dashboard filters and selected language Unless user clear it
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Custom Field Label and Fuzzy
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** The document fields and table is not mapped which was already exported
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Table Train - Error in Group mapping needs to be set again
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Doc2API dashboard API Test
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Basic UI Test for Doc2Landing
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** export configuration update
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** zammad customer is ticket autor
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE** Table Export Column Mappings and Formatted Data
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** [Extraction View] Mapped Columns
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Advance Settings on Table extraction view
-- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED** Calc is wrong
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** Supplierer Match not working
+
 
 ## 1.13
 

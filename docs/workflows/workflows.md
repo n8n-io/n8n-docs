@@ -10,13 +10,13 @@ A workflow can be started manually (with the Start node) or by Trigger nodes. Wh
 
 Workflows that start with a Trigger node or a Webhook node need to be activated in order to be executed. This is done via the **Active** toggle in the Editor UI.
 
-Active workflows enable the Trigger and Webhook nodes to receive data whenever a condition is met (e.g., Monday at 10:00, an update in a Trello board) and in turn trigger the workflow execution.
+Active workflows enable the Trigger and Webhook nodes to receive data whenever a condition is met (for example, Monday at 10:00, an update in a Trello board) and in turn trigger the workflow execution.
 
 All the newly created workflows are deactivated by default. 
 
-## Sharing a workflow
+## Export and import a workflow
 
-Workflows are saved in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. Feel free to [share your workflows](/contributing/#contribute-a-workflow) on the [n8n page](https://n8n.io/workflows) and contribute to the workflow library.
+n8n saves workflows in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. 
 
 You can export a workflow as a JSON file in two ways:
 
@@ -33,7 +33,7 @@ You can import JSON files as workflows in two ways:
 
 ## Workflow settings
 
-On each workflow, it is possible to set some custom settings and overwrite some of the global default settings from the **Workflow** > **Settings** menu.
+On each workflow, it's possible to set some custom settings and overwrite some of the global default settings from the **Workflow** > **Settings** menu.
 
 ![The Workflow Setting modal.](/_images/workflows/workflows/workflow_settings.png)
 
@@ -46,7 +46,7 @@ The following settings are available:
 * **Save Manual Executions**: If executions started from the Editor UI should be saved.
 * **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
 * **Timeout Workflow**: Toggle to enable setting a duration after which the current workflow execution should be cancelled.
-* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (e.g. 3 minutes for Start level).
+* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (for example, three minutes for Start level).
 
 ## Failed workflows
 
@@ -66,7 +66,7 @@ When creating a new workflow, you can choose whether to start with an empty work
 
 Templates provide:
 
-* A way to get started quickly: we might already have a template that does what you need.
+* A way to get started quickly: n8n might already have a template that does what you need.
 * Examples of what you can build
 * Best practices for creating your own workflows
 
@@ -81,7 +81,7 @@ Templates provide:
 !!! note "Workflow templates are available in 0.165.0 and above"
     Workflow templates are available on all flavors of n8n. If you can't access workflow templates in n8n, check that your n8n version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of n8n with templates disabled.
 
-
+<!--
 ### Add your workflow to the library
 
 You can submit your own workflows to n8n's template library.
@@ -96,3 +96,4 @@ You can submit your own workflows to n8n's template library.
     * **Description**: tell users what the workflow does. Include any configuration or setup steps.
     * **Workflow code**: copy in the workflow JSON that you downloaded.
 5. Click **Publish Workflow to Share**. n8n reviews all workflows before publishing them.
+-->

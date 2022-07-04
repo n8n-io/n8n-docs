@@ -8,9 +8,6 @@ You can use this when working with data from external sources, to avoid having t
 * If the external resource has data or usage limits, pinning data during tests avoids consuming your resource limits.
 * You can fetch and pin the data you want to test, then have confidence that the data is consistent in all your workflow tests.
 
-[TODO: this doc was drafted before some UI was implemented. Do a final test with a later preview build, to ensure everything is covered and up to date]
-
-
 
 ## Pin data
 
@@ -35,15 +32,12 @@ To edit output data:
 
 1. Run the node to load data.
 2. In the **OUTPUT** view, select **JSON** to switch to JSON view.
-3. Hover over the JSON. n8n displays the **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span> and **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span> buttons. 
-4. Select **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span>.
-5. Edit your data.
-6. Select **Save**. n8n saves your data changes and pins your data.
+3. Select **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span>.
+4. Edit your data.
+5. Select **Save**. n8n saves your data changes and pins your data.
 
 
 ## Use data from previous executions
-
-[TODO: retest this in later preview build, suspect it will change]
 
 You can copy data from nodes in previous workflow executions:
 
@@ -56,20 +50,19 @@ You can copy data from nodes in previous workflow executions:
 7. There are two ways to copy the JSON:
   1. Select the JSON you want by highlighting it, like selecting text. Then use `ctrl` + `c` to copy it.
   2. Select the JSON you want to copy by clicking on a parameter. Then:
-    1. Hover over the JSON. n8n displays the **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span> and **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span> buttons.
+    1. Hover over the JSON. n8n displays the **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span> button.
     2. Select **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span>.
     3. You can choose what to copy:
         * **Copy Item Path** and **Copy Parameter Path** gives you expressions that access parts of the JSON.
         * **Copy Value**: copies the entire selected JSON. This is usually what you want when copying data from past executions.
 8. Return to the workflow you're currently working on:
-  a. Open the left menu.
-  b. Select **Workflows**.
-  c. Select **Open**.
-  d. Select the workflow you want to open.
+    a. Open the left menu.
+    b. Select **Workflows**.
+    c. Select **Open**.
+    d. Select the workflow you want to open.
 9. Open the node where you want to use the copied data.
 10. If there is no data, run the node to load data.
-11. In the **OUTPUT** view, select **JSON** to switch to JSON view.
-12. Hover over the JSON. n8n displays the **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span> and **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span> buttons. 
-13. Select **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span>.
-14. Paste in the data from the previous execution.
-15. Select **Save**. n8n saves your data changes and pins your data.
+11. In the **OUTPUT** view, select **JSON** to switch to JSON view. 
+12. Select **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png)</span>.
+15. Paste in the data from the previous execution.
+16. Select **Save**. n8n saves your data changes and pins your data.

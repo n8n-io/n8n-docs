@@ -1,6 +1,6 @@
-# Exporting, Importing, and Sharing Workflows
+# Exporting and importing workflows
 
-In this chapter you will learn how to export and import workflows, as well as share your workflows on the [n8n workflows](https://n8n.io/workflows){:target="_blank" .external} page.
+In this chapter you will learn how to export and import workflows.
 
 
 
@@ -21,6 +21,7 @@ You can export and import workflows in two ways:
     * Export: See the [full list of commands ](/reference/cli-commands/){:target="_blank" .external} for exporting workflows or credentials.
     * Import: See the [full list of commands ](/reference/cli-commands/#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.
 
+<!--
 ## Sharing workflows
 
 We love to see what users build with n8n and discover inspiring workflows! On the [n8n workflows page](https://n8n.io/workflows){:target="_blank" .external} you can find hundreds of workflows contributed by our team or community of users.
@@ -49,3 +50,4 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 <figure><img src="/_images/courses/level-one/chapter-three/Share-workflow.png" alt="Share workflow" style="width:100%"><figcaption align = "center"><i>Share workflow</i></figcaption></figure>
 
 Next, your workflow will be reviewed by our team. If it meets our guidelines, it will appear on the n8n workflows page for everyone to see and use!
+-->

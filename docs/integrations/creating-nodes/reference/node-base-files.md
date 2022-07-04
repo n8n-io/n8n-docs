@@ -81,8 +81,7 @@ An array of strings. Tells n8n how the node behaves when the workflow runs. Opti
 * `trigger`: node waits for a trigger.
 * `schedule`: node waits for a timer to expire.
 * `input`, `output`, `transform`: these currently have no effect.
-
-[TODO: which should people use if not using trigger or schedule?]
+* An empty array, `[]`. Use this as the default option if you don't need `trigger` or `schedule`.
 
 ### description
 
@@ -182,44 +181,46 @@ For more information about UI element types, refer to [UI elements](/integration
 
 ## Declarative-style parameters
 
-### loadOptions
+### methods and loadOptions
 
-Object. You can use this parameter to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
+`methods` is an object. It contains the `loadOptions` parameter. You can use this parameter to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
 
 ```js
-loadOptions: {
-	routing: {
-		request: {
-			url: '/webhook/example-option-parameters',
-			method: 'GET',
+methods : {
+	loadOptions: {
+		routing: {
+			request: {
+				url: '/webhook/example-option-parameters',
+				method: 'GET',
+			},
+			output: {
+				postReceive: [
+					{
+						// When the returned data is nested under another property
+						// Specify that property key
+						type: 'rootProperty',
+						properties: {
+							property: 'responseData',
+						},
+					},
+					{
+						type: 'setKeyValue',
+						properties: {
+							name: '={{$responseItem.key}} ({{$responseItem.value}})',
+							value: '={{$responseItem.value}}',
+						},
+					},
+					{
+						// If incoming data is an array of objects, sort alphabetically by key
+						type: 'sort',
+						properties: {
+							key: 'name',
+						},
+					},
+				],
+			},
 		},
-		output: {
-			postReceive: [
-				{
-          // When the returned data is nested under another property
-          // Specify that property key
-					type: 'rootProperty',
-					properties: {
-						property: 'responseData',
-					},
-				},
-				{
-					type: 'setKeyValue',
-					properties: {
-						name: '={{$responseItem.key}} ({{$responseItem.value}})',
-						value: '={{$responseItem.value}}',
-					},
-				},
-				{
-          // If incoming data is an array of objects, sort alphabetically by key
-					type: 'sort',
-					properties: {
-						key: 'name',
-					},
-				},
-			],
-		},
-	},
+	}
 },
 ```
 

@@ -55,11 +55,11 @@ You can copy data from nodes in previous workflow executions:
     3. You can choose what to copy:
         * **Copy Item Path** and **Copy Parameter Path** gives you expressions that access parts of the JSON.
         * **Copy Value**: copies the entire selected JSON. This is usually what you want when copying data from past executions.
-8. Return to the workflow you're currently working on:
-    a. Open the left menu.
-    b. Select **Workflows**.
-    c. Select **Open**.
-    d. Select the workflow you want to open.
+8. Return to the workflow you're currently working on:  
+    1. Open the left menu.
+    2. Select **Workflows**.
+    3. Select **Open**.
+    4. Select the workflow you want to open.
 9. Open the node where you want to use the copied data.
 10. If there is no data, run the node to load data.
 11. In the **OUTPUT** view, select **JSON** to switch to JSON view. 

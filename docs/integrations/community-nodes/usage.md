@@ -1,10 +1,10 @@
 # Using community nodes
 
-To use community nodes, you first need to [install](/integrations/community-nodes/installation/){:target=_blank} them.
+To use community nodes, you first need to [install](/integrations/community-nodes/installation/) them.
 
 ## Adding community nodes to your workflow
 
-After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. n8n marks community nodes with a **Package** <span class="inline-image">![Package icon](/_images/common-icons/package.png)</span> icon.
+After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. n8n marks community nodes with a **Package** <span class="inline-image">![Package icon](/_images/common-icons/package.png)</span> icon in the nodes panel.
 
 ## Community nodes with duplicate names
 

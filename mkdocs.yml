@@ -160,12 +160,13 @@ nav:
         - Overview: integrations/creating-nodes/reference/index.md
         - Standards: integrations/creating-nodes/reference/standards.md 
         - Node UI elements: integrations/creating-nodes/reference/ui-elements.md 
-        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md
         - Versioning: integrations/creating-nodes/reference/node-versioning.md 
         - File structure: integrations/creating-nodes/reference/node-file-structure.md
         - Base files: integrations/creating-nodes/reference/node-base-files.md
         - Codex files: integrations/creating-nodes/reference/node-codex-files.md  
         - Credentials files: integrations/creating-nodes/reference/credentials-files.md    
+        - HTTP request helpers: integrations/creating-nodes/reference/http-helpers.md
+        - Paired items: integrations/creating-nodes/reference/paired-items.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md

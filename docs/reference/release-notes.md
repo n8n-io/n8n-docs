@@ -1,5 +1,43 @@
 # Release notes
 
+## n8n@0.184.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-06-29
+
+This release includes:
+
+* New core features
+* Enhancements to the Clockify node.
+* Bug fixes.
+
+### New features
+
+* You can now access `getBinaryDataBuffer` in the pre-send method.
+* n8n now exposes the item index being processed by a node.
+* Migrated the expressions templating engine to [n8n's fork of riot-tmpl](https://github.com/n8n-io/tmpl){:target=_blank .external-link}.
+
+
+### Node enhancements
+
+[Clockify node](/integrations/nodes/n8n-nodes-base.clockify/): added three new resources: Client, User, and Workspace. Also added support for custom API calls.
+
+
+### Bug fixes
+
+* Core: fixed an error with logging circular links in JSON.
+* Editor UI: now display the full text of long error messages.
+* Editor UI: fix for an issue with credentials rendering when the node has no parameters.
+* [Cortex node](/integrations/nodes/n8n-nodes-base.cortex/): fix an issue preventing all analyzers being returned.
+* [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/): ensure all OAuth2 credentials work with this node.
+* [LinkedIn node](/integrations/nodes/n8n-nodes-base.linkedIn/): fix an issue with image preview.
+* [Salesforce node](/integrations/nodes/n8n-nodes-base.salesforce/): fix an issue that was causing the lead status to not use the new name when name is updated.
+* Fixed an issue with required/optional parameters.
+
+### Contributors
+
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+
 ## n8n@0.183.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.182.1...n8n@0.183.0){:target=_blank .external-link} for this version.<br />

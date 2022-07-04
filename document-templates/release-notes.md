@@ -1,6 +1,6 @@
 ## n8n@<version-number>
 
-View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>) for this version.<br />
+View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>){:target=_blank .external-link} for this version.<br />
 **Release date:** _yyyy-MM-dd_
 
 _One or two sentence summary of release._

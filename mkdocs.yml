@@ -140,37 +140,6 @@ nav:
         - Node linter: integrations/creating-nodes/code/node-linter.md
         - Node review checklist: integrations/creating-nodes/code/review-checklist.md
         - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
-  - Courses:
-    - Overview: courses/index.md
-    - Level one:
-      - Overview: courses/level-one/index.md
-      - Navigating the editor UI: courses/level-one/chapter-1.md
-      - Building a mini-workflow: courses/level-one/chapter-2.md
-      - Automating a (real-world) use case: courses/level-one/chapter-3.md
-      - Designing the workflow: courses/level-one/chapter-4.md
-      - Building the workflow:
-        - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-        - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-        - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-        - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-        - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-        - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-        - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-        - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-      - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
-      - Test your knowledge: courses/level-one/chapter-7.md
-    - Level two:
-      - Overview: courses/level-two/index.md
-      - Understanding the data structure: courses/level-two/chapter-1.md
-      - Processing different data types: courses/level-two/chapter-2.md
-      - Merging and splitting data: courses/level-two/chapter-3.md
-      - Dealing with errors in workflows: courses/level-two/chapter-4.md
-      - Automating a business workflow:
-        - Use case: courses/level-two/chapter-5/chapter-5.0.md
-        - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
-        - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
-        - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
-      - Test your knowledge: courses/level-two/chapter-6.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md
@@ -217,4 +186,35 @@ nav:
     - Configuration: embed/configuration.md
     - Workflow management: embed/managing-workflows.md
     - Workflows templates: embed/workflow-templates.md
+  - Courses:
+      - Overview: courses/index.md
+      - Level one:
+        - Overview: courses/level-one/index.md
+        - Navigating the editor UI: courses/level-one/chapter-1.md
+        - Building a mini-workflow: courses/level-one/chapter-2.md
+        - Automating a (real-world) use case: courses/level-one/chapter-3.md
+        - Designing the workflow: courses/level-one/chapter-4.md
+        - Building the workflow:
+          - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+          - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+          - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+          - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+          - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+          - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+          - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+          - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+        - Exporting and importing workflows: courses/level-one/chapter-6.md
+        - Test your knowledge: courses/level-one/chapter-7.md
+      - Level two:
+        - Overview: courses/level-two/index.md
+        - Understanding the data structure: courses/level-two/chapter-1.md
+        - Processing different data types: courses/level-two/chapter-2.md
+        - Merging and splitting data: courses/level-two/chapter-3.md
+        - Dealing with errors in workflows: courses/level-two/chapter-4.md
+        - Automating a business workflow:
+          - Use case: courses/level-two/chapter-5/chapter-5.0.md
+          - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+          - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+          - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+        - Test your knowledge: courses/level-two/chapter-6.md
   - Contributing: contributing.md

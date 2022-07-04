@@ -62,21 +62,29 @@ These parameters are the same for all node types.
 
 ### displayName
 
-String. This is the name users see in the n8n GUI.
+_String_ | _Required_
+
+This is the name users see in the n8n GUI.
 
 ### name
 
-String. The internal name of the object. Used to reference it from other places in the node.
+_String_ | _Required_
+
+The internal name of the object. Used to reference it from other places in the node.
 
 ### icon
 
-String, starting with `file`. For example, `icon: 'file:exampleNodeIcon.svg'`.
+_String_ | _Required_
+
+Starts with `file`. For example, `icon: 'file:exampleNodeIcon.svg'`.
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
 ### group
 
-An array of strings. Tells n8n how the node behaves when the workflow runs. Options are:
+_Array of strings_ | _Required_
+
+Tells n8n how the node behaves when the workflow runs. Options are:
 
 * `trigger`: node waits for a trigger.
 * `schedule`: node waits for a timer to expire.
@@ -85,11 +93,15 @@ An array of strings. Tells n8n how the node behaves when the workflow runs. Opti
 
 ### description
 
-String. A short description of the node. n8n uses this in the GUI.
+_String_ | _Required_
+
+A short description of the node. n8n uses this in the GUI.
 
 ### defaults
 
-Object. Contains essential brand and name settings.
+_Object_ | _Required_
+
+Contains essential brand and name settings.
 
 The object can include:
 
@@ -98,15 +110,21 @@ The object can include:
 
 ### inputs
 
-Array of strings. Names the input connectors. Controls the number of connectors the node has on the input side.
+_Array of strings_ | _Required_
+
+Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, us `input: ['main']`.
 
 ### outputs
 
-Array of strings. Names the output connectors. Controls the number of connectors the node has on the output side.
+_Array of strings_ | _Required_  
+
+Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, us `output: ['main']`.
 
 ### credentials
 
-Array of object. This parameter tells n8n the credential options. Each object defines an authentication type.
+_Array of objects_ | _Required_  
+
+This parameter tells n8n the credential options. Each object defines an authentication type.
 
 The object must include:
 
@@ -115,7 +133,9 @@ The object must include:
 
 ### requestDefaults
 
-Object. Set up the basic information for the API calls the nod makes.
+_Object_ | _Required_  
+
+Set up the basic information for the API calls the node makes.
 
 This object must include:
 
@@ -128,7 +148,9 @@ You can also add:
 
 ### properties
 
-Array of objects. This contains the resource and operations objects that define node behaviors, as well as objects to set up mandatory and optional fields that can receive user input.
+_Array of objects_ | _Required_  
+
+This contains the resource and operations objects that define node behaviors, as well as objects to set up mandatory and optional fields that can receive user input.
 
 #### Resource objects
 
@@ -183,7 +205,9 @@ For more information about UI element types, refer to [UI elements](/integration
 
 ### methods and loadOptions
 
-`methods` is an object. It contains the `loadOptions` parameter. You can use this parameter to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
+_Object_ | _Optional_
+
+`methods` contains the `loadOptions` object. You can use `loadOptions` to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
 
 ```js
 methods : {
@@ -225,6 +249,8 @@ methods : {
 ```
 
 ### routing
+
+_Object_ | _Required_
 
 `routing` is an object used within an `options` array in operations and input field objects. It contains the details of an API call.
 
@@ -277,7 +303,9 @@ TODO: more info on the routing object
 
 ### version
 
-Number or array. If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
+_Number_ or _array_ | Optional
+
+If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
 n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
 
@@ -286,11 +314,15 @@ n8n support two methods of node versioning, but declarative-style nodes must use
 
 ### defaultVersion
 
-Number. Use `defaultVersion` when using the full versioning approach.
+_Number_ | _Optional_
+
+Use `defaultVersion` when using the full versioning approach.
 
 n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information.
 
 ### methods
+
+_Object_ | _Optional_
 
 Contains the `loadOptions` method for programmatic-style nodes. You can use this method to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries.
 
@@ -326,7 +358,9 @@ For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packag
 
 ### version
 
-Number or array. Use `version` when using the light versioning approach.
+_Number_ or _array_ | _Optional_
+
+Use `version` when using the light versioning approach.
 
 If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 

@@ -7,7 +7,9 @@ An n8n node operation consumes input items and produces output items. n8n genera
 
 n8n needs to know which input item a given output item comes from. If this information is missing, expressions in other nodes may break.
 
-You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key, at the same level as the `json` key in your output:
+You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key:
+
+
 
 [TODO: https://n8nio.slack.com/archives/C0353SYUN1K/p1656427464953149]
 ```js

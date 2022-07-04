@@ -15,7 +15,7 @@ The node base file follows this basic structure:
 2. Create a class for the node
 3. Within the node class, create a `description` object, which defines the node.
 
-detailsA programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
+A programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
 
 ### Outline structure for a declarative-style node
 
@@ -24,7 +24,7 @@ This code snippet gives an outline of the node structure.
 ```js
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
-export class APOD implements INodeType {
+export class ExampleNode implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details here
 		properties: [
@@ -66,9 +66,23 @@ String. This is the name users see in the n8n GUI.
 
 ### name
 
+String. The internal name of the object. Used to reference it from other places in the node.
+
 ### icon
 
+String, starting with `file`. For example, `icon: 'file:exampleNodeIcon.svg'`.
+
+--8<-- "_snippets/integrations/creating-nodes/node-icons.md"
+
 ### group
+
+An array of strings. Tells n8n how the node behaves when the workflow runs. Options are:
+
+* `trigger`: node waits for a trigger.
+* `schedule`: node waits for a timer to expire.
+* `input`, `output`, `transform`: these currently have no effect.
+
+[TODO: which should people use if not using trigger or schedule?]
 
 ### description
 
@@ -85,11 +99,11 @@ The object can include:
 
 ### inputs
 
-Array of strings. Names the input connectors. Controls how many connectors the node has on the input side.
+Array of strings. Names the input connectors. Controls the number of connectors the node has on the input side.
 
 ### outputs
 
-Array of strings. Names the output connectors. Controls how many connectors the node has on the output side.
+Array of strings. Names the output connectors. Controls the number of connectors the node has on the output side.
 
 ### credentials
 
@@ -97,12 +111,12 @@ Array of object. This parameter tells n8n the credential options. Each object de
 
 The object must include:
 
-* `name`: the credential name. Must match the `name` property in the credential file. For example, `name: 'asanaApi'` in  in [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} links to `name = 'asanaApi'` in [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}.
+* `name`: the credential name. Must match the `name` property in the credential file. For example, `name: 'asanaApi'`  in [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} links to `name = 'asanaApi'` in [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}.
 * `required`: Boolean. Specify whether authentication is required to use this node.
 
 ### requestDefaults
 
-Object. Set up the basic information for API calls to the service this node integrates. [TODO: fix phrasing, this is horrible]
+Object. Set up the basic information for the API calls the nod makes.
 
 This object must include:
 
@@ -138,23 +152,80 @@ The operations object defines the available operations on a resource.
 
 #### Additional fields objects
 
-### methods
+These objects define optional parameters. n8n displays them under **Additional Fields** in the GUI. Users can choose which parameters to set.
 
-#### loadOptions
+The objects must include:
 
-JavaScript function. [TODO: see gmail node - message > manage label as example]
+```js
+displayName: 'Additional Fields',
+name: 'additionalFields',
+// The UI element type
+type: ''
+placeholder: 'Add Field',
+default: {},
+displayOption: {
+  // Set which resources and operations this field is available for
+  show: {
+    resource: [
+      // Resource names
+    ],
+    operation: [
+      // Operation names
+    ]
+  }
+}
+```
+
+For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/reference/ui-elements/).
+
+
 
 ## Declarative-style parameters
 
-### version
+### loadOptions
 
-Number or array. If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
+Object. You can use this parameter to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
 
-n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+```js
+loadOptions: {
+	routing: {
+		request: {
+			url: '/webhook/example-option-parameters',
+			method: 'GET',
+		},
+		output: {
+			postReceive: [
+				{
+          // When the returned data is nested under another property
+          // Specify that property key
+					type: 'rootProperty',
+					properties: {
+						property: 'responseData',
+					},
+				},
+				{
+					type: 'setKeyValue',
+					properties: {
+						name: '={{$responseItem.key}} ({{$responseItem.value}})',
+						value: '={{$responseItem.value}}',
+					},
+				},
+				{
+          // If incoming data is an array of objects, sort alphabetically by key
+					type: 'sort',
+					properties: {
+						key: 'name',
+					},
+				},
+			],
+		},
+	},
+},
+```
 
 ### routing
 
-`routing` is an object used within an `options` array in operations and input field objects. It contains the details of the API call.
+`routing` is an object used within an `options` array in operations and input field objects. It contains the details of an API call.
 
 The code example below comes from the [Declarative-style tutorial](/integrations/creating-nodes/build/declarative-style-node/). It sets up an integration with a NASA API. It shows how to use `requestDefaults` to set up the basic API call details, and `routing` to add information for each operation.
 
@@ -192,13 +263,22 @@ description: INodeTypeDescription = {
 }
 ```
 
+<!--
+
+TODO: more info on the routing object
 ### routing.output
 
 ### routing.request
 
 ### routing.send
 
+-->
 
+### version
+
+Number or array. If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
+
+n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
 
 ## Programmatic-style parameters
 
@@ -207,8 +287,41 @@ description: INodeTypeDescription = {
 
 Number. Use `defaultVersion` when using the full versioning approach.
 
-n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information.
 
+### methods
+
+Contains the `loadOptions` method for programmatic-style nodes. You can use this method to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries.
+
+For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Gmail/Gmail.node.ts) uses `loadOptions` to get all email labels:
+
+```js
+	methods = {
+		loadOptions: {
+			// Get all the labels and display them
+			async getLabels(
+				this: ILoadOptionsFunctions,
+			): Promise<INodePropertyOptions[]> {
+				const returnData: INodePropertyOptions[] = [];
+				const labels = await googleApiRequestAllItems.call(
+					this,
+					'labels',
+					'GET',
+					'/gmail/v1/users/me/labels',
+				);
+				for (const label of labels) {
+					const labelName = label.name;
+					const labelId = label.id;
+					returnData.push({
+						name: labelName,
+						value: labelId,
+					});
+				}
+				return returnData;
+			},
+		},
+	};
+```
 
 ### version
 
@@ -216,7 +329,7 @@ Number or array. Use `version` when using the light versioning approach.
 
 If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 
-n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/plan/node-versioning/) for more information.
+n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information.
 
 ## Programmatic-style: The execute() method
 

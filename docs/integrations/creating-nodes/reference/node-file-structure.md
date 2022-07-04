@@ -31,7 +31,7 @@ For more complex nodes, n8n recommends the following structure:
 
 ## Versioning
 
-If your node has more than one version, and you're using full versioning, this makes the file structure more complex. You need a directory for each version, along with a base file that sets the default version. Refer to [Node versioning](/integrations/creating-nodes/build/node-versioning/) for more information on working with versions, including types of versioning.
+If your node has more than one version, and you're using full versioning, this makes the file structure more complex. You need a directory for each version, along with a base file that sets the default version. Refer to [Node versioning](/integrations/creating-nodes/reference/node-versioning/) for more information on working with versions, including types of versioning.
 
 ## A best-practice example: The Mattermost node
 

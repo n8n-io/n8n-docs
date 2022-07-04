@@ -4,18 +4,18 @@ This checklist helps you build a node that meets the standards for submission to
 
 ## Preparation
 
-<input type="checkbox"> Set up your editor for code formatting (indentation, new lines, linting). If you use Visual Studio Code, you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin">TSLint extension</a> for linting.</input> <br>
+<input type="checkbox"> Set up your editor for code formatting (indentation, new lines, linting). If you use Visual Studio Code, you can use the [TSLint extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin){:target=_blank .external-link} for linting.</input> <br>
 <input type="checkbox"> Get credentials (for example, Client ID, Client Secret, API key, user login, user password, website URL) for the service you are building a node for.</input>
 
 ## Development
 
-<input type="checkbox"> If you're creating a node requested by a community member, make sure to comment on the feature request in the [community forum](https://community.n8n.io/c/feature-requests/5).</input><br>
+<input type="checkbox"> If you're creating a node requested by a community member, make sure to comment on the feature request in the [community forum](https://community.n8n.io/c/feature-requests/5){:target=_blank .external-link}.</input><br>
 <input type="checkbox"> Add complementary operations to each resource (for example, create, delete)</input><br>
 <input type="checkbox"> Programmatic-style only. Check the node works with more than one input item.</input><br> 
 <input type="checkbox"> Ensure the parameters have the correct type.</input><br>
 <input type="checkbox"> Mind the defaults: if the service has a default as true, keep it as true. Changing default values can break the existing workflows of the users.</input><br>
 <input type="checkbox"> Check if the node disposes of everything. In particular, the node has closed all connections.</input><br>
-<input type="checkbox"> Check your code using <a href="https://docs.n8n.io/nodes/creating-nodes/nodelinter.html">Node linter</a>.</input><br>
+<input type="checkbox"> Check your code using the [node linter](/integrations/creating-nodes/reference/node-linter/).</input><br>
 
 ## Testing
 
@@ -24,17 +24,17 @@ This checklist helps you build a node that meets the standards for submission to
 
 ## Code formatting
 
-<input type="checkbox"> Ensure the branch lints cleanly by running `npm run lint`.</input><br>
+<input type="checkbox"> Ensure the package lints cleanly by running `npm run lint`.</input><br>
 <input type="checkbox"> Ensure the indentation is correct. Check this in the editor configuration.</input><br>
 <input type="checkbox"> Ensure there are no extra spaces. Check this in the editor configuration.</input><br>
 <input type="checkbox"> Code comment dividers inside if-branches.</input><br>
 <input type="checkbox"> Use "create/delete" verbs for operations, except for tags, where you should use "add/remove."</input><br>
 
-## Errors and Outputs
+## Errors and outputs
 
 <input type="checkbox"> Ensure empty API responses return `{ success: true }`.</input><br>
 <input type="checkbox"> Ensure the node handles and displays error responses (for example, malformed requests, requests with invalid credentials) and use the current format. You can check this by making failing requests to the API.</input><br>
-<input type="checkbox"> Check if you can simplify the response. If so, add a simplify function (for example, <a href="https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SecurityScorecard/GenericFunctions.ts">SecurityScorecard node</a>).</input><br>
+<input type="checkbox"> Check if you can simplify the response. If so, add a simplify function (for example, [SecurityScorecard node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SecurityScorecard/GenericFunctions.ts){:target=_blank .external-link}).</input><br>
 <input type="checkbox"> Ensure the response from `Create` is consistent with `Get`.</input><br>
 <input type="checkbox"> Ensure the response from `Get All` is consistent with `Get`.</input><br>
 
@@ -59,7 +59,7 @@ This checklist helps you build a node that meets the standards for submission to
 <!-- vale off -->
 <input type="checkbox"> Check that brand names are correct (for example, "GitHub" not "Github"). </input><br>
 <input type="checkbox">If the node is a trigger node, show this in the name by adding "Trigger" after the service name (for example, "Trello Trigger").</input><br>
-<input type="checkbox"> Ensure the logo is either a PNG or SVG, ideally the latter. <a href="https://vecta.io/symbols">Vecta</a> is a good website to find SVGs of different applications.</input><br>
+<input type="checkbox"> Ensure the logo is either a PNG or SVG, ideally the latter. [Vecta](https://vecta.io/symbols){:target=_blank .external-link} is a good website to find SVGs of different applications.</input><br>
 <input type="checkbox"> If the logo is an SVG, ensure the canvas is a perfect square. If the logo is PNG, ensure it's 60x60 pixels and compressed.</input><br>
 <input type="checkbox"> Ensure the border color of the node matches the branding of the service.</input><br>
 <!-- vale on -->
@@ -67,6 +67,6 @@ This checklist helps you build a node that meets the standards for submission to
 ## Nice-to-haves (optional)
 
 <input type="checkbox"> Add handler for `continueOnFail`. This handler continues the workflow even if the node's execution fails.</input><br>
-<input type="checkbox"> Remove `required: false` and `description: ''` in the node descriptions (for example, <a href="https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Lemlist/descriptions">Lemlist node</a>).</input><br>
+<input type="checkbox"> Remove `required: false` and `description: ''` in the node descriptions (for example, [Lemlist node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Lemlist/descriptions){:target=_blank .external-link}).</input><br>
 <input type="checkbox"> At call site, specify first `body` and then `qs`.</input><br>
 <input type="checkbox"> At call site, prepend the endpoint with slash `/` (for example, "/campaign").</input><br>

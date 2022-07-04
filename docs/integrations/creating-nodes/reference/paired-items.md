@@ -9,7 +9,7 @@ n8n needs to know which input item a given output item comes from. If this infor
 
 You must provide item pairing information when returning the output of your operations. You can do this using the `pairedItem` key, at the same level as the `json` key in your output:
 
-[TODO: clarify wtf is going on here]
+[TODO: https://n8nio.slack.com/archives/C0353SYUN1K/p1656427464953149]
 ```js
 [{
 	json: {

@@ -1,7 +1,5 @@
 # Creating Your First Node
 
-[TODO: delete most of this, the n8n-nodes-module doc is more up to date]
-
 Today, you will learn how to create your first node for n8n.
 
 ## Prerequisites

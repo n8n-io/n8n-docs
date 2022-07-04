@@ -130,7 +130,7 @@ Every node must have a base file. In this example, the file is `NasaPics.node.ts
 
 #### Step 4.1: Lint configuration and imports
 
-Start by [TODO: do we always want them to disable that linting?] disabling one of the linter warnings, and adding the import statements:
+Start by disabling one of the linter warnings, and adding the import statements:
 
 ```js
 /* eslint-disable n8n-nodes-base/filesystem-wrong-node-filename */

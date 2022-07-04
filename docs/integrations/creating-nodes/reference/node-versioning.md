@@ -1,7 +1,5 @@
 # Node versioning
 
-[TODO: decide if this should be in Plan or in Reference. Maybe split]
-
 n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version. 
 
 !!! note "Versioning type restricted by node style"
@@ -25,4 +23,4 @@ Node versioning summary:
 - The base node file should contain a description including the `defaultVersion` (usually the latest) and a list of versions. It shouldn't contain anything else.
 - n8n recommends using `v1`, `v2`, and so on, for version folder names.
 
-[TODO: add more info on how node versioning will affect end users and encourage good versioning]
+

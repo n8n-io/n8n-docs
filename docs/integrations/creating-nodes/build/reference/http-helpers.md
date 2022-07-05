@@ -73,7 +73,7 @@ Some notes about the possible fields:
 
 The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. Now deprecated.
 
-To minimise incompatibility, n8n made a transparent conversion to another library called `axios`.
+To minimize incompatibility, n8n made a transparent conversion to another library called `axios`.
 
 If you are having issues, please report them in the [Community Forums](https://community.n8n.io/) or on [GitHub](https://github.com/n8n-io/n8n/issues).
 

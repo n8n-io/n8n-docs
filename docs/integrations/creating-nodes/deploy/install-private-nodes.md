@@ -70,4 +70,4 @@ You can now use your node in Docker.
 
 ## Install your node in a global n8n instance
 
-If you're running n8n installed globally, make sure that you install your node inside n8n. n8n will find the module and load it automatically.
+If you've installed n8n globally, make sure that you install your node inside n8n. n8n will find the module and load it automatically.

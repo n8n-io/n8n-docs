@@ -12,6 +12,7 @@ You need some understanding of:
 
 - JavaScript/TypeScript
 - REST APIs
+- git
 
 ## Build your node
 
@@ -247,7 +248,6 @@ Add the following to the `properties` array, after the `resource` object:
 		{
 			name: 'Get',
 			value: 'get',
-			action: 'Get a single picture of the day',
 			description: 'Get the Astronomy Picture of the day',
 			routing: {
 				request: {
@@ -279,7 +279,7 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '={{ "/mars-photos/api/v1/" + roverName + "/photos" }}'
+					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos'
 				}
 			}
 		}
@@ -306,7 +306,30 @@ Add the following to the `properties` array, after the `resource` object:
 			]
 		}
 	}
-}
+},
+{
+	displayName: 'Date',
+	description: 'Earth date',
+	required: true,
+	name: 'marsRoverDate',
+	type: 'dateTime',
+	default:'',
+	displayOptions: {
+		show: {
+			resource: [
+				'marsRoverPhotos'
+			]
+		}
+	},
+	routing: {
+		request: {
+			// You've already set up the URL. qs appends the value of the field as a query string
+			qs: {
+				earth_date: '={{ new Date($value).toISOString().substr(0,10) }}'
+			}
+		}
+	}	
+},
 ```
 
 This code creates two operations: one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.

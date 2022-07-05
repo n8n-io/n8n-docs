@@ -307,7 +307,7 @@ _Number_ or _array_ | Optional
 
 If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
-n8n support two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
+n8n supports two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
 
 ## Programmatic-style parameters
 
@@ -368,7 +368,7 @@ n8n support two methods of node versioning. Programmatic-style nodes can use eit
 
 ## Programmatic-style: The execute() method
 
-The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object.
+The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles requests using the `routing` key in the `operations` object.
 
 The `execute()` method creates and returns an instance of `INodeExecutionData`.
 

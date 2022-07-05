@@ -6,11 +6,11 @@ tags:
 ---
 
 
+:fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**
+
 :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**
 
 :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**
-
-:fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**
 
 
 # Release Notes

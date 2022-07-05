@@ -4,11 +4,11 @@ title: Image
 ---
 # Image
 
-Image widget is used to display images in your app. 
+Image widget is used to display images in your app.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Image](/img/widgets/image/image.png)
+![Insight - Widget Reference - Image](/_images/insight2/widgets/image/image.png)
 
 </div>
 
@@ -16,7 +16,7 @@ Image widget is used to display images in your app.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Image](/img/widgets/image/events.png)
+![Insight - Widget Reference - Image](/_images/insight2/widgets/image/events.png)
 
 </div>
 

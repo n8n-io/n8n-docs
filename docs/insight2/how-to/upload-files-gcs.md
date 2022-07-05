@@ -18,7 +18,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Upload files using GCS](/img/how-to/upload-files-gcs/adding-account.png)
+![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/adding-account.png)
 
 </div>
 
@@ -30,7 +30,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
+![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
 
 </div>
 
@@ -46,7 +46,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
+![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
 
 </div>
 
@@ -68,6 +68,6 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Upload files using GCS](/img/how-to/upload-files-gcs/final-result.png)
+![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/final-result.png)
 
 </div>

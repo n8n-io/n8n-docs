@@ -22,7 +22,7 @@ Insight requires the following to connect to your MongoDB.
 
 It is recommended to create a new MongoDB user so that you can control the access levels of Insight.
 
-<img src="/img/datasource-reference/mo-connect.png" alt="Insight - Mongo connection" height="250"/>
+<img src="/_images/insight2/datasource-reference/mo-connect.png" alt="Insight - Mongo connection" height="250"/>
 
 Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight server. Click on 'Save' button to save the data source.
 
@@ -30,7 +30,7 @@ Click on 'Test connection' button to verify if the credentials are correct and t
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click 'Save' to save the query.
 
-<img src="/img/datasource-reference/mo-query.png" alt="Insight - Mongo query" height="250"/>
+<img src="/_images/insight2/datasource-reference/mo-query.png" alt="Insight - Mongo query" height="250"/>
 
 Click on the 'run' button to run the query. NOTE: Query should be saved before running.
 
@@ -98,7 +98,7 @@ Perform bulk operations. [Reference](https://docs.mongodb.com/drivers/node/v4.0/
 ```javascript
 { amount: { $lt: '{{ components.textinput1.value }}' }}
 
-// Dates 
+// Dates
 // supported: Extended JSON syntax
 { createdAt: { $date: '{{ new Date('01/10/2020') }}'} }
 // not supported: MongoDB classic syntax

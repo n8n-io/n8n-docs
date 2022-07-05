@@ -12,7 +12,7 @@ Range Sliders have "Two handles" option which allows user to select within a ran
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Text input](/img/widgets/range-slider/range_slider.png)
+![Insight - Widget Reference - Text input](/_images/insight2/widgets/range-slider/range_slider.png)
 
 </div>
 
@@ -47,13 +47,13 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ### Line color
 
-Enter the hexcode to set the default color for slider's track. 
+Enter the hexcode to set the default color for slider's track.
 ### Handle color
 
-Enter the hexcode to set the color for slider's handler. 
+Enter the hexcode to set the color for slider's handler.
 ### Track color
 
-Enter the hexcode to set the color for slider's active portion on the track. 
+Enter the hexcode to set the color for slider's active portion on the track.
 ### Visiblity
 
 Set the visivlity of the slider programmatically. The default value is `{{true}}`.

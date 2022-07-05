@@ -7,8 +7,8 @@ title: Building Queries
 
 Query Editor lives at the bottom of the page. We will now build a query for the PostgreSQL datasource that we connected in the previous step.
 
-:::tip 
-You can click on the 'enlarge' icon to enlarge query editor pane. 
+:::tip
+You can click on the 'enlarge' icon to enlarge query editor pane.
 :::
 
 - Click on the `+` icon of the query editor to create a new query.
@@ -22,7 +22,7 @@ SELECT * FROM customers;
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/query.png)
+![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query.png)
 
 </div>
 
@@ -30,7 +30,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/preview.png)
+![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview.png)
 
 </div>
 
@@ -39,11 +39,11 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/advanced-options.gif)
+![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options.gif)
 
 </div>
 
-#### Run query on page load 
+#### Run query on page load
 If this option is enabled, the query will be run when the app is loaded for the first time. The queries can have more than one trigger, ie the same query can later be triggered again using a button's click event or table's row selected event or any other events.
 
 #### Request confirmation before running query
@@ -51,7 +51,7 @@ Enable this option to show a prompt to confirm the action before a query is run.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/confirm.png)
+![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/confirm.png)
 
 </div>
 

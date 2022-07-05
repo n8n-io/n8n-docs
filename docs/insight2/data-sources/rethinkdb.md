@@ -6,7 +6,7 @@ title: Rethinkdb
 
 Insight can connect to rethinkdb databases to read and write data. For more info visit::https://rethinkdb.com/api/javascript/.com/
 
-<img class="screenshot-full" src="/img/datasource-reference/rethink/rethink_auth.png" alt="Insight - Data source - rethinkDB" height="420" />
+<img class="screenshot-full" src="/_images/insight2/datasource-reference/rethink/rethink_auth.png" alt="Insight - Data source - rethinkDB" height="420" />
 
 ## Connection
 
@@ -15,8 +15,8 @@ Insight connects to InfluxDB using :
 - **Database**
 - **Host**
 - **Port**
-- **Username** 
-- **Password** 
+- **Username**
+- **Password**
 
 
 ## Supported queries:

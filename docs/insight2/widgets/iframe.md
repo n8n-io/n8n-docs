@@ -8,7 +8,7 @@ Iframe widget is used to embed another HTML page into the current one and displa
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/iframe.png)
+![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe.png)
 
 </div>
 
@@ -22,7 +22,7 @@ Sets the **URL** of the page to embed.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/layout.png)
+![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/layout.png)
 
 </div>
 
@@ -37,7 +37,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/styles.png)
+![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/styles.png)
 
 </div>
 

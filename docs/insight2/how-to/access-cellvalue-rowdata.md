@@ -11,7 +11,7 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/newapp.gif)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/newapp.gif)
 
 </div>
 
@@ -20,7 +20,7 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/restapi.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/restapi.png)
 
 </div>
 
@@ -30,7 +30,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/apiendpoint.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/apiendpoint.png)
 
 </div>
 
@@ -38,7 +38,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/runquery.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/runquery.png)
 
 </div>
 
@@ -46,16 +46,16 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/inspectord.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/inspectord.png)
 
 </div>
 
-- Now that we have got the data, we will display it on the table. To do this, click on the widget handle of the table to open its properties in the right sidebar. 
+- Now that we have got the data, we will display it on the table. To do this, click on the widget handle of the table to open its properties in the right sidebar.
 - In the Table Data field, enter `{{queries.crypto.data.coins}}` - as you can see in the screenshot of the inspector the data is inside the `coins` array. You'll see the data in the Preview(green box) below the field.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/data.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/data.png)
 
 </div>
 
@@ -63,7 +63,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/columns.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/columns.png)
 
 </div>
 
@@ -71,7 +71,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/table.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/table.png)
 
 </div>
 
@@ -84,7 +84,7 @@ Now that we have our data on the table, we will change the color of the text in 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/price.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/price.png)
 
 </div>
 
@@ -93,7 +93,7 @@ Now that we have our data on the table, we will change the color of the text in 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/cellvalue.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/cellvalue.png)
 
 </div>
 
@@ -103,13 +103,13 @@ You can also use Hex Color Code instead of mentioning color in plane text.
 
 ### Using rowData to change column text color
 
-- To change the color of the text using `rowData` variable it is required to mention the column name whose cell value we will be comparing in the condition. Let's take a look by changing the text color of **Symbol** column. 
+- To change the color of the text using `rowData` variable it is required to mention the column name whose cell value we will be comparing in the condition. Let's take a look by changing the text color of **Symbol** column.
 - We will add a condition to look in the row data and if the row has column called `name` which has value `Solana` then it should change the color to red else the color should be green.
 - Edit the properties of the Symbol column, set the **Text Color** field value to `{{rowData.name ===  'Solana' ? 'red' : 'green'}}`.
 - You'll see that in the Symbols column all the values has become green except the one that has Solana in Name column.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Change text color in columns of the table](/img/how-to/change-text-color/rowData.png)
+![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/rowData.png)
 
 </div>

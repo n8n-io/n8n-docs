@@ -284,9 +284,7 @@ nav:
     - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
   - Insight²:
-    - Action: app2/tutorial/actions.md
-    - Datasource: app2/tutorial/adding-a-datasource.md
-    - Widget: app2/tutorial/adding-widget.md
+ 
 
   # - Courses:
   #   - Overview: courses/index.md

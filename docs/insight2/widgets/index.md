@@ -1,7 +1,48 @@
 ---
 title: Widgets
 description: 
-tags:
-  - 
-  - 
+
 ---
+
+* [button group](/insight2/widgets/button-group.md)
+* [button](/insight2/widgets/button.md)
+* [calendar](/insight2/widgets/calendar.md)
+* [chart](/insight2/widgets/chart.md)
+* [checkbox](/insight2/widgets/checkbox.md)
+* [circular-progress-bar](/insight2/widgets/circular-progress-bar.md)
+* [code-editor](/insight2/widgets/code-editor.md)
+* [container](docs/insight2/widgets/container.md)
+* [custom-component](/insight2/widgets/custom-component.md)
+* [date-range-picker](/insight2/widgets/date-range-picker.md)
+* [datepicker](docs/insight2/widgets/datepicker.md)
+* [divider](/insight2/widgets/divider.md)
+* [dropdown](/insight2/widgets/dropdown.md)
+* [file-picker](/insight2/widgets/file-picker.md)
+* [iframe](/insight2/widgets/iframe.md)
+* [image](/insight2/widgets/image.md)
+* [kanban](/insight2/widgets/kanban.md)
+* [listview](/insight2/widgets/listview.md)
+* [map](/insight2/widgets/map.md)
+* [modal](/insight2/widgets/modal.md)
+* [multiselect](/insight2/widgets/multiselect.md)
+* [number-input](/insight2/widgets/number-input.md)
+* [password-input](/insight2/widgets/password-input.md)
+* [PDF](/insight2/widgets/pdf.md)
+* [QR-Scanner](/insight2/widgets/qr-scanner.md)
+* [radio-button](/insight2/widgets/radio-button.md)
+* [range-slider](/insight2/widgets/range-slider.md)
+* [rich-text-editor](/insight2/widgets/rich-text-editor.md)
+* [spinner](/insight2/widgets/spinner.md)
+* [star](/insight2/widgets/star.md)
+* [statistics](/insight2/widgets/statistics.md)
+* [steps](/insight2/widgets/steps.md)
+* [table](/insight2/widgets/table.md)
+* [tabs](/insight2/widgets/tabs.md)
+* [tags](/insight2/widgets/tags.md)
+* [text-input](/insight2/widgets/text-input.md)
+* [text](/insight2/widgets/text.md)
+* [textarea](/insight2/widgets/textarea.md)
+* [timeline](/insight2/widgets/timeline.md)
+* [timer](/insight2/widgets/timer.md)
+* [toggle-switch](/insight2/widgets/toggle-switch.md)
+

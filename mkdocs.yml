@@ -304,7 +304,7 @@ nav:
       - Divider: insight2/widgets/divider.md
       - Dropdown: insight2/widgets/dropdown.md
       - File picker: insight2/widgets/file-picker.md
-      - Iframe: insight2/widgets/iframe.md
+      - iFrame: insight2/widgets/iframe.md
       - Image: insight2/widgets/image.md
       - Kanban: insight2/widgets/kanban.md
       - Listview: insight2/widgets/listview.md

@@ -286,7 +286,7 @@ nav:
   - Insight²:
     - Introduction: insight2/intro.md
     - Actions: insight2/tutorial/actions.md
-    - Data-Sources: insight2/tutorial/adding-a-datasource.md
+    - Data-Sources: 
       - Overwiew: insight2/data-sources/index.md
       - Airtable: insight2/data-sources/airtable.md
       - Appwrite: insight2/data-sources/appwrite.md

@@ -21,7 +21,7 @@ You can also test your connection before saving the configuration by clicking on
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/connect.png)
+![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/connect.png)
 
 </div>
 
@@ -37,7 +37,7 @@ To create a query for sending email, you will need to provide the following prop
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/query1.png)
+![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
 
 </div>
 
@@ -48,6 +48,6 @@ To create a query for sending email, you will need to provide the following prop
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/query2.png)
+![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
 
 </div>

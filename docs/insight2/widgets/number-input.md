@@ -8,7 +8,7 @@ Number Input widget lets users enter and change numbers.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Number Input](/img/widgets/number-input/number.png)
+![Insight - Widget Reference - Number Input](/_images/insight2/widgets/number-input/number.png)
 
 </div>
 

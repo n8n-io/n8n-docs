@@ -8,7 +8,7 @@ List view widget allows to create a list of repeatable rows of data. Just like c
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/listviewapp.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/listviewapp.png)
 
 </div>
 
@@ -18,7 +18,7 @@ List view widget allows to create a list of repeatable rows of data. Just like c
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/event.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/event.png)
 
 </div>
 
@@ -34,7 +34,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/properties.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/properties.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/listlayout.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/listlayout.png)
 
 </div>
 
@@ -61,7 +61,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/style.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/style.png)
 
 </div>
 
@@ -81,7 +81,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/emptylist.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/emptylist.png)
 
 </div>
 
@@ -89,7 +89,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/data.gif)
+![Insight - List view widget](/_images/insight2/widgets/list-view/data.gif)
 
 </div>
 
@@ -97,7 +97,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/datadisplay.png)
+![Insight - List view widget](/_images/insight2/widgets/list-view/datadisplay.png)
 
 </div>
 
@@ -105,7 +105,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/addingwidgets.gif)
+![Insight - List view widget](/_images/insight2/widgets/list-view/addingwidgets.gif)
 
 </div>
 

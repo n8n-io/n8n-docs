@@ -23,7 +23,7 @@ You can also configure for **[additional optional parameters](https://github.com
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Amazon Athena - Connection](/img/datasource-reference/athena/athena-connection.png)
+![Insight - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
 
 </div>
 
@@ -33,7 +33,7 @@ You can also configure for **[additional optional parameters](https://github.com
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Querying- Amazon Athena](/img/datasource-reference/athena/athena-query.png)
+![Insight - Querying- Amazon Athena](/_images/insight2/datasource-reference/athena/athena-query.png)
 
 </div>
 

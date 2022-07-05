@@ -19,14 +19,14 @@ Insight requires the following to connect to your Elasticsearch cluster:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/connect.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/connect.png)
 
 </div>
 
 Elastic search datasource is also providing an option for connecting services with ssl certificates. 
 - You can either use CA / Client certificates option. 
   
-![Insight - Data Source - Elasticsearch - SSL](/img/datasource-reference/elasticsearch/ssl.png)
+![Insight - Data Source - Elasticsearch - SSL](/_images/insight2/datasource-reference/elasticsearch/ssl.png)
 
 
 ## Querying Elasticsearch 
@@ -36,7 +36,7 @@ Select the operation that you want to perform on your Elasticsearch cluster and 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/query.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/query.png)
 
 </div>
 
@@ -52,7 +52,7 @@ This operation allows you to execute a search query and get back search hits tha
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/elastic-search.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/elastic-search.png)
 
 </div>
 
@@ -62,7 +62,7 @@ This operation allows you to add a JSON document to the specified data stream or
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/index.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/index.png)
 
 </div>
 
@@ -72,7 +72,7 @@ This operation allows you to retrieve the specified JSON document from the index
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/get.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/get.png)
 
 </div>
 
@@ -82,6 +82,6 @@ This operation allows to update a document using the specified script. Read the 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - Elasticsearch](/img/datasource-reference/elasticsearch/update.png)
+![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/update.png)
 
 </div>

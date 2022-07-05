@@ -5,7 +5,7 @@ title: Bulk update multiple rows in table
 
 # Bulk update multiple rows in table
 
-Currently, the datasources in Insight have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query. 
+Currently, the datasources in Insight have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query.
 
 In this guide, We have assumed that you have successfully connected the data source. For this guide, we will be using the PostgreSQL data source as an example database, currently, this workaround can be used only for PostgreSQL and MySQL.
 
@@ -15,7 +15,7 @@ Let's create the query that will be getting the data from the database:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/postgres1.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/postgres1.png)
 
 </div>
 
@@ -26,7 +26,7 @@ Let's create the query that will be getting the data from the database:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/showData.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/showData.png)
 
 </div>
 
@@ -37,7 +37,7 @@ Let's create the query that will be getting the data from the database:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/columns.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/columns.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Let's create the query that will be getting the data from the database:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/options.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/options.png)
 
 </div>
 
@@ -75,7 +75,7 @@ return sql
 ```
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/runjs1.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/runjs1.png)
 
 </div>
 
@@ -85,7 +85,7 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/update.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/update.png)
 
 </div>
 
@@ -97,7 +97,7 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/event.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/event.png)
 
 </div>
 
@@ -105,6 +105,6 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/success.png)
+![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/success.png)
 
 </div>

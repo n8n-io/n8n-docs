@@ -64,7 +64,7 @@ Some notes about the possible fields:
 	* `repeat`: `{ a: ['b', 'c'] }` as `a=b&a=c`  
 	* `comma`: `{ a: ['b', 'c'] }` as `a=b,c`
 - **auth**: Used for Basic auth. Provide `username` and `password`.
-- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to false to prevent this from happening
+- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to true to prevent this from happening.
 - **skipSslCertificateValidation**: Used for calling HTTPS services without proper certificate
 - **returnFullResponse**: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
 - **encoding**: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.

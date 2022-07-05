@@ -309,7 +309,7 @@ Add the following to the `properties` array, after the `resource` object:
 }
 ```
 
-This code creates two operations, one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
+This code creates two operations: one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
 
 #### Step 4.6: Optional fields
 

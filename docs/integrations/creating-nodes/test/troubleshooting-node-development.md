@@ -19,7 +19,7 @@ Check that the name in the credentials array matches the name used in the proper
 <!-- vale on -->
 
 - Check that the names of the node file, node folder, and class match the path added to `packages/nodes-base/package.json`.
-- Check the names used in the `displayOptions` property are names used by UI elements in the node.
+- Check that the names used in the `displayOptions` property are names used by UI elements in the node.
 
 <!-- vale off -->
 ### Node icon doesn't show up in the Add Node menu and the Editor UI

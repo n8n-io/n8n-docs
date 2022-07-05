@@ -1,63 +1,49 @@
 # Release notes
 
-## [TODO: in com nodes release]
+## n8n@0.185.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.184.0...n8n@0.185.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-05
+
+This release adds a new node, Google Ads. It also contains bug fixes and node enhancements, as well as a small addition to core.
+
+### New features
+
+Core: add the `action` parameter to INodePropertyOptions. This parameter is now available when building nodes.
+
+### New nodes
 
 <div class="n8n-new-features" markdown>
 
-#### Simplify authentication setup for node creators
+#### Google Ads node
 
-This release introduces a simpler way of handling authorization when building a node. All credentials should now contain an `authenticate` property that dictates how the credential is used in a request.
-n8n has also simplified authentication types: instead of specifying an authentication type and using the correct interface, you can now set the type as `"generic"`, and use the `IAuthenticateGeneric` interface. 
+n8n now provides a [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds/) node, allowing you to get data from Google Ad campaigns.
 
-You can use this approach for any authentication method where data is sent in the header, body, or query string. This includes methods like bearer and basic auth. You can't use this method for more complex authentication types that require multiple calls, or for methods that don't pass authentication data. This includes OAuth.
-
-For an example of the new authentication syntax, refer to n8n's [Asana node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-link}.
-
-```js
-// in AsanaApi.credentials.ts 
-import {
-	IAuthenticateGeneric,
-	ICredentialType,
-	INodeProperties,
-} from 'n8n-workflow';
-
-export class AsanaApi implements ICredentialType {
-	name = 'asanaApi';
-	displayName = 'Asana API';
-	documentationUrl = 'asana';
-	properties: INodeProperties[] = [
-		{
-			displayName: 'Access Token',
-			name: 'accessToken',
-			type: 'string',
-			default: '',
-		},
-	];
-
-	authenticate: IAuthenticateGeneric = {
-		type: 'generic',
-		properties: {
-			headers: {
-				Authorization: '=Bearer {{$credentials.accessToken}}',
-			},
-		},
-	};
-}
-```
 </div>
 
-## n8n@0.184.0
+### Node enhancements
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2022-06-29
+* [DeepL node](/integrations/nodes/n8n-nodes-base.deepL/): Add support for longer text fields, and add credentials tests.
+* [Facebook Graph API node](/integrations/nodes/n8n-nodes-base.facebookGraphAPI/): Add support for Facebook Graph API 14.
+* [JIRA node](/integrations/nodes/n8n-nodes-base.jira/): Add support for the simplified option with rendered fields.
+* [Webflow trigger node](/integrations/trigger-nodes/n8n-nodes-base.webflowTrigger/): Reduce the chance of webhook duplication. Add a credentials test.
+* [WordPress node](/integrations/nodes/n8n-nodes-base.wordpress/): Add a post template option.
 
-This release includes:
+### Bug fixes
 
-* New core features
-* Enhancements to the Clockify node.
-* Bug fixes.
+* [HubSpot node](/integrations/nodes/n8n-nodes-base.hubspot/): Fix for search endpoints.
+* [KoboToolbox node](/integrations/nodes/n8n-nodes-base.koBoToolbox/): Improve attachment matching logic and GeoJSON Polygon format.
+* [Odoo node](/integrations/nodes/n8n-nodes-base.odoo/): Prevent possible issues with some custom fields.
+* Sticky note node: Fix an issue that was causing the main header to hide.
+* [Todoist node](/integrations/nodes/n8n-nodes-base.todoist/): Improve multi-item support.
 
-### New features
+### Contributors
+
+[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link} 
+
 
 ## n8n@0.184.0
 

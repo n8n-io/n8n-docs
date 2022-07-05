@@ -11,7 +11,7 @@ Your node must include:
   * This directory must contain the [base file](/integrations/creating-nodes/build/reference/node-base-files/), in the format `<node-name>.node.ts`. For example, `MyNode.node.ts`.
   * n8n recommends including a [codex file](/integrations/creating-nodes/build/reference/node-codex-files/), containing metadata for your node. The codex filename must match the node base filename. For example, given a node base file named `MyNode.node.ts`, the codex name is `MyNode.node.json`.
   * The `nodes` directory can contain other files and subdirectories, including directories for versions, and node code split across more than one file to create a modular structure.
-* A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-file/). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
+* A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-files/). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
 
 ## Modular structure
 <!-- vale off -->

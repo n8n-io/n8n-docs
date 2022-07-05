@@ -73,7 +73,7 @@ Each object contains:
 
 * `displayName`: the name n8n uses in the GUI.
 * `name`: the internal name of the object. Used to reference it from other places in the node.
-* `type`: define the data type expected, such as `string`.
+* `type`: the data type expected, such as `string`.
 * `default`: the URL that n8n should use to test credentials.
 
 ### authenticate

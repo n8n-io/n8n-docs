@@ -24,7 +24,7 @@ For more complex nodes, n8n recommends the following structure:
 
   * `actions`: directory with description and implementation of each possible resource and operation.
     * In the `actions` folder, n8n recommends using `resources` and `operations` as the names of the sub-folders. 
-    * For the implementation and description you can use separate files. Use `execute.ts` and `description.ts` as filenames. This make browsing through the code a lot easier. You can simplify this for nodes that have a less complicated structure.
+    * For the implementation and description you can use separate files. Use `execute.ts` and `description.ts` as filenames. This makes browsing through the code a lot easier. You can simplify this for nodes that have a less complicated structure.
   * `methods`: an optional directory dynamic parameters' functions.  
   * `transport`: a directory containing the communication implementation.
 

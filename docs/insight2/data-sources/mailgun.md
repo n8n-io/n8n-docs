@@ -7,7 +7,7 @@ title: Mailgun
 
 Insight can connect to your Mailgun account to send emails.
 
-<img class="screenshot-full" src="/img/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight - Data source - Mailgun" height="420" />
+<img class="screenshot-full" src="/_images/insight2/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight - Data source - Mailgun" height="420" />
 
 :::info
 The Mailgun API Datasource supports for interaction with the mail endpoint of the [Mailgun API](https://documentation.mailgun.com/en/latest/api-intro.html#authentication-1).
@@ -42,7 +42,7 @@ Optional parameters:
 
 - Body as HTML
 
-<img class="screenshot-full" src="/img/datasource-reference/MailGun/MailGun-query.jpg" alt="Insight - Query Mailgun" height="420"/>
+<img class="screenshot-full" src="/_images/insight2/datasource-reference/MailGun/MailGun-query.jpg" alt="Insight - Query Mailgun" height="420"/>
 
 :::info
 **Send mail to** - accepts a single email id.

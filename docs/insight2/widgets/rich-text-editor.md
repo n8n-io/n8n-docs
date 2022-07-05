@@ -9,7 +9,7 @@ It should be preferred for blog posts, forum posts or notes sections. The text i
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Rich Text Editor](/img/widgets/richtexteditor/richtexteditor.png)
+![Insight - Widget Reference - Rich Text Editor](/_images/insight2/widgets/richtexteditor/richtexteditor.png)
 
 </div>
 

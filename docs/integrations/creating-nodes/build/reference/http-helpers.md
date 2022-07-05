@@ -7,7 +7,7 @@ It's common to call external APIs or make HTTP requests to other services from a
 
 This plays a major role during node development, maintenance, and improvements.
 
-n8n provides a flexible helper for making HTTP requests that abstracts away most of the complexity.
+n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
 
 ## How to use
 
@@ -64,7 +64,7 @@ Some notes about the possible fields:
 	* `repeat`: `{ a: ['b', 'c'] }` as `a=b&a=c`  
 	* `comma`: `{ a: ['b', 'c'] }` as `a=b,c`
 - **auth**: Used for Basic auth. Provide `username` and `password`.
-- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to false to prevent this from happening
+- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to true to prevent this from happening.
 - **skipSslCertificateValidation**: Used for calling HTTPS services without proper certificate
 - **returnFullResponse**: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
 - **encoding**: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
@@ -73,7 +73,7 @@ Some notes about the possible fields:
 
 The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. Now deprecated.
 
-To minimise incompatibility, n8n made a transparent conversion to another library called `axios`.
+To minimize incompatibility, n8n made a transparent conversion to another library called `axios`.
 
 If you are having issues, please report them in the [Community Forums](https://community.n8n.io/) or on [GitHub](https://github.com/n8n-io/n8n/issues).
 

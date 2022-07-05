@@ -14,7 +14,7 @@ The codex filename must match the node base filename. For example, given a node 
 
 ## Node categories
 
-You can define one or more category in your node configuration JSON. This helps n8n put the node in the correct category in the nodes panel.
+You can define one or more categories in your node configuration JSON. This helps n8n put the node in the correct category in the nodes panel.
 
 Choose from these categories:
 

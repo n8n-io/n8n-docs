@@ -102,7 +102,7 @@ Your npm package details are in the `package.json` at the root of the project. U
 
 Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `NasaPics.node.json`.
 
-Add the following:
+Add the following code to the JSON file:
 
 ```json
 {

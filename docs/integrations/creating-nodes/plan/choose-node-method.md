@@ -11,7 +11,7 @@ n8n has two node-building styles:
 
 The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for more information on node parameters and the `execute()` method.
 
-Compare these code snippets. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
+To better understand the difference between the declarative and programmatic styles, compare the two code snippets below. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
 
 In programmatic style:
 

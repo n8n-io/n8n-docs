@@ -1,4 +1,4 @@
-# Build a declarative-style node
+# Tutorial: Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
 
@@ -15,7 +15,7 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code manageable, the node won't implement every available option for the Mars Rover Photos endpoint.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
 !!! note "Existing node"
     n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -46,6 +46,8 @@ Now create the following directories and files:
 * `nodes/nasapics/NasaPics.node.ts`
 * `nodes/nasapics/nasapics.svg`
 * `credentials/NasaPics.credentials.ts`
+
+These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
 
 ### Step 2: Update the npm package details
 
@@ -131,7 +133,7 @@ For more information on these parameters, refer to [Node codex files](/integrati
 
 ### Step 4: Create the node
 
-Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/node-file-structure/) for more information.
+Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
 #### Step 4.1: Lint configuration and imports
 
@@ -144,7 +146,7 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 #### Step 4.2: Create the main class
 
-The node must export an interface that implements INodeType. This interface must include a `description` object [TODO: think this is also an interface? Technical terminology halp!], which in turn contains the `properties` array.
+The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 ```js
 export class NasaPics implements INodeType {
@@ -190,7 +192,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 		},
 ```
 
-#### Step 4.4: Add resource
+#### Step 4.4: Add resources
 
 The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Add the `properties` array, with the resource object:
 
@@ -399,6 +401,7 @@ export class NasaPicsApi implements ICredentialType {
 }
 ```
 
+For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
 
 ## Test your node
 

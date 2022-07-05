@@ -23,7 +23,7 @@ You need some understanding of:
 
 ## Selecting the node
 
-The first thing that we have to do is pick the service we want to create the node for. We will use [SendGrid](https://sendgrid.com/) as an example.
+The first thing to do is pick the service you want to create the node for. For this tutorial, use [SendGrid](https://sendgrid.com/) as an example.
 
 For the sake of brevity, we will only showcase how to add the functionality to create a contact. Since n8n's repository already has a SendGrid node, we will name this node **FriendGrid** to avoid conflicts.
 

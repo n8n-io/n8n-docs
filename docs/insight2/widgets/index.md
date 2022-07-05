@@ -1,7 +1,9 @@
 ---
 title: Widgets
 description: 
-
+tags:
+  - Insight²
+  - Widgets
 ---
 
 * [Button group](/insight2/widgets/button-group/)
@@ -11,10 +13,10 @@ description:
 * [Checkbox](/insight2/widgets/checkbox/)
 * [Circular Progress Bar](/insight2/widgets/circular-progress-bar/)
 * [Code Editor](/insight2/widgets/code-editor/)
-* [Container](docs/insight2/widgets/container/)
+* [Container](/insight2/widgets/container/)
 * [Custom Component](/insight2/widgets/custom-component/)
 * [Date Range Picker](/insight2/widgets/date-range-picker/)
-* [Datepicker](docs/insight2/widgets/datepicker/)
+* [Datepicker](/insight2/widgets/datepicker/)
 * [Divider](/insight2/widgets/divider/)
 * [Dropdown](/insight2/widgets/dropdown/)
 * [File picker](/insight2/widgets/file-picker/)

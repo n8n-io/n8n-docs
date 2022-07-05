@@ -7,7 +7,7 @@ This section includes:
 * Guidance on planning your build, including [which style to use](/integrations/creating-nodes/plan/choose-node-method/).
 * [Tutorials](/integrations/creating-nodes/build/) for different node building styles.
 * Instructions for [testing your node](/integrations/creating-nodes/test/), including how to use the n8n [node linter](/integrations/creating-nodes/test/node-linter/) and [troubleshooting](/integrations/creating-nodes/test/troubleshooting-node-development/) support.
-* How to [share your node](/integrations/creating-nodes/use/submit-community-nodes/) with the community, or use it as a [private node](/integrations/creating-nodes/use/install-private-nodes/).
+* How to [share your node](/integrations/creating-nodes/deploy/submit-community-nodes/) with the community, or use it as a [private node](/integrations/creating-nodes/deploy/install-private-nodes/).
 * [Reference material](/integrations/creating-nodes/build/reference/), including UI elements and information on the individual files that make up a node.
 
 ## Technical difficulty

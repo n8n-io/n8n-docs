@@ -284,6 +284,11 @@ nav:
     - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
   - Insight²:
+    - Introduction: insight2/intro.md
+    - Getting Started:
+    - Actions: insight2/tutorial/actions.md
+    - Data-Sources: insight2/tutorial/adding-a-datasource.md
+    - Widgets: insight2/widgets/index.md
  
 
   # - Courses:

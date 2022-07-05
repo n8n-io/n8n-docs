@@ -39,10 +39,10 @@ n8n now provides a [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds/) n
 
 ### Contributors
 
-[cgobrech](https://github.com/cgobrech)  
-[pemontto](https://github.com/pemontto)  
-[Yann Jouanique](https://github.com/Yann-J)
-[Zapfmeister](https://github.com/Zapfmeister) 
+[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link} 
 
 
 ## n8n@0.184.0

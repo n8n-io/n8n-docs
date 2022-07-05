@@ -7,7 +7,7 @@ It's common to call external APIs or make HTTP requests to other services from a
 
 This plays a major role during node development, maintenance, and improvements.
 
-n8n provides a flexible helper for making HTTP requests that abstracts away most of the complexity.
+n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
 
 ## How to use
 

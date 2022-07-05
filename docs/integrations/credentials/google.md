@@ -17,6 +17,7 @@ Once configured, you can use your credentials to authenticate the following node
 | Node | OAuth | Service Account |
 | :--- | :---: | :-------------: |
 | [G Suite Admin](/integrations/nodes/n8n-nodes-base.gSuiteAdmin/) | :white_check_mark: | :x: |
+| [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds) | :white_check_mark: | :x: |
 | [Gmail](/integrations/nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
 | [Google Analytics](/integrations/nodes/n8n-nodes-base.googleAnalytics/) | :white_check_mark: | :x: |
 | [Google BigQuery](/integrations/nodes/n8n-nodes-base.googleBigQuery/) | :white_check_mark: | :x: |

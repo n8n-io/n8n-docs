@@ -1,5 +1,50 @@
 # Release notes
 
+## n8n@0.185.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.184.0...n8n@0.185.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-05
+
+This release adds a new node, Google Ads. It also contains bug fixes and node enhancements, as well as a small addition to core.
+
+### New features
+
+Core: add the `action` parameter to INodePropertyOptions. This parameter is now available when building nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Google Ads node
+
+n8n now provides a [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds/) node, allowing you to get data from Google Ad campaigns.
+
+</div>
+
+### Node enhancements
+
+* [DeepL node](/integrations/nodes/n8n-nodes-base.deepL/): Add support for longer text fields, and add credentials tests.
+* [Facebook Graph API node](/integrations/nodes/n8n-nodes-base.facebookGraphAPI/): Add support for Facebook Graph API 14.
+* [JIRA node](/integrations/nodes/n8n-nodes-base.jira/): Add support for the simplified option with rendered fields.
+* [Webflow trigger node](/integrations/trigger-nodes/n8n-nodes-base.webflowTrigger/): Reduce the chance of webhook duplication. Add a credentials test.
+* [WordPress node](/integrations/nodes/n8n-nodes-base.wordpress/): Add a post template option.
+
+### Bug fixes
+
+* [HubSpot node](/integrations/nodes/n8n-nodes-base.hubspot/): Fix for search endpoints.
+* [KoboToolbox node](/integrations/nodes/n8n-nodes-base.koBoToolbox/): Improve attachment matching logic and GeoJSON Polygon format.
+* [Odoo node](/integrations/nodes/n8n-nodes-base.odoo/): Prevent possible issues with some custom fields.
+* Sticky note node: Fix an issue that was causing the main header to hide.
+* [Todoist node](/integrations/nodes/n8n-nodes-base.todoist/): Improve multi-item support.
+
+### Contributors
+
+[cgobrech](https://github.com/cgobrech)  
+[pemontto](https://github.com/pemontto)  
+[Yann Jouanique](https://github.com/Yann-J)
+[Zapfmeister](https://github.com/Zapfmeister) 
+
+
 ## n8n@0.184.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.183.0...n8n@0.184.0){:target=_blank .external-link} for this version.<br />

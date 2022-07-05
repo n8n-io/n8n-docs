@@ -285,7 +285,6 @@ nav:
     - API: ocr/ocr-api.md
   - Insight²:
     - Introduction: insight2/intro.md
-    - Getting Started: insight2/how-to/index.md
     - Actions: insight2/tutorial/actions.md
     - Data-Sources: insight2/tutorial/adding-a-datasource.md
     - Widgets: 

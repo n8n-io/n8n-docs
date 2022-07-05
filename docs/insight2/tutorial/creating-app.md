@@ -1,6 +1,9 @@
 ---
-id: creating-app
 title: Creating new app
+description: 
+tags:
+  - 
+  - 
 ---
 
 # Creating new app

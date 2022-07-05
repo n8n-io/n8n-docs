@@ -39,7 +39,7 @@ These resources will help you quickly build and deploy apps using Insight:
 The references for data sources and widgets:
 
 - **[Datasource Reference](/docs/data-sources/redis)**
-- **[Widget Reference](/docs/widgets/table)**
+- **[Widget Reference](/insight2/widgets/table/)**
 
 ## Complete tutorials
 - **[Build a GitHub star history tracker](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)**

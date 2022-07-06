@@ -1,6 +1,9 @@
 ---
-id: oauth2-authorization
 title: REST API authentication using OAuth 2.0
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # REST API authentication using OAuth 2.0

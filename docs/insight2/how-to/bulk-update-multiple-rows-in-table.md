@@ -1,6 +1,9 @@
 ---
-id: bulk-update-multiple-rows
 title: Bulk update multiple rows in table
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # Bulk update multiple rows in table

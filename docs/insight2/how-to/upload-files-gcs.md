@@ -1,6 +1,9 @@
 ---
-id: upload-files-gcs
 title: Upload files using GCS
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # Upload files using GCS

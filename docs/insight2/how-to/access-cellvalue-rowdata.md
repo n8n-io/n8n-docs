@@ -1,6 +1,9 @@
 ---
-id: access-cellvalue-rowdata
 title: Change text color in columns of the table
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # Change text color in columns by accessing `cellValue` and `rowData` in the table

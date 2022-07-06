@@ -1,6 +1,9 @@
 ---
-id: upload-files-aws
 title: Upload files on AWS S3 bucket
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # Upload and download files on AWS S3 bucket

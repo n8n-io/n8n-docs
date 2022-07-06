@@ -87,7 +87,6 @@ Now that we have our data on the table, we will change the color of the text in 
 
 
 
-
 You can also use Hex Color Code instead of mentioning color in plane text.
 
 

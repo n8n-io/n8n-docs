@@ -1,6 +1,9 @@
 ---
-id: set-localstorage
 title: Set localStorage
+description: 
+tags:
+  - Insight²
+  - Actions
 ---
 
 # Set localStorage

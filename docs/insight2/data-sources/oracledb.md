@@ -19,11 +19,11 @@ A Oracle DB can be connected with the following credentails:
 - **Password**
 - **Client Library Path** ( Only required for local setup )
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - OracleDB](/_images/insight2/datasource-reference/oracledb/oracleauth.png)
 
-</div>
+
 
 Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
 

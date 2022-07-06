@@ -7,7 +7,7 @@ title: Custom Component
 
 Custom Component can be used to do create your own React component when the needed functionality isn't available in other components.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Timeline](/_images/insight2/widgets/custom-component/custom-component.png)
 

@@ -12,7 +12,7 @@ Widgets can be shown on desktop, mobile, or both.
 :::
 
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - widgets list](/_images/insight2/tutorial/mobile-layout/mobile-layout.gif)
 

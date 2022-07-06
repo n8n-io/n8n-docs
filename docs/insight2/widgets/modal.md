@@ -6,11 +6,11 @@ title: Modal
 
 Modal widget renders in front of a backdrop, and it blocks interaction with the rest of the application until the modal is closed. It can be used to add dialog boxes to your app for lightboxes, user notifications, forms, etc.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Modal](/_images/insight2/widgets/modal/modal1.gif)
 
-</div>
+
 
 ## Add widgets to Modal
 

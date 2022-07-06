@@ -6,11 +6,11 @@ title: Timer
 
 Timer widget lets users to count timer both upward and downward
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Timer](/_images/insight2/widgets/timer/timer.png)
 
-</div>
+
 
 ## Properties
 

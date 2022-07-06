@@ -10,11 +10,11 @@ Textarea widgets let users enter and edit just text like [Text Input](/docs/widg
 Textarea should be preferred over [Text Input](/docs/widgets/text-input) when user input is more than one sentence.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Text input](/_images/insight2/widgets/textarea/textarea.png)
 
-</div>
+
 
 ## Properties
 

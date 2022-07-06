@@ -17,19 +17,19 @@ You can create new versions from **App Version Manager** on the top-right corner
 
 - Go to the **App Version Manager** and click on the dropdown. It will display all the versions of the app that have been created.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/appversion.png)
 
-</div>
+
 
 - Click on **Create Version** and a modal will pop-up. Enter a **Version Name** and click on **Create version from** dropdown that will include all the versions of the app, choose a version that you want to use for your new version and then click on `Create Version`.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/modal.png)
 
-</div>
+
 
 ## Release
 
@@ -41,7 +41,7 @@ To release a version:
 
 - Go to the **App Version Manager** and select the `version` from the dropdown that you want to release.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/versiondropdown.png)
 
@@ -49,7 +49,7 @@ To release a version:
 
 - Click on the `Release` button on the top-right corner.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/release.png)
 
@@ -60,7 +60,7 @@ To release a version:
 
 Insight will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/prompt.png)
 

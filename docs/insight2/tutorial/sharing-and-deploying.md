@@ -9,7 +9,7 @@ title: Preview and Sharing Apps
 
 Clicking on `Preview` will open up the currently opened version of the app in the new tab. This is useful if you want to immediately check the app in production.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
 
@@ -21,7 +21,7 @@ Once you have released a version of your app, you can share the app with others 
 
 - Click on the **Share** button on the top-right corner
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/share.png)
 
@@ -29,7 +29,7 @@ Once you have released a version of your app, you can share the app with others 
 
 - In the dialog box, turn on the toggle switch to `Make the application public` and shareable
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/toggle.png)
 
@@ -37,7 +37,7 @@ Once you have released a version of your app, you can share the app with others 
 
 - Create your own `customised URL` for the app and click on `copy` to copy the URL
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/url.png)
 
@@ -45,7 +45,7 @@ Once you have released a version of your app, you can share the app with others 
 
 - You can also `Embedd` your application using the embeddable link
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/embedd.png)
 

@@ -10,11 +10,11 @@ Text Input widget let users enter and edit text.
 The Text Input should be preferred when user input is a single line of text.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Text input](/_images/insight2/widgets/text-input/textinput.png)
 
-</div>
+
 
 ## Properties
 

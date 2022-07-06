@@ -6,19 +6,19 @@ title: Container
 
 Containers are used to group widgets together. You can move the desired number of widgets inside a container to organize your app better.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Code editor](/_images/insight2/widgets/container/container.gif)
 
-</div>
+
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Container](/_images/insight2/widgets/container/layout.png)
 
-</div>
+
 
 | Layout      | description |
 | ----------- | ----------- |
@@ -27,11 +27,11 @@ Containers are used to group widgets together. You can move the desired number o
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Container](/_images/insight2/widgets/container/styles.png)
 
-</div>
+
 
 | Style      | Description |
 | ----------- | ----------- |

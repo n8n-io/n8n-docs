@@ -25,11 +25,11 @@ Insight requires the following to connect to your Athena.
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
 
-</div>
+
 
 ## Querying Amazon Athena
 

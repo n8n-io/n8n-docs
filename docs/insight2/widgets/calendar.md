@@ -9,11 +9,10 @@ Calendar widget comes with the following features:
 - **Events**
 - **Resource scheduling**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar.png)
 
-</div>
 
 ## Properties
 
@@ -77,11 +76,11 @@ Specifying resources will make the calendar categorize `week` view and `day` vie
 
 If we specify the `resourceId` of any of the events as `1`, then that event will be assigned to `Room A`, generating the following calendar, assuming that we've set the view to `day` and are viewing the day on which this event exists.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar-resource.png)
 
-</div>
+
 
 ### Default view
 
@@ -120,11 +119,11 @@ Determines whether to display a popover whenever an event is clicked. Click on `
 
 ## Events
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/events.png)
 
-</div>
+
 
 ### On Event selected
 
@@ -154,11 +153,11 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/layout.png)
 
-</div>
+
 
 ### Show on desktop
 
@@ -169,11 +168,11 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/styles.png)
 
-</div>
+
 
 ### Visibility
 

@@ -6,11 +6,11 @@ title: Code Editor
 
 Code Editor widget is a versatile text editor for editing code and supports several languages.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/editor.png)
 
-</div>
+
 
 ## Properties
 
@@ -18,11 +18,11 @@ Code Editor widget is a versatile text editor for editing code and supports seve
 Any property having `Fx` button next to its field can be **programmatically configured**.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/prop.png)
 
-</div>
+
 
 | properties      | description | Expected value |
 | ----------- | ----------- | ----------------- |
@@ -170,11 +170,11 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/layout.png)
 
-</div>
+
 
 | Layout  | description |
 | ----------- | ----------- |
@@ -183,11 +183,11 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/styles.png)
 
-</div>
+
 
 | Styles  | description |
 | ----------- | ----------- |

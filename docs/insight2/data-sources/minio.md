@@ -27,11 +27,11 @@ Insight requires the following to connect to your DynamoDB:
 - **Access key**
 - **Secret key**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Minio connection](/_images/insight2/datasource-reference/minio-connect.png)
 
-</div>
+
 
 Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
 

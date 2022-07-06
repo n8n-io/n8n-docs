@@ -6,19 +6,19 @@ title: Image
 
 Image widget is used to display images in your app.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Image](/_images/insight2/widgets/image/image.png)
 
-</div>
+
 
 ## Events
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Image](/_images/insight2/widgets/image/events.png)
 
-</div>
+
 
 ### On click
 

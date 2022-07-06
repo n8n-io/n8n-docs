@@ -2,8 +2,9 @@
 
 Insight can connect to Woocommerce databases to read and write data.
 
-- [Connection](#connection)
-- [Getting Started](#querying-woocommerce)
+- [woocommerce](#woocommerce)
+	- [Connection](#connection)
+	- [Querying Woocommerce](#querying-woocommerce)
 
 ## Connection
 

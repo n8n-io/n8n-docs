@@ -141,11 +141,11 @@ Example response from Baserow:
 - **Table ID**
 - **Row ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-get-row.png)
 
-</div>
+
 
 Example response from Baserow:
 

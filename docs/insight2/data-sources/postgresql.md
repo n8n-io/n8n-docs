@@ -22,11 +22,11 @@ Insight requires the following to connect to your PostgreSQL database.
 
 It is recommended to create a new PostgreSQL database user so that you can control the access levels of Insight.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pgconnect.png)
 
-</div>
+
 
 Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
 
@@ -40,11 +40,11 @@ Select SQL mode from the dropdown and enter the query in the editor. Click on th
 
 **NOTE**: Query should be saved before running.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-sql.png)
 
-</div>
+
 
 #### GUI mode
 
@@ -52,11 +52,10 @@ Select GUI mode from the dropdown and then choose the operation **Bulk update us
 
 Click on the `run` button to run the query. **NOTE**: Query should be saved before running.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-gui.png)
 
-</div>
 
 :::tip
 Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/docs/tutorial/transformations)**

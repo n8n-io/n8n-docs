@@ -6,11 +6,11 @@ title: Iframe
 
 Iframe widget is used to embed another HTML page into the current one and display iframes in your app.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe.png)
 
-</div>
+
 
 ## Properties
 
@@ -20,11 +20,11 @@ Sets the **URL** of the page to embed.
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/layout.png)
 
-</div>
+
 
 ### Show on desktop
 
@@ -35,11 +35,11 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/styles.png)
 
-</div>
+
 
 ### Visibility
 

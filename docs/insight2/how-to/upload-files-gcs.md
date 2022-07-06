@@ -40,15 +40,16 @@ Before adding the new data source we will need to have a private key for our GCS
 
 1. Select a pdf file and hold it in the file picker.
 
-:::info
+
  File types must be valid **[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)** type according to input element specification or a valid file extension.
 
  To accept any/all file type(s), set `Accept file types` to an empty value.
-:::
+
 
 
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
+
 
 
 

@@ -13,7 +13,7 @@ tags:
 * [Building queries](/insight2/tutorial/building-queries/)
 * [Creating new app](/insight2/tutorial/creating-app/)
 * [Debugger](/insight2/tutorial/debugger/)
-* [Manage User Groups](/insight2/tutorial/manage-users-groups/)
+* [Managing Users and Groups](/insight2/tutorial/manage-users-groups/)
 * [Mobile Layout](/insight2/tutorial/mobile-layout/)
 * [Sharing and Deploying](/insight2/tutorial/sharing-and-deploying/)
 * [Transformations](/insight2/tutorial/transformations/)

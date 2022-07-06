@@ -58,7 +58,9 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/columns.png)
 
 
+
 - Once you've added the columns, you'll get the table like this:
+
 
 
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/table.png)

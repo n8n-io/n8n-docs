@@ -1,6 +1,9 @@
 ---
-id: mssql
 title: MS SQL Server / Azure SQL databases
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # MS SQL Server / Azure SQL databases

@@ -1,6 +1,9 @@
 ---
-id: google.sheets
 title: Google Sheets
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Google Sheets

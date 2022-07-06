@@ -1,6 +1,9 @@
 ---
-id: mailgun
 title: Mailgun
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Mailgun

@@ -1,6 +1,9 @@
 ---
-id: gcs
 title: Google Cloud Storage
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Google Cloud Storage

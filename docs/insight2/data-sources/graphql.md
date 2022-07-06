@@ -1,6 +1,9 @@
 ---
-id: graphql
 title: GraphQL
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # GraphQL

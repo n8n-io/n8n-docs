@@ -1,6 +1,9 @@
 ---
-id: minio
 title: MinIO
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # MinIO

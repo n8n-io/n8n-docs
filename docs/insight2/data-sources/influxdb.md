@@ -1,6 +1,9 @@
 ---
-id: influxdb
 title: InfluxDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # InfluxDB

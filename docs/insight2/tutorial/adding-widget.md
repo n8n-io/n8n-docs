@@ -32,9 +32,9 @@ The widgets can be resized and repositioned within the canvas.
 ## Adding widgets to Modal
 To add a widget to Modal, we need to trigger [Show modal action](/docs/tutorial/actions#available-actions)
 
-:::info
+
 Before triggering `Show modal action` we need to add a modal widget to the canvas.
-:::
+
 
 - Add a `modal widget` to the app
 - Trigger the **Show modal action**
@@ -82,6 +82,6 @@ Since we have already run the query in previous step, the data will be immediate
 
 So far in this tutorial, we have connected to a PostgreSQL database and displayed the data on a table.
 
-:::tip
-Read the widget reference of table [here](/docs/widgets/table) for more customizations such as server-side pagination, actions, editing data.
-:::
+
+Read the widget reference of table [here](/insight2/widgets/table/) for more customizations such as server-side pagination, actions, editing data.
+

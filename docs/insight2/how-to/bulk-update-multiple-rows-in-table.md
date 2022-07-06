@@ -20,7 +20,6 @@ Let's create the query that will be getting the data from the database:
 
 ![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/postgres1.png)
 
-</div>
 
 ## 2. Display the data on the table
 
@@ -31,7 +30,6 @@ Let's create the query that will be getting the data from the database:
 
 ![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/showData.png)
 
-</div>
 
 ## 3. Make the columns editable
 

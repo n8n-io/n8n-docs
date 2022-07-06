@@ -23,7 +23,7 @@ The query will now look like this:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Query result transformations](/img/tutorial/transformations/transform.png)
+![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform.png)
 
 </div>
 
@@ -31,7 +31,7 @@ Click the `create` button to create the query. Saved queries can be run using th
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Query result transformations](/img/tutorial/transformations/result.png)
+![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/result.png)
 
 </div>
 
@@ -39,7 +39,7 @@ We can see that `first_name` and `last_name` are added to all the rows in the `d
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Query result transformations](/img/tutorial/transformations/rawdata.png)
+![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/rawdata.png)
 
 </div>
 

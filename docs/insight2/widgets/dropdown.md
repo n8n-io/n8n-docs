@@ -8,7 +8,7 @@ The Dropdown widget can be used to collect user input from a list of options.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Dropdown](/img/widgets/dropdown/drop.png)
+![Insight - Widget Reference - Dropdown](/_images/insight2/widgets/dropdown/drop.png)
 
 </div>
 
@@ -18,7 +18,7 @@ Dropdown options can be referred to your query data with dynamic variables.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Dropdown](/img/widgets/dropdown/dropdown-dynamicvalues.gif)
+![Insight - Widget Reference - Dropdown](/_images/insight2/widgets/dropdown/dropdown-dynamicvalues.gif)
 
 </div>
 
@@ -26,7 +26,7 @@ Dropdown options can be referred to your query data with dynamic variables.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Dropdown](/img/widgets/dropdown/events.png)
+![Insight - Widget Reference - Dropdown](/_images/insight2/widgets/dropdown/events.png)
 
 </div>
 
@@ -43,7 +43,7 @@ the dropdown's input box. The corresponding search text will be exposed as `sear
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Dropdown](/img/widgets/dropdown/props.png)
+![Insight - Widget Reference - Dropdown](/_images/insight2/widgets/dropdown/props.png)
 
 </div>
 
@@ -86,7 +86,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Dropdown](/img/widgets/dropdown/styles.png)
+![Insight - Widget Reference - Dropdown](/_images/insight2/widgets/dropdown/styles.png)
 
 </div>
 

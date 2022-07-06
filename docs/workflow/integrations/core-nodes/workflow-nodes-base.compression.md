@@ -38,7 +38,7 @@ The start node exists by default when you create a new workflow.
 
 This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
-1. Enter the URL of the image in the ***URL*** field. For example, `https://docs.n8n.io/assets/img/final-workflow.f380b957.png`.
+1. Enter the URL of the image in the ***URL*** field. For example, `https://docs.n8n.io/assets/_images/insight2/final-workflow.f380b957.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Enter `workflow_image` in the ***Binary Property*** field.
 4. Click on ***Execute Node*** to run the node.

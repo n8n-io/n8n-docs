@@ -296,6 +296,8 @@ nav:
       - Preview and Sharing Apps: insight2/tutorial/sharing-and-deploying.md
       - Transformations: insight2/tutorial/transformations.md
       - Versioning and release: insight2/tutorial/versioning-and-release.md
+      - Keyboard Shortcuts: insight2/tutorial/keyboard-shortcuts.md
+      - Multi-Workspace: insight2/tutorial/multiworkspace.md
     - Introduction: insight2/intro.md
     - Actions: insight2/tutorial/actions.md
     - Data-Sources: 

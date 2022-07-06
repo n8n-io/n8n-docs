@@ -1,6 +1,9 @@
 ---
-id: adding-a-datasource
 title: Adding a data source
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Adding a data source

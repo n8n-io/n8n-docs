@@ -1,6 +1,9 @@
 ---
-id: debugger
 title: Debugger
+description: 
+tags:
+  - Insight²
+  - Debugger
 ---
 
 # Debugger

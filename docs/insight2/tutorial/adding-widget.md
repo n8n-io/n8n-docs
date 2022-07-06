@@ -1,6 +1,9 @@
 ---
-id: adding-widget
 title: Adding a widget
+description: 
+tags:
+  - Insight²
+  - Widget
 ---
 
 # Adding a widget

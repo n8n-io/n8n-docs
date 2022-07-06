@@ -1,6 +1,10 @@
 ---
-id: mobile-layout
 title: Mobile layout
+description: 
+tags:
+  - Insight²
+  - Mobile
+  - Layout
 ---
 
 # Mobile layout

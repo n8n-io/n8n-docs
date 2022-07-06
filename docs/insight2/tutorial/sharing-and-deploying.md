@@ -1,6 +1,10 @@
 ---
-id: sharing-and-deploying
 title: Preview and Sharing Apps
+description: 
+tags:
+  - Insight²
+  - Sharing 
+  - App
 ---
 
 # Preview and Sharing Apps

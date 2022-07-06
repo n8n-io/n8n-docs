@@ -1,6 +1,9 @@
 ---
-id: multiworkspace
 title: Multi-Workspace
+description: 
+tags:
+  - Insight²
+  - Workspace
 ---
 
 # Multi-Workspace

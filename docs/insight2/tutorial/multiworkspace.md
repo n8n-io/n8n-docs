@@ -23,7 +23,7 @@ User can create their own workspaces, user who created workspace will be having 
 
 ## Permissions
 
-- The administrator can manage [users and groups](/insight2/tutorial/manage-users-groups.md) of each workspace
+- The administrator can manage [users and groups](/insight2/tutorial/manage-users-groups/) of each workspace
 - Applications and settings can not be shared between workspaces
 - A user authorised to login to Insight will not have access to all workspaces, Usesr should be invited or signed up to a workspace to log-in to it.
 

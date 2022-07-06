@@ -1,6 +1,9 @@
 ---
-id: airtable
 title: Airtable
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Airtable

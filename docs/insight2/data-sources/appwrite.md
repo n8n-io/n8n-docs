@@ -1,6 +1,9 @@
 ---
-id: appwrite
 title: Appwrite Database
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Appwrite Database

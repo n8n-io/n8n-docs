@@ -11,7 +11,7 @@ Calendar widget comes with the following features:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar.png)
+![Insight - Widget Reference - Calendar](/img/widgets/calendar/calendar.png)
 
 </div>
 
@@ -79,7 +79,7 @@ If we specify the `resourceId` of any of the events as `1`, then that event will
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar-resource.png)
+![Insight - Widget Reference - Calendar](/img/widgets/calendar/calendar-resource.png)
 
 </div>
 
@@ -122,7 +122,7 @@ Determines whether to display a popover whenever an event is clicked. Click on `
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/events.png)
+![Insight - Widget Reference - Calendar](/img/widgets/calendar/events.png)
 
 </div>
 
@@ -156,7 +156,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/layout.png)
+![Insight - Widget Reference - Calendar](/img/widgets/calendar/layout.png)
 
 </div>
 
@@ -171,7 +171,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/styles.png)
+![Insight - Widget Reference - Calendar](/img/widgets/calendar/styles.png)
 
 </div>
 

@@ -8,7 +8,7 @@ The map widget can be used to pick or select locations on the Google map with th
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Map](/_images/insight2/widgets/map/map.png)
+![Insight - Widget Reference - Map](/img/widgets/map/map.png)
 
 </div>
 
@@ -40,7 +40,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | properties      | description | Expected value |
 | ----------- | ----------- | ------------------ |
 | Initial location | It is the default location's coordinates that the map should focus on. | An object containing the latitude and langitude as key value pairs. ex: `{{ {"lat": 40.7128, "lng": -73.935242} }}` |
-| Default Markers | List of markers that should be shown on the map | An array of objects containing the coordinates. ex: `{{ [{"lat": 40.7128, "lng": -73.935242}] }}` |
+| Default Markers | List of markers that should be shown on the map | An array of objects containing the coordinates. ex: `{{ [{"lat": 40.7128, "lng": -73.935242}] }}` | 
 | Add new markers | This property should be enabled to add new markers to the map on click. | `On` by default, toggle `off` to disable adding new markers on the map. Can be programmatically configured by clicking on `Fx`, accepts values `{{true}}` or `{{false}}` |
 | Search for places | It can be used to show or hide auto-complete search box. | `On` by default, toggle `off` to disable search on the map. Can be programmatically configured by clicking on `Fx`, accepts values `{{true}}` or `{{false}}` |
 

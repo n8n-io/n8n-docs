@@ -11,7 +11,7 @@ Admin of a workspace can add users to the workspace. To manage the users in your
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu1.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/menu1.png)
 
 </div>
 
@@ -23,7 +23,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/userspage.png)
 
 </div>
 
@@ -31,7 +31,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/addnewuser.png)
 
 </div>
 
@@ -45,7 +45,7 @@ You can also copy the invitation url by clicking on the copy icon next to `invit
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/status.png)
 
 </div>
 
@@ -55,7 +55,7 @@ You can disable any active user's access to your workspace by clicking on the **
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/archived.png)
 
 </div>
 
@@ -65,7 +65,7 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/status.png)
 
 </div>
 
@@ -75,7 +75,7 @@ On Insight, Admins can create groups for users added in a workspace and grant th
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/menu2.png)
 
 </div>
 
@@ -83,33 +83,33 @@ On Insight, Admins can create groups for users added in a workspace and grant th
 
 Every group on Insight has three components:
 
-#### Apps:
+#### Apps: 
 
 Admins can add or remove any number of apps for a group of users. To add an app to a group, select an app from the dropdown and click on `Add` button next to it. You can also set app permissions such as `View` or `Edit` for the group. You can set different permissions for different apps in a group.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/apps.png)
 
 </div>
 
-#### Users:
+#### Users: 
 
 Admins can add or remove any numbers of users in a group. Just select a user from the dropdown and click on `Add` button to add it to a group. To delete a user from a group, click on `Delete` button next to it.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/users.png)
 
 </div>
 
-#### Permissions:
+#### Permissions: 
 
 Admins can set granular permission like creating/deleting apps or creating folder for a group of users.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/permissions.png)
 
 </div>
 
@@ -133,7 +133,7 @@ This group contains all the users and admins.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/allusers.png)
 
 </div>
 
@@ -147,7 +147,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/admin.png)
 
 </div>
 
@@ -157,7 +157,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/newgroup1.png)
 
 </div>
 
@@ -165,7 +165,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/newgroup2.png)
 
 </div>
 
@@ -177,6 +177,6 @@ To delete a group, click on `Delete` next to it. It will confirm whether you wan
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup.png)
+![Insight - Managing Users and Groups](/img/tutorial/manage-users-groups/deletegroup.png)
 
 </div>

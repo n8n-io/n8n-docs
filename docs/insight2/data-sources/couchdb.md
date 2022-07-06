@@ -9,7 +9,7 @@ Insight can connect to CouchDB databases to read and write data. CocuhDB uses ba
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch.gif)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/auth_couch.gif)
 
 </div>
 
@@ -50,7 +50,7 @@ include_docs (boolean) – include_docs key is set to false by default , if true
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/listing.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/listing.png)
 
 </div>
 
@@ -95,7 +95,7 @@ Example response from CouchDb:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/retrieving.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/retrieving.png)
 
 </div>
 
@@ -118,7 +118,7 @@ The returned JSON is the JSON of the document, including the document ID and rev
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/creating.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/creating.png)
 
 </div>
 
@@ -156,7 +156,7 @@ You get the document as JSON in the response. For each update to the document, t
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/updating.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/updating.png)
 
 </div>
 
@@ -190,7 +190,7 @@ Example response from CouchDb:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/deleting.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/deleting.png)
 
 </div>
 
@@ -222,7 +222,7 @@ selector syntax: https://pouchdb.com/guides/mango-queries.html
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/find.png)
 
 </div>
 
@@ -251,7 +251,7 @@ Example response from CouchDb:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find_response.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/find_response.png)
 
 </div>
 
@@ -266,7 +266,7 @@ Reference for view :https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#wha
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/get_view.png)
+![Insight - Data source - CouchDb](/img/datasource-reference/couchdb/get_view.png)
 
 </div>
 

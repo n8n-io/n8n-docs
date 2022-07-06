@@ -13,19 +13,19 @@ The data sources are created on app level and not on workspace level.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/add-datasource.png)
+![Insight - Tutorial - Adding a data source](/img/tutorial/adding-datasource/add-datasource.png)
 
 </div>
 
-You will be prompted to select the data source that you wish to add. Let's select PostgreSQL for this tutorial. You will then need to provide the credentials of your PostgreSQL database. The fields that are marked as `encrypted` will be encrypted before saving to Insight's database.
+You will be prompted to select the data source that you wish to add. Let's select PostgreSQL for this tutorial. You will then need to provide the credentials of your PostgreSQL database. The fields that are marked as `encrypted` will be encrypted before saving to Insight's database. 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/datasources.png)
+![Insight - Tutorial - Adding a data source](/img/tutorial/adding-datasource/datasources.png)
 
 </div>
 
-The name of the data source must be unique (within the app) and can be changed by clicking on the data source name at the top of the prompt. Click on `Test Connection` button to verify the connection, this might take a couple of minutes. Once verified, save the data source.
+The name of the data source must be unique (within the app) and can be changed by clicking on the data source name at the top of the prompt. Click on `Test Connection` button to verify the connection, this might take a couple of minutes. Once verified, save the data source. 
 
 :::tip
 If you are using Insight cloud and if your data source is not publicly accessible, please white-list our IP address ( shown while creating a new data source ).
@@ -33,6 +33,6 @@ If you are using Insight cloud and if your data source is not publicly accessibl
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/postgres.png)
+![Insight - Tutorial - Adding a data source](/img/tutorial/adding-datasource/postgres.png)
 
 </div>

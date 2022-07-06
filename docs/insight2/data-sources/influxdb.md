@@ -22,7 +22,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxauth.png)
+![Insight - Data source - influxDB](/img/datasource-reference/influxdb/influxauth.png)
 
 </div>
 
@@ -52,7 +52,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/operations.png)
+![Insight - Data source - influxDB](/img/datasource-reference/influxdb/operations.png)
 
 </div>
 

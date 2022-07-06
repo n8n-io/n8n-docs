@@ -38,8 +38,8 @@ The start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request node
 
-1. Enter `https://docs.n8n.io/assets/_images/insight2/n8n-logo.png` in the ***URL*** field.
-2. Select the 'File' option from the ***Response Format*** dropdown list.
+1. Enter `https://docs.n8n.io/assets/img/n8n-logo.png` in the ***URL*** field.
+2. Select the 'File' option from the ***Response Format*** dropdown list. 
 3. Click on ***Execute Node*** to run the node.
 
 ![Using the HTTP Request node to get an image](/_images/integrations/core-nodes/writebinaryfile/httprequest_node.png)

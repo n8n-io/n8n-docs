@@ -12,7 +12,7 @@ The Text Input should be preferred when user input is a single line of text.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Text input](/_images/insight2/widgets/text-input/textinput.png)
+![Insight - Widget Reference - Text input](/img/widgets/text-input/textinput.png)
 
 </div>
 
@@ -66,7 +66,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ### Border Radius
 
-Use this property to modify the border radius of the widget. The field expects only numerical value from `1` to `100`, default is `0`.
+Use this property to modify the border radius of the widget. The field expects only numerical value from `1` to `100`, default is `0`. 
 ### Visibility
 
 This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.

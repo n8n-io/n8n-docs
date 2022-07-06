@@ -21,7 +21,7 @@ A Oracle DB can be connected with the following credentails:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - OracleDB](/_images/insight2/datasource-reference/oracledb/oracleauth.png)
+![Insight - Data source - OracleDB](/img/datasource-reference/oracledb/oracleauth.png)
 
 </div>
 

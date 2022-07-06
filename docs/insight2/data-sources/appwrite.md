@@ -24,7 +24,7 @@ To connect Appwrite datasource to your Insight application, go to the data sourc
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init.gif)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite-init.gif)
 
 </div>
 
@@ -34,7 +34,7 @@ After setting up the Appwrite datasource, you can click on the `+` button of the
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query.gif)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite-query.gif)
 
 </div>
 
@@ -70,7 +70,7 @@ This operation can be used to get a list of all the user documents.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_list.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_list.png)
 
 </div>
 
@@ -86,7 +86,7 @@ Use this operation to get a document from a collection by its unique ID.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_get.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_get.png)
 
 </div>
 
@@ -102,7 +102,7 @@ Use this operation to create a new document in a collection.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_add.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_add.png)
 
 </div>
 
@@ -120,7 +120,7 @@ Use this operation to update a document.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_update.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_update.png)
 
 </div>
 
@@ -136,7 +136,7 @@ Use this operation for deleting a document in collection.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_delete.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_delete.png)
 
 </div>
 
@@ -155,6 +155,6 @@ and these objects must contain a key value pair to point unique record in the da
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_bulk.png)
+![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_bulk.png)
 
 </div>

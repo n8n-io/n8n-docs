@@ -11,7 +11,7 @@ Clicking on `Preview` will open up the currently opened version of the app in th
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
+![Insight - Managing Users and Groups](/img/tutorial/sharing/preview.gif)
 
 </div>
 
@@ -23,7 +23,7 @@ Once you have released a version of your app, you can share the app with others 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/share.png)
+![Insight - Managing Users and Groups](/img/tutorial/sharing/share.png)
 
 </div>
 
@@ -31,7 +31,7 @@ Once you have released a version of your app, you can share the app with others 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/toggle.png)
+![Insight - Managing Users and Groups](/img/tutorial/sharing/toggle.png)
 
 </div>
 
@@ -39,7 +39,7 @@ Once you have released a version of your app, you can share the app with others 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/url.png)
+![Insight - Managing Users and Groups](/img/tutorial/sharing/url.png)
 
 </div>
 
@@ -47,6 +47,6 @@ Once you have released a version of your app, you can share the app with others 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/embedd.png)
+![Insight - Managing Users and Groups](/img/tutorial/sharing/embedd.png)
 
 </div>

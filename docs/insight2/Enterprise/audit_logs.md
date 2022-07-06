@@ -6,7 +6,7 @@ title: Audit logs
 
 The audit log is the report of all the activities done in your Insight account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
 
-<img class="screenshot-full" src="/_images/insight2/enterprise/audit_logs/audit_logs.gif" alt="Insight - Enterprise - Audit logs" height="420"/>
+<img class="screenshot-full" src="/img/enterprise/audit_logs/audit_logs.gif" alt="Insight - Enterprise - Audit logs" height="420"/>
 
 ### Filter audit logs
 
@@ -14,7 +14,7 @@ Audited events can be filtered using the below characteristics:
 
 #### Select Users
 
-Select a specific user from this dropdown to check all their activities.
+Select a specific user from this dropdown to check all their activities. 
 
 #### Select Apps
 
@@ -57,7 +57,7 @@ It is mandatory to set a Data Range in `From` and `To` to filter audit logs.
 
 ### Understanding information from logs
 
-<img class="screenshot-full" src="/_images/insight2/enterprise/audit_logs/reading_logs.png" alt="Insight - Enterprise - Reading logs" />
+<img class="screenshot-full" src="/img/enterprise/audit_logs/reading_logs.png" alt="Insight - Enterprise - Reading logs" />
 
 | Property  | description |
 | ----------- | ----------- |

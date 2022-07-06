@@ -36,7 +36,7 @@ Insight requires the config json downloaded from your account to connect to BigQ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-create.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-create.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-query.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-query.png)
 
 </div>
 
@@ -93,7 +93,7 @@ Retruns list of datasets.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_datasets.png)
 
 </div>
 
@@ -111,7 +111,7 @@ Return list of tables within a dataset
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_tables.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_tables.png)
 
 </div>
 
@@ -122,7 +122,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/query.png)
 
 </div>
 
@@ -131,7 +131,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-insert.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-insert.png)
 
 </div>
 
@@ -140,7 +140,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-delete.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-delete.png)
 
 </div>
 
@@ -152,7 +152,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-update.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-update.png)
 
 </div>
 
@@ -165,7 +165,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-view.png)
+![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-view.png)
 
 </div>
 

@@ -10,7 +10,7 @@ Insight can run Redis commands on your Redis instances.
 
 Insight requires the following to connect to your Redis instances. 
 
-<img class="screenshot-full" src="/_images/insight2/redis/connect.png" alt="Insight - Redis connection" height="250"/>
+<img class="screenshot-full" src="/img/redis/connect.png" alt="Insight - Redis connection" height="250"/>
 
 - **Host**
 - **Port** - The default port for Redis server is 6379

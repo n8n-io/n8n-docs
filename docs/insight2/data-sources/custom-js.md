@@ -9,7 +9,7 @@ You can write custom JavaScript code to interact with components and queries. To
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Custom JavaScript](/_images/insight2/datasource-reference/custom-javascript/custom-javascript.png)
+![Insight - Data source - Custom JavaScript](/img/datasource-reference/custom-javascript/custom-javascript.png)
 
 </div>
 
@@ -33,7 +33,7 @@ The return value is used as the `data` of the query.
 
 <div style={{textAlign: 'center'}}>
 
-![Display random number using JS](/_images/insight2/datasource-reference/custom-javascript/jsrandom.gif)
+![Display random number using JS](/img/datasource-reference/custom-javascript/jsrandom.gif)
 
 </div>
 

@@ -8,7 +8,7 @@ The Datepicker widget allows users to select a single value for date and time fr
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Date range picker](/_images/insight2/widgets/datepicker/datepicker.png)
+![Insight - Widget Reference - Date range picker](/img/widgets/datepicker/datepicker.png)
 
 </div>
 

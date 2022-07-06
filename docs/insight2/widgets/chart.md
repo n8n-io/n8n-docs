@@ -31,7 +31,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/linec.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/linec.png)
 
 </div>
 
@@ -59,7 +59,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/barc.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/barc.png)
 
 </div>
 
@@ -84,7 +84,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/piec.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/piec.png)
 
 </div>
 
@@ -100,13 +100,13 @@ This field is used to add a title to your selected chart.
 
 ### Plotly JSON chart schema
 
-In the chart widget, you can also plot a chart with JSON data. So the JSON will contain the information about the chart type, chart data, etc. You can learn more about the JSON properties from [here](https://plotly.com/javascript/reference/).
+In the chart widget, you can also plot a chart with JSON data. So the JSON will contain the information about the chart type, chart data, etc. You can learn more about the JSON properties from [here](https://plotly.com/javascript/reference/). 
 
 Anyway, to work with the JSON you need to enable the `Use Plotly JSON schema` toggle from the properties section.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/pfjson.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/pfjson.png)
 
 </div>
 
@@ -116,7 +116,7 @@ The end result will be like this:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/jsonschema.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/jsonschema.png)
 
 </div>
 
@@ -140,7 +140,7 @@ Toggle `on` or `off` to show or hide the grid lines on the chart. You can also p
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/layout.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/layout.png)
 
 </div>
 
@@ -155,7 +155,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/styles.png)
+![Insight - Widget Reference - Chart](/img/widgets/chart/styles.png)
 
 </div>
 

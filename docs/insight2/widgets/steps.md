@@ -8,7 +8,7 @@ Steps are used to guide users through complex processes, making them easier and 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Star rating Widget](/_images/insight2/widgets/steps/steps.png)
+![Insight - Star rating Widget](/img/widgets/steps/steps.png)
 
 </div>
 

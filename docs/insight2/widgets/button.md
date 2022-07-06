@@ -13,7 +13,7 @@ Button widget can be used to take actions.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Button Action List](/_images/insight2/widgets/button/button-actions.png)
+![Insight - Widget Reference - Button Action List](/img/widgets/button/button-actions.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - widget- button](/_images/insight2/widgets/button/properties.png)
+![Insight - widget- button](/img/widgets/button/properties.png)
 
 </div>
 
@@ -42,7 +42,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - widget- button](/_images/insight2/widgets/list-view/listlayout.png)
+![Insight - widget- button](/img/widgets/list-view/listlayout.png)
 
 </div>
 
@@ -55,12 +55,12 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - widget- button](/_images/insight2/widgets/button/styles.png)
+![Insight - widget- button](/img/widgets/button/styles.png)
 
 </div>
 
 | Style      | Description |
-| ----------- | ----------- |
+| ----------- | ----------- | 
 | Background color |  You can change the background color of the widget by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Text color |  You can change the color of the Text in button by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |

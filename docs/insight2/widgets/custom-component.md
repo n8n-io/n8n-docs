@@ -9,7 +9,7 @@ Custom Component can be used to do create your own React component when the need
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Timeline](/_images/insight2/widgets/custom-component/custom-component.png)
+![Insight - Widget Reference - Timeline](/img/widgets/custom-component/custom-component.png)
 
 </div>
 

@@ -18,7 +18,7 @@ Insight is an **open-source low-code framework** to build and deploy custom inte
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/_images/insight2/introduction/how-it-works.png)
+![Insight - List view widget](/_images/insight2/introduction/how-it-works.pngg)
 
 </div>
 

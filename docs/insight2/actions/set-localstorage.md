@@ -21,7 +21,8 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 <img src="/_images/insight2/sample-app-2.png" alt="Set local storage sample app" height="350" />
 
 3. Select the text label we've added and set its value to the name item from localStorage
-<img src="(/_images/insight2/sample-app-3.png)" alt="Set local storage sample app" height="150" />
+
+<img src="/_images/insight2/sample-app-3.png" alt="Set local storage sample app" height="150" />
 
 4. Now save the application, this is important as we're about to reload the page.
 

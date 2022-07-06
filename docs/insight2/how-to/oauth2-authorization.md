@@ -33,9 +33,9 @@ Let's follow the steps to authorize Insight to access your Google profile data:
 
 - Select **add data source** from the left sidebar, and choose **REST API** from the dialog window.
 
-:::info
+
 You can rename the data source by clicking on its default name `REST API`
-:::
+
 
 - In the **URL** field, enter the base URL `https://www.googleapis.com/oauth2/v1/userinfo`; the base URL specifies the network address of the API service.
 - Select authentication type as `OAuth 2.0`

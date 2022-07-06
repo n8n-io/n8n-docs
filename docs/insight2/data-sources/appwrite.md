@@ -44,7 +44,7 @@ After setting up the Appwrite datasource, you can click on the `+` button of the
 After selecting Appwrite datasource, select the operation that you want to perform on Appwrite database and click **Save** to save the query.
 
 :::tip
-Query results can be transformed using Transformations. Read our **Transformation documentation** [here](/docs/tutorial/transformations)
+Query results can be transformed using Transformations. Read our **Transformation documentation** [here](/insight2/tutorial/transformations/)
 :::
 
 ## Supported operations

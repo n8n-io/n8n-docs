@@ -29,7 +29,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage.png)
 
-</div>
+
 
 - Now enter the details of new user such as first name, last name, email, and then click on the **Create User**.
 
@@ -37,21 +37,21 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser.png)
 
-</div>
+
 
 - An email including the **Invite Link** to join your workspace will be send to the created user. The status will turn from **invited** to **active** after the user successfully joins your workspace using the invite link.
 
-:::tip
+
 
 You can also copy the invitation url by clicking on the copy icon next to `invited` status of the created user.
 
-:::
+
 
 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
 
-</div>
+
 
 ### Disabling a user's access
 
@@ -61,7 +61,6 @@ You can disable any active user's access to your workspace by clicking on the **
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived.png)
 
-</div>
 
 ### Enabling a user's access
 
@@ -71,7 +70,7 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
 
-</div>
+
 
 ## Managing Groups
 
@@ -81,7 +80,7 @@ On Insight, Admins can create groups for users added in a workspace and grant th
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2.png)
 
-</div>
+
 
 ### Group properties
 
@@ -95,7 +94,7 @@ Admins can add or remove any number of apps for a group of users. To add an app 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps.png)
 
-</div>
+
 
 #### Users:
 
@@ -105,7 +104,7 @@ Admins can add or remove any numbers of users in a group. Just select a user fro
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users.png)
 
-</div>
+
 
 #### Permissions:
 
@@ -115,13 +114,13 @@ Admins can set granular permission like creating/deleting apps or creating folde
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions.png)
 
-</div>
 
-:::tip
+
+
 
 All the activities performed by any Admin or any user in a workspace is logged in `Audit logs` - including any activity related with managing users and groups.
 
-:::
+
 
 ### Predefined Groups
 
@@ -139,7 +138,7 @@ This group contains all the users and admins.
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers.png)
 
-</div>
+
 
 **2. Admin**
 
@@ -153,7 +152,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin.png)
 
-</div>
+
 
 ### Creating new group
 
@@ -163,7 +162,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1.png)
 
-</div>
+
 
 - Enter a name for the group and click `Create Group` button.
 
@@ -171,7 +170,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2.png)
 
-</div>
+
 
 - Once the group is created, you can add **Apps**, **Users** and set their **Properties** for that group.
 
@@ -183,4 +182,4 @@ To delete a group, click on `Delete` next to it. It will confirm whether you wan
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup.png)
 
-</div>
+

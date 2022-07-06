@@ -22,7 +22,7 @@ Airtable API has a rate limit, and at the time of writing this documentation, th
 :::
 
 :::tip
-This guide assumes that you have already gone through [Adding a data source](/docs/tutorial/adding-a-datasource) tutorial.
+This guide assumes that you have already gone through [Adding a data source](/insight2/tutorial/adding-a-datasource/) tutorial.
 :::
 
 ## Supported queries

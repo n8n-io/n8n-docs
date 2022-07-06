@@ -107,6 +107,7 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 
 
+
 ![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/success.png)
 
 

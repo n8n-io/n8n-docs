@@ -8,9 +8,9 @@ tags:
 
 # Creating new app
 
-:::info
+
 Apps in Insight binds the widgets, data sources and queries together.
-:::
+
 
 This tutorial will walk you through building a simple app to fetch customer information from a PostgreSQL database and display the data using the table widget.
 To create a new Insight app, click on the **'Create new application'** button on the Insight dashboard.

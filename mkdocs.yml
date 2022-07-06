@@ -301,6 +301,11 @@ nav:
     - Introduction: insight2/intro.md
     - IN² Examples:
       - insight2/examples/index.md
+      - Change text color in columns of the table: insight2/how-to/access-cellvalue-rowdata.md
+      - Bulk update multiple rows in table: insight2/how-to/bulk-update-multiple-rows-in-table.md
+      - REST API authentication using OAuth 2.0: insight2/how-to/oauth2-authorization.md
+      - Upload files on AWS S3 bucket: insight2/how-to/upload-files-aws.md
+      - Upload files using GCS: insight2/how-to/upload-files-gcs.md
     - Actions: insight2/tutorial/actions.md
     - Data-Sources: 
       - Overview: insight2/data-sources/index.md

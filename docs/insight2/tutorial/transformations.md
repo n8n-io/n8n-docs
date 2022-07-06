@@ -21,11 +21,13 @@ return data.map((row) => {
 });
 ```
 
+
 The query will now look like this:
 
 
 
 ![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform.png)
+
 
 
 
@@ -37,11 +39,13 @@ Click the `create` button to create the query. Saved queries can be run using th
 
 
 
+
 We can see that `first_name` and `last_name` are added to all the rows in the `data` object of the query. If you need the original data of the query, it will be available in the `rawData` object of the query.
 
 
 
 ![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/rawdata.png)
+
 
 
 

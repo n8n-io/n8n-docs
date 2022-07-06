@@ -39,7 +39,7 @@ Insight requires the config json downloaded from your account to connect to BigQ
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-create.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-create.png)
 
 
 
@@ -51,7 +51,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-query.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-query.png)
 
 
 

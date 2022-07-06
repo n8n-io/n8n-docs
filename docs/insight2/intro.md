@@ -18,7 +18,7 @@ Insight is an **open-source low-code framework** to build and deploy custom inte
 
 
 
-![Insight - List view widget](/_images/insight2/introduction/how-it-works.pngg)
+![Insight - List view widget](/_images/insight2/introduction/how-it-works.png)
 
 
 

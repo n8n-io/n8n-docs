@@ -299,6 +299,8 @@ nav:
       - Keyboard Shortcuts: insight2/tutorial/keyboard-shortcuts.md
       - Multi-Workspace: insight2/tutorial/multiworkspace.md
     - Introduction: insight2/intro.md
+    - IN² Examples:
+      - insight2/examples/index.md
     - Actions: insight2/tutorial/actions.md
     - Data-Sources: 
       - Overview: insight2/data-sources/index.md

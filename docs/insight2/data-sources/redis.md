@@ -1,6 +1,9 @@
 ---
-id: redis
 title: Redis
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Redis

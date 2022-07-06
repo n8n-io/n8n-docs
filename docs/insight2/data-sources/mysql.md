@@ -1,6 +1,9 @@
 ---
-id: mysql
 title: MySQL
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # MySQL

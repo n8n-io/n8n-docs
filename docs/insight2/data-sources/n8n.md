@@ -1,6 +1,9 @@
 ---
-id: n8n
 title: n8n
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # n8n

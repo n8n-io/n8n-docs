@@ -1,8 +1,12 @@
 ---
-id: rethinkdb
-title: Rethinkdb
+title: RethinkDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
-# Rethinkdb
+
+# RethinkDB
 
 Insight can connect to rethinkdb databases to read and write data. For more info visit::https://rethinkdb.com/api/javascript/.com/
 

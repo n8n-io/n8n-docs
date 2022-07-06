@@ -1,7 +1,11 @@
 ---
-id: notion
 title: Notion
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
+
 # Notion
 
 Insight can connect to a Notion workspace to do operations on notion pages, databases and blocks.

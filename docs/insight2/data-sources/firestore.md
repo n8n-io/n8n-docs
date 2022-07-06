@@ -5,7 +5,7 @@ title: Cloud Firestore
 
 # Cloud Firestore
 
-## Connection 
+## Connection
 Insight connects to your Cloud Firestore using JSON key of your GCP service account.
 To generate a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
@@ -13,21 +13,21 @@ Once the key is downloaded, click on `+` button of data sources panel at the lef
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/add-ds-firestore.gif)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-ds-firestore.gif)
 
 </div>
 
-## Querying Firestore 
+## Querying Firestore
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/firestore-query.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/firestore-query.png)
 
 </div>
 
-Select the operation that you want to perform on Firestore and click **Save** to save the query. 
+Select the operation that you want to perform on Firestore and click **Save** to save the query.
 
 :::tip
 Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/docs/tutorial/transformations)**
@@ -36,8 +36,8 @@ Query results can be transformed using transformations. Read our transformations
 ## Supported operations
 1. [Get document](#get-document)
 2. [Query collection](#query-collection)
-3. [Add Document to Collection](#add-document-to-collection) 
-4. [Update document](#update-document) 
+3. [Add Document to Collection](#add-document-to-collection)
+4. [Update document](#update-document)
 5. [Set document](#set-document)
 6. [Bulk update using document id](#bulk-update-using-document-id)
 7. [Delete document](#delete-document)
@@ -52,7 +52,7 @@ Use this operation to get the data in a document.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/get.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/get.png)
 
 </div>
 
@@ -74,7 +74,7 @@ Use this operation to query all the documents in a collection. Check firestore d
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/query-collection.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/query-collection.png)
 
 </div>
 
@@ -95,7 +95,7 @@ Use this operation for creating a new document in a collection.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/add-document.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-document.png)
 
 </div>
 
@@ -116,7 +116,7 @@ Use this operation for updating the existing document in a collection. Also, it 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/update.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/update.png)
 
 </div>
 
@@ -137,7 +137,7 @@ This operation replaces your chosen object with the value that you provide. So i
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/set.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/set.png)
 
 </div>
 
@@ -147,14 +147,14 @@ Use this operation for bulk updating documents.
 
 #### Required parameters:
 
-- **Collection**: 
-- **Key for document ID**: 
+- **Collection**:
+- **Key for document ID**:
 - **Records**:
 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/bulk.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/bulk.png)
 
 </div>
 
@@ -168,7 +168,7 @@ Use this operation for deleting a document in a collection.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Firestore](/img/datasource-reference/firestore/delete.png)
+![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/delete.png)
 
 </div>
 

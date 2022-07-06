@@ -8,7 +8,7 @@ The date-range picker widget allows users to select a range of dates.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Date range picker](/img/widgets/date-range-picker/date-range.gif)
+![Insight - Widget Reference - Date range picker](/_images/insight2/widgets/date-range-picker/date-range.gif)
 
 </div>
 
@@ -31,7 +31,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ### Border Radius
 
-Use this property to modify the border radius of the date range picker. The field expects only numerical value from `1` to `100`, default is `0`. 
+Use this property to modify the border radius of the date range picker. The field expects only numerical value from `1` to `100`, default is `0`.
 ### Visibility
 
 This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.

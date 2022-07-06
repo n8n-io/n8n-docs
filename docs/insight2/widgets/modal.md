@@ -8,7 +8,7 @@ Modal widget renders in front of a backdrop, and it blocks interaction with the 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Modal](/img/widgets/modal/modal1.gif)
+![Insight - Widget Reference - Modal](/_images/insight2/widgets/modal/modal1.gif)
 
 </div>
 
@@ -20,7 +20,7 @@ To add widgets to the Modals please refer to **[Tutorial - Adding widgets to a m
 
 ### Title
 
-Title that should be shown on the header of the modal. 
+Title that should be shown on the header of the modal.
 
 ### Modal size
 

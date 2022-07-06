@@ -5,11 +5,11 @@ title: Versioning and Release
 
 # Versioning and Release
 
-Versioning and Release lets you version control your apps and release app changes to the users. 
+Versioning and Release lets you version control your apps and release app changes to the users.
 
 ## Versioning
 
-Versioning is really useful if multiple developers are working on an app, it allows them to save their own version of the app. This also prevents developers from overwriting the other developer's work. 
+Versioning is really useful if multiple developers are working on an app, it allows them to save their own version of the app. This also prevents developers from overwriting the other developer's work.
 
 ### Creating a Version
 
@@ -19,7 +19,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/img/tutorial/versioning-and-release/appversion.png)
+![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/appversion.png)
 
 </div>
 
@@ -27,7 +27,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/img/tutorial/versioning-and-release/modal.png)
+![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/modal.png)
 
 </div>
 
@@ -43,7 +43,7 @@ To release a version:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/img/tutorial/versioning-and-release/versiondropdown.png)
+![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/versiondropdown.png)
 
 </div>
 
@@ -51,18 +51,18 @@ To release a version:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/img/tutorial/versioning-and-release/release.png)
+![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/release.png)
 
 </div>
 
 
-:::tip 
+:::tip
 
 Insight will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Managing Users and Groups](/img/tutorial/versioning-and-release/prompt.png)
+![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/prompt.png)
 
 </div>
 

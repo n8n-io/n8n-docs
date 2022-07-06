@@ -5,7 +5,7 @@ title: Oracle DB
 
 # Oracle DB
 
-Insight can connect to Oracle databases to read and write data. 
+Insight can connect to Oracle databases to read and write data.
 
 ## Connection
 
@@ -21,7 +21,7 @@ A Oracle DB can be connected with the following credentails:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - OracleDB](/img/datasource-reference/oracledb/oracleauth.png)
+![Insight - Data source - OracleDB](/_images/insight2/datasource-reference/oracledb/oracleauth.png)
 
 </div>
 
@@ -42,7 +42,7 @@ SQL mode can be used to write raw SQL queries. Select SQL mode from the dropdown
 
 #### GUI mode
 
-GUI mode can be used to query Oracle database without writing queries. Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the records in the form of an array of objects. 
+GUI mode can be used to query Oracle database without writing queries. Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the records in the form of an array of objects.
 
 **Example**: `{{ [ {id: 1, channel: 33}, {id:2, channel:24} ] }}`
 

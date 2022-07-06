@@ -5,7 +5,7 @@ title: MySQL
 
 # MySQL
 
-Insight can connect to MySQL databases to read and write data. 
+Insight can connect to MySQL databases to read and write data.
 
 ## Connection
 
@@ -20,11 +20,11 @@ Insight requires the following to connect to your MySQL database.
 - **Username**
 - **Password**
 
-It is recommended to create a new MySQL database user so that you can control the access levels of Insight. 
+It is recommended to create a new MySQL database user so that you can control the access levels of Insight.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - MySQL](/img/datasource-reference/mysql/mysql.png)
+![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql.png)
 
 </div>
 
@@ -45,20 +45,20 @@ SQL mode can be used to write raw SQL queries. Select SQL mode from the dropdown
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - MySQL](/img/datasource-reference/mysql/mysql-sqlmode.png)
+![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-sqlmode.png)
 
 </div>
 
 
 #### GUI mode
 
-GUI mode can be used to query MySQL database without writing queries. Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the records in the form of an array of objects. 
+GUI mode can be used to query MySQL database without writing queries. Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the records in the form of an array of objects.
 
 **Example**: `{{ [ {id: 1, channel: 33}, {id:2, channel:24} ] }}`
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - MySQL](/img/datasource-reference/mysql/mysql-guimode.png)
+![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-guimode.png)
 
 </div>
 

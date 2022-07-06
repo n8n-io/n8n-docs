@@ -9,7 +9,7 @@ Timeline widget can be used to do a visual representation of a sequence of event
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Timeline](/img/widgets/timeline/timeline.png)
+![Insight - Widget Reference - Timeline](/_images/insight2/widgets/timeline/timeline.png)
 
 </div>
 
@@ -21,10 +21,10 @@ Timeline widget can be used to do a visual representation of a sequence of event
 
 **Example:**
 ```json
-[ 
+[
     { "title": "Product Launched", "subTitle": "First version of our product released to public", "date": "20/10/2021", "iconBackgroundColor": "#4d72fa"},
-    { "title": "First Signup", "subTitle": "Congratulations! We got our first signup", "date": "22/10/2021", "iconBackgroundColor": "#4d72fa"}, 
-    { "title": "First Payment", "subTitle": "Hurray! We got our first payment", "date": "01/11/2021", "iconBackgroundColor": "#4d72fa"} 
+    { "title": "First Signup", "subTitle": "Congratulations! We got our first signup", "date": "22/10/2021", "iconBackgroundColor": "#4d72fa"},
+    { "title": "First Payment", "subTitle": "Hurray! We got our first payment", "date": "01/11/2021", "iconBackgroundColor": "#4d72fa"}
 ]
 ```
 
@@ -43,7 +43,7 @@ Hide date can be used to hide the date time or Left Hand Side of the timeline wi
 ## Styles
 
 | Style      | Description |
-| ----------- | ----------- | 
+| ----------- | ----------- |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
 
 :::info

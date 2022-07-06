@@ -7,7 +7,7 @@ title: Appwrite Database
 
 Now build applications on top of your Appwrite database.
 
-## Connection 
+## Connection
 
 Insight connects to your Appwrite app using :
 - **Host (API endpoint)**
@@ -24,21 +24,21 @@ To connect Appwrite datasource to your Insight application, go to the data sourc
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite-init.gif)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init.gif)
 
 </div>
 
-## Querying Appwrite 
+## Querying Appwrite
 
 After setting up the Appwrite datasource, you can click on the `+` button of the query manager at the bottom panel of the editor and select the Appwrite data source that you added in the previous step.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite-query.gif)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query.gif)
 
 </div>
 
-After selecting Appwrite datasource, select the operation that you want to perform on Appwrite database and click **Save** to save the query. 
+After selecting Appwrite datasource, select the operation that you want to perform on Appwrite database and click **Save** to save the query.
 
 :::tip
 Query results can be transformed using Transformations. Read our **Transformation documentation** [here](/docs/tutorial/transformations)
@@ -49,7 +49,7 @@ Query results can be transformed using Transformations. Read our **Transformatio
 1.  **[List documents](#list-documents)**
 2.  **[Get document](#get-document)**
 3.  **[Create document](#create-document)**
-4.  **[Update document](#update-document)** 
+4.  **[Update document](#update-document)**
 5.  **[Delete document](#delete-document)**
 6.  **[Bulk update using document id](#bulk-update-using-document-id)**
 
@@ -59,9 +59,9 @@ This operation can be used to get a list of all the user documents.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID field should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID field should be of `String` type.
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Limit:** Maximum number of documents to return in response. By default will return maximum 25 results. Maximum of 100 results allowed per request. The Limit value should be of `integer` type.
 - **Order fields:** Array of attributes used to sort results. The order field value should be an `array`.
@@ -70,23 +70,23 @@ This operation can be used to get a list of all the user documents.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_list.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_list.png)
 
 </div>
 
 ### Get document
 
-Use this operation to get a document from a collection by its unique ID. 
+Use this operation to get a document from a collection by its unique ID.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type.
 
-- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type. 
+- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_get.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_get.png)
 
 </div>
 
@@ -96,13 +96,13 @@ Use this operation to create a new document in a collection.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The collection ID should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The collection ID should be of `String` type.
 
 - **Body:** Enter the document data as JSON object.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_add.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_add.png)
 
 </div>
 
@@ -112,15 +112,15 @@ Use this operation to update a document.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type.
 
-- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type. 
+- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type.
 
 - **Body:** Enter the document data as JSON object.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_update.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_update.png)
 
 </div>
 
@@ -130,13 +130,13 @@ Use this operation for deleting a document in collection.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type.
 
-- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type. 
+- **Document ID:** Enter the document ID of the document that you want to get. The document ID should be of `String` type.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_delete.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_delete.png)
 
 </div>
 
@@ -146,7 +146,7 @@ Use this operation for bulk updating a documents in a collection.
 
 #### Required parameters:
 
-- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type. 
+- **Collection ID:** You can create a new collection using the Database service [server integration](https://appwrite.io/docs/server/database#createCollection) or appwrite console. The value for collection ID should be of `String` type.
 
 - **Key for document ID:**  Enter the key or attribute name that can be used to identify each record.
 
@@ -155,6 +155,6 @@ and these objects must contain a key value pair to point unique record in the da
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - Appwrite](/img/datasource-reference/appwrite/appwrite_bulk.png)
+![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_bulk.png)
 
 </div>

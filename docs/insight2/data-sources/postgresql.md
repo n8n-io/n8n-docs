@@ -5,7 +5,7 @@ title: PostgreSQL
 
 # PostgreSQL
 
-Insight can connect to PostgreSQL databases to read and write data. 
+Insight can connect to PostgreSQL databases to read and write data.
 
 ## Connection
 
@@ -24,7 +24,7 @@ It is recommended to create a new PostgreSQL database user so that you can contr
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - PostgreSQL](/img/datasource-reference/postgresql/pgconnect.png)
+![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pgconnect.png)
 
 </div>
 
@@ -42,19 +42,19 @@ Select SQL mode from the dropdown and enter the query in the editor. Click on th
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - PostgreSQL](/img/datasource-reference/postgresql/pg-sql.png)
+![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-sql.png)
 
 </div>
 
 #### GUI mode
 
-Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the **records** in the form of an array of objects. 
+Select GUI mode from the dropdown and then choose the operation **Bulk update using primary key**. Enter the **Table** name and **Primary key column** name. Now, in the editor enter the **records** in the form of an array of objects.
 
 Click on the `run` button to run the query. **NOTE**: Query should be saved before running.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - PostgreSQL](/img/datasource-reference/postgresql/pg-gui.png)
+![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-gui.png)
 
 </div>
 

@@ -6,7 +6,7 @@ title: MS SQL Server / Azure SQL databases
 # MS SQL Server / Azure SQL databases
 
 
-Insight can connect to MS SQL Server & Azure SQL databases to read and write data. 
+Insight can connect to MS SQL Server & Azure SQL databases to read and write data.
 
 ## Connection
 
@@ -22,19 +22,19 @@ Insight requires the following to connect to your PostgreSQL database.
 - **Password**
 - **Azure** - Select this option if you are using Azure SQL databases.
 
-It is recommended to create a new database user so that you can control the access levels of Insight. 
+It is recommended to create a new database user so that you can control the access levels of Insight.
 
 Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight server. Click on 'Save' button to save the data source.
 
-<img src="/img/datasource-reference/mssql/connect.gif" alt="Insight - Redis connection" height="420"/>
+<img src="/_images/insight2/datasource-reference/mssql/connect.gif" alt="Insight - Redis connection" height="420"/>
 
 
 ## Querying SQL Server / Azure SQL databases
-Click on '+' button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. 
+Click on '+' button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source.
 
 Click on the 'run' button to run the query. NOTE: Query should be saved before running.
 
-<img src="/img/datasource-reference/mssql/query.gif" alt="Insight - Redis connection" height="420"/>
+<img src="/_images/insight2/datasource-reference/mssql/query.gif" alt="Insight - Redis connection" height="420"/>
 
 
 :::tip

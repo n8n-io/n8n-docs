@@ -8,7 +8,7 @@ Star rating widget can be used to display as well as input ratings. The widget s
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Star rating Widget](/img/widgets/star/star-rating.png)
+![Insight - Star rating Widget](/_images/insight2/widgets/star/star-rating.png)
 
 </div>
 

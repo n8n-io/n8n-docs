@@ -4,31 +4,31 @@ title: Calendar
 ---
 # Calendar
 
-Calendar widget comes with the following features:  
+Calendar widget comes with the following features:
 - **Day, month and week level views**
 - **Events**
 - **Resource scheduling**
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/img/widgets/calendar/calendar.png)
+![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar.png)
 
 </div>
 
 ## Properties
 
 ### Date format
-Determines the format in which any date passed to the calendar via any of the properties will be parsed.  
-It also determines the format in which any date made available by the calendar via exposed variables will be displayed.  
+Determines the format in which any date passed to the calendar via any of the properties will be parsed.
+It also determines the format in which any date made available by the calendar via exposed variables will be displayed.
 It uses the date format conventions of [moment.js](https://momentjs.com/).
 ### Default date
-Determines the date on which the calendar's view will be centered on.  
-If the calendar is on `month` view, it will show the month on which this date exists.  
-If the calendar is on `week` view, it will show the week on which this date exists.  
+Determines the date on which the calendar's view will be centered on.
+If the calendar is on `month` view, it will show the month on which this date exists.
+If the calendar is on `week` view, it will show the week on which this date exists.
 This property needs to be formatted using the `Date format` property which is configurable on the inspector.
 ### Events
 `Events` property should contain an array of objects, each of which describes the events that the calendar needs to display.
-  
+
 Assuming that you set the date format to `MM-DD-YYYY HH:mm:ss A Z`, setting the `Events` property to the following code snippet will display an event titled `Sample Event` at the first hour of this day, as displayed in the image of calendar at the beginning of this page.
 
 ```javascript
@@ -63,7 +63,7 @@ exposes any of the events via its exposed variables.
 
 ### Resources
 
-Specifying resources will make the calendar categorize `week` view and `day` view for each of the resources specified.  
+Specifying resources will make the calendar categorize `week` view and `day` view for each of the resources specified.
 
   For example, to categorize week/day view into for three rooms, we specify `resources` this way:
 
@@ -79,13 +79,13 @@ If we specify the `resourceId` of any of the events as `1`, then that event will
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/img/widgets/calendar/calendar-resource.png)
+![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar-resource.png)
 
 </div>
 
 ### Default view
 
-Determines whether the calendar would display a `day`, a `week` or a `month`.  
+Determines whether the calendar would display a `day`, a `week` or a `month`.
 Setting this property to anything other than these values will make the calendar default to `month` view.
 
 The view that is currently selected will be exposed as the variable `currentView`.
@@ -122,20 +122,20 @@ Determines whether to display a popover whenever an event is clicked. Click on `
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/img/widgets/calendar/events.png)
+![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/events.png)
 
 </div>
 
 ### On Event selected
 
-This event is fired when the user clicks on a calendar event.  
-  
+This event is fired when the user clicks on a calendar event.
+
 Last selected event is exposed as `selectedEvent`.
 
 ### on Slot selected
 
-This event is fired when the user either clicks on an calendar slot(empty cell or empty space of a cell with event) or when they click and drag to select multiple slots.  
-  
+This event is fired when the user either clicks on an calendar slot(empty cell or empty space of a cell with event) or when they click and drag to select multiple slots.
+
 Last selected slot(s) are exposed as `selectedSlots`.
 
 ### On Date Navigate
@@ -156,7 +156,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/img/widgets/calendar/layout.png)
+![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/layout.png)
 
 </div>
 
@@ -171,7 +171,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Calendar](/img/widgets/calendar/styles.png)
+![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/styles.png)
 
 </div>
 
@@ -181,7 +181,7 @@ Toggle on or off to control the visibility of the widget. You can programmatical
 
 ### Cell size in views classified by resource
 
-When `resources` are specified, the calendar could take up quite a lot of horizontal space, making the horizontal scroll bar of calendar having to be relied upon all the time.  
+When `resources` are specified, the calendar could take up quite a lot of horizontal space, making the horizontal scroll bar of calendar having to be relied upon all the time.
 
 If we set this property to `compact`, the cell sizes will be smaller in `week` and `day` views.
 

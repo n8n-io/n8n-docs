@@ -10,11 +10,11 @@ Apps in Insight binds the widgets, data sources and queries together.
 :::
 
 This tutorial will walk you through building a simple app to fetch customer information from a PostgreSQL database and display the data using the table widget.
-To create a new Insight app, click on the **'Create new application'** button on the Insight dashboard. 
+To create a new Insight app, click on the **'Create new application'** button on the Insight dashboard.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Creating an app](/img/tutorial/creating-new-app/dashboard.png)
+![Insight - Creating an app](/_images/insight2/tutorial/creating-new-app/dashboard.png)
 
 </div>
 
@@ -22,11 +22,11 @@ You will be redirected to the visual app editor once the app has been created. C
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Creating an app](/img/tutorial/creating-new-app/visual-app-editor.png)
+![Insight - Creating an app](/_images/insight2/tutorial/creating-new-app/visual-app-editor.png)
 
 </div>
 
-The main components of an app: 
+The main components of an app:
 
 - **[Widgets](https://docs.tooljet.com/docs/tutorial/adding-widget)** - UI components such as tables, buttons, dropdowns.
 - **[Data sources](https://docs.tooljet.com/docs/tutorial/adding-a-datasource)** - Insight can connect to databases, APIs and external services to fetch and modify data.

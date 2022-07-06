@@ -9,7 +9,7 @@ Insight can connect to BigQuery databases to run BigQuery queries.
 
 ## Connection
 
-Please refer [this](https://cloud.google.com/bigquery/docs/bigquery-web-ui) link to enable BigQuery API in Google Cloud Console. 
+Please refer [this](https://cloud.google.com/bigquery/docs/bigquery-web-ui) link to enable BigQuery API in Google Cloud Console.
 
 Create **Service Account** and **key**, then get your configs downloaded as **JSON**
 
@@ -36,7 +36,7 @@ Insight requires the config json downloaded from your account to connect to BigQ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-create.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-create.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-query.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-query.png)
 
 </div>
 
@@ -87,13 +87,13 @@ Query results can be transformed using transformations. Read our transformations
 
 Retruns list of datasets.
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Options:** This can be used to filter the list.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_datasets.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
 
 </div>
 
@@ -101,17 +101,17 @@ Retruns list of datasets.
 
 Return list of tables within a dataset
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Dataset:** Enter the dataset name.
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Options:** This can be used to filter the list.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_tables.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_tables.png)
 
 </div>
 
@@ -122,7 +122,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/query.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
 
 </div>
 
@@ -131,16 +131,16 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-insert.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-insert.png)
 
 </div>
 
-### Delete Record 
+### Delete Record
 - To delete a record.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-delete.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-delete.png)
 
 </div>
 
@@ -152,7 +152,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-update.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-update.png)
 
 </div>
 
@@ -165,7 +165,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-view.png)
+![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-view.png)
 
 </div>
 

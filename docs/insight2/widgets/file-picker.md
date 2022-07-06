@@ -8,7 +8,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/picker.png)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/picker.png)
 
 </div>
 
@@ -20,7 +20,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/file-type.gif)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/file-type.gif)
 
 </div>
 
@@ -32,7 +32,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/events.png)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/events.png)
 
 </div>
 
@@ -54,7 +54,7 @@ Creates a drag & drop zone. Files can be dragged and dropped to the "drag & drop
 
 On clicking it invokes the default OS file prompt.
 
-### Pick mulitple files 
+### Pick mulitple files
 
 Allows drag and drop (or selection from the file dialog) of multiple files. `Pick multiple files` is disabled by default.
 
@@ -76,7 +76,7 @@ Minimum file size (in bytes).
 
 :::tip
 Files can be accepted or rejected based on the file types, maximum file count, maximum file size (in bytes) and minimum file size (in bytes).
-If `Pick mulitple files` is set to false and additional files are dropped, all files besides the first will be rejected. 
+If `Pick mulitple files` is set to false and additional files are dropped, all files besides the first will be rejected.
 Any file that does not have a size in the range of `Max size limit` and `Min size limit` will be rejected.
 :::
 
@@ -84,7 +84,7 @@ Any file that does not have a size in the range of `Max size limit` and `Min siz
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/options.png)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/options.png)
 
 </div>
 
@@ -104,7 +104,7 @@ If the **Parse content** option is toggled on, it only parses the next file that
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/layout.png)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/layout.png)
 
 </div>
 
@@ -119,7 +119,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/styles.png)
+![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/styles.png)
 
 </div>
 

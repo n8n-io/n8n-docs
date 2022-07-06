@@ -29,7 +29,7 @@ You can also configure for **[additional optional parameters](https://docs.snowf
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Snowflake connection](/img/datasource-reference/snowflake/snowflake-connect.png)
+![Insight - Snowflake connection](/_images/insight2/datasource-reference/snowflake/snowflake-connect.png)
 
 </div>
 
@@ -39,11 +39,11 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Snowflake query](/img/datasource-reference/snowflake/snowflake-query.png)
+![Insight - Snowflake query](/_images/insight2/datasource-reference/snowflake/snowflake-query.png)
 
 </div>
 
-Click on the `run` button to run the query. 
+Click on the `run` button to run the query.
 
 **NOTE:** Query should be saved before running.
 

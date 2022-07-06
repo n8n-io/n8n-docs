@@ -29,7 +29,7 @@ Insight requires the following to connect to your DynamoDB:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Minio connection](/img/datasource-reference/minio-connect.png)
+![Insight - Minio connection](/_images/insight2/datasource-reference/minio-connect.png)
 
 </div>
 
@@ -39,9 +39,9 @@ Click on **Test connection** button to verify if the credentials are correct and
 
 Click on `+` button of the **query manager** at the bottom panel of the editor and select the data source added in the previous step as the data source. Select the operation that you want to perform and click **Save** to save the query.
 
-![Insight - Mino query](/img/datasource-reference/minio-query.png)
+![Insight - Mino query](/_images/insight2/datasource-reference/minio-query.png)
 
-Click on the **run** button to run the query. 
+Click on the **run** button to run the query.
 **NOTE**: Query should be saved before running.
 
 :::tip

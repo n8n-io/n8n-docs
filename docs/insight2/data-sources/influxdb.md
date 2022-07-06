@@ -22,7 +22,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/img/datasource-reference/influxdb/influxauth.png)
+![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxauth.png)
 
 </div>
 
@@ -52,11 +52,11 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/img/datasource-reference/influxdb/operations.png)
+![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/operations.png)
 
 </div>
 
-### Write data 
+### Write data
 
 This operation writes data to a bucket.
 
@@ -65,7 +65,7 @@ This operation writes data to a bucket.
 - **Bucket**
 - **Organization name or ID**
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Precision**
 
@@ -80,22 +80,22 @@ Retrieves data from InfluxDB buckets.
 
 This operation analyzes flux query and generates a query specification.
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Query**
 
-### Retrieve query suggestions 
+### Retrieve query suggestions
 
 This query retrieve query suggestions.
 
-### Retrieve query suggestions for a branching suggestion 
+### Retrieve query suggestions for a branching suggestion
 
 This operation retrieve query suggestions for a branching suggestion.
 
 #### Required parameters:
 - **Name**
 
-### Analyze a Flux query 
+### Analyze a Flux query
 
 This Analyzes a Flux query.
 
@@ -103,16 +103,16 @@ This Analyzes a Flux query.
 
 - **Query**
 
-### List buckets 
+### List buckets
 
 This operation lists all the buckets in a database.
-### Create a bucket 
+### Create a bucket
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Query**
 
-### Retrieve a bucket 
+### Retrieve a bucket
 
 This operation retrieve a bucket in a database.
 

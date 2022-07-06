@@ -5,7 +5,7 @@ title: SAP HANA
 
 # SAP HANA
 
-Insight can connect to SAP HANA databases to read and write data. 
+Insight can connect to SAP HANA databases to read and write data.
 
 - [Connection](#connection)
 - [Querying SAP HANA](#querying-sap-hana)
@@ -27,7 +27,7 @@ Please make sure the host/ip of the database is accessible from your VPC if you 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - SAP HANA](/img/datasource-reference/saphana/connect.png)
+![Insight - Data source - SAP HANA](/_images/insight2/datasource-reference/saphana/connect.png)
 
 </div>
 
@@ -41,7 +41,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data source - SAP HANA](/img/datasource-reference/saphana/query.png)
+![Insight - Data source - SAP HANA](/_images/insight2/datasource-reference/saphana/query.png)
 
 </div>
 

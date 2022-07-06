@@ -6,10 +6,10 @@ title: TypeSense
 # TypeSense
 Insight can connect to your TypeSense deployment to read and write data.
 
-## Connection 
+## Connection
 Please make sure the host/IP of the TypeSense deployment is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please **whitelist our IP**.
 
-Insight requires the following to connect to your TypeSense deployment: 
+Insight requires the following to connect to your TypeSense deployment:
 - **Host**
 - **Port**
 - **API Key**
@@ -17,18 +17,18 @@ Insight requires the following to connect to your TypeSense deployment:
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/connect.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/connect.png)
 
 </div>
 
-## Querying TypeSense 
+## Querying TypeSense
 
-Click on `+` button of the query manager at the bottom panel of the editor and select the TypeSense added in the previous step as the data source.  
-Select the operation that you want to perform on your TypeSense cluster and click `Create` to save the query. 
+Click on `+` button of the query manager at the bottom panel of the editor and select the TypeSense added in the previous step as the data source.
+Select the operation that you want to perform on your TypeSense cluster and click `Create` to save the query.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/query.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/query.png)
 
 </div>
 
@@ -44,7 +44,7 @@ With this operation you can easily create `Collections` in your TypeSense cluste
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/collection.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/collection.png)
 
 </div>
 
@@ -55,7 +55,7 @@ https://typesense.org/docs/0.22.2/api/documents.html#index-a-single-document)**.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/index.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/index.png)
 
 </div>
 
@@ -65,7 +65,7 @@ Use this operation to perform a search within the specified collection. Know mor
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/search.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/search.png)
 
 </div>
 
@@ -75,7 +75,7 @@ Use this operation to fetch an individual document in a collection by providing 
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/get.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/get.png)
 
 </div>
 
@@ -85,7 +85,7 @@ Use this operation to update an individual document by providing the **Collectio
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/update.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/update.png)
 
 </div>
 
@@ -95,7 +95,7 @@ Delete a document from collection by providing the `Id` of the document. Check o
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Data Source - TypeSense](/img/datasource-reference/typesense/delete.png)
+![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/delete.png)
 
 </div>
 

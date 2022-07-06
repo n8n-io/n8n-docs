@@ -8,7 +8,7 @@ A Password Input widget provides a way for the users to securely enter a passwor
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Password Input](/img/widgets/password-input/password-input.gif)
+![Insight - Widget Reference - Password Input](/_images/insight2/widgets/password-input/password-input.gif)
 
 </div>
 
@@ -16,7 +16,7 @@ A Password Input widget provides a way for the users to securely enter a passwor
 
 ### Placeholder
 
-It specifies a hint that describes the expected value. 
+It specifies a hint that describes the expected value.
 
 ## Validation
 

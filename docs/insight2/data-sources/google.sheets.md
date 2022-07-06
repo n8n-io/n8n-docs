@@ -22,7 +22,7 @@ If you are self-hosting the application, you will need to perform some additiona
      * `TOOLJET_HOST`
   3. Enable the Google Sheets API in the GCP console
 
-## Authorization Scopes 
+## Authorization Scopes
 
 You can create a Google Sheets data source with one of either of the two permission scopes :
   1. **Read Only**
@@ -30,7 +30,7 @@ You can create a Google Sheets data source with one of either of the two permiss
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Insight - Data source Google Sheets](/img/datasource-reference/google-sheets/googlesheets.gif)
+![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/googlesheets.gif)
 
 </div>
 
@@ -46,7 +46,7 @@ Using Google sheets data source you can perfom several operations from your appl
 
 ### Read data from a sheet
 
-This operation returns the table data from the spreadsheet in the form of json object. 
+This operation returns the table data from the spreadsheet in the form of json object.
 
 | Fields      | description |
 | ----------- | ----------- |
@@ -57,7 +57,7 @@ This operation returns the table data from the spreadsheet in the form of json o
 
 <div style={{textAlign: 'center'}}>
 
-![Insight- Data source - Google Sheets](/img/datasource-reference/google-sheets/read-data-op.png)
+![Insight- Data source - Google Sheets](/_images/insight2/datasource-reference/google-sheets/read-data-op.png)
 
 </div>
 
@@ -73,7 +73,7 @@ You can add more rows to the table using the append operation.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Insight - Data source Google Sheets](/img/datasource-reference/google-sheets/append-data-op.png)
+![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/append-data-op.png)
 
 </div>
 
@@ -91,7 +91,7 @@ You can update the existing data in sheet using this operation.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Insight - Data source - Google Sheets](/img/datasource-reference/google-sheets/update-data-op.png)
+![Insight - Insight - Data source - Google Sheets](/_images/insight2/datasource-reference/google-sheets/update-data-op.png)
 
 </div>
 
@@ -108,7 +108,7 @@ Use this operation delete a specific row from the sheet.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Insight - Data source Google Sheets](/img/datasource-reference/google-sheets/delete-row-op.png)
+![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/delete-row-op.png)
 
 </div>
 
@@ -120,6 +120,6 @@ Here is the `Preview` of the query that used the get spreadsheet info operation.
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Insight - Data source Google Sheets](/img/datasource-reference/google-sheets/get-info2.png)
+![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/get-info2.png)
 
 </div>

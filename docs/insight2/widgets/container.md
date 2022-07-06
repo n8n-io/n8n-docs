@@ -8,7 +8,7 @@ Containers are used to group widgets together. You can move the desired number o
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Code editor](/img/widgets/container/container.gif)
+![Insight - Widget Reference - Code editor](/_images/insight2/widgets/container/container.gif)
 
 </div>
 
@@ -16,7 +16,7 @@ Containers are used to group widgets together. You can move the desired number o
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Container](/img/widgets/container/layout.png)
+![Insight - Widget Reference - Container](/_images/insight2/widgets/container/layout.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Containers are used to group widgets together. You can move the desired number o
 
 <div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Container](/img/widgets/container/styles.png)
+![Insight - Widget Reference - Container](/_images/insight2/widgets/container/styles.png)
 
 </div>
 

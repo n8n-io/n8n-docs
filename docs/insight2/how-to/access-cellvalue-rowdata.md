@@ -13,18 +13,14 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 - Let's start by creating a new application and then adding a table widget into the canvas.
 
 
-
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/newapp.gif)
-
 
 
 - Now go to the **Query Panel** at the bottom of the app editor and click on the `+` button.
 - Choose **RestAPI** data source
 
 
-
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/restapi.png)
-
 
 
 - Now we will use a sample RestAPI endpoint -  I have used the API provided by **coinstats.app**, API-URL:
@@ -32,25 +28,19 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 - Choose `GET` method, enter the request URL (API URL in previous step), name the query - I have named it `crypto`, and then **Create** the query
 
 
-
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/apiendpoint.png)
-
 
 
 - Now hit the **Run** button next to the query name to run the query.
 
 
-
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/runquery.png)
-
 
 
 - Once you run the query, you can check the data returned by the query in the **Inspector** on the left sidebar.
 
 
-
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/inspectord.png)
-
 
 
 - Now that we have got the data, we will display it on the table. To do this, click on the widget handle of the table to open its properties in the right sidebar.
@@ -61,17 +51,13 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/data.png)
 
 
-
 - Let's add the columns that we want to display on the table. Go to the **Columns** section, Add columns, set their Names, and set **key** for each column. I have added 5 columns: **Rank**, **Name**, **Symbol**, **Price**, and **Market Cap**.
-
 
 
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/columns.png)
 
 
-
 - Once you've added the columns, you'll get the table like this:
-
 
 
 ![Insight - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/table.png)

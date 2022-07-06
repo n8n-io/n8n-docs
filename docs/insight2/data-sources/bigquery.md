@@ -114,7 +114,7 @@ Return list of tables within a dataset
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_tables.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq_list_tables.png)
 
 
 
@@ -134,7 +134,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-insert.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-insert.png)
 
 
 
@@ -143,7 +143,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-delete.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-delete.png)
 
 
 
@@ -155,7 +155,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-update.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-update.png)
 
 
 
@@ -168,7 +168,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-view.png)
+![Insight - Data source - BigQuery](/_images/insight2/bq-view.png)
 
 
 

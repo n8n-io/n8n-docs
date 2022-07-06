@@ -18,5 +18,5 @@ tags:
 * [Preview and Sharing Apps](/insight2/tutorial/sharing-and-deploying/)
 * [Transformations](/insight2/tutorial/transformations/)
 * [Versioning and release](/insight2/tutorial/versioning-and-release/)
-* [Keyboard Shortcuts]
-* [Multi-Workspace]
+* [Keyboard Shortcuts](/insight2/tutorial/keyboard-shortcuts/)
+* [Multi-Workspace](/insight2/tutorial/multiworkspace/)

@@ -124,15 +124,17 @@ Click on the widget handle to edit the file picker properties:
 
 - Select a pdf file and hold it in the file picker.
 
-:::info
+
  File types must be valid **[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)** type according to input element specification or a valid file extension.
 
  To accept any/all file type(s), set `Accept file types` to an empty value.
-:::
+
 
 
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
+
+
 
 
 

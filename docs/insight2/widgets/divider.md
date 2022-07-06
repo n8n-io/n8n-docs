@@ -6,20 +6,20 @@ title: Divider
 
 Divider widget is used to add separator between components.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Divider](/_images/insight2/widgets/divider/divider.png)
 
-</div>
+
 
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Divider](/_images/insight2/widgets/divider/layout1.png)
 
-</div>
+
 
 | properties      | description |
 | ----------- | ----------- |
@@ -28,11 +28,11 @@ Divider widget is used to add separator between components.
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Divider](/_images/insight2/widgets/divider/styles1.png)
 
-</div>
+
 
 | properties      | description |
 | ----------- | ----------- |

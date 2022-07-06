@@ -7,11 +7,11 @@ title: Timeline
 Timeline widget can be used to do a visual representation of a sequence of events
 
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Timeline](/_images/insight2/widgets/timeline/timeline.png)
 
-</div>
+
 
 ## Properties
 

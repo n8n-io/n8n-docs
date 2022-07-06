@@ -19,11 +19,11 @@ A SMTP server can be connected with the following credentails:
 You can also test your connection before saving the configuration by clicking on `Test Connection` button.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/connect.png)
 
-</div>
+
 
 ## Querying SMTP
 
@@ -35,7 +35,7 @@ To create a query for sending email, you will need to provide the following prop
   - **To** `required` : Recipient's email address
   - **Subject** : Subject of the email
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
 
@@ -46,7 +46,7 @@ To create a query for sending email, you will need to provide the following prop
 
   For example, you can set the `Attachments` field value to `{{ components.filepicker1.file }}` or you can pass an array of `{{ name: 'filename.jpg', dataURL: '......' }}` object to accomplish this.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
 

@@ -9,11 +9,11 @@ title: Baserow
 
 Insight can connect to your Baserow account to read and write data. Baserow API token is required to create an Baserow data source on Insight. You can follow the steps to create API token from [this link](https://baserow.io/api-docs).
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-intro.gif)
 
-</div>
+
 
 :::tip
 This guide assumes that you have already gone through [Adding a data source](/docs/tutorial/adding-a-datasource) tutorial.
@@ -37,11 +37,11 @@ This query lists all the fields in a table.
 
 - **Table ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-fields.png)
 
-</div>
+
 
 Example response from Baserow:
 
@@ -92,11 +92,11 @@ This query lists all the rows in a table.
 
 - **Table ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-rows.png)
 
-</div>
+
 
 Example response from Baserow:
 
@@ -141,11 +141,11 @@ Example response from Baserow:
 - **Table ID**
 - **Row ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-get-row.png)
 
-</div>
+
 
 Example response from Baserow:
 
@@ -167,11 +167,10 @@ Example response from Baserow:
 - **Table ID**
 - **Records**
 
-<div style={{textAlign: 'center'}}>
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-create-row.png)
 
-</div>
+
 
 #### Example Records:
 
@@ -205,11 +204,10 @@ Example response from Baserow:
 - **Row ID**
 - **Records**
 
-<div style={{textAlign: 'center'}}>
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-update-row.png)
 
-</div>
+
 
 #### Example Records:
 
@@ -246,11 +244,11 @@ Example response from Baserow:
 
 - **Before ID** (The row will be moved before the entered ID. If not provided, then the row will be moved to the end )
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-move-row.png)
 
-</div>
+
 
 Example response from Baserow:
 
@@ -272,10 +270,10 @@ Example response from Baserow:
 - **Table ID**
 - **Row ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-delete-row.png)
 
-</div>
+
 
 While deleting a row, the response will be either success or failure from Baserow

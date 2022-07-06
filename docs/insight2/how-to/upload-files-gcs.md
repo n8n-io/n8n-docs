@@ -16,11 +16,10 @@ Before adding the new data source we will need to have a private key for our GCS
 3. Enter the **JSON private key for service account** and test the connection.
 4. Click on **Save** to add the data source.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/adding-account.png)
 
-</div>
 
 ## Adding a file picker
 
@@ -28,15 +27,15 @@ Before adding the new data source we will need to have a private key for our GCS
 2. Configure the file picker:
   - Change the **Accept file types** to `{{"application/pdf"}}` for the picker to accept only pdf files. In the screenshot below, we have set the accepted file type property to `{{"application/pdf"}}` so it will allow to select only pdf files:
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
 
-</div>
+
 
   - Change the **Max file count** to `{{1}}` as we are only going to upload 1 file at a time.
 
-3. Select a pdf file and hold it in the file picker.
+1. Select a pdf file and hold it in the file picker.
 
 :::info
  File types must be valid **[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)** type according to input element specification or a valid file extension.
@@ -44,11 +43,11 @@ Before adding the new data source we will need to have a private key for our GCS
  To accept any/all file type(s), set `Accept file types` to an empty value.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
 
-</div>
+
 
 ## Creating a query
 
@@ -66,8 +65,8 @@ Before adding the new data source we will need to have a private key for our GCS
 2. Edit the properties of the button and add a **event handler** to **Run the query** on **On-Click** event.
 3. Click on **Button** to fire the query, this will upload the pdf file that you selected earlier through the file picker and will upload it on the GCS.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/final-result.png)
 
-</div>
+

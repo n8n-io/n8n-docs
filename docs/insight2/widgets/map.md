@@ -6,11 +6,11 @@ title: Map
 
 The map widget can be used to pick or select locations on the Google map with the location's coordinates.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Map](/_images/insight2/widgets/map/map.png)
 
-</div>
+
 
 ## Exposed variables
 

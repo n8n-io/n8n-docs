@@ -11,11 +11,11 @@ Button widget can be used to take actions.
 ## Properties
 ### Event: On click
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Button Action List](/_images/insight2/widgets/button/button-actions.png)
 
-</div>
+
 
 To add an event to a button, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
@@ -27,11 +27,11 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Properties
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - widget- button](/_images/insight2/widgets/button/properties.png)
 
-</div>
+
 
 | Properties  | description | Expected value |
 | ----------- | ----------- | -------------- |
@@ -40,11 +40,11 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Layout
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - widget- button](/_images/insight2/widgets/list-view/listlayout.png)
 
-</div>
+
 
 | Layout  | description | Expected value |
 | ----------- | ----------- | ------------ |
@@ -53,11 +53,11 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Styles
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - widget- button](/_images/insight2/widgets/button/styles.png)
 
-</div>
+
 
 | Style      | Description |
 | ----------- | ----------- |

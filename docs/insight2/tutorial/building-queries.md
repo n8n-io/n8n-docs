@@ -20,15 +20,15 @@ You can click on the 'enlarge' icon to enlarge query editor pane.
 SELECT * FROM customers;
 ```
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query.png)
 
-</div>
+
 
 Query results can be previewed by clicking the `preview` button. Previewing queries will not alter the state of the app.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview.png)
 
@@ -37,7 +37,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 ## Advanced options
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options.gif)
 
@@ -49,7 +49,7 @@ If this option is enabled, the query will be run when the app is loaded for the 
 #### Request confirmation before running query
 Enable this option to show a prompt to confirm the action before a query is run. The confirmation prompt will look like this:
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/confirm.png)
 

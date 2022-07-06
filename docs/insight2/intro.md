@@ -8,25 +8,27 @@ slug: /
 
 Insight is an **open-source low-code framework** to build and deploy custom internal tools. Insight can connect to your data sources such as databases ( PostgreSQL, MongoDB, MySQL, Elasticsearch, Firestore, DynamoDB, Redis and more ), API endpoints ( Insight supports OAuth2 authorization ) and external services ( Stripe, Slack, Google Sheets, Airtable and more ). Once the data sources are connected, Insight can run queries on these data sources to fetch and update data. The data fetched from data sources can be visualised and modified using the UI widgets such as tables, charts, forms, etc.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - List view widget](/_images/insight2/introduction/githubstar.png)
 
-</div>
+
 
 ## How Insight works
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - List view widget](/_images/insight2/introduction/how-it-works.pngg)
 
-</div>
+
+
+
 
 **Insight has just 3 fundamental principles for building apps:**
 
 - **Connect to data sources:** Connect to your existing data sources such as PostgreSQL, MySQL, Firestore, Stripe, Google Sheets, API endpoints, etc.
 - **Build queries:** Insight comes with query builders for all supported data sources. Insight also supports the use of custom JavaScript code to transform the query results.
-- **Customise widgets:** Widgets are the UI components that can be edited using Insight's visual app builder ( Eg: tables, charts, forms, etc ). Widgets have events such as `on click`, `on row selected`, `on page changed`, etc. Every UI widget has a dark version. 
+- **Customise widgets:** Widgets are the UI components that can be edited using Insight's visual app builder ( Eg: tables, charts, forms, etc ). Widgets have events such as `on click`, `on row selected`, `on page changed`, etc. Every UI widget has a dark version.
 
 Insight binds together the data sources, queries and widgets to convert business logic into custom applications.
 ## Getting Started
@@ -34,7 +36,7 @@ Insight binds together the data sources, queries and widgets to convert business
 These resources will help you quickly build and deploy apps using Insight:
 
 - **[Basic Tutorial](/docs/tutorial/creating-app)** - Learn how to build simple UI and connect to data sources.
-- **[Deploy](/docs/setup/)** - Learn how to deploy Insight on Heroku, Kubernetes, etc 
+- **[Deploy](/docs/setup/)** - Learn how to deploy Insight on Heroku, Kubernetes, etc
 
 The references for data sources and widgets:
 

@@ -10,11 +10,11 @@ Range sliders are widely used across different UIs. One of the main purposes is 
 Range Sliders have "Two handles" option which allows user to select within a range.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Text input](/_images/insight2/widgets/range-slider/range_slider.png)
 
-</div>
+
 
 ## Properties
 

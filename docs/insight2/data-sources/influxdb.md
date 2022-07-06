@@ -20,11 +20,11 @@ Insight connects to InfluxDB using :
 For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influxdb/cloud/security/tokens/create-token/).
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxauth.png)
 
-</div>
+
 
 ## Supported queries:
 
@@ -50,11 +50,11 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 - [Delete a bucket](#delete-a-bucket)
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/operations.png)
 
-</div>
+
 
 ### Write data
 

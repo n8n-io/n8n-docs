@@ -3,9 +3,13 @@
 
 Insight can connect to Amazon Athena databases to read and write data.
 
-- [Connection](#connection)
-- [Querying-athena](#querying-amazon-athena)
-- [Basic Operation](#basic-queries)
+- [Athena](#athena)
+	- [Connection](#connection)
+	- [Querying Amazon Athena](#querying-amazon-athena)
+		- [Basic queries](#basic-queries)
+			- [Creating table](#creating-table)
+			- [Inserting to table](#inserting-to-table)
+			- [Select operation](#select-operation)
 
 ## Connection
 
@@ -21,21 +25,21 @@ Insight requires the following to connect to your Athena.
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
 
-</div>
+
 
 ## Querying Amazon Athena
 
 - Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the datasource. Query manager then can be used to write SQL queries.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Querying- Amazon Athena](/_images/insight2/datasource-reference/athena/athena-query.png)
 
-</div>
+
 
 - Click on the `run` button to run the query.
 

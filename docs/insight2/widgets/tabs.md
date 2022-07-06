@@ -6,11 +6,11 @@ title: Tabs
 
 A Tabs widget contains a number of defined containers that can be navigated through the tabs. Each tab acts as a container and can have different components or widgets.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Tabs](/_images/insight2/widgets/tabs/tabs.png)
 
-</div>
+
 
 ## Properties
 

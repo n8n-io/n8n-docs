@@ -7,21 +7,31 @@ title: CouchDB
 
 Insight can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on Insight. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
 
-<div style={{textAlign: 'center'}}>
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch.gif)
 
-</div>
 
 ## Supported queries:
 
-- [Listing records](#listing-records)
-- [Retrieving a record](#retrieving-a-record)
-- [Creating a record](#creating-a-record)
-- [Updating a record](#updating-a-record)
-- [Deleting a record](#deleting-a-record)
-- [Find](#find)
-- [Retrieving a view](#retrieving-a-view)
+- [CouchDB](#couchdb)
+	- [Supported queries:](#supported-queries)
+		- [Listing records](#listing-records)
+			- [Optional parameters:](#optional-parameters)
+		- [Retrieving a record](#retrieving-a-record)
+			- [Required parameters:](#required-parameters)
+		- [Creating a record](#creating-a-record)
+			- [Example Records:](#example-records)
+		- [Updating a record](#updating-a-record)
+			- [Required parameters:](#required-parameters-1)
+			- [Example body:](#example-body)
+		- [Deleting a record](#deleting-a-record)
+			- [Required parameters:](#required-parameters-2)
+		- [Find](#find)
+			- [Required parameters:](#required-parameters-3)
+			- [Example body:](#example-body-1)
+		- [Retrieving a view](#retrieving-a-view)
+			- [Required parameters:](#required-parameters-4)
+			- [Optional parameters:](#optional-parameters-1)
 
 :::info
 NOTE: Record ID is same as document ID("_id") .
@@ -48,11 +58,11 @@ include_docs (boolean) – include_docs key is set to false by default , if true
 
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/listing.png)
 
-</div>
+
 
 
 Example response from CouchDb:
@@ -93,11 +103,11 @@ Example response from CouchDb:
 
 - **Record ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/retrieving.png)
 
-</div>
+
 
 
 Example response from CouchDb:
@@ -116,11 +126,11 @@ The returned JSON is the JSON of the document, including the document ID and rev
 
 ### Creating a record
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/creating.png)
 
-</div>
+
 
 #### Example Records:
 
@@ -154,11 +164,10 @@ You get the document as JSON in the response. For each update to the document, t
 - **Revision ID**
 - **Record ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/updating.png)
 
-</div>
 
 #### Example body:
 
@@ -188,11 +197,11 @@ Example response from CouchDb:
 - **Revision ID**
 - **Record ID**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/deleting.png)
 
-</div>
+
 
 
 Click on the `run` button to run the query.
@@ -220,11 +229,11 @@ NOTE:
 selector syntax: https://pouchdb.com/guides/mango-queries.html
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find.png)
 
-</div>
+
 
 #### Example body:
 
@@ -249,11 +258,11 @@ More information : https://docs.couchdb.org/en/stable/api/database/find.html
 
 Example response from CouchDb:
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find_response.png)
 
-</div>
+
 
 ### Retrieving a view
 
@@ -264,11 +273,11 @@ Views are the primary tool used for querying and reporting on CouchDB documents.
 
 Reference for view :https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#what-is-a-view
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/get_view.png)
 
-</div>
+
 
 #### Optional parameters:
 

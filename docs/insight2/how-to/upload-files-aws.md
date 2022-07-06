@@ -16,11 +16,10 @@ Once you have successfully added the AWS data source, build a basic UI using the
 - **File picker**: For uploading the file.
 - **Button**: This will be used to fire the upload query.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/ui.png)
 
-</div>
 
 ## Queries
 
@@ -35,11 +34,11 @@ We'll create the following queries:
 
 This query will fetch the list of all the buckets in your S3. Just create a new query, select AWS S3 data souce, and choose **List buckets** operation. Name the query **getBuckets** and click **Save**.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/getBuckets.png)
 
-</div>
+
 
 Now, let's edit the properties of **dropdown** widget.
 
@@ -49,21 +48,21 @@ Now, let's edit the properties of **dropdown** widget.
 
 You can later add an event handler for running the **listObject** query whenever an option is selected from the dropdown.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/dropdown.png)
 
-</div>
+
 
 ### listObjects
 
 This query will list all the objects inside the selected Bucket in dropdown. Select **List objects in a bucket** operation, enter `{{components.dropdown1.value}}` in the Bucket field - this will dynamically get the field value from the selected option in dropdown.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/listObjects.png)
 
-</div>
+
 
 Edit the properties of **table** widget:
 - **Table data**: `{{queries.listObjects.data['Contents']}}`
@@ -73,21 +72,21 @@ Edit the properties of **table** widget:
   - **Size**: Set the **Column Name** to `Size` and **Key** to `Size`
 - Add a **Action button**: Set button text to **Copy signed URL**, Add a handler to this button for On Click event and Action to Copy to clipboard, in the text field enter `{{queries.download.data.url}}` - this will get the download url from the **download** query that we will create next.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/table.png)
 
-</div>
+
 
 ### download
 
 Create a new query and select **Signed URL for download** operation. In the Bucket field, enter `{{components.dropdown1.value}}` and in Key enter `{{components.table1.selectedRow.Key}}`.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/download.png)
 
-</div>
+
 
 Edit the **properites** of the table, add a Event handler for running the `download` query for `Row clicked` event. This will generate a signed url for download every time a row is clicked on the table.
 
@@ -100,11 +99,11 @@ Create a new query, select the **Upload object** operation. Enter the following 
 - **Upload data**: `{{components.filepicker1.file[0].base64Data}}`
 - **Encoding**: `base64`
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/uploadToS3.png)
 
-</div>
+
 
 #### Configure the file picker:
 
@@ -112,11 +111,11 @@ Click on the widget handle to edit the file picker properties:
 
 - Change the **Accept file types** to `{{"application/pdf"}}` for the picker to accept only pdf files or `{{"image/*"}}` for the picker to accept only image files . In the screenshot below, we have set the accepted file type property to `{{"application/pdf"}}` so it will allow to select only pdf files:
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
 
-</div>
+
 
 - Change the **Max file count** to `{{1}}` as we are only going to upload 1 file at a time.
 
@@ -128,10 +127,10 @@ Click on the widget handle to edit the file picker properties:
  To accept any/all file type(s), set `Accept file types` to an empty value.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
 
-</div>
+
 
 Final steps, go to the **Advanced** tab of the **uploadToS3** query and add a query to run **listObjects** query so that whenever a file is uploaded the tabled is refreshed.

@@ -7,8 +7,9 @@ title: Snowflake
 
 Insight can connect to Snowflake databases to read and write data.
 
-- [Connection](#connection)
-- [Getting Started](#querying-snowflake)
+- [Snowflake](#snowflake)
+	- [Connection](#connection)
+	- [Querying Snowflake](#querying-snowflake)
 
 ## Connection
 
@@ -27,21 +28,21 @@ Insight requires the following to connect to your Snowflake database.
 You can also configure for **[additional optional parameters](https://docs.snowflake.com/en/user-guide/nodejs-driver-use.html#additional-connection-options)**.
 :::
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Snowflake connection](/_images/insight2/datasource-reference/snowflake/snowflake-connect.png)
 
-</div>
+
 
 ## Querying Snowflake
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the datasource. Query manager then can be used to write raw SQL queries.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Snowflake query](/_images/insight2/datasource-reference/snowflake/snowflake-query.png)
 
-</div>
+
 
 Click on the `run` button to run the query.
 

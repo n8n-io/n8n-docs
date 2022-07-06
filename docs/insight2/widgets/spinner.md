@@ -6,11 +6,11 @@ title: Spinner
 
 Spinner widget can be used to provide a visual indication that an action is in progress by awaiting a change.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Widget Reference - Number Input](/_images/insight2/widgets/spinner/spinner.png)
 
-</div>
+
 
 
 ## Layout

@@ -34,11 +34,11 @@ Insight requires the config json downloaded from your account to connect to BigQ
 }
 ```
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-create.png)
 
-</div>
+
 
 Click on **Test connection** button to verify if the credentials are correct and that the API is accessible to Insight server. Click on **Save** button to save the data source.
 
@@ -46,11 +46,11 @@ Click on **Test connection** button to verify if the credentials are correct and
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click **Save** to create the query.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-query.png)
 
-</div>
+
 
 Click on the **run** button to run the query. NOTE: Query should be saved before running.
 
@@ -91,11 +91,11 @@ Retruns list of datasets.
 
 - **Options:** This can be used to filter the list.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
 
-</div>
+
 
 ### List Tables
 
@@ -109,40 +109,40 @@ Return list of tables within a dataset
 
 - **Options:** This can be used to filter the list.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_tables.png)
 
-</div>
+
 
 ### Query
 
 Return data based on the `Query`. `Query options` ([Reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/Job)), and `Query result options` ([Reference](https://cloud.google.com/nodejs/docs/reference/bigquery/latest/overview#_google_cloud_bigquery_QueryResultsOptions_type)).
 
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
 
-</div>
+
 
 ### Insert Record
 - To insert a record.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-insert.png)
 
-</div>
+
 
 ### Delete Record
 - To delete a record.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-delete.png)
 
-</div>
+
 
 :::info
 NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be deleted!
@@ -150,11 +150,11 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 ### Update Record
 - To update a record.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-update.png)
 
-</div>
+
 
 :::info
 NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be updated!
@@ -163,11 +163,11 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 - To create a view.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/bq-view.png)
 
-</div>
+
 
 
 ### Create Table

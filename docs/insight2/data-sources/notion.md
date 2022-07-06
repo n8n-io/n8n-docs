@@ -9,7 +9,7 @@ Insight can connect to a Notion workspace to do operations on notion pages, data
 
 For integrating Notion with Insight we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/api.png)
 
@@ -23,7 +23,7 @@ Notion API provides support for:
 - **[Block](#blocks)**
 - **[User](#user)**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/querying.png)
 
@@ -33,7 +33,7 @@ Notion API provides support for:
 
 Before querying Notion, you must share the database with your integration. Click the share button in your database view, find your integration name select it.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/share.png)
 
@@ -49,7 +49,7 @@ On database resource you can perform the following operations:
 - **[Create a database](#3-create-a-database)**
 - **[Update a database](#4-update-a-database)**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/db_q.png)
 
@@ -63,7 +63,7 @@ This operations retreives a Database object using the ID specified.
 
 - **Database ID**: You'll find the Database ID in the url. Suppose this is the example url: `https://www.notion.so/workspace/XXX?v=YYY&p=ZZZ` then `XXX` is the database ID, `YYY` is the view ID and `ZZZ` is the page ID.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/db_retrieve.png)
 
@@ -126,7 +126,7 @@ On page resource you can perform the following operations:
 - **[Retrieve a page property](#4-retrieve-a-page-property-item)**
 - **[Archive a page](#5-archive-delete-a-page)**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/page_q.png)
 
@@ -180,7 +180,7 @@ The following operations can be performed on the block resource:
 - **[Update a block](#4-update-a-block)**
 - **[Delete a block](#5-delete-a-block)**
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/block_q.png)
 
@@ -229,7 +229,7 @@ The following operations can be performed on the user notion resource:
 #### 1. Retrieve a user from current workspace
 This operation retrieves a User using the ID specified.
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/user_q.png)
 

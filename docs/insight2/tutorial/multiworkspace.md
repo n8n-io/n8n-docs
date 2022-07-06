@@ -12,11 +12,11 @@ User can create their own workspaces, user who created workspace will be having 
 
 ## Hierarchy
 
-<div style={{textAlign: 'center'}}>
+
 
 ![Insight - Google create project](/_images/insight2/multiworkspace/Tooljet-workspace.png)
 
-</div>
+
 
 ## Permissions
 

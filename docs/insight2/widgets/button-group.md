@@ -10,10 +10,10 @@ Button group widget can be used to take actions.
 ## Properties
 ### Event: On click
 
-<div style={{textAlign: 'center'}}>
 
 
-</div>
+
+
 
 To add an event to a button group, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
@@ -25,9 +25,9 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Properties
 
-<div style={{textAlign: 'center'}}>
 
-</div>
+
+
 
 | Properties  | description | Expected value |
 | ----------- | ----------- | -------------- |
@@ -46,12 +46,12 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Styles
 
-<div style={{textAlign: 'center'}}>
 
-</div>
+
+
 
 | Style      | Description |
-| ----------- | ----------- | 
+| ----------- | ----------- |
 | Background color |  You can change the background color of the widget by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Text color |  You can change the color of the Text in button by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |

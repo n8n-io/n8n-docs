@@ -1,6 +1,9 @@
 ---
-id: smtp
 title: SMTP
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # SMTP

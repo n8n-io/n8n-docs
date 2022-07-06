@@ -1,8 +1,16 @@
-# woocommerce
+---
+title: WooCommerce
+description: 
+tags:
+  - Insight²
+  - Data Sources
+---
+
+# WooCommerce
 
 Insight can connect to Woocommerce databases to read and write data.
 
-- [woocommerce](#woocommerce)
+- [WooCommerce](#woocommerce)
 	- [Connection](#connection)
 	- [Querying Woocommerce](#querying-woocommerce)
 

@@ -1,6 +1,9 @@
 ---
-id: snowflake
 title: Snowflake
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Snowflake

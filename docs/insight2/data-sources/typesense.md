@@ -1,6 +1,9 @@
 ---
-id: typesense
 title: TypeSense
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # TypeSense

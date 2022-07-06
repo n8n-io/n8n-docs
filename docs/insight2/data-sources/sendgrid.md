@@ -1,6 +1,9 @@
 ---
-id: sendgrid
 title: SendGrid
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # SendGrid

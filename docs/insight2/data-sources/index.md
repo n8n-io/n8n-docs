@@ -6,9 +6,9 @@ tags:
   - Data Sources
 ---
 
-* [Airtable](/insight2/widgets/button-group/)
-* [Appwrite](/insight2/widgets/button/)
-* [Athena](/insight2/widgets/calendar/)
+* [Airtable](/insight2/data-sources/airtable/)
+* [Appwrite](/insight2/data-sources/appwrite/)
+* [Athena](/insight2/data-sources/athena/)
 * [Baserow](/insight2/widgets/chart/)
 * [BigQuery](/insight2/widgets/checkbox/)
 * [CouchDB](/insight2/widgets/circular-progress-bar/)

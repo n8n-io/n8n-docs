@@ -1,6 +1,9 @@
 ---
-id: couchdb
 title: CouchDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # CouchDB

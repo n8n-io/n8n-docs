@@ -1,6 +1,9 @@
 ---
-id: dynamodb
 title: DynamoDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # DynamoDB

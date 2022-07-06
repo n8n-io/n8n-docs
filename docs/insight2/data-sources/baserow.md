@@ -1,6 +1,9 @@
 ---
-id: baserow
 title: Baserow
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Baserow

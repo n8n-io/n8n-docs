@@ -1,6 +1,9 @@
 ---
-id: custom-js
 title: Custom JavaScript
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # Custom JavaScript

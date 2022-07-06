@@ -17,7 +17,7 @@ Clicking on `Preview` will open up the currently opened version of the app in th
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
 
-</div>
+
 
 ## Sharing an app
 
@@ -29,7 +29,7 @@ Once you have released a version of your app, you can share the app with others 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/share.png)
 
-</div>
+
 
 - In the dialog box, turn on the toggle switch to `Make the application public` and shareable
 
@@ -37,7 +37,7 @@ Once you have released a version of your app, you can share the app with others 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/toggle.png)
 
-</div>
+
 
 - Create your own `customised URL` for the app and click on `copy` to copy the URL
 
@@ -45,7 +45,7 @@ Once you have released a version of your app, you can share the app with others 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/url.png)
 
-</div>
+
 
 - You can also `Embedd` your application using the embeddable link
 
@@ -53,4 +53,4 @@ Once you have released a version of your app, you can share the app with others 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/embedd.png)
 
-</div>
+

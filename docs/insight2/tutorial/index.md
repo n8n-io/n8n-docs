@@ -15,6 +15,6 @@ tags:
 * [Debugger](/insight2/tutorial/debugger/)
 * [Managing Users and Groups](/insight2/tutorial/manage-users-groups/)
 * [Mobile Layout](/insight2/tutorial/mobile-layout/)
-* [Sharing and Deploying](/insight2/tutorial/sharing-and-deploying/)
+* [Preview and Sharing Apps](/insight2/tutorial/sharing-and-deploying/)
 * [Transformations](/insight2/tutorial/transformations/)
 * [Versioning and release](/insight2/tutorial/versioning-and-release/)

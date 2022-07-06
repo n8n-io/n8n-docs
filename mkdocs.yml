@@ -293,7 +293,7 @@ nav:
       - Debugger: insight2/tutorial/debugger.md
       - Manage User Groups: insight2/tutorial/manage-users-groups.md
       - Mobile Layout: insight2/tutorial/mobile-layout.md
-      - Sharing and Deploying: insight2/tutorial/sharing-and-deploying.md
+      - Preview and Sharing Apps: insight2/tutorial/sharing-and-deploying.md
       - Transformations: insight2/tutorial/transformations.md
       - Versioning and release: insight2/tutorial/versioning-and-release.md
     - Introduction: insight2/intro.md

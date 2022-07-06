@@ -49,7 +49,7 @@ To release a version:
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/versiondropdown.png)
 
-</div>
+
 
 - Click on the `Release` button on the top-right corner.
 
@@ -57,10 +57,10 @@ To release a version:
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/release.png)
 
-</div>
 
 
-:::tip
+
+
 
 Insight will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 
@@ -68,9 +68,9 @@ Insight will block editing of the `Released version` of an app and will display 
 
 ![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/prompt.png)
 
-</div>
 
-:::
+
+
 
 
 

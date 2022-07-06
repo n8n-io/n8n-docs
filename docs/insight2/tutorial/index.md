@@ -10,7 +10,7 @@ tags:
 
 * [Adding datasource](/insight2/tutorial/adding-a-datasource/)
 * [Adding widget](/insight2/tutorial/adding-widget/)
-* [Building queries](/insight2/tutorial/building-queries/)
+* [Building Queries](/insight2/tutorial/building-queries/)
 * [Creating new app](/insight2/tutorial/creating-app/)
 * [Debugger](/insight2/tutorial/debugger/)
 * [Managing Users and Groups](/insight2/tutorial/manage-users-groups/)

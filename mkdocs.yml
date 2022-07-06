@@ -288,7 +288,7 @@ nav:
       - insight2/tutorial/index.md
       - Adding datasource: insight2/tutorial/adding-a-datasource.md
       - Adding widget: insight2/tutorial/adding-widget.md
-      - Building queries: insight2/tutorial/building-queries.md
+      - Building Queries: insight2/tutorial/building-queries.md
       - Creating new app: insight2/tutorial/creating-app.md
       - Debugger: insight2/tutorial/debugger.md
       - Manage User Groups: insight2/tutorial/manage-users-groups.md

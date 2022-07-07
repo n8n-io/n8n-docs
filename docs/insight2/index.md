@@ -37,10 +37,10 @@ Insight² is an **open-source low-code framework** to build and deploy custom in
 Insight binds together the data sources, queries and widgets to convert business logic into custom applications.
 ## Getting Started
 
-These resources will help you quickly build and deploy apps using Insight:
+These resources will help you quickly build and deploy apps using Insight²:
 
 - **[Basic Tutorial](/insight2/tutorial/creating-app/)** - Learn how to build simple UI and connect to data sources.
-- **[Deploy](/docs/setup/)** - Learn how to deploy Insight on Heroku, Kubernetes, etc
+- **[Deploy](/docs/setup/)** - Learn how to deploy Insight² on Heroku, Kubernetes, etc
 
 The references for data sources and widgets:
 

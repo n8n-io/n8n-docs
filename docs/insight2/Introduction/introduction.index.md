@@ -3,12 +3,12 @@ title: Introduction
 description: 
 tags:
   - Insight²
-  - Getting Started
+  - Get Started
 ---
 
 
 ![](/_images/insight2/Logo_IN².png)
-![](/_images/insight2/Logo_IN²_weiss.png)
+
 
 
 ##INSIGHT² – NO-CODE WEB-APPLICATION PLATTFORM
@@ -24,3 +24,4 @@ Insight² is the integrated platform that enables anyone to build web applicatio
 
 Insight² has a community-based build strategy, so you can add comments anywhere on the canvas to collaborate with your colleagues.
 
+##[Get started](/insight2/tutorial/)

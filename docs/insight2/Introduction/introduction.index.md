@@ -21,6 +21,9 @@ Insight² is the integrated platform that enables anyone to build web applicatio
 * Drag and drop application creation
 
 
+![](/_images/insight2/IN²_Demo.png)
+
+
 Insight² has a community-based build strategy, so you can add comments anywhere on the canvas to collaborate with your colleagues.
 
 ##[Get started](/insight2/tutorial/)

@@ -20,10 +20,10 @@ Running computer connected to internet
 
 The following screen will be shown when you go to your URL:
 
-![](docs/_images/insight2/deployment/IN²_Login.png)
+![](/_images/insight2/deployment/IN²_Login.png)
 
 Enter the Login Details provided by us and click on Login button or press Enter to login.
 
 After getting logged in successfully, you will see the following screen. It means all is set, you are ready to go.
 
-![](docs/_images/insight2/deployment/IN²_Welcome_dashboard.png)
+![](/_images/insight2/deployment/IN²_Welcome_dashboard.png)

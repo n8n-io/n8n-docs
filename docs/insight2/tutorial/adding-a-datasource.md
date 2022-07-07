@@ -16,7 +16,7 @@ The data sources are created on app level and not on workspace level.
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/add-datasource.png)
+![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_1.png)
 
 
 
@@ -24,7 +24,7 @@ You will be prompted to select the data source that you wish to add. Let's selec
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/datasources.png)
+![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_2.png)
 
 
 
@@ -36,6 +36,6 @@ If you are using Insight cloud and if your data source is not publicly accessibl
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/tutorial/adding-datasource/postgres.png)
+![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_3.png)
 
 

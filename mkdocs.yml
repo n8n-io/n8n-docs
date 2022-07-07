@@ -299,7 +299,6 @@ nav:
       - Versioning and release: insight2/tutorial/versioning-and-release.md
       - Keyboard Shortcuts: insight2/tutorial/keyboard-shortcuts.md
       - Multi-Workspace: insight2/tutorial/multiworkspace.md
-    - Introduction: insight2/intro.md
     - IN² Examples:
       - insight2/examples/index.md
       - Change text color in columns of the table: insight2/how-to/access-cellvalue-rowdata.md

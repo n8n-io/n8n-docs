@@ -1,8 +1,11 @@
 ---
-id: audit_logs
-title: Audit logs
+title: Audit Logs
+description: When a change is applied to a system, it correlates with a change in the system’s behavior. That change should be documented in an audit log.
+tags:
+  - Insight²
+  - Audit Logs
 ---
-# Audit logs
+# Audit Logs
 
 The audit log is the report of all the activities done in your Insight account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
 

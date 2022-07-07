@@ -7,10 +7,9 @@ tags:
 ---
 
 
-![](/_images/insight2/Logo_IN².png)
+![](/_images/insight2/Logo_IN².png) a No-Code Web application developed by Polydocs GmbH
 
 
-##INSIGHT² – NO-CODE WEB-APPLICATION PLATTFORM
 
 Insight² promotes innovation through the digitization of visualization and data management applications.
 

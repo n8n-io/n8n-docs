@@ -40,7 +40,7 @@ Insight² binds together the data sources, queries and widgets to convert busine
 These resources will help you quickly build and deploy apps using Insight²:
 
 - **[Basic Tutorial](/insight2/tutorial/creating-app/)** - Learn how to build simple UI and connect to data sources.
-- **[Deploy](/docs/setup/)** - Learn how to deploy Insight² on Heroku, Kubernetes, etc
+- **[Deploy](/insight2/deployment/#how-to-deploy-insight2)** - Learn how to deploy Insight² 
 
 The references for data sources and widgets:
 

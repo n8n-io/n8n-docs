@@ -18,17 +18,17 @@ Insight² is an **open-source low-code framework** to build and deploy custom in
 
 
 
-## How Insight works
+## How Insight² works
 
 
 
-![Insight - List view widget](/_images/insight2/introduction/how-it-works.png)
+![Insight² - List view widget](/_images/insight2/introduction/how-it-works.png)
 
 
 
 
 
-**Insight has just 3 fundamental principles for building apps:**
+**Insight² has just 3 fundamental principles for building apps:**
 
 - **Connect to data sources:** Connect to your existing data sources such as PostgreSQL, MySQL, Firestore, Stripe, Google Sheets, API endpoints, etc.
 - **Build queries:** Insight comes with query builders for all supported data sources. Insight also supports the use of custom JavaScript code to transform the query results.
@@ -44,8 +44,8 @@ These resources will help you quickly build and deploy apps using Insight:
 
 The references for data sources and widgets:
 
-- **[Datasource Reference](/insight2/data-sources/redis/)**
-- **[Widget Reference](/insight2/widgets/table/)**
+- **[Datasource Reference](/insight2/data-sources/)**
+- **[Widget Reference](/insight2/widgets/)**
 
 ## Complete tutorials
 - **[Build a GitHub star history tracker](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)**

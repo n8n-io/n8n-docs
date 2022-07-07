@@ -39,24 +39,10 @@ Insight binds together the data sources, queries and widgets to convert business
 
 These resources will help you quickly build and deploy apps using Insight:
 
-- **[Basic Tutorial](/docs/tutorial/creating-app)** - Learn how to build simple UI and connect to data sources.
+- **[Basic Tutorial](/insight2/tutorial/creating-app/)** - Learn how to build simple UI and connect to data sources.
 - **[Deploy](/docs/setup/)** - Learn how to deploy Insight on Heroku, Kubernetes, etc
 
 The references for data sources and widgets:
 
 - **[Datasource Reference](/insight2/data-sources/)**
 - **[Widget Reference](/insight2/widgets/)**
-
-## Complete tutorials
-- **[Build a GitHub star history tracker](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)**
-- **[Build an AWS S3 file explorer app](https://blog.tooljet.com/building-an-app-to-view-and-upload-files-in-aws-s3-bucket/)**
-- **[Build a WhatsApp CRM](https://blog.tooljet.com/build-a-whatsapp-crm-using-tooljet-within-10-mins/)**
-- **[Build a cryptocurrency dashboard](https://blog.tooljet.com/how-to-build-a-cryptocurrency-dashboard-in-10-minutes/)**
-- **[Build a Redis GUI](https://blog.tooljet.com/building-a-redis-gui-using-tooljet-in-5-minutes/)**
-- **[Build a coupon code manager app](https://blog.tooljet.com/build-a-coupon-code-manager-app-in-10-minutes/)**
-
-## Help and Support
-- We have extensively documented the features of Insight, but in case you are stuck, please feel free to e-mail us at **hello@tooljet.com**
-- If you are using Insight cloud, click on the chat icon at the bottom-left corner for instant help.
-- If you have found a bug, please create a **[GitHub issue](https://github.com/Insight/Insight/issues)** for the same.
-- Feel free to join our highly active **[Slack Community](https://join.slack.com/t/tooljet/shared_invite/zt-r2neyfcw-KD1COL6t2kgVTlTtAV5rtg)**.

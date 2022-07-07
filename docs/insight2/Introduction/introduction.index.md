@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Insight²
 description: 
 tags:
   - Insight²
@@ -8,7 +8,6 @@ tags:
 
 
 ![](/_images/insight2/Logo_IN².png)
-
 
 
 ##INSIGHT² – NO-CODE WEB-APPLICATION PLATTFORM

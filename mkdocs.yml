@@ -141,7 +141,7 @@ nav:
       - All Export Options:
         - doc2/export/index.md
         - Export to Infor:
-          - doc2/export/export-to-infor/index.md
+        - doc2/export/export-to-infor/index.md
           - Export to Infor ION and IDM: doc2/export/infor-ion.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md
           - How to create a IDM mapping file: doc2/export/how-to-create-a-idm-mapping-file.md

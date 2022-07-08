@@ -129,8 +129,7 @@ nav:
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
-      - All Import Options:
-        - doc2/import.md
+      - All Import Options: doc2/import.md
         - Email: doc2/e-mail.md
         - Fileshare Import:
           - Fileshare: doc2/fileshare.md
@@ -139,7 +138,7 @@ nav:
           - Windows: doc2/watchdog-windows.md
         - Webhook: doc2/api.md
       - All Export Options:
-        - doc2/export.md
+        - doc2/export/index.md
         - Export to Infor:
           - Export to Infor ION and IDM: doc2/export/export-to-infor.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md

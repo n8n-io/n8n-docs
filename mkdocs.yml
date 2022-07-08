@@ -129,7 +129,8 @@ nav:
       - Modules: doc2/modules.md
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
-      - All Import Options: doc2/import.md
+      - All Import Options: 
+        - doc2/import/index.md
         - Email: doc2/e-mail.md
         - Fileshare Import:
           - Fileshare: doc2/fileshare.md

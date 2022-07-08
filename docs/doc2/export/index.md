@@ -13,6 +13,6 @@ tags:
 
 #### Here you can find the export options and the corresponding articles.
 
-- [Webhook](/doc2/webhook)
+- [Webhook](/doc2/export/webhook/)
 - [infor](/doc2/export/export-to-infor/)
 - [FLOW²](/doc2/export/export-to-flow2/)

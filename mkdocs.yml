@@ -133,7 +133,7 @@ nav:
         - doc2/import/index.md
         - Email: doc2/e-mail.md
         - Fileshare Import:
-          - doc2/fileshare.md
+          - doc2/fileshare/index.md
           - Configuration: doc2/watchpuppy-configuration.md
           - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md

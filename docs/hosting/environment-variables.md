@@ -76,7 +76,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | String | `https://docs.n8n.io/getting-started/installation/updating.html` | The URL displayed in the New Versions panel for additional information. |
 | `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/reference/data-collection/) with n8n |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | String | `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io` | Telemetry configuration for the frontend. |
-| `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the frontend. |
+| `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the backend. |
 | `N8N_AVAILABLE_BINARY_DATA_MODES` | String | `filesystem` | A comma separated list of available binary data modes. |
 | `N8N_BINARY_DATA_STORAGE_PATH` | String | `N8N_USE_FOLDER/binaryData` | The path where n8n stores binary data. |
 | `N8N_BINARY_DATA_TTL` | Number | `60` | Time to live (in minutes) for binary data of unsaved executions. |

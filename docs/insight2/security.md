@@ -13,7 +13,7 @@ tags:
 Insight² does not store data returned from your data sources. Insight² server acts as a proxy and passes the data as it is to the Insight² client. The credentials for the data sources are handled by the server and never exposed to the client. For example, if you are making an API request, the query is run from the server and not from the frontend.
 
 ## Datasource credentials
-All the datasource credentials are securely encrypted using `aes-256-gcm`. The credentials are never exposed to the frontend ( Insight² client ).
+All the datasource credentials are securely encrypted using `aes-256-gcm`. The credentials are never exposed to the frontend (Insight² client).
 
 ## Other security features
 - **TLS**: If you are using Insight² cloud, all connections are encrypted using TLS. We also have documentation for setting up TLS for self-hosted installations of Insight.

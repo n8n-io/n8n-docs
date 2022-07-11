@@ -8,7 +8,7 @@ Image widget is used to display images in your app.
 
 
 
-![Insight - Widget Reference - Image](/_images/insight2/widgets/image/image.png)
+![Insight² - Widget Reference - Image](/_images/insight2/widgets/image/image.png)
 
 
 
@@ -16,7 +16,7 @@ Image widget is used to display images in your app.
 
 
 
-![Insight - Widget Reference - Image](/_images/insight2/widgets/image/events.png)
+![Insight² - Widget Reference - Image](/_images/insight2/widgets/image/events.png)
 
 
 

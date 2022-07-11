@@ -9,7 +9,7 @@ Kanban widget allows you to visually organize and prioritize your tasks with a t
 
 
 
-![Insight - Kanban widget](/_images/insight2/widgets/kanban/kanban.png)
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban.png)
 
 </div>
 
@@ -27,7 +27,7 @@ Just like any other event on Insight, you can set multiple handlers for any of t
 
 
 
-![Insight - Kanban widget](/_images/insight2/widgets/kanban/kanban-events.png)
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban-events.png)
 
 </div>
 
@@ -40,7 +40,7 @@ Please keep in mind that you need to provide an `id` for each card in the `Card 
 and this `id` must be of type string.
 :::
 
-![Insight - Kanban widget](/_images/insight2/widgets/kanban/properties.png)
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/properties.png)
 
 </div>
 
@@ -58,7 +58,7 @@ and this `id` must be of type string.
 
 
 
-![Insight - Kanban widget](/_images/insight2/widgets/kanban/layout.png)
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/layout.png)
 
 </div>
 
@@ -71,7 +71,7 @@ and this `id` must be of type string.
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/kanban/styles.png)
+![Insight² - List view widget](/_images/insight2/widgets/kanban/styles.png)
 
 </div>
 
@@ -86,7 +86,7 @@ and this `id` must be of type string.
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/kanban/variables.png)
+![Insight² - List view widget](/_images/insight2/widgets/kanban/variables.png)
 
 </div>
 

@@ -10,7 +10,7 @@ The Toggle switch widget should be used if we want to make a binary choice, such
 
 
 
-![Insight - Widget Reference - Timer](/_images/insight2/widgets/toggle-switch/toggleswitch.png)
+![Insight² - Widget Reference - Timer](/_images/insight2/widgets/toggle-switch/toggleswitch.png)
 
 
 

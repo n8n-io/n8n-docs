@@ -7,7 +7,7 @@ Scan QR codes using device camera and hold the data they carry.
 
 
 
-![Insight - QR Scanner](/_images/insight2/widgets/qr-scanner/qr-scanner.jpeg)
+![Insight² - QR Scanner](/_images/insight2/widgets/qr-scanner/qr-scanner.jpeg)
 
 </div>
 

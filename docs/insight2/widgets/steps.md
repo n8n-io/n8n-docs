@@ -8,7 +8,7 @@ Steps are used to guide users through complex processes, making them easier and 
 
 
 
-![Insight - Star rating Widget](/_images/insight2/widgets/steps/steps.png)
+![Insight² - Star rating Widget](/_images/insight2/widgets/steps/steps.png)
 
 
 

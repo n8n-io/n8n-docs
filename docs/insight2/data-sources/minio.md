@@ -8,7 +8,7 @@ tags:
 
 # MinIO
 
-Insight can connect to minio and perform various operation on them.
+Insight² can connect to minio and perform various operation on them.
 
 ## Supported operations
 
@@ -23,7 +23,7 @@ Insight can connect to minio and perform various operation on them.
 
 To add a new minio source, click on the **Add or edit datasource** icon on the left sidebar of the app editor and click on `Add datasource` button. Select Minio from the modal that pops up.
 
-Insight requires the following to connect to your DynamoDB:
+Insight² requires the following to connect to your DynamoDB:
 
 - **Host**
 - **Port**
@@ -32,17 +32,17 @@ Insight requires the following to connect to your DynamoDB:
 
 
 
-![Insight - Minio connection](/_images/insight2/datasource-reference/minio-connect.png)
+![Insight² - Minio connection](/_images/insight2/datasource-reference/minio-connect.png)
 
 
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying Minio
 
 Click on `+` button of the **query manager** at the bottom panel of the editor and select the data source added in the previous step as the data source. Select the operation that you want to perform and click **Save** to save the query.
 
-![Insight - Mino query](/_images/insight2/datasource-reference/minio-query.png)
+![Insight² - Mino query](/_images/insight2/datasource-reference/minio-query.png)
 
 Click on the **run** button to run the query.
 **NOTE**: Query should be saved before running.

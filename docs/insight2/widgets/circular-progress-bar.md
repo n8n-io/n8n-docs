@@ -8,7 +8,7 @@ Circular progress bar widget can be used to show progress in a progress circle.
 
 
 
-![Insight - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/cpb.png)
+![Insight² - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/cpb.png)
 
 
 
@@ -20,7 +20,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/prop.png)
+![Insight² - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/prop.png)
 
 
 | properties  | description | Expected Value |
@@ -32,7 +32,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/layout.png)
+![Insight² - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/layout.png)
 
 
 
@@ -45,7 +45,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/styles.png)
+![Insight² - Widget Reference - Circular progress bar](/_images/insight2/widgets/circular-progressbar/styles.png)
 
 
 

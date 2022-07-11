@@ -8,7 +8,7 @@ tags:
 
 # WooCommerce
 
-Insight can connect to Woocommerce databases to read and write data.
+Insight² can connect to Woocommerce databases to read and write data.
 
 - [WooCommerce](#woocommerce)
 	- [Connection](#connection)
@@ -22,7 +22,7 @@ You may use [HTTP Basic Auth] by providing the REST API Consumer Key as the user
 - **Consumer key**
 - **Consumer secret**
 
-![Insight - Data Source - Woocommerce](/_images/insight2/datasource-reference/woocommerce/woocomerce-auth.png)
+![Insight² - Data Source - Woocommerce](/_images/insight2/datasource-reference/woocommerce/woocomerce-auth.png)
 
 :::info
 NOTE: For generating keys visit admin dashboard of woocommerce , more info: https://woocommerce.github.io/woocommerce-rest-api-docs/?javascript#authentication

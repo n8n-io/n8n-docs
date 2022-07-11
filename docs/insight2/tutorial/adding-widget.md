@@ -12,7 +12,7 @@ To add a widget, navigate to the `Widget manager` on the right sidebar. It will 
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/widget.png)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/widget.png)
 
 
 
@@ -25,7 +25,7 @@ The widgets can be resized and repositioned within the canvas.
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize.gif)
 
 
 
@@ -43,7 +43,7 @@ Before triggering `Show modal action` we need to add a modal widget to the canva
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/modal.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/modal.gif)
 
 
 
@@ -52,7 +52,7 @@ We can resize the column width using the resize handle of the column.
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize-table-column.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize-table-column.gif)
 
 
 
@@ -61,7 +61,7 @@ Click on the widget to open the inspect panel on right sidebar. Here you can cha
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/inspect-panel.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/inspect-panel.gif)
 
 
 
@@ -76,7 +76,7 @@ Since we have already run the query in previous step, the data will be immediate
 
 
 
-![Insight - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/table-data.png)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/table-data.png)
 
 
 

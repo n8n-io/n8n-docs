@@ -8,7 +8,7 @@ tags:
 
 # SMTP
 
-SMTP plugin can connect Insight applications to **SMTP servers** for sending emails.
+SMTP plugin can connect Insight² applications to **SMTP servers** for sending emails.
 
 ## Connection
 
@@ -24,7 +24,7 @@ You can also test your connection before saving the configuration by clicking on
 
 
 
-![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/connect.png)
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/connect.png)
 
 
 
@@ -40,7 +40,7 @@ To create a query for sending email, you will need to provide the following prop
 
 
 
-![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
 
 </div>
 
@@ -51,6 +51,6 @@ To create a query for sending email, you will need to provide the following prop
 
 
 
-![Insight - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
 
 </div>

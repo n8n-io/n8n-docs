@@ -8,7 +8,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/picker.png)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/picker.png)
 
 
 
@@ -20,7 +20,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/file-type.gif)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/file-type.gif)
 
 </div>
 
@@ -32,7 +32,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/events.png)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/events.png)
 
 </div>
 
@@ -84,7 +84,7 @@ Any file that does not have a size in the range of `Max size limit` and `Min siz
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/options.png)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/options.png)
 
 </div>
 
@@ -104,7 +104,7 @@ If the **Parse content** option is toggled on, it only parses the next file that
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/layout.png)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/layout.png)
 
 </div>
 
@@ -119,7 +119,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 
 
-![Insight - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/styles.png)
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/styles.png)
 
 </div>
 

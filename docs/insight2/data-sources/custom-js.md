@@ -12,7 +12,7 @@ You can write custom JavaScript code to interact with components and queries. To
 
 
 
-![Insight - Data source - Custom JavaScript](/_images/insight2/datasource-reference/custom-javascript/custom-javascript.png)
+![Insight² - Data source - Custom JavaScript](/_images/insight2/datasource-reference/custom-javascript/custom-javascript.png)
 
 </div>
 
@@ -45,7 +45,7 @@ You can also write custom JavaScript code to get the data from **External APIs**
 
 ### Libraries
 
-Insight allows you to internally utilize these libraries:
+Insight² allows you to internally utilize these libraries:
 
 | Name        | Documentation |
 | ----------- | ----------- |

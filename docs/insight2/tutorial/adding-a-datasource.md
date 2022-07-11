@@ -16,7 +16,7 @@ The data sources are created on app level and not on workspace level.
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_1.png)
+![Insight² - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_1.png)
 
 
 
@@ -24,18 +24,18 @@ You will be prompted to select the data source that you wish to add. Let's selec
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_2.png)
+![Insight² - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_2.png)
 
 
 
 The name of the data source must be unique (within the app) and can be changed by clicking on the data source name at the top of the prompt. Click on `Test Connection` button to verify the connection, this might take a couple of minutes. Once verified, save the data source.
 
 
-If you are using Insight cloud and if your data source is not publicly accessible, please white-list our IP address ( shown while creating a new data source ).
+If you are using Insight² cloud and if your data source is not publicly accessible, please white-list our IP address ( shown while creating a new data source ).
 
 
 
 
-![Insight - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_3.png)
+![Insight² - Tutorial - Adding a data source](/_images/insight2/datasource-reference/postgresql/AddingDatasource_3.png)
 
 

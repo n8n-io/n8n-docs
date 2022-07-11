@@ -7,12 +7,12 @@ tags:
 ---
 
 # TypeSense
-Insight can connect to your TypeSense deployment to read and write data.
+Insight² can connect to your TypeSense deployment to read and write data.
 
 ## Connection
-Please make sure the host/IP of the TypeSense deployment is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please **whitelist our IP**.
+Please make sure the host/IP of the TypeSense deployment is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please **whitelist our IP**.
 
-Insight requires the following to connect to your TypeSense deployment:
+Insight² requires the following to connect to your TypeSense deployment:
 - **Host**
 - **Port**
 - **API Key**
@@ -20,7 +20,7 @@ Insight requires the following to connect to your TypeSense deployment:
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/connect.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/connect.png)
 
 
 ## Querying TypeSense
@@ -30,7 +30,7 @@ Select the operation that you want to perform on your TypeSense cluster and clic
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/query.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/query.png)
 
 
 
@@ -46,7 +46,7 @@ With this operation you can easily create `Collections` in your TypeSense cluste
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/collection.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/collection.png)
 
 
 
@@ -57,7 +57,7 @@ https://typesense.org/docs/0.22.2/api/documents.html#index-a-single-document)**.
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/index.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/index.png)
 
 
 
@@ -67,7 +67,7 @@ Use this operation to perform a search within the specified collection. Know mor
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/search.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/search.png)
 
 
 
@@ -77,7 +77,7 @@ Use this operation to fetch an individual document in a collection by providing 
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/get.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/get.png)
 
 
 
@@ -87,7 +87,7 @@ Use this operation to update an individual document by providing the **Collectio
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/update.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/update.png)
 
 
 
@@ -97,7 +97,7 @@ Delete a document from collection by providing the `Id` of the document. Check o
 
 
 
-![Insight - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/delete.png)
+![Insight² - Data Source - TypeSense](/_images/insight2/datasource-reference/typesense/delete.png)
 
 
 

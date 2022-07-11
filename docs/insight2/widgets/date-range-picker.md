@@ -8,7 +8,7 @@ The date-range picker widget allows users to select a range of dates.
 
 
 
-![Insight - Widget Reference - Date range picker](/_images/insight2/widgets/date-range-picker/date-range.gif)
+![Insight² - Widget Reference - Date range picker](/_images/insight2/widgets/date-range-picker/date-range.gif)
 
 
 

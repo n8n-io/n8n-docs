@@ -8,7 +8,7 @@ Star rating widget can be used to display as well as input ratings. The widget s
 
 
 
-![Insight - Star rating Widget](/_images/insight2/widgets/star/star-rating.png)
+![Insight² - Star rating Widget](/_images/insight2/widgets/star/star-rating.png)
 
 
 ## Event

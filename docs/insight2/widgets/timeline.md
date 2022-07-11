@@ -9,7 +9,7 @@ Timeline widget can be used to do a visual representation of a sequence of event
 
 
 
-![Insight - Widget Reference - Timeline](/_images/insight2/widgets/timeline/timeline.png)
+![Insight² - Widget Reference - Timeline](/_images/insight2/widgets/timeline/timeline.png)
 
 
 

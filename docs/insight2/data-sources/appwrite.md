@@ -12,7 +12,7 @@ Now build applications on top of your Appwrite database.
 
 ## Connection
 
-Insight connects to your Appwrite app using :
+Insight² connects to your Appwrite app using :
 - **Host (API endpoint)**
 - **Project ID**
 - **Secret key**
@@ -23,11 +23,11 @@ You'll find the Secret key and other credentials on your Appwrite's project sett
 You should also set scope for access of particular resource. Learn more about the **API keys and scopes** [here](https://appwrite.io/docs/keys).
 :::
 
-To connect Appwrite datasource to your Insight application, go to the data source manager on the left-sidebar and click on the `+` button. Select Appwrite from the list of available datasources, provide the credentials and click **Save**. It is recommended to the check the connection by clicking on 'Test connection' button to verify if the service account can access Appwrite from Insight server.
+To connect Appwrite datasource to your Insight² application, go to the data source manager on the left-sidebar and click on the `+` button. Select Appwrite from the list of available datasources, provide the credentials and click **Save**. It is recommended to the check the connection by clicking on 'Test connection' button to verify if the service account can access Appwrite from Insight² server.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init.gif)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init.gif)
 
 
 
@@ -37,7 +37,7 @@ After setting up the Appwrite datasource, you can click on the `+` button of the
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query.gif)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query.gif)
 
 
 
@@ -72,7 +72,7 @@ This operation can be used to get a list of all the user documents.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_list.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_list.png)
 
 
 ### Get document
@@ -87,7 +87,7 @@ Use this operation to get a document from a collection by its unique ID.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_get.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_get.png)
 
 
 
@@ -103,7 +103,7 @@ Use this operation to create a new document in a collection.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_add.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_add.png)
 
 
 
@@ -121,7 +121,7 @@ Use this operation to update a document.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_update.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_update.png)
 
 
 
@@ -137,7 +137,7 @@ Use this operation for deleting a document in collection.
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_delete.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_delete.png)
 
 
 
@@ -156,5 +156,5 @@ and these objects must contain a key value pair to point unique record in the da
 
 
 
-![Insight - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_bulk.png)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite_bulk.png)
 

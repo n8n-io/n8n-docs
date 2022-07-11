@@ -8,7 +8,7 @@ tags:
 
 # Bulk update multiple rows in table
 
-Currently, the datasources in Insight have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query.
+Currently, the datasources in Insight² have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query.
 
 In this guide, We have assumed that you have successfully connected the data source. For this guide, we will be using the PostgreSQL data source as an example database, currently, this workaround can be used only for PostgreSQL and MySQL.
 
@@ -18,7 +18,7 @@ Let's create the query that will be getting the data from the database:
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/postgres1.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/postgres1.png)
 
 
 ## 2. Display the data on the table
@@ -28,7 +28,7 @@ Let's create the query that will be getting the data from the database:
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/showData.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/showData.png)
 
 
 ## 3. Make the columns editable
@@ -38,7 +38,7 @@ Let's create the query that will be getting the data from the database:
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/columns.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/columns.png)
 
 
 
@@ -49,7 +49,7 @@ Let's create the query that will be getting the data from the database:
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/options.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/options.png)
 
 
 
@@ -76,7 +76,7 @@ return sql
 ```
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/runjs1.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/runjs1.png)
 
 
 
@@ -86,7 +86,7 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/update.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/update.png)
 
 
 
@@ -98,7 +98,7 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/event.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/event.png)
 
 
 
@@ -108,6 +108,6 @@ Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter
 
 
 
-![Insight - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/success.png)
+![Insight² - How To - Bulk update multiple rows in table](/_images/insight2/how-to/bulk-update-multiple/success.png)
 
 

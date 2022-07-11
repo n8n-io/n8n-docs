@@ -12,7 +12,7 @@ The debugger captures errors that happens while running the queries. For example
 
 
 
-![Insight - Debugger](/_images/insight2/tutorial/debugger/debugger.gif)
+![Insight² - Debugger](/_images/insight2/tutorial/debugger/debugger.gif)
 
 
 
@@ -22,6 +22,6 @@ You can click on the `pin` icon at the top-right corner of the debugger if you d
 
 
 
-![Insight - Debugger](/_images/insight2/tutorial/debugger/pinned-debugger.gif)
+![Insight² - Debugger](/_images/insight2/tutorial/debugger/pinned-debugger.gif)
 
 </div>

@@ -16,7 +16,7 @@ Insight² does not store data returned from your data sources. Insight² server 
 All the datasource credentials are securely encrypted using `aes-256-gcm`. The credentials are never exposed to the frontend ( Insight² client ).
 
 ## Other security features
-- **TLS**: If you are using Insight cloud, all connections are encrypted using TLS. We also have documentation for setting up TLS for self-hosted installations of Insight.
+- **TLS**: If you are using Insight² cloud, all connections are encrypted using TLS. We also have documentation for setting up TLS for self-hosted installations of Insight.
 - **Audit logs**: Audit logs are available on the enterprise edition of Insight. Every user action is logged along with the IP addresses and user information.
 - **Request logging**: All the requests to server are logged. If self-hosted, you can easily extend Insight² to use your preferred logging service. Insight² comes with built-in Sentry integration.
 - **Whitelisted IPs**: If you are using Insight² cloud, you can whitelist our IP address (3.129.198.40) so that your datasources are not exposed to the public.

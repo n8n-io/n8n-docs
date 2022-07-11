@@ -9,11 +9,11 @@ tags:
 # Airtable
 
 
-Insight can connect to your Airtable account to read and write data. **Airtable API key** is required to create an Airtable data source on Insight. You can generate API key by visiting [Airtable account page](https://airtable.com/account).
+Insight² can connect to your Airtable account to read and write data. **Airtable API key** is required to create an Airtable data source on Insight. You can generate API key by visiting [Airtable account page](https://airtable.com/account).
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtableds.gif)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtableds.gif)
 
 
 
@@ -49,7 +49,7 @@ This query lists all the records in a table. The results are paginated and each 
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_list.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_list.png)
 
 
 
@@ -97,7 +97,7 @@ Example response from Airtable:
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_retrieve.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_retrieve.png)
 
 
 
@@ -123,7 +123,7 @@ Example response from Airtable:
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_create.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_create.png)
 
 
 
@@ -188,7 +188,7 @@ Example response from Airtable:
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_update.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_update.png)
 
 
 
@@ -196,7 +196,7 @@ Example response from Airtable:
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable-update-example-body.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable-update-example-body.png)
 
 
 
@@ -227,7 +227,7 @@ Example response from Airtable:
 
 
 
-![Insight - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_delete.png)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtable_delete.png)
 
 
 

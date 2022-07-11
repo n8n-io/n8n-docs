@@ -21,7 +21,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/adding-account.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/adding-account.png)
 
 
 ## Adding a file picker
@@ -32,7 +32,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
 
 
 
@@ -48,7 +48,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
 
 
 
@@ -71,6 +71,6 @@ Before adding the new data source we will need to have a private key for our GCS
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/final-result.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/final-result.png)
 
 

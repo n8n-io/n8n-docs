@@ -8,7 +8,7 @@ tags:
 
 # Oracle DB
 
-Insight can connect to Oracle databases to read and write data.
+Insight² can connect to Oracle databases to read and write data.
 
 ## Connection
 
@@ -24,11 +24,11 @@ A Oracle DB can be connected with the following credentails:
 
 
 
-![Insight - Data source - OracleDB](/_images/insight2/datasource-reference/oracledb/oracleauth.png)
+![Insight² - Data source - OracleDB](/_images/insight2/datasource-reference/oracledb/oracleauth.png)
 
 
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying Oracle DB
 

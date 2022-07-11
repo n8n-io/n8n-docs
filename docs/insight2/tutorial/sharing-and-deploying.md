@@ -15,7 +15,7 @@ Clicking on `Preview` will open up the currently opened version of the app in th
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
 
 
 
@@ -27,7 +27,7 @@ Once you have released a version of your app, you can share the app with others 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/share.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/share.png)
 
 
 
@@ -35,7 +35,7 @@ Once you have released a version of your app, you can share the app with others 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/toggle.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/toggle.png)
 
 
 
@@ -43,7 +43,7 @@ Once you have released a version of your app, you can share the app with others 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/url.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/url.png)
 
 
 
@@ -51,6 +51,6 @@ Once you have released a version of your app, you can share the app with others 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/sharing/embedd.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/embedd.png)
 
 

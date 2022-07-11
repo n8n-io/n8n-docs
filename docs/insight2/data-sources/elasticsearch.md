@@ -7,14 +7,14 @@ tags:
 ---
 
 # Elasticsearch
-Insight can connect to your Elasticsearch cluster to read and write data.
+Insight² can connect to your Elasticsearch cluster to read and write data.
 
 ## Connection
-Please make sure the host/IP of the Elasticsearch cluster is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please **whitelist our IP**.
+Please make sure the host/IP of the Elasticsearch cluster is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please **whitelist our IP**.
 
 To add a new Elasticsearch database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select Elasticsearch from the modal that pops up.
 
-Insight requires the following to connect to your Elasticsearch cluster:
+Insight² requires the following to connect to your Elasticsearch cluster:
 - **Host**
 - **Port**
 - **Username**
@@ -22,14 +22,14 @@ Insight requires the following to connect to your Elasticsearch cluster:
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/connect.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/connect.png)
 
 
 
 Elastic search datasource is also providing an option for connecting services with ssl certificates.
 - You can either use CA / Client certificates option.
 
-![Insight - Data Source - Elasticsearch - SSL](/_images/insight2/datasource-reference/elasticsearch/ssl.png)
+![Insight² - Data Source - Elasticsearch - SSL](/_images/insight2/datasource-reference/elasticsearch/ssl.png)
 
 
 ## Querying Elasticsearch
@@ -39,7 +39,7 @@ Select the operation that you want to perform on your Elasticsearch cluster and 
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/query.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/query.png)
 
 </div>
 
@@ -55,7 +55,7 @@ This operation allows you to execute a search query and get back search hits tha
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/elastic-search.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/elastic-search.png)
 
 </div>
 
@@ -65,7 +65,7 @@ This operation allows you to add a JSON document to the specified data stream or
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/index.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/index.png)
 
 </div>
 
@@ -75,7 +75,7 @@ This operation allows you to retrieve the specified JSON document from the index
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/get.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/get.png)
 
 </div>
 
@@ -85,6 +85,6 @@ This operation allows to update a document using the specified script. Read the 
 
 
 
-![Insight - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/update.png)
+![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/update.png)
 
 </div>

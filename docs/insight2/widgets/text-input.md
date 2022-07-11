@@ -12,7 +12,7 @@ The Text Input should be preferred when user input is a single line of text.
 
 
 
-![Insight - Widget Reference - Text input](/_images/insight2/widgets/text-input/textinput.png)
+![Insight² - Widget Reference - Text input](/_images/insight2/widgets/text-input/textinput.png)
 
 
 

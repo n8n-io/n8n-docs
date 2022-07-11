@@ -8,7 +8,7 @@ A Tabs widget contains a number of defined containers that can be navigated thro
 
 
 
-![Insight - Widget Reference - Tabs](/_images/insight2/widgets/tabs/tabs.png)
+![Insight² - Widget Reference - Tabs](/_images/insight2/widgets/tabs/tabs.png)
 
 
 

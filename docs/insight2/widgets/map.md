@@ -8,7 +8,7 @@ The map widget can be used to pick or select locations on the Google map with th
 
 
 
-![Insight - Widget Reference - Map](/_images/insight2/widgets/map/map.png)
+![Insight² - Widget Reference - Map](/_images/insight2/widgets/map/map.png)
 
 
 

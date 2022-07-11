@@ -8,7 +8,7 @@ List view widget allows to create a list of repeatable rows of data. Just like c
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/listviewapp.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/listviewapp.png)
 
 
 
@@ -18,7 +18,7 @@ List view widget allows to create a list of repeatable rows of data. Just like c
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/event.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/event.png)
 
 
 
@@ -34,7 +34,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/properties.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/properties.png)
 
 
 
@@ -48,7 +48,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/listlayout.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/listlayout.png)
 
 
 | Layout  | description | Expected value |
@@ -60,7 +60,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/style.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/style.png)
 
 
 
@@ -80,7 +80,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/emptylist.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/emptylist.png)
 
 
 
@@ -88,14 +88,14 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/data.gif)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/data.gif)
 
 
 - Now lets edit the `List data` property of list view widget for displaying the query data. We will use JS to get the data from the query - `{{queries.restapi1.data.data}}`. Here the last `data` is data object that includes array of objects, the first `data` is the data resulted from the `restapi1` query. This will automatically create the rows in the widget using the data.
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/datadisplay.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/datadisplay.png)
 
 
 
@@ -103,7 +103,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - List view widget](/_images/insight2/widgets/list-view/addingwidgets.gif)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/addingwidgets.gif)
 
 
 :::tip

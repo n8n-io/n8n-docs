@@ -9,14 +9,14 @@ tags:
 # Cloud Firestore
 
 ## Connection
-Insight connects to your Cloud Firestore using JSON key of your GCP service account.
+Insight² connects to your Cloud Firestore using JSON key of your GCP service account.
 To generate a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
-Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on **Test connection** button to verify if the service account can access Firestore from Insight server. Click on **Save** button to save the datasource.
+Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on **Test connection** button to verify if the service account can access Firestore from Insight² server. Click on **Save** button to save the datasource.
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-ds-firestore.gif)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-ds-firestore.gif)
 
 </div>
 
@@ -26,7 +26,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/firestore-query.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/firestore-query.png)
 
 </div>
 
@@ -55,7 +55,7 @@ Use this operation to get the data in a document.
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/get.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/get.png)
 
 </div>
 
@@ -77,7 +77,7 @@ Use this operation to query all the documents in a collection. Check firestore d
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/query-collection.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/query-collection.png)
 
 
 
@@ -98,7 +98,7 @@ Use this operation for creating a new document in a collection.
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-document.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-document.png)
 
 
 
@@ -119,7 +119,7 @@ Use this operation for updating the existing document in a collection. Also, it 
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/update.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/update.png)
 
 
 
@@ -140,7 +140,7 @@ This operation replaces your chosen object with the value that you provide. So i
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/set.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/set.png)
 
 
 
@@ -157,7 +157,7 @@ Use this operation for bulk updating documents.
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/bulk.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/bulk.png)
 
 
 
@@ -171,7 +171,7 @@ Use this operation for deleting a document in a collection.
 
 
 
-![Insight - Data source - Firestore](/_images/insight2/datasource-reference/firestore/delete.png)
+![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/delete.png)
 
 
 

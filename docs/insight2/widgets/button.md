@@ -6,14 +6,14 @@ title: Button
 
 Button widget can be used to take actions.
 
-<iframe height="500"src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Insight Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500"src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Insight² Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Properties
 ### Event: On click
 
 
 
-![Insight - Widget Reference - Button Action List](/_images/insight2/widgets/button/button-actions.png)
+![Insight² - Widget Reference - Button Action List](/_images/insight2/widgets/button/button-actions.png)
 
 
 
@@ -29,7 +29,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - widget- button](/_images/insight2/widgets/button/properties.png)
+![Insight² - widget- button](/_images/insight2/widgets/button/properties.png)
 
 
 
@@ -42,7 +42,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - widget- button](/_images/insight2/widgets/list-view/listlayout.png)
+![Insight² - widget- button](/_images/insight2/widgets/list-view/listlayout.png)
 
 
 
@@ -55,7 +55,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - widget- button](/_images/insight2/widgets/button/styles.png)
+![Insight² - widget- button](/_images/insight2/widgets/button/styles.png)
 
 
 

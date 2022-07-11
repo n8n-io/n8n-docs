@@ -15,7 +15,7 @@ Admin of a workspace can add users to the workspace. To manage the users in your
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu1.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu1.png)
 
 
 
@@ -27,7 +27,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage.png)
 
 
 
@@ -35,7 +35,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser.png)
 
 
 
@@ -49,7 +49,7 @@ You can also copy the invitation url by clicking on the copy icon next to `invit
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
 
 
 
@@ -59,7 +59,7 @@ You can disable any active user's access to your workspace by clicking on the **
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived.png)
 
 
 ### Enabling a user's access
@@ -68,7 +68,7 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
 
 
 
@@ -78,13 +78,13 @@ On Insight, Admins can create groups for users added in a workspace and grant th
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2.png)
 
 
 
 ### Group properties
 
-Every group on Insight has three components:
+Every group on Insight² has three components:
 
 #### Apps:
 
@@ -92,7 +92,7 @@ Admins can add or remove any number of apps for a group of users. To add an app 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps.png)
 
 
 
@@ -102,7 +102,7 @@ Admins can add or remove any numbers of users in a group. Just select a user fro
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users.png)
 
 
 
@@ -112,7 +112,7 @@ Admins can set granular permission like creating/deleting apps or creating folde
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions.png)
 
 
 
@@ -136,7 +136,7 @@ This group contains all the users and admins.
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers.png)
 
 
 
@@ -150,7 +150,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin.png)
 
 
 
@@ -160,7 +160,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1.png)
 
 
 
@@ -168,7 +168,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2.png)
 
 
 
@@ -180,6 +180,6 @@ To delete a group, click on `Delete` next to it. It will confirm whether you wan
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup.png)
 
 

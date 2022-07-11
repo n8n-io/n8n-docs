@@ -10,11 +10,11 @@ tags:
 
 ## Connection
 
-Insight can connect to your Baserow account to read and write data. Baserow API token is required to create an Baserow data source on Insight. You can follow the steps to create API token from [this link](https://baserow.io/api-docs).
+Insight² can connect to your Baserow account to read and write data. Baserow API token is required to create an Baserow data source on Insight. You can follow the steps to create API token from [this link](https://baserow.io/api-docs).
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-intro.gif)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-intro.gif)
 
 
 
@@ -42,7 +42,7 @@ This query lists all the fields in a table.
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-fields.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-fields.png)
 
 
 
@@ -97,7 +97,7 @@ This query lists all the rows in a table.
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-rows.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-list-rows.png)
 
 
 
@@ -146,7 +146,7 @@ Example response from Baserow:
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-get-row.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-get-row.png)
 
 
 
@@ -171,7 +171,7 @@ Example response from Baserow:
 - **Records**
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-create-row.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-create-row.png)
 
 
 
@@ -208,7 +208,7 @@ Example response from Baserow:
 - **Records**
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-update-row.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-update-row.png)
 
 
 
@@ -249,7 +249,7 @@ Example response from Baserow:
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-move-row.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-move-row.png)
 
 
 
@@ -275,7 +275,7 @@ Example response from Baserow:
 
 
 
-![Insight - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-delete-row.png)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-delete-row.png)
 
 
 

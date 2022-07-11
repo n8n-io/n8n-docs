@@ -8,7 +8,7 @@ tags:
 
 # BigQuery
 
-Insight can connect to BigQuery databases to run BigQuery queries.
+Insight² can connect to BigQuery databases to run BigQuery queries.
 
 ## Connection
 
@@ -18,7 +18,7 @@ Create **Service Account** and **key**, then get your configs downloaded as **JS
 
 To add a new BigQuery, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select BigQuery from the modal that pops up.
 
-Insight requires the config json downloaded from your account to connect to BigQuery. Paste the json into the `Private key` field.
+Insight² requires the config json downloaded from your account to connect to BigQuery. Paste the json into the `Private key` field.
 
 **The json looks like**:
 
@@ -39,11 +39,11 @@ Insight requires the config json downloaded from your account to connect to BigQ
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-create.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-create.png)
 
 
 
-Click on **Test connection** button to verify if the credentials are correct and that the API is accessible to Insight server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the API is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying BigQuery
 
@@ -51,7 +51,7 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-query.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-query.png)
 
 
 
@@ -96,7 +96,7 @@ Retruns list of datasets.
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
+![Insight² - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
 
 
 
@@ -114,7 +114,7 @@ Return list of tables within a dataset
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq_list_tables.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq_list_tables.png)
 
 
 
@@ -125,7 +125,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
+![Insight² - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
 
 
 
@@ -134,7 +134,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-insert.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-insert.png)
 
 
 
@@ -143,7 +143,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-delete.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-delete.png)
 
 
 
@@ -155,7 +155,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-update.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-update.png)
 
 
 
@@ -168,7 +168,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 
 
-![Insight - Data source - BigQuery](/_images/insight2/bq-view.png)
+![Insight² - Data source - BigQuery](/_images/insight2/bq-view.png)
 
 
 

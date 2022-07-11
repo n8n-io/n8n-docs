@@ -11,13 +11,13 @@ tags:
 User can create their own workspaces, user who created workspace will be having admin privileges for the workspace.
 
 
-![Insight - Google create project](/_images/insight2/multiworkspace/multi-workspace.gif)
+![Insight² - Google create project](/_images/insight2/multiworkspace/multi-workspace.gif)
 
 ## Hierarchy
 
 
 
-![Insight - Google create project](/_images/insight2/multiworkspace/Tooljet-workspace.png)
+![Insight² - Google create project](/_images/insight2/multiworkspace/Tooljet-workspace.png)
 
 
 
@@ -25,7 +25,7 @@ User can create their own workspaces, user who created workspace will be having 
 
 - The administrator can manage [users and groups](/insight2/tutorial/manage-users-groups/) of each workspace
 - Applications and settings can not be shared between workspaces
-- A user authorised to login to Insight will not have access to all workspaces, Usesr should be invited or signed up to a workspace to log-in to it.
+- A user authorised to login to Insight² will not have access to all workspaces, Usesr should be invited or signed up to a workspace to log-in to it.
 
 ## Enabling Multi-Workspace
 

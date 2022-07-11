@@ -26,7 +26,7 @@ The query will now look like this:
 
 
 
-![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform.png)
+![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform.png)
 
 
 
@@ -35,7 +35,7 @@ Click the `create` button to create the query. Saved queries can be run using th
 
 
 
-![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/result.png)
+![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/result.png)
 
 
 
@@ -44,7 +44,7 @@ We can see that `first_name` and `last_name` are added to all the rows in the `d
 
 
 
-![Insight - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/rawdata.png)
+![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/rawdata.png)
 
 
 

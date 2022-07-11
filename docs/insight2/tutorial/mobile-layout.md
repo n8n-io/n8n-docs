@@ -17,7 +17,7 @@ Widgets can be shown on desktop, mobile, or both.
 
 
 
-![Insight - widgets list](/_images/insight2/tutorial/mobile-layout/mobile-layout.gif)
+![Insight² - widgets list](/_images/insight2/tutorial/mobile-layout/mobile-layout.gif)
 
 
 

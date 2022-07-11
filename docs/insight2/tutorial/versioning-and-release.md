@@ -23,7 +23,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/appversion.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/appversion.png)
 
 
 
@@ -31,7 +31,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/modal.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/modal.png)
 
 
 
@@ -47,7 +47,7 @@ To release a version:
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/versiondropdown.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/versiondropdown.png)
 
 
 
@@ -55,18 +55,18 @@ To release a version:
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/release.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/release.png)
 
 
 
 
 
 
-Insight will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+Insight² will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 
 
 
-![Insight - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/prompt.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/versioning-and-release/prompt.png)
 
 
 

@@ -12,7 +12,7 @@ The checkbox widget consists of a single checkbox input.
 
 
 
-![Insight - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/checkbox.gif)
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/checkbox.gif)
 
 
 
@@ -26,7 +26,7 @@ The text is to be used as the label for the checkbox. This field expects a `Stri
 
 
 
-![Insight - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/events.png)
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/events.png)
 
 
 
@@ -44,7 +44,7 @@ On uncheck event is triggered when checkbox input is unchecked.
 
 
 
-![Insight - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/layout.png)
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/layout.png)
 
 
 #### Show on desktop
@@ -58,7 +58,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 
 
-![Insight - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/styles.png)
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/styles.png)
 
 
 

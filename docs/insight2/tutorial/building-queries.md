@@ -25,7 +25,7 @@ SELECT * FROM customers;
 
 
 
-![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query.png)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query.png)
 
 
 
@@ -33,7 +33,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 
 
-![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview.png)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview.png)
 
 
 
@@ -42,7 +42,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 
 
-![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options.gif)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options.gif)
 
 
 
@@ -54,7 +54,7 @@ Enable this option to show a prompt to confirm the action before a query is run.
 
 
 
-![Insight - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/confirm.png)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/confirm.png)
 
 
 

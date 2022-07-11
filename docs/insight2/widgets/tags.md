@@ -8,7 +8,7 @@ Tags widget can be used to show array of data as tags.
 
 
 
-![Insight - Widget Reference - Tags](/_images/insight2/widgets/tags/tags.png)
+![Insight² - Widget Reference - Tags](/_images/insight2/widgets/tags/tags.png)
 
 
 

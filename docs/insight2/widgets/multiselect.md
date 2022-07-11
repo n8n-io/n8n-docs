@@ -8,7 +8,7 @@ Multiselect widget can be used to collect multiple user inputs from a list of op
 
 
 
-![Insight - Widget Reference - Multiselect](/_images/insight2/widgets/multiselect/multi.gif)
+![Insight² - Widget Reference - Multiselect](/_images/insight2/widgets/multiselect/multi.gif)
 
 
 

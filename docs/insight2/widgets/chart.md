@@ -31,7 +31,7 @@ The chart will look like this:
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/linec.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/linec.png)
 
 </div>
 
@@ -59,7 +59,7 @@ The chart will look like this:
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/barc.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/barc.png)
 
 </div>
 
@@ -84,7 +84,7 @@ The chart will look like this:
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/piec.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/piec.png)
 
 
 
@@ -106,7 +106,7 @@ Anyway, to work with the JSON you need to enable the `Use Plotly JSON schema` to
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/pfjson.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/pfjson.png)
 
 
 
@@ -116,7 +116,7 @@ The end result will be like this:
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/jsonschema.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/jsonschema.png)
 
 
 
@@ -140,7 +140,7 @@ Toggle `on` or `off` to show or hide the grid lines on the chart. You can also p
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/layout.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/layout.png)
 
 
 
@@ -155,7 +155,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 
 
-![Insight - Widget Reference - Chart](/_images/insight2/widgets/chart/styles.png)
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/styles.png)
 
 
 ### Padding

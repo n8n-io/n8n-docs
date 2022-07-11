@@ -6,7 +6,7 @@ title: Table
 
 Tables can be used for both displaying and editing data.
 
-<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="Insight Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="Insight² Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Table data
 

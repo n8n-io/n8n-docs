@@ -8,7 +8,7 @@ Modal widget renders in front of a backdrop, and it blocks interaction with the 
 
 
 
-![Insight - Widget Reference - Modal](/_images/insight2/widgets/modal/modal1.gif)
+![Insight² - Widget Reference - Modal](/_images/insight2/widgets/modal/modal1.gif)
 
 
 

@@ -12,7 +12,7 @@ Range Sliders have "Two handles" option which allows user to select within a ran
 
 
 
-![Insight - Widget Reference - Text input](/_images/insight2/widgets/range-slider/range_slider.png)
+![Insight² - Widget Reference - Text input](/_images/insight2/widgets/range-slider/range_slider.png)
 
 
 

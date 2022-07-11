@@ -21,7 +21,7 @@ Once you have successfully added the AWS data source, build a basic UI using the
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/ui.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/ui.png)
 
 
 ## Queries
@@ -39,7 +39,7 @@ This query will fetch the list of all the buckets in your S3. Just create a new 
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/getBuckets.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/getBuckets.png)
 
 
 
@@ -53,7 +53,7 @@ You can later add an event handler for running the **listObject** query whenever
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/dropdown.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/dropdown.png)
 
 
 
@@ -63,7 +63,7 @@ This query will list all the objects inside the selected Bucket in dropdown. Sel
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/listObjects.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/listObjects.png)
 
 
 
@@ -77,7 +77,7 @@ Edit the properties of **table** widget:
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/table.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/table.png)
 
 
 
@@ -87,7 +87,7 @@ Create a new query and select **Signed URL for download** operation. In the Buck
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/download.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/download.png)
 
 
 
@@ -104,7 +104,7 @@ Create a new query, select the **Upload object** operation. Enter the following 
 
 
 
-![Insight - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/uploadToS3.png)
+![Insight² - How To - Upload files on AWS S3 bucket](/_images/insight2/how-to/upload-files-aws/uploadToS3.png)
 
 
 
@@ -116,7 +116,7 @@ Click on the widget handle to edit the file picker properties:
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/result-filepicker.png)
 
 
 
@@ -132,7 +132,7 @@ Click on the widget handle to edit the file picker properties:
 
 
 
-![Insight - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
+![Insight² - How To - Upload files using GCS](/_images/insight2/how-to/upload-files-gcs/config-filepicker.png)
 
 
 

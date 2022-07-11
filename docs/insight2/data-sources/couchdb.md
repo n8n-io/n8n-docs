@@ -8,10 +8,10 @@ tags:
 
 # CouchDB
 
-Insight can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on Insight. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
+Insight² can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on Insight. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch.gif)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch.gif)
 
 
 ## Supported queries:
@@ -63,7 +63,7 @@ include_docs (boolean) – include_docs key is set to false by default , if true
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/listing.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/listing.png)
 
 
 
@@ -108,7 +108,7 @@ Example response from CouchDb:
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/retrieving.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/retrieving.png)
 
 
 
@@ -131,7 +131,7 @@ The returned JSON is the JSON of the document, including the document ID and rev
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/creating.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/creating.png)
 
 
 
@@ -169,7 +169,7 @@ You get the document as JSON in the response. For each update to the document, t
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/updating.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/updating.png)
 
 
 #### Example body:
@@ -202,7 +202,7 @@ Example response from CouchDb:
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/deleting.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/deleting.png)
 
 
 
@@ -234,7 +234,7 @@ selector syntax: https://pouchdb.com/guides/mango-queries.html
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find.png)
 
 
 
@@ -263,7 +263,7 @@ Example response from CouchDb:
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find_response.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/find_response.png)
 
 
 
@@ -278,7 +278,7 @@ Reference for view :https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#wha
 
 
 
-![Insight - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/get_view.png)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/get_view.png)
 
 
 

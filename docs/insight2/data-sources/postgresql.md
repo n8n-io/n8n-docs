@@ -8,15 +8,15 @@ tags:
 
 # PostgreSQL
 
-Insight can connect to PostgreSQL databases to read and write data.
+Insight² can connect to PostgreSQL databases to read and write data.
 
 ## Connection
 
-Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please whitelist our IP.
+Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please whitelist our IP.
 
 To add a new PostgreSQL database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select PostgreSQL from the modal that pops up.
 
-Insight requires the following to connect to your PostgreSQL database.
+Insight² requires the following to connect to your PostgreSQL database.
 
 - **Host**
 - **Port**
@@ -27,11 +27,11 @@ It is recommended to create a new PostgreSQL database user so that you can contr
 
 
 
-![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pgconnect.png)
+![Insight² - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pgconnect.png)
 
 
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying PostgreSQL
 
@@ -45,7 +45,7 @@ Select SQL mode from the dropdown and enter the query in the editor. Click on th
 
 
 
-![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-sql.png)
+![Insight² - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-sql.png)
 
 
 
@@ -57,7 +57,7 @@ Click on the `run` button to run the query. **NOTE**: Query should be saved befo
 
 
 
-![Insight - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-gui.png)
+![Insight² - Data source - PostgreSQL](/_images/insight2/datasource-reference/postgresql/pg-gui.png)
 
 
 :::tip

@@ -9,7 +9,7 @@ Statistics can be used to display different statistical information.
 
 
 
-![Insight - Star rating Widget](/_images/insight2/widgets/statistics/stats.png)
+![Insight² - Star rating Widget](/_images/insight2/widgets/statistics/stats.png)
 
 </div>
 

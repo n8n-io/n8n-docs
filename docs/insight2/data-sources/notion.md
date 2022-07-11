@@ -8,14 +8,14 @@ tags:
 
 # Notion
 
-Insight can connect to a Notion workspace to do operations on notion pages, databases and blocks.
+Insight² can connect to a Notion workspace to do operations on notion pages, databases and blocks.
 ## Connection
 
-For integrating Notion with Insight we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
+For integrating Notion with Insight² we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/api.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/api.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Notion API provides support for:
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/querying.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/querying.png)
 
 </div>
 
@@ -39,7 +39,7 @@ Before querying Notion, you must share the database with your integration. Click
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/share.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/share.png)
 
 </div>
 
@@ -55,7 +55,7 @@ On database resource you can perform the following operations:
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/db_q.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/db_q.png)
 
 </div>
 
@@ -69,7 +69,7 @@ This operations retreives a Database object using the ID specified.
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/db_retrieve.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/db_retrieve.png)
 
 </div>
 
@@ -132,7 +132,7 @@ On page resource you can perform the following operations:
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/page_q.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/page_q.png)
 
 </div>
 
@@ -186,7 +186,7 @@ The following operations can be performed on the block resource:
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/block_q.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/block_q.png)
 
 </div>
 
@@ -235,7 +235,7 @@ This operation retrieves a User using the ID specified.
 
 
 
-![Insight - Data source - Notion](/_images/insight2/datasource-reference/notion/user_q.png)
+![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/user_q.png)
 
 </div>
 

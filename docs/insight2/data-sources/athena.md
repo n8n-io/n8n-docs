@@ -8,7 +8,7 @@ tags:
 
 # Athena
 
-Insight can connect to Amazon Athena databases to read and write data.
+Insight² can connect to Amazon Athena databases to read and write data.
 
 - [Athena](#athena)
 	- [Connection](#connection)
@@ -20,7 +20,7 @@ Insight can connect to Amazon Athena databases to read and write data.
 
 ## Connection
 
-Insight requires the following to connect to your Athena.
+Insight² requires the following to connect to your Athena.
 
 - **Database**
 - **S3 output location**
@@ -34,7 +34,7 @@ You can also configure for **[additional optional parameters](https://github.com
 
 
 
-![Insight - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
+![Insight² - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
 
 
 
@@ -44,7 +44,7 @@ You can also configure for **[additional optional parameters](https://github.com
 
 
 
-![Insight - Querying- Amazon Athena](/_images/insight2/datasource-reference/athena/athena-query.png)
+![Insight² - Querying- Amazon Athena](/_images/insight2/datasource-reference/athena/athena-query.png)
 
 
 

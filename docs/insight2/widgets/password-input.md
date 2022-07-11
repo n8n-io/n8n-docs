@@ -8,7 +8,7 @@ A Password Input widget provides a way for the users to securely enter a passwor
 
 
 
-![Insight - Widget Reference - Password Input](/_images/insight2/widgets/password-input/password-input.gif)
+![Insight² - Widget Reference - Password Input](/_images/insight2/widgets/password-input/password-input.gif)
 
 
 

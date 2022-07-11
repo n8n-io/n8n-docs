@@ -8,7 +8,7 @@ Code Editor widget is a versatile text editor for editing code and supports seve
 
 
 
-![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/editor.png)
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/editor.png)
 
 
 
@@ -20,7 +20,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/prop.png)
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/prop.png)
 
 
 
@@ -172,7 +172,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/layout.png)
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/layout.png)
 
 
 
@@ -185,7 +185,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/styles.png)
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/styles.png)
 
 
 

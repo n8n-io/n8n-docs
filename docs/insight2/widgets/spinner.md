@@ -8,7 +8,7 @@ Spinner widget can be used to provide a visual indication that an action is in p
 
 
 
-![Insight - Widget Reference - Number Input](/_images/insight2/widgets/spinner/spinner.png)
+![Insight² - Widget Reference - Number Input](/_images/insight2/widgets/spinner/spinner.png)
 
 
 

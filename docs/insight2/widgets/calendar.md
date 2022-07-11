@@ -11,7 +11,7 @@ Calendar widget comes with the following features:
 
 
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar.png)
+![Insight² - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar.png)
 
 
 ## Properties
@@ -78,7 +78,7 @@ If we specify the `resourceId` of any of the events as `1`, then that event will
 
 
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar-resource.png)
+![Insight² - Widget Reference - Calendar](/_images/insight2/widgets/calendar/calendar-resource.png)
 
 
 
@@ -121,7 +121,7 @@ Determines whether to display a popover whenever an event is clicked. Click on `
 
 
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/events.png)
+![Insight² - Widget Reference - Calendar](/_images/insight2/widgets/calendar/events.png)
 
 
 
@@ -155,7 +155,7 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/layout.png)
+![Insight² - Widget Reference - Calendar](/_images/insight2/widgets/calendar/layout.png)
 
 
 
@@ -170,7 +170,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 
 
-![Insight - Widget Reference - Calendar](/_images/insight2/widgets/calendar/styles.png)
+![Insight² - Widget Reference - Calendar](/_images/insight2/widgets/calendar/styles.png)
 
 
 

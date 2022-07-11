@@ -8,7 +8,7 @@ Iframe widget is used to embed another HTML page into the current one and displa
 
 
 
-![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe.png)
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe.png)
 
 
 
@@ -22,7 +22,7 @@ Sets the **URL** of the page to embed.
 
 
 
-![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/layout.png)
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/layout.png)
 
 
 
@@ -37,7 +37,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 
 
-![Insight - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/styles.png)
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/styles.png)
 
 
 

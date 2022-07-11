@@ -8,15 +8,15 @@ tags:
 
 # MySQL
 
-Insight can connect to MySQL databases to read and write data.
+Insight² can connect to MySQL databases to read and write data.
 
 ## Connection
 
-Insight requires the following to connect to your MySQL database. Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please whitelist our IP.
+Insight² requires the following to connect to your MySQL database. Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please whitelist our IP.
 
 To add a new MySQL database, click on the `+` button on data sources panel at left sidebar in the app editor. Select MySQL from the modal that pops up.
 
-Insight requires the following to connect to your MySQL database.
+Insight² requires the following to connect to your MySQL database.
 
 - **Host**
 - **Port**
@@ -27,11 +27,11 @@ It is recommended to create a new MySQL database user so that you can control th
 
 
 
-![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql.png)
+![Insight² - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql.png)
 
 
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying MySQL
 
@@ -48,7 +48,7 @@ SQL mode can be used to write raw SQL queries. Select SQL mode from the dropdown
 
 
 
-![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-sqlmode.png)
+![Insight² - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-sqlmode.png)
 
 
 
@@ -61,7 +61,7 @@ GUI mode can be used to query MySQL database without writing queries. Select GUI
 
 
 
-![Insight - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-guimode.png)
+![Insight² - Data source - MySQL](/_images/insight2/datasource-reference/mysql/mysql-guimode.png)
 
 
 

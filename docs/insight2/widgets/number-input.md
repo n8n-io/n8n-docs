@@ -8,7 +8,7 @@ Number Input widget lets users enter and change numbers.
 
 
 
-![Insight - Widget Reference - Number Input](/_images/insight2/widgets/number-input/number.png)
+![Insight² - Widget Reference - Number Input](/_images/insight2/widgets/number-input/number.png)
 
 
 

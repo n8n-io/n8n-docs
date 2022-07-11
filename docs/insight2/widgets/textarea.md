@@ -12,7 +12,7 @@ Textarea should be preferred over [Text Input](/docs/widgets/text-input) when us
 
 
 
-![Insight - Widget Reference - Text input](/_images/insight2/widgets/textarea/textarea.png)
+![Insight² - Widget Reference - Text input](/_images/insight2/widgets/textarea/textarea.png)
 
 
 

@@ -8,7 +8,7 @@ Radio button widget can be used to select one option from a group of options.
 
 
 
-![Insight - Widget Reference - RadioButton](/_images/insight2/widgets/radio-button/radiobutton.png)
+![Insight² - Widget Reference - RadioButton](/_images/insight2/widgets/radio-button/radiobutton.png)
 
 </div>
 
@@ -80,7 +80,7 @@ This is `off` by default, toggle `on` the switch to lock the widget and make it 
 
 
 
-![Insight - Radio Button Widget Properties](/_images/insight2/widgets/radio-button/radio-ex.gif)
+![Insight² - Radio Button Widget Properties](/_images/insight2/widgets/radio-button/radio-ex.gif)
 
 </div>
 

@@ -8,7 +8,7 @@ Timer widget lets users to count timer both upward and downward
 
 
 
-![Insight - Widget Reference - Timer](/_images/insight2/widgets/timer/timer.png)
+![Insight² - Widget Reference - Timer](/_images/insight2/widgets/timer/timer.png)
 
 
 

@@ -8,11 +8,11 @@ tags:
 
 # InfluxDB
 
-Insight can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more info visit [InfluxDB docs](https://docs.influxdata.com/).
+Insight² can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more info visit [InfluxDB docs](https://docs.influxdata.com/).
 
 ## Connection
 
-Insight connects to InfluxDB using :
+Insight² connects to InfluxDB using :
 
 - **API Token**
 - **Host**
@@ -25,7 +25,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 
 
-![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxauth.png)
+![Insight² - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxauth.png)
 
 
 
@@ -55,7 +55,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 
 
-![Insight - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/operations.png)
+![Insight² - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/operations.png)
 
 
 

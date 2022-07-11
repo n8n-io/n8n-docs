@@ -8,11 +8,11 @@ tags:
 
 # Google Sheets
 
-Insight can connect to Google Sheet using OAuth 2.0, which helps us to limit an application's access to a user's account.
+Insight² can connect to Google Sheet using OAuth 2.0, which helps us to limit an application's access to a user's account.
 
 ## How to integrate Google Sheets
 
-<iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="Insight Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="Insight² Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Self-Hosted Configuration
 
@@ -33,7 +33,7 @@ You can create a Google Sheets data source with one of either of the two permiss
 
 
 
-![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/googlesheets.gif)
+![Insight² - Insight² - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/googlesheets.gif)
 
 
 
@@ -76,7 +76,7 @@ You can add more rows to the table using the append operation.
 
 
 
-![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/append-data-op.png)
+![Insight² - Insight² - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/append-data-op.png)
 
 
 
@@ -94,7 +94,7 @@ You can update the existing data in sheet using this operation.
 
 
 
-![Insight - Insight - Data source - Google Sheets](/_images/insight2/datasource-reference/google-sheets/update-data-op.png)
+![Insight² - Insight² - Data source - Google Sheets](/_images/insight2/datasource-reference/google-sheets/update-data-op.png)
 
 
 
@@ -111,7 +111,7 @@ Use this operation delete a specific row from the sheet.
 
 
 
-![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/delete-row-op.png)
+![Insight² - Insight² - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/delete-row-op.png)
 
 
 
@@ -123,6 +123,6 @@ Here is the `Preview` of the query that used the get spreadsheet info operation.
 
 
 
-![Insight - Insight - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/get-info2.png)
+![Insight² - Insight² - Data source Google Sheets](/_images/insight2/datasource-reference/google-sheets/get-info2.png)
 
 

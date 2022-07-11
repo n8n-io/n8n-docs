@@ -287,6 +287,8 @@ nav:
   - Insight²:
     - Introduction: insight2/index.md
     - Deployment: insight2/deployment.md
+    - Security: insight2/security.md
+    - Tracking: insight2/tracking.md
     - Getting Started:
       - insight2/tutorial/index.md
       - Adding datasource: insight2/tutorial/adding-a-datasource.md

@@ -1,6 +1,6 @@
 # n8n node linter
 
-n8n's node linter, [`eslint-plugin-n8n-nodes-base`](https://github.com/ivov/eslint-plugin-n8n-nodes-base), statically analyzes ("lints") the source code of n8n nodes and credentials in the official repository and in community packages. The linter helps to detect and automatically fix issues to help you follow best practices.
+n8n's node linter, [`eslint-plugin-n8n-nodes-base`](https://github.com/ivov/eslint-plugin-n8n-nodes-base), statically analyzes ("lints") the source code of n8n nodes and credentials in the official repository and in community packages. The linter detects issues and automatically fixes them to help you follow best practices.
 
 `eslint-plugin-n8n-nodes-base` contains a [collection of rules](https://github.com/ivov/eslint-plugin-n8n-nodes-base#ruleset) for node files (`*.node.ts`), resource description files (`*Description.ts`), credential files (`*.credentials.ts`), and the `package.json` of a community package.
 
@@ -14,16 +14,20 @@ Run `npm install` in the starter project to install all dependencies. Once the i
 
 ## Usage
 
+The linter can be used in a community package and in the main repository.
+
 ### Linting
 
-The linter runs automatically after installing dependencies and before publishing the package to npm.
+In a **community package**, the linter runs automatically after installing dependencies and before publishing the package to npm. In the **main repository**, the linter runs automatically via GitHub Actions whenever you push to your PR.
 
-VSCode also runs the linter in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
+In both cases, VSCode lints in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
 
 You can also run the linter manually:
 
 * Run `npm run lint` to lint and view detected issues in your console. 
 * Run `npm run lintfix` to lint and automatically fix issues. The linter fixes violations of rules [marked as automatically fixable](https://github.com/ivov/eslint-plugin-n8n-nodes-base#ruleset).
+
+Both commands can be run in the root dir of your community package, or in `/packages/nodes-base/` in the main repository.
 
 ### Exceptions
 

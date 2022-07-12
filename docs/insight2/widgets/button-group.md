@@ -19,9 +19,9 @@ To add an event to a button group, click on the widget handle to open the widget
 
 **On Click** event is triggered when the button group is clicked. Just like any other event on Insight, you can set multiple handlers for on click event.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/#event-on-click) docs to get the detailed information about all the **Actions**.
+
 
 ### Properties
 
@@ -59,6 +59,6 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | Border radius | Use this property to modify the border radius of the button. |
 | Selected background color | Use this property to modify the background colour of selected buttons |
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

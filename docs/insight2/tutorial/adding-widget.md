@@ -12,7 +12,7 @@ To add a widget, navigate to the `Widget manager` on the right sidebar. It will 
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/widget.png)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/widget_in2.png)
 
 
 

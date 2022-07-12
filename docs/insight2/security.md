@@ -22,4 +22,4 @@ All the datasource credentials are securely encrypted using `aes-256-gcm`. The c
 - **Whitelisted IPs**: If you are using Insight² cloud, you can whitelist our IP address (3.129.198.40) so that your datasources are not exposed to the public.
 - **Backups**: Insight² cloud is hosted on AWS using EKS with autoscaling and regular backups.
 
-If you notice a security vulnerability, please let the team know by sending an email to `security@tooljet.com`. 
+If you notice a security vulnerability, please let the team know by sending an email to `info@polydocs.io`. 

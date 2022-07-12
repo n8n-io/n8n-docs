@@ -14,7 +14,7 @@ Modal widget renders in front of a backdrop, and it blocks interaction with the 
 
 ## Add widgets to Modal
 
-To add widgets to the Modals please refer to **[Tutorial - Adding widgets to a modal](/docs/tutorial/adding-widget#adding-widgets-to-modal)**
+To add widgets to the Modals please refer to **[Tutorial - Adding widgets to a modal](/insight2/tutorial/adding-widget/#adding-widgets-to-modal)**
 
 ## Properties
 
@@ -41,6 +41,6 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

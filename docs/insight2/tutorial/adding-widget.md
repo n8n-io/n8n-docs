@@ -43,7 +43,7 @@ Before triggering `Show modal action` we need to add a modal widget to the canva
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/modal.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/modal_in2.gif)
 
 
 

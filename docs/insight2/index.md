@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Insight²"
-description: Insight² is an **open-source low-code framework** to build and deploy custom internal tools. Insight² can connect to your data sources such as databases ( PostgreSQL, MongoDB, MySQL, Elasticsearch, Firestore, DynamoDB, Redis and more ), API endpoints ( Insight² supports OAuth2 authorization ) and external services ( Stripe, Slack, Google Sheets, Airtable and more ). Once the data sources are connected, Insight² can run queries on these data sources to fetch and update data. The data fetched from data sources can be visualised and modified using the UI widgets such as tables, charts, forms, etc.
+description: Insight² is an open-source low-code framework to build and deploy custom internal tools. It can connect to data sources such as databases, API endpoints and external services.
 tags:
   - Insight²
   - Introduction

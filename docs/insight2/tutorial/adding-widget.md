@@ -25,7 +25,7 @@ The widgets can be resized and repositioned within the canvas.
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize_in2.gif)
 
 
 

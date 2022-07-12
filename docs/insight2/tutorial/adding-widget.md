@@ -52,7 +52,7 @@ We can resize the column width using the resize handle of the column.
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize-table-column.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/resize-table-column_in2.gif)
 
 
 
@@ -61,7 +61,7 @@ Click on the widget to open the inspect panel on right sidebar. Here you can cha
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/inspect-panel.gif)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/inspect-panel_in2.gif)
 
 
 
@@ -76,7 +76,7 @@ Since we have already run the query in previous step, the data will be immediate
 
 
 
-![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/table-data.png)
+![Insight² - Tutorial - Adding a widget](/_images/insight2/tutorial/adding-widget/table-data_in2.png)
 
 
 

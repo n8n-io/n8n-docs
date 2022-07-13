@@ -15,7 +15,7 @@ Clicking on `Preview` will open up the currently opened version of the app in th
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview.gif)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/sharing/preview_in2.gif)
 
 
 

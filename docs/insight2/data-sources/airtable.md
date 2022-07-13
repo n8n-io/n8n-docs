@@ -13,17 +13,17 @@ Insight² can connect to your Airtable account to read and write data. **Airtabl
 
 
 
-![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtableds.gif)
+![Insight² - Data source - Airtable](/_images/insight2/datasource-reference/airtable/airtableds_in2.gif)
 
 
 
-:::info
+
 Airtable API has a rate limit, and at the time of writing this documentation, the limit is five(5) requests per second per base. You can read more about rate limits here **[Airtable API]( https://airtable.com/api )**.
-:::
 
-:::tip
+
+
 This guide assumes that you have already gone through [Adding a data source](/insight2/tutorial/adding-a-datasource/) tutorial.
-:::
+
 
 ## Supported queries
 
@@ -151,9 +151,9 @@ Example response from Airtable:
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE: Query must be saved before running.
-:::
+
 
 Example response from Airtable:
 ```json
@@ -202,9 +202,9 @@ Example response from Airtable:
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE: Query must be saved before running.
-:::
+
 
 Example response from Airtable:
 ```json
@@ -233,9 +233,9 @@ Example response from Airtable:
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE: Query must be saved before running.
-:::
+
 
 Example response from Airtable:
 

@@ -255,7 +255,7 @@ Click on the `run` button to run the query.
 
 **NOTE**: selector (json) – JSON object describing criteria used to select documents.
 
-More information : https://docs.couchdb.org/en/stable/api/database/find.html
+[More information](https://docs.couchdb.org/en/stable/api/database/find.html)
 
 
 Example response from CouchDb:

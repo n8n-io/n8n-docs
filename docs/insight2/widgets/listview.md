@@ -103,11 +103,11 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight² - List view widget](/_images/insight2/widgets/list-view/addingwidgets.gif)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/addingwidgets_in2.gif)
 
 
-:::tip
+
 
 Use `{{listItem.key}}` to display data on the nested widgets. Example: For displaying the images we used `{{listItem.avatar}}` where **avatar** is one of the key in the objects from the query result.
 
-:::
+

@@ -37,7 +37,7 @@ Insight² can connect to CouchDB databases to read and write data. CocuhDB uses 
 			- [Optional parameters:](/insight2/data-sources/couchdb/#optional-parameters_1)
 
 
-NOTE: Record ID is same as document ID("_id") .
+**NOTE**: Record ID is same as document ID("_id") .
 
 ### Listing records
 
@@ -144,7 +144,7 @@ The returned JSON is the JSON of the document, including the document ID and rev
 Click on the `run` button to run the query.
 
 
-NOTE: Query must be saved before running.
+**NOTE**: Query must be saved before running.
 
 
 Example response from CouchDb:
@@ -182,7 +182,7 @@ You get the document as JSON in the response. For each update to the document, t
 Click on the `run` button to run the query.
 
 
-NOTE: Query must be saved before running.
+**NOTE**: Query must be saved before running.
 
 
 Example response from CouchDb:
@@ -228,8 +228,8 @@ Find documents using a declarative JSON querying syntax.
 - **Selector**
 
 
-NOTE:
-selector syntax: https://pouchdb.com/guides/mango-queries.html
+**NOTE**: selector syntax: https://pouchdb.com/guides/mango-queries.html
+
 
 
 
@@ -253,8 +253,7 @@ selector syntax: https://pouchdb.com/guides/mango-queries.html
 Click on the `run` button to run the query.
 
 
-NOTE:
-selector (json) – JSON object describing criteria used to select documents.
+**NOTE**: selector (json) – JSON object describing criteria used to select documents.
 
 More information : https://docs.couchdb.org/en/stable/api/database/find.html
 

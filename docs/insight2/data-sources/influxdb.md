@@ -8,7 +8,7 @@ tags:
 
 # InfluxDB
 
-Insight² can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more informations visit [InfluxDB docs](https://docs.influxdata.com/).
+Insight² can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more information visit [InfluxDB docs](https://docs.influxdata.com/).
 
 ## Connection
 

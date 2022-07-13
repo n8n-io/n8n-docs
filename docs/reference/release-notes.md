@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.186.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.185.0...n8n@0.186.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-13
+
+This contains bug fixes and enhancements for the AWS DynamoDB, Customer.io, Elasticsearch, EmailReadImap, Google Drive, Freshworks CRM, HTTP Request, Jira Trigger, Postgres, Redis, Rename Keys, SpreadsheetFile, and Telegram nodes as well as a small bug fix to the n8n core functionality.
+
 ## n8n@0.185.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.184.0...n8n@0.185.0){:target=_blank .external-link} for this version.<br />
@@ -39,10 +46,10 @@ n8n now provides a [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds/) n
 
 ### Contributors
 
-[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
-[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
-[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link} 
+[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
+[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link}
 
 
 ## n8n@0.184.0
@@ -110,7 +117,7 @@ Enhancements to the **Trigger** inputs panel: When using a trigger node, you wil
 
 ### Contributors
 
-[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}  
+[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}
 [Rahimli Rahim](https://github.com/rahimlis){:target=_blank .external-link}
 
 ## n8n@0.182.1
@@ -148,10 +155,10 @@ Added support for the client_credentials grant type for OAuth2.
 
 ### Contributors
 
-[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}  
-[Erick Friis](https://github.com/efriis){:target=_blank .external-link}  
-[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}  
-[Shaun](https://github.com/simshaun){:target=_blank .external-link}  
+[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}
+[Erick Friis](https://github.com/efriis){:target=_blank .external-link}
+[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}
+[Shaun](https://github.com/simshaun){:target=_blank .external-link}
 [Valentin Mocanu](https://github.com/rontav){:target=_blank .external-link}
 
 ## n8n@0.181.2
@@ -245,7 +252,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 
 ### Contributors
 
-[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}  
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
 
 ## n8n@0.179.0

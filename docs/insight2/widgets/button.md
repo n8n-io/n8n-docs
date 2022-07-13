@@ -1,6 +1,9 @@
 ---
-id: button
 title: Button
+description: 
+tags:
+  - Insight²
+  - Widgets
 ---
 # Button
 
@@ -21,9 +24,9 @@ To add an event to a button, click on the widget handle to open the widget prope
 
 **On Click** event is triggered when the button is clicked. Just like any other event on Insight, you can set multiple handlers for on click event.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/) docs to get the detailed information about all the **Actions**.
+
 
 ### Properties
 
@@ -67,6 +70,6 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | Disable | Toggle on to lock the widget. You can programmatically change its value by clicking on the `Fx` button next to it, if set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
 | Border radius | Use this property to modify the border radius of the button. |
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

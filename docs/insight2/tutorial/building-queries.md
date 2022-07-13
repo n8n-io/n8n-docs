@@ -25,7 +25,7 @@ SELECT * FROM customers;
 
 
 
-![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query.png)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query_in2.png)
 
 
 
@@ -33,7 +33,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 
 
-![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview.png)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview_in2.png)
 
 
 
@@ -42,7 +42,7 @@ Query results can be previewed by clicking the `preview` button. Previewing quer
 
 
 
-![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options.gif)
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options_in2.gif)
 
 
 

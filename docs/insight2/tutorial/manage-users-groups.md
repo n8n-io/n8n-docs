@@ -78,7 +78,7 @@ On Insight, Admins can create groups for users added in a workspace and grant th
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2_in2.png)
 
 
 

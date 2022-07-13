@@ -8,7 +8,7 @@ Iframe widget is used to embed another HTML page into the current one and displa
 
 
 
-![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe.png)
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe_in2.png)
 
 
 

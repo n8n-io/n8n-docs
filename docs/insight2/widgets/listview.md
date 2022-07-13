@@ -1,7 +1,11 @@
 ---
-id: listview
 title: List view
+description: 
+tags:
+  - Insight²
+  - Widgets
 ---
+
 # List view
 
 List view widget allows to create a list of repeatable rows of data. Just like container widget, you can nest other widgets inside of it and control how many times they repeat.
@@ -26,9 +30,9 @@ To add an event to a button, click on the widget handle to open the widget prope
 
 **Row clicked** event is triggered when the button is clicked. Just like any other event on Insight, you can set multiple handlers for row clicked event.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/) docs to get the detailed information about all the **Actions**.
+
 
 ## Properties
 
@@ -70,9 +74,9 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | Visibility | This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`. |
 | Disable |  This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+
 
 ## Example: Displaying data in the list view
 
@@ -80,7 +84,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight² - List view widget](/_images/insight2/widgets/list-view/emptylist.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/emptylist_in2.png)
 
 
 
@@ -95,7 +99,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 
 
-![Insight² - List view widget](/_images/insight2/widgets/list-view/datadisplay.png)
+![Insight² - List view widget](/_images/insight2/widgets/list-view/datadisplay_in2.png)
 
 
 

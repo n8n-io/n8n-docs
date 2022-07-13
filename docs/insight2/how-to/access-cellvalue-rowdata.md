@@ -13,7 +13,7 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 - Let's start by creating a new application and then adding a table widget into the canvas.
 
 
-![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/newapp.gif)
+![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/newapp_in2.gif)
 
 
 - Now go to the **Query Panel** at the bottom of the app editor and click on the `+` button.
@@ -63,7 +63,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 
 
-![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/table.png)
+![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/table_in2.png)
 
 
 
@@ -85,7 +85,7 @@ Now that we have our data on the table, we will change the color of the text in 
 
 
 
-![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/cellvalue.png)
+![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/cellvalue_in2.png)
 
 
 
@@ -101,6 +101,6 @@ You can also use Hex Color Code instead of mentioning color in plane text.
 
 
 
-![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/rowData.png)
+![Insight² - How To - Change text color in columns of the table](/_images/insight2/how-to/change-text-color/rowData_in2.png)
 
 

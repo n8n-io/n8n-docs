@@ -150,7 +150,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/admin_in2.png)
 
 
 
@@ -160,7 +160,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup1_in2.png)
 
 
 
@@ -168,7 +168,7 @@ This group contains admins by default. Admins can add more admins or remove the 
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/newgroup2_in2.png)
 
 
 
@@ -180,6 +180,6 @@ To delete a group, click on `Delete` next to it. It will confirm whether you wan
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/deletegroup_in2.png)
 
 

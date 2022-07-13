@@ -14,13 +14,13 @@ Insight² can connect to your Baserow account to read and write data. Baserow AP
 
 
 
-![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-intro.gif)
+![Insight² - Data source - Baserow](/_images/insight2/datasource-reference/baserow/baserow-intro_in2.gif)
 
 
 
-:::tip
+
 This guide assumes that you have already gone through [Adding a data source](/insight2/tutorial/adding-a-datasource/) tutorial.
-:::
+
 
 ## Supported queries
 

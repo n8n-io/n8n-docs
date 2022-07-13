@@ -228,7 +228,7 @@ Find documents using a declarative JSON querying syntax.
 - **Selector**
 
 
-**NOTE**: [selector syntax]: (https://pouchdb.com/guides/mango-queries.html)
+**NOTE**: [selector syntax](https://pouchdb.com/guides/mango-queries.html)
 
 
 

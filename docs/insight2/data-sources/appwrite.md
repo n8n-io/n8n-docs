@@ -19,15 +19,15 @@ Insight² connects to your Appwrite app using :
 
 You'll find the Secret key and other credentials on your Appwrite's project settings page. You may need to create a new key if you don't have one already.
 
-:::info
+
 You should also set scope for access of particular resource. Learn more about the **API keys and scopes** [here](https://appwrite.io/docs/keys).
-:::
+
 
 To connect Appwrite datasource to your Insight² application, go to the data source manager on the left-sidebar and click on the `+` button. Select Appwrite from the list of available datasources, provide the credentials and click **Save**. It is recommended to the check the connection by clicking on 'Test connection' button to verify if the service account can access Appwrite from Insight² server.
 
 
 
-![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init.gif)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-init_in2.gif)
 
 
 
@@ -37,7 +37,7 @@ After setting up the Appwrite datasource, you can click on the `+` button of the
 
 
 
-![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query.gif)
+![Insight² - Data source - Appwrite](/_images/insight2/datasource-reference/appwrite/appwrite-query_in2.gif)
 
 
 

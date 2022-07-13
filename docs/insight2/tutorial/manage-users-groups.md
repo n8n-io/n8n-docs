@@ -92,7 +92,7 @@ Admins can add or remove any number of apps for a group of users. To add an app 
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps_in2.png)
 
 
 
@@ -102,7 +102,7 @@ Admins can add or remove any numbers of users in a group. Just select a user fro
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/users_in2.png)
 
 
 
@@ -112,7 +112,7 @@ Admins can set granular permission like creating/deleting apps or creating folde
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/permissions_in2.png)
 
 
 
@@ -136,7 +136,7 @@ This group contains all the users and admins.
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/allusers_in2.png)
 
 
 

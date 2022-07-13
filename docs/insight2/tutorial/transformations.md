@@ -26,7 +26,7 @@ The query will now look like this:
 
 
 
-![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform.png)
+![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/transform_in2.png)
 
 
 
@@ -35,7 +35,7 @@ Click the `create` button to create the query. Saved queries can be run using th
 
 
 
-![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/result.png)
+![Insight² - Tutorial - Query result transformations](/_images/insight2/tutorial/transformations/result_in2.png)
 
 
 

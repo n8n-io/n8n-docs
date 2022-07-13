@@ -17,7 +17,7 @@ To create a new Insight² app, click on the **'Create new application'** button 
 
 
 
-![Insight² - Creating an app](/_images/insight2/tutorial/creating-new-app/dashboard.png)
+![Insight² - Creating an app](/_images/insight2/tutorial/creating-new-app/dashboard_in2.png)
 
 
 
@@ -25,7 +25,7 @@ You will be redirected to the visual app editor once the app has been created. C
 
 
 
-![Insight² - Creating an app](/_images/insight2/tutorial/creating-new-app/visual-app-editor.png)
+![Insight² - Creating an app](/_images/insight2/tutorial/creating-new-app/visual-app-editor_in2.png)
 
 
 

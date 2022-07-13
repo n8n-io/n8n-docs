@@ -15,7 +15,7 @@ Admin of a workspace can add users to the workspace. To manage the users in your
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu1.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu1_in2.png)
 
 
 
@@ -27,7 +27,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/userspage_in2.png)
 
 
 
@@ -35,7 +35,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/addnewuser_in2.png)
 
 
 
@@ -49,7 +49,7 @@ You can also copy the invitation url by clicking on the copy icon next to `invit
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status_in2.png)
 
 
 
@@ -59,7 +59,7 @@ You can disable any active user's access to your workspace by clicking on the **
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/archived_in2.png)
 
 
 ### Enabling a user's access
@@ -68,7 +68,7 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2_in2.png)
 
 
 

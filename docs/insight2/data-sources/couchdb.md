@@ -8,37 +8,37 @@ tags:
 
 # CouchDB
 
-Insight² can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on Insight. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
+Insight² can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on Insight². For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
 
 
-![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch.gif)
+![Insight² - Data source - CouchDb](/_images/insight2/datasource-reference/couchdb/auth_couch_in2.gif)
 
 
 ## Supported queries:
 
-- [CouchDB](#couchdb)
-	- [Supported queries:](#supported-queries)
-		- [Listing records](#listing-records)
-			- [Optional parameters:](#optional-parameters)
-		- [Retrieving a record](#retrieving-a-record)
-			- [Required parameters:](#required-parameters)
-		- [Creating a record](#creating-a-record)
-			- [Example Records:](#example-records)
-		- [Updating a record](#updating-a-record)
-			- [Required parameters:](#required-parameters-1)
-			- [Example body:](#example-body)
-		- [Deleting a record](#deleting-a-record)
-			- [Required parameters:](#required-parameters-2)
-		- [Find](#find)
-			- [Required parameters:](#required-parameters-3)
-			- [Example body:](#example-body-1)
-		- [Retrieving a view](#retrieving-a-view)
-			- [Required parameters:](#required-parameters-4)
-			- [Optional parameters:](#optional-parameters-1)
 
-:::info
+
+	- [Listing records](/insight2/data-sources/couchdb/#listing-records)
+			- [Optional parameters:](/insight2/data-sources/couchdb/#optional-parameters)
+	- [Retrieving a record](/insight2/data-sources/couchdb/#retrieving-a-record)
+			- [Required parameters:](/insight2/data-sources/couchdb/#required-parameters)
+	- [Creating a record](/insight2/data-sources/couchdb/#creating-a-record)
+			- [Example Records:](/insight2/data-sources/couchdb/#example-records)
+	- [Updating a record](/insight2/data-sources/couchdb/#updating-a-record)
+			- [Required parameters:](/insight2/data-sources/couchdb/#required-parameters_1)
+			- [Example body:](/insight2/data-sources/couchdb/#example-body)
+	- [Deleting a record](/insight2/data-sources/couchdb/#deleting-a-record)
+			- [/insight2/data-sources/couchdb/#required-parameters_2)
+	- [Find](/insight2/data-sources/couchdb/#find)
+			- [Required parameters:](/insight2/data-sources/couchdb/#required-parameters_3)
+			- [Example body:](/insight2/data-sources/couchdb/#example-body_1)
+	- [Retrieving a view](/insight2/data-sources/couchdb/#retrieving-a-view)
+			- [Required parameters:](/insight2/data-sources/couchdb/#required-parameters_4)
+			- [Optional parameters:](/insight2/data-sources/couchdb/#optional-parameters_1)
+
+
 NOTE: Record ID is same as document ID("_id") .
-:::
+
 ### Listing records
 
 This query lists all the records in a database.
@@ -50,7 +50,7 @@ This query lists all the records in a database.
 - **Limit**
 - **Skip**
 
-:::info
+
 descending (boolean) – Return the documents in descending order by key. Default is false.
 
 limit (number) – Limit the number of the returned documents to the specified number.
@@ -59,7 +59,7 @@ skip (number) – Skip this number of records before starting to return the resu
 
 include_docs (boolean) – include_docs key is set to false by default , if true it returns the document data along with the default fields.
 
-:::
+
 
 
 
@@ -143,9 +143,9 @@ The returned JSON is the JSON of the document, including the document ID and rev
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE: Query must be saved before running.
-:::
+
 
 Example response from CouchDb:
 ```json
@@ -181,9 +181,9 @@ You get the document as JSON in the response. For each update to the document, t
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE: Query must be saved before running.
-:::
+
 
 Example response from CouchDb:
 ```json
@@ -227,10 +227,10 @@ Find documents using a declarative JSON querying syntax.
 #### Required parameters:
 - **Selector**
 
-:::info
+
 NOTE:
 selector syntax: https://pouchdb.com/guides/mango-queries.html
-:::
+
 
 
 
@@ -252,12 +252,12 @@ selector syntax: https://pouchdb.com/guides/mango-queries.html
 
 Click on the `run` button to run the query.
 
-:::info
+
 NOTE:
 selector (json) – JSON object describing criteria used to select documents.
 
 More information : https://docs.couchdb.org/en/stable/api/database/find.html
-:::
+
 
 Example response from CouchDb:
 
@@ -274,7 +274,7 @@ Views are the primary tool used for querying and reporting on CouchDB documents.
 #### Required parameters:
 - **View url**
 
-Reference for view :https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#what-is-a-view
+[Reference for view](https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#what-is-a-view)
 
 
 
@@ -291,7 +291,7 @@ Reference for view :https://docs.couchdb.org/en/3.2.0/ddocs/views/intro.html#wha
 
 Click on the `run` button to run the query.
 
-:::info
+
 startkey (json) – Return records starting with the specified key.
 
 endkey (json) – Stop returning records when the specified key is reached.
@@ -299,7 +299,7 @@ endkey (json) – Stop returning records when the specified key is reached.
 limit (number) – Limit the number of the returned documents to the specified number.
 
 skip (number) – Skip this number of records before starting to return the results. Default is 0.
-:::
+
 
 Example response from CouchDb:
 ```json

@@ -158,9 +158,9 @@ nav:
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
     - PO Matching:
-      - Overview: doc2/pomatching/po-matching.md
-      - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md
+      - doc2/pomatching/po-matching.md
       - Invoices: doc2/pomatching/po-matching-invoices.md
+      - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md
       - Order Confirmation: doc2/pomatching/po-matching-order-confirmation.md
 
     - ZUGFeRD: doc2/zugpferd-and-peppol.md

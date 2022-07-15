@@ -18,7 +18,7 @@ There are three ways you can match your Purchase Order
 
 #### Corresponding settings must be made in DOC²
 
-![](/_images/doc2/DOC²_Modules_PO-1024x591.png)
+![](/_images/doc2/DOC²_POM_1_Modules.png)
 
 Settings - Modules - Purchase Order
 

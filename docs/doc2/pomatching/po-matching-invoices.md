@@ -1,6 +1,6 @@
 ---
 title: "PO Matching - Invoices"
-description: This is a step by step guide how to create a purchase order in LN, Upload the invoice in DOC², handle two different scenarios and check the receipt of the invoice in LN.
+description: Step by step guide how to create a purchase order in LN, Upload the invoice in DOC², handle two different scenarios and check the receipt of the invoice in LN.
 date: "2022-01-24"
 tags:
   - DOC²
@@ -46,19 +46,19 @@ After that save the purchase order. You must **approve** said purchase order and
 
 ## Upload the Invoice in DOC2
 
-![](/_images/doc2/DOC²_Dashboard_PO-1024x565.png)
+![](/_images/doc2/DOC²_POM_Invoices_1.png)
 
 The symbol under “Matched” indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
 Open the document and validate the extracted fields.
 
-![](/_images/doc2/DOC²_Extracted_PO-Number-1024x534.png)
+![](/_images/doc2/DOC²_POM_Invoices_2.png)
 
 * * *
 
-After validating all extracted fields open matching overview by clicking on PO MATCHING
+After validating all extracted fields open matching overview by clicking on **PO MATCHING**
 
-![](/_images/doc2/DOC²_POmatching_after-field-validation-1024x554.png)
+![](/_images/doc2/DOC²_POM_Invoices_3.png)
 
 You can also go directly from dashboard to the matching overview by following the steps below
 

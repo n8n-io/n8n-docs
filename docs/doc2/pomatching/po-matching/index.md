@@ -37,7 +37,7 @@ During validation, the supplier's PO must be extracted correctly.
 
 ![](/_images/doc2/DOC²_POM_3_Keyboard.png)
 
-### These are all the keyboard shortcuts you can use in the PO Matching screen:
+### These are all the keyboard shortcuts you can use on the PO Matching screen:
 
 ![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_1.png)
 ![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_2.png)

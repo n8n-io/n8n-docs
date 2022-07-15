@@ -118,17 +118,17 @@ Save to apply all changes.
 
 Once everything is correct the document can be validated and exported.
 
-![](/_images/doc2/DOC²_doc-exporting-1024x89.png)
+![](/_images/doc2/DOC²_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_doc-exported-successfully-1024x87.png)
+![](/_images/doc2/DOC²_POM_Invoices_8.png)
 
 exported successfully
 
 ![This image has an empty alt attribute; its file name is Attention-Warning.png](/_images/doc2/Attention-Warning.png)
 
-Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](/doc2/doc2app/po-matching/po-matching-delivery-notes/).
+Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](/doc2/pomatching/po-matching-delivery-notes/).
 
 * * *
 

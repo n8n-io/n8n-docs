@@ -13,8 +13,9 @@ tags:
 There are three ways you can match your Purchase Order
 
 1. with the corresponding [invoice](/doc2/pomatching/po-matching-invoices/)
-2. with the corresponding [delivery note](/doc2/pomatching/po-matching-delivery-notes/)
-3. with the corresponding [order confirmation](/doc2/pomatching/po-matching-order-confirmation/)
+2. with the corresponding [delivery note](/doc2/pomatching/po-matching-delivery-notes/) and  [order confirmation](/doc2/pomatching/po-matching-order-confirmation/)<br> 
+All three components must match within agreed-upon tolerance levels. It is then entered into the AP system.
+3. with all the above documents, but also requires control information such as actual number of items delivered and their quality control. Once all 4 components match, the invoice is entered into the AP database.
 
 #### Corresponding settings must be made in DOC² under Settings - Modules - Purchase Order
 

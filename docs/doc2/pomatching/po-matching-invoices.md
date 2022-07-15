@@ -60,7 +60,7 @@ After validating all extracted fields open matching overview by clicking on **PO
 
 ![](/_images/doc2/DOC²_POM_Invoices_3.png)
 
-You can also go directly from dashboard to the matching overview by following the steps below
+You can also go directly from dashboard to the matching overview by following the steps [below](/doc2/pomatching/po-matching-invoices/#case-1-matched)
 
 * * *
 
@@ -92,9 +92,9 @@ exported successfully
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_dashboard_mismatch-1024x89.png)
+![](/_images/doc2/DOC²_POM_Invoices_9.png)
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.02.28-1024x553.png)
+![](docs/_images/doc2/DOC²_POM_Invoices_10.png)
 
 Here you can see that the quantity of the ordered item does not match the quantity on the invoice.
 

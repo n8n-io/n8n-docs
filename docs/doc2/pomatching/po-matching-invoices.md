@@ -104,13 +104,17 @@ The “x” would delete the match on the invoice.
 
 A new match from the purchase order can be added to the invoice by dragging and dropping the appropriate data row(s).
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.03.53-1024x556.png)
+![](/_images/doc2/DOC²_POM_Invoices_11.png)
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.08.50-1024x553.png)
+You need to confirm the mismatched properties.
+
+![](/_images/doc2/DOC²_POM_Invoices_12.png)
+
+![](/_images/doc2/DOC²_POM_Invoices_13.png)
 
 Save to apply all changes.
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.09.29-1024x555.png)
+![](/_images/doc2/DOC²_POM_Invoices_14.png)
 
 Once everything is correct the document can be validated and exported.
 

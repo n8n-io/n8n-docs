@@ -48,7 +48,7 @@ After that save the purchase order. You must **approve** said purchase order and
 
 ![](/_images/doc2/DOC²_POM_Invoices_1.png)
 
-The symbol under “Matched” indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
+The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
 Open the document and validate the extracted fields.
 
@@ -64,25 +64,25 @@ You can also go directly from dashboard to the matching overview by following th
 
 * * *
 
-The symbol under “Matched” indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
+The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
-![](/_images/doc2/DOC²_red-and-green-1024x216.png)
+![](/_images/doc2/DOC²_POM_Invoices_4.png)
 
 ### Case 1: Matched
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_Matched-Symbol-1024x85.png)
+![](/_images/doc2/DOC²_POM_Invoices_5.png)
 
-![](/_images/doc2/DOC²_Matching-Overview-1024x551.png)
+![](/_images/doc2/DOC²_POM_Invoices_6.png)
 
 In this case the quantity of items ordered matches the quantity on the invoice, the match and thus the document can be validated and exported.
 
-![](/_images/doc2/DOC²_Document-exporting-1024x134.png)
+![](/_images/doc2/DOC²_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_Document-finished-1024x91.png)
+![](/_images/doc2/DOC²_POM_Invoices_8.png)
 
 exported successfully
 

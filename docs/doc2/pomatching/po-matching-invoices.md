@@ -15,8 +15,6 @@ tags:
 
 Open LN and go to Purchase Order Intake Workbench
 
-[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
-
 
 ![](/_images/doc2/LN_PO-Intake-Workbench.png)
 
@@ -43,6 +41,8 @@ After that save the purchase order. You must **approve** said purchase order and
 ![](/_images/doc2/LN_PO_Approve-1024x528.png)
 
 * * *
+
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
 ## Upload the Invoice in DOC2
 

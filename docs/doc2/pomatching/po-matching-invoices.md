@@ -94,7 +94,7 @@ Access the matching overview by clicking on the Matching Symbol on the dashboard
 
 ![](/_images/doc2/DOC²_POM_Invoices_9.png)
 
-![](docs/_images/doc2/DOC²_POM_Invoices_10.png)
+![](/_images/doc2/DOC²_POM_Invoices_10.png)
 
 Here you can see that the quantity of the ordered item does not match the quantity on the invoice.
 

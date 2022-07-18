@@ -48,7 +48,9 @@ If you're running n8n using Docker, you need to create a Docker image with the n
 
 	EXPOSE 5678/tcp
 	```
+
 2. Copy your node and credential files into your `~/.n8n/custom/` directory. This makes them available to Docker.
+
 3. Download the [docker-entrypoint.sh](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/docker-entrypoint.sh) file, and place it in the same directory as your Dockerfile.
 
 4. Build your Docker image:

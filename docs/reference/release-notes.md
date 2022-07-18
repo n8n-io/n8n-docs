@@ -1,5 +1,55 @@
 # Release notes
 
+## n8n@0.186.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.186.0...n8n@0.186.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-14
+
+This is a bug fix release. It includes a fix for an issue with the Airtable node.
+
+## n8n@0.186.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.185.0...n8n@0.186.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-13
+
+This release contains bug fixes and node enhancements.
+
+### New features
+
+* Add item information to more node errors.
+* Update multiple credentials with tests, and add support for custom operations.
+
+### Node enhancements
+
+
+* [AWS DynamoDB node](/integrations/nodes/n8n-nodes-base.awsDynamoDb/): improve error handling and add an optional GetAll Scan FilterExpression.
+* [Customer.io node](/integrations/nodes/n8n-nodes-base.customerIo/): add support for tracking region selection.
+* [Elasticsearch node](/integrations/nodes/n8n-nodes-base.elasticsearch/): add 'Source Excludes' and 'Source Includes' options to the Document: getAll operation. Add credential tests, index pipelines, and index refresh.
+* [Freshworks CRM node](/integrations/nodes/n8n-nodes-base.freshworksCrm/): add search and lookup functionality.
+* [JIRA node](/integrations/trigger-nodes/n8n-nodes-base.jiraTrigger/): add optional query authentication.
+* [Postgres node](/integrations/nodes/n8n-nodes-base.postgres/): improve handling of large numbers.
+* [Redis node](/integrations/nodes/n8n-nodes-base.redis/): add push and pop operations.
+* [Rename node](/integrations/core-nodes/n8n-nodes-base.renameKeys/): add regex replace.
+* [Spreadsheet file node](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/): allow skipping headers when writing spreadsheets.
+
+
+
+### Bug fixes
+
+* Editor: Fix an error that occured after repeated executions.
+* [EmailReadImap node](/integrations/core-nodes/n8n-nodes-base.imapEmail/): improve handling of network problems.
+* [Google Drive node](/integrations/nodes/n8n-nodes-base.googleDrive/): process input items using the list operation.
+* [Telegram node](/integrations/nodes/n8n-nodes-base.telegram/): fix for a bug affecting sending binary data (images, documents and so on).
+
+### Contributors
+
+[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}  
+[h4ux](https://github.com/h4ux){:target=_blank .external-link}  
+[miguel-mconf](https://github.com/miguel-mconf){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+
 ## n8n@0.185.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.184.0...n8n@0.185.0){:target=_blank .external-link} for this version.<br />

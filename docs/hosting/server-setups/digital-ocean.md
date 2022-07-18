@@ -4,17 +4,17 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 ## Create droplet
 
-Select the project to host the Droplet and click _Droplets_ from the _Manage_ menu. You can use the Docker image from the _Marketplace_ tab or use one of the Linux distributions and [install Docker yourself](https://www.docker.com/get-started/). The rest of this tutorial assumes you have Docker installed on the Droplet.
+Select the project to host the Droplet and click __Droplets__ from the __Manage__ menu. You can use the Docker image from the __Marketplace__ tab or use one of the Linux distributions and [install Docker yourself](https://www.docker.com/get-started/){:target="_blank"}. The rest of this tutorial assumes you have Docker installed on the Droplet.
 
 ## Login to Droplet
 
-The remainder of the steps in this guide require you to login to the Droplet, [find more details in the Digital Ocean documentation](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/).
+The remainder of the steps in this guide require you to log in to the Droplet, [find more details in the Digital Ocean documentation](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank"}.
 
 ## Prerequisites
 
 ### Create folders
 
-Both n8n and Caddy require creating folders and files that the host operating system copies to Docker containers. Create the following on the Droplet in a location accessible by Docker:
+Both n8n and Caddy require creating folders and files that the host operating system copies to Docker containers. Create the following on the Droplet in a location accessible by Docker. If you run Docker as root user, you can create the folders and files anywhere. If you run Docker "[Rootless](https://docs.docker.com/engine/security/rootless/){:target="_blank"}" for better security, create the folders and files in a location that user has access to:
 
 - _caddy_config_
 - _caddy_config/Caddyfile_
@@ -23,11 +23,11 @@ Both n8n and Caddy require creating folders and files that the host operating sy
 
 ### Setup DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new [CNAME or A record](https://ns1.com/resources/dns-records-explained){:target="_blank"} for the n8n subdomain.
 
 ### Open ports
 
-To set up secure connections to the Droplet, you need to open the following ports in the Droplet's firewall:
+To set up secure connections to the Droplet, you need to open the following ports in the Droplet's firewall by running the following two commands:
 
 ```shell
 sudo ufw allow 80
@@ -67,7 +67,7 @@ SSL_EMAIL=example@example.com
 
 ## Create Docker Compose file
 
-Create a _docker-compose.yml_ file, and add the following:
+Create a _docker-compose.yml_ file and add the following:
 
 ```yaml
 version: "3.7"

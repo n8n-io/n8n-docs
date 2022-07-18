@@ -6,7 +6,9 @@ n8n's node linter, [`eslint-plugin-n8n-nodes-base`](https://github.com/ivov/esli
 
 ## Setup
 
-Run `npm install` in the starter project to install all dependencies. Once the installation finishes, the linter is available to you. If using VSCode, install the [ESLint VSCode extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). For other IDEs, refer to their ESLint integrations.
+If using the [n8n node starter](https://github.com/n8n-io/n8n-nodes-starter): Run `npm install` in the starter project to install all dependencies. Once the installation finishes, the linter is available to you. 
+
+If using VSCode, install the [ESLint VSCode extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). For other IDEs, refer to their ESLint integrations.
 
 !!! note "Don't edit the configuration file"
     [`.eslintrc.js`](https://github.com/n8n-io/n8n-nodes-starter/blob/master/.eslintrc.js) contains the configuration for `eslint-plugin-n8n-nodes-base`. Don't edit this file.
@@ -14,11 +16,11 @@ Run `npm install` in the starter project to install all dependencies. Once the i
 
 ## Usage
 
-The linter can be used in a community package and in the main repository.
+You can use the linter in a community package or in the main n8n repository.
 
 ### Linting
 
-In a **community package**, the linter runs automatically after installing dependencies and before publishing the package to npm. In the **main repository**, the linter runs automatically via GitHub Actions whenever you push to your PR.
+In a community package, the linter runs automatically after installing dependencies and before publishing the package to npm. In the [main n8n repository](https://github.com/n8n-io/n8n){:target=_blank .external-link}, the linter runs automatically using GitHub Actions whenever you push to your pull request.
 
 In both cases, VSCode lints in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
 
@@ -27,7 +29,7 @@ You can also run the linter manually:
 * Run `npm run lint` to lint and view detected issues in your console. 
 * Run `npm run lintfix` to lint and automatically fix issues. The linter fixes violations of rules [marked as automatically fixable](https://github.com/ivov/eslint-plugin-n8n-nodes-base#ruleset).
 
-Both commands can be run in the root dir of your community package, or in `/packages/nodes-base/` in the main repository.
+Both commands can run in the root directory of your community package, or in `/packages/nodes-base/` in the main repository.
 
 ### Exceptions
 

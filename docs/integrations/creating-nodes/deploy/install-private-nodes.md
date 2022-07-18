@@ -4,14 +4,9 @@ You can build your own nodes and install them in your n8n instance without publi
 
 ## Install your node in a Docker n8n instance
 
-If you're running n8n using Docker, you need to create a Docker image with the node module installed in n8n. 
+If you're running n8n using Docker, you need to create a Docker image with the node installed in n8n. 
 
 1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
-2. Add the following command in your Dockerfile before the font installation command.
-
-	```Dockerfile
-	RUN cd /usr/local/lib/node_modules/n8n && npm install <n8n-node-name>
-	```
 
 	Your Dockerfile should look like this:
 
@@ -35,8 +30,6 @@ If you're running n8n using Docker, you need to create a Docker image with the n
 		apk del build-dependencies \
 		&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root;
 
-	# Install your node. Replace <n8n-node-name> with the name of your module
-	RUN cd /usr/local/lib/node_modules/n8n && npm install <n8n-node-name>
 
 	# Install fonts
 	RUN apk --no-cache add --virtual fonts msttcorefonts-installer fontconfig && \
@@ -55,7 +48,7 @@ If you're running n8n using Docker, you need to create a Docker image with the n
 
 	EXPOSE 5678/tcp
 	```
-
+2. Copy your node and credential files into your `~/.n8n/custom/` directory. This makes them available to Docker.
 3. Download the [docker-entrypoint.sh](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/docker-entrypoint.sh) file, and place it in the same directory as your Dockerfile.
 
 4. Build your Docker image:

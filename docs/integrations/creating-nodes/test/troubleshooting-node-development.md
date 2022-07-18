@@ -42,4 +42,4 @@ Check that you registered the node in the `package.json` file in your project.
 ### Changes to the description properties don't show in the UI on refreshing
 <!-- vale on -->
 
-Every time you change the description properties, you have to stop the current n8n process (`ctrl` + `c`) and run it again (`npm run dev`).
+Every time you change the description properties, you have to stop the current n8n process (`ctrl` + `c`) and run it again. You may also need to re-run `npm link`.

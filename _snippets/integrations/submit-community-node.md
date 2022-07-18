@@ -16,5 +16,6 @@ To make your node available to the n8n community node repository, you must:
 * Make sure the package name starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. For example, `n8n-nodes-weather` or `@weatherPlugins/n8n-nodes-weather`.
 * Include `n8n-community-node-package` in your package keywords.
 * Make sure that you add your nodes and credentials to the `package.json` file inside the `n8n` attribute. Refer to the [package.json in the starter node](https://github.com/n8n-io/n8n-nodes-starter/blob/master/package.json){:target=_blank .external-link} for an example.
+* Check your node using the [linter](/integrations/creating-nodes/test/node-linter/) and test it locally to ensure it works.
 * Submit the package to the npm registry. Refer to npm's documentation on [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry){:target=_blank .external-link} for more information.
 

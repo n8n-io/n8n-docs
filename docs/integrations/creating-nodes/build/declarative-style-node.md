@@ -52,7 +52,7 @@ These are the key files required for any node. Refer to [Node file structure](/i
 
 ### Step 2: Update the npm package details
 
-Your npm package details are in the `package.json` at the root of the project. Update this file to include the following information:
+Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
 
 ```json
 {
@@ -83,6 +83,7 @@ Your npm package details are in the `package.json` at the root of the project. U
   "files": [
     "dist"
   ],
+	// Link the credentials and node
   "n8n": {
     "credentials": [
       "dist/credentials/NasaPics.credentials.js"
@@ -136,18 +137,20 @@ For more information on these parameters, refer to [Node codex files](/integrati
 
 Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
-#### Step 4.1: Lint configuration and imports
+#### Step 4.1: Imports
 
-Start by disabling one of the linter warnings, and adding the import statements:
+Start by adding the import statements:
 
 ```js
-/* eslint-disable n8n-nodes-base/filesystem-wrong-node-filename */
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
 #### Step 4.2: Create the main class
 
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
+
+!!! note "Class names and file names"
+		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 
 ```js
 export class NasaPics implements INodeType {
@@ -425,6 +428,8 @@ export class NasaPicsApi implements ICredentialType {
 ```
 
 For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
+
+
 
 ## Test your node
 

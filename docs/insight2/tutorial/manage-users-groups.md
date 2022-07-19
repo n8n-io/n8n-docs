@@ -108,7 +108,7 @@ Admins can add or remove any numbers of users in a group. Just select a user fro
 
 #### Permissions:
 
-Admins can set granular permission like creating/deleting apps or creating folder for a group of users.
+Admins can set granular permission like creating/deleting apps or creating/updating/deleting folders  for a group of users.
 
 
 

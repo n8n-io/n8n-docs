@@ -31,7 +31,7 @@ Admins can invite anyone to a workspace using the email address. To invite a use
 
 
 
-- Now enter the details of new user such as first name, last name, email, and then click on the **Create User**.
+- Now enter the details of new user such as first name, last name, email, and then click on **Create User**.
 
 
 

@@ -93,7 +93,7 @@ Admins can add or remove any number of apps for a group of users. To add an app 
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps_in2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/apps_1_in2.png)
 
 
 

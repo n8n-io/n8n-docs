@@ -133,7 +133,7 @@ This group contains all the users and admins.
 
 | Apps | Users | Permissions |
 | ----------- | ----------- | ----------- |
-| You can add or remove apps. | Modification is disabled. This group will have all the users and admins added in a workspace. | You can edit permissions for all the users globally. |
+| You can add or remove apps. | Modification is disabled. This group will have all the users and admins added in a workspace. | You can edit permissions for all the users globally. 
 
 
 

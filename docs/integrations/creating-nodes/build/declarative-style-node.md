@@ -25,12 +25,12 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 
 n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
 
-Clone the repository, navigate into the directory, and install dependencies:
+Clone the repository and navigate into the directory:
 
 ```shell
 git clone https://github.com/n8n-io/n8n-nodes-starter.git n8n-nodes-nasa-pics
 cd n8n-nodes-nasa-pics
-npm i
+
 ```
 
 The starter contains example nodes and credentials. Delete the following directories and files:
@@ -42,15 +42,28 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-* `nodes/nasapics`
-* `nodes/nasapics/NasaPics.node.json`
-* `nodes/nasapics/NasaPics.node.ts`
-* `nodes/nasapics/nasapics.svg`
-* `credentials/NasaPics.credentials.ts`
+* `nodes/NasaPics`
+* `nodes/NasaPics/NasaPics.node.json`
+* `nodes/NasaPics/NasaPics.node.ts`
+* `nodes/NasaPics/nasapics.svg`
+* `credentials/NasaPicsApi.credentials.ts`
 
 These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
 
-### Step 2: Update the npm package details
+Now install the project dependencies:
+
+```shell
+npm i
+```
+
+### Step 2: Add an icon
+
+Copy and paste the NASA SVG logo from [here](view-source:https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`.
+
+
+--8<-- "_snippets/integrations/creating-nodes/node-icons.md"
+
+### Step 3: Update the npm package details
 
 Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
 
@@ -67,8 +80,8 @@ Your npm package details are in the `package.json` at the root of the project. I
   "license": "MIT",
   "homepage": "https://n8n.io",
   "author": {
-    "name": "<your-name>",
-    "email": "<your-email>"
+    "name": "Test",
+    "email": "test@example.com"
   },
   "repository": {
     "type": "git",
@@ -86,10 +99,10 @@ Your npm package details are in the `package.json` at the root of the project. I
 	// Link the credentials and node
   "n8n": {
     "credentials": [
-      "dist/credentials/NasaPics.credentials.js"
+      "dist/credentials/NasaPicsApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/nasapics/NasaPics.node.js"
+      "dist/nodes/NasaPics/NasaPics.node.js"
     ]
   },
   "devDependencies": {
@@ -102,7 +115,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 
 ```
 
-### Step 3: Add node metadata
+### Step 4: Add node metadata
 
 Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `NasaPics.node.json`.
 
@@ -110,7 +123,7 @@ Add the following code to the JSON file:
 
 ```json
 {
-	"node": "n8n-nodes-base.nasapics",
+	"node": "n8n-nodes-base.NasaPics",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
@@ -133,11 +146,11 @@ Add the following code to the JSON file:
 
 For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
 
-### Step 4: Create the node
+### Step 5: Create the node
 
 Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
-#### Step 4.1: Imports
+#### Step 5.1: Imports
 
 Start by adding the import statements:
 
@@ -145,7 +158,7 @@ Start by adding the import statements:
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
-#### Step 4.2: Create the main class
+#### Step 5.2: Create the main class
 
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
@@ -163,13 +176,13 @@ export class NasaPics implements INodeType {
 }
 ```
 
-#### Step 4.3: Add node details
+#### Step 5.3: Add node details
 
 All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
 
 ```js
 		displayName: 'NASA Pics',
-		name: 'nasapics',
+		name: 'NasaPics',
 		icon: 'file:nasapics.svg',
 		group: ['transform'],
 		version: 1,
@@ -177,7 +190,6 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 		description: 'Get data from NASAs API',
 		defaults: {
 			name: 'NASA Pics',
-			color: '#0b3d91',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
@@ -196,9 +208,9 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 		},
 ```
 
-#### Step 4.4: Add resources
+#### Step 5.4: Add resources
 
-The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Add the `properties` array, with the resource object:
+The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Update the `properties` array with the resource object:
 
 ```js
 properties: [
@@ -221,12 +233,12 @@ properties: [
 	},
 	// Operations will go here
 
-],
+]
 ```
 
 `type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 
-#### Step 4.5: Add operations
+#### Step 5.5: Add operations
 
 The operations object defines the available operations on a resource.
 
@@ -251,6 +263,7 @@ Add the following to the `properties` array, after the `resource` object:
 		{
 			name: 'Get',
 			value: 'get',
+			action: 'Get the APOD',
 			description: 'Get the Astronomy Picture of the day',
 			routing: {
 				request: {
@@ -278,6 +291,7 @@ Add the following to the `properties` array, after the `resource` object:
 		{
 			name: 'Get',
 			value: 'get',
+			action: 'Get Mars Rover photos',
 			description: 'Get photos from the Mars Rover',
 			routing: {
 				request: {
@@ -333,11 +347,12 @@ Add the following to the `properties` array, after the `resource` object:
 		}
 	}	
 },
+// Optional/additional fields will go here
 ```
 
 This code creates two operations: one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
 
-#### Step 4.6: Optional fields
+#### Step 5.6: Optional fields
 
 Most APIs, including the NASA API that you're using in this example, have optional fields you can use to refine your query.
 
@@ -381,20 +396,12 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 }
 ```
 
-Your completed base file should look like this [TODO: link].
-
-### Step 5: Add an icon
-
-Copy and paste the NASA SVG logo from [here](view-source:https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`.
-
-
---8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
 ### Step 6: Set up authentication
 
 The NASA API requires users to authenticate with an API key.
 
-Add the following to `NasaPicsApi.credentials.ts`:
+Add the following to `nasaPicsApi.credentials.ts`:
 
 ```js
 import {
@@ -404,9 +411,11 @@ import {
 } from 'n8n-workflow';
 
 export class NasaPicsApi implements ICredentialType {
-	name = 'nasapicsApi';
+	name = 'NasaPicsApi';
 	displayName = 'NASA Pics API';
-	documentationUrl = '';
+	// Uses the link to this tutorial as an example
+	// Replace with your own docs links when building your own nodes
+	documentationUrl = 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',

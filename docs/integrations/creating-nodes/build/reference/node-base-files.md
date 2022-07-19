@@ -169,7 +169,12 @@ The operations object defines the available operations on a resource.
 * `name`: String. This should always be `option`.
 * `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
-* `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
+* `options`: Array of objects. Each objects describes an operation's behavior, such as its routing, the REST verb it uses, and so on. An `options` object includes:
+	* `name`. String.
+	* `value`. String.
+	* `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
+	* `description`: String.
+	* `routing`: Object containing request details.
 
 #### Additional fields objects
 

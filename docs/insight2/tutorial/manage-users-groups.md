@@ -68,13 +68,13 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 
 
-![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/menu2_in2.png)
+![Insight² - Managing Users and Groups](/_images/insight2/tutorial/manage-users-groups/status_in2.png)
 
 
 
 ## Managing Groups
 
-On Insight, Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Account menu** on top right corner and click on the **Manage Groups**.
+On Insight², Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Account menu** on top right corner and click on the **Manage Groups**.
 
 
 

@@ -127,7 +127,7 @@ Add the following code to the JSON file:
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
-        "Miscellaneous"
+		"Miscellaneous"
 	],
 	"resources": {
 		"credentialDocumentation": [
@@ -226,8 +226,8 @@ properties: [
 			},
 			{
 				name: 'Mars Rover Photos',
-				value: 'marsRoverPhotos'
-			}
+				value: 'marsRoverPhotos',
+			},
 		],
 		default: 'astronomyPictureOfTheDay',
 	},
@@ -255,9 +255,9 @@ Add the following to the `properties` array, after the `resource` object:
 	displayOptions: {
 		show: {
 			resource: [
-				'astronomyPictureOfTheDay'
-			]
-		}
+				'astronomyPictureOfTheDay',
+			],
+		},
 	},
 	options: [
 		{
@@ -268,10 +268,10 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '/planetary/apod'
-				}
-			}
-		}
+					url: '/planetary/apod',
+				},
+			},
+		},
 	],
 	default: 'get'
 },
@@ -283,9 +283,9 @@ Add the following to the `properties` array, after the `resource` object:
 	displayOptions: {
 		show: {
 			resource: [
-				'marsRoverPhotos'
-			]
-		}
+				'marsRoverPhotos',
+			],
+		},
 	},
 	options: [
 		{
@@ -296,10 +296,10 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos'
-				}
-			}
-		}
+					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos',
+				},
+			},
+		},
 	],
 	default: 'get'
 },
@@ -313,16 +313,16 @@ Add the following to the `properties` array, after the `resource` object:
 		{name: 'Curiosity', value: 'curiosity'},
 		{name: 'Opportunity', value: 'opportunity'},
 		{name: 'Perseverance', value: 'perseverance'},
-		{name: 'Spirit', value: 'spirit'}
+		{name: 'Spirit', value: 'spirit'},
 	],
 	default: 'curiosity',
 	displayOptions: {
 		show: {
 			resource: [
-				'marsRoverPhotos'
-			]
-		}
-	}
+				'marsRoverPhotos',
+			],
+		},
+	},
 },
 {
 	displayName: 'Date',
@@ -334,18 +334,18 @@ Add the following to the `properties` array, after the `resource` object:
 	displayOptions: {
 		show: {
 			resource: [
-				'marsRoverPhotos'
-			]
-		}
+				'marsRoverPhotos',
+			],
+		},
 	},
 	routing: {
 		request: {
 			// You've already set up the URL. qs appends the value of the field as a query string
 			qs: {
-				earth_date: '={{ new Date($value).toISOString().substr(0,10) }}'
-			}
-		}
-	}	
+				earth_date: '={{ new Date($value).toISOString().substr(0,10) }}',
+			},
+		},
+	},
 },
 // Optional/additional fields will go here
 ```
@@ -370,12 +370,12 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 	displayOptions: {
 		show: {
 			resource: [
-				'astronomyPictureOfTheDay'
+				'astronomyPictureOfTheDay',
 			],
 			operation: [
-				'get'
-			]
-		}
+				'get',
+			],
+		},
 	},
 	options: [
 		{
@@ -387,11 +387,11 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 				request: {
 					// You've already set up the URL. qs appends the value of the field as a query string
 					qs: {
-						date: '={{ new Date($value).toISOString().substr(0,10) }}'
-					}
-				}
-			}		
-		}
+						date: '={{ new Date($value).toISOString().substr(0,10) }}',
+					},
+				},
+			},
+		},
 	],									
 }
 ```
@@ -442,4 +442,6 @@ For more information about credentials files and options, refer to [Credentials 
 
 ## Test your node
 
+
 --8<-- "_snippets/integrations/creating-nodes/testing.md"
+

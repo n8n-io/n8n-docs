@@ -35,4 +35,6 @@ Both commands can run in the root directory of your community package, or in `/p
 
 Instead of fixing a rule violation, you can also make an exception for it, so the linter doesn't flag it.
 
-To make a lint exception, hover over the issue and click on `Quick fix` (or `cmd+.` in macOS) and select **Disable {rule} for this line**. Only disable rules for a line where you have good reason to. If you think the linter is misdetecting an issue, please [report it in the linter repository](https://github.com/ivov/eslint-plugin-n8n-nodes-base/issues).
+To make a lint exception from VSCode: hover over the issue and click on `Quick fix` (or `cmd+.` in macOS) and select **Disable {rule} for this line**. Only disable rules for a line where you have good reason to. If you think the linter is misdetecting an issue, please [report it in the linter repository](https://github.com/ivov/eslint-plugin-n8n-nodes-base/issues).
+
+To add a lint exception to a single file, add a code comment. In particular, TSLint rules may not show up in VSCode and may need to be turned off using code comments. Refer to the [TSLint documentation](https://palantir.github.io/tslint/usage/rule-flags/) for more guidance.  

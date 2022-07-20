@@ -80,9 +80,33 @@ export class AsanaApi implements ICredentialType {
 ```
 </div>
 
+#### Other new features
+
+* Added a `preAuthentication` method to credentials.
+* Added more credentials tests.
+* Introduce automatic fixing for paired item information in some scenarios.
+
+### Node enhancements
+
+* [ERPNext node](/integrations/nodes/n8n-nodes-base.erpNext/): add credential tests, and add support for unauthorized certs.
+* [Google Drive node](/integrations/nodes/n8n-nodes-base.googleDrive/): add support for move to trash.
+* [Mindee node](/integrations/nodes/n8n-nodes-base.mindee/): support new version.
+* [Notion node](/integrations/nodes/n8n-nodes-base.notion/): support ignoring the Notion URL property if empty.
+* [Shopify node](/integrations/nodes/n8n-nodes-base.shopify/): add OAuth support.
+
 ### Bug fixes
 
+* API: add missing node settings parameters.
+* API: validate static data value for resource workflow.
+* Baserow Node: fix an issue preventing table names from loading.
+* Editor: hide the **Execute previous node** button when in read-only mode.
+* Editor: hide tabs if there's only one branch.
+* Roundup of link fixes in nodes.
+
 ### Contributors
+
+[Florian Bachmann](https://github.com/baflo){:target=_blank .external-link}  
+[Olivier Aygalenq](https://github.com/oaygalenq){:target=_blank .external-link}  
 
 
 ## n8n@0.186.1

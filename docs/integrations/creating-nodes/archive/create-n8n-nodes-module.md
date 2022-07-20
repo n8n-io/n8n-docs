@@ -1,5 +1,7 @@
 # Creating n8n-nodes-module
 
+[TODO: this is the most up to date method, use it]
+
 In this guide, you'll learn to create a custom n8n-nodes-module that can be installed separately alongside your n8n instance. The n8n-nodes-module is an npm package that contains the node. Your custom node will get loaded automatically when n8n starts.
 
 Consider creating n8n-nodes-module if any of the following conditions satisfy your needs:

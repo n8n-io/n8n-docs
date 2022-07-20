@@ -1,3 +1,16 @@
+# Creating nodes overhaul
+
+/integrations/creating-nodes/code/create-first-node/   /integrations/creating-nodes/build/
+/integrations/creating-nodes/code/standards/   /integrations/creating-nodes/build/reference/
+/integrations/creating-nodes/code/create-trigger-node/   /integrations/creating-nodes/build/create-trigger-node/
+/integrations/creating-nodes/code/ui-elements/   /integrations/creating-nodes/build/reference/ui-elements/
+/integrations/creating-nodes/code/node-linter/   /integrations/creating-nodes/test/node-linter/
+/integrations/creating-nodes/code/review-checklist/   /integrations/creating-nodes/build/reference/
+/integrations/creating-nodes/code/troubleshooting-node-development/   /integrations/creating-nodes/test/troubleshooting-node-development/
+/integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
+/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
+
+# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 

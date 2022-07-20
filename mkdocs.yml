@@ -93,6 +93,7 @@ nav:
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
       - Data pinning: data/data-pinning.md
+      - Data mapping: data/data-mapping.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:
@@ -126,6 +127,14 @@ nav:
     - Trigger nodes: integrations/trigger-nodes/
     - Credentials: integrations/credentials/
     - Custom API actions for existing nodes: integrations/custom-operations.md
+    - Community nodes:
+      - Overview: integrations/community-nodes/index.md
+      - Installation and management: integrations/community-nodes/installation.md
+      - Risks: integrations/community-nodes/risks.md
+      - Blocklist: integrations/community-nodes/blocklist.md
+      - Using community nodes: integrations/community-nodes/usage.md
+      - Troubleshooting: integrations/community-nodes/troubleshooting.md
+      - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
       - Code-based node building:

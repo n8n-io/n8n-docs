@@ -92,6 +92,7 @@ nav:
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
+      - Data mapping: data/data-mapping.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:

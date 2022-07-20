@@ -17,7 +17,9 @@ Basic configuration:
 }
 ```
 
-![String](/_images/integrations/creating-nodes/code/string.png)
+
+![String](/_images/integrations/creating-nodes/string.png)
+
 
 String field for inputting passwords:
 
@@ -35,7 +37,7 @@ String field for inputting passwords:
 }
 ```
 
-![Password](/_images/integrations/creating-nodes/code/password.png)
+![Password](/_images/integrations/creating-nodes/password.png)
 
 
 String field with more than one row:
@@ -54,7 +56,7 @@ String field with more than one row:
 }
 ```
 
-![Multiple rows](/_images/integrations/creating-nodes/code/multiple-rows.png)
+![Multiple rows](/_images/integrations/creating-nodes/multiple-rows.png)
 
 ## Number
 
@@ -76,7 +78,7 @@ Basic configuration:
 }
 ```
 
-![Number](/_images/integrations/creating-nodes/code/number.png)
+![Number](/_images/integrations/creating-nodes/number.png)
 
 Number field with decimal points:
 
@@ -94,7 +96,7 @@ Number field with decimal points:
 }
 ```
 
-![Decimal](/_images/integrations/creating-nodes/code/decimal.png)
+![Decimal](/_images/integrations/creating-nodes/decimal.png)
 
 ## Collection
 
@@ -132,7 +134,7 @@ Use the `collection` type when you need to display optional fields.
 }
 ```
 
-![Collection](/_images/integrations/creating-nodes/code/collection.png)
+![Collection](/_images/integrations/creating-nodes/collection.png)
 
 
 ## DateTime
@@ -149,7 +151,9 @@ The `dateTime` type provides a date picker.
 }
 ```
 
-![DateTime](/_images/integrations/creating-nodes/code/datetime.png)
+![DateTime](/_images/integrations/creating-nodes/datetime.png)
+
+
 
 ## Boolean
 
@@ -165,7 +169,7 @@ The `boolean` type adds a toggle for entering true or false.
 }
 ```
 
-![Boolean](/_images/integrations/creating-nodes/code/boolean.png)
+![Boolean](/_images/integrations/creating-nodes/boolean.png)
 
 ## Color
 
@@ -180,7 +184,7 @@ The `color` type provides a color selector.
 }
 ```
 
-![Color](/_images/integrations/creating-nodes/code/color.png)
+![Color](/_images/integrations/creating-nodes/color.png)
 
 ## Options
 
@@ -206,7 +210,7 @@ The `options` type adds an options list. Users can select a single value.
 }
 ```
 
-![Options](/_images/integrations/creating-nodes/code/options.png)
+![Options](/_images/integrations/creating-nodes/options.png)
 
 ## Multi options
 
@@ -232,7 +236,7 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multi-options](/_images/integrations/creating-nodes/code/multioptions.png)
+![Multioptions](/_images/integrations/creating-nodes/multioptions.png)
 
 
 ## Fixed collection
@@ -274,7 +278,7 @@ Use the `fixedCollection` type to group fields that are semantically related.
 }
 ```
 
-![Fixed collection](/_images/integrations/creating-nodes/code/fixed-collection.png)
+![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
 
 ## JSON
 
@@ -288,5 +292,5 @@ Use the `fixedCollection` type to group fields that are semantically related.
 }
 ```
 
-![JSON](/_images/integrations/creating-nodes/code/json.png)
+![JSON](/_images/integrations/creating-nodes/json.png)
 

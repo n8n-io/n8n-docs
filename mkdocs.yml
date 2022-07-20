@@ -9,6 +9,8 @@ theme:
   palette:
       scheme: light
   features:
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky
@@ -137,18 +139,32 @@ nav:
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
-      - Code-based node building:
-        - Overview: integrations/creating-nodes/code/index.md
-        - Standards: integrations/creating-nodes/code/standards.md
-        - Create your first node: integrations/creating-nodes/code/create-first-node.md
-        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
-        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
-        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
-        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
-        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
-        - Node linter: integrations/creating-nodes/code/node-linter.md
-        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
-        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
+      - Plan your node:
+        - Overview: integrations/creating-nodes/plan/index.md
+        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
+      - Build your node:
+        - Overview: integrations/creating-nodes/build/index.md        
+        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - Reference:
+          - Overview: integrations/creating-nodes/build/reference/index.md
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 
+          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
+          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+          - Base files: integrations/creating-nodes/build/reference/node-base-files.md
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
+          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
+      - Test your node:
+        - Overview: integrations/creating-nodes/test/index.md
+        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
+        - Node linter: integrations/creating-nodes/test/node-linter.md
+        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
+      - Deploy your node:
+        - Overview: integrations/creating-nodes/deploy/index.md
+        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md

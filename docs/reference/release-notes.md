@@ -5,7 +5,10 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.186.1...n8n@0.187.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-07-20
 
-This release includes several major new features.
+This release includes several major new features, including:
+
+* The community nodes repo: a new way to build and share nodes.
+* Data pinning and data mapping: accelerate workflow development with better data manipulation functionality.
 
 ### New features
 

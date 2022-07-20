@@ -1,5 +1,40 @@
 # Release notes
 
+## n8n@0.187.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.186.1...n8n@0.187.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-20
+
+This release includes several major new features.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+#### Community nodes repository
+
+This release introduces the [community node repository](/integrations/community-nodes/). This allows developers to build and share nodes as npm packages. Users can install community-built nodes directly in n8n.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+#### Data pinning
+
+[Data pinning](/data/data-pinning/) allows you to freeze and edit data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. This avoids repeated API calls when developing a workflow, reducing calls to external systems, and speeding up workflow development.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+#### Data mapping
+
+This release introduces a drag and drop interface for [data mapping](/data/data-mapping/), as a quick way to map data without using expressions.
+
+</div>
+
+### Bug fixes
+
+### Contributors
+
+
 ## n8n@0.186.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.186.0...n8n@0.186.1){:target=_blank .external-link} for this version.<br />
@@ -63,13 +98,7 @@ Core: add the `action` parameter to INodePropertyOptions. This parameter is now 
 
 ### New nodes
 
-<div class="n8n-new-features" markdown>
-
-#### Google Ads node
-
-n8n now provides a [Google Ads](/integrations/nodes/n8n-nodes-base.googleAds/) node, allowing you to get data from Google Ad campaigns.
-
-</div>
+[Google Ads node](/integrations/nodes/n8n-nodes-base.googleAds/): n8n now provides a Google Ads node, allowing you to get data from Google Ad campaigns.
 
 ### Node enhancements
 

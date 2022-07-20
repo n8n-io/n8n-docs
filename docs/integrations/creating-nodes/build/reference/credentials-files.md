@@ -82,7 +82,7 @@ Object. Contains objects that tell n8n how to inject the authentication data as 
 
 #### type
 
-String. If you're using an authentication method that sends data in the header, body, or query string, set this to `'generic'`. If using more complex authentication methods such as OAuth [TODO: what do they set it to for OAuth or JWT?]
+String. If you're using an authentication method that sends data in the header, body, or query string, set this to `'generic'`. 
 
 #### properties
 

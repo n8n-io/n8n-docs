@@ -17,20 +17,20 @@ Create a [ClickUp](https://www.clickup.com/) account.
 
 1. Open your ClickUp [dashboard](https://app.clickup.com).
 2. Click on your profile icon in the bottom left.
-3. Click on ***Integrations*** under your workspace profile.
-4. Click on ***ClickUp API***.
-5. Click on the ***+ Create an App*** button under the ***ClikcUp API*** section.
-6. Enter the name of your app in the ***App Name*** field.
+3. Click on **Integrations** under your workspace profile.
+4. Click on **ClickUp API**.
+5. Click on the **+ Create an App** button under the **ClickUp API** section.
+6. Enter the name of your app in the **App Name** field.
 7. Copy the 'OAuth Callback URL' provided in the 'ClickUp OAuth2 API' credentials in n8n.
-8. Paste it in the ***Redirect URL(s)*** field.
-9. Click on the ***Create App*** button.
+8. Paste it in the **Redirect URL(s)** field.
+9. Click on the **Create App** button.
 10. Copy the displayed client ID.
-11. Enter a name for your credentials in the ***Credentials Name*** field in the 'ClickUp OAuth2 API' credentials in n8n.
-12. Paste the client ID in the ***Client ID*** field in the 'ClickUp OAuth2 API' credentials in n8n.
+11. Enter a name for your credentials in the **Credentials Name** field in the 'ClickUp OAuth2 API' credentials in n8n.
+12. Paste the client ID in the **Client ID** field in the 'ClickUp OAuth2 API' credentials in n8n.
 13. Copy the client secret from ClickUp.
-14. Paste the client secret in the ***Client Secret*** field in the 'ClickUp OAuth2 API' credentials in n8n.
+14. Paste the client secret in the **Client Secret** field in the 'ClickUp OAuth2 API' credentials in n8n.
 15. Click on the circle button in the OAuth section to connect a ClickUp account to n8n.
-16. Click the ***Save*** button to save your credentials in n8n.
+16. Click the **Save** button to save your credentials in n8n.
 
 The following video demonstrates the steps mentioned above.
 

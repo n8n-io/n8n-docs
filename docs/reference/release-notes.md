@@ -1,5 +1,17 @@
 # Release notes
 
+## n8n@0.187.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.187.1...n8n@0.187.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-21
+
+This is a bug fix release.
+
+* Editor: fix for a console issue.
+* Editor: fix a login issue for non-admin users.
+* Editor: fix problems with the credentials modal that occured when no node is open.
+* NocoDB node: fix for an authentication issue.
+
 ## n8n@0.187.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.187.0...n8n@0.187.1){:target=_blank .external-link} for this version.<br />

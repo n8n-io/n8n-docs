@@ -4,8 +4,8 @@ Data mapping means referencing data from previous nodes. It doesn't include chan
 
 You can map data in the following ways:
 
-* Using [expressions](/code-examples/expressions/).
-* By dragging and dropping data from the **INPUT** table into parameters.
+* Using the expressions editor. Refer to [expressions](/code-examples/expressions/) for more information.
+* By dragging and dropping data from the **INPUT** table into parameters. This generates the expression for you.
 
 ## How to drag and drop data
 

@@ -9,7 +9,8 @@ n8n collects selected usage and performance data to help diagnose problems and i
 - From node parameters:
     - The 'resource' and 'operation' that a node is set to (if applicable)
     - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
-- The number of workflow executions and their status
+- The number of workflow executions and their status.
+- The domain of webhook calls, if specified (excluding subdomain).
 - Details on how the UI is used (for example, navigation, nodes panel searches)
 - Diagnostic information
     - n8n version

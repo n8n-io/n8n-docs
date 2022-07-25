@@ -58,7 +58,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Copy and paste the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`.
+Copy and paste the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`. To get the SVG source, right-click the image then select **View page source**.```
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"

@@ -2049,7 +2049,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [QuickBooks:](/integrations/nodes/n8n-nodes-base.quickbooks/) Added the Transaction resource and Get Report operation.
 
 ### Core Functionality
-- Integrated [Nodelinter](/integrations/creating-nodes/code/node-linter/) in n8n.
+- Integrated [Nodelinter](/integrations/creating-nodes/test/node-linter/) in n8n.
 - Fix to add a trailing slash (`/`) to all webhook URLs for proper functionality.
 
 ### Bug fixes

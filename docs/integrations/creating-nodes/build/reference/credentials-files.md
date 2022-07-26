@@ -1,6 +1,6 @@
 # Credentials file
 
-The credentials file defines the authorization methods for the node. All nodes must have a credentials file. The settings in this file affect what n8n displays in the **Credentials** modal.
+The credentials file defines the authorization methods for the node. The settings in this file affect what n8n displays in the **Credentials** modal, and must reflect the authentication requirements of the service you're connecting to.
 
 ## Structure of the credentials file
 
@@ -91,3 +91,7 @@ Object. Defines the authentication methods. Options are:
 * `body`: object. Sends authentication data in the request body. Can contain nested objects. 
 * `header`: object. Send authentication data in the request header.
 * `qs`: object. Stands for "query string." Send authentication data in the request query string.
+
+### test
+
+Provide a `request` object containing a URL and authentication type that n8n can use to test the credential.

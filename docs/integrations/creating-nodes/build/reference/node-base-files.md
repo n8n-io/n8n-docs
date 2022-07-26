@@ -4,7 +4,7 @@ The node base file contains the core code of your node. All nodes must have a ba
 
 This document gives short code snippets to help understand the code structure and concepts. For full walk-throughs of building a node, including real-world code examples, refer to [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node/) or [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node/).
 
-You can also explore the [n8n-nodes-starter](){:target=_blank .external-link} and n8n's own [nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes){:target=_blank .external-link} for a wider range of examples. The starter contains basic examples that you can build on. The n8n [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost) is a good example of a more complex node, including versioning.
+You can also explore the [n8n-nodes-starter](){:target=_blank .external-link} and n8n's own [nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes){:target=_blank .external-link} for a wider range of examples. The starter contains basic examples that you can build on. The n8n [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost) is a good example of a more complex programmatic-style node, including versioning.
 
 
 ## Structure of the node base file
@@ -189,7 +189,7 @@ name: 'additionalFields',
 type: ''
 placeholder: 'Add Field',
 default: {},
-displayOption: {
+displayOptions: {
   // Set which resources and operations this field is available for
   show: {
     resource: [
@@ -198,7 +198,7 @@ displayOption: {
     operation: [
       // Operation names
     ]
-  }
+  },
 }
 ```
 
@@ -329,7 +329,7 @@ n8n support two methods of node versioning. Refer to [Node versioning](/integrat
 
 _Object_ | _Optional_
 
-Contains the `loadOptions` method for programmatic-style nodes. You can use this method to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries.
+Contains the `loadOptions` method for programmatic-style nodes. You can use this method to query the service to get user-specific settings (such as getting a user's email labels from Gmail), then return them and render them in the GUI so the user can include them in subsequent queries.
 
 For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Gmail/Gmail.node.ts) uses `loadOptions` to get all email labels:
 

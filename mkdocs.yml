@@ -94,8 +94,9 @@ nav:
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
-      - Data pinning: data/data-pinning.md
       - Data mapping: data/data-mapping.md
+      - Data pinning: data/data-pinning.md
+      - Data editing: data/data-editing.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:

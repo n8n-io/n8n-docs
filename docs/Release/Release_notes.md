@@ -34,10 +34,6 @@ tags:
 
 
 
-
-
-
-
 ## 1.15
 
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Customization of permissions for users - User ist not able to switch products on and off - only Admin can

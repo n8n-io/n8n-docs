@@ -22,9 +22,9 @@ tags:
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Symbol for locked documents/instances on dashboard
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Ability to select multiple documents on the dashboard to restart and/or delete at the same time
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Document lock: 
-   * Unlock Option for Admin user if doc is already being viewed by someone else
-   * Reload Option if document is modified before user can save
-     For External Application, this feature will be disable
+     - Unlock Option for Admin user if doc is already being viewed by someone else
+     - Reload Option if document is modified before user can save
+     - For External Application, this feature will be disabled
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Login Mobil Responsive 
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Display how long the free trial access is running
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: DOC² - functionality document details: Save Rules & Save and close

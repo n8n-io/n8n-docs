@@ -13,7 +13,7 @@ This release contains a new node for Metabase, bug fixes, and node and product e
 
 #### Metabase
 
-This release includes a new [Metabase node](/integrations/nodes/n8n-nodes-base.Metabase/). [Metabase](https://www.metabase.com/){:target=_blank .external-link} is a business data analysis tool.
+This release includes a new [Metabase node](/integrations/nodes/n8n-nodes-base.metabase/). [Metabase](https://www.metabase.com/){:target=_blank .external-link} is a business data analysis tool.
 
 </div>
 

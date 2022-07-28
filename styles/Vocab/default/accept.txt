@@ -13,6 +13,7 @@ invalid
 Lemlist
 Luxon
 Mattermost
+Metabase
 n8n
 namespace
 Nodelinter

@@ -57,7 +57,7 @@ There are different ways in which you can contribute to the n8n code base:
 
 - Fix [issues](https://github.com/n8n-io/n8n/issues) reported on GitHub. The [CONTRIBUTING guide](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) will help you get your development environment ready in minutes.
 - Add additional functionality to an existing third party integration.
-- Create an integration for a third party service. Check out [this guide](/integrations/creating-nodes/code/) on how to create a node.
+- Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/) for guidance on how to create a node.
 - Add a new feature to n8n.
 
 ## Contribute to the docs

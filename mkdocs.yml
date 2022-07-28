@@ -94,21 +94,22 @@ nav:
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
-      - Data pinning: data/data-pinning.md
       - Data mapping: data/data-mapping.md
+      - Data pinning: data/data-pinning.md
+      - Data editing: data/data-editing.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:
         - Overview: code-examples/expressions/index.md
         - Methods: code-examples/expressions/methods.md
         - Variables: code-examples/expressions/variables.md
-        - Data and time with Luxon: code-examples/expressions/luxon.md
+        - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
       - JavaScript for workflows:
         - Overview: code-examples/javascript-functions/index.md
         - Methods: code-examples/javascript-functions/methods.md
         - Variables: code-examples/javascript-functions/variables.md
-        - Data and time with Luxon: code-examples/javascript-functions/luxon.md
+        - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md

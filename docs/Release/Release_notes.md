@@ -15,6 +15,24 @@ tags:
 
 # Release Notes
 
+## 1.16
+
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [Insight²](/docs.polydocs.io/insight2/)
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Status Pending Approval on dashboard
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Symbol for locked documents/instances on dashboard
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Ability to select multiple documents on the dashboard to restart and/or delete at the same time
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Document lock: 
+   * Unlock Option for Admin user if doc is already being viewed by someone else
+   * Reload Option if document is modified before user can save
+     For External Application, this feature will be disable
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Login Mobil Responsive 
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Display how long the free trial access is running
+
+
+
+
+
+
 ## 1.15
 
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Customization of permissions for users - User ist not able to switch products on and off - only Admin can

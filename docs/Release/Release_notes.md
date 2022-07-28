@@ -27,6 +27,11 @@ tags:
      For External Application, this feature will be disable
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Login Mobil Responsive 
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: Display how long the free trial access is running
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: DOC² - functionality document details: Save Rules & Save and close
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: DOC² - Adding possibility to delete a not standard document type
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: DOC² - email import IMAP/SSL
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: DOC² - Error message when other file type than pdf gets uploaded
+
 
 
 

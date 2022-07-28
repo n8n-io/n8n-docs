@@ -1,5 +1,48 @@
 # Release notes
 
+## n8n@0.188.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.187.2...n8n@0.188.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-07-27
+
+This release contains a new node for Metabase, bug fixes, and node and product enhancements.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Metabase
+
+This release includes a new [Metabase node](/integrations/nodes/n8n-nodes-base.Metabase/). [Metabase](https://www.metabase.com/){:target=_blank .external-link} is a business data analysis tool.
+
+</div>
+
+### Enhancements
+
+This release includes improvements to n8n's core pairedItems functionality.
+
+### Node enhancements
+
+* [Item Lists node](/integrations/core-nodes/n8n-nodes-base.itemLists/): add an operation to create arrays from input items.
+* [Kafka trigger node](/integrations/trigger-nodes/n8n-nodes-base.kafkaTrigger/): add more option fields.
+
+
+### Bug fixes
+
+* Core: add Windows support to `import:credentials --separate`.
+* Editor: correct linking buttons color.
+* Editor: ensure data pinning works as expected when `pinData` is null.
+* Editor: fix a bug with spaces.
+* Editor: resolve an issue with sticky note duplication and positioning.
+* Editor: restore missing header colors.
+* AWS DynamoDB node: fix for errors with expression attribute names.
+* Mautic node: fix an authentication issue.
+* Rocketchat node: fix an authentication issue.
+
+### Contributors
+
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
+
 ## n8n@0.187.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.187.1...n8n@0.187.2){:target=_blank .external-link} for this version.<br />

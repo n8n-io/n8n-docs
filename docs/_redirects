@@ -1,5 +1,5 @@
 # Weird ones after IA launch
-/workflow/integrations/nodes/core-nodes/n8n-nodes-base.function/        /workflow/integrations/core-nodes/n8n-nodes-base.function/
+/workflow/integrations/nodes/core-nodes/n8n-nodes-base.function/        /workflow/integrations/core-nodes/workflow-nodes-base.function/
 
 # Updated during IA work
 /getting-started/key-components/        /workflows/
@@ -141,6 +141,8 @@
 /nodes/n8n-nodes-base.ftp/        /workflow/integrations/core-nodes/workflow-nodes-base.ftp/
 /nodes/n8n-nodes-base.function/        /workflow/integrations/core-nodes/workflow-nodes-base.function/
 /nodes/n8n-nodes-base.functionItem/        /workflow/integrations/core-nodes/workflow-nodes-base.functionItem/
+/core-nodes/n8n-nodes-base.function/        /workflow/integrations/core-nodes/workflow-nodes-base.function/
+/core-nodes/n8n-nodes-base.functionItem/        /workflow/integrations/core-nodes/workflow-nodes-base.functionItem/
 /nodes/n8n-nodes-base.getResponse/        /workflow/integrations/nodes/workflow-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getResponseTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.getResponseTrigger/
 /nodes/n8n-nodes-base.ghost/        /workflow/integrations/nodes/workflow-nodes-base.ghost/

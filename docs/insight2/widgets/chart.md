@@ -29,9 +29,9 @@ Chart widget takes the chart type, data and styles to draw charts using Plotly.j
 
 The chart will look like this:
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/linec.png)
+
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/linec.png)
 
 </div>
 
@@ -57,9 +57,9 @@ The chart will look like this:
 
 The chart will look like this:
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/barc.png)
+
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/barc.png)
 
 </div>
 
@@ -82,11 +82,11 @@ The chart will look like this:
 
 The chart will look like this:
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/piec.png)
 
-</div>
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/piec.png)
+
+
 
 ## Properties
 
@@ -100,25 +100,25 @@ This field is used to add a title to your selected chart.
 
 ### Plotly JSON chart schema
 
-In the chart widget, you can also plot a chart with JSON data. So the JSON will contain the information about the chart type, chart data, etc. You can learn more about the JSON properties from [here](https://plotly.com/javascript/reference/). 
+In the chart widget, you can also plot a chart with JSON data. So the JSON will contain the information about the chart type, chart data, etc. You can learn more about the JSON properties from [here](https://plotly.com/javascript/reference/).
 
 Anyway, to work with the JSON you need to enable the `Use Plotly JSON schema` toggle from the properties section.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/pfjson.png)
 
-</div>
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/pfjson.png)
+
+
 
 It will show the [JSON description](https://plotly.com/chart-studio-help/json-chart-schema/) field to put the JSON data.
 
 The end result will be like this:
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/jsonschema.png)
 
-</div>
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/jsonschema.png)
+
+
 
 ### Loading state
 
@@ -138,11 +138,11 @@ Toggle `on` or `off` to show or hide the grid lines on the chart. You can also p
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/layout.png)
 
-</div>
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/layout.png)
+
+
 
 ### Show on desktop
 
@@ -153,11 +153,10 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Chart](/img/widgets/chart/styles.png)
 
-</div>
+![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/styles.png)
+
 
 ### Padding
 

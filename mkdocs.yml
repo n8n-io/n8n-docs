@@ -130,18 +130,19 @@ nav:
       - API: doc2/settings-api.md
       - Users: doc2/settings-users.md
       - All Import Options:
-        - Overview: doc2/import.md
+        - doc2/import/index.md
         - Email: doc2/e-mail.md
         - Fileshare Import:
-          - Fileshare: doc2/fileshare.md
+          - doc2/fileshare/index.md
           - Configuration: doc2/watchpuppy-configuration.md
           - Linux: doc2/watchdog-linux.md
           - Windows: doc2/watchdog-windows.md
         - Webhook: doc2/api.md
       - All Export Options:
-        - Export: doc2/export.md
+        - doc2/export/index.md
         - Export to Infor:
-          - Export to Infor ION and IDM: doc2/export/export-to-infor.md
+          - doc2/export/export-to-infor/index.md
+          - Export to Infor ION and IDM: doc2/export/infor-ion.md
           - How to create a BOD mapping file: doc2/export/how-to-create-a-bod-mapping-file.md
           - How to create a IDM mapping file: doc2/export/how-to-create-a-idm-mapping-file.md
           - Export to Infor IDM: doc2/export/infor-idm.md
@@ -157,9 +158,9 @@ nav:
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
     - PO Matching:
-      - Overview: doc2/pomatching/po-matching.md
+      - doc2/pomatching/po-matching/index.md
+      - Invoice: doc2/pomatching/po-matching-invoices.md
       - Delivery Note: doc2/pomatching/po-matching-delivery-notes.md
-      - Invoices: doc2/pomatching/po-matching-invoices.md
       - Order Confirmation: doc2/pomatching/po-matching-order-confirmation.md
 
     - ZUGFeRD: doc2/zugpferd-and-peppol.md
@@ -284,11 +285,115 @@ nav:
     - Merge/Split PDF: ocr/merge-split-pdf.md
     - API: ocr/ocr-api.md
   - Insight²:
-    - Introduction: insight2/intro.md
-    - Getting Started: insight2/how-to/index.md
-    - Actions: insight2/tutorial/actions.md
-    - Data-Sources: insight2/tutorial/adding-a-datasource.md
-    - Widgets: insight2/widgets/index.md
+    - Introduction: insight2/index.md
+    - Deployment: insight2/deployment.md
+    - Security: insight2/security.md
+    - Tracking: insight2/tracking.md
+    - Getting Started:
+      - insight2/tutorial/index.md
+      - Adding datasource: insight2/tutorial/adding-a-datasource.md
+      - Adding widget: insight2/tutorial/adding-widget.md
+      - Building Queries: insight2/tutorial/building-queries.md
+      - Creating new app: insight2/tutorial/creating-app.md
+      - Debugger: insight2/tutorial/debugger.md
+      - Manage User Groups: insight2/tutorial/manage-users-groups.md
+      - Mobile Layout: insight2/tutorial/mobile-layout.md
+      - Preview and Sharing Apps: insight2/tutorial/sharing-and-deploying.md
+      - Transformations: insight2/tutorial/transformations.md
+      - Versioning and release: insight2/tutorial/versioning-and-release.md
+      - Keyboard Shortcuts: insight2/tutorial/keyboard-shortcuts.md
+      - Multi-Workspace: insight2/tutorial/multiworkspace.md
+    - IN² Examples:
+      - insight2/examples/index.md
+      - Change text color in columns of the table: insight2/how-to/access-cellvalue-rowdata.md
+      - Bulk update multiple rows in table: insight2/how-to/bulk-update-multiple-rows-in-table.md
+      - REST API authentication using OAuth 2.0: insight2/how-to/oauth2-authorization.md
+      - Upload files on AWS S3 bucket: insight2/how-to/upload-files-aws.md
+      - Upload files using GCS: insight2/how-to/upload-files-gcs.md
+    - Actions:
+      - insight2/actions/actions/index.md
+      - Generate file: insight2/actions/generate-file.md
+      - Set localStorage: insight2/actions/set-localstorage.md
+    - Data-Sources: 
+      - Overview: insight2/data-sources/index.md
+      - Airtable: insight2/data-sources/airtable.md
+      - Appwrite: insight2/data-sources/appwrite.md
+      - Athena: insight2/data-sources/athena.md
+      - Baserow: insight2/data-sources/baserow.md
+      - BigQuery: insight2/data-sources/bigquery.md
+      - CouchDB: insight2/data-sources/couchdb.md
+      - Custom JS: insight2/data-sources/custom-js.md
+      - DynamoDB: insight2/data-sources/dynamodb.md
+      - Elasticsearch: insight2/data-sources/elasticsearch.md
+      - Firestore: insight2/data-sources/firestore.md
+      - GCS: insight2/data-sources/gcs.md
+      - Google Sheets: insight2/data-sources/google.sheets.md
+      - GraphQL: insight2/data-sources/graphql.md
+      - InfluxDB: insight2/data-sources/influxdb.md
+      - Mailgun: insight2/data-sources/mailgun.md
+      - MinIO: insight2/data-sources/minio.md
+      - MongoDB: insight2/data-sources/mongodb.md
+      - MSSQL: insight2/data-sources/mssql.md
+      - MySQL: insight2/data-sources/mysql.md
+      - n8n: insight2/data-sources/n8n.md
+      - Notion: insight2/data-sources/notion.md
+      - OpenAPI: insight2/data-sources/openapi.md
+      - OracleDB: insight2/data-sources/oracledb.md
+      - PostgreSQL: insight2/data-sources/postgresql.md
+      - Redis: insight2/data-sources/redis.md
+      - REST API: insight2/data-sources/restapi.md
+      - RethinkDB: insight2/data-sources/rethinkdb.md
+      - S3: insight2/data-sources/s3.md
+      - SAP HANA: insight2/data-sources/saphana.md
+      - SendGrid: insight2/data-sources/sendgrid.md
+      - SMTP: insight2/data-sources/smtp.md
+      - Snowflake: insight2/data-sources/snowflake.md
+      - Typesense: insight2/data-sources/typesense.md
+      - WooCommerce: insight2/data-sources/woocommerce.md
+    - Widgets: 
+      - Overview: insight2/widgets/index.md
+      - Button group: insight2/widgets/button-group.md
+      - Button: insight2/widgets/button.md
+      - Calendar: insight2/widgets/calendar.md
+      - Chart: insight2/widgets/chart.md
+      - Checkbox: insight2/widgets/checkbox.md
+      - Circular Progress Bar: insight2/widgets/circular-progress-bar.md
+      - Code Editor: insight2/widgets/code-editor.md
+      - Container: insight2/widgets/container.md
+      - Custom Component: insight2/widgets/custom-component.md
+      - Date Range Picker: insight2/widgets/date-range-picker.md
+      - Datepicker: insight2/widgets/datepicker.md
+      - Divider: insight2/widgets/divider.md
+      - Dropdown: insight2/widgets/dropdown.md
+      - File picker: insight2/widgets/file-picker.md
+      - iFrame: insight2/widgets/iframe.md
+      - Image: insight2/widgets/image.md
+      - Kanban: insight2/widgets/kanban.md
+      - Listview: insight2/widgets/listview.md
+      - Map: insight2/widgets/map.md
+      - Modal: insight2/widgets/modal.md
+      - Multiselect: insight2/widgets/multiselect.md
+      - Number input: insight2/widgets/number-input.md
+      - Password input: insight2/widgets/password-input.md
+      - PDF: insight2/widgets/pdf.md
+      - QR-Scanner: insight2/widgets/qr-scanner.md
+      - Radio button: insight2/widgets/radio-button.md
+      - Range Slider: insight2/widgets/range-slider.md
+      - Rich Text Editor: insight2/widgets/rich-text-editor.md
+      - Spinner: insight2/widgets/spinner.md
+      - Star: insight2/widgets/star.md
+      - Statistics: insight2/widgets/statistics.md
+      - Steps: insight2/widgets/steps.md
+      - Table: insight2/widgets/table.md
+      - Tabs: insight2/widgets/tabs.md
+      - Tags: insight2/widgets/tags.md
+      - Text input: insight2/widgets/text-input.md
+      - Text: insight2/widgets/text.md
+      - Textarea: insight2/widgets/textarea.md
+      - Timeline: insight2/widgets/timeline.md
+      - Timer: insight2/widgets/timer.md
+      - Toggle Switch: insight2/widgets/toggle-switch.md
+
  
 
   # - Courses:

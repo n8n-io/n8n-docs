@@ -6,11 +6,11 @@ title: Spinner
 
 Spinner widget can be used to provide a visual indication that an action is in progress by awaiting a change.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Number Input](/img/widgets/spinner/spinner.png)
 
-</div>
+![Insight² - Widget Reference - Number Input](/_images/insight2/widgets/spinner/spinner.png)
+
+
 
 
 ## Layout
@@ -31,7 +31,7 @@ Toggle on or off to control the visibility of the widget. You can programmatical
 
 ### Color
 
-Change the color of the Spinner by entering the `Hex color code` or choosing a color of your choice from the color-picker. 
+Change the color of the Spinner by entering the `Hex color code` or choosing a color of your choice from the color-picker.
 
 ### Size
 

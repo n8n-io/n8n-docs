@@ -1,6 +1,9 @@
 ---
-id: multiworkspace
 title: Multi-Workspace
+description: 
+tags:
+  - Insight²
+  - Workspace
 ---
 
 # Multi-Workspace
@@ -8,21 +11,21 @@ title: Multi-Workspace
 User can create their own workspaces, user who created workspace will be having admin privileges for the workspace.
 
 
-![Insight - Google create project](/img/multiworkspace/multi-workspace.gif)
+![Insight² - Google create project](/_images/insight2/multiworkspace/multi-workspace.gif)
 
 ## Hierarchy
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Google create project](/img/multiworkspace/Tooljet-workspace.png)
 
-</div>
+![Insight² - Google create project](/_images/insight2/multiworkspace/Tooljet-workspace.png)
+
+
 
 ## Permissions
 
-- The administrator can manage [users and groups](/docs/tutorial/manage-users-groups) of each workspace
+- The administrator can manage [users and groups](/insight2/tutorial/manage-users-groups/) of each workspace
 - Applications and settings can not be shared between workspaces
-- A user authorised to login to Insight will not have access to all workspaces, Usesr should be invited or signed up to a workspace to log-in to it.
+- A user authorised to login to Insight² will not have access to all workspaces, Usesr should be invited or signed up to a workspace to log-in to it.
 
 ## Enabling Multi-Workspace
 

@@ -4,13 +4,13 @@ title: Code Editor
 ---
 # Code Editor
 
-Code Editor widget is a versatile text editor for editing code and supports several languages. 
+Code Editor widget is a versatile text editor for editing code and supports several languages.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Code editor](/img/widgets/code-editor/editor.png)
 
-</div>
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/editor.png)
+
+
 
 ## Properties
 
@@ -18,11 +18,11 @@ Code Editor widget is a versatile text editor for editing code and supports seve
 Any property having `Fx` button next to its field can be **programmatically configured**.
 :::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Code editor](/img/widgets/code-editor/prop.png)
 
-</div>
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/prop.png)
+
+
 
 | properties      | description | Expected value |
 | ----------- | ----------- | ----------------- |
@@ -170,11 +170,11 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Code editor](/img/widgets/code-editor/layout.png)
 
-</div>
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/layout.png)
+
+
 
 | Layout  | description |
 | ----------- | ----------- |
@@ -183,13 +183,13 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Code editor](/img/widgets/code-editor/styles.png)
 
-</div>
+![Insight² - Widget Reference - Code editor](/_images/insight2/widgets/code-editor/styles.png)
 
-| Styles  | description | 
+
+
+| Styles  | description |
 | ----------- | ----------- |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`. |
 | Disable | This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |

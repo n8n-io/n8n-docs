@@ -4,29 +4,29 @@ title: Image
 ---
 # Image
 
-Image widget is used to display images in your app. 
+Image widget is used to display images in your app.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Image](/img/widgets/image/image.png)
 
-</div>
+![Insight² - Widget Reference - Image](/_images/insight2/widgets/image/image_in2.png)
+
+
 
 ## Events
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Image](/img/widgets/image/events.png)
 
-</div>
+![Insight² - Widget Reference - Image](/_images/insight2/widgets/image/events.png)
+
+
 
 ### On click
 
 On click event is triggered when an image is clicked.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/) docs to get the detailed information about all the **Actions**.
+
 
 ## Properties
 
@@ -81,6 +81,6 @@ Toggle on or off to control the visibility of the widget. You can programmatical
 
 This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

@@ -6,17 +6,17 @@ title: Password Input
 
 A Password Input widget provides a way for the users to securely enter a password. The Password Input is a one-line plain text editor in which the text is obscured so that it cannot be read, by replacing each character with an asterisk ("*") symbol.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Password Input](/img/widgets/password-input/password-input.gif)
 
-</div>
+![Insight² - Widget Reference - Password Input](/_images/insight2/widgets/password-input/password-input.gif)
+
+
 
 ## Properties
 
 ### Placeholder
 
-It specifies a hint that describes the expected value. 
+It specifies a hint that describes the expected value.
 
 ## Validation
 

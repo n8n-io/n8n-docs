@@ -7,9 +7,9 @@ title: Kanban
 
 Kanban widget allows you to visually organize and prioritize your tasks with a transparent workflow. You can set the number of columns to display, enable/disable the add cards button, and bind data to the cards.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Kanban widget](/img/widgets/kanban/kanban.png)
+
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban.png)
 
 </div>
 
@@ -25,22 +25,22 @@ To add an event, click on the widget handle to open the widget properties on the
 
 Just like any other event on Insight, you can set multiple handlers for any of the above mentioned events.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Kanban widget](/img/widgets/kanban/kanban-events.png)
+
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban-events.png)
 
 </div>
 
 ## Properties
 
-<div style={{textAlign: 'center'}}>
+
 
 :::caution
 Please keep in mind that you need to provide an `id` for each card in the `Card data` field <br />
 and this `id` must be of type string.
 :::
 
-![Insight - Kanban widget](/img/widgets/kanban/properties.png)
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/properties.png)
 
 </div>
 
@@ -56,9 +56,9 @@ and this `id` must be of type string.
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Kanban widget](/img/widgets/kanban/layout.png)
+
+![Insight² - Kanban widget](/_images/insight2/widgets/kanban/layout.png)
 
 </div>
 
@@ -69,9 +69,9 @@ and this `id` must be of type string.
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/kanban/styles.png)
+
+![Insight² - List view widget](/_images/insight2/widgets/kanban/styles.png)
 
 </div>
 
@@ -84,9 +84,9 @@ and this `id` must be of type string.
 
 ## Exposed variables
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/kanban/variables.png)
+
+![Insight² - List view widget](/_images/insight2/widgets/kanban/variables.png)
 
 </div>
 

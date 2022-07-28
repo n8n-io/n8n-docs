@@ -1,15 +1,26 @@
+---
+title: Athena
+description: 
+tags:
+  - Insight²
+  - Data Sources
+---
 
 # Athena
 
-Insight can connect to Amazon Athena databases to read and write data. 
+Insight² can connect to Amazon Athena databases to read and write data.
 
-- [Connection](#connection)
-- [Querying-athena](#querying-amazon-athena)
-- [Basic Operation](#basic-queries)
+- [Athena](#athena)
+	- [Connection](#connection)
+	- [Querying Amazon Athena](#querying-amazon-athena)
+		- [Basic queries](#basic-queries)
+			- [Creating table](#creating-table)
+			- [Inserting to table](#inserting-to-table)
+			- [Select operation](#select-operation)
 
 ## Connection
 
-Insight requires the following to connect to your Athena.
+Insight² requires the following to connect to your Athena.
 
 - **Database**
 - **S3 output location**
@@ -21,23 +32,23 @@ Insight requires the following to connect to your Athena.
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.
 :::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Amazon Athena - Connection](/img/datasource-reference/athena/athena-connection.png)
 
-</div>
+![Insight² - Amazon Athena - Connection](/_images/insight2/datasource-reference/athena/athena-connection.png)
+
+
 
 ## Querying Amazon Athena
 
 - Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the datasource. Query manager then can be used to write SQL queries.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Querying- Amazon Athena](/img/datasource-reference/athena/athena-query.png)
 
-</div>
+![Insight² - Querying- Amazon Athena](/_images/insight2/datasource-reference/athena/athena-query.png)
 
-- Click on the `run` button to run the query. 
+
+
+- Click on the `run` button to run the query.
 
 **NOTE:** Query should be saved before running.
 
@@ -51,7 +62,7 @@ Refer amazon athena docs here for more info: [link](https://docs.aws.amazon.com/
 **Refer amazon athena docs here for more info:** [link](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
 :::
 
-#### Creating table 
+#### Creating table
 
 
 ```sql

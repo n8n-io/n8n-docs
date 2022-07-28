@@ -7,9 +7,9 @@ title: Custom Component
 
 Custom Component can be used to do create your own React component when the needed functionality isn't available in other components.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Timeline](/img/widgets/custom-component/custom-component.png)
+
+![Insight² - Widget Reference - Timeline](/_images/insight2/widgets/custom-component/custom-component.png)
 
 </div>
 
@@ -33,9 +33,9 @@ The data needs to be an objects which needs to be passed as `data` props to the 
 
 This field is used to add a React code for your custom component. The packages for the custom component can be imported from [Skypack](https://www.skypack.dev/). For example, to import `React` package into the custom component it can be imported as `import React from 'https://cdn.skypack.dev/react'`.
 
-Insight provides 3 props to interact with the app: `data`, `updateData` and `runQuery`.
+Insight² provides 3 props to interact with the app: `data`, `updateData` and `runQuery`.
 
-- `data` is a shared object between custom component and Insight app.
+- `data` is a shared object between custom component and Insight² app.
 - `updateData` is a function which accepts a single object used to update the data passed to the custom component.
 - `runQuery` is a function which accepts a query name as a string used to run the query from the custom component.
 

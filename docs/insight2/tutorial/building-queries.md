@@ -1,15 +1,18 @@
 ---
-id: building-queries
 title: Building Queries
+description: 
+tags:
+  - Insight²
+  - Queries
 ---
 
 # Building Queries
 
 Query Editor lives at the bottom of the page. We will now build a query for the PostgreSQL datasource that we connected in the previous step.
 
-:::tip 
-You can click on the 'enlarge' icon to enlarge query editor pane. 
-:::
+
+You can click on the 'enlarge' icon to enlarge query editor pane.
+
 
 - Click on the `+` icon of the query editor to create a new query.
 - Select the PostgreSQL datasource created in previous step.
@@ -20,40 +23,40 @@ You can click on the 'enlarge' icon to enlarge query editor pane.
 SELECT * FROM customers;
 ```
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/query.png)
 
-</div>
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/query_in2.png)
+
+
 
 Query results can be previewed by clicking the `preview` button. Previewing queries will not alter the state of the app.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/preview.png)
 
-</div>
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/preview_in2.png)
+
+
 
 
 ## Advanced options
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/advanced-options.gif)
 
-</div>
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/advanced-options_in2.gif)
 
-#### Run query on page load 
+
+
+#### Run query on page load
 If this option is enabled, the query will be run when the app is loaded for the first time. The queries can have more than one trigger, ie the same query can later be triggered again using a button's click event or table's row selected event or any other events.
 
 #### Request confirmation before running query
 Enable this option to show a prompt to confirm the action before a query is run. The confirmation prompt will look like this:
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Tutorial - Building a query](/img/tutorial/building-queries/confirm.png)
 
-</div>
+![Insight² - Tutorial - Building a query](/_images/insight2/tutorial/building-queries/confirm.png)
+
+
 
 #### Show notification on success
 Enable this option to show a custom message on query completion. Duration of the notification can also be set.

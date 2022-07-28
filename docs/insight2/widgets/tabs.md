@@ -6,11 +6,11 @@ title: Tabs
 
 A Tabs widget contains a number of defined containers that can be navigated through the tabs. Each tab acts as a container and can have different components or widgets.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Tabs](/img/widgets/tabs/tabs.png)
 
-</div>
+![Insight² - Widget Reference - Tabs](/_images/insight2/widgets/tabs/tabs.png)
+
+
 
 ## Properties
 
@@ -20,7 +20,7 @@ This property lets you add and remove containers from the tabs widget. Each cont
 
 ### Default tab
 
-This property selects the container in the tab which matches the corresponding `id`. By default, the value is set to `0`. 
+This property selects the container in the tab which matches the corresponding `id`. By default, the value is set to `0`.
 
 ## Layout
 

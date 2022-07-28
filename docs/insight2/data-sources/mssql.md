@@ -1,20 +1,23 @@
 ---
-id: mssql
 title: MS SQL Server / Azure SQL databases
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # MS SQL Server / Azure SQL databases
 
 
-Insight can connect to MS SQL Server & Azure SQL databases to read and write data. 
+Insight² can connect to MS SQL Server & Azure SQL databases to read and write data.
 
 ## Connection
 
-Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please whitelist our IP.
+Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please whitelist our IP.
 
 To add new MS SQL Server / Azure SQL database, click on the '+' button on data sources panel at the left-bottom corner of the app editor. Select `SQL Server` from the modal that pops up.
 
-Insight requires the following to connect to your PostgreSQL database.
+Insight² requires the following to connect to your PostgreSQL database.
 
 - **Host**
 - **Port**
@@ -22,19 +25,19 @@ Insight requires the following to connect to your PostgreSQL database.
 - **Password**
 - **Azure** - Select this option if you are using Azure SQL databases.
 
-It is recommended to create a new database user so that you can control the access levels of Insight. 
+It is recommended to create a new database user so that you can control the access levels of Insight.
 
-Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight server. Click on 'Save' button to save the data source.
+Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on 'Save' button to save the data source.
 
-<img src="/img/datasource-reference/mssql/connect.gif" alt="Insight - Redis connection" height="420"/>
+<img src="/_images/insight2/datasource-reference/mssql/connect.gif" alt="Insight² - Redis connection" height="420"/>
 
 
 ## Querying SQL Server / Azure SQL databases
-Click on '+' button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. 
+Click on '+' button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source.
 
 Click on the 'run' button to run the query. NOTE: Query should be saved before running.
 
-<img src="/img/datasource-reference/mssql/query.gif" alt="Insight - Redis connection" height="420"/>
+<img src="/_images/insight2/datasource-reference/mssql/query.gif" alt="Insight² - Redis connection" height="420"/>
 
 
 :::tip

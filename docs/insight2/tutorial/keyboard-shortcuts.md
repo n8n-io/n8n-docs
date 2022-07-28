@@ -1,6 +1,9 @@
 ---
-id: keyboard-shortcuts
 title: Keyboard Shortcuts
+description: 
+tags:
+  - Insight²
+  - Keyboard
 ---
 
 # Keyboard Shortcuts

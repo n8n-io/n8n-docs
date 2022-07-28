@@ -1,42 +1,46 @@
 ---
-id: listview
 title: List view
+description: 
+tags:
+  - Insight²
+  - Widgets
 ---
+
 # List view
 
 List view widget allows to create a list of repeatable rows of data. Just like container widget, you can nest other widgets inside of it and control how many times they repeat.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/listviewapp.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/listviewapp.png)
+
+
 
 ## Event
 
 ### Row clicked
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/event.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/event.png)
+
+
 
 To add an event to a button, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
 **Row clicked** event is triggered when the button is clicked. Just like any other event on Insight, you can set multiple handlers for row clicked event.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/) docs to get the detailed information about all the **Actions**.
+
 
 ## Properties
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/properties.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/properties.png)
+
+
 
 | Properties  | description | Expected value |
 | ----------- | ----------- | -------------- |
@@ -46,11 +50,10 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/listlayout.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/listlayout.png)
+
 
 | Layout  | description | Expected value |
 | ----------- | ----------- | ------------ |
@@ -59,11 +62,11 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/style.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/style.png)
+
+
 
 | Style      | Description |
 | ----------- | ----------- |
@@ -71,46 +74,44 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | Visibility | This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`. |
 | Disable |  This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+
 
 ## Example: Displaying data in the list view
 
 - Let's start by creating a new app and then dragging the List view widget onto the canvas.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/emptylist.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/emptylist_in2.png)
+
+
 
 - Now lets create a query and select REST API from the datasource dropdown. Chose the `GET` method and enter the API endpoint - `https://reqres.in/api/users?page=1`. Save this query and fire it. Inspect the query results from the left sidebar, you'll see that it resulted the `data` object having array of objects.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/data.gif)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/data.gif)
+
 
 - Now lets edit the `List data` property of list view widget for displaying the query data. We will use JS to get the data from the query - `{{queries.restapi1.data.data}}`. Here the last `data` is data object that includes array of objects, the first `data` is the data resulted from the `restapi1` query. This will automatically create the rows in the widget using the data.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/datadisplay.png)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/datadisplay_in2.png)
+
+
 
 - Finally, we will need to nest widgets into the first row of list view widget and the widget will automatically create the subsequent instances. The subsequent rows will appear the same way you'll display the data in the first row.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - List view widget](/img/widgets/list-view/addingwidgets.gif)
 
-</div>
+![Insight² - List view widget](/_images/insight2/widgets/list-view/addingwidgets_in2.gif)
 
-:::tip
+
+
 
 Use `{{listItem.key}}` to display data on the nested widgets. Example: For displaying the images we used `{{listItem.avatar}}` where **avatar** is one of the key in the objects from the query result.
 
-:::
+

@@ -45,7 +45,7 @@ On normal exports you will have to pick "CLOUD" on the left slider.
 With the right slider you can choose if you want to export the normal PDF Invoice to Infor or if you want to export the Invoice as ZUGfERD (PDF with X-Rechnung format ZUGfERD XML attachment).
 ![](/_images/doc2/ExportToInforIDM_4_PDF_Cloud.png)
 ![](/_images/doc2/ExportToInforIDM_4_ZUGfERD_Cloud.png)
-On exports using [Watchdog](../fileshare.md), you will have to pick "ONPREM" on the left slider.
+On exports using [Watchdog](/doc2/fileshare/), you will have to pick "ONPREM" on the left slider.
 ![](/_images/doc2/ExportToInforIDM_4_PDF_OnPrem.png)
 ![](/_images/doc2/ExportToInforIDM_4_ZUGfERD_OnPrem.png)
 

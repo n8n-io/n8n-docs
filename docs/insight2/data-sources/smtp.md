@@ -1,11 +1,14 @@
 ---
-id: smtp
 title: SMTP
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # SMTP
 
-SMTP plugin can connect Insight applications to **SMTP servers** for sending emails.
+SMTP plugin can connect Insight² applications to **SMTP servers** for sending emails.
 
 ## Connection
 
@@ -19,11 +22,11 @@ A SMTP server can be connected with the following credentails:
 You can also test your connection before saving the configuration by clicking on `Test Connection` button.
 :::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/connect.png)
 
-</div>
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/connect.png)
+
+
 
 ## Querying SMTP
 
@@ -35,19 +38,19 @@ To create a query for sending email, you will need to provide the following prop
   - **To** `required` : Recipient's email address
   - **Subject** : Subject of the email
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/query1.png)
+
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
 
 </div>
 
   - **Body** : You can enter the body text either in the form of `raw text` or `html` in their respective fields.
-  - **Attachments** : Attachments can be added to a SMTP query by referencing the file from the `File Picker` component in the attachments field. 
-  
+  - **Attachments** : Attachments can be added to a SMTP query by referencing the file from the `File Picker` component in the attachments field.
+
   For example, you can set the `Attachments` field value to `{{ components.filepicker1.file }}` or you can pass an array of `{{ name: 'filename.jpg', dataURL: '......' }}` object to accomplish this.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/smtp/query2.png)
+
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
 
 </div>

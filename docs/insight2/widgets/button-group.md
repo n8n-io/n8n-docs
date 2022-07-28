@@ -10,24 +10,24 @@ Button group widget can be used to take actions.
 ## Properties
 ### Event: On click
 
-<div style={{textAlign: 'center'}}>
 
 
-</div>
+
+
 
 To add an event to a button group, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
 **On Click** event is triggered when the button group is clicked. Just like any other event on Insight, you can set multiple handlers for on click event.
 
-:::info
-Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
+Check [Action Reference](/insight2/actions/actions/#event-on-click) docs to get the detailed information about all the **Actions**.
+
 
 ### Properties
 
-<div style={{textAlign: 'center'}}>
 
-</div>
+
+
 
 | Properties  | description | Expected value |
 | ----------- | ----------- | -------------- |
@@ -46,12 +46,12 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 
 ### Styles
 
-<div style={{textAlign: 'center'}}>
 
-</div>
+
+
 
 | Style      | Description |
-| ----------- | ----------- | 
+| ----------- | ----------- |
 | Background color |  You can change the background color of the widget by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Text color |  You can change the color of the Text in button by entering the Hex color code or choosing a color of your choice from the color picker. |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
@@ -59,6 +59,6 @@ Check [Action Reference](/docs/actions/show-alert) docs to get the detailed info
 | Border radius | Use this property to modify the border radius of the button. |
 | Selected background color | Use this property to modify the background colour of selected buttons |
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

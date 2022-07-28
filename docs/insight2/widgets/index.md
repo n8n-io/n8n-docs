@@ -2,6 +2,49 @@
 title: Widgets
 description: 
 tags:
-  - 
-  - 
+  - Insight²
+  - Widgets
 ---
+
+* [Button group](/insight2/widgets/button-group/)
+* [Button](/insight2/widgets/button/)
+* [Calendar](/insight2/widgets/calendar/)
+* [Chart](/insight2/widgets/chart/)
+* [Checkbox](/insight2/widgets/checkbox/)
+* [Circular Progress Bar](/insight2/widgets/circular-progress-bar/)
+* [Code Editor](/insight2/widgets/code-editor/)
+* [Container](/insight2/widgets/container/)
+* [Custom Component](/insight2/widgets/custom-component/)
+* [Date Range Picker](/insight2/widgets/date-range-picker/)
+* [Datepicker](/insight2/widgets/datepicker/)
+* [Divider](/insight2/widgets/divider/)
+* [Dropdown](/insight2/widgets/dropdown/)
+* [File picker](/insight2/widgets/file-picker/)
+* [iFrame](/insight2/widgets/iframe/)
+* [Image](/insight2/widgets/image/)
+* [Kanban](/insight2/widgets/kanban/)
+* [Listview](/insight2/widgets/listview/)
+* [Map](/insight2/widgets/map/)
+* [Modal](/insight2/widgets/modal/)
+* [Multiselect](/insight2/widgets/multiselect/)
+* [Number input](/insight2/widgets/number-input/)
+* [Password input](/insight2/widgets/password-input/)
+* [PDF](/insight2/widgets/pdf/)
+* [QR-Scanner](/insight2/widgets/qr-scanner/)
+* [Radio button](/insight2/widgets/radio-button/)
+* [Range Slider](/insight2/widgets/range-slider/)
+* [Rich Text Editor](/insight2/widgets/rich-text-editor/)
+* [Spinner](/insight2/widgets/spinner/)
+* [Star](/insight2/widgets/star/)
+* [Statistics](/insight2/widgets/statistics/)
+* [Steps](/insight2/widgets/steps/)
+* [Table](/insight2/widgets/table/)
+* [Tabs](/insight2/widgets/tabs/)
+* [Tags](/insight2/widgets/tags/)
+* [Text input](/insight2/widgets/text-input/)
+* [Text](/insight2/widgets/text/)
+* [Textarea](/insight2/widgets/textarea/)
+* [Timeline](/insight2/widgets/timeline/)
+* [Timer](/insight2/widgets/timer/)
+* [Toggle Switch](/insight2/widgets/toggle-switch/)
+

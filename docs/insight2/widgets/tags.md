@@ -6,11 +6,11 @@ title: Tags
 
 Tags widget can be used to show array of data as tags.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Tags](/img/widgets/tags/tags.png)
 
-</div>
+![Insight² - Widget Reference - Tags](/_images/insight2/widgets/tags/tags.png)
+
+
 
 ## Properties
 

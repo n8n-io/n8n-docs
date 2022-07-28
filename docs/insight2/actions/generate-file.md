@@ -1,6 +1,9 @@
 ---
-id: generate-file
 title: Generate file
+description: 
+tags:
+  - Insight²
+  - Actions
 ---
 
 # Generate file
@@ -18,7 +21,7 @@ Presently, the only file type supported is `CSV`.
 
 ### Data format for CSV
 
-For `CSV` file type, the data field should be supplied with an array objects. Insight assumes that the keys of each of
+For `CSV` file type, the data field should be supplied with an array objects. Insight² assumes that the keys of each of
 these objects are the same and that they represent the column headers of the csv file.
 
 Example:

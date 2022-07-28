@@ -6,11 +6,11 @@ title: Iframe
 
 Iframe widget is used to embed another HTML page into the current one and display iframes in your app.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/iframe.png)
 
-</div>
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/iframe_in2.png)
+
+
 
 ## Properties
 
@@ -18,13 +18,13 @@ Iframe widget is used to embed another HTML page into the current one and displa
 
 Sets the **URL** of the page to embed.
 
-## Layout
+### Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/layout.png)
 
-</div>
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/layout.png)
+
+
 
 ### Show on desktop
 
@@ -35,11 +35,11 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Iframe ](/img/widgets/iframe/styles.png)
 
-</div>
+![Insight² - Widget Reference - Iframe ](/_images/insight2/widgets/iframe/styles.png)
+
+
 
 ### Visibility
 
@@ -49,6 +49,6 @@ Toggle on or off to control the visibility of the widget. You can programmatical
 
 This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
 
-:::info
+
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

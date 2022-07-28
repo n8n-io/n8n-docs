@@ -329,7 +329,8 @@
 /nodes/n8n-nodes-base.spontit/        /workflow/integrations/nodes/workflow-nodes-base.spontit/
 /nodes/workflow-nodes-base.spotify/        /workflow/integrations/nodes/workflow-nodes-base.spotify/
 /nodes/n8n-nodes-base.spreadsheetFile/        /workflow/integrations/core-nodes/workflow-nodes-base.spreadsheetFile/
-/nodes/n8n-nodes-base.sseTrigger/        /workflow/integrations/core-nodes/workflow-nodes-base.sseTrigger/
+workflow/integrations/workflow-nodes-base.sseTrigger/        /workflow/integrations/core-nodes/workflow-nodes-base.sseTrigger/
+/nodes/n8n-nodes-base.sseTrigger            /workflow/integrations/workflow-nodes-base.sseTrigger
 /nodes/n8n-nodes-base.ssh/        /workflow/integrations/core-nodes/workflow-nodes-base.ssh/
 /nodes/workflow-nodes-base.stackby/        /workflow/integrations/nodes/workflow-nodes-base.stackby/
 /nodes/n8n-nodes-base.start/        /workflow/integrations/core-nodes/workflow-nodes-base.start/

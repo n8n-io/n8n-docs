@@ -1,19 +1,22 @@
 ---
-id: mongodb
 title: MongoDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # MongoDB
 
-Insight can connect to MongoDB to read and write data.
+Insight² can connect to MongoDB to read and write data.
 
 ## Connection
 
-Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight cloud, please whitelist our IP.
+Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight. If you are using Insight² cloud, please whitelist our IP.
 
 To add a new MongoDB, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select MongoDB from the modal that pops up.
 
-Insight requires the following to connect to your MongoDB.
+Insight² requires the following to connect to your MongoDB.
 
 - **Host**
 - **Port**
@@ -22,15 +25,15 @@ Insight requires the following to connect to your MongoDB.
 
 It is recommended to create a new MongoDB user so that you can control the access levels of Insight.
 
-<img src="/img/datasource-reference/mo-connect.png" alt="Insight - Mongo connection" height="250"/>
+<img src="/_images/insight2/datasource-reference/mo-connect.png" alt="Insight² - Mongo connection" height="250"/>
 
-Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight server. Click on 'Save' button to save the data source.
+Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on 'Save' button to save the data source.
 
 ## Querying MongoDB
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click 'Save' to save the query.
 
-<img src="/img/datasource-reference/mo-query.png" alt="Insight - Mongo query" height="250"/>
+<img src="/_images/insight2/datasource-reference/mo-query.png" alt="Insight² - Mongo query" height="250"/>
 
 Click on the 'run' button to run the query. NOTE: Query should be saved before running.
 
@@ -39,24 +42,29 @@ Query results can be transformed using transformations. Read our transformations
 :::
 
 ### Supported operations
-- [List Collections](#list-collections)
-- [Find One](#find-one)
-- [Find Many](#find-many)
-- [Total Count](#total-count)
-- [Count](#count)
-- [Distinct](#distinct)
-- [Insert One](#insert-one)
-- [Insert Many](#insert-many)
-- [Update One](#update-one)
-- [Update Many](#update-many)
-- [Replace One](#replace-one)
-- [Find One and Update](#find-one-and-update)
-- [Find One and Replace](#find-one-and-replace)
-- [Find One and Delete](#find-one-and-delete)
-- [Aggregate](#aggregate)
-- [Delete One](#delete-one)
-- [Delete Many](#delete-many)
-- [Bulk Operations](#bulk-operations)
+- [MongoDB](#mongodb)
+	- [Connection](#connection)
+	- [Querying MongoDB](#querying-mongodb)
+		- [Supported operations](#supported-operations)
+			- [List Collections](#list-collections)
+			- [Fine One](#fine-one)
+			- [Fine Many](#fine-many)
+			- [Total Count](#total-count)
+			- [Count](#count)
+			- [Distinct](#distinct)
+			- [Insert One](#insert-one)
+			- [Insert Many](#insert-many)
+			- [Update One](#update-one)
+			- [Update Many](#update-many)
+			- [Replace One](#replace-one)
+			- [Find One and Update](#find-one-and-update)
+			- [Find One and Replace](#find-one-and-replace)
+			- [Find One and Delete](#find-one-and-delete)
+			- [Aggregate](#aggregate)
+			- [Delete One](#delete-one)
+			- [Delete Many](#delete-many)
+			- [Bulk Operations](#bulk-operations)
+		- [Dynamic Quries](#dynamic-quries)
 #### List Collections
 Retruns list of collections
 #### Fine One
@@ -98,7 +106,7 @@ Perform bulk operations. [Reference](https://docs.mongodb.com/drivers/node/v4.0/
 ```javascript
 { amount: { $lt: '{{ components.textinput1.value }}' }}
 
-// Dates 
+// Dates
 // supported: Extended JSON syntax
 { createdAt: { $date: '{{ new Date('01/10/2020') }}'} }
 // not supported: MongoDB classic syntax

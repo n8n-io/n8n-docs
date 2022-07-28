@@ -6,11 +6,11 @@ title: Steps
 
 Steps are used to guide users through complex processes, making them easier and more intuitive.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Star rating Widget](/img/widgets/steps/steps.png)
 
-</div>
+![Insight² - Star rating Widget](/_images/insight2/widgets/steps/steps.png)
+
+
 
 
 ### Steps

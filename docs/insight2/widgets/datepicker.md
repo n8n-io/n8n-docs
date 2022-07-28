@@ -6,11 +6,11 @@ title: Datepicker
 
 The Datepicker widget allows users to select a single value for date and time from a pre-determined set.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Date range picker](/img/widgets/datepicker/datepicker.png)
 
-</div>
+![Insight² - Widget Reference - Date range picker](/_images/insight2/widgets/datepicker/datepicker.png)
+
+
 
 ## Events
 ### Event: On select
@@ -65,7 +65,7 @@ This property only accepts boolean values. If set to `{{true}}`, the widget will
 
 ### Border Radius
 
-Use this property to modify the border radius of the date-picker. The field expects only numerical value from `1` to `100`, default is `0`. 
+Use this property to modify the border radius of the date-picker. The field expects only numerical value from `1` to `100`, default is `0`.
 
 :::info
 Any property having `Fx` button next to its field can be **programmatically configured**.

@@ -8,11 +8,11 @@ The toggle switch widget allows the user to change a setting between two states.
 
 The Toggle switch widget should be used if we want to make a binary choice, such as turning something **on or off** or **enable or disable**.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Timer](/img/widgets/toggle-switch/toggleswitch.png)
 
-</div>
+![Insight² - Widget Reference - Timer](/_images/insight2/widgets/toggle-switch/toggleswitch.png)
+
+
 
 ## Property
 

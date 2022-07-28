@@ -1,11 +1,14 @@
 ---
-id: n8n
 title: n8n
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # n8n
 
-Insight can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
+Insight² can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
 
 ## Connection
 
@@ -18,9 +21,9 @@ n8n webhooks can be called with or without an **Authentication**. You can keep t
     - **Username**
     - **Password**
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/n8n/basicauth.png)
+
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/basicauth.png)
 
 </div>
 
@@ -28,9 +31,9 @@ n8n webhooks can be called with or without an **Authentication**. You can keep t
     - **Name / Key**
     - **Value**
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/n8n/headerauth.png)
+
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/headerauth.png)
 
 </div>
 
@@ -46,8 +49,8 @@ You can trigger a workflow with `GET/POST` URL. Choose the request type from the
   - **URL parameters** (Support for GET & POST) `Optional`
   - **Body** (Only for POST URL) `Required`
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - n8n](/img/datasource-reference/n8n/query.png)
+
+![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/query.png)
 
 </div>

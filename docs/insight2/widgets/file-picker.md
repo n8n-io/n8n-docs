@@ -6,11 +6,11 @@ title: Filepicker
 
 Filepicker widget allows the user to drag and drop files or upload files by browsing the filesystem and selecting one or more files in a directory.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/picker.png)
 
-</div>
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/picker.png)
+
+
 
 :::info
  File types must be a valid [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) type according to input element specification or a valid file extension.
@@ -18,9 +18,9 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
  To accept any/all file type(s), set `Accept file types` to an empty value.
 :::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/file-type.gif)
+
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/file-type.gif)
 
 </div>
 
@@ -30,9 +30,9 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 ## Events
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/events.png)
+
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/events.png)
 
 </div>
 
@@ -54,7 +54,7 @@ Creates a drag & drop zone. Files can be dragged and dropped to the "drag & drop
 
 On clicking it invokes the default OS file prompt.
 
-### Pick mulitple files 
+### Pick mulitple files
 
 Allows drag and drop (or selection from the file dialog) of multiple files. `Pick multiple files` is disabled by default.
 
@@ -76,15 +76,15 @@ Minimum file size (in bytes).
 
 :::tip
 Files can be accepted or rejected based on the file types, maximum file count, maximum file size (in bytes) and minimum file size (in bytes).
-If `Pick mulitple files` is set to false and additional files are dropped, all files besides the first will be rejected. 
+If `Pick mulitple files` is set to false and additional files are dropped, all files besides the first will be rejected.
 Any file that does not have a size in the range of `Max size limit` and `Min size limit` will be rejected.
 :::
 
 ## Options
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/options.png)
+
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/options.png)
 
 </div>
 
@@ -102,9 +102,9 @@ If the **Parse content** option is toggled on, it only parses the next file that
 
 ## Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/layout.png)
+
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/layout.png)
 
 </div>
 
@@ -117,9 +117,9 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - File Picker](/img/widgets/filepicker/styles.png)
+
+![Insight² - Widget Reference - File Picker](/_images/insight2/widgets/filepicker/styles.png)
 
 </div>
 

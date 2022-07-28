@@ -1,30 +1,33 @@
 ---
-id: influxdb
 title: InfluxDB
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # InfluxDB
 
-Insight can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more info visit [InfluxDB docs](https://docs.influxdata.com/).
+Insight² can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more information visit [InfluxDB docs](https://docs.influxdata.com/).
 
 ## Connection
 
-Insight connects to InfluxDB using :
+Insight² connects to InfluxDB using :
 
 - **API Token**
 - **Host**
 - **Port**
 - **Protocol** (HTTP/HTTPS)
 
-:::info
+
 For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influxdb/cloud/security/tokens/create-token/).
-:::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/img/datasource-reference/influxdb/influxauth.png)
 
-</div>
+
+![Insight² - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxdb_influxauth_in2.png)
+
+
 
 ## Supported queries:
 
@@ -50,13 +53,13 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 - [Delete a bucket](#delete-a-bucket)
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - influxDB](/img/datasource-reference/influxdb/operations.png)
 
-</div>
+![Insight² - Data source - influxDB](/_images/insight2/datasource-reference/influxdb/influxdb_operations_in2.png)
 
-### Write data 
+
+
+### Write data
 
 This operation writes data to a bucket.
 
@@ -65,7 +68,7 @@ This operation writes data to a bucket.
 - **Bucket**
 - **Organization name or ID**
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Precision**
 
@@ -80,22 +83,22 @@ Retrieves data from InfluxDB buckets.
 
 This operation analyzes flux query and generates a query specification.
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Query**
 
-### Retrieve query suggestions 
+### Retrieve query suggestions
 
 This query retrieve query suggestions.
 
-### Retrieve query suggestions for a branching suggestion 
+### Retrieve query suggestions for a branching suggestion
 
 This operation retrieve query suggestions for a branching suggestion.
 
 #### Required parameters:
 - **Name**
 
-### Analyze a Flux query 
+### Analyze a Flux query
 
 This Analyzes a Flux query.
 
@@ -103,16 +106,16 @@ This Analyzes a Flux query.
 
 - **Query**
 
-### List buckets 
+### List buckets
 
 This operation lists all the buckets in a database.
-### Create a bucket 
+### Create a bucket
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Query**
 
-### Retrieve a bucket 
+### Retrieve a bucket
 
 This operation retrieve a bucket in a database.
 

@@ -6,11 +6,11 @@ title: Multiselect
 
 Multiselect widget can be used to collect multiple user inputs from a list of options.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Multiselect](/img/widgets/multiselect/multi.gif)
 
-</div>
+![Insight² - Widget Reference - Multiselect](/_images/insight2/widgets/multiselect/multi.gif)
+
+
 
 ## Event
 

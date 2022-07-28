@@ -6,9 +6,9 @@ title: Radio Button
 
 Radio button widget can be used to select one option from a group of options.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - RadioButton](/img/widgets/radio-button/radiobutton.png)
+
+![Insight² - Widget Reference - RadioButton](/_images/insight2/widgets/radio-button/radiobutton.png)
 
 </div>
 
@@ -78,9 +78,9 @@ This is `off` by default, toggle `on` the switch to lock the widget and make it 
 
 ## Example
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Radio Button Widget Properties](/img/widgets/radio-button/radio-ex.gif)
+
+![Insight² - Radio Button Widget Properties](/_images/insight2/widgets/radio-button/radio-ex.gif)
 
 </div>
 

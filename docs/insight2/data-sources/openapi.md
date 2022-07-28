@@ -1,11 +1,14 @@
 ---
-id: openapi
 title: OpenAPI
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # OpenAPI
 
-Insight has a data source for generating REST API operations from OpenAPI Specs.
+Insight² has a data source for generating REST API operations from OpenAPI Specs.
 
 ## Connection
 - Connections are generated from OpenAPI specifications. Currently supports Basic Auth, API Key, Bearer Token, OAuth 2.0

@@ -1,21 +1,24 @@
 ---
-id: bigquery
 title: BigQuery
+description: 
+tags:
+  - Insight²
+  - Data Sources
 ---
 
 # BigQuery
 
-Insight can connect to BigQuery databases to run BigQuery queries.
+Insight² can connect to BigQuery databases to run BigQuery queries.
 
 ## Connection
 
-Please refer [this](https://cloud.google.com/bigquery/docs/bigquery-web-ui) link to enable BigQuery API in Google Cloud Console. 
+Please refer [this](https://cloud.google.com/bigquery/docs/bigquery-web-ui) link to enable BigQuery API in Google Cloud Console.
 
 Create **Service Account** and **key**, then get your configs downloaded as **JSON**
 
 To add a new BigQuery, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select BigQuery from the modal that pops up.
 
-Insight requires the config json downloaded from your account to connect to BigQuery. Paste the json into the `Private key` field.
+Insight² requires the config json downloaded from your account to connect to BigQuery. Paste the json into the `Private key` field.
 
 **The json looks like**:
 
@@ -34,33 +37,33 @@ Insight requires the config json downloaded from your account to connect to BigQ
 }
 ```
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-create.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-create.png)
 
-Click on **Test connection** button to verify if the credentials are correct and that the API is accessible to Insight server. Click on **Save** button to save the data source.
+
+
+Click on **Test connection** button to verify if the credentials are correct and that the API is accessible to Insight² server. Click on **Save** button to save the data source.
 
 ## Querying BigQuery
 
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click **Save** to create the query.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-query.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-query.png)
+
+
 
 Click on the **run** button to run the query. NOTE: Query should be saved before running.
 
 :::tip
-Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/docs/tutorial/transformations)
+Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)
 :::
 
 ## Supported operations
 
--  [List Datasets](#list-datatsets)
+-  [List Datasets](#list-datasets)
 
 -  [List Tables](#list-tables)
 
@@ -87,62 +90,62 @@ Query results can be transformed using transformations. Read our transformations
 
 Retruns list of datasets.
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Options:** This can be used to filter the list.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_datasets.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/list_datasets.png)
+
+
 
 ### List Tables
 
 Return list of tables within a dataset
 
-#### Required parameters: 
+#### Required parameters:
 
 - **Dataset:** Enter the dataset name.
 
-#### Optional parameters: 
+#### Optional parameters:
 
 - **Options:** This can be used to filter the list.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/list_tables.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq_list_tables.png)
+
+
 
 ### Query
 
 Return data based on the `Query`. `Query options` ([Reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/Job)), and `Query result options` ([Reference](https://cloud.google.com/nodejs/docs/reference/bigquery/latest/overview#_google_cloud_bigquery_QueryResultsOptions_type)).
 
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/query.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/datasource-reference/bigquery/query.png)
+
+
 
 ### Insert Record
 - To insert a record.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-insert.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-insert.png)
 
-### Delete Record 
+
+
+### Delete Record
 - To delete a record.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-delete.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-delete.png)
+
+
 
 :::info
 NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be deleted!
@@ -150,11 +153,11 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 ### Update Record
 - To update a record.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-update.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-update.png)
+
+
 
 :::info
 NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be updated!
@@ -163,11 +166,11 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 - To create a view.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Data source - BigQuery](/img/datasource-reference/bigquery/bq-view.png)
 
-</div>
+![Insight² - Data source - BigQuery](/_images/insight2/bq-view.png)
+
+
 
 
 ### Create Table

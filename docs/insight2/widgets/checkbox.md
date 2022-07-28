@@ -10,11 +10,11 @@ Checkbox widget can be used for allowing the users to make a binary choice, e.g,
 The checkbox widget consists of a single checkbox input.
 :::
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Checkbox](/img/widgets/checkbox/checkbox.gif)
 
-</div>
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/checkbox.gif)
+
+
 
 ## Properties
 
@@ -24,11 +24,11 @@ The text is to be used as the label for the checkbox. This field expects a `Stri
 
 ### Events
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Checkbox](/img/widgets/checkbox/events.png)
 
-</div>
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/events.png)
+
+
 
 :::info
 Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
@@ -42,11 +42,10 @@ On uncheck event is triggered when checkbox input is unchecked.
 
 ### Layout
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Checkbox](/img/widgets/checkbox/layout.png)
 
-</div>
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/layout.png)
+
 
 #### Show on desktop
 
@@ -57,15 +56,15 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 ## Styles
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Checkbox](/img/widgets/checkbox/styles.png)
 
-</div>
+![Insight² - Widget Reference - Checkbox](/_images/insight2/widgets/checkbox/styles.png)
+
+
 
 ### Text color
 
-Change the color of the Text in checkbox by entering the `Hex color code` or choosing a color of your choice from the color-picker. 
+Change the color of the Text in checkbox by entering the `Hex color code` or choosing a color of your choice from the color-picker.
 
 ### Checkbox color
 

@@ -1,6 +1,6 @@
 ---
 title: "PO Matching - Invoices"
-description: This is a step by step guide how to create a purchase order in LN, Upload the invoice in DOC², handle two different scenarios and check the receipt of the invoice in LN.
+description: Step by step guide how to create a purchase order in LN, Upload the invoice in DOC², handle two different scenarios and check the receipt of the invoice in LN.
 date: "2022-01-24"
 tags:
   - DOC²
@@ -14,8 +14,6 @@ tags:
 ## Create a purchase order in LN
 
 Open LN and go to Purchase Order Intake Workbench
-
-[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
 
 ![](/_images/doc2/LN_PO-Intake-Workbench.png)
@@ -44,45 +42,47 @@ After that save the purchase order. You must **approve** said purchase order and
 
 * * *
 
+[Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
+
 ## Upload the Invoice in DOC2
 
-![](/_images/doc2/DOC²_Dashboard_PO-1024x565.png)
+![](/_images/doc2/DOC²_POM_Invoices_1.png)
 
-The symbol under “Matched” indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
+The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
 Open the document and validate the extracted fields.
 
-![](/_images/doc2/DOC²_Extracted_PO-Number-1024x534.png)
+![](/_images/doc2/DOC²_POM_Invoices_2.png)
 
 * * *
 
-After validating all extracted fields open matching overview by clicking on PO MATCHING
+After validating all extracted fields open matching overview by clicking on **PO MATCHING**
 
-![](/_images/doc2/DOC²_POmatching_after-field-validation-1024x554.png)
+![](/_images/doc2/DOC²_POM_Invoices_3.png)
 
-You can also go directly from dashboard to the matching overview by following the steps below
+You can also go directly from dashboard to the matching overview by following the steps [below](/doc2/pomatching/po-matching-invoices/#case-1-matched)
 
 * * *
 
-The symbol under “Matched” indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
+The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
-![](/_images/doc2/DOC²_red-and-green-1024x216.png)
+![](/_images/doc2/DOC²_POM_Invoices_4.png)
 
 ### Case 1: Matched
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_Matched-Symbol-1024x85.png)
+![](/_images/doc2/DOC²_POM_Invoices_5.png)
 
-![](/_images/doc2/DOC²_Matching-Overview-1024x551.png)
+![](/_images/doc2/DOC²_POM_Invoices_6.png)
 
 In this case the quantity of items ordered matches the quantity on the invoice, the match and thus the document can be validated and exported.
 
-![](/_images/doc2/DOC²_Document-exporting-1024x134.png)
+![](/_images/doc2/DOC²_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_Document-finished-1024x91.png)
+![](/_images/doc2/DOC²_POM_Invoices_8.png)
 
 exported successfully
 
@@ -92,9 +92,9 @@ exported successfully
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_dashboard_mismatch-1024x89.png)
+![](/_images/doc2/DOC²_POM_Invoices_9.png)
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.02.28-1024x553.png)
+![](/_images/doc2/DOC²_POM_Invoices_10.png)
 
 Here you can see that the quantity of the ordered item does not match the quantity on the invoice.
 
@@ -104,27 +104,31 @@ The “x” would delete the match on the invoice.
 
 A new match from the purchase order can be added to the invoice by dragging and dropping the appropriate data row(s).
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.03.53-1024x556.png)
+![](/_images/doc2/DOC²_POM_Invoices_11.png)
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.08.50-1024x553.png)
+You need to confirm the mismatched properties.
+
+![](/_images/doc2/DOC²_POM_Invoices_12.png)
+
+![](/_images/doc2/DOC²_POM_Invoices_13.png)
 
 Save to apply all changes.
 
-![](/_images/doc2/Screenshot-2022-01-26-at-16.09.29-1024x555.png)
+![](/_images/doc2/DOC²_POM_Invoices_14.png)
 
 Once everything is correct the document can be validated and exported.
 
-![](/_images/doc2/DOC²_doc-exporting-1024x89.png)
+![](/_images/doc2/DOC²_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_doc-exported-successfully-1024x87.png)
+![](/_images/doc2/DOC²_POM_Invoices_8.png)
 
 exported successfully
 
 ![This image has an empty alt attribute; its file name is Attention-Warning.png](/_images/doc2/Attention-Warning.png)
 
-Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](/doc2/doc2app/po-matching/po-matching-delivery-notes/).
+Since in LN no comparison regarding the quantity between order and invoice is possible, in this case you have to make the comparison with the delivery bill. You can find out how this works [here](/doc2/pomatching/po-matching-delivery-notes/).
 
 * * *
 

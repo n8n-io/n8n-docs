@@ -7,9 +7,9 @@ title: Rich Text Editor
 Rich Text Editor can be used to enter and edit the text in HTML format.
 It should be preferred for blog posts, forum posts or notes sections. The text is to be used as the label for the radio button.
 
-<div style={{textAlign: 'center'}}>
 
-![Insight - Widget Reference - Rich Text Editor](/img/widgets/richtexteditor/richtexteditor.png)
+
+![Insight² - Widget Reference - Rich Text Editor](/_images/insight2/widgets/richtexteditor/richtexteditor.png)
 
 </div>
 

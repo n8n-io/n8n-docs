@@ -1,11 +1,14 @@
 ---
-id: oauth2-authorization
 title: REST API authentication using OAuth 2.0
+description: 
+tags:
+  - Insight²
+  - Examples
 ---
 
 # REST API authentication using OAuth 2.0
 
-Insight’s REST API data source supports OAuth 2.0 as the authentication type. In this guide, we’ll learn how to use **Google OAuth2 API** to delegate authorization and authentication for your Insight Application.
+Insight’s REST API data source supports OAuth 2.0 as the authentication type. In this guide, we’ll learn how to use **Google OAuth2 API** to delegate authorization and authentication for your Insight² Application.
 
 Before setting up the REST API data source in Insight, we need to configure the **Google Cloud Platform** to gather the API keys required for the authorization access.
 
@@ -15,24 +18,24 @@ Google Cloud Platform provides access to more than 350 APIs and Services that ca
 
 1. Sign in to your [Google Cloud](https://cloud.google.com/) account, and from the console create a New Project.
 2. Navigate to the **APIs and Services**, and then open the **OAuth consent screen** section from the left sidebar.
-3. Enter the Application details and select the appropriate scopes for your application. We will select the profile and the email scopes. 
+3. Enter the Application details and select the appropriate scopes for your application. We will select the profile and the email scopes.
 4. Once you have created the OAuth consent screen, Create new credentials for the **OAuth client ID** from the **Credentials** section in the left sidebar.
 5. Select the application type, enter the application name, and then add the following URIs under Authorised Redirect URIs:
-    1. `https://app.tooljet.com/oauth2/authorize` (if you’re using Insight cloud)
-    2. `http://localhost:8082/oauth2/authorize` (if you’re using Insight locally)
+    1. `https://app.tooljet.com/oauth2/authorize` (if you’re using Insight² cloud)
+    2. `http://localhost:8082/oauth2/authorize` (if you’re using Insight² locally)
 6. Now save and then you’ll get the **Client ID and Client secret** for your application.
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/gcp.png" alt="Insight - How To - REST API authentication using OAuth 2.0" height="420"/>
+<img class="screenshot-full" src="/_images/insight2/how-to/oauth2-authorization/gcp.png" alt="Insight² - How To - REST API authentication using OAuth 2.0" height="420"/>
 
-## Configuring Insight Application with Google's OAuth 2.0 API
+## Configuring Insight² Application with Google's OAuth 2.0 API
 
-Let's follow the steps to authorize Insight to access your Google profile data:
+Let's follow the steps to authorize Insight² to access your Google profile data:
 
 - Select **add data source** from the left sidebar, and choose **REST API** from the dialog window.
 
-:::info
+
 You can rename the data source by clicking on its default name `REST API`
-:::
+
 
 - In the **URL** field, enter the base URL `https://www.googleapis.com/oauth2/v1/userinfo`; the base URL specifies the network address of the API service.
 - Select authentication type as `OAuth 2.0`
@@ -47,11 +50,11 @@ You can rename the data source by clicking on its default name `REST API`
     | ----------- | ----------- |
     | response_type | code ( `code` refers to the Authorization Code) |
     | client_id | **Client ID**  |
-    | redirect_uri | `http://localhost:8082/oauth2/authorize` if using Insight locally or enter this `https://app.tooljet.com/oauth2/authorize` if using Insight Cloud.  |
-    
+    | redirect_uri | `http://localhost:8082/oauth2/authorize` if using Insight² locally or enter this `https://app.tooljet.com/oauth2/authorize` if using Insight² Cloud.  |
+
 - Keep the default selection for **Client Authentication** and **Save** the data source.
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/restapi.png" alt="Insight - How To - REST API authentication using OAuth 2.0"/>
+<img class="screenshot-full" src="/_images/insight2/how-to/oauth2-authorization/restapi.png" alt="Insight² - How To - REST API authentication using OAuth 2.0"/>
 
 ## Create the query
 
@@ -61,6 +64,6 @@ Let’s create a query to make a `GET` request to the URL, it will pop a new win
 - In the **Method** dropdown select `GET` and in advance tab toggle `run query on page load?`
 - **Save** and **Run** the query.
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/oauth.gif" alt="Insight - How To - REST API authentication using OAuth 2.0"/>
+<img class="screenshot-full" src="/_images/insight2/how-to/oauth2-authorization/oauth.gif" alt="Insight² - How To - REST API authentication using OAuth 2.0"/>
 
 A new window will pop for authentication and once auth is successful, you can run the query again to get the user data like Name and Profile Picture.

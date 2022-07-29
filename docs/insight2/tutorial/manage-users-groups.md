@@ -122,7 +122,6 @@ Admins can set granular permission like creating/deleting apps or creating/updat
 All the activities performed by any Admin or any user in a workspace is logged in `Audit logs` - including any activity related with managing users and groups.
 
 
-
 ### Predefined Groups
 
 By default, every workspace will have two User Groups:

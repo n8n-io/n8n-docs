@@ -1,0 +1,108 @@
+<!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Parallax group: hero (above the fold) -->
+<section class="mdx-parallax__group" data-md-color-scheme="slate">
+  {% for layer in [
+    { "depth": 8, "position": "70%", "image": "1-landscape" },
+    { "depth": 5, "position": "25%", "image": "2-plateau" },
+    { "depth": 4, "position": "20%", "image": "3-astronaut-1" },
+    { "depth": 3, "position": "30%", "image": "4-astronaut-2" },
+    { "depth": 2, "position": "40%", "image": "5-plants-1" },
+    { "depth": 1, "position": "50%", "image": "6-plants-2" },
+  ] %}
+    {% set image = "overrides/assets/images/layers/" ~ layer["image"] %}
+    {% set style = "style=\"" ~ [
+      "--md-parallax-depth: " ~ layer["depth"],
+      "--md-image-position: " ~ layer["position"]
+    ] | join(";") ~ "\"" %}
+
+    <!-- Parallax layer: image as AVIF, WebP and PNG in 4 sizes -->
+    <picture class="mdx-parallax__layer" {{ style }}>
+      {% for type in ["avif", "webp"] %}
+        <source
+          type="image/{{ type }}"
+          srcset="
+            {{ image ~    '.' ~ type }} 1280w,
+            {{ image ~ '@2x.' ~ type }} 1920w,
+            {{ image ~ '@3x.' ~ type }} 2560w,
+            {{ image ~ '@4x.' ~ type }} 3840w
+          "
+        />
+      {% endfor %}
+      <img
+        srcset="
+          {{ image ~    '.png' }} 1280w,
+          {{ image ~ '@2x.png' }} 1920w,
+          {{ image ~ '@3x.png' }} 2560w,
+          {{ image ~ '@4x.png' }} 3840w
+        "
+        src="{{ image ~ '.png' }}"
+        alt=""
+        class="mdx-parallax__image"
+      />
+    </picture>
+  {% endfor %}
+
+  <!-- Parallax layer: gradient for blending -->
+  <div class="mdx-parallax__layer mdx-parallax__blend"></div>
+
+  <!-- Hero -->
+  <div class="mdx-hero" data-mdx-component="hero">
+    <div class="mdx-hero__scrollwrap md-grid">
+
+      <!-- Navigation tabs (must be moved here) -->
+      {% include "partials/tabs.html" %}
+
+      <!-- Hero content -->
+      <div class="mdx-hero__inner">
+        <div class="mdx-hero__teaser md-typeset">
+          <h1>Documentation that simply works</h1>
+          <p>{{ config.site_description }}.</p>
+          <a href="getting-started/" class="md-button">
+            Get started
+          </a>
+          <a
+            href="#everything-you-would-expect"
+            class="md-button md-button--secondary"
+          >
+            Learn more
+          </a>
+
+          <!-- Attribution link -->
+          <a
+            href="https://christinedonath.com"
+            class="mdx-hero__attribution"
+            tabIndex="-1"
+          >
+            <strong>© Christine Donath</strong>
+          </a>
+        </div>
+
+        <!-- More indicator -->
+        <div class="mdx-hero__more">
+          {% include ".icons/material/arrow-down.svg" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

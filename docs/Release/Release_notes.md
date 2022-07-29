@@ -17,6 +17,7 @@ tags:
 
 ## 1.16
 
+
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [Insight²](/insight2/)
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Status Pending Approval on dashboard
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: DOC² - Symbol for locked documents/instances on dashboard

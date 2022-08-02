@@ -16,9 +16,9 @@ Both n8n and Caddy require creating folders that the host operating system (the 
 
 Create the following on the Droplet in a location accessible by Docker. If you run Docker as root user, you can create them anywhere. If you run Docker "[Rootless](https://docs.docker.com/engine/security/rootless/){:target="_blank"}" for better security, create them in a location that user has access to:
 
-- `caddy_config_: Holds the Caddy configuration files.
-- `caddy_data_: A cache folder for Caddy.
-- `local_files_: A folder for files you upload or add via n8n.
+- `caddy_config`: Holds the Caddy configuration files.
+- `caddy_data`: A cache folder for Caddy.
+- `local_files`: A folder for files you upload or add via n8n.
 
 Use the following command to create the folders:
 
@@ -34,7 +34,7 @@ To persist the Caddy cache between restarts and speed up start times, create [a 
 docker volume create caddy_data
 ```
 
-## Setup DNS
+## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new [CNAME or A record](https://ns1.com/resources/dns-records-explained){:target="_blank"} for the n8n subdomain.
 

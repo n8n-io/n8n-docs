@@ -4,7 +4,7 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 ## Create a Droplet
 
-Select the project to host the Droplet and click __Droplets__ from the __Manage__ menu. You can use [the Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank"} from the __Marketplace__ tab or use one of the Linux distributions and [install Docker yourself](https://www.docker.com/get-started/){:target="_blank"}. The rest of this tutorial assumes you have Docker installed on the Droplet.
+Select the project to host the Droplet and click **Droplets** from the **Manage** menu. You can use [the Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" class=.external-link} from the **Marketplace** tab or use one of the Linux distributions and [install Docker yourself](https://www.docker.com/get-started/){:target="_blank" class=.external-link}. The rest of this tutorial assumes you have Docker installed on the Droplet.
 
 ## Log in to your Droplet
 

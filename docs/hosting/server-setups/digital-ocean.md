@@ -8,7 +8,7 @@ Select the project to host the Droplet and click **Droplets** from the **Manage*
 
 ## Log in to your Droplet
 
-The remainder of the steps in this guide require you to log in to the Droplet via a terminal with SSH. [Find more details on how to do this in the Digital Ocean documentation](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank"}.
+The remainder of the steps in this guide require you to log in to the Droplet using a terminal with SSH. [Find more details on how to do this in the Digital Ocean documentation](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank"}.
 
 ## Create folders and files
 

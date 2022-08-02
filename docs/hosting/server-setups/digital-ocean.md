@@ -171,7 +171,7 @@ docker-compose up -d
 
 Open the URL formed of the subdomain and domain name defined earlier, enter the user name and password defined earlier, and you should be able to access n8n.
 
-Stop n8n and Caddy with the following command:
+You can stop n8n and Caddy with the following command:
 
 ```shell
 sudo docker-compose stop

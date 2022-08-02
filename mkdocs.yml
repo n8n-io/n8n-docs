@@ -22,14 +22,6 @@ extra_css:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
-extra:
-  analytics:
-    provider: google
-    property: UA-146470481-3
-  consent:
-    title: Cookie and analytics consent
-    description: 
-      We use cookies (and other similar technologies) to collect data in order to improve our site. You have the option to opt-in or opt-out of certain cookie tracking technologies. For more information on privacy and data management at n8n, refer to our <a href="https://n8n.io/legal/privacy" target="_blank">privacy policy</a>.
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list

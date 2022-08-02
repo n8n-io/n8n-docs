@@ -4,6 +4,7 @@ Using community nodes means you are installing unverified code from a public sou
 
 Risks include:
 
+* System security: community nodes have full access to the machine that n8n runs on, and can do anything, including malicious actions.
 * Data security: any community node that you use has access to data in your workflows.
 * Breaking changes: node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes.
 

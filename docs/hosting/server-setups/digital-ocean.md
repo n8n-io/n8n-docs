@@ -16,9 +16,9 @@ Both n8n and Caddy require creating folders that the host operating system (the 
 
 Create the following on the Droplet in a location accessible by Docker. If you run Docker as root user, you can create them anywhere. If you run Docker "[Rootless](https://docs.docker.com/engine/security/rootless/){:target="_blank"}" for better security, create them in a location that user has access to:
 
-- _caddy_config_: Holds the Caddy configuration files.
-- _caddy_data_: A cache folder for Caddy.
-- _local_files_: A folder for files you upload or add via n8n.
+- `caddy_config_: Holds the Caddy configuration files.
+- `caddy_data_: A cache folder for Caddy.
+- `local_files_: A folder for files you upload or add via n8n.
 
 Use the following command to create the folders:
 
@@ -51,7 +51,7 @@ sudo ufw allow 443
 
 ## Configure n8n
 
-Create an _.env_ file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own:
+Create an `.env` file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own:
 
 Create the file:
 
@@ -93,9 +93,9 @@ SSL_EMAIL=example@example.com
 The Docker compose file defines the services the application needs, in this case Caddy and n8n.
 
 - The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
-- The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the _.env_ file), and the volumes it needs to copy to the containers.
+- The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
 
-Create a _docker-compose.yml_ file, make sure to create it in the same location as the _.env_ file:
+Create a `docker-compose.yml` file, make sure to create it in the same location as the `.env` file:
 
 ```shell
 nano docker-compose.yml
@@ -145,13 +145,13 @@ volumes:
 
 ## Configure Caddy
 
-Caddy needs to know which domains it should serve, and which port to expose to the outside world. Create a _Caddyfile_ file in the *caddy_config* folder.
+Caddy needs to know which domains it should serve, and which port to expose to the outside world. Create a `Caddyfile` file in the *caddy_config* folder.
 
 ```shell
 nano caddy_config/Caddyfile
 ```
 
-Add the following configuration, adding your subdomain. The `n8n` tells Caddy to use the service definition defined in the _docker-compose.yml_ file:
+Add the following configuration, adding your subdomain. The `n8n` tells Caddy to use the service definition defined in the `docker-compose.yml` file:
 
 ```text
 <SUB_DOMAIN> {

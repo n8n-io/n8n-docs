@@ -34,7 +34,7 @@ To persist the Caddy cache between restarts and speed up start times, create [a 
 docker volume create caddy_data
 ```
 
-## Setup DNS
+## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new [CNAME or A record](https://ns1.com/resources/dns-records-explained){:target="_blank"} for the n8n subdomain.
 

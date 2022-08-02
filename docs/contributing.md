@@ -2,6 +2,20 @@
 
 There are a several ways in which you can contribute to n8n, depending on your skills and interests. Each form of contribution is valuable to us!
 
+## Contributor quick start
+
+Here is a quick list of the contributions we are looking for:
+- Build community nodes 
+- Write an n8n tutorial
+- Host an n8n event (virtual or locally)
+- Write for our docs
+- Create workflow templates
+- Write a review
+- Participate on our support forum
+
+To start contributing or to get ideas of what to do, check out our [Contributor board on GitHub](https://github.com/orgs/n8n-io/projects/3). If there is a project you want on the board, please assign it to yourself and start contributing! 
+
+Keep reading for more ideas on contributions. 
 
 
 ## Share some love 🧡
@@ -65,17 +79,6 @@ There are different ways in which you can contribute to the n8n code base:
 You can contribute to the n8n documentation, for example by documenting nodes or fixing issues.
 
 The repository for the docs is [here](https://github.com/n8n-io/n8n-docs) and the guidelines for contributing to the docs are [here](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md).
-
-## Share your story
-
-n8n users come from a wide range of backgrounds, experience levels, and interests. We like to highlight different users and their projects in our [blog interviews](https://medium.com/n8n-io/tagged/interview). If you're working with n8n and would like to inspire the community, we'd love to hear from you.
-
-We have the following process for user stories for our blog:
-
-1. **Pitch:** Fill out [this typeform](https://n8n-community.typeform.com/to/VYiRI7WN?typeform-source=n8n.io) to tell us briefly how you use n8n and what you'd like to share with the world about your experience.
-2. **Discussion:** We get back to you and schedule a call to discuss more or send you a list of questions.
-3. **Review:** We write/edit the interview and send you the final draft for review.
-4. **Publishing:** Once you approve the final draft, we schedule the post to be published on our blog.
 
 ## Write a blog post
 

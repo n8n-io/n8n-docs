@@ -5,6 +5,7 @@ There are a several ways in which you can contribute to n8n, depending on your s
 ## Contributor quick start
 
 Here is a quick list of the contributions we are looking for:
+
 - Build community nodes 
 - Write an n8n tutorial
 - Host an n8n event (virtual or locally)

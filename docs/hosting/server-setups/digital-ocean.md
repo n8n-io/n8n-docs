@@ -12,7 +12,7 @@ The remainder of the steps in this guide require you to log in to the Droplet us
 
 ## Create folders and files
 
-Both n8n and Caddy require creating folders that the host operating system (the Digital Ocean Droplet) copies to Docker containers to make them available to Docker.
+Both n8n and Caddy require creating folders that the host operating system (the DigitalOcean Droplet) copies to Docker containers to make them available to Docker.
 
 Create the following on the Droplet in a location accessible by Docker. If you run Docker as root user, you can create them anywhere. If you run Docker "[Rootless](https://docs.docker.com/engine/security/rootless/){:target="_blank"}" for better security, create them in a location that user has access to:
 

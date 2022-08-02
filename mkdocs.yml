@@ -145,7 +145,8 @@ nav:
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
       - Build your node:
-        - Overview: integrations/creating-nodes/build/index.md        
+        - Overview: integrations/creating-nodes/build/index.md       
+        - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - Reference:
           - Overview: integrations/creating-nodes/build/reference/index.md

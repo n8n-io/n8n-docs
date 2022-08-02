@@ -18,7 +18,7 @@ When reusing the internal name, you must ensure that only one field is visible t
 
 Some nodes have a lot of options. Add important ones to the top level. For all others, create an 'Additional Fields' parameter where users can set them if needed. This ensures that the interface stays clean and reduces user confusion. A good example of that would be the XML node.
 
-### Follow existing parameter naming guideline
+### Follow existing parameter naming guidelines
 
 If your node can perform several operations, call the parameter that sets the operation `Operation`. If your node can do these operations on more than one resource, create a `Resource` parameter. The following code sample shows a basic resource and operations setup:
 

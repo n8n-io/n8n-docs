@@ -11,7 +11,6 @@ tags:
 
 # Create Blank Workflow
 
-  - Workflow²
 Go to the Apps Screen and open Workflow² by clicking the **Open Workflow²** button
 
 ![Open Workflow](/_images/example/gdrive/image1.png)
@@ -20,7 +19,7 @@ This will open the Workflow² app as shown below
 
 ![Workflow App](/_images/example/gdrive/image2.png)
 
-Click the **New blank workflow** button to open the workflow blank designer screen
+Click the **New blank workflow** button in the upper right corner to open the workflow blank designer screen
 
 ![Blank Workflow](/_images/example/gdrive/image3.png)
 

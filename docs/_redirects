@@ -351,6 +351,7 @@ workflow/integrations/workflow-nodes-base.sseTrigger/        /workflow/integrati
 /nodes/workflow-nodes-base.tapfiliate/        /workflow/integrations/nodes/workflow-nodes-base.tapfiliate/
 /nodes/workflow-nodes-base.telegram/        /workflow/integrations/nodes/workflow-nodes-base.telegram/
 /nodes/workflow-nodes-base.telegramTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.telegramTrigger/
+/nodes/n8n-nodes-base.tempo/        /workflow/integrations/nodes/workflow-nodes-base.tempo/
 /nodes/workflow-nodes-base.theHive/        /workflow/integrations/nodes/workflow-nodes-base.theHive/
 /nodes/workflow-nodes-base.theHiveTrigger/        /workflow/integrations/trigger-nodes/workflow-nodes-base.theHiveTrigger/
 /nodes/workflow-nodes-base.timescaleDb/        /workflow/integrations/nodes/workflow-nodes-base.timescaleDb/

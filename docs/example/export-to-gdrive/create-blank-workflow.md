@@ -13,7 +13,7 @@ tags:
 
 Go to the Apps Screen and open Workflow² by clicking the **Open Workflow²** button
 
-![Open Workflow](/_images/example/gdrive/image1_open workflow2.png)
+![Open Workflow](/_images/example/gdrive/image1.png)
 
 This will open the Workflow² App as shown below
 

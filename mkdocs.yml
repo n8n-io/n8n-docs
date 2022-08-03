@@ -172,6 +172,8 @@ nav:
     - Overview: workflow/index.md
     - Try it out: 
       - try-it-out/index.md
+      - try-it-out/quickstart.md
+      - try-it-out/longer-introduction.md
     - WF² Examples:
       - example/workflows/index.md
       - Rename Keys: example/rename.md

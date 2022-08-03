@@ -14,7 +14,7 @@ You need some understanding of:
 - REST APIs
 - Expressions in n8n
 
-[TODO: do we still need lerna when working out of the starter?]
+[TODO: remove lerna per alex]
 
 - **Lerna:** You can install lerna globally with the following command:
 	```bash
@@ -129,7 +129,7 @@ Let's see how the node looks in the UI by following these steps:
 	- The first command installs all dependencies of all the modules and links them together.
 	- The second command builds all the code.
 	- The third command starts n8n in development mode.
-
+[TODO: remove lerna per alex]
 	```bash
 	lerna bootstrap --hoist
 	npm run build

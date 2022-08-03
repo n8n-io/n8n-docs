@@ -1,3 +1,13 @@
+---
+title: A slightly longer introduction
+description: This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way.
+tags:
+  - Workflow²
+  - Introduction
+  - Learn the basics
+---
+
+
 # A slightly longer introduction
 
 This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way. You will:

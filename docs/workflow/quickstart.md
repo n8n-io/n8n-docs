@@ -10,9 +10,9 @@ tags:
     
 
 
-Go to APPS 
+Go to **APPS** 
 ![APPS](/_images/workflows/workflows/WF_TryItOut_0.png)
-and after activating Workflow² by clicking the button, go to OPEN WORKFLOW²
+and after activating Workflow² by clicking the button, go to **OPEN WORKFLOW²**
 
 ![Start](/_images/workflows/workflows/WF_TryItOut_1.png)
 

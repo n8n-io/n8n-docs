@@ -8,7 +8,7 @@ The codex filename must match the node base filename. For example, given a node 
 | -------- | ----------- |
 | `node`    | Includes the node name. Must start with `n8n-nodes-base.`. For example, `n8n-nodes-base.openweatherapi`. | 
 | `nodeVersion` | The node version. This should have the same value as the `version` parameter in your main node file. For example, `"1.0"`. |
-| `codesVersion` | The codex file version. For example, `"1.0"`. |
+| `codexVersion` | The codex file version. For example, `"1.0"`. |
 | `categories` | The settings in the `categories` array determine which category n8n adds your node to in the GUI. See [Node categories](#node-categories) for more information. |
 | `resources` | The `resources` object contains links to your node documentation. n8n automatically adds help links to credentials and nodes in the GUI. |
 

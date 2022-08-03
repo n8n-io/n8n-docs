@@ -19,7 +19,7 @@ This will open the Workflow² App as shown below
 
 ![Workflow App](/_images/example/gdrive/image2.png)
 
-Click the **New blank workflow** button in the upper right corner to open the workflow blank designer screen
+Click the **New blank workflow** button on the upper right corner to open the workflow blank designer screen
 
 ![Blank Workflow](/_images/example/gdrive/image3.png)
 

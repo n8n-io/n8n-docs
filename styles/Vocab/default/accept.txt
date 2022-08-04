@@ -22,7 +22,11 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Shopify
+shopify
 There are
+Tooltip
+tooltip
 Trello
 Twilio
 URL

@@ -1,5 +1,31 @@
 # Release notes
 
+## n8n@0.189.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.188.0...n8n@0.189.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-03
+
+This release includes a new node, Sendinblue, as well as bug fixes.
+
+### New nodes
+
+[Sendinblue node](/integrations/nodes/n8n-nodes-base.sendInBlue/) and Sendinblue trigger node: introducing our [Sendinblue](https://www.sendinblue.com/){:target=_blank .external-link} integration.
+
+### Node enhancements
+
+[NocoDB node](/integrations/nodes/n8n-nodes-base.nocoDb/): add support for v0.90.0+
+
+### Bug fixes
+
+* Editor: fix a label cut off.
+* Fix an issue with saving workflows when tags are disabled.
+* Ensure support for community nodes on Windows.
+
+### Contributors
+
+[mertmit](https://github.com/mertmit){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+
 ## n8n@0.188.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.187.2...n8n@0.188.0){:target=_blank .external-link} for this version.<br />

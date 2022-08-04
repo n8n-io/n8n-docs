@@ -135,6 +135,7 @@ nav:
       - Plan your node:
         - Overview: integrations/creating-nodes/plan/index.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
       - Build your node:
         - Overview: integrations/creating-nodes/build/index.md       

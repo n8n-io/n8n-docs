@@ -325,7 +325,7 @@ Use `defaultVersion` when using the full versioning approach.
 
 n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
 
-### methods
+### methods and loadOptions
 
 _Object_ | _Optional_
 

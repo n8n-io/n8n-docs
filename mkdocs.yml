@@ -176,7 +176,7 @@ nav:
       - try-it-out/longer-introduction.md
     - Courses:
       - courses/index.md
-      - Level 1: 
+      - Level 1:
         - courses/level-one/index.md
         - courses/level-one/chapter-1.md
         - courses/level-one/chapter-2.md
@@ -192,7 +192,7 @@ nav:
         - courses/level-one/chapter-5/chapter-5.8.md
         - courses/level-one/chapter-6.md
         - courses/level-one/chapter-7.md
-      - Level 2: 
+      - Level 2:
         - courses/level-two/index.md
         - courses/level-two/chapter-1.md
         - courses/level-two/chapter-2.md

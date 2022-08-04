@@ -17,14 +17,14 @@ n8n provides integrations for all these steps, so Nathan's workflow in n8n would
 
 You will build this workflow in 8 steps:
 
-1. [Getting data from the data warehouse](/courses/level-one/chapter-5/chapter-5.1/)
-2. [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/)
-3. [Filtering orders](/courses/level-one/chapter-5/chapter-5.3/)
-4. [Setting values for processing orders](/courses/level-one/chapter-5/chapter-5.4/)
-5. [Calculating booked orders](/courses/level-one/chapter-5/chapter-5.5/)
-6. [Notifying the team](/courses/level-one/chapter-5/chapter-5.6/)
-7. [Scheduling the workflow](/courses/level-one/chapter-5/chapter-5.7/)
-8. [Activating and examining the workflow](/courses/level-one/chapter-5/chapter-5.8/)
+1. [Getting data from the data warehouse](/workflow/courses/level-one/chapter-5/chapter-5.1/)
+2. [Inserting data into Airtable](/workflow/courses/level-one/chapter-5/chapter-5.2/)
+3. [Filtering orders](/workflow/courses/level-one/chapter-5/chapter-5.3/)
+4. [Setting values for processing orders](/workflow/courses/level-one/chapter-5/chapter-5.4/)
+5. [Calculating booked orders](/workflow/courses/level-one/chapter-5/chapter-5.5/)
+6. [Notifying the team](/workflow/courses/level-one/chapter-5/chapter-5.6/)
+7. [Scheduling the workflow](/workflow/courses/level-one/chapter-5/chapter-5.7/)
+8. [Activating and examining the workflow](/workflow/courses/level-one/chapter-5/chapter-5.8/)
 
 To build this workflow, you will need credentials that are sent in the email from n8n when you sign up for this course. If you haven't signed up already, you can do it [here](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1){:target="_blank" .external-link}. If you haven't received a confirmation email after signing up, [contact us](mailto:course@n8n.io).
 

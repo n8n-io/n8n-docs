@@ -19,4 +19,4 @@ You can test your knowledge by taking a **quiz**, which consists of questions ab
 ## What's next?
 
 * Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on our [blog](https://n8n.io/blog/){:target="_blank" .external}, [YouTube channel](https://www.youtube.com/c/n8n-io){:target="_blank" .external}, [community forum](https://community.n8n.io){:target="_blank" .external}, and [Discord server](https://discord.gg/vWwMVThRta){:target="_blank" .external}.
-* Take the n8n [Course Level 2](/courses/level-two/).
+* Take the n8n [Course Level 2](/workflow/courses/level-two/).

@@ -20,7 +20,7 @@ Next, you'll learn how to navigate the Editor UI.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/){:target="_blank" .external} represents the web interface where you build [workflows](/workflows/workflows/){:target="_blank" .external}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
+The [Editor UI](/workflow/editor-ui/){:target="_blank" .external} represents the web interface where you build [workflows](/workflow/workflows/workflows/){:target="_blank" .external}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
 
 ### Left-side panel
 
@@ -54,7 +54,7 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 - Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and reset the canvas to the original resolution.
 - A button to *Execute Workflow*. When you click on it, all nodes on the canvas are executed.
 - A button with a *+* sign inside. This button opens the nodes panel.
-- A button with a note icon inside. This button adds a [sticky note](/workflows/sticky-notes){:target="_blank" .external} to the canvas.
+- A button with a note icon inside. This button adds a [sticky note](/workflow/workflows/sticky-notes/){:target="_blank" .external} to the canvas.
 - A square with a green play icon inside. This is the *Start node*. You will learn more about nodes in the [next section](#nodes).
 
 <figure><img src="/_images/courses/level-one/chapter-one/Workflow-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
@@ -86,7 +86,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/workflow/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 

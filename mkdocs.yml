@@ -227,7 +227,7 @@ nav:
       - Workflows: workflow/workflows/workflows.md
       - Connections: workflow/workflows/connections.md
       - Nodes: workflow/workflows/nodes.md
-      - Notes: workflow/workflows/workflow-notes.md
+      - Sticky Notes: workflow/workflows/sticky-notes.md
       - Items: workflow/workflows/items.md
     - Flow logic:
       - Overview: workflow/flow-logic/index.md

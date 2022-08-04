@@ -229,7 +229,7 @@ nav:
       - Nodes: workflow/workflows/nodes.md
       - Sticky Notes: workflow/workflows/sticky-notes.md
       - Items: workflow/workflows/items.md
-    - API authentication:
+    - API:
       - REST API: workflow/api/index.md
       - API authentication: workflow/api/authentication.md
       - API pagination: workflow/api/pagination.md

@@ -9,13 +9,13 @@ tags:
 
 A workflow is a collection of nodes connected together to automate a process. 
 
-A workflow² can be started manually (with the Start node) or by Trigger nodes. When a workflow² is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view your workflow executions in the **Execution log**, which can be helpful for debugging.
+A workflow can be started manually (with the Start node) or by Trigger nodes. When a workflow is started, it executes all the active and connected nodes. The workflow execution ends when all the nodes have processed their data. You can view your workflow executions in the **Execution log**, which can be helpful for debugging.
 
 ![Workflow²](/_images/workflows/workflows/Execute_workflow.gif)
 
-## Activating a workflow²
+## Activating a workflow
 
-Workflows² that start with a Trigger node or a Webhook node need to be activated in order to be executed. This is done via the **Active** toggle in the Editor UI.
+Workflows that start with a Trigger node or a Webhook node need to be activated in order to be executed. This is done via the **Active** toggle in the Editor UI.
 
 Active workflows enable the Trigger and Webhook nodes to receive data whenever a condition is met (e.g., Monday at 10:00, an update in a Trello board) and in turn trigger the workflow execution.
 
@@ -79,10 +79,10 @@ Templates provide:
 
 1. In the sidebar, click **Templates**.
 2. Browse or search the workflow templates list.
-3. Click a workflow to view more information. Doc² opens the workflow details page.
-4. On the workflow details page, click **Use this workflow**. Doc² opens the workflow.
+3. Click a workflow to view more information. Workflow² opens the workflow details page.
+4. On the workflow details page, click **Use this workflow**. Workflow² opens the workflow.
 5. Click **Save** to add the workflow to your workflows.
 
-!!! note "Workflow templates are available in 0.165.0 and above"
-    Workflow templates are available on all flavors of Workflow². If you can't access workflow templates in Doc², check that your Doc² version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of Doc² with templates disabled.
+<!-- !!! note "Workflow templates are available in 0.165.0 and above"
+    Workflow templates are available on all flavors of Workflow². If you can't access workflow templates in Doc², check that your Workflow² version is 0.165.0 or above, and check whether you are using a self-hosted or embedded version of Doc² with templates disabled. -->
 

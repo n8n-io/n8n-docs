@@ -2,10 +2,10 @@
 
 Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
-* How to [authenticate](/api/authentication/)
-* [Paginating](/api/pagination/) results
-* Using the [built-in API playground](/api/using-api-playground/)
-* [Endpoint reference](/api/api-reference/)
+* How to [authenticate](/workflow/api/authentication/)
+* [Paginating](/workflow/api/pagination/) results
+* Using the [built-in API playground](/workflow/api/using-api-playground/)
+* [Endpoint reference](/workflow/api/api-reference/)
 
 
 

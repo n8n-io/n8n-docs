@@ -25,7 +25,7 @@ For your first workflow, let's build something to take one tedious task off you 
 2. When you add the Gmail node to the canvas, its configuration modal opens automatically:
     ![Gmail configuration modal](/_images/quickstart/gmail_config.png)
 
-3. The first thing you need to do is configure your credentials so that Doc² can communicate with your Gmail account. You'll notice that the *OAuth2* method is selected by default for *Authentication*, so click the *Credentials* dropdown and select **Create New**. The new credentials modal appears:
+3. The first thing you need to do is configure your credentials so that Workflow² can communicate with your Gmail account. You'll notice that the *OAuth2* method is selected by default for *Authentication*, so click the *Credentials* dropdown and select **Create New**. The new credentials modal appears:
     ![New Credentials modal](/_images/quickstart/credentials_modal.png)
 
 4. Copy the *OAuth Callback URL* from this modal, then open a new browser tab and navigate to your [Google Cloud Console](https://console.cloud.google.com/) dashboard.
@@ -41,7 +41,7 @@ For your first workflow, let's build something to take one tedious task off you 
     !!! note " Keep in mind"
         We go through a quick credential flow for Google in this example, but you can learn all about Doc² credentials for Google services [here](/workflow/integrations/credentials/google/).
 
-6. Return to your Doc² tab and in the new credentials modal enter the *Client ID* and *Client Secret* obtained from your Google Cloud Console. A *Sign in with Google* button appears.
+6. Return to your Workflow² tab and in the new credentials modal enter the *Client ID* and *Client Secret* obtained from your Google Cloud Console. A *Sign in with Google* button appears.
     ![Gmail Credentials modal](/_images/quickstart/credentials_modal2.png)
 
 7. Click the *Sign in with Google* button. A modal appears asking you to select your Google account and **Allow** access.

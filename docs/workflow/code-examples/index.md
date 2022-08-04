@@ -12,6 +12,7 @@ This section covers:
     * [Introduction to expressions in n8n](/workflow//code-examples/expressions/).
     * Built in [methods](/workflow//code-examples/expressions/methods/) and [variables](/workflow//code-examples/expressions/variables/).
     * Supported libraries: [Luxon](/workflow//code-examples/expressions/luxon/) (for data and time) and [JMESPath](/workflow//code-examples/expressions/jmespath/) (for working with JSON).
+
 #JavaScript:
 
     * [Introduction to JavaScript in n8n](/workflow//code-examples/javascript-functions/).

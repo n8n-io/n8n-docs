@@ -172,6 +172,7 @@ nav:
     - Overview: workflow/index.md
     - Try it out: 
       - workflow/try-it-out/index.md
+      - workflow/quickstart.md
       - workflow/try-it-out/quickstart.md
       - workflow/try-it-out/longer-introduction.md
     - Courses:

@@ -174,6 +174,8 @@ nav:
       - try-it-out/index.md
       - try-it-out/quickstart.md
       - try-it-out/longer-introduction.md
+    - Courses:
+      - courses/index.md
     - WF² Examples:
       - example/workflows/index.md
       - Rename Keys: example/rename.md

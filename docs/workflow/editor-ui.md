@@ -4,7 +4,7 @@ The Editor UI is the web interface used to create [workflows](/workflow/workflow
 
 ![Editor](/_images/editor-ui/editor_ui.png)
 
-From the Editor UI, you can access all your workflows and credentials, as well as the Doc² documentation and forum.
+From the Editor UI, you can access all your workflows and credentials, as well as the Workflow² documentation and forum.
 
 The Editor UI sidebar menu contains the following sections and operations.
 
@@ -14,7 +14,7 @@ Available only fordoc2app.cloudintegration.eu, navigate to the Dashboard of your
 
 ![Admin Panel](/_images/editor-ui/admin_panel.png) -->
 
-## Workflows²
+## Workflows
 
 This section includes the operations for creating and editing workflows.
 

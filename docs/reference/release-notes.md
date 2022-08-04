@@ -3,7 +3,7 @@
 ## n8n@0.189.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.188.0...n8n@0.189.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2022-08-04
+**Release date:** 2022-08-03
 
 This release includes a new node, Sendinblue, as well as bug fixes.
 

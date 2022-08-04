@@ -18,9 +18,8 @@ You will:
 * Add a node and configure it using expressions.
 * Run your first workflow
 
-## Step one: Install and run n8n
+## Step one: [Run Workflow²](/workflow/quickstart/)
 
---8<-- "_snippets/try-it-out/install-run-n8n.md"
 
 ## Step two: Open a workflow template
 

@@ -21,9 +21,8 @@ This guide shows you how to automate a task using a workflow in Workflow², expl
     * Using expressions
 
 
-## Step one: Install and run n8n
+## Step one: [Run Workflow²](/workflow/quickstart/)
 
---8<-- "_snippets/try-it-out/install-run-n8n.md"
 
 ## Step two: Create a new workflow
 

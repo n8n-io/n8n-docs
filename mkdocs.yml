@@ -230,11 +230,11 @@ nav:
       - Sticky Notes: workflow/workflows/sticky-notes.md
       - Items: workflow/workflows/items.md
     - API authentication:
-      - REST API: api/index.md
-      - API authentication: api/authentication.md
-      - API pagination: api/pagination.md
-      - API playground: api/using-api-playground.md
-      - API reference: api/api-reference.md
+      - REST API: workflow/api/index.md
+      - API authentication: workflow/api/authentication.md
+      - API pagination: workflow/api/pagination.md
+      - API playground: workflow/api/using-api-playground.md
+      - API reference: workflow/api/api-reference.md
     - Flow logic:
       - Overview: workflow/flow-logic/index.md
       - Merging: workflow/flow-logic/merging.md

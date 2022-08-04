@@ -1,6 +1,6 @@
 # Automating a business workflow
 
-Remember [our friend Nathan](/courses/level-one/chapter-3){:target="_blank" .external}?
+Remember [our friend Nathan](/workflow/courses/level-one/chapter-3){:target="_blank" .external}?
 
 **Nathan 🙋:** Hello, it's me again. My manager was so impressed with my first workflow automation solution, that she entrusted me with more responsibility.<br/>
 **You 👩‍🔧:** More work and responsibility. Congratulations, I guess. What do you need to do now?<br/>

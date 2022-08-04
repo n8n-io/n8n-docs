@@ -35,7 +35,7 @@ To follow along this course (at a comfortable pace) you will need the following:
 
 - **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
 - **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
-- **Basic n8n skills**. We strongly recommend taking the [Level 1 course](/courses/level-one/){:target="_blank" .external} prior to this one.
+- **Basic n8n skills**. We strongly recommend taking the [Level 1 course](/workflow/courses/level-one/){:target="_blank" .external} prior to this one.
 - **Basic JavaScript understanding**.
 
 ## How long does the course take?
@@ -46,7 +46,7 @@ Completing the course should take around **two hours**. You do not have to compl
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-two/chapter-5/chapter-5.0/){:target="_blank" .external}
+- [x] Building the [main workflow](/workflow/courses/level-two/chapter-5/chapter-5.0/){:target="_blank" .external}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank" .external} at the end of the course
 
 You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}.

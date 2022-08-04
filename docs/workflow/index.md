@@ -21,7 +21,7 @@ It covers everything from setup to usage and development. It is a work in progre
 
 ## What is Workflow²?
 
-DOC² Workflow helps you to connect any app with an API with any other, and manipulate its data with little or no code. Workflow² is:
+Workflow² helps you to connect any app with an API with any other, and manipulate its data with little or no code. Benefits are:
 
     Customizable: highly flexible workflows and the option to build custom nodes.
     Convenient: use our Desktop app or npm to try out n8n, and our Cloud hosting option if you want us to handle the infrastructure.

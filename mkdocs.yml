@@ -171,38 +171,38 @@ nav:
   - Workflow²:
     - Overview: workflow/index.md
     - Try it out: 
-      - try-it-out/index.md
-      - try-it-out/quickstart.md
-      - try-it-out/longer-introduction.md
+      - workflow/try-it-out/index.md
+      - workflow/try-it-out/quickstart.md
+      - workflow/try-it-out/longer-introduction.md
     - Courses:
-      - courses/index.md
+      - workflow/courses/index.md
       - Level 1:
-        - courses/level-one/index.md
-        - courses/level-one/chapter-1.md
-        - courses/level-one/chapter-2.md
-        - courses/level-one/chapter-3.md
-        - courses/level-one/chapter-4.md
-        - courses/level-one/chapter-5/chapter-5.1.md
-        - courses/level-one/chapter-5/chapter-5.2.md
-        - courses/level-one/chapter-5/chapter-5.3.md
-        - courses/level-one/chapter-5/chapter-5.4.md
-        - courses/level-one/chapter-5/chapter-5.5.md
-        - courses/level-one/chapter-5/chapter-5.6.md
-        - courses/level-one/chapter-5/chapter-5.7.md
-        - courses/level-one/chapter-5/chapter-5.8.md
-        - courses/level-one/chapter-6.md
-        - courses/level-one/chapter-7.md
+        - workflow/courses/level-one/index.md
+        - workflow/courses/level-one/chapter-1.md
+        - workflow/courses/level-one/chapter-2.md
+        - workflow/courses/level-one/chapter-3.md
+        - workflow/courses/level-one/chapter-4.md
+        - workflow/courses/level-one/chapter-5/chapter-5.1.md
+        - workflow/courses/level-one/chapter-5/chapter-5.2.md
+        - workflow/courses/level-one/chapter-5/chapter-5.3.md
+        - workflow/courses/level-one/chapter-5/chapter-5.4.md
+        - workflow/courses/level-one/chapter-5/chapter-5.5.md
+        - workflow/courses/level-one/chapter-5/chapter-5.6.md
+        - workflow/courses/level-one/chapter-5/chapter-5.7.md
+        - workflow/courses/level-one/chapter-5/chapter-5.8.md
+        - workflow/courses/level-one/chapter-6.md
+        - workflow/courses/level-one/chapter-7.md
       - Level 2:
-        - courses/level-two/index.md
-        - courses/level-two/chapter-1.md
-        - courses/level-two/chapter-2.md
-        - courses/level-two/chapter-3.md
-        - courses/level-two/chapter-4.md
-        - courses/level-two/chapter-5/chapter-5.0.md
-        - courses/level-two/chapter-5/chapter-5.1.md
-        - courses/level-two/chapter-5/chapter-5.2.md
-        - courses/level-two/chapter-5/chapter-5.3.md
-        - courses/level-two/chapter-6.md
+        - workflow/courses/level-two/index.md
+        - workflow/courses/level-two/chapter-1.md
+        - workflow/courses/level-two/chapter-2.md
+        - workflow/courses/level-two/chapter-3.md
+        - workflow/courses/level-two/chapter-4.md
+        - workflow/courses/level-two/chapter-5/chapter-5.0.md
+        - workflow/courses/level-two/chapter-5/chapter-5.1.md
+        - workflow/courses/level-two/chapter-5/chapter-5.2.md
+        - workflow/courses/level-two/chapter-5/chapter-5.3.md
+        - workflow/courses/level-two/chapter-6.md
     - WF² Examples:
       - example/workflows/index.md
       - Rename Keys: example/rename.md
@@ -429,23 +429,23 @@ nav:
  
 
   # - Courses:
-  #   - Overview: courses/index.md
+  #   - Overview: workflow/courses/index.md
   #   - Level one:
-  #     - Overview: courses/level-one/index.md
-  #     - Navigating the editor UI: courses/level-one/chapter-1.md
-  #     - Building a mini-workflow: courses/level-one/chapter-2.md
-  #     - Automating a (real-world) use case: courses/level-one/chapter-3.md
-  #     - Designing the workflow: courses/level-one/chapter-4.md
+  #     - Overview: workflow/courses/level-one/index.md
+  #     - Navigating the editor UI: workflow/courses/level-one/chapter-1.md
+  #     - Building a mini-workflow: workflow/courses/level-one/chapter-2.md
+  #     - Automating a (real-world) use case: workflow/courses/level-one/chapter-3.md
+  #     - Designing the workflow: workflow/courses/level-one/chapter-4.md
   #     - Building the workflow:
-  #       - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-  #       - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-  #       - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-  #       - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-  #       - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-  #       - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-  #       - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-  #       - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-  #     - Exporting, importing, and sharing workflows: courses/level-one/chapter-6.md
-  #     - Take the quiz and get your certificate: courses/level-one/chapter-7.md
+  #       - Getting data from the data warehouse: workflow/courses/level-one/chapter-5/chapter-5.1.md
+  #       - Inserting data into airtable: workflow/courses/level-one/chapter-5/chapter-5.2.md
+  #       - Filtering orders: workflow/courses/level-one/chapter-5/chapter-5.3.md
+  #       - Setting values for processing orders: workflow/courses/level-one/chapter-5/chapter-5.4.md
+  #       - Calculating booked orders: workflow/courses/level-one/chapter-5/chapter-5.5.md
+  #       - Notifying the team: workflow/courses/level-one/chapter-5/chapter-5.6.md
+  #       - Scheduling the workflow: workflow/courses/level-one/chapter-5/chapter-5.7.md
+  #       - Activating and examining the workflow: workflow/courses/level-one/chapter-5/chapter-5.8.md
+  #     - Exporting, importing, and sharing workflows: workflow/courses/level-one/chapter-6.md
+  #     - Take the quiz and get your certificate: workflow/courses/level-one/chapter-7.md
 
 

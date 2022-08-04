@@ -32,9 +32,9 @@ DOC² Workflow helps you to connect any app with an API with any other, and mani
 # Where to start
 ## Up and running
 
-Jump right in to building workflows with the Quickstart guide, or see the hosting section to learn about the options to get started with Workflow².
+Jump right in to building workflows with the [Quickstart guide](/try-it-out/quickstart/), or see the hosting section to learn about the options to get started with Workflow².
 
 
 ## Learn the basics
 
-Read Understand workflows to learn the building blocks of automations in n8n, Flow logic for guidance on representing your automation's logic in n8n, or take the course for in-depth guidance and examples.
+Read [Understand workflows](/workflow/workflows/) to learn the building blocks of automations in n8n, [Flow logic](/workflow/flow-logic/) for guidance on representing your automation's logic in n8n, or take the [courses](/courses/) for in-depth guidance and examples.

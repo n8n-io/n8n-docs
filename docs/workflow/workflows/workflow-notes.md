@@ -13,11 +13,11 @@ We encourage using workflow notes heavily, especially on template workflows, to 
 
 ## Create a note
 
-Workflow² notes are a type of core node. To add a new note:
+Workflow notes are a type of core node. To add a new note:
 
 1. Open the nodes panel.
 2. Search for `note`.
-3. Click the **Note** node. Doc² adds a new note to the canvas.
+3. Click the **Note** node. Workflow² adds a new note to the canvas.
 
 ## Edit a note
 

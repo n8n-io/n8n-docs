@@ -20,12 +20,12 @@ Sticky Notes are a core node. To add a new Sticky Note:
 
 1. Open the nodes panel.
 2. Search for `note`.
-3. Click the **Sticky Note** node. n8n adds a new Sticky Note to the canvas.
+3. Click the **Sticky Note** node. Workflow² adds a new Sticky Note to the canvas.
 
 ## Edit a Sticky Note
 
 1. Double click the Sticky Note you want to edit.
-2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
+2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. Workflow² uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
 3. Click away from the note, or press `Esc`, to stop editing.
 
 ## Sticky Note positioning
@@ -64,4 +64,4 @@ Or created ordered lists with numbers:
 2. Item two
 ```
 
-For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
+For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). Workflow² uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.

@@ -46,7 +46,7 @@ You can enabling logging of your failed, successful, and/or manually selected wo
 ## Help
 
 This section includes resources for using Doc² and interacting with the community.
-* **Documentation**: Open the Workflow² documentation page
+* **Documentation**: Open the [Workflow² documentation page] (/workflow/)
 * **Forum**: Open the Workflow² community forum
 * **Workflows**: Open the Workflow² public [workflows](https://n8n.io/workflows) page
 * **About n8n**: View information about Workflow² (version, source code, license)

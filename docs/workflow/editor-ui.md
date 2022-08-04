@@ -1,3 +1,12 @@
+---
+title: "Workflow² Editor UI"
+description: The Editor UI is the web interface used to create workflows. It is accessed through a web browser at a designated website address.
+tags:
+  - Workflow²
+  - Editor UI
+
+---
+
 # Editor UI
 
 The Editor UI is the web interface used to create [workflows](/workflow/workflows/workflows/). It is accessed through a web browser at a designated website address.

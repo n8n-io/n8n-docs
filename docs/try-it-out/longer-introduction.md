@@ -17,7 +17,7 @@ This guide shows you how to automate a task using a workflow in Workflow², expl
     * Starting workflows with trigger nodes
     * Configuring credentials
     * Manipulating data
-    * Representing logic in an n8n workflow
+    * Representing logic in an Workflow² workflow
     * Using expressions
 
 
@@ -29,21 +29,21 @@ This guide shows you how to automate a task using a workflow in Workflow², expl
 
 Create a blank workflow:
 
-1. Select **Workflows** <span class="inline-image">![Add node icon](/_images/try-it-out/workflows-menu-button.png)</span>, then select **New**. n8n opens the new workflow.
+1. Select **Workflows** <span class="inline-image">![Add node icon](/_images/try-it-out/workflows-menu-button.png)</span>, then select **New**. Workflow² opens the new workflow.
 2. Rename the workflow to something meaningful, such as **Quickstart**: select the current workflow name, and replace it.
 
 ## Step three: Add a trigger node
 
-n8n provides two ways to start a workflow:
+Workflow² provides two ways to start a workflow:
 
-* Manually, by selecting **Execute workflow**, or from the CLI if you installed n8n with npm or Docker.
+* Manually, by selecting **Execute workflow**, or from the CLI if you installed Workflow² with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
 For this tutorial, use the [Cron trigger](/integrations/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
 
 1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
-2. Search for **Cron**. n8n shows a list of nodes that match the search.
-3. Select **Cron** to add the node to the canvas. n8n opens the node.
+2. Search for **Cron**. Workflow² shows a list of nodes that match the search.
+3. Select **Cron** to add the node to the canvas. Workflow² opens the node.
 4. Select **Add Cron Time**.
 5. For **Mode**, select **Every Week**.
 6. Enter a time and day. For this example, enter `09` in **Hour**, `0` in **Minute**, and `Monday` in **Weekday**.

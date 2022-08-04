@@ -1,3 +1,11 @@
+---
+title: Introduction
+description: When you're tired of manually entering data into the same spreadsheet every day and managing tens of different tools and systems, check out these courses.
+tags:
+  - Workflow²
+  - Course Level 2
+---
+
 # Introduction
 
 Welcome to the **n8n Course Level 2**!

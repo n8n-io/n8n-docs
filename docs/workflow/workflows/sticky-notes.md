@@ -1,4 +1,11 @@
-# Sticky Notes
+---
+title: Sticky Notes
+description: Workflow² recommends using Sticky Notes heavily, especially on template workflows, to help other users understand your workflow.
+tags:
+  - Workflow²
+  - Sticky Notes
+  
+  # Sticky Notes
 
 Sticky Notes allow you to annotate and comment on your workflows.
 

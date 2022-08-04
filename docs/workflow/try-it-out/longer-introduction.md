@@ -38,7 +38,7 @@ Workflow² provides two ways to start a workflow:
 * Manually, by selecting **Execute workflow**, or from the CLI if you installed Workflow² with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, use the [Cron trigger](/integrations/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
+For this tutorial, use the [Cron trigger](/workflow/integrations/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
 
 1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
 2. Search for **Cron**. Workflow² shows a list of nodes that match the search.
@@ -51,7 +51,7 @@ For this tutorial, use the [Cron trigger](/integrations/core-nodes/n8n-nodes-bas
 
 ## Step four: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
+The [NASA node](/workflow/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Cron node.
 2. Search for **NASA**. Workflow² shows a list of nodes that match the search.
@@ -75,7 +75,7 @@ The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact
     This generates a date in the correct format, seven days before the current date.
 
     !!! note "Date and time in n8n"
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code-examples/expressions/luxon/). 
+        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/workflow/code-examples/expressions/luxon/). 
 
 7. Close the **Edit Expression** modal to return to the NASA node.
 8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. Workflow² calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
@@ -83,7 +83,7 @@ The [NASA node](/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact
 
 ## Step five: Add logic with the If node
 
-Workflow² supports complex logic in workflows. In this tutorial, use the [If node](/integrations/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
+Workflow² supports complex logic in workflows. In this tutorial, use the [If node](/workflow/integrations/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
 
 Add the If node:
 
@@ -142,5 +142,5 @@ The last step of the workflow is to send the two reports about solar flares. For
 
 ## Next steps
 
-* Take Workflow² [courses](/courses/).
+* Take Workflow² [courses](/workflow/courses/).
 * Explore more examples in workflow templates.

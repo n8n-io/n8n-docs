@@ -27,4 +27,4 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 * [mdn web docs - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview): REST APIs work over HTTP, and use HTTP verbs, or methods, to indicate the type of action to perform.
 
 !!! tip "Use the API playground"
-    Trying out the API in the [playground](/api/using-api-playground/) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
+    Trying out the API in the [playground](/workflow/api/using-api-playground/) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.

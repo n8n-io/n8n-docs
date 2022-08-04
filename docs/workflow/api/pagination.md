@@ -1,6 +1,6 @@
 ---
-title: "WF² API pagination"
-description: WF² uses API keys to authenticate API calls.
+title: "Workflow² API pagination"
+description: The default page size is 100 results. You can change the page size limit. The maximum permitted size is 250.
 tags:
   - WF²
   - API

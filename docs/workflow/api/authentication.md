@@ -1,8 +1,8 @@
 ---
-title: "WF² API authentication"
+title: "Workflow² API authentication"
 description: WF² uses API keys to authenticate API calls.
 tags:
-  - WF²
+  - Workflow²
   - API
 
 ---

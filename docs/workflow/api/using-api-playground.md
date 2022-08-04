@@ -1,3 +1,12 @@
+---
+title: "Workflow² Using the API playground"
+description: The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests.
+tags:
+  - WF²
+  - API
+
+---
+
 # Using the API playground
 
 The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.

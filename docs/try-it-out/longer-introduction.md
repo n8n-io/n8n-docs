@@ -10,7 +10,7 @@ tags:
 
 # A slightly longer introduction
 
-This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way. You will:
+This guide shows you how to automate a task using a workflow in Workflow², explaining key concepts along the way. You will:
 
 * Create a workflow from scratch. You'll build a workflow that runs every week to get data from NASA, filters the data, and generates two reports.
 * Understand key concepts and skills, including:

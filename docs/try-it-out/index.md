@@ -10,7 +10,7 @@ tags:
 
 # Overview
 
-This section gets you up and running with building workflows in n8n.
+This section gets you up and running with building workflows in Workflow².
 
 * Want a very fast taster of n8n? Try the [Very quick quickstart](/try-it-out/quickstart/).
 * Looking for a more detailed introduction? Check out the [Slightly longer introduction](/try-it-out/longer-introduction/).

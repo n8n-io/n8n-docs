@@ -9,17 +9,17 @@ tags:
 
 # API authentication
 
-WF² uses API keys to authenticate API calls.
+Workflow² uses API keys to authenticate API calls.
 
 ## Create an API key
 
-1. Log in to WF².
+1. Log in to Workflow².
 2. Go to **Settings** > **API**.
 3. Select **Create an API key**.
 
 ## Delete an API key
 
-1. Log in to WF².
+1. Log in to Workflow².
 2. Go to **Settings** > **API**.
 3. Select **Delete** next to the key you want to delete.
 

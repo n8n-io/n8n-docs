@@ -9,7 +9,7 @@ tags:
 
 # Using the API playground
 
-The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
+The Workflow² API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
 
 For self-hosted users, n8n constructs the path from values set in your environment variables:
 

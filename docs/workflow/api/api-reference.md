@@ -1,11 +1,10 @@
 ---
-template: api.html
-hide:
-    - toc
-    - navigation
+title: "Workflow² API reference"
+description: WF² uses API keys to authenticate API calls.
 tags:
-  - WF²
+  - Workflow²
   - API
+
 ---
 
 

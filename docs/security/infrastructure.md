@@ -19,7 +19,7 @@ Additionally we only use ssl secured connections to comunicate with the database
 ### Digital Ocean Spaces
 The uploaded documents are stored in a Digital Ocean Space. The trafic is secured via ssl and multiple keys are required to access the stored files.
 
-## Trafic Security
+### Trafic Security
 We only allow https secured connections to comunicate with our Servers. This ensures that the transferd data is encrypted and secure. 
 
 ## Cloud Infor

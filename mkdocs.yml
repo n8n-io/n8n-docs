@@ -168,7 +168,7 @@ nav:
     - Extracted fields: doc2/extracted-fields.md
 
   - Security:
-    - Architecture: security/infra.md
+    - Architecture: security/infrastructure.md
 
   - Workflow²:
     - Overview: workflow/index.md

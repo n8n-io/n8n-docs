@@ -10,7 +10,7 @@ tags:
 
 
 ### Open ports
-* 443 (web)
+* 443
 
 ### Comunication with the Database
 Kubernetes and our Databases are inside the same VPC. We only access the database via the local ip, this way the transferd data never leaves the local network.

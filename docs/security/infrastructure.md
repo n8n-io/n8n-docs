@@ -6,7 +6,7 @@ tags:
   - Infrastructure
 ---
 
-# Application Architecture
+# Application Infrastructure
 
 
 ### Open ports

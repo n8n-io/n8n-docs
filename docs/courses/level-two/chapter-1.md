@@ -1,6 +1,6 @@
 # Understanding the data structure
 
-In this chapter, you will learn about the data structure of n8n and how to use the [Function node](/integrations/builtin/app-nodes/n8n-nodes-base.function/){:target="_blank" .external} to transform data and simulate node outputs.
+In this chapter, you will learn about the data structure of n8n and how to use the [Function node](/integrations/builtin/core-nodes/n8n-nodes-base.function/){:target="_blank"} to transform data and simulate node outputs.
 
 
 ## Data structure of n8n
@@ -47,7 +47,7 @@ The data that moves along from node to node in your workflow must be in a format
 
 	You can access the properties of an object using dot notation with the syntax `object.property`. For example, `turtles[1].color` gets the color of the second turtle.
 
-Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [Items](/getting-started/key-concepts/#item){:target="_blank" .external}.
+Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [Items](/workflows/items/){:target="_blank"}.
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 

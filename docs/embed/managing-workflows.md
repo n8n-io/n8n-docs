@@ -378,10 +378,10 @@ There are four steps to follow to implement this method:
 
 The details and scope of this workflow will vary greatly according to the individual use case, however there are a few design implementations to keep in mind:
 
-* This workflow must be triggered by a [Webhook](https://docs.n8n.io/nodes/n8n-nodes-base.webhook/#webhook) node.
+* This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](https://docs.n8n.io/nodes/expressions.html) so that the node’s credential field reads the credential provided in the webhook call.
-* Save and activate the workflow, ensuring the [Production URL](https://docs.n8n.io/nodes/n8n-nodes-base.webhook/#node-reference) is selected for the Webhook node.
+* Each node where the user’s credentials are needed should use an [expression](/code-examples/expressions/) so that the node’s credential field reads the credential provided in the webhook call.
+* Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) for more information.
 
 ### Call the workflow
 

@@ -492,7 +492,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](/integrations/core/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
+* [EmailReadImap node](/integrations/core-nodes/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
 * [Hubspot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
@@ -519,7 +519,7 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 
 ### Node enhancements
 
-* [RabbitMQ Trigger node](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmqTrigger/): Made message acknowledgement and parallel processing configurable.
+* [RabbitMQ Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/): Made message acknowledgement and parallel processing configurable.
 * [ServiceNow node](/integrations/builtin/app-nodes/n8n-nodes-base.serviceNow/): Added support for attachments.
 * [Todoist node](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/): Added support for specifying the parent task when adding and listing tasks.
 

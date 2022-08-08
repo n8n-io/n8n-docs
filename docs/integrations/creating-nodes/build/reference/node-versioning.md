@@ -1,6 +1,11 @@
 # Node versioning
 
-n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version. 
+n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version.
+
+Be aware of how n8n decides which node version to load:
+
+* If a user builds and saves a workflow using version 1, n8n continues to use version 1 in that workflow, even if you create and publish a version 2 of the node.
+* When a user creates a new workflow and browses for nodes, n8n always loads the latest version of the node.
 
 !!! note "Versioning type restricted by node style"
     If you build a node using the declarative style, you can't use full versioning.
@@ -9,7 +14,36 @@ n8n supports node versioning. You can make changes to existing nodes without bre
 
 This is available for all node types.
 
-One node can contain more than one version, allowing small version increments without code duplication. To use this feature, change the `version` parameter in your node to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which version n8n displays). You can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
+One node can contain more than one version, allowing small version increments without code duplication. To use this feature, change the `version` parameter to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which versions n8n displays those resources and operations with). In programmatic style nodes, you can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
+
+As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node/).
+
+In your base `NasaPics.node.ts` file:
+
+```js
+{
+    displayName: 'NASA Pics',
+    name: 'NasaPics',
+    icon: 'file:nasapics.svg',
+    // List the available versions
+    version: [1,2,3]
+    // More basic parameters here
+    // Add a resource that's only displayed for version2
+    properties: [
+        {
+            displayName: 'Resource name',
+            // More resource parameters
+            displayOptions: {
+                show: {
+                    '@version': 2,
+                },
+            },
+        },
+    ],
+}
+```
+
+
 
 ## Full versioning
 

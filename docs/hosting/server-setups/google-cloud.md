@@ -1,20 +1,40 @@
 # Hosting n8n on Google Cloud
 
-This hosting guide shows you how to self-host n8n on Google Cloud. It uses n8n and Caddy as a reverse proxy using Docker Compose to create the necessary resources.
+This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n and Caddy as a reverse proxy using Kubernetes to create the necessary resources.
+
+## Prerequisites
+
 
 ## Hosting options
 
-Google Cloud offers several ways suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes (containers running with Kubernetes).
+Google Cloud offers several ways suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
 
-This guide uses compute engine as it allows for persistent data by default, however, other options could also work for self-hosting n8n.
+This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
-You can use one of the marketplace Docker images, or install Docker and Docker Compose yourself. If you would rather create an instance using the gcloud command line tool, find more details in the [Google Cloud Platform documentation](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create).
+The steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead.
+
+## Create project
+
+GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment by clicking the project dropdown menu and then the _NEW PROJECT_ button. Then select the newly created project and as you follow other steps in this guide, make sure you have the correct project selected.
+
+
+
+## Enable the Kubernetes Engine API
+
+GKE isn't enabled by default, search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
+
+Enable the Kubernetes Engine API by clicking the __Enable__ button.
+
+## Create a cluster
+
+From the GKE service page, click the **Clusters** menu item and then the **CREATE** button.
+
+
 
 ## Login to instance
 
-The remainder of the steps in this guide require you to login to the instance, GCP offers a variety of ways to do this, and you can find connection commands from the _SSH_ dropdown of the instance details page.
+The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string that needs you to have [the gcloud command line tool installed](https://cloud.google.com/sdk/gcloud/). Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
 
-## Prerequisites
 
 ### Create folders
 

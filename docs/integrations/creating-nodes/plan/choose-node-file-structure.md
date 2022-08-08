@@ -1,4 +1,6 @@
-# Choose how many nodes to include in a package
+# Choose your file structure
+
+## Decide how many nodes to include in a package
 
 There are two possible setups when building a node:
 

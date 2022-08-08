@@ -141,4 +141,14 @@ n8n doesn't have good support for combining boolean operators in, such as AND an
 
 For example, you have a field called **Must match** to test if values match. Include options to test for **Any** and **All**, as separate options.
 
+#### Source keys or binary properties
+
+Binary data is file data, such as spreadsheets or images.
+
+[TODO: note to self - it means rename as]
+
+Input data field name
+
+
+
 

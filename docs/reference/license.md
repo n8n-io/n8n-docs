@@ -95,7 +95,7 @@ We coined the term ['fair-code'](https://faircode.io/) as a way of describing ou
 
 ### What is fair-code, and how does the Sustainable Use License relate to it?
 
-Fair-code is not a software license. It describes a software model where software:
+Fair-code isn't a software license. It describes a software model where software:
 
 * is generally free to use and can be distributed by anybody
 * has its source code openly available
@@ -105,3 +105,7 @@ Fair-code is not a software license. It describes a software model where softwar
 The Sustainable Use License is a fair-code license. You can read more about it, and see other examples of fair-code licenses [here](https://faircode.io/).
 
 We're always excited to talk about software licenses, fair-code and other principles around sharing code with interested parties. To get in touch to chat, email license@n8n.io.
+
+### Can I use n8n's Sustainable Use License for my own project?
+
+Yes! We're excited to see more software use the Sustainable Use License license, or other fair-code licenses. We'd love to hear about your project if you're using our license: license@n8n.io.

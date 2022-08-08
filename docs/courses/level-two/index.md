@@ -16,7 +16,7 @@ The focus in this course is on working with data. You will learn how to:
 - Use the data structure of n8n correctly.
 - Process different data types (for example, XML, HTML, date, time, and binary data).
 - Merge data from different sources (for example, a database, spreadsheet, or CRM).
-- Use functions and JavaScript code in the [Function node](/integrations/core-nodes/n8n-nodes-base.function){:target="_blank" .external}.
+- Use functions and JavaScript code in the [Function node](/integrations/builtin/core-nodes/n8n-nodes-base.function){:target="_blank" .external}.
 - Deal with error workflows and workflow errors.
 
 You will learn all this by completing short practical exercises after the theoretical explanations, and building a business workflow following instructions.

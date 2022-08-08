@@ -117,10 +117,12 @@ nav:
       - Data collection: reference/data-collection.md
   - Integrations:
     - Overview: integrations/index.md
-    - Core nodes: integrations/core-nodes/
-    - Nodes: integrations/nodes/
-    - Trigger nodes: integrations/trigger-nodes/
-    - Credentials: integrations/credentials/
+    - Built-in nodes:
+      - Overview: integrations/builtin/index.md
+      - Core nodes: integrations/builtin/core-nodes/
+      - App nodes: integrations/builtin/app-nodes/
+      - Trigger nodes: integrations/builtin/trigger-nodes/
+      - Credentials: integrations/builtin/credentials/
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - Overview: integrations/community-nodes/index.md
@@ -135,9 +137,11 @@ nav:
       - Plan your node:
         - Overview: integrations/creating-nodes/plan/index.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
-        - Standalone or multi-node packages: integrations/creating-nodes/plan/standalone-multi.md
+        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
+        - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
       - Build your node:
-        - Overview: integrations/creating-nodes/build/index.md        
+        - Overview: integrations/creating-nodes/build/index.md       
+        - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - Reference:
           - Overview: integrations/creating-nodes/build/reference/index.md

@@ -14,6 +14,16 @@ Basic configuration:
 	required: true, // Whether the field is required or not
 	default: 'n8n',
 	description: 'The name of the user',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -34,6 +44,16 @@ String field for inputting passwords:
 	},
 	default: '',
 	description: `User's password`,
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -53,6 +73,16 @@ String field with more than one row:
 	},
 	default: '',
 	description: 'Description',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -75,6 +105,16 @@ Basic configuration:
 	},
 	default: 10,
 	description: 'Your current age',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -93,6 +133,16 @@ Number field with decimal points:
 	},
 	default: 10.00,
 	description: 'Your current amount',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -131,6 +181,16 @@ Use the `collection` type when you need to display optional fields.
 			default: '',
 		},
 	],
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -148,6 +208,16 @@ The `dateTime` type provides a date picker.
 	type: 'dateTime',
 	default: '',
 	description: 'The date and time when the file was last modified',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -166,6 +236,16 @@ The `boolean` type adds a toggle for entering true or false.
 	type: 'boolean',
 	default: true, // Initial state of the toggle
 	description: 'Whether to wait for the image or not',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -181,6 +261,16 @@ The `color` type provides a color selector.
 	name: 'backgroundColor',
 	type: 'color',
 	default: '', // Initially selected color
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -207,6 +297,16 @@ The `options` type adds an options list. Users can select a single value.
 	],
 	default: 'image', // The initially selected option
 	description: 'Resource to consume',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -233,6 +333,16 @@ The `multiOptions` type adds an options list. Users can select more than one val
 	],
 	default: [], // Initially selected options
 	description: 'The events to be monitored',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -275,6 +385,16 @@ Use the `fixedCollection` type to group fields that are semantically related.
 			],
 		},
 	],
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 
@@ -289,6 +409,16 @@ Use the `fixedCollection` type to group fields that are semantically related.
 	type: 'json',
 	default: '',
 	description: '',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
 }
 ```
 

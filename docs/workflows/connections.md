@@ -6,6 +6,6 @@ To create a connection between two nodes, click on the grey dot on the right sid
 
 ## Example
 
-An [IF node](/integrations/core-nodes/n8n-nodes-base.if/) has two connections to different nodes: one for when the statement is true and one for when the statement is false.
+An [IF node](/integrations/builtin/core-nodes/n8n-nodes-base.if/) has two connections to different nodes: one for when the statement is true and one for when the statement is false.
 
 ![Connection](/_images/workflows/connections/Connection_ifnode.gif)

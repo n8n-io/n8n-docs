@@ -27,8 +27,8 @@ n8n provides core nodes for all these steps. This use case is somewhat complex a
 
 To build the workflows, you will need the following:
 
-* An [Airtable](https://airtable.com/){:target="_blank" .external} account and [credentials](/integrations/credentials/airtable/){:target="_blank" .external}.
-* A [Google](https://www.google.com/account/about/){:target="_blank" .external} account and [credentials](/integrations/credentials/google/){:target="_blank" .external} to access Gmail.
+* An [Airtable](https://airtable.com/){:target="_blank" .external} account and [credentials](/integrations/builtin/credentials/airtable/){:target="_blank" .external}.
+* A [Google](https://www.google.com/account/about/){:target="_blank" .external} account and [credentials](/integrations/builtin/credentials/google/){:target="_blank" .external} to access Gmail.
 * A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this via email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

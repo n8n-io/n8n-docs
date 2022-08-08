@@ -1,17 +1,27 @@
 # Choose your node building approach
 
-n8n has two node-building styles:
+n8n has two node-building styles, declarative and programmatic. 
 
-* Declarative: a JSON-based approach, supporting integration with REST APIs. This is simpler to write, and is the recommended option for most cases.
-* Programmatic: this style is more verbose. You must use the programmatic style for:
-    * Trigger nodes
-    * Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
-    * Any node that needs to transform incoming data.
-    * If you want to use full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on types of versioning.
+You should use the declarative style for most nodes. This style:
+
+* Uses a JSON-based syntax, making it simpler to write, with less risk of introducing bugs.
+* Is more future-proof.
+* Supports integration with REST APIs.
+
+The programmatic style is more verbose. You must use the programmatic style for:
+
+* Trigger nodes
+* Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
+* Any node that needs to transform incoming data.
+* Full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on types of versioning.
+
+## Data handling differences
 
 The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for more information on node parameters and the `execute()` method.
 
-To better understand the difference between the declarative and programmatic styles, compare the two code snippets below. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
+## Syntax differences
+
+To understand the difference between the declarative and programmatic styles, compare the two code snippets below. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
 
 In programmatic style:
 

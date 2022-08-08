@@ -20,6 +20,8 @@ Install the following tools:
 	```
 **NOTE:** Use node version `14.x` and npm version `6.x`
 
+[TODO: remove lerna per alex]
+
 - **Lerna:** Install [lerna](https://lerna.js.org/) globally with the following command:
 	```bash
 	npm install --global lerna

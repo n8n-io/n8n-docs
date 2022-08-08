@@ -20,7 +20,7 @@ Merging data can involve:
 
 		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
-In n8n, you can merge data from two different nodes using the [Merge node](/integrations/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
+In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
 
 - Append
 - Keep Key Matches
@@ -75,7 +75,7 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/core-nodes/n8n-nodes-base.splitInBatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitInBatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 !!! warning "Execution of Split in Batches node"
 

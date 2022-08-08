@@ -13,7 +13,7 @@ The first thing you need to do is get data from ABCorp's old data warehouse.
 
 In the previous chapter, you used a regular node for a specific app (YCombinator). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan's company.
 
-Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank" .external} in n8n.
+Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank" .external} in n8n.
 
 !!! note "No node for that service?"
     The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.

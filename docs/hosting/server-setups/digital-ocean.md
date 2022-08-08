@@ -1,6 +1,6 @@
 # Hosting n8n on DigitalOcean
 
-This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses n8n and [Caddy](http://caddyserver.com){:target="_blank" class=.external-link} (a reverse proxy) to allow access to the Droplet from the internet . It uses [Docker Compose](https://docs.docker.com/compose/){:target="_blank"} to create and define the application components and how they work together.
+This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses n8n and [Caddy](http://caddyserver.com){:target="_blank" class=.external-link} (a reverse proxy) to allow access to the Droplet from the internet. It uses [Docker Compose](https://docs.docker.com/compose/){:target="_blank"} to create and define the application components and how they work together.
 
 ## Create a Droplet
 
@@ -14,7 +14,7 @@ The remainder of the steps in this guide require you to log in to the Droplet us
 
 Both n8n and Caddy require creating folders that the host operating system (the DigitalOcean Droplet) copies to Docker containers to make them available to Docker.
 
-Create the following on the Droplet in a location accessible by Docker. If you run Docker as root user, you can create them anywhere. If you run Docker "[Rootless](https://docs.docker.com/engine/security/rootless/){:target="_blank"}" for better security, create them in a location that user has access to:
+Create the following on the Droplet in your home folder:
 
 - `caddy_config`: Holds the Caddy configuration files.
 - `caddy_data`: A cache folder for Caddy.

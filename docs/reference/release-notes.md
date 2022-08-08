@@ -1,5 +1,16 @@
 # Release notes
 
+## n8n@0.189.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.189.0...n8n@0.189.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-05
+
+This is a bug fix release.
+
+### Bug fixes
+
+Fixed an issue with MySQL and MariaDB migrations.
+
 ## n8n@0.189.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.188.0...n8n@0.189.0){:target=_blank .external-link} for this version.<br />

@@ -23,7 +23,7 @@ Based on the node you use in a workflow, you may have to use credentials to conn
 Below is an example of how n8n stores the credentials in the credentials_entity table in the SQLite database. The example below shows the data stored in the table for the *Pipedrive Trial* credentials.
 
 The ***name*** field contains the credentials name, and the ***data*** field stores the credentials by encrypting them.
-The [Pipedrive](/integrations/credentials/pipedrive/) node has two authentication methods - OAuth and Access Token. The ***type*** field indicates the method the credentials belong to. The ***nodeAccess*** field stores information about the nodes that have access to these credentials. In the example below, both the Pipedrive node and the Pipedrive Trigger node have access to the Pipedrive Trial credentials.
+The [Pipedrive](/integrations/builtin/credentials/pipedrive/) node has two authentication methods - OAuth and Access Token. The ***type*** field indicates the method the credentials belong to. The ***nodeAccess*** field stores information about the nodes that have access to these credentials. In the example below, both the Pipedrive node and the Pipedrive Trigger node have access to the Pipedrive Trial credentials.
 
 ![Data stored in the credentials_entity table](/_images/hosting/databases/credentials_entity.png)
 
@@ -41,7 +41,7 @@ Depending on the settings, the executions are stored in the `execution_entity` t
 | retrySuccessId | VARCHAR | Stores the ID of a retry execution if it was a success |
 | startedAt | DATETIME | Stores the date and time when execution gets started |
 | stoppedAt | DATETIME | Stores the date and time when execution gets stopped |
-| workflowData | TEXT | Stores the workflow data with the [static data](/integrations/core-nodes/n8n-nodes-base.function/#method-getworkflowstaticdata-type) (if any) |
+| workflowData | TEXT | Stores the workflow data with the [static data](/integrations/builtin/core-nodes/n8n-nodes-base.function/#method-getworkflowstaticdata-type) (if any) |
 | workflowId | VARCHAR | Stores the ID of the workflow that got executed |
 
 Below is an example of how n8n stores the execution information in the `execution_entity` table in the SQLite database. The example below shows the execution data stored in the table for the [Receive updates of the position of the ISS every minute](https://n8n.io/workflows/880) workflow.

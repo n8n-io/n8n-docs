@@ -3,7 +3,7 @@
 There are two places in n8n where you need to use code:
 
 * In [expressions](/code-examples/expressions/), for example programmatically setting the value of a field based on incoming data.
-* In the [function node](/integrations/core-nodes/n8n-nodes-base.function/), when you need to add JavaScript to your workflow.
+* In the [function node](/integrations/builtin/core-nodes/n8n-nodes-base.function/), when you need to add JavaScript to your workflow.
 
 This section covers:
 

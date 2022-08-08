@@ -69,7 +69,7 @@ export const ExampleNode implements INodeType {
 }
 ```
 
-### Node icons
+### Node icons [IN UI DESIGN]
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 

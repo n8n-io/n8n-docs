@@ -80,13 +80,25 @@ Order fields by:
 
 #### Help
 
-There are two types of help built in to the GUI:
+There are four types of help built in to the GUI:
 
 * Info boxes: yellow boxes that appear between fields.
   * Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
-* Tooltips: callouts that appear when the user hovers over the tooltip icon !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png). 
+* Hints: lines of text displayed beneath an input. Use hints when there's something the user needs to know, but an info box would be excessive.
+* Tooltips: callouts that appear when the user hovers over the tooltip icon !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png). Use tooltips for extra information that the user might need.
   * You don't have to provide a tooltip for every field. Only add one if it contains useful information. 
   * When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
+* Placeholder text: n8n can display placeholder text in a field where the user hasn't entered a value. This can help the user know what's expected in that field.
+
+Info boxes, hints, and tooltips can contain links to more information.
+
+#### Errors
+
+Make it clear which fields are required.
+
+Add validation rules to fields if possible. For example, check for valid email patterns if the field expects an email.
+
+When displaying errors, make sure only the main error message displays in the red error title. More information should go in **Details**.
 
 #### Toggles
 
@@ -102,7 +114,22 @@ There are two types of help built in to the GUI:
 * You can include list option descriptions. Only add descriptions if they provide useful information.
 * If there is an option like **All**, use the word **All**, not shorthand like *****.
 
-#### Providing IDs
+#### Trigger node inputs
+
+When a trigger node has a parameter for specifying which events to trigger on:
+
+* Name the parameter **Trigger on**.
+* Don't include a tooltip.
+
+#### Subtitles
+
+Set subtitles based on the values of the main parameters. For example:
+
+```js
+subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+```
+
+#### IDs
 
 When performing an operation on a specific record, such as "update a task comment", you need a way to specify which record you want to change.
 
@@ -113,6 +140,23 @@ When performing an operation on a specific record, such as "update a task commen
 * Build your node so that it can handle users providing more information than required. For example:
     * If you need a relative path, handle the user pasting in the absolute path.
     * If the user needs to get an ID from a URL, handle the user pasting in the entire URL.
+
+#### Dates and timestamps
+
+n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} for dates and times. Make sure that any date or timestamp field you implement supports all ISO 8601 formats.
+
+#### JSON
+
+You should support two ways of specifying the content of a text input that expects JSON:
+
+* Typing JSON directly into the text input: you need to parse the resulting string into a JSON object.
+* Using an expression that returns JSON.
+
+
+
+#### Node icons
+
+--8<-- "_snippets/integrations/node-icons.md"
 
 
 ### Common patterns and exceptions
@@ -133,8 +177,6 @@ This should always be a separate operation with:
   * Name: **Create or Update**
   * Description: **Create a new record, or update the current one if it already exists (upsert)**
 
-
-
 #### Boolean operators
 
 n8n doesn't have good support for combining boolean operators in, such as AND and OR, in the GUI. Whenever possible, provide options for all ANDs or all ORs.
@@ -143,11 +185,9 @@ For example, you have a field called **Must match** to test if values match. Inc
 
 #### Source keys or binary properties
 
-Binary data is file data, such as spreadsheets or images.
+Binary data is file data, such as spreadsheets or images. In n8n, you need a named key to reference the data. Don't use the terms "binary data" or "binary property" for this field. Instead, use a more descriptive name: **Input data field name** / **Output data field name**.
 
-[TODO: note to self - it means rename as]
 
-Input data field name
 
 
 

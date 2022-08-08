@@ -2,6 +2,12 @@
 
 Following best practices and standards in your node structure makes your node easier to maintain. It's helpful if other people need to work with the code.
 
+The file and directory structure of your node is affected by:
+
+* Your node's complexity.
+* Whether you use node versioning.
+* How many nodes you include in the npm package.
+
 ## Required files and directories
 
 Your node must include:
@@ -33,7 +39,16 @@ For more complex nodes, n8n recommends the following structure:
 
 If your node has more than one version, and you're using full versioning, this makes the file structure more complex. You need a directory for each version, along with a base file that sets the default version. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on working with versions, including types of versioning.
 
-## A best-practice example: The Mattermost node
+## Decide how many nodes to include in a package
+
+There are two possible setups when building a node:
+
+* One node in one npm package.
+* More than one node in a single npm package.
+
+n8n supports both approaches. If you include more than one node, each node should have its own directory in the `nodes` directory.
+
+## A best-practice example for programmatic nodes: The Mattermost node
 
 n8n's built-in [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-class} implements a modular structure and versioning, following recommended patterns.
 

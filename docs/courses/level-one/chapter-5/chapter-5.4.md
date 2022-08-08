@@ -4,7 +4,7 @@ In this step of the workflow you will learn how to select and set data before tr
 
 The next step in Nathan's workflow is to insert the *employeeName* and *orderId* of all *processing* orders into Airtable.
 
-For this, you need to use the [**Set node**](/integrations/core-nodes/n8n-nodes-base.set/){:target="_blank" .external}, which allows you to select and set the data you want to be transferred from one app/service to another.
+For this, you need to use the [**Set node**](/integrations/builtin/core-nodes/n8n-nodes-base.set/){:target="_blank" .external}, which allows you to select and set the data you want to be transferred from one app/service to another.
 
 !!! note "Set node"
     The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.

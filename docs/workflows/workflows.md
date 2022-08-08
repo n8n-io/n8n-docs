@@ -58,7 +58,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
-You can also use the [Error Trigger node](/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+You can also use the [Error Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
 
 ## Workflow templates
 

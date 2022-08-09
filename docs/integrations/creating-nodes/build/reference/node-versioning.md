@@ -14,11 +14,12 @@ Be aware of how n8n decides which node version to load:
 
 This is available for all node types.
 
-One node can contain more than one version, allowing small version increments without code duplication. To use this feature, change the `version` parameter to an array, and add your version numbers, including your existing version. You can then access the version parameter with `@version` in your `displayOptions` (to control which versions n8n displays those resources and operations with). In programmatic style nodes, you can also query the version in your `execute` function using `const nodeVersion = this.getNode().typeVersion;`.
+One node can contain more than one version, allowing small version increments without code duplication. To use this feature: 
 
-As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node/).
+1. Change the main `version` parameter to an array, and add your version numbers, including your existing version. 
+2. You can then access the version parameter with `@version` in your `displayOptions` in any object (to control which versions n8n displays the object with). You can also query the version from a function using `const nodeVersion = this.getNode().typeVersion;`.
 
-In your base `NasaPics.node.ts` file:
+As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node/), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
 
 ```js
 {
@@ -28,8 +29,8 @@ In your base `NasaPics.node.ts` file:
     // List the available versions
     version: [1,2,3]
     // More basic parameters here
-    // Add a resource that's only displayed for version2
     properties: [
+        // Add a resource that's only displayed for version2
         {
             displayName: 'Resource name',
             // More resource parameters
@@ -43,15 +44,13 @@ In your base `NasaPics.node.ts` file:
 }
 ```
 
-
-
 ## Full versioning
 
 This isn't available for declarative-style nodes.
 
 As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}.
 
-Node versioning summary:
+Full versioning summary:
 
 - The base node file should extend `NodeVersionedType` instead of `INodeType`.
 - The base node file should contain a description including the `defaultVersion` (usually the latest), other basic node metadata such as name, and a list of versions. It shouldn't contain any node functionality.

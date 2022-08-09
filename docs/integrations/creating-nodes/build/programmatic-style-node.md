@@ -12,14 +12,9 @@ You need some understanding of:
 
 - JavaScript/TypeScript
 - REST APIs
+- git
 - Expressions in n8n
 
-[TODO: remove lerna per alex]
-
-- **Lerna:** You can install lerna globally with the following command:
-	```bash
-	npm install --global lerna
-	```
 
 ## Selecting the node
 

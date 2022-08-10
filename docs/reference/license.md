@@ -41,9 +41,9 @@ All of the following examples are allowed under our license:
 * Supporting n8n, for example by setting it up or maintaining it on an internal company server.
 
 
-### What if I want to use n8n for something that is not permitted by the license?
+### What if I want to use n8n for something that's not permitted by the license?
 
-You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n.embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
+You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n Embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
 
 If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#can-you-give-some-examples-of-what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
 

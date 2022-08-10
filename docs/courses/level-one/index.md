@@ -32,7 +32,7 @@ You will build two workflows:
 
 ## What do I need to get started?
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n Cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
 - **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
 - Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but is not necessary.
 

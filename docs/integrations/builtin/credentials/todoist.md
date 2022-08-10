@@ -10,7 +10,7 @@ Create a [Todoist](https://todoist.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n.cloud users"
+!!! note "Note for n8n Cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Todoist account to n8n.
 
 

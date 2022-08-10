@@ -53,7 +53,7 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 
 ### Contributors
 
-[mertmit](https://github.com/mertmit){:target=_blank .external-link}
+[mertmit](https://github.com/mertmit){:target=_blank .external-link}  
 [Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
 
 ## n8n@0.188.0

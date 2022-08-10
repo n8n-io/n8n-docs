@@ -46,7 +46,7 @@ The following settings are available:
 * **Save Manual Executions**: If executions started from the Editor UI should be saved.
 * **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
 * **Timeout Workflow**: Toggle to enable setting a duration after which the current workflow execution should be cancelled.
-* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (for example, three minutes for Start level).
+* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n Cloud users a maximum available timeout is enforced for each plan (for example, three minutes for Start level).
 
 ## Failed workflows
 

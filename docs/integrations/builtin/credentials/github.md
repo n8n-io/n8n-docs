@@ -12,7 +12,7 @@ Create a [GitHub](https://github.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n.cloud users"
+!!! note "Note for n8n Cloud users"
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
 
 
@@ -40,7 +40,7 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/O1kEes6mQcs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The following video demonstrates the steps to authenticate the GitHub node on [n8n.cloud](https://n8n.cloud).
+The following video demonstrates the steps to authenticate the GitHub node on [n8n Cloud](https://n8n.cloud).
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/WtjRxIVVCIg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

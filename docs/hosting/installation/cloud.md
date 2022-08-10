@@ -1,13 +1,13 @@
-# n8n.cloud
+# n8n Cloud
 
-n8n.cloud is our hosted solution. In addition to all the features of n8n, it provides added benefits such as:
+n8n Cloud is our hosted solution. In addition to all the features of n8n, it provides added benefits such as:
 
 - No technical set up or maintenance for your n8n instance
 - 24/7 uptime monitoring
 - Managed OAuth for authentication
 - Easy upgrades to the newest n8n versions
 
-[Sign up for n8n.cloud](https://www.n8n.cloud/)
+[Sign up for n8n Cloud](https://www.n8n.cloud/)
 
 !!! note "Cloud IP addresses"
         Currently it is `20.79.72.105`, however this is subject to change. The NAT addresses are `20.79.227.226` and `20.79.72.36`, but this is also subject to change.

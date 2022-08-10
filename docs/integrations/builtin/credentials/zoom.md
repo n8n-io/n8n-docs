@@ -10,7 +10,7 @@ Create a [Zoom](https://zoom.us/) account.
 
 ## Using OAuth
 
-<!-- !!! tip  Note for n8n.cloud users
+<!-- !!! tip  Note for n8n Cloud users
     You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Zoom account to n8n.
  -->
 

@@ -167,6 +167,8 @@ nav:
     - SSO Settings: doc2/settings-sso-settings.md
     - Extracted fields: doc2/extracted-fields.md
     - Infor Infrastructure: security/infrastructure.md
+    - Data security: security/datensicherung.md
+    - Groups & Priveleges: security/priveleges.md
 
   - Workflow²:
     - Overview: workflow/index.md

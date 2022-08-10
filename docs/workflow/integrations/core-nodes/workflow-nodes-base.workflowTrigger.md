@@ -23,7 +23,7 @@ The DOC² Trigger node will trigger the workflow whenever DOC² starts.
 
 1. Select 'Instance started' from the ***Events*** dropdown list.
 
-In the screenshot below, you will notice that the node triggers the workflow when the Doc² instance starts.
+In the screenshot below, you will notice that the node triggers the workflow when the DOC² instance starts.
 
 ![Using the Doc² Trigger node to trigger the workflow](/_images/integrations/core-nodes/n8ntrigger/n8ntrigger_node.png)
 

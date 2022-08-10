@@ -23,22 +23,7 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 
 ### Step 1: Set up the project
 
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
-
-Clone the repository and navigate into the directory:
-
-```shell
-git clone https://github.com/n8n-io/n8n-nodes-starter.git n8n-nodes-nasa-pics
-cd n8n-nodes-nasa-pics
-
-```
-
-The starter contains example nodes and credentials. Delete the following directories and files:
-
-* `nodes/ExampleNode`
-* `nodes/HTTPBin`
-* `credentials/ExampleCredentials.credentials.ts`
-* `credentials/HttpBinApi.credentials.ts`
+--8<-- "_snippets/integrations/creating-nodes/tutorial-set-up-project.md"
 
 Now create the following directories and files:
 
@@ -154,7 +139,7 @@ Every node must have a base file. In this example, the file is `NasaPics.node.ts
 
 Start by adding the import statements:
 
-```js
+```typescript
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
@@ -165,7 +150,7 @@ The node must export an interface that implements INodeType. This interface must
 !!! note "Class names and file names"
 		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 
-```js
+```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
@@ -180,7 +165,7 @@ export class NasaPics implements INodeType {
 
 All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
 
-```js
+```typescript
 		displayName: 'NASA Pics',
 		name: 'NasaPics',
 		icon: 'file:nasapics.svg',
@@ -212,7 +197,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 
 The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Update the `properties` array with the resource object:
 
-```js
+```typescript
 properties: [
 	{
 		displayName: 'Resource',
@@ -246,7 +231,7 @@ In a declarative-style node, the operations object includes `routing` (within th
 
 Add the following to the `properties` array, after the `resource` object:
 
-```js
+```typescript
 {
 	displayName: 'Operation',
 	name: 'operation',
@@ -360,7 +345,7 @@ To avoid overwhelming users, n8n displays these under **Additional Fields** in t
 
 For this tutorial, you'll add one additional field, to allow users to pick a date to use with the APOD endpoint. Add the following to the properties array:
 
-```js
+```typescript
 {
 	displayName: 'Additional Fields',
 	name: 'additionalFields',
@@ -403,7 +388,7 @@ The NASA API requires users to authenticate with an API key.
 
 Add the following to `nasaPicsApi.credentials.ts`:
 
-```js
+```typescript
 import {
 	IAuthenticateGeneric,
 	ICredentialType,

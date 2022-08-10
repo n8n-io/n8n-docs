@@ -1,4 +1,4 @@
-# Build a programmatic-style node
+# Tutorial:  Build a programmatic-style node
 
 This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
 
@@ -16,46 +16,130 @@ You need some understanding of:
 - Expressions in n8n
 
 
-## Selecting the node
+## Build your node
 
-The first thing to do is pick the service you want to create the node for. For this tutorial, use [SendGrid](https://sendgrid.com/) as an example.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/){:target=_blank .external-link}. You'll create a node that implements one piece of SendGrid functionality: create a contact.
 
-For the sake of brevity, we will only showcase how to add the functionality to create a contact. Since n8n's repository already has a SendGrid node, we will name this node **FriendGrid** to avoid conflicts.
+!!! note "Existing node"
+    n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
 
-## Cloning the repository
+### Step 1: Set up the project
 
-In GitHub, fork the [n8n repository](https://github.com/n8n-io/n8n). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
+--8<-- "_snippets/integrations/creating-nodes/tutorial-set-up-project.md"
 
-```bash
-git clone https://github.com/<USERNAME>/n8n.git && cd n8n
+Now create the following directories and files:
+
+* `nodes/FriendGrid`
+* `nodes/FriendGrid/FriendGrid.node.json`
+* `nodes/FriendGrid/FriendGrid.node.ts`
+* `nodes/FriendGrid/friendgrid.svg`
+* `credentials/FriendGridApi.credentials.ts`
+
+These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
+
+Now install the project dependencies:
+
+```shell
+npm i
 ```
 
-n8n is built from four main packages:
+### Step 2: Add an icon
 
-- cli
-- core
-- editor-ui
-- nodes-base
-
-All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
-
-- The folder `nodes`, contains all the nodes in n8n.
-- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
-- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
-
-![n8n folder structure](/_images/integrations/creating-nodes/n8n-folder-structure.png)
+Copy and paste the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} into `sendgrid.svg`. To get the SVG source, select **Raw**.
 
 
-## Creating the node
+--8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-1. Go to `packages/nodes-base/nodes`.
-2. Create a folder called `FriendGrid` (the folder names are PascalCase).
-3. Within the FriendGrid folder, create a file called `FriendGrid.node.ts` (YourNodeName.node.ts).
-4. Download and add the FriendGrid [icon](https://symbols.getvecta.com/stencil_95/59_sendgrid-icon.5e86042b30.svg) to the folder. Name it `friendGrid.svg`.
-	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node’s folder.
-	- An SVG is preferable. In case you have to use a PNG, make sure that it is compressed. A good tool for that is [tinypng](https://tinypng.com).
-	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/log's/tree/master/logos).
-5. Paste the following code in the `FriendGrid.node.ts` file.
+
+### Step 3: Update the npm package details
+
+Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
+
+```json
+{
+	// All node names must start with "n8n-nodes-"
+  "name": "n8n-nodes-friendgrid",
+  "version": "0.1.0",
+  "description": "n8n node to create contacts in SendGrid",
+  "keywords": [
+		// This keyword is required for community nodes
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://n8n.io",
+  "author": {
+    "name": "Test",
+    "email": "test@example.com"
+  },
+  "repository": {
+    "type": "git",
+		// Change the git remote to your own repository
+		// Add the new URL here
+    "url": "git+<your-repo-url>"
+  },
+  "main": "index.js",
+  "scripts": {
+		// don't change
+  },
+  "files": [
+    "dist"
+  ],
+	// Link the credentials and node
+  "n8n": {
+    "credentials": [
+      "dist/credentials/FriendGridApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/FriendGrid/.node.js"
+    ]
+  },
+  "devDependencies": {
+		// don't change
+  },
+  "dependencies": {
+    // don't change
+  }
+}
+```
+
+### Step 4: Add node metadata
+
+Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `FriendGrid.node.json`.
+
+Add the following code to the JSON file:
+
+```json
+{
+	"node": "n8n-nodes-base.FriendGrid",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Miscellaneous"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": ""
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": ""
+			}
+		]
+	}
+}
+```
+
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
+
+### Step 5: Create the node
+
+Every node must have a base file. In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+
+#### Step 5.1: Imports
+
+Start by adding the import statements:
 
 ```typescript
 import {
@@ -72,72 +156,56 @@ import {
 import {
     OptionsWithUri,
 } from 'request';
+```
 
+#### Step 5.2: Create the main class
+
+The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
+
+!!! note "Class names and file names"
+		Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
+
+```typescript
 export class FriendGrid implements INodeType {
-    description: INodeTypeDescription = {
-        displayName: 'FriendGrid',
-        name: 'friendGrid',
-        icon: 'file:friendGrid.svg',
-        group: ['transform'],
-        version: 1,
-        description: 'Consume FriendGrid API',
-        defaults: {
-            name: 'FriendGrid',
-            color: '#1A82e2',
-        },
-        inputs: ['main'],
-        outputs: ['main'],
-        credentials: [
-        ],
-        properties: [
-            // Node properties which the user gets displayed and
-            // can change on the node.
-        ],
-    };
-
-    async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-        return [[]];
-    }
+	description: INodeTypeDescription = {
+		// Basic node details will go here
+		properties: [
+			// Resources and operations will go here
+		]
+	};
 }
 ```
 
-Your directory structure should now look like the following.
+#### Step 5.3: Add node details
 
-![FriendGrid's directory structure](/_images/integrations/creating-nodes/friendgrid-directory-structure.png)
+All programmatic nodes need some basic parameters, such as their display name and icon. Add the following to the `description`:
+
+```typescript
+displayName: 'FriendGrid',
+name: 'friendGrid',
+icon: 'file:friendGrid.svg',
+group: ['transform'],
+version: 1,
+description: 'Consume SendGrid API',
+defaults: {
+		name: 'FriendGrid'
+},
+inputs: ['main'],
+outputs: ['main'],
+credentials: [
+	{
+		name: 'friendGridApi',
+		required: true,
+	},
+],
+```
 
 
-## Adding the node to Editor UI
 
-n8n uses the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
 
-Check the following figure to see how the properties affect the looks of the node.
 
-![FriendGrid's appearance in Editor UI](/_images/integrations/creating-nodes/friendgrid-appearance.png)
 
-**Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
-Let's see how the node looks in the UI by following these steps:
-
-1. Go to `/packages/nodes-base/package.json`.
-2. Paste `"dist/nodes/FriendGrid/FriendGrid.node.js",` in the nodes array to register the node (in an alphabetical order).
-3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
-	- The first command installs all dependencies of all the modules and links them together.
-	- The second command builds all the code.
-	- The third command starts n8n in development mode.
-[TODO: remove lerna per alex]
-	```bash
-	lerna bootstrap --hoist
-	npm run build
-	npm run dev
-	```
-
-4. Open your browser and go to [localhost:8080](http://localhost:8080/) and you should be able to see the Editor UI.
-5. Open the ***Create Node*** menu, type `FriendGrid`, and click on it to add the node to the Editor UI.
-
-**Notes**
-- On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
-- The property `description.name` uses camelCase.
-- The property `description.color` is the company branding's hexadecimal color. This is usually available on the company's website under style guide. In case the website does not include this information, there are other websites that help you get a company’s branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 '
 ## Creating the UI for the node

@@ -207,7 +207,7 @@ credentials: [
 
 
 
-'
+
 ## Creating the UI for the node
 
 Double-clicking on the FriendGrid node will open the Node Editor View. It will be empty since we haven't added any UI components yet. Luckily, n8n provides predefined JSON-based UI components that we can use to ask the user for different types of data.

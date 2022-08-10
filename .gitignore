@@ -6,7 +6,6 @@ dist
 npm-debug.log*
 yarn.lock
 .env
-.editorconfig
 .vscode
 .idea
 

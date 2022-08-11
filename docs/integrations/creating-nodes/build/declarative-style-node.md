@@ -28,7 +28,7 @@ n8n provides a starter repository for node development. Using the starter ensure
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository as `n8n-nodes-nasa-pics`:
 		```shell
-		git clone https://github.com/<your-organisation>/<your-repo-name>.git n8n-nodes-nasa-pics
+		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
 		cd n8n-nodes-nasa-pics
 		```
 

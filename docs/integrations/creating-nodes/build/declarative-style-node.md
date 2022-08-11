@@ -272,7 +272,7 @@ Add the following to the `properties` array, after the `resource` object:
 			},
 		},
 	],
-	default: 'get'
+	default: 'get',
 },
 {
 	displayName: 'Operation',
@@ -300,7 +300,7 @@ Add the following to the `properties` array, after the `resource` object:
 			},
 		},
 	],
-	default: 'get'
+	default: 'get',
 },
 {
 	displayName: 'Rover name',
@@ -429,7 +429,6 @@ export class NasaPicsApi implements ICredentialType {
 			qs: {
 				'api_key': '={{$credentials.apiKey}}'
 			}
-
 		},
 	} as IAuthenticateGeneric;
 }

@@ -25,13 +25,12 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 
 n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
 
-Clone the repository and navigate into the directory:
-
-```shell
-git clone https://github.com/n8n-io/n8n-nodes-starter.git n8n-nodes-nasa-pics
-cd n8n-nodes-nasa-pics
-
-```
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
+2. Clone your new repository as `n8n-nodes-nasa-pics`:
+		```shell
+		git clone https://github.com/<your-organisation>/<your-repo-name>.git n8n-nodes-nasa-pics
+		cd n8n-nodes-nasa-pics
+		```
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -273,7 +272,7 @@ Add the following to the `properties` array, after the `resource` object:
 			},
 		},
 	],
-	default: 'get'
+	default: 'get',
 },
 {
 	displayName: 'Operation',
@@ -301,7 +300,7 @@ Add the following to the `properties` array, after the `resource` object:
 			},
 		},
 	],
-	default: 'get'
+	default: 'get',
 },
 {
 	displayName: 'Rover name',
@@ -430,7 +429,6 @@ export class NasaPicsApi implements ICredentialType {
 			qs: {
 				'api_key': '={{$credentials.apiKey}}'
 			}
-
 		},
 	} as IAuthenticateGeneric;
 }
@@ -442,6 +440,11 @@ For more information about credentials files and options, refer to [Credentials 
 
 ## Test your node
 
-
 --8<-- "_snippets/integrations/creating-nodes/testing.md"
+
+## Next steps
+
+* [Deploy your node](/integrations/creating-nodes/deploy/).
+* View an example of a declarative node: n8n's [SendInBlue node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SendInBlue){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
 

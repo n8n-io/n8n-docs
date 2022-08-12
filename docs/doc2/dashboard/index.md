@@ -14,21 +14,21 @@ After logging in with your user you are redirected to the DASHBOARD homepage of 
 
 This is the main page and overview where you can capture, work, and manage the imported documents.
 
-![](/_images/doc2/Dashboard-1024x640.png){ loading=lazy }
+![](/_images/doc2/DOC²_Dashboard_1.png){ loading=lazy }
 
 The first upper bar is a very simple and easy reporting tool where you can filter it by week, month, year, or even the whole total.
 
 ## **Viewing Document by Status**
 
-![](/_images/doc2/Dashboard_reporting-tool-1024x294.png){ loading=lazy }
+![](/_images/doc2/DOC²_Dashboard_2.png){ loading=lazy }
 
-It shows you the total number of invoices imported, and the number of the ones that were automatically or manually processed. Furthermore, you can also see all the status, like **completed**, in **progress**, **pending** and **error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered invoices.
+It shows you the total number of documents imported, and the number of the ones that were automatically or manually processed. Furthermore, you can also see all the status, like **in progress**, **pending**, **pending approval**, **completed** and **error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents.
 
 As you can imagine the second part of the dashboard is the list/overview of all the uploaded documents. You can either see all of them or even just the ones that are assigned to you. And of course, you can also find it with the document name.
 
 ![](/_images/doc2/Dashboard_documents-1024x268.png){ loading=lazy }
 
-To start importing an invoice manually you simply click on the import button and choose the document you want to upload.
+To start importing an invoice manually you simply click on the **upload** button and choose the document you want to upload.
 
 ![](/_images/doc2/Upload-document-1024x640.png){ loading=lazy }
 

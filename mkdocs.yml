@@ -100,8 +100,7 @@ nav:
     - Getting Started: doc2/index.md
     - OnBoarding: doc2/onboarding.md
     - Deployment: doc2/deployment.md
-    - Dashboard:
-      - Dashboard: doc2/dashboard.md
+    - Dashboard: doc2/dashboard.md
       - Manual Import: doc2/manual-import.md
     - Document Validation:
       - Document Validation: doc2/document-validation.md

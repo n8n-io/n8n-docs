@@ -17,7 +17,7 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 		When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
 
 !!! note "SSH or Password"
-		DigitalOcean allows you to choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+		DigitalOcean lets you to choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 
 ## Log in to your Droplet
 

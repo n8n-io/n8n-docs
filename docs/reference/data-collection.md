@@ -1,6 +1,6 @@
 # Data collection
 
-n8n collects selected usage and performance data to help diagnose problems and improve the platform. n8n takes care to keep this data anonymous and to avoid collecting sensitive data. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/privacy).
+n8n collects selected usage and performance data to help diagnose problems and improve the platform. n8n takes care to keep this data anonymous and to avoid collecting sensitive data. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy).
 
 ## What n8n collects
 

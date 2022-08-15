@@ -1,24 +1,36 @@
 # Hosting n8n on DigitalOcean
 
-This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses n8n and [Caddy](http://caddyserver.com){:target="_blank" class=.external-link} (a reverse proxy) to allow access to the Droplet from the internet. It uses [Docker Compose](https://docs.docker.com/compose/){:target="_blank"} to create and define the application components and how they work together.
+This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses:
+
+* [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. 
+* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 
 ## Create a Droplet
 
-Log in to DigitalOcean and select the project to host the Droplet and click **Droplets** from the **Manage** menu. You can use [the Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" class=.external-link} from the **Marketplace** tab or use one of the Linux distributions and [install Docker yourself](https://www.docker.com/get-started/){:target="_blank" class=.external-link}. The rest of this tutorial assumes you have Docker installed on the Droplet.
+1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 
+2. Select the project to host the Droplet, or [create a new project](https://docs.digitalocean.com/products/projects/how-to/create/){:target=_blank .external-link}.
+3. In your project, select **Droplets** from the **Manage** menu. 
+4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} using the [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} available on the **Marketplace** tab.
+
+!!! note "Droplet resources"
+		When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
+
+!!! note "SSH or Password"
+		DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 
 ## Log in to your Droplet
 
-The remainder of the steps in this guide require you to log in to the Droplet using a terminal with SSH. [Find more details on how to do this in the Digital Ocean documentation](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank"}.
+The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
 
 ## Create folders and files
 
 Both n8n and Caddy require creating folders that the host operating system (the DigitalOcean Droplet) copies to Docker containers to make them available to Docker.
 
-Create the following on the Droplet in your home folder:
+Create the following in the Droplet root user's home folder:
 
 - `caddy_config`: Holds the Caddy configuration files.
 - `caddy_data`: A cache folder for Caddy.
-- `local_files`: A folder for files you upload or add via n8n.
+- `local_files`: A folder for files you upload or add using n8n.
 
 Use the following command to create the folders:
 
@@ -28,7 +40,7 @@ mkdir caddy_config caddy_data local_files
 
 ### Create Docker volume
 
-To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank"} that Docker reuses between restarts.
+To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
 
 ```shell
 docker volume create caddy_data
@@ -36,7 +48,7 @@ docker volume create caddy_data
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new [CNAME or A record](https://ns1.com/resources/dns-records-explained){:target="_blank"} for the n8n subdomain.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}.
 
 ## Open ports
 
@@ -51,7 +63,7 @@ sudo ufw allow 443
 
 ## Configure n8n
 
-Create an `.env` file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own:
+Create a `.env` file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own.
 
 Create the file:
 
@@ -62,8 +74,9 @@ nano .env
 Add the contents to the file:
 
 ```env
-# Path where you created folders earlier
-DATA_FOLDER=/root/n8n
+# Path where you created folders earlier. 
+# Change this if you didn't create them in the root directory.
+DATA_FOLDER=/root/
 
 # The top level domain to serve from, this should be the same as the subdomain you created above
 DOMAIN_NAME=example.com
@@ -88,6 +101,8 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=example@example.com
 ```
 
+For more information on n8n environment variables, refer to [Environment variables](/hosting/environment-variables/).
+
 ## Create Docker Compose file
 
 The Docker compose file defines the services the application needs, in this case Caddy and n8n.
@@ -95,7 +110,7 @@ The Docker compose file defines the services the application needs, in this case
 - The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
 - The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
 
-Create a `docker-compose.yml` file, make sure to create it in the same location as the `.env` file:
+Create a `docker-compose.yml` file. Make sure to create it in the same location as the `.env` file:
 
 ```shell
 nano docker-compose.yml
@@ -145,16 +160,16 @@ volumes:
 
 ## Configure Caddy
 
-Caddy needs to know which domains it should serve, and which port to expose to the outside world. Create a `Caddyfile` file in the *caddy_config* folder.
+Caddy needs to know which domains it should serve, and which port to expose to the outside world. Create a `Caddyfile` file in the `caddy_config` folder.
 
 ```shell
 nano caddy_config/Caddyfile
 ```
 
-Add the following configuration, adding your subdomain. The `n8n` tells Caddy to use the service definition defined in the `docker-compose.yml` file:
+Add the following configuration, adding your domain. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
 
 ```text
-<SUB_DOMAIN> {
+n8n.<domain>.<suffix> {
     reverse_proxy n8n:5678 {
       flush_interval -1
     }
@@ -169,7 +184,13 @@ Start n8n and Caddy with the following command:
 docker-compose up -d
 ```
 
-Open the URL formed of the subdomain and domain name defined earlier, enter the user name and password defined earlier, and you should be able to access n8n.
+This may take a few minutes.
+
+## Test your setup
+
+In your browser, open the URL formed of the subdomain and domain name defined earlier. Enter the user name and password defined earlier, and you should be able to access n8n.
+
+## Stop n8n and Caddy
 
 You can stop n8n and Caddy with the following command:
 

@@ -28,7 +28,7 @@ In the upper left corner, click on the round arrow icon. This will open the left
 
 The panel contains the following sections:
 
-- *Admin Panel*: Access the management Dashboard (for n8n.cloud users).
+- *Admin Panel*: Access the management Dashboard (for n8n Cloud users).
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions.

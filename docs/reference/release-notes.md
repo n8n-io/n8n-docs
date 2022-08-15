@@ -1,5 +1,24 @@
 # Release notes
 
+## n8n@0.190.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.189.1...n8n@0.190.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-10
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: fix a crash caused by parallel calls to test webhooks.
+* Core: fix an issue preventing static data being saved for poll triggers.
+* Public API: fix a pagination issue.
+* GitHub Trigger: typo fix.
+
+### Contributors
+
+[Nathan Poirier](https://github.com/nathan818fr){:target=_blank .external-link}
+
+
 ## n8n@0.189.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.189.0...n8n@0.189.1){:target=_blank .external-link} for this version.<br />
@@ -35,7 +54,7 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 ### Contributors
 
 [mertmit](https://github.com/mertmit){:target=_blank .external-link}  
-[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
 
 ## n8n@0.188.0
 
@@ -140,14 +159,14 @@ This release introduces a drag and drop interface for [data mapping](/data/data-
 #### Simplify authentication setup for node creators
 
 This release introduces a simpler way of handling authorization when building a node. All credentials should now contain an `authenticate` property that dictates how the credential is used in a request.
-n8n has also simplified authentication types: instead of specifying an authentication type and using the correct interface, you can now set the type as `"generic"`, and use the `IAuthenticateGeneric` interface. 
+n8n has also simplified authentication types: instead of specifying an authentication type and using the correct interface, you can now set the type as `"generic"`, and use the `IAuthenticateGeneric` interface.
 
 You can use this approach for any authentication method where data is sent in the header, body, or query string. This includes methods like bearer and basic auth. You can't use this approach for more complex authentication types that require multiple calls, or for methods that don't pass authentication data. This includes OAuth.
 
 For an example of the new authentication syntax, refer to n8n's [Asana node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-link}.
 
 ```js
-// in AsanaApi.credentials.ts 
+// in AsanaApi.credentials.ts
 import {
 	IAuthenticateGeneric,
 	ICredentialType,
@@ -204,8 +223,8 @@ export class AsanaApi implements ICredentialType {
 
 ### Contributors
 
-[Florian Bachmann](https://github.com/baflo){:target=_blank .external-link}  
-[Olivier Aygalenq](https://github.com/oaygalenq){:target=_blank .external-link}  
+[Florian Bachmann](https://github.com/baflo){:target=_blank .external-link}
+[Olivier Aygalenq](https://github.com/oaygalenq){:target=_blank .external-link}
 
 
 ## n8n@0.186.1
@@ -251,12 +270,12 @@ This release contains bug fixes and node enhancements.
 
 ### Contributors
 
-[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}  
-[h4ux](https://github.com/h4ux){:target=_blank .external-link}  
-[miguel-mconf](https://github.com/miguel-mconf){:target=_blank .external-link}  
-[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
-[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}
+[h4ux](https://github.com/h4ux){:target=_blank .external-link}
+[miguel-mconf](https://github.com/miguel-mconf){:target=_blank .external-link}
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
 
 ## n8n@0.185.0
 
@@ -291,10 +310,10 @@ Core: add the `action` parameter to INodePropertyOptions. This parameter is now 
 
 ### Contributors
 
-[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
-[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
-[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link} 
+[cgobrech](https://github.com/cgobrech){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
+[Zapfmeister](https://github.com/Zapfmeister){:target=_blank .external-link}
 
 
 ## n8n@0.184.0
@@ -362,7 +381,7 @@ Enhancements to the **Trigger** inputs panel: When using a trigger node, you wil
 
 ### Contributors
 
-[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}  
+[Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}
 [Rahimli Rahim](https://github.com/rahimlis){:target=_blank .external-link}
 
 ## n8n@0.182.1
@@ -400,10 +419,10 @@ Added support for the client_credentials grant type for OAuth2.
 
 ### Contributors
 
-[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}  
-[Erick Friis](https://github.com/efriis){:target=_blank .external-link}  
-[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}  
-[Shaun](https://github.com/simshaun){:target=_blank .external-link}  
+[Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}
+[Erick Friis](https://github.com/efriis){:target=_blank .external-link}
+[JoLo](https://github.com/jolo-dev){:target=_blank .external-link}
+[Shaun](https://github.com/simshaun){:target=_blank .external-link}
 [Valentin Mocanu](https://github.com/rontav){:target=_blank .external-link}
 
 ## n8n@0.181.2
@@ -497,7 +516,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 
 ### Contributors
 
-[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}  
+[Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
 
 ## n8n@0.179.0

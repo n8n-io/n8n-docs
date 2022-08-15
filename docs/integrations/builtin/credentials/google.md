@@ -6,9 +6,10 @@ Most nodes are [compatible](#compatible-nodes) with OAuth2 authentication. Suppo
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/) account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project)
-* [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started) (**For Google Perspective Only**)
+* [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
+* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
+* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}
+* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}
 
 ## Compatible nodes
 
@@ -17,7 +18,7 @@ Once configured, you can use your credentials to authenticate the following node
 | Node | OAuth | Service Account |
 | :--- | :---: | :-------------: |
 | [G Suite Admin](/integrations/builtin/app-nodes/n8n-nodes-base.gSuiteAdmin/) | :white_check_mark: | :x: |
-| [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleAds) | :white_check_mark: | :x: |
+| [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleAds/) | :white_check_mark: | :x: |
 | [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
 | [Google Analytics](/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/) | :white_check_mark: | :x: |
 | [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/) | :white_check_mark: | :x: |
@@ -38,7 +39,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googleTranslate/) | :white_check_mark: | :white_check_mark: |
 | [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youTube/) | :white_check_mark: | :x: |
 
-!!! note "Note for n8n.cloud users"
+!!! note "Note for n8n Cloud users"
     For the following nodes, you only need to enter the **Credentials Name** and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:
 
     * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/)
@@ -49,13 +50,13 @@ Once configured, you can use your credentials to authenticate the following node
 
 ## Using OAuth
 
-From your [Google Cloud Console](https://console.cloud.google.com) dashboard:
+From your [Google Cloud Console](https://console.cloud.google.com){:targe=_blank .external-link} dashboard:
 
 1. Click on the hamburger menu and select **APIs & Services > Credentials**.
 2. Click on **+ CREATE CREDENTIALS** and select **OAuth client ID**.
 
     !!! note "Note for new users"
-        If you're creating OAuth credentials for the first time, you will have to [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162).
+        If you're creating OAuth credentials for the first time, you will have to [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:targe=_blank .external-link}.
     
 
 3. From the **Application type** dropdown select **Web application**. A name is automatically generated, change it if desired.
@@ -81,7 +82,7 @@ The following video demonstrates the steps mentioned above.
 
 ## Using Service Account
 
-From your [Google Cloud Console](https://console.cloud.google.com) dashboard:
+From your [Google Cloud Console](https://console.cloud.google.com){:targe=_blank .external-link} dashboard:
 
 1. Click on the hamburger menu and select **APIs & Services > Credentials**.
 2. Click on **+ CREATE CREDENTIALS** and select **Service account**.
@@ -98,7 +99,7 @@ From you n8n instance:
 10. Enter a **Credentials Name**.
 11. In the **Service Account Email** field, enter the email associated with your new Service Account (visible in the **Details** tab).
 12. Enter the **Private Key** from the downloaded JSON file. If you are running an n8n version older than 0.156.0: replace all instances of `\n` in the JSON file with new lines.
-13. Optional: Click the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) and enter the desired email.
+13. Optional: Click the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:targe=_blank .external-link} and enter the desired email.
 14. **Save** your credentials.
 
 Now you must [enable](#enable-apis) each Google service API that you want to use.
@@ -113,12 +114,12 @@ The following video demonstrates the steps mentioned above.
 
 To enable an API, follow the steps below:
 
-1. Access your [Google Cloud Console](https://console.cloud.google.com).
+1. Access your [Google Cloud Console](https://console.cloud.google.com){:targe=_blank .external-link}.
 2. From the hamburger menu select **APIs & Services > Library**.
 3. Search for and select the API(s) you want to enable.
 5. Click on the **ENABLE** button.
 
-## FAQs
+## Troubleshooting
 
 ### Google hasn't verified this app
 

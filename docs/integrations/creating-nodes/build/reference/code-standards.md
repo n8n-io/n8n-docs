@@ -1,24 +1,24 @@
-# Standards
+# Code standards
 
-Following these guidelines helps make sure your node works. It also improves the user experience by ensuring consistency between nodes.
+Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/).
 
-## General guidelines
+## Use the linter
 
-These guidelines apply to any node you build.
+The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](/integrations/creating-nodes/test/node-linter/) documentation for more information.
 
-### Reuse internal parameter names
+## Use the starter
 
-All resource and operation fields in an n8n node have two settings: a display name, set using the `name` parameter, and an internal name, set using the `value` parameter. Reusing the internal name for fields allows n8n to preserve user-entered data if a user switches operations. 
+The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link}.
 
-For example: you're building a node with a resource named 'Order'. This resource has several operations, including Get, Edit, and Delete. Each of these operations uses an order ID to perform the operation on the specified order. You need to display an ID field for the user. This field has a display label, and an internal name. By using the same internal name (set in `value`) for the operation ID field on each resource, a user can enter the ID with the Get operation selected, and not lose it if they switch to Edit.
+## Write in TypeScript
 
-When reusing the internal name, you must ensure that only one field is visible to the user at a time. You can control this using `displayOptions`.
+All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
 
-### Create an 'Additional Fields' parameter
+## Detailed guidelines for writing a node
 
-Some nodes have a lot of options. Add important ones to the top level. For all others, create an 'Additional Fields' parameter where users can set them if needed. This ensures that the interface stays clean and reduces user confusion. A good example of that would be the XML node.
+These guidelines apply to any node you build. 
 
-### Follow existing parameter naming guidelines
+### Resources and operations
 
 If your node can perform several operations, call the parameter that sets the operation `Operation`. If your node can do these operations on more than one resource, create a `Resource` parameter. The following code sample shows a basic resource and operations setup:
 
@@ -69,17 +69,17 @@ export const ExampleNode implements INodeType {
 }
 ```
 
-### Node icons [IN UI DESIGN]
+### Reuse internal parameter names
 
---8<-- "_snippets/integrations/creating-nodes/node-icons.md"
+All resource and operation fields in an n8n node have two settings: a display name, set using the `name` parameter, and an internal name, set using the `value` parameter. Reusing the internal name for fields allows n8n to preserve user-entered data if a user switches operations. 
 
-### Write nodes in TypeScript
+For example: you're building a node with a resource named 'Order'. This resource has several operations, including Get, Edit, and Delete. Each of these operations uses an order ID to perform the operation on the specified order. You need to display an ID field for the user. This field has a display label, and an internal name. By using the same internal name (set in `value`) for the operation ID field on each resource, a user can enter the ID with the Get operation selected, and not lose it if they switch to Edit.
 
-All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
+When reusing the internal name, you must ensure that only one field is visible to the user at a time. You can control this using `displayOptions`.
 
-## Guidelines for the programmatic style
+## Detailed guidelines for writing a programmatic-style node
 
-These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/choose-node-method/){:target=_blank}.
+These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/choose-node-method/).
 
 ### Don't change incoming data
 
@@ -88,8 +88,6 @@ Never change the incoming data a node receives (data accessible with `this.getIn
 It's not necessary to always clone all the data. For example, if a node changes the binary data but not the JSON data, you can create a new item that reuses the reference to the JSON item.
 
 You can see an example in the code of the [ReadBinaryFile-Node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ReadBinaryFile.node.ts#L69-L83){:target=_blank .external-link}.
-
-
 
 
 ### Use the built in request library
@@ -102,4 +100,4 @@ const response = await this.helpers.httpRequest(options);
 
 This uses the npm package [`request-promise-native`](https://github.com/request/request-promise-native){:target=_blank .external-link}, which is the basic npm `request` module but with promises. For a full set of options refer to [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback){:target=_blank .external-link}.
 
-Refer to [HTTP helpers](/integrations/creating-nodes/code/http-helpers/){:target=_blank} for documentation and migration instructions for the deprecated `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/code/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.

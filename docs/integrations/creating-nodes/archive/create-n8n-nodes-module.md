@@ -8,7 +8,7 @@ Consider creating n8n-nodes-module if any of the following conditions satisfy yo
 - The nodes are only for yourself, your organization, or a small group of people.
 - The nodes require external dependencies that are not already available in n8n.
 
-**NOTE:** n8n-nodes-module can only be installed in self-hosted n8n instances. This functionality is currently not available on n8n.cloud or the desktop app. There are plans to introduce this functionality in the future.
+**NOTE:** n8n-nodes-module can only be installed in self-hosted n8n instances. This functionality is currently not available on n8n Cloud or the desktop app. There are plans to introduce this functionality in the future.
 
 ## Prerequisites
 

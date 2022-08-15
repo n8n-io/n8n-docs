@@ -638,3 +638,9 @@ This is just the tip of the iceberg. We built a regular node that consumes a RES
 ## Next steps
 
 Once you have created the node and want to contribute to n8n, please check the [Node Review Checklist](/integrations/creating-nodes/code/review-checklist/). Make sure you complete the checklist before creating a pull request.
+
+## Next steps
+
+* [Deploy your node](/integrations/creating-nodes/deploy/).
+* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. 
+* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).

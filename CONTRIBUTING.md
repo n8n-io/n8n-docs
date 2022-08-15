@@ -7,15 +7,16 @@ If you want to contribute to this repository - thank you! Before you start, have
 * **Nodes and trigger nodes:** Create a directory with the name of the node at `docs/integrations/builtin/app-nodes/` or `docs/integrations/builtin/trigger-nodes/` containing:
 
   - A text file named `n8n-nodes-base.<node-name>.md` describing the functionality of the relevant node.
+
 * **Credentials:** Create a document with the name of the node at `docs/integrations/builtin/credentials/` containing:
   - A text file with the node name describing how to obtain credentials for the relevant node.
 
 A standard node doc includes the following parts:
 
 * Node description
-  - Describe briefly the purpose and function of the node.
+  - Describe the purpose and function of the node.
 * Operations
-  - Enter the resources and operations exactly as they are named in the nodes.
+  - Enter the resources and operations exactly as they're named in the nodes.
 
 In the credentials doc:
 
@@ -36,6 +37,10 @@ Before submitting a PR, make sure your contribution ticks all these boxes:
 - [ ] All necessary files and images are included.
 - [ ] All links are working and direct to the right location.
 - [ ] All documentation files end with an empty newline.
-- [ ] The commit message describes clearly and succintly the changes you made.
-- [ ] The PR explains clearly and succintly the changes you made and why they are necessary.
+- [ ] The commit message describes clearly and succinctly the changes you made.
+- [ ] The PR explains clearly and succinctly the changes you made and why they're necessary.
 - [ ] You have read and accepted the [code of conduct](https://github.com/n8n-io/n8n-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).
+
+## n8n's license
+
+Be aware that n8n is fair code licensed. For more information, refer to our [License](https://docs.n8n.io/reference/license/) documentation.

@@ -1,9 +1,9 @@
 # Integrations menu refactor
 
-/integrations/nodes/  /integrations/builtin/app-nodes/
-/integrations/trigger-nodes/   /integrations/builtin/trigger-nodes/
-/integrations/core-nodes/   /integrations/builtin/core-nodes/
-/integrations/credentials/   /integrations/builtin/credentials/
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat
+/integrations/credentials/*   /integrations/builtin/credentials/:splat
 
 # Creating nodes overhaul
 
@@ -257,6 +257,10 @@
 /nodes/n8n-nodes-base.gitlabtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gmail/		/integrations/builtin/app-nodes/n8n-nodes-base.gmail/
 /nodes/n8n-nodes-base.googleAds/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
+<<<<<<< HEAD
+=======
+/nodes/n8n-nodes-base.googleads/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
+>>>>>>> main
 /nodes/n8n-nodes-base.googleAnalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
 /nodes/n8n-nodes-base.googleanalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
 /nodes/n8n-nodes-base.googleBigQuery/		/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/
@@ -607,7 +611,7 @@
 /nodes/n8n-nodes-base.wisetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wiseTrigger/
 /nodes/n8n-nodes-base.wooCommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/
 /nodes/n8n-nodes-base.woocommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/
-/nodes/n8n-nodes-base.wooCommerceTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
+/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
 /nodes/n8n-nodes-base.woocommercetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
 /nodes/n8n-nodes-base.wordpress/		/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/
 /nodes/n8n-nodes-base.workableTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.workableTrigger/

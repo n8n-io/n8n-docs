@@ -10,7 +10,7 @@ The Editor UI sidebar menu contains the following sections and operations:
 
 ## Admin Panel
 
-Available only for n8n.cloud, navigate to the Dashboard of your n8n.cloud instance. Here you can view your executions and workflows counts, manage and upgrade your instance, and access support.
+Available only for n8n Cloud, navigate to the Dashboard of your n8n Cloud instance. Here you can view your executions and workflows counts, manage and upgrade your instance, and access support.
 
 ![Admin Panel](/_images/editor-ui/admin_panel.png)
 

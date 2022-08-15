@@ -21,7 +21,7 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 ## Log in to your Droplet
 
-The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for guidance.
+The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
 
 ## Create folders and files
 

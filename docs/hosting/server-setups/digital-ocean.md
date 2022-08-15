@@ -27,7 +27,7 @@ The rest of this guide requires you to log in to the Droplet using a terminal wi
 
 Both n8n and Caddy require creating folders that the host operating system (the DigitalOcean Droplet) copies to Docker containers to make them available to Docker.
 
-Create the following in the Droplet in your home folder:
+Create the following in the Droplet root user's home folder:
 
 - `caddy_config`: Holds the Caddy configuration files.
 - `caddy_data`: A cache folder for Caddy.

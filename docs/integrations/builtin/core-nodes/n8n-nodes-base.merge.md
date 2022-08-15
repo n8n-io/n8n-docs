@@ -17,6 +17,8 @@ You can specify how the Merge node should combine data from different branches. 
 - **Remove Key Matches:** Keeps the data of input 1 if it doesn't find a match with the data of input 2.
 - **Wait:** Waits till the data of both the inputs is available. It will then output a single empty item.
 
+--8<-- "_snippets/integrations/builtin/core-nodes/if-merge-branch-execution.md"
+
 ### Additional Fields
 
 - **Property Input 1:** The name of the property which decides which items of input 1 to merge. This field is displayed when 'Keep Key Matches', 'Merge By Key', or 'Remove Key Matches' is selected in the **Mode** dropdown list.

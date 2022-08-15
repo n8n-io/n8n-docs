@@ -36,6 +36,23 @@ From the GKE service page, click the **Clusters** menu item and then the **CREAT
 The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string that needs you to have [the gcloud command line tool installed](https://cloud.google.com/sdk/gcloud/). Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
 
 
+
+
+## Setup DNS
+
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
+
+If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
+
+
+## Open ports
+
+To set up secure connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging).
+
+
+
+
+
 ### Create folders
 
 Both n8n and Caddy require creating folders and files that the host operating system copies to Docker containers. Create the following on the instance in a location accessible by Docker:
@@ -45,17 +62,8 @@ Both n8n and Caddy require creating folders and files that the host operating sy
 - _caddy_data_
 - _local_files_
 
-### Setup DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
 
-If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
-
-<!-- TODO: I assume you can use n8n on an Ephemeral address, but I guess it's not recommended? -->
-
-### Open ports
-
-To set up secure connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging).
 
 ## Configure n8n
 

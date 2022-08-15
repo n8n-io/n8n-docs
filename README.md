@@ -18,14 +18,17 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
+
 # n8n organization members: 
 # Outside your docs project, do:
 git clone https://github.com/n8n-io/mkdocs-material-insiders.git mkdocs-material
 # Navigate back into the docs project and run:
 pip install -e <path-to-mkdocs-material>
+
 # External contributors: rely on the preview builds on pull requests, or 
 # use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
 pip install mkdocs-material
+
 # Serve a local preview
 mkdocs serve
 # Or build
@@ -35,6 +38,8 @@ mkdocs build
 ## Contributing
 
 Please read our [CONTRIBUTING](CONTRIBUTING.md) guide.
+
+You can find [style guidance](https://github.com/n8n-io/n8n-docs/wiki/Styles) in our wiki.
 
 
 ## Support
@@ -46,5 +51,5 @@ If you have problems or questions, head to our forum, and we will try to help yo
 
 n8n-docs is [fair-code](http://faircode.io) licensed under the [**Sustainable Use License**](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
 
-Additional information about license can be found in the [FAQ](https://docs.n8n.io/#/faq?id=license).
+Additional information about license can be found in the [License documentation](https://docs.n8n.io/reference/license/).
 

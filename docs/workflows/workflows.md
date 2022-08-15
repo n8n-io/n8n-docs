@@ -46,7 +46,7 @@ The following settings are available:
 * **Save Manual Executions**: If executions started from the Editor UI should be saved.
 * **Save Execution Progress**: If the execution data of each node should be saved. If set to "Yes", the workflow resumes from where it stopped in case of an error. However, this might increase latency.
 * **Timeout Workflow**: Toggle to enable setting a duration after which the current workflow execution should be cancelled.
-* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n.cloud users a maximum available timeout is enforced for each plan (for example, three minutes for Start level).
+* **Timeout After**: Only available when **Timeout Workflow** is enabled. Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n Cloud users a maximum available timeout is enforced for each plan (for example, three minutes for Start level).
 
 ## Failed workflows
 
@@ -58,7 +58,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
     * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
     * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
-You can also use the [Error Trigger node](/integrations/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
+You can also use the [Error Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.errorTrigger/), which triggers a workflow when another workflow has an error. Once a workflow fails, this node gets details about the failed workflow and the errors.
 
 ## Workflow templates
 

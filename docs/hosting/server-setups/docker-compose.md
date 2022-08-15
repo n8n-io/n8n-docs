@@ -118,7 +118,7 @@ services:
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 
-If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](/integrations/builtin/core-nodes/n8n-nodes-base.writeBinaryFile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
       - /local-files:/files

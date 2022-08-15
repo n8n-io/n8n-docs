@@ -1,6 +1,6 @@
-# n8n.cloud
+# n8n Cloud
 
-To updated your n8n.cloud instance navigate to your Dashboard:
+To updated your n8n Cloud instance navigate to your Dashboard:
 
 ![Admin Dashboard](/_images/hosting/updating/cloud/dashboard.png)
 

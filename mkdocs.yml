@@ -9,6 +9,8 @@ theme:
   palette:
       scheme: light
   features:
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky
@@ -20,14 +22,6 @@ extra_css:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
-extra:
-  analytics:
-    provider: google
-    property: UA-146470481-3
-  consent:
-    title: Cookie and analytics consent
-    description: 
-      We use cookies (and other similar technologies) to collect data in order to improve our site. You have the option to opt-in or opt-out of certain cookie tracking technologies. For more information on privacy and data management at n8n, refer to our <a href="https://n8n.io/legal/privacy" target="_blank">privacy policy</a>.
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list
@@ -87,24 +81,27 @@ nav:
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
       - Error handling: flow-logic/error-handling.md
-    - Mapping and transforming data:
+    - Data:
       - Overview: data/index.md
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Using code: data/code.md
+      - Data mapping: data/data-mapping.md
+      - Data pinning: data/data-pinning.md
+      - Data editing: data/data-editing.md
     - Code examples:
       - Overview: code-examples/index.md
       - Expressions:
         - Overview: code-examples/expressions/index.md
         - Methods: code-examples/expressions/methods.md
         - Variables: code-examples/expressions/variables.md
-        - Data and time with Luxon: code-examples/expressions/luxon.md
+        - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
       - JavaScript for workflows:
         - Overview: code-examples/javascript-functions/index.md
         - Methods: code-examples/javascript-functions/methods.md
         - Variables: code-examples/javascript-functions/variables.md
-        - Data and time with Luxon: code-examples/javascript-functions/luxon.md
+        - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
@@ -120,25 +117,52 @@ nav:
       - Data collection: reference/data-collection.md
   - Integrations:
     - Overview: integrations/index.md
-    - Core nodes: integrations/core-nodes/
-    - Nodes: integrations/nodes/
-    - Trigger nodes: integrations/trigger-nodes/
-    - Credentials: integrations/credentials/
+    - Built-in nodes:
+      - Overview: integrations/builtin/index.md
+      - Core nodes: integrations/builtin/core-nodes/
+      - App nodes: integrations/builtin/app-nodes/
+      - Trigger nodes: integrations/builtin/trigger-nodes/
+      - Credentials: integrations/builtin/credentials/
     - Custom API actions for existing nodes: integrations/custom-operations.md
+    - Community nodes:
+      - Overview: integrations/community-nodes/index.md
+      - Installation and management: integrations/community-nodes/installation.md
+      - Risks: integrations/community-nodes/risks.md
+      - Blocklist: integrations/community-nodes/blocklist.md
+      - Using community nodes: integrations/community-nodes/usage.md
+      - Troubleshooting: integrations/community-nodes/troubleshooting.md
+      - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
       - Overview: integrations/creating-nodes/index.md
-      - Code-based node building:
-        - Overview: integrations/creating-nodes/code/index.md
-        - Standards: integrations/creating-nodes/code/standards.md
-        - Create your first node: integrations/creating-nodes/code/create-first-node.md
-        - Create an n8n-nodes-module: integrations/creating-nodes/code/create-n8n-nodes-module.md
-        - Create a trigger node: integrations/creating-nodes/code/create-trigger-node.md
-        - Use the node developer CLI: integrations/creating-nodes/code/node-developer-cli.md
-        - Node UI elements: integrations/creating-nodes/code/ui-elements.md
-        - HTTP request helpers: integrations/creating-nodes/code/http-helpers.md
-        - Node linter: integrations/creating-nodes/code/node-linter.md
-        - Node review checklist: integrations/creating-nodes/code/review-checklist.md
-        - Troubleshooting: integrations/creating-nodes/code/troubleshooting-node-development.md
+      - Plan your node:
+        - Overview: integrations/creating-nodes/plan/index.md
+        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
+        - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
+      - Build your node:
+        - Overview: integrations/creating-nodes/build/index.md       
+        - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - Reference:
+          - Overview: integrations/creating-nodes/build/reference/index.md
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 
+          - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
+          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+          - Base files: integrations/creating-nodes/build/reference/node-base-files.md
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
+          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
+      - Test your node:
+        - Overview: integrations/creating-nodes/test/index.md
+        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
+        - Node linter: integrations/creating-nodes/test/node-linter.md
+        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
+      - Deploy your node:
+        - Overview: integrations/creating-nodes/deploy/index.md
+        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - Overview: hosting/index.md
     - Installation and hosting options: hosting/options.md

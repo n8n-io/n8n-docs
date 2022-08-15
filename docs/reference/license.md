@@ -41,9 +41,9 @@ All of the following examples are allowed under our license:
 * Supporting n8n, for example by setting it up or maintaining it on an internal company server.
 
 
-### What if I want to use n8n for something that is not permitted by the license?
+### What if I want to use n8n for something that's not permitted by the license?
 
-You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n.embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
+You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n Embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
 
 If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#can-you-give-some-examples-of-what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
 
@@ -95,7 +95,7 @@ We coined the term ['fair-code'](https://faircode.io/) as a way of describing ou
 
 ### What is fair-code, and how does the Sustainable Use License relate to it?
 
-Fair-code is not a software license. It describes a software model where software:
+Fair-code isn't a software license. It describes a software model where software:
 
 * is generally free to use and can be distributed by anybody
 * has its source code openly available
@@ -105,3 +105,7 @@ Fair-code is not a software license. It describes a software model where softwar
 The Sustainable Use License is a fair-code license. You can read more about it, and see other examples of fair-code licenses [here](https://faircode.io/).
 
 We're always excited to talk about software licenses, fair-code and other principles around sharing code with interested parties. To get in touch to chat, email license@n8n.io.
+
+### Can I use n8n's Sustainable Use License for my own project?
+
+Yes! We're excited to see more software use the Sustainable Use License. We'd love to hear about your project if you're using our license: license@n8n.io.

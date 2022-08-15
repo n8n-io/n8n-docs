@@ -16,7 +16,7 @@ Core nodes are functions or services that can be used to control how workflows a
 
 Use the Start node when you want to manually trigger the workflow with the `Execute Workflow` button at the bottom of the Editor UI. This way of starting the workflow is useful when creating and testing new workflows.
 
-If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/integrations/core-nodes/n8n-nodes-base.httpRequest/) or the [Webhook node](/integrations/core-nodes/n8n-nodes-base.webhook/). You can also read about [creating nodes](/integrations/creating-nodes/) and make a node for your desired application.
+If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) or the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/). You can also read about [creating nodes](/integrations/creating-nodes/) and make a node for your desired application.
 
 
 ## Regular nodes
@@ -27,7 +27,7 @@ Regular nodes perform an action, like fetching data or creating an entry in a ca
 
 ### Example
 
-A [Google Sheets node](/integrations/nodes/n8n-nodes-base.googleSheets/) can be used to retrieve or write data to a Google Sheet.
+A [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) can be used to retrieve or write data to a Google Sheet.
 
 ![Sheets_node](/_images/workflows/nodes/Google_sheets.png)
 
@@ -41,7 +41,7 @@ Trigger nodes can be app or core nodes.
 
 * **Core Trigger nodes** start the workflow at a specific time, at a time interval, or on a webhook call. For example, to get all users from a Postgres database every 10 minutes, use the Interval Trigger node with the Postgres node.
 
-* **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](/integrations/trigger-nodes/n8n-nodes-base.telegramtrigger/) can be used to trigger a workflow when a message is sent in a Telegram chat.
+* **App Trigger nodes** start the workflow when an event happens in an app. App Trigger nodes are named like the application they represent followed by "Trigger" and are listed under Trigger Nodes in the Editor. For example, a [Telegram trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) can be used to trigger a workflow when a message is sent in a Telegram chat.
 
 ![Telegram trigger](/_images/workflows/nodes/telegram_trigger.png)
 
@@ -63,7 +63,7 @@ To access the node parameters and settings, double-click on the node.
 
 ### Parameters
 
-The node parameters allow you to define the operations the node should perform. Find the available parameters of each node in the [node reference](/integrations/nodes/).
+The node parameters allow you to define the operations the node should perform. Find the available parameters of each node in the [node reference](/integrations/builtin/app-nodes/).
 
 ### Settings
 

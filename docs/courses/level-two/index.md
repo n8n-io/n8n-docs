@@ -16,7 +16,7 @@ The focus in this course is on working with data. You will learn how to:
 - Use the data structure of n8n correctly.
 - Process different data types (for example, XML, HTML, date, time, and binary data).
 - Merge data from different sources (for example, a database, spreadsheet, or CRM).
-- Use functions and JavaScript code in the [Function node](/integrations/core-nodes/n8n-nodes-base.function){:target="_blank" .external}.
+- Use functions and JavaScript code in the [Function node](/integrations/builtin/core-nodes/n8n-nodes-base.function){:target="_blank" .external}.
 - Deal with error workflows and workflow errors.
 
 You will learn all this by completing short practical exercises after the theoretical explanations, and building a business workflow following instructions.
@@ -25,7 +25,7 @@ You will learn all this by completing short practical exercises after the theore
 
 To follow along this course (at a comfortable pace) you will need the following:
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n.cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, [n8n Cloud](/hosting/installation/cloud/){:target="_blank" .external}, or the [desktop app](/hosting/installation/desktop-app/){:target="_blank" .external}.
 - **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
 - **Basic n8n skills**. We strongly recommend taking the [Level 1 course](/courses/level-one/){:target="_blank" .external} prior to this one.
 - **Basic JavaScript understanding**.

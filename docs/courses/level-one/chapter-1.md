@@ -28,7 +28,7 @@ In the upper left corner, click on the round arrow icon. This will open the left
 
 The panel contains the following sections:
 
-- *Admin Panel*: Access the management Dashboard (for n8n.cloud users).
+- *Admin Panel*: Access the management Dashboard (for n8n Cloud users).
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions.
@@ -86,7 +86,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/integrations/builtin/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 

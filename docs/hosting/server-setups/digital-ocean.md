@@ -4,7 +4,6 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 * [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. 
 * [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
-* The [n8n Docker image](https://hub.docker.com/r/n8nio/n8n){:target=_blank .external-link}.
 
 ## Create a Droplet
 
@@ -17,7 +16,7 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 		When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
 
 !!! note "SSH or Password"
-		DigitalOcean lets you to choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+		DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 
 ## Log in to your Droplet
 
@@ -111,7 +110,7 @@ The Docker compose file defines the services the application needs, in this case
 - The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
 - The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
 
-Create a `docker-compose.yml` file, make sure to create it in the same location as the `.env` file:
+Create a `docker-compose.yml` file. Make sure to create it in the same location as the `.env` file:
 
 ```shell
 nano docker-compose.yml

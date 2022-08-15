@@ -40,3 +40,7 @@ Before submitting a PR, make sure your contribution ticks all these boxes:
 - [ ] The commit message describes clearly and succinctly the changes you made.
 - [ ] The PR explains clearly and succinctly the changes you made and why they're necessary.
 - [ ] You have read and accepted the [code of conduct](https://github.com/n8n-io/n8n-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).
+
+## n8n's license
+
+Be aware that n8n is fair code licensed. For more information, refer to our [License](https://docs.n8n.io/reference/license/) documentation.

@@ -86,6 +86,15 @@
     * Get a user
     * Get all users
 
+## Working with Salesforce custom fields
+
+To add custom fields to your request:
+
+1. Select **Additional Fields** > **Add Field**.
+2. In the dropdown, select **Custom Fields**.
+
+You can then find and add your custom fields.
+
 ## Example Usage
 
 This workflow allows you to create, update, and add a note to a lead in Salesforce. You can also find the [workflow](https://n8n.io/workflows/664) on n8n.io. This example usage workflow would use the following nodes.

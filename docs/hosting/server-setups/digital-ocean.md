@@ -22,21 +22,29 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
 
-## Create folders and files
+## Clone configuration repository
 
-Both n8n and Caddy require creating folders that the host operating system (the DigitalOcean Droplet) copies to Docker containers to make them available to Docker.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean) into the root user folder of the Droplet. The following steps will tell you which file to change and what changes to make.
 
-Create the following in the Droplet root user's home folder:
+Clone the repository with the following command:
+
+```shell
+git clone https://github.com/n8n-io/n8n-digital-ocean
+```
+
+And change directory to the root of the repository you cloned:
+
+```shell
+cd n8n-digital-ocean
+```
+
+## Default folders and files
+
+The host operating system (the DigitalOcean Droplet) copies the three folders you created to Docker containers to make them available to Docker. The three folders are:
 
 - `caddy_config`: Holds the Caddy configuration files.
 - `caddy_data`: A cache folder for Caddy.
 - `local_files`: A folder for files you upload or add using n8n.
-
-Use the following command to create the folders:
-
-```shell
-mkdir caddy_config caddy_data local_files
-```
 
 ### Create Docker volume
 
@@ -63,110 +71,38 @@ sudo ufw allow 443
 
 ## Configure n8n
 
-Create a `.env` file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own.
+n8n needs some environment variables set to pass to the application running in the Docker container. The example `.env` file contains placeholders you need to replace with values of your own.
 
-Create the file:
+Open the file with the following command:
 
 ```shell
 nano .env
 ```
 
-Add the contents to the file:
+The file contains inline comments to help you know what to change.
 
-```env
-# Path where you created folders earlier. 
-# Change this if you didn't create them in the root directory.
-DATA_FOLDER=/root/
+## The Docker Compose file
 
-# The top level domain to serve from, this should be the same as the subdomain you created above
-DOMAIN_NAME=example.com
-
-# The subdomain to serve from
-SUBDOMAIN=n8n
-
-# DOMAIN_NAME and SUBDOMAIN combined decide where n8n will be reachable from
-# above example would result in: https://n8n.example.com
-
-# The user name to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_USER=user
-
-# The password to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_PASSWORD=password
-
-# Optional timezone to set which gets used by Cron-Node by default
-# If not set New York time will be used
-GENERIC_TIMEZONE=Europe/Berlin
-
-# The email address to use for the SSL certificate creation
-SSL_EMAIL=example@example.com
-```
-
-For more information on n8n environment variables, refer to [Environment variables](/hosting/environment-variables/).
-
-## Create Docker Compose file
-
-The Docker compose file defines the services the application needs, in this case Caddy and n8n.
+The Docker Compose file (`docker-compose.yml`) defines the services the application needs, in this case Caddy and n8n.
 
 - The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
 - The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
 
-Create a `docker-compose.yml` file. Make sure to create it in the same location as the `.env` file:
+The Docker Compose file uses the environment variables set in the `.env` file, so you shouldn't need to change it's content, but to take a look, run the following command:
 
 ```shell
 nano docker-compose.yml
 ```
 
-Add the following to the file:
-
-```yaml
-version: "3.7"
-
-services:
-  caddy:
-    image: caddy:latest
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ${DATA_FOLDER}/caddy_data:/data
-      - ${DATA_FOLDER}/caddy_config:/config
-      - ${DATA_FOLDER}/caddy_config/Caddyfile:/etc/caddy/Caddyfile
-
-  n8n:
-    image: n8nio/n8n
-    restart: always
-    ports:
-      - 5678:5678
-    environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER
-      - N8N_BASIC_AUTH_PASSWORD
-      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
-      - N8N_PORT=5678
-      - N8N_PROTOCOL=https
-      - NODE_ENV=production
-      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
-      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
-    volumes:
-      - ${DATA_FOLDER}/.n8n:/home/node/.n8n
-      - ${DATA_FOLDER}/local_files:/files
-
-volumes:
-  caddy_data:
-    external: true
-  caddy_config:
-```
-
 ## Configure Caddy
 
-Caddy needs to know which domains it should serve, and which port to expose to the outside world. Create a `Caddyfile` file in the `caddy_config` folder.
+Caddy needs to know which domains it should serve, and which port to expose to the outside world. Edit the `Caddyfile` file in the `caddy_config` folder.
 
 ```shell
 nano caddy_config/Caddyfile
 ```
 
-Add the following configuration, adding your domain. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
+Change the placeholder subdomain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
 
 ```text
 n8n.<domain>.<suffix> {

@@ -16,7 +16,7 @@ tags:
 
 ![](/_images/doc2/IDM_Select Dokumenttyp_2.png)
 
-Selection of the desired type (here Order Confirmation) & navigation to Related Documents
+**Selection of the desired type (here Order Confirmation) & navigation to related documents**
 
 ![](/_images/doc2/IDM_Dokumenttyp_3.png)
 

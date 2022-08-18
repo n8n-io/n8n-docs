@@ -29,21 +29,22 @@ tags:
 ![](/_images/doc2/IDM_Verbundene Dokumente_5.png)
 ![](/_images/doc2/IDM_Dokumenteinstellungen_6.png)
 
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } **IMPORTANT**
 It is important to make sure that the linked fields (e.g. id1) match - i.e. if the number in the "Purchase Order" field on the invoice matches the "id" field on the delivery bill, this must be entered accordingly.
 
 ![](/_images/doc2/IDM_Geschaeftskontextmodell_7.png)
-Add the three entities by clicking "+".
+**Add the three entities by clicking "+".**
 ![](/_images/doc2/IDM_Geschaeftskontextmodell Entitaeten_8.png)
 
-Invoice:
+**Invoice:**
 
 ![](/_images/doc2/IDM_PurchaseOrder_9.png)
 
-Delivery Note:
+**Delivery Note:**
 
 ![](/_images/doc2/IDM_Lieferschein_10.png)
 
-Order confirmation:
+**Order confirmation:**
 
 ![](/_images/doc2/IDM_Auftragsbestaetigung_11.png)
 

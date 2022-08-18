@@ -72,47 +72,47 @@ Your npm package details are in the `package.json` at the root of the project. I
 ```json
 {
 	// All node names must start with "n8n-nodes-"
-  "name": "n8n-nodes-nasapics",
-  "version": "0.1.0",
-  "description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
-  "keywords": [
+	"name": "n8n-nodes-nasapics",
+	"version": "0.1.0",
+	"description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
+	"keywords": [
 		// This keyword is required for community nodes
-    "n8n-community-node-package"
-  ],
-  "license": "MIT",
-  "homepage": "https://n8n.io",
-  "author": {
-    "name": "Test",
-    "email": "test@example.com"
-  },
-  "repository": {
-    "type": "git",
+		"n8n-community-node-package"
+	],
+	"license": "MIT",
+	"homepage": "https://n8n.io",
+	"author": {
+		"name": "Test",
+		"email": "test@example.com"
+	},
+	"repository": {
+		"type": "git",
 		// Change the git remote to your own repository
 		// Add the new URL here
-    "url": "git+<your-repo-url>"
-  },
-  "main": "index.js",
-  "scripts": {
+		"url": "git+<your-repo-url>"
+	},
+	"main": "index.js",
+	"scripts": {
 		// don't change
-  },
-  "files": [
-    "dist"
-  ],
+	},
+	"files": [
+		"dist"
+	],
 	// Link the credentials and node
-  "n8n": {
-    "credentials": [
-      "dist/credentials/NasaPicsApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/NasaPics/NasaPics.node.js"
-    ]
-  },
-  "devDependencies": {
+	"n8n": {
+		"credentials": [
+			"dist/credentials/NasaPicsApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/NasaPics/NasaPics.node.js"
+		]
+	},
+	"devDependencies": {
 		// don't change
-  },
-  "dependencies": {
-    // don't change
-  }
+	},
+	"dependencies": {
+		// don't change
+	}
 }
 
 ```

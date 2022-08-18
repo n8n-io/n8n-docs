@@ -5,7 +5,6 @@ tags:
   - DOC²
   - Infor
   - IDM
-
 ---
 ## IDM Display of documents in Context Viewer
 

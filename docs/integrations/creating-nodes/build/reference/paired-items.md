@@ -22,12 +22,12 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const ticketId = this.getNodeParameter('ticketId', i);
     responseData = await someApiRequest.call(this, 'GET', `/tickets/${ticketId}`);
 		returnData.push({
-				json: responseData,
-				pairedItem: {
-								item: i,
-				},
-			});
-    }
+			json: responseData,
+			pairedItem: {
+				item: i,
+			},
+		});
+  }
   return returnData;
 }
 ```

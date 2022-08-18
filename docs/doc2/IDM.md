@@ -1,5 +1,5 @@
 ---
-title: "IDM Display of documents in Context Viewer"
+title: IDM Display of documents in Context Viewer
 description: The Business Context Model allows the mapping between a Business Context Model and a Search Query to be specified. 
 tags:
   - DOC²

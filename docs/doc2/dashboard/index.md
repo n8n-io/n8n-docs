@@ -26,7 +26,7 @@ It shows you the total number of documents imported, and the number of the ones 
 
 As you can imagine the second part of the dashboard is the list/overview of all the uploaded documents. You can either see all of them or even just the ones that are assigned to you. And of course, you can also find it with the document name.
 
-![](/_images/doc2/Dashboard_documents-1024x268.png){ loading=lazy }
+![](/_images/doc2/DOC²_Dashboard_3.png){ loading=lazy }
 
 To start importing an invoice manually you simply click on the **upload** button and choose the document you want to upload.
 

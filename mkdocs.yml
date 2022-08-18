@@ -43,9 +43,7 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
-  - pymdownx.superfences:
-      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
-      preserve_tabs: true
+  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite

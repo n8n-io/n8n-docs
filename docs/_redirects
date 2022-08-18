@@ -257,10 +257,7 @@
 /nodes/n8n-nodes-base.gitlabtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gmail/		/integrations/builtin/app-nodes/n8n-nodes-base.gmail/
 /nodes/n8n-nodes-base.googleAds/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
-<<<<<<< HEAD
-=======
 /nodes/n8n-nodes-base.googleads/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
->>>>>>> main
 /nodes/n8n-nodes-base.googleAnalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
 /nodes/n8n-nodes-base.googleanalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
 /nodes/n8n-nodes-base.googleBigQuery/		/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/

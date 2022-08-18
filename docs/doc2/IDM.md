@@ -8,11 +8,11 @@ tags:
 
 ---
 
-Navigate to Document Management/IDM and select the Control Center icon
+**Navigate to Document Management/IDM and select the Control Center icon**
 
 ![](/_images/doc2/IDM_Control Center_1.png)
 
-Click on document type
+**Click on document type**
 
 ![](/_images/doc2/IDM_Select Dokumenttyp_2.png)
 
@@ -20,11 +20,11 @@ Selection of the desired type (here Order Confirmation) & navigation to Related 
 
 ![](/_images/doc2/IDM_Dokumenttyp_3.png)
 
-With a click on the "+" the connected document types can be added
+**With a click on the "+" the connected document types can be added**
 
 ![](/_images/doc2/IDM_Elemente hinzufügen_4.png)
 
-Fill in fields accordingly.
+**Fill in fields accordingly**
 
 ![](/_images/doc2/IDM_Verbundene Dokumente_5.png)
 ![](/_images/doc2/IDM_Dokumenteinstellungen_6.png)

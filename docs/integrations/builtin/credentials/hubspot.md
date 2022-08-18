@@ -29,7 +29,7 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 8. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the **Redirect URL** section.
 
 !!! warning "Exact scope needed"
-    If you grant access to more scopes than listed below, this might cause an issue with the authentication step. Make sure to only include what is listed below.
+    If you grant access to more or less scopes than listed below, this might cause an issue with the authentication step. Make sure to only include what is listed below.
 	
 9. In the Scopes section, select the following scopes in the **Find a scope** search box:
     * Trigger node:

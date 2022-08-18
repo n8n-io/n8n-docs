@@ -36,12 +36,15 @@ Add the three entities by clicking "+".
 ![](/_images/doc2/IDM_Geschaeftskontextmodell Entitaeten_8.png)
 
 Invoice:
+
 ![](/_images/doc2/IDM_PurchaseOrder_9.png)
 
 Delivery Note:
+
 ![](/_images/doc2/IDM_Lieferschein_10.png)
 
 Order confirmation:
+
 ![](/_images/doc2/IDM_Auftragsbestaetigung_11.png)
 
 

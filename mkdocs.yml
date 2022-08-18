@@ -122,6 +122,7 @@ nav:
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: doc2/infor.md
+      - IDM Display of documents in Context Viewer: doc2/IDM.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - General Settings: doc2/general settings.md

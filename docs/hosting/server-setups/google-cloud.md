@@ -1,9 +1,9 @@
 # Hosting n8n on Google Cloud
 
-This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n and Caddy as a reverse proxy using Kubernetes to create the necessary resources.
+This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
 ## Prerequisites
-
+- [The gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
 
 ## Hosting options
 
@@ -11,7 +11,7 @@ Google Cloud offers several ways suitable for hosting n8n, including Cloud Run (
 
 This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
-The steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead.
+Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
 ## Create project
 
@@ -27,13 +27,13 @@ Enable the Kubernetes Engine API by clicking the __Enable__ button.
 
 ## Create a cluster
 
-From the GKE service page, click the **Clusters** menu item and then the **CREATE** button.
+From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
 
 
 
 ## Login to instance
 
-The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string that needs you to have [the gcloud command line tool installed](https://cloud.google.com/sdk/gcloud/). Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
+The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string for the gcloud CLI tool. Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
 
 
 
@@ -44,28 +44,35 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
 
+<!-- TODO: Kubernetes handles? -->
+<!-- ## Open ports
 
-## Open ports
+To set up http connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging). -->
 
-To set up secure connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging).
-
-
-
-
-
-### Create folders
-
-Both n8n and Caddy require creating folders and files that the host operating system copies to Docker containers. Create the following on the instance in a location accessible by Docker:
-
-- _caddy_config_
-- _caddy_config/Caddyfile_
-- _caddy_data_
-- _local_files_
+## Clone repo
 
 
-
+The next few steps walk through the important parts of what the manifests configure.
 
 ## Configure n8n
+
+### Create a volume for file storage
+
+During initial setup and certain workflows, n8n needs to write files to disk and needs a persistent volume to do so.
+
+The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
+
+```yaml
+…
+volumes:
+  - name: n8n-claim0
+    persistentVolumeClaim:
+      claimName: n8n-claim0
+…
+```
+
+
+## Environment variables
 
 Create an _.env_ file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own:
 

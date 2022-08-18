@@ -32,6 +32,10 @@ To start importing an invoice manually you simply click on the **UPLOAD** button
 
 ![](/_images/doc2/DOC²_Dashboard_4.png){ loading=lazy }
 
+You can also drop files anywhere on dashboard to upload them.
+
+![](/_images/doc2/DOC²_Dashboard_5.png){ loading=lazy }
+
 Meaningful data is going to be extracted within seconds and the status changes from running to Ready For Validation.
 
 ![](/_images/doc2/DOC²_Dashboard_1.png){ loading=lazy }

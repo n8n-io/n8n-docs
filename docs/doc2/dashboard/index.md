@@ -40,8 +40,8 @@ What you see now is the validation screen where you can check, edit, and validat
 
 From left to right you will see first the name of the document, then how many pages it consists of. The following information is the date when the document was imported and its status.
 
-In the rightmost column you will see the Actions button. If you click on it, all available options will open: Assigne, Restart, Validate and delete.
+In the rightmost column you will see the Actions button. If you click on it, all available options will open: Assign, Restart, Validate and Delete.
 
-![](/_images/doc2/Actions.png){ loading=lazy }
+![](/_images/doc2/DOC²_Dashboard_Document_Actions.gif){ loading=lazy }
 
 Details on UI to check, edit and validate extracted fields of uploaded documents you will find [here](/doc2/document-validation/).

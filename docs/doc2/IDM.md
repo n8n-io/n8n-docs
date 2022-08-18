@@ -30,7 +30,8 @@ tags:
 ![](/_images/doc2/IDM_Dokumenteinstellungen_6.png)
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-It is important to make sure that the linked fields (e.g. id1) match - i.e. if the number in the "Purchase Order" field on the invoice matches the "id" field on the delivery bill, this must be entered accordingly.
+It is important to make sure that the linked fields (e.g. id1) match - i.e. if the number in the "Purchase Order" field on the invoice matches the "id" field on the delivery note, this must be entered accordingly.
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
 ![](/_images/doc2/IDM_Geschaeftskontextmodell_7.png)
 **Add the three entities by clicking "+".**

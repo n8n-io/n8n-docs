@@ -27,8 +27,6 @@
 
     /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/?h=font#additional-fonts */
     --md-text-font: "Moderat-Regular-Web";
-
-
 }
 
 
@@ -190,6 +188,9 @@
     vertical-align: middle;
 }
 
+code {
+	tab-size: 2;
+}
 
 
 

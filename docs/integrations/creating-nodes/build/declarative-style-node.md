@@ -1,4 +1,4 @@
-# Tutorial: Build a declarative-style node
+# Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
 
@@ -24,8 +24,23 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 ### Step 1: Set up the project
 
 
---8<-- "_snippets/integrations/creating-nodes/tutorial-set-up-project.md"
+n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
 
+Clone the repository and navigate into the directory:
+
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
+2. Clone your new repository:
+		```shell
+		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
+		cd n8n-nodes-nasa-pics
+		```
+
+The starter contains example nodes and credentials. Delete the following directories and files:
+
+* `nodes/ExampleNode`
+* `nodes/HTTPBin`
+* `credentials/ExampleCredentials.credentials.ts`
+* `credentials/HttpBinApi.credentials.ts`
 
 Now create the following directories and files:
 
@@ -157,7 +172,7 @@ export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
 		properties: [
-			// Resources and operations will go here
+		// Resources and operations will go here
 		]
 	};
 }
@@ -168,31 +183,31 @@ export class NasaPics implements INodeType {
 All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
 
 ```typescript
-		displayName: 'NASA Pics',
-		name: 'NasaPics',
-		icon: 'file:nasapics.svg',
-		group: ['transform'],
-		version: 1,
-		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Get data from NASAs API',
-		defaults: {
-			name: 'NASA Pics',
-		},
-		inputs: ['main'],
-		outputs: ['main'],
-		credentials: [
-			{
-				name: 'NasaPicsApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: 'https://api.nasa.gov',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
+displayName: 'NASA Pics',
+name: 'NasaPics',
+icon: 'file:nasapics.svg',
+group: ['transform'],
+version: 1,
+subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+description: 'Get data from NASAs API',
+defaults: {
+	name: 'NASA Pics',
+},
+inputs: ['main'],
+outputs: ['main'],
+credentials: [
+	{
+		name: 'NasaPicsApi',
+		required: true,
+	},
+],
+requestDefaults: {
+	baseURL: 'https://api.nasa.gov',
+	headers: {
+		Accept: 'application/json',
+		'Content-Type': 'application/json',
+	},
+},
 ```
 
 #### Step 5.4: Add resources

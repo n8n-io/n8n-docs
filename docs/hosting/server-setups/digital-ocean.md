@@ -102,7 +102,7 @@ Caddy needs to know which domains it should serve, and which port to expose to t
 nano caddy_config/Caddyfile
 ```
 
-Change the placeholder subdomain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
+Change the placeholder domain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
 
 ```text
 n8n.<domain>.<suffix> {

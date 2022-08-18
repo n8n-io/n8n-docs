@@ -12,39 +12,39 @@ tags:
 
 Navigate to Document Management/IDM and select the Control Center icon
 
-/_images/doc2/IDM_Control Center_1.png
+![]/_images/doc2/IDM_Control Center_1.png
 
 Click on document type
 
-/_images/doc2/IDM_Select Dokumenttyp_2.png
+![]/_images/doc2/IDM_Select Dokumenttyp_2.png
 
 Selection of the desired type (here Order Confirmation) & navigation to Related Documents
 
-/_images/doc2/IDM_Dokumenttyp_3.png
+![]/_images/doc2/IDM_Dokumenttyp_3.png
 
 With a click on the "+" the connected document types can be added
 
-/_images/doc2/IDM_Elemente hinzufügen_4.png
+![]/_images/doc2/IDM_Elemente hinzufügen_4.png
 
 Fill in fields accordingly.
 
-/_images/doc2/IDM_Verbundene Dokumente_5.png
-/_images/doc2/IDM_Dokumenteinstellungen_6.png
+![]/_images/doc2/IDM_Verbundene Dokumente_5.png
+![]/_images/doc2/IDM_Dokumenteinstellungen_6.png
 
 It is important to make sure that the linked fields (e.g. id1) match - i.e. if the number in the "Purchase Order" field on the invoice matches the "id" field on the delivery bill, this must be entered accordingly.
 
-/_images/doc2/IDM_Geschaeftskontextmodell_7.png
+![]/_images/doc2/IDM_Geschaeftskontextmodell_7.png
 Add the three entities by clicking "+".
-/_images/doc2/IDM_Geschaeftskontextmodell Entitaeten_8.png
+![]/_images/doc2/IDM_Geschaeftskontextmodell Entitaeten_8.png
 
 Invoice:
-/_images/doc2/IDM_PurchaseOrder_9.png
+![]/_images/doc2/IDM_PurchaseOrder_9.png
 
 Delivery Note:
-docs/_images/doc2/IDM_Lieferschein_10.png
+![]docs/_images/doc2/IDM_Lieferschein_10.png
 
 Order confirmation:
-docs/_images/doc2/IDM_Auftragsbestaetigung_11.png
+![]docs/_images/doc2/IDM_Auftragsbestaetigung_11.png
 
 
 

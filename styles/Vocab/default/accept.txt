@@ -3,6 +3,7 @@ Axios
 backend
 Boolean
 boolean
+Caddy
 Clockify
 Cron
 Dockerfile

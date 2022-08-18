@@ -27,6 +27,10 @@ Create a [HubSpot](https://www.hubspot.com/) account.
 6. Use the provided **Client ID** and the **Client secret** with your HubSpot OAuth2 API credentials in n8n.
 7. If you are using the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubSpotTrigger/) node, copy the **App ID** along with the information in the previous step.
 8. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the **Redirect URL** section.
+
+	!!! note "Exact scope needed"
+	    If you grant access to more or less scopes than listed below, this might cause an issue with the authentication step. Make sure to only include what is listed below.
+	
 9. In the Scopes section, select the following scopes in the **Find a scope** search box:
     * Trigger node:
         * oauth
@@ -50,9 +54,9 @@ Create a [HubSpot](https://www.hubspot.com/) account.
         * crm.schemas.companies (read),
         * forms,
         * tickets,
-11. Click on the **Save** button to save your settings in HubSpot.
-12. Back in n8n, click on the circle button in the OAuth section to connect your HubSpot account to n8n.
-13. Click the **Save** button to save your credentials.
+10. Click on the **Save** button to save your settings in HubSpot.
+11. Back in n8n, click on the circle button in the OAuth section to connect your HubSpot account to n8n.
+12. Click the **Save** button to save your credentials.
 
 
 ## Using API key

@@ -6,7 +6,7 @@ tags:
   - Infor
   - IDM
 ---
-# IDM Display of documents in Context Viewer
+## IDM Display of documents in Context Viewer
 
 **Navigate to Document Management/IDM and select the Control Center icon**
 

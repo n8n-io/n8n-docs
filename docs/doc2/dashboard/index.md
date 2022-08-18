@@ -22,13 +22,13 @@ The first upper bar is a very simple and easy reporting tool where you can filte
 
 ![](/_images/doc2/DOC²_Dashboard_2.png){ loading=lazy }
 
-It shows you the total number of documents imported, and the number of the ones that were automatically or manually processed. Furthermore, you can also see all the status, like **in progress**, **pending**, **pending approval**, **completed** and **error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents.
+It shows you the total number of documents imported, and the number of the ones that were automatically or manually processed. Furthermore, you can also see all the status, like **In progress**, **Pending**, **Pending Approval**, **Completed** and **Error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents.
 
 As you can imagine the second part of the dashboard is the list/overview of all the uploaded documents. You can either see all of them or even just the ones that are assigned to you. And of course, you can also find it with the document name.
 
 ![](/_images/doc2/DOC²_Dashboard_3.png){ loading=lazy }
 
-To start importing an invoice manually you simply click on the **upload** button and choose the document you want to upload.
+To start importing an invoice manually you simply click on the **UPLOAD** button and choose the document you want to upload.
 
 ![](/_images/doc2/DOC²_Dashboard_4.png){ loading=lazy }
 

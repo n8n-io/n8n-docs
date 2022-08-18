@@ -168,7 +168,7 @@ nav:
     - Extracted fields: doc2/extracted-fields.md
     - Infor Infrastructure: security/infrastructure.md
     - Data security: security/datensicherung.md
-    - Groups & Priveleges: security/priveleges.md
+    - Groups & Privileges: security/privileges.md
 
   - Workflow²:
     - Overview: workflow/index.md

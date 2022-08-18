@@ -24,7 +24,7 @@ The rest of this guide requires you to log in to the Droplet using a terminal wi
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean) into the root user folder of the Droplet. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean){:target=_blank .external-link} into the root user folder of the Droplet. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 

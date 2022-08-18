@@ -1,16 +1,16 @@
 ---
-title: Priveleges with Doc²
-description: A explanation of the groups & priveleges of Doc²
+title: Privileges with DOC²
+description: A explanation of the groups & privileges of DOC²
 tags:
-- Doc²
+- DOC²
 - Groups
-- Priveleges
+- Privileges
 ---
 # Admins
-The first user of Doc² is the default organization admin.
+The first user of DOC² is the default organization admin.
 
-## Priveleges
-Organisation admins are able to access the settings in Doc².
+## Privileges
+Organisation admins are able to access the settings in DOC².
 They are allowed to configure:
 
 - document types
@@ -20,11 +20,11 @@ They are allowed to configure:
 - modules
 - users
 - groups & roles
-- imports
-- exports
+- import methods
+- export settings
 - filter regexes
 - master data validation
-- sso settings
+- SSO settings
 
 ## User management
 Admins can add new users to the organization.  
@@ -33,25 +33,25 @@ Every admin can revoke a user's admin rights.
 
 # Groups
 ## What is a Group?
-A group is a set of users that can be granted specific permissions for one or multiple doctypes.  
+A group is a set of users that can be granted specific permissions for one or multiple document types.  
 The groups can be created, changed and deleted by the organization admins. Every organization admin has the rights to do this.  
 If no group is configured all privileges are granted to the users within the organization.
 
 ## Groups and Priveleges management
-Groups are managed in Doc² under Settings -> Groups & Roles 
+Groups are managed in DOC² under Settings -> Groups & Roles 
 
-### Doc² group user mangement  
+### DOC² group user mangement  
 The Organization admin can add users to the groups.
 ![doc2 group user mangement](/_images/security/group-user.png)
 
-### Doc² group permission mangement
+### DOC² group permission mangement
 The Organization admin can set the group permissions.
 ![doc2 group permission mangement](/_images/security/group-permissions.png)
 
 ## Group permissions
-When creating a group, you can specify what privileges the users have for each doctype.  
+When creating a group, you can specify what privileges the users have for each document type.  
 
-The different types of Priveleges are:
+The different types of Privileges are:
 
 - view
 - update
@@ -60,7 +60,7 @@ The different types of Priveleges are:
 - second approval 
 
 ### View 
-If a user doesn't have the view permission, the doctype will not be shown to him on the dashboard.  
+If a user doesn't have the view permission, the document type will not be shown to him on the dashboard.  
 
 ### Update
 Exporting documents is only possible if the user has the update permission.

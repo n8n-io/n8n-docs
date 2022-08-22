@@ -28,6 +28,6 @@ We only allow https secured connections to comunicate with our Servers. This ens
 
 
 
-## On Prem Infor
-With our On Prem solution, you done have to open any ports. This ensures that the security of your network is not compromised. 
+## On-Prem Infor
+With our On-Prem solution, you don't have to open any ports. This ensures that the security of your network is not compromised. 
 ![on-prem-infor](/_images/security/infra-on-prem.png)

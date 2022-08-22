@@ -10,7 +10,7 @@ tags:
 # Application Infrastructure
 
 
-### Open ports
+### Open port
 * 443
 
 ### Communication with the Database

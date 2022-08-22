@@ -18,7 +18,7 @@ Kubernetes and our Databases are inside the same VPC. We only access the databas
 Additionally, we only use SSL secured connections to communicate with the database.
 
 ### Spaces
-The uploaded documents are stored in a Space. The trafic is secured via ssl and multiple keys are required to access the stored files.
+The uploaded documents are stored in a Space. The traffic is secured via SSL and multiple keys are required to access the stored files.
 
 ### Traffic Security
 We only allow https secured connections to communicate with our servers. This ensures that the transferred data is encrypted and secure. 

@@ -43,8 +43,6 @@ The starter contains example nodes and credentials. Delete the following directo
 * `credentials/ExampleCredentials.credentials.ts`
 * `credentials/HttpBinApi.credentials.ts`
 
-
-
 Now create the following directories and files:
 
 * `nodes/FriendGrid`
@@ -104,6 +102,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 	],
 	// Link the credentials and node
 	"n8n": {
+		"n8nNodesApiVersion": 1,
 		"credentials": [
 			"dist/credentials/FriendGridApi.credentials.js"
 		],

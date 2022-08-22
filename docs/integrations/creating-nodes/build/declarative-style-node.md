@@ -100,6 +100,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 	],
 	// Link the credentials and node
 	"n8n": {
+		"n8nNodesApiVersion": 1,
 		"credentials": [
 			"dist/credentials/NasaPicsApi.credentials.js"
 		],

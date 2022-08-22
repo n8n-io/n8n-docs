@@ -23,11 +23,11 @@ The uploaded documents are stored in a Space. The traffic is secured via SSL and
 ### Traffic Security
 We only allow https secured connections to communicate with our servers. This ensures that the transferred data is encrypted and secure. 
 
-## Cloud Infor
+## Infor Cloud 
 ![cloud-infor](/_images/security/infra-cloud.png)
 
 
 
-## On-Prem Infor
+## Infor On-Prem 
 With our On-Prem solution, you don't have to open any ports. This ensures that the security of your network is not compromised. 
 ![on-prem-infor](/_images/security/infra-on-prem.png)

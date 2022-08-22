@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.191.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.191.0...n8n@0.191.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-19
+
+This is a bug fix release. It resolves an issue that was causing node connectors to disappear after a user renamed them.
+
 ## n8n@0.191.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.190.0...n8n@0.191.0){:target=_blank .external-link} for this version.<br />

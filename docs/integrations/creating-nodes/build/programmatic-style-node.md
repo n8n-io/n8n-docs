@@ -220,6 +220,8 @@ credentials: [
 ],
 ```
 
+n8n uses some of the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
+
 #### Step 5.4: Add the resource
 
 The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access one of SendGrid's API endpoints: `/v3/marketing/contacts`. This means you need to define a resource for this endpoint. Update the `properties` array with the resource object:
@@ -291,7 +293,7 @@ Add the following to the `properties` array, after the `resource` object:
 },
 ```
 
-#### Step 5.6: Optional fields
+#### Step 5.6: Add optional fields
 
 Most APIs, including the SendGrid API that you're using in this example, have optional fields you can use to refine your query.
 

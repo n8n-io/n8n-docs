@@ -93,14 +93,17 @@ You can now invite other people to your n8n instance.
 
 ## Manage users
 
-The **Users** page shows all users, including ones with pending invitations. You can:
+The **Users** page shows all users, including ones with pending invitations.
 
-* Delete a user:
-  1. Click the menu icon by the user you want to delete.
-  2. Confirm you want to delete them.
-  3. If they are an active user, choose whether to copy their workflow data and credentials to a new user, or permanently delete their workflows and credentials.
-* Resend an invitation to a pending user: click the menu icon by the user, then click **Resend invite**.
+### Delete a user
 
+1. Click the menu icon by the user you want to delete.
+2. Confirm you want to delete them.
+3. If the're an active user, choose whether to copy their workflow data and credentials to a new user, or permanently delete their workflows and credentials.
+
+### Resend an invitation to a pending user
+
+Click the menu icon by the user, then click **Resend invite**.
 
 ## Skipping or disabling user management
 

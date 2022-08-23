@@ -3,7 +3,8 @@
 This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
 ## Prerequisites
-- [The gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
+
+- [The gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
 
 ## Hosting options
 
@@ -11,32 +12,25 @@ Google Cloud offers several ways suitable for hosting n8n, including Cloud Run (
 
 This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
-Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
+Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link} instead to undertake all the steps.
 
 ## Create project
 
 GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment by clicking the project dropdown menu and then the _NEW PROJECT_ button. Then select the newly created project and as you follow other steps in this guide, make sure you have the correct project selected.
 
-
-
 ## Enable the Kubernetes Engine API
 
 GKE isn't enabled by default, search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
 
-Enable the Kubernetes Engine API by clicking the __Enable__ button.
+Enable the Kubernetes Engine API by clicking the **Enable** button.
 
 ## Create a cluster
 
 From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
 
-
-
 ## Login to instance
 
 The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string for the gcloud CLI tool. Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
-
-
-
 
 ## Setup DNS
 
@@ -51,8 +45,33 @@ To set up http connections to the instance, you need to open Firewall rules. You
 
 ## Clone repo
 
-
 The next few steps walk through the important parts of what the manifests configure.
+
+## Configure Postgres
+
+For larger scale n8n deployments, Postgres provides a more robust database backend than SQLite.
+
+### Create a volume for persistent storage
+
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class, [you can read this guide for specifics](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link}, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to "us-central".
+
+```yaml
+…
+allowedTopologies:
+  - matchLabelExpressions:
+      - key: failure-domain.beta.kubernetes.io/zone
+        values:
+          - us-central1-b
+          - us-central1-c
+```
+
+### Environment variables
+
+Postgres needs some environment variables set to pass to the application running in the containers.
+
+The example `postgres-secret.yaml` file contains placeholders you need to replace with values of your own for user details and the database to use.
+
+The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
 
 ## Configure n8n
 
@@ -71,116 +90,45 @@ volumes:
 …
 ```
 
+### Environment variables
 
-## Environment variables
+n8n needs some environment variables set to pass to the application running in the containers.
 
-Create an _.env_ file in the same folder you will run Docker Compose from, and add the following, replacing the values with your own:
+The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
 
-```env
-# Path where you created folders and files earlier
-DATA_FOLDER=/root/n8n
+## Deployments
 
-# The top level domain to serve from
-DOMAIN_NAME=example.com
+The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
 
-# The subdomain to serve from
-SUBDOMAIN=n8n
+The manifests define the following:
 
-# DOMAIN_NAME and SUBDOMAIN combined decide where n8n will be reachable from
-# above example would result in: https://n8n.example.com
+- Send the environment variables defined to each application pod
+- Define the container image to use
+- Set resource consumption limits. This is left empty in the example manifests, but you should set them to something appropriate for your deployment.
+- The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
+- Scaling and restart policies. The example manifests define only one instance of each pod, you should change this to meet your needs.
 
-# The user name to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_USER=user
+## Services
 
-# The password to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_PASSWORD=password
+The two service manifests (`postgres-service.yaml` and `n8n-service.yaml`) expose the services to the outside world using the Kubernetes load balancer using ports 5432 and 5678 respectively by default.
 
-# Optional timezone to set which gets used by Cron-Node by default
-# If not set New York time will be used
-GENERIC_TIMEZONE=Europe/Berlin
+## Send to Kubernetes cluster
 
-# The email address to use for the SSL certificate creation
-SSL_EMAIL=example@example.com
-```
-
-## Create Docker Compose file
-
-Create a _docker-compose.yml_ file, and add the following:
-
-```yaml
-version: "3.7"
-
-services:
-  caddy:
-    image: caddy:latest
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ${DATA_FOLDER}/caddy_data:/data
-      - ${DATA_FOLDER}/caddy_config:/config
-      - "${DATA_FOLDER}/caddy_config/Caddyfile:/etc/caddy/Caddyfile"
-
-  n8n:
-    image: n8nio/n8n
-    restart: always
-    ports:
-      - 5678:5678
-    environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER
-      - N8N_BASIC_AUTH_PASSWORD
-      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
-      - N8N_PORT=5678
-      - N8N_PROTOCOL=https
-      - NODE_ENV=production
-      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
-      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
-    volumes:
-      - ${DATA_FOLDER}/.n8n:/home/node/.n8n
-      - ${DATA_FOLDER}/local_files:/files
-
-volumes:
-  caddy_data:
-    external: true
-  caddy_config:
-```
-
-## Configure Caddy
-
-Open the _Caddyfile_ you created earlier, and add the following configuration, adding your subdomain:
-
-```text
-<SUB_DOMAIN> {
-    reverse_proxy n8n:5678 {
-      flush_interval -1
-    }
-}
-```
-
-Using `n8n` in the configuration
-
-## Create Docker volume
-
-To persist Caddy configuration between restarts, the Docker Compose file above specifies an `external` volume, create that with the following command:
+Send all the manifests to the cluster with the following command:
 
 ```shell
-docker volume create caddy_data
+kubectl apply -f .
 ```
 
-## Start Docker Compose
+!!! note "Namespace error"
+    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
 
-Start n8n and Caddy with the following command:
+    ```shell
+    kubectl apply -f namespace.yaml
+    ```
 
-```shell
-docker-compose up -d
-```
-
-Open the URL formed of the subdomain and domain name defined earlier, enter the user name and password defined earlier, and you should be able to access n8n.
-
-Stop n8n and Caddy with the following command:
+Remove the resources created by the manifests with the following command:
 
 ```shell
-sudo docker-compose stop
+kubectl delete -f .
 ```

@@ -1,6 +1,6 @@
 # Trello
 
-You can use these credentials to authenticate the following nodes with Trello.
+You can use these credentials to authenticate the following nodes with Trello:
 
 - [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/)
 - [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trelloTrigger/)
@@ -9,12 +9,11 @@ You can use these credentials to authenticate the following nodes with Trello.
 
 Create a [Trello](https://trello.com/) account.
 
-## Using Access Token
+## Using an access token
 
-1. Access [Trello API Key ](https://trello.com/app-key) portal.
-2. Gather your API key at the top.
-3. Scroll down and you will find your OAuth secret.
-4. Click on "generate a Token" where you will find your token.
-5. Use the API token, OAuth secret and API key with your node credentials in n8n.
-
-![Getting Trello credentials](/_images/integrations/builtin/credentials/trello/using-access-token.gif)
+1. Go to the [Trello API Key ](https://trello.com/app-key){:target_blank .external-link} portal. The page 404s if you're not signed into Trello.
+1. Copy your API key at the top.
+1. Select **generate a Token** to create your token. When prompted, allow it all the permissions it asks for.  
+--8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
+1. Enter the API key and API token.
+1. Select **Save**. n8n tests the connection.

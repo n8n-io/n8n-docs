@@ -8,7 +8,7 @@ tags:
   - LN
 ---
 
-**What is Infor Document Management (IDM)?**
+## What is Infor Document Management (IDM)?
 
 Infor Document Management (IDM) is an enterprise document management application deployed and integrated within the Infor Operating Service portal.
 
@@ -19,7 +19,7 @@ IDM is a central repository where you can manage your common business rules for 
 You can extend IDM with DOC². It provides optical character recognition (OCR) and intelligent character recognition (ICR) capabilities. These tools enable more complete and improved document capture processes. You can scan and connect your documents through a standard web browser and connect the documents to your business process. With IDM you can find the documents you require and you are always working with the latest, most complete version of a document. With access to all your critical business information in-context, DOC²  further automates your document workflows through automatic categorization and retrieval of key document metadata.
 
 
-**Accessing IDM**
+## Accessing IDM
 
 Access the application with the IDM URL.
 
@@ -34,13 +34,13 @@ To access the Control Center, click the options menu next to the **+ Add Documen
 
 ![](/_images/doc2/Infor/IDM_Control Center.png)
 
-If you have the IDM-AdvancedUser role or higher, you can perform these actions from the control center:
+If you have the `IDM-AdvancedUser` role or higher, you can perform these actions from the control center:
 
 1. Configure the Exporter/Importer. (See below)
 
 2. Synchronize the data model. Through this action the systems can self-heal by synchronizing the data model.
 
-For all other actions in the control center, see the Infor Document Management Administration Guide – Cloud Edition. These actions are only available for users with the IDM-Administrator role.
+For all other actions in the control center, see the _Infor Document Management Administration Guide – Cloud Edition_. These actions are only available for users with the `IDM-Administrator` role.
 
 **Configuration Exporter / Importer**
 
@@ -56,10 +56,10 @@ The xml files for all common document types can be downloaded here.
 
 If you are using Infor LN as ERP also upload these xml files:
 
-- Order Confirmation: ![IDMconfiguration_BusinessContext_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
-- Delivery Note: ![IDMconfiguration_BusinessContext_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml)
-                 ![IDMconfiguration_BusinessContext_DeliveryNote2](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
-- Invoice: ![IDMconfiguration_BusinessContext_Invoice](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
+- Order Confirmation: [IDMconfiguration_BusinessContext_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
+- Delivery Note: [IDMconfiguration_BusinessContext_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml)
+                 [IDMconfiguration_BusinessContext_DeliveryNote2](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
+- Invoice: [IDMconfiguration_BusinessContext_Invoice](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
 
 
 You can import the files as follows:

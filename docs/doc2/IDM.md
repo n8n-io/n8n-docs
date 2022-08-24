@@ -128,3 +128,14 @@ you will find the information here as follows:
 ```inv
 /LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
 ```
+
+All these steps connect all documents from IDM to the corresponding workbench in LN, where they are also displayed. And this is how it looks in LN:
+
+**Order Confirmation**
+![](/_images/doc2/Infor/LN_Order_Order Confirmation.png)
+
+**Delivery Note**
+![](/_images/doc2/Infor/LN_Workbench Order volume_Delivery Note.png)
+
+**Invoice**
+![](/_images/doc2/Infor/LN_Workbench Accounts Payable Processing_Invoice.png)

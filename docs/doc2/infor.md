@@ -14,7 +14,7 @@ tags:
 
 ### Only Invoice
 
-This is the most easy use case. 95% of call Ephesoft ( IDM Capture ) customer use this use case.
+This is the simplest use case. 95% of all Ephesoft (IDM Capture) customers use this use case.
 
 ``` mermaid
 graph LR

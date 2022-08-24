@@ -45,11 +45,10 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-* `nodes/FriendGrid`
-* `nodes/FriendGrid/FriendGrid.node.json`
-* `nodes/FriendGrid/FriendGrid.node.ts`
-* `nodes/FriendGrid/friendgrid.svg`
-* `credentials/FriendGridApi.credentials.ts`
+`nodes/FriendGrid`  
+`nodes/FriendGrid/FriendGrid.node.json`  
+`nodes/FriendGrid/FriendGrid.node.ts`  
+`credentials/FriendGridApi.credentials.ts`  
 
 These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
 
@@ -61,7 +60,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Copy and paste the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} into `sendgrid.svg`. To get the SVG source, select **Raw**.
+Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `sendgrid.svg` in `nodes/FriendGrid/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -119,6 +118,8 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+
 ### Step 4: Add node metadata
 
 Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `FriendGrid.node.json`.
@@ -152,7 +153,9 @@ For more information on these parameters, refer to [Node codex files](/integrati
 
 ### Step 5: Define the node in the base file
 
-Every node must have a base file. In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
+
+In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
 #### Step 5.1: Imports
 
@@ -220,7 +223,7 @@ credentials: [
 ],
 ```
 
-n8n uses some of the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
+n8n uses some of the properties set in `description` to render the node in the Editor UI. These properties are `displayName`, `icon`, and `description`.
 
 #### Step 5.4: Add the resource
 

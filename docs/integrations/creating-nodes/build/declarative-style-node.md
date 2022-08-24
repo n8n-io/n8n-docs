@@ -44,11 +44,10 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-* `nodes/NasaPics`
-* `nodes/NasaPics/NasaPics.node.json`
-* `nodes/NasaPics/NasaPics.node.ts`
-* `nodes/NasaPics/nasapics.svg`
-* `credentials/NasaPicsApi.credentials.ts`
+`nodes/NasaPics`  
+`nodes/NasaPics/NasaPics.node.json`  
+`nodes/NasaPics/NasaPics.node.ts`  
+`credentials/NasaPicsApi.credentials.ts`  
 
 These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
 
@@ -60,7 +59,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Copy and paste the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`. To get the SVG source, right-click the image then select **View page source**.
+Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} as `nasapics.svg` in `nodes/NasaPics/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -115,8 +114,9 @@ Your npm package details are in the `package.json` at the root of the project. I
 		// don't change
 	}
 }
-
 ```
+
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
 
 ### Step 4: Add node metadata
 
@@ -151,7 +151,9 @@ For more information on these parameters, refer to [Node codex files](/integrati
 
 ### Step 5: Create the node
 
-Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
+
+In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
 #### Step 5.1: Imports
 
@@ -210,6 +212,8 @@ requestDefaults: {
 	},
 },
 ```
+
+n8n uses some of the properties set in `description` to render the node in the Editor UI. These properties are `displayName`, `icon`, `description`, and `subtitle`.
 
 #### Step 5.4: Add resources
 

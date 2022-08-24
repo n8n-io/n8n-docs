@@ -36,9 +36,7 @@ To access the Control Center, click the options menu next to the **+ Add Documen
 
 If you have the IDM-AdvancedUser role or higher, you can perform these actions from the control center:
 
-1. Configure the Exporter/Importer.
-
-   See below
+1. Configure the Exporter/Importer. (See below)
 
 2. Synchronize the data model. Through this action the systems can self-heal by synchronizing the data model.
 
@@ -52,42 +50,72 @@ Configuration Exporter and Importer allows the user to export / import the Confi
 
 The xml files for all common document types can be downloaded here.
 
-- Order Confirmation: ![](/_images/doc2/Infor/IDMconfiguration_OrderConfirmation.xml)
-- Delivery Note: ![](/_images/doc2/Infor/IDMconfiguration_DeliveryNote.xml)
-- Invoice: ![](/_images/doc2/Infor/IDMconfiguration_Invoice.xml)
+- Order Confirmation: [IDMconfiguration_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_OrderConfirmation.xml)
+- Delivery Note: [IDMconfiguration_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_DeliveryNote.xml)
+- Invoice:  [IDMconfiguration_Invoice](/_images/doc2/Infor/IDMconfiguration_Invoice.xml)
 
 If you are using Infor LN as ERP also upload these xml files:
 
-- Order Confirmation: ![](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
-- Delivery Note: ![](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml)
-                 ![](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
-- Invoice: ![](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
+- Order Confirmation: ![IDMconfiguration_BusinessContext_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
+- Delivery Note: ![IDMconfiguration_BusinessContext_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml)
+                 ![IDMconfiguration_BusinessContext_DeliveryNote2](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
+- Invoice: ![IDMconfiguration_BusinessContext_Invoice](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
 
 
-**Fill in fields accordingly**
+You can import the files as follows:
 
-![](/_images/doc2/IDM_Verbundene Dokumente_5.png)
-![](/_images/doc2/IDM_Dokumenteinstellungen_6.png)
+**Using the Import tab**
 
-:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-It is important to make sure that the linked fields (e.g. id1) match - i.e. if the number in the "Purchase Order" field on the invoice matches the "id" field on the delivery note, this must be entered accordingly.
-:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+1. Navigate to **Control Center** > **Administration** > **Import / Export** and click the **Import** tab.
+2. Click **Select XML file** and browse for the XML file. A file validation applies. Only XML files that were created by the exporter are accepted. If validation fails, **Import XML** file remains disabled.
+3. When the configuration file is uploaded, an import preview is displayed and includes any or all of these parts:
+![](/_images/doc2/Infor/IDM_Using the import tab.png)
+4. You can collapse or expand each part to see possible warnings or information:
+   + Warning - yellow sign: The warning sign does not disable **Import XML file**. We recommend that you go through all warning messages before starting the importer. This could be due to these situations:
+    + Some configuration parts already exist in the repository that might be overwritten, for example, Result List.
+    + Some configuration parts already exist in the repository that might be lost, for example, Document Type Filter.
+   + Information - blue sign: The information sign does not disable Import XML file. It is usually displayed in these situations:
+    + If some parts cannot be imported, for example, Items.
+    + If some existing parts are merged with new ones from the XML file, for example, Result List.
+   + A green OK sign with no message required.
+5. Click **Import XML file** to run the importer. When the import is finished, a report window is displayed with an information table that summarizes the status of the import. If any error occurs during the import, the error message informs the user what went wrong.
 
-![](/_images/doc2/IDM_Geschaeftskontextmodell_7.png)
-**Add the three entities by clicking "+".**
-![](/_images/doc2/IDM_Geschaeftskontextmodell Entitaeten_8.png)
+When the import is successful, **Import XML file** is disabled.
 
-**Invoice:**
+This is how the general Information and attributes look like in IDM under the corresponding document type:
 
-![](/_images/doc2/IDM_PurchaseOrder_9.png)
+**Order Confirmation**
 
-**Delivery Note:**
+![](/_images/doc2/Infor/IDM_DocumentType_OrderConfirmation.png)
+![](/_images/doc2/Infor/IDM_Attributes_OrderConfirmation.png)
 
-![](/_images/doc2/IDM_Lieferschein_10.png)
+**Delivery Note**
 
-**Order confirmation:**
+![](/_images/doc2/Infor/IDM_DocumentType_DeliveryNote.png)
+![](/_images/doc2/Infor/IDM_Attributes_DeliveryNote.png)
 
-![](/_images/doc2/IDM_Auftragsbestaetigung_11.png)
+**Invoice**
 
+![](/_images/doc2/Infor/IDM_DocumentType_Invoice.png)
+![](/_images/doc2/Infor/IDM_Attributes_Invoice.png)
 
+When you open the **Business Context Model** menu item
+![](/_images/doc2/Infor/IDM_BusinessContextModel.png)
+you will find the information here as follows:
 
+**Order Confirmation**
+
+![](/_images/doc2/Infor/BusinessContextModel_XQuery_OrderConfirmation.png)
+`/ORDER_CONFIRMATION[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+
+**Delivery Note**
+
+![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote.png)
+`/DELIVERY_NOTE[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote2.png)
+`/DELIVERY_NOTE[@Delivery_Note_Id="{id3}"]`
+
+**Invoice**
+
+![](/_images/doc2/Infor/BusinessContextModel_XQuery_Invoice.png)
+`/LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`

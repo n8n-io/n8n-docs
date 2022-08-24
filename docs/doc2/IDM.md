@@ -28,7 +28,7 @@ By accessing the system through this URL, you are ensured that the required libr
 After logging in you can access the client application through the app switcher in the Infor Ming.le portal.
 
 
-**Control Center**
+### Control Center
 
 To access the Control Center, click the options menu next to the **+ Add Document** button on the **Document Management** landing page and select **Control Center**.
 
@@ -42,7 +42,7 @@ If you have the `IDM-AdvancedUser` role or higher, you can perform these actions
 
 For all other actions in the control center, see the _Infor Document Management Administration Guide – Cloud Edition_. These actions are only available for users with the `IDM-Administrator` role.
 
-**Configuration Exporter / Importer**
+### Configuration Exporter / Importer
 
 ![](/_images/doc2/Infor/IDM_ControlCenter_Document Type_Import.png)
 
@@ -64,7 +64,7 @@ If you are using Infor LN as ERP also upload these xml files:
 
 You can import the files as follows:
 
-**Using the Import tab**
+### Using the Import tab
 
 1. Navigate to **Control Center** > **Administration** > **Import / Export** and click the **Import** tab.
 2. Click **Select XML file** and browse for the XML file. A file validation applies. Only XML files that were created by the exporter are accepted. If validation fails, **Import XML** file remains disabled.
@@ -112,6 +112,7 @@ you will find the information here as follows:
 
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote.png)
 `/DELIVERY_NOTE[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote2.png)
 `/DELIVERY_NOTE[@Delivery_Note_Id="{id3}"]`
 

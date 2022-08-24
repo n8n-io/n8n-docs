@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://infor.com/daf">
+    <bcModels>
+        <bcModel>
+            <name>InforReceiveDeliveryItem:::DELIVERY_NOTE</name>
+            <xquery>/DELIVERY_NOTE[@Delivery_Note_Id="{id3}"]
+            </xquery>
+            <queries>
+                <query>
+                    <entities>DELIVERY_NOTE</entities>
+                    <useTextSearch>false</useTextSearch>
+                    <arguments>
+                        <argument>
+                            <key>Delivery_Note_Id</key>
+                            <operator>=</operator>
+                            <value>{id3}</value>
+                            <type>1</type>
+                            <logicalType>AND</logicalType>
+                        </argument>
+                    </arguments>
+                </query>
+            </queries>
+        </bcModel>
+    </bcModels>
+</configuration>

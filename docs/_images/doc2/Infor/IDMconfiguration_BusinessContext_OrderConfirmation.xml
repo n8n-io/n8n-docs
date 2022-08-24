@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://infor.com/daf">
+    <bcModels>
+        <bcModel>
+            <name>InforPurchaseOrder:::ORDER_CONFIRMATION</name>
+            <xquery>/ORDER_CONFIRMATION[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]</xquery>
+            <queries>
+                <query>
+                    <entities>ORDER_CONFIRMATION</entities>
+                    <useTextSearch>false</useTextSearch>
+                    <arguments>
+                        <argument>
+                            <key>MDS_EntityType</key>
+                            <operator>=</operator>
+                            <value>{entityType}</value>
+                            <type>1</type>
+                            <logicalType>AND</logicalType>
+                        </argument>
+                        <argument>
+                            <key>MDS_id1</key>
+                            <operator>=</operator>
+                            <value>{id1}</value>
+                            <type>1</type>
+                            <logicalType>AND</logicalType>
+                        </argument>
+                    </arguments>
+                </query>
+            </queries>
+        </bcModel>
+    </bcModels>
+</configuration>

@@ -1,10 +1,11 @@
 ---
-title: IDM Display of documents in Context Viewer
-description: The Business Context Model allows the mapping between a Business Context Model and a Search Query to be specified. 
+title: IDM Business Context Model
+description: In this documentation you will find informations how to create new document types in IDM and connect them with the corresponding workbench in LN 
 tags:
   - DOC²
   - Infor
   - IDM
+  - LN
 ---
 
 **Navigate to Document Management/IDM and select the Control Center icon**

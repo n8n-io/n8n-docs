@@ -123,7 +123,8 @@ nav:
     - Keyboard: doc2/keyboard.md
     - DOC² with Infor: 
       - Use Cases: doc2/infor.md
-      - IDM Display of documents in Context Viewer: doc2/IDM.md
+    - Integration with Infor IDM and ERP:
+      - IDM Business Context Model: doc2/IDM.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - General Settings: doc2/general settings.md

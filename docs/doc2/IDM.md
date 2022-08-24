@@ -69,12 +69,18 @@ You can import the files as follows:
 1. Navigate to **Control Center** > **Administration** > **Import / Export** and click the **Import** tab.
 2. Click **Select XML file** and browse for the XML file. A file validation applies. Only XML files that were created by the exporter are accepted. If validation fails, **Import XML** file remains disabled.
 3. When the configuration file is uploaded, an import preview is displayed and includes any or all of these parts:
-![](/_images/doc2/Infor/IDM_Using the import tab.png)
+|  |  |
+| Document Types and Value Sets | The list of document types and value sets to be imported. |
+| Document Type Filter | A list of document types that is displayed for the user when importing this configuration. |
+| Result List | Result list configuration to be imported. |
+| Business Context Models | Business context model configuration to be imported. |
+| ION | ION configuration to be imported. |
+
 4. You can collapse or expand each part to see possible warnings or information:
    + :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } Warning - yellow sign: The warning sign does not disable **Import XML file**. We recommend that you go through all warning messages before starting the importer. This could be due to these situations:
     + Some configuration parts already exist in the repository that might be overwritten, for example, Result List.
     + Some configuration parts already exist in the repository that might be lost, for example, Document Type Filter.
-   + :font-awesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable Import XML file. It is usually displayed in these situations:
+   + :fontawesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable Import XML file. It is usually displayed in these situations:
     + If some parts cannot be imported, for example, Items.
     + If some existing parts are merged with new ones from the XML file, for example, Result List.
    + A green OK sign with no message required.
@@ -106,17 +112,25 @@ you will find the information here as follows:
 **Order Confirmation**
 
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_OrderConfirmation.png)
-`/ORDER_CONFIRMATION[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+```oc
+/ORDER_CONFIRMATION[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
+```
 
 **Delivery Note**
 
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote.png)
-`/DELIVERY_NOTE[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+```dn
+/DELIVERY_NOTE[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
+```
 
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_DeliveryNote2.png)
-`/DELIVERY_NOTE[@Delivery_Note_Id="{id3}"]`
+```dn2
+/DELIVERY_NOTE[@Delivery_Note_Id="{id3}"]
+```
 
 **Invoice**
 
 ![](/_images/doc2/Infor/BusinessContextModel_XQuery_Invoice.png)
-`/LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]`
+```inv
+/LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
+```

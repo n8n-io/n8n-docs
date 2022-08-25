@@ -1,5 +1,28 @@
 # Release notes
 
+## n8n@0.192.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.192.1...n8n@0.192.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-25
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: fix the feature flag check when PostHog is unavailable.
+* Editor: fix for a mapping bug that occured when value is null.
+
+## n8n@0.192.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.192.0...n8n@0.192.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-25
+
+This is a bug fix release.
+
+### Bug fixes
+
+Account for non-array types in `pinData` migration.
+
 ## n8n@0.192.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.191.1...n8n@0.192.0){:target=_blank .external-link} for this version.<br />

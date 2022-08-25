@@ -58,7 +58,7 @@ If you are using Infor LN as ERP also upload these xml files:
 
 - Order Confirmation: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml" download>IDMconfiguration_BusinessContext_OrderConfirmation</a>
 - Delivery Note: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml" download>IDMconfiguration_BusinessContext_DeliveryNote</a>
-*Tabspace*<a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml" download>IDMconfiguration_BusinessContext_DeliveryNote2</a>
+&emsp;<a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml" download>IDMconfiguration_BusinessContext_DeliveryNote2</a>
 - Invoice: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml" download>IDMconfiguration_BusinessContext_Invoice</a>
 
 

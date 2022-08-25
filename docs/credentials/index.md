@@ -6,6 +6,6 @@ Access the credentials UI by opening the left menu and selecting **Credentials**
 
 * [Create and edit credentials](/credentials/add-edit-credentials/).
 * Learn about [credential sharing](/credentials/credential-sharing/).
-* Find information on setting up credentials for your services in the [credentials library](/integrations/buitin/credentials/).
+* Find information on setting up credentials for your services in the [credentials library](/integrations/builtin/credentials/).
 
 

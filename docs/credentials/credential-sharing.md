@@ -1,6 +1,6 @@
 # Credential sharing
 
-!!! info "Feature availability limitations"
+!!! info "Feature availability"
 		This feature is:
 
 		* Available on Cloud

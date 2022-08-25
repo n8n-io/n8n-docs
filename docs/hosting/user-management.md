@@ -1,12 +1,13 @@
 # User management
 
+!!! info "Feature availability"
+		This feature isn't available on Desktop. Cloud users can't configure SMTP or email templates.
+
 User management in n8n allows you to invite people to work in your n8n instance. It includes:
 
 * Login and password management
 * Adding and removing users
 * Two account types: owner and member
-
-User management is available for self-hosted n8n. It isn't currently available for Cloud or Desktop.
 
 !!! note "Privacy"
     The user management feature doesn't send personal information, such as email or username, to n8n.

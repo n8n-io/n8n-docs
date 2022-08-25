@@ -69,28 +69,28 @@ You can import the files as follows:
 1. Navigate to **Control Center** > **Administration** > **Import / Export** and click the **Import** tab.
 2. Click **Select XML file** and browse for the XML file. A file validation applies. Only XML files that were created by the exporter are accepted. If validation fails, **Import XML** file remains disabled.
 3. When the configuration file is uploaded, an import preview is displayed and includes any or all of these parts:
-<table>
-<tr>
-    <td style="max-width: 100%; white-space: nowrap">Document Types and Value Sets</td>
-    <td style="max-width: 100%; white-space: nowrap">The list of document types and value sets to be imported.</td>
-</tr>
-<tr>
-    <td>Document Type Filter</td>
-    <td>A list of document types that is displayed for the user when importing this configuration.</td>
-</tr>
-<tr>
-    <td>Result List</td>
-    <td>Result list configuration to be imported.</td>
-</tr>
-<tr>
-    <td>Business Context Models</td>
-    <td>Business context model configuration to be imported.</td>
-</tr>
-<tr>
-    <td>ION</td>
-    <td>ION configuration to be imported.</td>
-</tr>
-</table>
+    <table>
+    <tr>
+        <td style="max-width: 100%; white-space: nowrap">Document Types and Value Sets</td>
+        <td style="max-width: 100%; white-space: nowrap">The list of document types and value sets to be imported.</td>
+    </tr>
+    <tr>
+        <td>Document Type Filter</td>
+        <td>A list of document types that is displayed for the user when importing this configuration.</td>
+    </tr>
+    <tr>
+        <td>Result List</td>
+        <td>Result list configuration to be imported.</td>
+    </tr>
+    <tr>
+        <td>Business Context Models</td>
+        <td>Business context model configuration to be imported.</td>
+    </tr>
+    <tr>
+        <td>ION</td>
+        <td>ION configuration to be imported.</td>
+    </tr>
+    </table>
 4. You can collapse or expand each part to see possible warnings or information:
    + :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } Warning - yellow sign: The warning sign does not disable **Import XML file**. We recommend that you go through all warning messages before starting the importer. This could be due to these situations:
     + Some configuration parts already exist in the repository that might be overwritten, for example, Result List.

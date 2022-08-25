@@ -31,7 +31,7 @@ There are two account types, owner and member. The account type affects the user
     We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
 
 
-## Setup
+## Set up on self-hosted n8n
 
 There are three stages to set up user management in n8n:
 
@@ -91,9 +91,30 @@ You can now invite other people to your n8n instance.
 5. Enter the new user's email address.
 6. Click **Invite user**. n8n sends an email with a link for the new user to join.
 
+## Set up on n8n Cloud
+
+### Step one: in-app setup
+
+When you set up user management for the first time, you create an owner account.
+
+1. Open n8n. The app displays a signup screen.
+2. Enter your details. Your password must be at least eight characters, including at least one number and one capital letter.
+3. Click **Next**. n8n logs you in with your new owner account.
+
+### Step two: invite users
+
+You can now invite other people to your n8n instance.
+
+1. Sign in with your owner account.
+2. Click your user icon > **Settings**. n8n opens your **Personal settings** page.
+3. Click **Users** to go to the **Users** page.
+4. Click **Invite**.
+5. Enter the new user's email address.
+6. Click **Invite user**. n8n sends an email with a link for the new user to join.
+
 ## Manage users
 
-The **Users** page shows all users, including ones with pending invitations.
+The **Settings** > **Users** page shows all users, including ones with pending invitations.
 
 ### Delete a user
 
@@ -110,7 +131,7 @@ Click the menu icon by the user, then click **Resend invite**.
 You don't have to use n8n's user management feature. You can:
 
 * Leave it enabled, but choose to skip the setup step. You can use n8n as normal. If you want to set up user management later, go to **Settings** > **Users**.
-* Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your n8n instance. You can't use this setting if you have already set up an owner account.
+* Self-hosted only: Disable the feature completely using the `N8N_USER_MANAGEMENT_DISABLED` environment variable. Setting this environment variable to `true` completely hides the feature in your n8n instance. You can't use this setting if you have already set up an owner account.
 
 ## Best practices
 

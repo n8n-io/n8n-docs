@@ -57,7 +57,7 @@ The xml files for all common document types can be downloaded here.
 If you are using Infor LN as ERP also upload these xml files:
 
 - Order Confirmation: [IDMconfiguration_BusinessContext_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
-- Delivery Note: [IDMconfiguration_BusinessContext_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml)
+- Delivery Note: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml" download>IDMconfiguration_BusinessContext_DeliveryNote</a>
                  [IDMconfiguration_BusinessContext_DeliveryNote2](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
 - Invoice: [IDMconfiguration_BusinessContext_Invoice](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
 

@@ -66,98 +66,13 @@ Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
 
-### Step 3: Update the npm package details
-
-Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
-
-```json
-{
-	// All node names must start with "n8n-nodes-"
-	"name": "n8n-nodes-friendgrid",
-	"version": "0.1.0",
-	"description": "n8n node to create contacts in SendGrid",
-	"keywords": [
-		// This keyword is required for community nodes
-		"n8n-community-node-package"
-	],
-	"license": "MIT",
-	"homepage": "https://n8n.io",
-	"author": {
-		"name": "Test",
-		"email": "test@example.com"
-	},
-	"repository": {
-		"type": "git",
-		// Change the git remote to your own repository
-		// Add the new URL here
-		"url": "git+<your-repo-url>"
-	},
-	"main": "index.js",
-	"scripts": {
-		// don't change
-	},
-	"files": [
-		"dist"
-	],
-	// Link the credentials and node
-	"n8n": {
-		"n8nNodesApiVersion": 1,
-		"credentials": [
-			"dist/credentials/FriendGridApi.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/FriendGrid/.node.js"
-		]
-	},
-	"devDependencies": {
-		// don't change
-	},
-	"dependencies": {
-		// don't change
-	}
-}
-```
-
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
-
-### Step 4: Add node metadata
-
-Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `FriendGrid.node.json`.
-
-Add the following code to the JSON file:
-
-```json
-{
-	"node": "n8n-nodes-base.FriendGrid",
-	"nodeVersion": "1.0",
-	"codexVersion": "1.0",
-	"categories": [
-		"Miscellaneous"
-	],
-	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": ""
-			}
-		],
-		"primaryDocumentation": [
-			{
-				"url": ""
-			}
-		]
-	}
-}
-```
-
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
-
-### Step 5: Define the node in the base file
+### Step 3: Define the node in the base file
 
 Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
 
 In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
-#### Step 5.1: Imports
+#### Step 3.1: Imports
 
 Start by adding the import statements:
 
@@ -178,7 +93,7 @@ import {
 } from 'request';
 ```
 
-#### Step 5.2: Create the main class
+#### Step 3.2: Create the main class
 
 The node must export an interface that implements `INodeType`. This interface must include a `description` interface, which in turn contains the `properties` array.
 
@@ -199,7 +114,7 @@ export class FriendGrid implements INodeType {
 }
 ```
 
-#### Step 5.3: Add node details
+#### Step 3.3: Add node details
 
 All programmatic nodes need some basic parameters, such as their display name and icon. Add the following to the `description`:
 
@@ -225,7 +140,7 @@ credentials: [
 
 n8n uses some of the properties set in `description` to render the node in the Editor UI. These properties are `displayName`, `icon`, and `description`.
 
-#### Step 5.4: Add the resource
+#### Step 3.4: Add the resource
 
 The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access one of SendGrid's API endpoints: `/v3/marketing/contacts`. This means you need to define a resource for this endpoint. Update the `properties` array with the resource object:
 
@@ -248,7 +163,7 @@ The resource object defines the API resource that the node uses. In this tutoria
 
 `type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 
-#### Step 5.5: Add operations
+#### Step 3.5: Add operations
 
 The operations object defines what you can do with a resource. It usually relates to REST API verbs (GET, POST, and so on). In this tutorial, there's one operation: create a contact. It has one required field, the email address for the contact the user creates.
 
@@ -296,7 +211,7 @@ Add the following to the `properties` array, after the `resource` object:
 },
 ```
 
-#### Step 5.6: Add optional fields
+#### Step 3.6: Add optional fields
 
 Most APIs, including the SendGrid API that you're using in this example, have optional fields you can use to refine your query.
 
@@ -338,7 +253,7 @@ For this tutorial, you'll add two additional fields, to allow users to enter the
 },
 ```
 
-### Step 6: Add the execute method
+### Step 4: Add the execute method
 
 Step 5 set up the node UI and basic information. It's time to map the node UI to API requests, and make the node actually do something.
 
@@ -414,7 +329,7 @@ Users can provide data in two ways:
 `getInputData()`, and the subsequent loop, allows the node to handle situations where data comes from a previous node. This includes supporting multiple inputs. This means that if, for example, the previous node outputs contact information for five people, your FriendGrid node can create five contacts.
 
 
-### Step 7: Set up authentication
+### Step 5: Set up authentication
 
 The SendGrid API requires users to authenticate with an API key.
 
@@ -442,6 +357,94 @@ export class FriendGridApi implements ICredentialType {
 ```
 
 For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
+
+### Step 6: Add node metadata
+
+Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `FriendGrid.node.json`.
+
+Add the following code to the JSON file:
+
+```json
+{
+	"node": "n8n-nodes-base.FriendGrid",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Miscellaneous"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": ""
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": ""
+			}
+		]
+	}
+}
+```
+
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
+
+
+### Step 7: Update the npm package details
+
+Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
+
+```json
+{
+	// All node names must start with "n8n-nodes-"
+	"name": "n8n-nodes-friendgrid",
+	"version": "0.1.0",
+	"description": "n8n node to create contacts in SendGrid",
+	"keywords": [
+		// This keyword is required for community nodes
+		"n8n-community-node-package"
+	],
+	"license": "MIT",
+	"homepage": "https://n8n.io",
+	"author": {
+		"name": "Test",
+		"email": "test@example.com"
+	},
+	"repository": {
+		"type": "git",
+		// Change the git remote to your own repository
+		// Add the new URL here
+		"url": "git+<your-repo-url>"
+	},
+	"main": "index.js",
+	"scripts": {
+		// don't change
+	},
+	"files": [
+		"dist"
+	],
+	// Link the credentials and node
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/FriendGridApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/FriendGrid/.node.js"
+		]
+	},
+	"devDependencies": {
+		// don't change
+	},
+	"dependencies": {
+		// don't change
+	}
+}
+```
+
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+
+
 
 ## Test your node
 

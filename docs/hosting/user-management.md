@@ -94,6 +94,9 @@ You can now invite other people to your n8n instance.
 
 ## Set up on n8n Cloud
 
+!!! warning "Irreversible upgrade"
+	Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+
 ### Step one: in-app setup
 
 When you set up user management for the first time, you create an owner account.

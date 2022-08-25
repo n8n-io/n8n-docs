@@ -50,16 +50,16 @@ Configuration Exporter and Importer allows the user to export / import the Confi
 
 The xml files for all common document types can be downloaded here.
 
-- Order Confirmation: [IDMconfiguration_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_OrderConfirmation.xml)
-- Delivery Note: [IDMconfiguration_DeliveryNote](/_images/doc2/Infor/IDMconfiguration_DeliveryNote.xml)
-- Invoice:  [IDMconfiguration_Invoice](/_images/doc2/Infor/IDMconfiguration_Invoice.xml)
+- Order Confirmation: <a href="/_images/doc2/Infor/IDMconfiguration_OrderConfirmation.xml" download>IDMconfiguration_OrderConfirmation</a>
+- Delivery Note: <a href="/_images/doc2/Infor/IDMconfiguration_DeliveryNote.xml" download>IDMconfiguration_DeliveryNote</a>
+- Invoice: <a href="/_images/doc2/Infor/IDMconfiguration_Invoice.xml" download>IDMconfiguration_Invoice</a> 
 
 If you are using Infor LN as ERP also upload these xml files:
 
-- Order Confirmation: [IDMconfiguration_BusinessContext_OrderConfirmation](/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml)
+- Order Confirmation: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_OrderConfirmation.xml" download>IDMconfiguration_BusinessContext_OrderConfirmation</a>
 - Delivery Note: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote.xml" download>IDMconfiguration_BusinessContext_DeliveryNote</a>
-                 [IDMconfiguration_BusinessContext_DeliveryNote2](/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml)
-- Invoice: [IDMconfiguration_BusinessContext_Invoice](/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml)
+<a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_DeliveryNote2.xml" download>IDMconfiguration_BusinessContext_DeliveryNote2</a>
+- Invoice: <a href="/_images/doc2/Infor/IDMconfiguration_BusinessContext_Invoice.xml" download>IDMconfiguration_BusinessContext_Invoice</a>
 
 
 You can import the files as follows:

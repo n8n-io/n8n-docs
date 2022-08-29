@@ -28,6 +28,14 @@ During validation, the supplier's PO must be extracted correctly.
 
 * * *
 
+Create the table from Purchase Order with one klick. See how easy that is:
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/9FsRoGZDfZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+* * *
+
 ## Keyboard accessibility for PO
 
 1\. Click on the PO Matching required Button of your Document on dashboard
@@ -43,10 +51,4 @@ During validation, the supplier's PO must be extracted correctly.
 ![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_1.png)
 ![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_2.png)
 
-* * *
 
-Create the table from purchase order with one klick. See how easy that is:
-
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/9FsRoGZDfZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>

@@ -37,7 +37,7 @@ n8n doesn't collect private or sensitive information, such as:
 
 ## How collection works
 
-n8n collects telemetry anonymously, with most data sent to n8n as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
+Most data is sent to n8n as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
 
 ## Opting out of telemetry
 

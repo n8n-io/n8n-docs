@@ -22,12 +22,13 @@ n8n collects selected usage and performance data to help diagnose problems and i
         - N8N_BASIC_AUTH_ACTIVE
     - OS, RAM, and CPUs
     - Anonymous instance ID
+ - IP address
 
 ## What n8n doesn't collect
 
 n8n doesn't collect private or sensitive information, such as:
 
-- Personally identifiable information
+- Personally identifiable information (except IP address)
 - Credential information
 - Node parameters (except 'resource' and 'operation')
 - Execution data

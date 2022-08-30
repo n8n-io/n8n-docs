@@ -18,7 +18,7 @@ This is when a node receives a single item and splits it. Every new item links b
 
 ```mermaid
 flowchart LR
-    A[Item-A]-->B{Node 1}
+  A[Item-A]-->B{Node 1}
 	B-->C[Item-B]
 	B-->D[Item-C]
 ```
@@ -29,7 +29,7 @@ This is when a node receives more than one item, operates on each item in turn, 
 
 * B1 links back to A1, B2 to A2, and so on.
 * It's possible to refer back from A3 to A1.
-* It's not possible to refer back from A3 to C1.
+* It's not possible to refer back from C1 to A3.
 
 ```mermaid
 flowchart LR
@@ -40,10 +40,10 @@ flowchart LR
 	B-->F[Item-B2]
 	B-->G[Item-B3]
 	E-->H{Node 2}
-	H-->I[Item-A3]
+	H-->I[Item-C1]
 ```
 
-### Multiple inputs, fewer or single outputs
+### Multiple inputs, combined outputs
 
 [TODO: will this work, or be undefined?]
 

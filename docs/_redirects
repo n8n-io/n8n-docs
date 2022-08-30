@@ -1,9 +1,9 @@
 # methods / vars / paired items
 
-/code-examples/expressions/methods/   /code-examples/methods/
-/code-examples/expressions/variables/   /code-examples/variables/
-/code-examples/javascript-functions/methods/   /code-examples/methods/
-/code-examples/javascript-functions/variables/   /code-examples/variables/
+/code-examples/expressions/methods/   /code-examples/methods-variables/
+/code-examples/expressions/variables/   /code-examples/methods-variables/
+/code-examples/javascript-functions/methods/   /code-examples/methods-variables/
+/code-examples/javascript-functions/variables/   /code-examples/methods-variables/
 
 # Integrations menu refactor
 

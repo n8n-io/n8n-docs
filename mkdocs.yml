@@ -102,31 +102,26 @@ nav:
         - Item linking errors: data/data-item-linking/item-linking-errors.md
     - Expressions and JavaScript:
       - Overview: code-examples/index.md
-      - Built-in methods: code-examples/methods.md
-      - Built-in variables: code-examples/variables.md
+      - Built-in methods and variables: code-examples/methods-variables.md
       - Expressions examples:
         - Overview: code-examples/expressions/index.md
-        - Methods:
-          - Overview: code-examples/expressions/methods/index.md
-        - Variables:
-          - Overview: code-examples/expressions/variables/index.md
-          - execution: code-examples/expressions/variables/execution.md
-          - workflow: code-examples/expressions/variables/workflow.md
+        - Methods and variables:
+          - Overview: code-examples/expressions/methods-variables/index.md
+          - execution: code-examples/expressions/methods-variables/execution.md
+          - workflow: code-examples/expressions/methods-variables/workflow.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
       - JavaScript examples:
         - Overview: code-examples/javascript-functions/index.md
-        - Methods:
-          - Overview: code-examples/javascript-functions/methods/index.md
-          - evaluateExpression: code-examples/javascript-functions/methods/evaluate-expression.md
-          - node: code-examples/javascript-functions/methods/node.md
-          - (node-name).all: code-examples/javascript-functions/methods/all.md
-          - (node-name).itemAt: code-examples/javascript-functions/methods/item-at.md
-        - Variables:
-          - Overview: code-examples/javascript-functions/variables/index.md
-          - execution: code-examples/javascript-functions/variables/execution.md
-          - runIndex: code-examples/javascript-functions/variables/run-index.md
-          - workflow: code-examples/javascript-functions/variables/workflow.md
+        - Methods and variables:
+          - Overview: code-examples/javascript-functions/methods-variables/index.md
+          - evaluateExpression: code-examples/javascript-functions/methods-variables/evaluate-expression.md
+          - node: code-examples/javascript-functions/methods-variables/node.md
+          - (node-name).all: code-examples/javascript-functions/methods-variables/all.md
+          - (node-name).itemAt: code-examples/javascript-functions/methods-variables/item-at.md
+          - execution: code-examples/javascript-functions/methods-variables/execution.md
+          - runIndex: code-examples/javascript-functions/methods-variables/run-index.md
+          - workflow: code-examples/javascript-functions/methods-variables/workflow.md
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md

@@ -17,11 +17,12 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 There are two account types, owner and member. The account type affects the user permissions and access.
 
-* Owner: this is the account that set up user management. There is one owner account for each n8n instance. You can't transfer ownership.
+* Owner: this is the account that set up user management. There's one owner account for each n8n instance. You can't transfer ownership.
   The owner can:
     * Add and remove users
     * See all workflows
     * Delete tags
+		* See all credentials (but not the sensitive information)
 * Members: these are normal n8n users.
   Members can:
     * See all workflow tags, create new tags, and assign tags to their workflows. Members can't delete tags.

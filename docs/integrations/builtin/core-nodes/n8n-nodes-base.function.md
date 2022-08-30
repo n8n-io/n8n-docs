@@ -9,100 +9,31 @@ Using the function node, you can:
     Note that the Function node is different from the [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
 
 
-The Function node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
+The Function node supports:
 
-The Function node supports writing to your browser console using `console.log`, useful for debugging and troubleshooting your workflows.
+* Promises. Instead of returning the items directly, you can return a promise which resolves accordingly.
+* Writing to your browser console using `console.log`. This is useful for debugging and troubleshooting your workflows.
 
-## Data structure
+When working with the Function node, you need to understand the following concepts:
 
-In n8n, all data passed between nodes is an array of objects. It has the following structure:
+* [Data structure](/data/data-structure/): understand the data you receive in the Function node, and requirements for outputting data from the node.
+* [Item linking](/data/data-item-linking/): learn how data items work.
 
-```json
-[
-	{
-		// For most data:
-		// Wrap each item in another object, with the key 'json'
-		"json": {
-			// Example data
-			"jsonKeyName": "keyValue",
-			"anotherJsonKey": {
-				"lowerLevelJsonKey": 1
-			}
-		},
-		// For binary data:
-		// Wrap each item in another object, with the key 'binary'
-		"binary": {
-			// Example data
-			"binaryKeyName": {
-				"data": "....", // Base64 encoded binary data (required)
-				"mimeType": "image/png", // Best practice to set if possible (optional)
-				"fileExtension": "png", // Best practice to set if possible (optional)
-				"fileName": "example.png", // Best practice to set if possible (optional)
-			}
-		}
-	},
-	...
-]
-```
+n8n provides built-in methods and variables. These provide support for:
 
-!!! note "Skipping the 'json' key and array syntax"
-    From 0.166.0 onwards, n8n automatically adds the `json` key if it's missing. It also automatically wraps your items in an array (`[]`) if needed. This is only when using the Function node. When building your own nodes, you must still make sure the node returns data with the `json` key.
+* Accessing specific item data
+* Accessing data about workflows, executions, and your n8n environment
+* Convenience variables to help with data and time
+
+Refer to [code examples](/code-examples/) for more information.
 
 
 
+## Output items
 
-## Example usage
+When using the Function node, you must return data in the format described in [data structure](/data/data-structure/).
 
-This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Function]()
-
-
-The final workflow should look like the following image.
-
-![A workflow with the Function node](/_images/integrations/builtin/core-nodes/function/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Function node
-
-1. Paste the following JavaScript code snippet in the *Function* field.
-```javascript
-var date = new Date().toISOString();
-var day = new Date().getDay();
-const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-items[0].json.date_today = date;
-items[0].json.day_today = weekday[day];
-
-return items;
-```
-2. Click on *Execute Node* to run the workflow.
-
-
-## Node reference
-
-You can also use the methods and variables mentioned in the [Expressions](/code-examples/expressions/) page in the Function node.
-
-### Variable: items
-
-It contains all the items that the node has received as an input.
-
-Information about how the data is structured can be found on [this](/data/data-structure/) page about data structures.
-
-The data can be accessed and manipulated like this:
-
-```typescript
-// Sets the JSON data property "myFileName" of the first item to the name of the
-// file which is set in the binary property "image" of the same item.
-items[0].json.myFileName = items[0].binary.image.fileName;
-
-return items;
-```
-
-This example creates 10 dummy items with the ids 0 to 9:
+This example creates 10 items with the IDs 0 to 9:
 
 ```typescript
 const newItems = [];
@@ -191,8 +122,4 @@ is active and it gets called by a Trigger or Webhook, the static data will be sa
 
 ## External libraries
 
-You can import and use built-in and external npm modules in the Function node. To learn how to enable external moduels, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-function-nodes) guide.
-
-## Further reading
-
-
+If you self-host n8n, you can import and use built-in and external npm modules in the Function node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-function-nodes) guide.

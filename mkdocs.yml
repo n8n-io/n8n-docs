@@ -44,6 +44,11 @@ markdown_extensions:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences:
+      # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
@@ -87,22 +92,41 @@ nav:
       - Overview: data/index.md
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
-      - Using code: data/code.md
+      - Process data using code: data/code.md
       - Data mapping: data/data-mapping.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
-    - Code examples:
+      - Data item linking: 
+        - Overview: data/data-item-linking/index.md
+        - Item linking scenarios: data/data-item-linking/item-linking-scenarios.md
+        - Item linking errors: data/data-item-linking/item-linking-errors.md
+    - Expressions and JavaScript:
       - Overview: code-examples/index.md
-      - Expressions:
+      - Built-in methods: code-examples/methods.md
+      - Built-in variables: code-examples/variables.md
+      - Expressions examples:
         - Overview: code-examples/expressions/index.md
-        - Methods: code-examples/expressions/methods.md
-        - Variables: code-examples/expressions/variables.md
+        - Methods:
+          - Overview: code-examples/expressions/methods/index.md
+        - Variables:
+          - Overview: code-examples/expressions/variables/index.md
+          - execution: code-examples/expressions/variables/execution.md
+          - workflow: code-examples/expressions/variables/workflow.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
-      - JavaScript for workflows:
+      - JavaScript examples:
         - Overview: code-examples/javascript-functions/index.md
-        - Methods: code-examples/javascript-functions/methods.md
-        - Variables: code-examples/javascript-functions/variables.md
+        - Methods:
+          - Overview: code-examples/javascript-functions/methods/index.md
+          - evaluateExpression: code-examples/javascript-functions/methods/evaluate-expression.md
+          - node: code-examples/javascript-functions/methods/node.md
+          - (node-name).all: code-examples/javascript-functions/methods/all.md
+          - (node-name).itemAt: code-examples/javascript-functions/methods/item-at.md
+        - Variables:
+          - Overview: code-examples/javascript-functions/variables/index.md
+          - execution: code-examples/javascript-functions/variables/execution.md
+          - runIndex: code-examples/javascript-functions/variables/run-index.md
+          - workflow: code-examples/javascript-functions/variables/workflow.md
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md

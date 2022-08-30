@@ -1,6 +1,6 @@
 # Overview
 
-Data represents units of information that are collected by and transmitted through nodes. For "basic usage" it is not necessarily needed to understand how the data that gets passed from one node to another is structured. However, it becomes important if you want to:
+Data is the information that n8n nodes receive and process. For basic usage of n8n you don't need to understand data structures and manipulation. However, it becomes important if you want to:
 
  - Create your own node
  - Write custom expressions
@@ -10,4 +10,6 @@ This section covers:
 
 * [Data structure](/data/data-structure/)
 * [Transforming data](/data/transforming-data/)
-* [Using code](/data/code/)
+* [Process data using code](/data/code/)
+* [Pinning](/data/data-pinning/) and [editing](/data/data-editing/) data during workflow development.
+* [Item linking](/data/data-item-linking/): how data items link to each other.

@@ -1,3 +1,10 @@
+# methods / vars / paired items
+
+/code-examples/expressions/methods/   /code-examples/methods/
+/code-examples/expressions/variables/   /code-examples/variables/
+/code-examples/javascript-functions/methods/   /code-examples/methods/
+/code-examples/javascript-functions/variables/   /code-examples/variables/
+
 # Integrations menu refactor
 
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat

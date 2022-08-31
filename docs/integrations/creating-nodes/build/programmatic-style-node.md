@@ -29,7 +29,7 @@ n8n provides a starter repository for node development. Using the starter ensure
 
 Clone the repository and navigate into the directory:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate){:target=_blank .external-link} from the template repository.
 2. Clone your new repository:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid

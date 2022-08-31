@@ -106,7 +106,7 @@ export class FriendGrid implements INodeType {
 		// Basic node details will go here
 		properties: [
 			// Resources and operations will go here
-		]
+		],
 	};
 	// The execute method will go here
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -126,7 +126,7 @@ group: ['transform'],
 version: 1,
 description: 'Consume SendGrid API',
 defaults: {
-	name: 'FriendGrid'
+	name: 'FriendGrid',
 },
 inputs: ['main'],
 outputs: ['main'],
@@ -156,6 +156,7 @@ The resource object defines the API resource that the node uses. In this tutoria
 		},
 	],
 	default: 'contact',
+	noDataExpression: true,
 	required: true,
 	description: 'Create a new contact',
 },
@@ -186,10 +187,11 @@ Add the following to the `properties` array, after the `resource` object:
 			name: 'Create',
 			value: 'create',
 			description: 'Create a contact',
+			action: 'Create a contact',
 		},
 	],
 	default: 'create',
-	description: 'The operation to perform.',
+	noDataExpression: true,
 },
 {
 	displayName: 'Email',
@@ -207,6 +209,7 @@ Add the following to the `properties` array, after the `resource` object:
 		},
 	},
 	default:'',
+	placeholder: 'name@email.com',
 	description:'Primary email for the contact',
 },
 ```
@@ -338,18 +341,17 @@ Add the following to `FriendGridApi.credentials.ts`
 ```typescript
 import {
 	ICredentialType,
-	NodePropertyTypes,
+	INodeProperties,
 } from 'n8n-workflow';
 
 export class FriendGridApi implements ICredentialType {
 	name = 'friendGridApi';
 	displayName = 'FriendGrid API';
-	documentationUrl = 'friendGrid';
-	properties = [
+	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
 			name: 'apiKey',
-			type: 'string' as NodePropertyTypes,
+			type: 'string',
 			default: '',
 		},
 	];
@@ -430,7 +432,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 			"dist/credentials/FriendGridApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/FriendGrid/.node.js"
+			"dist/nodes/FriendGrid/FriendGrid.node.js"
 		]
 	},
 	"devDependencies": {

@@ -11,10 +11,10 @@ For usage examples, refer to [Expressions examples](/code-examples/expressions/m
 | ------ | ----------- | ------------ |
 | `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | Expressions editor |
 | `$data` | Incoming raw data from a node. | Both |
-| `$input.item` | The paired item. [TODO: explain what this is] | Expressions editor |
-| `$input.all()` | | Both |
-| `$input.first()` | | Both |
-| `$input.last()` | | Both |
+| `$input.item` | The paired item. This is the input item that the previous node used to produce this item. Refer to [Item linking](/data/data-item-linking/) for more information on paired items and item linking. | Expressions editor |
+| `$input.all()` | All input items. | Both |
+| `$input.first()` | First input item. | Both |
+| `$input.last()` | Last input item. | Both |
 | `$input.params` | | Both |
 | `$input.context` | | Both |
 | `$json` | Shorthand for `$input.item.json`. Incoming JSON data from a node | Expressions editor |
@@ -25,13 +25,19 @@ For usage examples, refer to [Expressions examples](/code-examples/expressions/m
 | Method | Description | Availability |
 | ------ | ----------- | ------------ |
 | `$("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. Replaces `$items`. | Both |
-| `$("<node-name>").first(branchIndex?, runIndex?)` | | Both |
-| `$("<node-name>").last(branchIndex?, run Index?)` | | Both |
-| `$("<node-name>").item` | The paired item. [TODO: explain what this is]. | Expressions editor |
-| `$("<node-name>").itemAt(itemIndex, branchIndex?, runIndex?)` | [TODO: is this in? not working in expr] Returns an item at a given index. Replaces `$item()`. | Both |
-| `$("<node-name>").itemMatching(currentNodeinputIndex)` | [TODO: not yet implemented?] | Both |
+| `$("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node | Both |
+| `$("<node-name>").last(branchIndex?, run Index?)` | The last item output by the given node. | Both |
+| `$("<node-name>").item` | The paired item. This is the input item that the previous node used to produce this item. Refer to [Item linking](/data/data-item-linking/) for more information on paired items and item linking. | Expressions editor |
 | `$("<node-name>").params` | | |
 | `$("<node-name>").context` | | |
+
+<!-- possibly not live yet? 
+
+
+| `$("<node-name>").itemAt(itemIndex, branchIndex?, runIndex?)` | [TODO: is this in? not working in expr] Returns an item at a given index. Replaces `$item()`. | Both |
+| `$("<node-name>").itemMatching(currentNodeinputIndex)` | [TODO: not yet implemented?] | Both |
+
+-->
 
 ## Working with data
 
@@ -53,7 +59,7 @@ This includes:
 | Method | Description | Availability |
 | ------ | ----------- | ------------ |
 | `$env` | Contains [environment variables](/hosting/environment-variables/). | Both |
-| `$execution.id` | | Both |
+| `$execution.id` | The unique ID of the current workflow execution. | Both |
 | `$execution.mode` | | Both |
 | `$execution.resumeUrl` | The webhook URL to call to resume a waiting workflow. | Both |
 | `$parameters` | Parameters of the current node. | |
@@ -62,6 +68,6 @@ This includes:
 | `$prevNode.outputIndex` | Note that `$prevNode` always takes the first input. This is important when using it in a node with multiple inputs, such as the Merge node. | Both |
 | `$prevNode.runIndex` | Note that `$prevNode` always takes the first input. This is important when using it in a node with multiple inputs, such as the Merge node. | Both |
 | `$runIndex` | How many times n8n has executed the node. Zero-based (the first run is 0, the second is 1, and so on). | Both |
-| `$workflow.active` |  | Both |
-| `$workflow.id` |  | Both |
-| `$workflow.name` |  | Both |
+| `$workflow.active` | Whether the workflow is active (true) or not (false). | Both |
+| `$workflow.id` | The workflow ID. | Both |
+| `$workflow.name` | The workflow name. | Both |

@@ -581,4 +581,3 @@ Once you have created the node and want to contribute to n8n, please check the [
 * [Deploy your node](/integrations/creating-nodes/deploy/).
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. 
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
-* Make sure you understand key concepts: [item linking](/data/data-item-linking/item-linking-scenarios/) and [data structures](/data/data-structure/).

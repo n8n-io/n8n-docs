@@ -271,8 +271,6 @@ let responseData;
 const returnData = [];
 const resource = this.getNodeParameter('resource', 0) as string;
 const operation = this.getNodeParameter('operation', 0) as string;
-// Get credentials the user provided for this node
-const credentials = await this.getCredentials('friendGridApi') as IDataObject;
 
 // For each item, make an API call to create a contact
 for (let i = 0; i < items.length; i++) {
@@ -292,7 +290,6 @@ for (let i = 0; i < items.length; i++) {
 			const options: OptionsWithUri = {
 				headers: {
 					'Accept': 'application/json',
-					'Authorization': `Bearer ${credentials.apiKey}`,
 				},
 				method: 'PUT',
 				body: {
@@ -303,7 +300,7 @@ for (let i = 0; i < items.length; i++) {
 				uri: `https://api.sendgrid.com/v3/marketing/contacts`,
 				json: true,
 			};
-			responseData = await this.helpers.request(options);
+			responseData = await this.helpers.requestWithAuthentication.call(this, 'friendGridApi', options);
 			returnData.push(responseData);
 		}
 	}
@@ -340,6 +337,8 @@ Add the following to `FriendGridApi.credentials.ts`
 
 ```typescript
 import {
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -355,7 +354,24 @@ export class FriendGridApi implements ICredentialType {
 			default: '',
 		},
 	];
+
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.apiKey}}',
+			},
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://api.sendgrid.com/v3',
+			url: '/marketing/contacts',
+		},
+	};
 }
+
 ```
 
 For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).

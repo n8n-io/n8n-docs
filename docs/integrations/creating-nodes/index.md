@@ -10,10 +10,11 @@ This section includes:
 * How to [share your node](/integrations/creating-nodes/deploy/submit-community-nodes/) with the community, or use it as a [private node](/integrations/creating-nodes/deploy/install-private-nodes/).
 * [Reference material](/integrations/creating-nodes/build/reference/), including UI elements and information on the individual files that make up a node.
 
-## Technical difficulty
+## Prerequisites
 
 This section assumes the following:
 
 * Some familiarity with JavaScript and TypeScript.
 * Ability to manage your own development environment, including git.
 * Knowledge of npm, including creating and submitting packages.
+* Familiarity with n8n, including a good understanding of [data structures](/data/data-structures/) and [item linking](/data/data-item-linking/).

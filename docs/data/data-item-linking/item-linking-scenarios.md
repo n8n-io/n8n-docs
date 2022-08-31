@@ -2,7 +2,13 @@
 
 Each new item created by a node includes metadata that links them to the previous item (or items) that the node used to generate them. This can be complicated to understand, especially if the node splits or merges data. The following examples show how this behavior works in different scenarios.
 
-### Single input, single output
+This document provides a conceptual overview of this feature. For usage details, refer to:
+
+* [Item linking for node creators](/data/data-item-linking/item-linking-node-building/), for details on how to handle item linking when building a node.
+* [Following the data path](/data/data-item-linking/item-linking-users/), to learn how to reference items in previous nodes.
+* [Item linking errors](/data/data-item-linking/item-linking-errors/), to understand the errors you may encounter in the editor UI.
+
+## Single input, single output
 
 This is the simplest example. Item-C links back to Item-B, and Item-B links back to Item-A. This makes it possible to refer back to Item-A from Item-C. 
 
@@ -12,7 +18,7 @@ flowchart LR
 ```
 
 
-### Single input, multiple outputs
+## Single input, multiple outputs
 
 This is when a node receives a single item and splits it. Every new item links back to the original item. Both Item-B and Item-C link back to Item-A.
 
@@ -23,7 +29,7 @@ flowchart LR
 	B-->D[Item-C]
 ```
 
-### Multiple inputs, multiple outputs
+## Multiple inputs, multiple outputs
 
 This is when a node receives more than one item, operates on each item in turn, and outputs a new item for each input item that it processes. In this case:
 
@@ -43,18 +49,6 @@ flowchart LR
 	H-->I[Item-C1]
 ```
 
-### Multiple inputs, combined outputs
+## Multiple inputs, combined outputs
 
-[TODO: will this work, or be undefined?]
-
-This is when a node receives multiple items and combines them to output a fewer items than it receives. 
-
-The simplest example is multiple inputs to a single output. In this case, Item-B links back to all the input items:
-
-```mermaid
-flowchart LR
-	A[Item-A1]-->B{Node 1}
-	C[Item-A2]-->B{Node 1}
-	D[Item-A3]-->B{Node 1}
-	B-->E[Item-B]
-```
+This scenario is theoretically possible, but shouldn't occur in practice.

@@ -99,7 +99,9 @@ nav:
       - Data item linking: 
         - Overview: data/data-item-linking/index.md
         - Item linking scenarios: data/data-item-linking/item-linking-scenarios.md
+        - Following the data path: data/data-item-linking/item-linking-users.md
         - Item linking errors: data/data-item-linking/item-linking-errors.md
+        - Item linking for node creators: data/data-item-linking/item-linking-node-building.md
     - Expressions and JavaScript:
       - Overview: code-examples/index.md
       - Built-in methods and variables: code-examples/methods-variables.md
@@ -116,12 +118,14 @@ nav:
         - Methods and variables:
           - Overview: code-examples/javascript-functions/methods-variables/index.md
           - evaluateExpression: code-examples/javascript-functions/methods-variables/evaluate-expression.md
+          - item: code-examples/javascript-functions/methods-variables/item.md
           - node: code-examples/javascript-functions/methods-variables/node.md
           - (node-name).all: code-examples/javascript-functions/methods-variables/all.md
           - (node-name).itemAt: code-examples/javascript-functions/methods-variables/item-at.md
           - execution: code-examples/javascript-functions/methods-variables/execution.md
           - runIndex: code-examples/javascript-functions/methods-variables/run-index.md
           - workflow: code-examples/javascript-functions/methods-variables/workflow.md
+          - getWorkflowStaticData: code-examples/javascript-functions/methods-variables/get-workflow-static-data.md
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md

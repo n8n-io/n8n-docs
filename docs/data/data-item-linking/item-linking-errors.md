@@ -15,5 +15,7 @@ Check that:
 * The node you're referring to exists in the workflow.
 * The node you're referring to is part of the same path as the current node.
 
+## No data found for item-index
 
-## [TODO: pinned data errors]
+If your node expects a fixed number of inputs, and refers to them by item index, it will throw this error when an item is missing.
+

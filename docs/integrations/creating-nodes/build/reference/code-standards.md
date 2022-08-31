@@ -79,7 +79,7 @@ When reusing the internal name, you must ensure that only one field is visible t
 
 ## Detailed guidelines for writing a programmatic-style node
 
-These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/choose-node-method/).
+These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).
 
 ### Don't change incoming data
 
@@ -100,4 +100,4 @@ const response = await this.helpers.httpRequest(options);
 
 This uses the npm package [`request-promise-native`](https://github.com/request/request-promise-native){:target=_blank .external-link}, which is the basic npm `request` module but with promises. For a full set of options refer to [the underlying `request` options documentation](https://github.com/request/request#requestoptions-callback){:target=_blank .external-link}.
 
-Refer to [HTTP helpers](/integrations/creating-nodes/code/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.

@@ -131,7 +131,7 @@ In a Function node, create an array of objects named `myContacts` that contains 
 
 ## Referencing node data with the Function node
 
-Just like you can use [expressions](/code-examples/expressions/){:target="_blank" .external} to reference data from other nodes, you can also use some [methods](/code-examples/expressions/methods/){:target="_blank" .external} and [variables](/code-examples/expressions/variables/){:target="_blank" .external} in the Function node.
+Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code-examples/methods-variables/) in the Function node.
 
 ### Exercise
 

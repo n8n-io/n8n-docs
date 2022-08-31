@@ -2,7 +2,7 @@
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description, and whether they're available in the expressions editor, Function node, or both.
 
-For usage examples, refer to [Expressions examples](/code-examples/expressions/methods-variables/) and [JavaScript examples](/code-examples/javascript-functions/methods/).
+For usage examples, refer to [Expressions examples](/code-examples/expressions/methods-variables/) and [JavaScript examples](/code-examples/javascript-functions/methods-variables/).
 
 
 ## Node input

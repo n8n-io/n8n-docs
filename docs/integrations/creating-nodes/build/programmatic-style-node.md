@@ -60,7 +60,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `sendgrid.svg` in `nodes/FriendGrid/`.
+Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `friendGrid.svg` in `nodes/FriendGrid/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"

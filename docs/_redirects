@@ -313,6 +313,8 @@
 /nodes/n8n-nodes-base.helpscout/		/integrations/builtin/app-nodes/n8n-nodes-base.helpScout/
 /nodes/n8n-nodes-base.helpScoutTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpScoutTrigger/
 /nodes/n8n-nodes-base.helpscouttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpScoutTrigger/
+/nodes/n8n-nodes-base.highLevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highLevel/
+/nodes/n8n-nodes-base.highlevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/
 /nodes/n8n-nodes-base.homeAssistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/
 /nodes/n8n-nodes-base.homeassistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/
 /nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlExtract/

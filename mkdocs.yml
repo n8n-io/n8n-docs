@@ -99,7 +99,7 @@ nav:
       - Data item linking: 
         - Overview: data/data-item-linking/index.md
         - Item linking scenarios: data/data-item-linking/item-linking-scenarios.md
-        - Following the data path: data/data-item-linking/item-linking-users.md
+        - Working with the data path: data/data-item-linking/item-linking-users.md
         - Item linking errors: data/data-item-linking/item-linking-errors.md
         - Item linking for node creators: data/data-item-linking/item-linking-node-building.md
     - Expressions and JavaScript:

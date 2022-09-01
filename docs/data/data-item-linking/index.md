@@ -4,8 +4,9 @@ An item is a single piece of data. Nodes receive one or more items, operate on t
 
 You need to be understand this behavior if you're:
 
-* Building a programmatic-style node that implements complex behaviors with its input and output data.
-* Using the Function node or expressions editor to access data from earlier items in the workflow. Refer to [Code examples](/code-examples/) to find working examples of how to do this in both the expressions editor and the Function node.
+* Building a programmatic-style node that implements complex behaviors with its input and output data. Refer
+* Using the Function node or expressions editor to access data from earlier items in the workflow. 
+* Using the Function node to implement complex behaviors with input and output data.
 
 This section provides:
 

@@ -1,6 +1,6 @@
 # Item linking scenarios
 
-Each new item created by a node includes metadata that links them to the previous item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. The following examples show how this behavior works in different scenarios.
+Each output item created by a node includes metadata that links them to the input item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. The following examples show how this behavior works in different scenarios.
 
 This document provides a conceptual overview of this feature. For usage details, refer to:
 

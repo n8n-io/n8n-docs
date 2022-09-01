@@ -1,5 +1,47 @@
 # Release notes
 
+## n8n@0.193.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.1...n8n@0.193.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-01
+
+This is a bug fix release. It resolves an issue that was causing errors with OAuth2 credentials.
+
+## n8n@0.193.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.0...n8n@0.193.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-31
+
+This is a bug fix release. It resolves an issue that was preventing column headings from displaying correctly in the editor.
+
+## n8n@0.193.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.192.2...n8n@0.193.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-08-31
+
+This release contains a new node, feature enhancements, and bug fixes.
+
+### New nodes
+
+This release adds an integration for [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highLevel/), an all-in-one sales and marketing platform.
+
+### Enhancements
+
+* Docker: reduce the size of Alpine Docker images.
+* Editor: improve mapping tooltip behavior.
+
+### Bug fixes
+
+* Core: make digest auth work with query parameters.
+* Editor: send data as query on DELETE requests.
+* Fix credentials_entity table migration for MySQL.
+* Improve `.npmignore` to reduce the size of the published packages.
+
+### Contributors
+
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Tzachi Shirazi](https://github.com/TzachiSh){:target=_blank .external-link}
+
 ## n8n@0.192.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.192.1...n8n@0.192.2){:target=_blank .external-link} for this version.<br />

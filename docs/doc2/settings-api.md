@@ -9,6 +9,7 @@ tags:
   - API
 ---
 
-- API Integration - you will find you API Key here
+## API Integration 
+You will find your API key in the API menu item in the settings
 
-![](/_images/doc2/DOC²_API-Key_EN-1-1024x470.png)
+![](/_images/doc2/DOC²_Settings_API Key.png)

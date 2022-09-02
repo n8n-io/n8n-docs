@@ -13,9 +13,13 @@ tags:
 ### What is API integration? 
 API integration refers to a process of connecting two or more applications via APIs to "talk" to each other. The applications can perform a common function or exchange information to ensure data integrity.
 
+To access the hole API menu click [here](https://doc2api.cloudintegration.eu/docs) 
+
+
 ## API Calls
 
 All you need is your API Key. You can find it [here](/doc2/settings-api/) 
+
 
 * To **upload** documents you need following **POST** Request with this link:
 ```upl

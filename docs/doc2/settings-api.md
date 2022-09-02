@@ -9,6 +9,6 @@ tags:
   - API
 ---
 
-You will find your API key in the API menu item in the settings
+You will find your API Key in the API menu item in the settings
 
 ![](/_images/doc2/DOC²_Settings_API Key.png)

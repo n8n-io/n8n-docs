@@ -17,12 +17,12 @@ API integration refers to a process of connecting two or more applications via A
 
 All you need is your API Key. You can find it [here](/doc2/settings-api/) 
 
-* To upload documents you need following **POST** Request with this link:
+To **upload** documents you need following **POST** Request with this link:
 ```upl
 https://doc2api.cloudintegration.eu/document/process_documents
 ```
 
-* To query the status of the document you need following **GET** request with this link:
+To query the **status** of the document you need following **GET** request with this link:
 ```sta
 https://doc2api.cloudintegration.eu/document/documents_status/{doc_id}
 ```

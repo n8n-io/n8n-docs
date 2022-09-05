@@ -39,12 +39,21 @@ If the instance doesn't already have a static IP address,
 
 <!-- TODO: How? -->
 
+## Clone configuration repository
 
-## Clone repo
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
 
-<!-- TODO: Clone steps -->
+Clone the repository with the following command:
 
-The next few steps walk through the important parts of what the manifests configure.
+```shell
+git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp
+```
+
+And change directory to the root of the repository you cloned:
+
+```shell
+cd gcp
+```
 
 ## Configure Postgres
 

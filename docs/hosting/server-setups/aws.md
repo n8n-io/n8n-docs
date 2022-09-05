@@ -30,14 +30,17 @@ This can take a while to create the cluster.
 
 Once the cluster is created, eksctl automatically sets the kubectl context to the cluster.
 
-
 ## Setup DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static address of the instance.
 
-If the instance doesn't already have a static IP address, 
+To find the address of the n8n service running on the instance, first open the **Clusters** section of the **EKS** service page in the AWS console.
 
-<!-- TODO: How? -->
+Click the name of the cluster to open its configuration page.
+
+Click the **Resources** tab and the **Services** sub-menu of the **Service and networking** page.
+
+Click the **n8n** service and copy the **Load balancer URLs** value. Use this value suffixed with the n8n service port (5678) for DNS.
 
 ## Clone configuration repository
 

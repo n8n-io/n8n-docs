@@ -43,9 +43,21 @@ If the instance doesn't already have a static IP address, you can assign one to 
 
 To set up http connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging). -->
 
-## Clone repo
+## Clone configuration repository
 
-The next few steps walk through the important parts of what the manifests configure.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
+
+Clone the repository with the following command:
+
+```shell
+git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws
+```
+
+And change directory to the root of the repository you cloned:
+
+```shell
+cd aws
+```
 
 ## Configure Postgres
 

@@ -121,7 +121,7 @@ nav:
         - Advanced settings: doc2/table/advanced-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
     - Keyboard: doc2/keyboard.md
-    - API Integration: doc2/api integration/api integration.md
+    - API Integration: doc2/api-integration/api-integration.md
     - DOC² with Infor: 
       - Use Cases: doc2/infor.md
     - Integration with Infor IDM and ERP:

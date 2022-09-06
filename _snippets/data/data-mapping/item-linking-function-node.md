@@ -8,7 +8,7 @@ When using the Function node, there are some scenarios where you need to manuall
 
 [n8n's automatic item linking](/data/data-mapping/data-item-linking/item-linking-concepts/) handles the other scenarios.
 
-To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0 from input 0:
+To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0:
 
 ```js
 [

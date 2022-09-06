@@ -17,7 +17,7 @@ The Function node supports:
 When working with the Function node, you need to understand the following concepts:
 
 * [Data structure](/data/data-structure/): understand the data you receive in the Function node, and requirements for outputting data from the node.
-* [Item linking](/data/data-item-linking/): learn how data items work. You need to handle item linking when the number of input and output items doesn't match.
+* [Item linking](/data/data-mapping/data-item-linking/): learn how data items work. You need to handle item linking when the number of input and output items doesn't match.
 
 n8n provides built-in methods and variables. These provide support for:
 
@@ -47,6 +47,10 @@ for (let i=0;i<10;i++) {
 
 return newItems;
 ```
+
+## Manage item linking
+
+--8<-- "_snippets/data/data-mapping/item-linking-function-node.md"
 
 ## External libraries
 

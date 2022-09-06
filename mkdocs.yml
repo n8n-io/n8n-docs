@@ -93,15 +93,17 @@ nav:
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
       - Process data using code: data/code.md
-      - Data mapping: data/data-mapping.md
+      - Data mapping: 
+        - Overview: data/data-mapping/index.md
+        - Data mapping: data/data-mapping/data-mapping.md
+        - Data item linking: 
+          - Overview: data/data-mapping/data-item-linking/index.md
+          - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+          - Item linking in the Function node: data/data-mapping/data-item-linking/item-linking-function-node.md
+          - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
+          - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
-      - Data item linking: 
-        - Overview: data/data-item-linking/index.md
-        - Item linking scenarios: data/data-item-linking/item-linking-scenarios.md
-        - Working with the data path: data/data-item-linking/item-linking-users.md
-        - Item linking errors: data/data-item-linking/item-linking-errors.md
-        - Item linking for node creators: data/data-item-linking/item-linking-node-building.md
     - Expressions and JavaScript:
       - Overview: code-examples/index.md
       - Built-in methods and variables: code-examples/methods-variables.md
@@ -179,7 +181,7 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
+          - Item linking: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md

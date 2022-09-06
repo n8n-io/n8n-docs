@@ -473,4 +473,4 @@ You need to update the `package.json` to include your own information, such as y
 * [Deploy your node](/integrations/creating-nodes/deploy/).
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
-* Make sure you understand key concepts: [item linking](/data/data-item-linking/item-linking-scenarios/) and [data structures](/data/data-structure/).
+* Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts/) and [data structures](/data/data-structure/).

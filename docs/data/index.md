@@ -12,4 +12,4 @@ This section covers:
 * [Transforming data](/data/transforming-data/)
 * [Process data using code](/data/code/)
 * [Pinning](/data/data-pinning/) and [editing](/data/data-editing/) data during workflow development.
-* [Item linking](/data/data-item-linking/): how data items link to each other.
+* [Data mapping](/data/data-mapping/data-mapping/) and [Item linking](/data/data-mapping/data-item-linking/): how data items link to each other.

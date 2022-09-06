@@ -21,44 +21,6 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 ]
 ```
 
-### Example scenarios
-
-As an example, consider this input data:
-
-```json
-[
-  {
-    "id": "23423532",
-    "name": "Jay Gatsby",
-  },
-  {
-    "id": "23423533",
-    "name": "José Arcadio Buendía",
-  },
-  {
-    "id": "23423534",
-    "name": "Max Sendak",
-  },
-  {
-    "id": "23423535",
-    "name": "Zaphod Beeblebrox",
-  },
-  {
-    "id": "23423536",
-    "name": "Edmund Pevensie",
-  }
-]
-```
-
-If you do the following, you don't need to set `pairedItem`:
-
-* Sort the items into a new order.
-* Remove two items and return the rest.
-
-If you do the following, you must set `pairedItem`:
-
-* Extract the names, and use them to create new items: add `pairedItem` to all items.
-* Add more items: add `pairedItem` to the new items, if you want them to link back to an input item.
 
 ### pairedItem usage example
 

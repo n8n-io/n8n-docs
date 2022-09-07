@@ -95,7 +95,7 @@ nav:
       - Process data using code: data/code.md
       - Data mapping: 
         - Overview: data/data-mapping/index.md
-        - Data mapping: data/data-mapping/data-mapping.md
+        - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
         - Data item linking: 
           - Overview: data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md

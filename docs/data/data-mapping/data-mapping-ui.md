@@ -1,4 +1,4 @@
-# Data mapping
+# Mapping in the UI
 
 Data mapping means referencing data from previous nodes. It doesn't include changing (transforming) data, just referencing it.
 

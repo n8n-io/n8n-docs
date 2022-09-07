@@ -106,28 +106,24 @@ nav:
       - Data editing: data/data-editing.md
     - Expressions and JavaScript:
       - Overview: code-examples/index.md
-      - Built-in methods and variables: code-examples/methods-variables.md
+      - Built-in methods and variables: 
+        - Overview: code-examples/methods-variables/index.md
+        - Reference: code-examples/methods-variables/reference.md
+        - evaluateExpression: code-examples/methods-variables/evaluate-expression.md
+        - execution: code-examples/methods-variables/execution.md
+        - getWorkflowStaticData: code-examples/methods-variables/get-workflow-static-data.md
+        - item: code-examples/methods-variables/item.md
+        - node: code-examples/methods-variables/node.md
+        - (node-name).all: code-examples/methods-variables/all.md
+        - (node-name).itemAt: code-examples/methods-variables/item-at.md
+        - runIndex: code-examples/methods-variables/run-index.md
+        - workflow: code-examples/methods-variables/workflow.md
       - Expressions examples:
         - Overview: code-examples/expressions/index.md
-        - Methods and variables:
-          - Overview: code-examples/expressions/methods-variables/index.md
-          - execution: code-examples/expressions/methods-variables/execution.md
-          - workflow: code-examples/expressions/methods-variables/workflow.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
       - JavaScript examples:
-        - Overview: code-examples/javascript-functions/index.md
-        - Methods and variables:
-          - Overview: code-examples/javascript-functions/methods-variables/index.md
-          - evaluateExpression: code-examples/javascript-functions/methods-variables/evaluate-expression.md
-          - item: code-examples/javascript-functions/methods-variables/item.md
-          - node: code-examples/javascript-functions/methods-variables/node.md
-          - (node-name).all: code-examples/javascript-functions/methods-variables/all.md
-          - (node-name).itemAt: code-examples/javascript-functions/methods-variables/item-at.md
-          - execution: code-examples/javascript-functions/methods-variables/execution.md
-          - runIndex: code-examples/javascript-functions/methods-variables/run-index.md
-          - workflow: code-examples/javascript-functions/methods-variables/workflow.md
-          - getWorkflowStaticData: code-examples/javascript-functions/methods-variables/get-workflow-static-data.md
+        - Overview: code-examples/javascript-functions/index.md         
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md

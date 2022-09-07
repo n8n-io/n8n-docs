@@ -1,6 +1,20 @@
 # Release notes
 
-## n8n@0.194.4
+## n8n@0.193.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.4...n8n@0.193.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-07
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: prevent editing in the Function nodes in executions view.
+* Editor: ensure button widths are correct.
+* Editor: fix a popup title.
+* Gmail node: fix an issue introduced due to incorrect automatic data formatting.
+
+## n8n@0.193.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.3...n8n@0.193.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-09-06

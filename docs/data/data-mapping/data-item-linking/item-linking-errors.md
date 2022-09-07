@@ -6,7 +6,7 @@ n8n displays errors related to data mapping when there are problems tracing an i
 
 If you see this error message:
 
-> ERROR: '<node-name>' must be unpinned to execute
+> ERROR: '`<node-name>`' must be unpinned to execute
 
 Unpin the data in the named node, and execute the node to get fresh data.
 
@@ -20,7 +20,7 @@ This error has two possible causes:
 
 If you see this error message:
 
-> ERROR: Can't get data for expression under '<field-name>' field
+> ERROR: Can't get data for expression under '`<field-name>`' field
 
 You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Function node](/data/data-mapping/data-item-linking/item-linking-function-node/) for detailed guidance on handling item linking.
 

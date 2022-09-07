@@ -1,5 +1,61 @@
 # Release notes
 
+## n8n@0.194.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.3...n8n@0.193.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-06
+
+This release contains new features that lay the groundwork for upcoming releases, and bug fixes.
+
+### New features
+
+* It's now possible to configure the stop time for workers.
+* CLI: Added external hooks for when members are added or deleted.
+* Editor: Use the i18n component for localization (replacing v-html)
+
+### Bug fixes
+
+
+* CLI: include "auth-excluded" endpoints on the history middleware as well.
+* Core: fix MySQL migration issue with table prefix.
+* Correct spelling.
+* Fix n8n-square-button import.
+* AWS nodes: handle query string and body properly for AWS related requests.
+* AWS Lambda node: fix JSON data being sent to AWS Lambda as string.
+* Beeminder node: fix request ID not being sent when creating a new data point.
+* GitHub node: fix binary data not being returned.
+* GraphQL node: fix issue with return items.
+* Postgres node: fix issue with Postgres insert and paired item.
+* Kafka trigger node: fix Kafka trigger not working with default max requests value.
+* MonicaCrm node: fix pagination when using return all.
+* Gmail node: fix bug related to paired items.
+* Raindrop node: fix issue refreshing OAuth2 credentials.
+* Shopify node: fix pagination when empty fields are sent.
+
+### Contributors
+
+[Aaron Delasy](https://github.com/delasy){:target=_blank .external-link}  
+[ruanjiefeng](https://github.com/ruanjf){:target=_blank .external-link}
+
+
+## n8n@0.193.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.2...n8n@0.193.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-01
+
+This release contains bug fixes and node enhancements.
+
+### Node enhancements
+
+MongoDB node: add credential testing and two new operations.
+
+### Bug fixes
+
+* CLI: only initialize the mailer if the connection can be verified.
+* Core: fix an issue with disabled parent outputs in partial executions.
+* Nodes: remove duplicate wrapping of paired item data.
+
+
 ## n8n@0.193.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.1...n8n@0.193.2){:target=_blank .external-link} for this version.<br />

@@ -113,7 +113,7 @@ nav:
         - execution: code-examples/methods-variables/execution.md
         - getWorkflowStaticData: code-examples/methods-variables/get-workflow-static-data.md
         - item: code-examples/methods-variables/item.md
-        - node: code-examples/methods-variables/node.md
+        - (node-name).item: code-examples/methods-variables/node.md
         - (node-name).all: code-examples/methods-variables/all.md
         - (node-name).itemAt: code-examples/methods-variables/item-at.md
         - runIndex: code-examples/methods-variables/run-index.md

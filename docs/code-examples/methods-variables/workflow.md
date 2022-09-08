@@ -1,4 +1,4 @@
-# $workflow
+# `$workflow`
 
 Gives information about the current workflow.
 

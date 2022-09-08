@@ -1,6 +1,6 @@
-# $execution
+# `$execution`
 
-## $execution.id
+## `$execution.id`
 
 Contains the unique ID of the current workflow execution.
 

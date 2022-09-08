@@ -1,6 +1,6 @@
-# $item(index: number, runIndex?: number)
+# `$item(index: number, runIndex?: number)`
 
-With `$item` it is possible to access the data of parent nodes. That can be the item data but also
+With `$item` you can access the data of parent nodes. That can be the item data but also
 the parameters. It expects as input an index of the item the data should be returned for. This is
 needed because for each item the data returned can be different. This is probably straightforward for the
 item data itself but maybe less for data like parameters. The reason why it is also needed, is

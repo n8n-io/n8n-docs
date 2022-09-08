@@ -1,8 +1,11 @@
-# $evaluateExpression(expression: string, itemIndex: number)
+# `$evaluateExpression(expression: string, itemIndex?: number)`
 
 Evaluates a given string as expression.
-If no `itemIndex` is provided it uses by default in the Function-Node the data of item 0 and
-in the Function Item-Node the data of the current item.
+
+If you don't provide `itemIndex`, n8n uses:
+
+* The data from item 0 in the Function node.
+* The data from the current item in the Function Item node.
 
 Example:
 

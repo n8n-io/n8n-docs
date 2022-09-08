@@ -1,4 +1,4 @@
-# $(<node-name>).all(branchIndex?: number, runIndex?: number)
+# `$("<node-name>").all(branchIndex?: number, runIndex?: number)`
 
 This gives access to all the items of the current or parent nodes. If you don't supply any parameters, it returns all the items of the current node.
 

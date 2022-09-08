@@ -49,6 +49,7 @@ You will end up in the following screen. Please enter the information like in fo
 ![](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
 and click on **SAVE**.
 
+
 The export configuration is displayed in the overview. It can be edited or deleted as well as activated/deactivated via the action buttons:
 
 ![](/_images/doc2/DOC²_ExportSettings_Zugferd_ON.png)
@@ -60,6 +61,7 @@ In addition you need to enter your **Company Information**. You will find the me
 When everything is set up correctly, a new download button will appear in the dashboard after a document is finished:
 
 ![](/_images/doc2/DOC²_Download_ZugferdPDF.png)
+
 
 
 

@@ -26,7 +26,7 @@ Find more videos here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [_
 
 ###Set up the necessary export settings as follows###
 
-Navigate to **SETTINGS** above the dashboard::
+Navigate to **SETTINGS** above the dashboard:
 
 ![](/_images/doc2/DOC²_Dashboard_Settings.png)
 
@@ -61,6 +61,7 @@ In addition you need to enter your **Company Information**. You will find the me
 When everything is set up correctly, a new download button will appear in the dashboard after a document is finished:
 
 ![](/_images/doc2/DOC²_Download_ZugferdPDF.png)
+
 
 
 

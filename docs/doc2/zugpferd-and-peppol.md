@@ -22,60 +22,47 @@ tags:
 <iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/JUzkgCYdBU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-More Videos you find here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [__YouTube__](https://www.youtube.com/channel/UC19DwHXz5nwU2KBdtNr734g)
+Find more videos here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [__YouTube__](https://www.youtube.com/channel/UC19DwHXz5nwU2KBdtNr734g)
 
 
-Export setting can be managed via "SETTINGS -> Export". You can find the option as follows.
+Set up the necessary export settings as follows
 
-From the Dashboard navigate to "SETTINGS":
+Navigate to **SETTINGS** above the dashboard::
 
-![](/_images/doc2/image-29-1024x394.png)
+![](/_images/doc2/DOC²_Dashboard_Settings.png)
 
-In the settings navigate to "Export":
+Navigate to the **Export** menu item in the settings:
 
-![](/_images/doc2/image-30-1024x389.png)
+![](/_images/doc2/DOC²_Settings_Export.png)
 
-You need to create a new entry via the "ADD INTEGRATION" button:
+You need to create a new configuration via the **NEW** button:
 
-![](/_images/doc2/image-31-1024x221.png)
+![](/_images/doc2/DOC²_ExportSettings_new.png)
 
-In the following screen select either "Zugferd" or "Peppol BIS Billing 3.0" - depending on what you want to create the entry for:
+In the following screen select **Zugferd**:
 
-![](/_images/doc2/image-34-1024x278.png)
+![](/_images/doc2/DOC²_ExportSettings_SelectIntegration_Zugferd.png)
 
-## **Zugferd**
-
-You will end up in the following screen. Please enter the information like in following example:
-
-![](/_images/doc2/image-54-1024x461.png)
-
-When you are done, click on "CONFIRM".
-
-## **Peppol**
+## **ZUGFeRD**
 
 You will end up in the following screen. Please enter the information like in following example:
 
-![](/_images/doc2/image-55.png)
+![](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
 
-When you are done, click on "CONFIRM".
+and click on **SAVE**.
 
-The entries will appear in the overview. They can be edited or deleted via the action buttons:
+The export configuration is displayed in the overview. It can be edited or deleted as well as activated/deactivated via the action buttons:
 
-![](/_images/doc2/image-39-1024x315.png)
+![](/_images/doc2/DOC²_ExportSettings_Zugferd_ON.png)
 
 In addition you need to enter your **Company Information**. You will find the menu in the [settings overview](/doc2/company-information/).
 
 * * *
 
-When everything is set up correctly new download buttons will appear in the dashboard after a document has been finished:
+When everything is set up correctly, a new download button will appear in the dashboard after a document is finished:
 
-![](/_images/doc2/image-40.png)
+![](/_images/doc2/DOC²_Download_ZugferdPDF.png)
 
-One for Zugferd and one for Peppol:
-
-![](/_images/doc2/image-42.png)
-
-![](/_images/doc2/image-41.png)
 
 
 [Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }

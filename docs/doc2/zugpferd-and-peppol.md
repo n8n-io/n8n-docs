@@ -24,7 +24,7 @@ tags:
 Find more videos here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [__YouTube__](https://www.youtube.com/channel/UC19DwHXz5nwU2KBdtNr734g)
 
 
-Set up the necessary export settings as follows
+###Set up the necessary export settings as follows###
 
 Navigate to **SETTINGS** above the dashboard::
 
@@ -47,7 +47,6 @@ In the following screen select **Zugferd**:
 You will end up in the following screen. Please enter the information like in following example:
 
 ![](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
-
 and click on **SAVE**.
 
 The export configuration is displayed in the overview. It can be edited or deleted as well as activated/deactivated via the action buttons:

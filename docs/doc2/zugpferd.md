@@ -1,5 +1,5 @@
 ---
-title: "Zugferd and Peppol"
+title: "Zugferd"
 description: Export and Download documents as ZugferdPDF and Peppol BIS Billing
 date: "2022-03-03"
 tags:

@@ -38,7 +38,7 @@ You need to create a new configuration via the **NEW** button:
 
 ![](/_images/doc2/DOC²_ExportSettings_new.png)
 
-In the following screen select **Zugferd**:
+Select **Zugferd** in the following screen:
 
 ![](/_images/doc2/DOC²_ExportSettings_SelectIntegration_Zugferd.png)
 

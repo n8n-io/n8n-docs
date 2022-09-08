@@ -106,18 +106,16 @@ nav:
       - Data editing: data/data-editing.md
     - Expressions and JavaScript:
       - Overview: code-examples/index.md
-      - Built-in methods and variables: 
-        - Overview: code-examples/methods-variables/index.md
-        - Reference: code-examples/methods-variables/reference.md
-        - evaluateExpression: code-examples/methods-variables/evaluate-expression.md
-        - execution: code-examples/methods-variables/execution.md
-        - getWorkflowStaticData: code-examples/methods-variables/get-workflow-static-data.md
-        - item: code-examples/methods-variables/item.md
-        - (node-name).item: code-examples/methods-variables/node.md
-        - (node-name).all: code-examples/methods-variables/all.md
-        - (node-name).itemAt: code-examples/methods-variables/item-at.md
-        - runIndex: code-examples/methods-variables/run-index.md
-        - workflow: code-examples/methods-variables/workflow.md
+      - Built in methods and variables reference: code-examples/methods-variables-reference.md
+      - Built-in methods and variables examples: 
+        - Overview: code-examples/methods-variables-examples/index.md
+        - evaluateExpression: code-examples/methods-variables-examples/evaluate-expression.md
+        - execution: code-examples/methods-variables-examples/execution.md
+        - getWorkflowStaticData: code-examples/methods-variables-examples/get-workflow-static-data.md
+        - (node-name).item: code-examples/methods-variables-examples/node.md
+        - (node-name).all: code-examples/methods-variables-examples/all.md
+        - runIndex: code-examples/methods-variables-examples/run-index.md
+        - workflow: code-examples/methods-variables-examples/workflow.md
       - Expressions examples:
         - Overview: code-examples/expressions/index.md
         - Date and time with Luxon: code-examples/expressions/luxon.md

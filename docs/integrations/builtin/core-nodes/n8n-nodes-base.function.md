@@ -25,7 +25,7 @@ n8n provides built-in methods and variables. These provide support for:
 * Accessing data about workflows, executions, and your n8n environment
 * Convenience variables to help with data and time
 
-Refer to [methods and variables](/code-examples/methods-variables/) for more information.
+Refer to [methods and variables](/code-examples/methods-variables-reference/) for more information.
 
 
 ## Output items

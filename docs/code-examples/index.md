@@ -7,7 +7,7 @@ There are two places in n8n where you need to use code:
 
 This section covers:
 
-* Built-in [methods and variables](/code-examples/methods-variables/).
+* Built-in [methods and variables](/code-examples/methods-variables-reference/).
 * Expressions examples:
     * [Introduction to expressions in n8n](/code-examples/expressions/).
     * Supported libraries: [Luxon](/code-examples/expressions/luxon/) (for data and time) and [JMESPath](/code-examples/expressions/jmespath/) (for working with JSON).

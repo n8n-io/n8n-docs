@@ -7,7 +7,6 @@ tags:
   - Export
   - Download
   - Zugferd
-  - Peppol
 ---
 
 # Import ZUGFeRD to Doc²

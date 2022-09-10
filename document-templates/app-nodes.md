@@ -19,6 +19,11 @@ Match the brand name exactly. For example, GitHub NOT Github
 # <Name>
 
 _Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website._
+	
+## Operations
+
+* _Bullet list_
+* _Of available operations_.
 
 ## Related resources
 
@@ -33,12 +38,6 @@ _Link to the related trigger node if it exists, or tell them if it doesn't_
 * _List of links_
 * _To blog posts_
 * _And integrations marketing pages_
-
-
-## Operations
-
-* _Bullet list_
-* _Of available operations_.
 
 <!-- 
 Add any other sections here. 

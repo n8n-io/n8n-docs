@@ -11,7 +11,7 @@ If you enjoyed creating your first workflow and have successfully completed the 
 
  * [Rename Keys](/example/rename/) 
  * [Weather](/example/weather/)
- * [Email Import to DOC²](/example/email-import.md)
+ * [Email Import to DOC²](/example/email-import)
  * [Approval with DOC²](/example/approval/)
  * [DOC² to Excel](/example/export-excel/)
  * [New Order Workflow](/example/workflow_mautic1/)

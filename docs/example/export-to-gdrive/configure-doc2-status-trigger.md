@@ -4,7 +4,8 @@ description: Here we will check how to add and configure DOC² app status trigge
 tags:
   - Workflow²
   - Example
-  - DOC²Export
+  - DOC²
+  - Export
   - Google Drive
 
 ---

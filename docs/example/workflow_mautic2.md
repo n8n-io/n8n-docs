@@ -23,7 +23,17 @@ We then convert this information into a more convenient form for further process
 To do this, we create a small JS script in the function node that assigns the information to specific terms.
 Under "item.billing" in the part of the message that the WooCommerce Node receives, the customer data is stored.
 
-![Next](/_images/workflows/workflows/mauticworkflow_new_normalize.png)
+Edit JavaScript Code
+``` Javascript
+dict = {
+  'first_name': item.billing.first_name,
+  'last_name': item.billing.last_name,
+  'email': item.billing.email,
+}
+
+return dict;
+
+```
 
 With the help of this we will now create a new contact in MAUTIC.
 To do this, we first need a MAUTIC login.

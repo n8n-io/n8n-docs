@@ -44,7 +44,17 @@ The MAUTIC node needs a normal login (username and password) and the base URL of
 From the contact data received from MAUTIC, we now filter out the registered email addresses using the functionnode and a small javascript code and create a list of them.
 ( In this example we check only the used email address )
 
-![Next](/_images/workflows/workflows/mauticworkflow_new_order4.png)
+Edit JavaScript Code
+``` Javascript
+thelist = []
+
+items.forEach(function(item) {
+  thelist.push(item['json']['fields']['all']['email'])
+})
+
+return {thelist}
+
+```
 
 With the following IF node we check whether the e-mail address used for the order occurs in the list from MAUTIC and act accordingly.
 For the check by means of the IF Node we must insert the variable data there with the help of so-called expressions.

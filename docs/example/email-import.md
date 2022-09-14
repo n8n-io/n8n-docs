@@ -1,6 +1,6 @@
 ---
 title: Email Import to DOC² 
-description: In this example we trigger the result from Doc² and write the result to excel and upload it to Dropbox.
+description: This workflow searches for new e-mails in the configured sub-mailboxes of an e-mail address and uploads it to our DOC² system.
 date: 2022-09-14
 tags:
   - Workflow²
@@ -36,7 +36,7 @@ return items;
 
 ```
 
-Below you can find the whole workflow:
+Here is the complete workflow for you:
 
 
 ``` Javascript

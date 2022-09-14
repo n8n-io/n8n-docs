@@ -1,6 +1,6 @@
 ---
 title: Workflow² combined with MAUTIC
-description: A nice example of how to use the combined power of Workflow² and MAUTIC
+description: This is a nice example of how you can use the combined power of Workflow² and MAUTIC for new orders e.g. in your online shop.
 tags:
   - Workflow²
   - MAUTIC

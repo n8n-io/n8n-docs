@@ -9,7 +9,7 @@ tags:
 
 ---
 
-## Getting Doc2 API Key
+## Getting DOC² API Key
 
 Open **DOC²**, click **Settings** from the top right menu bar
 and then on **API** option

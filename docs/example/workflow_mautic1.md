@@ -7,7 +7,7 @@ tags:
   - How-To
 ---
 
-# MAUTIC Workflow Documentation (new order)
+# MAUTIC New Order Workflow
 
 ![Start](/_images/workflows/workflows/mauticworkflow_new_order1.png)
 
@@ -23,7 +23,17 @@ When activated, general information is received by the node, which is then conve
 To do this, we create a small JS script in the functionnode that maps the information to specific terms.
 Under "item.billing" in the part of the message the WooCommerce node receives, that contains the customer data.
 
-![Next](/_images/workflows/workflows/mauticworkflow_new_normalize.png)
+Edit JavaScript Code
+``` Javascript
+dict = {
+  'first_name': item.billing.first_name,
+  'last_name': item.billing.last_name,
+  'email': item.billing.email,
+}
+
+return dict;
+
+```
 
 Since we are talking about orders here and on many webshops it is quite possible to place an order even as a non-registered user, we will consequently look if we already have a contact in MAUTIC with the given email and/or with the first and last name.
 To do this, we request all contacts via the MAUTIC Node.

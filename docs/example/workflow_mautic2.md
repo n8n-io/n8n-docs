@@ -7,7 +7,7 @@ tags:
   - How-To
 ---
 
-# MAUTIC Workflow Documentation (new customer)
+# MAUTIC New Customer Workflow 
 
 ![Start](/_images/workflows/workflows/mauticworkflow_new_customer1.png)
 

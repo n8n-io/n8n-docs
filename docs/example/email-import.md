@@ -12,7 +12,7 @@ tags:
 
 #  Email Import to DOC²
 
-This workflow searches for new e-mails in the configured sub-mailboxes of an e-mail address. When a new email is found, it receives the attachment and uploads it to our DOC² system.
+This workflow searches for new e-mails in the configured sub-mailboxes of an e-mail address. When a new email is found, it receives the attachment and uploads it to DOC².
 
 
 ![](/_images/example/email import/WF_email-import.png)

@@ -11,8 +11,8 @@ tags:
 
 ## Getting Doc2 API Key
 
-Open **Doc2App** and click **Settings** from the top right menu bar
-and then click **API** option
+Open **DOC²**, click **Settings** from the top right menu bar
+and then on **API** option
 
 ![Settings](/_images/example/gdrive/image8.png)
 

@@ -1,16 +1,16 @@
 ---
-title: WF² Approval with Doc²
+title: WF² Approval with DOC²
 description: Documents Approval as important for any business. We show you how you can a easy Worfklow to create an approval
 date: 2021-07-05
 tags:
   - Workflow²
   - Approval
-  - Doc²
+  - DOC²
   - Ming.le
   - Infor OS
 ---
 
-# WF² Approval with Doc²
+# WF² Approval with DOC²
 
 
 

@@ -122,7 +122,7 @@ Here is the complete workflow for you:
         "credentials": {
           "Doc2AppApi": {
             "id": "19",
-            "name": "Doc2App Lopez dev"
+            "name": "Doc2App"
           }
         }
       },
@@ -143,7 +143,7 @@ Here is the complete workflow for you:
         "credentials": {
           "Doc2AppApi": {
             "id": "19",
-            "name": "Doc2App Lopez dev"
+            "name": "Doc2App"
           }
         }
       },
@@ -164,7 +164,7 @@ Here is the complete workflow for you:
         "credentials": {
           "Doc2AppApi": {
             "id": "19",
-            "name": "Doc2App Lopez dev"
+            "name": "Doc2App"
           }
         }
       },
@@ -196,7 +196,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       },
@@ -228,7 +228,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       },
@@ -260,7 +260,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       },
@@ -280,7 +280,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       },
@@ -300,7 +300,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       },
@@ -320,7 +320,7 @@ Here is the complete workflow for you:
         "credentials": {
           "gmailOAuth2": {
             "id": "20",
-            "name": "Gmail account Lopez"
+            "name": "Gmail account"
           }
         }
       }

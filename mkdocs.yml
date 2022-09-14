@@ -217,11 +217,12 @@ nav:
         - example/weather/index.md
         - Weather in the City: example/weather/weather.md
         - Rain: example/weather/weather_rain.md
-      - Approval with Doc²: example/approval.md
-      - Doc² to Excel: example/export-excel.md
+      - Email Import to DOC²: example/email-import.md
+      - Approval with DOC²: example/approval.md
+      - DOC² to Excel: example/export-excel.md
       - New Order Workflow: example/workflow_mautic1.md
       - New Customer Workflow: example/workflow_mautic2.md
-      - Doc² to Google Drive:
+      - DOC² to Google Drive:
         - example/export-to-gdrive/index.md
         - Create blank workflow: example/export-to-gdrive/create-blank-workflow.md
         - Configure Doc2StatusTrigger Node: example/export-to-gdrive/configure-doc2-status-trigger.md

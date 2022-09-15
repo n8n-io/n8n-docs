@@ -213,6 +213,7 @@ nav:
     - Configuration: embed/configuration.md
     - Workflow management: embed/managing-workflows.md
     - Workflows templates: embed/workflow-templates.md
+    - White Labelling: embed/white-labelling.md
   - Courses:
       - Overview: courses/index.md
       - Level one:

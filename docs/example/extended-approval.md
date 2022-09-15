@@ -1,16 +1,14 @@
 ---
-title: WF² Approval with DOC²
-description: Documents Approval as important for any business. We show you how you can a easy Worfklow to create an approval
-date: 2021-07-05
+title: WF² Extended Approval with DOC²
+description: Extended documents-approval as important for any business. We show you how you can easily create a Worfklow to assign an approval
+date: 2022-09-15
 tags:
   - Workflow²
   - Approval
   - DOC²
-  - Ming.le
-  - Infor OS
 ---
 
-# WF² Approval with DOC²
+# WF² Extended Approval with DOC²
 
 We now support double approvals meaning one user or groupmember approves a document and the document gets assigned to a second user or group to make sure that everything goes as wanted.
 

@@ -219,7 +219,7 @@ nav:
         - Rain: example/weather/weather_rain.md
       - Email Import to DOC²: example/email-import.md
       - Approval with DOC²: example/approval.md
-      - Extended approval: example/extended-approval.md
+      - Second approval: example/second-approval.md
       - DOC² to Excel: example/export-excel.md
       - New Order Workflow: example/workflow_mautic1.md
       - New Customer Workflow: example/workflow_mautic2.md

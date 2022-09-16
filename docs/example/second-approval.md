@@ -1,5 +1,5 @@
 ---
-title: WF² Extended Approval with DOC²
+title: WF² Second Approval with DOC²
 description: Extended documents-approval as important for any business. We show you how you can easily create a Worfklow to assign an approval
 date: 2022-09-15
 tags:
@@ -8,13 +8,13 @@ tags:
   - DOC²
 ---
 
-# WF² Extended Approval with DOC²
+# WF² Second Approval with DOC²
 
-We now support double approvals meaning one user or groupmember approves a document and the document gets assigned to a second user or group to make sure that everything goes as wanted.
+We now support second approvals, meaning a user or group member approves a document that is assigned to a second user or group to ensure the approval is granted correctly.
 
-Once the update is live, you can for example utilize the extended approval workflow from here to assign invoices to specific users or groups depending on the total cost (total amount) on an invoice.
+For example, once updated, you can use the advanced approval workflow from here to assign invoices to specific users or groups, depending on the total amount of the invoice.
 
-And with our Approve/Reject node in the mix you can have the workflow automatically approve or reject invoices which for example have high or low total amounts.
+And with our Approve/Reject node, you can use this workflow to automatically approve or reject invoices that have defined high or low totals, for example.
 
 ![](/_images/workflows/workflows/extended_approval.png)
 

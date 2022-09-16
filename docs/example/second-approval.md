@@ -22,7 +22,7 @@ With our new **Approve/Reject node**, you can use this workflow to automatically
 
 
 
-## Example
+## Examples
 
 First Approval workflow
 

@@ -24,7 +24,7 @@ With our new **Approve/Reject node**, you can use this workflow to automatically
 
 ## Example
 
-First workflow
+First Approval workflow
 
 ``` Javascript
 },
@@ -194,7 +194,7 @@ First workflow
 
 ```
 
-Second workflow
+Second Approval workflow
 
 ```Javascript
 {

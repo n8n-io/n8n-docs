@@ -12,9 +12,9 @@ tags:
 
 For your invoice receipt process in DOC², we now support second approvals. This means one user or group member approves an invoice, assigns it to a second user or group for review and approval to ensure the approval is granted correctly.
 
-For example, once updated, you can use the advanced approval workflow from here to assign invoices to specific users or groups, depending on the total amount of the invoice.
+After next release, you are able to use this advanced approval workflow to assign invoices to specific users or groups, depending on the total amount of the invoice.
 
-And with our Approve/Reject node, you can use this workflow to automatically approve or reject invoices that have defined high or low totals, for example.
+With our new **Approve/Reject node**, you can use this workflow to automatically approve or reject invoices that have defined high or low totals, for example.
 
 ![](/_images/workflows/workflows/extended_approval.png)
 

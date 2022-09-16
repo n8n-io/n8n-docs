@@ -10,7 +10,7 @@ tags:
 
 # WF² Second Approval with DOC²
 
-For your invoice receipt process in DOC², we now support second approvals. This means one user or group member approves an invoice and assigns it to a second user or group for review and approval to ensure the approval is granted correctly.
+For your invoice receipt process in DOC², we now support second approvals. This means one user or group member approves an invoice, assigns it to a second user or group for review and approval to ensure the approval is granted correctly.
 
 For example, once updated, you can use the advanced approval workflow from here to assign invoices to specific users or groups, depending on the total amount of the invoice.
 

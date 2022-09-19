@@ -28,9 +28,9 @@ Enable the Kubernetes Engine API by clicking the **Enable** button.
 
 From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
 
-## Login to instance
+## Set Kubectl context
 
-The remainder of the steps in this guide require you to login to the instance via an SSH connection. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string for the gcloud CLI tool. Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
+The remainder of the steps in this guide require you to set the GCP instance as the Kubectl context. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string for the gcloud CLI tool. Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
 
 ## Setup DNS
 
@@ -45,18 +45,18 @@ To set up http connections to the instance, you need to open Firewall rules. You
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws
+git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd aws
+cd gcp
 ```
 
 ## Configure Postgres
@@ -86,21 +86,6 @@ The example `postgres-secret.yaml` file contains placeholders you need to replac
 The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
 
 ## Configure n8n
-
-### Create a volume for file storage
-
-During initial setup and certain workflows, n8n needs to write files to disk and needs a persistent volume to do so.
-
-The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
-
-```yaml
-…
-volumes:
-  - name: n8n-claim0
-    persistentVolumeClaim:
-      claimName: n8n-claim0
-…
-```
 
 ### Environment variables
 

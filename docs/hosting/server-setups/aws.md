@@ -2,7 +2,6 @@
 
 This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
-
 ## Hosting options
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
@@ -49,13 +48,13 @@ Kubernetes and n8n require a series of configuration files. You can clone these 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp
+git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd gcp
+cd aws
 ```
 
 ## Configure Postgres
@@ -84,21 +83,6 @@ The example `postgres-secret.yaml` file contains placeholders you need to replac
 The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
 
 ## Configure n8n
-
-### Create a volume for file storage
-
-During initial setup and certain workflows, n8n needs to write files to disk and needs a persistent volume to do so.
-
-The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
-
-```yaml
-…
-volumes:
-  - name: n8n-claim0
-    persistentVolumeClaim:
-      claimName: n8n-claim0
-…
-```
 
 ### Environment variables
 

@@ -13,6 +13,8 @@ You can specify how the Merge node should combine data from different branches. 
 
 Combines data from both inputs. The output contains items from Input 1, followed by all items from Input 2.
 
+![Diagram](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
+
 ### Merge by fields
 
 Compare items by field values. Enter the fields you want to compare in **Fields to Match**.
@@ -22,11 +24,15 @@ n8n's default behavior is to keep matching items. You can change this using the 
 * Keep matches: merge items that match.
 * Keep non-matches: merge items that don't match.
 * Enrich Input 1: keep all data from Input 1, and add matching data from Input 2.
-* Enrich Input 2: leep all data from Input 2, and add matching data from Input 1.
+* Enrich Input 2: keep all data from Input 2, and add matching data from Input 1.
+
+![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
 
 ### Merge by position
 
 Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.
+
+![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-position-diagram.png)
 
 #### Inputs with different numbers of items
 
@@ -39,6 +45,8 @@ If there are more items in one input than the other, the default behavior is to 
 ### Multiplex
 
 Output all possible item combinations, while merging fields with the same name.
+
+![Diagram](/_images/integrations/builtin/core-nodes/merge/multiplex-diagram.png)
 
 #### Field value clashes
 
@@ -57,7 +65,7 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
 
 
-## Try it out
+## Try it out: a step by step example
 
 Create a simple workflow with some example input data to try out the Merge node.
 
@@ -124,32 +132,6 @@ Output data in table view:
 
 ![Append mode output](/_images/integrations/builtin/core-nodes/merge/append-mode.png)
 
-Output data in JSON view:
-
-```json
-[
-  {
-    "name": "Stefan",
-    "language": "de"
-  },
-  {
-    "name": "Jim",
-    "language": "en"
-  },
-  {
-    "name": "Hans",
-    "language": "de"
-  },
-  {
-    "greeting": "Hello",
-    "language": "en"
-  },
-  {
-    "greeting": "Hallo",
-    "language": "de"
-  }
-]
-```
 
 #### Merge by fields
 
@@ -163,27 +145,6 @@ Output in table view:
 
 ![Merge by Fields mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-fields-mode.png)
 
-Output in JSON view:
-
-```json
-[
-  {
-    "name": "Stefan",
-    "language": "de",
-    "greeting": "Hallo"
-  },
-  {
-    "name": "Jim",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Hans",
-    "language": "de",
-    "greeting": "Hallo"
-  }
-]
-```
 
 #### Merge by position
 
@@ -193,22 +154,6 @@ Default output in table view:
 
 ![Merge by Position mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-mode-default.png)
 
-Default output in JSON view:
-
-```json
-[
-  {
-    "name": "Stefan",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Jim",
-    "language": "de",
-    "greeting": "Hallo"
-  }
-]
-```
 
 ##### Keep unpaired items
 
@@ -218,26 +163,6 @@ Output with unpaired items in table view:
 
 ![Merge by Position mode with unpaired items output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-include-unpaired.png)
 
-Output with unpaired items in JSON view:
-
-```json
-[
-  {
-    "name": "Stefan",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Jim",
-    "language": "de",
-    "greeting": "Hallo"
-  },
-  {
-    "name": "Hans",
-    "language": "de"
-  }
-]
-```
 
 #### Multiplex
 
@@ -247,42 +172,9 @@ Output in table view:
 
 ![Merge by Multiplex mode output](/_images/integrations/builtin/core-nodes/merge/multiplex-mode.png)
 
-Output in JSON view:
 
-```json
-[
-  {
-    "name": "Stefan",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Stefan",
-    "language": "de",
-    "greeting": "Hallo"
-  },
-  {
-    "name": "Jim",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Jim",
-    "language": "de",
-    "greeting": "Hallo"
-  },
-  {
-    "name": "Hans",
-    "language": "en",
-    "greeting": "Hello"
-  },
-  {
-    "name": "Hans",
-    "language": "de",
-    "greeting": "Hallo"
-  }
-]
-```
+## Try it out: load a workflow
 
+n8n provides an example workflow that demonstrates key Merge node concepts.
 
-
+Go to [Joining different datasets](https://n8n.io/workflows/1747/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.

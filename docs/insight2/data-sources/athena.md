@@ -49,6 +49,7 @@ You can also configure for **[additional optional parameters](https://github.com
 
 - Click on the `run` button to run the query.
 
+
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 **NOTE:** Query should be saved before running.
 
@@ -84,3 +85,5 @@ VALUES ('Lansing',1)
 ```sql
 SELECT * from student WHERE AGE=1
 ```
+
+

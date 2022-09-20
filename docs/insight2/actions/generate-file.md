@@ -29,8 +29,8 @@ Example:
 ```javascript
 {{
   [
-    { name: 'John', email: 'john@tooljet.com' },
-    { name: 'Sarah', email: 'sarah@tooljet.com' },
+    { name: 'Daniel', email: 'daniel@polydocs.io' },
+    { name: 'Ines', email: 'ines@polydocs.io' },
   ]
 }}
 ```
@@ -39,6 +39,6 @@ Supplying the above snippet will generate a csv file which looks like this:
 
 ```csv
 name,email
-John,john@tooljet.com
-Sarah,sarah@tooljet.com
+Daniel,daniel@polydocs.io
+Ines,ines@polydocs.io
 ```

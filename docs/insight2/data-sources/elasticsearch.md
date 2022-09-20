@@ -14,7 +14,7 @@ Please make sure the host/IP of the Elasticsearch cluster is accessible from you
 
 To add a new Elasticsearch database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select Elasticsearch from the modal that pops up.
 
-Insight² requires the following to connect to your Elasticsearch cluster:
+Insight² requires the following to connect to your Elasticsearch cluster:<br>
 - **Host**
 - **Port**
 - **Username**
@@ -26,10 +26,10 @@ Insight² requires the following to connect to your Elasticsearch cluster:
 
 
 
-Elastic search datasource is also providing an option for connecting services with ssl certificates.
+Elastic search datasource is also providing an option for connecting services with ssl certificates.<br>
 - You can either use CA / Client certificates option.
 
-![Insight² - Data Source - Elasticsearch - SSL](/_images/insight2/datasource-reference/elasticsearch/ssl.png)
+![Insight² - Data Source - Elasticsearch - SSL](/_images/insight2/elasticsearch_ssl.png)
 
 
 ## Querying Elasticsearch

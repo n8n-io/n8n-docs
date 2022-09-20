@@ -41,11 +41,11 @@ Select the operation that you want to perform on your Elasticsearch cluster and 
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/query.png)
 
-</div>
 
-:::tip
-Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/docs/tutorial/transformations)**
-:::
+
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/insight2/tutorial/transformations/)**
+
 
 ## Supported operations
 
@@ -57,7 +57,6 @@ This operation allows you to execute a search query and get back search hits tha
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/elastic-search.png)
 
-</div>
 
 #### Index a document
 
@@ -67,7 +66,6 @@ This operation allows you to add a JSON document to the specified data stream or
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/index.png)
 
-</div>
 
 #### Get a document
 
@@ -77,7 +75,6 @@ This operation allows you to retrieve the specified JSON document from the index
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/get.png)
 
-</div>
 
 #### Update a document
 
@@ -87,4 +84,5 @@ This operation allows to update a document using the specified script. Read the 
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/update.png)
 
-</div>
+
+

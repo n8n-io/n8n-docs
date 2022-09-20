@@ -28,9 +28,8 @@ Insight² requires the following to connect to your Athena.
 - **Secret key**
 - **Region**
 
-:::info
+:fontawesome-solid-circle-info
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.
-:::
 
 
 

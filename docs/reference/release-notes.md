@@ -1,5 +1,73 @@
 # Release notes
 
+## n8n@0.194.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.5...n8n@0.194.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-15
+
+This release includes new nodes: a Gmail trigger, Google Cloud Storage, and Adalo. It also contains major overhauls of the Gmail and Merge nodes.
+
+### New features
+
+* CLI: load all nodes and credentials code in isolation.
+* Core, Editor UI: introduce support for node deprecation.
+* Editor: implement HTML sanitization for Notification and Message components.
+* Editor: display the input number on multi-input nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Adalo
+
+Adalo is a low code app builder. Refer to our [Adalo node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/) for more information.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Google Cloud Storage
+
+n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudStorage/). 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Gmail Trigger
+
+n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
+
+</div>
+
+
+### Node enhancements
+
+* Gmail node: this release includes an overhaul of the Gmail node, with updated resources and operations.
+* Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) to learn more.
+* MongoDB node: updated the Mongo driver to 4.9.1.
+
+
+### Bug fixes
+
+* CLI: core: address Dependabot warnings.
+* CLI: avoid scanning unnecessary directories on Windows.
+* CLI: load nodes and directories on Windows using the correct file path.
+* CLI: ensure password reset triggers internal and external hooks.
+* CLI: use absolute paths for loading custom nodes and credentials.
+* Core: returnJsonArray helper no longer breaks nodes that return no data.
+* Core: fix an issue with node renaming and expressions.
+* Core: update OAuth endpoints to use the instance base URL.
+* Nodes: resolved an issue that was preventing versioned nodes from loading.
+* Public API: better error handling for bad requests.
+* AWS nodes: fixed an issue with credentials testing.
+* GoogleBigQuery node: fix for empty responses when creating records.
+* Hubspot node: correct the node name on the canvas.
+
+### Contributors
+
+[Rhys Williams](https://github.com/rhyswilliamsza){:target=_blank .external-link}
+
 ## n8n@0.193.5
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.4...n8n@0.193.5){:target=_blank .external-link} for this version.<br />

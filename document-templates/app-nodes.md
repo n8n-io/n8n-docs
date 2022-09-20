@@ -36,12 +36,9 @@ Refer to [_Name's_ documentation]() for details about the operations.
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
 n8n provides a trigger node for _Name_. You can find the trigger node docs [here]().
 	
-<!-- this section is optional. Include it if we have good blog posts available -->
-### Examples
+<!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
+View [example workflows and related content](){:target=_blank .external-link} on our website.
 
-* _List of links_
-* _To blog posts_
-* _And integrations marketing pages_
 
 <!-- 
 Add any other sections here. 

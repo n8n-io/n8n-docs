@@ -12,13 +12,13 @@ tags:
 Insight² connects to your Cloud Firestore using JSON key of your GCP service account.
 To generate a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
-Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on **Test connection** button to verify if the service account can access Firestore from Insight² server. Click on **Save** button to save the datasource.
+Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on `Test connection' button to verify if the service account can access Firestore from Insight² server. Click on `Save` button to save the datasource.
 
 
 
 ![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/add-ds-firestore.gif)
 
-</div>
+
 
 ## Querying Firestore
 
@@ -28,13 +28,13 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 ![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/firestore-query.png)
 
-</div>
+
 
 Select the operation that you want to perform on Firestore and click **Save** to save the query.
 
-:::tip
-Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/docs/tutorial/transformations)**
-:::
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/insight2/tutorial/transformations/)**
+
 
 ## Supported operations
 1. [Get document](#get-document)
@@ -51,13 +51,14 @@ Use this operation to get the data in a document.
 
 #### Required parameters:
 
-- **Path**: Enter the path of the document. Path format: `collection name/document id`. ex: `books/23e2wsds32`
+- **Path**: Enter the path of the document. Path format: `collection name/document id`.<br>
+Example: `books/23e2wsds32`
 
 
 
 ![Insight² - Data source - Firestore](/_images/insight2/datasource-reference/firestore/get.png)
 
-</div>
+
 
 ### Query collection
 
@@ -87,7 +88,7 @@ Use this operation for creating a new document in a collection.
 
 #### Required parameters:
 
-- **Collection**: Enter the path of the document in a collection. Path format: `collection name/document id`. ex: `books/33243dwe2332`
+- **Collection**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
 - **Body**: Enter the Field names and their values in json form. example body:
 ```json
 {
@@ -108,7 +109,7 @@ Use this operation for updating the existing document in a collection. Also, it 
 
 #### Required parameters:
 
-- **Path**: Enter the path of the document in a collection. Path format: `collection name/document id`. ex: `books/33243dwe2332`
+- **Path**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
 - **Body**: Enter the Field names and their values in json form. example body:
 ```json
 {
@@ -129,7 +130,7 @@ This operation replaces your chosen object with the value that you provide. So i
 
 #### Required parameters:
 
-- **Path**: Enter the path of the document in a collection. Path format: `collection name/document id`. ex: `books/33243dwe2332`
+- **Path**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
 - **Body**: Enter the Field names and their values in json form. example body:
 ```json
 {
@@ -167,7 +168,7 @@ Use this operation for deleting a document in a collection.
 
 #### Required parameters:
 
-- **Path**: Enter the path of the document to be deleted in a collection. Path format: `collection name/document id`. ex: `books/33243dwe2332`
+- **Path**: Enter the path of the document to be deleted in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
 
 
 
@@ -182,3 +183,5 @@ The Firestore query result is in the form of object so we’ll need to transform
 ```js
 return data = Array(data)
 ```
+
+

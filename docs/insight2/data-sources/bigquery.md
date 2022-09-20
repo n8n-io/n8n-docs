@@ -57,9 +57,9 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 Click on the **run** button to run the query. NOTE: Query should be saved before running.
 
-:::tip
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)
-:::
+
 
 ## Supported operations
 
@@ -147,9 +147,10 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 
-:::info
-NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be deleted!
-:::
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+**NOTE**: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be deleted!
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+
 ### Update Record
 - To update a record.
 
@@ -159,9 +160,10 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 
 
-:::info
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be updated!
-:::
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+
 ### Create View
 
 - To create a view.
@@ -177,9 +179,11 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 
 - To create a table.
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 NOTE: visit -https://github.com/googleapis/nodejs-bigquery/blob/main/samples/createTable.js for more info on schema.
-:::
+
 
 ### Delete Table
 - To delete a table.
+
+

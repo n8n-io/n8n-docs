@@ -12,7 +12,7 @@ tags:
 Insight² connects to your Cloud Firestore using JSON key of your GCP service account.
 To generate a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
-Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on `Test connection' button to verify if the service account can access Firestore from Insight² server. Click on `Save` button to save the datasource.
+Once the key is downloaded, click on `+` button of data sources panel at the left-bottom corner of the app editor. Select Firestore from the modal that pops up. Paste the key in the field for GCP key. Click on `Test connection` button to verify if the service account can access Firestore from Insight² server. Click on `Save` button to save the datasource.
 
 
 
@@ -89,7 +89,7 @@ Use this operation for creating a new document in a collection.
 #### Required parameters:
 
 - **Collection**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
-- **Body**: Enter the Field names and their values in json form. example body:
+- **Body**: Enter the Field names and their values in json form. Example body:
 ```json
 {
 "Author": "Shubh",
@@ -110,7 +110,7 @@ Use this operation for updating the existing document in a collection. Also, it 
 #### Required parameters:
 
 - **Path**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
-- **Body**: Enter the Field names and their values in json form. example body:
+- **Body**: Enter the Field names and their values in json form. Example body:
 ```json
 {
 "Author": "Shubhendra",
@@ -131,7 +131,7 @@ This operation replaces your chosen object with the value that you provide. So i
 #### Required parameters:
 
 - **Path**: Enter the path of the document in a collection.<br> Path format: `collection name/document id`. Example: `books/33243dwe2332`
-- **Body**: Enter the Field names and their values in json form. example body:
+- **Body**: Enter the Field names and their values in json form. Example body:
 ```json
 {
 "Author": "Shefewfbh",

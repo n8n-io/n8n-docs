@@ -50,8 +50,11 @@ You can also configure for **[additional optional parameters](https://github.com
 - Click on the `run` button to run the query.
 
 
+
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 **NOTE:** Query should be saved before running.
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Refer amazon athena docs here for more info: [link](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)

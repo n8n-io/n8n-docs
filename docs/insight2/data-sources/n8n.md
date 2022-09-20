@@ -25,7 +25,7 @@ n8n webhooks can be called with or without an **Authentication**. You can keep t
 
 ![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/basicauth.png)
 
-</div>
+
 
 - **Header Auth**: To connect your n8n webhooks using header auth the following fields are required:
     - **Name / Key**
@@ -35,7 +35,7 @@ n8n webhooks can be called with or without an **Authentication**. You can keep t
 
 ![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/headerauth.png)
 
-</div>
+
 
 :::tip
 Webhook credentials and instance credentials are different. Please use the credentials that you use with the webhook trigger. Know more: **[Webhook Authentication](https://docs.n8n.io/nodes/n8n-nodes-base.webhook/#:~:text=then%20gets%20deactivated.-,Authentication,-%3A%20The%20Webhook%20node)**.
@@ -53,4 +53,4 @@ You can trigger a workflow with `GET/POST` URL. Choose the request type from the
 
 ![Insight² - Data source - n8n](/_images/insight2/datasource-reference/n8n/query.png)
 
-</div>
+

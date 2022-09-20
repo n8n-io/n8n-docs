@@ -33,7 +33,7 @@ The chart will look like this:
 
 ![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/linec.png)
 
-</div>
+
 
 ### Bar charts
 
@@ -61,7 +61,7 @@ The chart will look like this:
 
 ![Insight² - Widget Reference - Chart](/_images/insight2/widgets/chart/barc.png)
 
-</div>
+
 
 ### Pie charts
 

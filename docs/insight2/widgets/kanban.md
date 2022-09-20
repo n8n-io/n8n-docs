@@ -11,7 +11,7 @@ Kanban widget allows you to visually organize and prioritize your tasks with a t
 
 ![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban.png)
 
-</div>
+
 
 ## Events
 
@@ -29,7 +29,7 @@ Just like any other event on Insight, you can set multiple handlers for any of t
 
 ![Insight² - Kanban widget](/_images/insight2/widgets/kanban/kanban-events.png)
 
-</div>
+
 
 ## Properties
 
@@ -42,7 +42,7 @@ and this `id` must be of type string.
 
 ![Insight² - Kanban widget](/_images/insight2/widgets/kanban/properties.png)
 
-</div>
+
 
 | Properties      | description                                                                                                                           | Expected value                                                                                                                                                    |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ and this `id` must be of type string.
 
 ![Insight² - Kanban widget](/_images/insight2/widgets/kanban/layout.png)
 
-</div>
+
 
 | Layout          | description                                             | Expected value                                                                                        |
 | --------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ and this `id` must be of type string.
 
 ![Insight² - List view widget](/_images/insight2/widgets/kanban/styles.png)
 
-</div>
+
 
 | Style        | Description                                                                                                                                                                   |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ and this `id` must be of type string.
 
 ![Insight² - List view widget](/_images/insight2/widgets/kanban/variables.png)
 
-</div>
+
 
 | Variable         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

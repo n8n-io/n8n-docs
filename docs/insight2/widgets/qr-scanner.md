@@ -9,7 +9,7 @@ Scan QR codes using device camera and hold the data they carry.
 
 ![Insight² - QR Scanner](/_images/insight2/widgets/qr-scanner/qr-scanner.jpeg)
 
-</div>
+
 
 #### Known issue:
 You might have to stick to the Safari browser in IOS as camera access is restricted for third-party browsers.

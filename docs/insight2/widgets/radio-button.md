@@ -10,7 +10,7 @@ Radio button widget can be used to select one option from a group of options.
 
 ![Insight² - Widget Reference - RadioButton](/_images/insight2/widgets/radio-button/radiobutton.png)
 
-</div>
+
 
 :::tip
 Radio buttons are preferred when the list of options is less than six, and all the options can be displayed at once.
@@ -82,6 +82,6 @@ This is `off` by default, toggle `on` the switch to lock the widget and make it 
 
 ![Insight² - Radio Button Widget Properties](/_images/insight2/widgets/radio-button/radio-ex.gif)
 
-</div>
+
 
 

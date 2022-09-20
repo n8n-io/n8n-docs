@@ -12,12 +12,12 @@ Insight² can connect to GCS buckets and perform various operation on them.
 
 ## Supported operations
 
--**Read file**
--**Upload file**
--**List buckets**
--**List files in a bucket**
--**Signed url for download**
--**Signed url for upload**
+- **Read file**
+- **Upload file**
+- **List buckets**
+- **List files in a bucket**
+- **Signed url for download**
+- **Signed url for upload**
 
 ## Connection
 
@@ -36,7 +36,7 @@ Click on `+` button of the **query manager** at the bottom panel of the editor a
 
 ![Insight² - GCS query](/_images/insight2/datasource-reference/gcs-query.png)
 
-Click on the `run` button to run the query.
+Click on the `run` button to run the query.<br>
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 **NOTE**: Query should be saved before running.
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }

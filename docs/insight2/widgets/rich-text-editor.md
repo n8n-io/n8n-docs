@@ -11,7 +11,7 @@ It should be preferred for blog posts, forum posts or notes sections. The text i
 
 ![Insight² - Widget Reference - Rich Text Editor](/_images/insight2/widgets/richtexteditor/richtexteditor.png)
 
-</div>
+
 
 ## Properties
 

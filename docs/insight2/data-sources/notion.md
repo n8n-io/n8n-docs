@@ -17,7 +17,7 @@ For integrating Notion with Insight² we will need the API token. The API token 
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/api.png)
 
-</div>
+
 
 ## Querying Notion
 
@@ -31,7 +31,7 @@ Notion API provides support for:
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/querying.png)
 
-</div>
+
 
 :::tip
 
@@ -41,7 +41,7 @@ Before querying Notion, you must share the database with your integration. Click
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/share.png)
 
-</div>
+
 
 :::
 
@@ -57,7 +57,7 @@ On database resource you can perform the following operations:
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/db_q.png)
 
-</div>
+
 
 #### 1. Retrieve a database
 
@@ -71,7 +71,7 @@ This operations retreives a Database object using the ID specified.
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/db_retrieve.png)
 
-</div>
+
 
 #### 2. Query a database
 
@@ -134,7 +134,7 @@ On page resource you can perform the following operations:
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/page_q.png)
 
-</div>
+
 
 #### 1. Retrieve a page
 This operation retrieves a **Page** object using the ID specified.
@@ -188,7 +188,7 @@ The following operations can be performed on the block resource:
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/block_q.png)
 
-</div>
+
 
 :::info
 To get the id for blocks, simply click on the menu icon for the block and click "Copy link". Afterwards, paste the link in the browser and it should look like this: `https://www.notion.so/Creating-Page-Sample-ee18b8779ae54f358b09221d6665ee15#7fcb3940a1264aadb2ad4ee9ffe11b0e` the string after **#** is the block id i.e. `7fcb3940a1264aadb2ad4ee9ffe11b0e`.
@@ -237,7 +237,7 @@ This operation retrieves a User using the ID specified.
 
 ![Insight² - Data source - Notion](/_images/insight2/datasource-reference/notion/user_q.png)
 
-</div>
+
 
 ##### Required parameters:
 - **User ID**

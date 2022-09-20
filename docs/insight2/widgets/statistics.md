@@ -11,7 +11,7 @@ Statistics can be used to display different statistical information.
 
 ![Insight² - Star rating Widget](/_images/insight2/widgets/statistics/stats.png)
 
-</div>
+
 
 ## Properties
 

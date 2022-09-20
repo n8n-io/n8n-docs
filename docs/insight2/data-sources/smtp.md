@@ -42,7 +42,7 @@ To create a query for sending email, you will need to provide the following prop
 
 ![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query1.png)
 
-</div>
+
 
   - **Body** : You can enter the body text either in the form of `raw text` or `html` in their respective fields.
   - **Attachments** : Attachments can be added to a SMTP query by referencing the file from the `File Picker` component in the attachments field.
@@ -53,4 +53,4 @@ To create a query for sending email, you will need to provide the following prop
 
 ![Insight² - Data source - n8n](/_images/insight2/datasource-reference/smtp/query2.png)
 
-</div>
+

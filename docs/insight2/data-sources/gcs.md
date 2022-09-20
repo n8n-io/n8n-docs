@@ -42,5 +42,5 @@ Click on the `run` button to run the query.
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
-Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/docs/tutorial/transformations)
+Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)
 

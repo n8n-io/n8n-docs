@@ -91,6 +91,7 @@
 /nodes/n8n-nodes-base.activecampaigntrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/
 /nodes/n8n-nodes-base.acuitySchedulingTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/
 /nodes/n8n-nodes-base.acuityschedulingtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/
+/nodes/n8n-nodes-base.adalo/   /integrations/builtin/app-nodes.n8n-nodes-base.adalo/
 /nodes/n8n-nodes-base.affinity/		/integrations/builtin/app-nodes/n8n-nodes-base.affinity/
 /nodes/n8n-nodes-base.affinityTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinityTrigger/
 /nodes/n8n-nodes-base.affinitytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinityTrigger/
@@ -258,6 +259,7 @@
 /nodes/n8n-nodes-base.gitlabTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gitlabtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gmail/		/integrations/builtin/app-nodes/n8n-nodes-base.gmail/
+/nodes/n8n-nodes-base.gmailTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/
 /nodes/n8n-nodes-base.googleAds/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
 /nodes/n8n-nodes-base.googleads/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
 /nodes/n8n-nodes-base.googleAnalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
@@ -270,6 +272,7 @@
 /nodes/n8n-nodes-base.googlecalendar/		/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/
 /nodes/n8n-nodes-base.googleCalendarTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/
 /nodes/n8n-nodes-base.googlecalendartrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/
+/nodes/n8n-nodes-base.googleCloudStorage/   /integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage/
 /nodes/n8n-nodes-base.googleChat/		/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/
 /nodes/n8n-nodes-base.googlechat/		/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/
 /nodes/n8n-nodes-base.googleCloudNaturalLanguage/		/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudNaturalLanguage/

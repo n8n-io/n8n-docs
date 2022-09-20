@@ -27,7 +27,7 @@ Insight² requires the following to connect to your Elasticsearch cluster:<br>
 
 
 Elastic search datasource is also providing an option for connecting services with ssl certificates.<br>
-- You can either use CA / Client certificates option.
+ * You can either use CA / Client certificates option.
 
 ![Insight² - Data Source - Elasticsearch - SSL](/_images/insight2/elasticsearch_ssl.png)
 

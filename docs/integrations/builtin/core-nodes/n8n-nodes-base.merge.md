@@ -2,8 +2,6 @@
 
 Use the Merge node to combine data from two streams, once data of both streams is available.
 
-You can choose different merge modes. These affect how the node processes and outputs data. This document summarizes the behavior of the modes, and provides an example to try out and explore different modes.
-
 !!! note "Major changes in 0.194.0"
 		This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
 
@@ -50,13 +48,13 @@ Output all possible item combinations, while merging fields with the same name.
 
 Choose which input to keep. This option always waits until the data from both inputs is available. You can keep the data from Input 1 or Input 2, or you can output a single empty item. The node outputs the data from the chosen input, without changing it.
 
-## Branch execution with If and Merge nodes
-
---8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
-
 ## Merging branches with uneven numbers of items
 
 The items passed into Input 1 of the Merge node will take precedence. For example, if the Merge node receives five items in Input 1 and 10 items in Input 2, it only processes five items. The remaining five items from Input 2 aren't processed.
+
+## Branch execution with If and Merge nodes
+
+--8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
 
 
 ## Try it out

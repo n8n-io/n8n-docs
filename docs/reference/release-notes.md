@@ -36,14 +36,14 @@ n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-no
 
 #### Gmail Trigger
 
-n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
+n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
 
 </div>
 
 
 ### Node enhancements
 
-* Gmail node: this release includes an overhaul of the Gmail node, with updated resources and operations.
+* Gmail node: this release includes an overhaul of the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), with updated resources and operations.
 * Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) to learn more.
 * MongoDB node: updated the Mongo driver to 4.9.1.
 

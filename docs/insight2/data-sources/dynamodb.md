@@ -24,11 +24,11 @@ It is recommended to create a new IAM user for the database so that you can cont
 
 <img src="/_images/insight2/datasource-reference/dynamo-connect.png" alt="Insight² - Dynamo connection" height="250"/>
 
-Click on 'Test connection' button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on 'Save' button to save the data source.
+Click on `Test connection` button to verify if the credentials are correct and that the database is accessible to Insight² server. Click on `SAVE` button to save the data source.
 
 ## Querying DynamoDB
 
-Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click 'Save' to save the query.
+Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source. Select the operation that you want to perform and click `SAVE` to save the query.
 
 <img src="/_images/insight2/datasource-reference/dynamo-query.png" alt="Insight² - Dynamo query" height="250"/>
 

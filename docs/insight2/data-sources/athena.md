@@ -28,7 +28,7 @@ Insight² requires the following to connect to your Athena.
 - **Secret key**
 - **Region**
 
-:fontawesome-solid-circle-info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.
 
 
@@ -49,17 +49,18 @@ You can also configure for **[additional optional parameters](https://github.com
 
 - Click on the `run` button to run the query.
 
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 **NOTE:** Query should be saved before running.
 
-:::tip
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Refer amazon athena docs here for more info: [link](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
-:::
+
 
 ### Basic queries
 
-:::tip
-**Refer amazon athena docs here for more info:** [link](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
-:::
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+Refer amazon athena docs here for more info: [link](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
+
 
 #### Creating table
 

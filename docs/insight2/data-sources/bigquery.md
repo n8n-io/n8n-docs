@@ -161,7 +161,7 @@ Return data based on the `Query`. `Query options` ([Reference](https://cloud.goo
 
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-NOTE: Be careful when deleting records in a table. If you omit the WHERE clause, all records in the table will be updated!
+NOTE: Be careful when updating records in a table. If you omit the WHERE clause, all records in the table will be updated!
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
 ### Create View
@@ -180,7 +180,7 @@ NOTE: Be careful when deleting records in a table. If you omit the WHERE clause,
 - To create a table.
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
-NOTE: visit -https://github.com/googleapis/nodejs-bigquery/blob/main/samples/createTable.js for more info on schema.
+NOTE: [visit](https://github.com/googleapis/nodejs-bigquery/blob/main/samples/createTable.js) for more info on schema.
 
 
 ### Delete Table

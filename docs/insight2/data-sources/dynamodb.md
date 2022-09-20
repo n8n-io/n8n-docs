@@ -32,8 +32,11 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 
 <img src="/_images/insight2/datasource-reference/dynamo-query.png" alt="Insight² - Dynamo query" height="250"/>
 
-Click on the 'run' button to run the query. NOTE: Query should be saved before running.
+Click on the 'run' button to run the query.
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } 
+**NOTE**: Query should be saved before running.
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
-:::tip
-Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/docs/tutorial/transformations)
-:::
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)
+

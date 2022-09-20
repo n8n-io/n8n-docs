@@ -87,7 +87,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 
 ### Create a volume for file storage
 
-During initial setup and certain workflows, n8n needs to write files to disk and needs a persistent volume to do so.
+While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key) between restarts, which saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 

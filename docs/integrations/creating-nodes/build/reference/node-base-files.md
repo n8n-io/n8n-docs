@@ -300,6 +300,8 @@ description: INodeTypeDescription = {
 TODO: more info on the routing object
 ### routing.output
 
+include postReceive actions, including ability to dynamically disable - see DOC-400
+
 ### routing.request
 
 ### routing.send

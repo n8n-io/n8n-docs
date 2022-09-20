@@ -15,11 +15,10 @@ Please make sure the host/IP of the Elasticsearch cluster is accessible from you
 To add a new Elasticsearch database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select Elasticsearch from the modal that pops up.
 
 Insight² requires the following to connect to your Elasticsearch cluster:<br>
-- **Host**
-- **Port**
-- **Username**
-- **Password**
-
+ - **Host**
+ - **Port**
+ - **Username**
+ - **Password**
 
 
 ![Insight² - Data Source - Elasticsearch](/_images/insight2/datasource-reference/elasticsearch/connect.png)

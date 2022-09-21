@@ -30,10 +30,10 @@ The second path is when we want to perform master data validation in DOC² to id
 
 [Infor Export](/doc2/export/export-to-infor/)
 
-[IDM Business Context Model](/doc2/IDM/)
+[IDM Business Context Model](/doc2/doc2-with-infor/IDM-business-context-model/)
 
 [Infor SSO with DOC²](/doc2/configuring-sso-in-cloud/)
 
-[Infor Infrastructure & Security](/security/infrastructure/)
+[Infor Infrastructure & Security](/doc2/doc2-with-infor/infrastructure/)
 
 

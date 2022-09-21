@@ -145,6 +145,7 @@ nav:
         - Overview: integrations/creating-nodes/build/index.md       
         - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
         - Reference:
           - Overview: integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 

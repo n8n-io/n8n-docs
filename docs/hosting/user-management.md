@@ -1,7 +1,11 @@
 # User management
 
 !!! info "Feature availability"
-		This feature isn't available on Desktop. Cloud users can't configure SMTP or email templates.
+
+		* Not available on Desktop
+		* Limited Cloud plans. Refer to [Cloud Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
+		* Cloud users can't configure SMTP or email templates.
+
 
 User management in n8n allows you to invite people to work in your n8n instance. It includes:
 

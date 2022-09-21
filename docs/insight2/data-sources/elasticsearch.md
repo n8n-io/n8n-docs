@@ -1,9 +1,10 @@
 ---
 title: Elasticsearch
-description: 
+description: Insight² can connect to your Elasticsearch cluster to read and write data. Learn more about it here and improve your workflows.
 tags:
   - Insight²
   - Data Sources
+  - Elasticsearch
 ---
 
 # Elasticsearch

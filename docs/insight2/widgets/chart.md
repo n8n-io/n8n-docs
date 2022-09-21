@@ -1,7 +1,13 @@
 ---
-id: chart
 title: Chart
+description: Chart widget takes the chart type, data and styles to draw charts using Plotly.js. 
+tags:
+  - Insight²
+  - Widgets
+  - Chart
 ---
+
+
 # Chart
 
 Chart widget takes the chart type, data and styles to draw charts using Plotly.js.
@@ -90,9 +96,9 @@ The chart will look like this:
 
 ## Properties
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+
 
 ### Title
 

@@ -1,9 +1,10 @@
 ---
 title: Google Cloud Storage
-description: 
+description: Insight² can connect to Google Cloud Storage buckets and perform various operation on them. Learn more about it here and improve your workflows.
 tags:
   - Insight²
   - Data Sources
+  - Google Cloud Storage
 ---
 
 # Google Cloud Storage

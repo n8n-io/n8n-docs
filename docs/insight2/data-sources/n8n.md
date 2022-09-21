@@ -1,9 +1,10 @@
 ---
 title: n8n
-description: 
+description: Insight² can trigger n8n workflows via webhook URLs. They can be invoked with or without an authentication. Learn more about it here.
 tags:
   - Insight²
   - Data Sources
+  - n8n
 ---
 
 # n8n
@@ -37,9 +38,9 @@ n8n webhooks can be called with or without an **Authentication**. You can keep t
 
 
 
-:::tip
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Webhook credentials and instance credentials are different. Please use the credentials that you use with the webhook trigger. Know more: **[Webhook Authentication](https://docs.n8n.io/nodes/n8n-nodes-base.webhook/#:~:text=then%20gets%20deactivated.-,Authentication,-%3A%20The%20Webhook%20node)**.
-:::
+
 
 ## Trigger Workflow
 

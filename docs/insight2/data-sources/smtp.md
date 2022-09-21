@@ -1,9 +1,10 @@
 ---
 title: SMTP
-description: 
+description: SMTP plugin can connect Insight² applications to SMTP servers for sending emails.
 tags:
   - Insight²
   - Data Sources
+  - SMTP
 ---
 
 # SMTP
@@ -18,9 +19,9 @@ A SMTP server can be connected with the following credentails:
 - **User**
 - **Password**
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 You can also test your connection before saving the configuration by clicking on `Test Connection` button.
-:::
+
 
 
 

@@ -1,9 +1,10 @@
 ---
 title: BigQuery
-description: 
+description: Insight² can connect to BigQuery databases to run BigQuery queries. Learn more about it here and improve your workflows.
 tags:
   - Insight²
   - Data Sources
+  - BigQuery
 ---
 
 # BigQuery

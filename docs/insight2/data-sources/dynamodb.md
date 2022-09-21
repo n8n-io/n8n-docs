@@ -1,9 +1,10 @@
 ---
 title: DynamoDB
-description: 
+description: Insight² can connect to DynamoDB to read and write data. Learn more about it here and improve your workflows.
 tags:
   - Insight²
   - Data Sources
+  - DynamoDB
 ---
 
 # DynamoDB

@@ -1,14 +1,16 @@
 ---
 title: Notion
-description: 
+description: Insight² can connect to a Notion workspace to do operations on notion pages, databases and blocks.
 tags:
   - Insight²
   - Data Sources
+  - Notion
 ---
 
 # Notion
 
 Insight² can connect to a Notion workspace to do operations on notion pages, databases and blocks.
+
 ## Connection
 
 For integrating Notion with Insight² we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
@@ -33,7 +35,7 @@ Notion API provides support for:
 
 
 
-:::tip
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 
 Before querying Notion, you must share the database with your integration. Click the share button in your database view, find your integration name select it.
 
@@ -43,7 +45,7 @@ Before querying Notion, you must share the database with your integration. Click
 
 
 
-:::
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 
 ### Database
 
@@ -190,9 +192,9 @@ The following operations can be performed on the block resource:
 
 
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 To get the id for blocks, simply click on the menu icon for the block and click "Copy link". Afterwards, paste the link in the browser and it should look like this: `https://www.notion.so/Creating-Page-Sample-ee18b8779ae54f358b09221d6665ee15#7fcb3940a1264aadb2ad4ee9ffe11b0e` the string after **#** is the block id i.e. `7fcb3940a1264aadb2ad4ee9ffe11b0e`.
-:::
+
 
 #### 1. Retrieve a block
 This operation retrieves a **Block** object using the ID specified.

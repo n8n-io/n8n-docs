@@ -4,11 +4,12 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 
 ## Prerequisites
 
-- [The gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
+- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
+- The [gke-gcloud-auth-plugin]{:target="_blank" .external-link} (install the gcloud CLI first)
 
 ## Hosting options
 
-Google Cloud offers several ways suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
+Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
 
 This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
@@ -16,23 +17,23 @@ Most of the steps in this guide use the Google Cloud UI, but you can also use th
 
 ## Create project
 
-GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment by clicking the project dropdown menu and then the _NEW PROJECT_ button. Then select the newly created project and as you follow other steps in this guide, make sure you have the correct project selected.
+GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment from your Google Cloud Console: select the project dropdown menu and then the **NEW PROJECT** button. Then select the newly created project. As you follow the other steps in this guide, make sure you have the correct project selected.
 
 ## Enable the Kubernetes Engine API
 
-GKE isn't enabled by default, search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
+GKE isn't enabled by default. Search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
 
-Enable the Kubernetes Engine API by clicking the **Enable** button.
+Select **ENABLE** to enable the Kubernetes Engine API for this project.
 
 ## Create a cluster
 
-From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
+From the Kubernetes Engine service page, select **Clusters**, then select **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
 
 ## Set Kubectl context
 
-The remainder of the steps in this guide require you to set the GCP instance as the Kubectl context. You can find the connection details for a cluster instance by opening its details page and then the **CONNECT** button. The resulting code snippet shows a connection string for the gcloud CLI tool. Paste and run that code snippet into a terminal to change your local Kubernetes settings to use the new gcloud cluster.
+The rest of the steps in this guide require you to set the GCP instance as the Kubectl context. You can find the connection details for a cluster instance by opening its details page and selecting **CONNECT**. The displayed code snippet shows a connection string for the gcloud CLI tool. Paste and run the code snippet in the gcloud CLI to change your local Kubernetes settings to use the new gcloud cluster.
 
-## Setup DNS
+## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
 

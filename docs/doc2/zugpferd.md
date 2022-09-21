@@ -29,7 +29,7 @@ Find more videos here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [_
 
 Navigate to **SETTINGS** above the dashboard:
 
-![](/_images/doc2/DOC²_Dashboard_Settings.png)
+![DOC² Workflow](/_images/doc2/DOC²_Dashboard_Settings.png)
 
 Navigate to the **Export** menu item in the settings:
 
@@ -37,17 +37,17 @@ Navigate to the **Export** menu item in the settings:
 
 You need to create a new configuration via the **NEW** button:
 
-![](/_images/doc2/DOC²_ExportSettings_new.png)
+![DOC² Export Settings](/_images/doc2/DOC²_ExportSettings_new.png)
 
 Select **Zugferd** in the following screen:
 
-![](/_images/doc2/DOC²_ExportSettings_SelectIntegration_Zugferd.png)
+![DOC² Zugpferd](/_images/doc2/DOC²_ExportSettings_SelectIntegration_Zugferd.png)
 
 ## **ZUGFeRD**
 
 You will end up in the following screen. Please enter the information like in following example:
 
-![](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
+![DOC² Zugpferd Export](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
 and click on **SAVE**.
 
 
@@ -61,7 +61,7 @@ In addition you need to enter your **Company Information**. You will find the me
 
 When everything is set up correctly, a new download button will appear in the dashboard after a document is finished:
 
-![](/_images/doc2/DOC²_Download_ZugferdPDF.png)
+![Download Zugpferd](/_images/doc2/DOC²_Download_ZugferdPDF.png)
 
 
 

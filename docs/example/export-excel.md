@@ -13,7 +13,7 @@ tags:
 #  DOC² export to Excel and Upload to Dropbox
 
 
-![](/_images/excel-dropbox.png)
+![DOC² export to Excel](/_images/excel-dropbox.png)
 
 
 In this example we trigger the result from DOC² and write the result to excel and upload it to Dropbox.

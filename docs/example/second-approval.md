@@ -18,7 +18,7 @@ In Release 1.18.xxx.x or higher, you are able to use this advanced approval work
 
 With our new **Approve/Reject node**, you can use this workflow to automatically approve or reject invoices that have defined high or low totals, for example.
 
-![](/_images/workflows/workflows/extended_approval.png)
+![Approval](/_images/workflows/workflows/extended_approval.png)
 
 
 

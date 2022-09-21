@@ -103,6 +103,7 @@ nav:
     - Dashboard:
       - doc2/dashboard/index.md
       - Manual Import: doc2/manual-import.md
+      - Keyboard: doc2/keyboard.md
     - Document Validation:
       - Document Validation: doc2/document-validation.md
       - Master Data Validation: doc2/master-data-validation.md
@@ -120,7 +121,6 @@ nav:
         - Manual row selection: doc2/table/manual-row-selection.md
         - Advanced settings: doc2/table/advanced-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
-    - Keyboard: doc2/keyboard.md
     - API Integration: doc2/api-integration/api-integration.md
     - DOC² with Infor:
       - Use Cases: doc2/infor.md
@@ -160,6 +160,7 @@ nav:
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
       - SSO:
+	- SSO Settings: doc2/settings-sso-settings.md
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
     - PO Matching:
@@ -169,7 +170,7 @@ nav:
       - Order Confirmation: doc2/pomatching/po-matching-order-confirmation.md
 
     - ZUGFeRD: doc2/zugpferd.md
-    - SSO Settings: doc2/settings-sso-settings.md
+
     - Extracted fields: doc2/extracted-fields.md
     - Infor Infrastructure: security/infrastructure.md
     - Data security: security/datensicherung.md

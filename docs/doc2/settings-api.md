@@ -11,4 +11,4 @@ tags:
 
 You will find your **API Key** in the API menu item in the settings
 
-![](/_images/doc2/DOC²_Settings_API Key.png)
+![DOC² - API Key](/_images/doc2/DOC²_Settings_API Key.png)

@@ -1,5 +1,5 @@
 ---
-title: How to create an Infor ION file
+title: How to create an Infor ION API file
 description: This is a step by step guide how to create an Infor ION API file that is needed for the export from DOC² to Infor with the permissions InforOS user must have.
 date: 2022-04-24
 hero: How to create an Infor ION file
@@ -11,7 +11,7 @@ tags:
   - Settings
 ---
 
-# How to create an Infor ION file
+# How to create an Infor ION API file
 
 #### Step-by-step instructions for creating an Infor ION API file required for Infor export.
 

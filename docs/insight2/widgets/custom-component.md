@@ -1,7 +1,12 @@
 ---
-id: custom-component
 title: Custom Component
+description: Custom Component can be used to do create your own React component when the needed functionality isn't available in other components. 
+tags:
+  - Insight²
+  - Widgets
+  - Custom Component
 ---
+
 
 # Custom Component
 
@@ -70,9 +75,9 @@ const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
 ReactDOM.render(<ConnectedComponent />, document.body);
 ```
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 `Tooljet.connectComponent` acts as a HOC and it is required to get access to the data passed into the custom component and run the query
-:::
+
 
 ## Layout
 
@@ -87,6 +92,6 @@ ReactDOM.render(<ConnectedComponent />, document.body);
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::
+

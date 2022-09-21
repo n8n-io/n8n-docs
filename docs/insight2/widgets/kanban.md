@@ -1,7 +1,12 @@
 ---
-id: kanban
 title: Kanban
+description: Kanban widget allows you to visually organize and prioritize your tasks with a transparent workflow. You can make a variety of different settings. 
+tags:
+  - Insight²
+  - Widgets
+  - Kanban
 ---
+
 
 # Kanban
 
@@ -35,10 +40,11 @@ Just like any other event on Insight, you can set multiple handlers for any of t
 
 
 
-:::caution
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+caution
 Please keep in mind that you need to provide an `id` for each card in the `Card data` field <br />
 and this `id` must be of type string.
-:::
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
 ![Insight² - Kanban widget](/_images/insight2/widgets/kanban/properties.png)
 

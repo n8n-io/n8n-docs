@@ -1,7 +1,12 @@
 ---
-id: statistics
 title: Statistics
+description: Statistics can be used to display different statistical information.
+tags:
+  - Insight²
+  - Widgets
+  - Statistics
 ---
+
 
 # Statistics
 
@@ -67,6 +72,5 @@ You can change the secondary text color of the primary label by entering the Hex
 
 Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Any property having `Fx` button next to its field can be **programmatically configured**.
-:::

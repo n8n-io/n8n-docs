@@ -1,7 +1,13 @@
 ---
-id: radio-button
 title: Radio Button
+description: Radio button widget can be used to select one option from a group of options. 
+tags:
+  - Insight²
+  - Widgets
+  - Radio Button
 ---
+
+
 # Radio Button
 
 Radio button widget can be used to select one option from a group of options.
@@ -12,13 +18,13 @@ Radio button widget can be used to select one option from a group of options.
 
 
 
-:::tip
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Radio buttons are preferred when the list of options is less than six, and all the options can be displayed at once.
-:::
 
-:::info
+
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 For more than six options, consider using [Dropdown](/docs/widgets/dropdown) widget.
-:::
+
 
 
 ## Event
@@ -27,9 +33,9 @@ For more than six options, consider using [Dropdown](/docs/widgets/dropdown) wid
 
 This event is triggered when an option is clicked.
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
 
 ## Properties
 

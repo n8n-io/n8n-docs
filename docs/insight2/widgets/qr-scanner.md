@@ -1,7 +1,13 @@
 ---
-id: qr-scanner
 title: QR Scanner
+description: Scan QR codes using device camera and hold the data they carry. 
+tags:
+  - Insight²
+  - Widgets
+  - QR Scanner
 ---
+
+
 # QR Scanner
 Scan QR codes using device camera and hold the data they carry.
 
@@ -24,9 +30,9 @@ This variable holds the data contained in the last QR code scanned by the widget
 
 This event is fired whenever the widget successfully scans a QR code.
 
-:::info
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Check [Action Reference](/docs/actions/show-alert) docs to get the detailed information about all the **Actions**.
-:::
+
 
 ## Debugging tip
 

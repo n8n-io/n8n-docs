@@ -1,8 +1,7 @@
 ---
 title: "Advanced settings for table extraction"
-description: In DOC² there are various advanced settings to extract a table. On this page you will find a few examples of different table characteristics. 
+description: In DOC² there are various advanced settings to extract a table. On this page you will find a few examples of different table characteristics.
 date: "2022-03-01"
-icon: material/table-cog
 tags:
   - Table
   - DOC²

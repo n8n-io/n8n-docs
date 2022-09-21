@@ -121,7 +121,7 @@ nav:
         - Manual row selection: doc2/table/manual-row-selection.md
         - Advanced settings: doc2/table/advanced-settings.md
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
-    - API Integration: doc2/api-integration/api-integration.md
+
     - DOC² with Infor:
       - Use Cases: doc2/infor.md
       - Diagram: doc2/inforflow.md
@@ -132,7 +132,9 @@ nav:
       - General Settings: doc2/general-settings.md
       - Company: doc2/company-information.md
       - Modules: doc2/modules.md
-      - API: doc2/settings-api.md
+      - API:
+        - doc2/settings-api.md
+        - API Integration: doc2/api-integration/api-integration.md
       - Users: doc2/settings-users.md
       - All Import Options:
         - doc2/import/index.md
@@ -160,7 +162,7 @@ nav:
       - Amount: doc2/settings-amount-settings.md
       - Doc Types: doc2/settings-document-types.md
       - SSO:
-	- SSO Settings: doc2/settings-sso-settings.md
+        - SSO Settings: doc2/settings-sso-settings.md
         - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Master Data Validation: doc2/settings-master-data-validation.md
     - PO Matching:

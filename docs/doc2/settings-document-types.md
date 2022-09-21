@@ -1,6 +1,6 @@
 ---
 title: "Document Types"
-description: Here you will find all documents available in DOC² as invoice, credit note, delivery note, order confirmation and many more 
+description: Here you will find all documents available in DOC² as invoice, credit note, delivery note, order confirmation and many more
 date: "2021-10-29"
 tags:
   - DOC²
@@ -10,11 +10,11 @@ tags:
 
 In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu:
 
-![](/_images/doc2/image-49-1024x401.png)
+![DOC² - Dashboard](/_images/doc2/image-49-1024x401.png)
 
 There you will find the menu item "Document Types". Open this menu:
 
-![](/_images/doc2/image-50-1024x502.png)
+![DOC² - Document Types](/_images/doc2/image-50-1024x502.png)
 
 In the following overview you will find all document types available in DOC²:
 
@@ -54,17 +54,17 @@ Here you can define the profile that shall be used. For example Peppol or Zugfer
 
 ![](/_images/doc2/image-6.png)
 
-Below you will find all the fields available for this type of document. You can set the following values per field individually:  
+Below you will find all the fields available for this type of document. You can set the following values per field individually:
 
-REQUIRED: Here you can define if the field must contain a value to continue.  
+REQUIRED: Here you can define if the field must contain a value to continue.
 
-READ ONLY: Here you can define if a field can only be displayed but not edited.  
+READ ONLY: Here you can define if a field can only be displayed but not edited.
 
-HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.  
+HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
 
-FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².  
+FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
 
-OCR and MATCH SCORE: Setting as described above, per field.  
+OCR and MATCH SCORE: Setting as described above, per field.
 
 FORMULA: Creation of a formula per field.
 

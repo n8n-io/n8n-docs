@@ -13,7 +13,7 @@ tags:
 
 # How to create an Infor ION file
 
-### Step-by-step instructions for creating an Infor ION API file required for Infor export.
+#### Step-by-step instructions for creating an Infor ION API file required for Infor export.
 
 **Prerequisites:**
 
@@ -21,23 +21,23 @@ tags:
 - A InforOS user that can be used as service account that has permission to create documents in IDM with the security roles `IDM-AdvancedUser`, `Infor-SuiteUser` and `MingleEnterprise`.
 
 
-1\. Open InforOS with a admin user and change to the **Infor ION API** Screen.<br>
+**1\.** Open InforOS with a admin user and change to the **Infor ION API** Screen.<br>
     Click on **Authorized Apps** and then on the `+`
 
 ![](/_images/doc2/infor-ion-api-1.png)
 
-2\. Enter a meaningfull name and description like 'Doc2Export'. Choose `Backend Service` and click on the disk icon to save.
+**2\.** Enter a meaningfull name and description like 'Doc2Export'. Choose `Backend Service` and click on the disk icon to save.
 
 ![](/_images/doc2/infor-ion-api-2.png)
 
-3\. Once the entires are saved, click the button **Download Credentials**.
+**3\.** Once the entires are saved, click the button **Download Credentials**.
 
 ![](/_images/doc2/infor-ion-api-3.png)
 
-4\. Switch on `Create Service Account` and enter the service user name into the box.
+**4\.** Switch on `Create Service Account` and enter the service user name into the box.
 
 ![](/_images/doc2/infor-ion-api-4.png)
 
-Click `DOWNLOAD` to get the ION API file.
+**5\.** Click `DOWNLOAD` to get the ION API file.
 
 

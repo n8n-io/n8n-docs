@@ -2,7 +2,6 @@
 title: "Document Validation"
 date: "2021-10-29"
 description: Explanation of how to start using DOC²
-icon: material/file-document-outline
 tags:
   - DOC²
   - Document

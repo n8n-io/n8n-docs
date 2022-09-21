@@ -2,7 +2,6 @@
 title: "Watchdog for Windows"
 description: In this documentation you will find how to configure Watchdog for Windows for easy Fileshare Import of your local documents to DOC².
 date: "2022-01-28"
-icon: material/microsoft-windows
 tags:
   - DOC²
   - Fileshare Import

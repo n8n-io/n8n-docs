@@ -2,7 +2,6 @@
 title: "Group function to extract data from tables"
 description: The group function is one of the most important feature to extract data form tables. Once a table has been extracted via DOC² and the columns have been mapped the obtained data can be grouped to get a structured result set of all extracted data.
 date: "2022-02-24"
-icon: material/group
 tags:
   - Tables
   - Table Extraction

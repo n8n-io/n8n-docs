@@ -1,6 +1,5 @@
 ---
 template: overrides/main.html
-icon: material/tab
 ---
 
 # Content tabs

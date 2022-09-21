@@ -1,7 +1,6 @@
 ---
 title: DOC² to Infor OS
 description: Documentation for Export DOC² to Infor OS
-icon: material/export
 tags:
   - DOC²
   - Export

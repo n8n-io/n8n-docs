@@ -14,13 +14,13 @@ After logging in with your user you are redirected to the DASHBOARD homepage of 
 
 This is the main page and overview where you can capture, work, and manage the imported documents.
 
-![](/_images/doc2/DOC²_Dashboard_1.png){ loading=lazy }
+![DOC² Dashboard](/_images/doc2/DOC²_Dashboard_1.png){ loading=lazy }
 
 The first upper bar is a very simple and easy reporting tool where you can filter it by week, month, year, or even the whole total.
 
 ## **Viewing Document by Status**
 
-![](/_images/doc2/DOC²_Dashboard_2.png){ loading=lazy }
+![DOC² View Document by Status](/_images/doc2/DOC²_Dashboard_2.png){ loading=lazy }
 
 It shows you the total number of documents imported, and the number of the ones that were automatically or manually processed. Furthermore, you can also see all the status, like **In progress**, **Pending**, **Pending Approval**, **Completed** and **Error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents.
 
@@ -46,6 +46,6 @@ From left to right you will see first the name of the document, then how many pa
 
 In the rightmost column you will see the Actions button. If you click on it, all available options will open: Assign, Restart, Validate and Delete.
 
-![](/_images/doc2/DOC²_Dashboard_Document_Actions.gif){ loading=lazy }
+![DOC² Action Buttons](/_images/doc2/DOC²_Dashboard_Document_Actions.gif){ loading=lazy }
 
 Details on UI to check, edit and validate extracted fields of uploaded documents you will find [here](/doc2/document-validation/).

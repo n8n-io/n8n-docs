@@ -17,13 +17,13 @@ tags:
 
 **Prerequisites:**
 
-- An admin user für InforOS with the security roles "ION Desk Admin", "ION API Admin", "IDM Admin".
-- A InforOS user that can be used as service account that has permission to create documents in IDM with the security roles "IDM-AdvancedUser", "Infor-SuiteUser" and "MingleEnterprise".
+- An admin user für InforOS with the security roles `ION Desk Admin`, `ION API Admin`, `IDM Admin`.
+- A InforOS user that can be used as service account that has permission to create documents in IDM with the security roles `IDM-AdvancedUser`, `Infor-SuiteUser` and `MingleEnterprise`.
 
-1. Open InforOS with a admin user and change to the "Infor ION API" Screen.
-    Click on "Authorized Apps" and then on the "+"
+1\. Open InforOS with a admin user and change to the **Infor ION API** Screen.
+    Click on **Authorized Apps** and then on the `+`
 
-![](/_images/doc2/image-14.png)
+![](/_images/doc2/infor-ion-api-1.png)
 
 2\. Enter a meaningfull name and description like "Doc2Export". Choose "Backend Service" and click on the disk icon to save.
 

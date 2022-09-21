@@ -2,7 +2,6 @@
 title: "WEBHOOK"
 description: With the webhook attached below, you can transfer documents directly to DOC² with a POST request by making a simple call.
 date: "2021-10-22"
-icons: material/api
 tags:
   - DOC²
   - API

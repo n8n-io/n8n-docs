@@ -19,7 +19,7 @@ tags:
 
 Here you will find all the information you need for the following steps
 
-![](/_images/doc2/DOC²_SSO-Service-Provider-Settings_EN-1024x508.png)
+![DOC² - SSO](/_images/doc2/DOC²_SSO-Service-Provider-Settings_EN-1024x508.png)
 
 ![](/_images/doc2/DOC²_Identity-Service-Provider-Settings_EN-1024x319.png)
 

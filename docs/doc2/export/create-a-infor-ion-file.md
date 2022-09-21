@@ -33,7 +33,7 @@ tags:
 
 ![](/_images/doc2/infor-ion-api-3.png)
 
-4\. Switch on `Create Service Accoun` and enter the service user name into the box.
+4\. Switch on `Create Service Account` and enter the service user name into the box.
 
 ![](/_images/doc2/infor-ion-api-4.png)
 

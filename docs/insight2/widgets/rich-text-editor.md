@@ -1,7 +1,13 @@
 ---
-id: rich-text-editor
 title: Rich Text Editor
+description: Rich Text Editor can be used to enter and edit the text in HTML format. It should be preferred for blog posts, forum posts or notes sections. 
+tags:
+  - Insight²
+  - Widgets
+  - Rich Text Editor
 ---
+
+
 # Rich Text Editor
 
 Rich Text Editor can be used to enter and edit the text in HTML format.

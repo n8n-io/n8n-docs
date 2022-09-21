@@ -124,6 +124,7 @@ nav:
     - API Integration: doc2/api-integration/api-integration.md
     - DOC² with Infor:
       - Use Cases: doc2/infor.md
+      - Diagram: doc2/inforflow.md
     - Integration with Infor IDM and ERP:
       - IDM Business Context Model: doc2/IDM.md
     - DOC² with Workflow²: doc2/workflow.md

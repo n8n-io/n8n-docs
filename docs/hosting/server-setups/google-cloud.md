@@ -26,7 +26,7 @@ Enable the Kubernetes Engine API by clicking the **Enable** button.
 
 ## Create a cluster
 
-From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
+From the GKE service page, click the **Clusters** menu item and then the **CREATE** button. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
 
 ## Set Kubectl context
 

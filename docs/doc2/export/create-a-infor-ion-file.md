@@ -20,6 +20,7 @@ tags:
 - An admin user für InforOS with the security roles `ION Desk Admin`, `ION API Admin` and<br> `IDM Admin`.
 - A InforOS user that can be used as service account that has permission to create documents in IDM with the security roles `IDM-AdvancedUser`, `Infor-SuiteUser` and `MingleEnterprise`.
 
+
 1\. Open InforOS with a admin user and change to the **Infor ION API** Screen.<br>
     Click on **Authorized Apps** and then on the `+`
 
@@ -39,6 +40,4 @@ tags:
 
 Click `DOWNLOAD` to get the ION API file.
 
-![](/_images/doc2/image-18.png)
 
-![](/_images/doc2/image-19.png)

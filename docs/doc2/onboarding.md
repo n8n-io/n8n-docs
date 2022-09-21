@@ -22,13 +22,17 @@ DOC² does not work in Tenant. All customer use the same cluster. Our Kubernetes
 
 [https://app.polydocs.io/](https://app.polydocs.io/)
 
-To access the system:
+Here are the two ways to access the system:
 
-1.  Contact your Polydocs GmbH representative or reach out to [support@polydocs.io](mailto: support@polydocs.io) to create a Organisation.
-2.  Go to the [App](https://app.polydocs.io/). We recommend bookmarking this URL for future reference.
-3.  Log in with the credentials provided in your onboarding email.
+1.  Contact your Polydocs GmbH representative or reach out to [support@polydocs.io](mailto: support@polydocs.io) to register your company.
+2. Once you have decided to let DOC² make your daily work easier, have already contacted us and have received the onboarding email, you are the first user and therefore the admin of your organization.
 
-**Tip:** Can't find the onboarding email? Go to your login screen and click the **Forgot password?** link.
+Here is your step by step guide to set up 
+
+1.  Go to the [App](https://app.polydocs.io/). We recommend bookmarking this URL for future reference.
+2.  Log in with the credentials provided in your onboarding email.
+
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }**Tip:**<br> Can't find the onboarding email? Go to your login screen and click the `Forgot password?` link.
 
 ### Step 2\: Adding Users
 

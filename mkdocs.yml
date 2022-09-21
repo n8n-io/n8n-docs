@@ -98,6 +98,7 @@ nav:
   - Changelog: Release/Release_notes.md
   - DOC²:
     - Getting Started: doc2/index.md
+    - Data security: security/datensicherung.md
     - OnBoarding: doc2/onboarding.md
     - Deployment: doc2/deployment.md
     - Dashboard:
@@ -123,10 +124,12 @@ nav:
         - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
 
     - DOC² with Infor:
-      - Use Cases: doc2/infor.md
-      - Diagram: doc2/inforflow.md
-    - Integration with Infor IDM and ERP:
-      - IDM Business Context Model: doc2/IDM.md
+      - doc2/doc2-with-infor/index.md
+      - Infor Infrastructure: doc2/doc2-with-infor/infrastructure.md
+      - Use Cases: doc2/doc2-with-infor/infor.md
+      - Diagram: doc2/doc2-with-infor/inforflow.mdmkd
+      - Integration with Infor IDM and ERP:
+        - doc2/doc2-with-infor/IDM-business-context-model.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - General Settings: doc2/general-settings.md
@@ -174,8 +177,6 @@ nav:
     - ZUGFeRD: doc2/zugpferd.md
 
     - Extracted fields: doc2/extracted-fields.md
-    - Infor Infrastructure: security/infrastructure.md
-    - Data security: security/datensicherung.md
     - Groups & Privileges: security/privileges.md
 
   - Workflow²:

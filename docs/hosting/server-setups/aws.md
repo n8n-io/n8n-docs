@@ -2,7 +2,6 @@
 
 This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
-
 ## Hosting options
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
@@ -44,18 +43,18 @@ Click the **n8n** service and copy the **Load balancer URLs** value. Use this va
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp
+git clone https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd gcp
+cd aws
 ```
 
 ## Configure Postgres

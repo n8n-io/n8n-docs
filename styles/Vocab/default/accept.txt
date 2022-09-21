@@ -1,6 +1,8 @@
+Adalo
 Asana
 Axios
 backend
+Beeminder
 Boolean
 boolean
 Caddy
@@ -11,10 +13,13 @@ Enum
 enum
 GIMP
 invalid
+Kafka
 Lemlist
 Luxon
 Mattermost
 Metabase
+Middleware
+middleware
 n8n
 namespace
 Nodelinter

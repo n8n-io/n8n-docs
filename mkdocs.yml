@@ -127,7 +127,7 @@ nav:
       - doc2/doc2-with-infor/index.md
       - Infor Infrastructure: doc2/doc2-with-infor/infrastructure.md
       - Use Cases: doc2/doc2-with-infor/infor.md
-      - Diagram: doc2/doc2-with-infor/inforflow.mdmkd
+      - Diagram: doc2/doc2-with-infor/inforflow.md
       - Integration with Infor IDM and ERP:
         - doc2/doc2-with-infor/IDM-business-context-model.md
     - DOC² with Workflow²: doc2/workflow.md

@@ -1,0 +1,71 @@
+# Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+name: publish
+
+on:
+  create:
+    tags:
+      - ".+"
+
+env:
+  PYTHON_VERSION: 3.x
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Build and push Docker image
+    if: github.event.repository.fork == true
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Lowercase repository name
+        run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          # platforms: linux/amd64,linux/arm64
+          tags: |
+            ghcr.io/${{ env.REPOSITORY_NAME }}:latest
+            ghcr.io/${{ env.REPOSITORY_NAME }}:${{ github.event.ref }}
+
+      - name: Check Docker image
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          docker run --rm -i --user $(id -u):$(id -g) -e GH_TOKEN=${GH_TOKEN} -v ${PWD}:/docs ghcr.io/${{ env.REPOSITORY_NAME }} build
+
+      - name: Publish Docker image
+        run: |
+          docker push --all-tags ghcr.io/${{ env.REPOSITORY_NAME }}

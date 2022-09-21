@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "Built-in tags plugin",
+  "oneOf": [
+    {
+      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#built-in-tags-plugin",
+      "enum": [
+        "tags"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#built-in-tags-plugin",
+          "type": "object",
+          "properties": {
+            "tags_file": {
+              "title": "Markdown file to render tags index",
+              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#+tags.tags_file",
+              "pattern": "\\.md$",
+              "default": "tags.md"
+            },
+            "tags_extra_files": {
+              "title": "Markdown files to render additional tags indexes",
+              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#+tags.tags_extra_files",
+              "type": "object",
+              "patternProperties": {
+                "\\.md$": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

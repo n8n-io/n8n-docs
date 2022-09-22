@@ -62,6 +62,9 @@ Example after:
 ![](/_images/doc2/image-22-1024x132.png){ loading=lazy }
 -->
 ## Below functionalities are available in advanced settings:
+
+![](/_images/doc2/advanced-settings_15.png){ loading=lazy }
+
 <!--
 **Minimum grouped rows**
 

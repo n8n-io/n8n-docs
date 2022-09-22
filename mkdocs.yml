@@ -106,7 +106,7 @@ nav:
       - Manual Import: doc2/manual-import.md
       - Keyboard: doc2/keyboard.md
     - Document Validation:
-      - doc2/document-validation/document-validation-index.md
+      - doc2/document-validation/index.md
       - Master Data Validation: doc2/master-data-validation.md
       - OCR View: doc2/ocr-view.md
       - AI Indicator: doc2/ai-indicators.md

@@ -8,37 +8,36 @@ tags:
   - Settings
 ---
 
-In the table extraction view you will find the menu item "Advance Settings" in the upper action bar (make sure that the training mode is activated):
+In the table extraction view, you will find the menu item `Settings` in the upper action bar (make sure that the training mode is activated). If you click on the gear icon, a window will open in which you will find the `Advanced Settings`.
 
-![](/_images/doc2/image-12.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_1.png){ loading=lazy }
 
-Following window will be opened:
 
-![](/_images/doc2/image-13.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_2.png){ loading=lazy }
 
-Below functionalities are available:
+Below functionalities are available in general settings:
 
 **Header row count**
 
 Here you can define the number of lines of a table header. For example, the table header line can be two lines:
 
-![](/_images/doc2/image-14.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_3.png){ loading=lazy }
 
 Accordingly, the value in "Header row count" is set to two:
 
-![](/_images/doc2/image-15.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_4.png){ loading=lazy }
 
-Why is it needed? It might be that DOC² does not recognize the second line in the table header as header line. In this case, it incorrectly inserts it into the table as extracted value. This can be easily prevented with this function.
+Why is this needed? It might be that DOC² does not recognize the third line in the table header as header line. In this case, it incorrectly inserts it into the table as extracted value. This can be easily prevented with this function.
 
 Example before:
 
-![](/_images/doc2/image-19.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_5.png){ loading=lazy }
 
 Example after:
 
-![](/_images/doc2/image-20.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
-**Move Extra Row to desc**
+**Move Extra Rows to**
 
 If a table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
 

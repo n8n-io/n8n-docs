@@ -37,13 +37,13 @@ Example after:
 
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
-**Move Extra Rows to**
+<!-- **Move Extra Rows to**
 
 If a table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
 
 ![](/_images/doc2/image-16.png){ loading=lazy }
 
-To work around this problem, the "Move Extra Row to desc" option can be enabled. This causes that this single row is taken over into the information below and can be extracted together with them into one row and then grouped.
+To work around this problem, the "Move Extra Row to" option can be enabled. This causes that this single row is taken over into the information below and can be extracted together with them into one row and then grouped.
 
 ![](/_images/doc2/image-18.png){ loading=lazy }
 
@@ -55,14 +55,24 @@ Example after:
 
 ![](/_images/doc2/image-22-1024x132.png){ loading=lazy }
 
+Below functionalities are available in advanced settings:
+
 **Minimum grouped rows**
 
-+++ DOCUMENTATION IN PROGRESS +++
+Enter the minimum number of rows in your grouped column here.
 
 **Maximum grouped rows**
 
-+++ DOCUMENTATION IN PROGRESS +++
+Enter the maximum number of rows in your grouped column here.
 
 **Distinct group columns**
 
-+++ DOCUMENTATION IN PROGRESS
+If you want only unique values for your grouped column, check the box here.
+
+**Reverse grouping**
+
+If you want to combine all the rows above the grouped attribute, check the box here.
+
+**Split Text**
+
+If you want to split the text exactly at the column separator, check the box here. -->

@@ -34,14 +34,11 @@ The remainder of the steps in this guide require you to set the GCP instance as 
 
 ## Setup DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item under the **Endpoints** column.
 
-If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
+!!! note "GKE and IP addresses"
 
-<!-- TODO: Kubernetes handles? -->
-<!-- ## Open ports
-
-To set up http connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging). -->
+  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records) for more details on how reserved IP addresses work with GKE and Kubernetes resources.
 
 ## Clone configuration repository
 

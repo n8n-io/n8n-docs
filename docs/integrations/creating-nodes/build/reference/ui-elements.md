@@ -424,3 +424,80 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![JSON](/_images/integrations/creating-nodes/json.png)
 
+## Resource locator
+
+![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)
+
+The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
+
+The following options are available:
+
+* ID
+* URL
+* List: allows users to select from a prepopulated list, or do a free text search, depending on configuration. This option requires more coding, as you must provide the search method or populate the list. Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search.
+
+You can choose which types to support.
+
+Basic example with ID and URL, with validation:
+
+```typescript
+{
+	displayName: 'Card',
+	name: 'cardID',
+	type: 'resourceLocator',
+	default: '',
+	description: 'Get a card'
+	modes: [
+		{
+			displayName: 'ID',
+			name: 'id',
+			type: 'string',
+			hint: 'Enter an ID',
+			validation: [
+				{
+					type: 'regex',
+					properties: {
+						regex: '^[0-9]'
+						errorMessage: 'The ID must start with a number'
+					},	
+				},
+			],
+			placeholder: '12example',
+			// How to use the ID in API call
+			url: '=http://api-base-url.com/?id={{$value}}'
+		},
+		displayName: 'URL',
+		name: 'url',
+		type: 'string',
+		hint: 'Enter a URL',
+		validation: [
+			async (this: IExecuteSingleFunctions, value: string) {
+				if (!value.startsWith("http")) {
+					throw new Error("No valid URL got entered.");
+				}
+			},
+		],
+		placeholder: 'https://example.com/card/12example/',
+		// How to get the ID from the URL
+		extractValue: {
+			type: 'regex',
+			regex: 'example\.com\/card\/([0-9]*.*)\/'
+		}
+	],
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
+}
+```
+
+
+
+
+

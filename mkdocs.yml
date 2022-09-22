@@ -112,15 +112,15 @@ nav:
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
     - Table Extraction:
-      - doc2/table/table-train.md
-      - Training table extraction: doc2/table/training-of-table-extraction.md
-      - Define tables and columns: doc2/table/define-table-and-columns.md
-      - Add new Column: doc2/table/add-new-table-column.md
-      - Mapping of Columns: doc2/mapping-of-columns.md
-      - Group function: doc2/table/group-function.md
-      - Manual row selection: doc2/table/manual-row-selection.md
-      - Advanced settings: doc2/table/advanced-settings.md
-      - Save and delete rules: doc2/table/save-rules-and-delete-rules.md
+      - doc2/table-extraction/index.md
+      - Training table extraction: doc2/table-extraction/training-of-table-extraction.md
+      - Define tables and columns: doc2/table-extraction/define-table-and-columns.md
+      - Add new Column: doc2/table-extraction/add-new-table-column.md
+      - Mapping of Columns: doc2/table-extraction/mapping-of-columns.md
+      - Group function: doc2/table-extraction/group-function.md
+      - Manual row selection: doc2/table-extraction/manual-row-selection.md
+      - Advanced settings: doc2/table-extraction/advanced-settings.md
+      - Save and delete rules: doc2/table-extraction/save-rules-and-delete-rules.md
 
     - DOC² with Infor:
       - doc2/doc2-with-infor/index.md

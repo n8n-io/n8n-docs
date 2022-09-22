@@ -18,7 +18,7 @@ In the table extraction view, you will find the menu item `Settings` in the uppe
 
 Below functionalities are available in general settings:
 
-**Header row count**
+###Header row count###
 
 Here you can define the number of lines of a table header. For example, the table header line can be two lines:
 
@@ -39,7 +39,7 @@ Why is this needed? It might be that DOC² does not recognize the second line in
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
 
-**Move Extra Rows to**
+###Move Extra Rows to###
 
 In this example, the item description in the table spans multiple lines. To extract all rows and include them in the Description column, select `Move Extra Rows to` `DESCRIPTION`.
 

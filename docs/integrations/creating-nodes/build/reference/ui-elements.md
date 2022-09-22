@@ -471,10 +471,12 @@ Example:
 		type: 'string',
 		hint: 'Enter a URL',
 		validation: [
-			async (this: IExecuteSingleFunctions, value: string) {
-				if (!value.startsWith("http")) {
-					throw new Error("Invalid URL");
-				}
+			{
+				type: 'regex',
+					properties: {
+						regex: '^http'
+						errorMessage: 'Invalid URL'
+					},	
 			},
 		],
 		placeholder: 'https://example.com/card/12example/',

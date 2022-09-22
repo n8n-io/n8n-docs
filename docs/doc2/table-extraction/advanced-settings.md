@@ -37,13 +37,20 @@ Example after:
 
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
-<!-- **Move Extra Rows to**
+-->
+**Move Extra Rows to**
 
+In this example, the item description in the table spans multiple lines. To extract all rows and include them in the Description column, select Move Extra Rows to DESCRIPTION.
 
+![](/_images/doc2/advanced-settings_11.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_12.png){ loading=lazy }
 
-To work around this problem, the option "Move Extra Rows to" DESCRIPTION can be activated. This causes this single row to be taken over into the selected column and extracted together with them into one row and then grouped.
+ After naming the columns and mapping them to position, you get the following result:
 
-![](/_images/doc2/advanced-settings_8.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_13.png){ loading=lazy }
+
+<!--
+
 
 Example before:
 

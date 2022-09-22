@@ -13,6 +13,7 @@ In the table extraction view, you will find the menu item `Settings` in the uppe
 ![](/_images/doc2/advanced-settings_1.png){ loading=lazy }
 
 
+
 ![](/_images/doc2/advanced-settings_2.png){ loading=lazy }
 
 Below functionalities are available in general settings:
@@ -27,13 +28,13 @@ Accordingly, the value in "Header row count" is set to two:
 
 ![](/_images/doc2/advanced-settings_4.png){ loading=lazy }
 
-Why is this needed? It might be that DOC² does not recognize the third line in the table header as header line. In this case, it incorrectly inserts it into the table as extracted value. This can be easily prevented with this function.
+Why is this needed? It might be that DOC² does not recognize the second line in the table header as header line. In this case, it incorrectly inserts it into the table as extracted value. This can be easily prevented with this function.
 
-Example before:
+<ins>Example before</ins>:
 
 ![](/_images/doc2/advanced-settings_5.png){ loading=lazy }
 
-Example after:
+<ins>Example after</ins>:
 
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 

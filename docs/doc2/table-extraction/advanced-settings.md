@@ -39,9 +39,7 @@ Example after:
 
 <!-- **Move Extra Rows to**
 
-If a table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
 
-![](/_images/doc2/advanced-settings_7.png){ loading=lazy }
 
 To work around this problem, the option "Move Extra Rows to" DESCRIPTION can be activated. This causes this single row to be taken over into the selected column and extracted together with them into one row and then grouped.
 
@@ -49,14 +47,14 @@ To work around this problem, the option "Move Extra Rows to" DESCRIPTION can be 
 
 Example before:
 
-![](/_images/doc2/image-21-1024x144.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_9.png){ loading=lazy }
 
 Example after:
 
 ![](/_images/doc2/image-22-1024x132.png){ loading=lazy }
-
+-->
 Below functionalities are available in advanced settings:
-
+<!--
 **Minimum grouped rows**
 
 Enter the minimum number of rows in your grouped column here.
@@ -68,10 +66,20 @@ Enter the maximum number of rows in your grouped column here.
 **Distinct group columns**
 
 If you want only unique values for your grouped column, check the box here.
-
+-->
 **Reverse grouping**
 
 If you want to combine all the rows above the grouped attribute, check the box here.
+
+In this example the table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
+
+![](/_images/doc2/advanced-settings_7.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_9.png){ loading=lazy }
+
+after checking the box and grouping on position the result is the following:
+
+![](/_images/doc2/advanced-settings_10.png){ loading=lazy }
+<!--
 
 **Split Text**
 

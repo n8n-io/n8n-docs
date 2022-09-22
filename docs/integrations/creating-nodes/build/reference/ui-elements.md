@@ -434,11 +434,11 @@ The following options are available:
 
 * ID
 * URL
-* List: allows users to select from a prepopulated list, or do a free text search, depending on configuration. This option requires more coding, as you must provide the search method or populate the list. Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search.
+* List: allows users to select or search from a prepopulated list. This option requires more coding, as you must populate the list, and handle searching if you choose to support it.
 
-You can choose which types to support.
+You can choose which types to include.
 
-Basic example with ID and URL, with validation:
+Example:
 
 ```typescript
 {
@@ -473,7 +473,7 @@ Basic example with ID and URL, with validation:
 		validation: [
 			async (this: IExecuteSingleFunctions, value: string) {
 				if (!value.startsWith("http")) {
-					throw new Error("No valid URL got entered.");
+					throw new Error("Invalid URL");
 				}
 			},
 		],
@@ -482,6 +482,21 @@ Basic example with ID and URL, with validation:
 		extractValue: {
 			type: 'regex',
 			regex: 'example\.com\/card\/([0-9]*.*)\/'
+		},
+		displayName: 'List',
+		name: 'list',
+		type: 'list',
+		typeOptions: {
+			// You must always provide a search method
+			// Write this method within the methods object in your base file
+			// The method must populate the list, and handle searching if searchable: true
+			searchListMethod: 'searchMethod'
+			// If you want users to be able to search the list
+			searchable: true,
+			// Set to true if you want to force users to search
+			// When true, users can't browse the list
+			// Or false if users can browse a list
+			searchFilterRequired: true
 		}
 	],
 	displayOptions: { // the resources and operations to display this element with
@@ -496,6 +511,11 @@ Basic example with ID and URL, with validation:
 	},
 }
 ```
+
+Refer to the following for live examples:
+
+* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
+* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
 
 
 

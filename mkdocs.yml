@@ -106,12 +106,13 @@ nav:
       - Manual Import: doc2/manual-import.md
       - Keyboard: doc2/keyboard.md
     - Document Validation:
-      - Document Validation: doc2/document-validation.md
+      - doc2/document-validation.md
       - Master Data Validation: doc2/master-data-validation.md
       - OCR View: doc2/ocr-view.md
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
-    - Table Extraction: doc2/table/table-train.md
+    - Table Extraction:
+        - doc2/table/table-train.md
         - Training table extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md

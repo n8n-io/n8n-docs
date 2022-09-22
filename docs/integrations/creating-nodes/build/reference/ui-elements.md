@@ -434,7 +434,7 @@ The following options are available:
 
 * ID
 * URL
-* List: allows users to select from a prepopulated list, or do a free text search, depending on configuration. This option requires more coding, as you must provide the search method or populate the list. Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search.
+* List: allows users to select from a prepopulated list, or do a free text search, depending on configuration. This option requires more coding, as you must provide the search method or populate the list. Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search.
 
 You can choose which types to support.
 

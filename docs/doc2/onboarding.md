@@ -32,7 +32,7 @@ Here is your step by step guide to set up
 1.  Go to the [App](https://app.polydocs.io/). We recommend bookmarking this URL for future reference.
 2.  Log in with the credentials provided in your onboarding email.
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" }**Tip:**<br> Can't find the onboarding email? Go to your login screen and click the `Forgot password?` link.
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }**Tip:**<br> Can't find the onboarding email? Go to [login screen](https://app.polydocs.io/), enter your email address and click the `Forgot Password?` link.
 
 ### Step 2\: Adding Users
 

@@ -111,8 +111,7 @@ nav:
       - OCR View: doc2/ocr-view.md
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
-    - Table:
-      - Table Extraction: doc2/table/table-train.md
+    - Table Extraction: doc2/table/table-train.md
       - Train:
         - Table Extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md

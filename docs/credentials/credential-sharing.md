@@ -1,10 +1,8 @@
 # Credential sharing
 
 !!! info "Feature availability"
-		This feature is:
-
-		* Available on Cloud
-		* A paid feature			
+		* Limited Cloud plans. Refer to [Cloud Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
+		* Not available outside Cloud.
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
 

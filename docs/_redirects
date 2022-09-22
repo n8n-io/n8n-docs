@@ -91,6 +91,7 @@
 /nodes/n8n-nodes-base.activecampaigntrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.activeCampaignTrigger/
 /nodes/n8n-nodes-base.acuitySchedulingTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/
 /nodes/n8n-nodes-base.acuityschedulingtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuitySchedulingTrigger/
+/nodes/n8n-nodes-base.adalo/   /integrations/builtin/app-nodes.n8n-nodes-base.adalo/
 /nodes/n8n-nodes-base.affinity/		/integrations/builtin/app-nodes/n8n-nodes-base.affinity/
 /nodes/n8n-nodes-base.affinityTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinityTrigger/
 /nodes/n8n-nodes-base.affinitytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinityTrigger/
@@ -148,6 +149,8 @@
 /nodes/n8n-nodes-base.Brandfetch/		/integrations/builtin/app-nodes/n8n-nodes-base.Brandfetch/
 /nodes/n8n-nodes-base.brandfetch/		/integrations/builtin/app-nodes/n8n-nodes-base.Brandfetch/
 /nodes/n8n-nodes-base.bubble/		/integrations/builtin/app-nodes/n8n-nodes-base.bubble/
+/nodes/n8n-nodes-base/calTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.calTrigger/
+/nodes/n8n-nodes-base/caltrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger/
 /nodes/n8n-nodes-base.calendlyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlyTrigger/
 /nodes/n8n-nodes-base.calendlytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlyTrigger/
 /nodes/n8n-nodes-base.chargebee/		/integrations/builtin/app-nodes/n8n-nodes-base.chargebee/
@@ -256,6 +259,7 @@
 /nodes/n8n-nodes-base.gitlabTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gitlabtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/
 /nodes/n8n-nodes-base.gmail/		/integrations/builtin/app-nodes/n8n-nodes-base.gmail/
+/nodes/n8n-nodes-base.gmailTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/
 /nodes/n8n-nodes-base.googleAds/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
 /nodes/n8n-nodes-base.googleads/      /integrations/builtin/app-nodes/n8n-nodes-base.googleAds/
 /nodes/n8n-nodes-base.googleAnalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/
@@ -268,6 +272,7 @@
 /nodes/n8n-nodes-base.googlecalendar/		/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/
 /nodes/n8n-nodes-base.googleCalendarTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/
 /nodes/n8n-nodes-base.googlecalendartrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/
+/nodes/n8n-nodes-base.googleCloudStorage/   /integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage/
 /nodes/n8n-nodes-base.googleChat/		/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/
 /nodes/n8n-nodes-base.googlechat/		/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/
 /nodes/n8n-nodes-base.googleCloudNaturalLanguage/		/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudNaturalLanguage/
@@ -313,6 +318,8 @@
 /nodes/n8n-nodes-base.helpscout/		/integrations/builtin/app-nodes/n8n-nodes-base.helpScout/
 /nodes/n8n-nodes-base.helpScoutTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpScoutTrigger/
 /nodes/n8n-nodes-base.helpscouttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpScoutTrigger/
+/nodes/n8n-nodes-base.highLevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highLevel/
+/nodes/n8n-nodes-base.highlevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/
 /nodes/n8n-nodes-base.homeAssistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/
 /nodes/n8n-nodes-base.homeassistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/
 /nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlExtract/
@@ -391,6 +398,7 @@
 /nodes/n8n-nodes-base.merge/		/integrations/builtin/core-nodes/n8n-nodes-base.merge/
 /nodes/n8n-nodes-base.messageBird/		/integrations/builtin/app-nodes/n8n-nodes-base.messageBird/
 /nodes/n8n-nodes-base.messagebird/		/integrations/builtin/app-nodes/n8n-nodes-base.messageBird/
+/nodes/n8n-nodes-base.metabase/		/integrations/builtin/app-nodes/n8n-nodes-base.metabase/
 /nodes/n8n-nodes-base.microsoftDynamicsCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftDynamicsCrm/
 /nodes/n8n-nodes-base.microsoftdynamicscrm/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftDynamicsCrm/
 /nodes/n8n-nodes-base.microsoftExcel/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftExcel/
@@ -470,6 +478,7 @@
 /nodes/n8n-nodes-base.pipedriveTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedriveTrigger/
 /nodes/n8n-nodes-base.pipedrivetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedriveTrigger/
 /nodes/n8n-nodes-base.plivo/		/integrations/builtin/app-nodes/n8n-nodes-base.plivo/
+/nodes/n8n-nodes-base.postbin/	/integrations/builtin/app-nodes/n8n-nodes-base.postbin/
 /nodes/n8n-nodes-base.postgres/		/integrations/builtin/app-nodes/n8n-nodes-base.postgres/
 /nodes/n8n-nodes-base.postHog/		/integrations/builtin/app-nodes/n8n-nodes-base.postHog/
 /nodes/n8n-nodes-base.postmarkTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarkTrigger/
@@ -519,6 +528,10 @@
 /nodes/n8n-nodes-base.segment/		/integrations/builtin/app-nodes/n8n-nodes-base.segment/
 /nodes/n8n-nodes-base.sendGrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendGrid/
 /nodes/n8n-nodes-base.sendgrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendGrid/
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendInBlue/
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendInBlueTrigger/
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
 /nodes/n8n-nodes-base.sendy/		/integrations/builtin/app-nodes/n8n-nodes-base.sendy/
 /nodes/n8n-nodes-base.sentryIo/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryIo/
 /nodes/n8n-nodes-base.sentryio/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryIo/
@@ -608,7 +621,7 @@
 /nodes/n8n-nodes-base.wisetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wiseTrigger/
 /nodes/n8n-nodes-base.wooCommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/
 /nodes/n8n-nodes-base.woocommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/
-/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
+/nodes/n8n-nodes-base.wooCommerceTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
 /nodes/n8n-nodes-base.woocommercetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/
 /nodes/n8n-nodes-base.wordpress/		/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/
 /nodes/n8n-nodes-base.workableTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.workableTrigger/

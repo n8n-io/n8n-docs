@@ -1,61 +1,33 @@
 # Creating Your First Trigger Node
 
-Today, you will learn how to create your first trigger node for n8n.
+This tutorial walks through building a trigger node.
 
 ## Prerequisites
-You have knowledge of:
+
+You need the following installed on your development machine:
+
+--8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
+
+You need some understanding of:
 
 - JavaScript/TypeScript
 - REST APIs
-- [Webhooks](https://www.getvero.com/resources/webhooks/)
+- Webhooks
 - Expressions in n8n
+- git
 
-Install the following tools:
 
-- **Git:** You can find instructions on how to install Git [here](https://git-scm.com/downloads).
-- **Node.js and npm:** You can find instructions on how to install both using nvm (Node Version Manager) [here](https://github.com/nvm-sh/nvm). The current minimum version is `14.15`. In case you already have Node.js and npm installed, you can check the current version with the following command:
-	```bash
-	node -v
-	npm -v
-	```
-**NOTE:** Use node version `14.x` and npm version `6.x`
 
-[TODO: remove lerna per alex]
-
-- **Lerna:** Install [lerna](https://lerna.js.org/) globally with the following command:
-	```bash
-	npm install --global lerna
-	```
-
-## Selecting the node
+## Build your node
 
 The first thing that we have to do is pick the service we want to create the node for. We will use [Autopilot](https://www.autopilothq.com/) as an example.
 
 
 Since n8n's repository already has a Autopilot Trigger node, we will name this node **Autofriend Trigger** to avoid conflicts.
 
-## Cloning the repository
+### Step 1: Set up the project
 
-In GitHub, fork the [n8n repository](https://github.com/n8n-io/n8n). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
-
-```bash
-git clone https://github.com/<USERNAME>/n8n.git && cd n8n
-```
-
-n8n is built from four main packages:
-
-- cli
-- core
-- editor-ui
-- nodes-base
-
-All these packages are under the `/packages` folder in the main n8n folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
-
-- The folder `nodes`, contains all the nodes in n8n.
-- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
-- The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when n8n is started.
-
-![n8n folder structure](/_images/integrations/creating-nodes/n8n-folder-structure.png)
+--8<-- "_snippets/integrations/creating-nodes/tutorial-set-up-project.md"
 
 
 ## Creating the node

@@ -6,13 +6,15 @@
     You can find authentication information for this node [here](/integrations/builtin/credentials/mongoDb/).
 
 
-## Basic Operations
+## Operations
 
-* Aggregate documents.
-* Delete documents.
-* Find documents.
-* Insert documents.
-* Update documents.
+* Aggregate documents
+* Delete documents
+* Find documents
+* Find and replace documents
+* Find and update documents
+* Insert documents
+* Update documents
 
 
 ## Example Usage

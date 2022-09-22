@@ -70,7 +70,6 @@ nav:
       - Overview: try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
-    - Editor UI: editor-ui.md
     - Understand workflows:
       - Overview: workflows/index.md
       - Workflows: workflows/workflows.md
@@ -78,6 +77,11 @@ nav:
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
       - Sticky Notes: workflows/sticky-notes.md
+      - Executions: workflows/executions.md
+    - Manage credentials:
+      - Overview: credentials/index.md
+      - Create and edit: credentials/add-edit-credentials.md
+      - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
       - Overview: flow-logic/index.md
       - Merging: flow-logic/merging.md

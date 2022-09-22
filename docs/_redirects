@@ -1,3 +1,7 @@
+# Editor UI
+
+/editor-ui/   /
+
 # Integrations menu refactor
 
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat

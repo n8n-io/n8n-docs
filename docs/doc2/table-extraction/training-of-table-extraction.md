@@ -8,10 +8,10 @@ tags:
   - Table
 ---
 
-- [How to define tables and columns](/doc2/table/define-table-and-columns/)
-- [Advanced settings](/doc2/table/advanced-settings/)
-- [Mapping of columns](/doc2/mapping-of-columns/)
-- [Group function](/doc2/table/group-function/)
-- [Manual row selection](/doc2/table/manual-row-selection/)
-- [Add new table column](/doc2/table/add-new-table-column/)
-- [Save and delete rules](/doc2/table/save-rules-and-delete-rules/)
+- [How to define tables and columns](/doc2/table-extraction/define-table-and-columns/)
+- [Advanced settings](/doc2/table-extraction/advanced-settings/)
+- [Mapping of columns](/doc2/table-extraction/mapping-of-columns/)
+- [Group function](/doc2/table-extraction/group-function/)
+- [Manual row selection](/doc2/table-extraction/manual-row-selection/)
+- [Add new table column](/doc2/table-extraction/add-new-table-column/)
+- [Save and delete rules](/doc2/table-extraction/save-rules-and-delete-rules/)

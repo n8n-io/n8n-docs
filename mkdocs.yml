@@ -112,8 +112,7 @@ nav:
       - AI Indicator: doc2/ai-indicators.md
       - Expressions: doc2/exception-filters.md
     - Table Extraction: doc2/table/table-train.md
-      - Train:
-        - Table Extraction: doc2/table/training-of-table-extraction.md
+      - Training table extraction: doc2/table/training-of-table-extraction.md
         - Define tables and columns: doc2/table/define-table-and-columns.md
         - Add new Column: doc2/table/add-new-table-column.md
         - Mapping of Columns: doc2/mapping-of-columns.md

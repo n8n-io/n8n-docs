@@ -16,9 +16,9 @@ In the table extraction view, you will find the menu item `Settings` in the uppe
 
 ![](/_images/doc2/advanced-settings_2.png){ loading=lazy }
 
-Below functionalities are available in general settings:
+## Below functionalities are available in general settings:
 
-###Header row count###
+##### Header row count
 
 Here you can define the number of lines of a table header. For example, the table header line can be two lines:
 
@@ -39,7 +39,7 @@ Why is this needed? It might be that DOC² does not recognize the second line in
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
 
-###Move Extra Rows to###
+##### Move Extra Rows to
 
 In this example, the item description in the table spans multiple lines. To extract all rows and include them in the Description column, select `Move Extra Rows to` `DESCRIPTION`.
 
@@ -61,7 +61,7 @@ Example after:
 
 ![](/_images/doc2/image-22-1024x132.png){ loading=lazy }
 -->
-Below functionalities are available in advanced settings:
+## Below functionalities are available in advanced settings:
 <!--
 **Minimum grouped rows**
 
@@ -75,7 +75,7 @@ Enter the maximum number of rows in your grouped column here.
 
 If you want only unique values for your grouped column, check the box here.
 -->
-**Reverse grouping**
+##### Reverse grouping
 
 If you want to combine all the rows above the grouped attribute, check the box here.
 

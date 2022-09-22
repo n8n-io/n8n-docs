@@ -38,7 +38,7 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 !!! note "GKE and IP addresses"
 
-  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records) for more details on how reserved IP addresses work with GKE and Kubernetes resources.
+  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
 
 ## Clone configuration repository
 
@@ -86,7 +86,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 
 ### Create a volume for file storage
 
-While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key) between restarts, which saves a file containing the key into file storage during startup.
+While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key){:target="_blank" .external-link} between restarts, which saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 

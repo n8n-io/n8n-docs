@@ -41,11 +41,11 @@ Example after:
 
 If a table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
 
-![](/_images/doc2/image-16.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_7.png){ loading=lazy }
 
-To work around this problem, the "Move Extra Row to" option can be enabled. This causes that this single row is taken over into the information below and can be extracted together with them into one row and then grouped.
+To work around this problem, the option "Move Extra Rows to" DESCRIPTION can be activated. This causes this single row to be taken over into the selected column and extracted together with them into one row and then grouped.
 
-![](/_images/doc2/image-18.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_8.png){ loading=lazy }
 
 Example before:
 

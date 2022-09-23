@@ -15,7 +15,7 @@ Your email folder could look like this
 ![](/_images/doc2/AllImportOptions_Email_Folder.png)
 
 
-Go to settings on top bar an choose Import in the selection
+Go to settings on top bar and choose Import in the selection
 
 ![](/_images/doc2/AllImportOptions_Email_1.png)
 
@@ -30,6 +30,9 @@ The boxes for E-Mail and Password as well as the API Key might get automatically
 What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username e.g. "incoming invoices" as well as email address and password from which the document should going to be imported from.
 
 This example is for a google email account:
+
+!!! note "Important due to changes made by Google"
+		You now need to set up 2-Factor Authentication and create an App-Password which you have to use here to make sure that the E-Mail import will work.
 
 ![](/_images/doc2/AllImportOptions_Email_3.png)
 

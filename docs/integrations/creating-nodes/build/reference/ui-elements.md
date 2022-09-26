@@ -424,3 +424,102 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![JSON](/_images/integrations/creating-nodes/json.png)
 
+## Resource locator
+
+![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)
+
+The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
+
+The following options are available:
+
+* ID
+* URL
+* List: allows users to select or search from a prepopulated list. This option requires more coding, as you must populate the list, and handle searching if you choose to support it.
+
+You can choose which types to include.
+
+Example:
+
+```typescript
+{
+	displayName: 'Card',
+	name: 'cardID',
+	type: 'resourceLocator',
+	default: '',
+	description: 'Get a card'
+	modes: [
+		{
+			displayName: 'ID',
+			name: 'id',
+			type: 'string',
+			hint: 'Enter an ID',
+			validation: [
+				{
+					type: 'regex',
+					properties: {
+						regex: '^[0-9]'
+						errorMessage: 'The ID must start with a number'
+					},	
+				},
+			],
+			placeholder: '12example',
+			// How to use the ID in API call
+			url: '=http://api-base-url.com/?id={{$value}}'
+		},
+		displayName: 'URL',
+		name: 'url',
+		type: 'string',
+		hint: 'Enter a URL',
+		validation: [
+			{
+				type: 'regex',
+					properties: {
+						regex: '^http'
+						errorMessage: 'Invalid URL'
+					},	
+			},
+		],
+		placeholder: 'https://example.com/card/12example/',
+		// How to get the ID from the URL
+		extractValue: {
+			type: 'regex',
+			regex: 'example\.com\/card\/([0-9]*.*)\/'
+		},
+		displayName: 'List',
+		name: 'list',
+		type: 'list',
+		typeOptions: {
+			// You must always provide a search method
+			// Write this method within the methods object in your base file
+			// The method must populate the list, and handle searching if searchable: true
+			searchListMethod: 'searchMethod'
+			// If you want users to be able to search the list
+			searchable: true,
+			// Set to true if you want to force users to search
+			// When true, users can't browse the list
+			// Or false if users can browse a list
+			searchFilterRequired: true
+		}
+	],
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
+}
+```
+
+Refer to the following for live examples:
+
+* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
+* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
+
+
+
+
+

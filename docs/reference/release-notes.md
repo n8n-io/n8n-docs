@@ -1,5 +1,84 @@
 # Release notes
 
+## n8n@0.195.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.4...n8n@0.195.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-23
+
+This is a bug fix release. It fixes an issue with extracting values in expressions.
+
+## n8n@0.195.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.3...n8n@0.195.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This release:
+
+* Adds the ability to resize the main node panel.
+* Resolves an issue with resource locator in expressions.
+
+## n8n@0.195.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.2...n8n@0.195.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release.
+
+* Editor: fix an expressions bug affecting numbers and booleans.
+* Added support for setting the TDS version in Microsoft SQL credentials.
+
+## n8n@0.195.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.1...n8n@0.195.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release. It resolves an issue with MySQL migrations.
+
+
+## n8n@0.195.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.0...n8n@0.195.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This is a bug fix release. It resolves an issue with Postgres migrations.
+
+## n8n@0.195.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.194.0...n8n@0.195.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This release introduces user management and credential sharing for our Cloud platform. It also contains other enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### User management and credential sharing for Cloud
+
+This release adds support for our existing [user management](/hosting/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+
+</div>
+
+Also in this release:
+
+* Added a `resourceLocator` parameter type for nodes, and started upgrading our built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in our [UI elements](/integrations/creating-nodes/build/reference/ui-elements/) documentation.
+* Cache npm dependencies to improve performance on self-hosted n8n
+
+### Bug fixes
+
+* Box node: fix an issue that sometimes prevented response data from being returned.
+* CLI: prevent n8n from crashing when it encounters an error in poll method.
+* Core: prevent calls to constructor, to forbid arbitrary code execution.
+* Editor: fix the output panel for Wait node executions.
+* HTTP node: ensure instance doesn't crash when batching enabled.
+* Public API: corrections to the OAuth schema.
+* Xero node: fix an issue that was causing line amount types to be ignored when creating new invoices.
+
+### Contributors
+
+[Ikko Ashimine](https://github.com/eltociear){:target=_blank .external-link}
+
+
 ## n8n@0.194.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.5...n8n@0.194.0){:target=_blank .external-link} for this version.<br />

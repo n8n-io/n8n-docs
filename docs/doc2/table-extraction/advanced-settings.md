@@ -50,25 +50,41 @@ In this example, the item description in the table spans several rows, but you o
 
 ![](/_images/doc2/advanced-settings_13.png){ loading=lazy }
 
-<!--
 
 
-Example before:
-
-![](/_images/doc2/advanced-settings_9.png){ loading=lazy }
-
-Example after:
-
-![](/_images/doc2/image-22-1024x132.png){ loading=lazy }
--->
-## Below functionalities are available in advanced settings:
+## Below functionalities are available in the advanced settings:
 
 ![](/_images/doc2/advanced-settings_15.png){ loading=lazy }
 
-<!--
+
 **Minimum grouped rows**
 
 Enter the minimum number of rows in your grouped column here.
+
+![](/_images/doc2/advanced-settings_16.png){ loading=lazy }
+
+In this table you see six rows of which only three are relevant for you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns all the other ones have to be trained as custom columns. And this is how it works step by step:
+
+Select the two header rows as well as two minimum grouped rows as these should be grouped to one position.
+
+![](/_images/doc2/advanced-settings_17.png){ loading=lazy }
+![](/_images/doc2/advanced-settings_18.png){ loading=lazy }
+
+Also select the `Move extra rows to` `Trash`option to be able to train all the other columns as custom columns.
+
+![](/_images/doc2/advanced-settings_19.png){ loading=lazy }
+
+Name first column Postition and group on that one.
+
+![](/_images/doc2/advanced-settings_20.png){ loading=lazy }
+
+After naming all columns and train the values this is your result:
+
+![](/_images/doc2/advanced-settings_21.png){ loading=lazy }
+
+
+
+<!--
 
 **Maximum grouped rows**
 

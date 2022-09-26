@@ -65,7 +65,7 @@ Enter the minimum number of rows in your grouped column here.
 
 In this table you see six rows of which only three are relevant for you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns all the other ones have to be trained as custom columns. <br> And this is how it works step by step:
 
-Select the two header rows as well as two minimum grouped rows as these should be grouped to one position.
+Select the two [header rows](/doc2/table-extraction/advanced-settings/#header-row-count) as well as two minimum grouped rows as these should be grouped to one row.
 
 ![](/_images/doc2/advanced-settings_17.png){ loading=lazy }
 ![](/_images/doc2/advanced-settings_18.png){ loading=lazy }
@@ -94,7 +94,7 @@ Enter the maximum number of rows in your grouped column here.
 #### Distinct group columns
 
 If you want only unique values for your grouped column, check the box here.
--->
+
 #### Reverse grouping
 
 If you want to combine all the rows above the grouped attribute, check the box here.

@@ -70,7 +70,7 @@ Select the two [header rows](/doc2/table-extraction/advanced-settings/#header-ro
 ![](/_images/doc2/advanced-settings_17.png){ loading=lazy }
 ![](/_images/doc2/advanced-settings_18.png){ loading=lazy }
 
-Also select the `Move extra rows to` `Trash`option to be able to train all the other columns as custom columns.
+Also select the `Move extra rows to` `Trash` option to be able to train all the other columns as custom columns.
 
 ![](/_images/doc2/advanced-settings_19.png){ loading=lazy }
 
@@ -95,16 +95,22 @@ Enter the maximum number of rows in your grouped column here.
 
 If you want only unique values for your grouped column, check the box here.
 
+-->
+
 #### Reverse grouping
 
 If you want to combine all the rows above the grouped attribute, check the box here.
 
-In this example the table starts with one single row that is above all the other information like position and so on, it might be that DOC² extracts this line as extra row and grouping of the information for example by position might not work properly.
+In this example, the table starts with a row that is above all other information but also needs to be extracted along with the information below it. It could be that DOC² extracts this row as an additional row and the grouping of the information, e.g. by position, does not work properly.
 
 ![](/_images/doc2/advanced-settings_7.png){ loading=lazy }
 ![](/_images/doc2/advanced-settings_9.png){ loading=lazy }
 
-after checking the box and grouping on position the result is the following:
+After grouping on net amount, checking the box, selecting the `Move extra rows to` `Trash` option 
+
+![](/_images/doc2/advanced-settings_9.1.png){ loading=lazy }
+
+and naming all columns this is your result:
 
 ![](/_images/doc2/advanced-settings_10.png){ loading=lazy }
 <!--

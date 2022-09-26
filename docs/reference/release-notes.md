@@ -1,5 +1,22 @@
 # Release notes
 
+## n8n@0.195.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.4...n8n@0.195.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-23
+
+This is a bug fix release. It fixes an issue with extracting values in expressions.
+
+## n8n@0.195.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.3...n8n@0.195.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This release:
+
+* Adds the ability to resize the main node panel.
+* Resolves an issue with resource locator in expressions.
+
 ## n8n@0.195.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.2...n8n@0.195.3){:target=_blank .external-link} for this version.<br />

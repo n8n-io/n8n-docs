@@ -27,7 +27,7 @@ Select **ENABLE** to enable the Kubernetes Engine API for this project.
 
 ## Create a cluster
 
-From the Kubernetes Engine service page, select **Clusters**, then select **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster.
+From the GKE service page, se;lect **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
 
 ## Set Kubectl context
 
@@ -35,10 +35,10 @@ The rest of the steps in this guide require you to set the GCP instance as the K
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static IP address of the instance.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item under the **Endpoints** column.
 
-If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
-
+!!! note "GKE and IP addresses"
+  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
 
 ## Clone configuration repository
 
@@ -86,7 +86,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 
 ### Create a volume for file storage
 
-While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key) between restarts, which saves a file containing the key into file storage during startup.
+While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key){:target="_blank" .external-link} between restarts, which saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 

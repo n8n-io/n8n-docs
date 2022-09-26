@@ -18,7 +18,7 @@ In the table extraction view, you will find the menu item `Settings` in the uppe
 
 ## Below functionalities are available in general settings:
 
-##### Header row count
+#### Header row count
 
 Here you can define the number of lines of a table header. For example, the table header line can be two lines:
 
@@ -39,7 +39,7 @@ Why is this needed? It might be that DOC² does not recognize the second line in
 ![](/_images/doc2/advanced-settings_6.png){ loading=lazy }
 
 
-##### Move Extra Rows to
+#### Move Extra Rows to
 
 In this example, the item description in the table spans several rows, but you only need the first one. To extract only this and include it in the Description column, select `Move Extra Rows to` `Trash`.
 
@@ -57,13 +57,13 @@ In this example, the item description in the table spans several rows, but you o
 ![](/_images/doc2/advanced-settings_15.png){ loading=lazy }
 
 
-##### Minimum grouped rows
+#### Minimum grouped rows
 
 Enter the minimum number of rows in your grouped column here.
 
 ![](/_images/doc2/advanced-settings_16.png){ loading=lazy }
 
-In this table you see six rows of which only three are relevant for you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns all the other ones have to be trained as custom columns. And this is how it works step by step:
+In this table you see six rows of which only three are relevant for you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns all the other ones have to be trained as custom columns. <br> And this is how it works step by step:
 
 Select the two header rows as well as two minimum grouped rows as these should be grouped to one position.
 
@@ -78,7 +78,8 @@ Name first column Postition and group on that one.
 
 ![](/_images/doc2/advanced-settings_20.png){ loading=lazy }
 
-After naming all columns and train the values this is your result:
+After naming all the columns and training the values, this is your result:
+
 
 ![](/_images/doc2/advanced-settings_21.png){ loading=lazy }
 
@@ -90,11 +91,11 @@ After naming all columns and train the values this is your result:
 
 Enter the maximum number of rows in your grouped column here.
 
-##### Distinct group columns
+#### Distinct group columns
 
 If you want only unique values for your grouped column, check the box here.
 -->
-##### Reverse grouping
+#### Reverse grouping
 
 If you want to combine all the rows above the grouped attribute, check the box here.
 
@@ -108,6 +109,6 @@ after checking the box and grouping on position the result is the following:
 ![](/_images/doc2/advanced-settings_10.png){ loading=lazy }
 <!--
 
-**Split Text**
+#### Split Text
 
 If you want to split the text exactly at the column separator, check the box here. -->

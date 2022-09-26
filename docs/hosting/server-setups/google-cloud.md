@@ -34,7 +34,7 @@ The remainder of the steps in this guide require you to set the GCP instance as 
 
 ## Setup DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item under the **Endpoints** column.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
 
 !!! note "GKE and IP addresses"
 

@@ -13,6 +13,5 @@ tags:
 
 - [E-Mail](/doc2/e-mail/)
 - [Manual Import](/doc2/manual-import/)
-- [Logic Apps](/doc2/)
-- [API](/doc2/)
-- [Microsoft Teams](/doc2/)
+- [API](/doc2/api-integration/api-integration/)
+

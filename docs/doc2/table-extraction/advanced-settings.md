@@ -57,7 +57,7 @@ In this example, the item description in the table spans several rows, but you o
 ![](/_images/doc2/advanced-settings_15.png){ loading=lazy }
 
 
-**Minimum grouped rows**
+##### Minimum grouped rows
 
 Enter the minimum number of rows in your grouped column here.
 
@@ -86,11 +86,11 @@ After naming all columns and train the values this is your result:
 
 <!--
 
-**Maximum grouped rows**
+##### Maximum grouped rows
 
 Enter the maximum number of rows in your grouped column here.
 
-**Distinct group columns**
+##### Distinct group columns
 
 If you want only unique values for your grouped column, check the box here.
 -->

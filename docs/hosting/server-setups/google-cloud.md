@@ -39,10 +39,6 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 If the instance doesn't already have a static IP address, you can assign one to it by editing the instance, and changing the network interface from "Ephemeral" to "Static".
 
-<!-- TODO: Kubernetes handles? -->
-<!-- ## Open ports
-
-To set up http connections to the instance, you need to open Firewall rules. You can do this when creating or editing an instance from the _Firewall_ section, or you can [use the gcloud CLI tool to open the ports](https://cloud.google.com/vpc/docs/firewall-rules-logging). -->
 
 ## Clone configuration repository
 

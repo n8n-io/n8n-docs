@@ -17,13 +17,13 @@ In this section you will find all the settings to customize DOC² to your compan
 - [Groups, Users and Permissions](/security/privileges/)
 - [Integration](/doc2/api-integration/api-integration/)
 - [Document Types](/doc2/settings-document-types/)
-- [Email notification settings](/doc2/document-validation/)
+- [Email notification settings]
 
 ## DOCUMENT PROCESSING
 
 - [Import](/doc2/import/)
 - [OCR Settings](/doc2/document-validation/ocr-view/)
-- [Classify and Extract]
+- [Classify and Extract](/doc2/document-validation/)
 - [Supplier Validation](/doc2/settings-master-data-validation/)
 - [Export](/doc2/export/)
 - [Approval] -->

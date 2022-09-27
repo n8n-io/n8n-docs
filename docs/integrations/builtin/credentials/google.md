@@ -2,8 +2,6 @@
 
 There are two authentication methods available for Google services nodes, [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link} and [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}. Usually, n8n recommends using OAuth. It's more widely available, and easier to set up. Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} for guidance on when you need service account.
 
-Most nodes are [compatible](#compatible-nodes) with OAuth2 authentication. Support for Service Account authentication is limited.
-
 ## Prerequisites
 
 * [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
@@ -13,7 +11,7 @@ Most nodes are [compatible](#compatible-nodes) with OAuth2 authentication. Suppo
 
 ## Compatible nodes
 
-Once configured, you can use your credentials to authenticate the following nodes:
+Once configured, you can use your credentials to authenticate the following nodes. Most nodes are compatible with OAuth2 authentication. Support for Service Account authentication is limited.
 
 | Node | OAuth | Service Account |
 | :--- | :---: | :-------------: |

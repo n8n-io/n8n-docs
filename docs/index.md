@@ -22,9 +22,9 @@ business models can open along the way.
 
 Every business process starts, contains or ends with a document. Regardless of whether in paper form or already as a file. This is called unstructured data. Although the information is on or in the document, it cannot be automatically integrated into the work processes, as it is simply not recognized by all software.
 
-## What is Doc²?
+## What is DOC²?
 
-DOC² is the latest software and solution for document capture that was developed by Fellow Consulting AG. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. No matter if paper or file. DOC² learns independently, the level of experience increases with each document. DOC² uses swarm intelligence for this.
+DOC² is the latest software and solution for document capture that was developed by PolyDocs GmbH. It is a completely cloud-based solution that uses Artificial Intelligence and Machine Learning to precisely identify, classify, analyze and read your documents. No matter if paper or file. DOC² learns independently, the level of experience increases with each document. DOC² uses swarm intelligence for this.
 
 The Advantages of DOC² at a glance:
 

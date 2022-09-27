@@ -17,7 +17,7 @@ tags:
 - [Save and delete rules](/doc2/table-extraction/save-rules-and-delete-rules/)
 
 
-## Training vs correction mode
+<!-- ## Training vs correction mode
 
 Training Mode:
 * Mapped columns are read only. User should not be able to change the text manually.
@@ -25,4 +25,4 @@ Training Mode:
 
 Correction Mode:
 * Delete row and add new row option should be available
-* User should be able to manually change the texts of the columns
+* User should be able to manually change the texts of the columns -->

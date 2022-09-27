@@ -15,6 +15,15 @@ tags:
 
 # Release Notes
 
+## 1.17
+
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [Training vs Correction Mode](/doc2/table-extraction/training-of-table-extraction/#training-vs-correction-mode)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Handling of rotated documents
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Sort - The order on purchase order table must be exactly as in Infor LN
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** UI
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE: Adding a button to send an additional description to trash
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Date issue on Dashboard
+
 ## 1.16
 
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [Insight²](/insight2/)

@@ -26,4 +26,5 @@ In this section you will find all the settings to customize DOC² to your compan
 - [Classify and Extract](/doc2/document-validation/)
 - [Supplier Validation](/doc2/settings-master-data-validation/)
 - [Export](/doc2/export/)
-- [Approval]
+- [Approval](/example/approval/)
+   fontawesome-solid-circle-info:{ style="color: #0F17E4" }documentation coming soon :fontawesome-solid-circle-info:{ style="color: #0F17E4" }

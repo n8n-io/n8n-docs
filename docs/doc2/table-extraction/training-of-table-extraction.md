@@ -16,6 +16,7 @@ tags:
 - [Add new table column](/doc2/table-extraction/add-new-table-column/)
 - [Save and delete rules](/doc2/table-extraction/save-rules-and-delete-rules/)
 
+_______________________________
 
 ## Training vs Correction Mode
 

@@ -15,3 +15,14 @@ tags:
 - [Manual row selection](/doc2/table-extraction/manual-row-selection/)
 - [Add new table column](/doc2/table-extraction/add-new-table-column/)
 - [Save and delete rules](/doc2/table-extraction/save-rules-and-delete-rules/)
+
+
+## Training vs correction mode
+
+Training Mode:
+* Mapped columns are read only. User should not be able to change the text manually.
+* Delete row button should not be visible
+
+Correction Mode:
+* Delete row and add new row option should be available
+* User should be able to manually change the texts of the columns

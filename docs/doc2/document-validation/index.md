@@ -12,7 +12,7 @@ tags:
 
 After you have uploaded a document as described [here](/doc2/dashboard/), perform the following steps to validate it:
 
-1. Go to HOME where you will find the DASHBOARD with uploaded documents
+1\. Go to HOME where you will find the DASHBOARD with uploaded documents
 
 ![](/_images/doc2/DOC²_Dashboard-1024x640.png)
 

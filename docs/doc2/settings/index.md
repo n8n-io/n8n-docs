@@ -9,7 +9,7 @@ tags:
   - Document Processing
 ---
 
-In this section you will find all the settings to customize DOC² to your company. From Global settings to all needed settings to process your documents.
+In this section you will find all the settings to customize DOC² to your company.<br> From Global settings to all needed settings to process your documents.
 
 ## GLOBAL SETTINGS
 

@@ -131,6 +131,7 @@ nav:
         - doc2/doc2-with-infor/IDM-business-context-model.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
+      - doc2/settings/index.md
       - General Settings: doc2/general-settings.md
       - Company Information: doc2/company-information.md
       - Modules: doc2/modules.md

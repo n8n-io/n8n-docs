@@ -19,15 +19,17 @@ tags:
 
 ## Training vs Correction Mode
 
-Training Mode:
-* Mapped columns are read only. You are not be able to change the text manually.
-* Delete row button is not visible
+##### Training Mode:
+
+- Mapped columns are read only. You are not be able to change the text manually.
+- Delete row button is not visible
 
 ![](/_images/te/TE-Training Mode.png){ loading=lazy }
 
-Correction Mode:
-* Delete row and add new row option is available
-* You are able to manually change the texts of the columns 
+##### Correction Mode:
+
+- Delete row and add new row option is available
+- You are able to manually change the texts of the columns 
 
 ![](/_images/te/TE-Correction Mode.png){ loading=lazy }
 

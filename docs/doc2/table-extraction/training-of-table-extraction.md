@@ -17,12 +17,21 @@ tags:
 - [Save and delete rules](/doc2/table-extraction/save-rules-and-delete-rules/)
 
 
-<!-- ## Training vs correction mode
+## Training vs correction mode
 
 Training Mode:
-* Mapped columns are read only. User should not be able to change the text manually.
-* Delete row button should not be visible
+* Mapped columns are read only. You are not be able to change the text manually.
+* Delete row button is not visible
+
+![](/_images/te/TE-Training Mode.png){ loading=lazy }
 
 Correction Mode:
-* Delete row and add new row option should be available
-* User should be able to manually change the texts of the columns -->
+* Delete row and add new row option is available
+* You are able to manually change the texts of the columns 
+
+![](/_images/te/TE-Correction Mode.png){ loading=lazy }
+
+After deleting first row and adding row below:
+
+![](/_images/te/TE-Correction Mode_edited table.png){ loading=lazy }
+

@@ -31,7 +31,7 @@ Correction Mode:
 
 ![](/_images/te/TE-Correction Mode.png){ loading=lazy }
 
-After deleting first row and adding row below:
+After deleting the first row and adding the bottom row:
 
 ![](/_images/te/TE-Correction Mode_edited table.png){ loading=lazy }
 

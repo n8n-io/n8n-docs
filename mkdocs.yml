@@ -21,7 +21,7 @@ copyright: >
 extra:
   analytics:
     provider: google
-    property: UA-1464708481-3
+    property: UA-146470481-3
   extra:
   consent:
     title: Cookie consent

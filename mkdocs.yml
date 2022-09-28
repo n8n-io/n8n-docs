@@ -163,7 +163,7 @@ nav:
 
 
       - Amount: doc2/settings-amount-settings.md
-      - Doc Types: doc2/settings-document-types.md
+      - Document Types: doc2/settings-document-types.md
       - SSO:
         - SSO Settings: doc2/settings-sso-settings.md
         - Infor SSO: doc2/configuring-sso-in-cloud.md

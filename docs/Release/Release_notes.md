@@ -21,7 +21,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Handling of rotated documents
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Sort - The order on purchase order table must be exactly as in Infor LN
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: UI
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE: Adding a button to send an additional description to trash - find example [here](/doc2/table-extraction/advanced-settings/#move-extra-rows-to)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT** TE: Adding a button to send additional description to trash<br> - find example [here](/doc2/table-extraction/advanced-settings/#move-extra-rows-to)
 - :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Date issue on Dashboard
 
 ## 1.16

@@ -60,14 +60,8 @@ Once configured, you can use your credentials to authenticate the following node
 
 ### Set up OAuth in Google Cloud
 
-In your [Google Cloud Console](https://console.cloud.google.com){:targe=_blank .external-link} dashboard:
-
-1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
-
-    !!! note "New users"
-        If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}.
-    
+1. Go to [Google Cloud Console](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}.    
 3. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
 4. In Google Cloud, select **+ ADD URI**. Paste in the OAuth redirect URL from the previous step.
 5. Select **CREATE**.

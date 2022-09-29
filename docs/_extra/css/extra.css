@@ -131,12 +131,22 @@
     white-space: pre;
 }
 
-/* border on TOC */
-/* [data-md-color-scheme="light"] .md-nav--secondary {
-    border-left: 1px solid var(--color-primary);
-} */
+/* bigger font in table */
 
+.md-typeset table:not([class]) {
+	font-size: 0.75rem
+}
 
+/* img borders */
+
+.md-typeset img, .md-typeset svg, .md-typeset video {
+	border: 1px solid #DBDFE7;
+	border-radius: 4px;
+}
+
+img:not(.inline-image > .md-typeset img) {
+	border: none;
+}
 
 /* dark mode */  
 /* [data-md-color-scheme="dark"] .md-header{

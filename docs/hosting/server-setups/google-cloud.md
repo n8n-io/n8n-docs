@@ -35,7 +35,7 @@ The rest of the steps in this guide require you to set the GCP instance as the K
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
 
 Clone the repository with the following command:
 
@@ -46,7 +46,7 @@ git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b gcp
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd gcp
+cd n8n-kubernetes-hosting
 ```
 
 ## Configure Postgres
@@ -55,7 +55,7 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Create a volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class, [you can read this guide for specifics](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link}, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to "us-central".
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class. You can read [this guide](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link} for specifics, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to "us-central".
 
 ```yaml
 …
@@ -67,11 +67,11 @@ allowedTopologies:
           - us-central1-c
 ```
 
-### Environment variables
+### Postgres environment variables
 
 Postgres needs some environment variables set to pass to the application running in the containers.
 
-The example `postgres-secret.yaml` file contains placeholders you need to replace with values of your own for user details and the database to use.
+The example `postgres-secret.yaml` file contains placeholders you need to replace with your own values. Postgres will use these details when creating the database..
 
 The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
 
@@ -79,7 +79,10 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 
 ### Create a volume for file storage
 
-While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key){:target="_blank" .external-link} between restarts, which saves a file containing the key into file storage during startup.
+While not essential for running n8n, using persistent volumes is required for:
+
+* Using nodes that interact with files, such as the binary data node.
+* If you want too persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key) between restarts. This saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 
@@ -92,7 +95,7 @@ volumes:
 …
 ```
 
-### Environment variables
+### n8n environment variables
 
 n8n needs some environment variables set to pass to the application running in the containers.
 
@@ -106,13 +109,13 @@ The manifests define the following:
 
 - Send the environment variables defined to each application pod
 - Define the container image to use
-- Set resource consumption limits. This is left empty in the example manifests, but you should set them to something appropriate for your deployment.
+- Set resource consumption limits with the `resources` object. This is empty in the example manifests. You must set them to something appropriate for your deployment.
 - The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
-- Scaling and restart policies. The example manifests define only one instance of each pod, you should change this to meet your needs.
+- Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
 
 ## Services
 
-The two service manifests (`postgres-service.yaml` and `n8n-service.yaml`) expose the services to the outside world using the Kubernetes load balancer using ports 5432 and 5678 respectively by default.
+The two service manifests (`postgres-service.yaml` and `n8n-service.yaml`) expose the services to the outside world using the Kubernetes load balancer using ports 5432 and 5678 respectively.
 
 ## Send to Kubernetes cluster
 

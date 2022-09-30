@@ -96,7 +96,7 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `credentials.update` | `[credentialData: ICredentialsDb]` | Called before existing credentials are saved. |
 | `frontend.settings` | `[frontendSettings: IN8nUISettings]` | Gets called on n8n startup. Allows you to, for example, overwrite frontend data like the displayed OAuth URL. |
 | `n8n.ready` | `[app: App]` | Called once n8n is ready. Can be used to, for example, register custom API endpoints. |
-| `n8n.step` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
+| `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
 | `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Can be used to overwrite an OAuth callback URL. |
 | `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Can be used to overwrite an OAuth callback URL. |
 | `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Can be used to restrict the number of active workflows. |

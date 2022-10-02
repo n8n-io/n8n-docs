@@ -29,15 +29,15 @@ In n8n, the data that is passed between nodes is an array of objects with the fo
    	 // Any kind of JSON data is allowed. So arrays and the data being deeply nested is fine.
    	 json: { // The actual data n8n operates on (required)
    		 // This data is only an example it could be any kind of JSON data
-   		 jsonKeyName: 'keyValue',
-   		 anotherJsonKey: {
-   			 lowerLevelJsonKey: 1
+   		 alfa: 'bravo',
+   		 charlie: {
+   			 delta: 1
    		 }
    	 },
    	 // Binary data of item. The most items in n8n do not contain any (optional)
    	 binary: {
-   		 // The key-name "binaryKeyName" is only an example. Any kind of key-name is possible.
-   		 binaryKeyName: {
+   		 // The key-name "alfa" is only an example. Any kind of key-name is possible.
+   		 alfa: {
    			 data: '....', // Base64 encoded binary data (required)
    			 mimeType: 'image/png', // Optional but should be set if possible (optional)
    			 fileExtension: 'png', // Optional but should be set if possible (optional)

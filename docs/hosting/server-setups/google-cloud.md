@@ -91,6 +91,26 @@ volumes:
 …
 ```
 
+### Pod resources
+
+[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
+
+```yaml
+…
+resources:
+  requests:
+    memory: "250Mi"
+  limits:
+    memory: "500Mi"
+…    
+```
+
+This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
+
+- **Start**: 320mb RAM, 10 millicore CPU burstable
+- **Pro**: 640mb RAM, 20 millicore CPU burstable
+- **Power**: 1280mb RAM, 80 millicore CPU burstable
+
 ### Environment variables
 
 n8n needs some environment variables set to pass to the application running in the containers.

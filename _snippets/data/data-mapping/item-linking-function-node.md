@@ -46,7 +46,7 @@ Take this input data:
   },
   {
     "id": "23423536",
-    "name": "Edmund Pevensie",
+    "name": "Edmund Pevensie"
   }
 ]
 ```

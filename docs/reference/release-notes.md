@@ -1,5 +1,105 @@
 # Release notes
 
+## n8n@0.196.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.5...n8n@0.196.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-30
+
+This release includes major new features:
+
+* Better item linking
+* New built-in variables and methods
+* A redesigned main navigation
+* New nodes, as well as an overhaul of the HTTP Request node
+
+It also contains bug fixes and node enhancements.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Improved item linking
+
+Introducing improved support for item linking (paired items). Item linking is a key concept in the n8n data flow. Learn more in [Data item linking](/data/data-mapping/data-item-linking/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Overhauled built-in variables
+
+n8n's [built-in methods and variables](/code-examples/methods-variables-reference/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Redesigned main navigation
+
+We've redesigned the main navigation (the left hand menu) to create a simpler user experience.
+
+</div>
+
+#### Other new features
+
+* Improved error text when loading options in a node.
+* On reset, share unshared credentials with the instance owner.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### n8n node
+
+The [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) allows you to consume the n8n API in your workflows.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### WhatsApp Business Platform node
+
+The [WhatsApp Business Platform](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node allows you to use the WhatsApp Business Platform Cloud API in your workflows.
+
+</div>
+
+### Node enhancements
+
+* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) for more information.
+* RabbitMQ trigger node: now automatically reconnects on disconnect.
+* Slack node: add the 'get many' operation for users.
+
+### Bug fixes
+
+* Build: add typing for SSE channel.
+* Build: fix lint issue.
+* CLI: add git to all Docker images
+* CLI: disable X-Powered-By: Express header.
+* CLI: disable CORS on SSE connections in production.
+* Core: remove commented out lines.
+* Core: delete unused dependencies.
+* Core: fix and harmonize documentation links for nodes.
+* Core: remove the --forceExit flag from CLI tests.
+* Editor: add missing event handler to accordion component.
+* Editor: fix Storybook setup.
+* Editor: ensure BASE_URL replacement works correctly on Windows.
+* Editor: fix parameter input field focus.
+* Editor: make lodash aliases work on case-sensitive file systems.
+* Editor: fix an issue affecting copy-pasting workflows into pinned data in the code editor.
+* Editor: ensure the run data pagination selector displays when appropriate.
+* Editor: ensure the run selector can open.
+* Editor: tidy up leftover i18n references in the node view.
+* Editor: correct an i18n string.
+* Editor: resolve slow loading times for node types, node creators, and push connections in the settings view.
+* Nodes: update descriptions in the Merge node
+* Nodes: ensure the card ID property displays for completed checklists in the Trello node.
+* Nodes: fix authentication for the new verions of Wekan.
+* Nodes: ensure form names list correctly in the Wufoo trigger node.
+
+### Contributors
+
+[Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target=_blank .external-link}
+
 ## n8n@0.195.5
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.4...n8n@0.195.5){:target=_blank .external-link} for this version.<br />

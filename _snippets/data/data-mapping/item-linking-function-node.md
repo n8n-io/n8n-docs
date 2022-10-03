@@ -34,7 +34,7 @@ Take this input data:
   },
   {
     "id": "23423533",
-    "name": "José Arcadio Buendía",
+    "name": "José Arcadio Buendía"
   },
   {
     "id": "23423534",

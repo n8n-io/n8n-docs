@@ -1,4 +1,5 @@
 site_name: n8n Documentation
+site_url: https://docs.n8n.io/
 theme:
   name: material
   custom_dir: overrides

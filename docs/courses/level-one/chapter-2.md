@@ -103,7 +103,7 @@ The node window displays more information about the node execution:
 This field displays the number of items (records) that are returned by the node request. In our case, it's expected to be 10, since this is the limit we set in the node. But if you don't set a limit, it's useful to see how many records are actually returned.
 - Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
-- Under the node name beside the **Parameters** tab, there is a link to the node's **documentation**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
+- Under the node name beside the **Parameters** tab, there is a link to the node's **Docs**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
 
 
 !!! warning "Error in nodes"

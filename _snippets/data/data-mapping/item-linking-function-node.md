@@ -30,7 +30,7 @@ Take this input data:
 [
   {
     "id": "23423532",
-    "name": "Jay Gatsby",
+    "name": "Jay Gatsby"
   },
   {
     "id": "23423533",

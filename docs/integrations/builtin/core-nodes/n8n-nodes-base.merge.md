@@ -28,6 +28,19 @@ n8n's default behavior is to keep matching items. You can change this using the 
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
 
+
+#### Field value clashes
+
+--8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
+
+#### Multiple matches
+
+Matching by field can generate multiple matches if the inputs contain duplicate data. To handle this, select **Add Option > Multiple Matches**. Then choose:
+
+* **Include All Matches**: output multiple items (one for each match).
+* **Include First Match Only**: keep the first item, discard subsequent items.
+
+
 ### Merge by position
 
 Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.

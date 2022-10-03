@@ -27,10 +27,10 @@ The *Hacker News node* has several parameters that need to be configured in orde
 
 - *Resource:* All <br/>
 This resource selects all data records (articles).
-- *Operation:* Get All <br/>
+- *Operation:* Get Many <br/>
 This operation fetches all the selected articles.
 - *Limit:* 10 <br/>
-This parameter sets a limit to how many results are returned by the Get All operation.
+This parameter sets a limit to how many results are returned by the Get Many operation.
 - *Additional fields > Add Field > Keyword:* automation <br/>
 Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation”. <br/>
 
@@ -103,7 +103,7 @@ The node window displays more information about the node execution:
 This field displays the number of items (records) that are returned by the node request. In our case, it's expected to be 10, since this is the limit we set in the node. But if you don't set a limit, it's useful to see how many records are actually returned.
 - Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
-- In the bottom right corner right under the node window, there is a reference link to the node's **documentation**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
+- Under the node name beside the **Parameters** tab, there is a link to the node's **Docs**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
 
 
 !!! warning "Error in nodes"

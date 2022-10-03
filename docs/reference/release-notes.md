@@ -1,6 +1,167 @@
 # Release notes
 
-## n8n@0.194.4
+## n8n@0.195.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.4...n8n@0.195.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-23
+
+This is a bug fix release. It fixes an issue with extracting values in expressions.
+
+## n8n@0.195.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.3...n8n@0.195.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This release:
+
+* Adds the ability to resize the main node panel.
+* Resolves an issue with resource locator in expressions.
+
+## n8n@0.195.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.2...n8n@0.195.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release.
+
+* Editor: fix an expressions bug affecting numbers and booleans.
+* Added support for setting the TDS version in Microsoft SQL credentials.
+
+## n8n@0.195.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.1...n8n@0.195.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release. It resolves an issue with MySQL migrations.
+
+
+## n8n@0.195.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.0...n8n@0.195.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This is a bug fix release. It resolves an issue with Postgres migrations.
+
+## n8n@0.195.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.194.0...n8n@0.195.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This release introduces user management and credential sharing for our Cloud platform. It also contains other enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### User management and credential sharing for Cloud
+
+This release adds support for our existing [user management](/hosting/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+
+</div>
+
+Also in this release:
+
+* Added a `resourceLocator` parameter type for nodes, and started upgrading our built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in our [UI elements](/integrations/creating-nodes/build/reference/ui-elements/) documentation.
+* Cache npm dependencies to improve performance on self-hosted n8n
+
+### Bug fixes
+
+* Box node: fix an issue that sometimes prevented response data from being returned.
+* CLI: prevent n8n from crashing when it encounters an error in poll method.
+* Core: prevent calls to constructor, to forbid arbitrary code execution.
+* Editor: fix the output panel for Wait node executions.
+* HTTP node: ensure instance doesn't crash when batching enabled.
+* Public API: corrections to the OAuth schema.
+* Xero node: fix an issue that was causing line amount types to be ignored when creating new invoices.
+
+### Contributors
+
+[Ikko Ashimine](https://github.com/eltociear){:target=_blank .external-link}
+
+
+## n8n@0.194.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.5...n8n@0.194.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-15
+
+This release includes new nodes: a Gmail trigger, Google Cloud Storage, and Adalo. It also contains major overhauls of the Gmail and Merge nodes.
+
+### New features
+
+* CLI: load all nodes and credentials code in isolation.
+* Core, Editor UI: introduce support for node deprecation.
+* Editor: implement HTML sanitization for Notification and Message components.
+* Editor: display the input number on multi-input nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Adalo
+
+Adalo is a low code app builder. Refer to our [Adalo node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/) for more information.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Google Cloud Storage
+
+n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudStorage/). 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Gmail Trigger
+
+n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
+
+</div>
+
+
+### Node enhancements
+
+* Gmail node: this release includes an overhaul of the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), with updated resources and operations.
+* Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) to learn more.
+* MongoDB node: updated the Mongo driver to 4.9.1.
+
+
+### Bug fixes
+
+* CLI: core: address Dependabot warnings.
+* CLI: avoid scanning unnecessary directories on Windows.
+* CLI: load nodes and directories on Windows using the correct file path.
+* CLI: ensure password reset triggers internal and external hooks.
+* CLI: use absolute paths for loading custom nodes and credentials.
+* Core: returnJsonArray helper no longer breaks nodes that return no data.
+* Core: fix an issue with node renaming and expressions.
+* Core: update OAuth endpoints to use the instance base URL.
+* Nodes: resolved an issue that was preventing versioned nodes from loading.
+* Public API: better error handling for bad requests.
+* AWS nodes: fixed an issue with credentials testing.
+* GoogleBigQuery node: fix for empty responses when creating records.
+* Hubspot node: correct the node name on the canvas.
+
+### Contributors
+
+[Rhys Williams](https://github.com/rhyswilliamsza){:target=_blank .external-link}
+
+## n8n@0.193.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.4...n8n@0.193.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-07
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: prevent editing in the Function nodes in executions view.
+* Editor: ensure button widths are correct.
+* Editor: fix a popup title.
+* Gmail node: fix an issue introduced due to incorrect automatic data formatting.
+
+## n8n@0.193.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.3...n8n@0.193.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-09-06

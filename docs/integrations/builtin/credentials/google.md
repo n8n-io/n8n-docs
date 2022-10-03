@@ -25,6 +25,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Books](/integrations/builtin/app-nodes/n8n-nodes-base.googleBooks/) | :white_check_mark: | :white_check_mark: |
 | [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/) | :white_check_mark: | :x: |
 | [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/) | :x: | :white_check_mark: |
+| [Google Cloud Storage](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudStorage/) | :white_check_mark: | :x: |
 | [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googleContacts/) | :white_check_mark: | :x: |
 | [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) | :white_check_mark: | :x: |
 | [Google Cloud Natural Language](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudNaturalLanguage/) | :white_check_mark: | :x: |
@@ -128,3 +129,13 @@ If using the OAuth authentication method, you might come across the warning **Go
 1. Click on **Advanced**.
 2. Click on **Go to CREDENTIALS_NAME (unsafe)**. `CREDENTIALS_NAME` is the name of the credentials created by the third party.
 3. Grant the requested permissions.
+
+### Service Account cannot access Google Drive files
+
+A Service Account can only access Google Drive files and folders that were shared with it's associated user email.
+
+1. Access your [Google Cloud Console](https://console.cloud.google.com){:targe=_blank .external-link} and copy your Service Account email.
+2. Access your [Google Drive](https://drive.google.com){:targe=_blank .external-link} and go to the designated file or folder.
+3. Right-click on the file or folder and select **Share**.
+4. Paste your Service Account email into **Add People and groups**.
+5. Select **Editor** for read-write access or **Viewer** for read-only access.

@@ -20,14 +20,24 @@ Match the brand name exactly. For example, GitHub NOT Github
 
 _Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website._
 
+!!! note "Credentials"
+    You can find authentication information for this node _here (link to credentials doc)_.
+
+## Events
+
+* _Bullet list_
+* _Of events this node responds to_.
+
 ## Related resources
 
-### Credentials and app node
+<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
+Refer to [_Name's_ documentation]() for details about the operations.
 
-_Link to the credentials doc_
+<!-- provide a link to the app node docs, if there is a trigger node for this service -->
+n8n provides an app node for _Name_. You can find the node docs [here]().
 
-_Link to the related app node if it exists._
 
+<!-- this section is optional. Include it if we have good blog posts available -->
 ### Examples
 
 * _List of links_

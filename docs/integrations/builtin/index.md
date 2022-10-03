@@ -25,3 +25,5 @@ External services need a way to identify and authenticate users. This data can r
 Nodes in n8n can then request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
 
 To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saved under `~/.n8n/config`.
+
+To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](/credentials/).

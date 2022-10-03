@@ -1,6 +1,6 @@
-### Branch execution with If and Merge nodes
-
 If you add a Merge node to a workflow containing an If node, it can result in both output branches of the If node executing.
+
+The Merge node is triggered by one branch, then goes and executes the other branch.
 
 For example, in the screenshot below there's a workflow containing a Set node, If node, and Merge node. The standard If node behavior is to execute one branch (in the screenshot, this is the **true** output). However, due to the Merge node, both branches execute, despite the If node not sending any data down the **false** branch.
 

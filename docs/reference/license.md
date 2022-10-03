@@ -1,6 +1,6 @@
 # License
 
-n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md)
+n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
 ## License FAQs
 

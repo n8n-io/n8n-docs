@@ -16,34 +16,32 @@ You can find more info on working with the docs project in the README: https://g
 The title should be the name of the integration 
 Match the brand name exactly. For example, GitHub NOT Github
 -->
-# <Name>
+# _Name_
 
-_Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website._
+_Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website. Include a link to the service's homepage._
 
-## Related resources
-
-### Credentials and trigger node
-
-_Link to the credentials doc_
-
-_Link to the related trigger node if it exists, or tell them if it doesn't_
-
-### Examples
-
-* _List of links_
-* _To blog posts_
-* _And integrations marketing pages_
-
-
+!!! note "Credentials"
+    You can find authentication information for this node _here (link to credentials doc)_.
+	
 ## Operations
 
 * _Bullet list_
 * _Of available operations_.
+
+## Related resources
+
+<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
+Refer to [_Name's_ documentation]() for details about the operations.
+
+<!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
+n8n provides a trigger node for _Name_. You can find the trigger node docs [here]().
+	
+<!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
+View [example workflows and related content](){:target=_blank .external-link} on our website.
+
 
 <!-- 
 Add any other sections here. 
 You should include: quirks, pain points, complex topics that trip people up
 You should not include: basic usage examples
 -->
-
-

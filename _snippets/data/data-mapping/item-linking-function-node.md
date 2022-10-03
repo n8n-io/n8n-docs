@@ -38,7 +38,7 @@ Take this input data:
   },
   {
     "id": "23423534",
-    "name": "Max Sendak",
+    "name": "Max Sendak"
   },
   {
     "id": "23423535",

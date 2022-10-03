@@ -42,7 +42,7 @@ Take this input data:
   },
   {
     "id": "23423535",
-    "name": "Zaphod Beeblebrox",
+    "name": "Zaphod Beeblebrox"
   },
   {
     "id": "23423536",

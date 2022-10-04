@@ -27,7 +27,7 @@ Select **ENABLE** to enable the Kubernetes Engine API for this project.
 
 ## Create a cluster
 
-From the GKE service page, se;lect **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
+From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link}, select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
 
 ## Set Kubectl context
 
@@ -95,11 +95,34 @@ volumes:
 …
 ```
 
-### n8n environment variables
+### Pod resources
+
+[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` and `postgres-deployment.yaml` files:
+
+```yaml
+…
+resources:
+  requests:
+    memory: "250Mi"
+  limits:
+    memory: "500Mi"
+…    
+```
+
+This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
+
+- **Start**: 320mb RAM, 10 millicore CPU burstable
+- **Pro**: 640mb RAM, 20 millicore CPU burstable
+- **Power**: 1280mb RAM, 80 millicore CPU burstable
+
+
+### Environment variables
 
 n8n needs some environment variables set to pass to the application running in the containers.
 
 The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
+
+Refer to [Environment variables](/hosting/environment-variables/) for n8n environment variables details.
 
 ## Deployments
 
@@ -109,7 +132,7 @@ The manifests define the following:
 
 - Send the environment variables defined to each application pod
 - Define the container image to use
-- Set resource consumption limits with the `resources` object. This is empty in the example manifests. You must set them to something appropriate for your deployment.
+- Set resource consumption limits with the `resources` object
 - The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
 - Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
 
@@ -132,7 +155,7 @@ kubectl apply -f .
     kubectl apply -f namespace.yaml
     ```
 
-## Setup DNS
+## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
 

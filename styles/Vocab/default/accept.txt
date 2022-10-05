@@ -7,10 +7,13 @@ Caddy
 Clockify
 Cron
 Dockerfile
+eksctl
 Enum
 enum
+Fargate
 GIMP
 invalid
+kubectl
 Lemlist
 Luxon
 Mattermost
@@ -23,6 +26,8 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Serverless
+serverless
 Shopify
 shopify
 There are

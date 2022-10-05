@@ -6,13 +6,13 @@ This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS)
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
 
-This guide uses EKS as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
+This guide uses [EKS](https://aws.amazon.com/eks/){:target=_blank .external-link} as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
 ## Prerequisites
 
-The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io).
+The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io){:target=_blank .external-link}.
 
-While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
+While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html){:target=_blank .external-link}, and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html){:target=_blank .external-link}.
 
 ## Create a cluster
 
@@ -25,11 +25,11 @@ eksctl create cluster --name n8n --region eu-central-1
 This can take a while to create the cluster.
 
 !!! note "AWS Fargate"
-    Fargate, AWS's serverless container management system is not compatible with n8n.
+    Fargate, AWS's serverless container management system isn't compatible with n8n.
 
 Once the cluster is created, eksctl automatically sets the kubectl context to the cluster.
 
-## Setup DNS
+## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static address of the instance.
 

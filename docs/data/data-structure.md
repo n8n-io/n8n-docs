@@ -9,16 +9,16 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 		// Wrap each item in another object, with the key 'json'
 		"json": {
 			// Example data
-			"alfa": "bravo",
-			"charlie": {
-				"delta": 1
+			"apple": "beets",
+			"carrot": {
+				"dill": 1
 			}
 		},
 		// For binary data:
 		// Wrap each item in another object, with the key 'binary'
 		"binary": {
 			// Example data
-			"alfa": {
+			"apple": {
 				"data": "....", // Base64 encoded binary data (required)
 				"mimeType": "image/png", // Best practice to set if possible (optional)
 				"fileExtension": "png", // Best practice to set if possible (optional)

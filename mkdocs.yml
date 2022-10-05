@@ -1,4 +1,5 @@
 site_name: n8n Documentation
+site_url: https://docs.n8n.io/
 theme:
   name: material
   custom_dir: overrides
@@ -16,6 +17,20 @@ theme:
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
+copyright: >
+  <a href="#__consent">Change cookie settings</a>
+extra:
+  analytics:
+    provider: google
+    property: UA-146470481-3
+  extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better. <br /><a href="https://n8n.io/legal#privacy" target=_blank>Privacy policy</a>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -44,6 +59,11 @@ markdown_extensions:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences:
+      # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
@@ -70,7 +90,6 @@ nav:
       - Overview: try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
-    - Editor UI: editor-ui.md
     - Understand workflows:
       - Overview: workflows/index.md
       - Workflows: workflows/workflows.md
@@ -78,6 +97,11 @@ nav:
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
       - Sticky Notes: workflows/sticky-notes.md
+      - Executions: workflows/executions.md
+    - Manage credentials:
+      - Overview: credentials/index.md
+      - Create and edit: credentials/add-edit-credentials.md
+      - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
       - Overview: flow-logic/index.md
       - Merging: flow-logic/merging.md
@@ -87,22 +111,36 @@ nav:
       - Overview: data/index.md
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
-      - Using code: data/code.md
-      - Data mapping: data/data-mapping.md
+      - Process data using code: data/code.md
+      - Data mapping: 
+        - Overview: data/data-mapping/index.md
+        - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+        - Data item linking: 
+          - Overview: data/data-mapping/data-item-linking/index.md
+          - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+          - Item linking in the Function node: data/data-mapping/data-item-linking/item-linking-function-node.md
+          - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
+          - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
-    - Code examples:
+    - Expressions and JavaScript:
       - Overview: code-examples/index.md
-      - Expressions:
+      - Built in methods and variables reference: code-examples/methods-variables-reference.md
+      - Built-in methods and variables examples: 
+        - Overview: code-examples/methods-variables-examples/index.md
+        - evaluateExpression: code-examples/methods-variables-examples/evaluate-expression.md
+        - execution: code-examples/methods-variables-examples/execution.md
+        - getWorkflowStaticData: code-examples/methods-variables-examples/get-workflow-static-data.md
+        - (node-name).item: code-examples/methods-variables-examples/node.md
+        - (node-name).all: code-examples/methods-variables-examples/all.md
+        - runIndex: code-examples/methods-variables-examples/run-index.md
+        - workflow: code-examples/methods-variables-examples/workflow.md
+      - Expressions examples:
         - Overview: code-examples/expressions/index.md
-        - Methods: code-examples/expressions/methods.md
-        - Variables: code-examples/expressions/variables.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
-      - JavaScript for workflows:
-        - Overview: code-examples/javascript-functions/index.md
-        - Methods: code-examples/javascript-functions/methods.md
-        - Variables: code-examples/javascript-functions/variables.md
+      - JavaScript examples:
+        - Overview: code-examples/javascript-functions/index.md         
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
@@ -156,7 +194,7 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
+          - Item linking: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
         - Overview: integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md

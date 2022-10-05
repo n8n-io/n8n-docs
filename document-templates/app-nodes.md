@@ -37,7 +37,7 @@ Refer to [_Name's_ documentation]() for details about the operations.
 n8n provides a trigger node for _Name_. You can find the trigger node docs [here]().
 	
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-View [example workflows and related content](){:target=_blank .external-link} on our website.
+View [example workflows and related content](){:target=_blank .external-link} on n8n's website.
 
 
 <!-- 

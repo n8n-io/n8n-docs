@@ -1,3 +1,16 @@
+
+# methods / vars / paired items
+
+/code-examples/expressions/methods/   /code-examples/methods-variables-reference/
+/code-examples/expressions/variables/   /code-examples/methods-variables-reference/
+/code-examples/javascript-functions/methods/   /code-examples/methods-variables-reference/
+/code-examples/javascript-functions/variables/   /code-examples/methods-variables-reference/
+/data/data-mapping/   /data/data-mapping/data-mapping-ui/
+
+# Editor UI
+
+/editor-ui/   /
+
 # Integrations menu refactor
 
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat

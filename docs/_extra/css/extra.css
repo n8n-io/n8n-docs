@@ -131,6 +131,10 @@
     white-space: pre;
 }
 
+.table-without-whitespace-pre td:first-of-type {
+	white-space: unset;
+}
+
 /* border on TOC */
 /* [data-md-color-scheme="light"] .md-nav--secondary {
     border-left: 1px solid var(--color-primary);

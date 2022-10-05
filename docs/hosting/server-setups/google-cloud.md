@@ -5,7 +5,7 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 ## Prerequisites
 
 - The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
-- The [gke-gcloud-auth-plugin]{:target="_blank" .external-link} (install the gcloud CLI first)
+- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
 
 ## Hosting options
 

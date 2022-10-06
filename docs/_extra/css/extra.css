@@ -147,7 +147,7 @@
 	border-radius: 4px;
 }
 
-img:not(.inline-image > .md-typeset img) {
+.md-typeset :is(.emojione,.twemoji,.gemoji) svg {
 	border: none;
 }
 
@@ -205,6 +205,10 @@ code {
     max-width: 25px;
     max-height: 25px;
     vertical-align: middle;
+}
+
+.inline-image > img {
+	border: none;
 }
 
 

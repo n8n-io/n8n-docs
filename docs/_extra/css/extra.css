@@ -132,6 +132,9 @@
 }
 
 /* bigger font in table */
+.table-without-whitespace-pre td:first-of-type {
+	white-space: unset;
+}
 
 .md-typeset table:not([class]) {
 	font-size: 0.75rem

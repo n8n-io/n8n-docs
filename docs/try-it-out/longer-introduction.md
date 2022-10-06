@@ -60,7 +60,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
 6. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
     1. Select **Add field**.
     2. Select **Start date**.
-    3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the **Edit Expression** modal.
+    3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab. n8n opens the **Edit Expression** modal.
     4. In the **Expression** field, enter the following expression:
     ```js
     {{$today.minus({days: 7}).toFormat('yyyy-MM-dd')}}
@@ -85,7 +85,7 @@ Add the If node:
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. Select **Add condition** > **String**.
 5. You need to check the value of the `classType` property in the NASA data. To do this:
-    1. Next to **Value 1**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**. n8n opens the expressions editor for this field.
+    1. Next to **Value 1**, select the **Expression** tab. n8n opens the expressions editor for this field.
     2. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
 
     !!! note "Make sure you ran the NASA node in the previous section"
@@ -111,7 +111,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 6. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**.
 7. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 8. In n8n, paste your Postbin ID into **Bin ID**.
-9. Now, configure the data to send to Postbin. Next to **Bin Content**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**.
+9. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab. n8n opens the expressions editor for this field.
 10. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
 11. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js

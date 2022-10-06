@@ -185,6 +185,7 @@ nav:
       - Docker Compose: hosting/server-setups/docker-compose.md
       - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
+      - Hetzner: hosting/server-setups/hetzner.md
     - Databases:
       - Overview: hosting/databases/index.md
       - Supported databases and settings: hosting/databases/supported-databases-settings.md

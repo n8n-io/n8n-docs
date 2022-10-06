@@ -64,7 +64,7 @@ Now that you are familiar with the n8n data structure, you can use it to create 
 return [
 	{
 		json: {
-			key: 'value',
+			apple: 'beets',
 		}
 	}
 ];

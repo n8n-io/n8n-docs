@@ -191,6 +191,12 @@ img:not(.inline-image > .md-typeset img) {
     border-left: 1px solid var(--color-primary);
 } */
 
+code {
+	tab-size: 2;
+}
+
+/* n8n classes */
+
 .inline-image {
     display:inline-block;
     max-width: 25px;
@@ -198,9 +204,7 @@ img:not(.inline-image > .md-typeset img) {
     vertical-align: middle;
 }
 
-code {
-	tab-size: 2;
-}
+
 
 
 

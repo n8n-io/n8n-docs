@@ -4,12 +4,13 @@ This quickstart gives you a very quick taste of n8n. Its aim is to allow you to 
 
 You will:
 
-* Install the desktop app
 * Load a workflow from the workflow templates library
 * Add a node and configure it using expressions.
 * Run your first workflow
 
 ## Step one: Install and run n8n
+
+!!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 

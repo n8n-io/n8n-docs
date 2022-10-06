@@ -1,4 +1,4 @@
-# Overview
+# Data
 
 Data represents units of information that are collected by and transmitted through nodes. For "basic usage" it is not necessarily needed to understand how the data that gets passed from one node to another is structured. However, it becomes important if you want to:
 

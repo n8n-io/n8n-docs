@@ -62,12 +62,12 @@ Now that you are familiar with the n8n data structure, you can use it to create 
 
 ```javascript
 return [
-  {
-    json: {
-      key: 'value',
-      }
-    }
-  ];
+	{
+		json: {
+			key: 'value',
+		}
+	}
+];
 ```
 
 For example, the array of objects representing the Ninja turtles would look like this in the Function node:

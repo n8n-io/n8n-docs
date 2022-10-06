@@ -1,4 +1,4 @@
-# Overview
+# Built-in integrations
 
 This section contains the node library: reference documentation for every built-in node in n8n, and their credentials.
 

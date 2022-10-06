@@ -1,4 +1,4 @@
-# Overview
+# Reference
 
 This section provides reference information about n8n, including:
 

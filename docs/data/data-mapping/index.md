@@ -1,4 +1,4 @@
-# Overview
+# Data mapping
 
 Data mapping means referencing data from previous nodes. 
 

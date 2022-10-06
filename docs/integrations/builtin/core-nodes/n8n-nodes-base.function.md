@@ -8,6 +8,7 @@ Using the function node, you can:
 !!! note "Function node and function item node"
     Note that the Function node is different from the [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
 
+
 The Function node supports:
 
 * Promises. Instead of returning the items directly, you can return a promise which resolves accordingly.

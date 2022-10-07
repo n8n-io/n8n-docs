@@ -37,7 +37,7 @@ In n8n, the data that is passed between nodes is an array of objects with the fo
    	 // Binary data of item. The most items in n8n do not contain any (optional)
    	 binary: {
    		 // The key-name "apple" is only an example. Any kind of key-name is possible.
-   		 apple: {
+   		 apple-picture: {
    			 data: '....', // Base64 encoded binary data (required)
    			 mimeType: 'image/png', // Optional but should be set if possible (optional)
    			 fileExtension: 'png', // Optional but should be set if possible (optional)

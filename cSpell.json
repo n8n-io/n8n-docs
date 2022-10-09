@@ -2,6 +2,19 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "Airtable",
+    "Calendly",
+    "Emelia",
+    "Eventbrite",
+    "Mailchimp",
+    "Postbin",
+    "Pushbullet",
+    "quickstart",
+    "Salesmate",
+    "Strava",
+    "Supabase",
+    "Typeform",
+    "Xero"
   ],
   "ignoreWords": [],
   "patterns": [

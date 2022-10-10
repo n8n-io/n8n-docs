@@ -15,7 +15,7 @@ Back to your workflow, remove the connection between the *HTTP Request* node and
 In the *IF* node window click on *Add Condition* > *string* and configure the parameters:
 
 - *Value 1*: Current Node > Input Data > JSON > orderStatus → `{{$json["orderStatus"]}}` <br>
-To select this value, click on the wheel icon “Add Expression” on the right side of the Value 1 field.
+To select this value, click the **Expression** tab on the right side of the Value 1 field.
 
     !!! note "Expressions"
         An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.

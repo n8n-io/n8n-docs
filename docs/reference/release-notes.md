@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.197.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.0...n8n@0.197.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-10
+
+This is a bug fix release. It resolves an issue with display width on the resource locator UI component.
+
 ## n8n@0.197.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.196.0...n8n@0.197.0){:target=_blank .external-link} for this version.<br />

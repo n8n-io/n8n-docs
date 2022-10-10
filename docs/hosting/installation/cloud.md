@@ -16,8 +16,6 @@ n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it p
 ## Cloud IP addresses
 
 !!! warning "Cloud IP addresses change without warning"
-	n8n doesn't guarantee static source IP addresses, as Cloud operates in a dynamic environment, scaling to meet demand.
+    n8n doesn't guarantee static source IP addresses, as Cloud operates in a dynamic environment, scaling to meet demand.
 
-The `20.218.202.73`. This is subject to change. The NAT addresses are `20.79.227.226` and `20.79.72.36`, but this is also subject to change.
-
-Recommended practice is to allowlist `20.79.72.0/24`, but if you need stricter measures, at minimum you must allowlist `20.218.202.73`, `20.79.72.36`, and `20.79.227.226`.
+The IP address is currently `20.218.202.73`. This is subject to change. The NAT addresses are `20.79.227.226` and `20.79.72.36`, but this is also subject to change.

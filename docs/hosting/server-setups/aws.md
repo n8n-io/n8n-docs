@@ -6,44 +6,32 @@ This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS)
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
 
-This guide uses EKS as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
+This guide uses [EKS](https://aws.amazon.com/eks/){:target=_blank .external-link} as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
 ## Prerequisites
 
-The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io).
+The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io){:target=_blank .external-link}.
 
-While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
+While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html){:target=_blank .external-link}, and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html){:target=_blank .external-link}.
 
 ## Create a cluster
 
 Use the eksctl tool to create a cluster specifying a name and a region with the following command:
 
 ```shell
-eksctl create cluster --name n8n --region eu-central-1
+eksctl create cluster --name n8n --region <your-aws-region>
 ```
 
 This can take a while to create the cluster.
 
 !!! note "AWS Fargate"
-    Fargate, AWS's serverless container management system is not compatible with n8n.
+    Fargate, AWS's serverless container management system isn't compatible with n8n.
 
 Once the cluster is created, eksctl automatically sets the kubectl context to the cluster.
 
-## Setup DNS
-
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static address of the instance.
-
-To find the address of the n8n service running on the instance, first open the **Clusters** section of the **EKS** service page in the AWS console.
-
-Click the name of the cluster to open its configuration page.
-
-Click the **Resources** tab and the **Services** sub-menu of the **Service and networking** page.
-
-Click the **n8n** service and copy the **Load balancer URLs** value. Use this value suffixed with the n8n service port (5678) for DNS.
-
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link}. The following steps tell you what each file does, and what settings you need to change.
 
 Clone the repository with the following command:
 
@@ -54,7 +42,7 @@ git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b aws
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd aws
+cd n8n-kubernetes-hosting
 ```
 
 ## Configure Postgres
@@ -63,7 +51,7 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Configure volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, "[gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2)" is suitable for this purpose and is defined in the `postgres-claaim0-persistentvolumeclaim.yaml` manifest.
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2){:target=_blank .external-link}, is suitable for this purpose. This is defined in the `postgres-claaim0-persistentvolumeclaim.yaml` manifest.
 
 ```yaml
 …
@@ -101,7 +89,7 @@ volumes:
 
 ### Pod resources
 
-[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
+[Kubernetes](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/){:target=_blank .external-link} lets you specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
 
 ```yaml
 …
@@ -133,9 +121,9 @@ The manifests define the following:
 
 - Send the environment variables defined to each application pod
 - Define the container image to use
-- Set resource consumption limits. This is left empty in the example manifests, but you should set them to something appropriate for your deployment.
+- Set resource consumption limits
 - The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
-- Scaling and restart policies. The example manifests define only one instance of each pod, you should change this to meet your needs.
+- Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
 
 ## Services
 
@@ -143,7 +131,7 @@ The two service manifests (`postgres-service.yaml` and `n8n-service.yaml`) expos
 
 ## Send to Kubernetes cluster
 
-Send all the manifests to the cluster with the following command:
+Send all the manifests to the cluster by running the following command in the `n8n-kubernetes-hosting` directory:
 
 ```shell
 kubectl apply -f .
@@ -156,7 +144,20 @@ kubectl apply -f .
     kubectl apply -f namespace.yaml
     ```
 
-Remove the resources created by the manifests with the following command:
+## Set up DNS
+
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to a static address of the instance.
+
+To find the address of the n8n service running on the instance:
+
+1. Open the **Clusters** section of the **Amazon Elastic Kubernetes Service** page in the AWS console.
+2. Select the name of the cluster to open its configuration page.
+3. Select the **Resources** tab, then **Service and networking** > **Services**.
+4. Select the **n8n** service and copy the **Load balancer URLs** value. Use this value suffixed with the n8n service port (5678) for DNS.
+
+## Delete resources
+
+If you need to delete the setup, you can remove the resources created by the manifests with the following command:
 
 ```shell
 kubectl delete -f .

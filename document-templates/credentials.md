@@ -16,9 +16,9 @@ You can find more info on working with the docs project in the README: https://g
 The title should be the name of the integration.
 Match the brand name exactly. For example, GitHub NOT Github
 -->
-# <Name>
+# _Name_
 
-You can use these credentials to authenticate the following nodes with <Name>:
+You can use these credentials to authenticate the following nodes with _Name_:
 
 * _List of apps_
 * _That use these credentials_
@@ -27,9 +27,14 @@ You can use these credentials to authenticate the following nodes with <Name>:
 
 _Include info on services they need to sign up for_
 
-## Using <Auth method>
 
-_Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (https://docs.n8n.io/integrations/builtin/credentials/asana/)_
+## Using _Auth method_
+	
+_Link to product's docs for this auth method._
+	
+_STOP AND THINK: does this node require a step by step? If authentication is easy to set up, or if this node isn't heavily used, consider leaving out the step by step to minimise maintenance._
+
+_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (https://docs.n8n.io/integrations/builtin/credentials/asana/)_
 
 <!-- 
 Add any other sections here. 

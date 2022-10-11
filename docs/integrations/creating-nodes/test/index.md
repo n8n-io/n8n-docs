@@ -1,4 +1,6 @@
-# Overview
+# Test a node
+
+This section contains information about testing your node.
 
 There are two ways to test your node:
 

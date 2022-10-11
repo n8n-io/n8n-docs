@@ -1,4 +1,4 @@
-# Tutorial: Build a declarative-style node
+# Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
 
@@ -23,10 +23,13 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 
 ### Step 1: Set up the project
 
+
 n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
 
+Clone the repository and navigate into the directory:
+
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
-2. Clone your new repository as `n8n-nodes-nasa-pics`:
+2. Clone your new repository:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
 		cd n8n-nodes-nasa-pics
@@ -41,11 +44,10 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-* `nodes/NasaPics`
-* `nodes/NasaPics/NasaPics.node.json`
-* `nodes/NasaPics/NasaPics.node.ts`
-* `nodes/NasaPics/nasapics.svg`
-* `credentials/NasaPicsApi.credentials.ts`
+`nodes/NasaPics`  
+`nodes/NasaPics/NasaPics.node.json`  
+`nodes/NasaPics/NasaPics.node.ts`  
+`credentials/NasaPicsApi.credentials.ts`  
 
 These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
 
@@ -57,161 +59,83 @@ npm i
 
 ### Step 2: Add an icon
 
-Copy and paste the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} into `nasapics.svg`. To get the SVG source, right-click the image then select **View page source**.
+Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} as `nasapics.svg` in `nodes/NasaPics/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-### Step 3: Update the npm package details
 
-Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
+### Step 3: Create the node
 
-```json
-{
-	// All node names must start with "n8n-nodes-"
-  "name": "n8n-nodes-nasapics",
-  "version": "0.1.0",
-  "description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
-  "keywords": [
-		// This keyword is required for community nodes
-    "n8n-community-node-package"
-  ],
-  "license": "MIT",
-  "homepage": "https://n8n.io",
-  "author": {
-    "name": "Test",
-    "email": "test@example.com"
-  },
-  "repository": {
-    "type": "git",
-		// Change the git remote to your own repository
-		// Add the new URL here
-    "url": "git+<your-repo-url>"
-  },
-  "main": "index.js",
-  "scripts": {
-		// don't change
-  },
-  "files": [
-    "dist"
-  ],
-	// Link the credentials and node
-  "n8n": {
-    "credentials": [
-      "dist/credentials/NasaPicsApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/NasaPics/NasaPics.node.js"
-    ]
-  },
-  "devDependencies": {
-		// don't change
-  },
-  "dependencies": {
-    // don't change
-  }
-}
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
 
-```
-
-### Step 4: Add node metadata
-
-Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `NasaPics.node.json`.
-
-Add the following code to the JSON file:
-
-```json
-{
-	"node": "n8n-nodes-base.NasaPics",
-	"nodeVersion": "1.0",
-	"codexVersion": "1.0",
-	"categories": [
-		"Miscellaneous"
-	],
-	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": ""
-			}
-		],
-		"primaryDocumentation": [
-			{
-				"url": ""
-			}
-		]
-	}
-}
-```
-
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
-
-### Step 5: Create the node
-
-Every node must have a base file. In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
 #### Step 5.1: Imports
 
 Start by adding the import statements:
 
-```js
+```typescript
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
-#### Step 5.2: Create the main class
+#### Step 3.2: Create the main class
 
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 !!! note "Class names and file names"
 		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 
-```js
+```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
 		properties: [
-			// Resources and operations will go here
+		// Resources and operations will go here
 		]
 	};
 }
 ```
 
-#### Step 5.3: Add node details
+#### Step 3.3: Add node details
 
 All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
 
-```js
-		displayName: 'NASA Pics',
-		name: 'NasaPics',
-		icon: 'file:nasapics.svg',
-		group: ['transform'],
-		version: 1,
-		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Get data from NASAs API',
-		defaults: {
-			name: 'NASA Pics',
-		},
-		inputs: ['main'],
-		outputs: ['main'],
-		credentials: [
-			{
-				name: 'NasaPicsApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: 'https://api.nasa.gov',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
+```typescript
+displayName: 'NASA Pics',
+name: 'NasaPics',
+icon: 'file:nasapics.svg',
+group: ['transform'],
+version: 1,
+subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+description: 'Get data from NASAs API',
+defaults: {
+	name: 'NASA Pics',
+},
+inputs: ['main'],
+outputs: ['main'],
+credentials: [
+	{
+		name: 'NasaPicsApi',
+		required: true,
+	},
+],
+requestDefaults: {
+	baseURL: 'https://api.nasa.gov',
+	headers: {
+		Accept: 'application/json',
+		'Content-Type': 'application/json',
+	},
+},
 ```
 
-#### Step 5.4: Add resources
+n8n uses some of the properties set in `description` to render the node in the Editor UI. These properties are `displayName`, `icon`, `description`, and `subtitle`.
+
+#### Step 3.4: Add resources
 
 The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Update the `properties` array with the resource object:
 
-```js
+```typescript
 properties: [
 	{
 		displayName: 'Resource',
@@ -237,7 +161,7 @@ properties: [
 
 `type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 
-#### Step 5.5: Add operations
+#### Step 3.5: Add operations
 
 The operations object defines the available operations on a resource.
 
@@ -245,7 +169,7 @@ In a declarative-style node, the operations object includes `routing` (within th
 
 Add the following to the `properties` array, after the `resource` object:
 
-```js
+```typescript
 {
 	displayName: 'Operation',
 	name: 'operation',
@@ -351,7 +275,7 @@ Add the following to the `properties` array, after the `resource` object:
 
 This code creates two operations: one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
 
-#### Step 5.6: Optional fields
+#### Step 3.6: Optional fields
 
 Most APIs, including the NASA API that you're using in this example, have optional fields you can use to refine your query.
 
@@ -359,7 +283,7 @@ To avoid overwhelming users, n8n displays these under **Additional Fields** in t
 
 For this tutorial, you'll add one additional field, to allow users to pick a date to use with the APOD endpoint. Add the following to the properties array:
 
-```js
+```typescript
 {
 	displayName: 'Additional Fields',
 	name: 'additionalFields',
@@ -396,13 +320,13 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 ```
 
 
-### Step 6: Set up authentication
+### Step 4: Set up authentication
 
 The NASA API requires users to authenticate with an API key.
 
 Add the following to `nasaPicsApi.credentials.ts`:
 
-```js
+```typescript
 import {
 	IAuthenticateGeneric,
 	ICredentialType,
@@ -437,6 +361,90 @@ export class NasaPicsApi implements ICredentialType {
 For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
 
 
+### Step 5: Add node metadata
+
+Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `NasaPics.node.json`.
+
+Add the following code to the JSON file:
+
+```json
+{
+	"node": "n8n-nodes-base.NasaPics",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Miscellaneous"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": ""
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": ""
+			}
+		]
+	}
+}
+```
+
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
+
+### Step 6: Update the npm package details
+
+Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
+
+```json
+{
+	// All node names must start with "n8n-nodes-"
+	"name": "n8n-nodes-nasapics",
+	"version": "0.1.0",
+	"description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
+	"keywords": [
+		// This keyword is required for community nodes
+		"n8n-community-node-package"
+	],
+	"license": "MIT",
+	"homepage": "https://n8n.io",
+	"author": {
+		"name": "Test",
+		"email": "test@example.com"
+	},
+	"repository": {
+		"type": "git",
+		// Change the git remote to your own repository
+		// Add the new URL here
+		"url": "git+<your-repo-url>"
+	},
+	"main": "index.js",
+	"scripts": {
+		// don't change
+	},
+	"files": [
+		"dist"
+	],
+	// Link the credentials and node
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/NasaPicsApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/NasaPics/NasaPics.node.js"
+		]
+	},
+	"devDependencies": {
+		// don't change
+	},
+	"dependencies": {
+		// don't change
+	}
+}
+```
+
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
 
 ## Test your node
 

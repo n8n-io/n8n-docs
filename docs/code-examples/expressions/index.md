@@ -27,7 +27,7 @@ To use an expression to set a parameter value:
 3. Write your expression in the expression editor. You can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
 
 
-### Example: get data from webhook body
+### Example: Get data from webhook body
 
 Consider the following scenario: you have a webhook trigger that receives data through the webhook body. You want to extract some of that data for use in the workflow.
 
@@ -66,7 +66,7 @@ This expression:
 2. Finds the value of `city` (in this example, "New York"). Note that this example uses JMESPath syntax to query the JSON data. You can also write this expression as `{{$json['body']['city']}}`.
 
 
-### Example: writing longer JavaScript
+### Example: Writing longer JavaScript
 
 An expression contains one line of JavaScript. This means you can'd do things like variable assignments or multiple standalone operations.
 

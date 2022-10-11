@@ -29,6 +29,6 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Bitly node
 
-1. First of all, you'll have to enter credentials for the Twilio node. You can find out how to do that [here](/integrations/builtin/credentials/bitly/).
+1. First of all, you'll have to enter credentials for the Bitly node. You can find out how to do that [here](/integrations/builtin/credentials/bitly/).
 2. Enter the URL in the *Long URL* field.
 3. Click on *Execute Node* to run the workflow.

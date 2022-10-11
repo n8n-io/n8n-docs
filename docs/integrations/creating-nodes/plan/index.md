@@ -1,4 +1,6 @@
-# Overview
+# Plan a node
+
+This section provides guidance on designing your node, including key technical decisions such as choosing your node building style.
 
 When building a node, there are design choices you need to make before you start:
 

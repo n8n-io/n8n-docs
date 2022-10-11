@@ -1,4 +1,6 @@
-# Overview
+# Deploy a node
+
+This section contains details on how to deploy and share your node.
 
 You can choose to:
 

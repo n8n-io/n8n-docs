@@ -6,6 +6,7 @@ Beeminder
 Boolean
 boolean
 Caddy
+Citrix
 Clockify
 Cron
 Dockerfile
@@ -36,4 +37,5 @@ tooltip
 Trello
 Twilio
 URL
+Venafi
 Vuex

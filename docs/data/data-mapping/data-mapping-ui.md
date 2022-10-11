@@ -4,16 +4,17 @@ Data mapping means referencing data from previous nodes. It doesn't include chan
 
 You can map data in the following ways:
 
-* Using the expressions editor. Refer to [expressions](/code-examples/expressions/) for more information.
-* By dragging and dropping data from the **INPUT** table into parameters. This generates the expression for you.
+* Using the expressions editor.
+* By dragging and dropping data from the **INPUT** table or JSON into parameters. This generates the expression for you.
 
 ## How to drag and drop data
 
 1. Run your workflow to load data.
 2. Open the node where you need to map data.
-3. Make sure the **INPUT** view is in **Table** layout.
-4. Click and hold a table heading to map top level data, or a field in the table to map nested data.	
-5. Drag the item into the parameter field where you want to use the data.
+3. You can map in both table and JSON view:
+	* In table view: click and hold a table heading to map top level data, or a field in the table to map nested data.
+	* In JSON view: click and hold an attribute. 
+4. Drag the item into the parameter field where you want to use the data.
 
 ### Understand nested data
 
@@ -44,11 +45,9 @@ n8n displays it in table form like this:
 
 ## Map data in the expressions editor
 
-These examples show how to access linked items in the expressions editor.
-
+These examples show how to access linked items in the expressions editor. Refer to [expressions](/code-examples/expressions/) for more information on expressions, including built in variables and methods.
 
 ### Access the linked item in a previous node's output
-
 
 When you use this, n8n works back up the item linking chain, to find the parent item in the given node.
 

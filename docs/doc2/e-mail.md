@@ -23,7 +23,7 @@ As you can see there is no email account for the import set up yet
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 
-Click on the **OFF** Button to open the Email import settings
+Click on the `OFF` Button to open the Email import settings
 
 The boxes for E-Mail and Password as well as the API Key might get automatically filled with your login information for DOC² depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
 
@@ -44,6 +44,9 @@ You can test the login by pressing the button of the same name. If all data are 
 
 ![](/_images/doc2/AllImportOptions_Email_5.png)
 
-After you click the **IMPORT** button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
+After you click the `IMPORT` button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
 
 ![](/_images/doc2/AllImportOptions_Email_6.png)
+
+
+If you have made the right decision to also use our [Workflow² APP](https://docs.polydocs.io/workflow/), you will find the corresponding workflows [here]() to automatically import your documents from your e-mail inbox to DOC².

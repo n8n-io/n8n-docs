@@ -23,11 +23,11 @@ As you can see there is no email account for the import set up yet
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 
-Click on the Deactivated Button to open the Email import settings
+Click on the **OFF** Button to open the Email import settings
 
-The boxes for E-Mail and Password as well as the API Key might get automatically filled with your login information for Doc2 depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
+The boxes for E-Mail and Password as well as the API Key might get automatically filled with your login information for DOC² depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
 
-What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username e.g. "incoming invoices" as well as email address and password from which the document should going to be imported from.
+What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username e.g. "incoming invoices" as well as email address and password from which the documents should going to be imported from.
 
 This example is for a google email account:
 
@@ -44,6 +44,6 @@ You can test the login by pressing the button of the same name. If all data are 
 
 ![](/_images/doc2/AllImportOptions_Email_5.png)
 
-After you click the Import button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
+After you click the **IMPORT** button, the documents will be fetched from the mailbox and you will be taken directly to the Dashboard.
 
 ![](/_images/doc2/AllImportOptions_Email_6.png)

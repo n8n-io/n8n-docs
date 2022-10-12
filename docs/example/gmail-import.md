@@ -5,12 +5,13 @@ date: 2022-09-14
 tags:
   - Workflow²
   - Email
+  - Gmail
   - Import
   - DOC²
 
 ---
 
-#  Email Import to DOC²
+#  Gmail Import to DOC²
 
 This workflow searches for new e-mails in the configured sub-mailboxes of an e-mail address. When a new email is found, it receives the attachment and uploads it to DOC².
 

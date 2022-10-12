@@ -222,7 +222,8 @@ nav:
         - example/weather/index.md
         - Weather in the City: example/weather/weather.md
         - Rain: example/weather/weather_rain.md
-      - Email Import to DOC²: example/email-import.md
+      - Gmail Import to DOC²: example/gmail-import.md
+      - Outlook Import to DOC²: example/outlook-import.md
       - Approval with DOC²: example/approval.md
       - Second Approval: example/second-approval.md
       - DOC² to Excel: example/export-excel.md

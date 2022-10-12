@@ -33,7 +33,7 @@ With the following workflow you can upload the attachments from your outlook ema
 
    ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)
 
-**3.1** <ins>First of all, you have to add your Microsoft account. Please follow these steps:</ins><br>
+**3.1** First of all, you have to add your Microsoft account.<ins>Please follow these steps:</ins><br>
     3.1.1 Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations)<br>
     3.1.2 Click on the `Register an application` button
         ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-new.png)<br>
@@ -62,7 +62,7 @@ With the following workflow you can upload the attachments from your outlook ema
 
    Now the node is going to check for new unread emails that are in the folder from Step 2.
 
-**4.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step **3.1**<br>
+**4.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step 3.1<br>
         ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)    
 **5.** The `Mark message as read` node marks the emails that were checked in the steps above as read<br> 
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br> 
@@ -93,7 +93,7 @@ With the following workflow you can upload the attachments from your outlook ema
 
   ```
 
-**8.** The `Upload Document` node uploads the saved attachments to DOC²
+**8.** The `Upload Document` node uploads the saved attachments to DOC²<br>
    ![](/_images/workflows/workflows/WF-outlook-import-upload-document.png)
 
 

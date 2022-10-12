@@ -49,4 +49,4 @@ After you click the `IMPORT` button, the documents will be fetched from the mail
 ![](/_images/doc2/AllImportOptions_Email_6.png)
 
 
-If you have made the right decision to also use our [Workflow² APP](https://docs.polydocs.io/workflow/), you will find the corresponding workflows [here]() to automatically import your documents from your e-mail inbox to DOC².
+If you have made the right decision to also use our [Workflow² APP](https://docs.polydocs.io/workflow/), you will find the corresponding workflows [here](https://docs.polydocs.io/example/gmail-import/) to automatically import your documents from your e-mail inbox to DOC².

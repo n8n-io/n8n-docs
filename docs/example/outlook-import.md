@@ -17,8 +17,8 @@ With the following workflow you can upload the attachments from your outlook ema
 
 ![](/_images/workflows/workflows/WF-outlook-import.png)
 
-1. The **Interval** node is used to trigger the workflow to run at regular intervals of time
-2. The **Return Folder IDs** is a function node that you can customize as you want to. You have to enter your folder IDs from your Outlook account from where you want to get the attachments exported:
+**1.** The `Interval` node is used to trigger the workflow to run at regular intervals of time
+**2.** The `Return Folder IDs` is a function node that you can customize as you want to. You have to enter your folder IDs from your Outlook account from where you want to get the attachments exported:
 
     Edit JavaScript Code
 
@@ -31,47 +31,47 @@ With the following workflow you can upload the attachments from your outlook ema
 
     ```
 
-3. The **Get Unread Messages** checks for all the messages that are unread
+**3.** The `Get Unread Messages` checks for all the messages that are unread
 
    ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)
 
    First of all, you have to add your Microsoft account. Please follow these steps:<br>
-      1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations)<br>
-      2. Click on the **Register an application** button
-          ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-new.png)
-      3. Enter a name for your app in the **Name** field.<br>
-      4. Select 'Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (eg. Skype, Xbox)' under the **Supported account types** section.<br>
-      5. Copy the 'OAuth Callback URL' provided in the Microsoft node credentials in Workflow².<br>
-      6. Paste it in the **Redirect URI (optional)** field on the **Register an application** page.
-          ![](/_images/workflows/workflows/WF-outlook-import-register-an-application.png)
-      7. Click on the **Register** button.<br>
-      8. Copy the **Application (client) ID**.<br>
-      9. Paste the Application ID in the **Client ID** field in the Microsoft node credentials in Workflow².
-          ![](/_images/workflows/workflows/WF-outlook-import-microsoft-outlook-oauth2-api.png)
-      10. On your Microsoft application page, click on **Certificates & secrets** in the left sidebar.
-          ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-doc2.png)
-      11. Click on the **'+ New client secret'** button under the **Client secrets** section.
-          ![](/_images/workflows/workflows/WF-outlook-import-certificates-and-secrets-new.png)
-      12. Enter a description in the **Description** field.<br>
-      13. Click on the **'Add'** button.<br>
-      14. Copy the displayed secret under the **Value** column.<br>
-          ![](/_images/workflows/workflows/WF-outlook-import-certificates-and-secrets-value.png)
-      15. Paste the secret in the **Client Secret** field in the Microsoft node credentials in Workflow².
-          ![](/_images/workflows/workflows/WF-outlook-import-microsoft-outlook-oauth2-api.png)
-      16. Click on the button in the OAuth section to connect a Microsoft account to Workflow².<br>
-      17. Login to your Microsoft account and allow the app to access your info.<br>
-      18. Click on the **'Save'** button in the Microsoft node credentials in DOC² to save your credentials.<br>
+    1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations)<br>
+    2. Click on the **Register an application** button
+        ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-new.png)
+    3. Enter a name for your app in the **Name** field.<br>
+    4. Select 'Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (eg. Skype, Xbox)' under the **Supported account types** section.<br>
+    5. Copy the 'OAuth Callback URL' provided in the Microsoft node credentials in Workflow².<br>
+    6. Paste it in the **Redirect URI (optional)** field on the **Register an application** page.
+        ![](/_images/workflows/workflows/WF-outlook-import-register-an-application.png)
+    7. Click on the **Register** button.<br>
+    8. Copy the **Application (client) ID**.<br>
+    9. Paste the Application ID in the **Client ID** field in the Microsoft node credentials in Workflow².
+        ![](/_images/workflows/workflows/WF-outlook-import-microsoft-outlook-oauth2-api.png)
+    10. On your Microsoft application page, click on **Certificates & secrets** in the left sidebar.
+        ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-doc2.png)
+    11. Click on the **'+ New client secret'** button under the **Client secrets** section.
+        ![](/_images/workflows/workflows/WF-outlook-import-certificates-and-secrets-new.png)
+    12. Enter a description in the **Description** field.<br>
+    13. Click on the **'Add'** button.<br>
+    14. Copy the displayed secret under the **Value** column.<br>
+        ![](/_images/workflows/workflows/WF-outlook-import-certificates-and-secrets-value.png)
+    15. Paste the secret in the **Client Secret** field in the Microsoft node credentials in Workflow².
+        ![](/_images/workflows/workflows/WF-outlook-import-microsoft-outlook-oauth2-api.png)
+    16. Click on the button in the OAuth section to connect a Microsoft account to Workflow².<br>
+    17. Login to your Microsoft account and allow the app to access your info.<br>
+    18. Click on the **'Save'** button in the Microsoft node credentials in DOC² to save your credentials.<br>
 
    Now the node is going to check for new unread emails that are in the folder from Step 2.
 
-4. The **Get Attachments** node will extract all the attachments from the emails
+**4.** The `Get Attachments` node will extract all the attachments from the emails
     1. First, you have to select the Microsoft account configured in Step 3.a.
-      ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)    
-5. The **Mark message as read** node marks the emails that were checked in the steps above as read
+        ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)    
+**5.** The `Mark message as read` node marks the emails that were checked in the steps above as read
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png) 
-6. The Download Attachments node downloads the attachments from the emails in a temporary directory as a binary file <br>
+**6.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file <br>
    ![](/_images/workflows/workflows/WF-outlook-import-download-attachment.png) 
-7. The **Get Folder Name** node is a custom function that returns the name of the folders as we need it for the classification of the uploaded documents to DOC² in the next step. For this, you have to enter the folder IDs again from Step 2. and enter the name of the corresponding folders:
+**7.** The `Get Folder Name` node is a custom function that returns the name of the folders as we need it for the classification of the uploaded documents to DOC² in the next step. For this, you have to enter the folder IDs again from Step 2. and enter the name of the corresponding folders:
 
     Edit JavaScript Code
 
@@ -98,7 +98,7 @@ With the following workflow you can upload the attachments from your outlook ema
 
     ```
 
-8. The **Upload Document** node uploads the saved attachments to DOC²
+**8.** The `Upload Document` node uploads the saved attachments to DOC²
    ![](/_images/workflows/workflows/WF-outlook-import-upload-document.png)
 
 

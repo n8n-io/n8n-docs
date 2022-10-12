@@ -1,5 +1,5 @@
 ---
-title: Email Import to DOC² 
+title: Email Import with GMail to DOC²
 description: This workflow searches for new e-mails in the configured sub-mailboxes of an e-mail address and uploads it to our DOC² system.
 date: 2022-09-14
 tags:
@@ -37,7 +37,7 @@ return items;
 
 ```
 
-To extract the documents to DOC² you have to select the **Doc2App Upload Documents** node. To connect the node to your account you have to apply the API key. The documentation you can find on this page. 
+To extract the documents to DOC² you have to select the **Doc2App Upload Documents** node. To connect the node to your account you have to apply the API key. The documentation you can find on this page.
 
 ![](/_images/example/email import/WF_Upload document.png)
 

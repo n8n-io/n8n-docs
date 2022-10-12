@@ -20,22 +20,22 @@ With the following workflow you can upload the attachments from your outlook ema
 1. The **Interval** node is used to trigger the workflow to run at regular intervals of time
 2. The **Return Folder IDs** is a function node that you can customize as you want to. You have to enter your folder IDs from your Outlook account from where you want to get the attachments exported:
 
-Edit JavaScript Code
+    Edit JavaScript Code
 
-``` Javascript
-return [{
-  folder_id: ''
-}, {
-  folder_id: ''
-}]
+    ``` Javascript
+    return [{
+      folder_id: ''
+    }, {
+      folder_id: ''
+    }]
 
-```
+    ```
 
 3. The **Get Unread Messages** checks for all the messages that are unread
 
 ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)
 
-  1. First of all, you have to add your Microsoft account. Please follow these steps:
+   First of all, you have to add your Microsoft account. Please follow these steps:
      1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations)
      2. Click on the **Register an application** button
         ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-new.png)

@@ -221,8 +221,8 @@
 /nodes/n8n-nodes-base.elasticsearch/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/
 /nodes/n8n-nodes-base.elasticSecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticSecurity/
 /nodes/n8n-nodes-base.elasticsecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticSecurity/
-/nodes/n8n-nodes-base.emailReadImap/		/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/
-/nodes/n8n-nodes-base.emailreadimap/		/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/
+/nodes/n8n-nodes-base.emailReadImap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
+/nodes/n8n-nodes-base.emailreadimap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
 /nodes/n8n-nodes-base.emailSend/		/integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/
 /nodes/n8n-nodes-base.emailsend/        /integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/
 /nodes/n8n-nodes-base.emelia/		/integrations/builtin/app-nodes/n8n-nodes-base.emelia/

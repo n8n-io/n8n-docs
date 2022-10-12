@@ -24,7 +24,6 @@ eksctl create cluster --name n8n --region <your-aws-region>
 
 This can take a while to create the cluster.
 
-    Fargate, AWS's serverless container management system isn't compatible with n8n.
 
 Once the cluster is created, eksctl automatically sets the kubectl context to the cluster.
 

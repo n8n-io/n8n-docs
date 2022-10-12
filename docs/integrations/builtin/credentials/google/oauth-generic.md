@@ -1,11 +1,6 @@
-# Google: OAuth2
+# Google: OAuth2 generic
 
-There are two types of OAuth2 setup:
-
-* Creating credentials for a specific service, associated with a single node. For example, creating credentials for use with the Gmail node.
-* Creating a generic OAuth2 credential for use with [custom operations](/integrations/custom-operations/).
-
-This document contains instructions for both options.
+This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations/).
 
 ## Prerequisites
 
@@ -18,12 +13,10 @@ This document contains instructions for both options.
 
 ### Create a new credential in n8n
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
-	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
+1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type. To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
 2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
 ![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
-3. If you're creating a generic Google OAuth2 API credential (rather than a credential for a specific service), you must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information.
+3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information.
 
 ### Set up OAuth in Google Cloud
 

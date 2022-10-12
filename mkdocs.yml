@@ -280,7 +280,7 @@ nav:
       - Keyboard shortcuts: workflow/reference/keyboard-shortcuts.md
       - Glossary: workflow/reference/glossary.md
       - License: workflow/reference/license.md
-      - Data collection: workflow/reference/data-collection.md
+      - Data collection: workflow/reference/data-collection.md 
     - Integrations:
       - Overview: workflow/integrations/index.md
       - Core nodes: workflow/integrations/core-nodes/

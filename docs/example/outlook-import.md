@@ -12,7 +12,7 @@ tags:
 
 ---
 
-#  O365 Import to DOC²
+#  Outlook Import to DOC²
 
 With the following workflow you can upload the attachments from your Office 365 emails to DOC².
 

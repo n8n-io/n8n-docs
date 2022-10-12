@@ -15,17 +15,33 @@ This document contains instructions for creating a Google credential for a singl
 
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type. To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
 2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
-![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
+
+	??? Details "View screenshot"
+		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
 
 
 ### Set up OAuth in Google Cloud
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
-![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}.    
-![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
+
+	??? Details "View screenshot"
+		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
+
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}. 
+
+	??? Details "View screenshot"   
+		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
+
 3. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
-4. In Google Cloud, select **+ ADD URI**. Paste in the OAuth redirect URL from the previous step.
+
+	??? Details "View screenshot"   
+		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
+
+4. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from the previous step.
+
+	??? Details "View screenshot"   
+		![Add URI](/_images/integrations/builtin/credentials/google/add-uri.png)
+
 5. Select **CREATE**.
 6. Enable each Google service API that you want to use:
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"

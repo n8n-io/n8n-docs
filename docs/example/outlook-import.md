@@ -62,12 +62,11 @@ With the following workflow you can upload the attachments from your outlook ema
 
    Now the node is going to check for new unread emails that are in the folder from Step 2.
 
-**4.** The `Get Attachments` node will extract all the attachments from the emails<br>
-    4.1 First, you have to select the Microsoft account configured in Step 3.1
+**4.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step **3.1**<br>
         ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)    
 **5.** The `Mark message as read` node marks the emails that were checked in the steps above as read<br> 
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br> 
-**6.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file
+**6.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>
    ![](/_images/workflows/workflows/WF-outlook-import-download-attachment.png)<br> 
 **7.** The `Get Folder Name` node is a custom function that returns the name of the folders as we need it for the classification of the uploaded documents to DOC² in the next step. For this, you have to enter the folder IDs again from Step 2. and enter the name of the corresponding folders:
 

@@ -137,7 +137,7 @@ nav:
       - Modules: doc2/modules.md
       - API: 
         - doc2/settings/api/index.md
-        - API Integration: doc2/settings/api-integration.md
+        - API Integration: doc2/settings/api/api-integration.md
       - Users: doc2/settings-users.md
       - All Import Options:
         - doc2/import/index.md

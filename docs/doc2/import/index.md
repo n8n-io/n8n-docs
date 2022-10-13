@@ -14,5 +14,5 @@ tags:
 
 - [E-Mail](/doc2/e-mail/)
 - [Manual Import](/doc2/manual-import/)
-- [API](/doc2/settings/api/api-integration.md)
+- [API](/doc2/settings/api/api-integration/)
 

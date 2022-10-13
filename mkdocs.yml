@@ -135,8 +135,8 @@ nav:
       - General Settings: doc2/general-settings.md
       - Company Information: doc2/company-information.md
       - Modules: doc2/modules.md
-      - API: doc2/settings-api.md
-        - API Integration: doc2/api-integration/api-integration.md
+      - API: doc2/settings/settings-api.md
+        - API Integration: doc2/settings/api-integration.md
       - Users: doc2/settings-users.md
       - All Import Options:
         - doc2/import/index.md

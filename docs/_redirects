@@ -27,7 +27,8 @@
 /reference/telemetry.html        /reference/data-collection/
 /reference/troubleshooting.html        /hosting/installation/npm/
 /reference/release-notes.html        /reference/release-notes/
-
+# Tini quick fix
+/nodes/n8n-nodes-base.upload 		/workflow/
 # The nodes library . . . may the odds be ever in your favour
 /credentials/*        /workflow/integrations/credentials/:splat
 

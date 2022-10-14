@@ -399,7 +399,7 @@ workflow/integrations/workflow-nodes-base.sseTrigger/        /workflow/integrati
 /nodes/workflow-nodes-base.zulip/        /workflow/integrations/nodes/workflow-nodes-base.zulip/
 /nodes/nodes-library/        /workflow/integrations/
 /nodes/        /workflow/integrations/nodes/
-
+/nodes/n8n-nodes-base.upload/ /workflow/
 
 # Old redirects
 

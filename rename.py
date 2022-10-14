@@ -16,12 +16,12 @@ def re_re_re_name_files():
     if problem in match:
       shutil.move(match, match.replace(problem, "2"))
 
-
+# only nice if we want multiprocessing
 def chonks(list_data, chunk_size):
     chunk_size = max(1, chunk_size)
     return (list_data[i:i+chunk_size] for i in range(0, len(list_data), chunk_size))
 
-def CapiTaliSaTion():
+def change_imag_path():
   result = list(Path("./docs").rglob("*.[mM][dD]"))
   for file in result: #chonks(result, int(len(result) / 4)):
     # for file in str(i):
@@ -52,7 +52,8 @@ def reg(line):
   
 
 if __name__ == '__main__':
-  CapiTaliSaTion()
+  re_re_re_name_files()
+  change_imag_path()
   # lines = "![](/_images/insight2/Logo_Insight².png)\n\n![](/_images/insight2/Logo_Insight².pn) \n\n![](/_images/insight2/Logo_Insight.png)"
   
   # res = reg(lines)

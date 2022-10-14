@@ -24,4 +24,4 @@ There you will find the menu item "Master Data Validation". Please open it:
 
 In the following view you can import the CSV file with all your data via drag and drop or via the button "BROWSE". Additionally you can define if your file contains semicolon or comma as separator. When you are done click on "SAVE" to apply your changes.
 
-![](/_images/doc2/DOC²_Master-Data-Validation_1-1024x561.png)
+![](/_images/doc2/DOC2_Master-Data-Validation_1-1024x561.png)

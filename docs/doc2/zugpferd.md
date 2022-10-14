@@ -29,31 +29,31 @@ Find more videos here: :fontawesome-brands-youtube:{ style="color: #EE0F0F" } [_
 
 Navigate to **SETTINGS** above the dashboard:
 
-![DOC² Workflow](/_images/doc2/DOC²_Dashboard_Settings.png)
+![DOC2 Workflow](/_images/doc2/DOC2_Dashboard_Settings.png)
 
 Navigate to the **Export** menu item in the settings:
 
-![](/_images/doc2/DOC²_Settings_Export.png)
+![](/_images/doc2/DOC2_Settings_Export.png)
 
 You need to create a new configuration via the **NEW** button:
 
-![DOC² Export Settings](/_images/doc2/DOC²_ExportSettings_new.png)
+![DOC2 Export Settings](/_images/doc2/DOC2_ExportSettings_new.png)
 
 Select **ZUGFeRD** in the following screen:
 
-![DOC² ZUGFeRD](/_images/doc2/DOC²_ExportSettings_SelectIntegration_Zugferd.png)
+![DOC2 ZUGFeRD](/_images/doc2/DOC2_ExportSettings_SelectIntegration_Zugferd.png)
 
 ## **ZUGFeRD**
 
 You will be directed to the following screen. Please enter the information according to the example below:
 
-![DOC² ZUGFeRD Export](/_images/doc2/DOC²_ExportSettings_Zugferd.png)
+![DOC2 ZUGFeRD Export](/_images/doc2/DOC2_ExportSettings_Zugferd.png)
 and click on `SAVE`.
 
 
 The export configuration is displayed in the overview. It can be edited or deleted as well as activated/deactivated via the action buttons:
 
-![](/_images/doc2/DOC²_ExportSettings_Zugferd_ON.png)
+![](/_images/doc2/DOC2_ExportSettings_Zugferd_ON.png)
 
 In addition you need to enter your **Company Information**. You will find the menu in the [settings overview](/doc2/company-information/).
 
@@ -61,7 +61,7 @@ In addition you need to enter your **Company Information**. You will find the me
 
 When everything is set up correctly, a new download button will appear in the dashboard after a document is finished:
 
-![Download ZUGFeRD](/_images/doc2/DOC²_Download_ZugferdPDF.png)
+![Download ZUGFeRD](/_images/doc2/DOC2_Download_ZugferdPDF.png)
 
 
 

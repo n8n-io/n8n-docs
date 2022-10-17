@@ -167,7 +167,7 @@ nav:
       - SSO:
         - SSO Settings: doc2/settings-sso-settings.md
         - Infor SSO: doc2/configuring-sso-in-cloud.md
-      - Master Data Validation: doc2/settings-master-data-validation.md
+      - Supplier Validation: doc2/settings-master-data-validation.md
     - PO Matching:
       - doc2/pomatching/po-matching/index.md
       - Invoice: doc2/pomatching/po-matching-invoices.md

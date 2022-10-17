@@ -22,6 +22,6 @@ There you will find the menu item "Supplier Validation". Please open it:
 
 ![](/_images/doc2/DOC2_SupplierValidation_2.png)
 
-In the following view you can import the CSV file with all your data via drag and drop or via the button "BROWSE". Additionally you can define if your file contains semicolon or comma as separator. When you are done click on "SAVE" to apply your changes.
+In the following view you can import the CSV file with all your data via drag and drop or via the button `BROWSE`. Additionally you can define if your file contains semicolon or comma as separator. When you are done click on `SAVE` to apply your changes.
 
 ![](/_images/doc2/DOC2_SupplierValidation_3.png)

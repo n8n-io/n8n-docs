@@ -18,7 +18,7 @@ To upload master data to DOC², please navigate to the settings from the dashboa
 
 ![](/_images/doc2/DOC2_SupplierValidation_1.png)
 
-There you will find the menu item "Supplier Validation". Please open it:
+There you will find the menu item **Supplier Validation**. Please open it:
 
 ![](/_images/doc2/DOC2_SupplierValidation_2.png)
 

@@ -10,21 +10,18 @@ tags:
 
 Documents can be imported manually into DOC² as described below.
 
-Click on the "Import" button in the Dashboard:
+Click on the `Upload` button on the Dashboard:
 
-![](/_images/doc2/image-23-1024x386.png)
+![](/_images/doc2/DOC2_manual-import_1.png)
 
 The following window opens:
 
-![](/_images/doc2/image-24-1024x341.png)
+![](/_images/doc2/DOC2_manual-import_2.png)
 
-Documents can be uploaded to DOC² via file browser or drag and drop. Furthermore, it is possible to upload multiple documents at once.
+Documents can be uploaded to DOC² via file browser or drag and drop. Furthermore, it is possible to upload multiple documents (**up to a maximum of 10**) at once.
 
-- Click on the button "Upload Documents" to upload documents via file browser. Select the files to be uploaded in your file browser and confirm your selection. The files will then be uploaded to DOC²:
+- Click on the button "Upload Documents" to upload documents via file browser. Select the files to be uploaded in your file browser and confirm your selection. The files will then be uploaded to DOC².
 
-![](/_images/doc2/image-25.png)
-
-![](/_images/doc2/doc2_manual-import.png)
 
 - Alternatively, drag and drop your files onto the DOC² import window as shown in the video below:
 

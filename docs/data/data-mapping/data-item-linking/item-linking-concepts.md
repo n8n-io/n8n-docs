@@ -1,11 +1,11 @@
 # Item linking concepts
 
-Each output item created by a node includes metadata that links them to the input item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. You need to understand item linking when building your own programmatic nodes, or in some scenarios using the Function node. 
+Each output item created by a node includes metadata that links them to the input item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. You need to understand item linking when building your own programmatic nodes, or in some scenarios using the Code node. 
 
 This document provides a conceptual overview of this feature. For usage details, refer to:
 
 * [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/), for details on how to handle item linking when building a node.
-* [Item linking in the Function node](/data/data-mapping/data-item-linking/item-linking-function-node/), to learn how to handle item linking in the Function node.
+* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/), to learn how to handle item linking in the Code node.
 * [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/), to understand the errors you may encounter in the editor UI.
 
 ## n8n's automatic item linking

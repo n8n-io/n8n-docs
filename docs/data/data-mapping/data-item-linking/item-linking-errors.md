@@ -22,5 +22,5 @@ If you see this error message:
 
 > ERROR: Can't get data for expression under '`<field-name>`' field
 
-You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Function node](/data/data-mapping/data-item-linking/item-linking-function-node/) for detailed guidance on handling item linking.
+You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Function node](/data/data-mapping/data-item-linking/item-linking-code-node/) for detailed guidance on handling item linking.
 

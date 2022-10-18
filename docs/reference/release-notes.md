@@ -81,6 +81,7 @@ Start a workflow in response to events in your Venafi Cloud service.
 
 ### Contributors
 
+[Jakob Backlund](https://github.com/jbacklund){:target=_blank .external-link}  
 [Yan Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
 
 ## n8n@0.197.1

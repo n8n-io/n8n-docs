@@ -1,5 +1,8 @@
 # Function
 
+!!! warning "Deprecated in 0.198.0"
+	n8n deprecated this node in version 0.198.0. Older workflows continue to work, and the node is still available in older versions n8n. From 0.198.0, n8n replaces the Function node with the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
+
 Using the function node, you can:
 
 * Transform data from other nodes
@@ -50,7 +53,7 @@ return newItems;
 
 ## Manage item linking
 
---8<-- "_snippets/data/data-mapping/item-linking-function-node.md"
+--8<-- "_snippets/data/data-mapping/item-linking-code-node.md"
 
 ## External libraries
 

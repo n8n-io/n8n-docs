@@ -382,6 +382,8 @@ nav:
         - integrations/builtin/credentials/uproc.md
         - integrations/builtin/credentials/uptimerobot.md
         - integrations/builtin/credentials/urlscanio.md
+        - integrations/builtin/credentials/venafitlsprotectcloud.md
+        - integrations/builtin/credentials/venafitlsprotectdatacenter.md
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/vonage.md
         - integrations/builtin/credentials/webflow.md
@@ -399,7 +401,6 @@ nav:
         - integrations/builtin/credentials/zoho.md
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zulip.md
-
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - integrations/community-nodes/index.md

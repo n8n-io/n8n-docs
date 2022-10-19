@@ -3,7 +3,7 @@
 Using service accounts is more complex than OAuth2. Before you begin:
 
 * Check if your node is [compatible](/integrations/builtin/credentials/google/#compatible-nodes) with Service Account.
-* Make sure you really need to use service account. For most use cases, OAuth2 is a better option.
+* Make sure you need to use service account. For most use cases, OAuth2 is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
 
 
@@ -31,13 +31,25 @@ Using service accounts is more complex than OAuth2. Before you begin:
 In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} dashboard:
 
 1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
+
+	??? Details "View screenshot"
+		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-api-services-credentials.png)
+
 2. Select **+ CREATE CREDENTIALS > Service account**.
+
+	??? Details "View screenshot"
+		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
+
 3. Enter a name in **Service account name**, and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
 4. Select **CREATE AND CONTINUE**.
 5. Based on your use-case, you may want to **Select a role** and **Grant users access to this service account**  using the corresponding sections.
 6. Select **DONE**.
 7. Select your newly created service account under the **Service Accounts** section. Open the **KEYS** tab.
 8. Select **ADD KEY > Create new key**.
+
+	??? Details "View screenshot"
+		![Create a new key](/_images/integrations/builtin/credentials/google/service-account-create-key.png)
+
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
 10. Enable each Google service API that you want to use:
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"

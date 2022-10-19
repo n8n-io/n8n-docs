@@ -12,19 +12,22 @@ In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen. Op
 
 ![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
-There you will find the menu item "Document Types". Open this menu:
+If you are logged in to DOC² as an admin, you will find all fields of a document that can be extracted under the respective document type.
+
+Open the menu **Document Types**.
 
 ![](/_images/doc2/DOC2_Dashboard_Settings_Document Types.png)
 
-In the following overview you will find all document types available in DOC²:
+In the following overview you will find all standard document types available for you:
 
 ![](/_images/doc2/DOC2_Document Types.png)
 
-Select the document type you want to configure. For example, "INVOICE":
+To see which fields can be extracted, for example from an invoice, click on `FIELDS` for this document type.
 
 ![](/_images/doc2/DOC2_Invoice_Fields.png)
 
-You will now see all settings you can make for this document type. For example you can configure the fields you want to extract from your documents:
+Here is a list of all the fields that can be extracted:
+
 
 ![](/_images/doc2/image-2-1024x822.png)
 

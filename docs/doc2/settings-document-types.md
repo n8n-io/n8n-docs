@@ -56,15 +56,17 @@ For each field you can check the boxes if they are
 
 
 
-![](/_images/doc2/image-2-1024x822.png)
 
-**Recognition Settings**
 
-OCR:
+### RECOGNITION SETTINGS
+
+![](/_images/doc2/DOC2_field settings_recognition settings.png)
+
+**OCR:**
 
 Here you can set the sensitivity of the OCR (Optical Character Recognition) function for all fields at once. This value determines the sensitivity with which a field is marked in red if it could not be extracted with 100% certainty (OCR related!).
 
-MATCH SCORE:
+**MATCH SCORE:**
 
 Here you can set the sensitivity of the MATCH SCORE function for all fields at once. This value determines from when a field is marked in red if DOC² has not extracted the field with 100% probability. In this case the field needs to be validated manually.
 

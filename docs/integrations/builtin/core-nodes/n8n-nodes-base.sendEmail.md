@@ -19,7 +19,7 @@ The Send Email node is used to send an email via an SMTP email server.
 ## Node Reference
 
 - **From Email:** The email address you are sending from.
-- **To Email:** The recipient email address.
+- **To Email:** The recipient email address. Multiple recipients can be separated using a comma.
 - **CC Email:** A field that can be used to specify an email address for a carbon copy of the email.
 - **BCC Email:** A field that can be used to specify an email address for a blind carbon copy of the email.
 - **Subject:** The subject of your message.

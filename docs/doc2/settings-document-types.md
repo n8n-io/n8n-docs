@@ -8,7 +8,7 @@ tags:
   - Document Types
 ---
 
-In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen. Open this menu:
+In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen.
 
 ![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
@@ -46,15 +46,24 @@ For every overpoint you can also **CREATE FIELD**s like freight, postage or any 
 
 For each field you can check the boxes if they are 
 
-- required
+- REQUIRED: Here you can define if the field must contain a value to continue.
 
-- read only
+- READ ONLY: Here you can define if a field can only be displayed but not edited.
 
-- hidden or
+- HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
 
-- forced for validation
+- FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
+
+- OCR and MATCH SCORE: Setting as described below, per field.
+
+- FORMULA: Creation of a formula per field.
 
 
+![](/_images/doc2/image-7.png)
+
+If all settings are made and should be saved, please confirm this with the "SAVE" button, otherwise the settings will not be applied.
+
+![](/_images/doc2/image-8-1024x167.png)
 
 
 
@@ -81,22 +90,6 @@ Here you can define the profile that shall be used. Either Default or ZUGFeRD.<b
 
 ![](/_images/doc2/DOC2_field settings_profile.png)
 
-Below you will find all the fields available for this type of document. You can set the following values per field individually:
 
-REQUIRED: Here you can define if the field must contain a value to continue.
 
-READ ONLY: Here you can define if a field can only be displayed but not edited.
 
-HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
-
-FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
-
-OCR and MATCH SCORE: Setting as described above, per field.
-
-FORMULA: Creation of a formula per field.
-
-![](/_images/doc2/image-7.png)
-
-If all settings are made and should be saved, please confirm this with the "SAVE" button, otherwise the settings will not be applied.
-
-![](/_images/doc2/image-8-1024x167.png)

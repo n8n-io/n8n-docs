@@ -28,7 +28,7 @@ To see which fields can be extracted, for example from an invoice, click on `FIE
 
 Here you will find all the fields that can be extracted:
 
-| **INVOICE DETAILS**| **PAYMENT DETAILS** | **VAT & AMOUNTS**   | **VENDOR DETAILS**  |
+| INVOICE DETAILS    | PAYMENT DETAILS     |  VAT & AMOUNTS      |  VENDOR DETAILS     |
 |       :----:       |        :----:       |       :----:        |      :----:         | 
 | INVOICE NUMBER     | IBAN                | CURRENCY            | ADDRESS             |
 | INVOICE DATE       | PAYMENT TERMS       | NET AMOUNT          | SUPPLIER NAME       | 

@@ -28,3 +28,8 @@ When you are done, click on `SAVE`.
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 The export will only work if a valid address is included on the document.
+
+### Subscription Plan and Usage
+
+Under your company information you can find your booked subscription plan with start and end date.
+You can also query your processed pages for a period selected in the calendar.

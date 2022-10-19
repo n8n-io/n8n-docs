@@ -1,15 +1,14 @@
 ---
-title: Document Types and Field Settings
+title: Document Types, Field Settings and Profile
 description: Here you will find all document types available in DOC² as invoice, credit note, delivery note, order confirmation and many more
 date: "2021-10-29"
 tags:
   - DOC²
   - Settings
   - Document Types
+  - Field Settings
 ---
 
-
-## Document Types
 
 In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen.
 
@@ -28,6 +27,8 @@ In the following overview you will find all standard document types available fo
 To see which fields can be extracted, for example from an invoice, click on `FIELDS` for this document type.
 
 ![](/_images/doc2/DOC2_Invoice_Fields.png)
+
+### FIELD SETTINGS
 
 Here you will find all the fields that can be extracted:
 
@@ -87,7 +88,7 @@ The button `RESTORE DEFAULTS` will set back both values to "50".
 ![](/_images/doc2/image-3.png)
 
 
-**PROFILE**
+### PROFILE
 
 Here you can define the profile that shall be used. Either Default or ZUGFeRD.<br> In profile ZUGFeRD there are predefined fields that are mandatory for this type of invoice.<br> If you do not explicitly use ZUGFeRD, please select "Default".
 

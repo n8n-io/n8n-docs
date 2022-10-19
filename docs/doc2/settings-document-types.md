@@ -72,17 +72,12 @@ The button "RESTORE DEFAULTS" will set back both values to "50".
 
 ![](/_images/doc2/image-3.png)
 
-**SPLIT**
-
-You can define how imported documents shall be split. Either by page or by invoice number (if you import PDF files with more than one invoice/several invoices).
-
-![](/_images/doc2/image-4.png)
 
 **PROFILE**
 
-Here you can define the profile that shall be used. For example Peppol or Zugferd. If you do not explicitly use one of the two, please select "Default".
+Here you can define the profile that shall be used. Either Default or ZUGFeRD.<br> In profile ZUGFeRD there are predefined fields that are mandatory for this type of invoice.<br> If you do not explicitly use ZUGFeRD, please select "Default".
 
-![](/_images/doc2/image-6.png)
+![](/_images/doc2/DOC2_field settings_profile.png)
 
 Below you will find all the fields available for this type of document. You can set the following values per field individually:
 

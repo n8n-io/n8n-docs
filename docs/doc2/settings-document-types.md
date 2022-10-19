@@ -30,11 +30,11 @@ Here you will find all the fields that can be extracted:
 
 | **INVOICE DETAILS**| **PAYMENT DETAILS** | **VAT & AMOUNTS**   | **VENDOR DETAILS**  |
 |       :----:       |        :----:       |       :----:        |      :----:         | 
-|INVOICE NUMBER      | IBAN                | CURRENCY            | ADDRESS             |
-|INVOICE DATE        | PAYMENT TERMS       | NET AMOUNT          | SUPPLIER NAME       | 
-|DELIVERY DATE       |                     | NET AMOUNT REDUCED  | VENDOR ID           |
-|PO NUMBER           |                     | NET AMOUNT TAX FREE | VENDOR VAT          |
-|ORDER DATE          |                     | REDUCED TAX AMOUNT  |                     | 
+| INVOICE NUMBER     | IBAN                | CURRENCY            | ADDRESS             |
+| INVOICE DATE       | PAYMENT TERMS       | NET AMOUNT          | SUPPLIER NAME       | 
+| DELIVERY DATE      |                     | NET AMOUNT REDUCED  | VENDOR ID           |
+| PO NUMBER          |                     | NET AMOUNT TAX FREE | VENDOR VAT          |
+| ORDER DATE         |                     | REDUCED TAX AMOUNT  |                     | 
 |                    |                     | TAX AMOUNT          |                     | 
 |                    |                     | TAX AMOUNT TAX FREE |                     |
 |                    |                     | TOTAL NET AMOUNT    |                     |

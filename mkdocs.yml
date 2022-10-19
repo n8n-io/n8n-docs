@@ -135,7 +135,7 @@ nav:
       - Company Information: doc2/company-information.md
       - Groups, Users and Permissions:
         - doc2/settings/groups-users-permissons/index.md
-      - Users: doc2/settings-users.md
+        - Users: doc2/settings-users.md
       - API: 
         - doc2/settings/api/index.md
         - API Integration: doc2/settings/api/api-integration.md

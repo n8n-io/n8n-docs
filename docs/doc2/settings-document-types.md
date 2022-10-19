@@ -35,11 +35,11 @@ Here you will find all the fields that can be extracted:
 |DELIVERY DATE       |                     | NET AMOUNT REDUCED  | VENDOR ID           |
 |PO NUMBER           |                     | NET AMOUNT TAX FREE | VENDOR VAT          |
 |ORDER DATE          |                     | REDUCED TAX AMOUNT  |
-                                           | TAX AMOUNT          |
-                                           | TAX AMOUNT TAX FREE | 
-                                           | TOTAL NET AMOUNT    |
-                                           | VAT RATE            | 
-                                           | VAT RATE REDUCED    | 
+                     |                     | TAX AMOUNT          |
+                     |                     | TAX AMOUNT TAX FREE | 
+                     |                     | TOTAL NET AMOUNT    |
+                     |                     | VAT RATE            | 
+                     |                     | VAT RATE REDUCED    | 
 
 
 For every overpoint you can also **CREATE FIELD**s like freight, postage or any field with an amount you want to extract from your invoices.

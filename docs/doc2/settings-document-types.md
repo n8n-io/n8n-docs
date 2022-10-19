@@ -28,28 +28,19 @@ To see which fields can be extracted, for example from an invoice, click on `FIE
 
 Here you will find all the fields that can be extracted:
 
-| **INVOICE DETAILS**| **PAYMENT DETAILS** | 
-|       :----:       |        :----:       |
-|INVOICE NUMBER      | IBAN                | 
-|INVOICE DATE        | PAYMENT TERMS       |  
-|DELIVERY DATE       |
-|PO NUMBER           |
-|ORDER DATE          |
+| **INVOICE DETAILS**| **PAYMENT DETAILS** | **VAT & AMOUNTS**   | **VENDOR DETAILS**  |
+|       :----:       |        :----:       |       :----:        |      :----:         | 
+|INVOICE NUMBER      | IBAN                | CURRENCY            | ADDRESS             |
+|INVOICE DATE        | PAYMENT TERMS       | NET AMOUNT          | SUPPLIER NAME       | 
+|DELIVERY DATE       |                     | NET AMOUNT REDUCED  | VENDOR ID           |
+|PO NUMBER           |                     | NET AMOUNT TAX FREE | VENDOR VAT          |
+|ORDER DATE          |                     | REDUCED TAX AMOUNT  |
+                                           | TAX AMOUNT          |
+                                           | TAX AMOUNT TAX FREE | 
+                                           | TOTAL NET AMOUNT    |
+                                           | VAT RATE            | 
+                                           | VAT RATE REDUCED    | 
 
-
-|**VAT & AMOUNTS**   | **VENDOR DETAILS**  |
-|      :----:        |      :----:         | 
-|CURRENCY            | ADDRESS             |
-|NET AMOUNT          | SUPPLIER NAME       |
-|NET AMOUNT REDUCED  | VENDOR ID           |
-|NET AMOUNT TAX FREE | VENDOR VAT          |
-|REDUCED TAX AMOUNT  |
-|TAX AMOUNT          |
-|TAX AMOUNT TAX FREE | 
-|TOTAL NET AMOUNT    |
-|TOTAL TAX AMOUNT    |
-|VAT RATE            |
-|VAT RATE REDUCED    |
 
 For every overpoint you can also **CREATE FIELD**s like freight, postage or any field with an amount you want to extract from your invoices.
 

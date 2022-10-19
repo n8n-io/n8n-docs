@@ -28,6 +28,53 @@ To see which fields can be extracted, for example from an invoice, click on `FIE
 
 Here is a list of all the fields that can be extracted:
 
+**INVOICE DETAILS**
+----
+INVOICE NUMBER
+INVOICE DATE
+DELIVERY DATE
+PO NUMBER
+ORDER DATE
+
+**PAYMENT DETAILS**
+----
+IBAN
+PAYMENT TERMS
+
+**VAT & AMOUNTS**
+----
+CURRENCY
+NET AMOUNT
+NET AMOUNT REDUCED
+NET AMOUNT TAX FREE
+REDUCED TAX AMOUNT
+TAX AMOUNT
+TAX AMOUNT TAX FREE
+TOTAL NET AMOUNT
+TOTAL TAX AMOUNT
+VAT RATE
+VAT RATE REDUCED
+
+**VENDOR DETAILS**
+----
+ADDRESS
+SUPPLIER NAME
+VENDOR ID
+VENDOR VAT
+
+For every overpoint you can also **CREATE FIELD**s like freight, postage or any field with an amount you want to extract from your invoices.
+
+For each field you can check the boxes if they are 
+
+- required
+
+- read only
+
+- hidden or
+
+- forced for validation
+
+
 
 ![](/_images/doc2/image-2-1024x822.png)
 

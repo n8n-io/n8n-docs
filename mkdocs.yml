@@ -133,12 +133,14 @@ nav:
     - Settings:
       - doc2/settings/index.md
       - Company Information: doc2/company-information.md
-      - General Settings: doc2/general-settings.md
-      - Modules: doc2/modules.md
+      - Groups, Users and Permissions:
+        - doc2/settings/groups-users-permissons/index.md
+      - Users: doc2/settings-users.md
       - API: 
         - doc2/settings/api/index.md
         - API Integration: doc2/settings/api/api-integration.md
-      - Users: doc2/settings-users.md
+      - General Settings: doc2/general-settings.md
+      - Modules: doc2/modules.md
       - All Import Options:
         - doc2/import/index.md
         - Email: doc2/e-mail.md

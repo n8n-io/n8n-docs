@@ -10,7 +10,7 @@ tags:
 ---
 
 
-In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen.
+In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` screen.
 
 ![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
@@ -35,15 +35,20 @@ Here you will find all the fields that can be extracted:
 | INVOICE DETAILS    | PAYMENT DETAILS     |  VAT & AMOUNTS      |  VENDOR DETAILS     |
 |       :----:       |        :----:       |       :----:        |      :----:         | 
 | INVOICE NUMBER     | IBAN                | CURRENCY            | ADDRESS             |
-| INVOICE DATE       | PAYMENT TERMS       | NET AMOUNT          | SUPPLIER NAME       | 
+| INVOICE DATE       | PAYMENT TERMS       | NET AMOUNT FULL     | SUPPLIER NAME       | 
 | DELIVERY DATE      |                     | NET AMOUNT REDUCED  | VENDOR ID           |
-| PO NUMBER          |                     | NET AMOUNT TAX FREE | VENDOR VAT          |
-| ORDER DATE         |                     | REDUCED TAX AMOUNT  |                     | 
-|                    |                     | TAX AMOUNT          |                     | 
-|                    |                     | TAX AMOUNT TAX FREE |                     |
-|                    |                     | TOTAL NET AMOUNT    |                     |
-|                    |                     | VAT RATE            |                     | 
+| PO NUMBER          |                     | NET AMOUNT FREE     | VENDOR VAT          |
+| ORDER DATE         |                     | TAX AMOUNT FULL     |                     | 
+|                    |                     | TAX AMOUNT REDUCED  |                     | 
+|                    |                     | TAX AMOUNT FREE     |                     |
+|                    |                     | VAT RATE FULL       |                     | 
 |                    |                     | VAT RATE REDUCED    |                     |
+|                    |                     | VAT RATE FREE       |                     |
+|                    |                     | TOTAL NET AMOUNT    |                     |
+|                    |                     | TOTAL TAX AMOUNT    |                     |
+|                    |                     | TOTAL AMOUNT        |                     |
+
+
 
 
 For every overpoint you can also **CREATE FIELD**s like freight, postage or any field with an amount you want to extract from your invoices.

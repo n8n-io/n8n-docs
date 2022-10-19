@@ -136,9 +136,9 @@ nav:
       - Groups, Users and Permissions:
         - doc2/settings/groups-users-permissons/index.md
         - Users: doc2/settings-users.md
-      - API: 
+      - Integration: 
         - doc2/settings/api/index.md
-        - API Integration: doc2/settings/api/api-integration.md
+        - API: doc2/settings/api/api-integration.md
       - General Settings: doc2/general-settings.md
       - Modules: doc2/modules.md
       - All Import Options:

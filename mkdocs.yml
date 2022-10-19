@@ -132,8 +132,8 @@ nav:
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - doc2/settings/index.md
-      - General Settings: doc2/general-settings.md
       - Company Information: doc2/company-information.md
+      - General Settings: doc2/general-settings.md
       - Modules: doc2/modules.md
       - API: 
         - doc2/settings/api/index.md

@@ -17,13 +17,13 @@ In this section you will find all the settings to customize DOC² to your compan
 - [Groups, Users and Permissions](/security/privileges/)
 - [Integration](/doc2/api-integration/api-integration/)
 - [Document Types](/doc2/settings-document-types/)
-- [Email notification settings](/doc2/e-mail/)
+- [Email notification](/doc2/e-mail/)
 
 ## DOCUMENT PROCESSING
 
 - [Import](/doc2/import/)
 - [OCR Settings](/doc2/document-validation/ocr-view/)
-- [Classify and Extract](/doc2/document-validation/)
+- [Classification and Extraction](/doc2/document-validation/)
 - [Supplier Validation](/doc2/settings-master-data-validation/)
 - [Export](/doc2/export/)
 - [Approval](/example/approval/)  :fontawesome-solid-circle-info:{ style="color: #0F17E4" }documentation for DOC² coming soon :fontawesome-solid-circle-info:{ style="color: #0F17E4" }

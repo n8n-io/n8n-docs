@@ -129,6 +129,7 @@ nav:
       - Diagram: doc2/doc2-with-infor/inforflow.md
       - Integration with Infor IDM and ERP:
         - doc2/doc2-with-infor/IDM-business-context-model.md
+      - Infor SSO: doc2/configuring-sso-in-cloud.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - doc2/settings/index.md
@@ -140,6 +141,7 @@ nav:
         - doc2/settings/integration/index.md
         - API: doc2/settings/integration/api-integration.md
         - SSO Settings: doc2/settings-sso-settings.md
+      - Document Types: doc2/settings-document-types.md
       - General Settings: doc2/general-settings.md
       - Modules: doc2/modules.md
       - All Import Options:
@@ -166,9 +168,6 @@ nav:
 
 
       - Amount: doc2/settings-amount-settings.md
-      - Document Types: doc2/settings-document-types.md
-      - SSO:
-        - Infor SSO: doc2/configuring-sso-in-cloud.md
       - Supplier Validation: doc2/settings-master-data-validation.md
     - PO Matching:
       - doc2/pomatching/po-matching/index.md

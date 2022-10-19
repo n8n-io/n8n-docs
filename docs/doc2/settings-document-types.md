@@ -26,7 +26,7 @@ To see which fields can be extracted, for example from an invoice, click on `FIE
 
 ![](/_images/doc2/DOC2_Invoice_Fields.png)
 
-Here is a list of all the fields that can be extracted:
+Here you will find all the fields that can be extracted:
 
 | **INVOICE DETAILS**| **PAYMENT DETAILS** | 
 |       :----:       |        :----:       |

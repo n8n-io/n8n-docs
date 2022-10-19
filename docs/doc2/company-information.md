@@ -6,6 +6,7 @@ tags:
   - Settings
   - DOC²
   - ZUGFeRD
+  - Subscription
 ---
 
 ### You will need this information filled for exporting documents in [ZUGFeRD](/doc2/zugpferd/) format.

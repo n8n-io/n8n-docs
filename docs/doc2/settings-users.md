@@ -15,7 +15,7 @@ From the Dashboard navigate to `SETTINGS`:
 
 ![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
-In the settings navigate to "Users":
+In the settings navigate to `Users`:
 
 ![](/_images/doc2/DOC2_settings_users.png)
 
@@ -43,7 +43,7 @@ As soon as the user is created it can be edited afterwards via the user overview
 
 ## How to reset the password
 
-Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on "FORGOT PASSWORD?":
+Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on <ins>Forgot Password?</ins>
 
 ![](/_images/doc2/Users_6.png)
 

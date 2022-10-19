@@ -8,21 +8,21 @@ tags:
   - Document Types
 ---
 
-In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu:
+In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` Screen. Open this menu:
 
-![DOC² - Dashboard](/_images/doc2/image-49-1024x401.png)
+![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
 There you will find the menu item "Document Types". Open this menu:
 
-![DOC² - Document Types](/_images/doc2/image-50-1024x502.png)
+![](/_images/doc2/DOC2_Dashboard_Settings_Document Types.png)
 
 In the following overview you will find all document types available in DOC²:
 
-![](/_images/doc2/image.png)
+![](/_images/doc2/DOC2_Document Types.png)
 
 Select the document type you want to configure. For example, "INVOICE":
 
-![](/_images/doc2/image-1.png)
+![](/_images/doc2/DOC2_Invoice_Fields.png)
 
 You will now see all settings you can make for this document type. For example you can configure the fields you want to extract from your documents:
 

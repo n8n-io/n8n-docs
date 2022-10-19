@@ -9,6 +9,7 @@
 
 * Certificate
 	* Create
+	* Install
 * File
 	* Delete
 	* Download

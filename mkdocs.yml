@@ -120,7 +120,7 @@ nav:
         - Data item linking: 
           - data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-          - Item linking in the Function node: data/data-mapping/data-item-linking/item-linking-function-node.md
+          - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
           - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
@@ -149,6 +149,7 @@ nav:
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
+      - Using console.log: code-examples/console-log.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
@@ -459,6 +460,7 @@ nav:
       - Docker Compose: hosting/server-setups/docker-compose.md
       - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
+      - Amazon Web Services: hosting/server-setups/aws.md
       - Google Cloud: hosting/server-setups/google-cloud.md
     - Databases:
       - hosting/databases/index.md

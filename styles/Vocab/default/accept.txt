@@ -10,10 +10,13 @@ Citrix
 Clockify
 Cron
 Dockerfile
+eksctl
 Enum
 enum
+Fargate
 GIMP
 invalid
+kubectl
 Kafka
 Lemlist
 Luxon
@@ -29,6 +32,8 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Serverless
+serverless
 Shopify
 shopify
 There are

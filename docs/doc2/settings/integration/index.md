@@ -1,6 +1,6 @@
 ---
-title: "API"
-description: API Integration offers capabilities and services that connect applications, processes, people, and devices. This is where to find your API Key in DOC².
+title: "Integration"
+description: In this section you will find your API Key as well as the SSO Service Provider Settings in DOC².
 date: "2021-10-29"
 icons: material/api
 tags:
@@ -9,6 +9,7 @@ tags:
   - API Key
 ---
 
-You will find your **API Key** in the Integration menu item in the settings
+In this section you will find your API Key as well as the SSO Service Provider Settings
 
-![](/_images/doc2/doc2-Settings-Integration-API Key.png)
+- [API Key](/doc2/settings/integration/api-integration)
+- [SSO](/doc2/settings-sso-settings/)

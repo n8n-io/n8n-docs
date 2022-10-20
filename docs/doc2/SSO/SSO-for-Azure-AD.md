@@ -14,7 +14,7 @@ tags:
 
 Perform the following steps to add SAML SSO in Azure AD:
 
-1. In Azure, go to your `Azure Active Directory` console
+*1.* In Azure, go to your `Azure Active Directory` console
 
     ![](/_images/doc2/SSO/Azure_1.png)
 

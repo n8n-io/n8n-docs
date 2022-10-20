@@ -12,15 +12,14 @@ tags:
 
 # Watchdog for Windows
 
-### Download file here:
-
+### Download the file here:
 <a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a>
 
 ## Folder configuration
 
 First configure the following folders:
 
-* Read folder → documents that are exported to DOC2 are uploaded here
+* Read folder → documents that are exported to DOC² are uploaded here
 * Error folder → documents that ran into an error during the export are saved here
 * Processed folder → successfully processed documents are stored here
 

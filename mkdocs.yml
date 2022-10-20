@@ -150,7 +150,7 @@ nav:
         - Fileshare Import:
           - doc2/fileshare/index.md
           - Windows: doc2/fileshare/watchdog-windows.md
-          - Linux: doc2/fileshare/watchdog-linux.md
+          - macOS: doc2/fileshare/watchdog-macOS.md
         - Webhook: doc2/api.md
       - All Export Options:
         - doc2/export/index.md

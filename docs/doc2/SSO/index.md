@@ -27,7 +27,7 @@ Manage user accounts in one place. Group memberships or roles can be used to aut
 
 <ins>Here you will find helpful documentation on the subject of SSO:</ins>
 
-* [Configuring SSO in Infor Cloud](/doc2/configuring-sso-in-cloud/)
+* [Configuring SSO in Infor Cloud](/doc2/doc2-with-infor/configuring-sso-in-cloud/)
 
 * [SSO for Azure AD with DOC²](/doc2/SSO/SSO-for-Azure-AD.md)
 

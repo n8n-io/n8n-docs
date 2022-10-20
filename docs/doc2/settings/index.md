@@ -17,7 +17,7 @@ In this section you will find all the settings to customize DOC² to your compan
 - [Groups, Users and Permissions](/security/privileges/)
 - [Integration](/doc2/settings/integration/)
 - [Document Types](/doc2/settings-document-types/)
-- [Email notification](/doc2/e-mail/)
+- [Email notification](/doc2/settings/email-notification/)
 
 ## DOCUMENT PROCESSING
 

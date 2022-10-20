@@ -24,8 +24,10 @@ Avoid re-entering usernames and passwords in apps to minimize security risk.
 #### Greater IT efficiency
 Manage user accounts in one place. Group memberships or roles can be used to automatically grant or revoke user access to apps.
 
-This is an overview how to configure SSO in and for different environments. 
+Here you will find helpful documentation on the subject of SSO:
 
 * [Configuring SSO in Infor Cloud](/doc2/configuring-sso-in-cloud/)
 
-* [SSO for Azure AD with DOC²](/doc2/fileshare/watchdog-macOS.md)
+* [SSO for Azure AD with DOC²](/doc2/SSO/SSO-for-Azure-AD.md)
+
+* [SSO Service Provider Settings in DOC²](/doc2/settings-sso-settings/)

@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "4dfc3676-2035-4d35-8af0-efc93509dfc6",
+		"name": "doc2app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23975890"
+	},
+	"item": [
+		{
+			"name": "Get User Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.polydocs.io/users/get_users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"polydocs",
+						"io"
+					],
+					"path": [
+						"users",
+						"get_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "FirstName",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "LastName",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Name.Lastname@test.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "False",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.polydocs.io/users/create",
+					"protocol": "https",
+					"host": [
+						"api",
+						"polydocs",
+						"io"
+					],
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.polydocs.io/users/delete/{user_id}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"polydocs",
+						"io"
+					],
+					"path": [
+						"users",
+						"delete",
+						"{user_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.polydocs.io/users/update/{user_id}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"polydocs",
+						"io"
+					],
+					"path": [
+						"users",
+						"update",
+						"{user_id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -10,11 +10,11 @@ tags:
 
 In this section you can configure all types of email notifications for your document types. Easily set employees to be notified when a document has a certain status.
 
-Go to Settings and open the email notifications menu.
+Go to Settings and open the email notification menu.
 
 ![](/_images/doc2/DOC2_email-notification_1.png)
 
-To add a new notification, click + NEW in the top right corner and the following window will open.
+To add a new notification, click `+ NEW` in the top right corner and the following window will open.
 
 ![](/_images/doc2/DOC2_email-notification_2.png)
 
@@ -26,7 +26,7 @@ In this you can define a custom name for the notification, select the document t
 * Pending Approval
 * Pending Second Approval
 
-More will follow
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }More will follow
 
 <ins>Time Units to choose are:</ins>
 

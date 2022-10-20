@@ -9,8 +9,6 @@ tags:
   
 ---
 
-### [Watchdog Configuration](/doc2/watchpuppy-configuration/)
+### [Watchdog - for Windows](/doc2/fileshare/watchdog-windows/)
 
-### [Watchdog - for Windows](/doc2/watchdog-windows/)
-
-### [Watchdog - Linux](/doc2/watchdog-linux/)
+### [Watchdog - Linux](/doc2/fileshare/watchdog-linux/)

@@ -142,7 +142,7 @@ nav:
         - API: doc2/settings/integration/api-integration.md
         - SSO Settings: doc2/settings-sso-settings.md
       - Document Types: doc2/settings-document-types.md
-      - General Settings: doc2/general-settings.md
+      - Email Notification: doc2/settings/email-notification.md
       - Modules: doc2/modules.md
       - All Import Options:
         - doc2/import/index.md

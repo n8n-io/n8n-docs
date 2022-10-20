@@ -15,4 +15,5 @@ tags:
 - [E-Mail](/doc2/e-mail/)
 - [Manual Import](/doc2/manual-import/)
 - [API](/doc2/settings/integration/api-integration/)
+- [Fileshare](/doc2/fileshare/index.md)
 

@@ -14,6 +14,6 @@ In this section you will find the Infor infrastructure, starting from use cases 
 - [Diagram](/doc2/doc2-with-infor/inforflow/)
 - [IDM Business Context Model](/doc2/doc2-with-infor/IDM-business-context-model/)
 - [Export](/doc2/export/export-to-infor/)
-- [SSO](/doc2/configuring-sso-in-cloud/)
+- [SSO](/doc2/doc2-with-infor/configuring-sso-in-cloud.md)
 
 

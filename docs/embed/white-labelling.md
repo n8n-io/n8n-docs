@@ -1,17 +1,17 @@
-# White Labelling
+# White labelling
 
-To white label n8n you customize the frontend styling and assets to match your brand identity. The process involves changing n8n's source code [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n), specifically two packages:
+White labelling n8n means customizing the frontend styling and assets to match your brand identity. The process involves changing two packages in n8n's source code [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n){:target=_blank .external-link}:
 
-* [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system) - n8n's [storybook](https://storybook.js.org/) design system with CSS styles and Vue.js components
-* [packages/editor-ui](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui) - n8n's [Vue.js](https://vuejs.org/) frontend build with [Vite.js](https://vitejs.dev)
+* [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link}: n8n's [storybook](https://storybook.js.org/){:target=_blank .external-link} design system with CSS styles and Vue.js components
+* [packages/editor-ui](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui){:target=_blank .external-link}: n8n's [Vue.js](https://vuejs.org/){:target=_blank .external-link} frontend build with [Vite.js](https://vitejs.dev){:target=_blank .external-link}
 
-## Prerequisite
+## Prerequisites
 
 You need the following installed on your development machine:
 
 --8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
 
-Create a fork of [n8n's repository](https://github.com/n8n-io/n8n) and clone your new repository.
+Create a fork of [n8n's repository](https://github.com/n8n-io/n8n){:target=_blank .external-link} and clone your new repository.
 
 ```shell
 git clone https://github.com/<your-organization>/n8n.git n8n
@@ -28,12 +28,12 @@ npm run start
 
 Whenever you make changes you need to rebuild and restart n8n. While developing you can use `npm run dev` to automatically rebuild and restart n8n anytime you make code changes. 
 
-## Theme Colors
+## Theme colors
 
-To customize theme colors look into [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system) and start with:
+To customize theme colors open [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link} and start with:
 
-- [packages/design-system/src/css/_tokens.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.scss)
-- [packages/design-system/src/css/_tokens.dark.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.dark.scss)
+- [packages/design-system/src/css/_tokens.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.scss){:target=_blank .external-link}
+- [packages/design-system/src/css/_tokens.dark.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.dark.scss){:target=_blank .external-link}
 
 At the top of `_tokens.scss` you will find `--color-primary` variables as HSL colors:
 
@@ -44,7 +44,7 @@ At the top of `_tokens.scss` you will find `--color-primary` variables as HSL co
 	--color-primary-l: 67.6%;
 ```
 
-In the following example the primary color changed to <span style="color:#0099ff">#0099ff</span>. To convert to HSL you can use a [color converter tool](https://www.w3schools.com/colors/colors_converter.asp).
+In the following example the primary color changes to <span style="color:#0099ff">#0099ff</span>. To convert to HSL you can use a [color converter tool](https://www.w3schools.com/colors/colors_converter.asp){:target=_blank .external-link}.
 
 ```scss
 @mixin theme {
@@ -56,11 +56,11 @@ In the following example the primary color changed to <span style="color:#0099ff
 ![Example Theme Color Customization](/_images/embed/white-label/color-transition.gif)
 
 !!! note
-    Similar CSS variables in `_tokens.dark.scss` for Dark mode are an upcoming feature that you can't toggle using n8n's UI yet.
+    Similar CSS variables in `_tokens.dark.scss` for dark mode are an upcoming feature that you can't toggle using n8n's UI yet.
 
-## Theme Logos
+## Theme logos
 
-To change the editor’s logo assets look into [packages/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui/public) and replace:
+To change the editor’s logo assets look into [packages/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui/public){:target=_blank .external-link} and replace:
 
 - favicon-16x16.png
 - favicon-32x32.png
@@ -69,16 +69,16 @@ To change the editor’s logo assets look into [packages/editor-ui/public](https
 - n8n-logo-collapsed.svg
 - n8n-logo-expanded.svg
 
-Replace these logo assets used in different Vue.js components like
+Replace these logo assets. n8n uses them in Vue.js components, including:
 
-* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue) - top/left logo in the main sidebar
-* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/Logo.vue) - Reused in other components
+* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link}: top/left logo in the main sidebar.
+* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/Logo.vue): reused in other components.
 
 In the following example replace `n8n-logo-collapsed.svg` and `n8n-logo-expanded.svg` to update the main sidebar's logo assets.
 
 ![Example Logo Main Sidebar](/_images/embed/white-label/logo-main-sidebar.png)
 
-If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue).
+If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link}.
 
 ```scss
 .logoItem {
@@ -105,15 +105,15 @@ If your logo assets require different sizing or placement you can customize SCSS
 }
 ```
 
-## Text Localization
+## Text localization
 
-To change all text occurrences like `n8n` or `n8n.io` to your brand identity you can customize n8n's english internationalization file:
+To change all text occurrences like `n8n` or `n8n.io` to your brand identity you can customize n8n's English internationalization file: [packages/editor-ui/src/plugins/i18n/locales/en.json](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/plugins/i18n/locales/en.json){:target=_blank .external-link}.
 
 - [packages/editor-ui/src/plugins/i18n/locales/en.json](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/plugins/i18n/locales/en.json)
 
-n8n uses the [Vue I18n](https://kazupon.github.io/vue-i18n/) internationalization plugin for Vue.js to translate the majority of UI texts. To search and replace text occurrences inside `en.json` you can use [Linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages).
+n8n uses the [Vue I18n](https://kazupon.github.io/vue-i18n/){:target=_blank .external-link} internationalization plugin for Vue.js to translate the majority of UI texts. To search and replace text occurrences inside `en.json` you can use [Linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages){:target=_blank .external-link}.
 
-In the following example add the `_brand.name` translation key to white label n8n's [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/AboutModal.vue).
+In the following example add the `_brand.name` translation key to white label n8n's [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/AboutModal.vue){:target=_blank .external-link}.
 
 ```js
 {
@@ -126,14 +126,14 @@ In the following example add the `_brand.name` translation key to white label n8
 
 ![Example About Modal Localization](/_images/embed/white-label/about-modal.png)
 
-### Window Title
+### Window title
 
-To change n8n`s window title to your brand name look at
+To change n8n's window title to your brand name, edit the following:
 
-- [packages/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/index.html)
-- [packages/editor-ui/src/components/mixins/titleChange.ts](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/mixins/titleChange.ts)
+- [packages/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/index.html){:target=_blank .external-link}
+- [packages/editor-ui/src/components/mixins/titleChange.ts](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/mixins/titleChange.ts){:target=_blank .external-link}
 
-In the following example replace all occurrences of `n8n` and `n8n.io` with `My Brand`.
+The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand`.
 
 ![Example Window Title Localization](/_images/embed/white-label/window-title.png)
 

@@ -38,8 +38,12 @@ The Delay hast to be set to a minimum of 5 minutes as the email server will need
 
 The email will be sent after selected time duration, if document status remains unchanged.
 
+&nbsp;
 
 <ins>This is what the corresponding email notifications look like:</ins>
 
 ![Ready For Validation](/_images/doc2/DOC2_email_readyforvalidation.png)
+
+&nbsp;
+
 ![Pending Approval](/_images/doc2/DOC2_email_forapproval.png)

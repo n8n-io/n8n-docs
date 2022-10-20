@@ -129,7 +129,7 @@ nav:
       - Diagram: doc2/doc2-with-infor/inforflow.md
       - Integration with Infor IDM and ERP:
         - doc2/doc2-with-infor/IDM-business-context-model.md
-      - Infor SSO: doc2/configuring-sso-in-cloud.md
+      - Infor SSO: doc2/doc2-with-infor/configuring-sso-in-cloud.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - doc2/settings/index.md
@@ -181,6 +181,7 @@ nav:
     - Admin-Guides: doc2/admin-guides/postman-projects.md
     - SSO: 
       - doc2/SSO/index.md
+      - SSO for Azure AD with DOC²: docs/doc2/SSO/SSO-for-Azure-AD.md
 
   - Workflow²:
     - Overview: workflow/index.md

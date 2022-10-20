@@ -181,7 +181,7 @@ nav:
     - Admin-Guides: doc2/admin-guides/postman-projects.md
     - SSO: 
       - doc2/SSO/index.md
-      - SSO for Azure AD with DOC²: docs/doc2/SSO/SSO-for-Azure-AD.md
+      - SSO for Azure AD with DOC²: doc2/SSO/SSO-for-Azure-AD.md
 
   - Workflow²:
     - Overview: workflow/index.md

@@ -12,7 +12,7 @@ tags:
 
 # Watchdog for Windows
 
-### Download here:
+### Download file here:
 
 <a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a>
 

@@ -46,6 +46,7 @@
     * Get all stars of autenticated user.
 * User
     * Get information about a user
+	* Get a list of users
     * Get online status of a user
 * User Group
     * Create a user group

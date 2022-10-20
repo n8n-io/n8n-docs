@@ -1,4 +1,5 @@
 site_name: n8n Documentation
+site_url: https://docs.n8n.io/
 theme:
   name: material
   custom_dir: overrides
@@ -11,11 +12,27 @@ theme:
   features:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
+copyright: >
+  <a href="#__consent">Change cookie settings</a>
+extra:
+  analytics:
+    provider: google
+    property: UA-146470481-3
+  extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better. <br /><a href="https://n8n.io/legal#privacy" target=_blank>Privacy policy</a>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -44,6 +61,11 @@ markdown_extensions:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences:
+      # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
@@ -67,50 +89,69 @@ nav:
   - Using n8n:
     - Welcome: index.md
     - Try it out: 
-      - Overview: try-it-out/index.md
+      - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
-    - Editor UI: editor-ui.md
     - Understand workflows:
-      - Overview: workflows/index.md
+      - workflows/index.md
       - Workflows: workflows/workflows.md
       - Connections: workflows/connections.md
       - Nodes: workflows/nodes.md
       - Items: workflows/items.md
       - Sticky Notes: workflows/sticky-notes.md
+      - Executions: workflows/executions.md
+    - Manage credentials:
+      - credentials/index.md
+      - Create and edit: credentials/add-edit-credentials.md
+      - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
-      - Overview: flow-logic/index.md
+      - flow-logic/index.md
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
       - Error handling: flow-logic/error-handling.md
     - Data:
-      - Overview: data/index.md
+      - data/index.md
       - Data structure: data/data-structure.md
       - Transforming data: data/transforming-data.md
-      - Using code: data/code.md
-      - Data mapping: data/data-mapping.md
+      - Process data using code: data/code.md
+      - Data mapping: 
+        - data/data-mapping/index.md
+        - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+        - Data item linking: 
+          - data/data-mapping/data-item-linking/index.md
+          - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+          - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
+          - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
+          - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
-    - Code examples:
-      - Overview: code-examples/index.md
-      - Expressions:
-        - Overview: code-examples/expressions/index.md
-        - Methods: code-examples/expressions/methods.md
-        - Variables: code-examples/expressions/variables.md
+    - Expressions and JavaScript:
+      - code-examples/index.md
+      - Built in methods and variables reference: code-examples/methods-variables-reference.md
+      - Built-in methods and variables examples: 
+        - code-examples/methods-variables-examples/index.md
+        - evaluateExpression: code-examples/methods-variables-examples/evaluate-expression.md
+        - execution: code-examples/methods-variables-examples/execution.md
+        - getWorkflowStaticData: code-examples/methods-variables-examples/get-workflow-static-data.md
+        - (node-name).item: code-examples/methods-variables-examples/node.md
+        - (node-name).all: code-examples/methods-variables-examples/all.md
+        - runIndex: code-examples/methods-variables-examples/run-index.md
+        - workflow: code-examples/methods-variables-examples/workflow.md
+      - Expressions examples:
+        - code-examples/expressions/index.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
-      - JavaScript for workflows:
-        - Overview: code-examples/javascript-functions/index.md
-        - Methods: code-examples/javascript-functions/methods.md
-        - Variables: code-examples/javascript-functions/variables.md
+      - JavaScript examples:
+        - code-examples/javascript-functions/index.md         
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
+      - Using console.log: code-examples/console-log.md
     - Reference:
-      - Overview: reference/index.md
+      - reference/index.md
       - Release notes: reference/release-notes.md
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
@@ -118,16 +159,16 @@ nav:
       - License: reference/license.md
       - Data collection: reference/data-collection.md
   - Integrations:
-    - Overview: integrations/index.md
+    - integrations/index.md
     - Built-in nodes:
-      - Overview: integrations/builtin/index.md
+      - integrations/builtin/index.md
       - Core nodes: integrations/builtin/core-nodes/
       - App nodes: integrations/builtin/app-nodes/
       - Trigger nodes: integrations/builtin/trigger-nodes/
       - Credentials: integrations/builtin/credentials/
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
-      - Overview: integrations/community-nodes/index.md
+      - integrations/community-nodes/index.md
       - Installation and management: integrations/community-nodes/installation.md
       - Risks: integrations/community-nodes/risks.md
       - Blocklist: integrations/community-nodes/blocklist.md
@@ -135,19 +176,19 @@ nav:
       - Troubleshooting: integrations/community-nodes/troubleshooting.md
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
     - Creating nodes:
-      - Overview: integrations/creating-nodes/index.md
+      - integrations/creating-nodes/index.md
       - Plan your node:
-        - Overview: integrations/creating-nodes/plan/index.md
+        - integrations/creating-nodes/plan/index.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
       - Build your node:
-        - Overview: integrations/creating-nodes/build/index.md       
+        - integrations/creating-nodes/build/index.md       
         - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
         - Reference:
-          - Overview: integrations/creating-nodes/build/reference/index.md
+          - integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
@@ -156,21 +197,21 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-          - Paired items: integrations/creating-nodes/build/reference/paired-items.md
+          - Item linking: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
-        - Overview: integrations/creating-nodes/test/index.md
+        - integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
         - Node linter: integrations/creating-nodes/test/node-linter.md
         - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
       - Deploy your node:
-        - Overview: integrations/creating-nodes/deploy/index.md
+        - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
-    - Overview: hosting/index.md
+    - hosting/index.md
     - Installation and hosting options: hosting/options.md
     - Installation:
-      - Overview: hosting/installation/index.md
+      - hosting/installation/index.md
       - Desktop app: hosting/installation/desktop-app.md
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
@@ -181,33 +222,35 @@ nav:
     - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Server setups:
-      - Overview: hosting/server-setups/index.md
+      - hosting/server-setups/index.md
       - Docker Compose: hosting/server-setups/docker-compose.md
       - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
+      - Amazon Web Services: hosting/server-setups/aws.md
+      - Google Cloud: hosting/server-setups/google-cloud.md
     - Databases:
-      - Overview: hosting/databases/index.md
+      - hosting/databases/index.md
       - Supported databases and settings: hosting/databases/supported-databases-settings.md
       - Database structure: hosting/databases/structure.md
     - Updating:
-      - Overview: hosting/updating/index.md
+      - hosting/updating/index.md
       - npm: hosting/updating/npm.md
       - Docker: hosting/updating/docker.md
       - Desktop app: hosting/updating/desktop.md
       - Cloud: hosting/updating/cloud.md
     - Scaling:
-      - Overview: hosting/scaling/index.md
+      - hosting/scaling/index.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
   - API:
-    - The n8n public API: api/index.md
+    - api/index.md
     - Authentication: api/authentication.md
     - Pagination: api/pagination.md
     - Using the API playground: api/using-api-playground.md
     - API reference: api/api-reference.md
   - Embed:
-    - n8n Embed: embed/index.md
+    - embed/index.md
     - Prerequisites: embed/prerequisites.md
     - Deployment: embed/deployment.md
     - Configuration: embed/configuration.md
@@ -215,9 +258,9 @@ nav:
     - Workflows templates: embed/workflow-templates.md
     - White Labelling: embed/white-labelling.md
   - Courses:
-      - Overview: courses/index.md
+      - courses/index.md
       - Level one:
-        - Overview: courses/level-one/index.md
+        - courses/level-one/index.md
         - Navigating the editor UI: courses/level-one/chapter-1.md
         - Building a mini-workflow: courses/level-one/chapter-2.md
         - Automating a (real-world) use case: courses/level-one/chapter-3.md
@@ -234,7 +277,7 @@ nav:
         - Exporting and importing workflows: courses/level-one/chapter-6.md
         - Test your knowledge: courses/level-one/chapter-7.md
       - Level two:
-        - Overview: courses/level-two/index.md
+        - courses/level-two/index.md
         - Understanding the data structure: courses/level-two/chapter-1.md
         - Processing different data types: courses/level-two/chapter-2.md
         - Merging and splitting data: courses/level-two/chapter-3.md

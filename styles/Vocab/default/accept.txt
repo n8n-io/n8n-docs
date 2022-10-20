@@ -1,3 +1,4 @@
+Adalo
 Asana
 Axios
 backend
@@ -5,13 +6,17 @@ Beeminder
 Boolean
 boolean
 Caddy
+Citrix
 Clockify
 Cron
 Dockerfile
+eksctl
 Enum
 enum
+Fargate
 GIMP
 invalid
+kubectl
 Kafka
 Lemlist
 Luxon
@@ -27,6 +32,8 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Serverless
+serverless
 Shopify
 shopify
 There are
@@ -35,4 +42,5 @@ tooltip
 Trello
 Twilio
 URL
+Venafi
 Vuex

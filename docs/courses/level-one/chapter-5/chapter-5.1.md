@@ -31,7 +31,7 @@ In the left panel, select:
 - *Headers > Add Header:*
   - *Name:* `unique_id`
   - *Value:* The Unique ID your received in the email when you signed up for this course.
-- *Authentication:* Header Auth<br/>
+- *Authentication > Generic Credential Type > Generic Auth Type:* Header Auth<br/>
     This option requires credentials to allow you to access the data.
 
 !!! note "Credentials"

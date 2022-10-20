@@ -35,7 +35,9 @@ You can add comparison conditions using the **Add Condition** dropdown. Conditio
 
 You can choose to split a workflow when any of the specified conditions are met, or only when all the specified conditions are met using the options in the **Combine** dropdown list.
 
---8<-- "_snippets/integrations/builtin/core-nodes/if-merge-branch-execution.md"
+## Branch execution with If and Merge nodes
+
+--8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
 
 ## Example Usage
 

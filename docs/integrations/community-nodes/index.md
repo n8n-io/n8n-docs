@@ -1,4 +1,4 @@
-# Overview
+# Community nodes
 
 n8n provides hundreds of built-in nodes. It also supports users [creating their own nodes](/integrations/creating-nodes/). These are community nodes. 
 

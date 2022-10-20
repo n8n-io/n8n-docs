@@ -24,7 +24,8 @@ Avoid re-entering usernames and passwords in apps to minimize security risk.
 #### Greater IT efficiency
 Manage user accounts in one place. Group memberships or roles can be used to automatically grant or revoke user access to apps.
 
-Here you will find helpful documentation on the subject of SSO:
+
+<ins>Here you will find helpful documentation on the subject of SSO:</ins>
 
 * [Configuring SSO in Infor Cloud](/doc2/configuring-sso-in-cloud/)
 

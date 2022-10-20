@@ -7,6 +7,7 @@ tags:
   - DOC²
   - Settings
   - API Key
+  - SSO
 ---
 
 In this section you will find your API Key as well as the SSO Service Provider Settings

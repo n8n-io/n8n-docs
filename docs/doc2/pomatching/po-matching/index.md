@@ -19,7 +19,7 @@ All three components must match within agreed-upon tolerance levels. It is then 
 
 #### Corresponding settings must be made in DOC² under Settings - Modules - Purchase Order
 
-![](/_images/doc2/DOC²_POM_1_Modules.png)
+![](/_images/doc2/DOC2_POM_1_Modules.png)
 
 
 On documents, the Purchase Order is listed either in the headers or, for some, in the table rows.
@@ -40,15 +40,15 @@ Create the table from Purchase Order with one klick. See how easy that is:
 
 1\. Click on the PO Matching required Button of your Document on dashboard
 
-![](/_images/doc2/DOC²_POM_2.png)
+![](/_images/doc2/DOC2_POM_2.png)
 
 2\. You will find the Keyboard Shortcuts by clicking on the keyboard icon
 
-![](/_images/doc2/DOC²_POM_3_Keyboard.png)
+![](/_images/doc2/DOC2_POM_3_Keyboard.png)
 
 ### These are all the keyboard shortcuts you can use on the PO Matching screen:
 
-![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_1.png)
-![](/_images/doc2/DOC²_POM_4_Keyboardshortcuts_2.png)
+![](/_images/doc2/DOC2_POM_4_Keyboardshortcuts_1.png)
+![](/_images/doc2/DOC2_POM_4_Keyboardshortcuts_2.png)
 
 

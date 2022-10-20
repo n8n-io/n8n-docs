@@ -46,19 +46,19 @@ After that save the purchase order. You must **approve** said purchase order and
 
 ## Upload the Invoice in DOC2
 
-![](/_images/doc2/DOC²_POM_Invoices_1.png)
+![](/_images/doc2/DOC2_POM_Invoices_1.png)
 
 The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
 Open the document and validate the extracted fields.
 
-![](/_images/doc2/DOC²_POM_Invoices_2.png)
+![](/_images/doc2/DOC2_POM_Invoices_2.png)
 
 * * *
 
 After validating all extracted fields open matching overview by clicking on **PO MATCHING**
 
-![](/_images/doc2/DOC²_POM_Invoices_3.png)
+![](/_images/doc2/DOC2_POM_Invoices_3.png)
 
 You can also go directly from dashboard to the matching overview by following the steps [below](/doc2/pomatching/po-matching-invoices/#case-1-matched)
 
@@ -66,23 +66,23 @@ You can also go directly from dashboard to the matching overview by following th
 
 The symbol under **MATCHED** indicates the current matching status – green for matched and red for not matched. Ideally it is already green.
 
-![](/_images/doc2/DOC²_POM_Invoices_4.png)
+![](/_images/doc2/DOC2_POM_Invoices_4.png)
 
 ### Case 1: Matched
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_POM_Invoices_5.png)
+![](/_images/doc2/DOC2_POM_Invoices_5.png)
 
-![](/_images/doc2/DOC²_POM_Invoices_6.png)
+![](/_images/doc2/DOC2_POM_Invoices_6.png)
 
 In this case the quantity of items ordered matches the quantity on the invoice, the match and thus the document can be validated and exported.
 
-![](/_images/doc2/DOC²_POM_Invoices_7.png)
+![](/_images/doc2/DOC2_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_POM_Invoices_8.png)
+![](/_images/doc2/DOC2_POM_Invoices_8.png)
 
 exported successfully
 
@@ -92,9 +92,9 @@ exported successfully
 
 Access the matching overview by clicking on the Matching Symbol on the dashboard.
 
-![](/_images/doc2/DOC²_POM_Invoices_9.png)
+![](/_images/doc2/DOC2_POM_Invoices_9.png)
 
-![](/_images/doc2/DOC²_POM_Invoices_10.png)
+![](/_images/doc2/DOC2_POM_Invoices_10.png)
 
 Here you can see that the quantity of the ordered item does not match the quantity on the invoice.
 
@@ -104,25 +104,25 @@ The “x” would delete the match on the invoice.
 
 A new match from the purchase order can be added to the invoice by dragging and dropping the appropriate data row(s).
 
-![](/_images/doc2/DOC²_POM_Invoices_11.png)
+![](/_images/doc2/DOC2_POM_Invoices_11.png)
 
 You need to confirm the mismatched properties.
 
-![](/_images/doc2/DOC²_POM_Invoices_12.png)
+![](/_images/doc2/DOC2_POM_Invoices_12.png)
 
-![](/_images/doc2/DOC²_POM_Invoices_13.png)
+![](/_images/doc2/DOC2_POM_Invoices_13.png)
 
 Save to apply all changes.
 
-![](/_images/doc2/DOC²_POM_Invoices_14.png)
+![](/_images/doc2/DOC2_POM_Invoices_14.png)
 
 Once everything is correct the document can be validated and exported.
 
-![](/_images/doc2/DOC²_POM_Invoices_7.png)
+![](/_images/doc2/DOC2_POM_Invoices_7.png)
 
 invoice exporting
 
-![](/_images/doc2/DOC²_POM_Invoices_8.png)
+![](/_images/doc2/DOC2_POM_Invoices_8.png)
 
 exported successfully
 

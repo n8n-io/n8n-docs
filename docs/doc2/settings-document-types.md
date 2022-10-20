@@ -1,75 +1,104 @@
 ---
-title: "Document Types"
-description: Here you will find all documents available in DOC² as invoice, credit note, delivery note, order confirmation and many more
+title: Document Types, Field Settings and Profile
+description: Here you will find all document types available in DOC² as invoice, credit note, delivery note, order confirmation and many more
 date: "2021-10-29"
 tags:
   - DOC²
   - Settings
   - Document Types
+  - Field Settings
 ---
 
-In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu:
 
-![DOC² - Dashboard](/_images/doc2/image-49-1024x401.png)
+In DOC² you will find the `SETTINGS` menu in the upper bar on `HOME` screen.
 
-There you will find the menu item "Document Types". Open this menu:
+![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
-![DOC² - Document Types](/_images/doc2/image-50-1024x502.png)
+If you are logged in to DOC² as an admin, you will find all fields of a document that can be extracted under the respective document type.
 
-In the following overview you will find all document types available in DOC²:
+Open the menu **Document Types**.
 
-![](/_images/doc2/image.png)
+![](/_images/doc2/DOC2_Dashboard_Settings_Document Types.png)
 
-Select the document type you want to configure. For example, "INVOICE":
+In the following overview you will find all standard document types available for you:
 
-![](/_images/doc2/image-1.png)
+![](/_images/doc2/DOC2_Document Types.png)
 
-You will now see all settings you can make for this document type. For example you can configure the fields you want to extract from your documents:
+To see which fields can be extracted, for example from an invoice, click on `FIELDS` for this document type.
 
-![](/_images/doc2/image-2-1024x822.png)
+![](/_images/doc2/DOC2_Invoice_Fields.png)
 
-**Recognition Settings**
+### FIELD SETTINGS
 
-OCR:
+Here you will find all the fields that can be extracted:
+
+| INVOICE DETAILS    | PAYMENT DETAILS     |  VAT & AMOUNTS      |  VENDOR DETAILS     |
+|       :----:       |        :----:       |       :----:        |      :----:         | 
+| INVOICE NUMBER     | IBAN                | CURRENCY            | ADDRESS             |
+| INVOICE DATE       | PAYMENT TERMS       | NET AMOUNT FULL     | SUPPLIER NAME       | 
+| DELIVERY DATE      |                     | NET AMOUNT REDUCED  | VENDOR ID           |
+| PO NUMBER          |                     | NET AMOUNT FREE     | VENDOR VAT          |
+| ORDER DATE         |                     | TAX AMOUNT FULL     |                     | 
+|                    |                     | TAX AMOUNT REDUCED  |                     | 
+|                    |                     | TAX AMOUNT FREE     |                     |
+|                    |                     | VAT RATE FULL       |                     | 
+|                    |                     | VAT RATE REDUCED    |                     |
+|                    |                     | VAT RATE FREE       |                     |
+|                    |                     | TOTAL NET AMOUNT    |                     |
+|                    |                     | TOTAL TAX AMOUNT    |                     |
+|                    |                     | TOTAL AMOUNT        |                     |
+
+
+
+
+For every overpoint you can also **CREATE FIELD**s like freight, postage or any field with an amount you want to extract from your invoices.
+
+For each field you can check the boxes if they are 
+
+- REQUIRED: Here you can define if the field must contain a value to continue.
+
+- READ ONLY: Here you can define if a field can only be displayed but not edited.
+
+- HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
+
+- FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
+
+- OCR and MATCH SCORE: Setting as described below, per field.
+
+- FORMULA: Creation of a formula per field.
+
+
+![](/_images/doc2/DOC2_field settings_fields.png)
+
+If all settings are made and should be saved, please confirm this with the `SAVE SETTINGS` button, otherwise the settings will not be applied.
+
+![](/_images/doc2/DOC2_field settings_fields_save settings.png)
+
+
+
+### RECOGNITION SETTINGS
+
+![](/_images/doc2/DOC2_field settings_recognition settings.png)
+
+**OCR:**
 
 Here you can set the sensitivity of the OCR (Optical Character Recognition) function for all fields at once. This value determines the sensitivity with which a field is marked in red if it could not be extracted with 100% certainty (OCR related!).
 
-MATCH SCORE:
+**MATCH SCORE:**
 
 Here you can set the sensitivity of the MATCH SCORE function for all fields at once. This value determines from when a field is marked in red if DOC² has not extracted the field with 100% probability. In this case the field needs to be validated manually.
 
-The button "RESTORE DEFAULTS" will set back both values to "50".
+The button `RESTORE DEFAULTS` will set back both values to "50".
 
 ![](/_images/doc2/image-3.png)
 
-**SPLIT**
 
-You can define how imported documents shall be split. Either by page or by invoice number (if you import PDF files with more than one invoice/several invoices).
+### PROFILE
 
-![](/_images/doc2/image-4.png)
+Here you can define the profile that shall be used. Either Default or ZUGFeRD.<br> In profile ZUGFeRD there are predefined fields that are mandatory for this type of invoice.<br> If you do not explicitly use ZUGFeRD, please select "Default".
 
-**PROFILE**
+![](/_images/doc2/DOC2_field settings_profile.png)
 
-Here you can define the profile that shall be used. For example Peppol or Zugferd. If you do not explicitly use one of the two, please select "Default".
 
-![](/_images/doc2/image-6.png)
 
-Below you will find all the fields available for this type of document. You can set the following values per field individually:
 
-REQUIRED: Here you can define if the field must contain a value to continue.
-
-READ ONLY: Here you can define if a field can only be displayed but not edited.
-
-HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
-
-FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
-
-OCR and MATCH SCORE: Setting as described above, per field.
-
-FORMULA: Creation of a formula per field.
-
-![](/_images/doc2/image-7.png)
-
-If all settings are made and should be saved, please confirm this with the "SAVE" button, otherwise the settings will not be applied.
-
-![](/_images/doc2/image-8-1024x167.png)

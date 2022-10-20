@@ -129,16 +129,21 @@ nav:
       - Diagram: doc2/doc2-with-infor/inforflow.md
       - Integration with Infor IDM and ERP:
         - doc2/doc2-with-infor/IDM-business-context-model.md
+      - Infor SSO: doc2/configuring-sso-in-cloud.md
     - DOC² with Workflow²: doc2/workflow.md
     - Settings:
       - doc2/settings/index.md
-      - General Settings: doc2/general-settings.md
       - Company Information: doc2/company-information.md
+      - Groups, Users and Permissions:
+        - doc2/settings/groups-users-permissons/index.md
+        - Users: doc2/settings-users.md
+      - Integration: 
+        - doc2/settings/integration/index.md
+        - API: doc2/settings/integration/api-integration.md
+        - SSO Settings: doc2/settings-sso-settings.md
+      - Document Types: doc2/settings-document-types.md
+      - Email Notification: doc2/settings/email-notification.md
       - Modules: doc2/modules.md
-      - API: 
-        - doc2/settings/api/index.md
-        - API Integration: doc2/settings/api/api-integration.md
-      - Users: doc2/settings-users.md
       - All Import Options:
         - doc2/import/index.md
         - Email: doc2/e-mail.md
@@ -163,11 +168,7 @@ nav:
 
 
       - Amount: doc2/settings-amount-settings.md
-      - Document Types: doc2/settings-document-types.md
-      - SSO:
-        - SSO Settings: doc2/settings-sso-settings.md
-        - Infor SSO: doc2/configuring-sso-in-cloud.md
-      - Master Data Validation: doc2/settings-master-data-validation.md
+      - Supplier Validation: doc2/settings-master-data-validation.md
     - PO Matching:
       - doc2/pomatching/po-matching/index.md
       - Invoice: doc2/pomatching/po-matching-invoices.md

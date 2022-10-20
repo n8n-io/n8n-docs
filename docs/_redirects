@@ -27,7 +27,8 @@
 /reference/telemetry.html        /reference/data-collection/
 /reference/troubleshooting.html        /hosting/installation/npm/
 /reference/release-notes.html        /reference/release-notes/
-
+# Tini quick fix
+/nodes/n8n-nodes-base.upload 		/workflow/
 # The nodes library . . . may the odds be ever in your favour
 /credentials/*        /workflow/integrations/credentials/:splat
 
@@ -398,7 +399,7 @@ workflow/integrations/workflow-nodes-base.sseTrigger/        /workflow/integrati
 /nodes/workflow-nodes-base.zulip/        /workflow/integrations/nodes/workflow-nodes-base.zulip/
 /nodes/nodes-library/        /workflow/integrations/
 /nodes/        /workflow/integrations/nodes/
-
+/nodes/n8n-nodes-base.upload/ /workflow/
 
 # Old redirects
 

@@ -49,11 +49,11 @@ You can also find more information by entering:./watchpuppy -h
 
 > If you have selected DOC² you will find the document on the dashboard
 
-![](/_images/doc2/DOC²_Dashboard_1-1024x333.png)
+![](/_images/doc2/DOC2_Dashboard_1-1024x333.png)
 
 Document running
 
-![](/_images/doc2/DOC²_Dashboard_2-1024x343.png)
+![](/_images/doc2/DOC2_Dashboard_2-1024x343.png)
 
 Document ready for Validation
 

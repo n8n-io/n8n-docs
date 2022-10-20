@@ -61,7 +61,7 @@ Here you will find all the information you need for the following steps
 
 c) Download the certificate
 
-![](/_images/doc2/DOC²_SSO-Service-Provider-Settings-1024x640.png){ loading=lazy }
+![](/_images/doc2/DOC2_SSO-Service-Provider-Settings-1024x640.png){ loading=lazy }
 
 **4\. Filling the Service Provider with the help of SSO Service Provider Settings in DOC²**
 
@@ -93,11 +93,11 @@ a) Click on IMPORT an then choose the METADATA file that you have already downlo
 
 b) Click on CONFIGURE
 
-![](/_images/doc2/DOC²_identity-service-provider-settings_completed-1024x316.png){ loading=lazy }
+![](/_images/doc2/DOC2_identity-service-provider-settings_completed-1024x316.png){ loading=lazy }
 
 This part is successfully completed when you see the following popup
 
-![](/_images/doc2/DOC²_File-successfully-saved.png){ loading=lazy }
+![](/_images/doc2/DOC2_File-successfully-saved.png){ loading=lazy }
 
 **6\. Add new Application in infor Ming.le**
 

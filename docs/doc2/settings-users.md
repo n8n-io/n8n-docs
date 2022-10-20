@@ -9,25 +9,25 @@ tags:
   - Password
 ---
 
-Users can be managed via "SETTINGS -> Users". You can find the option as follows.
+To manage your users follow these steps:
 
-From the Dashboard navigate to "SETTINGS":
+From the Dashboard navigate to `SETTINGS`:
 
-![DOC² - User](/_images/doc2/Users_1.png)
+![](/_images/doc2/DOC2_Dashboard_Settings.png)
 
-In the settings navigate to "Users":
+In the settings navigate to `Users`:
 
-![](/_images/doc2/Users_2.png)
+![](/_images/doc2/DOC2_settings_users.png)
 
-Direktlink: [https://app.polydocs.io/settings/user](https://app.polydocs.io/settings/user)
+Direct link: [https://app.polydocs.io/settings/user](https://app.polydocs.io/settings/user)
 
 ## How to add a user
 
 Once the admin is registered, you can add your employees via following steps.
 
-In the user menu click on "ADD USER":
+In the user menu click on `ADD USER`:
 
-![](/_images/doc2/Users_3.png)
+![](/_images/doc2/DOC2_settings_add-user.png)
 
 Enter the data of the user to be created:
 
@@ -43,7 +43,7 @@ As soon as the user is created it can be edited afterwards via the user overview
 
 ## How to reset the password
 
-Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on "FORGOT PASSWORD?":
+Go to the DOC² log-in page ([https://app.polydocs.io/](https://app.polydocs.io/)) enter your mail address and click on <ins>Forgot Password?</ins>
 
 ![](/_images/doc2/Users_6.png)
 

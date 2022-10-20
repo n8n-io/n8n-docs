@@ -1,11 +1,11 @@
 ---
-title: "Master data validation"
+title: "Master Data Validation"
 description: DOC² offers in the document validation overview the possibility to match supplier data extracted from the document with the master data from your ERP system and to assign the document to the correct supplier without any manual work in the best case.
 date: "2022-02-24"
 tags:
   - DOC²
   - Document Validation
-  - Master data validation
+  - Master Data Validation
 ---
 
 DOC² offers in the document validation overview the possibility to match supplier data extracted from the document with the master data from your ERP system (precondition: [your master data has been uploaded to DOC²](/doc2/settings-master-data-validation/) and to assign the document to the correct supplier without any manual work in the best case.
@@ -16,11 +16,9 @@ There are currently two ways to do this.
 
 The VAT number is extracted from the document using DOC²:
 
-![](/_images/doc2/image-18.png)
+![](/_images/doc2/DOC2_master-data-validation_1.png)
 
-In the background, the VAT number is matched with the supplier master data, provided by you to DOC² and the supplier ID including the corresponding supplier data like name, address, ... is determined automatically:
-
-![](/_images/doc2/image-20.png)
+In the background, the VAT number is matched with the supplier master data, provided by you to DOC² and the supplier ID including the corresponding supplier data like name and address is determined automatically.
 
 The user can manually intervene at any time and call up the supplier provided. This is done via the following button:
 

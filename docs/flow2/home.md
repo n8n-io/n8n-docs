@@ -12,7 +12,7 @@ After logging in with your user you are redirected to the DASHBOARD homepage of 
 
 This is the main page and overview where you can find your documents recently accessed, recently created and your applied favorites. You can also find an overview of all important items in the left sidebar.
 
-![](/_images/doc2/FLOW²_Dashboard-User-1-1024x585.png){ loading=lazy }
+![](/_images/doc2/FLOW2_Dashboard-User-1-1024x585.png){ loading=lazy }
 
 The left sidebar with buttons and selectors is for accessing:
 

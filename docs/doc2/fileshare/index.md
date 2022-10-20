@@ -11,4 +11,4 @@ tags:
 
 ### [Watchdog - for Windows](/doc2/fileshare/watchdog-windows/)
 
-### [Watchdog - macOS](/doc2/fileshare/watchdog-macOS.md)
+### [Watchdog - macOS](/doc2/fileshare/watchdog-macos/)

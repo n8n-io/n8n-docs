@@ -19,9 +19,11 @@ Perform the following steps to add SAML SSO in Azure AD:
     ![](/_images/doc2/SSO/Azure_1.png)
 
 
+
 2. In the left panel, click `Enterprise applications`
 
     ![](/_images/doc2/SSO/Azure_2.png)
+
 
 
 3. Click `+ New application`
@@ -29,14 +31,17 @@ Perform the following steps to add SAML SSO in Azure AD:
     ![](/_images/doc2/SSO/Azure_3.png)
 
 
+
 4. Click `+ Create your own application`
 
     ![](/_images/doc2/SSO/Azure_4.png)
 
 
+
 5. Enter a name for your application. Keep the remaining default selections.
 
     ![](/_images/doc2/SSO/Azure_5.png)
+
 
 
 6. Click on `Create``
@@ -75,6 +80,7 @@ Important: You should already have created users and groups in Azure AD. If you 
 
 
 
+
 6. Go to the `Groups` view list and find the assigned groups.
 
 
@@ -87,6 +93,7 @@ Next, you need to finish setting up single-sign-on in Azure.
 
     ![](/_images/doc2/SSO/Azure_10.png)
             
+
 
 2. Click `SAML`
 
@@ -103,9 +110,11 @@ Next, you need to finish setting up single-sign-on in Azure.
 4. Upload the DOC² **metadata.xml**, which you can find in the Settings menu **Integration**<br> under **SSO Service Provider Settings** of your DOC² account.
 
 
+
 5. Edit the `Basic SAML Configuration`
 
     ![](/_images/doc2/SSO/Azure_13.png)
+
 
 
 6. Add the SAML/SSO endpoint to the configuration in Azure. For example: 
@@ -114,14 +123,18 @@ Next, you need to finish setting up single-sign-on in Azure.
     ```
             
 
+
 7. Enter the appropriate URL for the `Sign on URL` and `Logout URL` fields.
-            
+
+
 
 8. Click on `Save`
 
 
+
 9. Download the newly generated signing `Certificate (Raw)` and `Federation Metadata XML`.
     ![](/_images/doc2/SSO/Azure_14.png)
+   
                 
 
 10. Upload the FederationMetadata.xml into the **Identity Service Provider Settings** of your DOC² account which you can find in the Settings menu **Integration**.

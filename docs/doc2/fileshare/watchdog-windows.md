@@ -14,11 +14,11 @@ tags:
 
 ### Download here:
 
-[WatchPuppy-win](https://docs.cloudintegration.eu/wp-content/uploads/2022/03/WatchPuppy-win.zip)[Download](https://docs.cloudintegration.eu/wp-content/uploads/2022/03/WatchPuppy-win.zip)
+<a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a>
 
 ## Folder configuration
 
-First you configure the following folders:
+First configure the following folders:
 
 * Read folder → documents that are exported to DOC2 are uploaded here
 * Error folder → documents that ran into an error during the export are saved here

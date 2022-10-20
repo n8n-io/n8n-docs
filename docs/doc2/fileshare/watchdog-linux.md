@@ -17,7 +17,7 @@ tags:
 
 ## Folder configuration
 
-First you configure the following folders:
+First configure the following folders:
 
 * Read folder → documents that are exported to DOC2 are uploaded here
 * Error folder → documents that ran into an error during the export are saved here

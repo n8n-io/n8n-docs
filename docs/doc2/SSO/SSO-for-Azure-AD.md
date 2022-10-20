@@ -32,6 +32,7 @@ Perform the following steps to add SAML SSO in Azure AD:
 
 
 
+
 **4.** Click `+ Create your own application`
 
 ![](/_images/doc2/SSO/Azure_4.png)

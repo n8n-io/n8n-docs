@@ -44,7 +44,7 @@ Perform the following steps to add SAML SSO in Azure AD:
 
 
 
-6. Click on `Create``
+6. Click on `Create`
 
 
 ## Assign Users to the SSO Configuration
@@ -134,8 +134,8 @@ Next, you need to finish setting up single-sign-on in Azure.
 
 9. Download the newly generated signing `Certificate (Raw)` and `Federation Metadata XML`.
     ![](/_images/doc2/SSO/Azure_14.png)
-   
-                
+
+
 
 10. Upload the FederationMetadata.xml into the **Identity Service Provider Settings** of your DOC² account which you can find in the Settings menu **Integration**.
 

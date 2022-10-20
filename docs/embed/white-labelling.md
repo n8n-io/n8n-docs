@@ -131,7 +131,28 @@ To change n8n's window title to your brand name, edit the following:
 - [packages/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/index.html){:target=_blank .external-link}
 - [packages/editor-ui/src/components/mixins/titleChange.ts](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/mixins/titleChange.ts){:target=_blank .external-link}
 
-The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand`.
+The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand` in `index.html` and `titleChange.ts`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Replace html title attribute -->
+	<title>My Brand - Workflow Automation</title>
+</head>
+```
+
+```typescript
+$titleSet(workflow: string, status: WorkflowTitleStatus) {
+	// replace n8n prefix
+	window.document.title = `My Brand - ${icon} ${workflow}`;
+},
+
+$titleReset() {
+	// replace n8n prefix
+	document.title = `My Brand - Workflow Automation`;
+},
+```
 
 ![Example Window Title Localization](/_images/embed/white-label/window-title.png)
 

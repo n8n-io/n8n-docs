@@ -57,7 +57,7 @@ In the screenshot below, you will notice that the node creates a new task in Mic
 
 ![Create a task with the Microsoft To Do node](/_images/integrations/builtin/app-nodes/microsofttodo/microsofttodo_node.png)
 
-### 3. Microsoft To Do1 node (update: task)
+### 3. Microsoft To Do node (update: task)
 
 This node will update the status of the task that we created in the previous node.
 
@@ -77,7 +77,7 @@ In the screenshot below, you will notice that the node updates the status of the
 
 ![Update the status of a task using the Microsoft To Do node](/_images/integrations/builtin/app-nodes/microsofttodo/microsofttodo1_node.png)
 
-### 4. Microsoft To Do2 node (get: task)
+### 4. Microsoft To Do node (get: task)
 
 This node will get the task that we created earlier.
 

@@ -140,13 +140,11 @@ The DELETE method is used to delete, for example, users, organizations and so on
 **4.**  Now paste this link in the text box next to the DELETE method in Postman.<br>
 **5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id using the GET method).<br>
 **6.**  If you included the user_id in the URL, you don't need to add a body key and value for it.
+**7.**  When you click `Send`, you should see "success": true in the response.
 
 It should look like this:
 
 ![Picture](/_images/doc2/admin_guides_delete_body.png){ loading=lazy }
-
-
-When you click `Send`, you should see success: "True" in the response.
 
 
 ## "PUT" Method example

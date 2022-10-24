@@ -21,7 +21,7 @@ This guide will show you how to make HTTP requests to your DOC² organization vi
 ## Setup
 
 
-First, [download Postman](https://www.postman.com/downloads/postman-agent/) on your system.
+First, [download Postman](https://www.postman.com/downloads/) on your system.
 
 Now follow this step-by-step guide to learn how HTTP requests work in Postman.
 

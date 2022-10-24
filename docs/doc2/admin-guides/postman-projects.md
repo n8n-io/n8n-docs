@@ -44,7 +44,7 @@ In this collection, you can add multiple HTTP requests. To do this, click on the
 
 ## Authorization
 
-Before you can continue with the further steps, you have to enter your API key from DOC² once to authorize your HTTP requests.
+Before you can proceed with each HTTP request, you need to enter your API key from DOC² to authorize them.
 
 **1.** Click on the `Authorization` tab und choose `API Key` as authorization type.
 
@@ -64,9 +64,7 @@ The GET method is very useful to get information about users, sub-organizations,
 **1.**  Choose the GET method in your HTTP request.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
-    
-    for example:
-     
+
     https://api.polydocs.io/users/get_users
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }
@@ -84,7 +82,6 @@ The POST method is usually used to create users or organizations, for example. T
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
-    for example 
     https://api.polydocs.io/users/create
 
 ![Picture](/_images/doc2/admin_guides_post_api.png){ loading=lazy }
@@ -111,7 +108,6 @@ The DELETE method is used to delete, for example, users, organizations and so on
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
-    for example: 
     https://api.polydocs.io/users/delete/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_delete_api.png){ loading=lazy }
@@ -136,7 +132,6 @@ The PUT method is mainly used to update user or organization data. It is very ea
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
-    for example: 
     https://api.polydocs.io/users/update/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_put_api.png){ loading=lazy }

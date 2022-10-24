@@ -118,28 +118,18 @@ Next, you need to finish setting up single-sign-on in Azure.
 
 
 
-**6.** Add the SAML/SSO endpoint to the configuration in Azure. For example: 
-    ```
-    https://<ServerURL>/dcma/saml/SSO
-    ```
-            
+**6.** Check if the `Entity ID`, `ACS URL`, `Sign on URL` and `Logout URL` are populated right.
+    
+![](/_images/doc2/SSO/Azure_13.1.png)         
 
 
-**7.** Enter the appropriate URL for the `Sign on URL` and `Logout URL` fields.
-
-
-
-**8.** Click on `Save`
-
-
-
-**9.** Download the newly generated signing `Certificate (Raw)` and `Federation Metadata XML`.
+**7.** Download the newly generated **Federation Metadata XML**.
 
 ![](/_images/doc2/SSO/Azure_14.png)
 
 
 
-**10.** Upload the FederationMetadata.xml into the **Identity Service Provider Settings** of your DOC² account which you can find in the Settings menu **Integration**.
+**8.** Upload the FederationMetadata.xml into the **Identity Service Provider Settings** of your DOC² account which you can find in the Settings menu **Integration**.
 
 ![](/_images/doc2/SSO/Azure_15.png)
 

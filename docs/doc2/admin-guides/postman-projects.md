@@ -63,7 +63,7 @@ The GET method is very useful to get information about users, sub-organizations,
 
 **1.**  Choose the GET method in your HTTP request.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
 
     https://api.polydocs.io/users/get_users
 
@@ -80,7 +80,7 @@ The POST method is usually used to create users or organizations, for example. T
 
 **1.**  Select the "POST" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
     
     https://api.polydocs.io/users/create
 
@@ -106,7 +106,7 @@ The DELETE method is used to delete, for example, users, organizations and so on
 
 **1.**  Select the "DELETE" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
     
     https://api.polydocs.io/users/delete/{user_id}
 
@@ -130,7 +130,7 @@ The PUT method is mainly used to update user or organization data. It is very ea
 
 **1.**  Select the "PUT" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
     
     https://api.polydocs.io/users/update/{user_id}
 

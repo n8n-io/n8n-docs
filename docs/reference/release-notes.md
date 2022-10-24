@@ -1,5 +1,87 @@
 # Release notes
 
+## n8n@0.199.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.2...n8n@0.199.0){:target=_blank .external-link} for this version.<br />
+**Release date:** _2022-10-21_
+
+This release includes new nodes, an improved workflow UI, performance improvements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### New workflow experience
+
+This release brings a collection of UI changes, aimed at improving the workflow experience for users. This includes:
+
+* Removing the Start node, and adding help to guide users to find a trigger node.
+* Improved node search.
+* New nodes: Manual Trigger and Execute Workflow Trigger.
+
+</div>
+
+* Core: block workflow updates on interim changes.
+* Core: enable sending client credentials in the body of API calls.
+* Editor: add automatic credential selection for new nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Compare node
+
+_Description of new feature. Link to new node doc._
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Execute Workflow Trigger node
+
+_Description of new feature. Link to new node doc._
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Manual Trigger node
+
+You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Schedule Trigger node
+
+This release introduces the Schedule Trigger node, replacing the Cron node. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/).
+
+</div>
+
+### Node enhancements
+
+* Hubspot node: you can now use your Hubspot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+* Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+* _Include link to node doc._
+
+### Bug fixes
+
+* Editor: fix a hover bug in the bottom menu.
+* Editor: resolve performance issues when opening a node, or editing a code node, with a large amount of data.
+* Editor: ensure workflows always stop when clicking the stop button.
+* Editor: fix a bug that was causing text highlighting when mapping data in Firefox.
+* Editor: ensure correct linting in the Code node editor.
+* Editor: handle null values in table view.
+* Elasticsearch node: fix a pagination issue.
+* Google Drive node: fix typo.
+* HTTP Request node: avoid errors when a response doesn't provide a content type.
+* n8n node: fix a bug that was preventing the resource locator component from returning all items.
+
+### Contributors
+
+_List external contributors. Do not use a bulleted list here._
+
 ## n8n@0.198.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.1...n8n@0.198.2){:target=_blank .external-link} for this version.<br />

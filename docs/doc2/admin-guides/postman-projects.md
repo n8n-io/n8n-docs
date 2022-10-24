@@ -7,7 +7,7 @@ tags:
   - Postman
   - Guide
   - Setup
-  - Http request
+  - HTTP request
   - Admin
 ---
 

@@ -169,7 +169,7 @@ The PUT method is mainly used to update user or organization data. It is very ea
 Suppose you want to change the email address of a user in your organization.
 
 **1.**  In the body, enter "email" as the key and the new email address as the value.<br>
-**2.**  Then just press `Send` and you should see success in the response.
+**2.**  Then just press `Send` and you should see "success" in the response.
 
 
 If you'd like to have this all more visualized and interactive, you can download the Postman project <a href="/example/downloadables/doc2app.postman_collection.json" download>here</a> to try it all out.

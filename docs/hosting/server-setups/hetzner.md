@@ -8,8 +8,8 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 ## Create a server
 
 1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.
-2. Select the project to host the server, or create a new project by clicking the large **+ NEW PROJECT BUTTON**.
-3. Click the **+ CREATE SERVER** button on the project tile you want to add it to.
+2. Select the project to host the server, or create a new project by selecting **+ NEW PROJECT**.
+3. Select **+ CREATE SERVER** on the project tile you want to add it to.
 
 You can change most of the settings to suit your needs, but as this guide uses Docker to run the application, under the **Image** section, select "Docker CE" from the **APPS** tab.
 
@@ -25,7 +25,7 @@ The rest of this guide requires you to log in to the server using a terminal wit
 
 ## Install Docker compose
 
-The Hetzner Docker app image doesn't have Docker compose installed, install it with the following commands:
+The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
 
 ```shell
 apt get update
@@ -34,7 +34,7 @@ apt install docker-compose
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean) into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 

@@ -35,6 +35,8 @@ Now follow this step-by-step guide to learn how HTTP requests work in Postman.
 
 **3.**  After making your selection and clicking `Create Workspace` select Collections on the left side of the application and create a new collection for your HTTP requests.
 
+![Picture](/_images/doc2/admin_guides_postman_guide_new collection.png){ loading=lazy }
+
 In this collection, you can add multiple HTTP requests. To do this, click on the 3 points of the collection and select `Add request`.
 
 ![Picture](/_images/doc2/admin_guides_add_request.png){ loading=lazy }

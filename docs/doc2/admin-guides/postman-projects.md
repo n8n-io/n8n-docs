@@ -33,7 +33,7 @@ Now follow this step-by-step guide to learn how HTTP requests work in Postman.
 
 ![Picture](/_images/doc2/admin_guides_postman_guide_create-workspace-visibility.png){ loading=lazy }
 
-**3.**  After making your selection and clicking `Create Workspace` select Collections on the left side of the application and create a new collection for your HTTP requests.
+**3.**  After making your selection and clicking `Create Workspace` select Collections on the left side of the application and create a new collection for your HTTP requests by clicking `+`.
 
 ![Picture](/_images/doc2/admin_guides_postman_guide_new collection.png){ loading=lazy }
 

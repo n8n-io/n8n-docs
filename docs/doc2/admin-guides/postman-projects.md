@@ -21,12 +21,19 @@ This guide will show you how to make HTTP requests to your DOC² organization vi
 ## Setup
 
 
-First, [download Postman](https://www.postman.com/downloads/) on your system.
+First, [download Postman](https://www.postman.com/downloads/) to your system and sign in/register.
 
 Now follow this step-by-step guide to learn how HTTP requests work in Postman.
 
-**1.**  Click on Workspaces and create a new Workspace (you can name it whatever you want).<br>
-**2.**  Select Collections on the left side of the application and create a new collection for your HTTP requests.
+**1.**  Click on Workspaces and create a new workspace (you can name it whatever you want).<br>
+
+![Picture](/_images/doc2/admin_guides_postman_guide_workspace_1.png){ loading=lazy }
+
+**2.**  You have to select the visibility which determines who can access this workspace.
+
+![Picture](/_images/doc2/admin_guides_postman_guide_create-workspace-visibility.png){ loading=lazy }
+
+**3.**  After making your selection and clicking `Create Workspace` select Collections on the left side of the application and create a new collection for your HTTP requests.
 
 In this collection, you can add multiple HTTP requests. To do this, click on the 3 points of the collection and select `Add request`.
 

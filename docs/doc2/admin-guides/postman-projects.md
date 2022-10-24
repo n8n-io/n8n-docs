@@ -21,7 +21,7 @@ This guide will help you learn how to make HTTP requests via Postman to your DOC
 ## **Setup**
 
 
-First, Download Postman on your system.
+First, [Download Postman](/doc2/admin-guides/doc2app.postman_collection.json) on your system.
 
 Now Follow this step-by-step guide to learn how HTTP requests in Postman work.
 

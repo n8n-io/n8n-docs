@@ -55,7 +55,7 @@ It should look like this:
 The GET method is very useful to get information about users, sub-organizations, processed documents and much more.
 
 **1.**  Choose the GET method in your HTTP request.<br>
-**2.**  Authorize yourself as described above.<br>
+**2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
     for example 

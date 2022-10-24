@@ -4,6 +4,7 @@
 /data/data-mapping/data-item-linking/item-linking-function-node/   /data/data-mapping/data-item-linking/item-linking-code-node/
 /integrations/builtin/core-nodes/n8n-nodes-base.function/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
 /integrations/builtin/core-nodes/n8n-nodes-base.functionItem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
 
 # methods / vars / paired items
 

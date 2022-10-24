@@ -23,12 +23,12 @@ This guide will show you how to make HTTP requests to your DOC² organization vi
 
 First, [download Postman](https://www.postman.com/downloads/postman-agent/) on your system.
 
-Now Follow this step-by-step guide to learn how HTTP requests in Postman work.
+Now follow this step-by-step guide to learn how HTTP requests work in Postman.
 
-**1.**  Click on Workspaces and create a new Workspace (You can call it what you want).<br>
-**2.**  Select Collections on the left-hand side of the application and create a new collection for your HTTP requests.
+**1.**  Click on Workspaces and create a new Workspace (you can name it whatever you want).<br>
+**2.**  Select Collections on the left side of the application and create a new collection for your HTTP requests.
 
-In this collection, you can add multiple HTTP requests. To do so click on the 3 Dots of the collection and select "Add request".
+In this collection, you can add multiple HTTP requests. To do this, click on the 3 points of the collection and select `Add request`.
 
 ![Picture](/_images/doc2/admin_guides_add_request.png){ loading=lazy }
 
@@ -36,14 +36,14 @@ In this collection, you can add multiple HTTP requests. To do so click on the 3 
 ## Authorization
 
 
-Now you created your HTTP request but you need the authorization to identify your user Account.
+Now you have created your HTTP request, but you need the permission to identify your user account.
 
-**1.**  First Enter the HTTP request you just created and open the Authorization Tab.
+**1.**  First, enter the HTTP request you just created and open the `Authorization` tab.
 
 ![Picture](/_images/doc2/admin_guides_authorize.png){ loading=lazy }
 
-**2.**  Select "API key" for the authorization type and fill in the values.<br>
-**3.**  In the "Key" Field enter "x-api-key" and for the value enter your API Key (Can be found in Doc² -> Settings -> Integration)  for "Add to" select Header.
+**2.**  Select `API Key` as authorization type and fill in the values.<br>
+**3.**  Enter "x-api-key" in the `Key` field and enter your API key as the value (found in DOC² Settings menu **Integration**) Select the `Add to` header.
 
 It should look like this:
 
@@ -52,95 +52,95 @@ It should look like this:
 
 ## "GET" Method example
 
-The GET method is very helpful to gain information about users, organisations, documents and many more
+The GET method is very useful to get information about users, sub-organizations, processed documents and much more.
 
-**1.**  Select the GET Method in your HTTP request.<br>
-**2.**  Authorize yourself, as described Above.<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
+**1.**  Choose the GET method in your HTTP request.<br>
+**2.**  Authorize yourself as described above.<br>
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
     for example 
     https://api.polydocs.io/users/get_users
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the GET Method in Postman.
+**4.**  Now paste this link in the text box next to the GET method in Postman.
 
-Click on send and you should get all information about every user in your organisation.
+Click `Submit` and you should receive all the information about every user in your organization.
 
 
 ## "POST" Method example
 
-The POST method is usually used to create something like users or organisations. This method will put information into the database.
+The POST method is usually used to create users or organizations, for example. This method inserts information into the database.
 
 **1.**  Select the "POST" Method.<br>
-**2.**  Authorize yourself, as described above.<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
+**2.**  Authorize yourself as described above.<br>
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
     for example 
     https://api.polydocs.io/users/create
 
 ![Picture](/_images/doc2/admin_guides_post_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the POST Method in Postman.<br>
-**5.**  Select the Body tab in your HTTP request and enter the Keys and the Values for every credential that has a red star next to their name.
+**4.**  Now paste this link into the text box next to the POST method in Postman.<br>
+**5.**  Select the `Body` tab in your HTTP request and enter the keys and the values ​​for each credential that has a red asterisk next to its name.
 
-If you are finished it should look somewhat like this:
+When you're done, it should look like this:
 
 ![Picture](/_images/doc2/admin_guide_post_body.png){ loading=lazy }
 
-If you wish to create an Admin account, then set the "is_admin" value to "True".
+If you want to create an admin account, set the `is_admin` value to **true**.
 
-At last, click send and you can see all credentials you set in the response at the bottom, If you see them it means the User has been created.
+Finally, click `Submit` and you can see all the credentials you set in the response below. This means the user has been created.
 
 ![Picture](/_images/doc2/admin_guides_post_response.png){ loading=lazy }
 
 
 ## "DELETE" Method example
 
-The the DELETE method is used to delete for example users, organisations, ...
+The DELETE method is used to delete, for example, users, organizations and so on.
 
 **1.**  Select the "DELETE" Method.<br>
-**2.**  Authorize yourself, as described above.<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
+**2.**  Authorize yourself as described above.<br>
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
     for example: 
     https://api.polydocs.io/users/delete/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_delete_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the DELETE Method in Postman.<br>
-**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id with the GET Method)<br>
-**6.**  If you've put the user_id in the URL there is no need for you to add a body key and value for that.
+**4.**  Now paste this link in the text box next to the DELETE method in Postman.<br>
+**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id using the GET method).<br>
+**6.**  If you included the user_id in the URL, you don't need to add a body key and value for it.
 
 It should look like this:
 
 ![Picture](/_images/doc2/admin_guides_delete_body.png){ loading=lazy }
 
 
-If you click send you should see "Success: True" in the response.
+When you click `Submit`, you should see success: "True" in the response.
 
 
 ## "PUT" Method example
 
-The PUT method is mostly used to update data from users or organisations. It's very easy to use and very understandable
+The PUT method is mainly used to update user or organization data. It is very easy to understand and use.
 
 **1.**  Select the "PUT" Method.<br>
-**2.**  Authorize yourself, as described above.<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
+**2.**  Authorize yourself as described above.<br>
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
     for example: 
     https://api.polydocs.io/users/update/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_put_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the PUT Method in Postman.<br>
-**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id with the GET Method)
+**4.**  Now paste this link in the text box next to the PUT method in Postman.<br>
+**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id using the GET method).
 
-Let's say you want to change the email address of one of your users in your organisation.
+Suppose you want to change the email address of a user in your organization.
 
-**1.**  In the Body enter "email" as the key and the new email address as the value.<br>
-**2.**  Then just press send and you should see a Success in the response.
+**1.**  In the body, enter "email" as the key and the new email address as the value.<br>
+**2.**  Then just press `Send` and you should see success in the response.
 
 
-If you want to have this all better visualized and interactive, you can download the Postman project <a href="/example/downloadables/doc2app.postman_collection.json" download>here</a> and test this all out. 
-Just hit the Import button and select this file and you should be good to go.
+If you'd like to have this all more visualized and interactive, you can download the Postman project <a href="/example/downloadables/doc2app.postman_collection.json" download>here</a> to try it all out.
+Just click the Import button and select this file to get started right away.

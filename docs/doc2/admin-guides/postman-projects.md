@@ -44,15 +44,13 @@ In this collection, you can add multiple HTTP requests. To do this, click on the
 
 ## Authorization
 
+Before you can continue with the further steps, you have to enter your API key from DOC² once to authorize your HTTP requests.
 
-Now you have created your HTTP request, but you need the permission to identify your user account.
+**1.** Click on the `Authorization` tab und choose `API Key` as authorization type.
 
-**1.**  First, enter the HTTP request you just created and open the `Authorization` tab.
+![Picture](/_images/doc2/admin_guides_authorization_API Key.png){ loading=lazy }
 
-![Picture](/_images/doc2/admin_guides_authorize.png){ loading=lazy }
-
-**2.**  Select `API Key` as authorization type and fill in the values.<br>
-**3.**  Enter "x-api-key" in the `Key` field and enter your API key as the value (found in DOC² Settings menu **Integration**) Select the `Add to` header.
+**2.**  Fill in the values. Enter "x-api-key" in the `Key` field and your API key as value (found in DOC² Settings menu **Integration**) Select the Add to `Header`.
 
 It should look like this:
 
@@ -67,7 +65,8 @@ The GET method is very useful to get information about users, sub-organizations,
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL.
     
-    for example 
+    for example:
+     
     https://api.polydocs.io/users/get_users
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }

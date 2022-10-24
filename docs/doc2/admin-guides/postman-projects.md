@@ -63,15 +63,17 @@ The GET method is very useful to get information about users, sub-organizations,
 
 **1.**  Choose the GET method in your HTTP request.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
-
-    https://api.polydocs.io/users/get_users
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> choose the GET command, 
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }
 
+        copy the URL. For example:
+
+        https://api.polydocs.io/docs#/users/get_users_users_get_users_get
+
 **4.**  Now paste this link in the text box next to the GET method in Postman.
 
-Click `Submit` and you should receive all the information about every user in your organization.
+Click `Send` and you should receive all the information about every user in your organization.
 
 
 ## "POST" Method example

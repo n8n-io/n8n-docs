@@ -1,10 +1,14 @@
+# 2022 UI changes
 
-# code node
+/integrations/builtin/core-nodes/n8n-nodes-base.imapemail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
+
+# code schedule start nodes
 
 /data/data-mapping/data-item-linking/item-linking-function-node/   /data/data-mapping/data-item-linking/item-linking-code-node/
 /integrations/builtin/core-nodes/n8n-nodes-base.function/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
 /integrations/builtin/core-nodes/n8n-nodes-base.functionItem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
 /integrations/builtin/core-nodes/n8n-nodes-base.functionitem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/integrations/builtin/core-nodes/n8n-nodes-base.cron/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
 
 # methods / vars / paired items
 

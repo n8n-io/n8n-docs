@@ -64,7 +64,7 @@ Important: You should already have created users and groups in Azure AD. If you 
 ![](/_images/doc2/SSO/Azure_6.png)
 
 
-**3.** Select the users and groups you want to assign to this SSO configuration. These users will be able to authenticate Transact using SSO.
+**3.** Select the users and groups you want to assign to this SSO configuration. These users will be able to authenticate DOC² using SSO.
 
 ![](/_images/doc2/SSO/Azure_7.png)
             

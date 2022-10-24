@@ -31,13 +31,13 @@ _Briefly summarize the service. This should be one or two sentences, and can oft
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [_Name's_ documentation]() for details about the operations.
+Refer to [_Name's_ documentation]() for more information about the service.
 
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
 n8n provides a trigger node for _Name_. You can find the trigger node docs [here]().
 	
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-View [example workflows and related content](){:target=_blank .external-link} on our website.
+View [example workflows and related content](){:target=_blank .external-link} on n8n's website.
 
 
 <!-- 

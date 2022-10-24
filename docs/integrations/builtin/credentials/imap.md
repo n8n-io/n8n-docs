@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with IMAP.
 
-- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/)
+- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/)
 
 ## Prerequisites
 

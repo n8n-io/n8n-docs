@@ -1,4 +1,4 @@
-# Overview
+# Installation
 
 Installation guides for n8n:
 

@@ -42,7 +42,6 @@ _Description of new feature. Link to new node doc._
 
 * _List any nodes with new functionality_
 * _Or other improvements._
-* _Include link to node doc._
 
 ### Bug fixes
 

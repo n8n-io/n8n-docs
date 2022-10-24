@@ -6,13 +6,18 @@ Beeminder
 Boolean
 boolean
 Caddy
+Citrix
 Clockify
 Cron
 Dockerfile
+eksctl
 Enum
 enum
+Fargate
+Firestore
 GIMP
 invalid
+kubectl
 Kafka
 Lemlist
 Luxon
@@ -28,6 +33,9 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Realtime
+Serverless
+serverless
 Shopify
 shopify
 There are
@@ -35,5 +43,8 @@ Tooltip
 tooltip
 Trello
 Twilio
+URI
+URIs
 URL
+Venafi
 Vuex

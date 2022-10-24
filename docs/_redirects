@@ -1,3 +1,27 @@
+# 2022 UI changes
+
+/integrations/builtin/core-nodes/n8n-nodes-base.imapemail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
+
+# code schedule start nodes
+
+/data/data-mapping/data-item-linking/item-linking-function-node/   /data/data-mapping/data-item-linking/item-linking-code-node/
+/integrations/builtin/core-nodes/n8n-nodes-base.function/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/integrations/builtin/core-nodes/n8n-nodes-base.cron/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
+
+# methods / vars / paired items
+
+/code-examples/expressions/methods/   /code-examples/methods-variables-reference/
+/code-examples/expressions/variables/   /code-examples/methods-variables-reference/
+/code-examples/javascript-functions/methods/   /code-examples/methods-variables-reference/
+/code-examples/javascript-functions/variables/   /code-examples/methods-variables-reference/
+/data/data-mapping/   /data/data-mapping/data-mapping-ui/
+
+# Editor UI
+
+/editor-ui/   /
+
 # Integrations menu refactor
 
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat
@@ -208,8 +232,8 @@
 /nodes/n8n-nodes-base.elasticsearch/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/
 /nodes/n8n-nodes-base.elasticSecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticSecurity/
 /nodes/n8n-nodes-base.elasticsecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticSecurity/
-/nodes/n8n-nodes-base.emailReadImap/		/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/
-/nodes/n8n-nodes-base.emailreadimap/		/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/
+/nodes/n8n-nodes-base.emailReadImap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
+/nodes/n8n-nodes-base.emailreadimap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
 /nodes/n8n-nodes-base.emailSend/		/integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/
 /nodes/n8n-nodes-base.emailsend/        /integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/
 /nodes/n8n-nodes-base.emelia/		/integrations/builtin/app-nodes/n8n-nodes-base.emelia/
@@ -243,9 +267,9 @@
 /nodes/n8n-nodes-base.freshworksCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.freshworksCrm/
 /nodes/n8n-nodes-base.freshworkscrm/		/integrations/builtin/app-nodes/n8n-nodes-base.freshworksCrm/
 /nodes/n8n-nodes-base.ftp/		/integrations/builtin/core-nodes/n8n-nodes-base.ftp/
-/nodes/n8n-nodes-base.function/		/integrations/builtin/core-nodes/n8n-nodes-base.function/
-/nodes/n8n-nodes-base.functionItem/		/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/
-/nodes/n8n-nodes-base.functionitem/     /integrations/builtin/core-nodes/n8n-nodes-base.functionItem/
+/nodes/n8n-nodes-base.function/		/integrations/builtin/core-nodes/n8n-nodes-base.code/
+/nodes/n8n-nodes-base.functionItem/		/integrations/builtin/core-nodes/n8n-nodes-base.code/
+/nodes/n8n-nodes-base.functionitem/     /integrations/builtin/core-nodes/n8n-nodes-base.code/
 /nodes/n8n-nodes-base.getResponse/		/integrations/builtin/app-nodes/n8n-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getresponse/		/integrations/builtin/app-nodes/n8n-nodes-base.getResponse/
 /nodes/n8n-nodes-base.getResponseTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.getResponseTrigger/

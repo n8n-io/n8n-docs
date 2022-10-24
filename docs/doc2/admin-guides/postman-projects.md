@@ -44,7 +44,9 @@ In this collection, you can add multiple HTTP requests. To do this, click on the
 
 ## Authorization
 
-Before you can proceed with each HTTP request, you need to enter your API key from DOC² to authorize them.
+### In Postman
+
+Before you can create your HTTP requests, you need to enter your API key from DOC² to authorize them.
 
 **1.** Click on the `Authorization` tab und choose `API Key` as authorization type.
 
@@ -56,6 +58,17 @@ It should look like this:
 
 ![Picture](/_images/doc2/admin_guides_authorize_finish.png){ loading=lazy }
 
+### On <a href="https://api.polydocs.io">api.polydocs.io</a>
+
+**1.** Click on **Authorize** in the upper right corner
+
+![Picture](/_images/doc2/admin_guides_doc2-api-authorize.png){ loading=lazy }
+
+**2.** Enter your API Key and confirm by clicking `Authorize`
+
+![Picture](/_images/doc2/admin_guides_doc2-api-authorize_key.png){ loading=lazy }
+
+
 
 ## "GET" Method example
 
@@ -63,14 +76,14 @@ The GET method is very useful to get information about users, sub-organizations,
 
 **1.**  Choose the GET method in your HTTP request.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> choose the GET command and copy the URL. For example:
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }
 
 
 
-        https://api.polydocs.io/docs#/users/get_users_users_get_users_get
-        
+        https://api.polydocs.io/users/get_users
+
 
 **4.**  Now paste this link in the text box next to the GET method in Postman.
 
@@ -84,10 +97,13 @@ The POST method is usually used to create users or organizations, for example. T
 **1.**  Select the "POST" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
-    
-    https://api.polydocs.io/users/create
 
 ![Picture](/_images/doc2/admin_guides_post_api.png){ loading=lazy }
+    
+
+
+    https://api.polydocs.io/users/create
+
 
 **4.**  Now paste this link into the text box next to the POST method in Postman.<br>
 **5.**  Select the `Body` tab in your HTTP request and enter the keys and the values ​​for each credential that has a red asterisk next to its name.
@@ -98,7 +114,7 @@ When you're done, it should look like this:
 
 If you want to create an admin account, set the `is_admin` value to **true**.
 
-Finally, click `Submit` and you can see all the credentials you set in the response below. This means the user has been created.
+Finally, click `Send` and you can see all the credentials you set in the response below. This means the user has been created.
 
 ![Picture](/_images/doc2/admin_guides_post_response.png){ loading=lazy }
 
@@ -110,10 +126,14 @@ The DELETE method is used to delete, for example, users, organizations and so on
 **1.**  Select the "DELETE" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
-    
-    https://api.polydocs.io/users/delete/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_delete_api.png){ loading=lazy }
+
+
+
+    https://api.polydocs.io/users/delete/{user_id}
+
+
 
 **4.**  Now paste this link in the text box next to the DELETE method in Postman.<br>
 **5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id using the GET method).<br>
@@ -124,7 +144,7 @@ It should look like this:
 ![Picture](/_images/doc2/admin_guides_delete_body.png){ loading=lazy }
 
 
-When you click `Submit`, you should see success: "True" in the response.
+When you click `Send`, you should see success: "True" in the response.
 
 
 ## "PUT" Method example
@@ -134,10 +154,14 @@ The PUT method is mainly used to update user or organization data. It is very ea
 **1.**  Select the "PUT" Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
+
+![Picture](/_images/doc2/admin_guides_put_api.png){ loading=lazy }
+
+
     
     https://api.polydocs.io/users/update/{user_id}
 
-![Picture](/_images/doc2/admin_guides_put_api.png){ loading=lazy }
+
 
 **4.**  Now paste this link in the text box next to the PUT method in Postman.<br>
 **5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id using the GET method).

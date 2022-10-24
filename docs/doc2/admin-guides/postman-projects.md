@@ -67,7 +67,7 @@ The GET method is very useful to get information about users, sub-organizations,
 
 ![Picture](/_images/doc2/admin_guide_get_api.png){ loading=lazy }
 
-        copy the URL. For example:
+    copy the URL. For example:
 
         https://api.polydocs.io/docs#/users/get_users_users_get_users_get
 

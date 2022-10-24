@@ -176,6 +176,7 @@ Refer to [User management](/hosting/user-management/) for more information on se
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
+| `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
 

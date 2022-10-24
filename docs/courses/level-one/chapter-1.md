@@ -30,8 +30,10 @@ The panel contains the following sections:
 
 - *Admin Panel*: Access the management Dashboard (for n8n Cloud users).
 - *Workflows*: Contains operations for creating and editing workflows.
+- *Templates*: Contains pre-built workflows that can be searched.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions.
+- *Settings*: Contains editable configuration for the account and other things.
 - *Help*: Contains resources around n8n product and community.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>

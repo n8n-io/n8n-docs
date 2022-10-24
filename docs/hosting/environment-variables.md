@@ -160,8 +160,8 @@ Refer to [User management](/hosting/user-management/) for more information on se
 | :------- | :---- | :------- | :---------- |
 | `NODES_INCLUDE` | String | - | Specify which nodes to load. |
 | `NODES_EXCLUDE` | String | - | Specify which nodes not to load. |
-| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in Function nodes. Use * to allow all. n8n disables importing modules by default. |
-| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in Function nodes. n8n disables importing modules by default. |
+| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
+| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which Node Type to use as Error Trigger. |
 | `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to additional directories containing your custom nodes. |
 
@@ -176,6 +176,7 @@ Refer to [User management](/hosting/user-management/) for more information on se
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
+| `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
 

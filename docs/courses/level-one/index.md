@@ -1,4 +1,4 @@
-# Introduction
+# Level one: Introduction
 
 Welcome to the **n8n Course Level 1**!
 

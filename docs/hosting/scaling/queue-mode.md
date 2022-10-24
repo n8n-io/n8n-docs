@@ -69,6 +69,7 @@ You can also set the following optional configurations:
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
 | `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. | 
+| `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. | 
 
 Now you can start your n8n instance and it will connect to your Redis instance.
 

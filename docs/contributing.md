@@ -1,25 +1,8 @@
-# How can I contribute?
+# How can you contribute?
 
 There are a several ways in which you can contribute to n8n, depending on your skills and interests. Each form of contribution is valuable to us!
 
-## Contributor quick start
-
-Here is a quick list of the contributions we are looking for:
-
-- Build community nodes 
-- Write an n8n tutorial
-- Host an n8n event (virtual or locally)
-- Write for our docs
-- Create workflow templates
-- Write a review
-- Participate on our support forum
-
-To start contributing or to get ideas of what to do, check out our [Contributor board on GitHub](https://github.com/orgs/n8n-io/projects/3){:target=_blank class=.external-link}. If there is a project you want on the board, please assign it to yourself and start contributing! 
-
-Keep reading for more ideas on contributions. 
-
-
-## Share some love
+## Share some love: review us
 
 - Star n8n on [GitHub](https://github.com/n8n-io/n8n){:target=_blank class=.external-link} and [Docker Hub](https://hub.docker.com/r/n8nio/n8n){:target=_blank class=.external-link}.
 - Follow us on [Twitter](https://twitter.com/n8n_io){:target=_blank class=.external-link}, [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/){:target=_blank class=.external-link}.
@@ -51,14 +34,12 @@ To share a workflow, follow these steps:
 
 1. Sign in to [n8n.io](https://n8n.io/login){:target=_blank class=.external-link}.
 2. Open the [workflows](https://n8n.io/workflows){:target=_blank class=.external-link} page.
-3. Click on the **+ Share New Workflow** button.
-4. Enter the name of your workflow in the **Name** field.
-The name should be short and descriptive, so that other users can understand the purpose of the workflow at a glance.
-5. Enter a detailed description of the workflow in the **Description** field.
-In the description you should add a screenshot of the workflow and briefly explain what the nodes used in the workflow do.
+3. Select **+ Share New Workflow**.
+4. Enter the name of your workflow in the **Name** field. The name should be short and descriptive, so that other users can understand the purpose of the workflow at a glance.
+5. Enter a detailed description of the workflow in the **Description** field. Add a screenshot of the workflow and briefly explain what the nodes used in the workflow do.
 6. In your n8n instance, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
 7. Back on the workflows page, delete the existing code in the **Workflow Code** field and paste your workflow in it (Ctrl + V or Cmd + V).
-8. Click on the **Publish Workflow to Share** button to share your workflow.
+8. Select **Publish Workflow to Share** to share your workflow.
 
 See the above steps in action in this video:
 
@@ -70,13 +51,16 @@ See the above steps in action in this video:
 
 -->
 
+## Build a node
+
+Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/) for guidance on how to create and publish a community node.
+
 ## Contribute to the code
 
 There are different ways in which you can contribute to the n8n code base:
 
 - Fix [issues](https://github.com/n8n-io/n8n/issues){:target=_blank class=.external-link} reported on GitHub. The [CONTRIBUTING guide](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md){:target=_blank class=.external-link} will help you get your development environment ready in minutes.
 - Add additional functionality to an existing third party integration.
-- Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/) for guidance on how to create a node.
 - Add a new feature to n8n.
 
 ## Contribute to the docs

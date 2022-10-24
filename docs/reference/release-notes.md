@@ -1,5 +1,499 @@
 # Release notes
 
+## n8n@0.199.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.2...n8n@0.199.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-21
+
+This release includes new nodes, an improved workflow UI, performance improvements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### New workflow experience
+
+This release brings a collection of UI changes, aimed at improving the workflow experience for users. This includes:
+
+* Removing the Start node, and adding help to guide users to find a trigger node.
+* Improved node search.
+* New nodes: Manual Trigger and Execute Workflow Trigger.
+
+</div>
+
+* Core: block workflow updates on interim changes.
+* Core: enable sending client credentials in the body of API calls.
+* Editor: add automatic credential selection for new nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Compare node
+
+The Compare Datasets node helps you compare data from two input streams. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Execute Workflow Trigger node
+
+The Execute Workflow Trigger starts a workflow in response to another workflow. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Manual Trigger node
+
+The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Schedule Trigger node
+
+This release introduces the Schedule Trigger node, replacing the Cron node. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/).
+
+</div>
+
+### Node enhancements
+
+* Hubspot node: you can now use your Hubspot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+* Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+
+### Bug fixes
+
+* Editor: fix a hover bug in the bottom menu.
+* Editor: resolve performance issues when opening a node, or editing a code node, with a large amount of data.
+* Editor: ensure workflows always stop when clicking the stop button.
+* Editor: fix a bug that was causing text highlighting when mapping data in Firefox.
+* Editor: ensure correct linting in the Code node editor.
+* Editor: handle null values in table view.
+* Elasticsearch node: fix a pagination issue.
+* Google Drive node: fix typo.
+* HTTP Request node: avoid errors when a response doesn't provide a content type.
+* n8n node: fix a bug that was preventing the resource locator component from returning all items.
+
+### Contributors
+
+[AndLLA](https://github.com/AndLLA){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+[vcrwr](https://github.com/vcrwr){:target=_blank .external-link}
+
+## n8n@0.198.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.1...n8n@0.198.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+This release fixes a bug affecting scrolling through parameter lists.
+
+## n8n@0.198.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.0...n8n@0.198.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: change the initial position of the Start node.
+* Editor: align JSON view properties with their values.
+* Editor: fix `BASE_PATH` for Vite dev mode.
+* Editor: fix data pinning success source.
+
+### Contributor
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
+
+
+## n8n@0.198.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.1...n8n@0.198.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes to the Merge node. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01980){:target=_blank .external-link}.
+
+### New features
+
+* Editor: update the expressions display.
+* Editor: update the n8n-menu component.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Code node
+
+This release introduces the Code node. This node replaces both the Function and Function Item nodes. Refer to the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) documentation for more information.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Venafi TLS Protect Cloud trigger node
+
+Start a workflow in response to events in your Venafi Cloud service.
+
+</div>
+
+### Node enhancements
+
+* Citrix ADC node: add Certificate Install operation.
+* Kafka node: add a **Use key** option for messages.
+* MySQL node: use the resource locator component for table parameters, making it easier for users to browse and select their database fields from within n8n.
+
+### Bug fixes
+
+* Core, Editor: prevent overlap between running and pinning data.
+* Core: expression evaluation of processes now respects `N8N_BLOCK_ENV_ACCESS_IN_NODE`.
+* Editor: ensure the Axios base URL still works when hosted in a subfolder.
+* Editor: fixes for horizontal scrollbar rendering.
+* Editor: ensure the menu closes promptly when loading a credentials page.
+* Editor: menu UI fixes.
+* Box node: fix an issue that was causing the Create Folder operation to show extra items.
+* GSuite Admin node: resolve issue that was causing the User Update operation to fail.
+* GitLab trigger node: ensure this node activates reliably.
+* HTTP Request node: ensure OAuth credentials work properly with predefined credentials.
+* KoboToolbox node: fix the hook logs.
+* SeaTable node: ensure link items show in response.
+* Zoom node: resolve an issue that was causing missing output items.
+
+### Contributors
+
+[Jakob Backlund](https://github.com/jbacklund){:target=_blank .external-link}  
+[Yan Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
+
+## n8n@0.197.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.0...n8n@0.197.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-10
+
+This is a bug fix release. It resolves an issue with display width on the resource locator UI component.
+
+## n8n@0.197.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.196.0...n8n@0.197.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-10
+
+This release includes six new nodes, focused around infrastructure management. It also adds support for drag and drop data mapping in the JSON input view, and includes bug fixes.
+
+### New features
+
+* Core: improve light versioning support in declarative node design.
+* Editor UI: data mapping for JSON view. You can now map data using drag and drop from JSON view, as well as table view.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### AWS Certificate Manager
+
+A new integration with AWS Certificate Manager. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awsCertificateManager/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### AWS Elastic Load Balancing
+
+Manage your AWS load balancers from your workflow using the new AWS Elastic Load Balancing node. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awsElb/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Citrix ADC
+
+Citrix ADC is an application delivery and load balancing solution for monolithic and microservices-based applications. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.citrixAdc/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Cloudflare
+
+Cloudflare provides a range of services to manage and protect your websites. This new node allows you to manage zone certificates in Cloudflare from your workflows. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Venafi nodes
+
+This release includes two new Venafi nodes, to integrate with their Protect TLS service.
+
+</div>
+
+### Node enhancements
+
+Crypto node: add SHA3 support.
+
+### Bug fixes
+
+* CLI: cache generated assets in a user-writeable directory.
+* Core: prevent excess runs when data is pinned in a trigger node.
+* Core: ensure hook URLs always added correctly.
+* Editor: a fix for an issue affecting linked items in combination with data pinning.
+* Editor: resolve a bug with the binary data view.
+* GitHub trigger node: ensure trigger executes reliably.
+* Microsoft Excel node: fix pagination issue.
+* Microsoft ToDo node: fix pagination issue.
+
+### Contributors
+
+[Stratos Theodorou](https://github.com/eeVoskos){:target=_blank .external-link}
+
+## n8n@0.196.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.5...n8n@0.196.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-30
+
+This release includes major new features:
+
+* Better item linking
+* New built-in variables and methods
+* A redesigned main navigation
+* New nodes, as well as an overhaul of the HTTP Request node
+
+It also contains bug fixes and node enhancements.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Improved item linking
+
+Introducing improved support for item linking (paired items). Item linking is a key concept in the n8n data flow. Learn more in [Data item linking](/data/data-mapping/data-item-linking/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Overhauled built-in variables
+
+n8n's [built-in methods and variables](/code-examples/methods-variables-reference/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Redesigned main navigation
+
+We've redesigned the main navigation (the left hand menu) to create a simpler user experience.
+
+</div>
+
+#### Other new features
+
+* Improved error text when loading options in a node.
+* On reset, share unshared credentials with the instance owner.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### n8n node
+
+The [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) allows you to consume the n8n API in your workflows.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### WhatsApp Business Platform node
+
+The [WhatsApp Business Platform](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node allows you to use the WhatsApp Business Platform Cloud API in your workflows.
+
+</div>
+
+### Node enhancements
+
+* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) for more information.
+* RabbitMQ trigger node: now automatically reconnects on disconnect.
+* Slack node: add the 'get many' operation for users.
+
+### Bug fixes
+
+* Build: add typing for SSE channel.
+* Build: fix lint issue.
+* CLI: add git to all Docker images
+* CLI: disable X-Powered-By: Express header.
+* CLI: disable CORS on SSE connections in production.
+* Core: remove commented out lines.
+* Core: delete unused dependencies.
+* Core: fix and harmonize documentation links for nodes.
+* Core: remove the --forceExit flag from CLI tests.
+* Editor: add missing event handler to accordion component.
+* Editor: fix Storybook setup.
+* Editor: ensure BASE_URL replacement works correctly on Windows.
+* Editor: fix parameter input field focus.
+* Editor: make lodash aliases work on case-sensitive file systems.
+* Editor: fix an issue affecting copy-pasting workflows into pinned data in the code editor.
+* Editor: ensure the run data pagination selector displays when appropriate.
+* Editor: ensure the run selector can open.
+* Editor: tidy up leftover i18n references in the node view.
+* Editor: correct an i18n string.
+* Editor: resolve slow loading times for node types, node creators, and push connections in the settings view.
+* Nodes: update descriptions in the Merge node
+* Nodes: ensure the card ID property displays for completed checklists in the Trello node.
+* Nodes: fix authentication for the new verions of Wekan.
+* Nodes: ensure form names list correctly in the Wufoo trigger node.
+
+### Contributors
+
+[Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target=_blank .external-link}
+
+## n8n@0.195.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.4...n8n@0.195.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-23
+
+This is a bug fix release. It fixes an issue with extracting values in expressions.
+
+## n8n@0.195.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.3...n8n@0.195.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This release:
+
+* Adds the ability to resize the main node panel.
+* Resolves an issue with resource locator in expressions.
+
+## n8n@0.195.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.2...n8n@0.195.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release.
+
+* Editor: fix an expressions bug affecting numbers and booleans.
+* Added support for setting the TDS version in Microsoft SQL credentials.
+
+## n8n@0.195.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.1...n8n@0.195.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-22
+
+This is a bug fix release. It resolves an issue with MySQL migrations.
+
+
+## n8n@0.195.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.195.0...n8n@0.195.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This is a bug fix release. It resolves an issue with Postgres migrations.
+
+## n8n@0.195.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.194.0...n8n@0.195.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-21
+
+This release introduces user management and credential sharing for our Cloud platform. It also contains other enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### User management and credential sharing for Cloud
+
+This release adds support for our existing [user management](/hosting/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+
+</div>
+
+Also in this release:
+
+* Added a `resourceLocator` parameter type for nodes, and started upgrading our built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in our [UI elements](/integrations/creating-nodes/build/reference/ui-elements/) documentation.
+* Cache npm dependencies to improve performance on self-hosted n8n
+
+### Bug fixes
+
+* Box node: fix an issue that sometimes prevented response data from being returned.
+* CLI: prevent n8n from crashing when it encounters an error in poll method.
+* Core: prevent calls to constructor, to forbid arbitrary code execution.
+* Editor: fix the output panel for Wait node executions.
+* HTTP node: ensure instance doesn't crash when batching enabled.
+* Public API: corrections to the OAuth schema.
+* Xero node: fix an issue that was causing line amount types to be ignored when creating new invoices.
+
+### Contributors
+
+[Ikko Ashimine](https://github.com/eltociear){:target=_blank .external-link}
+
+
+## n8n@0.194.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.5...n8n@0.194.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-09-15
+
+This release includes new nodes: a Gmail trigger, Google Cloud Storage, and Adalo. It also contains major overhauls of the Gmail and Merge nodes.
+
+### New features
+
+* CLI: load all nodes and credentials code in isolation.
+* Core, Editor UI: introduce support for node deprecation.
+* Editor: implement HTML sanitization for Notification and Message components.
+* Editor: display the input number on multi-input nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Adalo
+
+Adalo is a low code app builder. Refer to our [Adalo node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/) for more information.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Google Cloud Storage
+
+n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudStorage/). 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Gmail Trigger
+
+n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
+
+</div>
+
+
+### Node enhancements
+
+* Gmail node: this release includes an overhaul of the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), with updated resources and operations.
+* Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) to learn more.
+* MongoDB node: updated the Mongo driver to 4.9.1.
+
+
+### Bug fixes
+
+* CLI: core: address Dependabot warnings.
+* CLI: avoid scanning unnecessary directories on Windows.
+* CLI: load nodes and directories on Windows using the correct file path.
+* CLI: ensure password reset triggers internal and external hooks.
+* CLI: use absolute paths for loading custom nodes and credentials.
+* Core: returnJsonArray helper no longer breaks nodes that return no data.
+* Core: fix an issue with node renaming and expressions.
+* Core: update OAuth endpoints to use the instance base URL.
+* Nodes: resolved an issue that was preventing versioned nodes from loading.
+* Public API: better error handling for bad requests.
+* AWS nodes: fixed an issue with credentials testing.
+* GoogleBigQuery node: fix for empty responses when creating records.
+* Hubspot node: correct the node name on the canvas.
+
+### Contributors
+
+[Rhys Williams](https://github.com/rhyswilliamsza){:target=_blank .external-link}
+
 ## n8n@0.193.5
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.193.4...n8n@0.193.5){:target=_blank .external-link} for this version.<br />
@@ -459,7 +953,7 @@ This release contains bug fixes and node enhancements.
 ### Bug fixes
 
 * Editor: Fix an error that occured after repeated executions.
-* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/): improve handling of network problems.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/): improve handling of network problems.
 * [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/): process input items using the list operation.
 * [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/): fix for a bug affecting sending binary data (images, documents and so on).
 
@@ -706,7 +1200,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](/integrations/core-nodes/n8n-nodes-base.imapEmail){:target=_blank}: improve error handling.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/){:target=_blank}: improve error handling.
 * [Hubspot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
@@ -1089,7 +1583,7 @@ You can now download binary data from individual nodes in your workflow.
 ### Bug fixes
 
 * **core:** Fix crash on webhook when last node did not return data
-* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fix issue that crashed process if node was configured wrong.
+* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fix issue that crashed process if node was configured wrong.
 * [Google Tasks Node:](/integrations/builtin/app-nodes/n8n-nodes-base.googleTasks/) Fix 'Show Completed' option and hide title field where not needed.
 * [NocoDB Node:](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/) Fix pagination.
 * [Salesforce Node:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fix issue that 'status' did not get used for Case => Create & Update
@@ -2807,7 +3301,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
+* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Added the Force reconnect option
 * [Paddle:](/integrations/builtin/app-nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
 * [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
@@ -2990,7 +3484,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 * [AWS SQS:](/integrations/builtin/app-nodes/n8n-nodes-base.awsSqs/) Fixed an issue with API version and casing
-* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fixed re-connection issue
+* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fixed re-connection issue
 * [Keap:](/integrations/builtin/app-nodes/n8n-nodes-base.keap/) Fixed an issue with the Opt In Reason parameter
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed an issue with loading custom fields
 

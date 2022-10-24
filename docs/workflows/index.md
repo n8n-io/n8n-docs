@@ -1,4 +1,4 @@
-# Overview
+# Workflows
 
 Learn about the key components of an automation in n8n:
 

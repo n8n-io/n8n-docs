@@ -96,7 +96,7 @@ Click `Send` and you should receive all the information about every user in your
 
 The POST method is usually used to create users or organizations, for example. This method inserts information into the database.
 
-**1.**  Select the "POST" Method.<br>
+**1.**  Select the POST Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
 
@@ -125,7 +125,7 @@ Finally, click `Send` and you can see all the credentials you set in the respons
 
 The DELETE method is used to delete, for example, users, organizations and so on.
 
-**1.**  Select the "DELETE" Method.<br>
+**1.**  Select the DELETE Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
 
@@ -151,7 +151,7 @@ It should look like this:
 
 The PUT method is mainly used to update user or organization data. It is very easy to understand and use.
 
-**1.**  Select the "PUT" Method.<br>
+**1.**  Select the PUT Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
 

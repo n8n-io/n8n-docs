@@ -174,3 +174,5 @@ Suppose you want to change the email address of a user in your organization.
 
 If you'd like to have this all more visualized and interactive, you can download the Postman project <a href="/example/downloadables/doc2app.postman_collection.json" download>here</a> to try it all out.
 Just click the Import button and select this file to get started right away.
+
+![Picture](/_images/doc2/admin_guides_import_json.png){ loading=lazy }

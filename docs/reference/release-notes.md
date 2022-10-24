@@ -3,7 +3,7 @@
 ## n8n@0.199.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.2...n8n@0.199.0){:target=_blank .external-link} for this version.<br />
-**Release date:** _2022-10-21_
+**Release date:** 2022-10-21
 
 This release includes new nodes, an improved workflow UI, performance improvements, and bug fixes.
 
@@ -31,7 +31,7 @@ This release brings a collection of UI changes, aimed at improving the workflow 
 
 #### Compare node
 
-_Description of new feature. Link to new node doc._
+The Compare Datasets node helps you compare data from two input streams. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/).
 
 </div>
 
@@ -39,7 +39,7 @@ _Description of new feature. Link to new node doc._
 
 #### Execute Workflow Trigger node
 
-_Description of new feature. Link to new node doc._
+The Execute Workflow Trigger starts a workflow in response to another workflow. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/).
 
 </div>
 
@@ -47,7 +47,7 @@ _Description of new feature. Link to new node doc._
 
 #### Manual Trigger node
 
-You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/).
+The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/).
 
 </div>
 
@@ -63,7 +63,6 @@ This release introduces the Schedule Trigger node, replacing the Cron node. You 
 
 * Hubspot node: you can now use your Hubspot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
 * Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
-* _Include link to node doc._
 
 ### Bug fixes
 
@@ -80,7 +79,9 @@ This release introduces the Schedule Trigger node, replacing the Cron node. You 
 
 ### Contributors
 
-_List external contributors. Do not use a bulleted list here._
+[AndLLA](https://github.com/AndLLA){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+[vcrwr](https://github.com/vcrwr){:target=_blank .external-link}
 
 ## n8n@0.198.2
 

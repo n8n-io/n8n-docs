@@ -34,18 +34,18 @@ apt install docker-compose
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-digital-ocean){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-digital-ocean
+git clone https://github.com/n8n-io/n8n-docker-caddy.git
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd n8n-digital-ocean
+cd n8n-docker-caddy
 ```
 
 ## Default folders and files

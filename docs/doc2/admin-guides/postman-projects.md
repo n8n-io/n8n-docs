@@ -72,11 +72,12 @@ Click on send and you should get all information about every user in your organi
 
 The POST method is usually used to create something like users or organisations. This method will put information into the database.
 
-**1.**  Select the "POST" Method.
-**2.**  Authorize yourself, as described above.
+**1.**  Select the "POST" Method.<br>
+**2.**  Authorize yourself, as described above.<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
     
-    for example https://api.polydocs.io/users/create
+    for example 
+    https://api.polydocs.io/users/create
 
 ![Picture](/_images/doc2/admin_guides_post_api.png){ loading=lazy }
 
@@ -98,19 +99,20 @@ At last, click send and you can see all credentials you set in the response at t
 
 The the DELETE method is used to delete for example users, organisations, ...
 
-**1.**  Select the "DELETE" Method.
-**2.**  Authorize yourself, as described above.
+**1.**  Select the "DELETE" Method.<br>
+**2.**  Authorize yourself, as described above.<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
     
-    for example: https://api.polydocs.io/users/delete/{user_id}
+    for example: 
+    https://api.polydocs.io/users/delete/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_delete_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the DELETE Method in Postman.
-**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id with the GET Method)
+**4.**  Now paste that link in the text box next to the DELETE Method in Postman.<br>
+**5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id with the GET Method)<br>
 **6.**  If you've put the user_id in the URL there is no need for you to add a body key and value for that.
 
-It should look something like this:
+It should look like this:
 
 ![Picture](/_images/doc2/admin_guides_delete_body.png){ loading=lazy }
 
@@ -122,20 +124,21 @@ If you click send you should see "Success: True" in the response.
 
 The PUT method is mostly used to update data from users or organisations. It's very easy to use and very understandable
 
-**1.**  Select the "PUT" Method.
-**2.**  Authorize yourself, as described above.
+**1.**  Select the "PUT" Method.<br>
+**2.**  Authorize yourself, as described above.<br>
 **3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the Function behind the polydocs URL.
     
-    for example: https://api.polydocs.io/users/update/{user_id}
+    for example: 
+    https://api.polydocs.io/users/update/{user_id}
 
 ![Picture](/_images/doc2/admin_guides_put_api.png){ loading=lazy }
 
-**4.**  Now paste that link in the text box next to the PUT Method in Postman.
+**4.**  Now paste that link in the text box next to the PUT Method in Postman.<br>
 **5.**  Replace the {user_id} at the end of the URL with the actual user ID you want to delete. (You can get the user_id with the GET Method)
 
 Let's say you want to change the email address of one of your users in your organisation.
 
-**1.**  In the Body enter "email" as the key and the new email address as the value.
+**1.**  In the Body enter "email" as the key and the new email address as the value.<br>
 **2.**  Then just press send and you should see a Success in the response.
 
 

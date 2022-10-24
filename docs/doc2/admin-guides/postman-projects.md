@@ -50,7 +50,7 @@ Before you can proceed with each HTTP request, you need to enter your API key fr
 
 ![Picture](/_images/doc2/admin_guides_authorization_API Key.png){ loading=lazy }
 
-**2.**  Fill in the values. Enter "x-api-key" in the `Key` field and your API key as value (found in DOC² Settings menu **Integration**) Select the Add to `Header`.
+**2.**  Fill in the values. Enter "x-api-key" in the `Key` field and your API Key as value (found in DOC² Settings menu **Integration**) Select the Add to `Header`.
 
 It should look like this:
 

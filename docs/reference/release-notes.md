@@ -870,7 +870,7 @@ This release contains bug fixes and node enhancements.
 ### Bug fixes
 
 * Editor: Fix an error that occured after repeated executions.
-* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/): improve handling of network problems.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/): improve handling of network problems.
 * [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/): process input items using the list operation.
 * [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/): fix for a bug affecting sending binary data (images, documents and so on).
 
@@ -1117,7 +1117,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/){:target=_blank}: improve error handling.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/){:target=_blank}: improve error handling.
 * [Hubspot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
@@ -1500,7 +1500,7 @@ You can now download binary data from individual nodes in your workflow.
 ### Bug fixes
 
 * **core:** Fix crash on webhook when last node did not return data
-* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fix issue that crashed process if node was configured wrong.
+* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fix issue that crashed process if node was configured wrong.
 * [Google Tasks Node:](/integrations/builtin/app-nodes/n8n-nodes-base.googleTasks/) Fix 'Show Completed' option and hide title field where not needed.
 * [NocoDB Node:](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/) Fix pagination.
 * [Salesforce Node:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fix issue that 'status' did not get used for Case => Create & Update
@@ -3218,7 +3218,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
+* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Added the Force reconnect option
 * [Paddle:](/integrations/builtin/app-nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
 * [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
@@ -3401,7 +3401,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 * [AWS SQS:](/integrations/builtin/app-nodes/n8n-nodes-base.awsSqs/) Fixed an issue with API version and casing
-* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fixed re-connection issue
+* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fixed re-connection issue
 * [Keap:](/integrations/builtin/app-nodes/n8n-nodes-base.keap/) Fixed an issue with the Opt In Reason parameter
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed an issue with loading custom fields
 

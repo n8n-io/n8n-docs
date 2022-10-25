@@ -1,3 +1,7 @@
+---
+description: Learn how to contribute to n8n.
+---
+
 # How can you contribute?
 
 There are a several ways in which you can contribute to n8n, depending on your skills and interests. Each form of contribution is valuable to us!

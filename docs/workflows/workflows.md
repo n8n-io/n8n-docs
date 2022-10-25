@@ -1,3 +1,7 @@
+---
+description: A workflow is a connection of nodes connected together to automate a process.
+---
+
 # Workflow
 
 A workflow is a collection of nodes connected together to automate a process. 

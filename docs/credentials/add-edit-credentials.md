@@ -1,3 +1,7 @@
+---
+description: Creating and editing credentials.
+---
+
 # Create and edit credentials
 
 You can get to the credential modal by either: 

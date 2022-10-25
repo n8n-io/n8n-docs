@@ -1,3 +1,7 @@
+---
+description: CLI commands available in n8n.
+---
+
 # CLI commands for n8n
 
 n8n includes a CLI (command line interface), allowing you to perform many common actions using the CLI rather than the n8n editor. These include starting workflows, and exporting and importing workflows and credentials.

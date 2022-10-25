@@ -1,3 +1,7 @@
+---
+description: Authenticating with the services you're connecting to.
+---
+
 # Credentials
 
 Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node.

@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with ConvertKit.
 
-- [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertKit/)
-- [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertKitTrigger/)
+- [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit/)
+- [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger/)
 
 ## Prerequisites
 

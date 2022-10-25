@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with MessageBird.
 
-- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messageBird/)
+- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/)
 
 ## Prerequisites
 

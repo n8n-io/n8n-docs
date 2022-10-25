@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Microsoft SQL.
 
-- [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftSQL/)
+- [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/)
 
 ## Prerequisites
 

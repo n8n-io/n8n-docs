@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with PayPal.
 
-- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.payPal/)
-- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.payPalTrigger/)
+- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal/)
+- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger/)
 
 ## Prerequisites
 

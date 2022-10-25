@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with APITemplate.io.
 
-- [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apiTemplateIo/)
+- [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/)
 
 ## Prerequisites
 

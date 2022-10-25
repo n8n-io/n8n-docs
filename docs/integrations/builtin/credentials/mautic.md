@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Mautic.
 
 - [Mautic](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/)
-- [Mautic Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mauticTrigger/)
+- [Mautic Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger/)
 
 ## Prerequisites
 

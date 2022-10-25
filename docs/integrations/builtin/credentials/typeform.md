@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Typeform.
 
-- [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeFormTrigger/)
+- [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 
 ## Prerequisites
 

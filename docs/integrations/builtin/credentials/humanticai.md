@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Humantic AI.
 
-- [Humantic AI](/integrations/builtin/app-nodes/n8n-nodes-base.humanticAi/)
+- [Humantic AI](/integrations/builtin/app-nodes/n8n-nodes-base.humanticai/)
 
 ## Using API
 

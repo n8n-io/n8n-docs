@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Prerequisites
 

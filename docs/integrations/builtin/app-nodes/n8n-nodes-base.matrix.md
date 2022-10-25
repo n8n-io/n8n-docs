@@ -32,7 +32,7 @@ This workflow allows you to create a room, invite members from a different room,
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Matrix]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

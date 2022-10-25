@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Strava.
 
 - [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava/)
-- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravaTrigger/)
+- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/)
 
 ## Prerequisites
 

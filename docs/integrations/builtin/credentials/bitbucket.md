@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Bitbucket.
 
-- [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbucketTrigger/)
+- [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/)
 
 
 ## Prerequisites

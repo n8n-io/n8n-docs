@@ -24,4 +24,4 @@ View [example workflows and related content](https://n8n.io/integrations/venafi-
 n8n also provides:
 
 * A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectdatacentertrigger/) for Venafi TLS Protect Datacenter.
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafiTlsProtectCloud/) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) node for Venafi TLS Protect Cloud.
+* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) node for Venafi TLS Protect Cloud.

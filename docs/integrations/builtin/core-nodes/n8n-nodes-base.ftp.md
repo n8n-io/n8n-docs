@@ -14,7 +14,7 @@ The FTP node is useful to access and upload files to an FTP server.
 - Rename/move content from old path to new path
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 
 ## Node Reference
 
@@ -26,7 +26,7 @@ The FTP node is useful to access and upload files to an FTP server.
 
 This workflow allows you to upload a file to an FTP server and get a list of all files using the FTP node. You can also find the [workflow](https://n8n.io/workflows/663) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [FTP]()
 
 The final workflow should look like the following image.

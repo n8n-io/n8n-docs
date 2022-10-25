@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Pipedrive.
 
 - [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/)
-- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedriveTrigger/)
+- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/)
 
 ## Prerequisites
 

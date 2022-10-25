@@ -7,4 +7,4 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 * Reuse a workflow: for example, you could have multiple workflows pulling and processing data from different sources, then have all those workflows call a single workflow that generates a report.
 * Break large workflows into smaller components.
 
-This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeWorkflow/) node.
+This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node.

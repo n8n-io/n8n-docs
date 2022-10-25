@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes:
 
-* [KoBo Toolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.koBoToolboxTrigger/)
-* [KoBo Toolbox](/integrations/builtin/app-nodes/n8n-nodes-base.koBoToolbox/)
+* [KoBo Toolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger/)
+* [KoBo Toolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/)
 
 KoBo Toolbox uses an API key for authentication:
 

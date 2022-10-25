@@ -15,7 +15,7 @@
 
 This workflow allows you to send daily weather updates via a push notification using the Pushcut node. You can also find the [workflow](https://n8n.io/workflows/843) on n8n.io. This example usage workflow uses the following nodes.
 - [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openWeatherMap/)
+- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
 - [Pushcut]()
 
 The final workflow should look like the following image.

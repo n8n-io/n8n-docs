@@ -68,7 +68,7 @@ This example workflow uses the following nodes.
 - [Wait]()
 - [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
 - [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
 
 The final workflow should look like the following image.

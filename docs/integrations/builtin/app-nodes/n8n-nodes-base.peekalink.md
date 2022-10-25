@@ -17,7 +17,7 @@ This workflow allows you to check if preview for a link is available and return 
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Peekalink]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

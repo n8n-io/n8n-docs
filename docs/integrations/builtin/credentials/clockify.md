@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Clockify.
 
 - [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify/)
-- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifyTrigger/)
+- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/)
 
 ## Prerequisites
 

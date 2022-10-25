@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Emelia.
 
 - [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia/)
-- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliaTrigger/)
+- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger/)
 
 ## Prerequisites
 

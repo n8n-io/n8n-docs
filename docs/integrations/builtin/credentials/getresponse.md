@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with GetResponse.
 
-- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getResponse/)
-- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getResponseTrigger/)
+- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse/)
+- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/)
 
 ## Prerequisites
 

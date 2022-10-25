@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with SMTP.
 
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with TimescaleDB.
 
-- [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaleDb/)
+- [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/)
 
 ## Prerequisites
 

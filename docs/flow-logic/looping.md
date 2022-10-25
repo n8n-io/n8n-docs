@@ -60,7 +60,7 @@ Here is an [example workflow](https://n8n.io/workflows/1130) that implements a l
 
 ![Editor UI view of sample workflow](/_images/flow-logic/looping/example_workflow.png)
 
-You should use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitInBatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you only want to process a specific group of returned items.
+You should use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you only want to process a specific group of returned items.
 
 **Note**: The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it is not necessary to add an IF node to stop the loop.
 
@@ -72,24 +72,24 @@ There are a limited number of nodes and operations where you need to design a lo
 	* **List**: This operation executes only once, not for each incoming item.
 * [**Coda**](/integrations/builtin/app-nodes/n8n-nodes-base.coda/) node:
 	* **Get All**: For the Table and View resources, this operation executes only once.
-* [**CrateDB**](/integrations/builtin/app-nodes/n8n-nodes-base.crateDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Execute Workflow**](/integrations/builtin/core-nodes/n8n-nodes-base.executeWorkflow/) node executes only once by default.
-* [**Function**](/integrations/builtin/core-nodes/n8n-nodes-base.function/) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitInBatches/) node.
-* [**Google Cloud Firestore**](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) node:
+* [**CrateDB**](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**Execute Workflow**](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node executes only once by default.
+* [**Function**](/integrations/builtin/core-nodes/n8n-nodes-base.function/) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node.
+* [**Google Cloud Firestore**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) node:
 	* **Get All**: For the Collection and Document resources, this operation executes only once.
-* [**Google Drive**](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) node:
+* [**Google Drive**](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) node:
 	* **List**: This operation executes only once, not for each incoming item.
-* [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) node:
+* [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) node:
 	* **Read**: This operation executes only once for the `Sheet` resource.
 	* **Update**: This operation updates multiple rows if they are in the same range. It does not iterate through additional ranges.
-* [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
-* [**Microsoft SQL**](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftSql/) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
-* [**MongoDB**](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/) executes `Find` once, regardless of the number of incoming items.
+* [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node: You must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
+* [**Microsoft SQL**](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) node does not natively handle looping, so if you want the node to process all incoming items you must create a loop.
+* [**MongoDB**](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) executes `Find` once, regardless of the number of incoming items.
 * [**Postgres**](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**QuestDB**](/integrations/builtin/app-nodes/n8n-nodes-base.questDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
-* [**Read Binary Files**](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFiles/) node will fetch the files from the specified path only once. This node doesn't execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
+* [**QuestDB**](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**Read Binary Files**](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node will fetch the files from the specified path only once. This node doesn't execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
 * [**Redis**](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) node:
 	* **Info**: This operation executes only once, regardless of the number of items in the incoming data.
-* [**RSS**](/integrations/builtin/core-nodes/n8n-nodes-base.rssFeedRead/) nodes executes only once regardless of the number of items in the incoming data.
-* [**Spreadsheet**](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
-* [**TimescaleDB**](/integrations/builtin/app-nodes/n8n-nodes-base.timescaleDb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
+* [**RSS**](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/) nodes executes only once regardless of the number of items in the incoming data.
+* [**Spreadsheet**](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
+* [**TimescaleDB**](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).

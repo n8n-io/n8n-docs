@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with LingvaNex.
 
-- [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvaNex/)
+- [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex/)
 
 ## Prerequisites
 

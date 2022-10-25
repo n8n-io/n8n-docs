@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Home Assistant.
 
-- [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/)
+- [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/)
 
 ## Prerequisites
 

@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with MailerLite.
 
-- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerLite/)
-- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerLiteTrigger/)
+- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/)
+- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/)
 
 ## Prerequisites
 

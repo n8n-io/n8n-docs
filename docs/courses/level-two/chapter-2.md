@@ -11,7 +11,7 @@ You're most likely familiar with HTML and XML.
 
     HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 
-If you need to process HTML or XML data in your n8n workflows, use the [HTML Extract node](/integrations/builtin/core-nodes/n8n-nodes-base.htmlExtract/){:target="_blank" .external} or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/){:target="_blank" .external}.
+If you need to process HTML or XML data in your n8n workflows, use the [HTML Extract node](/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/){:target="_blank" .external} or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/){:target="_blank" .external}.
 
 The HTML Extract node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
@@ -80,7 +80,7 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 
-If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.dateTime/){:target="_blank" .external}.
+If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/){:target="_blank" .external}.
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the two trigger nodes:
 
@@ -264,11 +264,11 @@ So far, you have mainly worked with text data. But what if you want to process d
 
 In n8n, you can process binary data with the following nodes:
 
-- [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.moveBinaryData/){:target="_blank" .external} to move data between binary and JSON properties.
-- [Read Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/){:target="_blank" .external} to read a file from the host machine that runs n8n.
-- [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFiles/){:target="_blank" .external} to read multiple files from the host machine that runs n8n.
-- [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writeBinaryFile/){:target="_blank" .external} to write a file to the host machine that runs n8n.
-- [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/){:target="_blank" .external} to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
+- [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/){:target="_blank" .external} to move data between binary and JSON properties.
+- [Read Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/){:target="_blank" .external} to read a file from the host machine that runs n8n.
+- [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/){:target="_blank" .external} to read multiple files from the host machine that runs n8n.
+- [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/){:target="_blank" .external} to write a file to the host machine that runs n8n.
+- [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external} to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 

@@ -63,7 +63,7 @@
 This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file to the channel. You can also find the [workflow](https://n8n.io/workflows/811) on n8n.io This example usage workflow uses the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Slack]()
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 The final workflow should look like the following image.
 
@@ -127,7 +127,7 @@ In the screenshot below, you will notice that node sends a message with an attac
 
 ### 5. HTTP Request node (GET)
 
-This node will fetch a file from a URL. You can also use the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node to read a file from the path you specify.
+This node will fetch a file from a URL. You can also use the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node to read a file from the path you specify.
 
 1. Enter the URL of a file in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.

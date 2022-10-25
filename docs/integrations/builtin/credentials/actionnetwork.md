@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionNetwork/)
+- [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/)
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with SurveyMonkey.
 
-- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveyMonkeyTrigger/)
+- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger/)
 
 
 ## Prerequisites

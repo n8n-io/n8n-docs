@@ -1,3 +1,7 @@
+---
+description: Quickstart covering key concepts in n8n.
+---
+
 # A slightly longer introduction
 
 This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way. You will:
@@ -16,6 +20,7 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 !!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
+
 
 ## Step two: Create a new workflow
 

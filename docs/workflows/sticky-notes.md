@@ -1,3 +1,7 @@
+---
+description: Annotate your workflows using sticky notes.
+---
+
 # Sticky Notes
 
 Sticky Notes allow you to annotate and comment on your workflows.

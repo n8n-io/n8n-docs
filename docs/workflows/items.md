@@ -1,3 +1,7 @@
+---
+description: An 'item' in n8n is a piece of data.
+---
+
 # Items
 
 Data sent from one node to another is sent as an array of JSON objects. Each element in this collection is called an **Item**. A node performs its action on each item of incoming data.

@@ -1,3 +1,7 @@
+---
+description: Use code in your n8n workflows.
+---
+
 # Code in n8n
 
 There are two places in n8n where you need to use code:

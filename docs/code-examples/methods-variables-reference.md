@@ -1,3 +1,7 @@
+---
+description: Built-in methods and variables you can use in expressions and code in n8n.
+---
+
 # Built-in methods and variables
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description. Note that some methods and variables aren't available in the Function node.

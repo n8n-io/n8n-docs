@@ -15,6 +15,18 @@ tags:
 
 # Release Notes
 
+## 1.18
+
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [E-Mail notifications for doc type and status](/doc2/settings/email-notification/)
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implementation of Document Sub Types
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Matching - Quantity match delivery note
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Matching - Hiding empty columns
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Visibility of document sub types on dashboard
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Fields required for validation on the document details screen are always shown marked with red asterisk
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: numerous changes to the UI: alignment of buttons -size and placement, translations, new upload popup, a check box to select the entire column in the document type Permissions view for groups, Keyboard shortcuts
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Dashboard (list) filters based on Groups & Roles
+- :fontawesome-solid-bug-slash:{ style="color: #EE0F0F" } **FIXED**: Delete WF access possible again
+
 ## 1.17
 
 - :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [Training vs Correction Mode](/doc2/table-extraction/training-of-table-extraction/#training-vs-correction-mode)

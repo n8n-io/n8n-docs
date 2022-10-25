@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Datacenter:
 
 * [Venafi TLS Protect Datacenter node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/)
-* [Venafi TLS Protect Datacenter trigger node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacentertrigger/)
+
 
 Venafi provide a [PDF guide](/_downloads/venafi-tpp.pdf) to getting credentials. Follow the steps in the guide, making a note of the name and client ID you choose. When choosing scopes, make sure you choose the scopes needed for the operations you want to perform within n8n. For example, if you plan to work with certificates, including deleting them, include the **Certificate** scope in your Venafi credentials setup, with the **delete** option enabled.
 

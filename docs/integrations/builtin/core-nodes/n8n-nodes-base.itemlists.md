@@ -1,6 +1,6 @@
 # Item Lists
 
-The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to easily modify the structure for further processing without the need to use [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/) nodes and write custom JavaScript.
+The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to modify the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes and write custom JavaScript.
 
 ## Operations
 

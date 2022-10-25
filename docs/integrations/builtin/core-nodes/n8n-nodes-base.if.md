@@ -43,7 +43,7 @@ You can choose to split a workflow when any of the specified conditions are met,
 
 This workflow executes two different *Set* nodes based on the output given by an *IF* node. You can also find the [workflow](https://n8n.io/workflows/581) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/)
+- [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/)
 - [IF]()
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 
@@ -57,9 +57,9 @@ The final workflow should look like the following image.
 The start node exists by default when you create a new workflow.
 
 
-### 2. Function node
+### 2. Code node
 
-1. Enter the following code in the **Function** field.
+1. Enter the following code:
 ```
 return [
   {

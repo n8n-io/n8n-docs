@@ -74,7 +74,7 @@ There are a limited number of nodes and operations where you need to design a lo
 	* **Get All**: For the Table and View resources, this operation executes only once.
 * [**CrateDB**](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) node will execute and iterate over all incoming items only for Postgres related functions (e.g. `pgInsert`, `pgUpdate`, `pqQuery`).
 * [**Execute Workflow**](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node executes only once by default.
-* [**Function**](/integrations/builtin/core-nodes/n8n-nodes-base.function/) node processes all the items based on the entered code snippet, but it gets executed only once. If you need to execute the Function node multiple times you have to create a loop using the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node.
+* [**Code**](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node processes all the items based on the entered code snippet.
 * [**Google Cloud Firestore**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) node:
 	* **Get All**: For the Collection and Document resources, this operation executes only once.
 * [**Google Drive**](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) node:

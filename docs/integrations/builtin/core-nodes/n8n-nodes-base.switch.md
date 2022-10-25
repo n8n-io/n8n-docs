@@ -35,7 +35,7 @@ This workflow executes four different Set nodes based on the output given by a S
 - [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/)
 - [Switch]()
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
-- [NoOp](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [NoOp](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 
 The final workflow should look like the following image.

@@ -4,7 +4,7 @@
 
 A function is a block of code designed to perform a certain task. In n8n, you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node.
 
-The [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/) and [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) nodes are the most powerful in n8n. Both nodes work similarly: they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
+The [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/) and [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) nodes are the most powerful in n8n. Both nodes work similarly: they give you access to the incoming data and you can manipulate it. With these nodes you can implement any function you want using JavaScript code.
 
 The code of the **Function node** gets executed once. The node receives the full items (JSON and binary data) as an array and expects an array of items as a return value. The items returned can be totally different from the incoming ones. It's possible to remove and edit existing items, and also to add or return totally new ones.
 

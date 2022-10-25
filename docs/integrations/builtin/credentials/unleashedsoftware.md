@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Unleashed Software.
 
-- [Unleashed Software](/integrations/builtin/app-nodes/n8n-nodes-base.unleashedSoftware/)
+- [Unleashed Software](/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware/)
 
 ## Prerequisites
 

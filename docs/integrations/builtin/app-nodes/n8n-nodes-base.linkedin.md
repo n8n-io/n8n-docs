@@ -19,7 +19,7 @@
 
 This workflow allows you to get an image from a URL and post it on LinkedIn. You can also find the [workflow](https://n8n.io/workflows/681) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [LinkedIn]()
 
 The final workflow should look like the following image.

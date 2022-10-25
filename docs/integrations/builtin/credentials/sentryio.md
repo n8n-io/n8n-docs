@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Sentry.io.
 
-- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryIo/)
+- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/)
 
 ## Prerequisites
 

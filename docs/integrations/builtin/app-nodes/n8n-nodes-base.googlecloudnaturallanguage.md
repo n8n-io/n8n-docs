@@ -18,7 +18,7 @@ This workflow allows you to analyze the sentiment of feedback received via a Typ
 - [Google Cloud Natural Language]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

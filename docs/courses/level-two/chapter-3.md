@@ -75,7 +75,7 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitInBatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 !!! warning "Execution of Split in Batches node"
 

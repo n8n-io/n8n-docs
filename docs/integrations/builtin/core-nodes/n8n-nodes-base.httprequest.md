@@ -102,7 +102,7 @@ Select **Execute node**. n8n calls the `users` endpoint of the Reqres API, and o
 
 ### Send a binary file to an API endpoint
 
-1. Connect the HTTP Request node with a node that has previously fetched the binary file. For example, this could be an HTTP Request node, [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node, [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) node, and so on.
+1. Connect the HTTP Request node with a node that has previously fetched the binary file. For example, this could be an HTTP Request node, [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node, [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) node, and so on.
 2. Select **POST** in the **Method** dropdown. Check the API documentation of your API to make sure that you have selected the correct HTTP request method.
 3. Enter the URL you want to send the binary file to in the **URL** field.
 4. Enable **Send Body**.

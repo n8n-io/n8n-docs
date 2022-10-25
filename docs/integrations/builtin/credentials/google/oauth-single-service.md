@@ -9,10 +9,10 @@ This document contains instructions for creating a Google credential for a singl
 !!! note "Note for n8n Cloud users"
     For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
 
-    * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/)
-    * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googleContacts/)
-    * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/)
-    * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googleTasks/)
+    * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
+    * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+    * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
+    * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
 
 
 ## Set up OAuth

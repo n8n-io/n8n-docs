@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Cloud:
 
-* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafiTlsProtectCloud/)
+* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/)
 * [Venafi TLS Protect Cloud trigger node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/)
 
 

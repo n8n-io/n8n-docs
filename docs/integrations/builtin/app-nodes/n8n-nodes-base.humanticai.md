@@ -17,7 +17,7 @@
 
 This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/784) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Humantic AI]()
 
 The final workflow should look like the following image.

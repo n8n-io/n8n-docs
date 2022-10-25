@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with SecurityScorecard.
 
-- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityScorecard/)
+- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard/)
 
 
 ## Prerequisites

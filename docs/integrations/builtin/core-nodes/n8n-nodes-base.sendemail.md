@@ -9,7 +9,7 @@ The Send Email node is used to send an email via an SMTP email server.
 !!! note "Keep in mind"
     1. Before sending, ensure that you have already created email addresses that are approved for sending on your SMTP service.
 2. The Send Email node merely sends an email via your SMTP server and plays no part in email deliverability.
-3. To attach a file, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node to pass a file as a data property.
+3. To attach a file, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass a file as a data property.
 
 
 ## Basic Operations

@@ -15,7 +15,7 @@
 This workflow sends out email notifications when a new file has been uploaded to Google Drive. It uses two nodes:
 
 - [Google Drive Trigger]()
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendEmail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
 
 The final workflow should look like the image below.
 

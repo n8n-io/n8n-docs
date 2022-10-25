@@ -27,7 +27,7 @@ This workflow allows you to execute a command that returns the percentage of the
 - [Execute Command]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 
 The final workflow should look like the following image.
@@ -124,7 +124,7 @@ ls
 
 ### How to run the curl command in the Execute Command node?
 
-You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node to make a cURL request.
+You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
 

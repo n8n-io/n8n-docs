@@ -14,7 +14,7 @@ This workflow allows you to receive messages from a topic and send an SMS if the
 - [Kafka Trigger]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Vonage](/integrations/builtin/app-nodes/n8n-nodes-base.vonage/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

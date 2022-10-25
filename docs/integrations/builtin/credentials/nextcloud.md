@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Nextcloud.
 
-- [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextCloud/)
+- [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/)
 
 ## Prerequisites
 

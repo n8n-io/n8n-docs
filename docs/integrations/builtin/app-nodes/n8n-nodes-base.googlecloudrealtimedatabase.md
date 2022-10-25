@@ -19,7 +19,7 @@
 This workflow allows you to receive updates of the position of the ISS every minute and push it to a database using the Google Cloud Realtime Database node. You can also find the [workflow](https://n8n.io/workflows/787) on n8n.io. This example usage workflow uses the following nodes.
 
 - [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 - [Google Cloud Realtime Database]()
 

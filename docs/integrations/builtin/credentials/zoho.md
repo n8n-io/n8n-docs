@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Zoho.
 
-- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohoCRM/)
+- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/)
 
 ## Prerequisites
 

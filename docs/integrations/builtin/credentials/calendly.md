@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Calendly.
 
-- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlyTrigger/)
+- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with RabbitMQ.
 
 - [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/)
-- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/)
+- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/)
 
 ## Prerequisites
 

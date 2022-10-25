@@ -38,7 +38,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Set node
 
-This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node, to get the data you want to add to the Google Sheets.
+This example workflow uses the Set node to generate data that we want to add to Google Sheets. You can also use other nodes, for example, the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, to get the data you want to add to the Google Sheets.
 
 1. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 2. Enter `Name` in the ***Name*** field.

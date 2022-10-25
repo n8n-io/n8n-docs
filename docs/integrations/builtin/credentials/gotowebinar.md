@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with GoToWebinar.
 
-- [GoToWebinar](/integrations/builtin/app-nodes/n8n-nodes-base.goToWebinar/)
+- [GoToWebinar](/integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar/)
 
 ## Prerequisites
 

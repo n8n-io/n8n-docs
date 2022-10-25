@@ -22,7 +22,7 @@ This workflow allows you to get all the contacts from GetResponse and check if t
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [GetResponse]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

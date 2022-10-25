@@ -13,7 +13,7 @@ This workflow allows you to receive a message on Mattermost when new meeting not
 - [Notion Trigger]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
-- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noOp/)
+- [No Operation, do nothing](/integrations/builtin/core-nodes/n8n-nodes-base.noop/)
 
 The final workflow should look like the following image.
 

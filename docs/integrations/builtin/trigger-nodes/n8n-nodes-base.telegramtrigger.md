@@ -24,7 +24,7 @@
 This workflow allows you to receive messages using the Telegram Trigger node and send an image of a cocktail when a message is received. You can also find the [workflow](https://n8n.io/workflows/782) on n8n.io. This example usage workflow would use the following nodes.
 
 - [Telegram Trigger]()
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
 
 The final workflow should look like the following image.

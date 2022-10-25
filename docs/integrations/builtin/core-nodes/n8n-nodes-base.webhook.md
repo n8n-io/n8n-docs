@@ -63,7 +63,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on n8n.io. This example usage workflow uses the following nodes.
 - [Webhook]()
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openWeatherMap/)
+- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 
 The final workflow should look like the following image.
@@ -143,7 +143,7 @@ Here is a GIF demonstrating how to retrieve the test and production webhook URLs
 
 ### How to use the HTTP Request node to trigger the Webhook node?
 
-The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
+The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node is used to make HTTP requests to the URL you specify. To use the HTTP Request node to trigger the Webhook node, follow the steps mentioned below.
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
 3. Select the appropriate method from the ***Request Method*** dropdown list. For example, if you have selected GET as the HTTP method in your Webhook node, select GET as the request method in the HTTP Request node.

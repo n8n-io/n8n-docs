@@ -3,7 +3,7 @@
 The Spreadsheet File node is used to access data from spreadsheet files.
 
 !!! note "Keep in mind"
-    You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node to pass the image file as a data property to the Spreadsheet File node.
+    You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Spreadsheet File node.
 
 
 ## Basic Operations
@@ -35,7 +35,7 @@ When writing to a spreadsheet file, the *File Format* field can be used to speci
 
 This workflow allows you to read a spreadsheet file using the Spreadsheet File node. You can also find the [workflow](https://n8n.io/workflows/586) on the website. This example usage workflow would use the following three nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/)
+- [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/)
 - [Spreadsheet File]()
 
 

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Brandfetch.
 
-- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.Brandfetch/)
+- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/)
 
 ## Prerequisites
 

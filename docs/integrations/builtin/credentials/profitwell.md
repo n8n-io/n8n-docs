@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with ProfitWell.
 
-- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitWell/)
+- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell/)
 
 ## Prerequisites
 

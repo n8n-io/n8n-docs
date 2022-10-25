@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with OpenWeatherMap.
 
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openWeatherMap/)
+- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
 
 ## Prerequisites
 

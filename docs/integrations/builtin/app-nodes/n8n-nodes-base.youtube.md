@@ -38,7 +38,7 @@
 
 This workflow allows you to upload a video, create a playlist, and add the video to the playlist in YouTube. You can also find the [workflow](https://n8n.io/workflows/638) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/)
+- [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/)
 - [YouTube]()
 
 The final workflow should look like the following image.

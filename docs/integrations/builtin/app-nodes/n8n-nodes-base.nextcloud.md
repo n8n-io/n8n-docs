@@ -34,7 +34,7 @@
 This workflow allows you to create a folder in Nextcloud, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/620) on n8n.io. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Nextcloud]()
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 The final workflow should look like the following image.
 

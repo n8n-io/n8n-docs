@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with MySQL.
 
-- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mySql/)
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
 
 ## Prerequisites
 

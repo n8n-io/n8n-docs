@@ -18,7 +18,7 @@ This workflow allows you to read RSS feed from two different sources using the S
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/)
 - [Split In Batches]()
-- [RSS Feed Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssFeedRead/)
+- [RSS Feed Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/)
 
 The final workflow should look like the following image.
 

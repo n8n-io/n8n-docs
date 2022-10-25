@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with The Hive.
 
-- [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.theHive/)
+- [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/)
 
 ## Prerequisites
 

@@ -9,7 +9,8 @@
 ## Example Usage
 
 This workflow allows you to send updates about the position of the ISS every minute to a queue using the RabbitMQ node. You can also find the [workflow](https://n8n.io/workflows/844) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 - [RabbitMQ]()

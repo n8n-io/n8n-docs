@@ -190,7 +190,7 @@ To change the format, click on ***Add Option*** and select 'Value Input Mode' fr
 
 ### How to append an array in the Google Sheets?
 
-To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Function node](/integrations/builtin/core-nodes/n8n-nodes-base.function/) to convert the array into JSON format.
+To insert the data in Google Sheets, you have to first convert the data in a valid JSON (key, value) format. You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) to convert the array into JSON format.
 
 ### How to return all the values with the Lookup operation?
 

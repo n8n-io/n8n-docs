@@ -23,7 +23,8 @@
 ## Example Usage
 
 This workflow allows you to get the price of BTC in EUR using the CoinGecko node and send an SMS when the price is greater than or equal to €9000. You can also find the [workflow](https://n8n.io/workflows/704) on n8n.io. This example usage workflow would use the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [CoinGecko]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio/)
@@ -33,9 +34,9 @@ The final workflow should look like the following image.
 
 ![A workflow with the CoinGecko node](/_images/integrations/builtin/app-nodes/coingecko/workflow.png)
 
-### 1. Cron node
+### 1. Schedule Trigger node
 
-The Cron node will trigger the workflow every minute.
+The Schedule Trigger node will trigger the workflow every minute.
 
 1. Click on ***Add Cron Time***.
 2. Select 'Every Minute' from the ***Mode*** dropdown list.

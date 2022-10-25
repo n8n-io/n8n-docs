@@ -15,7 +15,8 @@
 ## Example Usage
 
 This workflow allows you to receive updates of the position of the ISS every minute and insert it to a table using the TimscaleDB node. You can also find the [workflow](https://n8n.io/workflows/917) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 - [TimescaleDB]()

@@ -1,3 +1,24 @@
+# 2002 SEO audit
+
+/nodes/expressions/expressions.html   /code-examples/expressions/
+/nodes/expressions.html   /code-examples/expressions/
+/reference/configuration.html   /hosting/configuration/
+/getting-started/installation/index.html   /hosting/options/
+/getting-started/create-your-first-workflow/    /try-it-out/
+/reference/scaling-n8n.html   /hosting/scaling/
+/reference/workflow.html   /workflows/
+/nodes/nodes-library/core-nodes/   /integrations/builtin/core-nodes/
+/reference/data/data-structure.html   /data/data-structure/
+/nodes/credentials/Google/   /integrations/builtin/credentials/google/
+/nodes/credentials/ActiveCampaign/   /integrations/builtin/credentials/activecampaign/
+/getting-started/quickstart.html   /try-it-out/
+/nodes/node-basics.html   /workflows/nodes/
+/nodes/nodes-library/core-nodes/IMAPEmail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/
+/getting-started/key-concepts.html   /flow-logic/
+/nodes/n8n-nodes-base.editimage/   /integrations/builtin/core-nodes/n8n-nodes-base.editimage/
+/nodes/nodes-library/trigger-nodes/HubSpotTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/
+
+
 # 2022 UI changes
 
 /integrations/builtin/core-nodes/n8n-nodes-base.imapemail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/

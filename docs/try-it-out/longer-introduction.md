@@ -31,7 +31,7 @@ n8n provides two ways to start a workflow:
 * Manually, by selecting **Execute workflow**, or from the CLI if you installed n8n with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, use the [Cron trigger](/integrations/builtin/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
+For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/). This allows you to run the workflow on a schedule:
 
 1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
 2. Search for **Cron**. n8n shows a list of nodes that match the search.

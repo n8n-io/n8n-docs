@@ -18,7 +18,8 @@
 ## Example Usage
 
 This workflow allows you to send position updates of the ISS every minute to a table in Google BigQuery. You can also find the [workflow](https://n8n.io/workflows/1049) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 - [Google BigQuery]()
@@ -27,9 +28,9 @@ The final workflow should look like the following image.
 
 ![A workflow with the Google BigQuery node](/_images/integrations/builtin/app-nodes/googlebigquery/workflow.png)
 
-### 1. Cron node
+### 1. Schedule Trigger node
 
-The Cron node will trigger the workflow every minute.
+The Schedule Trigger node will trigger the workflow every minute.
 
 1. Click on ***Add Cron Time***.
 2. Select 'Every Minute' from the ***Mode*** dropdown list.

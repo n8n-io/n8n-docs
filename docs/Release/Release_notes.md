@@ -17,7 +17,7 @@ tags:
 
 ## 1.18
 
-- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [E-Mail notifications for doc type and status](/doc2/settings/email-notification/)
+- :fontawesome-solid-thumbs-up:{ style="color: #03900c" }  **NEW FEATURE**: [E-Mail notifications for Document Type and Status](/doc2/settings/email-notification/)
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implementation of Document Sub Types
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Matching - Quantity match delivery note
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: PO Matching - Hiding empty columns

@@ -23,4 +23,5 @@ All you need is your API Key. You will find your **Key** in the Integration menu
 ![](/_images/doc2/doc2-Settings-Integration-API Key.png)
 
 
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 Various examples of **API Calls** can be found [here](/doc2/settings/integration/api-calls-examples/).

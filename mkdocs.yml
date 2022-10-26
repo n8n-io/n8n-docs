@@ -140,6 +140,7 @@ nav:
       - Integration: 
         - doc2/settings/integration/index.md
         - API: doc2/settings/integration/api-integration.md
+        - API calls examples: doc2/settings/integration/api-calls-examples.md
         - SSO Settings: doc2/settings-sso-settings.md
       - Document Types: doc2/settings-document-types.md
       - Email Notification: doc2/settings/email-notification.md

@@ -35,7 +35,7 @@ After completing steps **1.-3.**<br>
 
 ![Picture](/_images/doc2/DOC2_API_POST_Process.png){ loading=lazy }
 
-**5.** Open the tab and click on **Try it out** in the upper right corner to enter the following value
+**5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
 
 source:   **email:{Pattern name}**  
 
@@ -57,11 +57,20 @@ After completing steps **1.-3.**<br>
 
 ![Picture](/_images/doc2/DOC2_API_GET_Document-Status.png){ loading=lazy }
 
-**5.** Open the tab and click on **Try it out** in the upper right corner to enter the following value
+**5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
 
-doc-id:   https://app.polydocs.io/2a/**4a2ed020-f471-43ca-937d-84df1fe53b0f**
+doc-id:   https://app.polydocs.io/2a/**9c931f6f-f352-4526-a78d-c036c39a8d9e**
+
+You get the document id when you open the document on the dashboard. This is the last part of the URL when the document is open.
 
 ![Picture](/_images/doc2/DOC2_API_GET_Document-Status_doc_id.png){ loading=lazy }
+
+
+You will receive the following response:
+
+![Picture](/_images/doc2/DOC2_API_GET_Document-Status_Response.png){ loading=lazy }
+
+**Ready For Validation** means that the user can check the document.
 
 
 

@@ -12,7 +12,8 @@ tags:
 
 #### In this section you will find examples of different API calls via [link](https://api.polydocs.io/docs).
 
-# Upload Source
+
+## Upload Source
 
 **1.** go to [link](https://api.polydocs.io/docs)
 **2.** Click on **Authorize** in the upper right corner

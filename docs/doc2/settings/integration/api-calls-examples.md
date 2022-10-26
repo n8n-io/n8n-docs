@@ -12,8 +12,8 @@ tags:
 
 #### In this section you will find examples of different API calls via [api.polydocs.io](https://api.polydocs.io/docs).
 
-
-## Upload Source
+# Authentication
+For each example, authentication is the first step
 
 **1.** go to [api.polydocs.io](https://api.polydocs.io/docs)<br>
 **2.** Click on **Authorize** in the upper right corner
@@ -24,6 +24,12 @@ tags:
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize_key.png){ loading=lazy }
 
+
+
+
+## Upload Source
+
+After completing steps **1.-3.**
 **4.** scroll down to 
 
 ![Picture](/_images/doc2/DOC2_API_POST_Process.png){ loading=lazy }
@@ -32,7 +38,7 @@ tags:
 
 |          |                            |
 |  ----    |          ------            |
-|  source  |  email:{Pattern name}      |
+|  source: |  email:{Pattern name}      |
 
 ![Picture](/_images/doc2/DOC2_API_POST_document process.png){ loading=lazy }
 

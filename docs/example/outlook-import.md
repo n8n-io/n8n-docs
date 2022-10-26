@@ -12,15 +12,16 @@ tags:
 
 ---
 
-#  Outlook Import to DOC² for certain sub-organizations
+##  Outlook Import to DOC² for certain sub-organizations
 
-With the following Workflow² you can upload Email attachements in specific folders to a specific sub-organization in your Doc² Organization. This can be useful if you want to import Invoices from your Outlook inbox but only want it to be seen by a certain sub-organiszation.
+With the following workflow you can upload email attachments from specific folders to a specific sub-organization of your DOC² organization. This can be useful if you want to import invoices from your Outlook inbox but only want them to be visible to a specific sub-organization.
 
 ![](/_images/workflows/workflows/WF-outlook-import.png)
 
 **1.** The `Interval` node is used to trigger the workflow to run at regular intervals of time.<br>
 **2.** The `Microsoft getFolders` is an Outlook node that gets all the Folders in your Outlook Inbox.<br>
-**3.** The `FunctionItem` function is a node where you can specify the folders you want to organise your sub-organizations. You can call them whatever you want but they have to be the same name as the folders in your Outlook.
+![](/_images/workflows/workflows/WF-outlook-import_get-folders.png)
+**3.** The `FunctionItem` is a node where you can specify the folders intended for your sub-organizations. These must have the same name as the folders in your Outlook.
 
 ``` Javascript
   const folders = [
@@ -30,22 +31,23 @@ With the following Workflow² you can upload Email attachements in specific fold
   
 ```
 
-**4.** The `IF` Node just checks if the folders you entered in step 3 exist. If a folder exists that you have entered, it will continue exporting with that folder, if a folder does not exist simply nothing will happen with it.
+**4.** The `IF` node checks if the folders entered in step 3 exist. If they exist and the name matches, the export continues. If the entered folder name does not exist, nothing happens.
 
-**5.** The `Get unread messages` checks for all the messages that are unread
+**5.** The `Get unread messages` node searches for all unread messages.
 
    ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)
 
 **6.1** First of all, you have to add your Microsoft account.<ins>Please follow these steps:</ins><br>
     6.1.1 Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations)<br>
-    6.1.2 Click on the `Register an application` button
+    6.1.2 Click on the `+ New registration` button
         ![](/_images/workflows/workflows/WF-outlook-import-app-registrations-new.png)<br>
     6.1.3 Enter a name for your app in the `Name` field.<br>
-    6.1.4 Select 'Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal     Microsoft accounts (eg. Skype, Xbox)' under the **Supported account types** section.<br>
+    6.1.4 Select `Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal     Microsoft accounts (eg. Skype, Xbox)` under the **Supported account types** section.<br>
     6.1.5 Copy the `OAuth Callback URL` provided in the Microsoft node credentials in Workflow².<br>
-    6.1.6 Paste it in the `Redirect URI (optional)` field on the `Register an application` page.
+    ![](/_images/workflows/workflows/WF-outlook-import-OAuth-redirect-url.png)
+    6.1.6 Choose **Web** and paste it in the next field under the `Redirect URI (optional)` section.
         ![](/_images/workflows/workflows/WF-outlook-import-register-an-application.png)<br>
-    6.1.7 Click on the `Register` button.<br>
+    6.1.7 Click on the `Register` button at the bottom left.<br>
     6.1.8 Copy the **Application (client) ID**.<br>
     6.1.9 Paste the Application ID in the `Client ID` field in the Microsoft node credentials in Workflow².
         ![](/_images/workflows/workflows/WF-outlook-import-microsoft-outlook-oauth2-api.png)<br>
@@ -66,6 +68,7 @@ With the following Workflow² you can upload Email attachements in specific fold
    Now the node is going to check for new unread emails that are in the folder from Step 2.
 
 **7.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step 3.1<br>
+
         ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)<br>
 **8.** The `Mark message as read` node marks the emails that were checked in the steps above as read<br>
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br>
@@ -80,8 +83,8 @@ With the following Workflow² you can upload Email attachements in specific fold
 ];
 
 const folders = [
-  "101_Kostenrechnung",
-  "102_Wareneingangrechnung"
+  "101_Polydocs",
+  "102_Polydocs"
 ];
 
 id = $node["FunctionItem"].json["check_id"];
@@ -101,18 +104,18 @@ return item;
 
 **11.** The `Switch` Node checks the "inbox" line in the json that got freshly added by the Script in the Step before and sends them to the right node for the right sub-organization<br>
 ![](/_images/workflows/workflows/WF-outlook-import-switch-node.png)<br>
-**12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Kostenrechnung and to what sub-organization it is supposed to be uploaded.<br>
+**12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
-**13.** In your Doc² you have to add classification rules, so that the Upload Node knows where to upload the documents.<br>
-    13.1 Open Doc²<br>
+**13.** In your DOC² you have to add classification rules, so that the Upload Node knows where to upload the documents.<br>
+    13.1 Open DOC²<br>
     13.2 Go to the Settings page<br>
     13.3 Click on `Classification and Extraction`<br>
     13.4 In `Classification Rules` Click on **ADD**.<br>
     ![](/_images/workflows/workflows/WF-outlook-import-classification-rules.png)<br>
-    13.5 For the Pattern enter your Outlook folder name, in this example it is `101_Kostenrechnung`<br>
+    13.5 For the Pattern enter your Outlook folder name, in this example it is `101_Polydocs`<br>
     13.6 For the type select `E-Mail`<br>
     13.7 For Sub Organization select the Subu Organization where the documents should be uploaded.<br>
-    13.8 For the Document Type you can enter whatever Document Type you want. Leave Blank for any Document Type<br>
+    13.8 You can enter any document type as the document type. Leave the field blank for each document type<br>
 
 
 <ins>Here is the complete workflow for you to download:</ins>

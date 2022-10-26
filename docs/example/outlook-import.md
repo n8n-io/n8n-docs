@@ -12,7 +12,7 @@ tags:
 
 ---
 
-#  Outlook Import to DOC² for certain sub-organiszations
+#  Outlook Import to DOC² for certain sub-organizations
 
 With the following Workflow² you can upload Email attachements in specific folders to a specific sub-organization in your Doc² Organization. This can be useful if you want to import Invoices from your Outlook inbox but only want it to be seen by a certain sub-organiszation.
 

@@ -116,16 +116,12 @@ You can find this in the Settings under the menu item Classification and Extract
 
 ![](/_images/workflows/workflows/WF-outlook-import-doc2-settings.png)
 
-
-    13.1 Open DOC²<br>
-    13.2 Go to the Settings page<br>
-    13.3 Click on `Classification and Extraction`<br>
-    13.4 In `Classification Rules` Click on **ADD**.<br>
-    ![](/_images/workflows/workflows/WF-outlook-import-classification-rules.png)<br>
-    13.5 For the Pattern enter your Outlook folder name, in this example it is `101_Polydocs`<br>
-    13.6 For the type select `E-Mail`<br>
-    13.7 For Sub Organization select the Subu Organization where the documents should be uploaded.<br>
-    13.8 You can enter any document type as the document type. Leave the field blank for each document type<br>
+![](/_images/workflows/workflows/WF-outlook-import-classification-rules.png)<br>
+    
+    * For the Pattern enter your Outlook folder name, in this example it is `101_Polydocs`<br>
+    * For the type select `E-Mail`<br>
+    * For Sub Organization select the Subu Organization where the documents should be uploaded.<br>
+    * You can enter any document type as the document type. Leave the field blank for each document type<br>
 
 
 <ins>Here is the complete workflow for you to download:</ins>

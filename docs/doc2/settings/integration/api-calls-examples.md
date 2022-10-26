@@ -16,7 +16,7 @@ tags:
 
 # Authentication
 
-**1.** go to [api.polydocs.io](https://api.polydocs.io/docs)<br>
+**1.** Open [api.polydocs.io](https://api.polydocs.io/docs)<br>
 **2.** Click on **Authorize** in the upper right corner
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize.png){ loading=lazy }

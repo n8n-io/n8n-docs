@@ -23,4 +23,4 @@ All you need is your API Key. You will find your **Key** in the Integration menu
 ![](/_images/doc2/doc2-Settings-Integration-API Key.png)
 
 
-[Here](/doc2/settings/integration/api-calls-examples/) you will find examples of different **API Calls**.
+You will find examples of different **API Calls** [here](/doc2/settings/integration/api-calls-examples/).

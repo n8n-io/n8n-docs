@@ -7,127 +7,538 @@
 	},
 	"item": [
 		{
-			"name": "Get User Request",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"url": {
-					"raw": "https://api.polydocs.io/users/get_users",
-					"protocol": "https",
-					"host": [
-						"api",
-						"polydocs",
-						"io"
-					],
-					"path": [
-						"users",
-						"get_users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create User Request",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "first_name",
-							"value": "FirstName",
-							"type": "text"
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
 						},
-						{
-							"key": "last_name",
-							"value": "LastName",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "Name.Lastname@test.net",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "password",
-							"type": "text"
-						},
-						{
-							"key": "is_admin",
-							"value": "False",
-							"type": "text"
+						"url": {
+							"raw": "https://api.polydocs.io/users/get_users",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"users",
+								"get_users"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "https://api.polydocs.io/users/create",
-					"protocol": "https",
-					"host": [
-						"api",
-						"polydocs",
-						"io"
-					],
-					"path": [
-						"users",
-						"create"
-					]
+				{
+					"name": "Create User Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "FirstName",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "LastName",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Name.Lastname@test.net",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "is_admin",
+									"value": "False",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/users/create",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/users/delete/{user_id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"users",
+								"delete",
+								"{user_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/users/update/{user_id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"users",
+								"update",
+								"{user_id}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Delete User Request",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "https://api.polydocs.io/users/delete/{user_id}",
-					"protocol": "https",
-					"host": [
-						"api",
-						"polydocs",
-						"io"
-					],
-					"path": [
-						"users",
-						"delete",
-						"{user_id}"
-					]
+			"name": "Sub Organisations",
+			"item": [
+				{
+					"name": "Create Sub Organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Name",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/sub_organisations/create",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"sub_organisations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub Organisation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/sub_organisations/delete/{sub_org_id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"sub_organisations",
+								"delete",
+								"{sub_org_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sub Organisation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/sub_organisations/update/{sub_org_id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"sub_organisations",
+								"update",
+								"{sub_org_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User to Sub Organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sub_org_id",
+									"value": "Group ID",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "User ID",
+									"type": "text"
+								},
+								{
+									"key": "remove_from_others",
+									"value": "True or False",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/sub_organisation_user/add_user_to_sub_organisation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"sub_organisation_user",
+								"add_user_to_sub_organisation"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Update User Request",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "https://api.polydocs.io/users/update/{user_id}",
-					"protocol": "https",
-					"host": [
-						"api",
-						"polydocs",
-						"io"
-					],
-					"path": [
-						"users",
-						"update",
-						"{user_id}"
-					]
+			"name": "Groups Permissions",
+			"item": [
+				{
+					"name": "Set Group Permissions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "group_id",
+									"value": "Group ID",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "Data",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/group_permission/set_group_permissions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"group_permission",
+								"set_group_permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set all Groups Permissions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "permissions_data",
+									"value": "Permission Data",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/group_permission/set_all_groups_permissions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"group_permission",
+								"set_all_groups_permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Group Permissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "group_id",
+									"value": "Group ID",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/group_permission/get_group_permissions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"group_permission",
+								"get_group_permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Groups and Permissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/group_permission/get_user_groups_and_permissions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"group_permission",
+								"get_user_groups_and_permissions"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Groups",
+			"item": [
+				{
+					"name": "Create Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Name",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/groups/create",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"groups",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/groups/delete/{group_id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"groups",
+								"delete",
+								"{group_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/groups/update/{group_id}?name=New_Name&description=New_Description",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"groups",
+								"update",
+								"{group_id}"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "New_Name"
+								},
+								{
+									"key": "description",
+									"value": "New_Description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User to Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.polydocs.io/groups/add_user_to_group?group_id=Group ID&user_id=User ID&remove_from_other_groups=False",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"groups",
+								"add_user_to_group"
+							],
+							"query": [
+								{
+									"key": "group_id",
+									"value": "Group ID"
+								},
+								{
+									"key": "user_id",
+									"value": "User ID"
+								},
+								{
+									"key": "remove_from_other_groups",
+									"value": "False"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

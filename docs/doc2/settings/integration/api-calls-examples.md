@@ -10,32 +10,69 @@ tags:
   - api.polydocs.io
 ---
 
-## In this section you will find examples of different API calls via api.polydocs.io.
+#### In this section you will find examples of different API Calls via [api.polydocs.io](https://api.polydocs.io/docs).
 
-# Upload Source
+<ins>For each example, authentication is the first step</ins>
 
-**1.** go to [](https://api.polydocs.io/docs)
+# Authentication
+
+**1.** Open [api.polydocs.io](https://api.polydocs.io/docs)<br>
 **2.** Click on **Authorize** in the upper right corner
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize.png){ loading=lazy }
 
-**3.** Enter your API Key and confirm by clicking `Authorize`
+**3.** Enter your [API Key](/doc2/settings/integration/api-integration/) and confirm by clicking `Authorize`
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize_key.png){ loading=lazy }
 
+
+
+
+## Upload document
+
+After completing steps **1.-3.**<br>
 **4.** scroll down to 
 
 ![Picture](/_images/doc2/DOC2_API_POST_Process.png){ loading=lazy }
 
-**5.** Open the tab and click on **Try it out** in the upper right corner to enter the following value
+**5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
 
-|  source  |  email:{Pattern name}  |
+source:   **email:{Pattern name}**  
 
 ![Picture](/_images/doc2/DOC2_API_POST_document process.png){ loading=lazy }
 
+ 
 **6.** Select the file you want to upload and click `Execute`
 
 Your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
 
 ![Picture](/_images/doc2/DOC2_classification-rules_Pattern.png){ loading=lazy }
-![Picture](docs/_images/doc2/DOC2_Uploaded-doc-on-dashboard.png){ loading=lazy }
+![Picture](/_images/doc2/DOC2_Uploaded-doc-on-dashboard.png){ loading=lazy }
+
+
+## Document Status
+
+After completing steps **1.-3.**<br>
+**4.** scroll down to
+
+![Picture](/_images/doc2/DOC2_API_GET_Document-Status.png){ loading=lazy }
+
+**5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
+
+doc-id:   https://app.polydocs.io/2a/**9c931f6f-f352-4526-a78d-c036c39a8d9e**
+
+You get the document id when you open the document on the dashboard. This is the last part of the URL when the document is open.
+
+![Picture](/_images/doc2/DOC2_API_GET_Document-Status_doc_id.png){ loading=lazy }
+
+
+You will receive the following response:
+
+![Picture](/_images/doc2/DOC2_API_GET_Document-Status_Response.png){ loading=lazy }
+
+**Ready For Validation** means that the user can check the document.
+
+
+
+
+

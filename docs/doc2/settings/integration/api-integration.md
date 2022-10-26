@@ -18,9 +18,9 @@ To access the hole Polydocs API menu click [here](https://doc2api.cloudintegrati
 
 ## API Key
 
-All you need is your API Key. You will find your **Key** in the Integration menu item in the settings
+All you need is your API Key. You will find your **Key** in the Integration menu item in the settings.
 
 ![](/_images/doc2/doc2-Settings-Integration-API Key.png)
 
 
-You will find examples of different **API Calls** [here](/doc2/settings/integration/api-calls-examples/).
+Various examples of **API Calls** can be found [here](/doc2/settings/integration/api-calls-examples/).

@@ -10,12 +10,12 @@ tags:
   - api.polydocs.io
 ---
 
-#### In this section you will find examples of different API calls via [link](https://api.polydocs.io/docs).
+#### In this section you will find examples of different API calls via [api.polydocs.io](https://api.polydocs.io/docs).
 
 
 ## Upload Source
 
-**1.** go to [link](https://api.polydocs.io/docs)
+**1.** go to [api.polydocs.io](https://api.polydocs.io/docs)<br>
 **2.** Click on **Authorize** in the upper right corner
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize.png){ loading=lazy }
@@ -32,7 +32,7 @@ tags:
 
 |          |                            |
 |  ----    |          ------            |
-|  source  |  email**:**{Pattern name}  |
+|  source  |  email:{Pattern name}      |
 
 ![Picture](/_images/doc2/DOC2_API_POST_document process.png){ loading=lazy }
 

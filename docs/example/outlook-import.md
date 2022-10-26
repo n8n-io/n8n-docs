@@ -69,7 +69,7 @@ With the following workflow you can upload email attachments from specific folde
 
 **7.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step 3.1<br>
 
-   ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)<br>
+   ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)
 **8.** The `Mark message as read` node marks the emails that were checked in the steps above as read<br>
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br>
 **9.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>

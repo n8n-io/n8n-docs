@@ -106,7 +106,17 @@ return item;
 ![](/_images/workflows/workflows/WF-outlook-import-switch-node.png)<br>
 **12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
+
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
+Add the classification rules in DOC² so that the upload node knows where to upload the documents.
+
 **13.** In your DOC² you have to add classification rules, so that the Upload Node knows where to upload the documents.<br>
+
+You can find this in the Settings under the menu item Classification and Extraction in the subitem Document Processing.  
+
+![](/_images/workflows/workflows/WF-outlook-import-doc2-settings.png)
+
+
     13.1 Open DOC²<br>
     13.2 Go to the Settings page<br>
     13.3 Click on `Classification and Extraction`<br>

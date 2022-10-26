@@ -1,0 +1,407 @@
+{
+  "name": "Workflow Outlook",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "143ad22c-849b-4508-99b4-e4dcbe4b0c3e",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        2760,
+        900
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "folderMessage",
+        "operation": "getAll",
+        "folderId": "={{$json[\"check_id\"]}}",
+        "additionalFields": {
+          "filter": "isRead eq false"
+        }
+      },
+      "name": "Get unread messages",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        920,
+        480
+      ],
+      "id": "23a77cf1-9f71-40e9-9ae9-f5417fe76421",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "11",
+          "name": "Microsoft Outlook DocDemo"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "messageId": "={{ $json[\"id\"] }}",
+        "updateFields": {
+          "isRead": true
+        }
+      },
+      "name": "Mark message as read",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        260
+      ],
+      "id": "9c2c6467-e6f4-4d89-ba81-6045a7ac63e6",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "11",
+          "name": "Microsoft Outlook DocDemo"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "interval": 60
+      },
+      "name": "Interval",
+      "type": "n8n-nodes-base.interval",
+      "typeVersion": 1,
+      "position": [
+        100,
+        580
+      ],
+      "id": "88cf517a-035c-4bf1-993d-12133ee5ba6c"
+    },
+    {
+      "parameters": {
+        "label": "={{$node[\"Get Folder Name\"].json[\"name\"]}}",
+        "doc_type": "INVOICE",
+        "importtype": "email",
+        "address": "={{$node[\"Get unread messages\"].json[\"sender\"][\"emailAddress\"][\"address\"]}}",
+        "inbox": "={{$node[\"Get Folder Name\"].json[\"inbox\"]}}",
+        "sub_org": "fcb1d623-1953-4f4a-8309-b3506b65933c"
+      },
+      "id": "30d39327-c9a8-4ed7-ad95-8da701d73dc5",
+      "name": "Upload Document",
+      "type": "n8n-nodes-base.upload",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        220
+      ],
+      "alwaysOutputData": false,
+      "credentials": {
+        "Doc2AppApi": {
+          "id": "12",
+          "name": "Doc2App"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "operation": "getAll",
+        "messageId": "={{ $json[\"id\"] }}",
+        "additionalFields": {}
+      },
+      "id": "589491a9-182a-4b14-bfa9-30af3365fc69",
+      "name": "Get Attachments",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        480
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "11",
+          "name": "Microsoft Outlook DocDemo"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "operation": "download",
+        "messageId": "={{ $node[\"Get unread messages\"].json[\"id\"] }}",
+        "attachmentId": "={{$json[\"id\"]}}"
+      },
+      "id": "1a6c6c83-a29a-483e-9ee1-74141af17339",
+      "name": "Download Attachment",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        480
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "11",
+          "name": "Microsoft Outlook DocDemo"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "functionCode": "const folders = [\n  \"101_Kostenrechnung\",\n  \"102_Wareneingangrechnung\"\n];\n\nif ($node[\"Microsoft getFolders\"].json[\"displayName\"]){\n  folder_name =  $node[\"Microsoft getFolders\"].json[\"displayName\"];\n\n  for (const folder of folders) {\n    console.log(folder)\n    if (folder == folder_name){\n      item.check_id = $node[\"Microsoft getFolders\"].json[\"id\"];\n    }\n  }\n}\n\nreturn item;\n"
+      },
+      "id": "27a256b1-b2a7-4616-a29c-95e331cd7ad9",
+      "name": "FunctionItem",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        500,
+        580
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "eb5dfc2b-8806-4296-8dd4-5370a41c6a66",
+      "name": "NoOp",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        920,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"check_id\"]}}",
+              "value2": "={{$json[\"id\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "c1835878-1d80-4a84-9c11-9bba82b23262",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        700,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const folderls = [\n  $node[\"FunctionItem\"].json[\"displayName\"]\n];\n\n\n\nconst folders = [\n  \"101_Kostenrechnung\",\n  \"102_Wareneingangrechnung\"\n];\n\nid = $node[\"FunctionItem\"].json[\"check_id\"];\nnames = $node[\"FunctionItem\"].json[\"displayName\"];\n\nif (id){\n  for (const folder of folders) {\n    if (folder == names){\n      item.inbox = names;\n    }\n  }\n}\n\nreturn item;"
+      },
+      "id": "4d6ce55d-d929-493b-9bbd-ac42c814e32f",
+      "name": "Get Folder Name",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"inbox\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "101_Kostenrechnung"
+            },
+            {
+              "value2": "102_Wareneingangrechnung",
+              "output": 1
+            }
+          ]
+        }
+      },
+      "id": "5d6ca3ec-6319-4f22-bc5a-a9d16400cff1",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "label": "={{$node[\"Get Folder Name\"].json[\"name\"]}}",
+        "doc_type": "INVOICE",
+        "importtype": "email",
+        "address": "={{$node[\"Get unread messages\"].json[\"sender\"][\"emailAddress\"][\"address\"]}}",
+        "inbox": "={{$node[\"Get Folder Name\"].json[\"inbox\"]}}",
+        "sub_org": "bc7ed89e-1b23-4e7e-ad3e-89791f357864"
+      },
+      "id": "b0d7806b-1e0a-493f-ac56-a4ae66d90629",
+      "name": "Upload Document1",
+      "type": "n8n-nodes-base.upload",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        480
+      ],
+      "alwaysOutputData": false,
+      "credentials": {
+        "Doc2AppApi": {
+          "id": "12",
+          "name": "Doc2App"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "getAll",
+        "additionalFields": {}
+      },
+      "id": "0d534627-6ed8-40f6-a72f-4e96386be0e9",
+      "name": "Microsoft getFolders",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        300,
+        580
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "11",
+          "name": "Microsoft Outlook DocDemo"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get unread messages": {
+      "main": [
+        [
+          {
+            "node": "Mark message as read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Attachments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interval": {
+      "main": [
+        [
+          {
+            "node": "Microsoft getFolders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Attachments": {
+      "main": [
+        [
+          {
+            "node": "Download Attachment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Attachment": {
+      "main": [
+        [
+          {
+            "node": "Get Folder Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionItem": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Get unread messages",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NoOp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Folder Name": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Upload Document",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Upload Document1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft getFolders": {
+      "main": [
+        [
+          {
+            "node": "FunctionItem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": 9,
+  "meta": {
+    "instanceId": "eb73f4ffdc88a336ed06723651bb7b7abb2d020a5b45cd3b91150b837f59c98c"
+  },
+  "tags": []
+}

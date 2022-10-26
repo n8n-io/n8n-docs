@@ -16,11 +16,11 @@ API integration refers to a process of connecting two or more applications via A
 To access the hole Polydocs API menu click [here](https://doc2api.cloudintegration.eu/docs) 
 
 
-## API Calls
+## API Key
 
 All you need is your API Key. You will find your **API Key** in the Integration menu item in the settings
 
 ![](/_images/doc2/doc2-Settings-Integration-API Key.png)
 
 
-[Here](/doc2/settings/integration/api-calls-examples/) you will find examples of different API calls.
+[Here](/doc2/settings/integration/api-calls-examples/) you will find examples of different **API Calls**.

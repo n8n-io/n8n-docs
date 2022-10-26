@@ -21,7 +21,7 @@ tags:
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize.png){ loading=lazy }
 
-**3.** Enter your API Key and confirm by clicking `Authorize`
+**3.** Enter your [API Key](/doc2/settings/integration/api-integration/) and confirm by clicking `Authorize`
 
 ![Picture](/_images/doc2/admin_guides_doc2-api-authorize_key.png){ loading=lazy }
 

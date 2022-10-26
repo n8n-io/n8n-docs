@@ -10,7 +10,7 @@ tags:
   - api.polydocs.io
 ---
 
-#### In this section you will find examples of different API calls via api.polydocs.io.
+#### In this section you will find examples of different API calls via [link](https://api.polydocs.io/docs).
 
 # Upload Source
 

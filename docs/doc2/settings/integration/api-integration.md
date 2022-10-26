@@ -23,13 +23,4 @@ All you need is your API Key. You will find your **API Key** in the Integration 
 ![](/_images/doc2/doc2-Settings-Integration-API Key.png)
 
 
-
-* To **upload** documents you need following **POST** Request with this link:
-```upl
-https://doc2api.cloudintegration.eu/document/process_documents
-```
-
-* To query the **status** of the document you need following **GET** request with this link:
-```sta
-https://doc2api.cloudintegration.eu/document/documents_status/{doc_id}
-```
+[Here](/doc2/settings/integration/api-calls-examples/) you will find examples of different API calls.

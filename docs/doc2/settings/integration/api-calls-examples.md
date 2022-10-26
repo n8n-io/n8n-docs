@@ -12,7 +12,7 @@ tags:
 
 #### In this section you will find examples of different API calls via [api.polydocs.io](https://api.polydocs.io/docs).
 
-For each example, authentication is the first step
+<ins>For each example, authentication is the first step</ins>
 
 # Authentication
 
@@ -28,7 +28,7 @@ For each example, authentication is the first step
 
 
 
-## Upload Source
+## Upload document
 
 After completing steps **1.-3.**<br>
 **4.** scroll down to 

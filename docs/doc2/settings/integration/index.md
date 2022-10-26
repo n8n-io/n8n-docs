@@ -13,4 +13,5 @@ tags:
 In this section you will find your API Key as well as the SSO Service Provider Settings
 
 - [API Key](/doc2/settings/integration/api-integration/)
+- [API Calls](/doc2/settings/integration/api-calls-examples.md)
 - [SSO](/doc2/settings-sso-settings/)

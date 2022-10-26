@@ -110,9 +110,7 @@ return item;
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-Add the classification rules in DOC² so that the upload node knows where to upload the documents.
-
-**13.** In your DOC² you have to add classification rules, so that the Upload Node knows where to upload the documents.<br>
+**13.** Add the classification rules in DOC² so that the upload node knows where to upload the documents.
 
 You can find this in the Settings under the menu item Classification and Extraction in the subitem Document Processing.  
 
@@ -120,10 +118,10 @@ You can find this in the Settings under the menu item Classification and Extract
 
 ![](/_images/workflows/workflows/WF-outlook-import-classification-rules.png)<br>
     
-    * For the Pattern enter your Outlook folder name, in this example it is `101_Polydocs`<br>
-    * For the type select `E-Mail`<br>
-    * For Sub Organization select the Subu Organization where the documents should be uploaded.<br>
-    * You can enter any document type as the document type. Leave the field blank for each document type<br>
+* For the Pattern enter your Outlook folder name, in this example it is `101_Polydocs`<br>
+* For the type select `E-Mail`<br>
+* For Sub Organization select the Subu Organization where the documents should be uploaded.<br>
+* You can enter any document type as the document type. Leave the field blank for each document type<br>
 
 
 <ins>Here is the complete workflow for you to download:</ins>

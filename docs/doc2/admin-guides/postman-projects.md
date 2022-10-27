@@ -143,7 +143,7 @@ You can also use the POST method to upload a document to DOC².
 ![Picture](/_images/doc2/admin_guides_post_document-process_body-form-data-file.png){ loading=lazy } 
 ![Picture](/_images/doc2/admin_guides_post_document-process_key-value-send.png){ loading=lazy }
 **6.**  Enter **file** into the `KEY` field where you will find the hidden File dropdown. Select `File` and move to the `VALUE` field where you are able to select your file by clicking `Select Files`. 
-**7:** When you click `Send`, you should see "success": true in the response.
+**7.** When you click `Send`, you should see "success": true in the response.
 
 It should look like this:
 

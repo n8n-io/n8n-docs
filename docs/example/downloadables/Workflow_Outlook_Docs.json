@@ -1,17 +1,16 @@
 {
-  "name": "Workflow Outlook",
+  "name": "Workflow Outlook Docs",
   "nodes": [
     {
       "parameters": {},
-      "id": "143ad22c-849b-4508-99b4-e4dcbe4b0c3e",
+      "id": "4a1b3794-27b0-418f-a55c-d1ae2e2fe485",
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        2760,
-        900
-      ],
-      "disabled": true
+        240,
+        300
+      ]
     },
     {
       "parameters": {
@@ -26,13 +25,13 @@
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        920,
-        480
+        -680,
+        700
       ],
-      "id": "23a77cf1-9f71-40e9-9ae9-f5417fe76421",
+      "id": "82a51178-ed1c-44bc-a8ea-59e494c98633",
       "credentials": {
         "microsoftOutlookOAuth2Api": {
-          "id": "11",
+          "id": "18",
           "name": "Microsoft Outlook DocDemo"
         }
       },
@@ -50,13 +49,13 @@
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1140,
-        260
+        -460,
+        480
       ],
-      "id": "9c2c6467-e6f4-4d89-ba81-6045a7ac63e6",
+      "id": "bad5259c-ac0a-4ca5-ad6e-e9c917a7d2be",
       "credentials": {
         "microsoftOutlookOAuth2Api": {
-          "id": "11",
+          "id": "18",
           "name": "Microsoft Outlook DocDemo"
         }
       }
@@ -69,10 +68,10 @@
       "type": "n8n-nodes-base.interval",
       "typeVersion": 1,
       "position": [
-        100,
-        580
+        -1500,
+        800
       ],
-      "id": "88cf517a-035c-4bf1-993d-12133ee5ba6c"
+      "id": "dad40043-d57f-49e6-b0b5-79b49217994c"
     },
     {
       "parameters": {
@@ -83,19 +82,19 @@
         "inbox": "={{$node[\"Get Folder Name\"].json[\"inbox\"]}}",
         "sub_org": "fcb1d623-1953-4f4a-8309-b3506b65933c"
       },
-      "id": "30d39327-c9a8-4ed7-ad95-8da701d73dc5",
+      "id": "c7aca707-8b4a-4cab-abbf-23eb4253c664",
       "name": "Upload Document",
       "type": "n8n-nodes-base.upload",
       "typeVersion": 1,
       "position": [
-        2040,
-        220
+        440,
+        440
       ],
       "alwaysOutputData": false,
       "credentials": {
         "Doc2AppApi": {
           "id": "12",
-          "name": "Doc2App"
+          "name": "Doc2App account 2"
         }
       },
       "continueOnFail": true
@@ -107,17 +106,17 @@
         "messageId": "={{ $json[\"id\"] }}",
         "additionalFields": {}
       },
-      "id": "589491a9-182a-4b14-bfa9-30af3365fc69",
+      "id": "b592eec2-8467-4bf2-b315-0bc8f22f218c",
       "name": "Get Attachments",
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1140,
-        480
+        -460,
+        700
       ],
       "credentials": {
         "microsoftOutlookOAuth2Api": {
-          "id": "11",
+          "id": "18",
           "name": "Microsoft Outlook DocDemo"
         }
       },
@@ -130,17 +129,17 @@
         "messageId": "={{ $node[\"Get unread messages\"].json[\"id\"] }}",
         "attachmentId": "={{$json[\"id\"]}}"
       },
-      "id": "1a6c6c83-a29a-483e-9ee1-74141af17339",
+      "id": "c5505872-a8a3-4122-b1b9-eb83679e6c1b",
       "name": "Download Attachment",
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1360,
-        480
+        -240,
+        700
       ],
       "credentials": {
         "microsoftOutlookOAuth2Api": {
-          "id": "11",
+          "id": "18",
           "name": "Microsoft Outlook DocDemo"
         }
       },
@@ -148,26 +147,26 @@
     },
     {
       "parameters": {
-        "functionCode": "const folders = [\n  \"101_Kostenrechnung\",\n  \"102_Wareneingangrechnung\"\n];\n\nif ($node[\"Microsoft getFolders\"].json[\"displayName\"]){\n  folder_name =  $node[\"Microsoft getFolders\"].json[\"displayName\"];\n\n  for (const folder of folders) {\n    console.log(folder)\n    if (folder == folder_name){\n      item.check_id = $node[\"Microsoft getFolders\"].json[\"id\"];\n    }\n  }\n}\n\nreturn item;\n"
+        "functionCode": "const folders = [\n  \"101_Polydocs\",\n  \"102_Polydocs\"\n];\n\nif ($node[\"Microsoft getFolders\"].json[\"displayName\"]){\n  folder_name =  $node[\"Microsoft getFolders\"].json[\"displayName\"];\n\n  for (const folder of folders) {\n    console.log(folder)\n    if (folder == folder_name){\n      item.check_id = $node[\"Microsoft getFolders\"].json[\"id\"];\n    }\n  }\n}\n\nreturn item;\n"
       },
-      "id": "27a256b1-b2a7-4616-a29c-95e331cd7ad9",
+      "id": "22c37573-b647-46cd-8dec-7b243228672b",
       "name": "FunctionItem",
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        500,
-        580
+        -1100,
+        800
       ]
     },
     {
       "parameters": {},
-      "id": "eb5dfc2b-8806-4296-8dd4-5370a41c6a66",
+      "id": "1daa4384-592f-42ba-8f49-69a2d0f6f110",
       "name": "NoOp",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        920,
-        680
+        -680,
+        900
       ]
     },
     {
@@ -181,26 +180,26 @@
           ]
         }
       },
-      "id": "c1835878-1d80-4a84-9c11-9bba82b23262",
+      "id": "75f6e57c-6cef-4bf3-97ed-37fa6faa55c9",
       "name": "IF",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        700,
-        580
+        -900,
+        800
       ]
     },
     {
       "parameters": {
-        "functionCode": "const folderls = [\n  $node[\"FunctionItem\"].json[\"displayName\"]\n];\n\n\n\nconst folders = [\n  \"101_Kostenrechnung\",\n  \"102_Wareneingangrechnung\"\n];\n\nid = $node[\"FunctionItem\"].json[\"check_id\"];\nnames = $node[\"FunctionItem\"].json[\"displayName\"];\n\nif (id){\n  for (const folder of folders) {\n    if (folder == names){\n      item.inbox = names;\n    }\n  }\n}\n\nreturn item;"
+        "functionCode": "const folderls = [\n  $node[\"FunctionItem\"].json[\"displayName\"]\n];\n\n\n\nconst folders = [\n  \"101_Polydocs\",\n  \"102_Polydocs\"\n];\n\nid = $node[\"FunctionItem\"].json[\"check_id\"];\nnames = $node[\"FunctionItem\"].json[\"displayName\"];\n\nif (id){\n  for (const folder of folders) {\n    if (folder == names){\n      item.inbox = names;\n    }\n  }\n}\n\nreturn item;"
       },
-      "id": "4d6ce55d-d929-493b-9bbd-ac42c814e32f",
+      "id": "9b4495ed-c78d-491b-b72c-0d05028c1dfb",
       "name": "Get Folder Name",
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        1580,
-        480
+        -20,
+        700
       ]
     },
     {
@@ -219,13 +218,13 @@
           ]
         }
       },
-      "id": "5d6ca3ec-6319-4f22-bc5a-a9d16400cff1",
+      "id": "51b392de-9821-4939-9bf5-9e1107f7f666",
       "name": "Switch",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        1800,
-        480
+        200,
+        700
       ]
     },
     {
@@ -237,19 +236,19 @@
         "inbox": "={{$node[\"Get Folder Name\"].json[\"inbox\"]}}",
         "sub_org": "bc7ed89e-1b23-4e7e-ad3e-89791f357864"
       },
-      "id": "b0d7806b-1e0a-493f-ac56-a4ae66d90629",
+      "id": "2cd5bc19-71c7-4af3-826f-54837038cd79",
       "name": "Upload Document1",
       "type": "n8n-nodes-base.upload",
       "typeVersion": 1,
       "position": [
-        2040,
-        480
+        440,
+        700
       ],
       "alwaysOutputData": false,
       "credentials": {
         "Doc2AppApi": {
           "id": "12",
-          "name": "Doc2App"
+          "name": "Doc2App account 2"
         }
       },
       "continueOnFail": true
@@ -260,17 +259,17 @@
         "operation": "getAll",
         "additionalFields": {}
       },
-      "id": "0d534627-6ed8-40f6-a72f-4e96386be0e9",
+      "id": "53071cba-4e36-4a5f-b84d-bcc7bf1b6863",
       "name": "Microsoft getFolders",
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        300,
-        580
+        -1300,
+        800
       ],
       "credentials": {
         "microsoftOutlookOAuth2Api": {
-          "id": "11",
+          "id": "18",
           "name": "Microsoft Outlook DocDemo"
         }
       }
@@ -399,9 +398,9 @@
   },
   "active": false,
   "settings": {},
-  "id": 9,
+  "id": 8,
   "meta": {
-    "instanceId": "eb73f4ffdc88a336ed06723651bb7b7abb2d020a5b45cd3b91150b837f59c98c"
+    "instanceId": "d6d8b0cd086866de0f8a89d32c2e82629886a21b160aff77440383fe235ef72b"
   },
   "tags": []
 }

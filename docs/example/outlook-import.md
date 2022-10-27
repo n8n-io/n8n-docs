@@ -80,8 +80,8 @@ With the following Workflow² you can upload Email attachements in specific fold
 ];
 
 const folders = [
-  "101_Kostenrechnung",
-  "102_Wareneingangrechnung"
+  "101_Polydocs",
+  "102_Polydocs"
 ];
 
 id = $node["FunctionItem"].json["check_id"];
@@ -117,4 +117,4 @@ return item;
 
 <ins>Here is the complete workflow for you to download:</ins>
 
-<a href="/example/downloadables/Workflow_Outlook.json" download>Download</a>
+<a href="/example/downloadables/Workflow_Outlook_Docs.json" download>Download</a>

@@ -4,12 +4,12 @@ description: Built-in methods and variables you can use in expressions and code 
 
 # Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description. Note that some methods and variables aren't available in the Function node.
+n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description. Note that some methods and variables aren't available in the Code node.
 
 
 ## Current node input
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
 | `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :x: |

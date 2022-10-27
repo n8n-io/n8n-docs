@@ -87,10 +87,13 @@ Here we will upload a document to /document/process but the steps are the same f
 
 1. Enter Metadata ![](/_images/doc2/metadata/metadata-upload.png)
    1. Metadata needs to be in a valid json format. [Json Validator](https://jsonlint.com/)<br>
-      An example of a metadata entry would be:<br> `{"custom-key": "the custom value", "custom_doc_id": "8a5cf33b-c923-4879-96ca-94d69965d508"}`
+      An example of a metadata entry would be:<br> 
+      ```
+     `{"custom-key": "the custom value", "custom_doc_id": "8a5cf33b-c923-4879-96ca-94d69965d508"}`
+      ```
 2. Select a file to upload ![](/_images/doc2/metadata/file-upload.png)
 3. Click `Execute`
-4. Wait for response. If the metadata field is not a valid json an error messgae will appear. ![Invalid Json response](/_images/doc2/metadata/invalid-json-response.png) If "success": true, then your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
+4. Wait for response. If the metadata field is not a valid json an error message will appear. ![Invalid Json response](/_images/doc2/metadata/invalid-json-response.png) If "success": true, then your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
 
 
 

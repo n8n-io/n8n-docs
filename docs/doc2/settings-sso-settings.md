@@ -25,4 +25,4 @@ Here you will find all the information you need for the following steps
 
 The step by step guide to configure SSO in Infor Cloud can be found [here](/doc2/doc2-with-infor/configuring-sso-in-cloud/).
 
-More helpful documentation you will find [here](/doc2/sso/).
+More helpful documentation can be found [here](/doc2/sso/).

@@ -96,7 +96,7 @@ Click `Send` and you should receive all the information about every user in your
 
 The POST method is usually used to create users or organizations, for example. This method inserts information into the database.
 
-#### Create User
+### Create User
 
 **1.**  Select the POST Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
@@ -123,7 +123,7 @@ Finally, click `Send` and you can see all the credentials you set in the respons
 ![Picture](/_images/doc2/admin_guides_post_response.png){ loading=lazy }
 
 
-#### Upload document
+### Upload document
 
 You can also use the POST method to upload a document to DOC².
 

@@ -92,9 +92,11 @@ The GET method is very useful to get information about users, sub-organizations,
 Click `Send` and you should receive all the information about every user in your organization.
 
 
-## "POST" Method example
+## "POST" Method examples
 
 The POST method is usually used to create users or organizations, for example. This method inserts information into the database.
+
+#### Create User
 
 **1.**  Select the POST Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
@@ -121,8 +123,9 @@ Finally, click `Send` and you can see all the credentials you set in the respons
 ![Picture](/_images/doc2/admin_guides_post_response.png){ loading=lazy }
 
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
-You can also use the POST method to **upload a document** to DOC².
+#### Upload document
+
+You can also use the POST method to upload a document to DOC².
 
 **1.**  Select the POST Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>

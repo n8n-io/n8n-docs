@@ -31,14 +31,14 @@ If you self-host n8n, you can import and use built-in and external npm modules i
 
 There are two places where you can use code in n8n: the Code node and the expressions editor. When using either area, there are some key concepts you need to know, as well as some built-in methods and variables to help with common tasks.
 
-## Key concepts
+### Key concepts
 
 When working with the Code node, you need to understand the following concepts:
 
 * [Data structure](/data/data-structure/): understand the data you receive in the Code node, and requirements for outputting data from the node.
 * [Item linking](/data/data-mapping/data-item-linking/): learn how data items work, and how to link to items from previous nodes. You need to handle item linking in your code when the number of input and output items doesn't match.
 
-## Built-in methods and variables
+### Built-in methods and variables
 
 n8n includes built-in methods and variables. These provide support for:
 

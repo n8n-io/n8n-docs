@@ -121,6 +121,32 @@ Finally, click `Send` and you can see all the credentials you set in the respons
 ![Picture](/_images/doc2/admin_guides_post_response.png){ loading=lazy }
 
 
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+You can also use the POST method to **upload a document** to DOC².
+
+**1.**  Select the POST Method.<br>
+**2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. In this case:
+
+![Picture](/_images/doc2/admin_guides_post_document-process.png){ loading=lazy }
+    
+
+
+   https://api.polydocs.io/document/process
+
+
+**4.**  Now paste this link into the text box next to the POST method in Postman.<br>
+**5.**  Select the `Body` tab in your HTTP request and choose `form-data`
+![Picture](/_images/doc2/admin_guides_post_document-process_body-form-data-file.png){ loading=lazy } 
+![Picture](/_images/doc2/admin_guides_post_document-process_key-value-send.png){ loading=lazy }
+**6.**  Enter **file** into the `KEY` field where you will find the hidden File dropdown. Select `File` and move to the `VALUE` field where you are able to select your file by clicking `Select Files`. 
+**7:** When you click `Send`, you should see "success": true in the response.
+
+It should look like this:
+
+![Picture](/_images/doc2/admin_guides_upload_body.png){ loading=lazy }
+
+
 ## "DELETE" Method example
 
 The DELETE method is used to delete, for example, users, organizations and so on.

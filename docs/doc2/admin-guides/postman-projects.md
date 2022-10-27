@@ -135,7 +135,7 @@ You can also use the POST method to upload a document to DOC².
     
 
 
-   https://api.polydocs.io/document/process
+    https://api.polydocs.io/document/process
 
 
 **4.**  Now paste this link into the text box next to the POST method in Postman.<br>

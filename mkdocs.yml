@@ -464,6 +464,7 @@ nav:
       - Digital Ocean: hosting/server-setups/digital-ocean.md
       - Hetzner: hosting/server-setups/hetzner.md
       - Amazon Web Services: hosting/server-setups/aws.md
+      - Azure: hosting/server-setups/azure.md
       - Google Cloud: hosting/server-setups/google-cloud.md
     - Databases:
       - hosting/databases/index.md

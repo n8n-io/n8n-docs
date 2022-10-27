@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with Sendinblue:
 
-* [Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendInBlue/)
-* [Sendinblue trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.sendInBlueTrigger/)
+* [Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/)
+* [Sendinblue trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/)
 
 ## API key
 

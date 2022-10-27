@@ -12,7 +12,7 @@ The SSH node is useful for executing commands via the Secure Shell Protocol.
 - Download a file
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readBinaryFile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 
 ## Node Reference
 

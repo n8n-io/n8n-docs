@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Chargebee.
 
 - [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee/)
-- [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeeTrigger/)
+- [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger/)
 
 ## Prerequisites
 

@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with ClickUp.
 
-- [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickUp/)
-- [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickUpTrigger/)
+- [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup/)
+- [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger/)
 
 ## Prerequisites
 

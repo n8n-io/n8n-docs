@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with MongoDB.
 
-- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/)
+- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/)
 
 ## Prerequisites
 

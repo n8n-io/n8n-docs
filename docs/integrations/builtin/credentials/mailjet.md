@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Mailjet.
 
 - [Mailjet](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/)
-- [Mailjet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjetTrigger/)
+- [Mailjet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger/)
 
 ## Prerequisites
 

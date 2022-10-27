@@ -194,4 +194,4 @@ Output in table view:
 
 n8n provides an example workflow that demonstrates key Merge node concepts.
 
-Go to [Joining different datasets](https://n8n.io/workflows/1747/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.
+Go to [Joining different datasets](https://n8n.io/workflows/1747-joining-different-datasets/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.

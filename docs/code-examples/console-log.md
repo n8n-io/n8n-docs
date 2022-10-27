@@ -1,3 +1,7 @@
+---
+description: How to use console.log()
+---
+
 # Using console.log in the Code node
 
 You can use `console.log()` in the Code node to help when writing and debugging your code.

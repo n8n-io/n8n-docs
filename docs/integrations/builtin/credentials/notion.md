@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Notion.
 
 - [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/)
-- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notionTrigger/)
+- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/)
 
 ## Prerequisites
 

@@ -28,7 +28,7 @@ Now that the table is prepared let's return to the workflow in the Editor UI.
 Add an ***Airtable node*** connected to the HTTP Request node.
 
 !!! note "Spreadsheet nodes"
-    You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/){:target="_blank" .external}.
+    You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external}.
 
 
 In the *Airtable node* window, configure the following parameters:

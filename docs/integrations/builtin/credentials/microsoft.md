@@ -2,13 +2,13 @@
 
 You can use these credentials to authenticate the following nodes with Microsoft.
 
-- [Microsoft Dynamics CRM](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftDynamicsCrm/)
-- [Microsoft Excel](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftExcel/)
-- [Microsoft Graph Security](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftGraphSecurity/)
-- [Microsoft OneDrive](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/)
-- [Microsoft Outlook](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOutlook/)
-- [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftTeams/)
-- [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftToDo/)
+- [Microsoft Dynamics CRM](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/)
+- [Microsoft Excel](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel/)
+- [Microsoft Graph Security](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity/)
+- [Microsoft OneDrive](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/)
+- [Microsoft Outlook](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/)
+- [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/)
+- [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/)
 
 ## Prerequisites
 

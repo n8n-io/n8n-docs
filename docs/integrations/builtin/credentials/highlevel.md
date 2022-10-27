@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with HighLevel:
 
-* [HighLevel node](/integrations/builtin/app-nodes/n8n-nodes-base.highLevel/)
+* [HighLevel node](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel/)
 
 ## Prerequisites
 

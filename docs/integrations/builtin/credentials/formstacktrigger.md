@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstackTrigger/)
+- [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger/)
 
 ## Prerequisites
 

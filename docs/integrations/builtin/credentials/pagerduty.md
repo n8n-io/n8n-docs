@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with PagerDuty.
 
-- [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerDuty/)
+- [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/)
 
 ## Prerequisites
 

@@ -1,3 +1,7 @@
+---
+description: A quick example to try out n8n.
+---
+
 # The very quick quickstart
 
 This quickstart gives you a very quick taste of n8n. Its aim is to allow you to try out the UI, and introduce you to two key features: workflow templates and expressions. It doesn't include detailed explanations or explore concepts.

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with CrateDB.
 
-- [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.crateDb/)
+- [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/)
 
 ## Prerequisites
 

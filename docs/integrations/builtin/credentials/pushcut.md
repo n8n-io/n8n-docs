@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Pushcut.
 
 - [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut/)
-- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcutTrigger/)
+- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/)
 
 ## Prerequisites
 

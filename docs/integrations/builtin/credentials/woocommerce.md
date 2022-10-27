@@ -2,8 +2,8 @@
 
 You can use these credentials to authenticate the following nodes with WooCommerce.
 
-- [WooCommerce](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/)
-- [WooCommerce Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wooCommerceTrigger/)
+- [WooCommerce](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/)
+- [WooCommerce Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger/)
 
 ## Prerequisites
 

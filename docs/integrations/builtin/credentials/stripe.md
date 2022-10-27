@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Stripe.
 
-- [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripeTrigger/)
+- [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger/)
 - [Stripe](/integrations/builtin/app-nodes/n8n-nodes-base.stripe/)
 
 ## Prerequisites

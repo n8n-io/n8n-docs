@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with GitLab.
 
 - [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab/)
-- [GitLab Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/)
+- [GitLab Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/)
 
 ## Prerequisites
 

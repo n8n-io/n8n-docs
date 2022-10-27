@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Asana.
 
 - [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana/)
-- [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanaTrigger/)
+- [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger/)
 
 
 ## Prerequisites

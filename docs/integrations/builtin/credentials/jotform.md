@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with JotForm.
 
-- [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotFormTrigger/)
+- [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger/)
 
 ## Prerequisites
 

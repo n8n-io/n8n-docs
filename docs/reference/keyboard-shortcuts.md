@@ -1,4 +1,8 @@
-# Keyboard Shortcuts
+---
+description: Keyboard shortcuts available in n8n.
+---
+
+# Keyboard shortcuts
 
 The following keyboard shortcuts can be used:
 

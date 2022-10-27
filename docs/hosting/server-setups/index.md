@@ -5,8 +5,9 @@ Guides to self-hosting n8n with:
 * [Docker Compose](/hosting/server-setups/docker-compose/)
 * [Caddy](/hosting/server-setups/caddy/)
 * [Digital Ocean](/hosting/server-setups/digital-ocean/) (using Caddy and Docker Compose)
-* [Azure](/hosting/server-setups/azure/)
+* [Hetzner Cloud]((/hosting/server-setups/hetzner/) (using Caddy and Docker Compose)
 * [AWS](/hosting/server-setups/aws/)
+* [Azure](/hosting/server-setups/azure/)
 * [Google Cloud Platform](/hosting/server-setups/google-cloud/)
 
 

@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Webflow.
 
 - [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow/)
-- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowTrigger/)
+- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/)
 
 ## Prerequisites
 

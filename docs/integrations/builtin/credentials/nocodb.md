@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/)
+- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/)
 
 ## Prerequisites
 

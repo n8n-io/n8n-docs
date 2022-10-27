@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with monday.com.
 
-- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondayCom/)
+- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/)
 
 ## Prerequisites
 

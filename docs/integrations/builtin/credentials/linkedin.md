@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with LinkedIn.
 
-- [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedIn/)
+- [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/)
 
 ## Prerequisites
 

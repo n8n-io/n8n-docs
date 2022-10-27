@@ -1,3 +1,7 @@
+---
+description: Pagination in n8n's public REST API.
+---
+
 # API pagination
 
 The default page size is 100 results. You can change the page size limit. The maximum permitted size is 250.

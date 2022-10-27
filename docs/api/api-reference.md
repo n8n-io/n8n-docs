@@ -3,6 +3,7 @@ template: api.html
 hide:
     - toc
     - navigation
+description: API reference for n8n's public REST API.
 ---
 
 

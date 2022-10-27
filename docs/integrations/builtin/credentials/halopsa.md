@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with HaloPSA.
 
-- [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.haloPSA/)
+- [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/)
 
 ## Prerequisites
 

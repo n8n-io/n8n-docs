@@ -31,7 +31,7 @@ _Briefly summarize the service. This should be one or two sentences, and can oft
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [_Name's_ documentation]() for more information about the service.
+Refer to [_Name's_ documentation](){:target=_blank .external-link} for more information about the service.
 
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
 n8n provides a trigger node for _Name_. You can find the trigger node docs [here]().

@@ -6,7 +6,7 @@
     You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
 
 
-## Basic Operations
+## Operations
 
 * File
     * Copy a file
@@ -25,24 +25,20 @@
     * Search a folder
     * Share a folder
 
-## Example Usage
+## Related resources
 
-This workflow allows you to create a folder in Microsoft OneDrive. You can also find the [workflow](https://n8n.io/workflows/565) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Microsoft OneDrive]()
 
-The final workflow should look like the following image.
+Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link} for more information about the service.
 
-![A workflow with the Microsoft OneDrive node](/_images/integrations/builtin/app-nodes/microsoftonedrive/workflow.png)
+View [example workflows and related content](https://n8n.io/integrations/microsoft-onedrive/){:target=_blank .external-link} on n8n's website.
 
-### 1. Start node
+## Find the folder ID
 
-The start node exists by default when you create a new workflow.
+To perform operations on folders, you need to supply the ID. You can find this:
 
-### 2. Microsoft OneDrive node
-
-1. First of all, you'll have to enter credentials for the Microsoft OneDrive node. You can find out how to do that [here](/integrations/builtin/credentials/microsoft/).
-2. Select the 'Folder' option from the *Resource* dropdown list.
-3. Select the 'Create' option from the *Operation* dropdown list.
-4. Enter the folder name in the *Name* field.
-5. Click on *Execute Node* to run the workflow.
+* In the URL of the folder
+* By searching for it using the node. You need to do this if using MS 365 (where OneDrive uses Sharepoint behind the scenes):
+	1. Select **Resource** > **Folder**.
+	2. Select **Operation** > **Search**.
+	3. In **Query**, enter the folder name.
+	4. Select **Execute node**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.

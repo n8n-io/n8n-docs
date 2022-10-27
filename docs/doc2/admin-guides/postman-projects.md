@@ -100,7 +100,7 @@ The POST method is usually used to create users or organizations, for example. T
 
 **1.**  Select the POST Method.<br>
 **2.**  Authorize yourself as described [above](/doc2/admin-guides/postman-projects/#authorization).<br>
-**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. For example:
+**3.**  Open <a href="https://api.polydocs.io">api.polydocs.io</a> and add the path of the function behind the polydocs URL. In this case:
 
 ![Picture](/_images/doc2/admin_guides_post_api.png){ loading=lazy }
     

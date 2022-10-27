@@ -72,7 +72,24 @@ You will receive the following response:
 
 **Ready For Validation** means that the user can check the document.
 
+## Upload document with metadata
 
+After completing steps **1.-3.**<br>
+**4.** scroll down to one of these endpoints:<br>
+ - /document/process<br>
+ - /document/process_documents<br>
+ - /document/process_base64<br>
+
+Here we will upload a document to /document/process but the steps are the same for the other endpoints
+
+
+**5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
+
+1. Enter Metadata ![](/_images/doc2/metadata/metadata-upload.png)
+   1. Metadata needs to be in a valid json format. [Json Validator](https://jsonlint.com/)
+2. Select a file to upload ![](/_images/doc2/metadata/file-upload.png)
+3. Click `Execute`
+4. Wait for response. If the metadata field is not a valid json an error messgae will appear. ![Invalid Json response](/_images/doc2/metadata/invalid-json-response.png) If "success": true, then your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
 
 
 

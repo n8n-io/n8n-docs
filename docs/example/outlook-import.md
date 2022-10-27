@@ -126,4 +126,4 @@ You can find this in the `Settings` under the menu item **Classification and Ext
 
 <ins>Here is the complete workflow for you to download:</ins>
 
-<a href="/example/downloadables/Workflow_Outlook.json" download>Download</a>
+<a href="/example/downloadables/Workflow_Outlook_Docs.json" download>Download</a>

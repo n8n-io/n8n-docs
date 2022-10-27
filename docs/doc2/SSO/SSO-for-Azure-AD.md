@@ -110,6 +110,8 @@ Next, you need to finish setting up single-sign-on in Azure.
 
 **4.** Upload the DOC² **metadata.xml**, which you can find in the Settings menu **Integration**<br> under **SSO Service Provider Settings** of your DOC² account.
 
+![](/_images/doc2/SSO/Azure_Metadata.png)
+
 
 
 **5.** Edit the `Basic SAML Configuration`

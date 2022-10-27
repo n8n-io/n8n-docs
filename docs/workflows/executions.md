@@ -1,9 +1,9 @@
 ---
-description: An execution is a single run of a worklow.
+description: An execution is a single run of a workflow.
 ---
 
-# Overview
+# Executions
 
-An execution is a single run of a worklow.
+An execution is a single run of a workflow.
 
-You can view your executions history by opening the left menu, then selecting **Executions**. n8n opens the **Workflow Executions** modal.
+Select **Executions** <span class="inline-image">![Executions menu icon](/_images/common-icons/executions-menu.png)</span> to view your executions history. n8n opens the **Workflow Executions** modal. You can then open and view individual executions.

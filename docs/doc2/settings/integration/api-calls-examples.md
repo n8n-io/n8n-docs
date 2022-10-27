@@ -76,8 +76,8 @@ You will receive the following response:
 
 After completing steps **1.-3.**<br>
 **4.** scroll down to one of these endpoints:<br>
- - /document/process<br>
  - /document/process_documents<br>
+ - /document/process<br>
  - /document/process_base64<br>
 
 Here we will upload a document to /document/process but the steps are the same for the other endpoints

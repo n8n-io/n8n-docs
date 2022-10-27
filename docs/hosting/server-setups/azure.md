@@ -4,20 +4,11 @@ This hosting guide shows you how to self-host n8n on Azure. It uses n8n with Pos
 
 ## Prerequisites
 
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
 - [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank" .external-link}
 
 ## Hosting options
 
 Azure offers several ways suitable for hosting n8n, including Azure Container Instances (optimized for running containers), Linux Virtual Machines, and Azure Kubernetes Service (containers running with Kubernetes).
-=======
-- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
-- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
-
-## Hosting options
-
-Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
 
 This guide uses the Azure Kubernetes Service (AKS) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
@@ -25,14 +16,13 @@ The steps in this guide use a mix of the Azure UI and command line tool, but you
 
 ## Open the Azure Kubernetes Service
 
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
-From [the Azure portal](https://portal.azure.com/) select **Kubernetes services**.
+From [the Azure portal](https://portal.azure.com/){:target="_blank" .external-link} select **Kubernetes services**.
 
 ## Create a cluster
 
-From the Kubernetes services page, click the **Create** button and the **Create a Kubernetes cluster** menu item.
+From the Kubernetes services page, select **Create** > **Create a Kubernetes cluster**.
 
-You can select any of the configuration options that suit your need and then click the **Create** button when done.
+You can select any of the configuration options that suit your needs, then select **Create** when done.
 
 ## Set Kubectl context
 
@@ -40,47 +30,18 @@ The remainder of the steps in this guide require you to set the Azure instance a
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/azure){:target=_blank .external-link} locally. The following steps will tell you which file configures what and what you need to change.
-=======
-GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment from your Google Cloud Console: select the project dropdown menu and then the **NEW PROJECT** button. Then select the newly created project. As you follow the other steps in this guide, make sure you have the correct project selected.
-
-## Enable the Kubernetes Engine API
-
-GKE isn't enabled by default. Search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
-
-Select **ENABLE** to enable the Kubernetes Engine API for this project.
-
-## Create a cluster
-
-From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link}, select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
-
-## Set Kubectl context
-
-The rest of the steps in this guide require you to set the GCP instance as the Kubectl context. You can find the connection details for a cluster instance by opening its details page and selecting **CONNECT**. The displayed code snippet shows a connection string for the gcloud CLI tool. Paste and run the code snippet in the gcloud CLI to change your local Kubernetes settings to use the new gcloud cluster.
-
-## Clone configuration repository
-
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/azure){:target=_blank .external-link}. The following steps tell you which file configures what and what you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
 git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b azure
-=======
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b gcp
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
 cd azure
-=======
-cd n8n-kubernetes-hosting
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
 ```
 
 ## Configure Postgres
@@ -89,14 +50,10 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Configure volume for persistent storage
 
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
 To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default storage class is suitable for this purpose and is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
-=======
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class. You can read [this guide](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link} for specifics, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to "us-central".
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
 
-!!! note "Specialized Storage Classes"
-    If you have specialised or higher requirements for Storage Classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes){:target="_blank" .external-link}.
+!!! note "Specialized storage classes"
+    If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes){:target="_blank" .external-link}.
 
 ### Postgres environment variables
 
@@ -128,11 +85,7 @@ volumes:
 
 ### Pod resources
 
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
-[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
-=======
-[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` and `postgres-deployment.yaml` files:
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
+[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/){:target="_blank" .external-link} optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
 
 ```yaml
 …
@@ -150,10 +103,6 @@ This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kube
 - **Pro**: 640mb RAM, 20 millicore CPU burstable
 - **Power**: 1280mb RAM, 80 millicore CPU burstable
 
-<<<<<<< HEAD:docs/hosting/server-setups/azure.md
-=======
-
->>>>>>> main:docs/hosting/server-setups/google-cloud.md
 ### Environment variables
 
 n8n needs some environment variables set to pass to the application running in the containers.
@@ -198,7 +147,6 @@ kubectl apply -f .
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & ingresses** menu item of the cluster you want to use under the **External IP** column. You need to add the n8n port, "5678" to the URL.
 
 !!! note "Static IP addresses with AKS"
-
   [Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip){:target="_blank" .external-link} for more details on how to use a static IP address with AKS.
 
 ## Delete resources

@@ -18,9 +18,9 @@ You can use CLI commands with self-hosted n8n. Depending on how you choose to in
     # Mac
     /Users/<username>/Desktop/n8n.app/Contents/Resources/app/node_modules/n8n/bin/n8n export:workflow --all
     ```
-* Docker: the `n8n` command is available within your Docker container. For example:
+* Docker: the `n8n` command is available within your Docker container:
     ```sh
-    docker exec -it <n8n-container-name> n8n export:workflow --all
+    docker exec -u node -it <n8n-container-name> <n8n-cli-command>
     ```
 
 ## Start a workflow

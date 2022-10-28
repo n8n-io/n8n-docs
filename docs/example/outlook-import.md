@@ -24,11 +24,11 @@ With the following workflow you can upload email attachments from specific folde
 **3.** The `FunctionItem` is a node where you can specify the folders intended for your sub-organizations. These must have the same name as the folders in your Outlook.
 
 ``` Javascript
-  const folders = [
-  "101_Polydocs",
-  "102_Polydocs"
-];
-  
+  checker = {
+  '101_Kostenrechnung':'',
+  '102_Wareneingangrechnung':''
+	}
+
 ```
 
 **4.** The `IF` node checks if the folders entered in step 3 exist. If they exist and the name matches, the export continues. If the entered folder name does not exist, nothing happens.
@@ -75,49 +75,20 @@ With the following workflow you can upload email attachments from specific folde
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br>
 **9.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>
    ![](/_images/workflows/workflows/WF-outlook-import-download-attachment.png)<br>
-**10.** The `Get Folder Name` node is a custom function that adds an extra line to the json called "inbox", so the folders get sorted properly and are uploaded to the right sub-organization. Add the same folders as you did in the `FunctionItem` Node.
 
-``` Javascript
-
-  const folderls = [
-  $node["FunctionItem"].json["displayName"]
-];
-
-const folders = [
-  "101_Polydocs",
-  "102_Polydocs"
-];
-
-id = $node["FunctionItem"].json["check_id"];
-names = $node["FunctionItem"].json["displayName"];
-
-if (id){
-  for (const folder of folders) {
-    if (folder == names){
-      item.inbox = names;
-    }
-  }
-}
-
-return item;
-
-```
-
-**11.** The `Switch` Node checks the "inbox" line in the json that got freshly added by the Script in the Step before and sends them to the right node for the right sub-organization.<br>
-![](/_images/workflows/workflows/WF-outlook-import-switch-node.png)<br>
-**12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
+**10.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
 
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-**13.** Add the classification rules in DOC² so that the upload node knows where to upload the documents.
+**11.** Add the classification rules in DOC² so that the upload node knows where to upload the documents.
 
-You can find this in the `Settings` under the menu item **Classification and Extraction** in the subitem `Document Processing`.  
+You can find this in the `Settings` under the menu item **Classification and Extraction** in the subitem `Document Processing`.
 
 ![](/_images/workflows/workflows/WF-outlook-import-doc2-settings.png)
 
 ![](/_images/workflows/workflows/WF-outlook-import-classification-rules.png)<br>
-    
+
 * For the `Pattern` enter your Outlook folder name, in this example **101_Polydocs**<br>
 * For the `type` select **E-Mail**<br>
 * For `Sub Organization` select the Sub-Organization where the documents should be uploaded.<br>

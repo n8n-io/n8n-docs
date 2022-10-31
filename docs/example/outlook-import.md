@@ -33,6 +33,10 @@ With the following workflow you can upload email attachments from specific folde
 
 **4.** The `IF` node checks if the folders entered in step 3 exist. If they exist and the name matches, the export continues. If the entered folder name does not exist, nothing happens.
 
+**5.** The `SplitInBatches` node splits the list of Inboxes down to single pieces to ensure that every Inbox gets checked after another.
+
+   ![](/_images/workflows/workflows/WF-outlook-import-splitbatch.png)
+
 **5.** The `Get unread messages` node searches for all unread messages.
 
    ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)

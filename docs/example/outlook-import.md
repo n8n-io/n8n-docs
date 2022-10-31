@@ -25,8 +25,8 @@ With the following workflow you can upload email attachments from specific folde
 
 ``` Javascript
   checker = {
-  '101_Kostenrechnung':'',
-  '102_Wareneingangrechnung':''
+  '101_Polydocs':'',
+  '102_Polydocs':''
 	}
 
 ```

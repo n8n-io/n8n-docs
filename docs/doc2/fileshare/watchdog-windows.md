@@ -13,7 +13,7 @@ tags:
 # Watchdog for Windows
 
 ### Download the file here:
-<a href="/doc2/fileshare/watchdog.exe" download>Watchdog Download</a><br>
+<a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a><br>
 <a href="/doc2/fileshare/poppler.zip" download>Poppler Download</a>
 
 ## Folder configuration

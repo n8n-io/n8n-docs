@@ -105,6 +105,7 @@ nav:
       - doc2/dashboard/index.md
       - Manual Import: doc2/manual-import.md
       - Keyboard: doc2/keyboard.md
+      - Document Statuses: doc2/document_statuses.md
     - Document Validation:
       - doc2/document-validation/index.md
       - Master Data Validation: doc2/document-validation/master-data-validation.md

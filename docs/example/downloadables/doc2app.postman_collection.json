@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "4dfc3676-2035-4d35-8af0-efc93509dfc6",
+		"_postman_id": "4d17b5ca-dd61-424c-b7fc-badb2c61e3f9",
 		"name": "doc2app",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23975890"
+		"_exporter_id": "24037442"
 	},
 	"item": [
 		{
@@ -528,13 +528,56 @@
 			]
 		},
 		{
-			"name": "Document",
+			"name": "Documents",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Upload document",
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "UMkgUNzDoZNmlWBEBOELOGtEmd5w66UleOZIUM9JfGrM4OeAH3dDkhO1BwJhYeJ9SDMV7Ul94P4eRSK3uk4DWr42ly7aVehbwwOm6Mu0hVHzI0utlaQZqpKtLS0hBGop",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/kerstinmende/Documents/1_1_1_1_PROD Push_Stage-Testing_Dummy_Invoices/Samples_INV_Fake/Mango_invoice.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.polydocs.io/document/process",
+							"protocol": "https",
+							"host": [
+								"api",
+								"polydocs",
+								"io"
+							],
+							"path": [
+								"document",
+								"process"
+							]
+						}
 					},
 					"response": []
 				}

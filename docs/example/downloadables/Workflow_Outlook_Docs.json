@@ -20,6 +20,7 @@
         480
       ],
       "id": "23a77cf1-9f71-40e9-9ae9-f5417fe76421",
+      "alwaysOutputData": true,
       "credentials": {
         "microsoftOutlookOAuth2Api": {
           "id": "11",
@@ -40,8 +41,8 @@
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1320,
-        200
+        1500,
+        0
       ],
       "id": "9c2c6467-e6f4-4d89-ba81-6045a7ac63e6",
       "credentials": {
@@ -49,8 +50,7 @@
           "id": "11",
           "name": "Microsoft Outlook DocDemo"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -67,11 +67,11 @@
     },
     {
       "parameters": {
-        "label": "={{$node[\"Get Folder Name\"].json[\"name\"]}}",
+        "label": "={{$binary.data.fileName}}",
         "doc_type": "INVOICE",
         "importtype": "email",
         "address": "={{$node[\"Get unread messages\"].json[\"sender\"][\"emailAddress\"][\"address\"]}}",
-        "inbox": "={{Object.keys($node[\"FunctionItem\"].json)[0]}}",
+        "inbox": "={{Object.keys($node[\"SplitInBatches\"].json)[0]}}",
         "sub_org": "fcb1d623-1953-4f4a-8309-b3506b65933c"
       },
       "id": "30d39327-c9a8-4ed7-ad95-8da701d73dc5",
@@ -79,8 +79,8 @@
       "type": "n8n-nodes-base.upload",
       "typeVersion": 1,
       "position": [
-        1780,
-        480
+        2240,
+        220
       ],
       "alwaysOutputData": false,
       "credentials": {
@@ -103,8 +103,8 @@
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1360,
-        480
+        1600,
+        460
       ],
       "credentials": {
         "microsoftOutlookOAuth2Api": {
@@ -126,8 +126,8 @@
       "type": "n8n-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
-        1580,
-        480
+        1820,
+        460
       ],
       "credentials": {
         "microsoftOutlookOAuth2Api": {
@@ -139,7 +139,7 @@
     },
     {
       "parameters": {
-        "functionCode": "checker = {\n  '101_Kostenrechnung':'',\n  '102_Wareneingangrechnung':''\n}\nmapping = {}\n\nitem = $node[\"Microsoft getFolders\"].json\n\nif (item.displayName in checker) {\n  mapping[item.displayName]=item.id\n}\n\nreturn mapping;"
+        "functionCode": "checker = {\n  '101_Kostenrechnung':'',\n  '102_Wareneingangsrechnung':''\n}\nmapping = {}\n\nitem = $node[\"Microsoft getFolders\"].json\n\nif (item.displayName in checker) {\n  mapping[item.displayName]=item.id\n}\n\nreturn mapping;"
       },
       "id": "27a256b1-b2a7-4616-a29c-95e331cd7ad9",
       "name": "FunctionItem",
@@ -205,6 +205,77 @@
         920,
         480
       ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{Object.keys($node[\"SplitInBatches\"].json)[0]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "101_Kostenrechnung"
+            },
+            {
+              "value2": "102_Wareneingangsrechnung",
+              "output": 1
+            }
+          ]
+        }
+      },
+      "id": "6fa095dc-425f-4f0d-9267-6f243df4ffaf",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "label": "={{$binary.data.fileName}}",
+        "doc_type": "INVOICE",
+        "importtype": "email",
+        "address": "={{$node[\"Get unread messages\"].json[\"sender\"][\"emailAddress\"][\"address\"]}}",
+        "inbox": "={{Object.keys($node[\"SplitInBatches\"].json)[0]}}",
+        "sub_org": "bc7ed89e-1b23-4e7e-ad3e-89791f357864"
+      },
+      "id": "b7236cc8-1590-4421-a809-8af328883928",
+      "name": "Upload Document1",
+      "type": "n8n-nodes-base.upload",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        440
+      ],
+      "alwaysOutputData": false,
+      "credentials": {
+        "Doc2AppApi": {
+          "id": "12",
+          "name": "Doc2App"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$node[\"Get unread messages\"].json}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "1d1d96ce-0d07-4bca-b280-db209fb840cf",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        480
+      ]
     }
   ],
   "connections": {
@@ -212,12 +283,7 @@
       "main": [
         [
           {
-            "node": "Mark message as read",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Get Attachments",
+            "node": "IF1",
             "type": "main",
             "index": 0
           }
@@ -261,7 +327,7 @@
       "main": [
         [
           {
-            "node": "Upload Document",
+            "node": "Switch",
             "type": "main",
             "index": 0
           }
@@ -306,6 +372,58 @@
         [
           {
             "node": "Get unread messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Upload Document",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Upload Document1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Document1": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Get Attachments",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mark message as read",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SplitInBatches",
             "type": "main",
             "index": 0
           }

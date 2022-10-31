@@ -33,24 +33,25 @@ To configure these folders, you must select the **Settings folder** and press `B
 
 Next, configure general parameters:
 
-* Select an environment to which your documents should be exported.
-  The following options are available:
+#### Select an environment to which your documents should be exported.
+  :fontawesome-solid-circle-info:{ style="color: #0F17E4" } The following options are available:
 
-    - DOC² → the documents will only be exported to DOC²
+    **DOC²** → the documents will only be exported to DOC²
 
     ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_2.png)
-    - INFOR OS → here the watchdog checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
+    **INFOR OS** → here the watchdog checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
 
-    ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_1.png)
+   There are two more specific parameters:
 
-* API key → this key can be found under Integration settings of your DOC² account
-
-There are two more specific parameters:
-
-  * When exporting to Infor OS:
+   When exporting to Infor OS:
     - Document types → here you have the choice between three different document types
 
-![](/_images/doc2/Import_Watchdog_Windows_GeneralConfiguration.png)
+![](/_images/doc2/Import_Watchdog_Windows_General_Settings_1.png)
+
+#### API Key 
+    → this key can be found under Integration settings of your DOC² account
+
+
 
 ## Install poppler
 For the barcode Splitting to work you need to download the poppler.zip - unzip it and add the bin lib to the PATH system Variable.

@@ -12,7 +12,7 @@ tags:
 
 # Watchdog for Windows
 
-### Download the file here:
+### Download the files here:
 <a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a><br>
 <a href="/doc2/fileshare/poppler.zip" download>Poppler Download</a>
 
@@ -36,14 +36,14 @@ Next, configure general parameters:
 #### Select an environment to which your documents should be exported.
   :fontawesome-solid-circle-info:{ style="color: #0F17E4" } The following options are available:
 
-    **DOC²** → the documents will only be exported to DOC²
+  **DOC²** → the documents will only be exported to DOC²
 
-    ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_2.png)
-    **INFOR OS** → here the watchdog checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
+  ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_2.png)
+  **INFOR OS** → here the watchdog checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
 
-   There are two more specific parameters:
+  There are two more specific parameters:
 
-   When exporting to Infor OS:
+  When exporting to Infor OS:
     - Document types → here you have the choice between three different document types
 
 ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_1.png)

@@ -20,7 +20,7 @@ tags:
 
 First configure the following folders:
 
-* Read folder → documents that are exported to DOC² are uploaded here
+* Read folder → documents that should be uploaded to DOC² have to be in this folder
 * Error folder → documents that ran into an error during the export are saved here
 * Processed folder → successfully processed documents are stored here
 

@@ -20,7 +20,7 @@ With the following workflow you can upload email attachments from specific folde
 
 **1.** The `Interval` node is used to trigger the workflow to run at regular intervals of time.<br>
 **2.** The `Microsoft getFolders` is an Outlook node that gets all the Folders in your Outlook Inbox.<br>
-![](/_images/workflows/workflows/WF-outlook-import_get-folders.png)
+![](/_images/workflows/workflows/WF-outlook-import-get-folders.png)
 **3.** The `FunctionItem` is a node where you can specify the folders intended for your sub-organizations. These must have the same name as the folders in your Outlook.
 
 ``` Javascript

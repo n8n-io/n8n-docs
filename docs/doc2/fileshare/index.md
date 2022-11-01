@@ -6,9 +6,7 @@ tags:
   - DOC²
   - Import
   - Fileshare
-  
+
 ---
 
 ### [Watchdog - for Windows](/doc2/fileshare/watchdog-windows/)
-
-### [Watchdog - macOS](/doc2/fileshare/watchdog-macos/)

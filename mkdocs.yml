@@ -138,7 +138,7 @@ nav:
       - Groups, Users and Permissions:
         - doc2/settings/groups-users-permissons/index.md
         - Users: doc2/settings-users.md
-      - Integration: 
+      - Integration:
         - doc2/settings/integration/index.md
         - API: doc2/settings/integration/api-integration.md
         - API calls examples: doc2/settings/integration/api-calls-examples.md
@@ -152,7 +152,7 @@ nav:
         - Fileshare Import:
           - doc2/fileshare/index.md
           - Windows: doc2/fileshare/watchdog-windows.md
-          - macOS: doc2/fileshare/watchdog-macOS.md
+          # - macOS: doc2/fileshare/watchdog-macOS.md
         - Webhook: doc2/api.md
       - All Export Options:
         - doc2/export/index.md
@@ -181,7 +181,7 @@ nav:
     - Extracted fields: doc2/extracted-fields.md
     - Groups & Privileges: security/privileges.md
     - Admin-Guides: doc2/admin-guides/postman-projects.md
-    - SSO: 
+    - SSO:
       - doc2/SSO/index.md
       - SSO for Azure AD with DOC²: doc2/SSO/SSO-for-Azure-AD.md
 
@@ -286,7 +286,7 @@ nav:
       - Keyboard shortcuts: workflow/reference/keyboard-shortcuts.md
       - Glossary: workflow/reference/glossary.md
       - License: workflow/reference/license.md
-      - Data collection: workflow/reference/data-collection.md 
+      - Data collection: workflow/reference/data-collection.md
     - Integrations:
       - Overview: workflow/integrations/index.md
       - Core nodes: workflow/integrations/core-nodes/

@@ -12,32 +12,31 @@ tags:
 
 ##  All DOC² document statuses
 
-- `WatchDog Start`: Watchdog is starting.<br>
+- `WatchDog Start`: Watchdog is starting.
+- `WatchDog Split`: The document gets split in Watchdog.
+- `WatchDog Upload`: The document is getting uploaded in Watchdog.
+- `Upload`: The document is getting uploaded.
+- `OCR`: OCR is currently running on that document.
+- `Classification`: The document is getting Classified.
+- `Zugferd import`: A Zugferd document is getting imported.
+- `Ready for Validation`: The document is ready for validation.
+- `Zugferd export`: A Zugferd document is getting exported.
+- `Workflow`: Workflow is currently running with this document.
+- `Pending approval`: Document has to be approved.
+- `Pending second approval`: Document has to be approved a second time.
+- `Auto Accounting`: Automatic Accounting is running
+- `Export`: The Document is getting exported
+- `Error`: An error occured in the document
 
-- `WatchDog Split`: The document gets split in Watchdog.<br>
+##  Upload and Classify
 
-- `WatchDog Upload`: The document is getting uploaded in Watchdog.<br>
+``` mermaid
+sequenceDiagram
+  Upload->>Status: Get DocId from Upload?
+  loop Status
+      Status->>Status: Till FinalStatus is not Classify
+  end
+  Status->>Classify: FinalStatus is Classify
+	Classify->>Delete: Delete Document with DocId
 
-- `Upload`: The document is getting uploaded.<br>
-
-- `OCR`: OCR is currently running on that document.<br>
-
-- `Classification`: The document is getting Classified.<br>
-
-- `Zugferd import`: A Zugferd document is getting imported.<br>
-
-- `Ready for Validation`: The document is ready for validation.<br>
-
-- `Zugferd export`: A Zugferd document is getting exported.<br>
-
-- `Workflow`: Workflow is currently running with this document.<br>
-
-- `Pending approval`: Document has to be approved.<br>
-
-- `Pending second approval`: Document has to be approved a second time.<br>
-
-- `Auto Accounting`: Automatic Accounting is running<br>
-
-- `Export`: The Document is getting exported<br>
-
-- `Error`: An error occured in the document<br>
+```

@@ -14,8 +14,6 @@ This release contains improvements to the editor, node enhancements and bug fixe
 * Editor: add a read-only state for nodes.
 * Editor: add execution previews using the new **Executions** tab in the node view.
 * Editor: improvements to node panel search.
-* Code editor: add darkmode support. Darkmode enables automatically depending on your browser and system settings.
-
 
 ### Node enhancements
 

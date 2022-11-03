@@ -178,7 +178,6 @@ nav:
 
     - ZUGFeRD: doc2/zugpferd.md
 
-    - Extracted fields: doc2/extracted-fields.md
     - Groups & Privileges: security/privileges.md
     - Admin-Guides: doc2/admin-guides/postman-projects.md
     - SSO:

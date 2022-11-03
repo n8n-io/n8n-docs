@@ -1,5 +1,5 @@
 ---
-title: All DOC² document statuses
+title: All DOC² document status
 description: Here is a list of every status a document in DOC² could possibly have.
 date: 2022-09-14
 tags:
@@ -10,7 +10,7 @@ tags:
 
 ---
 
-##  All DOC² document statuses
+##  All DOC² document status
 
 - `WatchDog Start`: Watchdog is starting.
 - `WatchDog Split`: The document gets split in Watchdog.

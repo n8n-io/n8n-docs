@@ -13,7 +13,7 @@ To do this, open a document as known via the dashboard:
 
 ![](/_images/doc2/image-50-1024x391.png)
 
-In the Document View there are now two indicators for the quality of the extraction.
+In Document View there are now two indicators for the quality of the extraction.
 
 - Extraction quality in percent per field and current document
 - Overall extraction quality including previous extractions of documents of the same type.

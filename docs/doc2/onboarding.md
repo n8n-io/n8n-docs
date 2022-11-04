@@ -43,7 +43,7 @@ You can add users from **Settings** > **Users**. For help, refer to [Adding User
 
 ## **Understanding Document Review**
 
-After the initial setup is complete, most of your time in DOC² will be spent reviewing for example invoices.
+After the initial setup is complete, most of your time in DOC² will be spent reviewing example invoices.
 
 **Sending Document to DOC²**
 

@@ -19,7 +19,7 @@ This guide will help you learn the basics of DOC² get you up and running with a
 
 First, let's cover how to access and configure your system.
 
-DOC² does not work in Tenant. All customer use the same cluster. Our Kubernetes Cluster is hosted in Frankfurt / Germany.
+DOC² does not work in Tenant. All customers use the same cluster. Our Kubernetes Cluster is hosted in Frankfurt / Germany.
 
 [https://app.polydocs.io/](https://app.polydocs.io/)
 

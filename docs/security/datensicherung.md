@@ -10,7 +10,7 @@ tags:
 
 
 ### Uploaded files
-All of the uploaded files are stored in an object storage hosted by our Cloud Provider. The access is restricted and only possible if you pass the correct key and secret key 
+All of the uploaded files are stored in an object storage hosted by our Cloud Provider. The access is restricted and only possible if you pass the correct key and secret key.
 
 ### Database 
 We run daily database backups that are saved for seven days each.  

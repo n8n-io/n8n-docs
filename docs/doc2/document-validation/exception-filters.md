@@ -20,6 +20,6 @@ There you have the option of calling up the exception filters via the "Exception
 
 ![](/_images/doc2/image-65-1024x359.png)
 
-There you can set the appropriate filters and apply them via "Apply":
+You can then set the appropriate filters and apply them via "Apply":
 
 ![](/_images/doc2/image-67.png)

@@ -22,7 +22,7 @@ In document view there are two indicators for the quality of the extraction.
 
 **Extraction quality in percent per field and current document**
 
-For each field, a value is available on the right side, which indicates the quality of extraction for the current document. The display is a percentage value:
+For each field there is a value available on the right side which indicates the quality of extraction for the current document. A percentage value will be displayed:
 
 ![](/_images/doc2/image-52.png){ loading=lazy }
 

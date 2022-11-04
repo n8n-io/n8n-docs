@@ -12,7 +12,7 @@ DOC² offers, in the document validation overview, the possibility to match supp
 
 There are currently two ways to do this.
 
-**Matching using the extracted VAT number of the supplier**:
+**Matching the extracted VAT number of the supplier**:
 
 The VAT number is extracted from the document using DOC²:
 

@@ -11,7 +11,7 @@ tags:
 
 ## How to deploy DOC²
 
-All you need is the URL [App](https://app.polydocs.io/) and the Login Details received from us.
+All you need is the URL [App](https://app.polydocs.io/) and the login details that you received from us.
 The Login Details have admin rights.
 
 ## Prerequisites

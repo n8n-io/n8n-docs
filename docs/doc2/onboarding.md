@@ -13,7 +13,7 @@ tags:
 
 # OnBoarding
 
-This guide will help you learn the basics of DOC² that will get you up and running with an IPS that will maximise your productivity.
+This guide will help you learn the basics of DOC² that will get you up and running with an IPS that will maximize your productivity.
 
 ## **Performing Initial Setup**
 

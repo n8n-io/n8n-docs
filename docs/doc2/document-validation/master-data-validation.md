@@ -24,7 +24,7 @@ The user can manually intervene at any time and call up the supplier provided. T
 
 ![](/_images/doc2/image-21.png)
 
-The following window is called up and displays the supplier data for the corresponding VAT number. Using the search field, any VAT number can be entered and thereby the supplier master, provided by you to DOC², can be searched. If the correct supplier was found, it can be selected and accepted.
+The following window is called up and displays the supplier data for the corresponding VAT number. Using the search field, any VAT number can be entered and thereby the supplier master, provided by you to DOC², can be searched. If the correct supplier is found, it can be selected and accepted.
 
 ![](/_images/doc2/image-23-1024x276.png)
 

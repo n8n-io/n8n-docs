@@ -16,7 +16,7 @@ The login details have admin rights.
 
 ## Prerequisites
 
-Running Computer with access to internet
+Running Computer with access to internet.
 The following screen will be shown when you go to the URL:
 
 ![DOC2 Login](/_images/doc2/DOC2_Deployment_Login.png){ loading=lazy }

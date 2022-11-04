@@ -21,7 +21,7 @@ The following screen will be shown when you go to the URL:
 
 ![DOC2 Login](/_images/doc2/DOC2_Deployment_Login.png){ loading=lazy }
 
-Enter the Login Details you received from us. This is your admin data.
+Enter the login details you received from us. This is your admin data.
 If you see the following screen, you are almost ready to go. All further details and necessary steps can be found [here](https://docs.polydocs.io/doc2/document-validation/).
 
 ![DOC2 Login](/_images/doc2/DOC2_Deployment_Dashboard.png){ loading=lazy }

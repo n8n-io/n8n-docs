@@ -30,7 +30,7 @@ The following window is called up and displays the supplier data for the corresp
 
 Second possibility is **finding the supplier via the supplier name**:
 
-Using the button in the supplier name field the supplier master, which is provided by you to DOC², can also be called up. In this case, the supplier name can be searched in the supplier master:
+Using the button in the supplier name field, the supplier master (which is provided by you to DOC²) can also be called up. In this case, the supplier name can be searched in the supplier master:
 
 ![](/_images/doc2/image-24.png)
 

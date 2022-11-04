@@ -41,7 +41,7 @@ DOC² is the latest software and solution for document capture that was develope
 
 ## How do you use DOC²:
 
-  -  Scanning and Recognition of all types of documents (Invoices, Contracts, Forms, Medical Prescriptions etc.)
+  -  Scanning and Recognition of all types of documents (invoices, contracts, forms, medical prescriptions etc.)
   -  Reliable extraction of the data in the document and integration and further processing in the ERP, RPA or CRM system)
   -  Validation of the extracted data and verification against other systems from internal and public sources
   -  Integration into your system landscape (e.g. ERP System, Document Management, Workflow System etc)

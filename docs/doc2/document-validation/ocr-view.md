@@ -21,7 +21,7 @@ When you click this button a new window will be opened which displays the docume
 
 ![](/_images/doc2/image-45-1024x748.png)
 
-In addition, the following button can be used to switch to the debug view. This allows to see exactly how DOC² extracts the individual values in the background and whether these are recognized correctly:
+In addition, the following button can be used to switch to the debug view. This allows you to see exactly how DOC² extracts the individual values in the background and whether these are recognized correctly:
 
 ![](/_images/doc2/image-46.png)
 

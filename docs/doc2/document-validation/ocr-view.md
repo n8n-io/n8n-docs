@@ -7,9 +7,9 @@ tags:
   - OCR
 ---
 
-In the document viewer you have the possibility to open the OCR view for a document. This allows you to display the document in the pure OCR view without any formatting or similar.
+In document view you have the possibility to open the OCR view for a document. This allows you to display the document in the pure OCR view without any formatting or similar.
 
-To do this, import a document as usual and open it in the document viewer:
+To do this, import a document as usual and open it in the document view:
 
 ![](/_images/doc2/image-43-1024x374.png)
 

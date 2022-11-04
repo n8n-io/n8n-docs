@@ -59,5 +59,5 @@ If a document is not automatically processed, it will be stopped for manual revi
 To review extracted results:
 
 1.  On the **Dashboard**, click **on the document** to assign the 10 oldest invoices in the system to yourself. You'll be taken to the **Review** screen.
-2.  Review the extracted results. Refer to Reviewing Your document for more information.
+2.  Review the extracted results. Refer to reviewing your document for more information.
 3.  When you're satisfied, click **Complete Review**.

@@ -14,7 +14,7 @@ There are two types of Keyboard functions described below:
 
 **Enter Key**:
 
-The Enter Key will work for Exporting the document if there is no exception in the document i.e. Validation Required for the fields.
+The Enter Key will work for exporting the document if there is no exception in the document i.e. Validation Required for the fields.
 
 **Arrow-Down-Key**:
 

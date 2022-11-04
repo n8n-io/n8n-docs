@@ -12,7 +12,7 @@ tags:
 
 Basically, documents in DOC² are classified/defined via AI and regex. However, there a few exceptions, you need an additional negative filter (exception filter) that allows you to exclude certain things. Exception filters are important to achieve the best results.
 
-To define an exception filter, open the document view for any document:
+To define an exception filter, open document view for any document:
 
 ![](/_images/doc2/image-66-1024x409.png)
 

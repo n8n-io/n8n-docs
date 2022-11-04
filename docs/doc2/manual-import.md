@@ -32,7 +32,7 @@ Documents can be uploaded to DOC² via file browser or drag and drop. Furthermor
 
 Dragging and dropping files directly on the DOC² dashboard is also possible for uploading.
 
-As soon as the files have been uploaded, they have the initial status "Running". During this time the upload is processed. Editing the file is not possible in this status. Depending on the size and complexity of the file, processing may take a while:
+As soon as the files have been uploaded, they have the initial status "Running". During this time the upload is processed. Editing the file is not possible at this time. Depending on the size and complexity of the file, processing may take a while:
 
 ![](/_images/doc2/DOC2_manual-import_3.png)
 

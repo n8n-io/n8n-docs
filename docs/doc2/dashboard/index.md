@@ -12,7 +12,7 @@ tags:
 
 After logging in with your credentials you are redirected to the DASHBOARD homepage of DOC².
 
-This is the main page and overview where you can capture, work, and manage the imported documents.
+This is the main page and overview where you can capture, work and manage the imported documents.
 
 ![DOC2 Dashboard](/_images/doc2/DOC2_Dashboard_1.png){ loading=lazy }
 

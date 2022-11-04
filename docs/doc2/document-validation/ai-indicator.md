@@ -7,7 +7,7 @@ tags:
   - DOC²
 ---
 
-In the document view you will find options to display the quality of the extraction using graphical indicators. The so-called AI indicator.
+In document view you will find options to display the quality of the extraction using graphical indicators. The so-called AI indicator.
 
 To do this, open a document as known via the dashboard:
 

@@ -54,7 +54,7 @@ After the initial setup is complete, most of your time in DOC² will be spent re
 
 ### Reviewing Extracted Results
 
-If an document is not automatically processed, it will be stopped for manual review. This means you will need to edit or approve fields the system wasn't confident on, or couldn't find.
+If a document is not automatically processed, it will be stopped for manual review. This means you will need to edit or approve fields the system wasn't confident on, or couldn't find.
 
 To review extracted results:
 

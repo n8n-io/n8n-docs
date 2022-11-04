@@ -22,7 +22,7 @@ The first upper bar is a very simple and easy reporting tool where you can filte
 
 ![DOC2 View Document by Status](/_images/doc2/DOC2_Dashboard_2.png){ loading=lazy }
 
-It shows you the total number of documents imported, including the number of documents that were automatically or manually processed. Furthermore, you can view the status of documents that are, for example: **In progress**, **Pending**, **Pending Approval**, **Completed** or **Error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents.
+It shows you the total number of documents imported, including the number of documents that were automatically or manually processed. Furthermore, you can view the status of documents that are, for example: **In progress**, **Pending**, **Pending Approval**, **Completed** or **Error**. The main advantage of this reporting bar is that by just clicking one of these available boxes you can find the specific and filtered documents you are searching for.
 
 As you can imagine the second part of the dashboard is the list/overview of all the uploaded documents. You can either see all of them or even just the ones that are assigned to you. And of course, you can also find it with the document name.
 

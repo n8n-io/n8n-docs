@@ -32,7 +32,7 @@ DOC² is the latest software and solution for document capture that was develope
   -  With swarm intelligence, you benefit continuously from the experiences of other customers
   -  Improves the accuracy and quality of the recognized data
   -  Enables an automated process without ongoing corrections and interventions
-  -  Simple intuitive interface
+  -  Simple and intuitive interface
   -  No IT resources / specialists required
   -  Ensures a robust and consistent work process
   -  No sensitive data is stored or shared

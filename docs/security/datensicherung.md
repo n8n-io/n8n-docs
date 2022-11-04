@@ -15,7 +15,7 @@ All of the uploaded files are stored in an object storage hosted by our Cloud Pr
 ### Database 
 We run daily database backups that are then saved for seven days each.  
 The communication between the database and the servers is run only via https.  
-Stored passwords are encrypted in a way that, even with access to the database, they cannot be read.
+Stored passwords are encrypted in a way that, even with access to the database, cannot be read.
 
 
 ### Server Communication

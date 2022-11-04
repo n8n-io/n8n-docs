@@ -10,7 +10,7 @@ tags:
   - Overview
 ---
 
-After logging in with your user you are redirected to the DASHBOARD homepage of DOC².
+After logging in with your credentials you are redirected to the DASHBOARD homepage of DOC².
 
 This is the main page and overview where you can capture, work, and manage the imported documents.
 

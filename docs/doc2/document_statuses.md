@@ -17,7 +17,7 @@ tags:
 - `WatchDog Upload`: The document is getting uploaded in Watchdog.
 - `Upload`: The document is getting uploaded.
 - `OCR`: OCR is currently running on that document.
-- `Classification`: The document is getting Classified.
+- `Classification`: The document is getting classified.
 - `Zugferd import`: A Zugferd document is getting imported.
 - `Ready for Validation`: The document is ready for validation.
 - `Zugferd export`: A Zugferd document is getting exported.
@@ -40,3 +40,4 @@ sequenceDiagram
 	Classify->>Delete: Delete Document with DocId
 
 ```
+

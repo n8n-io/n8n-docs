@@ -18,7 +18,7 @@ The VAT number is extracted from the document using DOC²:
 
 ![](/_images/doc2/DOC2_master-data-validation_1.png)
 
-In the background, the VAT number is matched with the supplier master data, provided by you to DOC² and the supplier ID including the corresponding supplier data like name and address is determined automatically.
+In the background, the VAT number is matched with the supplier master data, provided by you to DOC² and the supplier ID including the corresponding supplier data like the name and address is determined automatically.
 
 The user can manually intervene at any time and call up the supplier provided. This is done via the following button:
 

@@ -17,7 +17,7 @@ There you will find the "OCR" button:
 
 ![](/_images/doc2/image-44-1024x421.png)
 
-When you click this button a new window will be opened which displays the document and its data in pure OCR view. This can be useful, for example, if data is not extracted correctly and you want to troubleshoot the actual values contained in the document and to be extracted:
+When you click this button a new window will be opened which displays the document and its data in pure OCR view. This can be useful, for example, if data is not extracted correctly and you want to troubleshoot the actual values contained in the document to be extracted:
 
 ![](/_images/doc2/image-45-1024x748.png)
 

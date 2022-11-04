@@ -27,7 +27,7 @@ In addition, the following button can be used to switch to debug view. This allo
 
 ![](/_images/doc2/image-47-1024x730.png)
 
-Furthermore, the following button can be used to switch back to the document view:
+Furthermore, the following button can be used to switch back to document view:
 
 ![](/_images/doc2/image-48.png)
 

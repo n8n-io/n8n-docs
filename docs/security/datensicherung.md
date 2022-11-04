@@ -19,5 +19,5 @@ Stored Passwords are encrypted in a way that, even with access to the database, 
 
 
 ### Server Communication
-All communication is done via HTTPS, every non https request is redirected to https.
+All communication is done via https, every non https request is redirected to https.
 

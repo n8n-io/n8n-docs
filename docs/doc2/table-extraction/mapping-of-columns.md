@@ -11,7 +11,7 @@ tags:
 
 Once data is extracted from a document you are able to map the extracted columns with the columns given by DOC².
 
-That can be done via selecting the header of a column in the extraction view.
+That can be done by selecting the header of a column in extraction view.
 
 A dropdown will open and you are able to select the column that you want to map.
 

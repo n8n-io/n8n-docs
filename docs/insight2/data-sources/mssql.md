@@ -40,6 +40,6 @@ Click on the `run` button to run the query.<br> :fontawesome-solid-triangle-excl
 <img src="/_images/insight2/datasource-reference/mssql/query.gif" alt="Insight² - Redis connection" height="420"/>
 
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } Tip:
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **Tip**:
 Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)
 

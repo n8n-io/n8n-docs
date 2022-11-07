@@ -48,7 +48,7 @@ If you defined a column by mistake it can be selected by clicking it and then de
 
 Note: The button is only visible if the column is selected.
 
-If you are done defining all tables and all columns on your document use the "Save" button to activate your changes and to extract the data from the document:
+If you are done defining all tables and columns on your document use the "Save" button to activate your changes and to extract the data from the document:
 
 ![](/_images/doc2/image-6-1024x202.png)
 

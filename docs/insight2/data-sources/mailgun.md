@@ -20,9 +20,9 @@ The Mailgun API Datasource supports for interaction with the mail endpoint of th
 
 To add a new Mailgun API datasource, click the **Datasource manager** icon on the left-sidebar of the app builder and click on the `Add datasource` button, then select Mailgun API from the modal that pops up.
 
-Enter your **Mailgun API key** in the "API key" field.
+Enter your **Mailgun API key** in the `Api key` field.
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tip**:
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tip**:<br>
 Mailgun API key is required to create an Mailgun datasource on Insight. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
 
 Click on the `Save` button to save the data source.
@@ -61,7 +61,7 @@ For example: `admin@polydocs.io`
 **Send a single email to multiple recipients**<br> The `Send mail to` field can contain an array of recipients, which will send a single email with all of the recipients in the field.
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
-**Send multiple individual emails to multiple recipients**<br> - set <b>Multiple recipients</b> field to `{{true}}` and the `Send mail to` field will be split into multiple emails and send to each recipient.
+**Send multiple individual emails to multiple recipients**<br> Set <b>Multiple recipients</b> field to `{{true}}` and the `Send mail to` field will be split into multiple emails and send to each recipient.
 
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } **NOTE**: Query should be saved before running.

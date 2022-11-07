@@ -29,7 +29,7 @@ _______________________________
 
 ##### Correction Mode:
 
-- Delete row and add new row option is available
+- The delete row and add new row options are available
 - You are able to manually change the texts of the columns 
 
 ![](/_images/te/Correction Mode.png){ loading=lazy }

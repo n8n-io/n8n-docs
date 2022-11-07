@@ -35,7 +35,7 @@ Click on `Test Connection` button to verify if the credentials are correct and t
 ## Querying SQL Server / Azure SQL databases
 Click on `+` button of the query manager at the bottom panel of the editor and select the database added in the previous step as the data source.
 
-Click on the `run` button to run the query. :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }NOTE: Query should be saved before running.
+Click on the `run` button to run the query.<br> :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }NOTE: Query should be saved before running.
 
 <img src="/_images/insight2/datasource-reference/mssql/query.gif" alt="Insight² - Redis connection" height="420"/>
 

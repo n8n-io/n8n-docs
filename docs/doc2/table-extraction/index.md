@@ -12,7 +12,7 @@ tags:
 
 With DOC² it is possible to extract tables from PDF-Files. That will be done via the "Line Items" functionality. It is used for extracting the tables from all types of documents (invoices, contracts, forms, medical prescriptions etc.).
 
-The extraction of data in tables can be achieved by following the steps described below:
+The extraction of data in tables can be achieved by following the steps below:
 
 1\. Login to your account with Email and Password you are given.
 

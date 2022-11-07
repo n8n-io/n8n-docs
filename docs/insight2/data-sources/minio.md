@@ -21,7 +21,7 @@ Insight² can connect to minio and perform various operation on them.
 
 ## Connection
 
-To add a new minio source, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select Minio from the modal that pops up.
+To add a new minio source, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select Minio from the modul that pops up.
 
 ![](/_images/insight2/datasource-reference/datasource_minio.png)
 
@@ -46,7 +46,7 @@ Click on `+` button of the **query manager** at the bottom panel of the editor a
 
 ![Insight² - Mino query](/_images/insight2/datasource-reference/minio-query.png)
 
-Click on the `run` button to run the query.
+Click on the `run` button to run the query.<br>
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }**NOTE**: Query should be saved before running.
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" } Tip:

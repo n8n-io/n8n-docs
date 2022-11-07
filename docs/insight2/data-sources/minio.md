@@ -23,7 +23,7 @@ Insight² can connect to minio and perform various operation on them.
 
 To add a new minio source, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select Minio from the modal that pops up.
 
-![](docs/_images/insight2/datasource-reference/datasource_minio.png)
+![](/_images/insight2/datasource-reference/datasource_minio.png)
 
 Insight² requires the following to connect to your DynamoDB:
 

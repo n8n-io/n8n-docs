@@ -9,7 +9,7 @@ tags:
 
 In document view you will find options to display the quality of the extraction using graphical indicators. The so-called AI indicator.
 
-To do this, open a document as known via the dashboard:
+To do this, open a document as shown via the dashboard:
 
 ![](/_images/doc2/image-50-1024x391.png)
 

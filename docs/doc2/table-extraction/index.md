@@ -20,9 +20,9 @@ The extraction of data in tables can be achieved by following the steps below:
 
 3\. Click on the document to open it.
 
-4\. Now, scroll down the extracted fields page to the **Line Items** section
+4\. Now, scroll down the extracted fields page to the **Line Items** section.
 
-5\. Click on the table icon inside the textbox
+5\. Click on the table icon inside the textbox.
 
 ![](/_images/doc2/Line-Items.png)
 

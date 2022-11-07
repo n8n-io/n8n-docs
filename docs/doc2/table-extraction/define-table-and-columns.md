@@ -38,7 +38,7 @@ Repeat this for the tables on the other pages as well. As an alternative, if the
 
 ![](/_images/doc2/image-5-1024x103.png)
 
-If the document is very confusing, it can be zoomed in or out using the "Zoom in" or "Zoom out" functionality. This is helpful, for example, when a lot of information is close together and this makes it difficult to define the columns:
+If the document is very confusing, it can be zoomed in or out using the "Zoom in" or "Zoom out" functionality. This is helpful, for example, when a lot of information is close together which makes it difficult to define the columns:
 
 ![](/_images/doc2/image-10.png)
 

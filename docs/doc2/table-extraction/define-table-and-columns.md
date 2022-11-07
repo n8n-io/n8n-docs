@@ -42,7 +42,7 @@ If the document is very confusing, it can be zoomed in or out using the "Zoom in
 
 ![](/_images/doc2/image-10.png)
 
-If you defined a column by mistake it can be selected by clicking it and deleted again via the following button:
+If you defined a column by mistake it can be selected by clicking it and then deleted again via the following button:
 
 ![](/_images/doc2/image-11.png)
 

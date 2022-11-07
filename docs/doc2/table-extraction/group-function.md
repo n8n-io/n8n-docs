@@ -10,7 +10,7 @@ tags:
 
 # Group function to extract data from tables
 
-Once a table has been extracted via DOC² and the columns have been mapped ([Mapping of columns](/doc2/table-extraction/mapping-of-columns/)) the obtained data can be grouped to get a structured result set of all extracted data.
+Once a table has been extracted via DOC² and the columns have been mapped ([Mapping of columns](/doc2/table-extraction/mapping-of-columns/)), the obtained data can be grouped to get a structured result set of all extracted data.
 
 [Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 

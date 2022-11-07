@@ -10,7 +10,7 @@ tags:
 
 ---
 
-Basically, documents in DOC² are classified/defined via AI and regex. However, there a few exceptions, you need an additional negative filter (exception filter) that allows you to exclude certain things. Exception filters are important to achieve the best results.
+Basically, documents in DOC² are classified/defined via AI and Regex. However, there a few exceptions, you need an additional negative filter (exception filter) that allows you to exclude certain things. Exception filters are important to achieve the best results.
 
 To define an exception filter, open document view for any document:
 

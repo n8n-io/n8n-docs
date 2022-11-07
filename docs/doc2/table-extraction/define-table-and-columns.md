@@ -16,7 +16,7 @@ You will end up in following screen where you can activate Training Mode:
 
 ![](/_images/doc2/image-1024x453.png)
 
-Via the "Edit" button table selection mode will be activated and you will be able to edit the document shown on the left side:
+By pressing the "Edit" button, table selection mode will be activated and you will be able to edit the document shown on the left side:
 
 ![](/_images/doc2/image-1-1024x170.png)
 

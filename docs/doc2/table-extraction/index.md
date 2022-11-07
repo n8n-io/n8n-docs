@@ -38,4 +38,4 @@ In practice, tables on documents are often much more complex and have a wide var
 
 And this is where the advantage of DOC² and its table extraction functionality comes into play. There are several ways to train the table extraction functionality and to achieve the best possible result, even with demanding tables.
 
-In the following sections you will learn how to train a table manually and what functionalities are available for this:
+In the following sections you will learn how to train a table manually and what functionalities are available for this.

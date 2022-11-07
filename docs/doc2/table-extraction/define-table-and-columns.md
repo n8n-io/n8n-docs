@@ -12,7 +12,7 @@ tags:
 
 To define tables and columns on a document please import a document, open it and go to table extraction view as shown before (via "Line Items").
 
-You will end up in following screen where you can activate the Training Mode:
+You will end up in following screen where you can activate Training Mode:
 
 ![](/_images/doc2/image-1024x453.png)
 

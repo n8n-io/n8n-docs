@@ -14,7 +14,7 @@ With DOC² it is possible to extract tables from PDF-Files. That will be done vi
 
 The extraction of data in tables can be achieved by following the steps below:
 
-1\. Login to your account with Email and Password you are given.
+1\. Login to your account with the Email and Password that you were given.
 
 2\. On Dashboard, import any document
 

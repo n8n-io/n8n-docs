@@ -30,15 +30,15 @@ The following optional parameters are also supported:
 
 <img class="screenshot-full" src="/_images/insight2/datasource-reference/graphql/add-source.gif" alt="Insight² - GraphQL connection" height="420"/>
 
-Click on the 'Save' button to save the data source.
+Click on the `Save` button to save the data source.
 
 ## Querying GraphQL
-Click on `+` button of the query manager at the bottom panel of the editor and select the GraphQL endpoint added in the previous step as the  data source.
+Click on `+` button of the query manager at the bottom panel of the editor and select the GraphQL endpoint added in the previous step as the data source.
 
 <img class="screenshot-full" src="/_images/insight2/datasource-reference/graphql-query.png" alt="Insight² - GraphQL connection" height="420"/>
 
-Click on the 'run' button to run the query. NOTE: Query should be saved before running.
+Click on the `run` button to run the query.<br>
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } **NOTE**: Query should be saved before running.
 
-:::tip
-Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/docs/tutorial/transformations)
-:::
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **Tip**:
+Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)

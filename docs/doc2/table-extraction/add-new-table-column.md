@@ -23,7 +23,7 @@ Columns can be added manually using the following button.
 
 ![](/_images/doc2/image-27-1024x367.png){ loading=lazy }
 
-In the window that opens, you can specify a name for the column to be generated. Furthermore, you can set whether it is an optional or a mandatory field. You can also specify whether the column is a field that contains text (column type STRING), that contains numerical values (column type AMOUNT) or that contains a date (column type DATE).
+In the window that opens, you can specify a name for the column to be generated. Furthermore, you can set whether it is an optional or a mandatory field. You can also specify whether the column is a field that contains text (column type STRING), numerical values (column type AMOUNT) or a date (column type DATE).
 
 ![](/_images/doc2/image-28-1024x692.png){ loading=lazy }
 

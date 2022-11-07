@@ -64,4 +64,4 @@ When you have saved the changes, the document remains in the Ready for Validatio
 
 ![](/_images/doc2/DOC2_document_validation_dashboard_11.png)
 
-Find more details in the following sections:
+Find more details in the following sections.

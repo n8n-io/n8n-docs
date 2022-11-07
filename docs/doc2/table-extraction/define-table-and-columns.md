@@ -10,7 +10,7 @@ tags:
 
 **Define tables**
 
-To define tables and columns on a document please import a document, open it and go to the table extraction view like already known (via "Line Items").
+To define tables and columns on a document please import a document, open it and go to table extraction view like already known (via "Line Items").
 
 You will end up in following screen where you can activate the Training Mode:
 

@@ -34,7 +34,7 @@ Once the tables are defined you can manually define the columns via the followin
 
 Define and sort the columns via drag and drop on the document like shown in the video below:
 
-Repeat this for the tables on the other pages as well. As an alternative, if the tables are equal on each page you can use the following button to use the same column for all tables defined in the document. This functionality copies the columns that you have defined to all other pages as well:
+Repeat this for the tables on the other pages as well. As an alternative, if the tables are equal on each page, you can use the following button to use the same column for all tables defined in the document. This functionality copies the columns that you have defined to all other pages as well:
 
 ![](/_images/doc2/image-5-1024x103.png)
 

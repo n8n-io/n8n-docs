@@ -18,7 +18,7 @@ Once a table has been extracted via DOC² and the columns have been mapped ([Map
 
 All documents, from order confirmations to invoices, can vary in complexity from company to company. For example, in documents, information may be presented in tables in some columns across multiple rows and in other columns across only one row.
 
-As an example, you can see the German invoice below, where the information in column "Bezeichnung" extends over several lines (positions).
+For example, you can see the German invoice below, where the information in column "Bezeichnung" extends over several lines (positions).
 
 ![](/_images/doc2/image-30-1024x636.png){ loading=lazy }
 

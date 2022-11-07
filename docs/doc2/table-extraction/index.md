@@ -26,7 +26,7 @@ The extraction of data in tables can be achieved by following the steps below:
 
 ![](/_images/doc2/Line-Items.png)
 
-You will end up in the table extraction view.
+You will end up in the table extraction view screen.
 
 If the document contains very simple tables it will detect and extract them automatically:
 

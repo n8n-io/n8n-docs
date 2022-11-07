@@ -26,7 +26,7 @@ At this point, another advantage of DOC² comes into play. It extracts the data 
 
 ![](/_images/doc2/image-31-1024x633.png){ loading=lazy }
 
-BUT: Now there is the possibility to group data based on a specific column. That means in this case it can be grouped by the column "Position" as shown in the following video. This in turn groups the rows of the "Description" column into one row. So that at the end you get a structured overall picture of the export and the data can now be processed further.
+BUT: It is now possible to group data based on a specific column. That means in this case it can be grouped by the column "Position" as shown in the following video. This in turn groups the rows of the "Description" column into one row. So that at the end you get a structured overall picture of the export and the data can now be processed further.
 
 If the grouping was created by mistake, it can be removed at any time, as also shown in the video.
 

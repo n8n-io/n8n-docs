@@ -24,7 +24,7 @@ You are now able to use the autodetect tables functionality and the system will 
 
 ![](/_images/doc2/image-2-1024x112.png)
 
-If the system is not able to find the tables automatically you can manually define the tables on the document like shown in the video below:
+If the system is not able to find the tables automatically, you can manually define the tables on the document like shown in the video below:
 
 **Define columns**
 

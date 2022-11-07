@@ -22,7 +22,7 @@ For example, you can see the German invoice below, where the information in colu
 
 ![](/_images/doc2/image-30-1024x636.png){ loading=lazy }
 
-At this point, another advantage of DOC² comes into play. It extracts the data in the first step 1 to 1. The result looks like this:
+At this point, another advantage of DOC² comes into play. It extracts the data in the first step. The result looks like this:
 
 ![](/_images/doc2/image-31-1024x633.png){ loading=lazy }
 

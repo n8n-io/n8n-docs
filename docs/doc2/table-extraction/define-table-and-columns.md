@@ -20,7 +20,7 @@ By pressing the "Edit" button, table selection mode will be activated and you wi
 
 ![](/_images/doc2/image-1-1024x170.png)
 
-In general your are now able to use the autodetect tables functionality and the system will automatically define the tables on the document:
+You are now able to use the autodetect tables functionality and the system will automatically define the tables on the document:
 
 ![](/_images/doc2/image-2-1024x112.png)
 

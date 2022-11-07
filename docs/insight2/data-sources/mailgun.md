@@ -50,18 +50,18 @@ Optional parameters:
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 **Send mail to** - accepts a single email id.
 For example:
-`{{"dev@tooljet.io"}}`.
+`{{"dev@polydocs.io"}}`.
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 **Send mail from** - accepts a string.
-For example: `admin@tooljet.io`
+For example: `admin@polydocs.io`
 
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tips**:<br>
-
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 **Send a single email to multiple recipients**<br> The `Send mail to` field can contain an array of recipients, which will send a single email with all of the recipients in the field.
 
-**Send multiple individual emails to multiple recipients** - set <b>Multiple recipients</b> field to `{{true}}` and the `Send mail to` field will be split into multiple emails and send to each recipient.
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" }
+**Send multiple individual emails to multiple recipients**<br> - set <b>Multiple recipients</b> field to `{{true}}` and the `Send mail to` field will be split into multiple emails and send to each recipient.
 
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } **NOTE**: Query should be saved before running.

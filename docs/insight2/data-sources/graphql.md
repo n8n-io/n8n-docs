@@ -13,7 +13,7 @@ Insight² can connect to GraphQL endpoints to execute queries and mutations.
 
 ## Connection
 
-To add a new GraphQL datasource, click the `+` button on  data sources panel at the bottom-left corner of the app builder and then select GraphQL from the modal that pops up.
+To add a new GraphQL datasource,click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select GraphQL from the modul that pops up.
 
 Insight² requires the following to connect to a GraphQL datasource.
 

@@ -16,9 +16,9 @@ The extraction of data in tables can be achieved by following the steps below:
 
 1\. Login to your account with the Email and Password that you were given.
 
-2\. At your Dashboard, proceed to import any document
+2\. At your Dashboard, proceed to import any document.
 
-3\. Click on the document to Open
+3\. Click on the document to open it.
 
 4\. Now, scroll down the extracted fields page to **Line Items** section
 

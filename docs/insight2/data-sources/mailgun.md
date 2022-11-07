@@ -46,6 +46,7 @@ Optional parameters:
 
 <img class="screenshot-full" src="/_images/insight2/datasource-reference/MailGun/MailGun-query.jpg" alt="Insight² - Query Mailgun" height="420"/>
 
+
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 **Send mail to** - accepts a single email id.
 For example:
@@ -56,7 +57,8 @@ For example:
 For example: `admin@tooljet.io`
 
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tips**:
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tips**:<br>
+
 **Send a single email to multiple recipients**<br> The `Send mail to` field can contain an array of recipients, which will send a single email with all of the recipients in the field.
 
 **Send multiple individual emails to multiple recipients** - set <b>Multiple recipients</b> field to `{{true}}` and the `Send mail to` field will be split into multiple emails and send to each recipient.

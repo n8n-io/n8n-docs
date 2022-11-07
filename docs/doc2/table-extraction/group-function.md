@@ -14,7 +14,7 @@ Once a table has been extracted via DOC² and the columns have been mapped ([Map
 
 [Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 
-## What does this mean in detail?
+## What does this mean?
 
 All documents from order confirmations to invoices can vary enormously in complexity from company to company. For example, in documents, information may be presented in tables in some columns across multiple rows and in other columns across only one row.
 

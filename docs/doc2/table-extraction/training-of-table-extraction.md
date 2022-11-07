@@ -22,7 +22,7 @@ _______________________________
 
 ##### Training Mode:
 
-- Mapped columns are read only. You are not be able to change the text manually.
+- Only mapped columns are read. You are not be able to change the text manually.
 - Delete row button is not visible
 
 ![](/_images/te/Training Mode.png){ loading=lazy }

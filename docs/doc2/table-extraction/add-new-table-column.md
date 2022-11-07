@@ -9,7 +9,7 @@ tags:
 
 # Add new table column
 
-DOC² offers the possibility to manually create columns for extracted documents. This is necessary when there is a need to manually map columns to rows (fields) on the extracted document. When this is necessary and how it works you will learn here: [Manual row selection](/doc2/table/manual-row-selection/)
+DOC² offers the possibility to manually create columns for extracted documents. This is necessary when there is a need to manually map columns to rows (fields) on the extracted document. When this is necessary and how it works is available here: [Manual row selection](/doc2/table/manual-row-selection/)
 
 Import any document and open it. Navigate to the table extraction view like via the "LINE ITEMS" button:
 

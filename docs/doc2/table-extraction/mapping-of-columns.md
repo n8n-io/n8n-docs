@@ -13,10 +13,10 @@ Once data is extracted from a document you are able to map the extracted columns
 
 That can be done by selecting the header of a column in extraction view.
 
-A dropdown will open and you are able to select the column that you want to map.
+A drop-down will open and you will be able to select the column that you want to map.
 
 ![](/_images/doc2/image-8-1024x790.png)
 
-If a column has been mapped incorrectly you can simply re-map the column by clicking the dropdown menu again.
+If a column has been mapped incorrectly you can simply re-map the column by clicking the drop-down menu again.
 
 In the following video you can see in detail how to map and re-map different columns on a document:

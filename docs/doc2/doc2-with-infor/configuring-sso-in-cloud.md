@@ -73,7 +73,7 @@ c) Download the certificate
 
 a) When you have filled out everything remember to save it with the disk icon above Application Type
 
-b) Then, enter the service provider DOC² again.
+b) Then, enter the details of the service provider DOC² again.
 
 c) Click on view the Identity Provider Information underneath.
 

@@ -95,7 +95,7 @@ b) Click on CONFIGURE
 
 ![](/_images/doc2/DOC2_identity-service-provider-settings_completed-1024x316.png){ loading=lazy }
 
-This part is successfully completed when you see the following popup
+This part is successfully completed when you see the following pop-up
 
 ![](/_images/doc2/DOC2_File-successfully-saved.png){ loading=lazy }
 

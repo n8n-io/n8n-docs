@@ -101,7 +101,7 @@ If you want only unique values for your grouped column, check the box here.
 
 If you want to combine all the rows above the grouped attribute, check the box here.
 
-In this example, the table starts with a row that is above all other information but also needs to be extracted along with the information below it. DOC² might extract this row as an additional row and the grouping of the information, e.g. by position, will not work properly.
+In this example, the table starts with a row that is above all other information but also needs to be extracted along with the information below it. DOC² might extract this row as an additional row and then the grouping of the information, e.g. by position, will not work properly.
 
 ![](/_images/doc2/advanced-settings_7.png){ loading=lazy }
 ![](/_images/doc2/advanced-settings_9.png){ loading=lazy }

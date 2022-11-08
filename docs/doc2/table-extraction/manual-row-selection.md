@@ -24,7 +24,7 @@ In this case it is not possible for the system to automatically define to which 
 
 To solve this issue DOC² offers you the option to manually select and map information on a document to any column.
 
-First of all make sure training mode is activated:
+First of all, make sure training mode is activated:
 
 ![](/_images/doc2/image-11.png)
 

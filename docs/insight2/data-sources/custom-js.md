@@ -35,7 +35,7 @@ The return value is used as the `data` of the query.
 
 
 
-![Display random number using JS](/_images/insight2/datasource-reference/custom-javascript/jsrandom.gif)
+![Display random number using JS](docs/_images/insight2/jsrandom.gif)
 
 
 

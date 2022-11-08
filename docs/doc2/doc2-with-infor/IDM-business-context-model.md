@@ -23,7 +23,7 @@ You can extend IDM with DOC². It provides Optical Character Recognition (OCR) a
 
 Access the application with the IDM URL.
 
-By accessing the system through this URL, you are ensured that the required libraries are loaded during the page load. Otherwise, several features such as Shortcuts and Context Sharing, do not work properly. The IDM URL is provided to your IDM administrator.
+By accessing the system through this URL, you are ensured that the required libraries are loaded during the page load. Otherwise several features, such as Shortcuts and Context Sharing, do not work properly. The IDM URL is provided to your IDM administrator.
 
 After logging in you can access the client application through the app switcher in the Infor Ming.le portal.
 

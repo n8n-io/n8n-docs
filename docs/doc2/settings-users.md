@@ -47,7 +47,7 @@ Go to the DOC² login page ([https://app.polydocs.io/](https://app.polydocs.io/)
 
 ![](/_images/doc2/Users_6.png)
 
-You will immediately receive an email with a link to reset the password. The link will navigate you to following page where you can enter a new password:
+You will immediately receive an email with a link to reset the password. The link will navigate you to the following page where you can enter a new password:
 
 ![](/_images/doc2/Users_7.png)
 

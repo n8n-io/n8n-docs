@@ -19,7 +19,7 @@ tags:
 
 **1\. Get access to the Cloud and check your access**
 
-The URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME](https://mingle-portal.eu1.inforcloudsuite.com/)\> followed by your personal extension
+The URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME](https://mingle-portal.eu1.inforcloudsuite.com/)\> followed by your personal extension.
 
 ![](/_images/doc2/infor-signin-1024x520.png){ loading=lazy }
 

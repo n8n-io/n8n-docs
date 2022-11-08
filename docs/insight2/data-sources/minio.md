@@ -21,7 +21,7 @@ Insight² can connect to minio and perform various operation on them.
 
 ## Connection
 
-To add a new minio source, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select Minio from the modul that pops up.
+To add a new minio source, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select **Minio** from the modul that pops up.
 
 ![](/_images/insight2/datasource-reference/datasource_minio.png)
 

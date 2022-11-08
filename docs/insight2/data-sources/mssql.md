@@ -15,7 +15,7 @@ Insight² can connect to MS SQL Server & Azure SQL databases to read and write d
 
 Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted Insight². If you are using Insight² cloud, please whitelist our IP.
 
-To add new MS SQL Server / Azure SQL database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select `SQL Server` from the modal that pops up.
+To add new MS SQL Server / Azure SQL database, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select **SQL Server** from the modul that pops up.
 
 Insight² requires the following to connect to your PostgreSQL database.
 

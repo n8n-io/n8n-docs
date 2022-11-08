@@ -115,8 +115,8 @@ c) Fill out all the required fields, like in the image below, but with your own 
 
 **The final step:**
 
-- Log out of DOC².
-- Go back to the burger menu in infor and select the icon you just created.
-- And you are already on the dashboard of DOC².
+- Log out of DOC²
+- Go back to the burger menu in Infor and select the icon you just created
+- You should then be at the dashboard of DOC²
 
 ![](/_images/doc2/Sign-in-over-SSO-1024x640.png){ loading=lazy }

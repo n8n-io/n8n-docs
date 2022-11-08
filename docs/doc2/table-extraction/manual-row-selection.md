@@ -12,7 +12,7 @@ tags:
 
 # Manual row selection
 
-It is possible that on some documents text in rows is not only written under one column. It might happen that it is written through different columns like in the example below:
+It is possible for some documents to have text in rows that are not only written under one specific coloumn. It might happen that it is written through different columns like in the example below:
 
 ![](/_images/doc2/image-10-1024x606.png)
 

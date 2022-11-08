@@ -40,7 +40,7 @@ The rows highlighted in violet can not be mapped manually as the mapping has alr
 
 Extractable columns need to be created first. You can learn how to do this here: [Add new table column](/doc2/table/add-new-table-column/)
 
-Once the column has been created, training mode and row edit mode are activated you can map text on the document to the column as shown in the video below:
+Once the column has been created and you have activated both "Training Mode" and "Row Data Edit Mode", will you be able to map text on the document to the column as shown in the video below:
 
 In the video you can see how to:
 

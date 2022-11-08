@@ -95,7 +95,7 @@ You can import the files as follows:
    + :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } Warning - yellow sign: The warning sign does not disable **Import XML file**. We recommend that you go through all warning messages before starting the importer. This could be due to these situations:
     + Some configuration parts already exist in the repository that might be overwritten, for example, Result List.
     + Some configuration parts already exist in the repository that might be lost, for example, Document Type Filter.
-   + :fontawesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable Import XML file. It is usually displayed in these situations:
+   + :fontawesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable Import XML file. It is usually displayed for these reasons:
     + If some parts cannot be imported, for example, Items.
     + If some existing parts are merged with new ones from the XML file, for example, Result List.
    + A green OK sign with no message required.

@@ -36,7 +36,7 @@ Please note that the manual mapping of text to a column is only possible for ext
 
 ![](/_images/doc2/image-14-1024x669.png)
 
-The violet ones can not be mapped manually as the mapping has already been done via the columns defined on the document.
+The rows highlighted in violet can not be mapped manually as the mapping has already been done via the columns defined on the document.
 
 Extractable columns need to be created first. You will learn here how that works: [Add new table column](/doc2/table/add-new-table-column/)
 

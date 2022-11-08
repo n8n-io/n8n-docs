@@ -14,7 +14,7 @@ You can write custom JavaScript code to interact with components and queries. To
 
 ![Insight² - Data source - Custom JavaScript](/_images/insight2/datasource-reference/custom-javascript/custom-javascript.png)
 
-</div>
+
 
 #### Example: Displaying random number
 
@@ -25,11 +25,10 @@ You can write custom JavaScript code to interact with components and queries. To
 const a = Math.floor(Math.random() * (10 - 1)) + 1;
 return a;
 ```
-:::tip
 
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **TIP**:
 The return value is used as the `data` of the query.
 
-:::
 - Let's edit the properties of widgets:
     - Add an event handler to the button - Select **On Click** event, **Run Query** action, and select the `runjs1` query that we created. This will run the JavaScript code every time the button is clicked.
     - Edit the property of text widget - In the text field enter **Random number: `{{queries.runjs1.data}}`**. It will display the output as Random number: *result from JS code*
@@ -53,8 +52,9 @@ Insight² allows you to internally utilize these libraries:
 | Lodash      | [https://lodash.com/docs/](https://lodash.com/docs/) |
 | Axios       | [https://axios-http.com/docs/intro](https://axios-http.com/docs/intro) |
 
-:::danger
+
+:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }DANGER
 
 Issues with writing custom JavaScript code? Ask in our [Slack community](https://join.slack.com/t/tooljet/shared_invite/zt-r2neyfcw-KD1COL6t2kgVTlTtAV5rtg).
 
-:::
+

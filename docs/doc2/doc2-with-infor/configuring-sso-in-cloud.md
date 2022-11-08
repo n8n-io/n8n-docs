@@ -95,13 +95,13 @@ b) Click on CONFIGURE
 
 ![](/_images/doc2/DOC2_identity-service-provider-settings_completed-1024x316.png){ loading=lazy }
 
-This part is successfully completed when you see the following pop-up
+This part is successfully completed when you see the following pop-up.
 
 ![](/_images/doc2/DOC2_File-successfully-saved.png){ loading=lazy }
 
 **6\. Add new Application in infor Ming.le**
 
-a) got to Admin settings and
+a) Go to Admin settings
 
 ![](/_images/doc2/infor_Admin-Settings_Manage-Applications-1024x528.png){ loading=lazy }
 

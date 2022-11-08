@@ -55,7 +55,7 @@ c. Now click on the “+” sign and add DOC² as Service Provider. (View step 4
 
 a) Log in using the URL [https://app.polydocs.io/](https://app.polydocs.io/) with the login details you received from us.
 
-b) Go to SETTINGS (on top bar) and choose SSO Settings down at the bottom of the list.
+b) Go to SETTINGS (on top bar) and choose "SSO Settings" down at the bottom of the list.
 
 Here you will find all the information you need for the following steps
 

@@ -17,7 +17,7 @@ tags:
 
 ![Infor CloudSuite API Flow DOC²](/_images/doc2/infor/Doc2-Infor.png)
 
-The DOC² integration to Infor LN / M3 is mostly done via ION API, ION Desk and the Infor Standard BODs. There are two main paths that need to be considered when integrating: how we export the data to Infor and how we get data for the master data validation in DOC².
+The DOC² integration to Infor LN / M3 is mostly done via ION API, ION Desk and the Infor Standard BODs. There are two main paths that need to be considered when integrating, how we export the data to Infor and how we get data for the master data validation in DOC².
 
 
 

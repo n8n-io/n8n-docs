@@ -23,7 +23,7 @@ The URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME
 
 ![](/_images/doc2/infor-signin-1024x520.png){ loading=lazy }
 
-a) Choose the option "Cloud Identities" and use your login details
+a) Choose the option "Cloud Identities" and fill in your login details
 
 ![](/_images/doc2/LogIn-infor-1024x640.png){ loading=lazy }
 

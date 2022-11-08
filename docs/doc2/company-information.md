@@ -9,7 +9,7 @@ tags:
   - Subscription
 ---
 
-### You will need this information filled for exporting documents in [ZUGFeRD](/doc2/zugpferd/) format.
+### You will need this information filled in for exporting documents in [ZUGFeRD](/doc2/zugpferd/) format.
 
 ![](/_images/doc2/Company_1.png){ loading=lazy }
 

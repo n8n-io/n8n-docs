@@ -23,7 +23,7 @@ Direct link: [https://app.polydocs.io/settings/user](https://app.polydocs.io/set
 
 ## How to add a user
 
-Once the admin is registered, you can add your employees via following steps.
+Once the admin is registered, you can add your employees by following these steps.
 
 In the user menu click on `ADD USER`:
 

@@ -47,7 +47,7 @@ b. You will see this window with the Service Providers.
 
 ![](/_images/doc2/infor_Service-Provider_2-1-1024x479.png){ loading=lazy }
 
-c. Now click on the “+” sign and add our DOC² as Service Provider. (View step 4)
+c. Now click on the “+” sign and add DOC² as Service Provider. (View step 4)
 
 ![](/_images/doc2/infor6.png){ loading=lazy }
 

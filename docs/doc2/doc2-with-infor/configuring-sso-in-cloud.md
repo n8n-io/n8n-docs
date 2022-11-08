@@ -35,7 +35,7 @@ b) After you have logged in, you will have access to the Infor Cloud. You will b
 
 **2\. Open "User Management" to add a new Service Provider**
 
-On the right hand side of the bar menu, you will find the user menu and that is where you can access the user management
+On the right hand side of the bar menu, you will find the user menu and that is where you can access user management
 
 ![](/_images/doc2/infor_User-Management-1024x548.png){ loading=lazy }
 

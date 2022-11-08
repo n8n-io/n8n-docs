@@ -22,7 +22,7 @@ On the screenshot you can see that the table and columns have already been defin
 
 In this case it is not possible for the system to automatically define to which column the information belongs.
 
-To solve this issue DOC² offers a possibility to manually select and map information on a document to any column.
+To solve this issue DOC² offers the possibility to manually select and map information on a document to any column.
 
 First of all make sure training mode is activated:
 

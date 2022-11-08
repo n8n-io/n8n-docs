@@ -25,7 +25,7 @@ The first export path starts with the ION API which allows DOC² to not only sen
 
 
 
-The second path is when we want to perform master data validation in DOC² to identify the supplier or to compare / match the purchase order lines. That's why we automatically activate a trigger in LN / M3 so that when a new entry or changes are made in the master data, we receive the Sync.RemitToPartyMaster, Sync.SupplierPartyMaster and the Sync.PurchaseOrder BODs to DOC². The process is configured again in ION Desk where we define the dataflow to a specific connection point to DOC².
+The second path is when we want to perform master data validation in DOC² to identify the supplier or to compare / match the purchase order lines. That's why we automatically activate a trigger in LN / M3 so that when a new entry or changes are made in the master data, we receive: the Sync.RemitToPartyMaster, Sync.SupplierPartyMaster and the Sync.PurchaseOrder BODs to DOC². The process is configured again in ION Desk where we define the dataflow to a specific connection point to DOC².
 
 
 [Infor Export](/doc2/export/export-to-infor/)

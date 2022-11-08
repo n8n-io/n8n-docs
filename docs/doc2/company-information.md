@@ -32,5 +32,5 @@ The export will only work if a valid address is included on the document.
 
 ### Subscription Plan and Usage
 
-Under your company information you can find your booked subscription plan with start and end date.
+Under your company information you can find your booked subscription plan with the start and end date.
 You can also query your processed pages for a period selected in the calendar.

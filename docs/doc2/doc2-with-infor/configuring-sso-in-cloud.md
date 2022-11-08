@@ -83,7 +83,7 @@ c) Click on "VIEW" underneath Identity Provider Information.
 
 d) Export the **SAML METADATA.**
 
-File looks like this: ServiceProviderSAMLMetadata\_10\_20\_2021.xml
+The file looks like this: ServiceProviderSAMLMetadata\_10\_20\_2021.xml
 
 **5\. Import the SAML METADATA in the SSO Settings.**
 

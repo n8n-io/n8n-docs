@@ -120,7 +120,7 @@ This is what the general information and attributes look like in IDM under the c
 ![](/_images/doc2/Infor/IDM_DocumentType_Invoice.png)
 ![](/_images/doc2/Infor/IDM_Attributes_Invoice.png)
 
-When you open the **Business Context Model** menu item
+When you open the **Business Context Model** menu item,
 ![](/_images/doc2/Infor/IDM_BusinessContextModel.png)
 you will find the information here as follows:
 

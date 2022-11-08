@@ -150,7 +150,7 @@ you will find the information here as follows:
 /LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
 ```
 
-All these steps connect all documents from IDM to the corresponding workbench in LN, where they are also displayed. And this is how it looks in LN:
+All these steps connect all the documents from IDM to the corresponding workbench in LN, where they are also displayed. And this is how it looks in LN:
 
 **Order Confirmation**
 

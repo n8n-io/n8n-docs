@@ -8,7 +8,7 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 - A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
 
 
-## Use the deploy template to create a Heroku project
+## Use the deployment template to create a Heroku project
 
 The quickest way to get started with deploying n8n to Heroku is using the **Deploy to Heroku** button:
 

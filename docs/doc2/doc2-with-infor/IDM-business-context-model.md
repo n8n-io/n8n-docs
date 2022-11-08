@@ -16,7 +16,7 @@ IDM is one of several Infor applications that uses the user interface of Infor M
 
 IDM is a central repository where you can manage your common business rules for creating, storing, and managing documents – such as invoices, vendor document, and employee records. You can view, edit, create, and store the physical files.
 
-You can extend IDM with DOC². It provides optical character recognition (OCR) and intelligent character recognition (ICR) capabilities. These tools enable more complete and improved document capture processes. You can scan and connect your documents through a standard web browser and connect the documents to your business process. With IDM you can find the documents you require and you are always working with the latest, most complete version of a document. With access to all your critical business information in-context, DOC²  further automates your document workflows through automatic categorization and retrieval of key document metadata.
+You can extend IDM with DOC². It provides Optical Character Recognition (OCR) and Intelligent Character Recognition (ICR) capabilities. These tools enable more complete and improved document capture processes. You can scan and connect your documents through a standard web browser and connect the documents to your business process. With IDM you can find the documents you require and you are always working with the latest, most complete version of a document. With access to all your critical business information in-context, DOC²  further automates your document workflows through automatic categorization and retrieval of key document metadata.
 
 
 ## Accessing IDM

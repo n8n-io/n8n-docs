@@ -46,7 +46,7 @@ In this example, the item description in the table spans several rows, but you o
 ![](/_images/doc2/advanced-settings_11.png){ loading=lazy }
 ![](/_images/doc2/advanced-settings_12.png){ loading=lazy }
 
- After naming the columns and mapping them to position, you get the following result:
+ After naming the columns and mapping them to a position, you get the following result:
 
 ![](/_images/doc2/advanced-settings_13.png){ loading=lazy }
 

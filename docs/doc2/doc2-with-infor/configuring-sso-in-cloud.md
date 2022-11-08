@@ -105,7 +105,7 @@ a) Go to Admin Settings
 
 ![](/_images/doc2/infor_Admin-Settings_Manage-Applications-1024x528.png){ loading=lazy }
 
-b) click on ADD APPLICATION top right
+b) Click on ADD APPLICATION in the top right corner
 
 ![](/_images/doc2/infor_Add-Application.png){ loading=lazy }
 

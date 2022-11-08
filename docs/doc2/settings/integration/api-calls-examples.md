@@ -53,7 +53,7 @@ Your document will be uploaded to your dashboard with the rules you set in [DOCÂ
 ## Document Status
 
 After completing steps **1.-3.**<br>
-**4.** scroll down to
+**4.** Scroll down to
 
 ![Picture](/_images/doc2/DOC2_API_GET_Document-Status.png){ loading=lazy }
 

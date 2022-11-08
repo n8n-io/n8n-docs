@@ -28,7 +28,7 @@ Accordingly, the value in "Header row count" is set to two:
 
 ![](/_images/doc2/advanced-settings_4.png){ loading=lazy }
 
-Why is this needed? It might be that DOC² does not recognize the second line in the table header as header line. In this case, it incorrectly inserts it into the table as an extracted value. This can be easily prevented with this function.
+Why is this needed? It might be that DOC² does not recognize the second line in the table header as header line. In this case, it incorrectly inserts it into the table as an extracted value. This can easily be prevented with this function.
 
 <ins>Example before</ins>:
 

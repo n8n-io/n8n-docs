@@ -13,10 +13,10 @@ Insight² can connect to Amazon Athena databases to read and write data.
 - [Athena](#athena)
 	- [Connection](#connection)
 	- [Querying Amazon Athena](#querying-amazon-athena)
-		- [Basic queries](#basic-queries)
-			- [Creating table](#creating-table)
-			- [Inserting to table](#inserting-to-table)
-			- [Select operation](#select-operation)
+	- [Basic queries](#basic-queries)
+		- [Creating table](#creating-table)
+		- [Inserting to table](#inserting-to-table)
+		- [Select operation](#select-operation)
 
 ## Connection
 

@@ -63,7 +63,7 @@ c) Download the certificate
 
 ![](/_images/doc2/DOC2_SSO-Service-Provider-Settings-1024x640.png){ loading=lazy }
 
-**4\. Filling the Service Provider with the help of SSO Service Provider Settings in DOC²**
+**4\. Filling in the Service Provider details with the help of SSO Service Provider Settings in DOC²**
 
 ![](/_images/doc2/infor_Service-Provider_3-1024x891.png)
 

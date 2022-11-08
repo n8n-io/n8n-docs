@@ -75,7 +75,7 @@ a) When you have filled out everything remember to save it with the disk icon ab
 
 b) Then, enter the details of the service provider DOC² again.
 
-c) Click on view the Identity Provider Information underneath.
+c) Click on "VIEW" underneath Identity Provider Information.
 
 ![](/_images/doc2/infor_Identity-Provider-Information-copy-1024x559.png){ loading=lazy }
 

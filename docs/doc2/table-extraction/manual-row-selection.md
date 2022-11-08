@@ -38,7 +38,7 @@ Please note that the manual mapping of text to a column is only possible for ext
 
 The rows highlighted in violet can not be mapped manually as the mapping has already been done via the columns defined on the document.
 
-Extractable columns need to be created first. You will learn here how that works: [Add new table column](/doc2/table/add-new-table-column/)
+Extractable columns need to be created first. You can learn how to do this here: [Add new table column](/doc2/table/add-new-table-column/)
 
 Once the column has been created, training mode and row edit mode are activated you can map text on the document to the column as shown in the video below:
 

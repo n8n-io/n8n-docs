@@ -74,7 +74,7 @@ Also select the `Move extra rows to` `Trash` option to be able to train all the 
 
 ![](/_images/doc2/advanced-settings_19.png){ loading=lazy }
 
-Name the first column Postition and group on that one.
+Name the first column "Postition" and group on that one.
 
 ![](/_images/doc2/advanced-settings_20.png){ loading=lazy }
 

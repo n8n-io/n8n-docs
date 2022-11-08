@@ -43,8 +43,6 @@ Optional parameters:
 
 - Body as HTML
 
-<img class="screenshot-full" src="/_images/insight2/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight² - Query Mailgun" height="420"/>
-
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 **Send mail to** - accepts a single email id.

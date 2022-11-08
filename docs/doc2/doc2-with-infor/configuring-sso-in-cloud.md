@@ -89,7 +89,7 @@ The file looks like this: ServiceProviderSAMLMetadata\_10\_20\_2021.xml
 
 Go to IDENTITY SERVICE PROVIDER SETTINGS, enter your Tenant ID (e.g. FELLOWCONSULTING\_DEV and underneath that line you will see Upload file and the IMPORT Button, this is where you need to upload the previously exported SAML METADATA file.
 
-a) Click on IMPORT an then choose the METADATA file that you have already downloaded from the SSO SERVICE PROVIDER SETTINGS
+a) Click on IMPORT and then choose the METADATA file that you have already downloaded from the SSO SERVICE PROVIDER SETTINGS
 
 b) Click on CONFIGURE
 

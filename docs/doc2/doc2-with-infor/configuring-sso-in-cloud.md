@@ -33,7 +33,7 @@ b) After you have logged in, you will have access to the Infor Cloud. You will b
 
 ![](/_images/doc2/infor_Burger-Menu-1024x586.png){ loading=lazy }
 
-**2\. Open User Management for adding new Service Provider**
+**2\. Open "User Management" to add a new Service Provider**
 
 On the right hand side of the bar menu, you will find the user menu and there you can access the user management
 

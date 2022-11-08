@@ -16,7 +16,7 @@ It is possible for some documents to have text in rows that are not only written
 
 ![](/_images/doc2/image-10-1024x606.png)
 
-On the screenshot you can see that the table and columns have already been defined. Having a detailed look on the highlighted information (PRAEF) you will recognize that the text is written through columns "Bezeichnung", "Menge", "ME" and "Preis in EUR".
+On the screenshot you can see that the table and columns have already been defined. After having a detailed look on the highlighted information (PRAEF) you will recognize that the text is written through columns "Bezeichnung", "Menge", "ME" and "Preis in EUR".
 
 [Sign up for a 30 days free trail](https://app.polydocs.io){ .md-button .md-button--primary }
 

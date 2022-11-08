@@ -9,7 +9,7 @@ tags:
 
 ## DOC² with Workflow²
 
-See how easily you can use DOC² with Workflow²
+See how easy it is to use DOC² with Workflow²
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/Zk8_pNfXBhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

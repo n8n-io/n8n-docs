@@ -27,7 +27,7 @@ If you are self-hosting the application, you will need to perform some additiona
 
 ## Authorization Scopes
 
-You can create a Google Sheets data source with one of either of the two permission scopes :
+You can create a Google Sheets data source with one of either of the two permission scopes:<br>
   1. **Read Only**
   2. **Read and Write**
 
@@ -41,11 +41,11 @@ You can create a Google Sheets data source with one of either of the two permiss
 
 Using Google sheets data source you can perfom several operations from your applications like:
 
-  1. **[Read data from a sheet](/docs/data-sources/google.sheets#read-data-from-a-sheet)**
-  2. **[Append data to a sheet](/docs/data-sources/google.sheets#append-data-to-a-sheet)**
-  3. **[Update single row of a sheet](/docs/data-sources/google.sheets#update-single-row-of-a-sheet)**
-  4. **[Delete row from a sheet](/docs/data-sources/google.sheets#delete-row-from-a-sheet)**
-  5. **[Get spreadsheet info](/docs/data-sources/google.sheets#get-spreadsheet-info)**
+  1. **[Read data from a sheet](/insight2/data-sources/google.sheets/#read-data-from-a-sheet)**
+  2. **[Append data to a sheet](/insight2/data-sources/google.sheets/#append-data-to-a-sheet)**
+  3. **[Update single row of a sheet](/insight2/data-sources/google.sheets/#update-single-row-of-a-sheet)**
+  4. **[Delete row from a sheet](/insight2/data-sources/google.sheets/#delete-row-from-a-sheet)**
+  5. **[Get spreadsheet info](/insight2/data-sources/google.sheets/#get-spreadsheet-info)**
 
 ### Read data from a sheet
 

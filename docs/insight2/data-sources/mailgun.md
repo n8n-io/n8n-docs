@@ -18,11 +18,11 @@ The Mailgun API Datasource supports for interaction with the mail endpoint of th
 
 To add a new Mailgun API datasource, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select **Mailgun** from the modul that pops up.
 
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **TIP**: Mailgun API key is required to create an Mailgun datasource on Insight. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
+
 Enter your **Mailgun API key** in the `Api key` field.
 
 <img class="screenshot-full" src="/_images/insight2/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight² - Data source - Mailgun" height="420" />
-
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tip**: Mailgun API key is required to create an Mailgun datasource on Insight. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
 
 Click on the `Save` button to save the data source.
 

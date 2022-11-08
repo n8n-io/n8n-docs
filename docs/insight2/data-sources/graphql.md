@@ -40,5 +40,5 @@ Click on `+` button of the query manager at the bottom panel of the editor and s
 Click on the `run` button to run the query.<br>
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" } **NOTE**: Query should be saved before running.
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **Tip**:
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **TIP**:
 Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/insight2/tutorial/transformations/)

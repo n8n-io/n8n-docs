@@ -53,7 +53,6 @@ You can also configure for **[additional optional parameters](https://github.com
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 **NOTE:** Query should be saved before running.
-:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
 
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }

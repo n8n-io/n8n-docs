@@ -16,7 +16,7 @@ In table extraction view, you will find the menu item `Settings` in the upper ac
 
 ![](/_images/doc2/advanced-settings_2.png){ loading=lazy }
 
-## Below functionalities are available in general settings:
+## These functionalities are available in general settings:
 
 #### Header row count
 

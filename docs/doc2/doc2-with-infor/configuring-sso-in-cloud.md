@@ -99,7 +99,7 @@ This part is successfully completed when you see the following pop-up.
 
 ![](/_images/doc2/DOC2_File-successfully-saved.png){ loading=lazy }
 
-**6\. Add new Application in Infor Ming.le**
+**6\. Adding a new Application in Infor Ming.le**
 
 a) Go to Admin Settings
 

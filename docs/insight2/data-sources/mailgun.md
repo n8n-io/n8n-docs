@@ -10,20 +10,19 @@ tags:
 
 Insight² can connect to your Mailgun account to send emails.
 
-<img class="screenshot-full" src="/_images/insight2/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight² - Data source - Mailgun" height="420" />
-
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }
 The Mailgun API Datasource supports for interaction with the mail endpoint of the [Mailgun API](https://documentation.mailgun.com/en/latest/api-intro.html#authentication-1).
 
 
 ## Connection
 
-To add a new Mailgun API datasource, click the **Datasource manager** icon on the left-sidebar of the app builder and click on the `Add datasource` button, then select Mailgun API from the modal that pops up.
+To add a new Mailgun API datasource, click on the **Add or edit datasources** icon on the left sidebar of the app editor and click on `+ add data source` button. Select **Mailgun** from the modul that pops up.
 
 Enter your **Mailgun API key** in the `Api key` field.
 
-:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tip**:<br>
-Mailgun API key is required to create an Mailgun datasource on Insight. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
+<img class="screenshot-full" src="/_images/insight2/datasource-reference/mailgun/mailgun-datasource.png" alt="Insight² - Data source - Mailgun" height="420" />
+
+:fontawesome-solid-circle-info:{ style="color: #0F17E4" } **tip**: Mailgun API key is required to create an Mailgun datasource on Insight. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
 
 Click on the `Save` button to save the data source.
 

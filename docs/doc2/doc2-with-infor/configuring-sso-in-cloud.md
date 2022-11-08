@@ -99,9 +99,9 @@ This part is successfully completed when you see the following pop-up.
 
 ![](/_images/doc2/DOC2_File-successfully-saved.png){ loading=lazy }
 
-**6\. Add new Application in infor Ming.le**
+**6\. Add new Application in Infor Ming.le**
 
-a) Go to Admin settings
+a) Go to Admin Settings
 
 ![](/_images/doc2/infor_Admin-Settings_Manage-Applications-1024x528.png){ loading=lazy }
 

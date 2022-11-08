@@ -14,7 +14,7 @@ Insight² can connect to Google Sheet using OAuth 2.0, which helps us to limit a
 
 <iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="Insight² Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Self-Hosted Configuration
+<!-- ## Self-Hosted Configuration
 
 If you are self-hosting the application, you will need to perform some additional steps.
 
@@ -23,7 +23,7 @@ If you are self-hosting the application, you will need to perform some additiona
      * `GOOGLE_CLIENT_ID`
      * `GOOGLE_CLIENT_SECRET`
      * `TOOLJET_HOST`
-  3. Enable the Google Sheets API in the GCP console
+  3. Enable the Google Sheets API in the GCP console -->
 
 ## Authorization Scopes
 

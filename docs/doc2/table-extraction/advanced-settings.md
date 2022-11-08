@@ -63,7 +63,7 @@ Enter the minimum number of rows in your grouped column here.
 
 ![](/_images/doc2/advanced-settings_16.png){ loading=lazy }
 
-In this table you see six rows of which only three would be relevant to you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns, all the other ones have to be trained as custom columns. <br> And this is how it works step by step:
+In this table you see six rows of which only three would be relevant to you. In the first two columns there are two criteria that have to be extracted separately. These will be your mapped columns, all the other ones have to be trained as custom columns. <br> It works as follows:
 
 Select the two [header rows](/doc2/table-extraction/advanced-settings/#header-row-count) as well as two minimum grouped rows as these should be grouped to one row.
 

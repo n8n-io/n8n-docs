@@ -28,7 +28,7 @@ If you are self-hosting the application, you will need to perform some additiona
 ## Authorization Scopes
 
 You can create a Google Sheets data source with one of either of the two permission scopes:<br>
-1. **Read Only**
+1. **Read Only**<br>
 2. **Read and Write**
 
 

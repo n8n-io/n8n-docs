@@ -57,7 +57,7 @@ a) Log in using the URL [https://app.polydocs.io/](https://app.polydocs.io/) wit
 
 b) Go to SETTINGS (on top bar) and choose "SSO Settings" down at the bottom of the list.
 
-Here you will find all the information you need for the following steps
+Here you will find all the information you need for the following steps.
 
 c) Download the certificate
 

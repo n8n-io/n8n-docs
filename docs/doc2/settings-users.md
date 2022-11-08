@@ -51,7 +51,7 @@ You will immediately receive an email with a link to reset the password. The lin
 
 ![](/_images/doc2/Users_7.png)
 
-As soon as the new password has been entered and confirmed, it can be used for login from now on.
+As soon as the new password has been entered and confirmed, it can be used for login purposes.
 
 
 [Sign up for a 30 days free trail](https://polydocs.io/free-trail/){ .md-button .md-button--primary }

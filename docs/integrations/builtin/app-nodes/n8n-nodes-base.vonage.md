@@ -14,8 +14,9 @@
 ## Example Usage
 
 This workflow allows you to send daily weather updates via an SMS message using the Vonage node. You can also find the [workflow](https://n8n.io/workflows/723) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openWeatherMap/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
+- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
 - [Vonage]()
 
 The final workflow should look like the following image.

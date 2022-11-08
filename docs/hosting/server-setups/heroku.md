@@ -2,10 +2,11 @@
 
 This hosting guide shows you how to self-host n8n on Heroku. It uses:
 
+
 - [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 - [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres){:target="_blank" .external-link} to host n8n's data storage.
-- [Heroku's CLI tool](https://devcenter.heroku.com/articles/heroku-cli){:target="_blank" .external-link}.
 - A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
+
 
 ## Use the deploy template to create a Heroku project
 

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Figma Trigger (Beta)](/integrations/builtin/trigger-nodes/n8n-nodes-base.figmaTrigger/)
+- [Figma Trigger (Beta)](/integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Mailchimp.
 
 - [Mailchimp](/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp/)
-- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimpTrigger/)
+- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Zendesk.
 
 - [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/)
-- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendeskTrigger/)
+- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/)
 
 ## Prerequisites
 

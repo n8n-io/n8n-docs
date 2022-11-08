@@ -121,7 +121,7 @@ If you want to learn more about *IP addresses*, see [What Is an IP Address?](htt
 ## JavaScript
 A modern programming language popular with web platforms used to create interactive web interfaces.
 
-While n8n is written in TypeScript, the final code generated is JavaScript and the [Function node](/integrations/builtin/core-nodes/n8n-nodes-base.function/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
+While n8n is written in TypeScript, the final code generated is JavaScript and the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) uses JavaScript to create customized [nodes](#Node). JavaScript is used in the n8n's Function nodes.
 
 To learn more about Javascript, visit [Javascript Tutorial](https://www.w3schools.com/js/DEFAULT.asp).
 

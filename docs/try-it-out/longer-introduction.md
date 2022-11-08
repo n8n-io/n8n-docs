@@ -1,3 +1,7 @@
+---
+description: Quickstart covering key concepts in n8n.
+---
+
 # A slightly longer introduction
 
 This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way. You will:
@@ -17,6 +21,7 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
+
 ## Step two: Create a new workflow
 
 Create a blank workflow:
@@ -31,7 +36,7 @@ n8n provides two ways to start a workflow:
 * Manually, by selecting **Execute workflow**, or from the CLI if you installed n8n with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, use the [Cron trigger](/integrations/builtin/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
+For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/). This allows you to run the workflow on a schedule:
 
 1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
 2. Search for **Cron**. n8n shows a list of nodes that match the search.

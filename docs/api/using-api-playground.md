@@ -1,3 +1,7 @@
+---
+description: How to use the API playground to try out n8n's public REST API.
+---
+
 # Using the API playground
 
 The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.

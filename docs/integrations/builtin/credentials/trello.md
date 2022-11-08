@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Trello:
 
 - [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/)
-- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trelloTrigger/)
+- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/)
 
 ## Prerequisites
 

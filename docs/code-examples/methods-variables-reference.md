@@ -1,11 +1,15 @@
+---
+description: Built-in methods and variables you can use in expressions and code in n8n.
+---
+
 # Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description. Note that some methods and variables aren't available in the Function node.
+n8n provides built-in methods and variables for working with data and accessing n8n data. This document provides a reference list of available methods and variables, with a short description. Note that some methods and variables aren't available in the Code node.
 
 
 ## Current node input
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
 | `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :x: |
@@ -62,7 +66,7 @@ This includes:
 | `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
 | `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/). | :white_check_mark: |
-| `$getWorkflowStaticData(type)` | Static data isn't available when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. | :white_check_mark: |
+| `$getWorkflowStaticData(type)` | View an [example](/code-examples/methods-variables-examples/get-workflow-static-data/). Static data isn't available when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. | :white_check_mark: |
 | `$itemIndex` | The index of an item in a list of items. | :x: |
 | `$prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 | `$prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |

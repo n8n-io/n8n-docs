@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Affinity.
 
 - [Affinity](/integrations/builtin/app-nodes/n8n-nodes-base.affinity/)
-- [Affinity Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.affinityTrigger/)
+- [Affinity Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger/)
 
 
 

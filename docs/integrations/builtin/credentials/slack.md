@@ -77,4 +77,4 @@ The following video demonstrates the steps mentioned above.
 
 ## Privacy policy
 
-For details about how you data is collected and used, see the [n8n](https://n8n.io/legal/privacy) and [Slack](https://slack.com/intl/en-de/trust/privacy/privacy-policy) privacy policies.
+For details about how you data is collected and used, see the [n8n](https://n8n.io/legal/) and [Slack](https://slack.com/intl/en-de/trust/privacy/privacy-policy) privacy policies.

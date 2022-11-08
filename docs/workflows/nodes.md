@@ -1,3 +1,7 @@
+---
+description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
+---
+
 # Node
 
 A node is an entry point for retrieving data, a function to process data, or an exit for sending data. The data process performed by nodes can include filtering, recomposing, and changing data.
@@ -16,7 +20,7 @@ Core nodes are functions or services that can be used to control how workflows a
 
 Use the Start node when you want to manually trigger the workflow with the `Execute Workflow` button at the bottom of the Editor UI. This way of starting the workflow is useful when creating and testing new workflows.
 
-If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) or the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/). You can also read about [creating nodes](/integrations/creating-nodes/) and make a node for your desired application.
+If an application you need does not have a dedicated Node yet, you can access the data by using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) or the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/). You can also read about [creating nodes](/integrations/creating-nodes/) and make a node for your desired application.
 
 
 ## Regular nodes
@@ -27,7 +31,7 @@ Regular nodes perform an action, like fetching data or creating an entry in a ca
 
 ### Example
 
-A [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) can be used to retrieve or write data to a Google Sheet.
+A [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) can be used to retrieve or write data to a Google Sheet.
 
 ![Sheets_node](/_images/workflows/nodes/Google_sheets.png)
 

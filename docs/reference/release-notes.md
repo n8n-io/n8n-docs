@@ -1,5 +1,261 @@
 # Release notes
 
+## n8n@0.201.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.200.1...n8n@0.201.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-11-02
+
+This release contains workflow and node enhancements, and bug fixes.
+
+### New features
+
+* Core: reimplement blocking workflow updates on interim changes.
+* Editor: block the UI in node details view when the workflow is listening for an event.
+* Performance improvements
+
+### Node enhancements
+
+Venafi TLS Protect Cloud node: make issuing template depend on application.
+
+### Bug fixes
+
+* Core: fix wokflow hashing for MySQL.
+* Core: make `deepCopy` backward compatible.
+* Editor: ensure `displayOptions` received the value from the resource locator component.
+* Editor: disable the settings link in executions view for unsaved workflows.
+* Editor: ensure forms reliably save.
+* Editor: fix issues with interim updates in executions view.
+* Editor: fix for node creator search.
+* Editor: limit columns in table view to prevent the UI becoming unresponsive in the node details view.
+
+
+## n8n@0.200.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.200.0...n8n@0.200.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-28
+
+This is a bug fix release.
+
+### Bug fixes
+
+* API: do not reset the auth cookie on every request to GET `/login`.
+* AWS SNS trigger node: add missing jsonParse import.
+* Core: avoid callstack with circular dependencies.
+* Editor: resolve issues with the executions list auto-refresh, and with saving new workflows.
+* Editor: redirect the outdated `/workflow` path.
+* Editor: remove a filter that prevented display of running executions.
+
+
+## n8n@0.200.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.199.0...n8n@0.200.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-27
+
+This release contains improvements to the editor, node enhancements and bug fixes.
+
+### New features
+
+* Core, editor: introduce workflow caller policy.
+* Core: block workflow update on interim change.
+* Editor: add a read-only state for nodes.
+* Editor: add execution previews using the new **Executions** tab in the node view.
+* Editor: improvements to node panel search.
+
+### Node enhancements
+
+* Airtable Trigger node: add the resource locator component.
+* HTTP Request node: add options for raw JSON headers and queries.
+* InvoiceNinja node: add support for V5.
+* Write Binary File node: add option to append to a file.
+
+### Bug fixes
+
+* API: validate executions and workflow filter parameters.
+* Core: amend typing for `jsonParse()` options.
+* Core: fix `predefinedCredentialType` in node graph item.
+* Core: fix canvas node execution skipping parent nodes.
+* Core: fix single node execution failing in `main` mode.
+* Core: set JWT authentication token `sameSite` policy to `lax`.
+* Core: update to imports in helpers.
+* Editor: curb item method linting in single-item mode.
+* Editor: stop rendering expressions as HTML.
+* Email Trigger node: backport V2 mark-seen-after processing to V1.
+* Email Trigger node: improve connection handling and credentials.
+* HTTP Request node: fix sending previously selected credentials.
+* TheHive node: small fixes.
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+
+## n8n@0.199.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.2...n8n@0.199.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-21
+
+This release includes new nodes, an improved workflow UI, performance improvements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### New workflow experience
+
+This release brings a collection of UI changes, aimed at improving the workflow experience for users. This includes:
+
+* Removing the Start node, and adding help to guide users to find a trigger node.
+* Improved node search.
+* New nodes: Manual Trigger and Execute Workflow Trigger.
+
+</div>
+
+* Core: block workflow updates on interim changes.
+* Core: enable sending client credentials in the body of API calls.
+* Editor: add automatic credential selection for new nodes.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Compare node
+
+The Compare Datasets node helps you compare data from two input streams. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Execute Workflow Trigger node
+
+The Execute Workflow Trigger starts a workflow in response to another workflow. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Manual Trigger node
+
+The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Schedule Trigger node
+
+This release introduces the Schedule Trigger node, replacing the Cron node. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/).
+
+</div>
+
+### Node enhancements
+
+* Hubspot node: you can now use your Hubspot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+* Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+
+### Bug fixes
+
+* Editor: fix a hover bug in the bottom menu.
+* Editor: resolve performance issues when opening a node, or editing a code node, with a large amount of data.
+* Editor: ensure workflows always stop when clicking the stop button.
+* Editor: fix a bug that was causing text highlighting when mapping data in Firefox.
+* Editor: ensure correct linting in the Code node editor.
+* Editor: handle null values in table view.
+* Elasticsearch node: fix a pagination issue.
+* Google Drive node: fix typo.
+* HTTP Request node: avoid errors when a response doesn't provide a content type.
+* n8n node: fix a bug that was preventing the resource locator component from returning all items.
+
+### Contributors
+
+[AndLLA](https://github.com/AndLLA){:target=_blank .external-link}  
+[Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
+[vcrwr](https://github.com/vcrwr){:target=_blank .external-link}
+
+## n8n@0.198.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.1...n8n@0.198.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+This release fixes a bug affecting scrolling through parameter lists.
+
+## n8n@0.198.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.198.0...n8n@0.198.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: change the initial position of the Start node.
+* Editor: align JSON view properties with their values.
+* Editor: fix `BASE_PATH` for Vite dev mode.
+* Editor: fix data pinning success source.
+
+### Contributor
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
+
+
+## n8n@0.198.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.1...n8n@0.198.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-10-14
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes to the Merge node. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01980){:target=_blank .external-link}.
+
+### New features
+
+* Editor: update the expressions display.
+* Editor: update the n8n-menu component.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Code node
+
+This release introduces the Code node. This node replaces both the Function and Function Item nodes. Refer to the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) documentation for more information.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Venafi TLS Protect Cloud trigger node
+
+Start a workflow in response to events in your Venafi Cloud service.
+
+</div>
+
+### Node enhancements
+
+* Citrix ADC node: add Certificate Install operation.
+* Kafka node: add a **Use key** option for messages.
+* MySQL node: use the resource locator component for table parameters, making it easier for users to browse and select their database fields from within n8n.
+
+### Bug fixes
+
+* Core, Editor: prevent overlap between running and pinning data.
+* Core: expression evaluation of processes now respects `N8N_BLOCK_ENV_ACCESS_IN_NODE`.
+* Editor: ensure the Axios base URL still works when hosted in a subfolder.
+* Editor: fixes for horizontal scrollbar rendering.
+* Editor: ensure the menu closes promptly when loading a credentials page.
+* Editor: menu UI fixes.
+* Box node: fix an issue that was causing the Create Folder operation to show extra items.
+* GSuite Admin node: resolve issue that was causing the User Update operation to fail.
+* GitLab trigger node: ensure this node activates reliably.
+* HTTP Request node: ensure OAuth credentials work properly with predefined credentials.
+* KoboToolbox node: fix the hook logs.
+* SeaTable node: ensure link items show in response.
+* Zoom node: resolve an issue that was causing missing output items.
+
+### Contributors
+
+[Jakob Backlund](https://github.com/jbacklund){:target=_blank .external-link}  
+[Yan Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
+
 ## n8n@0.197.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.0...n8n@0.197.1){:target=_blank .external-link} for this version.<br />
@@ -25,7 +281,7 @@ This release includes six new nodes, focused around infrastructure management. I
 
 #### AWS Certificate Manager
 
-A new integration with AWS Certificate Manager. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awsCertificateManager/).
+A new integration with AWS Certificate Manager. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/).
 
 </div>
 
@@ -33,7 +289,7 @@ A new integration with AWS Certificate Manager. You can find the documentation [
 
 #### AWS Elastic Load Balancing
 
-Manage your AWS load balancers from your workflow using the new AWS Elastic Load Balancing node. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awsElb/).
+Manage your AWS load balancers from your workflow using the new AWS Elastic Load Balancing node. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.awselb/).
 
 </div>
 
@@ -41,7 +297,7 @@ Manage your AWS load balancers from your workflow using the new AWS Elastic Load
 
 #### Citrix ADC
 
-Citrix ADC is an application delivery and load balancing solution for monolithic and microservices-based applications. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.citrixAdc/).
+Citrix ADC is an application delivery and load balancing solution for monolithic and microservices-based applications. You can find the documentation [here](/integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/).
 
 </div>
 
@@ -145,7 +401,7 @@ The [WhatsApp Business Platform](/integrations/builtin/app-nodes/n8n-nodes-base.
 
 ### Node enhancements
 
-* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) for more information.
+* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) for more information.
 * RabbitMQ trigger node: now automatically reconnects on disconnect.
 * Slack node: add the 'get many' operation for users.
 
@@ -287,7 +543,7 @@ Adalo is a low code app builder. Refer to our [Adalo node documentation](/integr
 
 #### Google Cloud Storage
 
-n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudStorage/). 
+n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage/). 
 
 </div>
 
@@ -295,7 +551,7 @@ n8n now has a [Google Cloud Storage node](/integrations/builtin/app-nodes/n8n-no
 
 #### Gmail Trigger
 
-n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailTrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
+n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/). This allows you to trigger workflows in response to a Gmail account receiving an email.
 
 </div>
 
@@ -420,7 +676,7 @@ This release contains a new node, feature enhancements, and bug fixes.
 
 ### New nodes
 
-This release adds an integration for [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highLevel/), an all-in-one sales and marketing platform.
+This release adds an integration for [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel/), an all-in-one sales and marketing platform.
 
 ### Enhancements
 
@@ -561,11 +817,11 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 
 ### New nodes
 
-[Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendInBlue/) and Sendinblue trigger node: introducing our [Sendinblue](https://www.sendinblue.com/){:target=_blank .external-link} integration.
+[Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/) and Sendinblue trigger node: introducing our [Sendinblue](https://www.sendinblue.com/){:target=_blank .external-link} integration.
 
 ### Node enhancements
 
-[NocoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/): add support for v0.90.0+
+[NocoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/): add support for v0.90.0+
 
 ### Bug fixes
 
@@ -601,8 +857,8 @@ This release includes improvements to n8n's core pairedItems functionality.
 
 ### Node enhancements
 
-* [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists/): add an operation to create arrays from input items.
-* [Kafka trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkaTrigger/): add more option fields.
+* [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/): add an operation to create arrays from input items.
+* [Kafka trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/): add more option fields.
 
 
 ### Bug fixes
@@ -728,8 +984,8 @@ export class AsanaApi implements ICredentialType {
 
 ### Node enhancements
 
-* [ERPNext node](/integrations/builtin/app-nodes/n8n-nodes-base.erpNext/): add credential tests, and add support for unauthorized certs.
-* [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/): add support for move to trash.
+* [ERPNext node](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/): add credential tests, and add support for unauthorized certs.
+* [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/): add support for move to trash.
 * [Mindee node](/integrations/builtin/app-nodes/n8n-nodes-base.mindee/): support new version.
 * [Notion node](/integrations/builtin/app-nodes/n8n-nodes-base.notion/): support ignoring the Notion URL property if empty.
 * [Shopify node](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/): add OAuth support.
@@ -771,23 +1027,23 @@ This release contains bug fixes and node enhancements.
 ### Node enhancements
 
 
-* [AWS DynamoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.awsDynamoDb/): improve error handling and add an optional GetAll Scan FilterExpression.
-* [Customer.io node](/integrations/builtin/app-nodes/n8n-nodes-base.customerIo/): add support for tracking region selection.
+* [AWS DynamoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/): improve error handling and add an optional GetAll Scan FilterExpression.
+* [Customer.io node](/integrations/builtin/app-nodes/n8n-nodes-base.customerio/): add support for tracking region selection.
 * [Elasticsearch node](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/): add 'Source Excludes' and 'Source Includes' options to the Document: getAll operation. Add credential tests, index pipelines, and index refresh.
-* [Freshworks CRM node](/integrations/builtin/app-nodes/n8n-nodes-base.freshworksCrm/): add search and lookup functionality.
-* [JIRA node](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiraTrigger/): add optional query authentication.
+* [Freshworks CRM node](/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm/): add search and lookup functionality.
+* [JIRA node](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger/): add optional query authentication.
 * [Postgres node](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/): improve handling of large numbers.
 * [Redis node](/integrations/builtin/app-nodes/n8n-nodes-base.redis/): add push and pop operations.
-* [Rename node](/integrations/builtin/core-nodes/n8n-nodes-base.renameKeys/): add regex replace.
-* [Spreadsheet file node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/): allow skipping headers when writing spreadsheets.
+* [Rename node](/integrations/builtin/core-nodes/n8n-nodes-base.renamekeys/): add regex replace.
+* [Spreadsheet file node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/): allow skipping headers when writing spreadsheets.
 
 
 
 ### Bug fixes
 
 * Editor: Fix an error that occured after repeated executions.
-* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/): improve handling of network problems.
-* [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/): process input items using the list operation.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/): improve handling of network problems.
+* [Google Drive node](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/): process input items using the list operation.
 * [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/): fix for a bug affecting sending binary data (images, documents and so on).
 
 ### Contributors
@@ -812,20 +1068,20 @@ Core: add the `action` parameter to INodePropertyOptions. This parameter is now 
 
 ### New nodes
 
-[Google Ads node](/integrations/builtin/app-nodes/n8n-nodes-base.googleAds/): n8n now provides a Google Ads node, allowing you to get data from Google Ad campaigns.
+[Google Ads node](/integrations/builtin/app-nodes/n8n-nodes-base.googleads/): n8n now provides a Google Ads node, allowing you to get data from Google Ad campaigns.
 
 ### Node enhancements
 
-* [DeepL node](/integrations/builtin/app-nodes/n8n-nodes-base.deepL/): Add support for longer text fields, and add credentials tests.
-* [Facebook Graph API node](/integrations/builtin/app-nodes/n8n-nodes-base.facebookGraphAPI/): Add support for Facebook Graph API 14.
+* [DeepL node](/integrations/builtin/app-nodes/n8n-nodes-base.deepl/): Add support for longer text fields, and add credentials tests.
+* [Facebook Graph API node](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/): Add support for Facebook Graph API 14.
 * [JIRA node](/integrations/builtin/app-nodes/n8n-nodes-base.jira/): Add support for the simplified option with rendered fields.
-* [Webflow trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowTrigger/): Reduce the chance of webhook duplication. Add a credentials test.
+* [Webflow trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/): Reduce the chance of webhook duplication. Add a credentials test.
 * [WordPress node](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/): Add a post template option.
 
 ### Bug fixes
 
 * [HubSpot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/): Fix for search endpoints.
-* [KoboToolbox node](/integrations/builtin/app-nodes/n8n-nodes-base.koBoToolbox/): Improve attachment matching logic and GeoJSON Polygon format.
+* [KoboToolbox node](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/): Improve attachment matching logic and GeoJSON Polygon format.
 * [Odoo node](/integrations/builtin/app-nodes/n8n-nodes-base.odoo/): Prevent possible issues with some custom fields.
 * Sticky note node: Fix an issue that was causing the main header to hide.
 * [Todoist node](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/): Improve multi-item support.
@@ -867,8 +1123,8 @@ This release includes:
 * Editor UI: now display the full text of long error messages.
 * Editor UI: fix for an issue with credentials rendering when the node has no parameters.
 * [Cortex node](/integrations/builtin/app-nodes/n8n-nodes-base.cortex/): fix an issue preventing all analyzers being returned.
-* [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/): ensure all OAuth2 credentials work with this node.
-* [LinkedIn node](/integrations/builtin/app-nodes/n8n-nodes-base.linkedIn/): fix an issue with image preview.
+* [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): ensure all OAuth2 credentials work with this node.
+* [LinkedIn node](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/): fix an issue with image preview.
 * [Salesforce node](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/): fix an issue that was causing the lead status to not use the new name when name is updated.
 * Fixed an issue with required/optional parameters.
 
@@ -935,7 +1191,7 @@ Added support for the client_credentials grant type for OAuth2.
 * Core: fixes an issue with combined expressions not resolving if one expression was invalid.
 * Core: fixed an issue that was causing the public API to fail to build on Windows.
 * Editor: ensure errors display correctly.
-* [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/){:target=_blank}: better handling for requests that return null.
+* [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target=_blank}: better handling for requests that return null.
 * [Pipedrive node](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/){:target=_blank}: fixes a limits issue with the GetAll operation on the Lead resource.
 * [Postbin node](/integrations/builtin/app-nodes/n8n-nodes-base.postbin/){:target=_blank}: remove a false error.
 
@@ -1033,7 +1289,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/){:target=_blank}: improve error handling.
+* [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/){:target=_blank}: improve error handling.
 * [Hubspot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
@@ -1060,8 +1316,8 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 
 ### Node enhancements
 
-* [RabbitMQ Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/): Made message acknowledgement and parallel processing configurable.
-* [ServiceNow node](/integrations/builtin/app-nodes/n8n-nodes-base.serviceNow/): Added support for attachments.
+* [RabbitMQ Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/): Made message acknowledgement and parallel processing configurable.
+* [ServiceNow node](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/): Added support for attachments.
 * [Todoist node](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/): Added support for specifying the parent task when adding and listing tasks.
 
 ### Bug fixes
@@ -1072,9 +1328,9 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 * **Editor UI**: fixed display behavior of credentials assigned to versioned nodes.
 * [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord){:target=_blank}: Fixed rate limit handling.
 * [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail){:target=_blank}: Fixed sending attachments in filesystem data mode.
-* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets){:target=_blank}: Fixed an error preventing the *Use Header Names as JSON Paths* option from working as expected.
-* [Nextcloud node](/integrations/builtin/app-nodes/n8n-nodes-base.nextCloud){:target=_blank}: Updated the node so the list:folder operation works with Nextcloud version 24.
-* [YouTube node](/integrations/builtin/app-nodes/n8n-nodes-base.youTube){:target=_blank}: Fixed problem with uploading large files.
+* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets){:target=_blank}: Fixed an error preventing the *Use Header Names as JSON Paths* option from working as expected.
+* [Nextcloud node](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud){:target=_blank}: Updated the node so the list:folder operation works with Nextcloud version 24.
+* [YouTube node](/integrations/builtin/app-nodes/n8n-nodes-base.youtube){:target=_blank}: Fixed problem with uploading large files.
 
 
 ## n8n@0.178.2
@@ -1153,18 +1409,18 @@ n8n now automatically converts Luxon DateTime objects to strings.
 
 ### Node enhancements
 
-* [Google Drive Node](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/){:target="_blank"}: Drive upload, delete, and share operations now support shared Drives.
-* [Microsoft OneDrive](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/){:target="_blank"}: Add the rename operation for files and folders.
+* [Google Drive Node](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/){:target="_blank"}: Drive upload, delete, and share operations now support shared Drives.
+* [Microsoft OneDrive](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/){:target="_blank"}: Add the rename operation for files and folders.
 * [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/){:target="_blank"}: Add support for operations relating to board members.
 
 ### Bug fixes
 
 * **core:** Fix call to `/executions-current` with unsaved workflow.
 * **core:** Fix issue with fixedCollection having all default values.
-* [Edit Image Node](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/){:target="_blank"}: Fix font selection.
+* [Edit Image Node](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/){:target="_blank"}: Fix font selection.
 * [Ghost Node](/integrations/builtin/app-nodes/n8n-nodes-base.ghost/){:target="_blank"}: Fix post tags and add credential tests.
-* [Google Calendar Node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/){:target="_blank"}: Make it work with public calendars and clean up.
-* [KoBoToolbox Node](/integrations/builtin/app-nodes/n8n-nodes-base.koBoToolbox/){:target="_blank"}: Fix query and sort + use question name in attachments.
+* [Google Calendar Node](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/){:target="_blank"}: Make it work with public calendars and clean up.
+* [KoBoToolbox Node](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/){:target="_blank"}: Fix query and sort + use question name in attachments.
 * [Mailjet Trigger Node](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/){:target="_blank"}: Fix issue that node couldn't get activated.
 * [Pipedrive Node](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/){:target="_blank"}: Fix resolve properties when using multi option field.
 
@@ -1190,7 +1446,7 @@ This release contains bug fixes and node enhancements.
 
 * **core**: a fix for filtering the executions list by waiting status.
 * **core**: improved webhook error messages.
-* [Edit Image node](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/): node now works correctly with the binary-data-mode 'filesystem'.
+* [Edit Image node](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/): node now works correctly with the binary-data-mode 'filesystem'.
 
 ### Contributors
 
@@ -1229,8 +1485,8 @@ This release adds support for node versioning, along with node enhancements and 
 
 ### Node enhancements
 
-* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/): n8n now handles header names formatted as JSON paths.
-* [Microsoft Dynamics CRM node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftDynamicsCrm/): add support for regions other than North America.
+* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/): n8n now handles header names formatted as JSON paths.
+* [Microsoft Dynamics CRM node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/): add support for regions other than North America.
 * [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/): add support for querying chat administrators.
 
 ### Bug fixes
@@ -1239,7 +1495,7 @@ This release adds support for node versioning, along with node enhancements and 
 * **core**: n8n now skips credentials checks for disabled nodes.
 * **editor**: fix a bug affecting touchscreen monitors.
 * [HubSpot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/): fix for search operators.
-* [SendGrid node](/integrations/builtin/app-nodes/n8n-nodes-base.sendGrid/): fixed an issue with sending attachments.
+* [SendGrid node](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/): fixed an issue with sending attachments.
 * [Wise node](/integrations/builtin/app-nodes/n8n-nodes-base.wise/): respect the time parameter on `get: exchangeRate`.
 
 ### Contributors
@@ -1267,18 +1523,18 @@ This release adds Sticky Notes, a new feature that allows you to annotate and co
 
 * **core**: allow external OAuth connection. This enhancement adds support for connecting OAuth apps without access to n8n.
 * All AWS nodes now support AWS temporary credentials.
-* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/): Added upsert support.
-* [Microsoft Teams node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftTeams/): adds several enhancements:
+* [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/): Added upsert support.
+* [Microsoft Teams node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/): adds several enhancements:
     * An option to limit groups to "member of", rather than retrieving the whole directory.
     * An option to get all tasks from a plan instead of just a group member.
     * Autocompletion for plans, buckets, labels, and members in update fields for tasks.
-* [MongoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/): you can now parse dates using dot notation.
+* [MongoDB node](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/): you can now parse dates using dot notation.
 
 ### Bug fixes
 
 
-* [Calendly trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlyTrigger/): updated the logo.
-* [Microsoft OneDrive node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/): fixed an issue that was preventing upload of files with special characters in the file name.
+* [Calendly trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/): updated the logo.
+* [Microsoft OneDrive node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/): fixed an issue that was preventing upload of files with special characters in the file name.
 * [QuickBooks node](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks/): fixed a pagination issue.
 
 ### Contributors
@@ -1320,9 +1576,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 ### Node enhancements
 
 * [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/): additional fields now available when sending a message to Discord.
-* [GoogleBigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/): added support for service account authentication.
-* [Google Cloud Realtime Database node](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudRealtimeDatabase/): you can now select a region.
-* [PagerDuty node](/integrations/builtin/app-nodes/n8n-nodes-base.pagerDuty/): now supports more detail in incidents.
+* [GoogleBigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/): added support for service account authentication.
+* [Google Cloud Realtime Database node](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase/): you can now select a region.
+* [PagerDuty node](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/): now supports more detail in incidents.
 * [Slack node](/integrations/builtin/app-nodes/n8n-nodes-base.slack/): added support for blocks in Slack message update.
 
 ### Bug fixes
@@ -1355,13 +1611,13 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 ### Node enhancements
 <br>
 [Magento 2 Node:](/integrations/builtin/app-nodes/n8n-nodes-base.magento2/) Added credential tests.
-[PayPal Node:](/integrations/builtin/app-nodes/n8n-nodes-base.payPal/) Added credential tests and updated the API URL.
+[PayPal Node:](/integrations/builtin/app-nodes/n8n-nodes-base.paypal/) Added credential tests and updated the API URL.
 
 ### Bug fixes
 
 **core**: Luxon now applies the correct timezone. Refer to [Luxon](/code-examples/expressions/luxon/) for more information.<br>
 **core**: fixed an issue with localization that was preventing i18n files from loading.<br>
-[Action Network Node:](/integrations/builtin/app-nodes/n8n-nodes-base.actionNetwork/) Fix a pagination issue and add credentials test.
+[Action Network Node:](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/) Fix a pagination issue and add credentials test.
 
 ### Contributors
 
@@ -1409,16 +1665,16 @@ You can now download binary data from individual nodes in your workflow.
 * [Mautic Node:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Add credential test and allow trailing slash in host.
 * [Microsoft Teams Node:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/) Add chat message support.
 * [Mocean Node:](/integrations/builtin/app-nodes/n8n-nodes-base.mocean/) Add 'Delivery Report URL' option and credential tests.
-* [ServiceNow Node:](/integrations/builtin/app-nodes/n8n-nodes-base.serviceNow/) Add basicAuth support and fix getColumns loadOptions.
+* [ServiceNow Node:](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/) Add basicAuth support and fix getColumns loadOptions.
 * [Strava Node:](/integrations/builtin/app-nodes/n8n-nodes-base.strava/) Add 'Get Streams' operation.
 
 
 ### Bug fixes
 
 * **core:** Fix crash on webhook when last node did not return data
-* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fix issue that crashed process if node was configured wrong.
-* [Google Tasks Node:](/integrations/builtin/app-nodes/n8n-nodes-base.googleTasks/) Fix 'Show Completed' option and hide title field where not needed.
-* [NocoDB Node:](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/) Fix pagination.
+* [EmailReadImap Node:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fix issue that crashed process if node was configured wrong.
+* [Google Tasks Node:](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/) Fix 'Show Completed' option and hide title field where not needed.
+* [NocoDB Node:](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/) Fix pagination.
 * [Salesforce Node:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fix issue that 'status' did not get used for Case => Create & Update
 
 ### Contributors
@@ -1440,7 +1696,7 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 ### Enhanced nodes
 
 * [Crypto Node:](/integrations/builtin/core-nodes/n8n-nodes-base.crypto/) Add Generate operation to generate random values.
-* [HTTP Request Node:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Add support for OPTIONS method.
+* [HTTP Request Node:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Add support for OPTIONS method.
 * [Jira Node:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Add Simplify Output option to Issue > Get.
 * [Reddit Node:](/integrations/builtin/app-nodes/n8n-nodes-base.reddit/) Add possibility to query saved posts.
 * [Zendesk Node:](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/) Add ticket status On-hold.
@@ -1492,8 +1748,8 @@ Read more about the new license in [License](/reference/license/).
 
 ### Enhanced nodes
 
-* [HTTP Request Node:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Allow Delete requests with body.
-* [KoBoToolbox Node:](/integrations/builtin/app-nodes/n8n-nodes-base.koBoToolbox/) Add KoBoToolbox Regular and Trigger Node.
+* [HTTP Request Node:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Allow Delete requests with body.
+* [KoBoToolbox Node:](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/) Add KoBoToolbox Regular and Trigger Node.
 * [Mailjet Node:](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/) Add credential tests and support for sandbox, JSON parameters & variables.
 * [Mattermost Node:](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/) Add support for Channel search.
 
@@ -1586,7 +1842,7 @@ Additionally, Regex is now labelled Regex Match.
 
 Added a Redis Trigger node, so you can now start workflows based on a Redis event.
 
-* [Redis Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
+* [Redis Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger/) Added a Redis Trigger node.
 
 ### Core functionality
 
@@ -1598,10 +1854,10 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 ### Nodes
 
 
-* [Facebook Graph API:](/integrations/builtin/app-nodes/n8n-nodes-base.facebookGraphApi/) Added suport for Facebook Graph API 13.
+* [Facebook Graph API:](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) Added suport for Facebook Graph API 13.
 * [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added suport for private app token authentication.
-* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/) Added the aggregate operation.
-* [Redis Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.redisTrigger/) Added a Redis Trigger node.
+* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) Added the aggregate operation.
+* [Redis Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger/) Added a Redis Trigger node.
 * [Redis:](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) Added support for publish operations.
 * [Strapi:](/integrations/builtin/app-nodes/n8n-nodes-base.strapi/) Added support for Strapi 4.
 * [WordPress:](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) Added status as an option to getAll post requests.
@@ -1648,7 +1904,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 
 * [Baserow:](/integrations/builtin/app-nodes/n8n-nodes-base.baserow/) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing Digest Authentication to fail in some scenarios.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed a bug causing Digest Authentication to fail in some scenarios.
 * [Wise:](/integrations/builtin/app-nodes/n8n-nodes-base.wise/) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
 
 ### Contributors
@@ -1692,7 +1948,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 
 * [Orbit:](/integrations/builtin/app-nodes/n8n-nodes-base.orbit/) Fixed a bug causing API requests to use an incorrect workspace identifier.
-* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.theHive/)  Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
+* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/)  Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
 
 ### Contributors
 
@@ -1715,13 +1971,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googleChat/)
+* [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/)
 
 ### Enhanced nodes
 
 
 * [Grist:](/integrations/builtin/app-nodes/n8n-nodes-base.grist/) Added support for self-hosted Grist instances.
-* [Telegram Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramTrigger/) Added new Extra Large option to Image Size field.
+* [Telegram Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) Added new Extra Large option to Image Size field.
 * [Webhook:](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
 
 ### Core Functionality
@@ -1751,8 +2007,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.haloPSA/)
-* [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.linearTrigger/)
+* [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/)
+* [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/)
 * [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad/)
 
 ### Enhanced nodes
@@ -1774,9 +2030,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Function:](/integrations/builtin/core-nodes/n8n-nodes-base.function/) Fixed a bug leaving the code editor size unchanged after resizing the window.
-* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) Fixed a bug leaving the code editor size unchanged after resizing the window.
+* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) Fixed a bug leaving the code editor size unchanged after resizing the window.
 * [IF:](/integrations/builtin/core-nodes/n8n-nodes-base.if/) Removed the empty sections left after removing a condition.
-* [Item Lists:](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists/) Fixed an erroneous placeholder text.
+* [Item Lists:](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) Fixed an erroneous placeholder text.
 
 ### Contributors
 
@@ -1838,10 +2094,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Airtable:](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/) Improved field description.
-* [Airtable Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtableTrigger/) Improved field description.
-* [erpNext:](/integrations/builtin/app-nodes/n8n-nodes-base.erpNext/) Prevented the node from throwing an error when no data is found.
+* [Airtable Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/) Improved field description.
+* [erpNext:](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/) Prevented the node from throwing an error when no data is found.
 * [Gmail:](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) Fixed a bug causing the BCC field to be ignored.
-* [Move Binary Data:](/integrations/builtin/core-nodes/n8n-nodes-base.moveBinaryData/) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
+* [Move Binary Data:](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
 * [Slack:](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) Fixed a typo in the Type field.
 
 ### Contributors
@@ -1856,7 +2112,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bambooHr/)
+* [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr/)
 
 ### Core Functionality
 
@@ -1868,9 +2124,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug causing custom headers from being ignored.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed a bug causing custom headers from being ignored.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Fixed a bug preventing all items from being returned in some situations.
-* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/) Fixed a bug preventing more than 200 items from being returned.
+* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/) Fixed a bug preventing more than 200 items from being returned.
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
 
 ### Contributors
@@ -1912,7 +2168,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Box:](/integrations/builtin/app-nodes/n8n-nodes-base.box/) Fixed a bug causing some files to be corrupted during download.
-* [Philips Hue:](/integrations/builtin/app-nodes/n8n-nodes-base.philipsHue/) Fixed a bug preventing the node from connecting to Philips Hue.
+* [Philips Hue:](/integrations/builtin/app-nodes/n8n-nodes-base.philipshue/) Fixed a bug preventing the node from connecting to Philips Hue.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed a bug preventing filters on date and datetime fields from working as expected.
 * [Supabase:](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/) Fixed an errorneous documentation link.
 
@@ -1928,16 +2184,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Microsoft Graph Security](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftGraphSecurity/)
-* [SyncroMSP](/integrations/builtin/app-nodes/n8n-nodes-base.syncroMsp/)
+* [Microsoft Graph Security](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity/)
+* [SyncroMSP](/integrations/builtin/app-nodes/n8n-nodes-base.syncromsp/)
 * [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/)
 
 ### Enhanced nodes
 
 
-* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/) Added Transparent operation.
+* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/) Added Transparent operation.
 * [Kafka:](/integrations/builtin/app-nodes/n8n-nodes-base.kafka/) Added Use Schema Registry option.
-* [Kafka Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkaTrigger/) Added Use Schema Registry option.
+* [Kafka Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/) Added Use Schema Registry option.
 * [Redis:](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) Added database field to credentials.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Account Number field.
 
@@ -1950,8 +2206,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/) Fixed a bug causing two items to be returned.
-* [iCalendar:](/integrations/builtin/core-nodes/n8n-nodes-base.iCal/) Fixed a bug preventing dates in January from working as expected.
+* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/) Fixed a bug causing two items to be returned.
+* [iCalendar:](/integrations/builtin/core-nodes/n8n-nodes-base.ical/) Fixed a bug preventing dates in January from working as expected.
 * [Merge:](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) Fixed causing empty binary data to overwrite other binary data on merge.
 
 ### Contributors
@@ -1976,7 +2232,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Function:](/integrations/builtin/core-nodes/n8n-nodes-base.function/) The node now prevents unsupported data from being returned.
-* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) The node now prevents unsupported data from being returned.
+* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) The node now prevents unsupported data from being returned.
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added Engagement resource with Create, Delete, Get, and Get All operations.
 * [Notion (Beta):](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity.
 * [Wait:](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) Added new Ignore Bots option.
@@ -1989,7 +2245,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed a bug where using Digest Auth would fail.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed a bug where using Digest Auth would fail.
 
 ### Contributors
 
@@ -2003,8 +2259,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 
-* [GitLab Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Added support for downloading and converting native Google files.
+* [GitLab Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added support for downloading and converting native Google files.
 * [Kitemaker:](/integrations/builtin/app-nodes/n8n-nodes-base.kitemaker/) Added Space ID field to Create operation of Work Item resource.
 * [Raindrop:](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/) Added Parse Metadata option to Create, Update operations of the Bookmark resource.
 
@@ -2064,17 +2320,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Figma Trigger (Beta)](/integrations/builtin/trigger-nodes/n8n-nodes-base.figmaTrigger/)
-* [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workableTrigger/)
+* [Figma Trigger (Beta)](/integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger/)
+* [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/)
 
 ### Enhanced nodes
 
 
-* [Google Contacts:](/integrations/builtin/app-nodes/n8n-nodes-base.googleContacts/) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Added support for query-based authentication.
-* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/) Added support for loading possible options in the Domain, Service, and Entity ID fields.
-* [One Simple API:](/integrations/builtin/app-nodes/n8n-nodes-base.oneSimpleApi/) Added support for Social Profile resources.
-* [PagerDuty:](/integrations/builtin/app-nodes/n8n-nodes-base.pagerDuty/) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
+* [Google Contacts:](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added support for query-based authentication.
+* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/) Added support for loading possible options in the Domain, Service, and Entity ID fields.
+* [One Simple API:](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/) Added support for Social Profile resources.
+* [PagerDuty:](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
 
 ### Core Functionality
 
@@ -2092,9 +2348,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [APITemplate.io:](/integrations/builtin/app-nodes/n8n-nodes-base.apiTemplateIo/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
+* [APITemplate.io:](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot OAuth2 API.
-* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspotTrigger/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API.
+* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API.
 * [Jira Software:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed a typo preventing the value in the amount field of from being saved.
 
@@ -2110,12 +2366,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Google Calendar Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googleCalendarTrigger/)
+* [Google Calendar Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger/)
 
 ### Enhanced nodes
 
 
-* [Telegram Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramTrigger/) Added support for downloading images to channel_post updates.
+* [Telegram Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) Added support for downloading images to channel_post updates.
 
 ### Core Functionality
 
@@ -2133,8 +2389,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [Google BigQuery:](/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
-* [RabbitMQ Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/) Added Trigger to the name of the trigger node.
+* [Google BigQuery:](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
+* [RabbitMQ Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/) Added Trigger to the name of the trigger node.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed a typo affecting the Type field of the Opportunity resource.
 
 ### Contributors
@@ -2162,7 +2418,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/) Fixed an issue preventing the Composite operation from working correctly in some cases.
+* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/) Fixed an issue preventing the Composite operation from working correctly in some cases.
 
 ### Contributors
 
@@ -2190,8 +2446,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
-* [ServiceNow:](/integrations/builtin/app-nodes/n8n-nodes-base.serviceNow/) Fixed incorrect mapping of incident urgency and impact values.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
+* [ServiceNow:](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/) Fixed incorrect mapping of incident urgency and impact values.
 * [Start:](/integrations/builtin/core-nodes/n8n-nodes-base.start/) Fixed an issue causing the node to be disabled in a new workflow.
 * [Xero:](/integrations/builtin/app-nodes/n8n-nodes-base.xero/) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
 
@@ -2203,12 +2459,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.oneSimpleApi/)
+* [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/)
 
 ### Enhanced nodes
 
 
-* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editImage/) Added Circle Primitive to Draw operation. Also added Composite operation.
+* [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/) Added Circle Primitive to Draw operation. Also added Composite operation.
 * [Zendesk:](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/) Added check for API credentials validity.
 * [Zulip:](/integrations/builtin/app-nodes/n8n-nodes-base.zulip/) Added additional field Role to the Update operation of the User resource.
 
@@ -2222,10 +2478,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [Google Tasks:](/integrations/builtin/app-nodes/n8n-nodes-base.googleTasks/) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
-* [Stripe Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripeTrigger/) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
-* [Toggl Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.togglTrigger/) Updated the API URL used by the node.
+* [Google Tasks:](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
+* [Stripe Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger/) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
+* [Toggl Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger/) Updated the API URL used by the node.
 
 ### Contributors
 
@@ -2240,7 +2496,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [Dropcontact](/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact/)
-* [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondToWebhook/)
+* [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/)
 
 ### Enhanced nodes
 
@@ -2249,7 +2505,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Slack:](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) Added User Group resource.
 * [Todoist:](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/) Added Update operation to Task resource.
 * [Wait:](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) Improved descriptions of available Respond options.
-* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/) Added password field to Crate operation of Customer resource.
+* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/) Added password field to Crate operation of Customer resource.
 
 ### Core Functionality
 
@@ -2285,7 +2541,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Local File Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localFileTrigger/)
+* [Local File Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/)
 
 ### Core Functionality
 
@@ -2300,13 +2556,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [Microsoft Dynamics CRM](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftDynamicsCrm/)
+* [Microsoft Dynamics CRM](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/)
 
 ### Enhanced nodes
 
 
-* [Agile CRM:](/integrations/builtin/app-nodes/n8n-nodes-base.agileCrm/) Added Filters to Get All operation of Contact and Company resources.
-* [Date & Time:](/integrations/builtin/core-nodes/n8n-nodes-base.dateTime/) Ensuring the return values are always of type string.
+* [Agile CRM:](/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm/) Added Filters to Get All operation of Contact and Company resources.
+* [Date & Time:](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) Ensuring the return values are always of type string.
 * [IF:](/integrations/builtin/core-nodes/n8n-nodes-base.if/) Added support for moment types to Date & Time condition.
 
 ### Core Functionality
@@ -2320,7 +2576,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
 
 ### Contributors
 
@@ -2334,17 +2590,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 
-* [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awsTextract/)
-* [Google Drive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googleDriveTrigger/)
+* [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/)
+* [Google Drive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/)
 
 ### Enhanced nodes
 
 
-* [Bitbucket Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbucketTrigger/) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
+* [Bitbucket Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
 * [GitHub:](/integrations/builtin/app-nodes/n8n-nodes-base.github/) Added check for API credentials validity.
-* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/) Added check for credentials validity.
+* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/) Added check for credentials validity.
 * [Jira Software:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Added check for credentials validity.
-* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/) Added functionality to create folder hierarchy automatically upon subfolder creation.
+* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/) Added functionality to create folder hierarchy automatically upon subfolder creation.
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added All Users option to Get All operation of Activity resource.
 * [Slack:](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
 * [Twitter:](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/) Added Tweet Mode additional field to the Search operation of Tweet resource.
@@ -2363,7 +2619,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Jira Software:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
 * [Slack:](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) Fixed an issue with pagination when loading more than 1,000 channels.
 * [Strapi:](/integrations/builtin/app-nodes/n8n-nodes-base.strapi/) Fixed an issue using the Where option of the Get All operation.
-* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
+* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
 ### Contributors
 
@@ -2375,7 +2631,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes
 
-* [Nextcloud:](/integrations/builtin/app-nodes/n8n-nodes-base.nextCloud/) Added Share operation to the File and Folder resources.
+* [Nextcloud:](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/) Added Share operation to the File and Folder resources.
 * [Zendesk:](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
 
 ### Core Functionality
@@ -2396,7 +2652,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added support for getting activities from deal ID.
-* [Facebook Graph API:](/integrations/builtin/app-nodes/n8n-nodes-base.facebookGraphApi/) Added support for Facebook Graph API versions 11 and 12.
+* [Facebook Graph API:](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) Added support for Facebook Graph API versions 11 and 12.
 
 ### Core Functionality
 - Fixed a build issue affecting a number of AWS nodes.
@@ -2415,7 +2671,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Stop and Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopAndError/)
+* [Stop and Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/)
 
 ### Core Functionality
 - Fixed overlapping buttons when viewing on mobile.
@@ -2429,9 +2685,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Fixed 'Ignore response code' flag.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Fixed 'Ignore response code' flag.
 * [Rundeck:](/integrations/builtin/app-nodes/n8n-nodes-base.rundeck/) Fixed issue with async loading of credentials.
-* [SeaTable:](/integrations/builtin/app-nodes/n8n-nodes-base.seaTable/) Fixed issue when entering a Baser URI with a trailing slash.
+* [SeaTable:](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/) Fixed issue when entering a Baser URI with a trailing slash.
 
 ### Contributors
 [Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
@@ -2450,9 +2706,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 * [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist/)
-* [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seaTable/)
-* [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seaTableTrigger/)
-* [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlScanIo/)
+* [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/)
+* [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger/)
+* [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio/)
 
 ### Core Functionality
 - Performance improvements in Editor UI
@@ -2494,14 +2750,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Elastic Security](/integrations/builtin/app-nodes/n8n-nodes-base.elasticSecurity/)
+* [Elastic Security](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity/)
 * [Misp](/integrations/builtin/app-nodes/n8n-nodes-base.misp/)
 * [Netlify](/integrations/builtin/app-nodes/n8n-nodes-base.netlify/)
-* [Netlify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifyTrigger/)
+* [Netlify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger/)
 
 ### Enhanced nodes
 
-* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspotTrigger/) Authentication method changed to OAuth2.
+* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) Authentication method changed to OAuth2.
 * [Wait:](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) Added improved status messages for Wait behavior.
 
 ### Core Functionality
@@ -2509,7 +2765,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendGrid/) Fixed issue with adding contacts to lists.
+* [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/) Fixed issue with adding contacts to lists.
 
 ### Contributors
 [Matías Aguirre](https://github.com/omab)
@@ -2520,7 +2776,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists/)
+* [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/)
 * [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2/)
 
 ### Enhanced nodes
@@ -2556,9 +2812,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Clockify:](/integrations/builtin/app-nodes/n8n-nodes-base.clockify/) Added Task resource.
 * [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Added Campaign Contact resource.
-* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/) Added ability to query documents by '_id'.
+* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) Added ability to query documents by '_id'.
 * [MQTT:](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/) Added SSL/TLS support to authentication.
-* [MQTT Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqttTrigger/) Added SSL/TLS support to authentication.
+* [MQTT Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/) Added SSL/TLS support to authentication.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added File Extension option to the Document resource. Added Type field to Task resource.
 * [Sms77:](/integrations/builtin/app-nodes/n8n-nodes-base.sms77/) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
 * [Zendesk:](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
@@ -2638,8 +2894,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formIoTrigger/)
-* [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstackTrigger/)
+* [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger/)
+* [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger/)
 * [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/)
 
 ### Core Functionality
@@ -2662,8 +2918,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes
 
-* [AWS DynamoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.awsDynamoDb/) Added Scan option to Item > Get All operation.
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Added File Name option to File > Update operation.
+* [AWS DynamoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/) Added Scan option to Item > Get All operation.
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added File Name option to File > Update operation.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website.
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Added Timezone option when inserting Date fields.
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID.
@@ -2675,7 +2931,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [AWS SES:](/integrations/builtin/app-nodes/n8n-nodes-base.awsSes/) Fixed issue where special characters in the message were not encoded.
+* [AWS SES:](/integrations/builtin/app-nodes/n8n-nodes-base.awsses/) Fixed issue where special characters in the message were not encoded.
 * [Baserow:](/integrations/builtin/app-nodes/n8n-nodes-base.baserow/) Fixed issue where Create operation inserted null values.
 * [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue when sending context parameter.
 
@@ -2688,11 +2944,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Monica CRM](/integrations/builtin/app-nodes/n8n-nodes-base.monicaCrm/)
+* [Monica CRM](/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm/)
 
 ### Enhanced nodes
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Added Follow All Redirects option.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added Follow All Redirects option.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Record Type ID field.
 
 ### Core Functionality
@@ -2700,7 +2956,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Nextcloud:](/integrations/builtin/app-nodes/n8n-nodes-base.nextCloud/) Fixed issue where List operation on an empty Folder returned an error.
+* [Nextcloud:](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/) Fixed issue where List operation on an empty Folder returned an error.
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
 
 ### Contributors
@@ -2730,17 +2986,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Freshworks CRM](/integrations/builtin/app-nodes/n8n-nodes-base.freshworksCrm/)
-* [Google Perspective](/integrations/builtin/app-nodes/n8n-nodes-base.googlePerspective/)
+* [Freshworks CRM](/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm/)
+* [Google Perspective](/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/)
 * [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack/)
-* [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocoDb/)
+* [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/)
 
 
 ### Enhanced nodes
 
-* [Facebook Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookTrigger/) Added Fields parameter.
+* [Facebook Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) Added Fields parameter.
 * [Gmail:](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) Added Sender Name parameter.
-* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/) Added Event resource.
+* [Home Assistant:](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/) Added Event resource.
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added Deal Product resource.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Document resource with Upload operation.
 * [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/) Added Customer resource.
@@ -2763,14 +3019,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Webex by Cisco](/integrations/builtin/app-nodes/n8n-nodes-base.ciscoWebex/)
-* [Webex by Cisco Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscoWebexTrigger/)
+* [Webex by Cisco](/integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex/)
+* [Webex by Cisco Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger/)
 
 
 ### Enhanced nodes
 
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added Lead resource. Added Search operation to Organization resource.
-* [Taiga Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.taigaTrigger/) Added Resource and Operations filters.
+* [Taiga Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger/) Added Resource and Operations filters.
 
 
 ### Core Functionality
@@ -2781,7 +3037,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Spreadsheet File:](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/) Fixed issue when saving dates.
+* [Spreadsheet File:](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) Fixed issue when saving dates.
 
 ### Contributors
 [Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
@@ -2798,16 +3054,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsDynamoDb/)
+* [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/)
 * [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/)
-* [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.serviceNow/)
+* [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/)
 
 ### Enhanced nodes
 
-* [Kafka Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkaTrigger/) Added Read Messages From Beginning option.
+* [Kafka Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/) Added Read Messages From Beginning option.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Sandbox Environment Type for OAuth2 credentials.
 * [Taiga:](/integrations/builtin/app-nodes/n8n-nodes-base.taiga/) Added Epic, Task, and User Story operations.
-* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.theHive/) Added Custom Fields option to the available Additional Fields.
+* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/) Added Custom Fields option to the available Additional Fields.
 
 ### Core Functionality
 - Fixed an issue where failed workflows were displayed as "running".
@@ -2841,12 +3097,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeAssistant/)
+* [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/)
 * [Stripe](/integrations/builtin/app-nodes/n8n-nodes-base.stripe/)
 
 ### Enhanced nodes
 
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Added Contact Segment resource.
 * [Telegram:](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) Added Delete operation to the Message resource.
 
@@ -2857,7 +3113,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftSql/) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
+* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
 
 ### Contributors
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
@@ -2877,7 +3133,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Airtable:](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/) Added Bulk Size option to all Operations.
 * [Box:](/integrations/builtin/app-nodes/n8n-nodes-base.box/) Added Share operation to File and Folder resources.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Last Name field to Update operation on Contact resource.
-* [Zoho CRM:](/integrations/builtin/app-nodes/n8n-nodes-base.zohoCrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
+* [Zoho CRM:](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality
 - Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
@@ -2885,7 +3141,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) Fixed an issue with handling 0 value that resulted in empty cells.
+* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) Fixed an issue with handling 0 value that resulted in empty cells.
 * [SSH:](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/) Fixed an issue with setting passphrases.
 
 ### Contributors
@@ -2900,7 +3156,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftSQL/) Fixed an issue with handling of Boolean values when inserting.
+* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) Fixed an issue with handling of Boolean values when inserting.
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Fixed an issue with the node icon.
 
 ## n8n@0.126.0
@@ -2909,14 +3165,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionNetwork/)
-* [Google Docs](/integrations/builtin/app-nodes/n8n-nodes-base.googleDocs/)
+* [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/)
+* [Google Docs](/integrations/builtin/app-nodes/n8n-nodes-base.googledocs/)
 
 ### Enhanced nodes
 
 * [AWS S3:](/integrations/builtin/app-nodes/n8n-nodes-base.awsS3/) Added Delete operation to the Bucket Resource.
-* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/) Added Dimension Filters to the available Additional Fields.
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Added Split Into Items option.
+* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) Added Dimension Filters to the available Additional Fields.
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added Split Into Items option.
 * [MQTT:](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/) Added mqqts protocol for MQTT credentials.
 * [QuickBooks:](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks/) Added Purchase resource with Get and Get All operations.
 
@@ -2929,8 +3185,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 * [Ghost:](/integrations/builtin/app-nodes/n8n-nodes-base.ghost/) Fixed an issue with the Get All operation functionality.
-* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/) Fixed an issue that caused an error when attempting to sort with no data present.
-* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftSQL/) Fixed an issue when escaping single quotes and mapping empty fields.
+* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) Fixed an issue that caused an error when attempting to sort with no data present.
+* [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) Fixed an issue when escaping single quotes and mapping empty fields.
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Fixed an issue with pagination of databases and users.
 
 ### Contributors
@@ -2949,7 +3205,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [MySQL:](/integrations/builtin/app-nodes/n8n-nodes-base.mySql/) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
+* [MySQL:](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
 
 ### Contributors
 [Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
@@ -2969,8 +3225,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes
 
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Added APP Properties and Properties options to the Upload operation of the File resource
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/) Added the functionlaity to log the request to the browser console for testing
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added APP Properties and Properties options to the Upload operation of the File resource
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added the functionlaity to log the request to the browser console for testing
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Added the Include Time parameter date field types
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
 * [Todoist:](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/) Added the Description option to the Task resource
@@ -3001,7 +3257,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 * [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git/)
-* [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftToDo/)
+* [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/)
 
 ### Enhanced nodes
 
@@ -3014,7 +3270,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [ASW Transcribe:](/integrations/builtin/app-nodes/n8n-nodes-base.awsTranscribe/) Fixed issues with options
+* [ASW Transcribe:](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/) Fixed issues with options
 
 ### Contributors
 
@@ -3041,7 +3297,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Function:](/integrations/builtin/core-nodes/n8n-nodes-base.function/) Added console.log support for writing to browser console
-* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) Added console.log support for writing to browser console
+* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) Added console.log support for writing to browser console
 
 ### Core Functionality
 - Fixed an issue that enables clicks on tags
@@ -3061,15 +3317,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awsTranscribe/)
+* [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
 * [SSH](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/)
-* [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimeRobot/)
+* [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot/)
 
 ### Enhanced nodes
 
-* [DeepL:](/integrations/builtin/app-nodes/n8n-nodes-base.deepL/) Added support for Free API
+* [DeepL:](/integrations/builtin/app-nodes/n8n-nodes-base.deepl/) Added support for Free API
 * [Function:](/integrations/builtin/core-nodes/n8n-nodes-base.function/) Added the functionality to log console.log messages to the browser console
-* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/) Added the functionality to log console.log messages to the browser console
+* [Function Item:](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) Added the functionality to log console.log messages to the browser console
 
 ### Core Functionality
 - Changed `bcrypt` library from `@node-rs/bcrypt` to `bcryptjs`
@@ -3080,7 +3336,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Fixed an issue with the Drive resource
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Fixed an issue with the Drive resource
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Fixed an issue with the filtering fields type and fixed an issue with the link option
 * [Switch:](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) Fixed an issue with the Expression mode
 
@@ -3104,7 +3360,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes
 
 * [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/)
-* [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notionTrigger/)
+* [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/)
 
 ### Enhanced nodes
 
@@ -3129,15 +3385,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [iCalendar](/integrations/builtin/core-nodes/n8n-nodes-base.iCal/)
+* [iCalendar](/integrations/builtin/core-nodes/n8n-nodes-base.ical/)
 
 ### Enhanced nodes
 
-* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Added the Force reconnect option
+* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
+* [IMAP Email:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Added the Force reconnect option
 * [Paddle:](/integrations/builtin/app-nodes/n8n-nodes-base.paddle/) Added the Use Sandbox environment API parameter
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Added the Position parameter to the Add operation of the Playlist resource
-* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.wooCommerce/) Added the Include Credentials in Query parameter
+* [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/) Added the Include Credentials in Query parameter
 
 ### Core Functionality
 - Added await to hooks to fix issues with the `Unknown` status of the workflows
@@ -3147,8 +3403,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Clockify Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifyTrigger/) Fixed an issue that occurred when the node returned an empty array
-* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) Fixed an issue with parsing empty document, and an issue with the detection of date
+* [Clockify Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/) Fixed an issue that occurred when the node returned an empty array
+* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) Fixed an issue with parsing empty document, and an issue with the detection of date
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed an issue with the Return All option
 
 ### Contributors
@@ -3161,13 +3417,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes
 
-* [AWS Comprehend:](/integrations/builtin/app-nodes/n8n-nodes-base.awsComprehend/) Added the Detect Entities operation
-* [AWS Lambda:](/integrations/builtin/app-nodes/n8n-nodes-base.awsLambda/) Added the ability to list functions recursively if the number of functions exceeds 50
-* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleAnalytics/) Added pagination to the Report resource
+* [AWS Comprehend:](/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend/) Added the Detect Entities operation
+* [AWS Lambda:](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/) Added the ability to list functions recursively if the number of functions exceeds 50
+* [Google Analytics:](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) Added pagination to the Report resource
 * [Mailjet:](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/) Added Reply To parameter
 * [Redis:](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) Added the Increment operation
-* [Spreadsheet File:](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetFile/) Added the Header Row option
-* [Webflow Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowTrigger/) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
+* [Spreadsheet File:](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) Added the Header Row option
+* [Webflow Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
 
 ### Core Functionality
 - Implemented timeout for subworkflows
@@ -3175,9 +3431,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCloudFirestore/) Fixed an issue with parsing null value
-* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Key Row parameter
-* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.zohoCrm/) Fixed an issue with the authentication
+* [Google Cloud Firestore:](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) Fixed an issue with parsing null value
+* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) Fixed an issue with the Key Row parameter
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/) Fixed an issue with the authentication
 
 ### Contributors
 
@@ -3208,17 +3464,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes
 
-* [CrateDB:](/integrations/builtin/app-nodes/n8n-nodes-base.crateDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [ERPNext:](/integrations/builtin/app-nodes/n8n-nodes-base.erpNext/) Added support for self-hosted ERPNext instances
+* [CrateDB:](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [ERPNext:](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/) Added support for self-hosted ERPNext instances
 * [FTP:](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/) Added the functionality to delete folders
-* [Google Calendar:](/integrations/builtin/app-nodes/n8n-nodes-base.googleCalendar/) Added the Continue on Fail functionality
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Added the functionality to add file name when downloading files
+* [Google Calendar:](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) Added the Continue on Fail functionality
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added the functionality to add file name when downloading files
 * [Gmail:](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) Added functionality to handle multiple binary properties
-* [Microsoft Outlook:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOutlook/) Added Is Read and Move option to the Message resource
+* [Microsoft Outlook:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/) Added Is Read and Move option to the Message resource
 * [Postgres:](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [QuestDB:](/integrations/builtin/app-nodes/n8n-nodes-base.questDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [QuestDB:](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [QuickBase:](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase/) Added option to use Field IDs
-* [TimescaleDB:](/integrations/builtin/app-nodes/n8n-nodes-base.timescaleDb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [TimescaleDB:](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
 * [Twist:](/integrations/builtin/app-nodes/n8n-nodes-base.twist/) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
 
 ### Core Functionality
@@ -3228,10 +3484,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [GetResponse Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.getResponseTrigger/) Fixed an issue with error handling
-* [GitHub Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubTrigger/) Fixed an issue with error handling
-* [GitLab Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabTrigger/) Fixed an issue with error handling
-* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning empty rows
+* [GetResponse Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/) Fixed an issue with error handling
+* [GitHub Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/) Fixed an issue with error handling
+* [GitLab Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/) Fixed an issue with error handling
+* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) Fixed an issue with the Lookup operation for returning empty rows
 * [Orbit:](/integrations/builtin/app-nodes/n8n-nodes-base.orbit/) Fixed issues with the Post resource
 * [Redis:](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) Fixed an issue with the node not returning an error
 * [Xero:](/integrations/builtin/app-nodes/n8n-nodes-base.xero/) Fixed an issue with the Create operation for the Contact resource
@@ -3254,18 +3510,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck/)
 * [n8n Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.n8nTrigger/)
-* [Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.workflowTrigger/)
+* [Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/)
 
 ### Enhanced nodes
 
-* [CrateDB:](/integrations/builtin/app-nodes/n8n-nodes-base.crateDb/) Added the Mode option that allows you to execute queries as transactions
+* [CrateDB:](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) Added the Mode option that allows you to execute queries as transactions
 * [Nextcloud:](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/) Added Delete, Get, Get All, and Update operation to the User resource
 * [Postgres:](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) Added the Mode option that allows you to execute queries as transactions
-* [QuestDB:](/integrations/builtin/app-nodes/n8n-nodes-base.questDb/) Added the Mode option that allows you to execute queries as transactions
+* [QuestDB:](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/) Added the Mode option that allows you to execute queries as transactions
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
-* [Sentry.io:](/integrations/builtin/app-nodes/n8n-nodes-base.sentryIo/) Added Delete and Update operations to Project, Release, and Team resources
-* [TimescaleDB:](/integrations/builtin/app-nodes/n8n-nodes-base.timescaleDb/) Added the Mode option that allows you to execute queries as transactions
-* [Zendesk Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
+* [Sentry.io:](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/) Added Delete and Update operations to Project, Release, and Team resources
+* [TimescaleDB:](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/) Added the Mode option that allows you to execute queries as transactions
+* [Zendesk Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/) Added support to retrieve custom fields
 
 ### Core Functionality
 - The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the n8n Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
@@ -3273,7 +3529,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) Fixed an issue with the Lookup operation for returning multiple empty rows
+* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) Fixed an issue with the Lookup operation for returning multiple empty rows
 * [Intercom:](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/) Fixed an issue with the User operation in the Company resource
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Fixed an issue with sending the lastActive parameter
 
@@ -3294,17 +3550,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googleBigQuery/)
+* [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/)
 * [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow/)
 
 ### Enhanced nodes
 
-* [Date & Time:](/integrations/builtin/core-nodes/n8n-nodes-base.dateTime/) Added Calculate a Date action that allows you to add or subtract time from a date
+* [Date & Time:](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) Added Calculate a Date action that allows you to add or subtract time from a date
 * [GitLab:](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab/) Added Get, Get All, Update, and Delete operations to the Release resource
-* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftOneDrive/) Added Delete operation to the Folder resource
-* [Monday:](/integrations/builtin/app-nodes/n8n-nodes-base.mondayCom/) Added support for OAuth2 authentication
-* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongoDb/) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
-* [MySQL:](/integrations/builtin/app-nodes/n8n-nodes-base.mySql/) Added support for insert modifiers and added support for SSL
+* [Microsoft OneDrive:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/) Added Delete operation to the Folder resource
+* [Monday:](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/) Added support for OAuth2 authentication
+* [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
+* [MySQL:](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/) Added support for insert modifiers and added support for SSL
 * [RabbitMQ:](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/) Added the functionality to close the connection after use and added support for AMPQS
 
 ### Core Functionality
@@ -3316,8 +3572,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [AWS SQS:](/integrations/builtin/app-nodes/n8n-nodes-base.awsSqs/) Fixed an issue with API version and casing
-* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.imapEmail/) Fixed re-connection issue
+* [AWS SQS:](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/) Fixed an issue with API version and casing
+* [IMAP:](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/) Fixed re-connection issue
 * [Keap:](/integrations/builtin/app-nodes/n8n-nodes-base.keap/) Fixed an issue with the Opt In Reason parameter
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed an issue with loading custom fields
 
@@ -3331,12 +3587,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [Google Slides](/integrations/builtin/app-nodes/n8n-nodes-base.googleSlides/)
+* [Google Slides](/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/)
 
 ### Enhanced nodes
 
 * [GitHub:](/integrations/builtin/app-nodes/n8n-nodes-base.github/) Added Release resource
-* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.theHive/) Added support to fetch observable data types
+* [TheHive:](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/) Added support to fetch observable data types
 * [RabbitMQ:](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/) Added header parameters
 
 ### Core Functionality
@@ -3349,8 +3605,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 * [Jira:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issue with loading issue types with classic project type
-* [RabbitMQ Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqTrigger/) Fixed an issue with the node reusing the same item
-* [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendGrid/) Fixed an issue with the dynamic field generation
+* [RabbitMQ Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/) Fixed an issue with the node reusing the same item
+* [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/) Fixed an issue with the dynamic field generation
 
 ### Contributors
 
@@ -3362,15 +3618,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes
 
-* [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awsSqs/)
+* [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/)
 * [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper/)
-* [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpNext/)
+* [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/)
 * [Oura](/integrations/builtin/app-nodes/n8n-nodes-base.oura/)
 
 ### Enhanced nodes
 
-* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googleDrive/) Added support for creating folders for shared drives
-* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/) Added Create and Remove operation to the Sheet resource
+* [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added support for creating folders for shared drives
+* [Google Sheets:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) Added Create and Remove operation to the Sheet resource
 * [Harvest:](/integrations/builtin/app-nodes/n8n-nodes-base.harvest/) Added Update operation to the Task resource
 * [Jira:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Added Reporter field to the Issue resource
 * [Postgres:](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) Added support for type casting
@@ -3383,7 +3639,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Bitwarden:](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden/) Fixed an issue with the Update operation of the Group resource
 * [Cortex:](/integrations/builtin/app-nodes/n8n-nodes-base.cortex/) Fixed an issue where only the last item got returned
-* [Invoice Ninja:](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceNinja/) Fixed an issue with the Project parameter
+* [Invoice Ninja:](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/) Fixed an issue with the Project parameter
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed an issue with the Get All operation of the Custom Object resource
 
 ### Contributors

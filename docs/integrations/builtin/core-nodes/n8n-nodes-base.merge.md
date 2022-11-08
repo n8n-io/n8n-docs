@@ -11,11 +11,15 @@ You can specify how the Merge node should combine data from different branches. 
 
 ### Append
 
-Combines data from both inputs. The output contains items from Input 1, followed by all items from Input 2.
+Keep data from both inputs. The output contains items from Input 1, followed by all items from Input 2.
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
 
-### Merge by fields
+### Combine
+
+Combine data from both inputs. Choose a **Combination Mode** to control how n8n merges the data.
+
+#### Merge by fields
 
 Compare items by field values. Enter the fields you want to compare in **Fields to Match**.
 
@@ -29,11 +33,11 @@ n8n's default behavior is to keep matching items. You can change this using the 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
 
 
-#### Field value clashes
+##### Field value clashes
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
 
-#### Multiple matches
+##### Multiple matches
 
 Matching by field can generate multiple matches if the inputs contain duplicate data. To handle this, select **Add Option > Multiple Matches**. Then choose:
 
@@ -41,27 +45,27 @@ Matching by field can generate multiple matches if the inputs contain duplicate 
 * **Include First Match Only**: keep the first item, discard subsequent items.
 
 
-### Merge by position
+#### Merge by position
 
 Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-position-diagram.png)
 
-#### Inputs with different numbers of items
+##### Inputs with different numbers of items
 
 If there are more items in one input than the other, the default behavior is to leave out the items without a match. Choose **Add Option** > **Include Any Unpaired Items** to keep the unmatched items.
 
-#### Field value clashes
+##### Field value clashes
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
 
-### Multiplex
+#### Multiplex
 
 Output all possible item combinations, while merging fields with the same name.
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/multiplex-diagram.png)
 
-#### Field value clashes
+##### Field value clashes
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
 
@@ -190,4 +194,4 @@ Output in table view:
 
 n8n provides an example workflow that demonstrates key Merge node concepts.
 
-Go to [Joining different datasets](https://n8n.io/workflows/1747/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.
+Go to [Joining different datasets](https://n8n.io/workflows/1747-joining-different-datasets/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.

@@ -2,18 +2,18 @@
 
 You can use these credentials to authenticate the following nodes with AWS.
 
-- [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awsCertificateManager/)
-- [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsDynamoDb/)
-- [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awsElb/)
-- [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awsLambda/)
-- [AWS Rekognition](/integrations/builtin/app-nodes/n8n-nodes-base.awsRekognition/)
+- [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/)
+- [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/)
+- [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb/)
+- [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/)
+- [AWS Rekognition](/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition/)
 - [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awsS3/)
-- [AWS SES](/integrations/builtin/app-nodes/n8n-nodes-base.awsSes/)
-- [AWS SNS](/integrations/builtin/app-nodes/n8n-nodes-base.awsSns/)
-- [AWS SNS Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.awsSnsTrigger/)
-- [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awsSqs/)
-- [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awsTextract/)
-- [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awsTranscribe/)
+- [AWS SES](/integrations/builtin/app-nodes/n8n-nodes-base.awsses/)
+- [AWS SNS](/integrations/builtin/app-nodes/n8n-nodes-base.awssns/)
+- [AWS SNS Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger/)
+- [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/)
+- [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/)
+- [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
 
 ## Prerequisites
 

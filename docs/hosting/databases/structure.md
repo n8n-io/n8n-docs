@@ -41,7 +41,7 @@ Depending on the settings, the executions are stored in the `execution_entity` t
 | retrySuccessId | VARCHAR | Stores the ID of a retry execution if it was a success |
 | startedAt | DATETIME | Stores the date and time when execution gets started |
 | stoppedAt | DATETIME | Stores the date and time when execution gets stopped |
-| workflowData | TEXT | Stores the workflow data with the [static data](/integrations/builtin/core-nodes/n8n-nodes-base.function/#method-getworkflowstaticdata-type) (if any) |
+| workflowData | TEXT | Stores the workflow data with the static data (if any) |
 | workflowId | VARCHAR | Stores the ID of the workflow that got executed |
 
 Below is an example of how n8n stores the execution information in the `execution_entity` table in the SQLite database. The example below shows the execution data stored in the table for the [Receive updates of the position of the ISS every minute](https://n8n.io/workflows/880) workflow.

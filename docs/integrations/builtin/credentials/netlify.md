@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes:
 
 - [Netlify](/integrations/builtin/app-nodes/n8n-nodes-base.netlify/)
-- [Netlify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifyTrigger/)
+- [Netlify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger/)
 
 ## Prerequisites
 

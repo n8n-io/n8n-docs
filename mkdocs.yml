@@ -1,5 +1,6 @@
 site_name: n8n Documentation
 site_url: https://docs.n8n.io/
+site_description: Documentation for n8n, a workflow automation platform.
 theme:
   name: material
   custom_dir: overrides
@@ -32,7 +33,7 @@ extra:
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
-      make our documentation better. <br /><a href="https://n8n.io/legal#privacy" target=_blank>Privacy policy</a>
+      make our documentation better. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -120,7 +121,7 @@ nav:
         - Data item linking: 
           - data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-          - Item linking in the Function node: data/data-mapping/data-item-linking/item-linking-function-node.md
+          - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
           - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
@@ -149,6 +150,7 @@ nav:
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
+      - Using console.log: code-examples/console-log.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
@@ -164,7 +166,242 @@ nav:
       - Core nodes: integrations/builtin/core-nodes/
       - App nodes: integrations/builtin/app-nodes/
       - Trigger nodes: integrations/builtin/trigger-nodes/
-      - Credentials: integrations/builtin/credentials/
+      - Credentials: 
+        - integrations/builtin/credentials/index.md
+        - integrations/builtin/credentials/actionnetwork.md
+        - integrations/builtin/credentials/activecampaign.md
+        - integrations/builtin/credentials/acuityscheduling.md
+        - integrations/builtin/credentials/adalo.md
+        - integrations/builtin/credentials/affinity.md
+        - integrations/builtin/credentials/agilecrm.md
+        - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/amqp.md
+        - integrations/builtin/credentials/apitemplateio.md
+        - integrations/builtin/credentials/asana.md
+        - integrations/builtin/credentials/automizy.md
+        - integrations/builtin/credentials/autopilot.md
+        - integrations/builtin/credentials/aws.md
+        - integrations/builtin/credentials/bamboohr.md
+        - integrations/builtin/credentials/bannerbear.md
+        - integrations/builtin/credentials/baserow.md
+        - integrations/builtin/credentials/beeminder.md
+        - integrations/builtin/credentials/bitbucket.md
+        - integrations/builtin/credentials/bitly.md
+        - integrations/builtin/credentials/bitwarden.md
+        - integrations/builtin/credentials/box.md
+        - integrations/builtin/credentials/brandfetch.md
+        - integrations/builtin/credentials/bubble.md
+        - integrations/builtin/credentials/cal.md
+        - integrations/builtin/credentials/calendly.md
+        - integrations/builtin/credentials/chargebee.md
+        - integrations/builtin/credentials/circleci.md
+        - integrations/builtin/credentials/ciscowebex.md
+        - integrations/builtin/credentials/citrixadc.md
+        - integrations/builtin/credentials/clearbit.md
+        - integrations/builtin/credentials/clickup.md
+        - integrations/builtin/credentials/clockify.md
+        - integrations/builtin/credentials/cloudflare.md
+        - integrations/builtin/credentials/cockpit.md
+        - integrations/builtin/credentials/coda.md
+        - integrations/builtin/credentials/contentful.md
+        - integrations/builtin/credentials/convertkit.md
+        - integrations/builtin/credentials/copper.md
+        - integrations/builtin/credentials/cortex.md
+        - integrations/builtin/credentials/cratedb.md
+        - integrations/builtin/credentials/customerio.md
+        - integrations/builtin/credentials/deepl.md
+        - integrations/builtin/credentials/demio.md
+        - integrations/builtin/credentials/dhl.md
+        - integrations/builtin/credentials/discord.md
+        - integrations/builtin/credentials/discourse.md
+        - integrations/builtin/credentials/disqus.md
+        - integrations/builtin/credentials/drift.md
+        - integrations/builtin/credentials/dropbox.md
+        - integrations/builtin/credentials/dropcontact.md
+        - integrations/builtin/credentials/egoi.md
+        - integrations/builtin/credentials/elasticsearch.md
+        - integrations/builtin/credentials/elasticsecurity.md
+        - integrations/builtin/credentials/emelia.md
+        - integrations/builtin/credentials/erpnext.md
+        - integrations/builtin/credentials/eventbrite.md
+        - integrations/builtin/credentials/facebookapp.md
+        - integrations/builtin/credentials/facebookgraph.md
+        - integrations/builtin/credentials/figma.md
+        - integrations/builtin/credentials/filemaker.md
+        - integrations/builtin/credentials/flow.md
+        - integrations/builtin/credentials/formiotrigger.md
+        - integrations/builtin/credentials/formstacktrigger.md
+        - integrations/builtin/credentials/freshdesk.md
+        - integrations/builtin/credentials/freshservice.md
+        - integrations/builtin/credentials/freshworkscrm.md
+        - integrations/builtin/credentials/ftp.md
+        - integrations/builtin/credentials/getresponse.md
+        - integrations/builtin/credentials/ghost.md
+        - integrations/builtin/credentials/git.md
+        - integrations/builtin/credentials/github.md
+        - integrations/builtin/credentials/gitlab.md
+        - Google: 
+          - integrations/builtin/credentials/google/index.md
+          - integrations/builtin/credentials/google/oauth-single-service.md
+          - integrations/builtin/credentials/google/oauth-generic.md
+          - integrations/builtin/credentials/google/service-account.md
+        - integrations/builtin/credentials/gotify.md
+        - integrations/builtin/credentials/gotowebinar.md
+        - integrations/builtin/credentials/grafana.md
+        - integrations/builtin/credentials/grist.md
+        - integrations/builtin/credentials/gumroad.md
+        - integrations/builtin/credentials/halopsa.md
+        - integrations/builtin/credentials/harvest.md
+        - integrations/builtin/credentials/helpscout.md
+        - integrations/builtin/credentials/highlevel.md
+        - integrations/builtin/credentials/homeassistant.md
+        - integrations/builtin/credentials/httprequest.md
+        - integrations/builtin/credentials/hubspot.md
+        - integrations/builtin/credentials/humanticai.md
+        - integrations/builtin/credentials/hunter.md
+        - integrations/builtin/credentials/imap.md
+        - integrations/builtin/credentials/intercom.md
+        - integrations/builtin/credentials/invoiceninja.md
+        - integrations/builtin/credentials/iterable.md
+        - integrations/builtin/credentials/jenkins.md
+        - integrations/builtin/credentials/jira.md
+        - integrations/builtin/credentials/jotform.md
+        - integrations/builtin/credentials/kafka.md
+        - integrations/builtin/credentials/keap.md
+        - integrations/builtin/credentials/kitemaker.md
+        - integrations/builtin/credentials/kobotoolbox.md
+        - integrations/builtin/credentials/lemlist.md
+        - integrations/builtin/credentials/line.md
+        - integrations/builtin/credentials/linear.md
+        - integrations/builtin/credentials/lingvanex.md
+        - integrations/builtin/credentials/linkedin.md
+        - integrations/builtin/credentials/magento2.md
+        - integrations/builtin/credentials/mailcheck.md
+        - integrations/builtin/credentials/mailchimp.md
+        - integrations/builtin/credentials/mailerlite.md
+        - integrations/builtin/credentials/mailgun.md
+        - integrations/builtin/credentials/mailjet.md
+        - integrations/builtin/credentials/mandrill.md
+        - integrations/builtin/credentials/marketstack.md
+        - integrations/builtin/credentials/matrix.md
+        - integrations/builtin/credentials/mattermost.md
+        - integrations/builtin/credentials/mautic.md
+        - integrations/builtin/credentials/medium.md
+        - integrations/builtin/credentials/messagebird.md
+        - integrations/builtin/credentials/metabase.md
+        - integrations/builtin/credentials/microsoft.md
+        - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/mindee.md
+        - integrations/builtin/credentials/misp.md
+        - integrations/builtin/credentials/mocean.md
+        - integrations/builtin/credentials/mondaycom.md
+        - integrations/builtin/credentials/mongodb.md
+        - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/mqtt.md
+        - integrations/builtin/credentials/msg91.md
+        - integrations/builtin/credentials/mysql.md
+        - integrations/builtin/credentials/nasa.md
+        - integrations/builtin/credentials/netlify.md
+        - integrations/builtin/credentials/nextcloud.md
+        - integrations/builtin/credentials/nocodb.md
+        - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/odoo.md
+        - integrations/builtin/credentials/onesimpleapi.md
+        - integrations/builtin/credentials/onfleet.md
+        - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/orbit.md
+        - integrations/builtin/credentials/oura.md
+        - integrations/builtin/credentials/paddle.md
+        - integrations/builtin/credentials/pagerduty.md
+        - integrations/builtin/credentials/paypal.md
+        - integrations/builtin/credentials/peekalink.md
+        - integrations/builtin/credentials/phantombuster.md
+        - integrations/builtin/credentials/philipshue.md
+        - integrations/builtin/credentials/pipedrive.md
+        - integrations/builtin/credentials/plivo.md
+        - integrations/builtin/credentials/postgres.md
+        - integrations/builtin/credentials/posthog.md
+        - integrations/builtin/credentials/postmark.md
+        - integrations/builtin/credentials/profitwell.md
+        - integrations/builtin/credentials/pushbullet.md
+        - integrations/builtin/credentials/pushcut.md
+        - integrations/builtin/credentials/pushover.md
+        - integrations/builtin/credentials/questdb.md
+        - integrations/builtin/credentials/quickbase.md
+        - integrations/builtin/credentials/quickbooks.md
+        - integrations/builtin/credentials/rabbitmq.md
+        - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/reddit.md
+        - integrations/builtin/credentials/redis.md
+        - integrations/builtin/credentials/rocketchat.md
+        - integrations/builtin/credentials/rundeck.md
+        - integrations/builtin/credentials/s3.md
+        - integrations/builtin/credentials/salesforce.md
+        - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/seatable.md
+        - integrations/builtin/credentials/securityscorecard.md
+        - integrations/builtin/credentials/segment.md
+        - integrations/builtin/credentials/sendemail.md
+        - integrations/builtin/credentials/sendgrid.md
+        - integrations/builtin/credentials/sendinblue.md
+        - integrations/builtin/credentials/sendy.md
+        - integrations/builtin/credentials/sentryio.md
+        - integrations/builtin/credentials/servicenow.md
+        - integrations/builtin/credentials/shopify.md
+        - integrations/builtin/credentials/signl4.md
+        - integrations/builtin/credentials/slack.md
+        - integrations/builtin/credentials/sms77.md
+        - integrations/builtin/credentials/snowflake.md
+        - integrations/builtin/credentials/splunk.md
+        - integrations/builtin/credentials/spontit.md
+        - integrations/builtin/credentials/spotify.md
+        - integrations/builtin/credentials/ssh.md
+        - integrations/builtin/credentials/stackby.md
+        - integrations/builtin/credentials/storyblok.md
+        - integrations/builtin/credentials/strapi.md
+        - integrations/builtin/credentials/strava.md
+        - integrations/builtin/credentials/stripe.md
+        - integrations/builtin/credentials/supabase.md
+        - integrations/builtin/credentials/surveymonkey.md
+        - integrations/builtin/credentials/syncromsp.md
+        - integrations/builtin/credentials/taiga.md
+        - integrations/builtin/credentials/tapfiliate.md
+        - integrations/builtin/credentials/telegram.md
+        - integrations/builtin/credentials/thehive.md
+        - integrations/builtin/credentials/timescaledb.md
+        - integrations/builtin/credentials/todoist.md
+        - integrations/builtin/credentials/toggl.md
+        - integrations/builtin/credentials/travisci.md
+        - integrations/builtin/credentials/trello.md
+        - integrations/builtin/credentials/twake.md
+        - integrations/builtin/credentials/twilio.md
+        - integrations/builtin/credentials/twist.md
+        - integrations/builtin/credentials/twitter.md
+        - integrations/builtin/credentials/typeform.md
+        - integrations/builtin/credentials/unleashedsoftware.md
+        - integrations/builtin/credentials/uplead.md
+        - integrations/builtin/credentials/uproc.md
+        - integrations/builtin/credentials/uptimerobot.md
+        - integrations/builtin/credentials/urlscanio.md
+        - integrations/builtin/credentials/venafitlsprotectcloud.md
+        - integrations/builtin/credentials/venafitlsprotectdatacenter.md
+        - integrations/builtin/credentials/vero.md
+        - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/webflow.md
+        - integrations/builtin/credentials/wekan.md
+        - integrations/builtin/credentials/whatsapp.md
+        - integrations/builtin/credentials/wise.md
+        - integrations/builtin/credentials/woocommerce.md
+        - integrations/builtin/credentials/wordpress.md
+        - integrations/builtin/credentials/workable.md
+        - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/xero.md
+        - integrations/builtin/credentials/yourls.md
+        - integrations/builtin/credentials/zammad.md
+        - integrations/builtin/credentials/zendesk.md
+        - integrations/builtin/credentials/zoho.md
+        - integrations/builtin/credentials/zoom.md
+        - integrations/builtin/credentials/zulip.md
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - integrations/community-nodes/index.md
@@ -226,7 +463,9 @@ nav:
       - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
       - Heroku: hosting/server-setups/heroku.md
+      - Hetzner: hosting/server-setups/hetzner.md
       - Amazon Web Services: hosting/server-setups/aws.md
+      - Azure: hosting/server-setups/azure.md
       - Google Cloud: hosting/server-setups/google-cloud.md
     - Databases:
       - hosting/databases/index.md
@@ -256,6 +495,7 @@ nav:
     - Configuration: embed/configuration.md
     - Workflow management: embed/managing-workflows.md
     - Workflows templates: embed/workflow-templates.md
+    - White Labelling: embed/white-labelling.md
   - Courses:
       - courses/index.md
       - Level one:

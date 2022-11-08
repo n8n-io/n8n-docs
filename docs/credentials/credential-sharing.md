@@ -1,3 +1,7 @@
+---
+description: Share credentials within an organization.
+---
+
 # Credential sharing
 
 !!! info "Feature availability"

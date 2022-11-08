@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Eventbrite.
 
-- [Eventbrite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbriteTrigger/)
+- [Eventbrite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger/)
 
 ## Prerequisites
 

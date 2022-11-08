@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes with Postmark.
 
-- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarkTrigger/)
+- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger/)
 
 ## Prerequisites
 

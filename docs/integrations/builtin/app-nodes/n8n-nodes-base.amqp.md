@@ -14,8 +14,9 @@
 ## Example Usage
 
 This workflow allows you to send updates about the position of the ISS every minute to an [ActiveMQ](https://activemq.apache.org/) queue using the AMQP Sender node. You can also find the [workflow](https://n8n.io/workflows/762) on n8n.io. This example usage workflow uses the following nodes.
-- [Cron](/integrations/builtin/core-nodes/n8n-nodes-base.cron/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+
+- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [Set](/integrations/builtin/core-nodes/n8n-nodes-base.set/)
 - [AMQP Sender]()
 

@@ -21,7 +21,7 @@ The DOC² integration to Infor LN / M3 is mostly done via ION API, ION Desk and 
 
 
 
-The first export path starts with the ION API which allows DOC² to not only send the PDF with the attributes to IDM but to also send the BOD Sync as well.CaptureDocument to ION Desk. In ION Desk we transform this Sync.CaptureDocument via ION mappings to the desired target BODs, always depending on which document type we are processing. These transformed Infor BODs are then automatically imported to LN or M3.
+The first export path starts with the ION API which allows DOC² to not only send the PDF with the attributes to IDM but to also send the BOD Sync as well.CaptureDocument to ION Desk. In ION Desk we transform this Sync.CaptureDocument via ION mappings to the desired target BODs, depending on which document type we are processing. These transformed Infor BODs are then automatically imported to LN or M3.
 
 
 

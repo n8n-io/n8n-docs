@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Copper.
 
 - [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper/)
-- [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.copperTrigger/)
+- [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger/)
 
 ## Prerequisites
 

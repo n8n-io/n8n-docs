@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Flow.
 
 - [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow/)
-- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowTrigger/)
+- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/)
 
 ## Prerequisites
 

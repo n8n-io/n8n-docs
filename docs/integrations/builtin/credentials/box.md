@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Box.
 
 - [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box/)
-- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxTrigger/)
+- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/)
 
 ## Prerequisites
 

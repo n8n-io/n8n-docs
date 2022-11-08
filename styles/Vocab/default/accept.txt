@@ -14,6 +14,7 @@ eksctl
 Enum
 enum
 Fargate
+Firestore
 GIMP
 invalid
 kubectl
@@ -32,6 +33,7 @@ onboarding
 Pipedrive
 Postbin
 Postgres
+Realtime
 Serverless
 serverless
 Shopify
@@ -41,6 +43,8 @@ Tooltip
 tooltip
 Trello
 Twilio
+URI
+URIs
 URL
 Venafi
 Vuex

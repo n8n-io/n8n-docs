@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Kafka.
 
 - [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka/)
-- [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkaTrigger/)
+- [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/)
 
 ## Prerequisites
 

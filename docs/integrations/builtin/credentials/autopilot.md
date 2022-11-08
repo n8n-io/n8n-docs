@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Autopilot.
 
 - [Autopilot](/integrations/builtin/app-nodes/n8n-nodes-base.autopilot/)
-- [Autopilot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilotTrigger/)
+- [Autopilot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger/)
 
 ## Prerequisites
 

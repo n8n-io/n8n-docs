@@ -28,7 +28,7 @@ The XML node is useful to convert data from and to XML.
 
 This workflow allows you to convert the JSON data received from the [CocktailDB API](https://www.thecocktaildb.com/) to XML. You can also find the [workflow](https://n8n.io/workflows/661) on n8n.io. This example usage workflow uses the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httpRequest/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 - [XML]()
 
 The final workflow should look like the following image.

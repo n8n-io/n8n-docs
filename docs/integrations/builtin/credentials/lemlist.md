@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Lemlist.
 
 - [Lemlist](/integrations/builtin/app-nodes/n8n-nodes-base.lemlist/)
-- [Lemlist Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlistTrigger/)
+- [Lemlist Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger/)
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 
 You can use these credentials to authenticate the following nodes:
 
-- [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workableTrigger/)
+- [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/)
 
 ## Prerequisites
 

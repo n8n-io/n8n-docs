@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with AMQP.
 
 - [AMQP Sender](/integrations/builtin/app-nodes/n8n-nodes-base.amqp/)
-- [AMQP Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.amqpTrigger/)
+- [AMQP Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger/)
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Airtable.
 
 - [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
-- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtableTrigger/)
+- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/)
 
 ## Prerequisites
 

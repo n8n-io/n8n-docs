@@ -22,7 +22,7 @@ This workflow allows you to find email and enrich your contact from a Google She
 
 This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googleSheets/)
+- [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
 - [Dropcontact node]()
 - [Lemlist node](/integrations/builtin/app-nodes/n8n-nodes-base.lemlist/)
 

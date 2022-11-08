@@ -1,3 +1,7 @@
+---
+description: Authentication for n8n's public REST API.
+---
+
 # API authentication
 
 n8n uses API keys to authenticate API calls.

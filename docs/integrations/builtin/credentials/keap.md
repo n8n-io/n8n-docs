@@ -3,7 +3,7 @@
 You can use these credentials to authenticate the following nodes with Keap.
 
 - [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap/)
-- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keapTrigger/)
+- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/)
 
 ## Prerequisites
 

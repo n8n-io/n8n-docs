@@ -23,7 +23,7 @@ As soon as the document/table extraction has been trained and the data is availa
 
 As soon as this document is imported into DOC² in the future, the rules are automatically applied during extraction and will always arrange the data into the trained format.
 
-The rule indicator shows how many rules have been defined and saved for this document.
+The rule indicator, illustrated below, shows how many rules have been defined and saved for this document.
 
 ![](/_images/doc2/image-34.png)
 

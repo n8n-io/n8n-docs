@@ -113,7 +113,7 @@ c) Fill out all the required fields, like in the image below, but with your own 
 
 ![](/_images/doc2/infor_Add-New-Application.png){ loading=lazy }
 
-**And now the last step:**
+**The final step:**
 
 - Log out of DOC².
 - Go back to the burger menu in infor and select the icon you just created.

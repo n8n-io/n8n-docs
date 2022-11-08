@@ -27,13 +27,13 @@ a) Choose the option "Cloud Identities" and fill in your login details.
 
 ![](/_images/doc2/LogIn-infor-1024x640.png){ loading=lazy }
 
-b) After you have logged in, you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
+b) After you have logged in, you will have access to the Infor Cloud. You will be taken to this page, but on the burger menu you will find access to all the applications.
 
 ![](/_images/doc2/Welcome-to-infor-Ming.le_-1024x585.png){ loading=lazy }
 
 ![](/_images/doc2/infor_Burger-Menu-1024x586.png){ loading=lazy }
 
-**2\. Open User Management for adding new Service Provider**
+**2\. Open "User Management" to add a new Service Provider**
 
 On the right hand side of the bar menu, you will find the user menu and there you can access the user management
 

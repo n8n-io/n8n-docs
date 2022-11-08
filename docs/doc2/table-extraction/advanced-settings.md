@@ -78,7 +78,7 @@ Name the first column "Position" and group on that one.
 
 ![](/_images/doc2/advanced-settings_20.png){ loading=lazy }
 
-After naming all the columns and training the values, this is your result:
+After naming all the columns and training the values, this should be your result:
 
 
 ![](/_images/doc2/advanced-settings_21.png){ loading=lazy }

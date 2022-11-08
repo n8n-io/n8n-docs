@@ -8,7 +8,7 @@ tags:
   - Settings
 ---
 
-In table extraction view, you will find the menu item `Settings` in the upper action bar (make sure that the training mode is activated). If you click on the gear icon, a window will open in which you will find the `Advanced Settings`.
+In table extraction view, you will find the menu item `Settings` in the upper action bar (make sure that "Training Mode" is activated). If you click on the gear icon, a window will open in which you will find the `Advanced Settings`.
 
 ![](/_images/doc2/advanced-settings_1.png){ loading=lazy }
 

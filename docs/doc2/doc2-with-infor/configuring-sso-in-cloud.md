@@ -109,7 +109,7 @@ b) Click on ADD APPLICATION in the top right corner
 
 ![](/_images/doc2/infor_Add-Application.png){ loading=lazy }
 
-c) Fill out all the required fields like on the image below but with your own SSO Url, don't forget to choose an icon and click on SAVE
+c) Fill out all the required fields, like in the image below, but with your own SSO Url. Don't forget to choose an icon and click on SAVE
 
 ![](/_images/doc2/infor_Add-New-Application.png){ loading=lazy }
 

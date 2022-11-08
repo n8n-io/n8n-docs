@@ -27,6 +27,6 @@ The rule indicator, illustrated below, shows how many rules have been defined an
 
 ![](/_images/doc2/image-34.png)
 
-Rules for documents can also be deleted using the "DELETE RULES" button. This may be necessary if rules have been saved incorrectly or in a qualitatively unsatisfactory way. This allows a document to be retrained. ATTENTION: Deleting rules will affect all documents with the same or similar format. And these documents must then be completely re-trained. This means that deleting the rules should be done with caution.
+Rules for documents can also be deleted using the "DELETE RULES" button. This may be necessary if rules have been saved incorrectly or in a qualitatively unsatisfactory way. This allows a document to be retrained. ATTENTION: Deleting rules will affect all documents with the same or similar format, these documents must then be completely re-trained. This means that deleting the rules should be done with caution.
 
 ![](/_images/doc2/image-35-1024x692.png)

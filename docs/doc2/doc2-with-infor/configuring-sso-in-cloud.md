@@ -39,7 +39,7 @@ On the right hand side of the bar menu, you will find the user menu and that is 
 
 ![](/_images/doc2/infor_User-Management-1024x548.png){ loading=lazy }
 
-a) Then you need to select in the left hand side menu the option **Security Administration** and **Service Provider**.
+a) Then, in the left hand side menu, you need to select  the option **Security Administration** and **Service Provider**.
 
 ![](/_images/doc2/infor_Service-Provider-1024x523.png){ loading=lazy }
 

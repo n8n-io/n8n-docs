@@ -28,7 +28,7 @@ First of all, make sure training mode is activated:
 
 ![](/_images/doc2/image-11.png)
 
-In addition you need to activate the row edit mode:
+Next you need to activate the row edit mode:
 
 ![](/_images/doc2/image-13-1024x314.png)
 

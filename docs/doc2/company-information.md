@@ -15,7 +15,7 @@ tags:
 
 Enter all company specific information here so that it can be used for various exports you might use.
 
-You will end up in the following screen.
+You will end up on the following screen.
 
 ![](/_images/doc2/Company_2.png){ loading=lazy }
 

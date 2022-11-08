@@ -27,7 +27,7 @@ a) Choose the option "Cloud Identities" and fill in your login details.
 
 ![](/_images/doc2/LogIn-infor-1024x640.png){ loading=lazy }
 
-b) After login you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
+b) After you have logged in, you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
 
 ![](/_images/doc2/Welcome-to-infor-Ming.le_-1024x585.png){ loading=lazy }
 

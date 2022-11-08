@@ -96,14 +96,14 @@ You can import the files as follows:
     + Some configuration parts already exist in the repository that might be overwritten. For example, Result List.
     + Some configuration parts already exist in the repository that might be lost, for example, Document Type Filter.
    + :fontawesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable **Import XML file**. It is usually displayed for these reasons:
-    + If some parts cannot be imported, for example, Items.
-    + If some existing parts are merged with new ones from the XML file, for example, Result List.
+    + If some parts cannot be imported, eg. Items.
+    + If some existing parts are merged with new ones from the XML file, eg. Result List.
    + A green OK sign with no message required.
 5. Click **Import XML file** to run the importer. When the import is finished, a report window is displayed with an information table that summarizes the status of the import. If any error occurs during the import, the error message informs the user what went wrong.
 
 When the import is successful, **Import XML file** is disabled.
 
-This is how the general Information and attributes look like in IDM under the corresponding document type:
+This is what the general information and attributes look like in IDM under the corresponding document type:
 
 **Order Confirmation**
 
@@ -120,7 +120,7 @@ This is how the general Information and attributes look like in IDM under the co
 ![](/_images/doc2/Infor/IDM_DocumentType_Invoice.png)
 ![](/_images/doc2/Infor/IDM_Attributes_Invoice.png)
 
-When you open the **Business Context Model** menu item
+When you open the **Business Context Model** menu item,
 ![](/_images/doc2/Infor/IDM_BusinessContextModel.png)
 you will find the information here as follows:
 
@@ -150,7 +150,7 @@ you will find the information here as follows:
 /LN_SupplierInvoice[@MDS_EntityType = "{entityType}" AND @MDS_id1 = "{id1}"]
 ```
 
-All these steps connect all documents from IDM to the corresponding workbench in LN, where they are also displayed. And this is how it looks in LN:
+All these steps connect all the documents from IDM to the corresponding workbench in LN, where they are also displayed. And this is how it looks in LN:
 
 **Order Confirmation**
 

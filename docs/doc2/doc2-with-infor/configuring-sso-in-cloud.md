@@ -15,19 +15,19 @@ tags:
 
 ### **Prerequisites**
 
-<table><tbody><tr><td><strong>Required Information</strong></td><td><strong>Description</strong></td></tr><tr><td>Login Details to Cloud</td><td>Credentials are mandatory for accessing the Infor Cloud environment.<br>The user should have the roles "Infor-SystemAdministrator" and "UserAdmin".</td></tr><tr><td>Config Admin Details (DOC²)</td><td>You should have received an email from Polydocs GmbH with the login details for the DOC² SSO Settings page.<br><br>You will need login and password.<br></td></tr><tr><td>Certificate</td><td>You can download the certificate in DOC² under SSO Service Provider Settings</td></tr></tbody></table>
+<table><tbody><tr><td><strong>Required Information</strong></td><td><strong>Description</strong></td></tr><tr><td>Login Details to Cloud</td><td>Credentials are mandatory for accessing the Infor Cloud environment.<br>The user should have the roles "Infor-SystemAdministrator" and "UserAdmin".</td></tr><tr><td>Config Admin Details (DOC²)</td><td>You should have received an email from Polydocs GmbH with the login details for the DOC² SSO Settings page.<br><br>You will need a login and password.<br></td></tr><tr><td>Certificate</td><td>You can download the certificate in DOC² under SSO Service Provider Settings.</td></tr></tbody></table>
 
 **1\. Get access to the Cloud and check your access**
 
-URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME](https://mingle-portal.eu1.inforcloudsuite.com/)\> followed by your personal extension
+The URL starts with [https://mingle-portal.eu1.inforcloudsuite.com/<TENANT\_NAME](https://mingle-portal.eu1.inforcloudsuite.com/)\> followed by your personal extension.
 
 ![](/_images/doc2/infor-signin-1024x520.png){ loading=lazy }
 
-a) Choose the option Cloud Identities and use your login details
+a) Choose the option "Cloud Identities" and fill in your login details.
 
 ![](/_images/doc2/LogIn-infor-1024x640.png){ loading=lazy }
 
-b) After login you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
+b) After you have logged in, you will have access to the Infor Cloud. In this case we enter this page, but on the burger menu you will find access to all application.
 
 ![](/_images/doc2/Welcome-to-infor-Ming.le_-1024x585.png){ loading=lazy }
 

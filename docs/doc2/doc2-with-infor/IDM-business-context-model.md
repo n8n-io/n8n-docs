@@ -103,7 +103,7 @@ You can import the files as follows:
 
 When the import is successful, **Import XML file** is disabled.
 
-This is how the general information and attributes look like in IDM under the corresponding document type:
+This is what the general information and attributes look like in IDM under the corresponding document type:
 
 **Order Confirmation**
 

@@ -31,7 +31,7 @@ tags:
 ## Upload document
 
 After completing steps **1.-3.**<br>
-**4.** scroll down to 
+**4.** Scroll down to 
 
 ![Picture](/_images/doc2/DOC2_API_POST_Process.png){ loading=lazy }
 

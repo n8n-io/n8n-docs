@@ -96,14 +96,14 @@ You can import the files as follows:
     + Some configuration parts already exist in the repository that might be overwritten. For example, Result List.
     + Some configuration parts already exist in the repository that might be lost, for example, Document Type Filter.
    + :fontawesome-solid-info:{ style="color: #eee20e" } Information - blue sign: The information sign does not disable **Import XML file**. It is usually displayed for these reasons:
-    + If some parts cannot be imported, for example, Items.
-    + If some existing parts are merged with new ones from the XML file, for example, Result List.
+    + If some parts cannot be imported, eg. Items.
+    + If some existing parts are merged with new ones from the XML file, eg. Result List.
    + A green OK sign with no message required.
 5. Click **Import XML file** to run the importer. When the import is finished, a report window is displayed with an information table that summarizes the status of the import. If any error occurs during the import, the error message informs the user what went wrong.
 
 When the import is successful, **Import XML file** is disabled.
 
-This is how the general Information and attributes look like in IDM under the corresponding document type:
+This is how the general information and attributes look like in IDM under the corresponding document type:
 
 **Order Confirmation**
 

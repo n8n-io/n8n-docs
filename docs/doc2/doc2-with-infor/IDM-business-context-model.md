@@ -48,7 +48,7 @@ For all other actions in the control center, see the _Infor Document Management 
 
 Configuration Exporter and Importer allows the user to export / import the Configuration parts of Control Center (Document Types Filter, Result List, Business Context Model, and ION Configuration) using XML documents.
 
-The xml files for all common document types can be downloaded here.
+The XML files for all common document types can be downloaded here.
 
 - Order Confirmation: <a href="/_images/doc2/Infor/IDMconfiguration_OrderConfirmation.xml" download>IDMconfiguration_OrderConfirmation</a>
 - Delivery Note: <a href="/_images/doc2/Infor/IDMconfiguration_DeliveryNote.xml" download>IDMconfiguration_DeliveryNote</a>

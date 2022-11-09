@@ -28,7 +28,7 @@ Here you can define a custom name for the notification, select the document type
 
 :fontawesome-solid-circle-info:{ style="color: #0F17E4" }More will follow
 
-<ins>Time Units to choose are:</ins>
+<ins>Time Units available include:</ins>
 
 - Minutes
 - Hours

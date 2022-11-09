@@ -93,7 +93,7 @@ Here we will upload a document to /document/process but the steps are the same f
       ```
 2. Select a file to upload ![](/_images/doc2/metadata/file-upload.png)
 3. Click `Execute`
-4. Wait for response. If the metadata field is not a valid json an error message will appear. ![Invalid Json response](/_images/doc2/metadata/invalid-json-response.png) If "success": true, then your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
+4. Wait for a response. If the metadata field is not a valid json an error message will appear. ![Invalid Json response](/_images/doc2/metadata/invalid-json-response.png) If "success": true, then your document will be uploaded to your dashboard with the rules you set in [DOC²](https://app.polydocs.io/settings/classify-extract)
 
 
 

@@ -82,7 +82,7 @@ Uncheck the box "Application has IMS EndPoint" and enter the "Client ID" copied 
 
 Change to the "Documents" tab.
 
-Click on the "+" icon and enter to the filter field "Sync.CaptureDocument". The list should show the correct BOD now, check the box in front of "Sync.CaptureDocument" and click "OK".
+Click on the "+" icon and in the filter field enter "Sync.CaptureDocument". The list should show the correct BOD now, check the box in front of "Sync.CaptureDocument" and click "OK".
 
 ![](/_images/doc2/image-40-1024x944.png)
 

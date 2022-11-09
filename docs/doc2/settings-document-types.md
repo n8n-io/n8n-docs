@@ -20,7 +20,7 @@ Open the menu **Document Types**.
 
 ![](/_images/doc2/DOC2_Dashboard_Settings_Document Types.png)
 
-In the following overview you will find all standard document types available for you:
+In the following overview you will find all the standard document types available to you:
 
 ![](/_images/doc2/DOC2_Document Types.png)
 

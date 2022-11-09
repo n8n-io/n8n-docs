@@ -86,7 +86,7 @@ Here you can set the sensitivity of the OCR (Optical Character Recognition) func
 
 **MATCH SCORE:**
 
-Here you can set the sensitivity of the MATCH SCORE function for all fields at once. This value determines from when a field is marked in red if DOC² has not extracted the field with 100% probability. In this case the field needs to be validated manually.
+Here you can set the sensitivity of the MATCH SCORE function for all fields. This value determines from when a field is marked in red if DOC² has not extracted the field with 100% probability. In this case the field needs to be validated manually.
 
 The button `RESTORE DEFAULTS` will set back both values to "50".
 

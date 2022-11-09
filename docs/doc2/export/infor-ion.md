@@ -47,7 +47,7 @@ Click on the ION API File section and select the ION API file that you want to u
 ![](/_images/doc2/image-32-1024x347.png)
 
 Click on the IDM Mapping file section and choose the IDM Mapping file you want to use for the export.  
-You find a example of the IDM mapping file on this page: [How to create a IDM mapping file](/doc2/export/how-to-create-a-idm-mapping-file/)
+You can find an example of the IDM mapping file on this page: [How to create a IDM mapping file](/doc2/export/how-to-create-a-idm-mapping-file/)
 
 ![](/_images/doc2/image-33-1024x344.png)
 

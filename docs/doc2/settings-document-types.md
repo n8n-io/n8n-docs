@@ -59,7 +59,7 @@ For each field you can check the boxes if they are:
 
 - READ ONLY: Here you can define if a field can only be displayed but not edited.
 
-- HIDDEN: Here you can define whether a field should be hidden or displayed in the extraction view.
+- HIDDEN: Here you can define whether a field should be hidden or displayed in extraction view.
 
 - FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
 

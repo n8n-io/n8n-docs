@@ -95,7 +95,7 @@ The button `RESTORE DEFAULTS` will reset both values back to "50".
 
 ### PROFILE
 
-Here you can define the profile that shall be used. Either Default or ZUGFeRD.<br> In profile ZUGFeRD there are predefined fields that are mandatory for this type of invoice.<br> If you do not explicitly use ZUGFeRD, please select "Default".
+Here you can define the profile that will be used. Either Default or ZUGFeRD.<br> In profile ZUGFeRD there are predefined fields that are mandatory for this type of invoice.<br> If you do not explicitly use ZUGFeRD, please select "Default".
 
 ![](/_images/doc2/DOC2_field settings_profile.png)
 

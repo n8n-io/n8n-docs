@@ -19,7 +19,7 @@ Go to SETTINGS in the top bar and click on "Import".
 
 ![](/_images/doc2/AllImportOptions_Email_1.png)
 
-As you can see there is no email account for the import set up yet.
+As you can see there is no email account setup for the import yet.
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 

@@ -15,7 +15,7 @@ Your email folder could look like this.
 ![](/_images/doc2/AllImportOptions_Email_Folder.png)
 
 
-Go to settings on top bar and choose Import in the selection.
+Go to SETTINGS on top bar and choose Import in the selection.
 
 ![](/_images/doc2/AllImportOptions_Email_1.png)
 

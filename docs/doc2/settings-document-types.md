@@ -61,7 +61,7 @@ For each field you can check the boxes if they are:
 
 - HIDDEN: Here you can define whether a field should be hidden or displayed in extraction view.
 
-- FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been read 100% by DOC².
+- FORCE VALIDATION: Here you can define whether a field must always be validated manually, even if it has been confidently read (100%) by DOC².
 
 - OCR and MATCH SCORE: Setting as described below, per field.
 

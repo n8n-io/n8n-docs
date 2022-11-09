@@ -68,7 +68,7 @@ For the barcode Splitting to work you need to download poppler.zip - unzip it an
 1. Search for System variable or Systemumgebungsvariablen
 2. Click on System Variables <br>
 ![](/_images/doc2/watchdog/systemeigenschaften.png)
-3. Open the system Variables, select Path and click on edit ![](/_images/doc2/watchdog/windows-env.png)
+3. Open the System Variables, select Path and click on edit ![](/_images/doc2/watchdog/windows-env.png)
 4. Add the path to the unziped poppler folder + \Libary\bin to the Path ![](/_images/doc2/watchdog/add-to-path.png)
 
 Done!

@@ -20,9 +20,9 @@ tags:
 
 First configure the following folders:
 
-* Read folder → documents that should be uploaded to DOC² have to be in this folder
-* Error folder → documents that ran into an error during the export are saved here
-* Processed folder → successfully processed documents are stored here
+* Read folder → documents that should be uploaded to DOC² have to be in this folder.
+* Error folder → documents that ran into an error during the export are saved here.
+* Processed folder → successfully processed documents are stored here.
 
 To configure these folders, you must select the **Settings folder** and press `Browse` for each folder
 

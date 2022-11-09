@@ -23,9 +23,9 @@ As you can see, there is no email account setup for the import yet.
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 
-Click on the `OFF` button to open the Email import settings
+Click on the `OFF` button to open the Email import settings.
 
-The boxes for E-Mail and Password as well as the API Key might get automatically filled with your login information for DOC² depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
+The boxes for E-Mail and Password as well as the API Key might get automatically filled in with your login information for DOC² depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
 
 What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username e.g. "incoming invoices" as well as email address and password from which the documents should going to be imported from.
 

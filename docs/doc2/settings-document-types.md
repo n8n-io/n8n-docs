@@ -24,7 +24,7 @@ In the following overview you will find all the standard document types availabl
 
 ![](/_images/doc2/DOC2_Document Types.png)
 
-To see which fields can be extracted, for example from an invoice, click on `FIELDS` for this document type.
+To see which fields can be extracted, from an invoice for example, click on `FIELDS` for this document type.
 
 ![](/_images/doc2/DOC2_Invoice_Fields.png)
 

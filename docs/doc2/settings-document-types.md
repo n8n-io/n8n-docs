@@ -82,7 +82,7 @@ If you have completed all your settings, and you wish to save them, please confi
 
 **OCR:**
 
-Here you can set the sensitivity of the OCR (Optical Character Recognition) function for all fields at once. This value determines the sensitivity with which a field is marked in red if it could not be extracted with 100% certainty (OCR related!).
+Here you can set the sensitivity of the OCR (Optical Character Recognition) function for all fields. This value determines the sensitivity with which a field is marked in red if it could not be extracted with 100% certainty (OCR related!).
 
 **MATCH SCORE:**
 

@@ -100,7 +100,7 @@ Drag and drop an "Application" to the flow and name it "Doc2".
 
 ![](/_images/doc2/image-44.png)
 
-Click on the "+" icon and select the "Doc2" application, in this case "Doc2Export" and click "OK".
+Click on the "+" icon and select the "Doc2" application, in this case "Doc2Export", and click "OK".
 
 ![](/_images/doc2/image-45.png)
 

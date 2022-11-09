@@ -17,7 +17,7 @@ tags:
 
 2\. Go to SETTINGS (on top bar) and select SSO Settings located at the bottom of the list.
 
-Here you will find all the information you need for the following steps
+Here you will find all the information you need for the following steps.
 
 ![DOC2 - SSO](/_images/doc2/DOC2_SSO-Service-Provider-Settings_EN-1024x508.png)
 

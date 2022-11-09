@@ -53,7 +53,7 @@ Here you will find all the fields that can be extracted:
 
 For every overpoint you can also **CREATE FIELDS** like freight, postage or any field with an amount you want to extract from your invoices.
 
-For each field you can check the boxes if they are 
+For each field you can check the boxes if they are:
 
 - REQUIRED: Here you can define if the field must contain a value to continue.
 

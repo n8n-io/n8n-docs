@@ -40,7 +40,7 @@ After you have entered all required fields of your respective provider, save the
 
 ![](/_images/doc2/AllImportOptions_Email_4.png)
 
-You can test the login by pressing the "TEST LOGIN" button. If all data are correct you will get a corresponding feedback.
+You can test the login by pressing the "TEST LOGIN" button. If all data is correct you will get the following feedback.
 
 ![](/_images/doc2/AllImportOptions_Email_5.png)
 

@@ -10,16 +10,16 @@ tags:
 
 ### If you want to import documents from a specific email folder, here are the steps you need to take:
 
-Your email folder could look like this
+Your email folder could look like this.
 
 ![](/_images/doc2/AllImportOptions_Email_Folder.png)
 
 
-Go to settings on top bar and choose Import in the selection
+Go to settings on top bar and choose Import in the selection.
 
 ![](/_images/doc2/AllImportOptions_Email_1.png)
 
-As you can see there is no email account for the import set up yet
+As you can see there is no email account for the import set up yet.
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 

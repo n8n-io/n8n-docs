@@ -61,7 +61,7 @@ After completing steps **1.-3.**<br>
 
 doc-id:   https://app.polydocs.io/2a/**9c931f6f-f352-4526-a78d-c036c39a8d9e**
 
-You get the document ID when you open the document on the dashboard. This is the last part of the URL when the document is open.
+You will obtain the document ID when you open the document on the dashboard. This is the last part of the URL when the document is open.
 
 ![Picture](/_images/doc2/DOC2_API_GET_Document-Status_doc_id.png){ loading=lazy }
 

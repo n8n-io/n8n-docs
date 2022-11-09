@@ -52,7 +52,7 @@ Next, configure general parameters:
 → this key can be found under the Integration settings of your DOC² account.
 
 #### Barcode splitting
-If you want to process documents in which several documents with barcodes are combined in one PDF, these are separated by the barcode using the following setting when uploading to DOC².
+If you want to process documents in which several documents with barcodes are combined into one PDF, these are separated by the barcode using the following setting when uploading to DOC².
 
 ![](/_images/doc2/Import_Watchdog_Windows_Barcode_Splitting.png)
 

@@ -74,7 +74,7 @@ Click on "+Add" and choose "IMS via ION API"
 
 ![](/_images/doc2/image-37.png)
 
-Enter the name meaningful "Doc2Export" and give it a meaningful description.
+Enter the name "Doc2Export" and give it a description.
 
 Uncheck the box "Application has IMS EndPoint" and enter the "Client ID" copied from ION API.
 

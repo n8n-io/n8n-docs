@@ -24,7 +24,7 @@ First configure the following folders:
 * Error folder → documents that ran into an error during the export are saved here.
 * Processed folder → successfully processed documents are stored here.
 
-To configure these folders, you must select the **Settings folder** and press `Browse` for each folder
+To configure these folders, you must select the **Settings folder** and press `Browse` for each folder.
 
 ![](/_images/doc2/Import_Watchdog_Windows_FolderConfiguration.png)
 

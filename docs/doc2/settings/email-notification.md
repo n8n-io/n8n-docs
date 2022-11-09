@@ -1,6 +1,6 @@
 ---
 title: "Email notification"
-description: In this section you can configure all types of email notifications for your document types. Easily set employees to be notified when a document has a certain status
+description: In this section you can configure all types of email notifications for your document types. You can easily setup for employees to be notified when a document has a certain status
 date: "2022-10-20"
 tags:
   - DOC²
@@ -8,7 +8,7 @@ tags:
   - Email notification
 ---
 
-In this section you can configure all types of email notifications for your document types. Easily set employees to be notified when a document has a certain status.
+In this section you can configure all types of email notifications for your document types. You can easily setup for employees to be notified when a document has a certain status.
 
 Go to Settings and open the **Email notification** menu.
 

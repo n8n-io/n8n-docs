@@ -90,7 +90,7 @@ Click the disk icon to save the settings.
 
 ![](/_images/doc2/image-41.png)
 
-Change to "Data Flows" and click on "+Add" and select "Document Flow".
+Change to "Data Flows", click on "+Add" and select "Document Flow".
 
 ![](/_images/doc2/image-43.png)
 

@@ -19,7 +19,7 @@ There you will find the menu item "Modules", open it.
 
 ![](/_images/doc2/image-45-1024x355.png)
 
-There you will find the option "PURCHASE ORDER" with which you can switch PO matching on/off.
+There you will find the option "PURCHASE ORDER" with which you can switch PO matching on or off.
 
 ![](/_images/doc2/image-46.png)
 

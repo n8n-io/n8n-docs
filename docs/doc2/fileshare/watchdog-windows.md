@@ -40,7 +40,7 @@ Next, configure general parameters:
 
   ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_2.png)
   
-  **INFOR OS** → here the watchdog checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
+  **INFOR OS** → here WATCHDOG checks if there are export orders for Infor OS On-Premise issued by DOC² and then the document is exported to IDM.
 
   There are two more specific parameters:
 

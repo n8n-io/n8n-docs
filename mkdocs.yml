@@ -462,6 +462,7 @@ nav:
       - Docker Compose: hosting/server-setups/docker-compose.md
       - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
+      - Heroku: hosting/server-setups/heroku.md
       - Hetzner: hosting/server-setups/hetzner.md
       - Amazon Web Services: hosting/server-setups/aws.md
       - Azure: hosting/server-setups/azure.md

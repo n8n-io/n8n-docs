@@ -75,7 +75,7 @@ You will receive the following response:
 ## Upload document with metadata
 
 After completing steps **1.-3.**<br>
-**4.** scroll down to one of these endpoints:<br>
+**4.** Scroll down to one of these endpoints:<br>
  - /document/process_documents<br>
  - /document/process<br>
  - /document/process_base64<br>

@@ -27,7 +27,7 @@ Click on the `OFF` button to open the Email import settings.
 
 The boxes for E-Mail and Password as well as the API Key might get automatically filled in with your login information for DOC², depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
 
-What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username e.g. "incoming invoices" as well as the email address and password from which the documents are going to be imported from.
+What you need to do is enter the protocol (IMAP or POP3), the encryption (SSL or TSL), server-name, port, a username (e.g. "incoming invoices") as well as the email address and password from which the documents are going to be imported from.
 
 This example is for a google email account:
 

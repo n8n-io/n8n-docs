@@ -16,6 +16,28 @@ tags:
 <a href="/doc2/fileshare/Watchdog.exe" download>Watchdog Download</a><br>
 <a href="/doc2/fileshare/poppler.zip" download>Poppler Download</a>
 
+## Running Watchdog
+Watchdog can run in headless mode as a servcie and in UI mode. 
+The UI mode can be used to make changes to the configuration if you dont want to adjust the watchdog-config.yml file manually.
+
+To start Watchdog in ui mode: `Watchdog.exe ui` 
+To start Watchdog in headless mode: 
+
+1. Open a cmd window with admin priveleges
+2. `cd` to the directory where the `Watchdog.exe` is located
+3. execute these commands: 
+    1. `Watchdog.exe install`
+    2. `Watchdog.exe start`
+    3. Optional - To enable Autostart: `Watchdog.exe --startup delayed install`
+   
+If Watchdog cant find the config file or the configuration is invalid it will start in UI mode for you to make adjustments to the Settings.
+To save the changes start and stop the app. Afterwards run the `Watchdog.exe start` command and watchdog will start in headless mode. 
+
+## Stoping and Uninstalling Watchdog
+To stop the Watchdog Service run: `Watchdog.exe stop` <br>
+To remove the Watchdog Service: `Watchdog.exe remove`
+
+
 ## Folder configuration
 
 First configure the following folders:
@@ -29,9 +51,6 @@ To configure these folders, you must select the **Settings folder** and press `B
 ![](/_images/doc2/Import_Watchdog_Windows_FolderConfiguration.png)
 
 
-## General configuration
-
-Next, configure general parameters:
 
 #### Select an environment to which your documents should be exported.
   :fontawesome-solid-circle-info:{ style="color: #0F17E4" } The following options are available:
@@ -56,11 +75,6 @@ If you want to process documents in which several documents with barcodes are co
 
 ![](/_images/doc2/Import_Watchdog_Windows_Barcode_Splitting.png)
 
-:fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-Make sure the Document Splitting in the Classification and Extraction Settings is disabled.
-
-![](/_images/doc2/DOC2_Classification_and_Extraction_Document_Splitting.png)
-
 
 ## Install poppler
 For the barcode Splitting to work you need to download the poppler.zip - unzip it and add the bin lib to the PATH system Variable.
@@ -71,3 +85,5 @@ For the barcode Splitting to work you need to download the poppler.zip - unzip i
 4. Add the path to the unziped poppler folder + \Libary\bin to the Path ![](/_images/doc2/watchdog/add-to-path.png)
 
 Done!
+
+

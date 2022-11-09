@@ -27,6 +27,6 @@ Furthermore you can define which documents should be matched via the option "Sel
 
 ![](/_images/doc2/image-47.png)
 
-Via the menu item "Table Extraction" the table extraction can be switched on/off. Furthermore, the version to be used with this account can be defined.
+Via the menu item "Table Extraction" the table extraction can be switched on or off. Furthermore, the version to be used with this account can be defined.
 
 ![](/_images/doc2/image-48.png)

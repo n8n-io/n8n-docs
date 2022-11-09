@@ -57,7 +57,7 @@ If you want to process documents in which several documents with barcodes are co
 ![](/_images/doc2/Import_Watchdog_Windows_Barcode_Splitting.png)
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-Make sure the Document Splitting in the Classification and Extraction Settings is disabled.
+Make sure Document Splitting in the Classification and Extraction Settings is disabled.
 
 ![](/_images/doc2/DOC2_Classification_and_Extraction_Document_Splitting.png)
 

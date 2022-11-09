@@ -52,7 +52,7 @@ You can find an example of the IDM mapping file on this page: [How to create a I
 ![](/_images/doc2/image-33-1024x344.png)
 
 Click on the BOD Mapping file section and choose the BOD Mapping file you want to use for the export.  
-You find a example of the BOD mapping file on this page: [How to create a BOD mapping file](/doc2/export/how-to-create-a-bod-mapping-file/)
+You can find an example of the BOD mapping file on this page: [How to create a BOD mapping file](/doc2/export/how-to-create-a-bod-mapping-file/)
 
 ![](/_images/doc2/image-34-1024x343.png)
 

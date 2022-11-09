@@ -15,7 +15,7 @@ In DOC² you will find the "SETTINGS" menu in the "DASHBOARD". Open this menu.
 
 ![](/_images/doc2/image-44-1024x396.png)
 
-There you will find the menu item "Modules". Open this menu.
+There you will find the menu item "Modules", open it.
 
 ![](/_images/doc2/image-45-1024x355.png)
 

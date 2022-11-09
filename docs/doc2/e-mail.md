@@ -23,7 +23,7 @@ As you can see, there is no email account setup for the import yet.
 
 ![](/_images/doc2/AllImportOptions_Email_2.png)
 
-Click on the `OFF` Button to open the Email import settings
+Click on the `OFF` button to open the Email import settings
 
 The boxes for E-Mail and Password as well as the API Key might get automatically filled with your login information for DOC² depending on your browser settings. Please empty the fields before continuing to enter the needed information for the E-Mail Import.
 

@@ -36,7 +36,7 @@ This example is for a google email account:
 
 ![](/_images/doc2/AllImportOptions_Email_3.png)
 
-After you have entered all required fields of your respective provider save the data
+After you have entered all required fields of your respective provider, save the data
 
 ![](/_images/doc2/AllImportOptions_Email_4.png)
 

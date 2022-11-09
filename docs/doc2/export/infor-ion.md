@@ -13,7 +13,7 @@ tags:
 ---
 
 ####   
-Export to Infor Document Management with publishing the document values in a seperate BOD
+Export to Infor Document Management by publishing the document values in a seperate BOD
 
 Step by Step guide how to export documents to Infor Document Management (IDM) with publishing the values in a seperate Sync.CaptureDocument BOD.
 

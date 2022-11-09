@@ -36,7 +36,7 @@ Here you can define a custom name for the notification, select the document type
 
 The delay has to be set to a minimum of 5 minutes as the email server will need that much time to respond.
 
-The email will be sent after the selected time duration, if document status remains unchanged.
+The email will be sent after the selected time duration, if the document status remains unchanged.
 
 &nbsp;
 

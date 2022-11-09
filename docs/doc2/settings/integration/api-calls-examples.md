@@ -86,7 +86,7 @@ Here we will upload a document to /document/process but the steps are the same f
 **5.** Open the tab and click on `Try it out` in the upper right corner to enter the following value
 
 1. Enter Metadata ![](/_images/doc2/metadata/metadata-upload.png)
-   1. Metadata needs to be in a valid json format. [Json Validator](https://jsonlint.com/)<br>
+   1. The metadata needs to be in a valid json format. [Json Validator](https://jsonlint.com/)<br>
       An example of a metadata entry would be:<br> 
       ```
       {"custom-key": "the custom value", "custom_doc_id": "8a5cf33b-c923-4879-96ca-94d69965d508"}`

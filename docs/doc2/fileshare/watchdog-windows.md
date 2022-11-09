@@ -44,7 +44,7 @@ Next, configure general parameters:
 
   There are two more specific parameters:
 
-  When exporting to Infor OS three document types are available
+  When exporting to Infor OS three document types are available.
 
 ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_1.png)
 

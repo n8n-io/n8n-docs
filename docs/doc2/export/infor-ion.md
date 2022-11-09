@@ -94,7 +94,7 @@ Change to "Data Flows", click on "+Add" and select "Document Flow".
 
 ![](/_images/doc2/image-43.png)
 
-Enter a meaningful name and description.
+Enter a name and description.
 
 Drag and drop an "Application" to the flow and name it "Doc2".
 

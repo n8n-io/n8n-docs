@@ -19,9 +19,9 @@ Example:
 
 ```javascript
 // Get the global workflow static data
-const staticData = getWorkflowStaticData('global');
+const staticData = $getWorkflowStaticData('global');
 // Get the static data of the node
-const staticData = getWorkflowStaticData('node');
+const staticData = $getWorkflowStaticData('node');
 
 // Access its data
 const lastExecution = staticData.lastExecution;

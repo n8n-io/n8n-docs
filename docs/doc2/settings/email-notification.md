@@ -18,7 +18,7 @@ To add a new notification, click `+ NEW` in the top right corner and the followi
 
 ![](/_images/doc2/DOC2_email-notification_2.png)
 
-In this you can define a custom name for the notification, select the document type and status as well as the time unit and enter the e-mail address of the person who should receive the corresponding notification.
+Here you can define a custom name for the notification, select the document type and status as well as the time unit and enter the e-mail address of the person who should receive the corresponding notification.
 
 <ins>The following status can be selected:</ins> 
 

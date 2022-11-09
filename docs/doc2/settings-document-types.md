@@ -70,7 +70,7 @@ For each field you can check the boxes if they are:
 
 ![](/_images/doc2/DOC2_field settings_fields.png)
 
-If you have completed all your settings and you wish to save them, please confirm this with the `SAVE SETTINGS` button, otherwise the settings will not be applied.
+If you have completed all your settings, and you wish to save them, please confirm this with the `SAVE SETTINGS` button. If this is not done, the settings will not be applied.
 
 ![](/_images/doc2/DOC2_field settings_fields_save settings.png)
 

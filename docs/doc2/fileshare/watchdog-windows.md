@@ -63,7 +63,7 @@ Make sure Document Splitting in the Classification and Extraction Settings is di
 
 
 ## Install poppler
-For the barcode Splitting to work you need to download the poppler.zip - unzip it and add the bin lib to the PATH system Variable.
+For the barcode Splitting to work you need to download poppler.zip - unzip it and add the bin lib to the PATH system Variable.
 
 1. Search for System variable or Systemumgebungsvariablen
 2. click on System Variables ![](/_images/doc2/watchdog/systemeigenschaften.png)

@@ -16,11 +16,11 @@ Expressions allow you to set node parameters dynamically based on data from:
 - Your Doc² environment
 
 
-n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 
+WF² uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 
 
 You can execute JavaScript within an expression. 
 
-n8n supports two libraries that make common tasks easier:
+WF² supports two libraries that make common tasks easier:
 
 - [Luxon](https://github.com/moment/luxon/), for working with data and time.
 - [JMESPath](https://jmespath.org/), for querying JSON.
@@ -47,7 +47,7 @@ Your webhook data looks similar to this:
 [
   {
     "headers": {
-      "host": "n8n.instance.address",
+      "host": "WF².instance.address",
       ...
     },
     "params": {},
@@ -71,7 +71,7 @@ In the next node in the workflow, you want to get just the value of `city`. You 
 
 This expression:
 
-1. Accesses the incoming JSON-formatted data using n8n's custom `$json` variable.
+1. Accesses the incoming JSON-formatted data using WF²'s custom `$json` variable.
 2. Finds the value of `city` (in this example, "New York"). Note that this example uses JMESPath syntax to query the JSON data. You can also write this expression as `{{$json['body']['city']}}`.
 
 

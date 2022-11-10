@@ -17,7 +17,7 @@ of the Software. Any license notice or attribution required by
 the License must also include this Commons Clause License
 Condition notice.
 
-Software: n8n
+Software: WF²
 
 License: Apache 2.0
 
@@ -215,7 +215,7 @@ Licensor: Doc² GmbH
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [2020] [n8n GmbH]
+   Copyright [2020] [WF² GmbH]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

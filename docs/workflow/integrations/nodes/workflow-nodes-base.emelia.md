@@ -21,7 +21,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a campaign, add a contact, and get the campaign from Emelia. You can also find the [workflow](https://n8n.io/workflows/961) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a campaign, add a contact, and get the campaign from Emelia. You can also find the [workflow](https://WF².io/workflows/961) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Emelia]()
 

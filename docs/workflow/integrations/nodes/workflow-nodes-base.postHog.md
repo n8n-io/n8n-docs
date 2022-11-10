@@ -20,7 +20,7 @@
 
 ## Example Usage
 
-This workflow allows you to create an event in PostHog when a request is made to a webhook URL. You can also find the [workflow](https://n8n.io/workflows/968) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create an event in PostHog when a request is made to a webhook URL. You can also find the [workflow](https://WF².io/workflows/968) on Workflow².io. This example usage workflow uses the following nodes.
 - [Webhook](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/)
 - [PostHog]()
 
@@ -36,7 +36,7 @@ This node will trigger the workflow. We will make a GET request to the test webh
 2. Copy the displayed URL. We will make a GET request to this URL later on.
 3. Save the workflow to register the webhook.
 4. Click on ***Execute Node*** to run the node.
-5. In a new browser tab, paste the URL that you copied in the previous step and append `?event=login` to it. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?event=login`. Here, we are passing a query parameter called `event` and assigning the value `login` to it.
+5. In a new browser tab, paste the URL that you copied in the previous step and append `?event=login` to it. Your URL should look similar to the following URL:`https://your-WF².url/webhook/path?event=login`. Here, we are passing a query parameter called `event` and assigning the value `login` to it.
 6. Press Enter (or Return) to make a request to the test webhook URL.
 
 In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.

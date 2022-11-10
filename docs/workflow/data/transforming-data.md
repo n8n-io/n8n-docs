@@ -1,10 +1,10 @@
 # Transforming data
 
-n8n uses a predefined [data structure](/data/data-structure/) that allows all nodes to process incoming data correctly.
+WF² uses a predefined [data structure](/data/data-structure/) that allows all nodes to process incoming data correctly.
 
 Your incoming data may have a different data structure, in which case you will need to transform it to allow each item to be processed individually.
 
-For example, the image below shows the output of an [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) node that returns data incompatible with n8n’s data structure. The node returns the data and displays that only one item was returned.
+For example, the image below shows the output of an [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/) node that returns data incompatible with WF²’s data structure. The node returns the data and displays that only one item was returned.
 
 ![HTTP Request node output](/_images/data/transforming-data/HTTPRequest_output.png)
 

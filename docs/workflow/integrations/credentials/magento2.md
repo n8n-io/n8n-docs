@@ -21,7 +21,7 @@ From your Magento [admin](https://docs.magento.com/user-guide/stores/admin.html)
 7. Select **Allow** to display a dialog screen with the credentials.
 8. Copy the **Access Token** value to use in Workflow².
 
-From n8n:
+From WF²:
 
 1. Enter the **Host** address of your Magento store.
 2. Enter the **Access Token** obtained above.

@@ -13,4 +13,4 @@ You can use these credentials to authenticate the following nodes with Grafana.
 2. Click the "Add API key" button and enter any ***Key name***.
 3. Click ***Add*** and copy the key shown.
 4. Use the key with your Grafana credentials in Workflow².
-5. Enter the base URL of your instance (e.g. `https://n8n.grafana.net`) in Workflow².
+5. Enter the base URL of your instance (e.g. `https://WF².grafana.net`) in Workflow².

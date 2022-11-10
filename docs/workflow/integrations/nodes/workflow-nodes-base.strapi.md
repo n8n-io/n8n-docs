@@ -29,7 +29,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get an entry in Strapi. You can also find the [workflow](https://n8n.io/workflows/779) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get an entry in Strapi. You can also find the [workflow](https://WF².io/workflows/779) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Strapi]()
@@ -48,7 +48,7 @@ We will use the Set node to set the title, content, and description for an entry
 
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `Title` in the ***Name*** field.
-3. Enter `Automate Strapi with n8n` in the ***Value*** field.
+3. Enter `Automate Strapi with WF²` in the ***Value*** field.
 4. Click on ***Add Value*** and select 'String' from the dropdown list.
 5. Enter `Content` in the ***Name*** field.
 6. Enter `Strapi is a headless CMS. We will use Strapi and Doc² to automate our content creation workflows.` in the ***Value*** field.
@@ -85,7 +85,7 @@ We will use the Set node to ensure that only the data that we set in this node g
 4. Select the following in the ***Variable Selector*** section: Nodes > Strapi > Output Data > JSON > id. You can also add the following expression: `{{$node["Strapi"].json["id"]}}`.
 5. Click on ***Add Value*** and select 'String' from the dropdown list.
 6. Enter `slug` in the ***Name*** field.
-7. Enter `automate-strapi-with-n8n` in the ***Value*** field.
+7. Enter `automate-strapi-with-WF²` in the ***Value*** field.
 8. Toggle ***Keep Only Set*** to `true`. We set this option to true to ensure that only the data that we have set in this node get passed on to the next nodes in the workflow.
 9. Click on ***Execute Node*** to run the node.
 

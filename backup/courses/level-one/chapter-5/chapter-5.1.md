@@ -26,14 +26,14 @@ Now, in your Editor UI, add an *HTTP Request node* like you learned in the [less
 In the left panel, select:
 
 - *Authentication:* Header Auth
-- *URL:* `https://internal.users.n8n.cloud/webhook/custom-erp`
+- *URL:* `https://internal.users.WF².cloud/webhook/custom-erp`
 - *Options > Add Option > Split Into Items:* toggle to true.
 This option will output each element of an array as its own item.
 - *Headers > Add Header:*
   - *Name:* `unique_id`
   - *Value:* your_unique_id
 
-**Note:** In case you don't already have your Unique ID, please sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to obtain it.
+**Note:** In case you don't already have your Unique ID, please sign-up [here](https://WF²-community.typeform.com/to/PDEMrevI) to obtain it.
 
 Since you selected *Header Authentication*, now you need to enter your credentials in order to be able to access the data.
 

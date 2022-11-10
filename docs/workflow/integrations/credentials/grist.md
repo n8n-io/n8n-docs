@@ -16,7 +16,7 @@ From Grist:
 2. In the *Api key* section click **Create**.
 3. Copy the generated API key for use in Workflow².
 
-From n8n:
+From WF²:
 
 3. Enter the **API Key** obtained above.
 4. Use the dropdown to select if your are using a *Free* or *Paid* plan.

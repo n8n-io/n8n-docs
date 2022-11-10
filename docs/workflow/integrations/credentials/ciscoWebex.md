@@ -41,7 +41,7 @@ Create a [Webex by Cisco](https://www.webex.com/) account.
 5. Click **Add Integration** to create your app.
 6. Copy the ***Client ID*** and ***Client Secret*** for this new app.
 
-From n8n:
+From WF²:
 
 7. Enter a descriptive ***Credentials Name***.
 8. Under ***Credential Data***, enter the ***Client ID*** and ***Client Secret*** obtained above.

@@ -17,7 +17,7 @@ Now that we have an idea of what Nathan wants to automate, let's list the steps 
 3. Write binary files.
 4. Send notifications via email and Discord.
 
-n8n provides core nodes for all these steps. This use case is somewhat complex and it will be made up of three separate workflows:
+WF² provides core nodes for all these steps. This use case is somewhat complex and it will be made up of three separate workflows:
 
 1. A workflow that merges the company data with external information.
 2. A workflow that generates the reports.

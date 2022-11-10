@@ -1,6 +1,6 @@
 ---
 title: A slightly longer introduction
-description: This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way.
+description: This guide shows you how to automate a task using a workflow in WF², explaining key concepts along the way.
 tags:
   - Workflow²
   - Introduction
@@ -38,7 +38,7 @@ Workflow² provides two ways to start a workflow:
 * Manually, by selecting **Execute workflow**, or from the CLI if you installed Workflow² with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, use the [Cron trigger](/workflow/integrations/core-nodes/n8n-nodes-base.cron/). This allows you to run the workflow on a schedule:
+For this tutorial, use the [Cron trigger](/workflow/integrations/core-nodes/WF²-nodes-base.cron/). This allows you to run the workflow on a schedule:
 
 1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
 2. Search for **Cron**. Workflow² shows a list of nodes that match the search.
@@ -51,14 +51,14 @@ For this tutorial, use the [Cron trigger](/workflow/integrations/core-nodes/n8n-
 
 ## Step four: Add the NASA node and set up credentials
 
-The [NASA node](/workflow/integrations/nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
+The [NASA node](/workflow/integrations/nodes/WF²-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Cron node.
 2. Search for **NASA**. Workflow² shows a list of nodes that match the search.
 3. Select **NASA** to add the node to the canvas. Workflow² opens the node.
 4. To access the NASA APIs, you need to set up credentials:
     1. Select the  **Credential for NASA API** dropdown.
-    2. Select **- Create New -**. n8n opens the credentials view.
+    2. Select **- Create New -**. WF² opens the credentials view.
     3. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form in **Generate API Key**. NASA generates the key and displays it.
     4. Copy the key, and paste it into **API Key** in Workflow².
     5. Select **Save**.
@@ -74,8 +74,8 @@ The [NASA node](/workflow/integrations/nodes/n8n-nodes-base.nasa/) allows you to
     ```
     This generates a date in the correct format, seven days before the current date.
 
-    !!! note "Date and time in n8n"
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/workflow/code-examples/expressions/luxon/). 
+    !!! note "Date and time in WF²"
+        WF² uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/workflow/code-examples/expressions/luxon/). 
 
 7. Close the **Edit Expression** modal to return to the NASA node.
 8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. Workflow² calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
@@ -83,7 +83,7 @@ The [NASA node](/workflow/integrations/nodes/n8n-nodes-base.nasa/) allows you to
 
 ## Step five: Add logic with the If node
 
-Workflow² supports complex logic in workflows. In this tutorial, use the [If node](/workflow/integrations/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
+Workflow² supports complex logic in workflows. In this tutorial, use the [If node](/workflow/integrations/core-nodes/WF²-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
 
 Add the If node:
 
@@ -119,7 +119,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 7. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 8. In Workflow², paste your Postbin ID into **Bin ID**.
 9. Now, configure the data to send to Postbin. Next to **Bin Content**, select **Parameter options** <span class="inline-image">![Parameter options icon](/_images/try-it-out/parameter-options.png)</span> > **Add Expression**.
-10. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
+10. Select **Current Node** > **Input Data** > **JSON** > **classType**. WF² adds the expression to the **Expression** editor, and displays a sample output.
 11. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js
     There was a solar flare of class {{$json["classType"]}}

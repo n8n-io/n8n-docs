@@ -29,7 +29,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a new member and update their information in Orbit using the Orbit node. It also allows you to create a note and a post for the new member in Orbit. You can also find the [workflow](https://n8n.io/workflows/765) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a new member and update their information in Orbit using the Orbit node. It also allows you to create a note and a post for the new member in Orbit. You can also find the [workflow](https://WF².io/workflows/765) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Orbit]()
 
@@ -73,7 +73,7 @@ This node will update the tags of the member that we created in the previous nod
 8. Enter the tags in the ***Tags to Add*** field. You can add multiple tags by separating them with a comma.
 9. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node updates the information of the new member that we created in the previous node. The node adds the tags `n8nConf` and `MLH` to the new member.
+In the screenshot below, you will notice that the node updates the information of the new member that we created in the previous node. The node adds the tags `WF²Conf` and `MLH` to the new member.
 
 ![Using the Orbit node to add tags to a member](/_images/integrations/nodes/orbit/orbit1_node.png)
 

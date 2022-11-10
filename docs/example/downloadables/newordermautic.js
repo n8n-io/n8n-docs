@@ -5,7 +5,7 @@
 		  "functionCode": "dict = {\n  'first_name': item.billing.first_name,\n  'last_name': item.billing.last_name,\n  'email': item.billing.email,\n}\n\nreturn dict;"
 		},
 		"name": "Normalize",
-		"type": "n8n-nodes-base.functionItem",
+		"type": "WF²-nodes-base.functionItem",
 		"typeVersion": 1,
 		"position": [
 		  460,
@@ -25,7 +25,7 @@
 		  }
 		},
 		"name": "New Contact?",
-		"type": "n8n-nodes-base.if",
+		"type": "WF²-nodes-base.if",
 		"typeVersion": 1,
 		"position": [
 		  980,
@@ -37,7 +37,7 @@
 		  "functionCode": "thelist = []\n\nitems.forEach(function(item) {\n  console.log(item['json']['fields']['all']['email'])\n  thelist.push(item['json']['fields']['all']['email'])\n})\nconsole.log(thelist)\n\nreturn {thelist}"
 		},
 		"name": "Normalize Contactdata",
-		"type": "n8n-nodes-base.function",
+		"type": "WF²-nodes-base.function",
 		"typeVersion": 1,
 		"position": [
 		  800,
@@ -54,7 +54,7 @@
 		  "options": {}
 		},
 		"name": "Yes - New Contact",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  1180,
@@ -72,7 +72,7 @@
 		  }
 		},
 		"name": "Mautic - Get Contacts",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  620,
@@ -88,7 +88,7 @@
 		  "contactId": "={{$json[\"id\"]}}"
 		},
 		"name": "Webshop - WelcomeEmail",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  1360,
@@ -102,7 +102,7 @@
 		  "event": "order.created"
 		},
 		"name": "New OrderTrigger",
-		"type": "n8n-nodes-base.wooCommerceTrigger",
+		"type": "WF²-nodes-base.wooCommerceTrigger",
 		"typeVersion": 1,
 		"position": [
 		  280,

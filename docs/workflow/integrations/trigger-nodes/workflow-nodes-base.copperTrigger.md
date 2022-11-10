@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive an update when a new project is created in Copper. You can also find the [workflow](https://n8n.io/workflows/537) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive an update when a new project is created in Copper. You can also find the [workflow](https://WF².io/workflows/537) on the website. This example usage workflow would use the following node.
 - [Copper Trigger]()
 
 The final workflow should look like the following image.

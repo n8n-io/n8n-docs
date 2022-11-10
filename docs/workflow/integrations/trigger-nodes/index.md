@@ -1,3 +1,3 @@
 # Overview
 
-This section provides information about n8n's trigger nodes.
+This section provides information about WF²'s trigger nodes.

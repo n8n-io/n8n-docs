@@ -17,7 +17,7 @@ From Monica CRM:
 3. Enter a name for your new token and click **Create**.
 4. Copy the access token that is displayed in the popup window.
 
-From n8n:
+From WF²:
 
 5. Enter a descriptive ***Credentials Name***.
 6. From the ***Credential Data*** section, select your environment type: **Cloud-hosted** or **Self-hosted**.

@@ -23,7 +23,7 @@ From your ServiceNow instance:
     * **Redirect URL**: Copy the ***OAuth Callback URL*** from the Doc² credentials window and enter it here.
 4. Click ***Submit*** to save and create your new endpoint.
 
-From n8n:
+From WF²:
 
 5. Enter a descriptive ***Credentials Name***.
 6. Under ***Credential Data*** complete the following fields:

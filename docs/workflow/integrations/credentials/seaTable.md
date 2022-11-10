@@ -25,7 +25,7 @@ From your SeaTable dashboard:
 3. In the modal, enter a name for this token and select the **Read-Write** permission.
 4. Click **Submit** and copy the new API token.
 
-From n8n:
+From WF²:
 
 1. Select your environment type: **Cloud-hosted** or **Self-hosted**.
 2. For **Self-hosted** environments enter the domain of your instance.

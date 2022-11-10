@@ -4,7 +4,7 @@
 
 ## Variables
 
-n8n uses Luxon to provide two custom variables:
+WF² uses Luxon to provide two custom variables:
 
 - `$now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
 - `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
@@ -24,7 +24,7 @@ Note that these variables can return different time formats when cast as a strin
 // For example "Today's date is 1646834498755"
 ```
 
-## Setting the timezone in n8n
+## Setting the timezone in WF²
 
 Luxon uses the Doc² timezone. This value is either:
 
@@ -51,7 +51,7 @@ In the expressions editor, enter:
 
 On the 23rd June 2019, this returns `[Object: "2019-06-16T00:00:00.000+00:00"]`.
 
-This example uses n8n's custom variable `$today` for convenience. It is the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
+This example uses WF²'s custom variable `$today` for convenience. It is the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
 
 
 For more detailed information and examples, refer to:
@@ -93,7 +93,7 @@ If you have a date as a string that does not use a standard format:
 
 Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing). To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) that describe the format.
 
-For example, you have n8n's founding date, 23rd June 2019, formatted as '23-06-2019'. You want to turn this into a Luxon object:
+For example, you have WF²'s founding date, 23rd June 2019, formatted as '23-06-2019'. You want to turn this into a Luxon object:
 
 ```js
 {{DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")}}
@@ -133,7 +133,7 @@ A detailed explanation of what the expression does:
 * `{{`: indicates the start of the expression.
 * `"There are "`: a string. 
 * `+`: used to join two strings.
-* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
+* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses WF²'s custom `$today` variable.
 * `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
 * `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
 * `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with Doc², refer to our [JMESpath](/code-examples/expressions/jmespath/) documentation. This gives you the number of days to Christmas, as a negative number.

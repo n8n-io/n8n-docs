@@ -10,7 +10,7 @@ tags:
 The Webhook node is one of the most powerful nodes in Workflow². It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an Doc² workflow. This allows several different services to connect to Doc² and run a workflow when data is received.
 
 !!! note " Keep in mind"
-    1. When using the Webhook node on the localhost, ensure that Doc² is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
+    1. When using the Webhook node on the localhost, ensure that Doc² is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#WF²-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#WF²-with-tunnel).
 2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don’t forget that the data flowing through the webhook won’t be visible in the Editor UI with the Production webhook.
 
 
@@ -68,7 +68,7 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 
 ## Example Usage
 
-This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://n8n.io/workflows/807) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to receive the weather information of a city using the Webhook and the OpenWeatherMap nodes. You can also find the [workflow](https://WF².io/workflows/807) on Workflow².io. This example usage workflow uses the following nodes.
 - [Webhook]()
 - [OpenWeatherMap](/workflow/integrations/nodes/workflow-nodes-base.openWeatherMap/)
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
@@ -87,7 +87,7 @@ This node will trigger the workflow. We will make a GET request to the Test URL 
 4. Select 'All Entries' from the ***Response Data***. This will return all the entries of the last executed node.
 5. Save the workflow to register the webhook.
 6. Click on ***Execute Node*** to run the node.
-7. In a new browser tab, paste the URL you copied in the previous step and append it with `?city=Berlin`. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?city=Berlin`. We are passing a query parameter `city` and assigning it the value `Berlin`.
+7. In a new browser tab, paste the URL you copied in the previous step and append it with `?city=Berlin`. Your URL should look similar to the following URL:`https://your-WF².url/webhook/path?city=Berlin`. We are passing a query parameter `city` and assigning it the value `Berlin`.
 8. Press Enter (or Return) to make a request to the Test Webhook URL.
 
 In the screenshot below, you will notice that the node triggers the workflow and receives a query parameter. We will use the value of the query parameter in the next node in the workflow.
@@ -179,19 +179,19 @@ You can add route parameters to the webhook URL path. This is useful when you ar
 You can use [cURL](https://curl.se/) to make HTTP requests that will trigger the Webhook node. To use cURL, make sure that you have installed it on your machine. You can follow [this guide](https://www.booleanworld.com/curl-command-tutorial-examples/) to install cURL on your machine.
 Based on your use-case, you can make an HTTP request with or without any parameters. You can also send files with the HTTP request using cURL.
 
-**Note:** In the following commands, replace `https://your-n8n.url/webhook/path` with your webhook URL.
+**Note:** In the following commands, replace `https://your-WF².url/webhook/path` with your webhook URL.
 
 - #### Make an HTTP request without any parameters
  To make a GET request without any parameters, use the following command in your terminal.
 
 ```sh
-curl --request GET https://your-n8n.url/webhook/path
+curl --request GET https://your-WF².url/webhook/path
 ```
 
 To make a POST request, use the following command.
 
 ```bash
-curl --request POST https://your-n8n.url/webhook/path
+curl --request POST https://your-WF².url/webhook/path
 ```
 
 - #### Make an HTTP request with body parameter
@@ -199,7 +199,7 @@ curl --request POST https://your-n8n.url/webhook/path
 To make an HTTP request with a body parameter, use the following command.
 
 ```sh
-curl --request GET https://your-n8n.url/webhook/path --data 'key=value'
+curl --request GET https://your-WF².url/webhook/path --data 'key=value'
 ```
 
 - #### Make an HTTP request with header parameter
@@ -207,7 +207,7 @@ curl --request GET https://your-n8n.url/webhook/path --data 'key=value'
 To make an HTTP request with a header parameter, use the following command.
 
 ```sh
-curl --request GET https://your-n8n.url/webhook/path --header 'key=value'
+curl --request GET https://your-WF².url/webhook/path --header 'key=value'
 ```
 
 - #### Make an HTTP request to send a file
@@ -215,7 +215,7 @@ curl --request GET https://your-n8n.url/webhook/path --header 'key=value'
 To send a file with the HTTP request, use the following command.
 
 ```sh
-curl --request GET https://your-n8n.url/webhook/path --from 'key=@/path/to/file'
+curl --request GET https://your-WF².url/webhook/path --from 'key=@/path/to/file'
 ```
 Replace `/path/to/file` with the path of the file you want to send.
 

@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a new contact gets added in Autopilot and add them to a base in Airtable. You can also find the [workflow](https://n8n.io/workflows/991) on Workflow².io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a new contact gets added in Autopilot and add them to a base in Airtable. You can also find the [workflow](https://WF².io/workflows/991) on Workflow².io. This example usage workflow would use the following node.
 - [Autopilot Trigger]()
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)

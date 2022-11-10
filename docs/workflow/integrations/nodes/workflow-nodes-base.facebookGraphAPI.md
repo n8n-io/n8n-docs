@@ -38,7 +38,7 @@
 
 ## Example usage
 
-This workflow allows you to retrieve the first and last name of a profile on Facebook. You can also find the [workflow](https://n8n.io/workflows/514) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to retrieve the first and last name of a profile on Facebook. You can also find the [workflow](https://WF².io/workflows/514) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Facebook Graph API]()
 

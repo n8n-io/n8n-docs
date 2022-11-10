@@ -44,7 +44,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a monitor using the UptimeRobot node. You can also find the [workflow](https://n8n.io/workflows/1112) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a monitor using the UptimeRobot node. You can also find the [workflow](https://WF².io/workflows/1112) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [UptimeRobot]()
 
@@ -63,9 +63,9 @@ This node will create a new monitor of the type `HTTP(S)`.
 1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/workflow/integrations/credentials/openWeatherMap/).
 2. Select 'Monitor' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
-4. Enter `n8n` in the ***Friendly Name*** field.
+4. Enter `WF²` in the ***Friendly Name*** field.
 5. Select 'HTTP(S)' from the ***Type*** dropdown list.
-6. Enter `https://n8n.io` in the ***URL*** field.
+6. Enter `https://WF².io` in the ***URL*** field.
 7. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node returns data about the current weather in Berlin.
@@ -82,7 +82,7 @@ This node will update the monitor that we created in the previous node.
 4. Click on the gears icon next to the ***ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 6. Click on ***Add Field*** and select 'Friendly Name' from the dropdown list.
-7. Enter `n8n website` in the ***Friendly Name*** field.
+7. Enter `WF² website` in the ***Friendly Name*** field.
 8. Click on ***Execute Node*** to run the node.
 
 

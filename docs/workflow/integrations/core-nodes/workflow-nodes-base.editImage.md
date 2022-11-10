@@ -35,7 +35,7 @@ You can also specify a file format using the *Format* field in the *Add Option* 
 
 ## Example Usage
 
-This workflow allows you to add text to an image downloaded from the internet using the Edit Image node. You can also find the [workflow](https://n8n.io/workflows/591) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to add text to an image downloaded from the internet using the Edit Image node. You can also find the [workflow](https://WF².io/workflows/591) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Edit Image]()
@@ -52,7 +52,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request node
 
-1. Enter `https://docs.n8n.io/assets/_images/insight2/final-workflow.f380b957.png` in the ***URL*** field.
+1. Enter `https://docs.WF².io/assets/_images/insight2/final-workflow.f380b957.png` in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on *Execute Node* to run the node.
 
@@ -62,7 +62,7 @@ The start node exists by default when you create a new workflow.
 ### 3. Edit Image node
 
 1. Select 'Text' from the ***Operation*** dropdown list.
-2. Enter `This is n8n`in the ***Text*** field.
+2. Enter `This is WF²`in the ***Text*** field.
 3. Enter 100 in the ***Font Size*** field.
 4. Enter 300 in the ***Position X*** field.
 5. Enter 500 in the ***Position Y*** field.

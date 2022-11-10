@@ -29,7 +29,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a post a Reddit and add a comment to that post. You can also find the [workflow](https://n8n.io/workflows/928) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a post a Reddit and add a comment to that post. You can also find the [workflow](https://WF².io/workflows/928) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Reddit]()
 
@@ -43,15 +43,15 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Reddit node (create: post)
 
-This node will create a post under the subreddit `n8n`. If you want to create a post under a different subreddit, enter the name of that subreddit instead.
+This node will create a post under the subreddit `WF²`. If you want to create a post under a different subreddit, enter the name of that subreddit instead.
 
 1. First of all, you'll have to enter credentials for the Reddit node. You can find out how to do that [here](/workflow/integrations/credentials/reddit/).
-2. Enter `n8n` in the ***Subreddit*** field.
+2. Enter `WF²` in the ***Subreddit*** field.
 3. Enter a title in the ***Title*** field.
 4. Enter the content of the post in the ***Text*** field.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new post under the subreddit `n8n`.
+In the screenshot below, you will notice that the node creates a new post under the subreddit `WF²`.
 
 ![Using the Reddit node to create a post](/_images/integrations/nodes/reddit/reddit_node.png)
 

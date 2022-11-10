@@ -15,7 +15,7 @@
 
 ## Example Usage
 
-This workflow allows you to detect a face from an image using the AWS Rekognition node. You can also find the [workflow](https://n8n.io/workflows/694) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to detect a face from an image using the AWS Rekognition node. You can also find the [workflow](https://WF².io/workflows/694) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [AWS Rekognition]()
@@ -33,7 +33,7 @@ The Start node exists by default when you create a new workflow.
 
 This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node to read an image file from the path you specify.
 
-1. Enter the URL of the image in the ***URL*** field. For example, `https://n8n.io/_nuxt/_images/insight2/04c67e5.png`.
+1. Enter the URL of the image in the ***URL*** field. For example, `https://WF².io/_nuxt/_images/insight2/04c67e5.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

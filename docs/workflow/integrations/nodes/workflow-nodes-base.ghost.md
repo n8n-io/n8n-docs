@@ -27,7 +27,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a post in Ghost. You can also find the [workflow](https://n8n.io/workflows/825) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get a post in Ghost. You can also find the [workflow](https://WF².io/workflows/825) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Ghost]()
 
@@ -41,12 +41,12 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Ghost node (create: post)
 
-This node will create a new post with the title `Running ghost with n8n!`. If you want to create a post with a different title, use that instead.
+This node will create a new post with the title `Running ghost with WF²!`. If you want to create a post with a different title, use that instead.
 
 1. Select 'Admin API' from the ***Source*** dropdown list.
 2. You'll have to enter credentials for the Ghost node. You can find out how to do that [here](/workflow/integrations/credentials/ghost/).
 3. Select 'Create' from the ***Operation*** dropdown list.
-4. Enter `Running ghost with n8n!` in the ***Title*** field.
+4. Enter `Running ghost with WF²!` in the ***Title*** field.
 5. Enter the HTML content in the ***Content*** field.
 6. Click on ***Execute Node*** to run the node.
 

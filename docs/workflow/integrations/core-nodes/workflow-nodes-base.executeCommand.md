@@ -24,7 +24,7 @@ The Execute Command node has two properties:
 
 ## Example Usage
 
-This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow is triggered twice a day, and if the memory usage exceeds 80%, it will send an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow is triggered twice a day, and if the memory usage exceeds 80%, it will send an SMS using the Twilio node. You can also find the [workflow](https://WF².io/workflows/716) on Workflow².io. This example usage workflow would use the following nodes.
 - [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [Execute Command]()
 - [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
@@ -128,14 +128,14 @@ If you want to run the curl command in the Execute Command node, you will have t
 1. Create a file named Dockerfile.
 2. Add the below code snippet to the Dockerfile.
 ```
-FROM n8nio/n8n
+FROM WF²io/WF²
 RUN apk --update add curl
 ```
 3. In the same folder, execute the command below command to build the Docker image.
 ```
-docker build -t n8n-curl
+docker build -t WF²-curl
 ```
-4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-curl`.
+4. Replace the Docker image you used before. For example, replace `WF²io/WF²` with `WF²-curl`.
 5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
 
 

@@ -1,6 +1,6 @@
 import express = require('express');
 
-import { BinaryDataManager } from 'n8n-core';
+import { BinaryDataManager } from 'WF²-core';
 import {
 	getExecutions,
 	getExecutionInWorkflows,

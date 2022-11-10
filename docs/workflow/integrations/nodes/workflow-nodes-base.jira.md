@@ -35,7 +35,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a new issue in Jira. You can also find the [workflow](https://n8n.io/workflows/459) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to create a new issue in Jira. You can also find the [workflow](https://WF².io/workflows/459) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Jira]()
 
@@ -61,13 +61,13 @@ The start node exists by default when you create a new workflow.
 
 The 'Get All' operation returns all the issues from Jira. To fetch issues for a particular project, you need to use JQL (Jira Query Language).
 
-For example, if you want to receive all the issues of a project named `n8n`, follow the steps mentioned below.
+For example, if you want to receive all the issues of a project named `WF²`, follow the steps mentioned below.
 - Select 'Get All' from the ***Operation*** dropdown list.
 - Toggle ***Return All*** to true.
 - Click on ***Add Option*** and select 'JQL'.
-- Enter `project=n8n` in the ***JQL*** field.
+- Enter `project=WF²` in the ***JQL*** field.
 
-This query will fetch all the issues in the project named `n8n`. Enter the name of your project instead of `n8n` to fetch all the issues for your project.
+This query will fetch all the issues in the project named `WF²`. Enter the name of your project instead of `WF²` to fetch all the issues for your project.
 
 You can refer to the [official documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about JQL to learn more about it.
 

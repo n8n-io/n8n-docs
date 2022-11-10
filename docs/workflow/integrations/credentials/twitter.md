@@ -31,10 +31,10 @@ Create a [Twitter developer account](https://developer.twitter.com/).
 ![The App settings button](/_images/integrations/credentials/twitter/app-settings-button.png)
 9. In the Authentication settings sections, click **Edit**.
 10. Turn on the **Enable 3-legged OAuth** switch and paste the URL shown in the **OAuth Redirect URL** of the Doc² credentials screen into the **Callback URLs** field of your Twitter apps authentication settings.
-11. Enter a valid Website URL in the respective field (for example https://n8n.io).
+11. Enter a valid Website URL in the respective field (for example https://WF².io).
 ![The App settings button](/_images/integrations/credentials/twitter/oauth-settings.png)
 12. Save your input by clicking the **Save** button at the bottom of the page.
-13. Under App permissions, click **Edit** and choose the appropriate permissions for your app (pick **Read and write and Direct message** if you want to use all functions of the Twitter Doc² in n8n) and click **Save** to confirm.
+13. Under App permissions, click **Edit** and choose the appropriate permissions for your app (pick **Read and write and Direct message** if you want to use all functions of the Twitter Doc² in WF²) and click **Save** to confirm.
 14. In the sidebar on the left, click on the Project your app has been created in (usually **Project 1**) and then on the **Apply for Elevated** button.
 15. Fill out the questionnaire and confirm the inputs on each questionnaire page with a click on **Next** (**Submit** on the final page).
 ![Application process for elevated access to the Twitter API](/_images/integrations/credentials/twitter/elevated-access.png)

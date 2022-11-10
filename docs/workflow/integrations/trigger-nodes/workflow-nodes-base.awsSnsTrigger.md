@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates for events in AWS SNS. You can also find the [workflow](https://n8n.io/workflows/509) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates for events in AWS SNS. You can also find the [workflow](https://WF².io/workflows/509) on the website. This example usage workflow would use the following node.
 - [AWS SNS Trigger]()
 
 The final workflow should look like the following image.

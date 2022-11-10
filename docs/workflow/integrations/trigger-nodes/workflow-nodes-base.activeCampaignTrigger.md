@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a new account is added by an admin in ActiveCampaign. You can also find the [workflow](https://n8n.io/workflows/488) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a new account is added by an admin in ActiveCampaign. You can also find the [workflow](https://WF².io/workflows/488) on the website. This example usage workflow would use the following node.
 - [ActiveCampaign Trigger]()
 
 The final workflow should look like the following image.

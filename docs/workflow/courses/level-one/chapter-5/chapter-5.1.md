@@ -13,10 +13,10 @@ The first thing you need to do is get data from ABCorp's old data warehouse.
 
 In the previous chapter, you used a regular node for a specific app (YCombinator). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan's company.
 
-Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/core-nodes/n8n-nodes-base.httpRequest/){:target="_blank" .external} in n8n.
+Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/core-nodes/WF²-nodes-base.httpRequest/){:target="_blank" .external} in WF².
 
 !!! note "No node for that service?"
-    The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
+    The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in WF².
 
 
 Now, in your Editor UI, add an *HTTP Request node* like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
@@ -35,7 +35,7 @@ In the left panel, select:
     This option requires credentials to allow you to access the data.
 
 !!! note "Credentials"
-    Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
+    Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as WF² nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
 
 
 To add your credentials, click on the field *Credential for Header Auth* and select *Create New*. This will open the Credentials window.

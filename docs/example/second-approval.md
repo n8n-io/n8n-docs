@@ -37,7 +37,7 @@ First Approval workflow
 	"group": ""
 	},
 	"name": "Assign Finance 5000",
-	"type": "n8n-nodes-base.assignEmployee",
+	"type": "WF²-nodes-base.assignEmployee",
 	"typeVersion": 1,
 	"position": [
 	620,
@@ -62,7 +62,7 @@ First Approval workflow
 	"combineOperation": "any"
 	},
 	"name": ">5000?",
-	"type": "n8n-nodes-base.if",
+	"type": "WF²-nodes-base.if",
 	"typeVersion": 1,
 	"position": [
 	420,
@@ -83,7 +83,7 @@ First Approval workflow
 	}
 	},
 	"name": ">100?",
-	"type": "n8n-nodes-base.if",
+	"type": "WF²-nodes-base.if",
 	"typeVersion": 1,
 	"position": [
 	620,
@@ -97,7 +97,7 @@ First Approval workflow
 	"group": ""
 	},
 	"name": "Assign Finance 100",
-	"type": "n8n-nodes-base.assignEmployee",
+	"type": "WF²-nodes-base.assignEmployee",
 	"typeVersion": 1,
 	"position": [
 	800,
@@ -114,7 +114,7 @@ First Approval workflow
 	"status": "validated_pending_approval"
 	},
 	"name": "First",
-	"type": "n8n-nodes-base.statusTrigger",
+	"type": "WF²-nodes-base.statusTrigger",
 	"typeVersion": 1,
 	"position": [
 	240,
@@ -133,7 +133,7 @@ First Approval workflow
 	},
 	"id": "",
 	"name": "Approve/Reject Documents",
-	"type": "n8n-nodes-base.approvereject",
+	"type": "WF²-nodes-base.approvereject",
 	"typeVersion": 1,
 	"position": [
 	800,
@@ -207,7 +207,7 @@ Second Approval workflow
         "status": "approved_pending_second_approval"
       },
       "name": "Second",
-      "type": "n8n-nodes-base.statusTrigger",
+      "type": "WF²-nodes-base.statusTrigger",
       "typeVersion": 1,
       "position": [
         600,
@@ -225,7 +225,7 @@ Second Approval workflow
         "group": ""
       },
       "name": "Assign Head",
-      "type": "n8n-nodes-base.assignEmployee",
+      "type": "WF²-nodes-base.assignEmployee",
       "typeVersion": 1,
       "position": [
         980,
@@ -242,7 +242,7 @@ Second Approval workflow
         "group": ""
       },
       "name": "Assign Finance",
-      "type": "n8n-nodes-base.assignEmployee",
+      "type": "WF²-nodes-base.assignEmployee",
       "typeVersion": 1,
       "position": [
         1160,
@@ -260,7 +260,7 @@ Second Approval workflow
       },
       "id": "",
       "name": "Auto Approve",
-      "type": "n8n-nodes-base.approvereject",
+      "type": "WF²-nodes-base.approvereject",
       "typeVersion": 1,
       "position": [
         1160,
@@ -284,7 +284,7 @@ Second Approval workflow
         "combineOperation": "any"
       },
       "name": ">100",
-      "type": "n8n-nodes-base.if",
+      "type": "WF²-nodes-base.if",
       "typeVersion": 1,
       "position": [
         980,
@@ -306,7 +306,7 @@ Second Approval workflow
         "combineOperation": "any"
       },
       "name": ">5000",
-      "type": "n8n-nodes-base.if",
+      "type": "WF²-nodes-base.if",
       "typeVersion": 1,
       "position": [
         780,

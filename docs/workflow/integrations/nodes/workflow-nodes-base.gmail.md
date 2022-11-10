@@ -30,7 +30,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all messages with a certain label, remove the label from the messages, and add a new label to the messages. You can also find the [workflow](https://n8n.io/workflows/621) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to get all messages with a certain label, remove the label from the messages, and add a new label to the messages. You can also find the [workflow](https://WF².io/workflows/621) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Gmail]()
 
@@ -44,7 +44,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Gmail node (getAll: message)
 
-This node will return ten messages with the label `n8n` from Gmail. If you want to return all the messages toggle ***Return All*** to `true`.
+This node will return ten messages with the label `WF²` from Gmail. If you want to return all the messages toggle ***Return All*** to `true`.
 
 1. First of all, you'll have to enter credentials for the Gmail node. You can find out how to do that [here](/workflow/integrations/credentials/google/).
 2. Select 'Message' from the ***Resource*** dropdown list.
@@ -55,7 +55,7 @@ This node will return ten messages with the label `n8n` from Gmail. If you want 
 7. Select the label from the ***Label IDs*** dropdown list.
 8. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns ten email messages with the label `n8n`.
+In the screenshot below, you will notice that the node returns ten email messages with the label `WF²`.
 
 ![Using the Gmail node to get all messages with a particular label](/_images/integrations/nodes/gmail/gmail_node.png)
 
@@ -63,7 +63,7 @@ In the screenshot below, you will notice that the node returns ten email message
 
 ### 3. Gmail1 node (remove: messageLabel)
 
-This node will remove the label `n8n` from all the messages that you received in the previous node. If you want to remove a different label, select that label instead.
+This node will remove the label `WF²` from all the messages that you received in the previous node. If you want to remove a different label, select that label instead.
 
 1. Select the credentials that you entered in the previous Gmail node.
 2. Select 'Message Label' from the ***Resource*** dropdown list.
@@ -73,7 +73,7 @@ This node will remove the label `n8n` from all the messages that you received in
 6. Select the label from the ***Label IDs*** dropdown list.
 7. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node removes the `n8n` label from the messages that we received from the previous node.
+In the screenshot below, you will notice that the node removes the `WF²` label from the messages that we received from the previous node.
 
 ![Using the Gmail node to remove a label from the messages](/_images/integrations/nodes/gmail/gmail1_node.png)
 

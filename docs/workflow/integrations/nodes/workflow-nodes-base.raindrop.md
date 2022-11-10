@@ -28,7 +28,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a collection and create, update, and get a bookmark in Raindrop. You can also find the [workflow](https://n8n.io/workflows/959) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a collection and create, update, and get a bookmark in Raindrop. You can also find the [workflow](https://WF².io/workflows/959) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Raindrop]()
 
@@ -49,7 +49,7 @@ This node will create a new collection in Raindrop.
 3. Enter a title in the ***Title*** field.
 4. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new collection with the title `n8n-docs`.
+In the screenshot below, you will notice that the node creates a new collection with the title `WF²-docs`.
 
 ![Using the Raindrop node to create a new collection](/_images/integrations/nodes/raindrop/raindrop_node.png)
 
@@ -63,7 +63,7 @@ This node will create a new bookmark and add it to the collection that we create
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Collection*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > _id. You can also add the following expression: `{{$json["_id"]}}`.
-6. Enter `https://docs.n8n.io` in the ***Link*** field.
+6. Enter `https://docs.WF².io` in the ***Link*** field.
 7. Click on ***Add Field*** and select 'Title' from the dropdown list.
 8. Enter `Documentation` in the ***Title*** field.
 9. Click on ***Execute Node*** to run the node.
@@ -82,7 +82,7 @@ This node will update the bookmark that we created in the previous node.
 4. Click on the gears icon next to the ***Bookmark ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > _id. You can also add the following expression: `{{$json["_id"]}}`.
 6. Click on ***Add Field*** and select 'Title' from the dropdown list.
-7. Enter `n8n Documentation` in the ***Title*** field.
+7. Enter `WF² Documentation` in the ***Title*** field.
 8. Click on ***Execute Node*** to run the node.
 
 

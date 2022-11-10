@@ -66,7 +66,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a case in TheHive. You can also find the [workflow](https://n8n.io/workflows/808) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a case in TheHive. You can also find the [workflow](https://WF².io/workflows/808) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [TheHive]()
 
@@ -80,7 +80,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. TheHive node (create: case)
 
-This node will create a new case in TheHive with the title `n8n` and set its severity to `low`. You can create a case with a different title and severity.
+This node will create a new case in TheHive with the title `WF²` and set its severity to `low`. You can create a case with a different title and severity.
 
 1. First of all, you'll have to enter credentials for the TheHive node. You can find out how to do that [here](/workflow/integrations/credentials/theHive/).
 2. Select 'Case' from the ***Resource*** dropdown list.
@@ -93,7 +93,7 @@ This node will create a new case in TheHive with the title `n8n` and set its sev
 9. Enter tags in the ***Tags*** field. You can enter multiple tags separate by a comma.
 10. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new case with the title `n8n` and `low` severity .
+In the screenshot below, you will notice that the node creates a new case with the title `WF²` and `low` severity .
 
 ![Using TheHive node to create a new case](/_images/integrations/nodes/thehive/thehive_node.png)
 

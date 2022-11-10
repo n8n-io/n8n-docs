@@ -22,7 +22,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive a Mattermost message when a user updates their profile on Facebook. You can also find the [workflow](https://n8n.io/workflows/785) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to receive a Mattermost message when a user updates their profile on Facebook. You can also find the [workflow](https://WF².io/workflows/785) on Workflow².io. This example usage workflow would use the following nodes.
 - [Facebook Trigger]()
 - [Mattermost](/workflow/integrations/nodes/workflow-nodes-base.mattermost/)
 

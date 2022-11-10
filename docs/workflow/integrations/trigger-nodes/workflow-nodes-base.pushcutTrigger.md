@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to send an SMS to a number whenever you go out. You can also find the [workflow](https://n8n.io/workflows/870) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to send an SMS to a number whenever you go out. You can also find the [workflow](https://WF².io/workflows/870) on Workflow².io. This example usage workflow uses the following nodes.
 - [Pushcut Trigger]()
 - [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 

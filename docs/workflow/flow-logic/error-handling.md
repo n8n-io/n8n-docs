@@ -18,7 +18,7 @@ The Error Trigger node will trigger in case the execution fails and receives inf
 	{
 		"execution": {
 			"id": "231",
-			"url": "https://n8n.example.com/execution/231",
+			"url": "https://WF².example.com/execution/231",
 			"retryOf": "34",
 			"error": {
 				"message": "Example Error Message",

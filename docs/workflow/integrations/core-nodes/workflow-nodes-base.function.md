@@ -62,7 +62,7 @@ In Doc², all data passed between nodes is an array of objects. It has the follo
 
 ## Example usage
 
-This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://n8n.io/workflows/524) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to get today's date and day using the Function node. You can also find the [workflow](https://WF².io/workflows/524) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Function]()
 

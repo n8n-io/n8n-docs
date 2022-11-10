@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Using Auth Token
 
-From n8n:
+From WF²:
 
 1. Enter a descriptive ***Credentials Name***.
 2. In the ***Credentials Data*** section enter the following:

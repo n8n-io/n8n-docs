@@ -1,4 +1,4 @@
-# CLI commands for n8n
+# CLI commands for WF²
 
 
 
@@ -9,12 +9,12 @@ Workflows can not only be started by triggers, webhooks, or manually via the Edi
 Execute a saved workflow by its ID:
 
 ```bash
-n8n execute --id <ID>
+WF² execute --id <ID>
 ```
 
 Execute a workflow from a workflow file:
 ```bash
-n8n execute --file <WORKFLOW_FILE>
+WF² execute --file <WORKFLOW_FILE>
 ```
 
 ## Change the active status of a workflow
@@ -24,25 +24,25 @@ You can change the active status of a workflow via the CLI.
 Set the active status of a workflow by its ID to false:
 
 ```bash
-n8n update:workflow --id=<ID> --active=false
+WF² update:workflow --id=<ID> --active=false
 ```
 
 Set the active status of a workflow by its ID to true:
 
 ```bash
-n8n update:workflow --id=<ID> --active=true
+WF² update:workflow --id=<ID> --active=true
 ```
 
 Set the active status to false for all the workflows:
 
 ```bash
-n8n update:workflow --all --active=false
+WF² update:workflow --all --active=false
 ```
 
 Set the active status to true for all the workflows:
 
 ```bash
-n8n update:workflow --all --active=true
+WF² update:workflow --all --active=true
 ```
 
 ## Export workflows and credentials
@@ -67,25 +67,25 @@ There are a couple of flags available for this.
 Export all your workflows to the standard output (terminal):
 
 ```bash
-n8n export:workflow --all
+WF² export:workflow --all
 ```
 
 Export a workflow by its ID and specify the output file name:
 
 ```bash
-n8n export:workflow --id=<ID> --output=file.json
+WF² export:workflow --id=<ID> --output=file.json
 ```
 
 Export all workflows to a specific directory in a single file:
 
 ```bash
-n8n export:workflow --all --output=backups/latest/
+WF² export:workflow --all --output=backups/latest/
 ```
 
 Export all the workflows to a specific directory using the `--backup` flag (details above):
 
 ```bash
-n8n export:workflow --backup --output=backups/latest/
+WF² export:workflow --backup --output=backups/latest/
 ```
 
 ### Credentials
@@ -93,25 +93,25 @@ n8n export:workflow --backup --output=backups/latest/
 Export all your credentials to the standard output (terminal):
 
 ```bash
-n8n export:credentials --all
+WF² export:credentials --all
 ```
 
 Export credentials by their ID and specify the output file name:
 
 ```bash
-n8n export:credentials --id=<ID> --output=file.json
+WF² export:credentials --id=<ID> --output=file.json
 ```
 
 Export all credentials to a specific directory in a single file:
 
 ```bash
-n8n export:credentials --all --output=backups/latest/
+WF² export:credentials --all --output=backups/latest/
 ```
 
 Export all the credentials to a specific directory using the `--backup` flag (details above):
 
 ```bash
-n8n export:credentials --backup --output=backups/latest/
+WF² export:credentials --backup --output=backups/latest/
 ```
 
 Export all the credentials in a decrypted (plain text) format. This can be used to migrate from one installation to another that has a different secret key (in the config file).
@@ -119,7 +119,7 @@ Export all the credentials in a decrypted (plain text) format. This can be used 
 **Note:** All sensitive information will be visible in the files.
 
 ```bash
-n8n export:credentials --all --decrypted --output=backups/decrypted.json
+WF² export:credentials --all --decrypted --output=backups/decrypted.json
 ```
 
 
@@ -153,12 +153,12 @@ In this case, you can edit the names from the Doc² interface and export again o
 Import workflows from a specific file:
 
 ```bash
-n8n import:workflow --input=file.json
+WF² import:workflow --input=file.json
 ```
 Import all the workflow files (*.json) from the specified directory:
 
 ```bash
-n8n import:workflow --separate --input=backups/latest/
+WF² import:workflow --separate --input=backups/latest/
 ```
 
 ### Credentials
@@ -166,11 +166,11 @@ n8n import:workflow --separate --input=backups/latest/
 Import credentials from a specific file:
 
 ```bash
-n8n import:credentials --input=file.json
+WF² import:credentials --input=file.json
 ```
 
 Import all the credentials files (*.json) from the specified directory:
 
 ```bash
-n8n import:credentials --separate --input=backups/latest/
+WF² import:credentials --separate --input=backups/latest/
 ```

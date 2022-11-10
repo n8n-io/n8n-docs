@@ -9,13 +9,13 @@ This section covers:
 
 #Expressions:
 
-    * [Introduction to expressions in n8n](/workflow//code-examples/expressions/).
+    * [Introduction to expressions in WF²](/workflow//code-examples/expressions/).
     * Built in [methods](/workflow//code-examples/expressions/methods/) and [variables](/workflow//code-examples/expressions/variables/).
     * Supported libraries: [Luxon](/workflow//code-examples/expressions/luxon/) (for data and time) and [JMESPath](/workflow//code-examples/expressions/jmespath/) (for working with JSON).
 
 #JavaScript:
 
-    * [Introduction to JavaScript in n8n](/workflow//code-examples/javascript-functions/).
+    * [Introduction to JavaScript in WF²](/workflow//code-examples/javascript-functions/).
     * Built in [methods](/workflow//code-examples/javascript-functions/methods/) and [variables](/code-examples/javascript-functions/variables/).
     * [Checking incoming data](/workflow//code-examples/javascript-functions/check-incoming-data/).
     * [Get the number of items returned by the last node](/workflow//code-examples/javascript-functions/number-items-last-node/).

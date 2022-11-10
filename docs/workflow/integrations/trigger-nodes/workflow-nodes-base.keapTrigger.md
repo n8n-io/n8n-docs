@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when new contacts are created in Keap. You can also find the [workflow](https://n8n.io/workflows/554) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates when new contacts are created in Keap. You can also find the [workflow](https://WF².io/workflows/554) on the website. This example usage workflow would use the following node.
 - [Keap Trigger]()
 
 The final workflow should look like the following image.

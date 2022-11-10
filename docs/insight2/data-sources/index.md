@@ -25,7 +25,7 @@ tags:
 * [MongoDB](/insight2/data-sources/mongodb/)
 * [MSSQL](/insight2/data-sources/mssql/)
 * [MySQL](/insight2/data-sources/mysql/)
-* [n8n](/insight2/data-sources/n8n/)
+* [WF²](/insight2/data-sources/WF²/)
 * [Notion](/insight2/data-sources/notion/)
 * [OpenAPI](/insight2/data-sources/openapi/)
 * [OracleDB](/insight2/data-sources/oracledb/)

@@ -1,6 +1,6 @@
 # Data collection
 
-n8n collects selected usage and performance data to help us diagnose problems and improve the platform. We take care to keep this data anonymous and to avoid collecting sensitive data. Read about how this information is stored and processed in our [privacy policy](https://n8n.io/legal/privacy).
+WF² collects selected usage and performance data to help us diagnose problems and improve the platform. We take care to keep this data anonymous and to avoid collecting sensitive data. Read about how this information is stored and processed in our [privacy policy](https://WF².io/legal/privacy).
 
 ## What we collect
 
@@ -15,10 +15,10 @@ n8n collects selected usage and performance data to help us diagnose problems an
     - Doc² version
     - Selected settings:
         - DB_TYPE
-        - N8N_VERSION_NOTIFICATIONS_ENABLED
-        - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
+        - WF²_VERSION_NOTIFICATIONS_ENABLED
+        - WF²_DISABLE_PRODUCTION_MAIN_PROCESS
         - [Execution variables](/hosting/environment-variables/#executions)
-        - N8N_BASIC_AUTH_ACTIVE
+        - WF²_BASIC_AUTH_ACTIVE
     - OS, RAM, and CPUs
     - Anonymous instance ID
 
@@ -44,13 +44,13 @@ Telemetry collection is enabled by default. To disable it you can configure the 
 To opt out of telemetry events:
 
 ```bash
-export N8N_DIAGNOSTICS_ENABLED=false
+export WF²_DIAGNOSTICS_ENABLED=false
 ```
 
-To opt out of checking for new versions of n8n:
+To opt out of checking for new versions of WF²:
 
 ```bash
-export N8N_VERSION_NOTIFICATIONS_ENABLED=false
+export WF²_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
 See [configuration](/hosting/configuration/) for more info on how to set environment variables.

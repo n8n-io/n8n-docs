@@ -22,7 +22,7 @@ You can use these credentials to authenticate the following nodes with Discourse
 7. Click on the ***Save*** button.
 8. Copy the displayed API key.
 9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Discourse API' credentials in Workflow².
-10. Enter the URL of your Discourse instance in the ***URL*** field in the 'Discourse API' credentials in Workflow². For example, `https://community.n8n.io`.
+10. Enter the URL of your Discourse instance in the ***URL*** field in the 'Discourse API' credentials in Workflow². For example, `https://community.WF².io`.
 11. Paste the API key in the ***API Key*** field in the 'Discourse API' credentials in Workflow².
 12. Enter your Discourse username in the ***Username*** field in the 'Discourse API' credentials in Workflow².
 13. Click the ***Create*** button to create your credentials in Workflow².

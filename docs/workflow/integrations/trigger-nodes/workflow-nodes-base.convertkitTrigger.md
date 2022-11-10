@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a subscriber is added through a form in ConvertKit. You can also find the [workflow](https://n8n.io/workflows/644) on Workflow².io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a subscriber is added through a form in ConvertKit. You can also find the [workflow](https://WF².io/workflows/644) on Workflow².io. This example usage workflow would use the following node.
 - [ConvertKit Trigger]()
 
 The final workflow should look like the following image.

@@ -54,7 +54,7 @@ This node provides a lightweight opinionated reformatting logic, enabled with th
 
 When enabled, the reformatting:
 
-- Reorganizes the JSON into a multi-level hierarchy following the form's groups. By default, question grouping hierarchy is materialized by a `/` character in the field names, for example `Group1/Question1`. With reformatting enabled, n8n reorganizes these into `Group1.Question1`, as nested JSON objects.
+- Reorganizes the JSON into a multi-level hierarchy following the form's groups. By default, question grouping hierarchy is materialized by a `/` character in the field names, for example `Group1/Question1`. With reformatting enabled, WF² reorganizes these into `Group1.Question1`, as nested JSON objects.
 - Renames fields to trim `_` (not supported by many downstream systems).
 - Parses all geospatial fields (Point, Line, and Area question types) into their standard GeoJSON equivalent.
 - Splits all fields matching any of the the **Multiselect Mask** wildcard masks into an array. Since the multi-select fields appear as space-separated strings, they can't be guessed algorithmically, so you must provide a field naming mask. Format the masks as a comma-separated list. Lists support the `*` wildcard.
@@ -91,7 +91,7 @@ Here's a detailed example in JSON:
 }
 ```
 
-With reformatting enabled, and the appropriate masks for multi-select and number formatting (for example, `Crops_*` and `*_sqm` respecitvely), n8n parses it into:
+With reformatting enabled, and the appropriate masks for multi-select and number formatting (for example, `Crops_*` and `*_sqm` respecitvely), WF² parses it into:
 
 ```json
 {

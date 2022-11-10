@@ -23,7 +23,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a user using the G Suite Admin node. You can also find the [workflow](https://n8n.io/workflows/710) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a user using the G Suite Admin node. You can also find the [workflow](https://WF².io/workflows/710) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [G Suite Admin]()
 
@@ -47,7 +47,7 @@ This node will create a user in G Suite with the following information:  first n
 7. Enter the username for the user in the ***Username*** field.
 8. Click on ***Execute Node*** to run the workflow.
 
-In the screenshot below, you will observe that the node has created a new user with the first name `Nathan`, last name `Nat`, domain `n8n.io`, username `nat`, and a password, in G Suite.
+In the screenshot below, you will observe that the node has created a new user with the first name `Nathan`, last name `Nat`, domain `WF².io`, username `nat`, and a password, in G Suite.
 
 ![Using the G Suite Admin node to create a user](/_images/integrations/nodes/gsuiteadmin/gsuiteadmin_node.png)
 

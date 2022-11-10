@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://n8n.io/workflows/916) on the website. This example usage workflow would use the following nodes.
+This workflow allows you to store the response of a form submission to Airtable and send a message to a channel on Slack. You can also find the [workflow](https://WF².io/workflows/916) on the website. This example usage workflow would use the following nodes.
 - [Typeform Trigger]()
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Airtable](/workflow/integrations/nodes/workflow-nodes-base.airtable/)
@@ -24,7 +24,7 @@ The final workflow should look like the following image.
 
 This node will trigger the workflow when a form response is submitted.
 
-This example workflow uses a Typeform to collect name and email address. Create a form exactly like [this](https://n8ndocsburner.typeform.com/to/dpr2kxSL) for the example workflow. Here are the questions and their question types for the form.
+This example workflow uses a Typeform to collect name and email address. Create a form exactly like [this](https://WF²docsburner.typeform.com/to/dpr2kxSL) for the example workflow. Here are the questions and their question types for the form.
 
 |Question | Type  |
 |---------|-------|

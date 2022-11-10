@@ -22,7 +22,7 @@
 
 ## Example Usage
 
-This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://n8n.io/workflows/694) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to append, lookup, update, and read data from Google Sheets. You can also find the [workflow](https://WF².io/workflows/694) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Google Sheets]()
@@ -198,7 +198,7 @@ By default, the Lookup operation returns only the first value that it matches. T
 
 ### How to specify a sheet?
 
-By default, the Google Sheets node will operate on the default sheet, `Sheet 1`. If you rename the sheet or want to use a different sheet, you have to specify the name of the sheet. You can do that in the ***Range*** field. For example, if you need to use a sheet named `n8n` for the range `A` to `H`, enter `n8n!A:H` in the ***Range*** field.
+By default, the Google Sheets node will operate on the default sheet, `Sheet 1`. If you rename the sheet or want to use a different sheet, you have to specify the name of the sheet. You can do that in the ***Range*** field. For example, if you need to use a sheet named `WF²` for the range `A` to `H`, enter `WF²!A:H` in the ***Range*** field.
 
 
 

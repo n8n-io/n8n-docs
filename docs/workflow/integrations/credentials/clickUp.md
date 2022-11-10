@@ -44,7 +44,7 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/jPD0p8n-Ddk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The following video demonstrates the steps to authenticate the ClickUp node on [n8n.cloud](https://n8n.cloud).
+The following video demonstrates the steps to authenticate the ClickUp node on [WF².cloud](https://WF².cloud).
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/1CjF_cPNSzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

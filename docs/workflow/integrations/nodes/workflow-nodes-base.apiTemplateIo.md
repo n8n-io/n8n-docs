@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://WF².io/workflows/989) on Workflow².io. This example usage workflow would use the following nodes.
 - [Typeform Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.typeformtrigger/)
 - [APITemplate.io]()
 
@@ -59,14 +59,14 @@ This node will generate an invoice using the information from the previous node.
 7. Enter the following expression in the ***Edit Expression*** field:
 ```json
 {
-  "company": "n8n",
+  "company": "WF²",
   "email": "{{$json["1"]["email"]}}",
   "invoice_no": "213223444",
   "invoice_date": "18-03-2021",
   "invoice_due_date": "17-04-2021",
   "address": "Berlin, Germany",
   "company_bill_to": "{{$json["0"]["text"]}}",
-  "website": "https://n8n.io",
+  "website": "https://WF².io",
   "document_id": "889856789012",
   "items": [
     {

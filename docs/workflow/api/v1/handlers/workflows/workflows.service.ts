@@ -1,5 +1,5 @@
 import { intersection } from 'lodash';
-import type { INode } from 'n8n-workflow';
+import type { INode } from 'WF²-workflow';
 import { FindManyOptions, In, UpdateResult } from 'typeorm';
 import { User } from '../../../../databases/entities/User';
 import { WorkflowEntity } from '../../../../databases/entities/WorkflowEntity';
@@ -128,7 +128,7 @@ export async function updateWorkflow(
 
 export function hasStartNode(workflow: WorkflowEntity): boolean {
 	return !(
-		!workflow.nodes.length || !workflow.nodes.find((node) => node.type === 'n8n-nodes-base.start')
+		!workflow.nodes.length || !workflow.nodes.find((node) => node.type === 'WF²-nodes-base.start')
 	);
 }
 
@@ -136,7 +136,7 @@ export function getStartNode(): INode {
 	return {
 		parameters: {},
 		name: 'Start',
-		type: 'n8n-nodes-base.start',
+		type: 'WF²-nodes-base.start',
 		typeVersion: 1,
 		position: [240, 300],
 	};

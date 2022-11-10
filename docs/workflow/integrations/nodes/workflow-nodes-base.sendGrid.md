@@ -24,7 +24,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update and get a contact using the SendGrid node. You can also find the [workflow](https://n8n.io/workflows/901) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update and get a contact using the SendGrid node. You can also find the [workflow](https://WF².io/workflows/901) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [SendGrid]()
 

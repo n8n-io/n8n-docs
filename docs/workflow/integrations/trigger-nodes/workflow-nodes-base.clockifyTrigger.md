@@ -10,7 +10,7 @@
 
 ## Example Usage
 
-This workflow allows you to get new time entries from Clockify. You can also find the [workflow](https://n8n.io/workflows/536) on the website. This example usage workflow would use the following node.
+This workflow allows you to get new time entries from Clockify. You can also find the [workflow](https://WF².io/workflows/536) on the website. This example usage workflow would use the following node.
 - [Clockify Trigger]()
 
 The final workflow should look like the following image.

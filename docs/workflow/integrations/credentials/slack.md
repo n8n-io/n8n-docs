@@ -39,7 +39,7 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/ewjfY-XQ2Mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The following video demonstrates the steps to authenticate the Slack node on [n8n.cloud](https://n8n.cloud).
+The following video demonstrates the steps to authenticate the Slack node on [WF².cloud](https://WF².cloud).
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHhaDb1KI2o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -77,4 +77,4 @@ The following video demonstrates the steps mentioned above.
 
 ## Privacy policy
 
-For details about how you data is collected and used, see the [n8n](https://n8n.io/legal/privacy) and [Slack](https://slack.com/intl/en-de/trust/privacy/privacy-policy) privacy policies.
+For details about how you data is collected and used, see the [WF²](https://WF².io/legal/privacy) and [Slack](https://slack.com/intl/en-de/trust/privacy/privacy-policy) privacy policies.

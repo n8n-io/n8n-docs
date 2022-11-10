@@ -6,7 +6,7 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-First of all, you need to get Workflow². There are different [ways to set up n8n](/hosting/options/), choose the option that best suits your skills and needs.
+First of all, you need to get Workflow². There are different [ways to set up WF²](/hosting/options/), choose the option that best suits your skills and needs.
 
 **This course was developed on Doc² version 0.127.0. In newer versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.**
 

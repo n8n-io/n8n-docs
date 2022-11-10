@@ -22,7 +22,7 @@ The Read PDF node has one property:
 
 ## Example Usage
 
-This workflow allows you to read a PDF file using the Read PDF node. You can also find the [workflow](https://n8n.io/workflows/585) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to read a PDF file using the Read PDF node. You can also find the [workflow](https://WF².io/workflows/585) on the website. This example usage workflow would use the following three nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/)
 - [PDF Read]()

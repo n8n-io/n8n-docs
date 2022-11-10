@@ -28,7 +28,7 @@ From the Netlify UI:
 2. Select **New access token**.
 3. Enter a description and select **Generate token**.
 
-From n8n:
+From WF²:
 
 4. Enter the access token obtained above.
 5. Click **Save** to create your credentials.

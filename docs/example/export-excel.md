@@ -29,7 +29,7 @@ In this example we trigger the result from DOC² and write the result to excel a
     {
       "parameters": {},
       "name": "Start",
-      "type": "n8n-nodes-base.start",
+      "type": "WF²-nodes-base.start",
       "typeVersion": 1,
       "position": [
         180,
@@ -42,7 +42,7 @@ In this example we trigger the result from DOC² and write the result to excel a
         "status": "validated_pending_export"
       },
       "name": "Status Trigger",
-      "type": "n8n-nodes-base.statusTrigger",
+      "type": "WF²-nodes-base.statusTrigger",
       "typeVersion": 1,
       "position": [
         200,
@@ -65,7 +65,7 @@ In this example we trigger the result from DOC² and write the result to excel a
         }
       },
       "name": "Spreadsheet File",
-      "type": "n8n-nodes-base.spreadsheetFile",
+      "type": "WF²-nodes-base.spreadsheetFile",
       "typeVersion": 1,
       "position": [
         900,
@@ -77,7 +77,7 @@ In this example we trigger the result from DOC² and write the result to excel a
         "functionCode": "// Code here will run only once, no matter how many input items there are.\n// More info and help: https://docs.polydocs.io/workflow/integrations/core-nodes/workflow-nodes-base.function\n// Tip: You can use luxon for dates and $jmespath for querying JSON structures\n\n// Loop over inputs and add a new field called 'myNewField' to the JSON of each one\n//for (item of items) {\n//  item.json.myNewField = 1;\n//}\n\n// You can write logs to the browser console\nconsole.log('Done!');\n\nreturn items[0].json.fields_compact;\n\n"
       },
       "name": "Function",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "typeVersion": 1,
       "position": [
         640,
@@ -89,7 +89,7 @@ In this example we trigger the result from DOC² and write the result to excel a
         "options": {}
       },
       "name": "Spreadsheet File1",
-      "type": "n8n-nodes-base.spreadsheetFile",
+      "type": "WF²-nodes-base.spreadsheetFile",
       "typeVersion": 1,
       "position": [
         1320,
@@ -102,7 +102,7 @@ In this example we trigger the result from DOC² and write the result to excel a
         "binaryData": true
       },
       "name": "Dropbox",
-      "type": "n8n-nodes-base.dropbox",
+      "type": "WF²-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
         1320,

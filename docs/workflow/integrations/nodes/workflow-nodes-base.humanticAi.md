@@ -15,7 +15,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://n8n.io/workflows/784) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, update, and get a profile using the Humantic AI node. You can also find the [workflow](https://WF².io/workflows/784) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Humantic AI]()

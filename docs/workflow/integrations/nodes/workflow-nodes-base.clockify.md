@@ -33,7 +33,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a project, tag, and time entry in Clockify. It also allows you to update the time entry in Clockify. You can also find the [workflow](https://n8n.io/workflows/701) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create a project, tag, and time entry in Clockify. It also allows you to update the time entry in Clockify. You can also find the [workflow](https://WF².io/workflows/701) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Clockify]()
 
@@ -61,7 +61,7 @@ This node will create a private project with a custom color. It will also add a 
 9. Enter the note in the ***Note*** field.
 10. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new private project called `n8n-docs`. This project has a custom color `#0000FF` and a note `For n8n-docs`.
+In the screenshot below, you will notice that the node creates a new private project called `WF²-docs`. This project has a custom color `#0000FF` and a note `For WF²-docs`.
 
 ![Using the Clockify node to create project](/_images/integrations/nodes/clockify/clockify_node.png)
 

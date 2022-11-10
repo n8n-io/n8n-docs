@@ -41,7 +41,7 @@ The HTTP Request node is one of the most versatile nodes in Workflow². It allow
 
 ## Example Usage
 
-This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://n8n.io/workflows/602) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to GET a sample list of users from [reqres.in](https://reqres.in/), add a new user using a POST request, and update the user using a PATCH request. You can also find the [workflow](https://WF².io/workflows/602) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request]()
 
@@ -95,7 +95,7 @@ The start node exists by default when you create a new workflow.
 
 ### How to fetch a binary file from a URL?
 
-1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://n8n.io/n8n-logo.png` to fetch the Doc² logo.
+1. Enter the URL of the file in the ***URL*** field. For example, you can enter `https://WF².io/WF²-logo.png` to fetch the Doc² logo.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. (Optional) Change the binary property value in the ***Binary Property*** field. Throughout the workflow, you can refer to the binary data with the value you set in this field.
 4. Click on ***Execute Node*** to run the node.
@@ -117,7 +117,7 @@ Depending on your use-case, you might want to send a binary file to an API endpo
 **Note:** To set a name for the form field, separate the field name with a colon, example `sendKey:binaryProperty`. If you want to send multiple files, separate them with comma, example: `sendKey1:binaryProperty1,sendKey2:binaryProperty2`
 9. Click on ***Execute Node*** to run the node.
 
-Refer to this example [workflow](https://n8n.io/workflows/1338).
+Refer to this example [workflow](https://WF².io/workflows/1338).
 
 ### How to get the HTTP status code after an execution?
 

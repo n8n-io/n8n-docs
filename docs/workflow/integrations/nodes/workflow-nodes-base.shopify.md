@@ -23,7 +23,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/548) on the website. This example usage workflow uses the following two nodes.
+This workflow allows you to get all orders from Shopify. You can also find the [workflow](https://WF².io/workflows/548) on the website. This example usage workflow uses the following two nodes.
 
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Shopify]()

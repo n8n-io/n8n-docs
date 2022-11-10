@@ -33,7 +33,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create an affiliate, add metadata, and add the affiliate to a program. You can also find the [workflow](https://n8n.io/workflows/936) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create an affiliate, add metadata, and add the affiliate to a program. You can also find the [workflow](https://WF².io/workflows/936) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Tapfiliate]()
 
@@ -71,7 +71,7 @@ This node will add metadata to the affiliate that we created with the previous n
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 6. Click on the ***Add Metadata*** button.
 7. Enter `tag` in the ***Key*** field.
-8. Enter `n8n` in the ***Value*** field.
+8. Enter `WF²` in the ***Value*** field.
 9. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node adds the metadata to the affiliate that we created with the previous node.

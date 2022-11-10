@@ -33,7 +33,7 @@ Example to show how to rename Keys in a JSON
   "nodes": [
     {
       "name": "Start",
-      "type": "n8n-nodes-base.start",
+      "type": "WF²-nodes-base.start",
       "position": [
         640,
         300
@@ -43,7 +43,7 @@ Example to show how to rename Keys in a JSON
     },
     {
       "name": "Rename Keys",
-      "type": "n8n-nodes-base.renameKeys",
+      "type": "WF²-nodes-base.renameKeys",
       "position": [
         1040,
         300
@@ -62,7 +62,7 @@ Example to show how to rename Keys in a JSON
     },
     {
       "name": "Function",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "position": [
         820,
         300

@@ -3,8 +3,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { FindOneOptions } from 'typeorm';
-import { UserSettings, Credentials } from 'n8n-core';
-import { IDataObject, INodeProperties, INodePropertyOptions } from 'n8n-workflow';
+import { UserSettings, Credentials } from 'WF²-core';
+import { IDataObject, INodeProperties, INodePropertyOptions } from 'WF²-workflow';
 import { Db, ICredentialsDb } from '../../../..';
 import { CredentialsEntity } from '../../../../databases/entities/CredentialsEntity';
 import { SharedCredentials } from '../../../../databases/entities/SharedCredentials';
@@ -47,7 +47,7 @@ export async function createCredential(
 	if (!newCredential.nodesAccess || newCredential.nodesAccess.length === 0) {
 		newCredential.nodesAccess = [
 			{
-				nodeType: `n8n-nodes-base.${properties.type?.toLowerCase() ?? 'unknown'}`,
+				nodeType: `WF²-nodes-base.${properties.type?.toLowerCase() ?? 'unknown'}`,
 				date: new Date(),
 			},
 		];

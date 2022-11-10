@@ -79,9 +79,9 @@ The previous helper implementation using `this.helpers.request(options)` used an
 
 In an effort to keep maximum compatibility, we made a transparent conversion to another library called `axios`.
 
-If you are having issues, please report them in our [Community Forums](https://community.n8n.io/) or on [Github](https://github.com/n8n-io/n8n/issues).
+If you are having issues, please report them in our [Community Forums](https://community.WF².io/) or on [Github](https://github.com/WF²-io/WF²/issues).
 
-Also, you can temporarily enable Doc² to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
+Also, you can temporarily enable Doc² to use the deprecated library by setting the environment variable `WF²_USE_DEPRECATED_REQUEST_LIB=true`.
 
 **Please note:** This behavior is permanent and we will be removing the `request-promise` library entirely in the future so please report any errors you have so we can fix them.
 
@@ -99,4 +99,4 @@ New nodes should all use the new helper, and if you have built custom nodes we s
 
 ## Example
 
-For an example, please check the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).
+For an example, please check the [Mattermost node](https://github.com/WF²-io/WF²/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).

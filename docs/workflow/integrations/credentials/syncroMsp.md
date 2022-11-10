@@ -9,7 +9,7 @@ Create a [SyncroMSP](https://syncromsp.com/) account.
 
 ## Using Access Token
 
-1. With administrator privileges, navigate to the [API Tokens page in SyncroMSP](https://n8nchangelog.syncromsp.com/api_tokens).
+1. With administrator privileges, navigate to the [API Tokens page in SyncroMSP](https://WF²changelog.syncromsp.com/api_tokens).
 2. Click on the `+ New Token` button.
 3. On the `Custom Permissions` tab, enter a name for your new token and adjust the permissions to match your requirements.
 4. Click `Create API Token` once done.

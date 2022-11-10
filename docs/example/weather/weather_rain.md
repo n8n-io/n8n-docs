@@ -37,7 +37,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
   "nodes": [
     {
       "name": "Start",
-      "type": "n8n-nodes-base.start",
+      "type": "WF²-nodes-base.start",
       "position": [
         360,
         300
@@ -47,7 +47,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "OpenWeatherMap",
-      "type": "n8n-nodes-base.openWeatherMap",
+      "type": "WF²-nodes-base.openWeatherMap",
       "position": [
         530,
         300
@@ -64,7 +64,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "IF",
-      "type": "n8n-nodes-base.if",
+      "type": "WF²-nodes-base.if",
       "position": [
         840,
         300
@@ -115,7 +115,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "Send Email",
-      "type": "n8n-nodes-base.emailSend",
+      "type": "WF²-nodes-base.emailSend",
       "position": [
         1030,
         200
@@ -125,7 +125,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
         "options": {},
         "subject": "It's going to rain today",
         "toEmail": "changeme@example.com",
-        "fromEmail": "n8n@example.com"
+        "fromEmail": "WF²@example.com"
       },
       "credentials": {
         "smtp": "Amazon SES"
@@ -134,7 +134,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "Cron",
-      "type": "n8n-nodes-base.cron",
+      "type": "WF²-nodes-base.cron",
       "position": [
         360,
         160
@@ -152,7 +152,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "Function",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "position": [
         680,
         300
@@ -164,7 +164,7 @@ Example of a cronjob workflow to send a weather forecast by email when it rains
     },
     {
       "name": "NoOp",
-      "type": "n8n-nodes-base.noOp",
+      "type": "WF²-nodes-base.noOp",
       "position": [
         1030,
         370

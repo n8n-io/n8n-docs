@@ -20,7 +20,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update, and get a user from Iterable. You can also find the [workflow](https://n8n.io/workflows/813) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get a user from Iterable. You can also find the [workflow](https://WF².io/workflows/813) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Iterable]()
 

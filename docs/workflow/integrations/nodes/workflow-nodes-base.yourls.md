@@ -22,7 +22,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create a short URL and get the statistics of the URL. You can also find the [workflow](https://n8n.io/workflows/815) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a short URL and get the statistics of the URL. You can also find the [workflow](https://WF².io/workflows/815) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Yourls]()
 

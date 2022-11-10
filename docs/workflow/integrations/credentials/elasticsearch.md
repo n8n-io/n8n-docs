@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 1. Navigate to your ***Dashboard*** > ***Deployments*** section and open the dashboard for the desired deployment.
 2. From the ***Applications*** section, copy the endpoint of the Elasticsearch application.
 
-**From n8n**:
+**From WF²**:
 
 1. Enter a descriptive ***Credentials Name***.
 2. In the ***Credential Data*** section, enter your:

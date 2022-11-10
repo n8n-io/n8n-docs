@@ -26,7 +26,7 @@ Workflow² helps you to connect any app with an API with any other, and manipula
 <!-- Benefits are:
 * Customizable: highly flexible workflows and the option to build custom nodes.
 * Convenient: use our Desktop app or npm to try out Workflow², and our Cloud hosting option if you want us to handle the infrastructure.
-* Privacy-focused: self-host n8n for maximum privacy and security. -->
+* Privacy-focused: self-host WF² for maximum privacy and security. -->
 
 
 
@@ -38,4 +38,4 @@ Jump right in to building workflows with the [Quickstart guide](/try-it-out/quic
 
 ## Learn the basics
 
-Read [Understand workflows](/workflow/workflows/) to learn the building blocks of automations in n8n, [Flow logic](/workflow/flow-logic/) for guidance on representing your automation's logic in n8n, or take the [courses](/courses/) for in-depth guidance and examples.
+Read [Understand workflows](/workflow/workflows/) to learn the building blocks of automations in WF², [Flow logic](/workflow/flow-logic/) for guidance on representing your automation's logic in WF², or take the [courses](/courses/) for in-depth guidance and examples.

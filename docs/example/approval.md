@@ -31,7 +31,7 @@ Infor customer can forward the document to Infor IDM with a define status to arc
   "nodes": [
     {
       "name": "Start",
-      "type": "n8n-nodes-base.start",
+      "type": "WF²-nodes-base.start",
       "position": [
         640,
         300
@@ -41,7 +41,7 @@ Infor customer can forward the document to Infor IDM with a define status to arc
     },
     {
       "name": "Rename Keys",
-      "type": "n8n-nodes-base.renameKeys",
+      "type": "WF²-nodes-base.renameKeys",
       "position": [
         1040,
         300
@@ -60,7 +60,7 @@ Infor customer can forward the document to Infor IDM with a define status to arc
     },
     {
       "name": "Function",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "position": [
         820,
         300

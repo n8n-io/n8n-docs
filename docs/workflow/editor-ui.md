@@ -58,5 +58,5 @@ This section includes resources for using Workflow² and interacting with the co
 
 * **Documentation**: Open the [Workflow² documentation page] (/workflow/)
 * **Forum**: Open the Workflow² community forum
-* **Workflows**: Open the Workflow² public [workflows](https://n8n.io/workflows) page
-* **About n8n**: View information about Workflow² (version, source code, license)
+* **Workflows**: Open the Workflow² public [workflows](https://WF².io/workflows) page
+* **About WF²**: View information about Workflow² (version, source code, license)

@@ -63,7 +63,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a customer and an invoice, and send the invoice to the customer. You can also find the [workflow](https://n8n.io/workflows/949) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a customer and an invoice, and send the invoice to the customer. You can also find the [workflow](https://WF².io/workflows/949) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [QuickBooks]()
 

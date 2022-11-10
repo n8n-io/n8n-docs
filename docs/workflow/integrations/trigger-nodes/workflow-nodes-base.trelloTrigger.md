@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates for changes in the specified list in Trello. You can also find the [workflow](https://n8n.io/workflows/491) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates for changes in the specified list in Trello. You can also find the [workflow](https://WF².io/workflows/491) on the website. This example usage workflow would use the following node.
 - [Trello Trigger]()
 
 The final workflow should look like the following image.

@@ -16,7 +16,7 @@
 
 ## Example Usage
 
-This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/965) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://WF².io/workflows/965) on Workflow².io. This example usage workflow uses the following nodes.
 - [Typeform Trigger](/workflow/integrations/trigger-nodes/workflow-nodes-base.typeformtrigger/)
 - [AWS Comprehend]()
 - [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)

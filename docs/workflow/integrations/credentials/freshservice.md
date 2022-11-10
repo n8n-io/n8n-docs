@@ -17,7 +17,7 @@ From Freshservice:
 3. Click on **API Settings**.
 4. Copy your API key.
 
-From n8n:
+From WF²:
 
 5. Enter a descriptive ***Credentials Name***.
 6. Under ***Credential Data***, enter the API Key obtained above in the corresponding field.

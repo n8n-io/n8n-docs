@@ -24,7 +24,7 @@ In the credentials doc:
 
 ## Style
 
-n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+WF² uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
 
 Some quick tips:
 
@@ -60,4 +60,4 @@ Before submitting a PR, make sure your contribution ticks all these boxes:
 - [ ] All documentation files end with an empty newline.
 - [ ] The commit message describes clearly and succintly the changes you made.
 - [ ] The PR explains clearly and succintly the changes you made and why they are necessary.
-- [ ] You have read and accepted the [code of conduct](https://github.com/n8n-io/n8n-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).
+- [ ] You have read and accepted the [code of conduct](https://github.com/WF²-io/WF²-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/WF²-io/WF²-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).

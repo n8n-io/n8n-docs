@@ -14,7 +14,7 @@ tags:
 
 ## The `$jmespath()` method
 
-n8n provides a custom method, `$jmespath()`, for use in expressions. It allows you to perform a search on a JSON object using the JMESPath query language.
+WF² provides a custom method, `$jmespath()`, for use in expressions. It allows you to perform a search on a JSON object using the JMESPath query language.
 
 The basic syntax is: 
 
@@ -56,7 +56,7 @@ Your webhook data looks similar to this:
 [
   {
     "headers": {
-      "host": "n8n.instance.address",
+      "host": "WF².instance.address",
       ...
     },
     "params": {},
@@ -115,7 +115,7 @@ Given this JSON from a webhook node:
 [
   {
     "headers": {
-      "host": "n8n.instance.address",
+      "host": "WF².instance.address",
       ...
     },
     "params": {},
@@ -189,7 +189,7 @@ Given this JSON from a webhook node:
 [
   {
     "headers": {
-      "host": "n8n.instance.address",
+      "host": "WF².instance.address",
       ...
     },
     "params": {},

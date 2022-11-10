@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://n8n.io/workflows/835) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to get the logo, icon, and information of a company and store it in Airtable. You can also find the [workflow](https://WF².io/workflows/835) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Brandfetch]()
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
@@ -36,10 +36,10 @@ The start node exists by default when you create a new workflow.
 This node will fetch the URL of the logo and icon of Workflow². If you want the logo and icon of a different company, enter the domain name of that company instead.
 
 1. First of all, you'll have to enter credentials for the Brandfetch node. You can find out how to do that [here](/workflow/integrations/credentials/brandfetch/).
-2. Enter `n8n.io` in the ***Domain*** field.
+2. Enter `WF².io` in the ***Domain*** field.
 3. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node retrieves the URL of n8n's logo and icon.
+In the screenshot below, you will notice that the node retrieves the URL of WF²'s logo and icon.
 
 ![Using the Brandfetch node to retrieve the URL of the logo and icon of a comapny](/_images/integrations/nodes/brandfetch/brandfetch_node.png)
 

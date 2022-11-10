@@ -1,18 +1,18 @@
 # Navigating the Editor UI
 
-In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in n8n.
+In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in WF².
 
 
 
 ## Getting started
 
-First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank" .external}, choose the option that best suits your skills and needs.
+First of all, you need to get WF². There are different [ways to set up WF²](/hosting/options/){:target="_blank" .external}, choose the option that best suits your skills and needs.
 
-!!! warning "n8n version"
+!!! warning "WF² version"
 
-    This course was developed on n8n version 0.175.1. In other versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.
+    This course was developed on WF² version 0.175.1. In other versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.
 
-Once you have n8n running, open the Editor UI in a browser window. It should look like this:
+Once you have WF² running, open the Editor UI in a browser window. It should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-one/Editor-UI.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
@@ -28,11 +28,11 @@ In the upper left corner, click on the round arrow icon. This will open the left
 
 The panel contains the following sections:
 
-- *Admin Panel*: Access the management Dashboard (for n8n.cloud users).
+- *Admin Panel*: Access the management Dashboard (for WF².cloud users).
 - *Workflows*: Contains operations for creating and editing workflows.
 - *Credentials*: Contains operations for creating credentials.
 - *Executions*: Contains information about your workflow executions.
-- *Help*: Contains resources around n8n product and community.
+- *Help*: Contains resources around WF² product and community.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Left-side-menu.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
@@ -86,7 +86,7 @@ Based on their function, nodes can be classified into two types:
 
 ### Start node
 
-The [*Start node*](/workflow/integrations/core-nodes/n8n-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
+The [*Start node*](/workflow/integrations/core-nodes/WF²-nodes-base.start/){:target="_blank" .external} is the default starting point in any workflow. Every time you create a new workflow, a *Start node* will be included by default.
 
 The **Start** node cannot be deleted or duplicated. If you have a workflow in which you don't use the Start node, you can remove the connection, deactivate it, and move it away from the workflow. If you need more than one Start node, you probably need to use other Trigger nodes or create separate workflows.
 

@@ -35,7 +35,7 @@ Example for a Webhook and reply with the Weather in the City
   "nodes": [
     {
       "name": "OpenWeatherMap",
-      "type": "n8n-nodes-base.openWeatherMap",
+      "type": "WF²-nodes-base.openWeatherMap",
       "position": [
         900,
         300
@@ -51,7 +51,7 @@ Example for a Webhook and reply with the Weather in the City
     },
     {
       "name": "Webhook GET",
-      "type": "n8n-nodes-base.webhook",
+      "type": "WF²-nodes-base.webhook",
       "position": [
         500,
         300
@@ -68,7 +68,7 @@ Example for a Webhook and reply with the Weather in the City
     },
     {
       "name": "Set City",
-      "type": "n8n-nodes-base.set",
+      "type": "WF²-nodes-base.set",
       "position": [
         700,
         300
@@ -88,7 +88,7 @@ Example for a Webhook and reply with the Weather in the City
     },
     {
       "name": "Create Response",
-      "type": "n8n-nodes-base.set",
+      "type": "WF²-nodes-base.set",
       "position": [
         1100,
         300

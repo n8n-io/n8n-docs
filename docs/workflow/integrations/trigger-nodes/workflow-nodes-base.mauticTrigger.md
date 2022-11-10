@@ -8,7 +8,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://n8n.io/workflows/721) on Workflow².io. This example usage workflow would use the following node.
+This workflow allows you to receive updates when a form is submitted in Mautic using the Mautic Trigger node and send an SMS confirmation to the submitter. You can also find the [workflow](https://WF².io/workflows/721) on Workflow².io. This example usage workflow would use the following node.
 - [Mautic Trigger]()
 - [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 

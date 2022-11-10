@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to insert and update data from a table in Airtable. You can also find the [workflow](https://n8n.io/workflows/818) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to insert and update data from a table in Airtable. You can also find the [workflow](https://WF².io/workflows/818) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Airtable]()
@@ -62,7 +62,7 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 ### 4. Airtable1 node (List)
 
-This node will list all the records with the name `n8n`. If you want to list records with a different name, use that name instead.
+This node will list all the records with the name `WF²`. If you want to list records with a different name, use that name instead.
 
 1. Select the credentials that you entered in the previous node.
 2. Select the 'List' option from the ***Operation*** dropdown list.
@@ -71,10 +71,10 @@ This node will list all the records with the name `n8n`. If you want to list rec
 5. Click on the gears icon next to the ***Table*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Airtable > Parameters > table. You can also add the following expression: `{{$node["Airtable"].parameter["table"]}}`.
 7. Click on ***Add Option*** and select 'Filter By Formula' from the dropdown list.
-8. Enter `Name='n8n'` in the ***Filter By Formula*** field.
+8. Enter `Name='WF²'` in the ***Filter By Formula*** field.
 9. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node only returns the record with the name `n8n`.
+In the screenshot below, you will notice that the node only returns the record with the name `WF²`.
 
 ![Using the Airtable node to read data from an Airtable table](/_images/integrations/nodes/airtable/airtable1_node.png)
 
@@ -126,13 +126,13 @@ To get the Record ID of your record, you can use the ***List*** operation of the
 
 ### How to filter records when using the List operation?
 
-To filter records from your Airtable base, use the ***Filter By Formula*** option. For example, if you want to return all the users that belong to the organization `n8n`, follow the steps mentioned below:
+To filter records from your Airtable base, use the ***Filter By Formula*** option. For example, if you want to return all the users that belong to the organization `WF²`, follow the steps mentioned below:
 1. Select 'List' from the ***Operation*** dropdown list.
 2. Enter the base ID and the table name in the ***Base ID*** and ***Table*** field, respectively.
 3. Click on ***Add Option*** and select 'Filter By Formula' from the dropdown list.
-4. Enter the following formula in the ***Filter By Formula*** field: `{Organization}='n8n'`.
+4. Enter the following formula in the ***Filter By Formula*** field: `{Organization}='WF²'`.
 
-Similarly, if you want to return all the users that do not belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
+Similarly, if you want to return all the users that do not belong to the organization `WF²`, use the following formula: `NOT({Organization}='WF²')`.
 
 Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
 

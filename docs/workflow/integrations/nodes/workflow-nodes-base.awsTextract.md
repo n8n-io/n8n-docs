@@ -12,7 +12,7 @@
 
 ## Example Usage
 
-This workflow allows you to extract data from a an invoice stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1282) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to extract data from a an invoice stored in AWS S3. You can also find the [workflow](https://WF².io/workflows/1282) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [AWS S3](/workflow/integrations/nodes/workflow-nodes-base.awsS3/)
 - [AWS Textract]()

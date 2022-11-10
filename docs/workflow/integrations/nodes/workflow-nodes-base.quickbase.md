@@ -25,7 +25,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, update, and get all records in Quick Base. You can also find the [workflow](https://n8n.io/workflows/805) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get all records in Quick Base. You can also find the [workflow](https://WF².io/workflows/805) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Set](/workflow/integrations/core-nodes/workflow-nodes-base.set/)
 - [Quick Base]()
@@ -44,7 +44,7 @@ We will use the Set node to set the name and age for a new record.
 
 1. Click on ***Add Value*** and select 'String' from the dropdown list.
 2. Enter `name` in the ***Name*** field.
-3. Enter `n8n` in the ***Value*** field.
+3. Enter `WF²` in the ***Value*** field.
 4. Click on ***Add Value*** and select 'Number' from the dropdown list.
 5. Enter `age` in the ***Name*** field.
 6. Set the value to `8`.

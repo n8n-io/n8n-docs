@@ -17,12 +17,12 @@ The Split In Batches node saves the original incoming data, and with each iterat
     - ***Reset:*** If set to true, the node will reset.
 
 !!! warning
-    Doc² natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how Doc² handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
+    Doc² natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how Doc² handles multiple items, refer to the documentation on [Looping in WF²](/flow-logic/looping/).
 
 
 ## Example Usage
 
-This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to read RSS feed from two different sources using the Split In Batches node. The Split in Batches node is needed in the workflow since the RSS Read node only processes the first item it receives. You can also find the [workflow](https://WF².io/workflows/687) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/)
 - [Split In Batches]()
@@ -45,12 +45,12 @@ The start node exists by default when you create a new workflow.
 return [
   {
     json: {
-      url: 'https://medium.com/feed/n8n-io',
+      url: 'https://medium.com/feed/WF²-io',
     }
   },
   {
     json: {
-      url: 'https://dev.to/feed/n8n',
+      url: 'https://dev.to/feed/WF²',
     }
   }
 ];
@@ -85,13 +85,13 @@ return [
 
 To identify if items are left to be processed by node use the following expression: `{{$node["SplitInBatches"].context["noItemsLeft"]}}`. This expression returns a boolean value. If there is data yet to be processed, the expression will return `false`, otherwise `true`.
 
-Refer to this [workflow](https://n8n.io/workflows/995) to try it out.
+Refer to this [workflow](https://WF².io/workflows/995) to try it out.
 
 ### How to get the current running index of the node?
 
 To get the current running index of the node, use the following expression: `{{$node["SplitInBatches"].context["currentRunIndex"];}}`.
 
-Refer to this [workflow](https://n8n.io/workflows/996) to try it out.
+Refer to this [workflow](https://WF².io/workflows/996) to try it out.
 
 
 

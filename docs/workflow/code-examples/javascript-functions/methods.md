@@ -56,7 +56,7 @@ const firstItem = $item(0).$node["Example Node"];
 const secondItem = $item(1).$node["Example Node"];
 ```
 
-Refer to this [example workflow](https://n8n.io/workflows/1330) to learn how this method can be used.
+Refer to this [example workflow](https://WF².io/workflows/1330) to learn how this method can be used.
 
 ### $node
 

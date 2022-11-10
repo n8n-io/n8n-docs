@@ -18,7 +18,7 @@ The IMAP Email node is used to receive emails via an IMAP email server. This nod
 
 ## Example Usage
 
-This workflow allows you to receive an email using the IMAP Email node. You can also find the [workflow](https://n8n.io/workflows/587) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to receive an email using the IMAP Email node. You can also find the [workflow](https://WF².io/workflows/587) on the website. This example usage workflow would use the following two nodes.
 - [IMAP Email]()
 
 The final workflow should look like the following image.

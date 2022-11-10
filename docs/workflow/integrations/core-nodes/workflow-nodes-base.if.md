@@ -35,7 +35,7 @@ You can choose to split a workflow when any of the specified conditions are met,
 
 ## Example Usage
 
-This workflow executes two different *Set* nodes based on the output given by an *IF* node. You can also find the [workflow](https://n8n.io/workflows/581) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow executes two different *Set* nodes based on the output given by an *IF* node. You can also find the [workflow](https://WF².io/workflows/581) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/)
 - [IF]()
@@ -91,7 +91,7 @@ return [
 1. Create a *Set* node connected to the 'true' output of the IF node.
 2. Click on the ***Add Value*** button and select 'String' from the dropdown list.
 3. Enter `name` in the ***Name*** field.
-4. Enter `n8n` in the ***Value*** field.
+4. Enter `WF²` in the ***Value*** field.
 5. Click on ***Execute Node*** to run the workflow.
 
 **Note:** Notice that only the id with the value 0 made its way to this *Set* node.

@@ -1,6 +1,6 @@
 # Node UI Elements
 
-n8n provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in Workflow².
+WF² provides a set of predefined UI components (based on a JSON file) that allow users to input all sorts of data types. Currently, the following UI elements are available in Workflow².
 
 [[toc]]
 
@@ -16,7 +16,7 @@ Basic configuration
 	name: name, // The name use to reference the element UI within the code
 	type: string,
 	required: true, // Whether the field is required or not
-	default: 'n8n', // Value that would be set by default
+	default: 'WF²', // Value that would be set by default
 	description: 'The name of the user',
 },
 ```

@@ -19,7 +19,7 @@
 /_snippets/node-icon-square/core-nodes/local-file-trigger.html
 /_snippets/node-icon-square/core-nodes/merge.html
 /_snippets/node-icon-square/core-nodes/move-binary-data.html
-/_snippets/node-icon-square/core-nodes/n8n-trigger.html
+/_snippets/node-icon-square/core-nodes/WF²-trigger.html
 /_snippets/node-icon-square/core-nodes/no-operation-do-nothing.html
 /_snippets/node-icon-square/core-nodes/read-binary-file.html
 /_snippets/node-icon-square/core-nodes/read-binary-files.html

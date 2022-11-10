@@ -10,7 +10,7 @@ To activate your workflow toggle the *Active* button on the top right corner of 
 
 **Workflow Executions**
 
-An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
+An execution represents a completed run of a workflow, from the first to the last node. WF² logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
 
 To see the execution log, in your Editor UI click on *Executions* in the left panel. This will open the *Workflow Executions* window.
 

@@ -59,7 +59,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file to the channel. You can also find the [workflow](https://n8n.io/workflows/811) on Workflow².io This example usage workflow uses the following nodes.
+This workflow allows you to create a channel, invite users to the channel, post a message, and upload a file to the channel. You can also find the [workflow](https://WF².io/workflows/811) on Workflow².io This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Slack]()
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)

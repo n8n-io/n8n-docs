@@ -28,7 +28,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a room, invite members from a different room, and send a message to the room that we created using the Matrix node. You can also find the [workflow](https://n8n.io/workflows/724) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a room, invite members from a different room, and send a message to the room that we created using the Matrix node. You can also find the [workflow](https://WF².io/workflows/724) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Matrix]()
 - [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
@@ -44,16 +44,16 @@ The Start node exists by default when you create a new workflow.
 
 ### 2. Matrix node (create: room)
 
-This node will create a new room called `n8n` on the Matrix server.
+This node will create a new room called `WF²` on the Matrix server.
 
 1. First of all, you'll have to enter credentials for the Matrix node. You can find out how to do that [here](/workflow/integrations/credentials/matrix/).
 
 2. Select 'Room' from the ***Resource*** dropdown list.
-3. Enter `n8n` in the ***Room Name*** field. You can also enter a different name for the room.
+3. Enter `WF²` in the ***Room Name*** field. You can also enter a different name for the room.
 4. Enter an alias for the room in the ***Room Alias*** field.
 5. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a room `n8n` with an alias `#discussion-n8n:matrix.org`.
+In the screenshot below, you will notice that the node creates a room `WF²` with an alias `#discussion-WF²:matrix.org`.
 
 ![Using the Matrix node to create a room](/_images/integrations/nodes/matrix/matrix_node.png)
 
@@ -120,7 +120,7 @@ This node will send an invitation to the members returned by the previous node t
 9. Click on ***Execute Node*** to run the node.
 
 
-In the screenshot below, you will notice that the node sends an invite to join the `n8n` room to the members of the other room.
+In the screenshot below, you will notice that the node sends an invite to join the `WF²` room to the members of the other room.
 
 ![Using the Matrix node to send an invite to join the room](/_images/integrations/nodes/matrix/matrix3_node.png)
 

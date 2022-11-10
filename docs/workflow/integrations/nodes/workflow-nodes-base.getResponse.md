@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all the contacts from GetResponse and check if they belong to a specific campaign. If they don't belong to the specified campaign, the workflow updates the campaign ID of the contacts using the GetResponse node. You can also find the [workflow](https://n8n.io/workflows/778) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to get all the contacts from GetResponse and check if they belong to a specific campaign. If they don't belong to the specified campaign, the workflow updates the campaign ID of the contacts using the GetResponse node. You can also find the [workflow](https://WF².io/workflows/778) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [GetResponse]()
 - [IF](/workflow/integrations/core-nodes/workflow-nodes-base.if/)
@@ -47,16 +47,16 @@ In the screenshot below, you will notice that the node retrieves all the contact
 
 ### 3. IF node
 
-This node will check if a contact belongs to the `n8n` campaign or not. If a contact does not belong to the `n8n` campaign, it will return true otherwise false. Create a campaign in GetResponse if you don't already have one.
+This node will check if a contact belongs to the `WF²` campaign or not. If a contact does not belong to the `WF²` campaign, it will return true otherwise false. Create a campaign in GetResponse if you don't already have one.
 
 1. Click on ***Add Condition*** and select 'String'.
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > GetResponse > Output Data > JSON > campaign > name. You can also add the following expression: `{{$node["GetResponse"].json["campaign"]["name"]}}`.
 4. Select 'Not Equal' from the ***Operation*** dropdown list.
-5. Enter `n8n` in the ***Value 2*** field. If you have a campaign with a different name, use that name instead.
+5. Enter `WF²` in the ***Value 2*** field. If you have a campaign with a different name, use that name instead.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node returns all the contacts that do not belong to the `n8n` campaign.
+In the screenshot below, you will notice that the node returns all the contacts that do not belong to the `WF²` campaign.
 
 ![Using the IF node to check if a contact belongs to the Doc² campaign or not](/_images/integrations/nodes/getresponse/if_node.png)
 
@@ -70,10 +70,10 @@ This node will update the campaign ID of all the contacts that we get from the t
 4. Click on the gears icon next to the ***Contact ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > IF > Output Data > JSON > contactId. You can also add the following expression: `{{$node["IF"].json["contactId"]}}`.
 6. Click on ***Add Field*** and select 'Campaign ID' from the dropdown list.
-7. Select `n8n` from the ***Campaign ID*** dropdown list. If you have a campaign with a different name, select that instead.
+7. Select `WF²` from the ***Campaign ID*** dropdown list. If you have a campaign with a different name, select that instead.
 8. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you notice that the node updates the campaign ID of all the contacts that do not belong to the `n8n` campaign.
+In the screenshot below, you notice that the node updates the campaign ID of all the contacts that do not belong to the `WF²` campaign.
 
 ![Using the GetResponse node to update the campaign of the contacts](/_images/integrations/nodes/getresponse/getresponse1_node.png)
 

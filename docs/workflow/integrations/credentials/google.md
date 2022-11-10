@@ -38,7 +38,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [YouTube](/workflow/integrations/nodes/workflow-nodes-base.youTube/) | :white_check_mark: | :x: |
 
 !!! note "⛅️ Note fordoc2app.cloudintegration.eu users"
-    For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to n8n:
+    For the following nodes, you only need to enter the Credentials Name and click on the **Sign in with Google** button in the OAuth section to connect your Google account to WF²:
 * [Google Calendar](/workflow/integrations/nodes/workflow-nodes-base.googleCalendar/)
 * [Google Contacts](/workflow/integrations/nodes/workflow-nodes-base.googleContacts/)
 * [Google Sheets](/workflow/integrations/nodes/workflow-nodes-base.googleSheets/)

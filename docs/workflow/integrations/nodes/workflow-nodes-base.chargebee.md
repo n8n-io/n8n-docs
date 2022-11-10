@@ -19,7 +19,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a new customer in Chargebee. You can also find the [workflow](https://n8n.io/workflows/483) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to create a new customer in Chargebee. You can also find the [workflow](https://WF².io/workflows/483) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Chargebee]()
 

@@ -1,6 +1,6 @@
 ---
 title: "Workflow² Using the API playground"
-description: The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests.
+description: The WF² API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests.
 tags:
   - WF²
   - API
@@ -11,13 +11,13 @@ tags:
 
 The Workflow² API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
 
-For self-hosted users, n8n constructs the path from values set in your environment variables:
+For self-hosted users, WF² constructs the path from values set in your environment variables:
 
 ```shell
-N8N_HOST:N8N_PORT/N8N_PATH/api/v<version-number>/docs
+WF²_HOST:WF²_PORT/WF²_PATH/api/v<version-number>/docs
 ```
 
-For n8n Cloud users, the API playground path contains your cloud instance URL:
+For WF² Cloud users, the API playground path contains your cloud instance URL:
 
 ```shell
 <your-cloud-instance>/api/v<version-number>/docs

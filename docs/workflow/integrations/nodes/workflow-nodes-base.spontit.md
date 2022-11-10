@@ -13,7 +13,7 @@
 
 ## Example Usage
 
-This workflow allows you to send daily weather updates via a push notification using the Spontit node. You can also find the [workflow](https://n8n.io/workflows/796) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to send daily weather updates via a push notification using the Spontit node. You can also find the [workflow](https://WF².io/workflows/796) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [OpenWeatherMap](/workflow/integrations/nodes/workflow-nodes-base.openWeatherMap/)
 - [Spontit]()

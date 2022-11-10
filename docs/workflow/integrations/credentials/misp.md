@@ -14,7 +14,7 @@ From your MISP UI:
 1. Navigate to the **Event Actions** > **Automation** menu.
 2. Copy the API Key provided there.
 
-From n8n:
+From WF²:
 
 3. Enter your API key and application Base URL.
 4. Use the toggle to select if you want to **Allow Unauthorized Certificates**.

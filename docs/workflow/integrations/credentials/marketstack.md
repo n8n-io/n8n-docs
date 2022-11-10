@@ -15,7 +15,7 @@ From Marketstack:
 1. Access your Marketstack dashboard.
 2. Copy the key provided in the ***Your API Access Key*** field.
 
-From n8n:
+From WF²:
 
 3. Enter a descriptive ***Credentials Name***.
 4. Under ***Credential Data***, enter the key obtained above in the corresponding field.

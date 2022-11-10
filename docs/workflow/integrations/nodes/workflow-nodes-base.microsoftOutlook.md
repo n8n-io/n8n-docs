@@ -39,7 +39,7 @@
 
 ## Example Usage
 
-This workflow allows you to create, add an attachment, and send a draft using the Microsoft Outlook node. You can also find the [workflow](https://n8n.io/workflows/867) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create, add an attachment, and send a draft using the Microsoft Outlook node. You can also find the [workflow](https://WF².io/workflows/867) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Microsoft Outlook]()
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
@@ -61,15 +61,15 @@ This node will create a draft message that we will send using the Microsoft Outl
 3. Enter the subject in the ***Subject*** field.
 4. Enter the following content in the ***Body Content*** field.
 ```html
-<h1>Hello from n8n!</h1>
-<p>We are sending this email using the Microsoft Outlook node in <a href="https://n8n.io">n8n</a></p>
+<h1>Hello from WF²!</h1>
+<p>We are sending this email using the Microsoft Outlook node in <a href="https://WF².io">WF²</a></p>
 <p>Best,</p>
 <p>Sender</p>
 ```
 5. Click on ***Add Field*** and select 'Body Content Type' from the dropdown list.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new draft with the subject `Hello from n8n!` and HTML body content.
+In the screenshot below, you will notice that the node creates a new draft with the subject `Hello from WF²!` and HTML body content.
 
 ![Using the Microsoft Outlook node to create a draft](/_images/integrations/nodes/microsoftoutlook/microsoftoutlook_node.png)
 
@@ -77,7 +77,7 @@ In the screenshot below, you will notice that the node creates a new draft with 
 
 This node will fetch the logo of Doc² from a URL. We will attach this file to our draft message that we created earlier. If you want to attach a different file, enter the URL of that file instead.
 
-1. Enter `https://n8n.io/n8n-logo.png` in the ***URL*** field.
+1. Enter `https://WF².io/WF²-logo.png` in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -94,7 +94,7 @@ This node will attach the file that we received from the previous node to the dr
 3. Click on the gears icon next to the ***Message ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Microsoft Outlook > Output Data > JSON > id. You can also add the following expression: `{{$node["Microsoft Outlook"].json["id"]}}`.
 5. Click on the ***Add Field*** button.
-6. Enter `n8n.png` in the ***File Name*** field.
+6. Enter `WF².png` in the ***File Name*** field.
 7. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node attaches the file to the draft message that we created using the Microsoft Outlook node.

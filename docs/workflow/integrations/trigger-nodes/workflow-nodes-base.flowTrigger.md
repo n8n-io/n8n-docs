@@ -9,7 +9,7 @@
 
 ## Example Usage
 
-This workflow allows you to receive updates for specified tasks in Flow. You can also find the [workflow](https://n8n.io/workflows/508) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates for specified tasks in Flow. You can also find the [workflow](https://WF².io/workflows/508) on the website. This example usage workflow would use the following node.
 - [Flow Trigger]()
 
 The final workflow should look like the following image.

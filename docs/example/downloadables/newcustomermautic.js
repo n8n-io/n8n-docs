@@ -10,7 +10,7 @@
 		  }
 		},
 		"name": "SugarCrm",
-		"type": "n8n-nodes-base.sugarCrm",
+		"type": "WF²-nodes-base.sugarCrm",
 		"typeVersion": 1,
 		"position": [
 		  1120,
@@ -29,7 +29,7 @@
 		  "options": {}
 		},
 		"name": "SaveContactMautic",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  760,
@@ -45,7 +45,7 @@
 		  "points": 10
 		},
 		"name": "Add10Points",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  940,
@@ -59,7 +59,7 @@
 		  "event": "customer.created"
 		},
 		"name": "NewCustomerTrigger",
-		"type": "n8n-nodes-base.wooCommerceTrigger",
+		"type": "WF²-nodes-base.wooCommerceTrigger",
 		"typeVersion": 1,
 		"position": [
 		  400,
@@ -74,7 +74,7 @@
 		  "functionCode": "dict = {\n  'first_name': item.billing.first_name,\n  'last_name': item.billing.last_name,\n  'email': item.billing.email,\n}\n\nreturn dict;"
 		},
 		"name": "NormalizeMain",
-		"type": "n8n-nodes-base.functionItem",
+		"type": "WF²-nodes-base.functionItem",
 		"typeVersion": 1,
 		"position": [
 		  580,
@@ -88,7 +88,7 @@
 		  "contactId": "={{$node[\"SaveContactMautic\"].json[\"id\"]}}"
 		},
 		"name": "Welcome-Email",
-		"type": "n8n-nodes-base.mautic",
+		"type": "WF²-nodes-base.mautic",
 		"typeVersion": 1,
 		"position": [
 		  1120,

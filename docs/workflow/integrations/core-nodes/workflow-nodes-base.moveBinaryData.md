@@ -34,7 +34,7 @@ The Move Binary Data node is useful to move data between binary and JSON propert
 
 ## Example Usage
 
-This workflow allows you to store the JSON data received from the [CocktailDB API](https://www.thecocktaildb.com/) to your machine. You can also find the [workflow](https://n8n.io/workflows/652) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to store the JSON data received from the [CocktailDB API](https://www.thecocktaildb.com/) to your machine. You can also find the [workflow](https://WF².io/workflows/652) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Write Binary Data](/workflow/integrations/core-nodes/workflow-nodes-base.writeBinaryFile/)

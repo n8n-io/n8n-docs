@@ -12,6 +12,6 @@ tags:
 
 This section gets you up and running with building workflows in Workflow².
 
-* Want a very fast taster of n8n? Try the [Very quick quickstart](/workflow/try-it-out/quickstart/).
+* Want a very fast taster of WF²? Try the [Very quick quickstart](/workflow/try-it-out/quickstart/).
 * Looking for a more detailed introduction? Check out the [Slightly longer introduction](/workflow/try-it-out/longer-introduction/).
 * Prefer to work through extensive examples? Maybe the [courses](/workflow/courses/) are for you.

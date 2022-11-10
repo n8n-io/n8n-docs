@@ -11,7 +11,7 @@ The Error Trigger node triggers a workflow when another workflow has an error. O
 
 ## Example Usage
 
-This workflow allows you to send an SMS when a workflow fails. You can also find the [workflow](https://n8n.io/workflows/665) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to send an SMS when a workflow fails. You can also find the [workflow](https://WF².io/workflows/665) on Workflow².io. This example usage workflow would use the following nodes.
 - [Twilio](/workflow/integrations/nodes/workflow-nodes-base.twilio/)
 
 The final workflow should look like the following image.

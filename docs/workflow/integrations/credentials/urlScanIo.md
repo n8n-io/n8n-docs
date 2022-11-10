@@ -23,7 +23,7 @@ From urlscan.io:
 3. Enter a description for your new API key as prompted and click **+ Create API key**.
 4. Copy the new API key for use in Workflow².
 
-From n8n:
+From WF²:
 
 5. Enter the **API Key** obtained above.
 6. Click **Save** to create your credentials.

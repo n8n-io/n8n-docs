@@ -1,6 +1,6 @@
 # Overview
 
-This section provides information about a variety of n8n's core nodes.
+This section provides information about a variety of WF²'s core nodes.
 
 * [Activation Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.activationTrigger/)
 * [Compression](/workflow/integrations/core-nodes/workflow-nodes-base.compression/)

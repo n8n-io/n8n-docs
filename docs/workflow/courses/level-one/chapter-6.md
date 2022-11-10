@@ -6,7 +6,7 @@ In this chapter you will learn how to export and import workflows.
 
 ## Exporting and importing workflows
 
-n8n workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else, or import a workflow from someone else.
+WF² workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else, or import a workflow from someone else.
 
 !!! warning "Sharing credentials"
     Note that the exported JSON file of your workflow will contain your credentials as well. If you don't want to share your credentials (recommended), delete them from the JSON file.
@@ -24,13 +24,13 @@ You can export and import workflows in two ways:
 <!--
 ## Sharing workflows
 
-We love to see what users build with n8n and discover inspiring workflows! On the [n8n workflows page](https://n8n.io/workflows){:target="_blank" .external} you can find hundreds of workflows contributed by our team or community of users.
+We love to see what users build with WF² and discover inspiring workflows! On the [WF² workflows page](https://WF².io/workflows){:target="_blank" .external} you can find hundreds of workflows contributed by our team or community of users.
 
 Since now you know how to build workflows, we encourage you to build more helpful and original workflows and share them with the community.
 
 To share a workflow, follow these steps:
 
-1. Sign in to [n8n.io](https://n8n.io/login){:target="_blank" .external}.
+1. Sign in to [WF².io](https://WF².io/login){:target="_blank" .external}.
 2. Click on the **_+ Share New Workflow_** button.
 3. Enter the name of your workflow in the **_Name_** field.
 The name should be descriptive for the purpose of the workflow and easy for other users to understand.
@@ -40,7 +40,7 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 	* The description should list all the nodes used in the workflow and the function they serve. You should also mention any prerequisites for building the workflow.
 
     !!! tip  Workflow description template
-        [This is an example](https://n8n.io/workflows/1110){:target="_blank" .external} of a well-written description that you can use as a template for your own workflows.
+        [This is an example](https://WF².io/workflows/1110){:target="_blank" .external} of a well-written description that you can use as a template for your own workflows.
 
 
 5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
@@ -49,5 +49,5 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 
 <figure><img src="/_images/courses/level-one/chapter-three/Share-workflow.png" alt="Share workflow" style="width:100%"><figcaption align = "center"><i>Share workflow</i></figcaption></figure>
 
-Next, your workflow will be reviewed by our team. If it meets our guidelines, it will appear on the n8n workflows page for everyone to see and use!
+Next, your workflow will be reviewed by our team. If it meets our guidelines, it will appear on the WF² workflows page for everyone to see and use!
 -->

@@ -44,7 +44,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to send a cocktail recipe to a specified chat ID every day via a Telegram bot. You can also find the [workflow](https://n8n.io/workflows/781) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to send a cocktail recipe to a specified chat ID every day via a Telegram bot. You can also find the [workflow](https://WF².io/workflows/781) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Telegram]()
@@ -107,7 +107,7 @@ The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcast
 2. Telegram node: Connect the Telegram node with the Split In Batches node. Use the ***Expression Editor*** to select the Chat IDs from the Split in Batches node.
 3. Function node: Connect the [Function](/workflow/integrations/core-nodes/workflow-nodes-base.function/) node with the Telegram node. Use the Function node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Split In Batches node.
 
-You can also use this [workflow](https://n8n.io/workflows/772).
+You can also use this [workflow](https://WF².io/workflows/772).
 
 ### How do I add a bot to a Telegram channel?
 

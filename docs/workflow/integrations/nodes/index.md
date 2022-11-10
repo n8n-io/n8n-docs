@@ -1,13 +1,13 @@
 ---
 title: "Overview"
-description: In this section you will find countless nodes of n8n. Starting with Brandfetch, a brand search engine that lets you find logos, colors, fonts, images and more.
+description: In this section you will find countless nodes of WF². Starting with Brandfetch, a brand search engine that lets you find logos, colors, fonts, images and more.
 tags:
   - Workflow
   - nodes
 ---
 
 # Overview
-### This section provides information about a variety of n8n's nodes.
+### This section provides information about a variety of WF²'s nodes.
 
 * [Brandfetch](/workflow/integrations/nodes/workflow-nodes-base.Brandfetch/)
 * [Action Network](/workflow/integrations/nodes/workflow-nodes-base.actionNetwork/)
@@ -238,8 +238,8 @@ tags:
 * [Wise](/workflow/integrations/nodes/workflow-nodes-base.wise/)
 * [WooCommerce](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce/)
 * [WordPress](/workflow/integrations/nodes/workflow-nodes-base.wordpress/)
-* [Customer Datastore (n8n Training)](/workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomerDatastore/)
-* [Customer Messenger (n8n Training)](/workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomerMessenger/)
+* [Customer Datastore (WF² Training)](/workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomerDatastore/)
+* [Customer Messenger (WF² Training)](/workflow/integrations/nodes/workflow-nodes-base.workflowTrainingCustomerMessenger/)
 * [Xero](/workflow/integrations/nodes/workflow-nodes-base.xero/)
 * [YouTube](/workflow/integrations/nodes/workflow-nodes-base.youTube/)
 * [Yourls](/workflow/integrations/nodes/workflow-nodes-base.yourls/)

@@ -1,13 +1,13 @@
 # Understanding the data structure
 
-In this chapter, you will learn about the data structure of n8n and how to use the [Function node](/integrations/nodes/n8n-nodes-base.function/){:target="_blank" .external} to transform data and simulate node outputs.
+In this chapter, you will learn about the data structure of WF² and how to use the [Function node](/integrations/nodes/WF²-nodes-base.function/){:target="_blank" .external} to transform data and simulate node outputs.
 
 
-## Data structure of n8n
+## Data structure of WF²
 
-In a basic sense, n8n nodes function as an Extract, Transform, Load (ETL) tool. The nodes allow you to access (extract) data from multiple disparate sources, modify (transform) that data in a particular way, and pass (load) it along to where it needs to be.
+In a basic sense, WF² nodes function as an Extract, Transform, Load (ETL) tool. The nodes allow you to access (extract) data from multiple disparate sources, modify (transform) that data in a particular way, and pass (load) it along to where it needs to be.
 
-The data that moves along from node to node in your workflow must be in a format (structure) that can be recognized and interpreted by each node. In n8n, this required structure is an array of objects.
+The data that moves along from node to node in your workflow must be in a format (structure) that can be recognized and interpreted by each node. In WF², this required structure is an array of objects.
 
 !!! note "What is an array of objects?"
 
@@ -51,14 +51,14 @@ Data sent from one node to another is sent as an array of JSON objects. The elem
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 
-An n8n node performs its action on each item of incoming data.
+An WF² node performs its action on each item of incoming data.
 
 <figure><img src="/_images/flow-logic/looping/customer_datastore_node.png"><figcaption align = "center"><i>Items in the Customer Datastore node</i></figcaption></figure>
 
 
 ## Creating data sets with the Function node
 
-Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the Function node to write JavaScript code defining your array of objects with the following structure:
+Now that you are familiar with the WF² data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the Function node to write JavaScript code defining your array of objects with the following structure:
 
 ```javascript
 return [
@@ -76,17 +76,17 @@ For example, the array of objects representing the Ninja turtles would look like
 
 !!! warning "JSON objects"
 
-	Notice that this array of objects contains an extra key: `json`. n8n expects you to wrap each object in an array in another object, with the key `json`.
+	Notice that this array of objects contains an extra key: `json`. WF² expects you to wrap each object in an array in another object, with the key `json`.
 
-	<figure><img src="/_images/courses/level-two/chapter-one/explanation_dataStructure.png" alt="" style="width:100%"><figcaption align = "center"><i>Illustration of data structure in n8n</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-one/explanation_dataStructure.png" alt="" style="width:100%"><figcaption align = "center"><i>Illustration of data structure in WF²</i></figcaption></figure>
 
-	It's good practice to pass the data in the right structure used by n8n. But don't worry if you forget to add the `json` key to an item, n8n (version 0.166.0 and above) adds it automatically.
+	It's good practice to pass the data in the right structure used by WF². But don't worry if you forget to add the `json` key to an item, WF² (version 0.166.0 and above) adds it automatically.
 
 
 You can also have nested pairs, for example if you want to define a primary and a secondary color. In this case, you need to further wrap the key-value pairs in curly braces `{}`.
 
-!!! note "n8n data structure video"
-	[This talk](https://www.youtube.com/watch?v=mQHT3Unn4tY) offers a more detailed explanation of data structure in n8n.
+!!! note "WF² data structure video"
+	[This talk](https://www.youtube.com/watch?v=mQHT3Unn4tY) offers a more detailed explanation of data structure in WF².
 
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/mQHT3Unn4tY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -152,7 +152,7 @@ Let's build on the previous exercise, in which you used the Function node to cre
 
 ## Transforming data
 
-The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data/){:target="_blank" .external}, so that each item can be processed individually.
+The incoming data from some nodes may have a different data structure than the one used in WF². In this case, you need to [transform the data](/data/transforming-data/){:target="_blank" .external}, so that each item can be processed individually.
 
 The two most common operations for data transformation are:
 
@@ -162,7 +162,7 @@ The two most common operations for data transformation are:
 There are several ways to transform data for the purposes mentioned above:
 
 - With the HTTP Request node, you can toggle the option `Split Into Items` to create multiple items from a single item. This is the easiest way to transform incoming web data with one click.
-- With the [Item Lists node](/integrations/core-nodes/n8n-nodes-base.itemLists){:target="_blank" .external}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Function node.
+- With the [Item Lists node](/integrations/core-nodes/WF²-nodes-base.itemLists){:target="_blank" .external}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Function node.
 - With the Function node, you can write JavaScript functions to modify the data structure of incoming data:
 
     To create multiple items from a single item, you can use this JavaScript code:

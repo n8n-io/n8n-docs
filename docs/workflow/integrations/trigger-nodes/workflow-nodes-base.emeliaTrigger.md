@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://n8n.io/workflows/1039) on Workflow².io. This example usage workflow would use the following node.
+This workflow allows you to send a message on Mattermost when a lead replies to your email. You can also find the [workflow](https://WF².io/workflows/1039) on Workflow².io. This example usage workflow would use the following node.
 - [Emelia Trigger]()
 - [Mattermost](/workflow/integrations/nodes/workflow-nodes-base.mattermost/)
 
@@ -27,7 +27,7 @@ The final workflow should look like the following image.
 
 ### 1. Emelia Trigger
 
-The Emelia Trigger node will trigger the workflow when a lead sends a reply to the campaign `n8n`. If you have a different campaign, use that instead.
+The Emelia Trigger node will trigger the workflow when a lead sends a reply to the campaign `WF²`. If you have a different campaign, use that instead.
 
 1. First of all, you'll have to enter credentials for the Emelia Trigger node. You can find out how to do that [here](/workflow/integrations/credentials/emelia/).
 2. Select a campaign from the ***Campaign*** dropdown list.

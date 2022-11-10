@@ -13,7 +13,7 @@
         }
       },
       "name": "Get unread messages",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "type": "WF²-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
         1160,
@@ -38,7 +38,7 @@
         }
       },
       "name": "Mark message as read",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "type": "WF²-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
         1500,
@@ -57,7 +57,7 @@
         "interval": 10
       },
       "name": "Interval",
-      "type": "n8n-nodes-base.interval",
+      "type": "WF²-nodes-base.interval",
       "typeVersion": 1,
       "position": [
         120,
@@ -76,7 +76,7 @@
       },
       "id": "30d39327-c9a8-4ed7-ad95-8da701d73dc5",
       "name": "Upload Document",
-      "type": "n8n-nodes-base.upload",
+      "type": "WF²-nodes-base.upload",
       "typeVersion": 1,
       "position": [
         2240,
@@ -100,7 +100,7 @@
       },
       "id": "589491a9-182a-4b14-bfa9-30af3365fc69",
       "name": "Get Attachments",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "type": "WF²-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
         1600,
@@ -123,7 +123,7 @@
       },
       "id": "1a6c6c83-a29a-483e-9ee1-74141af17339",
       "name": "Download Attachment",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "type": "WF²-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
         1820,
@@ -143,7 +143,7 @@
       },
       "id": "27a256b1-b2a7-4616-a29c-95e331cd7ad9",
       "name": "FunctionItem",
-      "type": "n8n-nodes-base.functionItem",
+      "type": "WF²-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
         500,
@@ -164,7 +164,7 @@
       },
       "id": "c1835878-1d80-4a84-9c11-9bba82b23262",
       "name": "IF",
-      "type": "n8n-nodes-base.if",
+      "type": "WF²-nodes-base.if",
       "typeVersion": 1,
       "position": [
         700,
@@ -179,7 +179,7 @@
       },
       "id": "0d534627-6ed8-40f6-a72f-4e96386be0e9",
       "name": "Microsoft getFolders",
-      "type": "n8n-nodes-base.microsoftOutlook",
+      "type": "WF²-nodes-base.microsoftOutlook",
       "typeVersion": 1,
       "position": [
         300,
@@ -199,7 +199,7 @@
       },
       "id": "857d2847-44ff-48a0-a458-e3cad5420826",
       "name": "SplitInBatches",
-      "type": "n8n-nodes-base.splitInBatches",
+      "type": "WF²-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
         920,
@@ -224,7 +224,7 @@
       },
       "id": "6fa095dc-425f-4f0d-9267-6f243df4ffaf",
       "name": "Switch",
-      "type": "n8n-nodes-base.switch",
+      "type": "WF²-nodes-base.switch",
       "typeVersion": 1,
       "position": [
         2000,
@@ -242,7 +242,7 @@
       },
       "id": "b7236cc8-1590-4421-a809-8af328883928",
       "name": "Upload Document1",
-      "type": "n8n-nodes-base.upload",
+      "type": "WF²-nodes-base.upload",
       "typeVersion": 1,
       "position": [
         2240,
@@ -270,7 +270,7 @@
       },
       "id": "1d1d96ce-0d07-4bca-b280-db209fb840cf",
       "name": "IF1",
-      "type": "n8n-nodes-base.if",
+      "type": "WF²-nodes-base.if",
       "typeVersion": 1,
       "position": [
         1340,

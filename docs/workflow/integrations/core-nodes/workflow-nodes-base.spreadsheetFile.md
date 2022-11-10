@@ -41,7 +41,7 @@ When writing to a spreadsheet file, the *File Format* field can be used to speci
 
 ## Example Usage
 
-This workflow allows you to read a spreadsheet file using the Spreadsheet File node. You can also find the [workflow](https://n8n.io/workflows/586) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to read a spreadsheet file using the Spreadsheet File node. You can also find the [workflow](https://WF².io/workflows/586) on the website. This example usage workflow would use the following three nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/)
 - [Spreadsheet File]()

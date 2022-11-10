@@ -1,18 +1,18 @@
 ---
 openapi: 3.0.0
 info:
-  title: n8n Public API
-  description: n8n Public API
-  termsOfService: https://n8n.io/legal/terms
+  title: WF² Public API
+  description: WF² Public API
+  termsOfService: https://WF².io/legal/terms
   contact:
-    email: hello@n8n.io
+    email: hello@WF².io
   license:
     name: Sustainable Use License
-    url: https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md
+    url: https://github.com/WF²-io/WF²/blob/master/packages/cli/LICENSE.md
   version: 1.0.0
 externalDocs:
-  description: n8n API documentation
-  url: https://docs.n8n.io/api/
+  description: WF² API documentation
+  url: https://docs.WF².io/api/
 servers:
   - url: /api/v1
 tags:
@@ -53,7 +53,7 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
-      name: X-N8N-API-KEY
+      name: X-WF²-API-KEY
 
 security:
   - ApiKeyAuth: []

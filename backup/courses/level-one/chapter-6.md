@@ -1,6 +1,6 @@
 # Exporting, Importing, and Sharing Workflows
 
-In this chapter you will learn how to export and import workflows, as well as share your workflows on the [n8n workflows](https://n8n.io/workflows) page.
+In this chapter you will learn how to export and import workflows, as well as share your workflows on the [WF² workflows](https://WF².io/workflows) page.
 
 
 
@@ -23,13 +23,13 @@ You can export and import workflows in two ways:
 
 ## Sharing workflows
 
-We love to see what users build with Doc² and discover inspiring workflows while also sharing our ideas with them! On the [n8n workflows page](https://n8n.io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
+We love to see what users build with Doc² and discover inspiring workflows while also sharing our ideas with them! On the [WF² workflows page](https://WF².io/workflows) you can find hundreds of workflows contributed by our team or community of users. Feel free to share your workflows too!
 
 Of course, since many users take this course and build the same workflow, there is no point in sharing Nathan’s workflow on the workflows page. However, we encourage you to build other helpful and original workflows and share them with the community.
 
 To share a workflow, follow these steps:
 
-1. Sign in to[ Workflow².io](https://n8n.io/login).
+1. Sign in to[ Workflow².io](https://WF².io/login).
 2. Click on the **_+ Share New Workflow_** button.
 3. Enter the name of your workflow in the **_Name_** field.
 The name should be descriptive for the purpose of the workflow and easy for other users to understand.
@@ -39,7 +39,7 @@ The name should be descriptive for the purpose of the workflow and easy for othe
 	* The description should list all the nodes used in the workflow and the function they serve. You should also mention any prerequisites for building the workflow.
 
     !!! tip  Workflow description template
-        [This is an example](https://n8n.io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
+        [This is an example](https://WF².io/workflows/1110) of a well-written description that you can use as a template for your own workflows.
     
 
 5. In the Editor UI, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).

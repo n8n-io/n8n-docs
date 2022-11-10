@@ -25,17 +25,17 @@ External services need a way to identify and authenticate users. This data can r
 
 Nodes in Workflow² can then request that credential information. As an additional layer of security credentials can only be accessed by node types which specifically have the right to do so.
 
-To make sure that the data is secure, it gets saved to the database encrypted. A random personal encryption key is used which gets automatically generated on the first run of Workflow² and then saved under `~/.n8n/config`.
+To make sure that the data is secure, it gets saved to the database encrypted. A random personal encryption key is used which gets automatically generated on the first run of Workflow² and then saved under `~/.WF²/config`.
 
 ## Requesting new integrations or integration features
 
 You can request new integrations to be added to our forum. There is a special section for that where
 other users can also upvote it so that we know which integrations are important and should be
-created next. Request a new feature [here](https://community.n8n.io/c/feature-requests/nodes).
+created next. Request a new feature [here](https://community.WF².io/c/feature-requests/nodes).
 
 Adding new functionality to an existing integration is normally not that complicated. So the chance is
 high that we can do that quite fast. Post your feature request in the forum and we'll see
-what we can do. Request a new feature [here](https://community.n8n.io/c/feature-requests/nodes).
+what we can do. Request a new feature [here](https://community.WF².io/c/feature-requests/nodes).
 
 ## Where to go next?
 

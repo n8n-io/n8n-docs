@@ -12,7 +12,7 @@
 
 ## Example Usage
 
-This workflow allows you to get synonyms of a German word in German. You can also find the [workflow](https://n8n.io/workflows/806) on the website. This example usage workflow would use the following nodes.
+This workflow allows you to get synonyms of a German word in German. You can also find the [workflow](https://WF².io/workflows/806) on the website. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [OpenThesaurus]()
 

@@ -19,6 +19,6 @@ Create a [BambooHR](https://www.bamboohr.com/) account.
 1. Log into your BambooHR account and click on the profile image in the upper right corner.
 2. Click on *API Keys*.
 3. Click on *Add New Key*, enter any name for your new key and hit *Generate Key*.
-4. Copy the key provided by BambooHR into the *API Key* field of n8n's credentials modal.
-5. Enter your subdomain (the part between `https://` and `.bamboohr.com`) in the *Subdomain* field of n8n's credentials modal.
+4. Copy the key provided by BambooHR into the *API Key* field of WF²'s credentials modal.
+5. Enter your subdomain (the part between `https://` and `.bamboohr.com`) in the *Subdomain* field of WF²'s credentials modal.
 6. Click on *Save*.

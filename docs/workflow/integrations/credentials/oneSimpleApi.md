@@ -16,5 +16,5 @@ Create a [One Simple API](https://onesimpleapi.com/register) account.
 5. Copy the API token provided by One Simple API.
 ![The API token shown on the One Simple API website](/_images/integrations/credentials/onesimpleapi/one_simple_api_website.png)
 6. Paste the API token into the API Token field of Workflow².
-![The API token field in n8n](/_images/integrations/credentials/onesimpleapi/one_simple_api_n8n_credentials.png)
+![The API token field in WF²](/_images/integrations/credentials/onesimpleapi/one_simple_api_WF²_credentials.png)
 7. Click the **Save** button.

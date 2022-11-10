@@ -9,7 +9,7 @@ Stripe is a suite of payment APIs that powers commerce for online businesses.
 
 ## Example Usage
 
-This workflow allows you to receive updates for Stripe events. You can also find the [workflow](https://n8n.io/workflows/545) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates for Stripe events. You can also find the [workflow](https://WF².io/workflows/545) on the website. This example usage workflow would use the following node.
 - [Stripe Trigger]()
 
 The final workflow should look like the following image.

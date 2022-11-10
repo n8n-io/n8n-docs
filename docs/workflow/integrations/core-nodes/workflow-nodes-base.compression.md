@@ -19,7 +19,7 @@ The Compression node is useful to compress and decompress files. You can either 
 
 ## Example Usage
 
-This workflow allows you to compress binary files to zip format and upload them to Dropbox. You can also find the [workflow](https://n8n.io/workflows/908) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to compress binary files to zip format and upload them to Dropbox. You can also find the [workflow](https://WF².io/workflows/908) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Dropbox](/workflow/integrations/nodes/workflow-nodes-base.dropbox/)
@@ -38,7 +38,7 @@ The start node exists by default when you create a new workflow.
 
 This example workflow uses the HTTP Request node to fetch an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
-1. Enter the URL of the image in the ***URL*** field. For example, `https://docs.n8n.io/assets/_images/insight2/final-workflow.f380b957.png`.
+1. Enter the URL of the image in the ***URL*** field. For example, `https://docs.WF².io/assets/_images/insight2/final-workflow.f380b957.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Enter `workflow_image` in the ***Binary Property*** field.
 4. Click on ***Execute Node*** to run the node.
@@ -51,7 +51,7 @@ In the screenshot below, you will notice that the HTTP Request node fetches the 
 
 This node fetches an image from a URL. You can also use the [Read Binary File](/workflow/integrations/core-nodes/workflow-nodes-base.readBinaryFile/) node to read a file from the path you specify.
 
-1. Enter the URL of the image in the ***URL*** field. For example, `https://n8n.io/n8n-logo.png`.
+1. Enter the URL of the image in the ***URL*** field. For example, `https://WF².io/WF²-logo.png`.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Enter `logo` in the ***Binary Property*** field.
 4. Click on ***Execute Node*** to run the node.

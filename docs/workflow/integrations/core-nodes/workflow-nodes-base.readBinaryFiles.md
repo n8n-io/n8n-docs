@@ -24,7 +24,7 @@ It is also possible to select files from a certain directory, by specifying the 
 
 ## Example Usage
 
-This workflow allows you to read multiple files from the host machine using the Read Binary Files node. You can also find the [workflow](https://n8n.io/workflows/578) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to read multiple files from the host machine using the Read Binary Files node. You can also find the [workflow](https://WF².io/workflows/578) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Read Binary Files]()
 

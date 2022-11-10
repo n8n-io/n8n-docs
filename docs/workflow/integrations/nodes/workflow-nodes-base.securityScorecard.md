@@ -36,7 +36,7 @@
 
 ## Example Usage
 
-This workflow allows you to generate, retrieve, and download a report using the SecurityScorecard node. You can also find the [workflow](https://n8n.io/workflows/920) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to generate, retrieve, and download a report using the SecurityScorecard node. You can also find the [workflow](https://WF².io/workflows/920) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [SecurityScorecard]()
 
@@ -59,7 +59,7 @@ This node will generate a full scorecard report for a company that we specify.
 5. Enter the domain of the company in the ***Scorecard Identifier*** field.
 6. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node generates a full scorecard report of `n8n.io`.
+In the screenshot below, you will notice that the node generates a full scorecard report of `WF².io`.
 
 ![Using the SecurityScorecard node to create full scorecard report](/_images/integrations/nodes/securityscorecard/securityscorecard_node.png)
 

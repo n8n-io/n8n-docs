@@ -5,7 +5,7 @@ You can use these credentials to authenticate the following nodes with Mocean.
 
 ## Prerequisites
 
-Create a [Mocean](https://dashboard.moceanapi.com/register?fr=n8n) account.
+Create a [Mocean](https://dashboard.moceanapi.com/register?fr=WF²) account.
 
 ## Using Access Token
 

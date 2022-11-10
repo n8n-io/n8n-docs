@@ -8,7 +8,7 @@ You have knowledge of:
 
 - JavaScript/TypeScript
 - REST APIs
-- Expressions in n8n
+- Expressions in WF²
 
 Install the following tools:
 
@@ -29,17 +29,17 @@ Install the following tools:
 
 The first thing that we have to do is pick the service we want to create the node for. We will use [SendGrid](https://sendgrid.com/) as an example.
 
-For the sake of brevity, we will only showcase how to add the functionality to create a contact. Since n8n's repository already has a SendGrid node, we will name this node **FriendGrid** to avoid conflicts.
+For the sake of brevity, we will only showcase how to add the functionality to create a contact. Since WF²'s repository already has a SendGrid node, we will name this node **FriendGrid** to avoid conflicts.
 
 ## Cloning the repository
 
-In GitHub, fork the [n8n repository](https://github.com/n8n-io/n8n). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
+In GitHub, fork the [WF² repository](https://github.com/WF²-io/WF²). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
 
 ```bash
-git clone https://github.com/<USERNAME>/n8n.git && cd n8n
+git clone https://github.com/<USERNAME>/WF².git && cd WF²
 ```
 
-n8n is built from four main packages:
+WF² is built from four main packages:
 
 - cli
 - core
@@ -49,10 +49,10 @@ n8n is built from four main packages:
 All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
 - The folder `nodes`, contains all the nodes in Workflow².
-- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
+- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in WF²'s database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
-![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
+![WF² folder structure](/_images/integrations/creating-nodes/code/WF²-folder-structure.png)
 
 
 ## Creating the node
@@ -69,14 +69,14 @@ All these packages are under the `/packages` folder in the main Doc² folder. We
 ```typescript
 import {
     IExecuteFunctions,
-} from 'n8n-core';
+} from 'WF²-core';
 
 import {
     IDataObject,
     INodeExecutionData,
     INodeType,
     INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 import {
     OptionsWithUri,
@@ -117,19 +117,19 @@ Your directory structure should now look like the following.
 
 ## Adding the node to Editor UI
 
-n8n uses the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
+WF² uses the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
 
 Check the following figure to see how the properties affect the looks of the node.
 
 ![FriendGrid's appearance in Editor UI](/_images/integrations/creating-nodes/code/friendgrid-appearance.png)
 
-**Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
+**Note:** The property description conforms to [INodeTypeDescription](https://github.com/WF²-io/WF²/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
 Let's see how the node looks in the UI by following these steps:
 
 1. Go to `/packages/nodes-base/package.json`.
 2. Paste `"dist/nodes/FriendGrid/FriendGrid.node.js",` in the nodes array to register the node (in an alphabetical order).
-3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
+3. Go to the project's main folder (WF²) in the terminal and run the following commands (it can take a few minutes).
 	- The first command installs all dependencies of all the modules and links them together.
 	- The second command builds all the code.
 	- The third command starts Doc² in development mode.
@@ -307,7 +307,7 @@ Now all our optional fields are presented in the UI and can be set individually 
 
 Most REST APIs use some sort of authentication mechanism. FriendGrid's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
-n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
+WF² gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s FriendGrid API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
@@ -319,7 +319,7 @@ With that in mind, let’s create the UI to ask for the user’s FriendGrid API 
 import {
     ICredentialType,
     NodePropertyTypes,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 export class FriendGridApi implements ICredentialType {
     name = 'friendGridApi';
@@ -426,7 +426,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 
 If everything went well, you should see the following.
 
-![Creating a contact in FriendGrid with n8n](/_images/integrations/creating-nodes/code/create-contact-friendgrid.png)
+![Creating a contact in FriendGrid with WF²](/_images/integrations/creating-nodes/code/create-contact-friendgrid.png)
 
 Now we can successfully create contacts in FriendGrid from Workflow².
 
@@ -443,12 +443,12 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
  return [
   {
     json: {
-      name: 'ricardo@n8n.io'
+      name: 'ricardo@WF².io'
     }
   },
     {
     json: {
-      name: 'hello@n8n.io'
+      name: 'hello@WF².io'
     }
   },
 ]
@@ -480,8 +480,8 @@ This is when the `this.getInputData()` function comes into play. Let's update ou
 					// get email input
 					const email = this.getNodeParameter('email', i) as string;
 
-					// i = 1 returns ricardo@n8n.io
-					// i = 2 returns hello@n8n.io
+					// i = 1 returns ricardo@WF².io
+					// i = 2 returns hello@WF².io
 
 					// get additional fields input
 					const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
@@ -531,12 +531,12 @@ Let’s go over the final version of the `execute` method. We are getting the it
 [
   {
     json: {
-      name: 'ricardo@n8n.io'
+      name: 'ricardo@WF².io'
     }
   },
     {
     json: {
-      name: 'hello@n8n.io'
+      name: 'hello@WF².io'
     }
   },
 ]
@@ -546,8 +546,8 @@ The `this.getNodeParameters(ParameterName, index)`function outputs the following
 
 | Index | Parameter Name | Output            |
 |-------|----------------|-------------------|
-| 0     | email          | ricardo@n8n.io    |
-| 1     | email          | hello@n8n.io      |
+| 0     | email          | ricardo@WF².io    |
+| 1     | email          | hello@WF².io      |
 
 We used the `this.helpers.request(options)` method to make the HTTP Request that creates the contact in FriendGrid. The FriendGrid endpoint returns something like this:
 
@@ -557,7 +557,7 @@ We used the `this.helpers.request(options)` method to make the HTTP Request that
 }
 ```
 
-We then used the `this.helpers.returnJsonArray()` method to map the API’s output data to n8n's data structure. The node then ends up returning the data like the following:
+We then used the `this.helpers.returnJsonArray()` method to map the API’s output data to WF²'s data structure. The node then ends up returning the data like the following:
 
 ```javascript
 [

@@ -33,24 +33,24 @@ Install the following tools:
 
 You can create multiple wf-nodes-modules. Each individual wf-nodes-module should get created in a separate folder since they are different npm packages. A single wf-nodes-module can contain multiple nodes. If you’re creating multiple nodes in the same module, as a best practice create each node in a separate folder.
 
-In this tutorial, you will create an n8n-nodes-module for the OpenWeatherMap API. You will name it ***n8n-nodes-weather***.
+In this tutorial, you will create an WF²-nodes-module for the OpenWeatherMap API. You will name it ***WF²-nodes-weather***.
 
 To quickly get started, clone the example starter using the following command:
 
 ```bash
-git clone https://github.com/n8n-io/n8n-nodes-starter.git n8n-nodes-weather.
+git clone https://github.com/WF²-io/WF²-nodes-starter.git WF²-nodes-weather.
 ```
 
-After the repo gets cloned, open the package.json file, and update the value of the name by replacing `n8n-nodes-starter` with `n8n-nodes-weather`.
+After the repo gets cloned, open the package.json file, and update the value of the name by replacing `WF²-nodes-starter` with `WF²-nodes-weather`.
 
-**NOTE:** The name of the module has to start with `n8n-nodes-`.
+**NOTE:** The name of the module has to start with `WF²-nodes-`.
 
 Open the cloned repository in your code editor, and create a new folder called `Weather`, inside the ***nodes*** folder. Create `Weather.node.ts` file inside the Weather folder and paste the following code:
 
 ```ts
 import {
 	IExecuteFunctions,
-} from 'n8n-core';
+} from 'WF²-core';
 import {
 	IDataObject,
 	INodeExecutionData,
@@ -58,7 +58,7 @@ import {
 	INodeTypeDescription,
 	NodeApiError,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 import { OptionsWithUri } from 'request';
 
@@ -356,7 +356,7 @@ The OpenWeatherMap API requires credentials to return results successfully. Crea
 import {
 	ICredentialType,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 
 export class WeatherApi implements ICredentialType {
@@ -373,11 +373,11 @@ export class WeatherApi implements ICredentialType {
 }
 ```
 
-Add the newly created node and the credential to the package.json file. Add `"dist/nodes/Weather/Weather.node.js"` to the ***nodes*** array in the ***n8n*** object (`n8n.nodes`). Similarly, add `"dist/credentials/WeatherApi.credentials.js"` to the ***credentials*** array in the ***n8n*** object (`n8n.credentials`).
+Add the newly created node and the credential to the package.json file. Add `"dist/nodes/Weather/Weather.node.js"` to the ***nodes*** array in the ***WF²*** object (`WF².nodes`). Similarly, add `"dist/credentials/WeatherApi.credentials.js"` to the ***credentials*** array in the ***WF²*** object (`WF².credentials`).
 
 ## Develop and test the module
 
-Once you’ve created the n8n-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
+Once you’ve created the WF²-nodes-module, you need to build the code and publish the package locally to test it. Run the following commands:
 
 ```bash
 # Install dependencies
@@ -396,38 +396,38 @@ In the terminal, open the folder where you installed Workflow². Run the followi
 
 ```bash
 # "Install" the above locally published module
-npm link n8n-nodes-weather
+npm link WF²-nodes-weather
 ```
 
 Start Doc² with the below command
 
 ```bash
-./node_modules/n8n/bin/n8n start
+./node_modules/WF²/bin/WF² start
 ```
 
-You will now be able to test and use your newly created n8n-nodes-module.
+You will now be able to test and use your newly created WF²-nodes-module.
 
-## Publish the n8n-nodes-module
+## Publish the WF²-nodes-module
 
-As mentioned, the n8n-nodes-module is an npm package. To make it available to others, you can publish it to the npm registry. Refer to the [Publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) guide to learn about publishing packages.
+As mentioned, the WF²-nodes-module is an npm package. To make it available to others, you can publish it to the npm registry. Refer to the [Publishing unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) guide to learn about publishing packages.
 
-Following the steps mentioned above, you can create multiple nodes within a single n8n-nodes-module. You can also create nodes that require dependencies that are not present in Workflow². When creating an n8n-nodes-module make sure that you follow the following guidelines:
+Following the steps mentioned above, you can create multiple nodes within a single WF²-nodes-module. You can also create nodes that require dependencies that are not present in Workflow². When creating an WF²-nodes-module make sure that you follow the following guidelines:
 
-- The name of the module should start with `n8n-nodes-`.
-- The `package.json` file has to contain a key `n8n` with the paths to nodes and credentials.
+- The name of the module should start with `WF²-nodes-`.
+- The `package.json` file has to contain a key `WF²` with the paths to nodes and credentials.
 - The module has to be installed alongside Workflow².
 
-## Use the n8n-nodes-module in production
+## Use the WF²-nodes-module in production
 
-Once you test and publish your n8n-nodes-module you would want to use it in your production environment.
+Once you test and publish your WF²-nodes-module you would want to use it in your production environment.
 
 If you’re running Doc² via Docker, you will have to create a Docker image with the node module installed in Workflow². Follow the steps below to create your Docker image:
 
-1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
+1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/WF²-io/WF²/blob/master/docker/images/WF²/Dockerfile).
 2. Add the following command in your Dockerfile before the font installation command.
 
 ```Dockerfile
-RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-weather
+RUN cd /usr/local/lib/node_modules/WF² && npm install WF²-nodes-weather
 ```
 
 Your Dockerfile should be as follow:
@@ -435,9 +435,9 @@ Your Dockerfile should be as follow:
 ```Dockerfile
 FROM node:14.15-alpine
 
-# ARG N8N_VERSION
+# ARG WF²_VERSION
 
-RUN if [ -z "$N8N_VERSION" ] ; then echo "The N8N_VERSION argument is missing!" ; exit 1; fi
+RUN if [ -z "$WF²_VERSION" ] ; then echo "The WF²_VERSION argument is missing!" ; exit 1; fi
 
 # Update everything and install needed dependencies
 RUN apk add --update graphicsmagick tzdata git tini su-exec
@@ -452,8 +452,8 @@ RUN apk --update add --virtual build-dependencies python build-base ca-certifica
 	apk del build-dependencies \
 	&& rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root;
 
-# Install n8n-nodes-weather module
-RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-weather
+# Install WF²-nodes-weather module
+RUN cd /usr/local/lib/node_modules/WF² && npm install WF²-nodes-weather
 
 # Install fonts
 RUN apk --no-cache add --virtual fonts msttcorefonts-installer fontconfig && \
@@ -474,10 +474,10 @@ ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 EXPOSE 5678/tcp
 ```
 
-**NOTE:** Replace n8n-nodes-weather with the name of your n8n-nodes-module
+**NOTE:** Replace WF²-nodes-weather with the name of your WF²-nodes-module
 
 3. Build your Docker image using the `docker build .` command.
 
-You will now be able to use your n8n-nodes-module in Docker.
+You will now be able to use your WF²-nodes-module in Docker.
 
-If you’re running either by installing it globally or via PM2, make sure that you install your n8n-nodes-module inside Workflow². Doc² will find the module and load it automatically.
+If you’re running either by installing it globally or via PM2, make sure that you install your WF²-nodes-module inside Workflow². Doc² will find the module and load it automatically.

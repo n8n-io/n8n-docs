@@ -1,6 +1,6 @@
 # Nodelinter
 
-[Nodelinter](https://github.com/n8n-io/nodelinter) is an extensible static analysis tool for checking your Doc² node files to ensure Doc² recommended best practices are followed when developing new nodes.
+[Nodelinter](https://github.com/WF²-io/nodelinter) is an extensible static analysis tool for checking your Doc² node files to ensure Doc² recommended best practices are followed when developing new nodes.
 
 This includes rules for:
 * Alphabetization of node parameters and options
@@ -8,7 +8,7 @@ This includes rules for:
 * Default values per parameter type
 * Required and optional key-value pairs
 
-See the full linting list [here](https://github.com/n8n-io/nodelinter/blob/master/src/lintings.ts) for more details.
+See the full linting list [here](https://github.com/WF²-io/nodelinter/blob/master/src/lintings.ts) for more details.
 
 ## Installation and Usage
 
@@ -38,13 +38,13 @@ Be sure to run Nodelinter and verify your code before submitting a pull request.
 
 ### Custom config
 
-The Nodelinter [default config](https://github.com/n8n-io/nodelinter/blob/master/src/defaultConfig.ts) can be overridden to, for example, change the areas and issues linted.
+The Nodelinter [default config](https://github.com/WF²-io/nodelinter/blob/master/src/defaultConfig.ts) can be overridden to, for example, change the areas and issues linted.
 
 To do so create a JSON file containing the key values you want to override. For example:
 
 ```json
 {
-  "target": "/Users/john/n8n/packages/nodes-base/nodes/Notion/Notion.node.ts",
+  "target": "/Users/john/WF²/packages/nodes-base/nodes/Notion/Notion.node.ts",
   "patterns": [".node.ts"],
   "sortMethod": "lineNumber",
   "lintings": {

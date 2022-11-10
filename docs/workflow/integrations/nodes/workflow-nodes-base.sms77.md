@@ -15,7 +15,7 @@
 
 ## Example Usage
 
-This workflow allows you to send an SMS to a specified phone number from any phone number. You can also find the [workflow](https://n8n.io/workflows/469) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to send an SMS to a specified phone number from any phone number. You can also find the [workflow](https://WF².io/workflows/469) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [sms77]()
 

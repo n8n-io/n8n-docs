@@ -1,6 +1,6 @@
 # Processing different data types
 
-In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/nodes/){:target="_blank" .external}.
+In this chapter, you will learn how to process different types of data using [WF² core nodes](/workflows/nodes/){:target="_blank" .external}.
 
 
 ## HTML and XML data
@@ -11,7 +11,7 @@ You're most likely familiar with HTML and XML.
 
     HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 
-If you need to process HTML or XML data in your n8n workflows, use the [HTML Extract node](/integrations/core-nodes/n8n-nodes-base.htmlExtract/){:target="_blank" .external} or [XML node](/integrations/core-nodes/n8n-nodes-base.xml/){:target="_blank" .external}.
+If you need to process HTML or XML data in your WF² workflows, use the [HTML Extract node](/integrations/core-nodes/WF²-nodes-base.htmlExtract/){:target="_blank" .external} or [XML node](/integrations/core-nodes/WF²-nodes-base.xml/){:target="_blank" .external}.
 
 The HTML Extract node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
@@ -80,19 +80,19 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 
-If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/core-nodes/n8n-nodes-base.dateTime/){:target="_blank" .external}.
+If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/core-nodes/WF²-nodes-base.dateTime/){:target="_blank" .external}.
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the two trigger nodes:
 
-- [Cron node](/integrations/core-nodes/n8n-nodes-base.cron/){:target="_blank" .external} triggers the workflow at fixed dates and/or times (for example, every Monday at 9am).
-- [Interval node](/integrations/core-nodes/n8n-nodes-base.interval/){:target="_blank" .external} triggers the workflow in regular intervals of time (for example, every 10 minutes).
+- [Cron node](/integrations/core-nodes/WF²-nodes-base.cron/){:target="_blank" .external} triggers the workflow at fixed dates and/or times (for example, every Monday at 9am).
+- [Interval node](/integrations/core-nodes/WF²-nodes-base.interval/){:target="_blank" .external} triggers the workflow in regular intervals of time (for example, every 10 minutes).
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/core-nodes/n8n-nodes-base.wait/){:target="_blank" .external} after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/core-nodes/WF²-nodes-base.wait/){:target="_blank" .external} after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
 
 ### Exercise
 
-Build a workflow that adds five days to an input date. Then, if the calculated date occurred after today, the workflow waits 1 minute before [setting](/integrations/core-nodes/n8n-nodes-base.set/){:target="_blank" .external} the calculated date as a value. The workflow should be triggered every 30 minutes.
+Build a workflow that adds five days to an input date. Then, if the calculated date occurred after today, the workflow waits 1 minute before [setting](/integrations/core-nodes/WF²-nodes-base.set/){:target="_blank" .external} the calculated date as a value. The workflow should be triggered every 30 minutes.
 
 ??? note "Show me the solution"
 
@@ -113,7 +113,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					"options": {}
 				},
 				"name": "Date & Time",
-				"type": "n8n-nodes-base.dateTime",
+				"type": "WF²-nodes-base.dateTime",
 				"typeVersion": 1,
 				"position": [
 					880,
@@ -125,7 +125,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					"unit": "hours"
 				},
 				"name": "Interval",
-				"type": "n8n-nodes-base.interval",
+				"type": "WF²-nodes-base.interval",
 				"typeVersion": 1,
 				"position": [
 					520,
@@ -137,7 +137,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					"unit": "minutes"
 				},
 				"name": "Wait",
-				"type": "n8n-nodes-base.wait",
+				"type": "WF²-nodes-base.wait",
 				"typeVersion": 1,
 				"position": [
 					1240,
@@ -157,7 +157,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					}
 				},
 				"name": "IF",
-				"type": "n8n-nodes-base.if",
+				"type": "WF²-nodes-base.if",
 				"typeVersion": 1,
 				"position": [
 					1060,
@@ -176,7 +176,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					"options": {}
 				},
 				"name": "Set",
-				"type": "n8n-nodes-base.set",
+				"type": "WF²-nodes-base.set",
 				"typeVersion": 1,
 				"position": [
 					1420,
@@ -189,7 +189,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					"returnAll": true
 				},
 				"name": "Customer Datastore",
-				"type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+				"type": "WF²-nodes-base.WF²TrainingCustomerDatastore",
 				"typeVersion": 1,
 				"position": [
 					700,
@@ -262,22 +262,22 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
-In n8n, you can process binary data with the following nodes:
+In WF², you can process binary data with the following nodes:
 
-- [Move Binary Data node](/integrations/core-nodes/n8n-nodes-base.moveBinaryData/){:target="_blank" .external} to move data between binary and JSON properties.
-- [Read Binary File node](/integrations/core-nodes/n8n-nodes-base.readBinaryFile/){:target="_blank" .external} to read a file from the host machine that runs n8n.
-- [Read Binary Files](/integrations/core-nodes/n8n-nodes-base.readBinaryFiles/){:target="_blank" .external} to read multiple files from the host machine that runs n8n.
-- [Write Binary File](/integrations/core-nodes/n8n-nodes-base.writeBinaryFile/){:target="_blank" .external} to write a file to the host machine that runs n8n.
-- [Spreadsheet File node](/integrations/core-nodes/n8n-nodes-base.spreadsheetFile/){:target="_blank" .external} to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
+- [Move Binary Data node](/integrations/core-nodes/WF²-nodes-base.moveBinaryData/){:target="_blank" .external} to move data between binary and JSON properties.
+- [Read Binary File node](/integrations/core-nodes/WF²-nodes-base.readBinaryFile/){:target="_blank" .external} to read a file from the host machine that runs WF².
+- [Read Binary Files](/integrations/core-nodes/WF²-nodes-base.readBinaryFiles/){:target="_blank" .external} to read multiple files from the host machine that runs WF².
+- [Write Binary File](/integrations/core-nodes/WF²-nodes-base.writeBinaryFile/){:target="_blank" .external} to write a file to the host machine that runs WF².
+- [Spreadsheet File node](/integrations/core-nodes/WF²-nodes-base.spreadsheetFile/){:target="_blank" .external} to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 
 !!! warning "Naming the right path"
 
-	The file path looks slightly different on n8n cloud compared to desktop or self-hosted:
+	The file path looks slightly different on WF² cloud compared to desktop or self-hosted:
 
-	- n8n desktop and self-hosted: `./Documents/my_file.json`
-	- n8n cloud: `/home/node/.n8n/my_file.json`
+	- WF² desktop and self-hosted: `./Documents/my_file.json`
+	- WF² cloud: `/home/node/.WF²/my_file.json`
 
 
 ### Exercise
@@ -306,7 +306,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 					"options": {}
 				},
 				"name": "HTTP Request",
-				"type": "n8n-nodes-base.httpRequest",
+				"type": "WF²-nodes-base.httpRequest",
 				"typeVersion": 1,
 				"position": [
 					1340,
@@ -321,7 +321,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 					}
 				},
 				"name": "Move Binary Data",
-				"type": "n8n-nodes-base.moveBinaryData",
+				"type": "WF²-nodes-base.moveBinaryData",
 				"typeVersion": 1,
 				"position": [
 					1600,
@@ -367,7 +367,7 @@ Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompo
 					"filePath": "={{$json[\"fileName\"]}}"
 				},
 				"name": "Read Binary File",
-				"type": "n8n-nodes-base.readBinaryFile",
+				"type": "WF²-nodes-base.readBinaryFile",
 				"typeVersion": 1,
 				"position": [
 					1060,
@@ -382,7 +382,7 @@ Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompo
 					}
 				},
 				"name": "HTTP Request",
-				"type": "n8n-nodes-base.httpRequest",
+				"type": "WF²-nodes-base.httpRequest",
 				"typeVersion": 1,
 				"position": [
 					520,
@@ -391,10 +391,10 @@ Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompo
 			},
 			{
 				"parameters": {
-					"fileName": "/home/node/.n8n/poemist.json"
+					"fileName": "/home/node/.WF²/poemist.json"
 				},
 				"name": "Write Binary File",
-				"type": "n8n-nodes-base.writeBinaryFile",
+				"type": "WF²-nodes-base.writeBinaryFile",
 				"position": [
 					880,
 					500
@@ -407,7 +407,7 @@ Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompo
 					"options": {}
 				},
 				"name": "Move Binary Data",
-				"type": "n8n-nodes-base.moveBinaryData",
+				"type": "WF²-nodes-base.moveBinaryData",
 				"position": [
 					700,
 					500

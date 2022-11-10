@@ -28,7 +28,7 @@
 
 ## Example Usage
 
-This workflow allows you to get all mailboxes from Help Scout. You can also find the [workflow](https://n8n.io/workflows/567) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to get all mailboxes from Help Scout. You can also find the [workflow](https://WF².io/workflows/567) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Help Scout]()
 

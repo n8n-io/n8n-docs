@@ -1,8 +1,8 @@
 # Release notes
 
-## n8n@0.172.0
+## WF²@0.172.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172.0) for this version.<br />
+View the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.171.1...WF²@0.172.0) for this version.<br />
 **Release date:** 2022-04-11
 
 ### Enhancements
@@ -24,9 +24,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 [Paolo Rechia](https://github.com/paolo-rechia)  
 
-## n8n@0.171.1
+## WF²@0.171.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.171.0...n8n@0.171.1) for this version.<br />
+View the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.171.0...WF²@0.171.1) for this version.<br />
 **Release date:** 2022-04-06
 
 This is a small bug fix release.
@@ -37,13 +37,13 @@ This is a small bug fix release.
 * **core**: fix an issue causing Doc² to falsely skip some authentication.<br>
 * [WooCommerce Node:](/workflow/integrations/nodes/workflow-nodes-base.wooCommerce) Fix a pagination issue with the GetAll operation.
 
-## n8n@0.171.0 
+## WF²@0.171.0 
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />
+View the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.170.0...WF²@0.171.0) for this version.<br />
 **Release date:** 2022-04-03
 
 !!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01710).
+    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01710).
 
 
 This release focuses on bug fixes and node enhancements, with one new feature, and one breaking change to the GraphQL node.
@@ -87,9 +87,9 @@ You can now download binary data from individual nodes in your workflow.
 * [pemontto](https://github.com/pemontto)
 * [Rhys Williams](https://github.com/rhyswilliamsza)
 
-## n8n@0.170.0
+## WF²@0.170.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.169.0...n8n@0.170.0) for this version.<br />
+View the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.169.0...WF²@0.170.0) for this version.<br />
 **Release date:** 2022-03-27
 
 This release focuses on bug fixes and adding functionality to existing nodes.
@@ -123,9 +123,9 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 
 
-## n8n@0.169.0
+## WF²@0.169.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.168.2...n8n@0.169.0) for this version.<br />
+View the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.168.2...WF²@0.169.0) for this version.<br />
 **Release date:** 2022-03-20
 
 This release includes:
@@ -137,7 +137,7 @@ This release includes:
 
 ### New license
 
-This release changes n8n's license, from [Apache 2.0 with Commons Clause](https://github.com/n8n-io/n8n/blob/181ba3c4e236279b65d102a8a33ae6896f160487/LICENSE.md) to [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
+This release changes WF²'s license, from [Apache 2.0 with Commons Clause](https://github.com/WF²-io/WF²/blob/181ba3c4e236279b65d102a8a33ae6896f160487/LICENSE.md) to [Sustainable Use License](https://github.com/WF²-io/WF²/blob/master/LICENSE.md).
 
 This change aims to clarify our license terms, and our position as a fair-code project.
 
@@ -170,23 +170,23 @@ Read more about the new license in [License](/reference/license/).
 * [Matthew Walther](https://github.com/mashiox)
 * [Yann Jouanique](https://github.com/Yann-J)
 
-## n8n@0.168.2
+## WF²@0.168.2
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.1...n8n@0.168.2) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.168.1...WF²@0.168.2) for this version.<br />
 **Release date:** 2022-03-16
 
 This release contains an important bug fix for 0.168.0. Users on 0.168.0 or 0.168.1 should upgrade to this.
 
-## n8n@0.168.1
+## WF²@0.168.1
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.168.0...n8n@0.168.1) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.168.0...WF²@0.168.1) for this version.<br />
 **Release date:** 2022-03-15
 
 A bug fix for user management: fixed an issue with email templates that was preventing owners from inviting members.
 
-## n8n@0.168.0
+## WF²@0.168.0
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.167.0...n8n@0.168.0) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.167.0...WF²@0.168.0) for this version.<br />
 **Release date:** 2022-03-14
 
 ### New feature: user management
@@ -199,9 +199,9 @@ User management in Doc² allows you to invite people to work in your self-hosted
 
 Check out the [user management documentation](/hosting/user-management/) for more information.
 
-## n8n@0.167.0
+## WF²@0.167.0
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.166.0...n8n@0.167.0) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.166.0...WF²@0.167.0) for this version.<br />
 **Release date:** 2022-03-13
 
 ### Highlights
@@ -279,9 +279,9 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 * [FFTDB](https://github.com/FFTDB)
 
 
-## n8n@0.166.0
+## WF²@0.166.0
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.165.1...n8n@0.166.0) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.165.1...WF²@0.166.0) for this version.<br />
 **Release date:** 2022-03-08
 
 ### New nodes 
@@ -296,7 +296,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 ### Core functionality 
 
-- Added new environment variable `N8N_HIRING_BANNER_ENABLED` to enable/disable the hiring banner.
+- Added new environment variable `WF²_HIRING_BANNER_ENABLED` to enable/disable the hiring banner.
 - Fixed a bug preventing keyboard shortcuts from working as expected.
 - Fixed a bug causing tooltips to be hidden behind other elements.
 - Fixed a bug causing some credentials to be hidden from the credentials list.
@@ -312,13 +312,13 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 [pemontto](https://github.com/pemontto)
 
-## n8n@0.165.0 
+## WF²@0.165.0 
 
-For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
+For a comprehensive list of changes, view the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.164.1...WF²@0.165.0) for this version.<br />
 **Release date:** 2022-02-28
 
 !!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01650).
+    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01650).
 
 
 
@@ -341,7 +341,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 - Added support for workflow templates.
 - Fixed a bug causing credentials tests to fail for versioned nodes.
 - Fixed a build problem by addind dependencies `@types/lodash.set` to the `workflow` package and `@types/uuid` to the `core` package.
-- Fixed an error causing some resources to ignore a non-standard `N8N_PATH` value.
+- Fixed an error causing some resources to ignore a non-standard `WF²_PATH` value.
 - Fixed an error preventing the placeholder text from being shown when entering credentials.
 - Improved error handling for telemetry-related errors.
 
@@ -355,18 +355,18 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 [alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [lsemaj](https://github.com/jamesliupenn), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [Saurabh Kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
 
-## n8n@0.164.1
+## WF²@0.164.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.0...n8n@0.164.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.164.0...WF²@0.164.1) for this version.<br />
 **Release date:** 2022-02-20
 
 ### Core Functionality 
 
 - Fixed a bug preventing webhooks from working as expected in some scenarios.
 
-## n8n@0.164.0
+## WF²@0.164.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.1...n8n@0.164.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.163.1...WF²@0.164.0) for this version.<br />
 **Release date:** 2022-02-20
 
 ### New nodes 
@@ -391,18 +391,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Jhalter5Stones](https://github.com/Jhalter5Stones), [Valentina Lilova](https://github.com/valentina98), [thorstenfreitag](https://github.com/thorstenfreitag)
 
-## n8n@0.163.1
+## WF²@0.163.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.163.0...n8n@0.163.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.163.0...WF²@0.163.1) for this version.<br />
 **Release date:** 2022-02-13
 
 ### Core Functionality 
 
 - Fixed a bug preventing OAuth2 authentication from working as expected in some scenarios.
 
-## n8n@0.163.0
+## WF²@0.163.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.162.0...n8n@0.163.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.162.0...WF²@0.163.0) for this version.<br />
 **Release date:** 2022-02-13
 
 ### New nodes 
@@ -439,9 +439,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Iñaki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
 
-## n8n@0.162.0
+## WF²@0.162.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.1...n8n@0.162.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.161.1...WF²@0.162.0) for this version.<br />
 **Release date:** 2022-02-06
 
 ### Enhanced nodes 
@@ -470,18 +470,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [pemontto](https://github.com/pemontto)
 
-## n8n@0.161.1
+## WF²@0.161.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.161.0...n8n@0.161.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.161.0...WF²@0.161.1) for this version.<br />
 **Release date:** 2022-02-01
 
 ### Core Functionality 
 
 - Added optional debug logging to health check functionality.
 
-## n8n@0.161.0
+## WF²@0.161.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.160.0...n8n@0.161.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.160.0...WF²@0.161.0) for this version.<br />
 **Release date:** 2022-01-30
 
 ### Core Functionality 
@@ -505,9 +505,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [fabian wohlgemuth](https://github.com/wohfab)
 
-## n8n@0.160.0
+## WF²@0.160.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.1...n8n@0.160.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.159.1...WF²@0.160.0) for this version.<br />
 **Release date:** 2022-01-22
 
 ### New nodes 
@@ -534,18 +534,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [fabian wohlgemuth](https://github.com/wohfab)
 
-## n8n@0.159.1
+## WF²@0.159.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.159.0...n8n@0.159.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.159.0...WF²@0.159.1) for this version.<br />
 **Release date:** 2022-01-18
 
 ### Core Functionality 
 
 - Temporarily removed debug logging for axios requests.
 
-## n8n@0.159.0
+## WF²@0.159.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.158.0...n8n@0.159.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.158.0...WF²@0.159.0) for this version.<br />
 **Release date:** 2022-01-16
 
 ### New nodes 
@@ -577,9 +577,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Phil Clifford](https://github.com/philclifford)
 
-## n8n@0.158.0
+## WF²@0.158.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.1...n8n@0.158.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.157.1...WF²@0.158.0) for this version.<br />
 **Release date:** 2022-01-09
 
 ### New nodes 
@@ -615,18 +615,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Ricardo Georgel](https://github.com/rgeorgel), [Pierre](https://github.com/hnb2), [Vahid Sebto](https://github.com/sebto)
 
-## n8n@0.157.1
+## WF²@0.157.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.157.0...n8n@0.157.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.157.0...WF²@0.157.1) for this version.<br />
 **Release date:** 2022-01-03
 
 ### Core Functionality 
 
 - Fixed a bug where not all nodes could use the new binary data handling.
 
-## n8n@0.157.0
+## WF²@0.157.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.156.0...n8n@0.157.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.156.0...WF²@0.157.0) for this version.<br />
 **Release date:** 2022-01-02
 
 ### Enhanced nodes 
@@ -652,9 +652,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [pemontto](https://github.com/pemontto)
 
-## n8n@0.156.0
+## WF²@0.156.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.155.2...n8n@0.156.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.155.2...WF²@0.156.0) for this version.<br />
 **Release date:** 2021-12-25
 
 ### Enhanced nodes 
@@ -679,18 +679,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Arpad Gabor](https://github.com/arpadgabor), [Leo Lou](https://github.com/l4u), [Manuel](https://github.com/tennox)
 
-## n8n@0.155.2
+## WF²@0.155.2
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.154.0...n8n@0.155.2) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.154.0...WF²@0.155.2) for this version.<br />
 **Release date:** 2021-12-19
 
 ### Core Functionality 
 
 - Added support for internationalization (i18n). This functionality is currently in alpha status and breaking changes are to be expected.
 
-## n8n@0.154.0
+## WF²@0.154.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.153.0...n8n@0.154.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.153.0...WF²@0.154.0) for this version.<br />
 **Release date:** 2021-12-19
 
 ### Enhanced nodes 
@@ -713,9 +713,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Mohammed Huzaif](https://github.com/huzaif-plivo), [Лебедев Иван](https://github.com/X-pech)
 
-## n8n@0.153.0
+## WF²@0.153.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.152.0...n8n@0.153.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.152.0...WF²@0.153.0) for this version.<br />
 **Release date:** 2021-12-11
 
 ### New nodes 
@@ -759,9 +759,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [pemontto](https://github.com/pemontto), [Jascha Lülsdorf](https://github.com/buelsenfrucht), [Jonathan Bennetts](https://github.com/Joffcom)
 
-## n8n@0.152.0
+## WF²@0.152.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.151.0...n8n@0.152.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.151.0...WF²@0.152.0) for this version.<br />
 **Release date:** 2021-12-04
 
 ### New nodes 
@@ -798,9 +798,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Zvonimir Erdelja](https://github.com/zvonimir-ebot7), [m2scared](https://github.com/m2scared)
 
-## n8n@0.151.0
+## WF²@0.151.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.150.0...n8n@0.151.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.150.0...WF²@0.151.0) for this version.<br />
 **Release date:** 2021-11-26
 
 ### New nodes 
@@ -825,9 +825,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Jonathan Bennetts](https://github.com/Joffcom)
 
-## n8n@0.150.0
+## WF²@0.150.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.149.0...n8n@0.150.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.149.0...WF²@0.150.0) for this version.<br />
 **Release date:** 2021-11-19
 
 ### Enhanced nodes 
@@ -838,7 +838,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Core Functionality 
 
 - Fixed a build issue by pinning rudder-sdk-node version 1.0.6 in CLI package.
-- Fixed an issue preventing the `n8n import:workflow --separate` CLI command from finding workflows on Windows.
+- Fixed an issue preventing the `WF² import:workflow --separate` CLI command from finding workflows on Windows.
 - Further improved the expression security.
 - Moved all nodes into separate directories in preparation for internationalization.
 - Removing default headers for PUT and PATCH operations when using axios.
@@ -852,9 +852,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Start:](/workflow/integrations/core-nodes/workflow-nodes-base.start/) Fixed an issue causing the node to be disabled in a new workflow.
 * [Xero:](/workflow/integrations/nodes/workflow-nodes-base.xero/) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
 
-## n8n@0.149.0
+## WF²@0.149.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.148.0...n8n@0.149.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.148.0...WF²@0.149.0) for this version.<br />
 **Release date:** 2021-11-13
 
 ### New nodes 
@@ -888,9 +888,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [GeylaniBerk](https://github.com/GeylaniBerk), [Jonathan Bennetts](https://github.com/Joffcom)
 
-## n8n@0.148.0
+## WF²@0.148.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.1...n8n@0.148.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.147.1...WF²@0.148.0) for this version.<br />
 **Release date:** 2021-11-05
 
 ### New nodes 
@@ -925,18 +925,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [mizzimizzi](https://github.com/mizzimizzi), [nikozila](https://github.com/nikozila), [Pauline](https://github.com/PaulineDropcontact)
 
-## n8n@0.147.1
+## WF²@0.147.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.147.0...n8n@0.147.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.147.0...WF²@0.147.1) for this version.<br />
 **Release date:** 2021-11-03
 
 ### Core Functionality 
 
 - Fixed a build issue by moving the `chokidar` dependency to a regular dependency.
 
-## n8n@0.147.0
+## WF²@0.147.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.146.0...n8n@0.147.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.146.0...WF²@0.147.0) for this version.<br />
 **Release date:** 2021-11-03
 
 ### New nodes 
@@ -949,9 +949,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Improved the database migration process to reduce memory footprint.
 - Fixed an issue with telemetry by adding an anonymous ID.
 
-## n8n@0.146.0
+## WF²@0.146.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.145.0...n8n@0.146.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.145.0...WF²@0.146.0) for this version.<br />
 **Release date:** 2021-10-29
 
 ### New nodes 
@@ -983,9 +983,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Valentina Lilova](https://github.com/valentina98), [Oliver Trajceski](https://github.com/SchnapsterDog)
 
-## n8n@0.145.0
+## WF²@0.145.0
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.144.0...n8n@0.145.0) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.144.0...WF²@0.145.0) for this version.<br />
 **Release date:** 2021-10-22
 
 ### New nodes 
@@ -1026,8 +1026,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [pemontto](https://github.com/pemontto), [rdd2](https://github.com/rdd2), [robertodamiani](https://github.com/robertodamiani), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
-## n8n@0.144.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.143.0...n8n@0.144.0) for this version.<br />
+## WF²@0.144.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.143.0...WF²@0.144.0) for this version.<br />
 **Release date:** 2021-10-15
 
 ### Enhanced nodes 
@@ -1046,8 +1046,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Jonathan Bennetts](https://github.com/Joffcom)
 
-## n8n@0.143.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.142.0...n8n@0.143.0) for this version.<br />
+## WF²@0.143.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.142.0...WF²@0.143.0) for this version.<br />
 **Release date:** 2021-10-14
 
 ### Enhanced nodes 
@@ -1066,8 +1066,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Rodrigo Correia](https://github.com/rodrigoscdc)
 
-## n8n@0.142.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.1...n8n@0.142.0) for this version.<br />
+## WF²@0.142.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.141.1...WF²@0.142.0) for this version.<br />
 **Release date:** 2021-10-07
 
 ### New nodes 
@@ -1093,15 +1093,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
 
-## n8n@0.141.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.0...n8n@0.141.1) for this version.<br />
+## WF²@0.141.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.141.0...WF²@0.141.1) for this version.<br />
 **Release date:** 2021-10-01
 
 ### Core Functionality 
 - Fixed issue with body formatting of `x-form-www-urlencoded` requests.
 
-## n8n@0.141.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.140.0...n8n@0.141.0) for this version.<br />
+## WF²@0.141.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.140.0...WF²@0.141.0) for this version.<br />
 **Release date:** 2021-09-30
 
 ### New nodes 
@@ -1118,8 +1118,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Alex Hall](https://github.com/alexmojaki), [Tom Klingenberg](https://github.com/ktomk)
 
-## n8n@0.140.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.1...n8n@0.140.0) for this version.<br />
+## WF²@0.140.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.139.1...WF²@0.140.0) for this version.<br />
 **Release date:** 2021-09-29
 
 ### New nodes 
@@ -1138,15 +1138,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [pemontto](https://github.com/pemontto)
 
-## n8n@0.139.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.139.0...n8n@0.139.1) for this version.<br />
+## WF²@0.139.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.139.0...WF²@0.139.1) for this version.<br />
 **Release date:** 2021-09-23
 
 ### Core Functionality 
 - Bug fixes and improvements for Editor UI.
 
-## n8n@0.139.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.138.0...n8n@0.139.0) for this version.<br />
+## WF²@0.139.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.138.0...WF²@0.139.0) for this version.<br />
 **Release date:** 2021-09-22
 
 ### New nodes 
@@ -1171,8 +1171,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Matías Aguirre](https://github.com/omab)
 
-## n8n@0.138.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.137.0...n8n@0.138.0) for this version.<br />
+## WF²@0.138.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.137.0...WF²@0.138.0) for this version.<br />
 **Release date:** 2021-09-15
 
 ### New nodes 
@@ -1200,8 +1200,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [bramknuever](https://github.com/bramknuever), [Chris Magnuson](https://github.com/ChrisMagnuson)
 
-## n8n@0.137.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.136.0...n8n@0.137.0) for this version.<br />
+## WF²@0.137.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.136.0...WF²@0.137.0) for this version.<br />
 **Release date:** 2021-09-05
 
 ### New nodes 
@@ -1234,8 +1234,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
 
-## n8n@0.136.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.3...n8n@0.136.0) for this version.<br />
+## WF²@0.136.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.135.3...WF²@0.136.0) for this version.<br />
 **Release date:** 2021-08-30
 
 ### Enhanced nodes 
@@ -1254,8 +1254,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Webhook:](/workflow/integrations/core-nodes/workflow-nodes-base.webhook/) Fixed issue when receiving multiple files.
 
 
-## n8n@0.135.3
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.2...n8n@0.135.3) for this version.<br />
+## WF²@0.135.3
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.135.2...WF²@0.135.3) for this version.<br />
 **Release date:** 2021-08-27
 
 ### Core Functionality 
@@ -1267,8 +1267,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Kyle Mohr](https://github.com/kylefmohr)
 
 
-## n8n@0.135.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.1...n8n@0.135.2) for this version.<br />
+## WF²@0.135.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.135.1...WF²@0.135.2) for this version.<br />
 **Release date:** 2021-08-26
 
 ### Core Functionality 
@@ -1276,20 +1276,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added expression support for credentials.
 - Fixed performance issues when loading credentials.
 
-## n8n@0.135.1
+## WF²@0.135.1
 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.0...n8n@0.135.1) for this version.<br />
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.135.0...WF²@0.135.1) for this version.<br />
 **Release date:** 2021-08-23
 
 ### Core Functionality 
 - Fixed an issue where if Doc² was shutdown during database migration while upgrading versions, errors would result upon next startup.
 
-## n8n@0.135.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />
+## WF²@0.135.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.134.0...WF²@0.135.0) for this version.<br />
 **Release date:** 2021-08-22
 
 !!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
+    Please note that this version contains breaking changes. You can read more about it [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
     The features that introduced the breaking changes have been flagged below.
 
 
@@ -1300,8 +1300,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Wait](/workflow/integrations/core-nodes/workflow-nodes-base.wait/)
 
 ### Core Functionality 
-- In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
-- Credentials are now loaded from the database on-demand. [](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- In-node method for accessing binary data is now asynchronous and a helper function for this has been implemented. [](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
+- Credentials are now loaded from the database on-demand. [](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01350)
 - Webhook UUIDs are automatically updated when duplicating a workflow.
 - Fixed an issue when referencing values before loops.
 
@@ -1313,8 +1313,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Aniruddha Adhikary](https://github.com/aniruddha-adhikary), [lublak](https://github.com/lublak), [parthibanbalaji](https://github.com/parthibanbalaji)
 
 
-## n8n@0.134.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.133.0...n8n@0.134.0) for this version.<br />
+## WF²@0.134.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.133.0...WF²@0.134.0) for this version.<br />
 **Release date:** 2021-08-15
 
 ### Enhanced nodes 
@@ -1339,8 +1339,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1)
 
-## n8n@0.133.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.132.2...n8n@0.133.0) for this version.<br />
+## WF²@0.133.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²%400.132.2...WF²@0.133.0) for this version.<br />
 **Release date:** 2021-08-08
 
 ### New nodes 
@@ -1363,8 +1363,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Jacob Burrell](https://github.com/jacobburrell), [Лебедев Иван](https://github.com/X-pech)
 
-## n8n@0.132.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.1...n8n@0.132.2) for this version.<br />
+## WF²@0.132.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.132.1...WF²@0.132.2) for this version.<br />
 **Release date:** 2021-08-02
 
 ### Bug fixes 
@@ -1374,15 +1374,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Лебедев Иван](https://github.com/X-pech)
 
-## n8n@0.132.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.0...n8n@0.132.1) for this version.<br />
+## WF²@0.132.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.132.0...WF²@0.132.1) for this version.<br />
 **Release date:** 2021-08-02
 
 ### Core Functionality 
 - Changed TypeORM version to 0.2.34
 
-## n8n@0.132.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.131.0...n8n@0.132.0) for this version.<br />
+## WF²@0.132.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.131.0...WF²@0.132.0) for this version.<br />
 **Release date:** 2021-08-01
 
 ### New nodes 
@@ -1409,12 +1409,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Ed Linklater](https://github.com/edlinklater), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
-## n8n@0.131.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
+## WF²@0.131.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.130.0...WF²@0.131.0) for this version.<br />
 **Release date:** 2021-07-24
 
 !!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
+    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
     The features that introduced the breaking changes have been flagged below.
 
 
@@ -1443,12 +1443,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
 
-## n8n@0.130.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
+## WF²@0.130.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.129.0...WF²@0.130.0) for this version.<br />
 **Release date:** 2021-07-18
 
 !!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/  blob/master/packages/cli/BREAKING-CHANGES.md#01300).
+    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/WF²-io/WF²/  blob/master/packages/cli/BREAKING-CHANGES.md#01300).
     The features that introduced the breaking changes have been flagged below.
 
 
@@ -1477,8 +1477,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Michael Hirschler](https://github.com/mvhirsch), [Mika Luhta](https://github.com/mluhta), [Pierre Lanvin](https://github.com/planvin)
 
-## n8n@0.129.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.128.0...n8n@0.129.0) for this version.<br />
+## WF²@0.129.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.128.0...WF²@0.129.0) for this version.<br />
 **Release date:** 2021-07-12
 
 ### New nodes 
@@ -1492,8 +1492,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Jérémie Pardou-Piquemal](https://github.com/jrmi)
 
-## n8n@0.128.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.127.0...n8n@0.128.0) for this version.<br />
+## WF²@0.128.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.127.0...WF²@0.128.0) for this version.<br />
 **Release date:** 2021-07-11
 
 ### New nodes 
@@ -1520,12 +1520,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 
-## n8n@0.127.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
+## WF²@0.127.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.126.1...WF²@0.127.0) for this version.<br />
 **Release date:** 2021-07-04
 
 !!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
+    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
     The features that introduced the breaking changes have been flagged below.
 
 
@@ -1537,7 +1537,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Zoho CRM:](/workflow/integrations/nodes/workflow-nodes-base.zohoCrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality 
-- Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
+- Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `WF² executeBatch --help` for details.
 - Added support to display binary video content in Editor UI.
 
 ### Bug fixes 
@@ -1548,8 +1548,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [flybluewolf](https://github.com/flybluewolf), [Kaito Udagawa](https://github.com/umireon)
 
-## n8n@0.126.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.0...n8n@0.126.1) for this version.<br />
+## WF²@0.126.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.126.0...WF²@0.126.1) for this version.<br />
 **Release date:** 2021-06-29
 
 ### Core Functionality 
@@ -1560,8 +1560,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Microsoft SQL:](/workflow/integrations/nodes/workflow-nodes-base.microsoftSQL/) Fixed an issue with handling of Boolean values when inserting.
 * [Pipedrive:](/workflow/integrations/nodes/workflow-nodes-base.pipedrive/) Fixed an issue with the node icon.
 
-## n8n@0.126.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.125.0...n8n@0.126.0) for this version.<br />
+## WF²@0.126.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.125.0...WF²@0.126.0) for this version.<br />
 **Release date:** 2021-06-27
 
 ### New nodes 
@@ -1579,7 +1579,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 ### Core Functionality 
-- Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
+- Templates from the [WF² Workflows](https://WF².io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
 - Added new Editor UI shortcuts. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
@@ -1593,8 +1593,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [calvintwr](https://github.com/calvintwr), [Jan Baykara](https://github.com/janbaykara)
 
-## n8n@0.125.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.1...n8n@0.125.0) for this version.<br />
+## WF²@0.125.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.124.1...WF²@0.125.0) for this version.<br />
 **Release date:** 2021-06-20
 
 ### Enhanced nodes 
@@ -1602,7 +1602,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Spotify:](/workflow/integrations/nodes/workflow-nodes-base.spotify/) Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource.
 
 ### Core Functionality 
-- Implemented new design of the Nodes Panel, adding categories and subcategories, along with improved search. For full details, see the [commits](https://github.com/n8n-io/n8n/commit/0470740737c5ee199447a68b7277c43be2042976).
+- Implemented new design of the Nodes Panel, adding categories and subcategories, along with improved search. For full details, see the [commits](https://github.com/WF²-io/WF²/commit/0470740737c5ee199447a68b7277c43be2042976).
 
 ### Bug fixes 
 
@@ -1611,8 +1611,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Contributors 
 [Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
 
-## n8n@0.124.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.124.0...n8n@0.124.1) for this version.<br />
+## WF²@0.124.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.124.0...WF²@0.124.1) for this version.<br />
 **Release date:** 2021-06-16
 
 ### Core Functionality 
@@ -1620,8 +1620,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue where the tags got removed when deactivating the workflow or updating settings
 - Removed the circular references for the error caused by the request library
 
-## n8n@0.124.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.123.1...n8n@0.124.0) for this version.<br />
+## WF²@0.124.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.123.1...WF²@0.124.0) for this version.<br />
 **Release date:** 2021-06-13
 
 ### Enhanced nodes 
@@ -1644,15 +1644,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Jean M](https://github.com/jemos), [romaincolombo-daily](https://github.com/romaincolombo-daily), [Thomas Jost](https://github.com/Schnouki), [Vincent](https://github.com/vbouchet31)
 
-## n8n@0.123.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.123.0...n8n@0.123.1) for this version.<br />
+## WF²@0.123.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.123.0...WF²@0.123.1) for this version.<br />
 **Release date:** 2021-06-06
 
 ### Core Functionality 
 - Fixed a build issue for missing node icons
 
-## n8n@0.123.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.3...n8n@0.123.0) for this version.<br />
+## WF²@0.123.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.122.3...WF²@0.123.0) for this version.<br />
 **Release date:** 2021-06-06
 
 ### New nodes 
@@ -1677,8 +1677,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Rodrigo Correia](https://github.com/rodrigoscdc), [Sam Roquitte](https://github.com/samr28)
 
-## n8n@0.122.3
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.2...n8n@0.122.3) for this version.<br />
+## WF²@0.122.3
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.122.2...WF²@0.122.3) for this version.<br />
 **Release date:** 2021-06-04
 
 ### Core Functionality 
@@ -1691,8 +1691,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Notion:](/workflow/integrations/nodes/workflow-nodes-base.notion/) Fixed an issue with parsing the last edited time
 
-## n8n@0.122.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.1...n8n@0.122.2) for this version.<br />
+## WF²@0.122.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.122.1...WF²@0.122.2) for this version.<br />
 **Release date:** 2021-05-31
 
 ### Enhanced nodes 
@@ -1705,15 +1705,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with escaping workflow name
 - Fixed an issue with selecting variables in the Expression Editor
 
-## n8n@0.122.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.122.0...n8n@0.122.1) for this version.<br />
+## WF²@0.122.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.122.0...WF²@0.122.1) for this version.<br />
 **Release date:** 2021-05-30
 
 ### Core Functionality 
 - Fixed an issue with the order in migration rollback
 
-## n8n@0.122.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.121.0...n8n@0.122.0) for this version.<br />
+## WF²@0.122.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.121.0...WF²@0.122.0) for this version.<br />
 **Release date:** 2021-05-30
 
 ### New nodes 
@@ -1745,8 +1745,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Alexander Mustafin](https://github.com/sashker)
 
-## n8n@0.121.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.121.0...n8n@0.121.1) for this version.<br />
+## WF²@0.121.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.121.0...WF²@0.121.1) for this version.<br />
 **Release date:** 2021-06-01
 
 ### Core Functionality 
@@ -1754,8 +1754,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed issues with the Expression Editor
 - Made improvements to the Expression Editor
 
-## n8n@0.121.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.120.0...n8n@0.121.0) for this version.<br />
+## WF²@0.121.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.120.0...WF²@0.121.0) for this version.<br />
 **Release date:** 2021-05-20
 
 ### New nodes 
@@ -1780,8 +1780,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Jacob Spizziri](https://github.com/jspizziri)
 
-## n8n@0.120.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.119.0...n8n@0.120.0) for this version.<br />
+## WF²@0.120.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.119.0...WF²@0.120.0) for this version.<br />
 **Release date:** 2021-05-17
 
 ### New nodes 
@@ -1812,8 +1812,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [DeskYT](https://github.com/DeskYT), [Daniel Lazaro](https://github.com/1izardo), [DerEnderKeks](https://github.com/DerEnderKeks), [mdasmendel](https://github.com/mdasmendel)
 
-## n8n@0.119.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.1...n8n@0.119.0) for this version.<br />
+## WF²@0.119.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.118.1...WF²@0.119.0) for this version.<br />
 **Release date:** 2021-05-09
 
 ### Enhanced nodes 
@@ -1841,20 +1841,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Nikita](https://github.com/Rirush)
 
 
-## n8n@0.118.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.118.0...n8n@0.118.1) for this version.<br />
+## WF²@0.118.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.118.0...WF²@0.118.1) for this version.<br />
 **Release date:** 2021-05-05
 
 ### Core Functionality 
 
 - Fixed an issue with error workflows
 
-## n8n@0.118.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
+## WF²@0.118.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.117.0...WF²@0.118.0) for this version.<br />
 **Release date:** 2021-05-02
 
 !!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
+    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
     The features that introduced the breaking changes have been flagged below.
 
 
@@ -1881,7 +1881,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Core Functionality 
 - Implemented the native `fs/promise` library where possible
 - Added the functionality to output logs to the console or a file
-- We have updated the minimum required version for Node.js to v14.15. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
+- We have updated the minimum required version for Node.js to v14.15. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01180) page
 
 ### Bug fixes 
 
@@ -1898,19 +1898,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 [Gustavo Arjones](https://github.com/arjones), [lublak](https://github.com/lublak), [Colton Anglin](https://github.com/Colton), [Mika Luhta](https://github.com/mluhta)
 
 
-## n8n@0.117.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />
+## WF²@0.117.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.116.1...WF²@0.117.0) for this version.<br />
 **Release date:** 2021-04-24
 
 !!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170).
+    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01170).
     The features that introduced the breaking changes have been flagged below.
 
 
 ### New nodes 
 
 * [Mailcheck](/workflow/integrations/nodes/workflow-nodes-base.mailcheck/)
-* [n8n Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.n8nTrigger/)
+* [WF² Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.WF²Trigger/)
 * [Workflow Trigger](/workflow/integrations/core-nodes/workflow-nodes-base.workflowTrigger/)
 
 ### Enhanced nodes 
@@ -1925,7 +1925,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Zendesk Trigger:](/workflow/integrations/trigger-nodes/workflow-nodes-base.zendeskTrigger/) Added support to retrieve custom fields
 
 ### Core Functionality 
-- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the Doc² Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
+- The Activation Trigger node has been deprecated. It has been replaced by two new nodes - the Doc² Trigger and the Workflow Trigger node. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page
 - Added the functionality to open the New Credentials dropdown by default
 
 ### Bug fixes 
@@ -1938,15 +1938,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Bart Vollebregt](https://github.com/bartvollebregt), [Ivan Timoshenko](https://github.com/bugagashenkj), [Konstantin Nosov](https://github.com/nosovk), [lublak](https://github.com/lublak), [Umair Kamran](https://github.com/UmairKamran),
 
-## n8n@0.116.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.0...n8n@0.116.1) for this version.<br />
+## WF²@0.116.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.116.0...WF²@0.116.1) for this version.<br />
 **Release date:** 2021-04-20
 
 ### Core Functionality 
 - Fixed a timeout issue with the workflows in the main process
 
-## n8n@0.116.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.115.0...n8n@0.116.0) for this version.<br />
+## WF²@0.116.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.115.0...WF²@0.116.0) for this version.<br />
 **Release date:** 2021-04-17
 
 ### New nodes 
@@ -1982,8 +1982,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Allan Daemon](https://github.com/AllanDaemon), [Anton Romanov](https://github.com/theone74), [Bart Vollebregt](https://github.com/bartvollebregt), [Cassiano Vailati](https://github.com/cassvail), [entrailz](https://github.com/entrailz), [Konstantin Nosov](https://github.com/nosovk), [LongYinan](https://github.com/Brooooooklyn)
 
-## n8n@0.115.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.114.0...n8n@0.115.0) for this version.<br />
+## WF²@0.115.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.114.0...WF²@0.115.0) for this version.<br />
 **Release date:** 2021-04-10
 
 ### New nodes 
@@ -2013,8 +2013,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Mika Luhta](https://github.com/mluhta), [Loran](https://github.com/loranmutafov), [stwonary](https://github.com/stwonary)
 
-## n8n@0.114.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.113.0...n8n@0.114.0) for this version.<br />
+## WF²@0.114.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.113.0...WF²@0.114.0) for this version.<br />
 **Release date:** 2021-04-03
 
 ### New nodes 
@@ -2047,8 +2047,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 [Agata M](https://github.com/curryy), [Allan Daemon](https://github.com/AllanDaemon), [Craig McElroy](https://github.com/camcelroy), [mjysci](https://github.com/mjysci)
 
-## n8n@0.113.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.112.0...n8n@0.113.0) for this version.<br />
+## WF²@0.113.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.112.0...WF²@0.113.0) for this version.<br />
 **Release date:** 2021-03-26
 
 - New nodes
@@ -2065,13 +2065,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Fullname and Company's domain, and Get Email by Fullname and Company's name operations
 - Bug fixes
 - Clearbit: Fixed an issue with the autocomplete URI
-- Dropbox: Fixed an issue with the Dropbox credentials by adding the APP Access Type parameter in the credentials. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01130) page
+- Dropbox: Fixed an issue with the Dropbox credentials by adding the APP Access Type parameter in the credentials. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01130) page
 - Spotify: Fixed an issue with the Delete operation of the Playlist resource
 - The variable selector now displays empty arrays
 - Fixed a permission issue with the Raspberry Pi Docker image
 
-## n8n@0.112.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.111.0...n8n@0.112.0) for this version.<br />
+## WF²@0.112.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.111.0...WF²@0.112.0) for this version.<br />
 **Release date:** 2021-03-19
 
 - New nodes
@@ -2088,8 +2088,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with the sub-workflows running on the main process
 - Fixed concurrency issues with sub-workflows
 
-## n8n@0.111.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.3...n8n@0.111.0) for this version.<br />
+## WF²@0.111.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.110.3...WF²@0.111.0) for this version.<br />
 **Release date:** 2021-03-12
 
 - New nodes
@@ -2099,7 +2099,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Wise Trigger
 - Enhanced nodes
 - Box: Added Get operation to the Folder resource
-- Dropbox: Added Search operation to the File resource. All operations are now performed relative to the user's root directory. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01110) page
+- Dropbox: Added Search operation to the File resource. All operations are now performed relative to the user's root directory. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01110) page
 - Facebook Graph API: Added new API versions
 - Google Drive: Added Update operation to the File resource
 - HubSpot: Added the Deal Description option
@@ -2119,15 +2119,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue to prevent crashing while saving execution data when the `data` field has over 64KB in MySQL
 - Updated `jws-rsa` to version `1.12.1`
 
-## n8n@0.110.3
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.110.0...n8n@0.110.3) for this version.<br />
+## WF²@0.110.3
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.110.0...WF²@0.110.3) for this version.<br />
 **Release date:** 2021-03-04
 
 - Bug fixes
 - APITemplate.io: Fixed an issue with the naming of the node
 
-## n8n@0.110.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.109.0...n8n@0.110.0) for this version.<br />
+## WF²@0.110.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.109.0...WF²@0.110.0) for this version.<br />
 **Release date:** 2021-03-04
 
 - New nodes
@@ -2147,11 +2147,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added support for Date & Time in the IF node and the Switch node
 - Fixed an issue with mouse selection when zooming in or out
 - Fixed an issue with current executing workflows when using queues for Postgres
-- Fixed naming and description for the `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` environment variable
+- Fixed naming and description for the `WF²_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` environment variable
 - Fixed an issue with auto-refresh of the execution list
 
-## n8n@0.109.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.108.0...n8n@0.109.0) for this version.<br />
+## WF²@0.109.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.108.0...WF²@0.109.0) for this version.<br />
 **Release date:** 2021-02-22
 
 - New nodes
@@ -2171,8 +2171,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed the issue which caused the execution history of subworkflows (workflows started via the Execute Workflow node) not to be saved
 - Added an option to export the credential data in plain text format using the CLI
 
-## n8n@0.108.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.107.0...n8n@0.108.0) for this version.<br />
+## WF²@0.108.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.107.0...WF²@0.108.0) for this version.<br />
 **Release date:** 2021-02-15
 
 - New nodes
@@ -2194,8 +2194,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with the regex that detected node names
 - Doc² now generates a unified execution ID instead of two separate IDs for currently running and saved executions
 
-## n8n@0.107.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.106.0...n8n@0.107.0) for this version.<br />
+## WF²@0.107.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.106.0...WF²@0.107.0) for this version.<br />
 **Release date:** 2021-02-08
 
 - New nodes
@@ -2213,8 +2213,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Updated Node.js version of Docker images to `14.15`
 - Added a shortcut `CTRL + scroll` to zoom
 
-## n8n@0.106.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.105.0...n8n@0.106.0) for this version.<br />
+## WF²@0.106.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.105.0...WF²@0.106.0) for this version.<br />
 **Release date:** 2021-02-05
 
 - New nodes
@@ -2229,8 +2229,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Typeform: Fixed an issue with the OAuth2 authentication method
 - Added support for `s` and `u` flags for regex in the IF node and the Switch node
 
-## n8n@0.105.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.2...n8n@0.105.0) for this version.<br />
+## WF²@0.105.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.104.2...WF²@0.105.0) for this version.<br />
 **Release date:** 2021-02-01
 
 - New nodes
@@ -2248,20 +2248,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added variable `$mode` to check the mode in which the workflow is being executed
 
 
-## n8n@0.104.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.1...n8n@0.104.2) for this version.<br />
+## WF²@0.104.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.104.1...WF²@0.104.2) for this version.<br />
 **Release date:** 2021-01-27
 
 - Fixed an issue with the credentials parameters that have the same name
 
-## n8n@0.104.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.104.0...n8n@0.104.1) for this version.<br />
+## WF²@0.104.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.104.0...WF²@0.104.1) for this version.<br />
 **Release date:** 2021-01-26
 
 - Fixed a bug with expressions in credentials
 
-## n8n@0.104.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.1...n8n@0.104.0) for this version.<br />
+## WF²@0.104.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.103.1...WF²@0.104.0) for this version.<br />
 **Release date:** 2021-01-26
 
 - New nodes
@@ -2276,17 +2276,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
 - Google Drive: Fixed the default value for the Send Notification Email option
 - Added support for expressions to credentials
-- Removed support for MongoDB as a database for Workflow². For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
+- Removed support for MongoDB as a database for Workflow². For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01040) page
 
-## n8n@0.103.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.103.0...n8n@0.103.1) for this version.<br />
+## WF²@0.103.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.103.0...WF²@0.103.1) for this version.<br />
 **Release date:** 2021-01-21
 
 - Bug fixes
 - Trello: Fixed the icon
 
-## n8n@0.103.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.102.0...n8n@0.103.0) for this version.<br />
+## WF²@0.103.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.102.0...WF²@0.103.0) for this version.<br />
 **Release date:** 2021-01-21
 
 - New nodes
@@ -2306,8 +2306,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - The title in the browser tab now resets for new workflows
 
 
-## n8n@0.102.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.101.0...n8n@0.102.0) for this version.<br />
+## WF²@0.102.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.101.0...WF²@0.102.0) for this version.<br />
 **Release date:** 2021-01-15
 
 - New nodes
@@ -2321,14 +2321,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Microsoft Outlook: Added support for a shared mailbox
 - RabbitMQ: Added Exchange mode
 - Salesforce: Added filters to all Get All operations
-- Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
-- Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
+- Slack: Made changes to the properties `As User` and `Ephemeral`. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
+- Typeform Trigger: The node now displays the recall information in the question in square brackets. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#01020) page
 - Zendesk: Removed the `Authorization URL` and `Access Token URL` fields from the OAuth2 credentials. The node now uses the subdomain passed by a user to connect to Zendesk.
 - Bug fixes
 - CoinGecko: Fixed an issue to process multiple input items correctly
 
-## n8n@0.101.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.100.0...n8n@0.101.0) for this version.<br />
+## WF²@0.101.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.100.0...WF²@0.101.0) for this version.<br />
 **Release date:** 2021-01-07
 
 - New nodes
@@ -2350,8 +2350,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Based on your settings, vacuum runs on SQLite on startup
 - Updated axios to version `0.21.1`
 
-## n8n@0.100.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.1...n8n@0.100.0) for this version.<br />
+## WF²@0.100.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.99.1...WF²@0.100.0) for this version.<br />
 **Release date:** 2020-12-30
 
 - New nodes
@@ -2374,14 +2374,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Telegram: Fixed an issue with the Send Audio operation
 - Binary data stays visible if a node gets re-executed
 
-## n8n@0.99.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.0...n8n@0.99.1) for this version.<br />
+## WF²@0.99.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.99.0...WF²@0.99.1) for this version.<br />
 **Release date:** 2020-12-24
 
 - Fixed a bug that caused HTML to render in JSON view
 
-## n8n@0.99.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.98.0...n8n@0.99.0) for this version.<br />
+## WF²@0.99.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.98.0...WF²@0.99.0) for this version.<br />
 **Release date:** 2020-12-24
 
 - New nodes
@@ -2402,8 +2402,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added functionality to easily copy the data and the path from the output
 - Fixed an issue with the node getting selected after it was duplicated
 
-## n8n@0.98.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.97.0...n8n@0.98.0) for this version.<br />
+## WF²@0.98.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.97.0...WF²@0.98.0) for this version.<br />
 **Release date:** 2020-12-16
 
 - New nodes
@@ -2421,8 +2421,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Mautic: Fixed an issue with the OAuth credentials
 - If a workflow is using the Error Trigger node, by default, the workflow will use itself as the Error Workflow
 - Fixed a bug that caused the Editor UI to display an incorrect (save) state upon activating or deactivating a workflow
-## n8n@0.97.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.96.0...n8n@0.97.0) for this version.<br />
+## WF²@0.97.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.96.0...WF²@0.97.0) for this version.<br />
 **Release date:** 2020-12-10
 
 - New nodes
@@ -2437,8 +2437,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed a bug that caused OAuth1 requests to break
 - Fixed Docker user mount path
 
-## n8n@0.96.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.95.1...n8n@0.96.0) for this version.<br />
+## WF²@0.96.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.95.1...WF²@0.96.0) for this version.<br />
 **Release date:** 2020-12-03
 
 - New nodes
@@ -2457,15 +2457,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed a bug which caused the Trigger-Nodes to require data from the first output
 - Added configuration to load only specific nodes
 
-## n8n@0.95.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.95.0...n8n@0.95.1) for this version.<br />
+## WF²@0.95.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.95.0...WF²@0.95.1) for this version.<br />
 **Release date:** 2020-11-25
 
 - Bug Fixes
 - Airtable Trigger: Fixed the icon of the node
 
-## n8n@0.95.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.1...n8n@0.95.0) for this version.<br />
+## WF²@0.95.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.94.1...WF²@0.95.0) for this version.<br />
 **Release date:** 2020-11-25
 
 - New nodes
@@ -2477,20 +2477,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Spontit
 - Enhanced nodes
 - Airable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
-- Harvest: Moved the account field from the credentials to the node parameters. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0950) page
+- Harvest: Moved the account field from the credentials to the node parameters. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0950) page
 - Bug Fixes
 - Slack: Fixed an issue with creating channels and inviting users to a channel
 
-## n8n@0.94.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.94.0...n8n@0.94.1) for this version.<br />
+## WF²@0.94.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.94.0...WF²@0.94.1) for this version.<br />
 **Release date:** 2020-11-20
 
 - Bug Fixes
 - GraphQL: Fixed an issue with the variables
 - WooCommerce Trigger: Fixed an issue with the webhook. The node now reuses a webhook if it already exists.
 
-## n8n@0.94.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.93.0...n8n@0.94.0) for this version.<br />
+## WF²@0.94.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.93.0...WF²@0.94.0) for this version.<br />
 **Release date:** 2020-11-19
 
 - New nodes
@@ -2504,15 +2504,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - FTP: Added Private Key and Passphrase fields to the SFTP credentials and made the directory creation more robust
 - IMAP: Increased the timeout
 - Matrix: Added option to send notice, emote, and HTML messages
-- Segment: Made changes to the properties `traits` and `properties`. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0940) page
+- Segment: Made changes to the properties `traits` and `properties`. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0940) page
 - Bug Fixes
 - GraphQL: Fixed an issue with the variables
 - Mailchimp: Fixed an issue with the OAuth credentials. The credentials are now sent with the body instead of the header
 - YouTube: Fixed a typo for the Unlisted option
 - Added horizontal scrolling
 
-## n8n@0.93.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.92.0...n8n@0.93.0) for this version.<br />
+## WF²@0.93.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.92.0...WF²@0.93.0) for this version.<br />
 **Release date:** 2020-11-11
 
 - New nodes
@@ -2527,14 +2527,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Jira: The node retrieves all the projects for the Project field instead of just 50
 - Mattermost: Improved the channel selection
 - Microsoft SQL: Added TLS parameter for the credentials
-- Pipedrive Trigger: Added OAuth authentication method. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0930) page
+- Pipedrive Trigger: Added OAuth authentication method. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0930) page
 - Segment: Added Custom Traits option for the Traits field
 - Bug Fixes
 - Shopify Trigger: Fixed an issue with activating the workflow
 - For custom nodes, you can now set custom documentation URLs
 
-## n8n@0.92.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.91.0...n8n@0.92.0) for this version.<br />
+## WF²@0.92.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.91.0...WF²@0.92.0) for this version.<br />
 **Release date:** 2020-11-04
 
 - New nodes
@@ -2549,8 +2549,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Gmail: Fixed an issue with the encoding for the subject field
 - Improved the Editor UI for the save workflow functionality
 
-## n8n@0.91.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.90.0...n8n@0.91.0) for this version.<br />
+## WF²@0.91.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.90.0...WF²@0.91.0) for this version.<br />
 **Release date:** 2020-10-23
 
 - New nodes
@@ -2579,29 +2579,29 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Updated the Node.js version for the Docker images
 
 
-## n8n@0.90.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.2...n8n@0.90.0) for this version.<br />
+## WF²@0.90.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.89.2...WF²@0.90.0) for this version.<br />
 **Release date:** 2020-10-23
 
-- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
+- Added a check for the Node.js version on startup. For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0900) page
 - Bug Fixes
 - Google Translate: Fixed an issue with the rendering of the image in Workflow².io
 
-## n8n@0.89.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.1...n8n@0.89.2) for this version.<br />
+## WF²@0.89.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.89.1...WF²@0.89.2) for this version.<br />
 **Release date:** 2020-10-22
 
 - Bug Fixes
 - Strava Trigger: Fixed a typo in the node name
 
-## n8n@0.89.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.89.0...n8n@0.89.1) for this version.<br />
+## WF²@0.89.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.89.0...WF²@0.89.1) for this version.<br />
 **Release date:** 2020-10-22
 
 - Removed debug messages
 
-## n8n@0.89.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.1...n8n@0.89.0) for this version.<br />
+## WF²@0.89.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.88.1...WF²@0.89.0) for this version.<br />
 **Release date:** 2020-10-22
 
 - New Nodes
@@ -2614,15 +2614,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed issue with displaying non-active workflows as active
 - Fixed an issue related to multiple-webhooks
 
-## n8n@0.88.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.88.0...n8n@0.88.1) for this version.<br />
+## WF²@0.88.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.88.0...WF²@0.88.1) for this version.<br />
 **Release date:** 2020-10-16
 
 - Bug Fixes
 - HTTP Request: Fixed an issue with the Form-Data Mutipart and the RAW/Custom Body Content Types
 
-## n8n@0.88.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />
+## WF²@0.88.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.87.2...WF²@0.88.0) for this version.<br />
 **Release date:** 2020-10-16
 
 - Enhanced Fixes
@@ -2632,16 +2632,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - AWS SES: Fixed an issue with the Send Template operation for the Email resource
 - AWS SNS Trigger: Fixed an issue with the Subscriptions topic
 
-## n8n@0.87.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.1...n8n@0.87.2) for this version.<br />
+## WF²@0.87.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.87.1...WF²@0.87.2) for this version.<br />
 **Release date:** 2020-10-15
 
 - Bug Fixes
 - Google Sheets: Fixed an issue with spaces in sheet names
 - Automizy: Fixed an issue with the default resource
 
-## n8n@0.87.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.0...n8n@0.87.1) for this version.<br />
+## WF²@0.87.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.87.0...WF²@0.87.1) for this version.<br />
 **Release date:** 2020-10-15
 
 - Bug Fixes
@@ -2649,8 +2649,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - HTTP Request: Fixed an issue with the GET Request
 - Added `HMAC-SHA512` signature method for OAuth 1.0
 
-## n8n@0.87.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.1...n8n@0.87.0) for this version.<br />
+## WF²@0.87.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.86.1...WF²@0.87.0) for this version.<br />
 **Release date:** 2020-10-14
 
 - New nodes
@@ -2674,17 +2674,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
 - ClickUp Trigger: Fixed issue with creating credentials
 - Pipedrive Trigger: Fixed issue with adding multiple webhooks to Pipedrive
-- The link.fish Scrape node has been removed from Workflow². For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
+- The link.fish Scrape node has been removed from Workflow². For more details, check out the entry in the [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0870) page
 
-## n8n@0.86.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.86.0...n8n@0.86.1) for this version.<br />
+## WF²@0.86.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.86.0...WF²@0.86.1) for this version.<br />
 **Release date:** 2020-10-06
 
 - Enhanced nodes
 - CoinGecko: Small fixes to the CoinGecko node
 
-## n8n@0.86.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.85.0...n8n@0.86.0) for this version.<br />
+## WF²@0.86.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.85.0...WF²@0.86.0) for this version.<br />
 **Release date:** 2020-10-05
 
 - New nodes
@@ -2700,8 +2700,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - S3: Fixed issue with uploading files
 - Webhook ID gets refreshed on node duplication
 
-## n8n@0.85.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.4...n8n@0.85.0) for this version.<br />
+## WF²@0.85.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.84.4...WF²@0.85.0) for this version.<br />
 **Release date:** 2020-09-30
 
 - Enhanced nodes
@@ -2712,33 +2712,33 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Changed the bcrypt library to `bcrypt.js` to make it compatible with Windows
 - The OAuth callback URLs are now generated in the backend
 
-## n8n@0.84.4
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.3...n8n@0.84.4) for this version.<br />
+## WF²@0.84.4
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.84.3...WF²@0.84.4) for this version.<br />
 **Release date:** 2020-09-23
 
 - Bug Fixes
 - Google Sheets: Fixed issues with the update and append operations
 
-## n8n@0.84.3
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.2...n8n@0.84.3) for this version.<br />
+## WF²@0.84.3
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.84.2...WF²@0.84.3) for this version.<br />
 **Release date:** 2020-09-23
 
 - Fixed an issue with the build by setting `jwks-rsa` to an older version
 
-## n8n@0.84.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.1...n8n@0.84.2) for this version.<br />
+## WF²@0.84.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.84.1...WF²@0.84.2) for this version.<br />
 **Release date:** 2020-09-23
 
 - Fixed an issue with the OAuth window. The OAuth window now closes after authentication is complete
 
-## n8n@0.84.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.84.0...n8n@0.84.1) for this version.<br />
+## WF²@0.84.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.84.0...WF²@0.84.1) for this version.<br />
 **Release date:** 2020-09-23
 
 - Additional endpoints can be excluded from authentication checks. Multiple endpoints can be added separated by colons
 
-## n8n@0.84.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.83.0...n8n@0.84.0) for this version.<br />
+## WF²@0.84.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.83.0...WF²@0.84.0) for this version.<br />
 **Release date:** 2020-09-23
 
 - Enhanced nodes
@@ -2751,8 +2751,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expressions now use short variables when selecting input data for the current node
 - Fixed issue with renaming credentials for active workflows
 
-## n8n@0.83.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.1...n8n@0.83.0) for this version.<br />
+## WF²@0.83.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.82.1...WF²@0.83.0) for this version.<br />
 **Release date:** 2020-09-18
 
 - New nodes
@@ -2760,7 +2760,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Taiga
 - Taiga Trigger
 - Enhanced nodes
-- ActiveCampaign: Added multiple functions, read more [here](https://github.com/n8n-io/n8n/commit/a552febab494f8ecc022391f046752f1f9f5a4cc)
+- ActiveCampaign: Added multiple functions, read more [here](https://github.com/WF²-io/WF²/commit/a552febab494f8ecc022391f046752f1f9f5a4cc)
 - Airtable: Added typecast functionality
 - Asana: Added OAuth2 support
 - ClickUp: Added OAuth2 support
@@ -2772,17 +2772,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug Fixes
 - Asana Trigger: Webhook validation has been deactivated
 - Paddle: Fixed `returnData` format and coupon description
-- The ActiveCampaign node has [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0830)
+- The ActiveCampaign node has [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0830)
 - Fixed issues with test-webhook registration
 
-## n8n@0.82.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.82.0...n8n@0.82.1) for this version.<br />
+## WF²@0.82.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.82.0...WF²@0.82.1) for this version.<br />
 **Release date:** 2020-09-14
 
 - Speed for basic authentication with hashed password has been improved
 
-## n8n@0.82.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.81.0...n8n@0.82.0) for this version.<br />
+## WF²@0.82.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.81.0...WF²@0.82.0) for this version.<br />
 **Release date:** 2020-09-14
 
 - New nodes
@@ -2797,8 +2797,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Expression support has been added to the credentials
 - Passwords for your Doc² instance can now be hashed
 
-## n8n@0.81.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.80.0...n8n@0.81.0) for this version.<br />
+## WF²@0.81.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.80.0...WF²@0.81.0) for this version.<br />
 **Release date:** 2020-09-09
 
 - New nodes
@@ -2813,8 +2813,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Telegram
 - Telegram Trigger
 
-## n8n@0.80.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.80.0) for this version.<br />
+## WF²@0.80.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.79.0...WF²@0.80.0) for this version.<br />
 **Release date:** 2020-09-02
 
 - New nodes
@@ -2829,20 +2829,20 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Telegram Trigger
 - Zendesk
 
-## n8n@0.79.3
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
+## WF²@0.79.3
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.79.2...WF²@0.79.3) for this version.<br />
 **Release date:** 2020-08-30
 
 - The bug that caused the workflows to not get activated correctly has been fixed
 
-## n8n@0.79.2
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.1...n8n@0.79.2) for this version.<br />
+## WF²@0.79.2
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.79.1...WF²@0.79.2) for this version.<br />
 **Release date:** 2020-08-28
 
 - Added missing rawBody for "application/x-www-form-urlencoded"
 
-## n8n@0.79.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.0...n8n@0.79.1) for this version.<br />
+## WF²@0.79.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.79.0...WF²@0.79.1) for this version.<br />
 **Release date:** 2020-08-28
 
 - Enhanced nodes
@@ -2854,8 +2854,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - HTTP Request node does not overwrite accept header if it's already set
 - Add rawBody to every request so that Doc² does not give an error if body is missing
 
-## n8n@0.79.0 
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
+## WF²@0.79.0 
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.79.2...WF²@0.79.3) for this version.<br />
 **Release date:** 2020-08-27
 
 - New nodes
@@ -2875,12 +2875,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Todoist
 - Trello
 - YouTube
-- The Todoist node has [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0790)
+- The Todoist node has [breaking changes](https://github.com/WF²-io/WF²/blob/master/packages/cli/BREAKING-CHANGES.md#0790)
 - Added dynamic titles on workflow execution
 - Nodes will now display a link to associated credential documentation
 
-## n8n@0.78.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.76.0...n8n@0.78.0) for this version.<br />
+## WF²@0.78.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.76.0...WF²@0.78.0) for this version.<br />
 **Release date:** 2020-08-18
 
 - New nodes
@@ -2899,8 +2899,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced support for [JWT based authentication](/hosting/security/#jwt)
 - Added an option to execute a node once, using data of only the first item
 
-## n8n@0.76.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.75.0...n8n@0.76.0) for this version.<br />
+## WF²@0.76.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.75.0...WF²@0.76.0) for this version.<br />
 **Release date:** 2020-08-05
 
 - New nodes
@@ -2915,8 +2915,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Move Binary Data
 - Nodes will now display a link to associated documentation
 
-## n8n@0.75.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.74.0...n8n@0.75.0) for this version.<br />
+## WF²@0.75.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.74.0...WF²@0.75.0) for this version.<br />
 **Release date:** 2020-07-26
 
 - New nodes
@@ -2931,8 +2931,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - QuestDB
 - Webhooks now support OPTIONS request
 
-## n8n@0.74.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.1...n8n@0.74.0) for this version.<br />
+## WF²@0.74.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.73.1...WF²@0.74.0) for this version.<br />
 **Release date:** 2020-07-15
 
 - New nodes
@@ -2951,16 +2951,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Webhook URLs are now handled independently of the workflow ID by `https://{hostname}/webhook/{path}` instead of the older `https://{hostname}/webhook/{workflow_id}/{node_name}/{path}`.
 
 
-## n8n@0.73.1
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.73.0...n8n@0.73.1) for this version.<br />
+## WF²@0.73.1
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.73.0...WF²@0.73.1) for this version.<br />
 **Release date:** 2020-07-08
 
 - Enhanced nodes
 - Microsoft SQL
 
 
-## n8n@0.73.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.72.0...n8n@0.73.0) for this version.<br />
+## WF²@0.73.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.72.0...WF²@0.73.0) for this version.<br />
 **Release date:** 2020-07-08
 
 - New nodes
@@ -2973,8 +2973,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - It is now possible to set default values for credentials that get prefilled, and the user cannot change.
 
 
-## n8n@0.72.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.71.0...n8n@0.72.0) for this version.<br />
+## WF²@0.72.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.71.0...WF²@0.72.0) for this version.<br />
 **Release date:** 2020-07-02
 
 - Enhanced nodes
@@ -2985,8 +2985,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed credential issue for the Execute Workflow node
 
 
-## n8n@0.71.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.70.0...n8n@0.71.0) for this version.<br />
+## WF²@0.71.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.70.0...WF²@0.71.0) for this version.<br />
 **Release date:** 2020-06-25
 
 - New nodes
@@ -3003,8 +3003,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - It is now possible to deploy Doc² under a subfolder
 
 
-## n8n@0.70.0
-For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.69.1...n8n@0.70.0) for this version.<br />
+## WF²@0.70.0
+For a comprehensive list of changes, check out the [commits](https://github.com/WF²-io/WF²/compare/WF²@0.69.1...WF²@0.70.0) for this version.<br />
 **Release date:** 2020-06-13
 
 - Enhanced nodes

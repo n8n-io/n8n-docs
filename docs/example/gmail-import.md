@@ -64,7 +64,7 @@ Here is the complete workflow for you:
       },
       "id": "c65a6e6a-e05c-4164-ad3d-53f42b5389fb",
       "name": "Cron",
-      "type": "n8n-nodes-base.cron",
+      "type": "WF²-nodes-base.cron",
       "typeVersion": 1,
       "position": [
         500,
@@ -76,7 +76,7 @@ Here is the complete workflow for you:
         "functionCode": "for (item of items) {\n  item.binary.data = item.binary.attachment_0;\n  delete item.binary.attachment_0;\n}\n\n// You can write logs to the browser console\nconsole.log('Done!', items);\n\nreturn items;"
       },
       "name": "Function 1",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "typeVersion": 1,
       "position": [
         1320,
@@ -89,7 +89,7 @@ Here is the complete workflow for you:
         "functionCode": "for (item of items) {\n  item.binary.data = item.binary.attachment_0;\n  delete item.binary.attachment_0;\n}\n\n// You can write logs to the browser console\nconsole.log('Done!', items);\n\nreturn items;"
       },
       "name": "Function 2",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "typeVersion": 1,
       "position": [
         1320,
@@ -102,7 +102,7 @@ Here is the complete workflow for you:
         "functionCode": "for (item of items) {\n  item.binary.data = item.binary.attachment_0;\n  delete item.binary.attachment_0;\n}\n\n// You can write logs to the browser console\nconsole.log('Done!', items);\n\nreturn items;"
       },
       "name": "Function 3",
-      "type": "n8n-nodes-base.function",
+      "type": "WF²-nodes-base.function",
       "typeVersion": 1,
       "position": [
         1320,
@@ -128,7 +128,7 @@ Here is the complete workflow for you:
       },
       "id": "128dffe6-7b61-4ce5-80d1-78e791743708",
       "name": "Mailbox 1",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         860,
@@ -160,7 +160,7 @@ Here is the complete workflow for you:
       },
       "id": "c5dda293-4e48-4a11-98b8-920fbd19efde",
       "name": "Mailbox 2",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         860,
@@ -192,7 +192,7 @@ Here is the complete workflow for you:
       },
       "id": "b08c6f55-19bd-4a90-8187-bdb2fee95bc7",
       "name": "Mailbox 3",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         860,
@@ -213,7 +213,7 @@ Here is the complete workflow for you:
       },
       "id": "ce4e3b6e-4157-4ebe-ad2e-aefb4ded6a7a",
       "name": "Mark As Read 1",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         1060,
@@ -233,7 +233,7 @@ Here is the complete workflow for you:
       },
       "id": "241ccb05-805d-44ce-8165-f5f35d5de686",
       "name": "Mark As Read 2",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         1060,
@@ -253,7 +253,7 @@ Here is the complete workflow for you:
       },
       "id": "ed8301eb-d86d-439e-8586-3000b8b1d9f0",
       "name": "Mark As Read 3",
-      "type": "n8n-nodes-base.gmail",
+      "type": "WF²-nodes-base.gmail",
       "typeVersion": 2,
       "position": [
         1060,
@@ -272,7 +272,7 @@ Here is the complete workflow for you:
       },
       "id": "4ba2e931-7c49-442a-b1e2-07aa036c7357",
       "name": "Upload Document 1",
-      "type": "n8n-nodes-base.upload",
+      "type": "WF²-nodes-base.upload",
       "typeVersion": 1,
       "position": [
         1640,
@@ -291,7 +291,7 @@ Here is the complete workflow for you:
       },
       "id": "b213ed6a-9458-4622-9943-51c71da1ea4f",
       "name": "Upload Document 2",
-      "type": "n8n-nodes-base.upload",
+      "type": "WF²-nodes-base.upload",
       "typeVersion": 1,
       "position": [
         1640,
@@ -310,7 +310,7 @@ Here is the complete workflow for you:
       },
       "id": "81992b56-3fa2-4eec-98d3-00ea59c887d1",
       "name": "Upload Document 3",
-      "type": "n8n-nodes-base.upload",
+      "type": "WF²-nodes-base.upload",
       "typeVersion": 1,
       "position": [
         1640,

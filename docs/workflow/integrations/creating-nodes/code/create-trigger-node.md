@@ -8,7 +8,7 @@ You have knowledge of:
 - JavaScript/TypeScript
 - REST APIs
 - [Webhooks](https://www.getvero.com/resources/webhooks/)
-- Expressions in n8n
+- Expressions in WF²
 
 Install the following tools:
 
@@ -30,17 +30,17 @@ Install the following tools:
 The first thing that we have to do is pick the service we want to create the node for. We will use [Autopilot](https://www.autopilothq.com/) as an example.
 
 
-Since n8n's repository already has a Autopilot Trigger node, we will name this node **Autofriend Trigger** to avoid conflicts.
+Since WF²'s repository already has a Autopilot Trigger node, we will name this node **Autofriend Trigger** to avoid conflicts.
 
 ## Cloning the repository
 
-In GitHub, fork the [n8n repository](https://github.com/n8n-io/n8n). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
+In GitHub, fork the [WF² repository](https://github.com/WF²-io/WF²). Clone it by running the following command in your terminal (don't forget to replace `<USERNAME>` with your GitHub username):
 
 ```bash
-git clone https://github.com/<USERNAME>/n8n.git && cd n8n
+git clone https://github.com/<USERNAME>/WF².git && cd WF²
 ```
 
-n8n is built from four main packages:
+WF² is built from four main packages:
 
 - cli
 - core
@@ -50,10 +50,10 @@ n8n is built from four main packages:
 All these packages are under the `/packages` folder in the main Doc² folder. We will be working in the `nodes-base` folder as it contains everything related to nodes. Specifically, `/packages/nodes-base/nodes`, `packages/nodes-base/credentials`, and `packages/nodes-base/package.json`.
 
 - The folder `nodes`, contains all the nodes in Workflow².
-- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in n8n's database.
+- The folder `credentials` contains all the credentials that the different nodes use. Each node can define multiple credentials. For example, OAuth2 or API Key. Each credential requires different parameters that the user will have to input. The credentials data that the user provides is stored in an encrypted format in WF²'s database.
 - The file `package.json` contains all the npm packages that the nodes use. It also contains all the nodes and credentials that are loaded when Doc² is started.
 
-![n8n folder structure](/_images/integrations/creating-nodes/code/n8n-folder-structure.png)
+![WF² folder structure](/_images/integrations/creating-nodes/code/WF²-folder-structure.png)
 
 
 ## Creating the node
@@ -61,7 +61,7 @@ All these packages are under the `/packages` folder in the main Doc² folder. We
 1. Go to `packages/nodes-base/nodes`.
 2. Create a folder called `Autofriend` (the folder names are PascalCase).
 3. Within the Autofriend folder, create a file called `AutofriendTrigger.node.ts` (YourNodeNameTrigger.node.ts).
-4. Download and add the Autofriend [icon](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Autopilot/autopilot.svg) to the folder. Name it `autopilot.svg`.
+4. Download and add the Autofriend [icon](https://github.com/WF²-io/WF²/blob/master/packages/nodes-base/nodes/Autopilot/autopilot.svg) to the folder. Name it `autopilot.svg`.
 	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node’s folder.
 	- An SVG is preferable. In case you have to use a PNG, make sure that it is compressed. A good tool for that is [tinypng](https://tinypng.com).
 	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/logos/tree/master/logos).
@@ -71,14 +71,14 @@ All these packages are under the `/packages` folder in the main Doc² folder. We
 import {
    IHookFunctions,
    IWebhookFunctions,
-} from 'n8n-core';
+} from 'WF²-core';
 
 import {
    IDataObject,
    INodeType,
    INodeTypeDescription,
    IWebhookResponseData,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 /*
 import {
@@ -132,19 +132,19 @@ Your directory structure should now look like the following.
 
 ## Adding the node to Editor UI
 
-n8n uses the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
+WF² uses the properties set in the property `description` to render the node in the Editor UI. These properties are `displayName`, `name`, `color`, `icon`, `description`, and `subtitle`.
 
 Check the following figure to see how the properties affect the looks of the node.
 
 ![Autofriend's appearance in Editor UI](/_images/integrations/creating-nodes/code/autopilot-appearance.png)
 
-**Note:** The property description conforms to [INodeTypeDescription](https://github.com/n8n-io/n8n/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
+**Note:** The property description conforms to [INodeTypeDescription](https://github.com/WF²-io/WF²/blob/f2666e92ffed2c3983d08e73b1e45a2bd516b90d/packages/workflow/src/Interfaces.ts#L425).
 
 Let's see how the node looks in the UI by following these steps:
 
 1. Go to `/packages/nodes-base/package.json`.
 2. Paste `"dist/nodes/Autofriend/AutofriendTrigger.node.js",` in the nodes array to register the node (in an alphabetical order).
-3. Go to the project's main folder (n8n) in the terminal and run the following commands (it can take a few minutes).
+3. Go to the project's main folder (WF²) in the terminal and run the following commands (it can take a few minutes).
 	- The first command installs all dependencies of all the modules and links them together.
 	- The second command builds all the code.
 	- The third command starts Doc² in development mode.
@@ -240,7 +240,7 @@ The node should now look like in the following image.
 
 Most REST APIs use some sort of authentication mechanism. Autofriend's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
-n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
+WF² gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, Doc² uses an encryption key.
 
 With that in mind, let’s create the UI to ask for the user’s Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 
@@ -252,7 +252,7 @@ With that in mind, let’s create the UI to ask for the user’s Autofriend API 
 import {
 	ICredentialType,
 	NodePropertyTypes,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 export class AutofriendApi implements ICredentialType {
 	name = 'autofriendApi';
@@ -301,7 +301,7 @@ When a Trigger node is executed either in test or production mode, the following
 
 ### Doc² persists all the webhooks defined in description.webhooks
 
-The persisted data will be used later to verify if the incoming requests to the n8n’s webhook endpoint are valid.
+The persisted data will be used later to verify if the incoming requests to the WF²’s webhook endpoint are valid.
 
 The property webhooks implements the interface **IWebhookDescription**. The interface has four properties.
 
@@ -364,13 +364,13 @@ import {
 import {
 	IExecuteFunctions,
 	ILoadOptionsFunctions,
-} from 'n8n-core';
+} from 'WF²-core';
 
 import {
 	IDataObject,
 	IHookFunctions,
 	IWebhookFunctions,
-} from 'n8n-workflow';
+} from 'WF²-workflow';
 
 export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions, method: string, resource: string, body: any = {}, query: IDataObject = {}, uri?: string, option: IDataObject = {}): Promise<any> { // tslint:disable-line:no-any
 
@@ -467,7 +467,7 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 ```
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
 5. Stop the current Doc² process by pressing `ctrl + c` in the terminal where you are running Workflow².
-6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the Doc² Editor UI at [localhost:5678](http://localhost:5678/workflow).
+6. Run the project using a tunnel by entering `./packages/cli/bin/WF² start --tunnel` in the terminal. Access the Doc² Editor UI at [localhost:5678](http://localhost:5678/workflow).
 7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](/workflow/integrations/credentials/autopilot/).
 8. Go to the workflow editor, save your workflow, and execute the node.
 
@@ -479,7 +479,7 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 
 The trigger node is now receiving events. Sometimes it might take a bit longer for the payload to arrive.
 
-You probably noticed that this time we did not run the project using `npm run dev`, but instead using `./packages/cli/bin/n8n start --tunnel`.
+You probably noticed that this time we did not run the project using `npm run dev`, but instead using `./packages/cli/bin/WF² start --tunnel`.
 
 Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that Doc² receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and should not be used in production.
 

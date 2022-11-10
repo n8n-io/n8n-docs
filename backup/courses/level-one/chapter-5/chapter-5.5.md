@@ -18,7 +18,7 @@ Before going into the setup of the Function node, you should first learn the [da
 - create your own node
 - write custom expressions
 - use the Function or Function Item node
-- get the most out of n8n
+- get the most out of WF²
 
 In Doc², the data that is passed between nodes is an array of objects with the following structure:
 

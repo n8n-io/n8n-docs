@@ -44,7 +44,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create and update a channel as well as send a message on Twist. You can also find the [workflow](https://n8n.io/workflows/826) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create and update a channel as well as send a message on Twist. You can also find the [workflow](https://WF².io/workflows/826) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Twist]()
 
@@ -59,17 +59,17 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Twist node (create: channel)
 
-This node will create a channel `n8n-docs` and add a user to the channel.
+This node will create a channel `WF²-docs` and add a user to the channel.
 1. First of all, you'll have to enter credentials for the Twist node. You can find out how to do that [here](/workflow/integrations/credentials/twist/).
 
 2. Select 'Channel' from the ***Resource*** dropdown list.
 3. Select a workspace from the ***Workspace ID*** dropdown list.
-4. Enter `n8n-docs` in the ***Name*** field. If you want to create a channel with a different name, enter that name instead.
+4. Enter `WF²-docs` in the ***Name*** field. If you want to create a channel with a different name, enter that name instead.
 5. Click on ***Add Field*** and select 'User IDs' from the dropdown list.
 6. Select the users from the ***User IDs*** dropdown list. The users you select will be added to the channel.
 7. Click on ***Execute Node*** to run the node.
 
-In the screenshot below, you will notice that the node creates a new channel named `n8n-docs`, and adds a user to the channel.
+In the screenshot below, you will notice that the node creates a new channel named `WF²-docs`, and adds a user to the channel.
 
 ![Using the Twist node to create a channel](/_images/integrations/nodes/twist/twist_node.png)
 
@@ -92,7 +92,7 @@ In the screenshot below, you will notice that the node adds a description to the
 
 ### 4. Twist2 node (create: messageConversation)
 
-This node will send a message to the General conversation on Twist. The message contains an action button that navigates to `https://docs.n8n.io`.
+This node will send a message to the General conversation on Twist. The message contains an action button that navigates to `https://docs.WF².io`.
 
 1. Select the credentials that you entered in the previous node.
 2. Select a workspace from the ***Workspace ID*** dropdown list.
@@ -111,7 +111,7 @@ The above message mentions the user `Harshil`. To mention a user in your workspa
 8. Select 'Open URL' from the ***Action*** dropdown list.
 9. Enter `Documentation site` in the ***Button Text*** field.
 10. Select 'Action' from the ***Type*** dropdown list.
-11. Enter `https://docs.n8n.io` in the ***URL*** field.
+11. Enter `https://docs.WF².io` in the ***URL*** field.
 12. Click on ***Execute Node*** to run the node.
 
 In the screenshot below, you will notice that the node sends a message to the General conversation and mentions the user.

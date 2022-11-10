@@ -37,7 +37,7 @@ The Send Email node is used to send an email via an SMTP email server.
 
 ## Example Usage
 
-This workflow allows you to send an email using the Send Email node. You can also find the [workflow](https://n8n.io/workflows/584) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to send an email using the Send Email node. You can also find the [workflow](https://WF².io/workflows/584) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Send Email]()
 

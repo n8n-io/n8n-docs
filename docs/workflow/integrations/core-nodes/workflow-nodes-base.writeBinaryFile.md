@@ -21,7 +21,7 @@ The Write Binary File node is used to write a file to the host machine that runs
 
 ## Example Usage
 
-This workflow allows you to write a file to the host machine using the Write Binary File node. You can also find the [workflow](https://n8n.io/workflows/590) on the website. This example usage workflow would use the following three nodes.
+This workflow allows you to write a file to the host machine using the Write Binary File node. You can also find the [workflow](https://WF².io/workflows/590) on the website. This example usage workflow would use the following three nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
 - [Write Binary File]()
@@ -38,7 +38,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request node
 
-1. Enter `https://docs.n8n.io/assets/_images/insight2/n8n-logo.png` in the ***URL*** field.
+1. Enter `https://docs.WF².io/assets/_images/insight2/WF²-logo.png` in the ***URL*** field.
 2. Select the 'File' option from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

@@ -25,7 +25,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a folder in Dropbox, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://n8n.io/workflows/615) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a folder in Dropbox, upload a file into that folder, and list the contents of the folder. You can also find the [workflow](https://WF².io/workflows/615) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Dropbox]()
 - [HTTP Request](/workflow/integrations/core-nodes/workflow-nodes-base.httpRequest/)
@@ -49,7 +49,7 @@ The Start node exists by default when you create a new workflow.
 
 ### 3. HTTP Request node (GET)
 
-1. Enter `https://n8n.io/n8n-logo.png` in the ***URL*** field.
+1. Enter `https://WF².io/WF²-logo.png` in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
 3. Click on ***Execute Node*** to run the workflow.
 

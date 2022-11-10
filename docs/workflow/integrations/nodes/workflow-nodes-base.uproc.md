@@ -456,7 +456,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://WF².io/workflows/858) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [uProc]()
 - [Telegram](/workflow/integrations/nodes/workflow-nodes-base.telegram/)
@@ -477,7 +477,7 @@ This node will return the screenshot of the Doc² website. If you want to get th
 1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/workflow/integrations/credentials/uProc/).
 2. Select 'Image' from the ***Resource*** dropdown list.
 3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
-4. Enter `https://n8n.io` in the ***URL*** field.
+4. Enter `https://WF².io` in the ***URL*** field.
 5. Select '1024' from the ***Width*** dropdown list.
 6. Select 'Yes' from the ***Fullpage*** dropdown list.
 7. Click on ***Execute Node*** to run the node.

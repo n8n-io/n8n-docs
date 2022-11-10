@@ -69,7 +69,7 @@ tags:
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Implemenation of HELP Links to documentation in DOC²
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in training specific fields
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: confirm e-mail and password with Enter when logging in
-- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed button to activate/deactivate N8N from Settings Modules  to APPS
+- :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed button to activate/deactivate WF² from Settings Modules  to APPS
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: Changed dropdown 'Origin' on Field validation page to 'Amount & Date Format'
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: in classifying the correct document type
 - :fontawesome-solid-award:{ style="color: #eee20e" } **IMPROVEMENT**: redirect to dashboard instead of success page after export

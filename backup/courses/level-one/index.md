@@ -17,7 +17,7 @@ This course is for you if you:
 By the end of this course you will know:
 
 - How to set up Doc² and navigate the Editor UI
-- How data is structured in n8n
+- How data is structured in WF²
 - How to configure different node parameters and add credentials
 - When and how to use conditional logic in workflows
 - How to schedule and control workflows
@@ -35,10 +35,10 @@ We believe in learning by doing. You can expect some theoretical information abo
 
 ## What do I need to get started?
 
-Sign-up [here](https://n8n-community.typeform.com/to/PDEMrevI) to get a Unique ID and a Webhook URL that you'll need in the course. Then all you need is:
+Sign-up [here](https://WF²-community.typeform.com/to/PDEMrevI) to get a Unique ID and a Webhook URL that you'll need in the course. Then all you need is:
 
 - A computer with macOS, Windows, or Linux
-- Some basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/) are nice-to-haves
+- Some basic knowledge of JavaScript and [APIs](https://WF².io/blog/what-are-apis-how-to-use-them-with-no-code/) are nice-to-haves
 - Eagerness to learn about the power of low-code automation
 
 ## How long does it take to complete the course?
@@ -49,7 +49,7 @@ Completing the course should take around two hours. You do not have to complete 
 
 Absolutely! We believe all good works deserve recognition. To get your certificate, you need to complete the following milestones:
 
-✅ [Sign up](https://n8n-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL<br/>
+✅ [Sign up](https://WF²-community.typeform.com/to/PDEMrevI) for the course to get your unique ID and webhook URL<br/>
 ✅ [Make an HTTP request](/courses/level-one/chapter-5/chapter-5.1/)<br/>
 ✅ [Send the workflow results as a message via Discord](/courses/level-one/chapter-5/chapter-5.6/)<br/>
 ✅ Pass the quiz (theory and practice) at the end of the course<br/>

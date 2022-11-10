@@ -20,7 +20,7 @@
 --8<-- "_snippets/node-icon-square/core-nodes/local-file-trigger.html"
 --8<-- "_snippets/node-icon-square/core-nodes/merge.html"
 --8<-- "_snippets/node-icon-square/core-nodes/move-binary-data.html"
---8<-- "_snippets/node-icon-square/core-nodes/n8n-trigger.html"
+--8<-- "_snippets/node-icon-square/core-nodes/WF²-trigger.html"
 --8<-- "_snippets/node-icon-square/core-nodes/no-operation-do-nothing.html"
 --8<-- "_snippets/node-icon-square/core-nodes/read-binary-file.html"
 --8<-- "_snippets/node-icon-square/core-nodes/read-binary-files.html"

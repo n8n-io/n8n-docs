@@ -18,9 +18,9 @@ Merging data can involve:
 
 		In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
-		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+		[This blog tutorial](https://WF².io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
-In n8n, you can merge data from two different nodes using the [Merge node](/integrations/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
+In WF², you can merge data from two different nodes using the [Merge node](/integrations/core-nodes/WF²-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
 
 - Append
 - Keep Key Matches
@@ -69,13 +69,13 @@ Build a workflow that merges data from the Customer Datastore node and Function 
 In some cases, you might need to perform the same operation on each element of an array / each data item (for example sending a message to every contact in your address book). In technical terms, you need to iterate through the data (with loops).
 
 
-n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions){:target="_blank" .external} for which you need to build a loop into your workflow.
+WF² handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions){:target="_blank" .external} for which you need to build a loop into your workflow.
 
-To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:target="_blank" .external}, you need to connect the output of one node to the input of a previous node, and add an IF node to check when to stop the loop.
+To [create a loop in an WF² workflow](/flow-logic/looping/#using-loops-in-WF²){:target="_blank" .external}, you need to connect the output of one node to the input of a previous node, and add an IF node to check when to stop the loop.
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/core-nodes/n8n-nodes-base.splitInBatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/core-nodes/WF²-nodes-base.splitInBatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 !!! warning "Execution of Split in Batches node"
 
@@ -86,7 +86,7 @@ If you need to process large incoming data, execute the Function node multiple t
 
 Build a workflow that reads the RSS feed from Medium and dev.to. The workflow should consist of three nodes:
 
-- A Function node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`)
+- A Function node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/WF²-io`) and dev.to (`https://dev.to/feed/WF²`)
 - A Split In Batches node with `Batch Size: 1`, that takes in the inputs from the Function node and RSS node and iterates over the items.
 - An RSS Read node that gets the URL of the Medium RSS feed, passed as an expression: `{{$node["SplitInBatches"].json["url"]}}`. The RSS Read node is one of the exception nodes which processes only the first item it receives, so the Split in Batches node is necessary for iterating over multiple items.
 
@@ -103,10 +103,10 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 		"nodes": [
 			{
 				"parameters": {
-					"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/n8n',\n    }\n  }\n];"
+					"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/WF²-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/WF²',\n    }\n  }\n];"
 				},
 				"name": "Function",
-				"type": "n8n-nodes-base.function",
+				"type": "WF²-nodes-base.function",
 				"position": [
 					480,
 					1880
@@ -118,7 +118,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 					"url": "={{$node[\"SplitInBatches\"].json[\"url\"]}}"
 				},
 				"name": "RSS Feed Read",
-				"type": "n8n-nodes-base.rssFeedRead",
+				"type": "WF²-nodes-base.rssFeedRead",
 				"position": [
 					880,
 					1880
@@ -131,7 +131,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 					"options": {}
 				},
 				"name": "SplitInBatches",
-				"type": "n8n-nodes-base.splitInBatches",
+				"type": "WF²-nodes-base.splitInBatches",
 				"position": [
 					680,
 					1880

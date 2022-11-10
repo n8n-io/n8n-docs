@@ -13,7 +13,7 @@
 
 ## Example Usage
 
-This workflow allows you to validate emails stored in Airtable using the Mailcheck node. You can also find the [workflow](https://n8n.io/workflows/1055) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to validate emails stored in Airtable using the Mailcheck node. You can also find the [workflow](https://WF².io/workflows/1055) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Airtable]/integrations/nodes/workflow-nodes-base.airtable/)
 - [Mailcheck]()

@@ -38,7 +38,7 @@ You can specify how data of branches should be merged. The following options are
 
 ## Example Usage
 
-This workflow allows you to merge greetings for the users based on their associated language using the Merge node. You can also find the [workflow](https://n8n.io/workflows/655) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to merge greetings for the users based on their associated language using the Merge node. You can also find the [workflow](https://WF².io/workflows/655) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Funtion](/workflow/integrations/core-nodes/workflow-nodes-base.function/)
 - [Merge]()

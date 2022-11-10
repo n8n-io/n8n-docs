@@ -17,7 +17,7 @@
 
 ## Example Usage
 
-This workflow allows you to send daily weather updates via an SMS message using the Plivo node. You can also find the [workflow](https://n8n.io/workflows/1005) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to send daily weather updates via an SMS message using the Plivo node. You can also find the [workflow](https://WF².io/workflows/1005) on Workflow².io. This example usage workflow uses the following nodes.
 - [Cron](/workflow/integrations/core-nodes/workflow-nodes-base.cron/)
 - [OpenWeatherMap](/workflow/integrations/nodes/workflow-nodes-base.openWeatherMap/)
 - [Plivo]()

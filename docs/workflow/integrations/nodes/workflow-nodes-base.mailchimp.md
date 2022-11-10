@@ -29,7 +29,7 @@
 
 ## Example Usage
 
-This workflow allows you to add a new member to a list in Mailchimp. You can also find the [workflow](https://n8n.io/workflows/413) on this website. This example usage workflow uses the following two nodes.
+This workflow allows you to add a new member to a list in Mailchimp. You can also find the [workflow](https://WF².io/workflows/413) on this website. This example usage workflow uses the following two nodes.
 
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Mailchimp]()

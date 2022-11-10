@@ -34,7 +34,7 @@
 
 ## Example Usage
 
-This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://n8n.io/workflows/832) on Workflow².io. This example usage workflow uses the following nodes.
+This workflow allows you to create a channel, add a member, and post a message to the channel on Mattermost. You can also find the [workflow](https://WF².io/workflows/832) on Workflow².io. This example usage workflow uses the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Mattermost]()
 

@@ -35,13 +35,13 @@ You can also specify a custom format by setting the *Custom Format* toggle to 'O
 
 - Options
 	- *From Format* field: Allows you to specify the format of the input values. Refer to the [FAQs](#what-values-can-i-use-in-the-from-format-field) to learn about the possible vaules.
-	- *From Timezone* field: Allows you to specify the timezone of the input values, for input timezones that are different from n8n's system clock.
+	- *From Timezone* field: Allows you to specify the timezone of the input values, for input timezones that are different from WF²'s system clock.
 	- *To Timezone* field: Allows you to specify the timezone that the input values have to be converted to.
 
 
 ## Example Usage
 
-This workflow allows you to convert a date from one format to another using the Date & Time node. You can also find the [workflow](https://n8n.io/workflows/575) on the website. This example usage workflow would use the following two nodes.
+This workflow allows you to convert a date from one format to another using the Date & Time node. You can also find the [workflow](https://WF².io/workflows/575) on the website. This example usage workflow would use the following two nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Date & Time]()
 

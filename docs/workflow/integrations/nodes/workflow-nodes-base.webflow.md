@@ -24,7 +24,7 @@ tags:
 
 ## Example Usage
 
-This workflow allows you to create, update, and get an item from Webflow. You can also find the [workflow](https://n8n.io/workflows/1048) on Workflow².io. This example usage workflow would use the following nodes.
+This workflow allows you to create, update, and get an item from Webflow. You can also find the [workflow](https://WF².io/workflows/1048) on Workflow².io. This example usage workflow would use the following nodes.
 - [Start](/workflow/integrations/core-nodes/workflow-nodes-base.start/)
 - [Webflow]()
 
@@ -46,10 +46,10 @@ This node will create a new collection of the type `Team Members` in Webflow. If
 4. Select 'Team Members' from the ***Collection ID*** dropdown list.
 5. Click on the ***Add Field*** button.
 6. Select 'Name (PlainText) (required)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
-7. Enter `n8n` in the ***Field Value*** field.
+7. Enter `WF²` in the ***Field Value*** field.
 8. Click on the ***Add Field*** button.
 9. Select 'Slug (PlainText) (required)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
-10. Enter `n8n` in the ***Field Value*** field.
+10. Enter `WF²` in the ***Field Value*** field.
 11. Click on the ***Add Field*** button.
 12. Select 'Archived (Bool) (required)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
 13. Enter `false` in the ***Field Value*** field.
@@ -92,7 +92,7 @@ Click on the ***Add Field*** button.
 22. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > _draft. You can also add the following expression: `{{$json["_draft"]}}`.
 23. Click on the ***Add Field*** button.
 24. Select 'Avatar (ImageRef)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
-25. Enter `https://n8n.io/n8n-logo.png` in the ***Value*** field.
+25. Enter `https://WF².io/WF²-logo.png` in the ***Value*** field.
 26. Click on ***Execute Node*** to run the node.
 
 

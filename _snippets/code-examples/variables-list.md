@@ -1,4 +1,4 @@
-n8n provides the following variables:
+WF² provides the following variables:
 
 - `$binary`: incoming binary data from a node
 - `$data`: incoming raw data from a node

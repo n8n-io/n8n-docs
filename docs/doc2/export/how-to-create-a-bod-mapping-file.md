@@ -94,7 +94,7 @@ IF_CORRELATION_ID=AlternateDocumentID
 #IF_VENDOR_IBAN=BankAccount
 ```
 
-In the rest of the file should stay as is and does not need any modification.
+The rest of the file should stay as is and does not need any modification.
 
 ```
 #If index field value is to be used somewhere else define path here.

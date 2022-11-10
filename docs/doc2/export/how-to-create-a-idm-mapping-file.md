@@ -48,7 +48,7 @@ In the third block you can define static values that will be transferred to IDM.
 
 It will be used to set the EntityType, AccountingEntity and GroupAccountingEntity in IDM.
 
-The values need to be set accordingly to your evironment.
+The values need to be set according to your evironment.
 
 ```
 #Define mappings for the static fields

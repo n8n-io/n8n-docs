@@ -1,6 +1,6 @@
 ---
 title: "Export to Infor IDM"
-description: Step by Step guide how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
+description: A step by Step guide on how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
 date: "2021-10-22"
 tags:
   - DOC²
@@ -12,7 +12,7 @@ tags:
 
 #### How to export to Infor Document Management without publishing the document values in a seperate BOD
 
-Step by Step guide how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
+A step by Step guide on how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
 
 **Prerequisites:**
 

@@ -1,6 +1,6 @@
 ---
 title: "How to create a IDM mapping file"
-description: This is a step by step guide how to create a IDM mapping file. Find out what to do in the first, second and third block.
+description: This is a step by step guide on how to create a IDM mapping file. Find out what to do in the first, second and third block.
 date: "2021-10-26"
 tags:
   - DOC²
@@ -10,7 +10,7 @@ tags:
   - Mapping
 ---
 
-#### Step by step guide how to create a IDM mapping file.
+#### Step by step guide on how to create a IDM mapping file.
 
 You can download a example mapping file here:
 

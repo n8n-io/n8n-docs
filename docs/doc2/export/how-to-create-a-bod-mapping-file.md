@@ -12,7 +12,7 @@ tags:
 
 #### Step by step guide how to create a BOD mapping file.
 
-You can download a example mapping file here:
+You can download an example mapping file here:
 
 [BOD mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt)[Download](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt)
 

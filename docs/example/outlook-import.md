@@ -55,18 +55,19 @@ With the following workflow you can upload email attachments from specific folde
 
 **7.** The `IF` node will check if the `Get unread message` node found new messages and, if there are any, sends the information further.
 
-   ![](/_images/workflows/workflows/WF-outlook-import-get-unread-messages.png)
-
 **8.** The `Get Attachments` node will extract all the attachments from the emails. First, you have to select the Microsoft account configured in step 3.1<br>
 
    ![](/_images/workflows/workflows/WF-outlook-import-get-attachments.png)
 
 **9.** The `Mark message as read` node marks the emails that were checked in the steps above as read<br>
    ![](/_images/workflows/workflows/WF-outlook-import-mark-message-as-read.png)<br>
-**1.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>
+
+**10.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>
    ![](/_images/workflows/workflows/WF-outlook-import-download-attachment.png)<br>
 
-**11.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
+**11.** The `Switch` node will upload the document
+
+**12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
 
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
 

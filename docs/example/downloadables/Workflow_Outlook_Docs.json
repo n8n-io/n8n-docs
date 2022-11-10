@@ -139,7 +139,7 @@
     },
     {
       "parameters": {
-        "functionCode": "checker = {\n  '101_Kostenrechnung':'',\n  '102_Wareneingangsrechnung':''\n}\nmapping = {}\n\nitem = $node[\"Microsoft getFolders\"].json\n\nif (item.displayName in checker) {\n  mapping[item.displayName]=item.id\n}\n\nreturn mapping;"
+        "functionCode": "checker = {\n  '101_Polydocs':'',\n  '102_Polydocs':''\n}\nmapping = {}\n\nitem = $node[\"Microsoft getFolders\"].json\n\nif (item.displayName in checker) {\n  mapping[item.displayName]=item.id\n}\n\nreturn mapping;"
       },
       "id": "27a256b1-b2a7-4616-a29c-95e331cd7ad9",
       "name": "FunctionItem",

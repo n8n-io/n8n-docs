@@ -81,7 +81,7 @@ In the fifth block the ACLString of the second block will be mapped to the ACL f
 ACL_Fields=SV_ACLString
 ```
 
-In the last block you can define the "Searchable\_PDF\_Name". That will be the name if the document in IDM.
+In the last block you can define the "Searchable\_PDF\_Name". That will be the name of the document in IDM.
 
 It can be a single field name or a concatenation of different fields. For example:
 

@@ -10,7 +10,7 @@ tags:
   - DOC²
 ---
 
-#### Export to Infor Document Management without publishing the document values in a seperate BOD
+#### How to export to Infor Document Management without publishing the document values in a seperate BOD
 
 Step by Step guide how to export documents to Infor Document Management (IDM) without publishing the values in a seperate BOD.
 

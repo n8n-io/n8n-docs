@@ -12,7 +12,7 @@ tags:
 
 #### Step by step guide on how to create a IDM mapping file.
 
-You can download a example mapping file here:
+You can download an example mapping file here:
 
 [IDM mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt)[Download](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt)
 

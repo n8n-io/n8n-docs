@@ -65,7 +65,7 @@ With the following workflow you can upload email attachments from specific folde
 **10.** The `Download Attachments` node downloads the attachments from the emails in a temporary directory as a binary file<br>
    ![](/_images/workflows/workflows/WF-outlook-import-download-attachment.png)<br>
 
-**11.** The `Switch` node will upload the document
+**11.** The `Switch` node will send the document to the correct Upload Node depending on inbox.
 
 **12.** The `Upload Document` node uploads the saved attachments to DOC². You just have to specify what inbox, in this case 101_Polydocs and to what sub-organization it is supposed to be uploaded.<br>
 

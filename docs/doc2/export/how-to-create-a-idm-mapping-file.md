@@ -18,7 +18,7 @@ You can download an example mapping file here:
 
 To use the example file, rename the file from "IDM\_Mapping.txt" to "IDM\_Mapping.properties".
 
-**Here you can find an explanation how the file is structured.**
+**Here you can find an explanation of how the file is structured.**
 
 In the first block the document type gets mapped. On the left side you see the document type name of DOC² and the right side the document type name of IDM.
 

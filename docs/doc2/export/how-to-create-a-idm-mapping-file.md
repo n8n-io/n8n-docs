@@ -14,7 +14,7 @@ tags:
 
 You can download an example mapping file here:
 
-[IDM mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt)[Download](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt)
+[IDM mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt) [download](https://docs.cloudintegration.eu/wp-content/uploads/2021/10/IDM_Mappings.txt)
 
 To use the example file, rename the file from "IDM\_Mapping.txt" to "IDM\_Mapping.properties".
 

@@ -424,6 +424,19 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![JSON](/_images/integrations/creating-nodes/json.png)
 
+## Notice
+
+Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
+
+```js
+{
+  displayName: 'Your text here',
+  name: 'notice',
+  type: 'notice',
+  default: '',
+},
+```
+
 ## Resource locator
 
 ![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)

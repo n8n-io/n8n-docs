@@ -9,6 +9,7 @@ n8n collects selected usage and performance data to help diagnose problems and i
 ## What n8n collects
 
 - Error codes and messages of failed executions (excluding any payload data, and not for custom nodes)
+- Error reports for app crashes and API issues
 - The graph of a workflow (types of nodes used and how they're connected)
 - From node parameters:
     - The 'resource' and 'operation' that a node is set to (if applicable)

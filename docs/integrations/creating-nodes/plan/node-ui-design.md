@@ -22,7 +22,7 @@ All node's use n8n's [node UI elements](/integrations/creating-nodes/build/refer
 | ------- | ----- |
 | Drop-down value | Title case |
 | Hint | Sentence case |
-| Info box | Sentence case. Don't use a period (`.`) for one-sentence tooltips. Always use a period if there's more than one sentence. This field can include links, which should open in a new tab. |
+| Info box | Sentence case. Don't use a period (`.`) for one-sentence information. Always use a period if there's more than one sentence. This field can include links, which should open in a new tab. |
 | Node name | Title case |
 | Parameter name | Title case |
 | Subtitle | Title case |

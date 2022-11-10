@@ -63,25 +63,26 @@ To configure these folders, you must select the **Settings folder** and press `B
 
   There are two more specific parameters:
 
-  When exporting to Infor OS three document types are available
+  When exporting to Infor OS three document types are available.
 
 ![](/_images/doc2/Import_Watchdog_Windows_General_Settings_1.png)
 
 #### API Key 
-→ this key can be found under the Integration settings of your DOC² account.
+→ This key can be found under the Integration settings of your DOC² account.
 
 #### Barcode splitting
-If you want to process documents in which several documents with barcodes are combined in one PDF, these are separated by the barcode using the following setting when uploading to DOC².
+If you want to process documents in which several documents with barcodes are combined into one PDF, these are separated by the barcode using the following setting when uploading to DOC².
 
 ![](/_images/doc2/Import_Watchdog_Windows_Barcode_Splitting.png)
 
 
 ## Install poppler
-For the barcode Splitting to work you need to download the poppler.zip - unzip it and add the bin lib to the PATH system Variable.
+For the barcode Splitting to work you need to download poppler.zip - unzip it and add the bin lib to the PATH system Variable.
 
 1. Search for System variable or Systemumgebungsvariablen
-2. click on System Variables ![](/_images/doc2/watchdog/systemeigenschaften.png)
-3. Open the system Variables, select Path and click on edit ![](/_images/doc2/watchdog/windows-env.png)
+2. Click on System Variables <br>
+![](/_images/doc2/watchdog/systemeigenschaften.png)
+3. Open the System Variables, select Path and click on edit ![](/_images/doc2/watchdog/windows-env.png)
 4. Add the path to the unziped poppler folder + \Libary\bin to the Path ![](/_images/doc2/watchdog/add-to-path.png)
 
 Done!

@@ -54,10 +54,10 @@ After the initial setup is complete, most of your time in DOC² will be spent re
 
 ### Reviewing Extracted Results
 
-If a document is not automatically processed, it will be stopped for manual review. This means you will need to edit or approve fields the system wasn't confident in, or couldn't find.
+If a document is not processed automatically, it is held for manual review. This means you need to edit or approve fields that the system isn't sure about or couldn't find.
 
 To review extracted results:
 
-1.  On the **Dashboard**, click **on the document** to assign the 10 oldest invoices in the system to yourself. You'll be taken to the **Review** screen.
-2.  Review the extracted results. Refer to reviewing your document for more information.
-3.  When you're satisfied, click **Complete Review**.
+1. On the **Dashboard**, click the document. You will be taken to the **Review** screen.
+2. Check the extracted results. You can recognize fields that have to be edited manually by the red marking at the beginning of the respective field.
+3. After successful verification and correction, click Confirm & Export.

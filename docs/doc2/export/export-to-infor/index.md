@@ -24,7 +24,7 @@ graph LR
 
 
 
-Here you can find all the useful pages to connect your infor environment correctly:
+Here you can find all the useful pages to connect your Infor environment correctly:
 
 - [:octicons-file-24: How to create a BOD mapping file](/doc2/export/how-to-create-a-bod-mapping-file/)
 - [:fontawesome-solid-file-export: Export to Infor ION and IDM](/doc2/export/infor-ion/)

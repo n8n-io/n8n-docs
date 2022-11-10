@@ -47,12 +47,12 @@ Click on the ION API File section and select the ION API file that you want to u
 ![](/_images/doc2/image-32-1024x347.png)
 
 Click on the IDM Mapping file section and choose the IDM Mapping file you want to use for the export.  
-You find a example of the IDM mapping file on this page: [How to create a IDM mapping file](/doc2/export/how-to-create-a-idm-mapping-file/)
+You can find an example of the IDM mapping file on this page: [How to create a IDM mapping file](/doc2/export/how-to-create-a-idm-mapping-file/)
 
 ![](/_images/doc2/image-33-1024x344.png)
 
 Click on the BOD Mapping file section and choose the BOD Mapping file you want to use for the export.  
-You find a example of the BOD mapping file on this page: [How to create a BOD mapping file](/doc2/export/how-to-create-a-bod-mapping-file/)
+You can find an example of the BOD mapping file on this page: [How to create a BOD mapping file](/doc2/export/how-to-create-a-bod-mapping-file/)
 
 ![](/_images/doc2/image-34-1024x343.png)
 
@@ -74,7 +74,7 @@ Click on "+Add" and choose "IMS via ION API"
 
 ![](/_images/doc2/image-37.png)
 
-Enter the name meaningful "Doc2Export" and give it a meaningful description.
+Enter the name "Doc2Export" and give it a description.
 
 Uncheck the box "Application has IMS EndPoint" and enter the "Client ID" copied from ION API.
 
@@ -82,7 +82,7 @@ Uncheck the box "Application has IMS EndPoint" and enter the "Client ID" copied 
 
 Change to the "Documents" tab.
 
-Click on the "+" icon and enter to the filter field "Sync.CaptureDocument". The list should show the correct BOD now, check the box in front of "Sync.CaptureDocument" and click "OK".
+Click on the "+" icon and in the filter field enter "Sync.CaptureDocument". The list should show the correct BOD now, check the box in front of "Sync.CaptureDocument" and click "OK".
 
 ![](/_images/doc2/image-40-1024x944.png)
 
@@ -90,17 +90,17 @@ Click the disk icon to save the settings.
 
 ![](/_images/doc2/image-41.png)
 
-Change to "Data Flows" and click on "+Add" and select "Document Flow".
+Change to "Data Flows", click on "+Add" and select "Document Flow".
 
 ![](/_images/doc2/image-43.png)
 
-Enter a meaningful name and description.
+Enter a name and description.
 
 Drag and drop an "Application" to the flow and name it "Doc2".
 
 ![](/_images/doc2/image-44.png)
 
-Click on the "+" icon and select the "Doc2" application, in this case "Doc2Export" and click "OK".
+Click on the "+" icon and select the "Doc2" application, in this case "Doc2Export", and click "OK".
 
 ![](/_images/doc2/image-45.png)
 

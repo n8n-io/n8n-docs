@@ -20,7 +20,7 @@ To use the example file, rename the file from “BOD\_Mapping.txt” to “BOD\_
 
 ****Here you can find an explanation of how the file is structured.****
 
-In the first block, all static values will be defined. Fields that would need an adjustment are "LogicalID" and "AccountingEntityID".
+In the first block, all static values will be defined. Fields that require adjustment are "LogicalID" and "AccountingEntityID".
 
 The "LogicalID" must be set to the logical ID of the IMS connection point that was defined for the DOC² BOD export.
 

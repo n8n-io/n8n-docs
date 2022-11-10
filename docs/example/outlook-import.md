@@ -72,7 +72,7 @@ With the following workflow you can upload email attachments from specific folde
 ![](/_images/workflows/workflows/WF-outlook-import-Doc-Upload.png)<br>
 
 :fontawesome-solid-triangle-exclamation:{ style="color: #EE0F0F" }
-**12.** Add the classification rules in DOC² so that the upload node knows where to upload the documents.
+**13.** Add the classification rules in DOC² so that the upload node knows where to upload the documents.
 
 You can find this in the `Settings` under the menu item **Classification and Extraction** in the subitem `Document Processing`.
 

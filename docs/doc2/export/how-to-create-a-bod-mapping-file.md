@@ -18,7 +18,7 @@ You can download an example mapping file here:
 
 To use the example file, rename the file from “BOD\_Mapping.txt” to “BOD\_Mapping.properties”.
 
-****Here you can find an explanation how the file is structured.****
+****Here you can find an explanation of how the file is structured.****
 
 In the first block, all static values will be defined. Fields that would need an adjustment are "LogicalID" and "AccountingEntityID".
 

@@ -14,7 +14,7 @@ tags:
 
 You can download an example mapping file here:
 
-[BOD mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt)[Download](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt)
+[BOD mapping example](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt) [download](https://docs.cloudintegration.eu/wp-content/uploads/2021/11/BOD_Mappings.txt)
 
 To use the example file, rename the file from “BOD\_Mapping.txt” to “BOD\_Mapping.properties”.
 

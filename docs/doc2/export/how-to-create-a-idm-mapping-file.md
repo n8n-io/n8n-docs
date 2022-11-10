@@ -33,7 +33,7 @@ In the second block you can define static values which will be used in the mappi
 
 In this example, there is a static field for FileNameSeperator and ACLString.
 
-With the field ACLString you can define the ACL that will set in IDM for each exported document.
+With the field ACLString, you can define the ACL that will be set in IDM for each exported document.
 
 ```
 #Define mappings for the static values

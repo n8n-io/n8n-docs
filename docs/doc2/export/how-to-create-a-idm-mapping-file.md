@@ -73,7 +73,7 @@ IF_INVOICE_DATE=InvoiceDate
 IF_SUPPLIER_NAME=SupplierName
 ```
 
-In the fifth block the ACL String of the second block will be mapped to the ACL field of IDM. Usualy this should not be changed.
+In the fifth block the ACLString of the second block will be mapped to the ACL field of IDM. Usualy this should not be changed.
 
 ```
 #Define ACL Field value

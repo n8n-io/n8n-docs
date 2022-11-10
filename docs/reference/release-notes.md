@@ -5,7 +5,7 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.201.0...n8n@0.202.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-11-10
 
-This release contains new features, including API enhancements, and bug fixes.
+This release contains core product improvements and bug fixes.
 
 ### New features
 

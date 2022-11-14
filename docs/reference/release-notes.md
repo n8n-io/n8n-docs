@@ -1,6 +1,6 @@
 # Release notes
 
-## n8n@0.202.0
+## n8n@0.202.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.202.0...n8n@0.202.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-11-10

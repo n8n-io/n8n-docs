@@ -26,8 +26,6 @@ Now, in your Editor UI, add an *HTTP Request node* like you learned in the lesso
 In the left panel, select:
 
 - *URL:* The Dataset URL your received in the email when you signed up for this course.
-- *Options > Add Option > Split Into Items:* toggle to true.<br/>
-	This option will output each element of an array as its own item.
 - *Headers > Add Header:*
   - *Name:* `unique_id`
   - *Value:* The Unique ID your received in the email when you signed up for this course.

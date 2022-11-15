@@ -1,18 +1,6 @@
 # Google: OAuth2 single service
 
-This document contains instructions for creating a Google credential for a single service. They're also available as a video. 
-
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-!!! note "Note for n8n Cloud users"
-    For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
-
-    * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-    * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
-    * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
-    * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
 
 ## Set up OAuth
@@ -34,7 +22,7 @@ You need a [Google Cloud Platform project](https://developers.google.com/workspa
 	??? Details "View screenshot"   
 		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
 
-4. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from the previous step.
+4. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
 
 	??? Details "View screenshot"  
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 
@@ -51,6 +39,12 @@ In n8n:
 1. Enter your new **Client ID** and **Client Secret** from Google Cloud Console in the credentials modal.
 2. Select **Sign in with Google** to complete your Google authentication.
 3. **Save** your new credentials.
+
+## Video
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 ## Troubleshooting

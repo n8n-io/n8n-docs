@@ -56,9 +56,9 @@ An n8n node performs its action on each item of incoming data.
 <figure><img src="/_images/flow-logic/looping/customer_datastore_node.png"><figcaption align = "center"><i>Items in the Customer Datastore node</i></figcaption></figure>
 
 
-## Creating data sets with the Function node
+## Creating data sets with the Code node
 
-Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the Function node to write JavaScript code defining your array of objects with the following structure:
+Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the Code node to write JavaScript code defining your array of objects with the following structure:
 
 ```javascript
 return [
@@ -70,9 +70,9 @@ return [
 ];
 ```
 
-For example, the array of objects representing the Ninja turtles would look like this in the Function node:
+For example, the array of objects representing the Ninja turtles would look like this in the Code node:
 
-<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_notNested.png" alt="" style="width:100%"><figcaption align = "center"><i>Array of objects in the Function node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_notNested.png" alt="" style="width:100%"><figcaption align = "center"><i>Array of objects in the Code node</i></figcaption></figure>
 
 !!! warning "JSON objects"
 
@@ -92,11 +92,11 @@ You can also have nested pairs, for example if you want to define a primary and 
 
 ### Exercise
 
-In a Function node, create an array of objects named `myContacts` that contains the properties `name` and `email`, and the `email` property is further split into `personal` and `work`.
+In a Code node, create an array of objects named `myContacts` that contains the properties `name` and `email`, and the `email` property is further split into `personal` and `work`.
 
 ??? note "Show me the solution"
 
-	In the Function node, in the JavaScript Code field you have to write the following code:
+	In the Code node, in the JavaScript Code field you have to write the following code:
 
 	```js
 		var myContacts = [
@@ -123,31 +123,32 @@ In a Function node, create an array of objects named `myContacts` that contains 
 		return myContacts;
 	```
 
-	When you execute the Function node, the result should look like this:
+	When you execute the Code node, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of Function node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of Code node</i></figcaption></figure>
 
 
 
-## Referencing node data with the Function node
+## Referencing node data with the Code node
 
-Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code-examples/methods-variables-reference/) in the Function node.
+Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code-examples/methods-variables-reference/) in the Code node.
 
 ### Exercise
 
-Let's build on the previous exercise, in which you used the Function node to create a data set of two contacts with their names and emails. Now, connect a second Function node to the first one. In the new node, write code to create a new column named `workEmail` that references the work email of the first contact.
+Let's build on the previous exercise, in which you used the Code node to create a data set of two contacts with their names and emails. Now, connect a second Code node to the first one. In the new node, write code to create a new column named `workEmail` that references the work email of the first contact.
 
 ??? note "Show me the solution"
-	In the Function node, in the JavaScript Code field you have to write the following code:
+	In the Code node, in the JavaScript Code field you have to write the following code:
 
 
+		let items = $input.all();
 		items[0].json.workEmail = items[0].json.email['work'];
 		return items;
 
 
-	When you execute the Function node, the result should look like this:
+	When you execute the Code node, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_reference.png" alt="" style="width:100%"><figcaption align = "center"><i>Function node reference</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_reference.png" alt="" style="width:100%"><figcaption align = "center"><i>Code node reference</i></figcaption></figure>
 
 
 ## Transforming data
@@ -161,14 +162,13 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- With the HTTP Request node, you can toggle the option `Split Into Items` to create multiple items from a single item. This is the easiest way to transform incoming web data with one click.
-- With the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists){:target="_blank" .external}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Function node.
-- With the Function node, you can write JavaScript functions to modify the data structure of incoming data:
+- With the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists){:target="_blank" .external}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node.
+- With the Code node, you can write JavaScript functions to modify the data structure of incoming data using the *Run Once for All Items* mode:
 
     To create multiple items from a single item, you can use this JavaScript code:
 
 	```js
-	return items[0].json.map(item => {
+	return $input.all().map(item => {
 		return {
 			json: item
 		}
@@ -181,7 +181,7 @@ There are several ways to transform data for the purposes mentioned above:
       return [
         {
           json: {
-            data_object: items.map(item => item.json)
+            data_object: $input.all().map(item => item.json)
           }
         }
       ];
@@ -189,7 +189,7 @@ There are several ways to transform data for the purposes mentioned above:
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the Poemist API `https://www.poemist.com/api/v1/randompoems`. Transform the incoming data with the `Split Into Items` option and with the Function node.
+Use the HTTP Request node to make a GET request to the Poemist API `https://www.poemist.com/api/v1/randompoems`. Transform the incoming data with the `Split Into Items` option and with the Code node.
 
 
 ??? note "Show me the solution"
@@ -209,7 +209,7 @@ Use the HTTP Request node to make a GET request to the Poemist API `https://www.
 
 	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_splitItems.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node with split items</i></figcaption></figure>
 
-	To transform the data with the Function node, connect this node to the *HTTP Request node* (without the toggle for splitting data) and write the following code in the JavaScript Code field:
+	To transform the data with the Code node, connect this node to the *HTTP Request node* (without the toggle for splitting data) and write the following code in the JavaScript Code field:
 
 	```js
 		return items[0].json.map(item => {
@@ -221,5 +221,5 @@ Use the HTTP Request node to make a GET request to the Poemist API `https://www.
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Function node with code to transform items</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Code node with code to transform items</i></figcaption></figure>
 

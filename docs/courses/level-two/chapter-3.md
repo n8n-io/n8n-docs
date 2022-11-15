@@ -45,11 +45,11 @@ Notice that three of these modes require a key (Merge By Key, Keep Key Matches, 
 
 ### Exercise
 
-Build a workflow that merges data from the Customer Datastore node and Function node.
+Build a workflow that merges data from the Customer Datastore node and Code node.
 
-* Add a Merge node that takes Input 1 from a Customer Datastore node and Input 2 from a Function node.
+* Add a Merge node that takes Input 1 from a Customer Datastore node and Input 2 from a Code node.
 * In the Customer Datastore node, run the operation Get All People.
-* In the Function node, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the information of two characters from the Customer Database. For example, Jay Gatsby's language would be English and country name would be United States.
+* In the Code node, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the information of two characters from the Customer Database. For example, Jay Gatsby's language would be English and country name would be United States.
 * In the Merge node, try out different merge modes.
 
 ??? note "Show me the solution"
@@ -75,7 +75,7 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Function node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 !!! warning "Execution of Split in Batches node"
 
@@ -86,8 +86,8 @@ If you need to process large incoming data, execute the Function node multiple t
 
 Build a workflow that reads the RSS feed from Medium and dev.to. The workflow should consist of three nodes:
 
-- A Function node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`)
-- A Split In Batches node with `Batch Size: 1`, that takes in the inputs from the Function node and RSS node and iterates over the items.
+- A Code node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`)
+- A Split In Batches node with `Batch Size: 1`, that takes in the inputs from the Code node and RSS node and iterates over the items.
 - An RSS Read node that gets the URL of the Medium RSS feed, passed as an expression: `{{$node["SplitInBatches"].json["url"]}}`. The RSS Read node is one of the exception nodes which processes only the first item it receives, so the Split in Batches node is necessary for iterating over multiple items.
 
 ??? note "Show me the solution"
@@ -105,8 +105,8 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 				"parameters": {
 					"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/n8n',\n    }\n  }\n];"
 				},
-				"name": "Function",
-				"type": "n8n-nodes-base.function",
+				"name": "Code",
+				"type": "n8n-nodes-base.code",
 				"position": [
 					480,
 					1880
@@ -140,7 +140,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 			}
 		],
 		"connections": {
-			"Function": {
+			"Code": {
 				"main": [
 					[
 						{

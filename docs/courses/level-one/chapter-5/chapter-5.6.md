@@ -8,7 +8,7 @@ Now that you have a calculated summary of the booked orders, you need to notify 
     You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/){:target="_blank" .external} and [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/){:target="_blank" .external}.
 
 
-In your workflow, add a Discord node connected to the Function node. In the Discord node window, configure the parameters:
+In your workflow, add a Discord node connected to the Code node. In the Discord node window, configure the parameters:
 
 - *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
 - *Text (Expression):* This week we have `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{$node["HTTP Request"].parameter["headerParametersUi"]["parameter"][0]["value"]}}`

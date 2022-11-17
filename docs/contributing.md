@@ -75,7 +75,9 @@ The repository for the docs is [here](https://github.com/n8n-io/n8n-docs){:targe
 
 ## Write a blog post
 
-You can write an article for the [n8n blog](https://n8n.io/blog/){:target=_blank class=.external-link}. Your article can be, for example, a [workflow tutorial](https://n8n.io/blog/tag/tutorial/){:target=_blank class=.external-link}, an opinion piece on automation, or some domain-specific [automation ideas](https://n8n.io/blog/tag/ideas/){:target=_blank class=.external-link}. Surprise us!
+You can write an article for the [n8n blog](https://n8n.io/blog/){:target=_blank class=.external-link}. Your article can be, for example, a [workflow tutorial](https://n8n.io/blog/tag/tutorial/){:target=_blank class=.external-link}, an opinion piece on automation, or some domain-specific [automation ideas](https://n8n.io/blog/tag/ideas/){:target=_blank class=.external-link}. 
+
+[This board](https://github.com/orgs/n8n-io/projects/3){:target=_blank .external-link} lists the most in-demand topics.
 
 n8n has the following process for guest contributions to our blog:
 

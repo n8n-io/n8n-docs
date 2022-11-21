@@ -72,6 +72,19 @@ To read from a sheet:
 3. In **Operation**, select **Read Rows**.
 4. Choose the **Document** and **Sheet** you want to read from.
 
+### Filters
+
+By default, the Google Sheets node reads and returns all rows in the sheet. To return a limited set of results:
+
+1. Select **Add Filter**.
+2. In **Column**, select the column in your sheet to search against.
+3. In **Value**, enter a cell value to search for. You can drag input data parameters here.
+
+If your filter matches multiple rows, n8n returns the first result. If you want all matching rows:
+
+1. Under **Options**, select **Add Option** > **When Filter Has Multiple Matches**.
+2. Change **When Filter Has Multiple Matches** to **Return All Matches**.
+
 ### Output formatting
 
 You can choose how n8n formats the data returned by Google Sheets:

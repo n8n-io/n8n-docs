@@ -79,12 +79,32 @@ You can write an article for the [n8n blog](https://n8n.io/blog/){:target=_blank
 
 [This board](https://github.com/orgs/n8n-io/projects/3){:target=_blank .external-link} lists the most in-demand topics.
 
-n8n has the following process for guest contributions to our blog:
+### Process to submit a post
 
-1. **Pitch:** Fill out [this typeform](https://n8n-community.typeform.com/to/VYiRI7WN?typeform-source=n8n.io){:target=_blank class=.external-link} to tell us what kind of content you'd like to contribute.
-2. **Evaluation:** We evaluate your content idea and, if it matches our content topics and target audience, we give you green light to start writing and submit the article.
-3. **Review**: You submit your finished article as a Google Doc and we start reviewing and editing it. This is usually an interactive, back-and-forth process, where we might ask for clarification and make suggestions in the doc for you to review. Depending on the length of the article and the required changes, the review process could take between a couple of days to a week or two.
-4. **Publishing:** Once all the changes and comments are resolved, we schedule the article to be published on our blog.
+n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. However, if you want n8n to highlight your post on our blog, you need to go through this process.
+
+#### 1. Submit your idea
+
+Submit your idea to n8n's [contributor board](https://github.com/orgs/n8n-io/projects/3){:target=_blank /external-link}. You can either:
+
+* Offer to write a post for an idea in the **Blog posts** column. To do this, comment on the ticket and tag the ticket owner.
+* Propose a new idea. To do this, comment on a **Submit your idea here** ticket (make sure to choose one that isn't already being used).
+
+When commenting, include as much detail as you can. If possible, provide an outline for your proposed post.
+
+#### 2. Approval
+
+n8n reviews your comment and responds. This includes a review and feedback on your outline.
+
+#### 3. Submit your draft
+
+Write your post in a Google Doc, following the [TODO: check if they want to use the style guide].
+
+When your draft is ready, share it in the GitHub ticket. Make sure the sharing link gives permission for anyone to comment.
+
+If your blog post includes example workflows:
+
+1. Publish the workflow
 
 ## Refer a candidate
 

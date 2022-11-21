@@ -17,7 +17,7 @@ Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 ## Using OAuth
 
 !!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Microsoft account to n8n.
+    You'll only need to click on the **Connect my account** button to connect your Microsoft account with n8n.
 
 
 1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations).

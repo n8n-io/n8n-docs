@@ -213,3 +213,12 @@ Refer to [User management](/hosting/user-management/) for more information on se
 | `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
 | `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | Whether to show onboarding tips when creating a new workflow (true) or not (false). |
 | `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
+
+## License
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_LICENSE_ACTIVATION_KEY` | String | `''` | Activation key to initialize license. |
+| `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Whether autorenew for licenses is enabled (true) or not (false). |
+| `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | How many seconds before expiry a license should automatically renew. |
+| `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |

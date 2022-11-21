@@ -199,3 +199,11 @@ Import all the credentials files (*.json) from the specified directory:
 ```bash
 n8n import:credentials --separate --input=backups/latest/
 ```
+
+## License
+
+Clear your existing license from n8n's database and reset n8n to default features:
+
+```sh
+n8n license:clear
+```

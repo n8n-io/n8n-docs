@@ -98,13 +98,32 @@ n8n reviews your comment and responds. This includes a review and feedback on yo
 
 #### 3. Submit your draft
 
-Write your post in a Google Doc, following the [TODO: check if they want to use the style guide].
+Write your post in a Google Doc, following the [style guide](https://n8n.notion.site/n8n-blog-writing-style-97dc73436a624933b75ddc941a361b70){:target=_blank .external-link}.
 
 When your draft is ready, share it in the GitHub ticket. Make sure the sharing link gives permission for anyone to comment.
 
-If your blog post includes example workflows:
+If your blog post includes example workflows, [export your workflow](/workflows/workflows/) and attach it to your submission.
 
-1. Publish the workflow
+If you want to have ownership of the article, submit a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
+
+#### 4. Review and edit
+
+Someone from n8n reviews your draft.They'll check it for:
+
+* Is the information accurate and up to date?
+* Do the workflows or other examples function?
+* Is the product information relevant?
+* Grammas and structure
+
+After the review, you'll have a chance to review any suggested changes and implement them. You can then notify the reviewer that your final draft is ready.
+
+#### 5. Publishing
+
+n8n will let you know an estimated publication date. 
+
+When the article is published, n8n will also promote it through social media. You're encouraged to share it on your own channels.
+
+
 
 ## Refer a candidate
 

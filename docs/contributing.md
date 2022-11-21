@@ -102,9 +102,9 @@ Write your post in a Google Doc, following the [style guide](https://n8n.notion.
 
 When your draft is ready, share it in the GitHub ticket. Make sure the sharing link gives permission for anyone to comment.
 
-If your blog post includes example workflows, export your workflow and attach it to your submission.
+If your blog post includes example workflows, export your workflow and copy the JSON into a separate section at the end of your blog post doc.
 
-If you want to have ownership of the article, submit a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
+If you want to have ownership of the article, submit a second Google Doc link with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
 
 #### 4. Review and edit
 
@@ -122,8 +122,6 @@ After the review, you'll have a chance to review any suggested changes and imple
 n8n will let you know an estimated publication date. 
 
 When the article is published, n8n will also promote it through social media. You're encouraged to share it on your own channels.
-
-
 
 ## Refer a candidate
 

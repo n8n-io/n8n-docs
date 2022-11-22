@@ -1,13 +1,13 @@
-site_name: n8n Documentation
+site_name: Automation Builder
 site_url: https://docs.n8n.io/
-site_description: Documentation for n8n, a workflow automation platform.
+site_description: Documentation for automation Builder, a automation flow platform.
 theme:
   name: material
   custom_dir: overrides
-  favicon: _images/favicon.ico
+  favicon: _images/do-favicon.ico
   font: false
   language: en
-  logo: _images/n8n-docs-icon.svg
+  logo: _images/logo.png
   palette:
       scheme: light
   features:
@@ -22,18 +22,18 @@ theme:
     - navigation.tracking
 copyright: >
   <a href="#__consent">Change cookie settings</a>
-extra:
-  analytics:
-    provider: google
-    property: UA-146470481-3
-  extra:
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+#extra:
+  # analytics:
+  #   provider: google
+  #   property: UA-146470481-3
+  # extra:
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     We use cookies to recognize your repeated visits and preferences, as well
+  #     as to measure the effectiveness of our documentation and whether users
+  #     find what they're searching for. With your consent, you're helping us to
+  #     make our documentation better. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -87,7 +87,7 @@ plugins:
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
 nav:
-  - Using n8n:
+  - Using Automation Builder:
     - Welcome: index.md
     - Try it out: 
       - try-it-out/index.md
@@ -443,45 +443,45 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
-  - Hosting n8n:
-    - hosting/index.md
-    - Installation and hosting options: hosting/options.md
-    - Installation:
-      - hosting/installation/index.md
-      - Desktop app: hosting/installation/desktop-app.md
-      - npm: hosting/installation/npm.md
-      - Docker: hosting/installation/docker.md
-      - Cloud: hosting/installation/cloud.md
-    - Configuration: hosting/configuration.md    
-    - Environment variables: hosting/environment-variables.md
-    - User management: hosting/user-management.md
-    - Security: hosting/security.md
-    - Logging: hosting/logging.md
-    - Server setups:
-      - hosting/server-setups/index.md
-      - Docker Compose: hosting/server-setups/docker-compose.md
-      - Caddy: hosting/server-setups/caddy.md
-      - Digital Ocean: hosting/server-setups/digital-ocean.md
-      - Heroku: hosting/server-setups/heroku.md
-      - Hetzner: hosting/server-setups/hetzner.md
-      - Amazon Web Services: hosting/server-setups/aws.md
-      - Azure: hosting/server-setups/azure.md
-      - Google Cloud: hosting/server-setups/google-cloud.md
-    - Databases:
-      - hosting/databases/index.md
-      - Supported databases and settings: hosting/databases/supported-databases-settings.md
-      - Database structure: hosting/databases/structure.md
-    - Updating:
-      - hosting/updating/index.md
-      - npm: hosting/updating/npm.md
-      - Docker: hosting/updating/docker.md
-      - Desktop app: hosting/updating/desktop.md
-      - Cloud: hosting/updating/cloud.md
-    - Scaling:
-      - hosting/scaling/index.md
-      - Execution data: hosting/scaling/execution-data.md
-      - Execution modes and processes: hosting/scaling/execution-modes-processes.md
-      - Configuring queue mode: hosting/scaling/queue-mode.md
+  # - Hosting n8n:
+  #   - hosting/index.md
+  #   - Installation and hosting options: hosting/options.md
+  #   - Installation:
+  #     - hosting/installation/index.md
+  #     - Desktop app: hosting/installation/desktop-app.md
+  #     - npm: hosting/installation/npm.md
+  #     - Docker: hosting/installation/docker.md
+  #     - Cloud: hosting/installation/cloud.md
+  #   - Configuration: hosting/configuration.md    
+  #   - Environment variables: hosting/environment-variables.md
+  #   - User management: hosting/user-management.md
+  #   - Security: hosting/security.md
+  #   - Logging: hosting/logging.md
+  #   - Server setups:
+  #     - hosting/server-setups/index.md
+  #     - Docker Compose: hosting/server-setups/docker-compose.md
+  #     - Caddy: hosting/server-setups/caddy.md
+  #     - Digital Ocean: hosting/server-setups/digital-ocean.md
+  #     - Heroku: hosting/server-setups/heroku.md
+  #     - Hetzner: hosting/server-setups/hetzner.md
+  #     - Amazon Web Services: hosting/server-setups/aws.md
+  #     - Azure: hosting/server-setups/azure.md
+  #     - Google Cloud: hosting/server-setups/google-cloud.md
+  #   - Databases:
+  #     - hosting/databases/index.md
+  #     - Supported databases and settings: hosting/databases/supported-databases-settings.md
+  #     - Database structure: hosting/databases/structure.md
+  #   - Updating:
+  #     - hosting/updating/index.md
+  #     - npm: hosting/updating/npm.md
+  #     - Docker: hosting/updating/docker.md
+  #     - Desktop app: hosting/updating/desktop.md
+  #     - Cloud: hosting/updating/cloud.md
+  #   - Scaling:
+  #     - hosting/scaling/index.md
+  #     - Execution data: hosting/scaling/execution-data.md
+  #     - Execution modes and processes: hosting/scaling/execution-modes-processes.md
+  #     - Configuring queue mode: hosting/scaling/queue-mode.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

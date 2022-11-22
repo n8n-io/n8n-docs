@@ -20,6 +20,7 @@
     --color-text-base: #58585F; 
     --color-text-dark: #555555;
     --color-background-base: #f2f4f8;
+    --color-background-do: rgb(0,97,188);
     --color-background-dark: #101330;
     --color-background-darker: hsl( 240, 4.2%, 14% );
     --color-background-light: #f2f4f8;
@@ -61,9 +62,9 @@
 --md-accent-fg-color: var(--color-primary-shade-1);
 --md-footer-bg-color: var(--color-background-base);
 --md-footer-fg-color: var(--color-text-base);
---md-footer-bg-color--dark: var(--color-background-dark);
+--md-footer-bg-color--dark: var(--color-background-do);
 --md-primary-bg-color: var(--color-text-dark);
---md-primary-fg-color: var(--color-background-dark);
+--md-primary-fg-color: var(--color-background-do);
 }
 
 [data-md-color-scheme="light"] .md-tabs__link--active {
@@ -80,11 +81,11 @@
 
 [data-md-color-scheme="light"] .md-header{
     box-shadow: none;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-do);
     color: white;
 }
 [data-md-color-scheme="light"] .md-tabs{
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-do);
     color: white; 
 }
 
@@ -144,6 +145,11 @@
     transform: none;
     transition: none;
     opacity: 1;
+}
+
+.md-header__button.md-logo :-webkit-any(img,svg) {
+    height: 50px;
+
 }
 
 /* better table behaviour */
@@ -231,11 +237,3 @@ code {
 .inline-image > img {
 	border: none;
 }
-
-
-
-
-
-
-
-

@@ -1,14 +1,15 @@
 // If the user has accepted cookies, set the n8n-consent cookie
 // This means if they then go to the website, they won't be prompted again
 var consent = __md_get("__consent")
-if (consent.analytics === true) {
+if (consent && consent.analytics === true) {
   document.cookie = "n8n-consent={'consent': true};path=/;domain=n8n.io";
 }
 
 // If the user already has the n8n-consent cookie, accept cookies in docs as well
 let n8nCookieConsent = getCookie("n8n-consent");
-if(n8nCookieConsent.consent === true) {
-	console.log(n8nCookieConsent);
+console.log("cs1 " + n8nCookieConsent);
+if(n8nCookieConsent && n8nCookieConsent === true) {
+	console.log("cs2 " + n8nCookieConsent);
 	__md_set("__consent", {"analytics": true})
 }
 

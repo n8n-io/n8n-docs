@@ -27,9 +27,6 @@ extra:
     provider: google
     property: UA-146470481-3
   consent:
-    cookies:
-      analytics: Google Analytics
-      custom: n8n-consent
     title: Cookie consent
     description: >- 
       We use cookies and other tracking technologies to improve your browsing experience, 

@@ -93,6 +93,10 @@ nav:
       - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
+    - Choose your n8n:
+      - choose-n8n/index.md
+      - Set up Cloud: choose-n8n/cloud.md
+      - Install Desktop: choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Workflows: workflows/workflows.md
@@ -445,13 +449,10 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - hosting/index.md
-    - Installation and hosting options: hosting/options.md
     - Installation:
       - hosting/installation/index.md
-      - Desktop app: hosting/installation/desktop-app.md
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
-      - Cloud: hosting/installation/cloud.md
     - Configuration: hosting/configuration.md    
     - Environment variables: hosting/environment-variables.md
     - User management: hosting/user-management.md
@@ -459,14 +460,14 @@ nav:
     - Logging: hosting/logging.md
     - Server setups:
       - hosting/server-setups/index.md
-      - Docker Compose: hosting/server-setups/docker-compose.md
-      - Caddy: hosting/server-setups/caddy.md
       - Digital Ocean: hosting/server-setups/digital-ocean.md
       - Heroku: hosting/server-setups/heroku.md
       - Hetzner: hosting/server-setups/hetzner.md
       - Amazon Web Services: hosting/server-setups/aws.md
       - Azure: hosting/server-setups/azure.md
       - Google Cloud: hosting/server-setups/google-cloud.md
+      - Docker Compose: hosting/server-setups/docker-compose.md
+      - Caddy: hosting/server-setups/caddy.md
     - Databases:
       - hosting/databases/index.md
       - Supported databases and settings: hosting/databases/supported-databases-settings.md

@@ -1,16 +1,18 @@
 # Server setups
 
-Guides to self-hosting n8n with:
+Self-host with Docker Compose:
 
-* [Docker Compose](/hosting/server-setups/docker-compose/)
-* [Caddy](/hosting/server-setups/caddy/)
-* [Digital Ocean](/hosting/server-setups/digital-ocean/) (using Caddy and Docker Compose)
+* [Digital Ocean](/hosting/server-setups/digital-ocean/)
 * [Heroku](/hosting/server-setups/heroku/)
-* [Hetzner Cloud](/hosting/server-setups/hetzner/) (using Caddy and Docker Compose)
+* [Hetzner Cloud](/hosting/server-setups/hetzner/)
+
+Starting points for a Kubernetes setup:
+
 * [AWS](/hosting/server-setups/aws/)
 * [Azure](/hosting/server-setups/azure/)
 * [Google Cloud Platform](/hosting/server-setups/google-cloud/)
 
+Configuration guides to help you get started on other platforms:
 
-!!! warning "Secure your n8n instance"
-    If you are following this guide to setup your n8n instance on a server, please make sure that you [secure](/hosting/security/) your n8n instance.
+* [Docker Compose](/hosting/server-setups/docker-compose/)
+* [Caddy](/hosting/server-setups/caddy/)

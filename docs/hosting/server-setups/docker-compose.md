@@ -198,3 +198,6 @@ n8n will now be reachable via the above defined subdomain + domain combination.
 The above example would result in: https://n8n.example.com
 
 n8n will only be reachable via `https` and not via `http`.
+
+!!! warning "Secure your n8n instance"
+    Make sure that you [secure](/hosting/security/) your n8n instance.

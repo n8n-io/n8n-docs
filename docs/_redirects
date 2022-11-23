@@ -1,4 +1,10 @@
-# 2002 SEO audit
+# Hosting user paths 2022
+
+/hosting/options/   /choose-n8n/
+/hosting/installation/cloud/   /choose-n8n/cloud/
+/hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+
+# 2022 SEO audit
 
 /nodes/expressions/expressions.html   /code-examples/expressions/
 /nodes/expressions.html   /code-examples/expressions/

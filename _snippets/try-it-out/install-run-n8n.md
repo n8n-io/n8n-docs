@@ -7,4 +7,4 @@ n8n is available as a [Cloud](/hosting/installation/cloud/) service, [desktop ap
 1. [Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip) or [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip).
 2. Once the download finishes, extract the files.
 3. Run the installer. It has no configuration steps.
-4. Once installation is complete, n8n Desktop opens automatically in the **Workflow templates** view. There may be a small lag between installation completing and the app opening.
+4. Once installation is complete, n8n Desktop opens automatically. There may be a small lag between installation completing and the app opening.

@@ -22,9 +22,10 @@ You will:
 
 n8n provides a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
-1. On the **Workflow templates** view, search for `Very quick quickstart`.
-2. Select the **Very quick quickstart** template to preview it.
-3. Select **Use this workflow** to open the template in your own editor.
+1. Select **Templates**.
+2. Search for `Very quick quickstart`.
+3. Select the **Very quick quickstart** template to preview it.
+4. Select **Use this workflow** to open the template in your own editor.
 
 This is a basic workflow. It:
 

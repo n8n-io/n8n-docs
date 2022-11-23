@@ -2,7 +2,7 @@
 // This means if they then go to the website, they won't be prompted again
 var consent = __md_get("__consent")
 if (consent.analytics === true) {
-  document.cookie = "n8n-consent={'consent': true}";
+  document.cookie = "n8n-consent={'consent': true};path=/";
 }
 
 // If the user already has the n8n-consent cookie, accept cookies in docs as well

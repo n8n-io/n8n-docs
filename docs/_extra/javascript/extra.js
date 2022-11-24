@@ -1,5 +1,5 @@
 // If the user has accepted cookies, set the n8n-consent cookie
-// This means if they then go to the website, they won't be prompted again
+// This means if they then go to the main website, they won't be prompted again
 let docsConsent = __md_get("__consent")
 let d = new Date();
 d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
@@ -11,18 +11,20 @@ if (docsConsent && docsConsent.analytics === true) {
 }
 
 // If the user already has the n8n-consent cookie, accept cookies in docs as well
-let n8nCookieConsent = getCookie("n8n-consent");
-n8nCookieConsent = JSON.parse(n8nCookieConsent);
-console.log("one");
-console.log(n8nCookieConsent);
-console.log("two");
-console.log(n8nCookieConsent.consent);
+let getn8nCookie = getCookie("n8n-consent");
+if(n8nCookieConsent) {
+  var parsedn8nCookie = JSON.parse(n8nCookieConsent);
+}
 
-if(n8nCookieConsent && n8nCookieConsent.consent === true) {
+console.log("one");
+console.log(parsedn8nCookie);
+console.log("two");
+console.log(parsedn8nCookie.consent);
+
+if(parsedn8nCookie && parsedn8nCookie.consent === true) {
 	console.log("in if");
 	__md_set("__consent", {"analytics": true})
-  let el = document.querySelector("[data-md-component=consent]")
-  el.hidden = true
+  location.hash = '';
 }
 
 // Function to help with extracting cookies by name

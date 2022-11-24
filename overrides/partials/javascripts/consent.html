@@ -44,6 +44,7 @@ if(getn8nCookie) {
   var parsedn8nCookie = JSON.parse(getn8nCookie);
 }
 if(parsedn8nCookie && parsedn8nCookie.consent === true) {
+	// Note that Material uses local storage to remember cookie settings
 	__md_set("__consent", {"analytics": true});
 }
 

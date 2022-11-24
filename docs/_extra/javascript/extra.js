@@ -17,7 +17,7 @@ console.log(n8nCookieConsent);
 console.log("two");
 console.log(n8nCookieConsent.consent);
 
-if(n8nCookieConsent && n8nCookieConsent === true) {
+if(n8nCookieConsent && n8nCookieConsent.consent === true) {
 	console.log("in if");
 	__md_set("__consent", {"analytics": true})
 }

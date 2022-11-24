@@ -14,7 +14,7 @@ if (docsConsent && docsConsent.analytics === true) {
 let getn8nCookie = getCookie("n8n-consent");
 console.log(getn8nCookie);
 if(getn8nCookie) {
-  var parsedn8nCookie = JSON.parse(n8nCookieConsent);
+  var parsedn8nCookie = JSON.parse(getn8nCookie);
 }
 
 console.log("one");

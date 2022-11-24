@@ -24,8 +24,9 @@ console.log(parsedn8nCookie.consent);
 
 if(parsedn8nCookie && parsedn8nCookie.consent === true) {
 	console.log("in if");
-	__md_set("__consent", {"analytics": true})
-  location.hash = '';
+	__md_set("__consent", {"analytics": true});
+	var el = document.querySelector("[data-md-component=consent]");
+	el.hidden = true;
 }
 
 // Function to help with extracting cookies by name

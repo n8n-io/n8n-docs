@@ -11,9 +11,11 @@ if (docsConsent && docsConsent.analytics === true) {
 
 // If the user already has the n8n-consent cookie, accept cookies in docs as well
 let n8nCookieConsent = getCookie("n8n-consent");
-console.log(typeOf(n8nCookieConsent));
 n8nCookieConsent = JSON.parse(n8nCookieConsent);
-if(n8nCookieConsent && n8nCookieConsent === true) {
+console.log("one");
+console.log(typeOf(n8nCookieConsent.consent));
+
+if(n8nCookieConsent && n8nCookieConsent.consent === true) {
 	console.log("cs2 " + n8nCookieConsent);
 	__md_set("__consent", {"analytics": true})
 }

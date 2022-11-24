@@ -2,34 +2,47 @@
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
-
 ## Set up OAuth
 
 You need a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link} for these steps.
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
+In Google Cloud:
+
+1. Go to [Google Cloud Console | APIs and services](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
 
 	??? Details "View screenshot"
 		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
 
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}. 
+2. **Optional:** If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
+
+	??? Details "View detailed steps"
+		1. Select **OAuth consent screen**.
+		2. For **User Type**, select **Internal**.
+		3. Select **Create**.
+		4. Enter the essential information: **App name**, **User support email**, and the **Email addresses** field in **Developer contact information**.
+		5. Add an authorized domain: select **+ ADD DOMAIN**. Enter `n8n.cloud` if using n8n's Cloud service, or the domain of your n8n instance if you're self-hosting.
+		6. Select **SAVE AND CONTINUE** to go to the **Scopes** page.
+		7. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
+		8. On the **Summary** page, review the information, then select **BACK TO DASHBOARD**.
+
+3. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}. 
 
 	??? Details "View screenshot"   
 		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
 
-3. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
+4. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
 
 	??? Details "View screenshot"   
 		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
 
-4. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
+5. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
 
 	??? Details "View screenshot"  
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 
 		![Add URI](/_images/integrations/builtin/credentials/google/add-uri.png)
 
-5. Select **CREATE**.
-6. Enable each Google service API that you want to use:
+6. Select **CREATE**.
+7. Enable each Google service API that you want to use:
 
 	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.  
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"

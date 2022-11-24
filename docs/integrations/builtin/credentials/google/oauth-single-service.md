@@ -13,7 +13,7 @@ In Google Cloud:
 	??? Details "View screenshot"
 		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
 
-2. **Optional:** If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
+2. **Optional:** If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}. Expand the detailed steps below for more guidance.
 
 	??? Details "View detailed steps"
 		1. Select **OAuth consent screen**.
@@ -25,7 +25,7 @@ In Google Cloud:
 		7. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
 		8. On the **Summary** page, review the information, then select **BACK TO DASHBOARD**.
 
-3. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}. 
+3. Select **+ CREATE CREDENTIALS > OAuth client ID**.
 
 	??? Details "View screenshot"   
 		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)

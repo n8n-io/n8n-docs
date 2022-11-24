@@ -4,7 +4,8 @@ let docsConsent = __md_get("__consent")
 let d = new Date();
 d.setTime(d.getTime() + 5 * 24 * 60 * 60 * 1000);
 let n8nCookie = {'consent': true};
-
+// When user clicks Accept on the consent form, page reloads and this sets
+// If it breaks, check the page reload is still happening
 if (docsConsent && docsConsent.analytics === true) {
   document.cookie = `n8n-consent=${JSON.stringify(n8nCookie)};expires=${d.toUTCString()};path=/;domain=.n8n.io`;
 }
@@ -20,8 +21,11 @@ console.log(n8nCookieConsent.consent);
 if(n8nCookieConsent && n8nCookieConsent.consent === true) {
 	console.log("in if");
 	__md_set("__consent", {"analytics": true})
+  let el = document.querySelector("[data-md-component=consent]")
+  el.hidden = true
 }
 
+// Function to help with extracting cookies by name
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);

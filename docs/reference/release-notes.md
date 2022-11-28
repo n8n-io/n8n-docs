@@ -18,7 +18,7 @@ This release contains performance enhancements and bug fixes.
 * Core: fix $items().length behavior in executeOnce mode.
 * Core: fix for unused imports.
 * Core: use CredentialsOverwrites when testing credentials.
-* COre: disable workflow locking due to issues.
+* Core: disable workflow locking due to issues.
 * Editor: fix for missing node connections in dev environment.
 * Editor: fix missing resource locator component.
 * Editor: prevent node-creator tabs from showing when toggled by CanvasAddButton.

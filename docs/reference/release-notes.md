@@ -1,5 +1,44 @@
 # Release notes
 
+## n8n@0.204.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.1...n8n@0.204.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-11-24
+
+This release introduces n8n's first pro feature: workflow sharing. To support this, it adds new license configuration options. It also includes other enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Workflow sharing
+
+_Description of new feature. Link to docs if available._
+
+</div>
+
+
+* Core: lazy-load nodes and credentials to reduce baseline memory usage.
+* Core: use longer stack traces when error reporting is enabled.
+* Core: introduce support for pro licenses. This includes new environment variables and CLI commands. 
+* Dev: add credentials E2E test suite and page object.
+
+### Bug fixes
+
+* Core: fix $items().length behavior in executeOnce mode.
+* Core: fix for unused imports.
+* Core: use CredentialsOverwrites when testing credentials.
+* COre: disable workflow locking due to issues.
+* Editor: fix for missing node connections in dev environment.
+* Editor: fix missing resource locator component.
+* Editor: prevent node-creator tabs from showing when toggled by CanvasAddButton.
+* Editor: table view column limit tooltip.
+Editor: fix broken n8n-info-tip slots.
+* IF Node: F=fix "Is Empty" and "Is Not Empty" operation failures for date objects.
+* Remove redundant `await` in nodes API request functions without try/catch.
+* Schedule Trigger Node: fixes inconsistent behavior with cron and weekly intervals.
+* Workflow activation shouldn't crash if one of the credential is invalid.
+
 ## n8n@0.203.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.0...n8n@0.203.1){:target=_blank .external-link} for this version.<br />

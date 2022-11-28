@@ -7,6 +7,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.1...n8n@0.204
 
 This release contains performance enhancements and bug fixes.
 
+### New features
+
 * Core: lazy-load nodes and credentials to reduce baseline memory usage.
 * Core: use longer stack traces when error reporting is enabled.
 * Dev: add credentials E2E test suite and page object.

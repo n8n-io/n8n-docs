@@ -1,6 +1,6 @@
 ---
 description: Choose between our Cloud service, or self-hosting options.
-----
+---
 
 # Choose your n8n
 

@@ -10,33 +10,39 @@
 
 * Client
     * Create a new client
+    * Update an existing client
     * Delete a client
     * Get data of a client
     * Get data of all clients
-* Expense
-    * Create a new expense
-    * Delete an expense
-    * Get data of an expense
-    * Get data of all expenses
 * Invoice
     * Create a new invoice
+    * Update an existing invoice
     * Delete a invoice
     * Email an invoice
     * Get data of a invoice
     * Get data of all invoices
-* Payment
-    * Create a new payment
-    * Delete a payment
-    * Get data of a payment
-    * Get data of all payments
 * Quote
     * Create a new quote
+    * Update an existing quote
     * Delete a quote
     * Email an quote
     * Get data of a quote
     * Get data of all quotes
+* Payment
+    * Create a new payment
+    * Update an existing payment
+    * Delete a payment
+    * Get data of a payment
+    * Get data of all payments
+* Expense
+    * Create a new expense
+    * Update an existing expense
+    * Delete an expense
+    * Get data of an expense
+    * Get data of all expenses
 * Task
     * Create a new task
+    * Update an existing task
     * Delete a task
     * Get data of a task
     * Get data of all tasks

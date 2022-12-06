@@ -3,6 +3,8 @@
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /choose-n8n/cloud/
 /hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat
+/hosting/environment-variables/   /hosting/configuration/environment-variables/
 
 # 2022 SEO audit
 
@@ -95,7 +97,7 @@
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /hosting/user-management/
-/reference/environment-variables.html                /hosting/environment-variables/
+/reference/environment-variables.html                /hosting/configuration/environment-variables/
 /reference/start-workflows-via-cli.html              /reference/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
@@ -105,7 +107,7 @@
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/server-setups/  
+/reference/server-setup.html                         /hosting/installation/server-setups/  
 
 # The nodes library . . . may the odds be ever in your favour
 

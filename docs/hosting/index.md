@@ -16,12 +16,6 @@ This section provides information on self-hosting n8n.
 
 	[:octicons-arrow-right-24: Configuration](/hosting/configuration/)
 
-- __User management__
-
-	Configure your n8n instance to support multiple users.
-
-	[:octicons-arrow-right-24: Configuration](/hosting/user-management/)
-
 - __Scaling__
 
 	Manage data, modes, and processes to keep n8n running smoothly at scale.

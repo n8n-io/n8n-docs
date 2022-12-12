@@ -1,6 +1,6 @@
 # Stop And Error
 
-Use the Stop And Error node to display error messages and send custom error information to error workflows.
+Use the Stop And Error node to display custom error messages, cause executions to fail under certain conditions, and send custom error information to error workflows.
 
 ## Operations
 
@@ -11,4 +11,4 @@ Use the Stop And Error node to display error messages and send custom error info
 
 You can use the Stop And Error node with the [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/) node.
 
-Read more about [Error handling](/flow-logic/error-handling/) in n8n workflows.
+Read more about [Error workflows](/flow-logic/error-handling/error-workflows/) in n8n workflows.

@@ -113,6 +113,7 @@ nav:
       - Looping: flow-logic/looping.md
       - Error handling:
         - flow-logic/error-handling/index.md
+        - Error workflows: flow-logic/error-handling/error-workflows.md
         - Memory-related errors: flow-logic/error-handling/memory-errors.md
     - Data:
       - data/index.md

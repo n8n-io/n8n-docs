@@ -5,6 +5,10 @@
 /hosting/installation/desktop-app/   /choose-n8n/desktop-app/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/configuration/environment-variables/
+/hosting/updating/cloud/   /choose-n8n/cloud/
+/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/npm/   /choose-n8n/npm/
+
 
 # 2022 SEO audit
 

@@ -1,17 +1,17 @@
 # Docker Installation
 
-[Docker](https://www.docker.com/) is a quick and simple way to download and start automating with n8n. By using Docker you are able to:
+[Docker](https://www.docker.com/){:target=_blank .external-link} offers the following advantages:
 
-* Install to a pristine environment
-* Easily install and run your preferred database with n8n
-* Enjoy a quick and simplified installation experience regardless of your OS
+* Install n8n in a clean environment.
+* Easier setup for your preferred database.
+* Can avoid issues due to different operating systems, as Docker provides a consistent system.
 
 ## Prerequisites
 
-Before proceeding ensure that you have installed [Docker Desktop](https://docs.docker.com/get-docker/).
+Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.
 
 !!! note "Linux Users "
-    Docker Desktop is only available for Mac and Windows. You must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
+    Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
 
 
 ## Starting n8n
@@ -33,8 +33,7 @@ By default n8n uses SQLite to save credentials, past executions and workflows.
 n8n also supports PostgresDB, MySQL and MariaDB, configurable via
 environment variables as detailed below.
 
-It is important to still persist data in the `/root/.n8n` folder as it contains n8n user data and even more importantly the encryption key
-for credentials. It is also the name of the webhook when the n8n tunnel is used. 
+It's important to still persist data in the `/root/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used. 
 
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
@@ -100,6 +99,53 @@ docker run -it --rm \
 	-e GENERIC_TIMEZONE="Europe/Berlin" \
 	-e TZ="Europe/Berlin" \
 	n8nio/n8n
+```
+
+## Updating
+
+From your Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
+
+![Docker Desktop](/_images/hosting/installation/docker/docker_desktop.png)
+
+You can also use the command line to pull the latest, or a specific version:
+
+```sh
+// Pull latest version
+docker pull n8nio/n8n
+
+// Pull specific version
+docker pull n8nio/n8n:0.126.1
+```
+
+Stop the container and start it again. You can also use the command line:
+
+```sh
+// Get the container ID
+docker ps -a
+
+// Stop the container with ID container_id
+docker stop [container_id]
+
+// Remove the container with ID container_id
+docker rm [container_id]
+
+// Start the container
+docker run --name=[container_name] [options] -d n8nio/n8n
+```
+
+### Docker Compose
+
+If you've running n8n using a docker-compose file, follow the below mentioned steps to update n8n.
+
+```sh
+// Pull latest version
+docker-compose pull
+
+// Stop and remove older version
+docker-compose down
+
+// Start the container
+docker-compose up -d
 ```
 
 ## Further reading

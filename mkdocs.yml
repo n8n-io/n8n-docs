@@ -455,7 +455,7 @@ nav:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
       - Server setups:
-        - hosting/server-setups/index.md
+        - hosting/installation/server-setups/index.md
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
         - Hetzner: hosting/installation/server-setups/hetzner.md
@@ -474,12 +474,6 @@ nav:
       - hosting/databases/index.md
       - Supported databases and settings: hosting/databases/supported-databases-settings.md
       - Database structure: hosting/databases/structure.md
-    - Updating:
-      - hosting/updating/index.md
-      - npm: hosting/updating/npm.md
-      - Docker: hosting/updating/docker.md
-      - Desktop app: hosting/updating/desktop.md
-      - Cloud: hosting/updating/cloud.md
     - Scaling:
       - hosting/scaling/index.md
       - Execution data: hosting/scaling/execution-data.md

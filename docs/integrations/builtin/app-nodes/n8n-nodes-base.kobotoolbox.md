@@ -7,19 +7,25 @@
 
 ## Operations
 
+* File
+	* Create
+	* Delete
+	* Get
+	* Get Many
 * Form
     * Get
-    * GetAll
+    * Get Many
+		* Redeploy
 * Hook
     * Get
-    * GetAll
+    * Get Many
     * Logs
     * Retry All
     * Retry One
 * Submission
     * Delete
     * Get
-    * Get All
+    * Get Many
     * Get Validation Status
     * Update Validation Status
 

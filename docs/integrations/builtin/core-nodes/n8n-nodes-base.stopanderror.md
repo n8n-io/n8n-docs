@@ -1,8 +1,14 @@
 # Stop And Error
 
-The Stop And Error node is used to throw an exception in workflows, enabling an error message or object to be displayed.
+Use the Stop And Error node to display error messages and send custom error information to error workflows.
 
-## Basic operations
+## Operations
 
 * Error Message
 * Error Object
+
+## Related resources
+
+You can use the Stop And Error node with the [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/) node.
+
+Read more about [Error handling](/flow-logic/error-handling/) in n8n workflows.

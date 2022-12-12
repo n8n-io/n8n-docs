@@ -111,7 +111,10 @@ nav:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
-      - Error handling: flow-logic/error-handling.md
+      - Error handling:
+        - flow-logic/error-handling/index.md
+        - Error workflows: flow-logic/error-handling/error-workflows.md
+        - Memory-related errors: flow-logic/error-handling/memory-errors.md
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
@@ -495,7 +498,7 @@ nav:
     - Configuration: embed/configuration.md
     - Workflow management: embed/managing-workflows.md
     - Workflows templates: embed/workflow-templates.md
-    - White Labelling: embed/white-labelling.md
+    - White labelling: embed/white-labelling.md
   - Courses:
       - courses/index.md
       - Level one:

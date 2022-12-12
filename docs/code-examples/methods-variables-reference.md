@@ -23,7 +23,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 
 ## Output of other nodes
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. | :white_check_mark: |
 | `$("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node | :white_check_mark: |
@@ -47,7 +47,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 
 ## Date and time
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$now` | A Luxon object containing the current timestamp. Equivalent to `DateTime.now()`. | :white_check_mark: |
 | `$today` | A Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`. | :white_check_mark: |
@@ -60,7 +60,7 @@ This includes:
 * Access to n8n environment variables for self-hosted n8n.
 * Metadata about workflows, executions, and nodes.
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$env` | Contains [environment variables](/hosting/configuration/environment-variables/). | :white_check_mark: |
 | `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
@@ -79,7 +79,7 @@ This includes:
 
 ## Advanced
 
-| Method | Description | Available in Function node? |
+| Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$evaluateExpression` | Evaluates a string as an expression | :white_check_mark: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | :white_check_mark: |

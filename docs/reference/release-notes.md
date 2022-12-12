@@ -1,5 +1,109 @@
 # Release notes
 
+## n8n@0.206.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.206.0...n8n@0.206.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-06
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: make expression resolution improvements.
+* Editor: schema unit test stub for Font Awesome icons.
+* Remove unnecessary console message.
+
+## n8n@0.206.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.205.0...n8n@0.206.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-06
+
+This release contains bug fixes, node enhancements, and a new node input view: schema view.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Schema view
+
+Schema view is a new node input view. It helps you browse the structure of your data, using the first input item.
+
+</div>
+
+* Core: add workflow execution statistics.
+* Editor: add the alert design system component.
+* Editor: fix checkbox line hight and make checkbox label clickable.
+* Nodes: add a message for read-only nodes.
+* Nodes: add a prompt to overwrite changes when concurrent editing occurs.
+
+### Node enhancements
+
+KoBo Toolbox node: add support for the media file API.
+
+### Bug fixes
+
+* Core: fix linter error.
+* Core: fix partial execution with pinned data on child node run.
+* Core: OAuth2 scopes now save.
+* Enable source-maps on WorkflowRunnerProcess in own mode.
+* Handle error when workflow does not exist or is inaccessible.
+* Make nodes.exclude and nodes.include work with lazy-loaded nodes.
+* Code Node: restore `pairedItem` to required n8n item keys.
+* Execute Workflow Node: update Execute Workflow node info notice text.
+* Gmail Trigger Node: trigger node missing some emails.
+* Local File Trigger Node: fix issue that causes a crash if the ignore field is empty.
+
+
+### Contributors
+
+[Marcel](https://github.com/marzn){:target=_blank .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+
+## n8n@0.205.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.204.0...n8n@0.205.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-02
+
+This release contains an overhaul of the expressions editor, node enhancements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Expressions editor usability overhaul
+
+This release contains usability enhancements for the expressions editor. The editor now includes color signals to indicate when syntax is valid or invalid, and better error messages and tips.
+
+</div>
+
+### Node enhancements
+
+* Facebook Graph APInode: update to support API version 15.
+* Google Calendar node: introduce the resource locator component to help users retrieve calendar parameters.
+* Postmark trigger node: update credentials so they can be used with the HTTP Request node (for custom API calls).
+* Todoist node: update to use API version 2.
+
+### Bug fixes
+
+* core: ensure executions list is properly filtered for all users.
+* core: fix `$items().length` in Execute Once mode.
+* core: mark binary data to be deleted when pruning executions.
+* core: OAuth2 scope saved to database fix.
+* editor: fix slots rendering of NodeCreator's NoResults component.
+* editor: JSON view values can be mapped like keys.
+* AWS SNS Node: fix a pagination issue.
+* Google Sheets Node: fix exception if no matching rows are found.
+* Google Sheets Node: fix for append operation if no empty rows in sheet.
+* Microsoft Outlook Node: fix binary attachment upload.
+* Pipedrive Node: resolve properties not working.
+* Lazy load nodes for credentials testing.
+* Credential overwrites should take precedence over credential default values.
+* Remove background for resource ownership selector.
+* Update padding for resource filters dropdown.
+* Update size of select components in filters dropdown.
+* Update workflow save button type and design and share button type.
+
+
 ## n8n@0.204.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.1...n8n@0.204.0){:target=_blank .external-link} for this version.<br />

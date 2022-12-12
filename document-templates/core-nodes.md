@@ -27,16 +27,18 @@ _Briefly summarize the functionality._
 
 _Link to the credentials doc, if there is one. If this node doesn't need credentials, remove this section. Most core nodes don't have credentials._
 
-### Examples
+## Operations
+
+* _Bullet list_
+* _Of available operations_.
+
+### Related resources
 
 * _List of links_
 * _To blog posts_
 * _And integrations marketing pages_
 
-## Operations
 
-* _Bullet list_
-* _Of available operations_.
 
 <!-- 
 Add any other sections here. 

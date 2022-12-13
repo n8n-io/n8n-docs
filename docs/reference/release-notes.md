@@ -1,5 +1,12 @@
 # Release notes
 
+## n8n@0.207.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.0...n8n@0.207.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-13
+
+This is a bug fix release. It resolves an issue with undo.
+
 ## n8n@0.207.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.206.1...n8n@0.207.0){:target=_blank .external-link} for this version.<br />
@@ -15,7 +22,21 @@ This release adds support for undo/redo actions on the canvas, and includes bug 
 
 You can now undo and redo actions on the canvas.
 
-Use `ctrl` + `z` to undo, `ctrl` + `shift` + `z` to redo.
+Use `ctrl`/`cmd` + `z` to undo, `ctrl`/`cmd` + `shift` + `z` to redo.
+
+Currently, n8n supports undo/redo for the following canvas actions:
+
+- Adding nodes
+- Deleting nodes
+- Adding connections
+- Deleting connections
+- Moving nodes
+- Moving connections
+- Import workflow (from file/from URL)
+- Copy/paste nodes
+- Renaming nodes
+- Duplicating nodes
+- Disabling/enabling nodes
 
 </div>
 

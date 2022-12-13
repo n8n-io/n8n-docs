@@ -4,7 +4,7 @@ description: Keyboard shortcuts available in n8n.
 
 # Keyboard shortcuts
 
-The following keyboard shortcuts can be used:
+The following keyboard shortcuts are available:
 
 ## General
 
@@ -14,6 +14,8 @@ The following keyboard shortcuts can be used:
  - **Ctrl + o**: Open workflow
  - **Ctrl + s**: Save the current workflow
  - **Ctrl + v**: Paste nodes
+ - **Ctrl + z**: undo
+ - **Ctrl + shift + z**: redo
 
 ## Node panel
 

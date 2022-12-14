@@ -8,6 +8,8 @@
 /hosting/updating/cloud/   /choose-n8n/cloud/
 /hosting/updating/desktop/   /choose-n8n/desktop/
 /hosting/updating/npm/   /choose-n8n/npm/
+/hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
+/hosting/databases/structure/   /hosting/architecture/database-structure/
 
 
 # 2022 SEO audit
@@ -105,7 +107,7 @@
 /reference/start-workflows-via-cli.html              /reference/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/databases/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/configuration/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /reference/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/

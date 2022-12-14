@@ -467,18 +467,18 @@ nav:
       - hosting/configuration/index.md
       - Configuration methods: hosting/configuration/configuration-methods.md    
       - Environment variables: hosting/configuration/environment-variables.md
+      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
     - User management: hosting/user-management.md
     - Security: hosting/security.md
     - Logging: hosting/logging.md
-    - Databases:
-      - hosting/databases/index.md
-      - Supported databases and settings: hosting/databases/supported-databases-settings.md
-      - Database structure: hosting/databases/structure.md
     - Scaling:
       - hosting/scaling/index.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+    - Architecture:
+      - hosting/architecture/index.md
+      - Database structure: hosting/architecture/database-structure.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

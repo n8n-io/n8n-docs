@@ -782,7 +782,7 @@ This release introduces user management and credential sharing for our Cloud pla
 
 #### User management and credential sharing for Cloud
 
-This release adds support for our existing [user management](/hosting/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+This release adds support for our existing [user management](/hosting/authentication/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
 
 </div>
 
@@ -2087,7 +2087,7 @@ User management in n8n allows you to invite people to work in your self-hosted n
 * Adding and removing users
 * Two account types: owner and member
 
-Check out the [user management documentation](/hosting/user-management/) for more information.
+Check out the [user management documentation](/hosting/authentication/user-management/) for more information.
 
 ## n8n@0.167.0
 
@@ -4786,7 +4786,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Google Sheets
 - Shopify
 - Todoist
-- Enhanced support for [JWT based authentication](/hosting/security/#jwt)
+- Enhanced support for [JWT based authentication](/hosting/authentication/jwt/)
 - Added an option to execute a node once, using data of only the first item
 
 ## n8n@0.76.0

@@ -468,7 +468,11 @@ nav:
       - Configuration methods: hosting/configuration/configuration-methods.md    
       - Environment variables: hosting/configuration/environment-variables.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-    - User management: hosting/user-management.md
+    - Users and authentication:
+      - hosting/authentication/index.md
+      - User management: hosting/authentication/user-management.md
+      - Basic auth: hosting/authentication/basic-auth.md
+      - JWT: hosting/authentication/jwt.md
     - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Scaling:

@@ -77,3 +77,7 @@ Your n8n instance's saved workflows.
 ### workflows_tags
 
 Maps tags to workflows. [tag_entity](#tag_entity) contains tag details.
+
+## Entity Relationship Diagram (ERD)
+
+!["n8n ERD"](/_images/hosting/architecture/n8n-database-diagram.png)

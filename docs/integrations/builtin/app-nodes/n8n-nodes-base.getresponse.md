@@ -3,7 +3,7 @@
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/getResponse/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
 
 
 
@@ -36,7 +36,7 @@ The start node exists by default when you create a new workflow.
 
 This node will retrieve all the contacts from GetResponse.
 
-1. First of all, you'll have to enter credentials for the GetResponse node. You can find out how to do that [here](/integrations/builtin/credentials/getResponse/).
+1. First of all, you'll have to enter credentials for the GetResponse node. You can find out how to do that [here](/integrations/builtin/credentials/getresponse/).
 2. Select 'GetAll' from the ***Operation*** dropdown list.
 3. Toggle ***Return All*** to true.
 5. Click on ***Execute Node*** to run the node.

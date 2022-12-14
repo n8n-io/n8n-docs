@@ -3,7 +3,7 @@
 [SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/securityScorecard/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/securityscorecard/).
 
 
 ## Basic Operations
@@ -52,7 +52,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will generate a full scorecard report for a company that we specify.
 
-1. First of all, you'll have to enter credentials for the SecurityScorecard node. You can find out how to do that [here](/integrations/builtin/credentials/securityScorecard/).
+1. First of all, you'll have to enter credentials for the SecurityScorecard node. You can find out how to do that [here](/integrations/builtin/credentials/securityscorecard/).
 2. Select 'Report' from the ***Resource*** dropdown list.
 3. Select 'Generate' from the ***Operation*** dropdown list.
 4. Select 'Full Scorecard' from the ***Report*** dropdown list.

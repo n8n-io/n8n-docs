@@ -3,7 +3,7 @@
 [Citrix ADC](https://www.citrix.com/en-gb/products/citrix-adc/){:target=_blank .external-link} is an application delivery and load balancing solution for monolithic and microservices-based applications.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/citrixAdc/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/citrixadc/).
 
 ## Operations
 

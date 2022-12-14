@@ -35,7 +35,7 @@ In the screenshot below you can see the file returned by the node.
 
 ### 2. Send Email node
 
-1. Enter valid credentials for the Send Email node. You can find out how to do so [here](/integrations/builtin/credentials/sendEmail/).
+1. Enter valid credentials for the Send Email node. You can find out how to do so [here](/integrations/builtin/credentials/sendemail/).
 2. Enter valid emails in the ***From Email*** and ***To Email*** fields.
 3. Enter `File Created` in the ***Subject*** field.
 4. Click on the gear icon next to the ***Text*** field and choose ***Add Expression***.

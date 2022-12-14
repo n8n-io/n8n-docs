@@ -3,7 +3,7 @@
 [LinkedIn](https://www.linkedin.com/) is an employment-oriented online service. It is mainly used for professional networking, including employers posting jobs and job seekers posting their CVs.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/linkedIn/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/linkedin/).
 
 
 ## Basic Operations
@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. LinkedIn node
 
-1. First of all, you'll have to enter credentials for the LinkedIn node. You can find out how to do that [here](/integrations/builtin/credentials/linkedIn/).
+1. First of all, you'll have to enter credentials for the LinkedIn node. You can find out how to do that [here](/integrations/builtin/credentials/linkedin/).
 2. Select 'Person' from the ***Post As*** dropdown list.
 3. Select the person you want to post as from the ***Person*** dropdown list.
 4. Enter a message in the ***Text*** field.

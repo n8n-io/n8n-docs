@@ -3,7 +3,7 @@
 [PostHog](https://posthog.com) is an open-source product analytics platform. It provides tools to improve your product, such as session recording, heatmaps, and feature flags.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/postHog/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/posthog/).
 
 
 ## Basic Operations
@@ -47,7 +47,7 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will create a new event in PostHog.
 
-1. First of all, you'll have to enter credentials for the PostHog node. You can find out how to do that [here](/integrations/builtin/credentials/postHog/).
+1. First of all, you'll have to enter credentials for the PostHog node. You can find out how to do that [here](/integrations/builtin/credentials/posthog/).
 2. Click on the gears icon next to the ***Event*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > query > event. You can also add the following expression: `{{$json["query"]["event"]}}`.

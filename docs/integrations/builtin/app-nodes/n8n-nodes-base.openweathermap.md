@@ -3,7 +3,7 @@
 [OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/openWeatherMap/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/openweathermap/).
 
 
 ## Basic Operations
@@ -27,7 +27,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. OpenWeatherMap node
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Enter the name of the city in the *City* field.
 3. Click on *Execute Node* to run the workflow.
 

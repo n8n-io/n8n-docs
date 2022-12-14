@@ -3,7 +3,7 @@
 [JotForm](https://www.jotform.com/) is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/jotForm/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/jotform/).
 
 
 
@@ -20,7 +20,7 @@ The final workflow should look like the following image.
 
 ### 1. JotForm Trigger node
 
-1. First of all, you'll have to enter credentials for the JotForm Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/jotForm/).
+1. First of all, you'll have to enter credentials for the JotForm Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/jotform/).
 2. Select the form you want to receive updates for from the *Form* dropdown list.
 3. Click on *Execute Node* to run the workflow.
 

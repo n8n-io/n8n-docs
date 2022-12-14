@@ -3,7 +3,7 @@
 [MessageBird](https://www.messagebird.com/) is a cloud communications platform that connects enterprises to their global customers.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/messageBird/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/messagebird/).
 
 
 ## Basic Operations
@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. MessageBird node
 
-1. First of all, you'll have to enter credentials for the MessageBird node. You can find out how to do that [here](/integrations/builtin/credentials/messageBird/).
+1. First of all, you'll have to enter credentials for the MessageBird node. You can find out how to do that [here](/integrations/builtin/credentials/messagebird/).
 2. Enter the phone number from which you'll be sending the message in the *From* field.
 3. Enter the phone number to which you'll be sending the message in the *To* field.
 4. Enter you message in the *Message* field.

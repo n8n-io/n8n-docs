@@ -3,7 +3,7 @@
 [PayPal](https://paypal.com) is a digital payment service that supports online fund transfers that customers can use when shopping online.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/payPal/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/paypal/).
 
 
 ## Example Usage
@@ -18,7 +18,7 @@ The final workflow should look like the following image.
 
 ### 1. PayPal Trigger node
 
-1. First of all, you'll have to enter credentials for the PayPal Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/payPal/).
+1. First of all, you'll have to enter credentials for the PayPal Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/paypal/).
 2. Select 'Billing Plan Activated' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

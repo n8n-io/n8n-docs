@@ -3,7 +3,7 @@
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/getResponse/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
 
 
 ## Events
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 
 The GetResponse Trigger node will trigger the workflow when a customer is subscribed to a list in GetResponse.
 
-1. First of all, you'll have to enter credentials for the GetResponse Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/getResponse/).
+1. First of all, you'll have to enter credentials for the GetResponse Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/getresponse/).
 2. Select 'Customer Subscribed' from the ***Events*** dropdown list.
 3. Select a list from the ***List IDs*** dropdown list.
 4. Click on ***Execute Node*** to run the node.

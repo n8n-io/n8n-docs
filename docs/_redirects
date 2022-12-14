@@ -11,7 +11,7 @@
 /hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/authentication/
-/hosting/user-management/   /hosting/authentication/user-management-self-hosted/
+/hosting/user-management/   /user-management/
 
 
 # 2022 SEO audit
@@ -104,7 +104,7 @@
 /getting-started/installation/advanced/maintenance.html /hosting/scaling/execution-data/
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
-/reference/user-management.html                      /hosting/authentication/user-management-self-hosted/
+/reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/configuration/environment-variables/
 /reference/start-workflows-via-cli.html              /reference/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/

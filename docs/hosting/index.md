@@ -1,8 +1,7 @@
-# Hosting n8n
+# Self-hosting n8n
 
-This section provides information on self-hosting n8n.
 
-<div class="grid cards" markdown>
+<div class="grid-cards-vertical cards" markdown>
 
 - __Installation and server setups__
 
@@ -15,6 +14,12 @@ This section provides information on self-hosting n8n.
 	Learn how to configure n8n with environment variables.
 
 	[:octicons-arrow-right-24: Configuration](/hosting/configuration/)
+
+- __Users and authentication__
+
+	Choose and set up user authentication for your n8n instance.
+
+	[:octicons-arrow-right-24: Authentication](/hosting/authentication/)
 
 - __Scaling__
 

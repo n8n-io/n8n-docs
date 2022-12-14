@@ -475,7 +475,7 @@ nav:
       - Configuration methods: hosting/configuration/configuration-methods.md    
       - Environment variables: hosting/configuration/environment-variables.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-    - Users and authentication:
+    - Authentication:
       - hosting/authentication/index.md
       - User management: hosting/authentication/user-management-self-hosted.md
       - Basic auth: hosting/authentication/basic-auth.md

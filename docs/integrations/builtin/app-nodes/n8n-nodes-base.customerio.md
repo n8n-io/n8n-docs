@@ -3,7 +3,7 @@
 [Customer.io](https://customer.io/) enables users to send newsletters to selected segments of customers using their website data. You can send targeted emails, push notifications, and SMS to lower churn, create stronger relationships, and drive subscriptions.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/customerIo/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/customerio/).
 
 
 ## Basic Operations
@@ -38,7 +38,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. CustomerIo node (upsert: customer)
 
-1. First of all, you'll have to enter credentials for the Customer.io node. You can find out how to do that [here](/integrations/builtin/credentials/customerIo/).
+1. First of all, you'll have to enter credentials for the Customer.io node. You can find out how to do that [here](/integrations/builtin/credentials/customerio/).
 2. Enter a customer id in the ***ID*** field.
 3. Click on the ***Add Field*** button and select 'Custom Properties' from the dropdown list.
 4. Click on the ***Choose Option To Add*** button.

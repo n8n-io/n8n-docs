@@ -3,7 +3,7 @@
 Sendinblue is a digital marketing platform to help users grow their business.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sendInBlue/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/sendinblue/).
 
 ## Operations
 

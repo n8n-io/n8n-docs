@@ -3,7 +3,7 @@
 [ServiceNow](https://www.servicenow.com/) is a cloud computing platform to help companies manage digital workflows for their operations.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/serviceNow/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/servicenow/).
 
 
 ## Basic operations
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. ServiceNow node
 
-1. First enter credentials, you can find out how to do that [here](/integrations/builtin/credentials/serviceNow/).
+1. First enter credentials, you can find out how to do that [here](/integrations/builtin/credentials/servicenow/).
 2. Select **Incident** from the ***Resource*** dropdown.
 3. Select **Get All** from the ***Operation*** dropdown.
 4. Click ***Add Option*** and select **Fields**.

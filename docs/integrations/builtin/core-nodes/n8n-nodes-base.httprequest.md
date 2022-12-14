@@ -41,7 +41,7 @@ Select **Generic Credential Type** to set up authentication using one of the fol
 - OAuth2
 - None
 	
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httpRequest/) for more information setting up each credential type.
+Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
 
 ### Parameters, headers, and body
 

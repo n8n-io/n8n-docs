@@ -3,7 +3,7 @@
 [monday.com](https://monday.com/) is a work operating system that enables organizations to manage tasks, projects, and team work.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mondayCom/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/mondaycom/).
 
 
 ## Basic Operations
@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. monday.com node
 
-1. First of all, you'll have to enter credentials for the monday.com node. You can find out how to do that [here](/integrations/builtin/credentials/mondayCom/).
+1. First of all, you'll have to enter credentials for the monday.com node. You can find out how to do that [here](/integrations/builtin/credentials/mondaycom/).
 2. Select the 'Get' option from the *Operation* dropdown list.
 3. Select the board you want to get from the *Board ID* dropdown list.
 4. Click on *Execute Node* to run the workflow.

@@ -3,7 +3,7 @@
 [TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/timescaleDb/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/timescaledb/).
 
 
 ## Basic Operations
@@ -82,7 +82,7 @@ We will insert the data from the previous node to a table named `iss`. To create
 CREATE TABLE iss(latitude NUMERIC, longitude NUMERIC, timestamp NUMERIC);
 ```
 
-1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](/integrations/builtin/credentials/timescaleDb/).
+1. First of all, you'll have to enter credentials for the TimescaleDB node. You can find out how to do that [here](/integrations/builtin/credentials/timescaledb/).
 2. Enter `iss` in the ***Table*** field.
 3. Enter `latitude, longitude, timestamp` in the ***Columns*** field.
 4. Click on ***Execute Node*** to run the node.

@@ -3,7 +3,7 @@
 [ProfitWell](https://www.profitwell.com/) provides real-time subscription financial metrics.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/profitWell/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/profitwell/).
 
 
 ## Basic Operations
@@ -41,7 +41,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return monthly financial metrics.
 
-1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/integrations/builtin/credentials/profitWell/).
+1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/integrations/builtin/credentials/profitwell/).
 2. Select 'Monthly' from the ***Type*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 

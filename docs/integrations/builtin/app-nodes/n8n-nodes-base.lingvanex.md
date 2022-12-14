@@ -3,7 +3,7 @@
 [LingvaNex](https://lingvanex.com) is a service that translates text, web pages, text on images, documents between English and over 112 other languages.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/lingvaNex/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/lingvanex/).
 
 
 ## Basic Operations
@@ -40,7 +40,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will translate the cocktail instructions that we got from the previous node to Italian. To translate the instructions in your language, select your language instead.
 
-1. First of all, you'll have to enter credentials for the LingvaNex node. You can find out how to do that [here](/integrations/builtin/credentials/lingvaNex/).
+1. First of all, you'll have to enter credentials for the LingvaNex node. You can find out how to do that [here](/integrations/builtin/credentials/lingvanex/).
 
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strInstructions"]}}`.

@@ -28,13 +28,11 @@ Stores all saved workflow executions. Workflow settings can affect which executi
 
 ### installed_nodes
 
-Lists the [community nodes](/integrations/community-nodes/) installed in your n8n instance. More information about each community node is available in [installed_packages](#installed_packages).
+Lists the [community nodes](/integrations/community-nodes/) installed in your n8n instance.
 
 ### installed_packages
 
-Details of npm packages installed in your n8n instance. This includes community nodes.
-
-<!-- TODO: clarify difference btw this and installed_nodes -->
+Details of npm community nodes packages installed in your n8n instance. [installed_nodes](#installed_nodes) lists each individual node. `installed_packages` lists npm packages, which may contain more than one node.
 
 ### migrations
 
@@ -46,9 +44,11 @@ The available user roles and scopes in n8n. One user may have several roles: for
 
 ### settings
 
-Records custom instance settings. These are settings that you can't control using environment variables.
+Records custom instance settings. These are settings that you can't control using environment variables. They include:
 
-<!-- TODO: would it also list env vars? -->
+* Whether the instance owner is set up
+* Whether the user chose to skip owner and user management setup
+* License key
 
 ### shared_credentials
 
@@ -61,8 +61,6 @@ Maps workflows to users.
 ### tag_entity
 
 All workflow tags created in the n8n instance. This table lists the tags. [workflows_tags](#workflows_tags) records which workflows have which tags.
-
-### typeorm_metadata
 
 ### user
 

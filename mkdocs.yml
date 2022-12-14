@@ -156,6 +156,13 @@ nav:
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
       - Using console.log: code-examples/console-log.md
+    - User management:
+      - user-management/index.md
+      - Cloud setup: user-management/cloud-setup.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Skip or disable: user-management/skip-disable.md
+      - Best practices: user-management/best-practices.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
@@ -470,10 +477,9 @@ nav:
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
     - Users and authentication:
       - hosting/authentication/index.md
-      - User management: hosting/authentication/user-management.md
+      - User management: hosting/authentication/user-management-self-hosted.md
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
-    - Security: hosting/security.md
     - Logging: hosting/logging.md
     - Scaling:
       - hosting/scaling/index.md

@@ -8,7 +8,7 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 This document describes how to configure your n8n instance to support user management, and the steps to start inviting users.
 
-Refer to [User management](/user-management/) for more information about usage, including:
+Refer to the main [User management](/user-management/) guide for more information about usage, including:
 
 * [Managing users](/user-management/manage-users/)
 * [Skipping or disabling user management](/user-management/skip-disable/)

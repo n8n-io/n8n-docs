@@ -1,11 +1,4 @@
-# Installation
-
-## Installation guides for n8n
-
-* [npm](/hosting/installation/npm/)
-* [Docker](/hosting/installation/docker/)
-
-## Server setup guides for specific platforms
+# Server setups
 
 Self-host with Docker Compose:
 

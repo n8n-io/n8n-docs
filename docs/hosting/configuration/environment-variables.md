@@ -87,11 +87,11 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## User management and SMTP
 
-Refer to [User management](/hosting/user-management/) for more information on setting up user management and emails.
+Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
 
 | Variable | Type | Default | Description | 
 | :------- | :--- | :------ | :---------- | 
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/user-management/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.| 
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.| 
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
 | `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ | 
 | `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ | 

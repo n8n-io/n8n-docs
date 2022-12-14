@@ -156,6 +156,13 @@ nav:
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
       - Using console.log: code-examples/console-log.md
+    - User management:
+      - user-management/index.md
+      - Cloud setup: user-management/cloud-setup.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Skip or disable: user-management/skip-disable.md
+      - Best practices: user-management/best-practices.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
@@ -454,36 +461,34 @@ nav:
       - hosting/installation/index.md
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
-    - Configuration: hosting/configuration.md    
-    - Environment variables: hosting/environment-variables.md
-    - User management: hosting/user-management.md
-    - Security: hosting/security.md
+      - Server setups:
+        - hosting/installation/server-setups/index.md
+        - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
+        - Heroku: hosting/installation/server-setups/heroku.md
+        - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Amazon Web Services: hosting/installation/server-setups/aws.md
+        - Azure: hosting/installation/server-setups/azure.md
+        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Docker Compose: hosting/installation/server-setups/docker-compose.md
+    - Configuration: 
+      - hosting/configuration/index.md
+      - Configuration methods: hosting/configuration/configuration-methods.md    
+      - Environment variables: hosting/configuration/environment-variables.md
+      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+    - Authentication:
+      - hosting/authentication/index.md
+      - User management: hosting/authentication/user-management-self-hosted.md
+      - Basic auth: hosting/authentication/basic-auth.md
+      - JWT: hosting/authentication/jwt.md
     - Logging: hosting/logging.md
-    - Server setups:
-      - hosting/server-setups/index.md
-      - Digital Ocean: hosting/server-setups/digital-ocean.md
-      - Heroku: hosting/server-setups/heroku.md
-      - Hetzner: hosting/server-setups/hetzner.md
-      - Amazon Web Services: hosting/server-setups/aws.md
-      - Azure: hosting/server-setups/azure.md
-      - Google Cloud: hosting/server-setups/google-cloud.md
-      - Docker Compose: hosting/server-setups/docker-compose.md
-      - Caddy: hosting/server-setups/caddy.md
-    - Databases:
-      - hosting/databases/index.md
-      - Supported databases and settings: hosting/databases/supported-databases-settings.md
-      - Database structure: hosting/databases/structure.md
-    - Updating:
-      - hosting/updating/index.md
-      - npm: hosting/updating/npm.md
-      - Docker: hosting/updating/docker.md
-      - Desktop app: hosting/updating/desktop.md
-      - Cloud: hosting/updating/cloud.md
     - Scaling:
       - hosting/scaling/index.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+    - Architecture:
+      - hosting/architecture/index.md
+      - Database structure: hosting/architecture/database-structure.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

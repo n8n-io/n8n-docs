@@ -1,12 +1,12 @@
+---
+description: How to set environment variables for n8n.
+---
+
 # Configuration
 
-It's possible to change some n8n defaults using environment variables.
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables/).
 
-For a full list of available configurations see [Environment Variables](/hosting/environment-variables/).
-
-## How to set
-
-Where you set these environment variables depends on how you are running n8n: with npm or Docker.
+## Set environment variables by command line
 
 ### npm
 
@@ -18,17 +18,7 @@ export <variable>=<value>
 
 ### Docker
 
-For Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file. For example:
-
-```yaml
-n8n:
-    environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=<user>
-      - N8N_BASIC_AUTH_PASSWORD=<password>
-```
-
-Or using the `-e` flag from the command line:
+In Docker you can use the `-e` flag from the command line:
 
 ```bash
 docker run -it --rm \
@@ -40,11 +30,13 @@ docker run -it --rm \
 	n8nio/n8n
 ```
 
-### Configuration by file
+## Set environment variables using a file
 
 You can also configure n8n using a configuration file.
 
 Only define the values that need to be different from the default in your configuration file. You can use multiple files. For example, you can have a file with generic base settings, and files with specific values for different environments.
+
+### npm
 
 Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`.
 
@@ -56,7 +48,7 @@ export N8N_CONFIG_FILES=/folder/my-config.json
 export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
 ```
 
-A possible configuration file could look like this:
+For example:
 
 ```json
 {
@@ -80,7 +72,23 @@ A possible configuration file could look like this:
 }
 ```
 
-You can also append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from Docker- and Kubernetes-Secrets.
+### Docker
+
+In Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file. 
+
+For example:
+
+```yaml
+n8n:
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=<user>
+      - N8N_BASIC_AUTH_PASSWORD=<password>
+```
+
+### Keeping sensitive data in separate files
+
+You can append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from Docker- and Kubernetes-Secrets.
 
 The following environment variables support file input:
 
@@ -117,10 +125,10 @@ The following environment variables support file input:
 ### Base URL
 
 !!! warning "Requires manual UI build"
-    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n docker image. The default is `/`, meaning that it uses the root-domain.
+    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
 
 
-Tells the front end how to reach the REST API of the back end.
+Tells the front end how to reach the REST API of the back end:
 
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
@@ -137,7 +145,7 @@ set it using an environment variable.
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 
-### Execute in same process
+### Execute all workflows in the same process
 
 All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your
 workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
@@ -166,7 +174,8 @@ export EXECUTIONS_TIMEOUT_MAX=7200
 
 Every user can add custom nodes that get loaded by n8n on startup. The default
 location is in the subfolder `.n8n/custom` of the user who started n8n.
-You can define additional folders with an environment variable.
+
+You can define additional folders with an environment variable:
 
 ```bash
 export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"

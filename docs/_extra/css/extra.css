@@ -232,10 +232,17 @@ code {
 	border: none;
 }
 
+.grid-cards-vertical {
+	grid-gap: .4rem;
+	display: grid;
+	grid-template-columns: none;
+	margin: 1em 0;
+}
 
+.grid-cards-vertical.cards>:-webkit-any(ul,ol) {
+    display: contents;
+}
 
-
-
-
-
-
+.grid-cards-vertical.cards>:is(ul,ol)>li {
+	display: block;
+}

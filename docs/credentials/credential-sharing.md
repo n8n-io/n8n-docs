@@ -10,7 +10,7 @@ description: Share credentials within an organization.
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
 
-To use credential sharing, you must enable [user management](/hosting/user-management/).
+To use credential sharing, you must enable [user management](/user-management/).
 
 ## Share a credential
 

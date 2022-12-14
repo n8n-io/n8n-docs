@@ -2,7 +2,7 @@
 
 There are several different modes in which you can configure n8n to operate when executing workflows. These settings become more important as you increase the number, and complexity, of your automation workflows. Ensuring you set n8n to run in the most beneficial mode is also crucial when you begin to [scale n8n](/hosting/scaling/) to handle very large workloads.
 
-The mode in which you n8n instance will operate is set via the following two [environment variables](/hosting/environment-variables/#executions):
+The mode in which you n8n instance will operate is set via the following two [environment variables](/hosting/configuration/environment-variables/#executions):
 
 | Variable | Options | Description |
 | -------- | ------- | ----------- |

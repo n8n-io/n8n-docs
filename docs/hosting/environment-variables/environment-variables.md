@@ -218,7 +218,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_LICENSE_ACTIVATION_KEY` | String | `''` | Activation key to initialize license. |
+| `N8N_LICENSE_ACTIVATION_KEY` | String | `''` | Activation key to initialize license. Not applicable if the n8n instance was already activated. |
 | `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Whether autorenew for licenses is enabled (true) or not (false). |
 | `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | How many seconds before expiry a license should automatically renew. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |

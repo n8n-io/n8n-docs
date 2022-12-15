@@ -42,7 +42,7 @@
 
 Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
 
-n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/gmailtrigger/).
+n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/).
 
 View [example workflows and related content](https://n8n.io/integrations/gmail/){:target=_blank .external-link} on our website.
 

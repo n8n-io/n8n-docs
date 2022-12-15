@@ -5,7 +5,7 @@
 The n8n Venafi TLS Protect Cloud node allows you to integrate with the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/){:target=_blank} service.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/venafiTlsProtectCloud/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud/).
 
 ## Operations
 

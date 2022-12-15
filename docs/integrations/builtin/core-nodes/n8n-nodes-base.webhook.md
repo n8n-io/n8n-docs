@@ -91,7 +91,7 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will return data about the current weather for the city that we received in the previous node.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Click on the gears icon next to the ***City*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Nodes > Webhook > Output Data > JSON > query > city. You can also add the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.

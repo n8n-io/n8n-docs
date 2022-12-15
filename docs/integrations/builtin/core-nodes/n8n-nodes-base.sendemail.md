@@ -3,7 +3,7 @@
 The Send Email node is used to send an email via an SMTP email server.
 
 !!! note "Credential"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sendEmail/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/sendemail/).
 
 
 !!! note "Keep in mind"
@@ -43,7 +43,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Send Email node
 
-1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/integrations/builtin/credentials/sendEmail/).
+1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/integrations/builtin/credentials/sendemail/).
 2. Enter the email address you want to send from in the *From Email* field.
 3. Enter the recipient email address in the *To Email* field.
 4. Enter a subject for your message in the *Subject* field.

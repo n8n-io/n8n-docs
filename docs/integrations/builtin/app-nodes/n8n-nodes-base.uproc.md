@@ -3,7 +3,7 @@
 [uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uProc/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/uproc/).
 
 
 ## Basic Operations
@@ -513,7 +513,7 @@ The start node exists by default when you create a new workflow.
 
 This node will return the screenshot of the n8n website. If you want to get the screenshot of a different website, enter the domain of that website instead.
 
-1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uProc/).
+1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uproc/).
 2. Select 'Image' from the ***Resource*** dropdown list.
 3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
 4. Enter `https://n8n.io` in the ***URL*** field.

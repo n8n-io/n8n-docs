@@ -3,7 +3,7 @@
 [Sentry.io](https://sentry.io) is a service that helps you monitor and fix crashes in realtime. Sentry's platform helps every developer diagnose, fix, and optimize the performance of their code.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sentryIo/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/sentryio/).
 
 
 ## Basic Operations
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Sentry.io node (create: release)
 
-1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](/integrations/builtin/credentials/sentryIo/).
+1. First of all, you'll have to enter credentials for the Sentry.io node. You can find out how to do that [here](/integrations/builtin/credentials/sentryio/).
 2. Select 'Release' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Select the organization from the ***Organization Slug*** dropdown list.

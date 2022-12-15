@@ -6,12 +6,11 @@ Expressions allow you to set node parameters dynamically based on data from:
 - The workflow
 - Your n8n environment
 
-
-n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with custom methods and variables. 
-
 You can execute JavaScript within an expression. 
 
-n8n supports two libraries that make common tasks easier:
+n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+
+n8n supports two libraries:
 
 - [Luxon](https://github.com/moment/luxon/), for working with data and time.
 - [JMESPath](https://jmespath.org/), for querying JSON.

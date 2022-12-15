@@ -3,7 +3,7 @@
 [Agile CRM](https://www.agilecrm.com/) is a CRM with Sales, Marketing and Service automation in single platform. It has sales tracking, contact management, marketing automation, web analytics, two-way emails, telephony, and a helpdesk.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/agileCrm/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/agilecrm/).
 
 
 ## Basic Operations
@@ -44,7 +44,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Agile CRM node
 
-1. First of all, you'll have to enter credentials for the Agile CRM node. You can find out how to do that [here](/integrations/builtin/credentials/agileCrm/).
+1. First of all, you'll have to enter credentials for the Agile CRM node. You can find out how to do that [here](/integrations/builtin/credentials/agilecrm/).
 2. Select the 'Create' option from the *Operation* dropdown list.
 3. Under the *Additional Fields* section, click on the *Add Field* button and select *First Name*.
 5. Enter the first name of the contact in the *First Name* field.

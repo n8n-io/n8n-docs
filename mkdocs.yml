@@ -26,14 +26,12 @@ extra:
   analytics:
     provider: google
     property: UA-146470481-3
-  extra:
   consent:
     title: Cookie consent
     description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+      We use cookies and other tracking technologies to improve your browsing experience, 
+      to analyze our website traffic, assist our marketing efforts and to understand where 
+      our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -93,6 +91,10 @@ nav:
       - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
+    - Choose your n8n:
+      - choose-n8n/index.md
+      - Set up Cloud: choose-n8n/cloud.md
+      - Install Desktop: choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Workflows: workflows/workflows.md
@@ -109,7 +111,10 @@ nav:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
-      - Error handling: flow-logic/error-handling.md
+      - Error handling:
+        - flow-logic/error-handling/index.md
+        - Error workflows: flow-logic/error-handling/error-workflows.md
+        - Memory-related errors: flow-logic/error-handling/memory-errors.md
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
@@ -151,6 +156,13 @@ nav:
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
       - Using console.log: code-examples/console-log.md
+    - User management:
+      - user-management/index.md
+      - Cloud setup: user-management/cloud-setup.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Skip or disable: user-management/skip-disable.md
+      - Best practices: user-management/best-practices.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
@@ -445,43 +457,38 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - hosting/index.md
-    - Installation and hosting options: hosting/options.md
     - Installation:
       - hosting/installation/index.md
-      - Desktop app: hosting/installation/desktop-app.md
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
-      - Cloud: hosting/installation/cloud.md
-    - Configuration: hosting/configuration.md    
-    - Environment variables: hosting/environment-variables.md
-    - User management: hosting/user-management.md
-    - Security: hosting/security.md
+      - Server setups:
+        - hosting/installation/server-setups/index.md
+        - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
+        - Heroku: hosting/installation/server-setups/heroku.md
+        - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Amazon Web Services: hosting/installation/server-setups/aws.md
+        - Azure: hosting/installation/server-setups/azure.md
+        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Docker Compose: hosting/installation/server-setups/docker-compose.md
+    - Environment variables: 
+      - hosting/environment-variables/index.md
+      - Configuration methods: hosting/environment-variables/configuration-methods.md    
+      - Environment variables reference: hosting/environment-variables/environment-variables.md
+    - Supported databases and settings: hosting/supported-databases-settings.md
+    - Authentication:
+      - hosting/authentication/index.md
+      - User management: hosting/authentication/user-management-self-hosted.md
+      - Basic auth: hosting/authentication/basic-auth.md
+      - JWT: hosting/authentication/jwt.md
     - Logging: hosting/logging.md
-    - Server setups:
-      - hosting/server-setups/index.md
-      - Docker Compose: hosting/server-setups/docker-compose.md
-      - Caddy: hosting/server-setups/caddy.md
-      - Digital Ocean: hosting/server-setups/digital-ocean.md
-      - Heroku: hosting/server-setups/heroku.md
-      - Hetzner: hosting/server-setups/hetzner.md
-      - Amazon Web Services: hosting/server-setups/aws.md
-      - Azure: hosting/server-setups/azure.md
-      - Google Cloud: hosting/server-setups/google-cloud.md
-    - Databases:
-      - hosting/databases/index.md
-      - Supported databases and settings: hosting/databases/supported-databases-settings.md
-      - Database structure: hosting/databases/structure.md
-    - Updating:
-      - hosting/updating/index.md
-      - npm: hosting/updating/npm.md
-      - Docker: hosting/updating/docker.md
-      - Desktop app: hosting/updating/desktop.md
-      - Cloud: hosting/updating/cloud.md
     - Scaling:
       - hosting/scaling/index.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+    - Architecture:
+      - hosting/architecture/index.md
+      - Database structure: hosting/architecture/database-structure.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md
@@ -495,7 +502,7 @@ nav:
     - Configuration: embed/configuration.md
     - Workflow management: embed/managing-workflows.md
     - Workflows templates: embed/workflow-templates.md
-    - White Labelling: embed/white-labelling.md
+    - White labelling: embed/white-labelling.md
   - Courses:
       - courses/index.md
       - Level one:

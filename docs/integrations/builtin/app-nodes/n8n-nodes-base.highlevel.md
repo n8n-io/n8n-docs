@@ -6,7 +6,7 @@
 
 ### Credentials 
 
-You can find authentication information for this node [here](/integrations/builtin/credentials/highLevel/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/highlevel/).
 
 ### HighLevel documentation and support
 

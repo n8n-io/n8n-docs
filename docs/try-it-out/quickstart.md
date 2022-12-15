@@ -22,9 +22,10 @@ You will:
 
 n8n provides a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
-1. On the **Workflow templates** view, search for `Very quick quickstart`.
-2. Select the **Very quick quickstart** template to preview it.
-3. Select **Use this workflow** to open the template in your own editor.
+1. Select **Templates**.
+2. Search for `Very quick quickstart`.
+3. Select the **Very quick quickstart** template to preview it.
+4. Select **Use this workflow** to open the template in your own editor.
 
 This is a basic workflow. It:
 
@@ -45,11 +46,9 @@ Add a third node to message each customer and tell them their description. The C
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. You're going to use [expressions](/code-examples/expressions/) to map in the **Customer ID** and create the **Message**:
-    1. Next to **Customer ID**, select the **Expression** tab. n8n opens the expressions editor for this field.
-    2. Select **Current Node** > **Input Data** > **JSON** > **customer_ID**. n8n adds the expression to the **Expression** editor, and displays a sample output.
-    3. Close the expressions editor.
-    4. Next to **Message**, select the **Expression** tab. n8n opens the expressions editor for this field.
-    5. Copy this expression into the editor:
+	1. Drag **customer_ID** from the **INPUT** panel into the **Customer ID** field in the node settings.
+    2. Hover over **Message**. Select the **Expression** tab. n8n opens the expressions editor for this field.
+    3. Copy this expression into the editor:
         ```
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}
         ```

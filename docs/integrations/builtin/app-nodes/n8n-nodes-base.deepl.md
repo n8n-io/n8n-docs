@@ -3,7 +3,7 @@
 [DeepL](https://deepL.com) is a machine translation service that allows you to translate text to different languages.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/deepL/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/deepl/).
 
 
 ## Basic Operations
@@ -41,7 +41,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will translate the cocktail instructions that we got from the previous node to French. To translate the instructions in your language, select your language instead.
 
-1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/integrations/builtin/credentials/deepL/).
+1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/integrations/builtin/credentials/deepl/).
 
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Current Nodes > Input Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$json["drinks"][0]["strInstructions"]}}`.

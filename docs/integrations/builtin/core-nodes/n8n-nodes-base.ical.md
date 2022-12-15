@@ -38,7 +38,7 @@ In the screenshot below, you will notice that the node creates the event file.
 
 This node will send the event file as an attachment.
 
-1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/integrations/builtin/credentials/sendEmail/).
+1. First of all, you'll have to enter credentials for the Send Email node. You can find out how to do that [here](/integrations/builtin/credentials/sendemail/).
 2. Enter the sender's email address in the ***From Email*** field.
 3. Enter the receiver's email address in the ***To Email*** field.
 4. Enter a subject in the ***Subject*** field.

@@ -43,7 +43,7 @@ On each workflow, it's possible to set some custom settings and overwrite some o
 
 The following settings are available:
 
-* **Error Workflow**: Select a workflow to trigger if the current workflow fails. See [Error Workflow](/flow-logic/error-handling/) for more details.
+* **Error Workflow**: Select a workflow to trigger if the current workflow fails. See [Error Workflow](/flow-logic/error-handling/error-workflows/) for more details.
 * **Timezone**: Sets the timezone to be used in the workflow. The default timezone is EDT (New York). The Timezone setting is particularly important for the Cron Trigger node.
 * **Save Data Error Execution**: If the execution data of the workflow should be saved when the workflow fails.
 * **Save Data Success Execution**: If the execution data of the workflow should be saved when the workflow succeeds.

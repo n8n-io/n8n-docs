@@ -3,7 +3,7 @@
 [MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mongoDb/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/mongodb/).
 
 
 ## Operations
@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. MongoDB node
 
-1. First of all, you'll have to enter credentials for the MongoDB node. You can find out how to do that [here](/integrations/builtin/credentials/mongoDb/).
+1. First of all, you'll have to enter credentials for the MongoDB node. You can find out how to do that [here](/integrations/builtin/credentials/mongodb/).
 2. Select 'Insert' from the *Operation* dropdown list.
 3. Enter the name of your MongoDB collection in the *Collection* field.
 4. Enter `my_key` in the *Fields* field.

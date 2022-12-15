@@ -3,7 +3,7 @@
 [CircleCI](https://circleci.com/) is a continuous integration and delivery platform helps teams release quality code, faster.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/circleCi/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/circleci/).
 
 
 ## Basic Operations
@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. CircleCI node
 
-1. First of all, you'll have to enter credentials for the CircleCI node. You can find out how to do that [here](/integrations/builtin/credentials/circleCi/).
+1. First of all, you'll have to enter credentials for the CircleCI node. You can find out how to do that [here](/integrations/builtin/credentials/circleci/).
 2. Select the VCS provider from the dropdown in the *Provider* field.
 3. Enter the project slug in the *Project Slug* field.
 4. Enter the number of the pipeline in CircleCI that you want to get in the *Pipeline Number* field.

@@ -1,4 +1,20 @@
-# 2002 SEO audit
+# Hosting user paths 2022
+
+/hosting/options/   /choose-n8n/
+/hosting/installation/cloud/   /choose-n8n/cloud/
+/hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat
+/hosting/environment-variables/   /hosting/environment-variables/environment-variables/
+/hosting/updating/cloud/   /choose-n8n/cloud/
+/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/npm/   /choose-n8n/npm/
+/hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
+/hosting/databases/structure/   /hosting/architecture/database-structure/
+/hosting/security/   /hosting/authentication/
+/hosting/user-management/   /user-management/
+
+
+# 2022 SEO audit
 
 /nodes/expressions/expressions.html   /code-examples/expressions/
 /nodes/expressions.html   /code-examples/expressions/
@@ -88,18 +104,18 @@
 /getting-started/installation/advanced/maintenance.html /hosting/scaling/execution-data/
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
-/reference/user-management.html                      /hosting/user-management/
+/reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/environment-variables/
 /reference/start-workflows-via-cli.html              /reference/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/databases/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /reference/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/server-setups/  
+/reference/server-setup.html                         /hosting/installation/server-setups/  
 
 # The nodes library . . . may the odds be ever in your favour
 

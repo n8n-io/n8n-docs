@@ -207,3 +207,13 @@ Clear your existing license from n8n's database and reset n8n to default feature
 ```sh
 n8n license:clear
 ```
+
+## User management
+
+You can reset user management using the n8n CLI. This returns user management to its pre-setup state. It removes all user accounts.
+
+Use this if you forget your password, and don't have SMTP set up to do password resets by email.
+
+```sh
+n8n user-management:reset
+```

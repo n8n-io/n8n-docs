@@ -3,7 +3,7 @@
 [GoToWebinar](https://www.gotomeeting.com/webinar) is a platform that helps you create and deliver online video conferences.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/goToWebinar/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/gotowebinar/).
 
 
 ## Basic Operations
@@ -55,7 +55,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new webinar in GoToWebinar.
 
-1. First of all, you'll have to enter credentials for the GoToWebinar node. You can find out how to do that [here](/integrations/builtin/credentials/goToWebinar/).
+1. First of all, you'll have to enter credentials for the GoToWebinar node. You can find out how to do that [here](/integrations/builtin/credentials/gotowebinar/).
 2. Select 'Webinar' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter a subject in the ***Subject*** field.

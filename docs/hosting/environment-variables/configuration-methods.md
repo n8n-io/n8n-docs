@@ -4,7 +4,7 @@ description: How to set environment variables for n8n.
 
 # Configuration
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables/).
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/environment-variables/environment-variables/).
 
 ## Set environment variables by command line
 

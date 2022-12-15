@@ -4,11 +4,11 @@
 /hosting/installation/cloud/   /choose-n8n/cloud/
 /hosting/installation/desktop-app/   /choose-n8n/desktop-app/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
-/hosting/environment-variables/   /hosting/configuration/environment-variables/
+/hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/cloud/   /choose-n8n/cloud/
 /hosting/updating/desktop/   /choose-n8n/desktop/
 /hosting/updating/npm/   /choose-n8n/npm/
-/hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
+/hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/authentication/
 /hosting/user-management/   /user-management/
@@ -105,11 +105,11 @@
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
-/reference/environment-variables.html                /hosting/configuration/environment-variables/
+/reference/environment-variables.html                /hosting/environment-variables/
 /reference/start-workflows-via-cli.html              /reference/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/configuration/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /reference/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/

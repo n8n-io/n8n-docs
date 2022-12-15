@@ -470,11 +470,11 @@ nav:
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
-    - Configuration: 
-      - hosting/configuration/index.md
-      - Configuration methods: hosting/configuration/configuration-methods.md    
-      - Environment variables: hosting/configuration/environment-variables.md
-      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+    - Environment variables: 
+      - hosting/environment-variables/index.md
+      - Configuration methods: hosting/environment-variables/configuration-methods.md    
+      - Environment variables reference: hosting/environment-variables/environment-variables.md
+    - Supported databases and settings: hosting/supported-databases-settings.md
     - Authentication:
       - hosting/authentication/index.md
       - User management: hosting/authentication/user-management-self-hosted.md

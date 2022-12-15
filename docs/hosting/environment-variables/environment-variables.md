@@ -1,7 +1,7 @@
 # Environment Variables
 
 !!! note "File-based configuration"
-    You can provide a [configuration file](/hosting/configuration/#configuration-via-file) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+    You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
 
 
 ## Credentials
@@ -57,7 +57,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n. |
-| `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/configuration/#configuration-by-file). |
+| `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/environment-variables/configuration-methods/). |
 | `N8N_DISABLE_UI` | Boolean | `false` | Disable the UI (true) or not (false). |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
 | `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. |
@@ -115,7 +115,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_ENDPOINT_WEBHOOK` | String | `webhook` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | String | `webhook-test` | The path used for test-webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_WAIT` | String | `webhook-waiting` | The path used for waiting-webhook endpoint. |
-| `WEBHOOK_URL` | String | - | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/configuration/#webhook-url) for more details. |
+| `WEBHOOK_URL` | String | - | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/environment-variables/configuration-methods/#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | Boolean | `false` | Disable production webhooks from main process. This helps ensure no HTTP traffic load to main process when using webhook-specific processes. |
 | `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | Boolean | `false` | Only de-register webhooks on external services when workflows are deactivated. |
 

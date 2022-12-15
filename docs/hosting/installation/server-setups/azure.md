@@ -109,7 +109,7 @@ n8n needs some environment variables set to pass to the application running in t
 
 The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/) for n8n environment variables details.
+Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
 
 ## Deployments
 

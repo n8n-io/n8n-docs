@@ -1,14 +1,12 @@
-# Supported databases and settings
+# Supported databases
 
-# Databases
-
-By default, n8n uses SQLite to save credentials, past executions, and workflows. However, n8n also supports PostgresDB.
+By default, n8n uses SQLite to save credentials, past executions, and workflows. However, n8n also supports PostgresDB and MySQL.
 
 ## Shared settings
 
 The following environment variables get used by all databases:
 
- - `DB_TABLE_PREFIX` (default: '') - Prefix for table names
+ - `DB_TABLE_PREFIX` (default: -) - Prefix for table names
 
 ## PostgresDB
 
@@ -52,8 +50,6 @@ You can choose between these configurations:
 
 ## MySQL / MariaDB
 
-The compatibility with MySQL/MariaDB has been tested. Even then, it is advisable to observe the operation of the application with this database as this option has been recently added. If you spot any problems, feel free to submit a bug report or a pull request.
-
 To use MySQL or MariaDB, provide the following environment variables:
 
  - `DB_TYPE=mysqldb` or `DB_TYPE=mariadb`
@@ -85,13 +81,13 @@ The database file is located at:
 
 ## Other databases
 
-Currently, only the databases mentioned above are supported. n8n internally uses
-[TypeORM](https://typeorm.io), so adding support for the following databases
-should not be too much work:
+n8n officially supports SQLite, PostgresDB, and MySQL. 
+
+n8n internally uses [TypeORM](https://typeorm.io){:target=_blank .external-link}, so adding support for the following databases
+should be possible:
 
  - CockroachDB
  - Microsoft SQL
  - Oracle
 
-If you cannot use any of the currently supported databases for some reason and
-you can code, we'd appreciate your support in the form of a pull request. If not, you can request support [here](https://community.n8n.io/c/feature-requests/cli).
+If you can't use any of the supported databases for some reason and you can code, consider submitting a [pull request](https://github.com/n8n-io/n8n){:target=_blank .external-link}. You can also request support [here](https://community.n8n.io/c/feature-requests/cli){:target=_blank .external-link}.

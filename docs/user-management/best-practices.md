@@ -22,5 +22,5 @@ This page contains advice on best practices relating to user management in n8n.
 	* `N8N_PORT`
 	* `N8N_PROTOCOL`
 	* `N8N_EDITOR_BASE_URL`  
-  More information on these variables is available in [Environment variables](/hosting/configuration/environment-variables/).
+  More information on these variables is available in [Environment variables](/hosting/environment-variables/environment-variables/).
 * You can't use n8n's user management with basic auth. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.

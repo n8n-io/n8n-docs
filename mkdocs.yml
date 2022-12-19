@@ -95,6 +95,7 @@ nav:
       - choose-n8n/index.md
       - Set up Cloud: choose-n8n/cloud.md
       - Install Desktop: choose-n8n/desktop-app.md
+      - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
       - Workflows: workflows/workflows.md
@@ -169,7 +170,6 @@ nav:
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
       - Glossary: reference/glossary.md
-      - License: reference/license.md
       - Data collection: reference/data-collection.md
   - Integrations:
     - integrations/index.md

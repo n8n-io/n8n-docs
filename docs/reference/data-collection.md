@@ -19,6 +19,10 @@ n8n collects selected usage and performance data to help diagnose problems and i
 	- The user ID of the user who ran the execution
 	- The first time a workflow loads data from an external source
 	- The first successful production (non-manual) workflow execution
+- Workflow sharing data:
+	- Workflow ID and user ID when a user opens the sharing modal
+	- Workflow ID and user ID when a user removes a sharee
+	- User attempts to save a locked workflow
 - The domain of webhook calls, if specified (excluding subdomain).
 - Details on how the UI is used (for example, navigation, nodes panel searches)
 - Diagnostic information

@@ -320,6 +320,7 @@ nav:
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
+        - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md

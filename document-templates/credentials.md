@@ -18,7 +18,7 @@ Match the brand name exactly. For example, GitHub NOT Github
 -->
 # _Name_
 
-You can use these credentials to authenticate the following nodes with _Name_:
+You can use these credentials to authenticate the following nodes with:
 
 * _List of apps_
 * _That use these credentials_

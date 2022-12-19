@@ -1,5 +1,65 @@
 # Release notes
 
+## n8n@0.208.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.1...n8n@0.208.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-16
+
+This release introduces a new inline expressions editor, and a new node: OpenAI. It also contains updates and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Inline expression editor
+
+You can now quickly write expressions inline in a node parameter. You can still choose to open the full expressions editor.
+
+!["Screenshot of the inline expressions editors"](/_images/reference/release-notes/0.208.0-inline-expressions.png)
+
+</div>
+
+* Add workflow sharing telemetry.
+* Core: allow for hiding page usage with environment variables (for upcoming feature)
+* Editor: update UI copy for user management setup when sharing is disabled.
+* Editor: hide credentials password values.
+* Editor: set **All workflows** view as default view on the **Workflows** page.
+* Editor: update UI copy for workflow overwriting message.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Open AI node
+
+This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for details.
+
+</div>
+
+### Node enhancements
+
+Send Email node: add support for a "Reply to" email address.
+
+### Bug fixes
+
+* Core: fix for Google and Microsoft generic OAuth2 credentials.
+* Core: fix HTTP Digest Auth for responses without an opaque parameter.
+* Disqus node: fix thread parameter for "Get All Threads" operation.
+* Don't crash the server when Telemetry is blocked via DNS.
+* Editor: allow mapping onto expression editor with selection range.
+* Editor: don't show actions dialog for actionless triggers when selected via keyboard.
+* Editor: fix an issue where some node actions wouldn't select default parameters correctly.
+* Editor: fix typo in retry-button option "Retry with original workflow".
+* Update permission for showing workflow caller policy.
+* Update pnpm-lock to fix build.
+
+### Contributors
+
+[Daemonxiao](https://github.com/Daemonxiao){:target=_blank .external-link}  
+[Kirill](https://github.com/kirill-chertkov){:target=_blank .external-link}  
+[Ricardo Duarte](https://github.com/rduarte){:target=_blank .external-link}  
+
+
 ## n8n@0.207.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.0...n8n@0.207.1){:target=_blank .external-link} for this version.<br />

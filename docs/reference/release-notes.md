@@ -1,5 +1,19 @@
 # Release notes
 
+## n8n@0.208.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.0...n8n@0.208.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-19
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Always retain original errors in the error chain on NodeOperationError.
+* BinaryDataManager should store metadata when saving from buffer.
+* Editor: fix for wrong execution data displayed in executions preview.
+* Pick up credential test functions from versioned nodes.
+
 ## n8n@0.208.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.1...n8n@0.208.0){:target=_blank .external-link} for this version.<br />

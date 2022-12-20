@@ -97,7 +97,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ | 
 | `N8N_SMTP_USER` | String | - | _your_SMTP_username_ |
 | `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ | 
-| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N <contact@n8n.com>_ | 
+| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ | 
 | `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |  
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. | 
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. | 

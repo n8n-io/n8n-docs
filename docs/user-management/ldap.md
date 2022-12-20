@@ -34,6 +34,9 @@ On first sign in, n8n creates a user account in n8n for the LDAP user.
 
 You must manage user details on the LDAP server, not in n8n. If you update or delete a user on your LDAP server, the n8n account updates at the next scheduled sync, or when the user next tries to log in, whichever happens first.
 
+!!! note "User deletion"
+	If you remove a user from your LDAP server, they lose n8n access on the next sync.
+
 ## Turn LDAP off
 
 To turn LDAP off:

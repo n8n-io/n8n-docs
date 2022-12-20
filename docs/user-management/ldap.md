@@ -6,7 +6,8 @@ description: Using LDAP with n8n.
 
 !!! info "Feature availability"		
 		* Available on Enterprise plans for n8n Cloud and self-hosted n8n.
-		* You must have an n8n instance owner account, and enable user management.
+		* You need access to the n8n instance owner account.
+		* You must enable user management. Refer to guides for [Cloud user management](/user-management/cloud-setup/) and [self-hosted user management](/hosting/authentication/user-management-self-hosted/).
 
 This page tells you how to enable LDAP in n8n. It assumes you are familiar with LDAP, and have an existing LDAP server set up.
 

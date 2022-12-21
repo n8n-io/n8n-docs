@@ -1,5 +1,37 @@
 # Release notes
 
+## n8n@0.209.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.1...n8n@0.209.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-21
+
+This release introduces workflow sharing, and changes to licensing and payment plans.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Workflow sharing
+
+_Description of new feature. Link to docs if available._
+
+</div>
+
+
+### Bug fixes
+
+* Editor: Correctly display trigger nodes without actions and with related regular node in the "On App Events" category.
+* Fix stickies resize.
+* Hide trigger tooltip for nodes with static test output.
+* Keep expression when dropping mapped value.
+* Prevent keyboard shortcuts in expression editor modal.
+* Redirect home to workflows always.
+* Update mapping GIFs.
+* Upgrade amqplib to address CVE-2022-0686.
+* View option for binary-data shouldn't download the file on Chrome/Edge.
+
+
+
 ## n8n@0.208.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.0...n8n@0.208.1){:target=_blank .external-link} for this version.<br />

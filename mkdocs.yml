@@ -163,6 +163,7 @@ nav:
       - Account types: user-management/account-types.md
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
+    - Log streaming: log-streaming.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md

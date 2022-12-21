@@ -200,6 +200,14 @@ Import all the credentials files (*.json) from the specified directory:
 n8n import:credentials --separate --input=backups/latest/
 ```
 
+## License
+
+Clear your existing license from n8n's database and reset n8n to default features:
+
+```sh
+n8n license:clear
+```
+
 ## User management
 
 You can reset user management using the n8n CLI. This returns user management to its pre-setup state. It removes all user accounts.

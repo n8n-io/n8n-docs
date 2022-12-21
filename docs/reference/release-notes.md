@@ -13,7 +13,7 @@ This release introduces workflow sharing, and changes to licensing and payment p
 
 #### Workflow sharing
 
-_Description of new feature. Link to docs if available._
+This release introduces workflow sharing for users on some plans. With workflow sharing, users can invite other users on the same n8n instance to use and edit their workflows. Refer to [Workflow sharing](/workflows/sharing/) for details.
 
 </div>
 

@@ -30,10 +30,9 @@ The following events are available. You can choose which events to stream in **S
 
 * Workflow
 	* Started
-	* Finished
-	* Error
-	* Shared
-	* Executed
+	* Success
+	* Failed
+	* Execution error
 * Node executions
 	* Started
 	* Finished
@@ -44,6 +43,19 @@ The following events are available. You can choose which events to stream in **S
 	* User invited
 	* User invitation accepted
 	* User reinvited
+	* User email failed
+	* User reset requested
+	* User reset
+	* User credentials created
+	* User credentials shared
+	* User API created
+	* User API deleted
+	* Package installed
+	* Package updated
+	* Package deleted
+	* Workflow created
+	* Workflow deleted
+	* Workflow updated
 
 ## Destinations
 

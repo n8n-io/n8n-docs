@@ -1,6 +1,6 @@
 # Processing different data types
 
-In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/nodes/).
+In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/components/nodes/).
 
 
 ## HTML and XML data

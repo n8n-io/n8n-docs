@@ -98,12 +98,18 @@ nav:
       - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
-      - Workflows: workflows/workflows.md
-      - Connections: workflows/connections.md
-      - Nodes: workflows/nodes.md
-      - Items: workflows/items.md
-      - Sticky Notes: workflows/sticky-notes.md
+      - Create and run: workflows/create.md
+      - Components: 
+        - workflows/components/index.md
+        - Nodes: workflows/components/nodes.md
+        - Connections: workflows/components/connections.md
+        - Sticky Notes: workflows/components/sticky-notes.md
       - Executions: workflows/executions.md
+      - Export and import: workflows/export-import.md
+      - Templates: workflows/templates.md
+      - Sharing: workflows/sharing.md
+      - Settings: workflows/settings.md
+      - Workflow ID: workflows/workflow-id.md
     - Manage credentials:
       - credentials/index.md
       - Create and edit: credentials/add-edit-credentials.md

@@ -1,6 +1,16 @@
+
 # License release 2022/2023
 
 /reference/license/   /choose-n8n/faircode-license/
+
+# Workflows refactor 2022
+
+/workflows/workflows/   /workflows/
+/workflows/items/   /data/data-structure/
+/workflows/nodes/   /workflows/components/nodes/
+/workflows/connections/   /workflows/components/connections/
+/workflows/sticky-notes/   /workflows/components/sticky-notes/
+
 
 # Hosting user paths 2022
 

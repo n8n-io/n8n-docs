@@ -32,7 +32,7 @@ The following events are available. You can choose which events to stream in **S
 	* Started
 	* Success
 	* Failed
-	* Execution error
+	* Execution error (n8n can't store execution data)
 * Node executions
 	* Started
 	* Finished

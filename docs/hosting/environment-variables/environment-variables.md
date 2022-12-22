@@ -6,7 +6,7 @@
 
 ## Credentials
 
-Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMTER: VALUE }}`.
+Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

@@ -29,7 +29,7 @@ The start node exists by default when you create a new workflow.
 4. Click on *Execute Node* to run the workflow.
 
 #### GraphQL query
-```json
+```graphql
 {
   launchesPast(limit: 5) {
     mission_name
@@ -70,5 +70,30 @@ The start node exists by default when you create a new workflow.
 ```
 
 
+#### GraphQL mutate
+For this example, we are going to use a fake graphql. The query is just to show the format of the query. In the real world, you probably need to provide *authentication* for mutation.
 
+1. Select None for *Authentication*
+2. Enter `https://graphqlzero.almansi.me/api `in the *Endpoint* field.
+3. Select POST for *HTTP Request Method*
+4. Select the 'JSON' option from the *Request Format* dropdown list.
+5. Enter the GraphQL query shown below in the *Query* field.
+6. Click on *Execute Node* to run the workflow.
 
+```graphql
+mutation {
+  createAlbum(
+		input: {
+      title: "new album"
+      userId: 1
+    }
+  ) {
+    title
+    id
+    user {
+      id
+      email
+    }
+  }
+}
+```

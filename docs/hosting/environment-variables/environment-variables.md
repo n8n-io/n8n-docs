@@ -89,19 +89,19 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
 
-| Variable | Type | Default | Description | 
-| :------- | :--- | :------ | :---------- | 
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.| 
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.|
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
-| `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ | 
-| `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ | 
+| `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ |
+| `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ |
 | `N8N_SMTP_USER` | String | - | _your_SMTP_username_ |
-| `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ | 
-| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ | 
-| `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |  
-| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. | 
-| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. | 
-| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. | 
+| `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ |
+| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ |
+| `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
+| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
+| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
 
 
 ## Endpoints
@@ -173,6 +173,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |
+| `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis >= 6). Don't define it for redis < 6 compatibility |
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |

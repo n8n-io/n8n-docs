@@ -175,6 +175,7 @@ nav:
       - Release notes: reference/release-notes.md
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
+      - Update n8n: reference/update.md
       - Glossary: reference/glossary.md
       - Data collection: reference/data-collection.md
   - Integrations:

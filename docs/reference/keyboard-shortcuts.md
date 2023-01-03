@@ -50,3 +50,7 @@ The following keyboard shortcuts are available:
 - **0**: Reset zoom level
 - **1**: Zoom to fit workflow
 - **Ctrl + Mouse wheel**: Zoom in/out
+
+## Within nodes
+
+- **=**: in an empty parameter input, this switches to expressions mode.

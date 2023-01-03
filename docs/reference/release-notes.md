@@ -1,5 +1,84 @@
 # Release notes
 
+## n8n@0.209.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.3...n8n@0.209.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-28
+
+This is primarily a bug fix release.
+
+### Bug fixes
+
+* Editor: add sticky note without manual trigger.
+* Editor: display default missing value in table view as undefined.
+* Editor: fix displaying of some trigger nodes in the creator panel.
+* Editor: fix trigger node type identification on add to canvas.
+* Editor: add the usage and plans page to Desktop.
+
+### New features
+
+Editor: pressing **=** in an empty parameter input switches to expression mode.
+
+## n8n@0.209.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.2...n8n@0.209.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-27
+
+This is primarily a bug fix release.
+
+### Bug fixes
+
+* Core: don't send credentials to browser console.
+* Core: permit a workflow user who isn't the owner to use their own credentials.
+* Editor: fix for loading executions that aren't on the current executions list.
+* Editor: make the tertiary button on the **Usage** page transparent.
+* Editor: update credential owner warning when sharing.
+
+### New features
+
+Editor: Improve UX for brace completion in the inline expressions editor.
+
+### Node enhancements
+
+Webhook node: when test the node by selecting **Listen For Test Event** then dispatching a call to the webhook, n8n now only runs the Webhook node. Previously, n8n ran the entire workflow. You can still test the full workflow by selecting **Execute Workflow**, then dispatching a test call. 
+
+## n8n@0.209.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.1...n8n@0.209.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-23
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: ensure full tree on expression editor parse. This resolves an issue with the expressions editor cutting off results.
+* Fix automatic credential selection when credentials are shared.
+
+### Performance improvements
+
+Improvements to the workflows list performance.
+
+## n8n@0.209.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.0...n8n@0.209.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-22
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: fix for executions preview scroll load bug and wrong execution being displayed.
+* Editor: force parse on long expressions.
+* Editor: restore trigger to the nodes panel.
+* Nodes: AWS DynamoDB Node Fix issue pagination and simplify issue.
+* Nodes: fix DynamoDB node type issues.
+* Resolve an issue with credentials and workflows not being matched correctly due to incorrect typing.
+* Restore missing tags when retrieving a workflow.
+
+### Contributors
+
+[Nathan Apter](https://github.com/napter){:target=_blank .external-link}
+
 ## n8n@0.209.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.1...n8n@0.209.0){:target=_blank .external-link} for this version.<br />

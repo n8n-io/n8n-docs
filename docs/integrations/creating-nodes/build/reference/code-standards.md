@@ -98,6 +98,6 @@ Some third-party services have their own libraries on npm, which make it easier 
 const response = await this.helpers.httpRequest(options);
 ```
 
-This uses the npm package [`axios`](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
+This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
 
 Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.

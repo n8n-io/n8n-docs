@@ -31,7 +31,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 | `$("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on item linking. | :x: |
 | `$("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
 | `$("<node-name>").context` | Only available when working with the Split in Batches node. Provides information about what's happening in the node, allowing you to see if the node is still processing items. | :white_check_mark: |
-| `$("<node-name>").itemMatching(currentNodeinputIndex)` | Use instead of `$("<node-name>").item` in the Function node if you need to trace back from an input item. | :white_check_mark: |
+| `$("<node-name>").itemMatching(currentNodeinputIndex)` | Use instead of `$("<node-name>").item` in the Code node if you need to trace back from an input item. | :white_check_mark: |
 
 
 

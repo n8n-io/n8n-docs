@@ -76,7 +76,7 @@ return [
 ```
 2. Click on **Execute Node** to run the workflow.
 
-![Using the Function node to send data to the IF node](/_images/integrations/builtin/core-nodes/if/function_node.png)
+![Using the Code node to send data to the IF node](/_images/integrations/builtin/core-nodes/if/function_node.png)
 
 
 ### 3. IF node

@@ -86,9 +86,9 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 
 Create a simple workflow with some example input data to try out the Merge node.
 
-### Set up sample data using the Function nodes
+### Set up sample data using the Code nodes
 
-1. Add a Function node to the canvas and connect it to the Start node.
+1. Add a Code node to the canvas and connect it to the Start node.
 2. Paste the following JavaScript code snippet in the **JavaScript Code** field:
 ```js
 return [
@@ -112,7 +112,7 @@ return [
   }
 ];
 ```
-3. Add a second Function node, and connect it to the Start node.
+3. Add a second Code node, and connect it to the Start node.
 4. Paste the following JavaScript code snippet in the **JavaScript Code** field:
 ```js
 return [
@@ -133,11 +133,11 @@ return [
 
 ### Try out different merge modes
 
-Add the Merge node. Connect the first Function node to **Input 1**, and the second Function node to **Input 2**. Run the workflow to load data into the Merge node.
+Add the Merge node. Connect the first Code node to **Input 1**, and the second Code node to **Input 2**. Run the workflow to load data into the Merge node.
 
 The final workflow should look like the following image.
 
-![Simple merge workflow with two function nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
+![Simple merge workflow with two Code nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
 
 Now try different options in **Mode** to see how it affects the output data.
 

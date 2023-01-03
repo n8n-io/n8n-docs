@@ -71,7 +71,7 @@ The start node exists by default when you create a new workflow.
 
 
 #### GraphQL mutate
-For this example, we are going to use a fake graphql. The query is just to show the format of the query. In the real world, you probably need to provide *authentication* for mutation.
+For this example, we are going to use a fake GraphQL. The query is just to show the format of the query. In the real world, you probably need to provide authentication for mutation.
 
 1. Select None for *Authentication*
 2. Enter `https://graphqlzero.almansi.me/api `in the *Endpoint* field.

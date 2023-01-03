@@ -50,7 +50,7 @@ return [
 2. Click on ***Execute Node*** to run the node.
 
 
-![Using the Function node to return URLs](/_images/integrations/builtin/core-nodes/splitinbatches/function_node.png)
+![Using the Code node to return URLs](/_images/integrations/builtin/core-nodes/splitinbatches/function_node.png)
 
 
 ### 3. SplitInBatches node

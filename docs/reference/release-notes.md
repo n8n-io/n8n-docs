@@ -5,6 +5,8 @@
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.4...n8n@0.210.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-01-05
 
+This release introduces two major new features: log streaming and security audits. It also contains node enhancements, bug fixes, and performance improvements.
+
 ### New features
 
 <div class="n8n-new-features" markdown>

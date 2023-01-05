@@ -36,7 +36,7 @@ This release adds a [security audit](/security-audit/) feature. You can now run 
 * Core: fix OAuth credential creation using the API.
 * Core: fix an issue with workflow lastUpdated field.
 * Editor: clear node creator and scrim on workspace reset.
-* Editor: fix an infinite loop while loading executions that are not on the current executions list.
+* Editor: fix an infinite loop while loading executions that aren't on the current executions list.
 * Editor: make node title non-editable in executions view.
 * Editor: prevent scrim on executable triggers.
 * Editor: support tabbing away from inline expression editor.
@@ -50,6 +50,9 @@ This release adds a [security audit](/security-audit/) feature. You can now run 
 * Lazy-load public API dependencies to reduce baseline memory usage.
 * Lazy-load queue mode and analytics dependencies.
 
+### Contributors
+
+[Thomas S.](https://github.com/intel44){:target=_blank .external-link}
 
 ## n8n@0.209.4
 

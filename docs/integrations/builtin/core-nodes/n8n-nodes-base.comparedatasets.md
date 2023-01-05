@@ -21,3 +21,7 @@ There are four output options:
 * **Same Branch**: data that is the same in both inputs.
 * **Different Branch**: data that is different between inputs.
 * **In B only Branch**: data that occurs only in the second output.
+
+## Related resources
+
+View [example workflows and related content](https://n8n.io/integrations/compare-datasets/){:target=_blank .external-link} on n8n's website.

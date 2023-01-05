@@ -1,5 +1,48 @@
 # Release notes
 
+## n8n@0.210.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.4...n8n@0.210.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-05
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Log streaming
+
+This release introduces log streaming
+
+</div>
+
+* Core: add support for Redis 6+ ACLs system using username in queue mode. Add the `QUEUE_BULL_REDIS_USERNAME` environment variable.
+
+### Node enhancements
+
+* Compare Datasets node: add an option for fuzzy compare.
+
+### Bug fixes
+
+* Apply credential overwrites recursively. This ensures that overwrites defined for a parent credential type also apply to all credentials extending it.
+* Core: enable full manual execution of a workflow using the error trigger.
+* Core: fix OAuth credential creation using the API.
+* Core: fix an issue with workflow lastUpdated field.
+* Editor: clear node creator and scrim on workspace reset.
+* Editor: fix an infinite loop while loading executions that are not on the current executions list.
+* Editor: make node title non-editable in executions view.
+* Editor: prevent scrim on executable triggers.
+* Editor: support tabbing away from inline expression editor.
+* Fix executions bulk deletion.
+* Google Sheets Node: fix exception when no **Values to Send** are set.
+* Respond to Webhook Node: fix issue that caused the content-type header to be overwritten.
+* Slack Node: add missing channels:read OAuth2 scope.
+
+### Performance improvements
+
+* Lazy-load public API dependencies to reduce baseline memory usage.
+* Lazy-load queue mode and analytics dependencies.
+
+
 ## n8n@0.209.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.3...n8n@0.209.4){:target=_blank .external-link} for this version.<br />

@@ -171,6 +171,7 @@ nav:
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
     - Log streaming: log-streaming.md
+    - Security audit: security-audit.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md

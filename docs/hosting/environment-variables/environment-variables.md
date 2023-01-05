@@ -187,7 +187,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |
-| `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis >= 6). Don't define it for redis < 6 compatibility |
+| `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis version 6 or above). Don't define it for Redis < 6 compatibility |
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |

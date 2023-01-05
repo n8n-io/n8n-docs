@@ -11,7 +11,15 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.4...n8n@0.210
 
 #### Log streaming
 
-This release introduces log streaming
+This release introduces [log streaming](/log-streaming/) for users on Enterprise self-hosted plans and custom Cloud plans. Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Security audit
+
+This release adds a [security audit](/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 
 </div>
 

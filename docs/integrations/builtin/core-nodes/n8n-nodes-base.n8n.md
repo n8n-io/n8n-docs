@@ -14,6 +14,8 @@ Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a l
 
 ## Operations
 
+* Audit
+	* Generate
 * Credential
 	* Create
 	* Delete

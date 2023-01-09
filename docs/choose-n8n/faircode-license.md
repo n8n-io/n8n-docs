@@ -2,7 +2,7 @@
 description: The n8n faircode license.
 ---
 
-# License
+# Faircode license
 
 n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
@@ -10,12 +10,15 @@ n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use Licen
 
 ### What license do you use?
 
-n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
+n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
 
 ### What source code is covered by the Sustainable Use License? 
 
-The [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) applies to all our source code hosted in our [main GitHub repository](https://github.com/n8n-io/n8n).
+The [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) applies to all our source code hosted in our [main GitHub repository](https://github.com/n8n-io/n8n) except:
+
+* Content of branches other than master
+* Source code files that contain `.ee.` in their file name. These are licensed under the [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
 ### What is the Sustainable Use License?
 

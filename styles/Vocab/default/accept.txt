@@ -44,6 +44,8 @@ Tooltip
 tooltip
 Trello
 Twilio
+Typeahead
+typeahead
 Unformatted
 unformatted
 URI

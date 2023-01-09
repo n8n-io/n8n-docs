@@ -22,6 +22,12 @@ These are the tables n8n creates during setup.
 
 Stores the credentials used to authenticate with integrations.
 
+### eventdestinations_entity
+
+Enterprise only.
+
+Contains the destination configurations for [Log streaming](/log-streaming/).
+
 ### execution_entity
 
 Stores all saved workflow executions. Workflow settings can affect which executions n8n saves.

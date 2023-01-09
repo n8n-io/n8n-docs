@@ -1,3 +1,17 @@
+
+# License release 2022/2023
+
+/reference/license/   /choose-n8n/faircode-license/
+
+# Workflows refactor 2022
+
+/workflows/workflows/   /workflows/
+/workflows/items/   /data/data-structure/
+/workflows/nodes/   /workflows/components/nodes/
+/workflows/connections/   /workflows/components/connections/
+/workflows/sticky-notes/   /workflows/components/sticky-notes/
+
+
 # Hosting user paths 2022
 
 /hosting/options/   /choose-n8n/
@@ -5,6 +19,7 @@
 /hosting/installation/desktop-app/   /choose-n8n/desktop-app/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
+/hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /choose-n8n/cloud/
 /hosting/updating/desktop/   /choose-n8n/desktop/
 /hosting/updating/npm/   /choose-n8n/npm/

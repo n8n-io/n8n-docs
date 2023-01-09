@@ -6,7 +6,7 @@
 
 ## Credentials
 
-Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMTER: VALUE }}`.
+Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -89,19 +89,19 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
 
-| Variable | Type | Default | Description | 
-| :------- | :--- | :------ | :---------- | 
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.| 
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.|
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
-| `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ | 
-| `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ | 
+| `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ |
+| `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ |
 | `N8N_SMTP_USER` | String | - | _your_SMTP_username_ |
-| `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ | 
-| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ | 
-| `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |  
-| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. | 
-| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. | 
-| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. | 
+| `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ |
+| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ |
+| `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
+| `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
+| `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
 
 
 ## Endpoints
@@ -143,6 +143,8 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 
 ## Logs
 
+### n8n logs
+
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `verbose`, `debug` | `info` | Log output level. |
@@ -153,6 +155,18 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `DB_LOGGING_ENABLED` | Boolean | `false` | Whether to enable database-specific logging. |
 | `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. |
 | `DB_LOGGING_MAX_EXECUTION_TIME` | Number | `1000` | Maximum execution time (in milliseconds) before n8n logs a warning. Set to `0` to disable long running query warning. |
+
+### Log streaming
+
+Refer to [Log streaming](/log-streaming/) for more information on this feature.
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_EVENTBUS_CHECKUNSENTINTERVAL` | Number | `0` | How often (in milliseconds) to check for unsent event messages. Can in rare cases cause a message to be sent twice. Set to `0` to disable it. |
+| `N8N_EVENTBUS_LOGWRITER_SYNCFILEACCESS` | Boolean | `false` | Whether all file access happens synchronously within the thread (true) or not (false). |
+| `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | How many event log files to keep. |
+| `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `102400` | Maximum size (in bytes) of an event log file before a new one is started. |
+| `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
 
 ## Nodes
 
@@ -173,6 +187,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |
+| `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis version 6 or above). Don't define it for Redis < 6 compatibility |
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
@@ -189,7 +204,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_BASIC_AUTH_USER`<br>/`_FILE` | String | - | The name of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_PASSWORD`<br>/`_FILE` | String | - | The password of the n8n user for basic authentication. |
 | `N8N_BASIC_AUTH_HASH`<br>/`_FILE` | Boolean | `false` | Whether to hash the basic authentication password. |
-| `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the function node (false) or not (true). |
+| `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the Code node (false) or not (true). |
 | `N8N_JWT_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate JWT authentication for editor and REST-API access. |
 | `N8N_JWT_AUTH_HEADER`<br>/`_FILE` | String | - | The request header containing a signed JWT. |
 | `N8N_JWT_AUTH_HEADER_VALUE_PREFIX`<br>/`_FILE` | String | - | Optional. The request header value prefix to strip. |
@@ -213,3 +228,13 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
 | `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | Whether to show onboarding tips when creating a new workflow (true) or not (false). |
 | `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
+
+## License
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_HIDE_USAGE_PAGE` | boolean | `false` | Hide the usage and plans page in the app. |
+| `N8N_LICENSE_ACTIVATION_KEY` | String | `''` | Activation key to initialize license. Not applicable if the n8n instance was already activated. |
+| `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Whether autorenew for licenses is enabled (true) or not (false). |
+| `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | How many seconds before expiry a license should automatically renew. |
+| `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |

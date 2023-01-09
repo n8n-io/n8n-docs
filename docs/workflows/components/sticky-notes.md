@@ -8,7 +8,7 @@ Sticky Notes allow you to annotate and comment on your workflows.
 
 n8n recommends using Sticky Notes heavily, especially on template workflows, to help other users understand your workflow.
 
-![Screenshot of a basic workflow with an example sticky note](/_images/workflows/stickies/example-sticky-note.png)
+![Screenshot of a basic workflow with an example sticky note](/_images/workflows/components/stickies/example-sticky-note.png)
 
 ## Create a Sticky Note
 

@@ -4,6 +4,10 @@ description: Configure self-hosted n8n for user management
 
 # Configure self-hosted n8n for user management
 
+!!! info "Feature availability"
+		* Not available on Desktop.
+		* Requires a paid plan.
+
 User management in n8n allows you to invite people to work in your n8n instance. 
 
 This document describes how to configure your n8n instance to support user management, and the steps to start inviting users.
@@ -25,7 +29,12 @@ There are three stages to set up user management in n8n:
 
 ### Step one: SMTP
 
-You need an SMTP server for user management to send invites and password resets. Get the following information from your SMTP provider:
+n8n recommends setting up an SMTP server, for user invites and password resets. 
+
+!!! note "Optional from 0.210.1"
+	From version 0.210.1 onward, this step is optional. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
+
+Get the following information from your SMTP provider:
 
 * Server name
 * SMTP username

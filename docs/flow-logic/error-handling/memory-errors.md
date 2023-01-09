@@ -17,7 +17,7 @@ Such problems occur when a workflow execution requires more memory than availabl
 - Amount of [JSON data](/data/data-structure/).
 - Size of binary data.
 - Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Function node can increase memory consumption significantly.
+- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Code node can increase memory consumption significantly.
 - Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
 - Additional workflows running at the same time.
 

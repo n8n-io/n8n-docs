@@ -29,7 +29,12 @@ There are three stages to set up user management in n8n:
 
 ### Step one: SMTP
 
-You need an SMTP server for user management to send invites and password resets. Get the following information from your SMTP provider:
+n8n recommends setting up an SMTP server, for user invites and password resets. 
+
+!!! note "Optional from 0.210.1"
+	From version 0.210.1 onward, this step is optional. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
+
+Get the following information from your SMTP provider:
 
 * Server name
 * SMTP username

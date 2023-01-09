@@ -1,6 +1,6 @@
 # Release notes
 
-## n8n@0.210.1
+## n8n@0.210.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-01-09

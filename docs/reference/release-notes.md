@@ -2,6 +2,34 @@
 
 ## n8n@0.210.1
 
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-09
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Typeahead for expressions
+
+When using [expressions](/code-examples/expressions/), n8n will now offer you suggestions as you type.
+
+!["Animated GIF showing typeahead in action"](/_images/reference/release-notes/0.210.2-expressions-type-ahead.gif)
+
+</div>
+
+### Bug fixes
+
+* Core: fix crash of manual workflow executions for unsaved workflows.
+* Editor: omit pairedItem from proxy completions.
+* Editor: prevent refresh on submit in credential edit modal.
+* Google Sheets Node: fix for auto-range detection.
+* Read Binary File Node: don't crash the execution when the source file doesn't exist.
+* Remove anonymous ID from tracking calls.
+* Stop OOM crashes in Execution Data pruning.
+* Update links for user management and SMTP help.
+
+## n8n@0.210.1
+
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.0...n8n@0.210.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-01-05
 

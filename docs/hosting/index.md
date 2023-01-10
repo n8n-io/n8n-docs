@@ -13,7 +13,7 @@
 
 	Learn how to configure n8n with environment variables.
 
-	[:octicons-arrow-right-24: Configuration](/hosting/configuration/)
+	[:octicons-arrow-right-24: Configuration](/hosting/environment-variables/)
 
 - __Users and authentication__
 

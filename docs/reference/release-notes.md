@@ -1,5 +1,7 @@
 # Release notes
 
+<div id="02102" markdown>
+
 ## n8n@0.210.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210.2){:target=_blank .external-link} for this version.<br />
@@ -27,6 +29,8 @@ When using [expressions](/code-examples/expressions/), n8n will now offer you su
 * Remove anonymous ID from tracking calls.
 * Stop OOM crashes in Execution Data pruning.
 * Update links for user management and SMTP help.
+
+</div>
 
 ## n8n@0.210.1
 

@@ -225,3 +225,53 @@ Use multiselect list to get the first and last names and create new lists contai
 ```
 
 
+
+### An alternative to arrow functions
+
+You can't use arrow functions in expressions. This means you can't easily do things like looking for an item with a specific key.
+
+For example, given the below input data, you could do a search like "find the item with the name Lenovo and tell me their category ID."
+
+```js
+return[
+  {
+    "num_categories": "0",
+    "num_products": "45",
+    "category_id": 5529735,
+    "parent_id": 1407340,
+    "pos_enabled": 1,
+    "pos_favorite": 0,
+    "name": "HP",
+    "description": "",
+    "image": ""
+  },
+  {
+    "num_categories": "0",
+    "num_products": "86",
+    "category_id": 5529740,
+    "parent_id": 1407340,
+    "pos_enabled": 1,
+    "pos_favorite": 0,
+    "name": "Lenovo",
+    "description": "",
+    "image": ""
+  }
+]
+```
+
+A standard JavaScript arrow function doesn't work:
+
+```js
+/* 
+This expression searches for an item with a key "Lenovo"
+in the output of the Code node
+It doesn't work in the expressions editor 
+*/
+{{ $("Code").all().filter((item) => item.json.name === 'Lenovo') }}
+```
+
+JMESPath provides a way round this:
+
+```js
+{{ $jmespath($("Code").all(), "[?json.name=='Lenovo'].json.category_id") }}
+```

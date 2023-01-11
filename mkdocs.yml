@@ -43,13 +43,10 @@ markdown_extensions:
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
-  - pymdownx.superfences
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html
-  - pymdownx.details
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
+  - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -83,6 +80,9 @@ plugins:
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+  - tags:
+      enabled: true
 nav:
   - Using n8n:
     - Welcome: index.md

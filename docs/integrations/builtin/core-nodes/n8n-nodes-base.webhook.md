@@ -51,7 +51,9 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 - [**Response Headers**](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) — This option allows you to specify additional headers in the Webhook response.
 - **Raw Body** — This option is used to specify when the Webhook node will receive data in a RAW format, such as JSON or XML.
 - **Binary Data** — This option is available only when the Webhook node is set to receive POST requests. Setting this to ‘true' lets the Webhook node know that it will receive binary data (such as an image/audio). You can use this option when you expect to receive a file via your Webhook node.
-
+- **No Response Body** - This option is used to specify if any body data is sent in the response.
+- **Ignore Bots** - This option is used to ignore requests from bots like link previewers and web crawlers.
+- 
 **Conditional Parameters:** The Webhook node also supports several other parameters, that are used only in certain configurations.
 
 - **Response Data:** This option is available only when set to respond when ‘Last node finishes'. It allows you to choose which data to return:

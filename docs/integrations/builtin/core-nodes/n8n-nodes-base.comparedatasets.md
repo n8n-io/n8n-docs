@@ -12,12 +12,13 @@ The Compare Datasets node helps you compare data from two input streams.
 	* **Use a Mix of Versions**
 	* **Include Both Versions**
 
-## Understand comparison
+## Understand item comparison
 
 Item comparison is a two stage process:
 
-1. n8n checks if the fields you selected to compare match across both inputs.
+1. n8n checks if the values of the fields you selected to compare match across both inputs.
 2. If the fields to compare match, n8n then compares all fields within the items, to determine if the items are the same or different.
+
 
 ## Options
 

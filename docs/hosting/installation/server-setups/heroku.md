@@ -56,3 +56,7 @@ The `heroku.yml` file defines the application you want to create on Heroku. It c
 
 * `setup` > `addons` defines the Heroku addons to use. In this case, the PostgreSQL database addon.
 * The `build` section defines how Heroku builds the application. In this case it uses the Docker buildpack to build a `web` service based on the supplied `Dockerfile`.
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

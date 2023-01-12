@@ -111,6 +111,8 @@ n8n needs some environment variables set to pass to the application running in t
 
 The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
 
+Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
+
 ## Deployments
 
 The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
@@ -163,3 +165,7 @@ If you need to delete the setup, you can remove the resources created by the man
 ```shell
 kubectl delete -f .
 ```
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

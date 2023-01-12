@@ -31,16 +31,16 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httpRequestNode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
-	Connect an *HTML Extract node* to the HTTP Request node and configure the former's parameters:
+	Connect an HTML Extract node to the HTTP Request node and configure the former's parameters:
 
-	- Source Data: JSON
-	- JSON Property: data
-	- Extraction Values:
-		- Key: event
-		- CSS Selector: .js-link-target
-		- Return Value: HTML
+	* Source Data: JSON
+	* JSON Property: data
+	* Extraction Values:  
+		* Key: event
+		* CSS Selector: .js-link-target
+		* Return Value: HTML
 
-		You can add more values to extract more data.
+	You can add more values to extract more data.
 
 	The result should look like this:
 

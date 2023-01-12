@@ -1,0 +1,68 @@
+name: Publish new n8n-docs image
+
+on:
+  push:
+    tags:
+    - '*'
+
+env:
+  GCR_PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  IMAGE: ${{ secrets.DOCKER_IMAGE_NAME }}
+  DOCKER_ORGA: ${{ secrets.DOCKER_PROJECT }}
+  DOCKER_BUILDKIT: "1"
+
+jobs:
+  build-tag:
+    name: Build and push docker image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build the Docker image
+      run: |-
+        docker build --tag "gcr.io/${GCR_PROJECT_ID}/${IMAGE}:${GITHUB_REF_NAME}" \
+          --build-arg TAG="${GITHUB_REF_NAME}" \
+          .
+
+    - name: Authenticate to Google Cloud
+      id: auth
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GKE_SA_KEY }}'
+
+    - name: Setup gcloud CLI
+      uses: google-github-actions/setup-gcloud@v1
+
+    - name: Configure Docker to use the gcloud command-line tool
+      run: |-
+        gcloud --quiet auth configure-docker
+
+    - name: Push the Docker image to Google Container Registry
+      run: |-
+        docker push "gcr.io/${GCR_PROJECT_ID}/${IMAGE}:${GITHUB_REF_NAME}"
+
+    - name: Tag image for docker hub
+      run: |-
+        docker tag "gcr.io/${GCR_PROJECT_ID}/${IMAGE}:${GITHUB_REF_NAME}" "docker.io/${DOCKER_ORGA}/${IMAGE}:${GITHUB_REF_NAME}"
+
+    - name: Log in docker hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_TOKEN_NAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN_VALUE }}
+
+    - name: Push to docker hub
+      run: |-
+        docker push "docker.io/${DOCKER_ORGA}/${IMAGE}:${GITHUB_REF_NAME}"
+
+    - name: Notify slack
+      if: failure()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: voxmedia/github-action-slack-notify-build@v1.1.1
+      with:
+        channel: devops
+        status: FAILED
+        color: danger

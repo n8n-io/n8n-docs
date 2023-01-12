@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  n8n_docs:
+    build:
+      context: .
+    command: mkdocs serve --dev-addr=0.0.0.0:8005
+    volumes:
+      - .:/app/n8n-docs
+    environment:
+      PYTHONPATH: .
+      N8N_DOCS_SERVICE: 'N8N_DOCS_SERVICE'
+    ports:
+      - '8005:8005'
+   

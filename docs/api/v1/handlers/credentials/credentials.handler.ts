@@ -1,9 +1,10 @@
-import express = require('express');
-import { CredentialsHelper } from '../../../../CredentialsHelper';
-import { CredentialTypes } from '../../../../CredentialTypes';
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+import express from 'express';
 
-import { CredentialsEntity } from '../../../../databases/entities/CredentialsEntity';
-import { CredentialRequest } from '../../../../requests';
+import { CredentialsHelper } from '@/CredentialsHelper';
+import { CredentialTypes } from '@/CredentialTypes';
+import { CredentialsEntity } from '@db/entities/CredentialsEntity';
+import { CredentialRequest } from '@/requests';
 import { CredentialTypeRequest } from '../../../types';
 import { authorize } from '../../shared/middlewares/global.middleware';
 import { validCredentialsProperties, validCredentialType } from './credentials.middleware';
@@ -29,7 +30,7 @@ export = {
 			res: express.Response,
 		): Promise<express.Response<Partial<CredentialsEntity>>> => {
 			try {
-				const newCredential = await createCredential(req.body as Partial<CredentialsEntity>);
+				const newCredential = await createCredential(req.body);
 
 				const encryptedData = await encryptCredential(newCredential);
 
@@ -38,7 +39,7 @@ export = {
 				const savedCredential = await saveCredential(newCredential, req.user, encryptedData);
 
 				// LoggerProxy.verbose('New credential created', {
-				// 	credentialId: newCredential.id,
+				// 	credentialsId: newCredential.id,
 				// 	ownerId: req.user.id,
 				// });
 
@@ -56,7 +57,7 @@ export = {
 			res: express.Response,
 		): Promise<express.Response<Partial<CredentialsEntity>>> => {
 			const { id: credentialId } = req.params;
-			let credentials: CredentialsEntity | undefined;
+			let credential: CredentialsEntity | undefined;
 
 			if (req.user.globalRole.name !== 'owner') {
 				const shared = await getSharedCredentials(req.user.id, credentialId, [
@@ -65,27 +66,18 @@ export = {
 				]);
 
 				if (shared?.role.name === 'owner') {
-					credentials = shared.credentials;
-				} else {
-					// LoggerProxy.info('Attempt to delete credential blocked due to lack of permissions', {
-					// 	credentialId,
-					// 	userId: req.user.id,
-					// });
+					credential = shared.credentials;
 				}
 			} else {
-				credentials = (await getCredentials(credentialId)) as CredentialsEntity;
+				credential = (await getCredentials(credentialId)) as CredentialsEntity;
 			}
 
-			if (!credentials) {
-				return res.status(404).json({
-					message: 'Not Found',
-				});
+			if (!credential) {
+				return res.status(404).json({ message: 'Not Found' });
 			}
 
-			await removeCredential(credentials);
-			credentials.id = Number(credentialId);
-
-			return res.json(sanitizeCredentials(credentials));
+			await removeCredential(credential);
+			return res.json(sanitizeCredentials(credential));
 		},
 	],
 
@@ -97,14 +89,12 @@ export = {
 			try {
 				CredentialTypes().getByName(credentialTypeName);
 			} catch (error) {
-				return res.status(404).json({
-					message: 'Not Found',
-				});
+				return res.status(404).json({ message: 'Not Found' });
 			}
 
-			let schema = new CredentialsHelper('').getCredentialsProperties(credentialTypeName);
-
-			schema = schema.filter((nodeProperty) => nodeProperty.type !== 'hidden');
+			const schema = new CredentialsHelper('')
+				.getCredentialsProperties(credentialTypeName)
+				.filter((property) => property.type !== 'hidden');
 
 			return res.json(toJsonSchema(schema));
 		},

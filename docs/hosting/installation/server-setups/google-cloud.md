@@ -170,3 +170,7 @@ Remove the resources created by the manifests with the following command:
 ```shell
 kubectl delete -f .
 ```
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

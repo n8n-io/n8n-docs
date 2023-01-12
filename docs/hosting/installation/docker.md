@@ -166,3 +166,7 @@ docker run -it --rm \
 	n8nio/n8n \
 	n8n start --tunnel
 ```
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

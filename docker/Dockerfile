@@ -13,6 +13,16 @@ COPY . /app/n8n-docs
 WORKDIR /app/n8n-docs
 
 RUN pip install --no-cache-dir -r requirements.txt
+
+RUN mkdir -p /app/n8n-docs/docs/integrations/builtin/all-nodes/
+RUN mkdir -p /app/n8n-docs/docs/_images/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/integrations/builtin/app-nodes/* /app/n8n-docs/docs/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/integrations/builtin/core-nodes/* /app/n8n-docs/docs/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/integrations/builtin/trigger-nodes/* /app/n8n-docs/docs/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/_images/integrations/builtin/app-nodes/* /app/n8n-docs/docs/_images/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/integrations/builtin/core-nodes/* /app/n8n-docs/docs/_images/integrations/builtin/all-nodes/
+RUN cp -r /app/n8n-docs/docs/integrations/builtin/trigger-nodes/* /app/n8n-docs/docs/_images/integrations/builtin/all-nodes/
+
 RUN mkdocs build
 
 COPY docker/docker-entrypoint.sh /usr/local/bin/

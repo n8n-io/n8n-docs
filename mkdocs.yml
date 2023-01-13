@@ -1,5 +1,5 @@
 site_name: Automation Builder
-site_url: http://docs-new.deepopinion.ai/automation-builder
+site_url: https://docs-new.deepopinion.ai/
 site_description: Documentation for automation Builder, a automation flow platform.
 theme:
   name: material
@@ -163,6 +163,7 @@ nav:
     - integrations/index.md
     - Built-in nodes:
       - integrations/builtin/index.md
+      - All Nodes: integrations/builtin/all-nodes/
       - Core nodes: integrations/builtin/core-nodes/
       - App nodes: integrations/builtin/app-nodes/
       - Trigger nodes: integrations/builtin/trigger-nodes/

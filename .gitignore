@@ -12,3 +12,7 @@ yarn.lock
 venv
 env
 site
+
+
+docs/integrations/builtin/all-nodes
+docs/_images/integrations/builtin/all-nodes

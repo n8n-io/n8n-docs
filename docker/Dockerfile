@@ -1,22 +1,26 @@
-FROM python:3.8-slim
+# Builder image to build docs
+FROM python:3.8-slim AS builder
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
-# Create an unprivileged user to run studio-admin as
-RUN useradd --system --uid 1001 --gid 0 --home-dir /app/n8n-docs --shell /bin/bash n8n-docs
 
 RUN apt-get update --fix-missing \
 	&& apt-get install -y  build-essential poppler-utils \
 	&& apt-get clean
 
 
+COPY . /app/n8n-docs
 WORKDIR /app/n8n-docs
 
-COPY requirements.txt /app/n8n-docs
 RUN pip install --no-cache-dir -r requirements.txt
+RUN mkdocs build
 
-COPY . /app/
-
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT /usr/local/bin/docker-entrypoint.sh
 
+# Final image to serve genereated docs
+FROM nginx:1.23.3 as final
+
+COPY --from=builder /app/n8n-docs/site /app/site
+COPY docker/nginx/default.conf /etc/nginx/conf.d/
+EXPOSE 8080

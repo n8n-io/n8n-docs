@@ -1,0 +1,53 @@
+name: Update helm-chart for staging
+
+on:
+  push:
+    # branches: [ main ]
+    tags:
+      # - "[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+-rc.[0-9]+"
+env:
+  CHART_NAME: "n8n-docs"
+
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Chart Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: deepopinion/helm-chart-n8n-docs
+          ssh-key: '${{ secrets.HELM_CHART_SSH_KEY }}'
+          fetch-depth: 0
+          persist-credentials: true
+          ref: staging
+          path: helm-chart
+
+      - name: Sed appVersion in Chart.yaml
+        run: |
+          set -x
+          sed -i "helm-chart/${CHART_NAME}/Chart.yaml" -e "s|appVersion: .*|appVersion: \"${GITHUB_REF_NAME}\"|"
+          grep appVersion "helm-chart/${CHART_NAME}/Chart.yaml"
+
+      - name: Add SSH key
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          set -x 
+          mkdir -p /home/runner/.ssh
+          ssh-keyscan github.com >> /home/runner/.ssh/known_hosts
+          echo "${{ secrets.HELM_CHART_SSH_KEY }}" > /home/runner/.ssh/github_actions
+          chmod 600 /home/runner/.ssh/github_actions
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add /home/runner/.ssh/github_actions
+
+      - name: Commit and push updated helm chart
+        run: |
+          git config --global user.email "bot@deepopinion.ai"
+          git config --global user.name "DeepOpinion Bot"
+          cd helm-chart
+          git diff
+          git add .
+          git status
+          git commit -m "(BOT) update ${CHART_NAME} helm chart, Version ${GITHUB_REF_NAME}" "${CHART_NAME}/Chart.yaml"
+          git push

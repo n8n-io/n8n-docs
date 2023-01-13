@@ -3,7 +3,7 @@
 [SyncroMSP](https://syncromsp.com/) is a cloud-based remote monitoring and management platform (RMM).
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/syncroMsp/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/syncromsp/).
 
 
 ## Basic Operations

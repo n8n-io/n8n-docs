@@ -3,7 +3,7 @@
 [Philips Hue](https://www.philips-hue.com/) is a line of smart color-changing LED lamps and bulbs that can be controlled wirelessly.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/philipsHue/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/philipshue/).
 
 
 ## Basic Operations
@@ -31,7 +31,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Philips Hue node (update: light)
 
-1. First of all, you'll have to enter credentials for the Philips Hue node. You can find out how to do that [here](/integrations/builtin/credentials/philipsHue/).
+1. First of all, you'll have to enter credentials for the Philips Hue node. You can find out how to do that [here](/integrations/builtin/credentials/philipshue/).
 2. Enter the light id in the ***Light ID*** field.
 3. Click on ***Add Field*** and select 'Brightness' from the dropdown list.
 4. Enter a value between 1 and 254 for the brightness in the ***Brightness*** field.

@@ -3,7 +3,7 @@
 [APITemplate.io](https://apitemplate.io) allows you to auto-generate images and PDF documents.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/apiTemplateIo/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/apitemplateio/).
 
 
 ## Basic Operations
@@ -50,7 +50,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will generate an invoice using the information from the previous node. Create an invoice template in APITemplate.io, if you don't already have one.
 
-1. First of all, you'll have to enter credentials for the APITemplate.io node. You can find out how to do that [here](/integrations/builtin/credentials/apiTemplateIo/).
+1. First of all, you'll have to enter credentials for the APITemplate.io node. You can find out how to do that [here](/integrations/builtin/credentials/apitemplateio/).
 2. Select 'PDF' from the ***Resource*** dropdown list.
 3. Select your invoice template from the ***Template ID*** dropdown list.
 4. Toggle ***JSON Parameters*** to `true`. By setting this option to true, the node allows us to write custom JSON data.

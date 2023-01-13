@@ -3,7 +3,7 @@
 [Help Scout](https://www.helpscout.com/) is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/helpScout/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/helpscout/).
 
 
 ## Basic Operations
@@ -42,7 +42,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Help Scout node
 
-1. First of all, you'll have to enter credentials for the Help Scout node. You can find out how to do that [here](/integrations/builtin/credentials/helpScout/).
+1. First of all, you'll have to enter credentials for the Help Scout node. You can find out how to do that [here](/integrations/builtin/credentials/helpscout/).
 2. Select the 'Mailbox' option from the *Resource* dropdown list.
 3. Select the 'Get All' option from the *Operation* dropdown list.
 4. Click on *Execute Node* to run the workflow.

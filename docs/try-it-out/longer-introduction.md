@@ -26,7 +26,7 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 Create a blank workflow:
 
-1. Select **Workflows** <span class="inline-image">![Add node icon](/_images/try-it-out/workflows-menu-button.png)</span>, then select **New**. n8n opens the new workflow.
+1. On the **Workflows** list, select **Add Workflow**.
 2. Rename the workflow to something meaningful, such as **Quickstart**: select the current workflow name, and replace it.
 
 ## Step three: Add a trigger node
@@ -38,12 +38,12 @@ n8n provides two ways to start a workflow:
 
 For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/). This allows you to run the workflow on a schedule:
 
-1. Select **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span>.
-2. Search for **Cron**. n8n shows a list of nodes that match the search.
-3. Select **Cron** to add the node to the canvas. n8n opens the node.
-4. Select **Add Cron Time**.
-5. For **Mode**, select **Every Week**.
-6. Enter a time and day. For this example, enter `09` in **Hour**, `0` in **Minute**, and `Monday` in **Weekday**.
+1. Select **Add first step**.
+2. Search for **Schedule**. n8n shows a list of nodes that match the search.
+3. Select **Schedule Trigger** to add the node to the canvas. n8n opens the node.
+4. For **Trigger Interval**, select **Weeks**.
+5. For **Weeks Between Triggers**, enter `1`.
+6. Enter a time and day. For this example, select **9am** in **Hour**, enter `0` in **Minute**, and select **Monday** in **Trigger on Weekdays**.
 7. Close the node details view to return to the canvas.
 
 

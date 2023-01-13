@@ -1,28 +1,31 @@
 import { parse } from 'flatted';
-import { In, Not, ObjectLiteral, LessThan, IsNull } from 'typeorm';
-import { Db, IExecutionFlattedDb, IExecutionResponseApi } from '../../../..';
-import { ExecutionStatus } from '../../../types';
+import { In, Not, Raw, LessThan, IsNull, FindOperator } from 'typeorm';
+
+import * as Db from '@/Db';
+import type { IExecutionFlattedDb, IExecutionResponseApi } from '@/Interfaces';
+import { ExecutionEntity } from '@db/entities/ExecutionEntity';
+import { ExecutionStatus } from '@/PublicApi/types';
 
 function prepareExecutionData(
 	execution: IExecutionFlattedDb | undefined,
 ): IExecutionResponseApi | undefined {
-	if (execution === undefined) {
-		return undefined;
-	}
+	if (!execution) return undefined;
 
-	if (!execution.data) {
-		return execution;
-	}
+	// @ts-ignore
+	if (!execution.data) return execution;
 
 	return {
 		...execution,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-		data: parse(execution.data),
+		data: parse(execution.data) as object,
 	};
 }
 
-function getStatusCondition(status: ExecutionStatus): ObjectLiteral {
-	const condition: ObjectLiteral = {};
+function getStatusCondition(status: ExecutionStatus) {
+	const condition: {
+		finished?: boolean;
+		waitTill?: FindOperator<ExecutionEntity>;
+		stoppedAt?: FindOperator<ExecutionEntity>;
+	} = {};
 
 	if (status === 'success') {
 		condition.finished = true;
@@ -32,11 +35,12 @@ function getStatusCondition(status: ExecutionStatus): ObjectLiteral {
 		condition.stoppedAt = Not(IsNull());
 		condition.finished = false;
 	}
+
 	return condition;
 }
 
 function getExecutionSelectableProperties(includeData?: boolean): Array<keyof IExecutionFlattedDb> {
-	const returnData: Array<keyof IExecutionFlattedDb> = [
+	const selectFields: Array<keyof IExecutionFlattedDb> = [
 		'id',
 		'mode',
 		'retryOf',
@@ -47,41 +51,62 @@ function getExecutionSelectableProperties(includeData?: boolean): Array<keyof IE
 		'waitTill',
 		'finished',
 	];
-	if (includeData) {
-		returnData.push('data');
-	}
-	return returnData;
+
+	if (includeData) selectFields.push('data');
+
+	return selectFields;
 }
 
-export async function getExecutions(data: {
+export async function getExecutions(params: {
 	limit: number;
 	includeData?: boolean;
-	lastId?: number;
-	workflowIds?: number[];
+	lastId?: string;
+	workflowIds?: string[];
 	status?: ExecutionStatus;
-	excludedExecutionsIds?: number[];
+	excludedExecutionsIds?: string[];
 }): Promise<IExecutionResponseApi[]> {
+	type WhereClause = Record<
+		string,
+		string | boolean | FindOperator<string | Partial<ExecutionEntity>>
+	>;
+
+	let where: WhereClause = {};
+
+	if (params.lastId && params.excludedExecutionsIds?.length) {
+		where.id = Raw((id) => `${id} < :lastId AND ${id} NOT IN (:...excludedExecutionsIds)`, {
+			lastId: params.lastId,
+			excludedExecutionsIds: params.excludedExecutionsIds,
+		});
+	} else if (params.lastId) {
+		where.id = LessThan(params.lastId);
+	} else if (params.excludedExecutionsIds?.length) {
+		where.id = Not(In(params.excludedExecutionsIds));
+	}
+
+	if (params.status) {
+		where = { ...where, ...getStatusCondition(params.status) };
+	}
+
+	if (params.workflowIds) {
+		where = { ...where, workflowId: In(params.workflowIds) };
+	}
+
 	const executions = await Db.collections.Execution.find({
-		select: getExecutionSelectableProperties(data.includeData),
-		where: {
-			...(data.lastId && { id: LessThan(data.lastId) }),
-			...(data.status && { ...getStatusCondition(data.status) }),
-			...(data.workflowIds && { workflowId: In(data.workflowIds.map(String)) }),
-			...(data.excludedExecutionsIds && { id: Not(In(data.excludedExecutionsIds)) }),
-		},
+		select: getExecutionSelectableProperties(params.includeData),
+		where,
 		order: { id: 'DESC' },
-		take: data.limit,
+		take: params.limit,
 	});
 
-	return executions.map((execution) => prepareExecutionData(execution)) as IExecutionResponseApi[];
+	return executions.map(prepareExecutionData) as IExecutionResponseApi[];
 }
 
 export async function getExecutionsCount(data: {
 	limit: number;
-	lastId?: number;
-	workflowIds?: number[];
+	lastId?: string;
+	workflowIds?: string[];
 	status?: ExecutionStatus;
-	excludedWorkflowIds?: number[];
+	excludedWorkflowIds?: string[];
 }): Promise<number> {
 	const executions = await Db.collections.Execution.count({
 		where: {
@@ -92,24 +117,29 @@ export async function getExecutionsCount(data: {
 		},
 		take: data.limit,
 	});
+
 	return executions;
 }
 
 export async function getExecutionInWorkflows(
-	id: number,
-	workflows: number[],
+	id: string,
+	workflowIds: string[],
 	includeData?: boolean,
 ): Promise<IExecutionResponseApi | undefined> {
 	const execution = await Db.collections.Execution.findOne({
 		select: getExecutionSelectableProperties(includeData),
 		where: {
 			id,
-			workflowId: In(workflows),
+			workflowId: In(workflowIds),
 		},
 	});
+
 	return prepareExecutionData(execution);
 }
 
-export async function deleteExecution(execution: IExecutionResponseApi | undefined): Promise<void> {
-	await Db.collections.Execution.remove(execution as IExecutionFlattedDb);
+export async function deleteExecution(
+	execution: IExecutionResponseApi | undefined,
+): Promise<IExecutionFlattedDb> {
+	// @ts-ignore
+	return Db.collections.Execution.remove(execution);
 }

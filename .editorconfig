@@ -11,5 +11,9 @@ trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
 
+[mkdocs.yml]
+indent_style = space
+indent_size = 2
+
 [*.ts]
 quote_type = single

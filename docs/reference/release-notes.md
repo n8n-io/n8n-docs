@@ -1,5 +1,494 @@
 # Release notes
 
+<div id="02102" markdown>
+
+## n8n@0.210.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-09
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Typeahead for expressions
+
+When using [expressions](/code-examples/expressions/), n8n will now offer you suggestions as you type.
+
+!["Animated GIF showing typeahead in action"](/_images/reference/release-notes/0.210.2-expressions-type-ahead.gif)
+
+</div>
+
+### Bug fixes
+
+* Core: fix crash of manual workflow executions for unsaved workflows.
+* Editor: omit pairedItem from proxy completions.
+* Editor: prevent refresh on submit in credential edit modal.
+* Google Sheets Node: fix for auto-range detection.
+* Read Binary File Node: don't crash the execution when the source file doesn't exist.
+* Remove anonymous ID from tracking calls.
+* Stop OOM crashes in Execution Data pruning.
+* Update links for user management and SMTP help.
+
+</div>
+
+## n8n@0.210.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.0...n8n@0.210.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-05
+
+This is a bug fix release. It also contains a new feature to support user management without SMTP set up.
+
+### New features
+
+#### Invite link for users on self-hosted n8n
+
+In earlier versions of self-hosted n8n, you needed SMTP set up on your n8n instance for user management to work. User management required SMTP to sent invitation emails.
+
+0.210.1 introduces an invite link, which you can copy and send to users manually. n8n still recommends setting up SMTP, as this is needed for password resets.
+
+### Bug fixes
+
+* Google Sheets node: fix an issue that was causing append and update operations to fail for numeric values.
+* Resolve issues with external hooks.
+
+## n8n@0.210.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.4...n8n@0.210.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-05
+
+This release introduces two major new features: log streaming and security audits. It also contains node enhancements, bug fixes, and performance improvements.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Log streaming
+
+This release introduces [log streaming](/log-streaming/) for users on Enterprise self-hosted plans and custom Cloud plans. Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Security audit
+
+This release adds a [security audit](/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+
+</div>
+
+* Core: add support for Redis 6+ ACLs system using username in queue mode. Add the `QUEUE_BULL_REDIS_USERNAME` environment variable.
+
+### Node enhancements
+
+* Compare Datasets node: add an option for fuzzy compare.
+
+### Bug fixes
+
+* Apply credential overwrites recursively. This ensures that overwrites defined for a parent credential type also apply to all credentials extending it.
+* Core: enable full manual execution of a workflow using the error trigger.
+* Core: fix OAuth credential creation using the API.
+* Core: fix an issue with workflow lastUpdated field.
+* Editor: clear node creator and scrim on workspace reset.
+* Editor: fix an infinite loop while loading executions that aren't on the current executions list.
+* Editor: make node title non-editable in executions view.
+* Editor: prevent scrim on executable triggers.
+* Editor: support tabbing away from inline expression editor.
+* Fix executions bulk deletion.
+* Google Sheets Node: fix exception when no **Values to Send** are set.
+* Respond to Webhook Node: fix issue that caused the content-type header to be overwritten.
+* Slack Node: add missing channels:read OAuth2 scope.
+
+### Performance improvements
+
+* Lazy-load public API dependencies to reduce baseline memory usage.
+* Lazy-load queue mode and analytics dependencies.
+
+### Contributors
+
+[Thomas S.](https://github.com/intel44){:target=_blank .external-link}
+
+## n8n@0.209.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.3...n8n@0.209.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-28
+
+This is primarily a bug fix release.
+
+### Bug fixes
+
+* Editor: add sticky note without manual trigger.
+* Editor: display default missing value in table view as undefined.
+* Editor: fix displaying of some trigger nodes in the creator panel.
+* Editor: fix trigger node type identification on add to canvas.
+* Editor: add the usage and plans page to Desktop.
+
+### New features
+
+Editor: pressing **=** in an empty parameter input switches to expression mode.
+
+## n8n@0.209.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.2...n8n@0.209.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-27
+
+This is primarily a bug fix release.
+
+### Bug fixes
+
+* Core: don't send credentials to browser console.
+* Core: permit a workflow user who isn't the owner to use their own credentials.
+* Editor: fix for loading executions that aren't on the current executions list.
+* Editor: make the tertiary button on the **Usage** page transparent.
+* Editor: update credential owner warning when sharing.
+
+### New features
+
+Editor: Improve UX for brace completion in the inline expressions editor.
+
+### Node enhancements
+
+Webhook node: when test the node by selecting **Listen For Test Event** then dispatching a call to the webhook, n8n now only runs the Webhook node. Previously, n8n ran the entire workflow. You can still test the full workflow by selecting **Execute Workflow**, then dispatching a test call. 
+
+## n8n@0.209.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.1...n8n@0.209.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-23
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: ensure full tree on expression editor parse. This resolves an issue with the expressions editor cutting off results.
+* Fix automatic credential selection when credentials are shared.
+
+### Performance improvements
+
+Improvements to the workflows list performance.
+
+## n8n@0.209.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.209.0...n8n@0.209.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-22
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: fix for executions preview scroll load bug and wrong execution being displayed.
+* Editor: force parse on long expressions.
+* Editor: restore trigger to the nodes panel.
+* Nodes: AWS DynamoDB Node Fix issue pagination and simplify issue.
+* Nodes: fix DynamoDB node type issues.
+* Resolve an issue with credentials and workflows not being matched correctly due to incorrect typing.
+* Restore missing tags when retrieving a workflow.
+
+### Contributors
+
+[Nathan Apter](https://github.com/napter){:target=_blank .external-link}
+
+## n8n@0.209.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.1...n8n@0.209.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-21
+
+This release introduces workflow sharing, and changes to licensing and payment plans.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Workflow sharing
+
+This release introduces workflow sharing for users on some plans. With workflow sharing, users can invite other users on the same n8n instance to use and edit their workflows. Refer to [Workflow sharing](/workflows/sharing/) for details.
+
+</div>
+
+
+### Bug fixes
+
+* Editor: Correctly display trigger nodes without actions and with related regular node in the "On App Events" category.
+* Fix stickies resize.
+* Hide trigger tooltip for nodes with static test output.
+* Keep expression when dropping mapped value.
+* Prevent keyboard shortcuts in expression editor modal.
+* Redirect home to workflows always.
+* Update mapping GIFs.
+* Upgrade amqplib to address CVE-2022-0686.
+* View option for binary-data shouldn't download the file on Chrome/Edge.
+
+
+
+## n8n@0.208.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.208.0...n8n@0.208.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-19
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Always retain original errors in the error chain on NodeOperationError.
+* BinaryDataManager should store metadata when saving from buffer.
+* Editor: fix for wrong execution data displayed in executions preview.
+* Pick up credential test functions from versioned nodes.
+
+## n8n@0.208.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.1...n8n@0.208.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-16
+
+This release introduces a new inline expressions editor, and a new node: OpenAI. It also contains updates and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Inline expression editor
+
+You can now quickly write expressions inline in a node parameter. You can still choose to open the full expressions editor.
+
+!["Screenshot of the inline expressions editors"](/_images/reference/release-notes/0.208.0-inline-expressions.png)
+
+</div>
+
+* Add workflow sharing telemetry.
+* Core: allow for hiding page usage with environment variables (for upcoming feature)
+* Editor: update UI copy for user management setup when sharing is disabled.
+* Editor: hide credentials password values.
+* Editor: set **All workflows** view as default view on the **Workflows** page.
+* Editor: update UI copy for workflow overwriting message.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Open AI node
+
+This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for details.
+
+</div>
+
+### Node enhancements
+
+Send Email node: add support for a "Reply to" email address.
+
+### Bug fixes
+
+* Core: fix for Google and Microsoft generic OAuth2 credentials.
+* Core: fix HTTP Digest Auth for responses without an opaque parameter.
+* Disqus node: fix thread parameter for "Get All Threads" operation.
+* Don't crash the server when Telemetry is blocked via DNS.
+* Editor: allow mapping onto expression editor with selection range.
+* Editor: don't show actions dialog for actionless triggers when selected via keyboard.
+* Editor: fix an issue where some node actions wouldn't select default parameters correctly.
+* Editor: fix typo in retry-button option "Retry with original workflow".
+* Update permission for showing workflow caller policy.
+* Update pnpm-lock to fix build.
+
+### Contributors
+
+[Daemonxiao](https://github.com/Daemonxiao){:target=_blank .external-link}  
+[Kirill](https://github.com/kirill-chertkov){:target=_blank .external-link}  
+[Ricardo Duarte](https://github.com/rduarte){:target=_blank .external-link}  
+
+
+## n8n@0.207.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.207.0...n8n@0.207.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-13
+
+This is a bug fix release. It resolves an issue with undo.
+
+## n8n@0.207.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.206.1...n8n@0.207.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-12
+
+This release adds support for undo/redo actions on the canvas, and includes bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Undo/redo
+
+You can now undo and redo actions on the canvas.
+
+Use `ctrl`/`cmd` + `z` to undo, `ctrl`/`cmd` + `shift` + `z` to redo.
+
+Currently, n8n supports undo/redo for the following canvas actions:
+
+- Adding nodes
+- Deleting nodes
+- Adding connections
+- Deleting connections
+- Moving nodes
+- Moving connections
+- Import workflow (from file/from URL)
+- Copy/paste nodes
+- Renaming nodes
+- Duplicating nodes
+- Disabling/enabling nodes
+
+</div>
+
+* App integration actions are now displayed in the nodes pane.
+* Add sharing permissions info for workflow sharees.
+* Handle sharing features when the user skips instance owner setup.
+* Update the credential test error message for credential sharees.
+
+### Bug fixes
+
+* Core: remove nodeGetter.
+* Core: Increase workflow reactivation max timeout to one day.
+* Core: Resolve an issue listing executions with Postgres.
+* Core: Remove foreign credentials when copying nodes or duplicating workflow.
+* Core: upgrade sse-channel to mitigate CVE-2019-10744.
+* Core: use license-sdk v1.6.1.
+* Editor: avoid adding manual trigger node when webhook node is added.
+* Editor: fix credential sharing issues handler when no matching ID or name.
+* Editor: fix for broken tab navigation.
+* Editor: schema view shows checkbox in case of empty data.
+* Editor: Stop returning UNKNOWN ERROR in the response if an actual error message is available.
+* Editor: update duplicate workflow action.
+* Move Binary Data Node: stringify objects before encoding them in MoveBinaryData.
+* Split In Batches Node: fix issue with pairedItem.
+
+
+## n8n@0.206.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.206.0...n8n@0.206.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-06
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: make expression resolution improvements.
+* Editor: schema unit test stub for Font Awesome icons.
+* Remove unnecessary console message.
+
+## n8n@0.206.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.205.0...n8n@0.206.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-06
+
+This release contains bug fixes, node enhancements, and a new node input view: schema view.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Schema view
+
+Schema view is a new node input view. It helps you browse the structure of your data, using the first input item.
+
+</div>
+
+* Core: add workflow execution statistics.
+* Editor: add the alert design system component.
+* Editor: fix checkbox line hight and make checkbox label clickable.
+* Nodes: add a message for read-only nodes.
+* Nodes: add a prompt to overwrite changes when concurrent editing occurs.
+
+### Node enhancements
+
+KoBo Toolbox node: add support for the media file API.
+
+### Bug fixes
+
+* Core: fix linter error.
+* Core: fix partial execution with pinned data on child node run.
+* Core: OAuth2 scopes now save.
+* Enable source-maps on WorkflowRunnerProcess in own mode.
+* Handle error when workflow does not exist or is inaccessible.
+* Make nodes.exclude and nodes.include work with lazy-loaded nodes.
+* Code Node: restore `pairedItem` to required n8n item keys.
+* Execute Workflow Node: update Execute Workflow node info notice text.
+* Gmail Trigger Node: trigger node missing some emails.
+* Local File Trigger Node: fix issue that causes a crash if the ignore field is empty.
+
+
+### Contributors
+
+[Marcel](https://github.com/marzn){:target=_blank .external-link}  
+[Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
+
+## n8n@0.205.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.204.0...n8n@0.205.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-12-02
+
+This release contains an overhaul of the expressions editor, node enhancements, and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Expressions editor usability overhaul
+
+This release contains usability enhancements for the expressions editor. The editor now includes color signals to indicate when syntax is valid or invalid, and better error messages and tips.
+
+</div>
+
+### Node enhancements
+
+* Facebook Graph APInode: update to support API version 15.
+* Google Calendar node: introduce the resource locator component to help users retrieve calendar parameters.
+* Postmark trigger node: update credentials so they can be used with the HTTP Request node (for custom API calls).
+* Todoist node: update to use API version 2.
+
+### Bug fixes
+
+* core: ensure executions list is properly filtered for all users.
+* core: fix `$items().length` in Execute Once mode.
+* core: mark binary data to be deleted when pruning executions.
+* core: OAuth2 scope saved to database fix.
+* editor: fix slots rendering of NodeCreator's NoResults component.
+* editor: JSON view values can be mapped like keys.
+* AWS SNS Node: fix a pagination issue.
+* Google Sheets Node: fix exception if no matching rows are found.
+* Google Sheets Node: fix for append operation if no empty rows in sheet.
+* Microsoft Outlook Node: fix binary attachment upload.
+* Pipedrive Node: resolve properties not working.
+* Lazy load nodes for credentials testing.
+* Credential overwrites should take precedence over credential default values.
+* Remove background for resource ownership selector.
+* Update padding for resource filters dropdown.
+* Update size of select components in filters dropdown.
+* Update workflow save button type and design and share button type.
+
+
+## n8n@0.204.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.1...n8n@0.204.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2022-11-24
+
+This release contains performance enhancements and bug fixes.
+
+### New features
+
+* Core: lazy-load nodes and credentials to reduce baseline memory usage.
+* Core: use longer stack traces when error reporting is enabled.
+* Dev: add credentials E2E test suite and page object.
+
+### Bug fixes
+
+* Core: fix $items().length behavior in executeOnce mode.
+* Core: fix for unused imports.
+* Core: use CredentialsOverwrites when testing credentials.
+* Core: disable workflow locking due to issues.
+* Editor: fix for missing node connections in dev environment.
+* Editor: fix missing resource locator component.
+* Editor: prevent node-creator tabs from showing when toggled by CanvasAddButton.
+* Editor: table view column limit tooltip.
+* Editor: fix broken n8n-info-tip slots.
+* IF Node: fix "Is Empty" and "Is Not Empty" operation failures for date objects.
+* Remove redundant `await` in nodes API request functions without try/catch.
+* Schedule Trigger Node: fixes inconsistent behavior with cron and weekly intervals.
+* Workflow activation shouldn't crash if one of the credential is invalid.
+
 ## n8n@0.203.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.203.0...n8n@0.203.1){:target=_blank .external-link} for this version.<br />
@@ -586,7 +1075,7 @@ This release introduces user management and credential sharing for our Cloud pla
 
 #### User management and credential sharing for Cloud
 
-This release adds support for our existing [user management](/hosting/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+This release adds support for our existing [user management](/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
 
 </div>
 
@@ -1891,7 +2380,7 @@ User management in n8n allows you to invite people to work in your self-hosted n
 * Adding and removing users
 * Two account types: owner and member
 
-Check out the [user management documentation](/hosting/user-management/) for more information.
+Check out the [user management documentation](/user-management/) for more information.
 
 ## n8n@0.167.0
 
@@ -4590,7 +5079,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Google Sheets
 - Shopify
 - Todoist
-- Enhanced support for [JWT based authentication](/hosting/security/#jwt)
+- Enhanced support for [JWT based authentication](/hosting/authentication/jwt/)
 - Added an option to execute a node once, using data of only the first item
 
 ## n8n@0.76.0

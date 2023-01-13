@@ -8,8 +8,18 @@ An execution is a single run of a workflow.
 
 To browse all executions:
 
-Select **Executions** <span class="inline-image">![Executions menu icon](/_images/common-icons/executions-menu.png)</span> in the left menu to view your executions history. n8n opens the **Workflow Executions** modal. You can then open and view individual executions.
+Select the **Executions**  in the left menu to view your executions history. n8n opens the **Workflow Executions** modal. You can then open and view individual executions.
 
 To view executions for a single workflow:
 
 In the workflow, select **Executions** in the top menu. You can preview all executions of that workflow.
+
+## Retry failed workflows
+
+If your workflow execution fails, you can retry the execution. To retry a failed workflow:
+
+1. Open the **Executions** list.
+2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png)</span>.
+3. Select either of the following options to retry the execution:
+    * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
+    * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.

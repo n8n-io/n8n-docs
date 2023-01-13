@@ -4,7 +4,7 @@ The Webhook node is one of the most powerful nodes in n8n. It allows you to crea
 
 !!! note "Keep in mind"
     1. When using the Webhook node on the localhost, ensure that n8n is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
-2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don't forget that the data flowing through the webhook won't be visible in the Editor UI with the Production webhook.
+		2. When working with a Production webhook, please ensure that you have saved and activated the workflow. Don't forget that the data flowing through the webhook won't be visible in the Editor UI with the Production webhook.
 
 
 Webhook nodes can be used as triggers for workflows when we want to receive data and run a workflow based on the data. The Webhook node also supports returning the data generated at the end of a workflow. This makes it very useful to build a workflow to process data and return the results, like an API endpoint.
@@ -51,7 +51,9 @@ First of all, in the parameters section, we have the Webhook URLs. Clicking on t
 - [**Response Headers**](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) — This option allows you to specify additional headers in the Webhook response.
 - **Raw Body** — This option is used to specify when the Webhook node will receive data in a RAW format, such as JSON or XML.
 - **Binary Data** — This option is available only when the Webhook node is set to receive POST requests. Setting this to ‘true' lets the Webhook node know that it will receive binary data (such as an image/audio). You can use this option when you expect to receive a file via your Webhook node.
-
+- **No Response Body** - This option is used to specify if any body data is sent in the response.
+- **Ignore Bots** - This option is used to ignore requests from bots like link previewers and web crawlers.
+- 
 **Conditional Parameters:** The Webhook node also supports several other parameters, that are used only in certain configurations.
 
 - **Response Data:** This option is available only when set to respond when ‘Last node finishes'. It allows you to choose which data to return:
@@ -91,7 +93,7 @@ In the screenshot below, you will notice that the node triggers the workflow and
 
 This node will return data about the current weather for the city that we received in the previous node.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Click on the gears icon next to the ***City*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Nodes > Webhook > Output Data > JSON > query > city. You can also add the following expression: `{{$node["Webhook"].json["query"]["city"]}}`.

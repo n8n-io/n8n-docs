@@ -3,7 +3,7 @@
 [FileMaker](https://www.claris.com/filemaker/) is an integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and service companies.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/fileMaker/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/filemaker/).
 
 
 ## Basic Operations
@@ -35,7 +35,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new record in FileMaker.
 
-1. First of all, you'll have to enter credentials for the FileMaker node. You can find out how to do that [here](/integrations/builtin/credentials/fileMaker/).
+1. First of all, you'll have to enter credentials for the FileMaker node. You can find out how to do that [here](/integrations/builtin/credentials/filemaker/).
 2. Select 'Create Record' from the ***Action*** dropdown list.
 3. Select a layout from the ***Layout*** dropdown list.
 4. Click on the ***Add Field*** button.

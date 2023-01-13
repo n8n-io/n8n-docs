@@ -3,7 +3,7 @@
 [UptimeRobot](https://uptimerobot.com/) is an uptime monitoring service. It monitors your website every 5 mins. You can set an HTTP/S, ping, port, keyword, or heartbeat monitor and get notifications to your email, phone, Telegram, Slack, Twitter, etc.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uptimeRobot/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/uptimerobot/).
 
 
 ## Basic Operations
@@ -53,7 +53,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new monitor of the type `HTTP(S)`.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Select 'Monitor' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `n8n` in the ***Friendly Name*** field.

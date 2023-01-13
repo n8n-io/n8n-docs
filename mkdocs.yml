@@ -22,6 +22,7 @@ theme:
     - navigation.tracking
 copyright: >
   <a href="#__consent">Change cookie settings</a>
+
 #extra:
   # analytics:
   #   provider: google
@@ -34,6 +35,8 @@ copyright: >
   #     as to measure the effectiveness of our documentation and whether users
   #     find what they're searching for. With your consent, you're helping us to
   #     make our documentation better. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+
+
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -45,12 +48,8 @@ markdown_extensions:
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admoni
   - admonition
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
-  - pymdownx.superfences
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html
-  - pymdownx.details
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Used for tags, setting unique templates for certain pages, and other custom frontmatter.
   - meta
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
@@ -86,6 +85,9 @@ plugins:
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+  - tags:
+      enabled: true
 nav:
   - Using Automation Builder:
     - Welcome: index.md
@@ -93,14 +95,25 @@ nav:
       - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
+    - Choose your n8n:
+      - choose-n8n/index.md
+      - Set up Cloud: choose-n8n/cloud.md
+      - Install Desktop: choose-n8n/desktop-app.md
+      - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
-      - Workflows: workflows/workflows.md
-      - Connections: workflows/connections.md
-      - Nodes: workflows/nodes.md
-      - Items: workflows/items.md
-      - Sticky Notes: workflows/sticky-notes.md
+      - Create and run: workflows/create.md
+      - Components: 
+        - workflows/components/index.md
+        - Nodes: workflows/components/nodes.md
+        - Connections: workflows/components/connections.md
+        - Sticky Notes: workflows/components/sticky-notes.md
       - Executions: workflows/executions.md
+      - Export and import: workflows/export-import.md
+      - Templates: workflows/templates.md
+      - Sharing: workflows/sharing.md
+      - Settings: workflows/settings.md
+      - Workflow ID: workflows/workflow-id.md
     - Manage credentials:
       - credentials/index.md
       - Create and edit: credentials/add-edit-credentials.md
@@ -109,7 +122,10 @@ nav:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
       - Looping: flow-logic/looping.md
-      - Error handling: flow-logic/error-handling.md
+      - Error handling:
+        - flow-logic/error-handling/index.md
+        - Error workflows: flow-logic/error-handling/error-workflows.md
+        - Memory-related errors: flow-logic/error-handling/memory-errors.md
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
@@ -151,13 +167,23 @@ nav:
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
       - Using console.log: code-examples/console-log.md
+    - User management:
+      - user-management/index.md
+      - Cloud setup: user-management/cloud-setup.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Skip or disable: user-management/skip-disable.md
+      - Best practices: user-management/best-practices.md
+      - LDAP: user-management/ldap.md
+    - Log streaming: log-streaming.md
+    - Security audit: security-audit.md
     - Reference:
       - reference/index.md
       - Release notes: reference/release-notes.md
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
+      - Update n8n: reference/update.md
       - Glossary: reference/glossary.md
-      - License: reference/license.md
       - Data collection: reference/data-collection.md
   - Integrations:
     - integrations/index.md
@@ -309,6 +335,7 @@ nav:
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
+        - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md
@@ -483,6 +510,7 @@ nav:
   #     - Execution data: hosting/scaling/execution-data.md
   #     - Execution modes and processes: hosting/scaling/execution-modes-processes.md
   #     - Configuring queue mode: hosting/scaling/queue-mode.md
+
   - API:
     - api/index.md
     - Authentication: api/authentication.md
@@ -529,3 +557,4 @@ nav:
   #         - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
   #       - Test your knowledge: courses/level-two/chapter-6.md
   # - Contributing: contributing.md
+

@@ -3,7 +3,7 @@
 [TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/theHive/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/thehive/).
 
 
 ## Basic Operations
@@ -75,7 +75,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new case in TheHive with the title `n8n` and set its severity to `low`. You can create a case with a different title and severity.
 
-1. First of all, you'll have to enter credentials for the TheHive node. You can find out how to do that [here](/integrations/builtin/credentials/theHive/).
+1. First of all, you'll have to enter credentials for the TheHive node. You can find out how to do that [here](/integrations/builtin/credentials/thehive/).
 2. Select 'Case' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter a title in the ***Title*** field.

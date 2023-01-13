@@ -3,7 +3,7 @@
 [Home Assistant](https://www.home-assistant.io/) is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/homeAssistant/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/homeassistant/).
 
 
 ## Basic operations
@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Home Assistant node
 
-1. First select your credentials for the Home Assistant node. You can find out how to create credentials [here](/integrations/builtin/credentials/homeAssistant/).
+1. First select your credentials for the Home Assistant node. You can find out how to create credentials [here](/integrations/builtin/credentials/homeassistant/).
 2. From the **Resource** dropdown select **Config**.
 3. From the **Operation** dropdown select **Get**.
 4. Click on **Execute Node** to run the workflow.

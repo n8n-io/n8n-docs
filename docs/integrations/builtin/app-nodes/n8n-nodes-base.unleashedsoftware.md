@@ -3,7 +3,7 @@
 [Unleashed Software](https://www.unleashedsoftware.com) is a cloud app that gives product businesses the freedom to better make, manage and move products by enabling them to achieve complete clarity and control over suppliers, production, warehouses, and sales.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/unleashedSoftware/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/unleashedsoftware/).
 
 
 ## Basic Operations
@@ -30,7 +30,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Unleashed Software node
 
-1. First of all, you'll have to enter credentials for the Unleashed Software node. You can find out how to do that [here](/integrations/builtin/credentials/unleashedSoftware/).
+1. First of all, you'll have to enter credentials for the Unleashed Software node. You can find out how to do that [here](/integrations/builtin/credentials/unleashedsoftware/).
 2. Toggle ***Return All*** to true.
 3. Click on the ***Add Filter*** button and select 'Order Status' from the dropdown list.
 4. Select 'Completed' from the ***Order Status*** dropdown list.

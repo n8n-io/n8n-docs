@@ -6,6 +6,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 * [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
 * [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
+* If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
 * If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}
 * If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}
 
@@ -28,7 +29,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 	??? Details "View screenshot"
 		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
 
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**. If you're creating OAuth credentials for the first time, you must [configure the consent screen](https://support.google.com/cloud/answer/10311615?hl=en&ref_topic=3473162){:target=_blank .external-link}.   
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**. .   
 
 	??? Details "View screenshot"   
 		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)

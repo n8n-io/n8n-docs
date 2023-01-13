@@ -1,7 +1,28 @@
-# Hosting n8n
+# Self-hosting n8n
 
-This section provides:
 
-* Information on all the [hosting options](/hosting/options/) for n8n.
-* Guidance on [installation](/hosting/installation/) methods.
-* Details of how to [configure](/hosting/configuration/), [secure](/hosting/security/), and [scale](/hosting/scaling/) the self-hosted version of n8n.
+<div class="grid-cards-vertical cards" markdown>
+
+- __Installation and server setups__
+
+	Install n8n on any platform using npm or Docker. Or follow our guides to popular hosting platforms.
+
+	[:octicons-arrow-right-24: Installation guides](/hosting/installation/)
+
+- __Configuration__
+
+	Learn how to configure n8n with environment variables.
+
+	[:octicons-arrow-right-24: Configuration](/hosting/environment-variables/)
+
+- __Users and authentication__
+
+	Choose and set up user authentication for your n8n instance.
+
+	[:octicons-arrow-right-24: Authentication](/hosting/authentication/)
+
+- __Scaling__
+
+	Manage data, modes, and processes to keep n8n running smoothly at scale.
+
+	[:octicons-arrow-right-24: Scaling](/hosting/scaling/)

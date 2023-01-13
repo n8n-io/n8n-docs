@@ -3,7 +3,7 @@
 [Humantic AI](https://humantic.ai/) provides AI-driven behavior and personality assessment of a candidate.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/humanticAi/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/humanticai/).
 
 
 ## Basic Operations
@@ -32,7 +32,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new profile for a candidate in Humantic AI. We will create a new profile using the LinkedIn URL of a candidate.
 
-1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/builtin/credentials/humanticAi/).
+1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/builtin/credentials/humanticai/).
 2. Enter the LinkedIn URL of the candidate in the ***User ID*** field.
 3. Click on ***Execute Node*** to run the node.
 

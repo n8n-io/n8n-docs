@@ -3,7 +3,7 @@
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/wooCommerce/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
 
 
 ## Basic Operations
@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new product in WooCommerce.
 
-1. First of all, you'll have to enter credentials for the WooCommerce node. You can find out how to do that [here](/integrations/builtin/credentials/wooCommerce/).
+1. First of all, you'll have to enter credentials for the WooCommerce node. You can find out how to do that [here](/integrations/builtin/credentials/woocommerce/).
 2. Enter the product name in the ***Name*** field.
 3. Click on ***Add Field*** and select 'Description'.
 4. Enter a description in the ***Description*** field.

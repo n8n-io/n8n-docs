@@ -15,7 +15,7 @@ services:
       - .:/app/n8n-docs
     environment:
       PYTHONPATH: .
-      N8N_DOCS_SERVICE: DEV_SERVE
+      N8N_DOCS_SERVICE: DEV_SERVER
     ports:
       - 8005:8005/tcp
 # vim: tabstop=2 softtabstop=2 shiftwidth=2 expandtab

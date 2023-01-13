@@ -24,6 +24,8 @@ jobs:
       run: |-
         docker build --tag "gcr.io/${GCR_PROJECT_ID}/${IMAGE}:${GITHUB_REF_NAME}" \
           --build-arg TAG="${GITHUB_REF_NAME}" \
+          -f docker/Dockerfile \
+          --target final \
           .
 
     - name: Authenticate to Google Cloud

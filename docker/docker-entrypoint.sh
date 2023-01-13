@@ -9,7 +9,7 @@ set -o pipefail
 declare -a COMMAND
 
 case "${N8N_DOCS_SERVICE}" in
-    "N8N_DOCS_SERVICE")
+    "DEV_SERVE")
         COMMAND+=("mkdocs" "serve" "--dev-addr=0.0.0.0:8005")
         ;;
     *)

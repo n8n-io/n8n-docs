@@ -39,7 +39,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 
 ### New features
 
-
 * Add demo experiment to help users activate.
 * Editor: Improvements to the **Executions** page.
 * Editor: Remove prevent-ndv-auto-open feature flag.
@@ -67,8 +66,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 * Run every database migration inside a transaction.
 * Upgrade class-validator to address CVE-2019-18413.
 * Zoom Node: Add notice about deprecation of Zoom JWT app support.
-
-### 
 
 </div>
 

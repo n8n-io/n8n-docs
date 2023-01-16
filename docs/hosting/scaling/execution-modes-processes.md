@@ -7,7 +7,7 @@ Set the n8n mode using the following [environment variables](/hosting/environmen
 | Variable | Options | Default | Description |
 | :------- | :------ | :------ | :--------- |
 | `EXECUTIONS_PROCESS` | Enum string: `main`, `own` | `own` | Whether n8n executions run in their own process or the main process. |
-| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue. |
+| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue. When you set this to `queue`, n8n ignores any `EXECUTION_PROCESS` setting and uses `main`. |
 
 ## Executions process
 
@@ -45,7 +45,7 @@ This is the default setting for n8n. When running n8n in the `regular` mode, eve
 
 ### Queue
 
-`Queue` mode is designed for handling high workloads. In this mode you run multiple instances of n8n: one main instance is required for triggering some workflows and allowing user access via UI, while the other worker instances process the executions. You can also add dedicated instances to handle incoming webhooks.
+`Queue` mode is designed for handling high workloads. In this mode you run multiple instances of n8n: one main instance is required for triggering some workflows and allowing user access through the UI, while the other worker instances process the executions. You can also add dedicated instances to handle incoming webhooks.
 
 `Queue` mode requires more setup than `regular` mode, but provides great scalability and stability with minimal latency.
 

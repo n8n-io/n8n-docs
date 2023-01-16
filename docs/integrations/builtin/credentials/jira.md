@@ -13,7 +13,7 @@ Create a [Jira](https://www.JIRA.com/) account.
 
 1. Access your Jira dashboard.
 2. Select on your user icon in the top right.
-3. Select **Manage Account**.
+3. Select **Manage account**.
 4. Select the**Security** tab.
 5. Select **Create and manage API tokens**.
 6. Create API token.

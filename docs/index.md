@@ -1,3 +1,8 @@
+---
+hide:
+  - path
+---
+
 # Welcome
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](http://faircode.io) licensed node-based workflow automation tool.

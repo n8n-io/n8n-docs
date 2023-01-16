@@ -8,6 +8,12 @@
 
 ## Basic Operations
 
+* File
+    * Create a new file in repository.
+    * Delete a file in repository.
+    * Edit a file in repository.
+    * Get the data of a single file.
+    * List contents of a folder.
 * Issue
     * Create a new issue
     * Create a new comment on an issue

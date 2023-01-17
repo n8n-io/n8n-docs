@@ -1,5 +1,30 @@
 # Release notes
 
+<div id="02112" markdown>
+
+## n8n@0.211.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.211.1...n8n@0.211.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-17
+
+This release contains a bug fix for community nodes, and a new trigger node.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Google Sheets trigger node
+
+This release adds a new [Google Sheets trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/). You can now start workflows in response to row changes or new rows in a Google Sheet.
+
+</div>
+
+### Bug fixes
+
+Fixes an issue that was preventing users from installing community nodes.
+
+</div>
+
 <div id="02111" markdown>
 
 ## n8n@0.211.1

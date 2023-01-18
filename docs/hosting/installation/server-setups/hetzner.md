@@ -23,13 +23,13 @@ You can change most of the settings to suit your needs, but as this guide uses D
 
 The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} for more information. You can find the public IP in the listing of the servers in your project.
 
-## Install Docker compose
+## Install Docker Compose
 
 The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
 
 ```shell
 apt get update
-apt install docker-compose
+apt install docker-compose-plugin
 ```
 
 ## Clone configuration repository
@@ -129,7 +129,7 @@ n8n.<domain>.<suffix> {
 Start n8n and Caddy with the following command:
 
 ```shell
-docker-compose up -d
+docker compose up -d
 ```
 
 This may take a few minutes.
@@ -143,7 +143,7 @@ In your browser, open the URL formed of the subdomain and domain name defined ea
 You can stop n8n and Caddy with the following command:
 
 ```shell
-sudo docker-compose stop
+sudo docker compose stop
 ```
 
 ## Next steps

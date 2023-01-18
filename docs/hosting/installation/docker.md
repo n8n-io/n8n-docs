@@ -135,17 +135,17 @@ docker run --name=[container_name] [options] -d n8nio/n8n
 
 ### Docker Compose
 
-If you've running n8n using a docker-compose file, follow the below mentioned steps to update n8n.
+If you've running n8n using a Docker Compose file, follow the below mentioned steps to update n8n.
 
 ```sh
 // Pull latest version
-docker-compose pull
+docker compose pull
 
 // Stop and remove older version
-docker-compose down
+docker compose down
 
 // Start the container
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Further reading

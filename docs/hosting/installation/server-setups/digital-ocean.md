@@ -119,7 +119,7 @@ n8n.<domain>.<suffix> {
 Start n8n and Caddy with the following command:
 
 ```shell
-docker-compose up -d
+docker compose up -d
 ```
 
 This may take a few minutes.
@@ -133,7 +133,7 @@ In your browser, open the URL formed of the subdomain and domain name defined ea
 You can stop n8n and Caddy with the following command:
 
 ```shell
-sudo docker-compose stop
+sudo docker compose stop
 ```
 
 ## Next steps

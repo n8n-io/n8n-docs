@@ -54,7 +54,7 @@ Name: n8n (or the desired subdomain)
 IP address: <IP_OF_YOUR_SERVER>
 ```
 
-### 5. Create docker-compose file
+### 5. Create Docker Compose file
 
 Create a `docker-compose.yml` file. Paste the following in the file:
 
@@ -178,18 +178,18 @@ The folder can be created like this:
 mkdir /root/n8n/
 ```
 
-### 8. Start docker-compose
+### 8. Start Docker Compose
 
 n8n can now be started via:
 
 ```bash
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 To stop the container:
 
 ```bash
-sudo docker-compose stop
+sudo docker compose stop
 ```
 
 ### 9. Done

@@ -17,6 +17,8 @@ theme:
     - content.code.copy
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
+    - navigation.path
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
     - navigation.tabs.sticky

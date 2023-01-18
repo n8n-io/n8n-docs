@@ -172,6 +172,12 @@
 	border: none;
 }
 
+/* reduce padding between title and breadcrumbs */
+
+.md-content__inner {
+	padding-top: 0;
+}
+
 /* dark mode */  
 /* [data-md-color-scheme="dark"] .md-header{
     box-shadow: none;

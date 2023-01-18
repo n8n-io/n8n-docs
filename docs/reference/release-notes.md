@@ -1,5 +1,99 @@
 # Release notes
 
+<div id="02112" markdown>
+
+## n8n@0.211.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.211.1...n8n@0.211.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-17
+
+This release contains a bug fix for community nodes, and a new trigger node.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Google Sheets trigger node
+
+This release adds a new [Google Sheets trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/). You can now start workflows in response to row changes or new rows in a Google Sheet.
+
+</div>
+
+### Bug fixes
+
+Fixes an issue that was preventing users from installing community nodes.
+
+</div>
+
+<div id="02111" markdown>
+
+## n8n@0.211.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.211.0...n8n@0.211.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-16
+
+This is a bug fix release. It resolves major issues with 0.211.0.
+
+### New features
+
+Editor: suppress validation errors for freshly added nodes.
+
+### Node enhancements
+
+* Google Ads node: update the API version to 11.
+* Google Drive Trigger node: start using the resource locator component.
+
+### Bug fixes
+
+* Build CLI to fix Postgres and MySQL test runs.
+* Extend date functions clobbering plus/minus.
+* Extension deep compare not quite working for some primitives.
+* Upgrade jsonwebtoken to address CVE-2022-23540.
+
+</div>
+
+<div id="02110" markdown>
+
+## n8n@0.211.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-13
+
+!!! warning "Don't use this version"
+		Upgrade directly to 0.211.1.
+
+### New features
+
+* Add demo experiment to help users activate.
+* Editor: Improvements to the **Executions** page.
+* Editor: Remove prevent-ndv-auto-open feature flag.
+* Editor: Update callout component design.
+* Add the expression extension framework.
+
+### Bug fixes
+
+* Core: Fixes event message confirmations if no subscribers present.
+* Core: Remove threads package, rewrite log writer worker.
+* Core: Throw error in UI on expression referencing missing node but don't fail execution.
+* DB revert command shouldn't run full migrations before each revert.
+* Editor: Disable data pinning on multiple output node types.
+* Editor: Don't overwrite `window.onerror` in production.
+* Editor: Execution page bug fixes.
+* Editor: Fixes event bus test.
+* Editor: Hide data pinning discoverability tooltip in execution view.
+* Editor: Mapping tooltip dismiss.
+* Editor: Recover from unsaved finished execution.
+* Editor: Setting NDV session ID.
+* First/last being extended on proxy objects.
+* Handle memory issues gracefully.
+* PayPal Trigger Node: Omit verification in sandbox environment.
+* Report app startup and database migration errors to Sentry.
+* Run every database migration inside a transaction.
+* Upgrade class-validator to address CVE-2019-18413.
+* Zoom Node: Add notice about deprecation of Zoom JWT app support.
+
+</div>
+
 <div id="02102" markdown>
 
 ## n8n@0.210.2

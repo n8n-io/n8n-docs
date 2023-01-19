@@ -233,7 +233,7 @@ export WEBHOOK_URL=https://n8n.example.com/
 ### Prometheus
 
 !!! note "Experimental"
-  At the moment, the exposition of Prometheus metrics is an experimental feature!
+    At the moment, the exposition of Prometheus metrics is an experimental feature!
 
 To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 

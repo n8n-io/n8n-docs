@@ -1,9 +1,14 @@
 # Affinity
 
-[Affinity](https://www.affinity.co/) is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
+[Affinity](https://www.affinity.co/){:target="_blank" .external-link} node allows you to automate work in the Affinity platform and integrate Affinity with other applications. n8n has built-in support for a wide range of Affinity features, which includes basic operations like creating, getting, updating & deleting lists, entries, organization, and persons.
+
+On this page, you'll find a list of operations the Affinity node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/affinity/).
+    Refer to the [Affinity credentials](/integrations/builtin/credentials/affinity/){:target="_blank" .external-link} for guidance on setting up authentication.
+	
+!!! note "Examples and templates"
+For example, usage and templates to help you get started, take a look at n8n's [Affinity integrations](https://n8n.io/integrations/affinity/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

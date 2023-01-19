@@ -18,6 +18,9 @@ For n8n Cloud users, the API playground path contains your cloud instance URL:
 <your-cloud-instance>/api/v<version-number>/docs
 ```
 
+!!! warning "Real data"
+    If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.
+
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell
@@ -37,6 +40,3 @@ The API includes built-in documentation about credential formats. This is availa
     }
 }
 ``` 
-
-!!! warning "Real data"
-    If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.

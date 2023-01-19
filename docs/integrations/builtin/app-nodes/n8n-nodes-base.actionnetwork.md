@@ -1,8 +1,10 @@
 # Action Network
 
-[Action Network](https://actionnetwork.org/){:target="_blank" .external-link} is an open platform that empowers individuals and groups to organize for progressive causes.
+[Action Network](https://actionnetwork.org/){:target="_blank" .https://actionnetwork.org/} is an open platform that empowers individuals and groups to organize for progressive causes.
 
-The Action Network node allows you to automate work in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating new events, adding new people, tags, and signatures. The Action Network node allows you to create, get, update, and delete events, petitions, attendance, person, and tags in your Action Network account. 
+The Action Network node allows you to automate work in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, which includes creating, updating, and deleting events, people, tags, and signatures. 
+
+On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
 !!! note "Credentials"
     Refer to the [Action Network credentials](/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 

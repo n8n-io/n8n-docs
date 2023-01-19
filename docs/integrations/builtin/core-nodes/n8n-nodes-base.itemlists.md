@@ -1,91 +1,109 @@
 # Item Lists
 
-The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to modify the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes and write custom JavaScript.
+The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to change the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes or write custom JavaScript.
 
 ## Operations
 
 The Item Lists node enables you to perform the following operations:
 
-* *Split Out Items*: Create separate items from a list of data within an item.
-* *Aggregate Items*: Merge multiple items into a single new item.
-* *Remove Duplicates*: Remove extraneous items.
-* *Sort*: Change the ordering of items.
-* *Limit*: Remove items beyond a defined maximum number.
+* Split Out Items: create separate items from a list of data within an item.
+* Aggregate Items: merge multiple items into a single new item.
+* Remove Duplicates: remove extraneous items.
+* Sort: change the ordering of items.
+* Limit: remove items beyond a defined maximum number.
 
-!!! note ""
-    Usually, you shouldn't use expressions for fields that expect a `key` value (for example, **Field to Split Out**). Expressions usually return values, not keys.
+!!! note "Expressions and keys"
+    Don't use expressions for fields that expect a `key` value (for example, **Field to Split Out**). Expressions usually return values, not keys.
 
 
 ### Split Out Items
 
 This operation is useful if your data contains a list of items, for example a list of customers, and you want to split them so that you have an item for each customer.
 
-![Split Out Items output](/_images/integrations/builtin/core-nodes/itemlists/split_out.png)
+When using the Split Out Items operation, configure the following parameters and options:
 
-When using the *Split Out Items* operation, configure the following parameters and options:
+* **Field to Split Out**: the field containing the list you want to separate out into individual items. Must be plain text and not an expression.
+* **Include**: select if  you want n8n to keep any other fields from the input data with each new individual item. You can select:
+    * **No Other Fields**
+    * **All Other Fields**
+    * **Selected Other Fields**: when selected, n8n displays **Fields to Include**. Enter a comma separated list of desired fields.
+	* **Options** > **Add Field**: use this to add more optional settings, including:
+		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
+		* **Destination Field Name**: optionally set the field name under which to put the new split contents.
 
-* *Field to Split Out*: The field containing the list you want to separate out into individual items (e.g. `Name` in the example here). **Must be plaintext and not an expression.**
-* *Include*: Select if any other fields from the input data should be kept with each new individual item. You can select:
-    * *No Other Fields*
-    * *All Other Fields*
-    * *Selected Other Fields*: When selected, a *Fields to Include* field is displayed. Enter a comma separated list of desired fields.
-* *Disable Dot Notation*: When disabled, child fields (in the format `parent.child`) cannot be referenced.
-* *Destination Field Name*: Optionally set the field name under which to put the new split contents.
+### Concatenate Items
 
-### Aggregate Items
+The Concatenate Items operations is useful when you want to take separate items, or portions of them, and group them together into individual items.
 
-The Aggregate Items operations is useful when you want to take many separate items, or just particular portions of them, and group them together into individual items. For example, the image below shows customer names and email addresses being grouped into individual items from a series of individual customer records that contained many other details.
+When using the Concatenate Items operation, configure the following parameters and options:
 
-![Aggregate Items output](/_images/integrations/builtin/core-nodes/itemlists/aggregate.png)
+* **Aggregate**: choose whether to aggregate **Individual Fields** or **All Item Data**.
+* If you choose **Individual Fields**, you can then set:
+	* **Field To Aggregate**: the name of the field in the input data to be aggregated together.
+	* **Rename Field**: enable this toggle to enter a field name for the aggregated output data. When aggregating multiple fields you must provide new output field names. You can't leave multiple fields undefined.
+	* **Output Field Name**: displayed when you enable **Rename Field**. The field name for the aggregated output data.
+	* **Options** > **Add Field**: use this to add more optional settings, including:
+		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
+* If you choose **All Item Data**, you can then set:
+	* **Put Output in Field**: the name of the output field.
+	* **Include**: choose from **All fields**, **Specified Fields**, or **All Fields Except**.
 
-When using the *Aggregate Items* operation, configure the following parameters and options:
-
-* *Field To Aggregate*: The name of the field in the input data to be aggregated together.
-* *Rename Field*: Enable this toggle to enter a field name for the aggregated output data. When aggregating multiple fields you must provide new output field names, **multiple fields cannot be left undefined**.
-* *Output Field Name*: Displayed only when *Rename Field* is enabled. The field name for the aggregated output data.
-* *Disable Dot Notation*: When disabled, child fields (in the format `parent.child`) cannot be referenced.
-* *Preserve Aggregated Lists*: If enabled, fields to aggregate that are lists will output a list of lists (rather than being merged into a single list).
 
 ### Remove Duplicates
 
-There are many situations where you can end up with duplicate data, a user creating multiple accounts, a customer submitting the same order multiple time, etc. When working with large datasets it becomes more difficult to easily spot and remove these items. 
+There are situations where you can end up with duplicate data, such as a user creating multiple accounts, or a customer submitting the same order multiple times. When working with large datasets it becomes more difficult to spot and remove these items. 
 
-The Remove Duplicates operation allows you to identify those items that are identical across all fields or only a desired subset of fields.
+The Remove Duplicates operation allows you to identify those items that are identical across all fields or a subset of fields.
 
-![Remove Duplicate Items output](/_images/integrations/builtin/core-nodes/itemlists/duplicates.png)
+When using the Remove Duplicates operation, configure the following parameters and options:
 
-When using the *Remove Duplicates* operation, configure the following parameters and options:
-
-* *Compare*: Provide which fields of the input data should be compared to check if they are the same. The following options are available:
-  * *All Fields*: Compares all fields of the input data.
-  * *All Fields Except*: Enter which input data fields should be excluded from the comparison. Multiple values can be provided separated by commas.
-  * *Selected Fields*: Enter which input data fields should be included in the comparison. Multiple values can be provided separated by commas.
-* *Disable Dot Notation*: When disabled, child fields (in the format `parent.child`) cannot be referenced.
+* **Compare**: specify which fields of the input data n8n should compare to check if they're the same. The following options are available:
+  * **All Fields**: compares all fields of the input data.
+  * **All Fields Except**: enter which input data fields n8n should exclude from the comparison. You can provide multiple values separated by commas.
+  * **Selected Fields**: enter which input data fields n8n should include in the comparison. You can provide multiple values separated by commas.
+* If you choose **All Fields Except** or **Selected Fields**, n8n displays **Options** > **Add Field**. Use this to add more optional settings, including:
+	* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
 
 ### Sort
 
-The Sort operation allows you to organize lists of in a desired ordering, or generate a random selection if desired (i.e. assign tasks to users randomly).
+The Sort operation allows you to organize lists of in a desired ordering, or generate a random selection.
 
-!!! note "Keep in mind"
-    The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) to learn more.
+!!! note "Array sort behavior
+    The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link} to learn more.
 
 
-![Sort Items output](/_images/integrations/builtin/core-nodes/itemlists/sort.png)
+When using the Sort operation, configure the following parameters and options:
 
-When using the *Sort* operation, configure the following parameters and options:
-
-* *Type*: Use the dropdown to select how you want to input the sorting. The following options are available:
-  * *Simple*: When you selected, you can use the **Add Field To Sort By* button to input the desired fields, and select whether *Ascending* or *Descending* order is desired.
-  * *Random*: Select to create a random order in the list.
-  * *Code*: When selected, displays a code input field where you can enter custom JavaScript code to perform the sort operation.
+* **Type**: use the dropdown to select how you want to input the sorting. The following options are available:
+  * **Simple**: when you selected, you can use the **Add Field To Sort By** button to input the fields, and select whether to use **Ascending** or **Descending** order.
+  * **Random**: select to create a random order in the list.
+  * **Code**: when selected, displays a code input field where you can enter custom JavaScript code to perform the sort operation.
+* **Options** > **Add Field**: use this to add more optional settings, including:
+	* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
 
 ### Limit
 
-If you want to keep and process only a specific number of items from your incoming data, the Limit operation allows you to select the desired number of items to keep and whether they should be taken from the beginning or end of the data (e.g. take the 5 highest priority tickets, the oldest order, etc.).
+If you want to keep and process a specific number of items from your incoming data, the Limit operation allows you to select the number of items to keep and whether n8n should take them from the beginning or end of the data.
 
-![Limit Items output](/_images/integrations/builtin/core-nodes/itemlists/limit.png)
+When using the Limit operation, configure the following parameters and options:
 
-When using the *Limit* operation, configure the following parameters and options:
+* **Max Items**: enter the maximum number of items that n8n should keep. If the input data contains more than this value, n8n removes the items.
+* **Keep**: when items must be removed, select if n8n keeps the input items at the beginning or end.
 
-* *Max Items*: Enter the maximum number of items that should be kept. If the input data contains more than this value, items will be removed.
-* *Keep*: When items must be removed, select if the input items at the beginning or end are kept.
+### Summarize
+
+Aggregate items together, in a manner similar to Excel pivot tables.
+
+When using the Summarize operation, configure the following parameters and options:
+
+* **Fields to Summarize**: 
+	* To combine values, select an **Aggregation** method, and enter a **Field** name.
+	* To split values, enter a field name or list of names in **Fields to Split By**.
+* **Options** > **Add Field**: use this to add more optional settings, including:
+	* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
+	* **Each Split in a Separate Item**: splitting generates a separate output item for each split out field.
+	* **All Splits in a Single Item**: splitting generates a single item, which lists the split out fields.
+
+## Related resources
+
+View [example workflows and related content](https://n8n.io/integrations/item-lists/){:target=_blank .external-link} on n8n's website.

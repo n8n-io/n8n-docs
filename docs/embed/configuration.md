@@ -1,5 +1,7 @@
 # Configuration
 
+--8<-- "_snippets/embed-license.md"
+
 ## Authentication
 
 You can secure n8n using Basic Authentication by setting the following environment variables:

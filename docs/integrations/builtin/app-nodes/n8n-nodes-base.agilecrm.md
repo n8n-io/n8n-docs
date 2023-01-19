@@ -1,9 +1,14 @@
 # Agile CRM
 
-[Agile CRM](https://www.agilecrm.com/) is a CRM with Sales, Marketing and Service automation in single platform. It has sales tracking, contact management, marketing automation, web analytics, two-way emails, telephony, and a helpdesk.
+[Agile CRM](https://www.agilecrm.com/){:target="_blank" .external-link} node allows you to automate work in the Agile CRM platform and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, which includes basic operations like creating, getting, updating & deleting companies, contracts, and deals.
+
+On this page, you'll find a list of operations the Agility CRM node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/agilecrm/).
+	Refer to the [Agility CRM credentials](https://docs.n8n.io/integrations/builtin/credentials/agilecrm/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+	For example, usage and templates to help you get started, take a look at n8n's [Agility CRM integrations](https://n8n.io/integrations/agile-crm/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

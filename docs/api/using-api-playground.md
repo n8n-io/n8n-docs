@@ -28,7 +28,7 @@ The API includes built-in documentation about credential formats. This is availa
 ```
 
 !!! note "How to find `credentialTypeName`"
-    To find the type, download your workflow and examine it (it's a JSON file). For a Google Drive node is `googleDriveOAuth2Api` the `{credentialTypeName}`:
+    To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api` :
 ```json
 {
     ...,

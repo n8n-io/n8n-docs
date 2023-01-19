@@ -3,7 +3,6 @@
 !!! note "File-based configuration"
     You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
 
-
 ## Credentials
 
 Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
@@ -90,7 +89,6 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | Number | `1440` | Time to live (in minutes) for persisted data. |
 
-
 ## User management and SMTP
 
 Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
@@ -109,14 +107,21 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
 
-
 ## Endpoints
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_PAYLOAD_SIZE_MAX` | Number | `16` | The maximum payload size in MB. |
-| `N8N_METRICS` | Boolean | `false` | Whether to enable the metrics endpoint. |
-| `N8N_METRICS_PREFIX` | String | `n8n_` | Optional prefix for metrics names. |
+| `N8N_METRICS` | Boolean | `false` | Whether to enable the `/metrics` endpoint. |
+| `N8N_METRICS_PREFIX` | String | `n8n_` | Optional prefix for n8n specific metrics names. |
+| `N8N_METRICS_INCLUDE_DEFAULT_METRICS` | Boolean | `true` | Whether to expose default system and node.js metrics. |
+| `N8N_METRICS_INCLUDE_WORKFLOW_ID_LABEL` | Boolean | `false` | Whether to include a label for the workflow ID on workflow metrics. |
+| `N8N_METRICS_INCLUDE_NODE_TYPE_LABEL` | Boolean | `false` | Whether to include a label for the node type on node metrics. |
+| `N8N_METRICS_INCLUDE_CREDENTIAL_TYPE_LABEL` | Boolean | `false` | Whether to include a label for the credential type on credential metrics. |
+| `N8N_METRICS_INCLUDE_API_ENDPOINTS` | Boolean | `false` | Whether to expose metrics for API endpoints. |
+| `N8N_METRICS_INCLUDE_API_PATH_LABEL` | Boolean | `false` | Whether to include a label for the path of API invocations. |
+| `N8N_METRICS_INCLUDE_API_METHOD_LABEL` | Boolean | `false` | Whether to include a label for the HTTP method (GET, POST, ...) of API invocations. |
+| `N8N_METRICS_INCLUDE_API_STATUS_CODE_LABEL` | Boolean | `false` | Whether to include a label for the HTTP status code (200, 404, ...) of API invocations. |
 | `N8N_ENDPOINT_REST` | String | `rest` | The path used for REST endpoint. |
 | `N8N_ENDPOINT_WEBHOOK` | String | `webhook` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | String | `webhook-test` | The path used for test-webhook endpoint. |

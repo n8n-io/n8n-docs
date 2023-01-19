@@ -7,10 +7,10 @@ The [Action Network](https://actionnetwork.org/){:target="_blank" .external-link
 On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Action Network credentials](/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 
+    Refer to the [Action Network credentials](/integrations/builtin/credentials/actionnetwork/){:target="_blank" .external-link} for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Action Network integrations](https://n8n.io/integrations/action-network/) list.
+    For example, usage and templates to help you get started, take a look at n8n's [Action Network integrations](https://n8n.io/integrations/action-network/){:target="_blank" .external-link} list.
 
 
 ## Basic operations

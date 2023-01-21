@@ -183,13 +183,13 @@ mkdir /root/n8n/
 n8n can now be started via:
 
 ```bash
-sudo docker compose up -d
+sudo docker-compose up -d
 ```
 
 To stop the container:
 
 ```bash
-sudo docker compose stop
+sudo docker-compose stop
 ```
 
 ### 9. Done

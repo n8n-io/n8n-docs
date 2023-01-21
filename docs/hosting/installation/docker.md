@@ -139,13 +139,13 @@ If you've running n8n using a Docker Compose file, follow the below mentioned st
 
 ```sh
 // Pull latest version
-docker compose pull
+docker-compose pull
 
 // Stop and remove older version
-docker compose down
+docker-compose down
 
 // Start the container
-docker compose up -d
+docker-compose up -d
 ```
 
 ## Further reading

@@ -1,9 +1,15 @@
 # AWS DynamoDB
 
-[AWS DynamoDB](https://aws.amazon.com/DynamoDB/) is a key-value and document database provided by Amazon as a part of Amazon Web Services.
+[AWS DynamoDB](https://aws.amazon.com/DynamoDB/){:target=_blank .external-link} node allows you to automate work in the AWS DynamoDB platform and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, which includes basic operations like creating, reading, updating & deleting items, and records on a database
+
+On this page, you'll find a list of operations the AWS DynamoDB node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+   Refer to the [AWS DynamoDB credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+   For example, usage and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
+
 
 
 ## Basic operations

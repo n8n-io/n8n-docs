@@ -1,9 +1,14 @@
 # Automizy
 
-[Automizy](https://automizy.com/) is an email marketing automation software that offers AI-powered Subject Line Tester, AB testing, and email automation.
+[Automizy](https://automizy.com/){:target=_blank .external-link}node allows you to automate work in the Automizy platform and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, which includes basic operations like creating, reading, listing, updating & deleting contacts, and lists
+
+On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/automizy/).
+   Refer to the [Automizy credentials](https://docs.n8n.io/integrations/builtin/credentials/automizy/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+   For example, usage and templates to help you get started, take a look at n8n's [Automizy integrations](https://n8n.io/integrations/automizy/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

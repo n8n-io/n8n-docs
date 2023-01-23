@@ -1,9 +1,14 @@
 # Chargebee
 
-[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
+[Chargebee](https://www.chargebee.com/){:target=_blank .external-link} node allows you to automate work in the Chargebee platform and integrate Chargebee with other applications. n8n has built-in support for a wide range of Chargebee features, which includes basic operations like returning, canceling, and creating customers, invoices, and subscriptions
+
+On this page, you'll find a list of operations the Chargebee node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee/).
+  Refer to the [Chargebee credentials](https://docs.n8n.io/integrations/builtin/credentials/chargebee/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [Chargebee integrations](https://n8n.io/integrations/chargebee/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

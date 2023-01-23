@@ -1,9 +1,14 @@
 # Demio
 
-[Demio](https://demio.com) provides a simple, no-download webinar experience and all the marketing tools you need to generate better results.
+[Demio](https://demio.com){:target="_blank" .external-link} node allows you to automate work in the Demio platform and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, which includes basic operations like getting, and registering events and reports.
+
+On this page, you'll find a list of operations the Demio node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/demio/).
+    Refer to the [Demio     credentials](https://docs.n8n.io/integrations/builtin/credentials/demio/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Demio integrations](https://n8n.io/integrations/demio/){:target="_blank" .external-link} list
 
 
 ## Basic Operations

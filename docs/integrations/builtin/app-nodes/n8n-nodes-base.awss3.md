@@ -1,9 +1,14 @@
 # AWS S3
 
-[AWS S3](https://aws.amazon.com/s3/) is a service offered by Amazon Web Services that provides object storage through a web service interface.
+[AWS S3](https://aws.amazon.com/s3/){:target=_blank .external-link} node allows you to automate work in the AWS S3 platform and integrate AWS S3 with other applications. n8n has built-in support for a wide range of AWS S3 features, which includes basic operations like creating, getting, deleting, copying, uploading, and downloading folders, files, and buckets.
+
+On this page, you'll find a list of operations the AWS S3 node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+  Refer to the [AWS S3 credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [AWS S3 integrations](https://n8n.io/integrations/aws-s3/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

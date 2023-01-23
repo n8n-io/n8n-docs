@@ -44,6 +44,12 @@
 	border-top: 1px solid var(--color-foreground-base);
 }
 
+.dt-func-arg-type {
+	color: var(--color-text-base);
+	font-size: var(--small-font);
+	text-transform: lowercase;
+}
+
 .dt-func-header-link {
 	display: inline-block;
 	opacity: 0;	

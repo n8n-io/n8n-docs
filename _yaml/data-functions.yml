@@ -4,7 +4,7 @@ df_string:
       - argName: algo
         optional: true
         longName: Algorithm
-        type: String
+        type: String enum
         default: md5
         options:
           - md5

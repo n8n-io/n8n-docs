@@ -1,9 +1,14 @@
 # CircleCI
 
-[CircleCI](https://circleci.com/) is a continuous integration and delivery platform helps teams release quality code, faster.
+[CircleCI](https://circleci.com/){:target=_blank .external-link} node allows you to automate work in the CircleCI platform and integrate CircleCI with other applications. n8n has built-in support for a wide range of CircleCI features, which includes basic operations like getting and triggering pipelines.
+
+On this page, you'll find a list of operations the CircleCI node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/circleci/).
+  Refer to the [CircleCI credentials](https://docs.n8n.io/integrations/builtin/credentials/circleci/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [CircleCI integrations](https://n8n.io/integrations/circleci/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

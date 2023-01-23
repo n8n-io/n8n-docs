@@ -1,10 +1,14 @@
 # CoinGecko
 
-[CoinGecko](https://www.coingecko.com) provides a fundamental analysis of the crypto market. In addition to tracking price, volume and market capitalization, CoinGecko tracks community growth, open-source code development, major events, and on-chain metrics.
+[CoinGecko](https://www.coingecko.com/){:target="_blank" .external-link} node allows you to automate work in the CoinGecko platform and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, which includes basic operations like getting coins and events.
+
+On this page, you'll find a list of operations the Coda node supports and links to more resources.
 
 !!! note "Credentials"
-    The CoinGecko node does not require authentication.
+    Refer to the [CoinGecko    credentials](https://docs.n8n.io/integrations/builtin/credentials/coingecko/){:target="_blank" .external-link} for guidance on setting up authentication. 
 
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [CoinGecko integrations](https://n8n.io/integrations/coingecko/){:target="_blank" .external-link} list.
 
 ## Basic Operations
 

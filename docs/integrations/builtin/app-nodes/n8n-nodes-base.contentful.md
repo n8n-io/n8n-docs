@@ -1,9 +1,14 @@
 # Contentful
 
-[Contentful](https://www.contentful.com/) provides a content infrastructure for digital teams to power content in websites, apps, and devices. It offers a central hub for structured content, powerful management and delivery APIs, and a customizable web app.
+[Contentful](https://www.contentful.com/){:target="_blank" .external-link} node allows you to automate work in the Contentful platform and integrate Contentful with other applications. n8n has built-in support for a wide range of Contentful features, which includes basic operations like getting assets, content types, entries, locales, and space.
+
+On this page, you'll find a list of operations the Contentful node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/contentful/).
+    Refer to the [Contentful     credentials](https://docs.n8n.io/integrations/builtin/credentials/contentful/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Contentful integrations](https://n8n.io/integrations/contentful/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -9,7 +9,7 @@
 }
 
 .dt-func-title-h4 {
-	font-weight: 600;
+	font-weight: 600 !important;
 }
 
 .dt-func-wrapper {

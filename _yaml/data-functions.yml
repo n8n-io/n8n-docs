@@ -1,0 +1,17 @@
+df_string: 
+  - funcName: hash
+    args:
+      - argName: algo
+        optional: true
+        longName: Algorithm
+        type: String
+        default: md5
+        options:
+          - md5
+          - base64
+          - sha1
+    returns: String
+    description: Returns a string hashed with the given algorithm.
+  - funcName: removeMarkdown
+    returns: String
+    description: Removes Markdown formatting from a string.

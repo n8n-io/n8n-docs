@@ -1,0 +1,70 @@
+:root { 
+	--color-red-600: #BF2F51;
+	--small-font: 0.6em;
+}
+
+.dt-func-title-h3 {
+	font-size: 1em !important;
+	font-weight: 800 !important;
+}
+
+.dt-func-title-h4 {
+	font-weight: 600;
+}
+
+.dt-func-wrapper {
+	border-bottom: 1px solid var(--color-foreground-base);
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+.dt-func-desc {
+
+}
+
+.dt-func-name {
+	font-weight: bold;
+	padding: 0.1em;
+	text-transform: lowercase;
+}
+
+.dt-func-optional {
+	color: var(--color-red-600);
+	font-size: var(--small-font);
+	font-weight: bold;
+	padding: 0.1em;
+	text-transform: uppercase;
+}
+
+.dt-func-options {
+
+}
+
+.dt-func-args {
+	border-top: 1px solid var(--color-foreground-base);
+}
+
+.dt-func-header-link {
+	display: inline-block;
+	opacity: 0;	
+}    
+
+.dt-func-header-link:hover, .dt-func-header-link:active, .dt-func-header-link:focus {
+	color: var(--md-typeset-a-color);
+	opacity: 1;
+	transition: color .25s,opacity 125ms;
+}
+
+.dt-func-arg-name-anchor {
+	display: inline-block;
+	opacity: 0;	
+}
+
+.dt-func-arg-name-anchor:hover, .dt-func-arg-name-anchor:active, .dt-func-arg-name-anchor:focus {
+	color: var(--md-typeset-a-color);
+	opacity: 1;
+	transition: color .25s,opacity 125ms;
+}
+
+
+

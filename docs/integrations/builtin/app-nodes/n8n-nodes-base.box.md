@@ -1,10 +1,15 @@
 # Box
 
-[Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files that are uploaded to its servers.
+[Box](https://www.box.com/){:target=_blank .external-link} node allows you to automate work in the Box platform and integrate Box with other applications. n8n has built-in support for a wide range of Box features, which includes basic operations like creating, copying, deleting, searching, uploading, and downloading files and folders
+
+On this page, you'll find a list of operations the Box node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/box/).
+  Refer to the [Box credentials](https://docs.n8n.io/integrations/builtin/credentials/box/){:target=_blank .external-link} for guidance on setting up authentication. 
 
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [Box integrations](https://n8n.io/integrations/box/){:target=_blank .external-link} list.
+ 
 
 ## Basic Operations
 

@@ -1,10 +1,14 @@
 # Webex by Cisco
 
-[Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
+[Webex by Cisco](https://webex.com/){:target=_blank .external-link} node allows you to automate work in the Webex platform and integrate Webex with other applications. n8n has built-in support for a wide range of Webex features, which includes basic operations like creating, getting, updating, and deleting meetings and messages.
+
+On this page, you'll find a list of operations the Webex node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ciscowebex/).
+  Refer to the [Webex credentials](https://docs.n8n.io/integrations/builtin/credentials/ciscowebex/){:target=_blank .external-link} for guidance on setting up authentication. 
 
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} list.
 
 ## Basic operations
 

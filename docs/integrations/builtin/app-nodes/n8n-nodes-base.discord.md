@@ -1,9 +1,14 @@
 # Discord
 
-[Discord](https://discord.com/) is a voice, video, and text communications platform for groups. Discord allows users to programmatically send messages using webhooks.
+[Discord](https://discord.com/){:target="_blank" .external-link} node allows you to automate work in the Discord platform and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, which includes basic operations like sending messages in a Discord channel
+
+On this page, you'll find a list of operations the Discord node supports and links to more resources.
 
 !!! note "Credentials"
-    The Discord node does not require authentication, but you must have access to a channel's settings to use webhooks. You can find out how to create a webhook in Discord [here](/integrations/builtin/credentials/discord/).
+    Refer to the [Discord       credentials](https://docs.n8n.io/integrations/builtin/credentials/discord/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Discord   integrations](https://n8n.io/integrations/discord/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

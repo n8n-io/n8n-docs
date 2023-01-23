@@ -1,9 +1,14 @@
 # Clearbit
 
-[Clearbit](https://clearbit.com/) provides powerful products, and data APIs like contact enrichment, lead generation, financial compliance, and more to help businesses grow.
+[Clearbit](https://clearbit.com/){:target="_blank" .external-link} node allows you to automate work in the Clearbit platform and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, which includes basic operations like auto-complete and looking up companies and persons.
+
+On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clearbit/).
+    Refer to the [Clearbit credentials](https://docs.n8n.io/integrations/builtin/credentials/clearbit/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Clearbit integrations](https://n8n.io/integrations/clearbit/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

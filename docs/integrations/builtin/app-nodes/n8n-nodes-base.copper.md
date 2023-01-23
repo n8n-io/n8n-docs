@@ -1,9 +1,14 @@
 # Copper
 
-[Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite, targeted towards small and medium-sized businesses.
+[Cortex](https://github.com/TheHive-Project/CortexDocs/){:target="_blank" .external-link} node allows you to automate work in the Cortex platform and integrate Cortex with other applications. n8n has built-in support for a wide range of Cortex features, which includes basic operations like getting, and executing responders, analyzers, and jobs.
+
+On this page, you'll find a list of operations the Cortex node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).
+    Refer to the [Cortex      credentials](https://docs.n8n.io/integrations/builtin/credentials/cortex/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Cortex integrations](https://n8n.io/integrations/cortex/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

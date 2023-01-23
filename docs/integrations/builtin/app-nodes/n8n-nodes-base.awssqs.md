@@ -1,9 +1,14 @@
 # AWS SQS
 
-[AWS SQS](https://aws.amazon.com/sqs/) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
+[AWS SQS](https://aws.amazon.com/sqs/){:target=_blank .external-link} node allows you to automate work in the AWS SNS platform and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, which includes basic operations like publishing messages.
+
+On this page, you'll find a list of operations the AWS SNS node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+  Refer to the [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [AWS SNS integrations](https://n8n.io/integrations/aws-sqs/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

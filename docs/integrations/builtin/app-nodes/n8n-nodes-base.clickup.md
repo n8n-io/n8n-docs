@@ -1,9 +1,14 @@
 # ClickUp
 
-[ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
+[ClickUp](https://clearbit.com/){:target="_blank" .external-link} node allows you to automate work in the Clearbit platform and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, which includes basic operations like auto-complete and looking up companies and persons.
+
+On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clickup/).
+    Refer to the [ClickUp credentials](https://docs.n8n.io/integrations/builtin/credentials/clickup/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [ClickUp integrations](https://n8n.io/integrations/clickup/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

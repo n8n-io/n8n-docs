@@ -1,9 +1,14 @@
 # ConvertKit
 
-[ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
+[Copper](https://www.copper.com/){:target="_blank" .external-link} node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, which includes basic operations like creating, deleting, getting, and updating companies, customer sources, leads, projects, and persons.
+
+On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit/).
+    Refer to the [Copper      credentials](https://docs.n8n.io/integrations/builtin/credentials/copper/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Copper integrations](https://n8n.io/integrations/copper/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

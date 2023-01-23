@@ -1,9 +1,14 @@
 # Brandfetch
 
-[Brandfetch](https://www.Brandfetch.com/) is a brand search engine that helps you find logos, colors, fonts, images, and more.
+[Brandfetch](https://www.Brandfetch.com/){:target=_blank .external-link} node allows you to automate work in the Brandfetch platform and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, which includes basic operations like returning a company’s information
+
+On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/brandfetch/).
+  Refer to the [Brandfetch credentials](https://docs.n8n.io/integrations/builtin/credentials/brandfetch/){:target=_blank .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples & Templates"
+  For example, usage and templates to help you get started, take a look at n8n's [Brandfetch integrations](https://n8n.io/integrations/brandfetch/){:target=_blank .external-link} list.
 
 
 

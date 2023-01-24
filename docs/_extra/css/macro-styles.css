@@ -1,21 +1,22 @@
 :root { 
-	--color-red-600: #BF2F51;
+	--color-purple: #8287EB;
 	--small-font: 0.6em;
 }
 
 .dt-func-title-h3 {
-	font-size: 1em !important;
+	font-size: 1.2em !important;
+	font-family: 'menlo', monospace;
 	font-weight: 800 !important;
 }
 
 .dt-func-title-h4 {
 	font-weight: 600 !important;
+	margin: 2em 0 1em 0;
 }
 
 .dt-func-wrapper {
-	border-bottom: 1px solid var(--color-foreground-base);
+	/* border-bottom: 1px solid var(--color-foreground-base); */
 	margin-bottom: 2em;
-	padding: 1em;
 }
 
 .dt-func-desc {
@@ -23,16 +24,17 @@
 }
 
 .dt-func-name {
+	font-family: 'menlo', monospace;
 	font-weight: bold;
-	padding: 0.1em;
+	padding: 0 0.5em 0 0;
 	text-transform: lowercase;
 }
 
 .dt-func-optional {
-	color: var(--color-red-600);
+	color: var(--color-purple);
 	font-size: var(--small-font);
 	font-weight: bold;
-	padding: 0.1em;
+	padding: 0 0.25em 0 0;
 	text-transform: uppercase;
 }
 
@@ -41,13 +43,14 @@
 }
 
 .dt-func-args {
-	border-top: 1px solid var(--color-foreground-base);
+	/* border-top: 1px solid var(--color-foreground-base); */
+	margin-bottom: 1em;
 }
 
 .dt-func-arg-type {
 	color: var(--color-text-base);
 	font-size: var(--small-font);
-	text-transform: lowercase;
+	text-transform: uppercase;
 }
 
 .dt-func-header-link {
@@ -74,3 +77,10 @@
 
 
 
+.dt-func-args-p {
+	margin: 0;
+}
+
+.dt-func-hr {
+	margin: 2.5em 0 2.5em 0;
+}

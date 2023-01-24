@@ -2,7 +2,7 @@
 <div class="dt-func-wrapper" >
 <h3 class="dt-func-title-h3" id="[[ funcName ]]">
 	[[funcName]]([[% if funcArgs %]][[% for arg in funcArgs %]][[arg.argName]][[% if arg.optional %]]?[[% endif %]]:
-	[[arg.longName]][[ "," if not loop.last ]][[% endfor %]][[% endif %]]):
+	[[arg.longName]][[ ", " if not loop.last ]][[% endfor %]][[% endif %]]):
 	[[returnType]]
 	<a class="dt-func-header-link" href="#[[ funcName ]]" title="Permanent link">#</a>
 </h3>
@@ -14,9 +14,10 @@
 	[[% for arg in funcArgs %]]
 <div class="dt-func-args">
 	<span class="dt-func-name" id="[[funcName]]-[[arg.argName]]">[[arg.argName]]</span><span class="dt-func-optional">[[% if arg.optional %]]Optional[[% else %]]Required[[% endif %]]</span><span class="dt-func-arg-type">[[ arg.type ]]</span><a class="dt-func-arg-name-anchor" href="#[[funcName]]-[[arg.argName]]"></a> 
+	<p class="dt-func-args-p">[[arg.description]]</p>
 	<div class="dt-func-options">[[% if arg.options %]]
-		<p>Default: <code>[[ arg.default ]]</code></p>
-		<p>One of: [[% for option in arg.options %]]
+		<p class="dt-func-args-p">Default: <code>[[ arg.default ]]</code></p>
+		<p class="dt-func-args-p">One of: [[% for option in arg.options %]]
 		<code>[[option]]</code>[[ "," if not loop.last ]]
 		[[% endfor %]]
 		</p>
@@ -25,4 +26,5 @@
 [[% endfor %]]
 [[% endif %]]
 </div>
+<hr class="dt-func-hr" />
 [[% endmacro %]]

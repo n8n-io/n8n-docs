@@ -36,10 +36,3 @@ description: A reference document listing built-in convenience functions to supp
 [[% for func in df_string %]]
 [[ dataFunctions.dataFunctions("string", func.funcName, func.returns, func.description, func.args, func.examples ) ]]
 [[% endfor %]]
-
-
-
-
-
-
-

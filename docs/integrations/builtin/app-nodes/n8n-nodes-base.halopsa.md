@@ -1,9 +1,14 @@
 # HaloPSA
 
-[HaloPSA](https://halopsa.com/) is a intuitive PSA software. Standardise your processes and keep your customers at the center of every conversation.
+[HaloPSA](https://halopsa.com/){:target="_blank" .external-link} node allows you to automate work in the HaloPSA platform and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HaloPSA features, which includes basic operations like creating, updating, deleting, and getting clients, sites and tickets. 
+
+On this page, you'll find a list of operations the HaloPSA node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/halopsa/).
+    Refer to the [HaloPSA credentials](https://docs.n8n.io/integrations/builtin/credentials/halopsa/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [HaloPSA integrations](https://n8n.io/integrations/halopsa/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

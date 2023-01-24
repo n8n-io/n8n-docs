@@ -51,7 +51,7 @@ df_string:
     description: Checks if a string is a valid URL.
   - funcName: isURL
     returns: Boolean
-    description: See [isUrl](#string-isUrl)
+    description: See <a href="#string-isUrl>isUrl</a>
   - funcName: length
     returns: Number
     description: Returns the character count of a string.
@@ -79,7 +79,7 @@ df_string:
     description: Converts a string to a date.
   - funcName: toDecimalNumber
     returns: Number
-    description: See [toFloat](#string-toFloat)
+    description: See <a href="#string-toFloat">toFloat</a>
   - funcName: toFloat
     returns: Number
     description: Converts a string to a decimal number.
@@ -382,13 +382,21 @@ df_array:
     description: Removes duplicates from an array.
   - funcName: renameKeys
     args:
-      - argName: 
+      - argName: from
         optional: false
+        longName: String
+        type: String
+        description: The key you want to rename.
+      - argName: to
+        optional: false
+        longName: String
+        type: String
+        description: The new name.
     returns: Array
-    description: Renames all matching keys in the array
+    description: Renames all matching keys in the array. You can rename more than one key by entering a series of comma separated strings, in the pattern oldKeyName, newKeyName.
   - funcName: size
     returns: Number
-    description: See [length](#array-length)
+    description: See <a href="#array-length">length</a>
   - funcName: smartJoin
     args:
       - argName: keyField
@@ -402,7 +410,7 @@ df_array:
         type: String
         description: The value to join.
     returns: Array
-    description: Joins list elements into a string. Removes non-matching and empty values and trims any whitespace before joining.
+    description: Operates on an array of objects where each object contains key-value pairs. Creates a new object containing key-value pairs, where the key is the value of the first pair, and the value is the value of the second pair. Removes non-matching and empty values and trims any whitespace before joining.
   - funcName: sum
     returns: Number
     description: Returns the total sum all the values in an array of parsable numbers.

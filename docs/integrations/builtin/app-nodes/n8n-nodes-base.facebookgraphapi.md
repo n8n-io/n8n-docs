@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Facebook Graph API node suppo
     Refer to the [Facebook Graph API credentials](https://docs.n8n.io/integrations/builtin/credentials/facebookgraph/){:target="_blank" .external-link} for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebookgraph){:target="_blank" .external-link} list.
+    For example, usage and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebookgraph/){:target="_blank" .external-link} list.
 
 
 ## Basic operations

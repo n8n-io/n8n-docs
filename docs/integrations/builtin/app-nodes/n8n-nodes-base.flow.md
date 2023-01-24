@@ -1,9 +1,14 @@
 # Flow
 
-[Flow](https://www.getflow.com/) is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
+[Flow](https://getflow.com){:target="_blank" .external-link} node allows you to automate work in the Flow platform and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, which includes basic operations like creating, updating, and getting tasks.
+
+On this page, you'll find a list of operations the Flow node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/flow/).
+    Refer to the [Flow credentials](https://docs.n8n.io/integrations/builtin/credentials/flow/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Flow integrations](https://n8n.io/integrations/flow){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

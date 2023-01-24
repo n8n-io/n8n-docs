@@ -1,9 +1,14 @@
 # Elasticsearch
 
-[Elasticsearch](https://www.elastic.co/) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+[Elasticsearch](https://elastic.co){:target="_blank" .external-link} node allows you to automate work in the Elasticsearch platform and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, which includes basic operations like creating, updating, deleting, and getting documents and indexes. 
+
+On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/elasticsearch/).
+    Refer to the [Elasticsearch credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsearch/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Elasticsearch integrations](https://n8n.io/integrations/elasticsearch){:target="_blank" .external-link} list.
 
 
 ## Basic operations

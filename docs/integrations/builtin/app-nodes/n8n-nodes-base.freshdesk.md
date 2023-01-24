@@ -1,9 +1,14 @@
 # Freshdesk
 
-[Freshdesk](https://freshdesk.com/) is a customer support software also classified as a ticketing software or a helpdesk that allows companies to effectively manage their customer care and support function.
+[Freshdesk](https://freshdesk.com){:target="_blank" .external-link} node allows you to automate work in the Freshdesk platform and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, which includes basic operations like creating, updating, deleting, and getting contacts and tickets.
+
+On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/freshdesk/).
+    Refer to the [Freshdesk credentials](https://docs.n8n.io/integrations/builtin/credentials/freshdesk/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Freshdesk integrations](https://n8n.io/integrations/freshdesk){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

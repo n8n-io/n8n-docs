@@ -167,7 +167,13 @@ nav:
         - code-examples/expressions/index.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
-        - Data transformation functions: code-examples/expressions/data-transformation-functions.md
+        - Data transformation functions: 
+          - code-examples/expressions/data-transformation-functions/index.md
+          - Arrays: code-examples/expressions/data-transformation-functions/arrays.md
+          - Dates: code-examples/expressions/data-transformation-functions/dates.md
+          - Numbers: code-examples/expressions/data-transformation-functions/numbers.md
+          - Objects: code-examples/expressions/data-transformation-functions/objects.md
+          - Strings: code-examples/expressions/data-transformation-functions/strings.md
       - JavaScript:
         - code-examples/javascript-functions/index.md         
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md

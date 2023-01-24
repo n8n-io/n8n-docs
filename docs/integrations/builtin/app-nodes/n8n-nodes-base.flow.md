@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the Flow node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Flow credentials](https://docs.n8n.io/integrations/builtin/credentials/flow/){:target="_blank" .external-link} for guidance on setting up authentication. 
+    Refer to the [Flow credentials](https://docs.n8n.io/integrations/builtin/credentials/flow/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For example, usage and templates to help you get started, take a look at n8n's [Flow integrations](https://n8n.io/integrations/flow/){:target="_blank" .external-link} list.

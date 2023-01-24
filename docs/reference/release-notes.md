@@ -11,7 +11,7 @@ This release includes an overhaul of the Google Analytics node, and bug fixes.
 
 ### Node enhancements
 
-This release includes an overhaul of the Google Analytics node. This brings the node's code and components in line with n8n's latest node building styles.
+This release includes an overhaul of the Google Analytics node. This brings the node's code and components in line with n8n's latest node building styles, and adds support for GA4 properties.
 
 ### Bug fixes
 

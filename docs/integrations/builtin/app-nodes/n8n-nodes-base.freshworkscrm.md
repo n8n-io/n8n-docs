@@ -1,9 +1,14 @@
 # Freshworks CRM
 
-[Freshworks CRM](https://www.freshworks.com/freshsales-crm/) is a cloud-based customer relationship management (CRM) solution that helps businesses manage their interactions with existing and potential customers.
+[Freshservice](https://freshservice.com){:target="_blank" .external-link} node allows you to automate work in the Freshservice platform and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshservice features, which includes basic operations like creating, updating, deleting, and getting contacts. 
+
+On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/freshworkscrm/).
+    Refer to the [Freshservice credentials](https://docs.n8n.io/integrations/builtin/credentials/freshservice/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Freshservice integrations](https://n8n.io/integrations/freshservice){:target="_blank" .external-link} list.
 
 
 ## Basic operations

@@ -1,9 +1,14 @@
 # GitLab
 
-[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
+[GitLab](https://gitlab.com){:target="_blank" .external-link} node allows you to automate work in the GitLab platform and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, which includes basic operations like creating, updating, deleting, and editing issues, repositories, releases and users. 
+
+On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab/).
+    Refer to the [GitLab credentials](https://docs.n8n.io/integrations/builtin/credentials/gitlab/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [GitLab integrations](https://n8n.io/integrations/gitlab){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

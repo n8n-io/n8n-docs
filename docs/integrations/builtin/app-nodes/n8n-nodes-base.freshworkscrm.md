@@ -1,14 +1,14 @@
 # Freshworks CRM
 
-[Freshservice](https://freshservice.com){:target="_blank" .external-link} node allows you to automate work in the Freshservice platform and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshservice features, which includes basic operations like creating, updating, deleting, and getting contacts. 
+[Freshworks CRM](https://www.freshworks.com/freshsales-crm/){:target="_blank" .external-link} node allows you to automate work in the Freshworks CRM platform and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, which includes basic operations like creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
 
-On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
+On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Freshservice credentials](https://docs.n8n.io/integrations/builtin/credentials/freshservice/){:target="_blank" .external-link} for guidance on setting up authentication. 
+    Refer to the [Freshworks CRM credentials](https://docs.n8n.io/integrations/builtin/credentials/freshworkscrm/){:target="_blank" .external-link} for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Freshservice integrations](https://n8n.io/integrations/freshservice){:target="_blank" .external-link} list.
+    For example, usage and templates to help you get started, take a look at n8n's [Freshworks CRM integrations](https://n8n.io/integrations/freshworkscrm){:target="_blank" .external-link} list.
 
 
 ## Basic operations

@@ -1,6 +1,6 @@
 # AWS Elastic Load Balancing
 
-[AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/){:target=_blank .external-link} node allows you to automate work in the AWS ELB platform and integrate AWS ELB with other applications. n8n has built-in support for a wide range of AWS ELB features, which includes basic operations like adding, getting, removing & deleting certificates and load balancers.
+[AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) node allows you to automate work in the AWS ELB platform and integrate AWS ELB with other applications. n8n has built-in support for a wide range of AWS ELB features, which includes basic operations like adding, getting, removing & deleting certificates and load balancers.
 
 On this page, you'll find a list of operations the AWS ELB node supports and links to more resources.
 

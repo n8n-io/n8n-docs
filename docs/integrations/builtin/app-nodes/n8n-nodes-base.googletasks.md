@@ -1,9 +1,14 @@
 # Google Tasks
 
-[Google Tasks](https://tasks.google.com) is a task management service developed by Google. It keeps track of your daily tasks, organize multiple lists, and track important deadlines.
+[Google Tasks](https://tasks.google.com/){:target="_blank" .external-link} node allows you to automate work in the Google Tasks platform and integrate Google Tasks with other applications. n8n has built-in support for a wide range of Google Tasks features, which includes basic operations like adding, updating, and retrieving contacts. 
+
+On this page, you'll find a list of operations the Google Tasks node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to the [Google Tasks credentials](https://docs.n8n.io/integrations/builtin/credentials/google/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Google Tasks integrations](https://n8n.io/integrations/google-tasks/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

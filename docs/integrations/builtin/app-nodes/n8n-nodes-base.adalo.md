@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
 !!! note "Credentials"
-	Refer to the [Adalo credentials](/integrations/builtin/credentials/adalo/){:target=_blank .external-link} for guidance on setting up authentication. 
+	Refer to the [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
 	
 !!! note "Examples and templates"
 	For example, usage and templates to help you get started, take a look at n8n's [Adalo integrations list](https://n8n.io/integrations/adalo/){:target=_blank .external-link}.

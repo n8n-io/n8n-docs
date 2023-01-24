@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the Google Books node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Google Books credentials](https://docs.n8n.io/integrations/builtin/credentials/google/){:target="_blank" .external-link} for guidance on setting up authentication. 
+    Refer to the [Google Books credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For example, usage and templates to help you get started, take a look at n8n's [Google Books integrations](https://n8n.io/integrations/google-books/){:target="_blank" .external-link} list.

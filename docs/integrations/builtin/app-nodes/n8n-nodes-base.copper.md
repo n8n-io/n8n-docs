@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the Cortex node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Cortex      credentials](https://docs.n8n.io/integrations/builtin/credentials/cortex/){:target="_blank" .external-link} for guidance on setting up authentication. 
+    Refer to the [Cortex credentials](https://docs.n8n.io/integrations/builtin/credentials/cortex/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For example, usage and templates to help you get started, take a look at n8n's [Cortex integrations](https://n8n.io/integrations/cortex/){:target="_blank" .external-link} list.

@@ -82,7 +82,7 @@
 }
 
 .dt-func-hr {
-	margin: 2.5em 0 2.5em 0;
+	margin: 2.5em 0 2.5em 0 !important;
 }
 
 .dt-func-example-code {

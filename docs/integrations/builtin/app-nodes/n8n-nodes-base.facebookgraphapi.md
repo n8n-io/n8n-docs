@@ -1,9 +1,14 @@
 # Facebook Graph API
 
-[Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
+[Facebook Graph API](https://facebook.com){:target="_blank" .external-link} node allows you to automate work in the Facebook Graph platform and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, which includes basic operations like using queries GET POST DELETE for several parameters like host URL, request methods and much more.
+
+On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookgraph/).
+    Refer to the [Facebook Graph API credentials](https://docs.n8n.io/integrations/builtin/credentials/facebookgraph/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebookgraph){:target="_blank" .external-link} list.
 
 
 ## Basic operations

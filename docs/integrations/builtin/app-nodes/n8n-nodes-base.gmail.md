@@ -1,9 +1,14 @@
 # Gmail
 
-[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google.
+[Gmail](https://gmail.com){:target="_blank" .external-link} node allows you to automate work in the Gmail platform and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, which includes basic operations like creating, updating, deleting, and getting drafts, messages, labels, thread.  
+
+On this page, you'll find a list of operations the Gmail node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to the [Gmail credentials](https://docs.n8n.io/integrations/builtin/credentials/gmail/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Gmail integrations](https://n8n.io/integrations/gmail/){:target="_blank" .external-link} list.
 
 
 ## Operations

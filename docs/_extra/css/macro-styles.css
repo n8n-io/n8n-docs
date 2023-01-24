@@ -11,7 +11,7 @@
 
 .dt-func-title-h4 {
 	font-weight: 600 !important;
-	margin: 2em 0 1em 0;
+	margin: 2em 0 1em 0 !important;
 }
 
 .dt-func-wrapper {
@@ -83,4 +83,13 @@
 
 .dt-func-hr {
 	margin: 2.5em 0 2.5em 0;
+}
+
+.dt-func-example-code {
+	font-weight: bold;
+}
+
+
+.dt-func-wrapper code {
+	display: block;
 }

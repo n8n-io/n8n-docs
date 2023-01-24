@@ -51,7 +51,7 @@ df_string:
     description: Checks if a string is a valid URL.
   - funcName: isURL
     returns: Boolean
-    description: See <a href="#string-isUrl>isUrl</a>
+    description: See <a href="#string-isUrl">isUrl</a>
   - funcName: length
     returns: Number
     description: Returns the character count of a string.
@@ -411,6 +411,10 @@ df_array:
         description: The value to join.
     returns: Array
     description: Operates on an array of objects where each object contains key-value pairs. Creates a new object containing key-value pairs, where the key is the value of the first pair, and the value is the value of the second pair. Removes non-matching and empty values and trims any whitespace before joining.
+    examples:
+      - exampleName: Basic usage
+        code: _macros/data-function-code/smartjoin-code.md
+        output: _macros/data-function-code/smartjoin-output.md
   - funcName: sum
     returns: Number
     description: Returns the total sum all the values in an array of parsable numbers.

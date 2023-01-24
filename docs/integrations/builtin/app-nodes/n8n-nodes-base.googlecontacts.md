@@ -1,9 +1,14 @@
 # Google Contacts
 
-[Google Contacts](https://contacts.google.com/) is Google's contact management tool that is available in its free email service Gmail, as a standalone service, and as a part of Google's business-oriented suite of web apps Google Apps.
+[Google Contacts](https://contacts.google.com/){:target="_blank" .external-link} node allows you to automate work in the Google Contacts platform and integrate Google Contacts with other applications. n8n has built-in support for a wide range of Google Contacts features, which includes basic operations like creating, updating, retrieving, deleting, and getting contacts. 
+
+On this page, you'll find a list of operations the Google Contacts node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to the [Google Contacts credentials](https://docs.n8n.io/integrations/builtin/credentials/google/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Google Contacts integrations](https://n8n.io/integrations/google-contacts/){:target="_blank" .external-link} list.
 
 
 

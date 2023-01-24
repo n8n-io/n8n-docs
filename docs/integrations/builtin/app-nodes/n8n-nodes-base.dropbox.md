@@ -1,9 +1,14 @@
 # Dropbox
 
-[Dropbox](https://dropbox.com) is a cloud-based file storage and sharing service, accessible through multiple devices.
+[Dropbox](https://dropbox.com){:target="_blank" .external-link} node allows you to automate work in the Dropbox platform and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, which includes basic operations like creating, downloading, moving, and copying files and folders.
+
+On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/dropbox/).
+    Refer to the [Dropbox credentials](https://docs.n8n.io/integrations/builtin/credentials/dropbox/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Dropbox integrations](https://n8n.io/integrations/dropbox){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

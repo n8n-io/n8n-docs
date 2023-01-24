@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [DeepL credentials](https://docs.n8n.io/integrations/builtin/credentials/deepl/){:target="_blank" .external-link} for guidance on setting up authentication. 
+    Refer to the [DeepL credentials](https://docs.n8n.io/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For example, usage and templates to help you get started, take a look at n8n's [DeepL integrations](https://n8n.io/integrations/deepl/){:target="_blank" .external-link} list.

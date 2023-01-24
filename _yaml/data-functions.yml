@@ -239,4 +239,66 @@ df_date:
         description: The last date in the range.
     returns: Boolean
     description: Checks if a Date is between two given dates.
+  - funcName: isDst
+    returns: Boolean
+    description: Checks if a Date is within Daylight Savings Time.
+  - funcName: isInLast
+    args:
+      - argName: n
+        optional: false
+        longName: Number
+        type: Number
+        description: The number of units. For example, to check if the date is in the last nine weeks, enter 9.
+        default: 0
+      - argName: unit
+        optional: false
+        longName: DurationUnit
+        type: String enum
+        description: A valid string specifying the time unit.
+        default: minutes
+        options:  *df_durationUnit
+    returns: Boolean
+    description: Checks if a Date is within a given time period.
+  - funcName: isWeekend
+    returns: Boolean
+    description: Checks if the Date falls on a Saturday or Sunday.
+  - funcName: minus
+    args:
+      - argName: n
+        optional: false
+        longName: Number
+        type: Number
+        description: The number of units. For example, to subtract nine seconds, enter 9 here.
+      - argName: unit
+        optional: false
+        longName: DurationUnit
+        type: String enum
+        description: A valid string specifying the time unit.
+        options:  *df_durationUnit
+    returns: Date
+    description: Subtracts a given time period from a Date.
+  - funcName: plus
+    args:
+      - argName: n
+        optional: false
+        longName: Number
+        type: Number
+        description: The number of units. For example, to add nine seconds, enter 9 here.
+      - argName: unit
+        optional: false
+        longName: DurationUnit
+        type: String enum
+        description: A valid string specifying the time unit.
+        options:  *df_durationUnit
+    returns: Date
+    description: Adds a given time period from a Date.
+  - funcName: toLocaleString
+    args:
+      - argName: locales
+        optional: false
+        longName: LanguageCode
+        type: String enum
+        description: An IETF BCP 47 language tag.
+    returns: String
+    description: Converts a Date to a string of a BCP 47 language code setting. If you don't provide an argument, this function uses your local settings.
 

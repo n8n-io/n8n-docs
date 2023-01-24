@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Ghost node supports and links
     Refer to the [Ghost credentials](https://docs.n8n.io/integrations/builtin/credentials/ghost/){:target="_blank" .external-link} for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Ghost integrations](https://n8n.io/integrations/ghost){:target="_blank" .external-link} list.
+    For example, usage and templates to help you get started, take a look at n8n's [Ghost integrations](https://n8n.io/integrations/ghost/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -5,7 +5,7 @@
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to the [Bitly credentials](https://docs.n8n.io/integrations/builtin/credentials/bitly/){:target=_blank .external-link} for guidance on setting up authentication. 
+  Refer to the [Bitly credentials](https://docs.n8n.io/integrations/builtin/credentials/bitly/) for guidance on setting up authentication. 
 
 !!! note "Examples & Templates"
   For example, usage and templates to help you get started, take a look at n8n's [Bitly integrations](https://n8n.io/integrations/bitly/){:target=_blank .external-link} list.

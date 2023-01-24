@@ -1,10 +1,10 @@
-[[% macro dataFunctions(funcName, returnType, description, funcArgs) %]]
+[[% macro dataFunctions(dataType, funcName, returnType, description, funcArgs) %]]
 <div class="dt-func-wrapper" >
 <h3 class="dt-func-title-h3" id="[[ funcName ]]">
 	[[funcName]]([[% if funcArgs %]][[% for arg in funcArgs %]][[arg.argName]][[% if arg.optional %]]?[[% endif %]]:
 	[[arg.longName]][[ ", " if not loop.last ]][[% endfor %]][[% endif %]]):
 	[[returnType]]
-	<a class="dt-func-header-link" href="#[[ funcName ]]" title="Permanent link">#</a>
+	<a class="dt-func-header-link" href="#[[dataType]]-[[ funcName ]]" title="Permanent link">#</a>
 </h3>
 <div class="dt-func-desc">
 [[description]]

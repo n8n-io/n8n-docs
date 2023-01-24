@@ -9,28 +9,32 @@ description: A reference document listing built-in convenience functions to supp
 
 ## Arrays
 
+[[% for func in df_array %]]
+[[ dataFunctions.dataFunctions("array", func.funcName, func.returns, func.description, func.args ) ]]
+[[% endfor %]]
+
 ## Dates
 
 [[% for func in df_date %]]
-[[ dataFunctions.dataFunctions(func.funcName, func.returns, func.description, func.args ) ]]
+[[ dataFunctions.dataFunctions("date", func.funcName, func.returns, func.description, func.args ) ]]
 [[% endfor %]]
 
 ## Numbers
 
 [[% for func in df_number %]]
-[[ dataFunctions.dataFunctions(func.funcName, func.returns, func.description, func.args ) ]]
+[[ dataFunctions.dataFunctions("number", func.funcName, func.returns, func.description, func.args ) ]]
 [[% endfor %]]
 
 ## Objects
 
 [[% for func in df_object %]]
-[[ dataFunctions.dataFunctions(func.funcName, func.returns, func.description, func.args ) ]]
+[[ dataFunctions.dataFunctions("object", func.funcName, func.returns, func.description, func.args ) ]]
 [[% endfor %]]
 
 ## Strings
 
 [[% for func in df_string %]]
-[[ dataFunctions.dataFunctions(func.funcName, func.returns, func.description, func.args ) ]]
+[[ dataFunctions.dataFunctions("string", func.funcName, func.returns, func.description, func.args ) ]]
 [[% endfor %]]
 
 

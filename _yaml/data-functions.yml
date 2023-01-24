@@ -51,7 +51,7 @@ df_string:
     description: Checks if a string is a valid URL.
   - funcName: isURL
     returns: Boolean
-    description: See [isUrl](#isUrl)
+    description: See [isUrl](#string-isUrl)
   - funcName: length
     returns: Number
     description: Returns the character count of a string.
@@ -79,7 +79,7 @@ df_string:
     description: Converts a string to a date.
   - funcName: toDecimalNumber
     returns: Number
-    description: See [toFloar](#toFloat)
+    description: See [toFloat](#string-toFloat)
   - funcName: toFloat
     returns: Number
     description: Converts a string to a decimal number.
@@ -301,4 +301,120 @@ df_date:
         description: An IETF BCP 47 language tag.
     returns: String
     description: Converts a Date to a string of a BCP 47 language code setting. If you don't provide an argument, this function uses your local settings.
-
+df_array:
+  - funcName: average
+    returns: Number
+    description: Returns the value of elements in an array
+  - funcName: chunk
+    args:
+      - argName: size
+        optional: false
+        longName: Number
+        type: Number
+        description: The size of each chunk.
+    returns: Array
+    description: Splits arrays into chunks with a length of size
+  - funcName: compact
+    returns: Array
+    description: Removes empty values from the array.
+  - funcName: count
+    returns: Number
+    description: Returns the number of elements in an array.
+  - funcName: difference
+    args:
+      - argName: arr
+        optional: false
+        longName: Array
+        type: Array
+        description: The array to compare to the base array.
+    returns: Array
+    description: Compares two arrays. Returns all elements in the base array that aren’t present in arr.
+  - funcName: intersection
+    args:
+      - argName: arr
+        optional: false
+        longName: Array
+        type: Array
+        description: The array to compare to the base array.
+    returns: Array
+    description: Compares two arrays. Returns all elements in the base array that are present in arr.
+  - funcName: isEmpty
+    returns: Boolean
+    description: Checks if the array doesn't have any elements.
+  - funcName: isNotEmpty
+    returns: Boolean
+    description: Checks if the array has elements.
+  - funcName: last
+    returns: Any
+    description: Returns the last element of the array.
+  - funcName: length
+    returns: Number
+    description: Returns the number of elements in an array.
+  - funcName: max
+    returns: Number
+    description: Returns the highest value in an array.
+  - funcName: merge
+    args:
+      - argName: arr
+        optional: false
+        longName: Array
+        type: Array
+        description: The array to merge into the base array.
+    returns: Array
+    description: Merges two Object-arrays into one array by merging the key-value pairs of each element.
+  - funcName: min
+    returns: Number
+    description: Gets the minimum value from a number-only array.
+  - funcName: pluck
+    args:
+      - argName: fieldName
+        optional: false,
+        longName: String
+        type: String
+        description: The key(s) you want to retrieve. You can enter as many keys as you want, as comma-separated strings.
+    returns: Array
+    description: Returns an array of Objects where keys equal the given field names.
+  - funcName: randomItem
+    returns: Any
+    description: Returns a random element from an array.
+  - funcName: removeDuplicates
+    returns: Array
+    description: Removes duplicates from an array.
+  - funcName: renameKeys
+    args:
+      - argName: 
+        optional: false
+    returns: Array
+    description: Renames all matching keys in the array
+  - funcName: size
+    returns: Number
+    description: See [length](#array-length)
+  - funcName: smartJoin
+    args:
+      - argName: keyField
+        optional: false
+        longName: String
+        type: String
+        description: The key to join.
+      - argName: nameField
+        optional: false
+        longName: String
+        type: String
+        description: The value to join.
+    returns: Array
+    description: Joins list elements into a string. Removes non-matching and empty values and trims any whitespace before joining.
+  - funcName: sum
+    returns: Number
+    description: Returns the total sum all the values in an array of parsable numbers.
+  - funcName: union
+    args:
+      - argName: arr
+        optional: false
+        longName: Array
+        type: Array
+        description: The array to compare to the base array.
+    returns: Array
+    description: Returns the elements in common between two arrays.
+  - funcName: unique
+    returns: Array
+    description: Remove duplicates from an array.

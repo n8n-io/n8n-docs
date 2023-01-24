@@ -1,11 +1,14 @@
 # Dropcontact
 
-[Dropcontact](https://www.dropcpontact.com) is an email finder platform that allows you to automatically find, verify and validate nominative emails and enrich your contacts with all efficient information to contact him.
+[Dropcontact](https://dropcontact.com){:target="_blank" .external-link} node allows you to automate work in the Dropcontact platform and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, which includes basic operations like fetching contacts. 
 
-
+On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/dropcontact/).
+    Refer to the [Dropcontact credentials](https://docs.n8n.io/integrations/builtin/credentials/drift/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [Dropcontact integrations](https://n8n.io/integrations/drift){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # GetResponse
 
-[GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
+[GetResponse](https://getresponse.com){:target="_blank" .external-link} node allows you to automate work in the GetResponse platform and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, which includes basic operations like creating, updating, deleting, and getting contacts. 
+
+On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
+    Refer to the [GetResponse credentials](https://docs.n8n.io/integrations/builtin/credentials/getresponse/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [GetResponse integrations](https://n8n.io/integrations/getresponse){:target="_blank" .external-link} list.
 
 
 

@@ -1,9 +1,14 @@
 # GitHub
 
-[GitHub](https://github.com/) provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+[GitHub](https://github.com){:target="_blank" .external-link} node allows you to automate work in the GitHub platform and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, which includes basic operations like creating, updating, deleting, and editing files, repositories, issues, releases, users. 
+
+On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/github/).
+    Refer to the [GitHub credentials](https://docs.n8n.io/integrations/builtin/credentials/github/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [GitHub integrations](https://n8n.io/integrations/github){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

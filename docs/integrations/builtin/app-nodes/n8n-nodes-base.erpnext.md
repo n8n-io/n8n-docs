@@ -1,9 +1,14 @@
 # ERPNext
 
-[ERPNext](https://erpnext.com) is an open-source integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and services companies.
+[ERPNext](https://erpnext.com){:target="_blank" .external-link} node allows you to automate work in the ERPNext platform and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, which includes basic operations like creating, updating, retrieving, and deleting documents. 
+
+On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/erpnext/).
+    Refer to the [ERPNext credentials](https://docs.n8n.io/integrations/builtin/credentials/erpnext/){:target="_blank" .external-link} for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For example, usage and templates to help you get started, take a look at n8n's [ERPNext integrations](https://n8n.io/integrations/erpnext){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

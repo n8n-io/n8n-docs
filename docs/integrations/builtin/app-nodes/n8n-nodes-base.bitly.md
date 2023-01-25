@@ -1,6 +1,6 @@
 # Bitly
 
-[Bitly](https://bitly.com/){:target=_blank .external-link} node allows you to automate work in the Bitly platform and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, which includes basic operations like creating, getting, and updating links.
+Bitly node allows you to automate work in the Bitly platform and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, which includes basic operations like creating, getting, and updating links.
 
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 

@@ -1,7 +1,7 @@
 # Disqus
 
 Disqus
-[Disqus](https://disqus.com){:target="_blank" .external-link} node allows you to automate work in the Disqus platform and integrate Disqus with other applications. n8n has built-in support for a wide range of Disqus features, which includes basic operations like returning forums.
+Disqus node allows you to automate work in the Disqus platform and integrate Disqus with other applications. n8n has built-in support for a wide range of Disqus features, which includes basic operations like returning forums.
 
 On this page, you'll find a list of operations the Disqus node supports and links to more resources.
 

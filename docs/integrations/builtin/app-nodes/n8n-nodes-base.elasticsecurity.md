@@ -1,15 +1,14 @@
 # Elastic Security
 
-[Elasticsearch](https://elastic.co){:target="_blank" .external-link} node allows you to automate work in the Elasticsearch platform and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, which includes basic operations like creating, updating, deleting, and getting documents and indexes. 
+Elastic Security node allows you to automate work in the Elastic Security platform and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, which includes basic operations like creating, updating, deleting, retrieving, and getting cases.
 
-On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
+On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Elasticsearch credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsearch/) for guidance on setting up authentication. 
+    Refer to the [Elastic Security credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Elasticsearch integrations](https://n8n.io/integrations/elasticsearch/){:target="_blank" .external-link} list.
-
+    For example, usage and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elasticsecurity){:target="_blank" .external-link} list.
 
 ## Basic operations
 

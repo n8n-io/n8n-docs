@@ -1,6 +1,6 @@
 # FileMaker
 
-[FileMaker](https://claris.com/filemaker){:target="_blank" .external-link} node allows you to automate work in the FileMaker platform and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, which includes basic operations like creating, finding, getting, editing, and duplicating files.
+FileMaker node allows you to automate work in the FileMaker platform and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, which includes basic operations like creating, finding, getting, editing, and duplicating files.
 
 On this page, you'll find a list of operations the FileMaker node supports and links to more resources.
 

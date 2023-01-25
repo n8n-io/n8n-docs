@@ -1,6 +1,6 @@
 # Dropcontact
 
-[Dropcontact](https://dropcontact.com){:target="_blank" .external-link} node allows you to automate work in the Dropcontact platform and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, which includes basic operations like fetching contacts. 
+Dropcontact node allows you to automate work in the Dropcontact platform and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, which includes basic operations like fetching contacts. 
 
 On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 

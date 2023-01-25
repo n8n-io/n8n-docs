@@ -1,6 +1,6 @@
 # Bubble
 
-[Bubble](https://www.bubble.io/){:target=_blank .external-link} node allows you to automate work in the Bubble platform and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, which includes basic operations like creating, deleting, getting, and updating objects.
+Bubble node allows you to automate work in the Bubble platform and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, which includes basic operations like creating, deleting, getting, and updating objects.
 
 On this page, you'll find a list of operations the Bubble node supports and links to more resources.
 

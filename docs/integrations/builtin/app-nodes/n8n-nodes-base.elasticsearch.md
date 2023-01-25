@@ -1,6 +1,6 @@
 # Elasticsearch
 
-[Elasticsearch](https://elastic.co){:target="_blank" .external-link} node allows you to automate work in the Elasticsearch platform and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, which includes basic operations like creating, updating, deleting, and getting documents and indexes. 
+Elasticsearch node allows you to automate work in the Elasticsearch platform and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, which includes basic operations like creating, updating, deleting, and getting documents and indexes. 
 
 On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
 

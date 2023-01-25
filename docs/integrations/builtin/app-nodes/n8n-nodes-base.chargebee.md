@@ -1,6 +1,6 @@
 # Chargebee
 
-[Chargebee](https://www.chargebee.com/){:target=_blank .external-link} node allows you to automate work in the Chargebee platform and integrate Chargebee with other applications. n8n has built-in support for a wide range of Chargebee features, which includes basic operations like returning, canceling, and creating customers, invoices, and subscriptions
+Chargebee node allows you to automate work in the Chargebee platform and integrate Chargebee with other applications. n8n has built-in support for a wide range of Chargebee features, which includes basic operations like returning, canceling, and creating customers, invoices, and subscriptions
 
 On this page, you'll find a list of operations the Chargebee node supports and links to more resources.
 

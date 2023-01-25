@@ -1,6 +1,6 @@
 # Google Translate
 
-[Google Translate](https://translate.google.com){:target="_blank" .external-link} node allows you to automate work in the Google Translate platform and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, which includes basic operations like translating languages.
+Google Translate node allows you to automate work in the Google Translate platform and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, which includes basic operations like translating languages.
 
 On this page, you'll find a list of operations the Google Translate node supports and links to more resources.
 

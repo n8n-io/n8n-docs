@@ -1,6 +1,6 @@
 # Google Docs
 
-[Google Docs](https://docs.google.com/){:target="_blank" .external-link} node allows you to automate work in the Google Docs platform and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, which includes basic operations like creating, updating, and getting documents. 
+Google Docs node allows you to automate work in the Google Docs platform and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, which includes basic operations like creating, updating, and getting documents. 
 
 On this page, you'll find a list of operations the Google Docs node supports and links to more resources.
 

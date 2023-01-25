@@ -1,6 +1,6 @@
 # Discord
 
-[Discord](https://discord.com/){:target="_blank" .external-link} node allows you to automate work in the Discord platform and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, which includes basic operations like sending messages in a Discord channel
+Discord node allows you to automate work in the Discord platform and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, which includes basic operations like sending messages in a Discord channel
 
 On this page, you'll find a list of operations the Discord node supports and links to more resources.
 

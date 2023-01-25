@@ -1,6 +1,6 @@
 # Google Cloud Natural Language
 
-[Google Cloud Natural Language](https://cloud.google.com/natural-language/){:target="_blank" .external-link} node allows you to automate work in the Google Cloud Natural Language platform and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, which includes basic operations like analyzing documents.
+Google Cloud Natural Language node allows you to automate work in the Google Cloud Natural Language platform and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, which includes basic operations like analyzing documents.
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 

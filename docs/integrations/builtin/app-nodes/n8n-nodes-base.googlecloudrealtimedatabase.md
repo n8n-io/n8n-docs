@@ -1,6 +1,6 @@
 # Google Cloud Realtime Database
 
-[Google Cloud Realtime Database](https://firebase.google.com/docs/database/){:target="_blank" .external-link} node allows you to automate work in the Google Cloud Realtime Database platform and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, which includes basic operations like writing, deleting, getting, and appending databases.
+Google Cloud Realtime Database node allows you to automate work in the Google Cloud Realtime Database platform and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, which includes basic operations like writing, deleting, getting, and appending databases.
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 

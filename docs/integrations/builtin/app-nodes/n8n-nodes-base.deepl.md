@@ -1,6 +1,6 @@
 # DeepL
 
-[DeepL](https://deepl.io){:target="_blank" .external-link} node allows you to automate work in the DeepL platform and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, which includes basic operations like translating languages.
+DeepL node allows you to automate work in the DeepL platform and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, which includes basic operations like translating languages.
 
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 

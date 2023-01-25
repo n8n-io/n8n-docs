@@ -278,10 +278,11 @@ df_date:
         type: Number
         description: The number of units. For example, to subtract nine seconds, enter 9 here.
       - argName: unit
-        optional: false
+        optional: true
         longName: DurationUnit
         type: String enum
         description: A valid string specifying the time unit.
+        default: minute
         options:  *df_durationUnit
     returns: Date
     description: Subtracts a given time period from a Date.
@@ -293,10 +294,11 @@ df_date:
         type: Number
         description: The number of units. For example, to add nine seconds, enter 9 here.
       - argName: unit
-        optional: false
+        optional: true
         longName: DurationUnit
         type: String enum
         description: A valid string specifying the time unit.
+        default: minute
         options:  *df_durationUnit
     returns: Date
     description: Adds a given time period from a Date.

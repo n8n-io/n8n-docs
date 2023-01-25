@@ -1,6 +1,6 @@
 # Gmail
 
-[Gmail](https://gmail.com){:target="_blank" .external-link} node allows you to automate work in the Gmail platform and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, which includes basic operations like creating, updating, deleting, and getting drafts, messages, labels, thread.  
+Gmail node allows you to automate work in the Gmail platform and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, which includes basic operations like creating, updating, deleting, and getting drafts, messages, labels, thread.  
 
 On this page, you'll find a list of operations the Gmail node supports and links to more resources.
 

@@ -10,13 +10,13 @@ df_types:
 df_string: 
   - funcName: extractDomain
     returns: String
-    description: Extracts a domain from a string
+    description: Extracts a domain from a string containing a valid URL. Returns undefined if none is found.
   - funcName: extractEmail
     returns: String
-    description: Extracts an email from a string
+    description: Extracts an email from a string. Returns undefined if none is found.
   - funcName: extractUrl
     returns: String
-    description: Extracts a URL from a string
+    description: Extracts a URL from a string. Returns undefined if none is found.
   - funcName: hash
     args:
       - argName: algo
@@ -72,7 +72,7 @@ df_string:
   - funcName: replaceSpecialChars
     returns: String
     description: Replaces non-ASCII characters in a string with an ASCII representation.
-  - funcName: stripTags
+  - funcName: removeTags
     returns: String
     description: Remove tags, such as HTML or XML, from a string.
   - funcName: toDate

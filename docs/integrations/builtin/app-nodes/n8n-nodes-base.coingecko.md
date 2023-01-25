@@ -1,6 +1,6 @@
 # CoinGecko
 
-[CoinGecko](https://www.coingecko.com/){:target="_blank" .external-link} node allows you to automate work in the CoinGecko platform and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, which includes basic operations like getting coins and events.
+CoinGecko node allows you to automate work in the CoinGecko platform and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, which includes basic operations like getting coins and events.
 
 On this page, you'll find a list of operations the Coda node supports and links to more resources.
 

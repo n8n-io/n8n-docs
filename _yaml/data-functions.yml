@@ -462,5 +462,11 @@ df_array:
     returns: Array
     description: Returns the elements in common between two arrays.
   - funcName: unique
+    args:
+      - argName: key
+        optional: true
+        longName: String
+        type: String
+        description: A key, or comma-separated list of keys, to check for duplicates.
     returns: Array
     description: Remove duplicates from an array.

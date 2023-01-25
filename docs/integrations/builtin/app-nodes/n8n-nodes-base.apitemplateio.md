@@ -1,6 +1,6 @@
 # APITemplate.io
 
-[APITemplate.io](https://apitemplate.io) allows you to auto-generate images and PDF documents.
+APITemplate.io allows you to auto-generate images and PDF documents.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/apitemplateio/).

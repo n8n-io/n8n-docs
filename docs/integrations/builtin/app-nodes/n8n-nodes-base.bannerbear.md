@@ -1,6 +1,6 @@
 # Bannerbear
 
-[Bannerbear](https://www.bannerbear.com/){:target=_blank .external-link} node allows you to automate work in the Bannerbear platform and integrate Bannerbear with other applications. n8n has built-in support for a wide range of Bannerbear features, which includes basic operations like creating and getting images and templates.
+Bannerbear node allows you to automate work in the Bannerbear platform and integrate Bannerbear with other applications. n8n has built-in support for a wide range of Bannerbear features, which includes basic operations like creating and getting images and templates.
 
 On this page, you'll find a list of operations the Bannerbear node supports and links to more resources.
 

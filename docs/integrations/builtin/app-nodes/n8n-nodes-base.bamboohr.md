@@ -1,6 +1,6 @@
 # BambooHR
 
-[BambooHR](https://www.bamboohr.com/){:target=_blank .external-link} node allows you to automate work in the BambooHR platform and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, which includes basic operations like creating, deleting, downloading, and getting company reports, employee documents, and files.
+BambooHR node allows you to automate work in the BambooHR platform and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, which includes basic operations like creating, deleting, downloading, and getting company reports, employee documents, and files.
 
 On this page, you'll find a list of operations the BambooHR node supports and links to more resources.
 

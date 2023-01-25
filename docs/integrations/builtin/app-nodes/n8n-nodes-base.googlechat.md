@@ -1,6 +1,6 @@
 # Google Chat
 
-[Google Chat](https://chat.google.com/){:target="_blank" .external-link} node allows you to automate work in the Google Chat platform and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, which includes basic operations like getting, creating, updating, and deleting memebers, spaces and messages. 
+Google Chat node allows you to automate work in the Google Chat platform and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, which includes basic operations like getting, creating, updating, and deleting memebers, spaces and messages. 
 
 On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
 

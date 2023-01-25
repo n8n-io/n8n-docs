@@ -100,9 +100,23 @@ df_string:
     returns: Number
     description: Converts a string to a whole number.
   - funcName: urlDecode
+    args:
+      - argName: entireString
+        optional: true
+        longName: Boolean
+        type: Boolean
+        description: Whether to decode characters that are part of the URI syntax (true) or not (false).
+        default: false
     returns: String
     description: Decodes a URL-encoded string. It decodes any percent-encoded characters in the input string, and replaces them with their original characters.
   - funcName: urlEncode
+    args:
+      - argName: entireString
+        optional: true
+        longName: Boolean
+        type: Boolean
+        description: Whether to encode characters that are part of the URI syntax (true) or not (false).
+        default: false
     returns: String
     description: Encodes a string to be used/included in a URL.
 df_object:
@@ -392,6 +406,12 @@ df_array:
     returns: Array item
     description: Returns a random element from an array.
   - funcName: removeDuplicates
+    args:
+      - argName: key
+        optional: true
+        longName: String
+        type: String
+        description: A key, or comma-separated list of keys, to check for duplicates.
     returns: Array
     description: Removes duplicates from an array.
   - funcName: renameKeys

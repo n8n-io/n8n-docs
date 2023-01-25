@@ -1,6 +1,6 @@
 # Google Slides
 
-[Google Slides](https://www.google.com/slides){:target="_blank" .external-link} node allows you to automate work in the Google Slides platform and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, which includes basic operations like creating, getting and replacing pages and presentation. 
+Google Slides node allows you to automate work in the Google Slides platform and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, which includes basic operations like creating, getting and replacing pages and presentation. 
 
 On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
 

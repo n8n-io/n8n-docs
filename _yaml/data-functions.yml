@@ -202,7 +202,7 @@ df_date:
   - funcName: beginningOf
     args:
       - argName: unit
-        optional: false
+        optional: true
         longName: DurationUnit
         type: String enum
         description: A valid string specifying the time unit.
@@ -216,7 +216,7 @@ df_date:
   - funcName: extract
     args:
       - argName: datePart
-        optional: false
+        optional: true
         longName: DurationUnit
         type: String enum
         description: A valid string specifying the time unit.
@@ -253,13 +253,13 @@ df_date:
   - funcName: isInLast
     args:
       - argName: n
-        optional: false
+        optional: true
         longName: Number
         type: Number
         description: The number of units. For example, to check if the date is in the last nine weeks, enter 9.
         default: 0
       - argName: unit
-        optional: false
+        optional: true
         longName: DurationUnit
         type: String enum
         description: A valid string specifying the time unit.
@@ -347,6 +347,9 @@ df_array:
         description: The array to compare to the base array.
     returns: Array
     description: Compares two arrays. Returns all elements in the base array that are present in arr.
+  - funcName: first
+    returns: Array item
+    description: Returns the first element of the array.
   - funcName: isEmpty
     returns: Boolean
     description: Checks if the array doesn't have any elements.
@@ -354,7 +357,7 @@ df_array:
     returns: Boolean
     description: Checks if the array has elements.
   - funcName: last
-    returns: Any
+    returns: Array item
     description: Returns the last element of the array.
   - funcName: length
     returns: Number
@@ -384,7 +387,7 @@ df_array:
     returns: Array
     description: Returns an array of Objects where keys equal the given field names.
   - funcName: randomItem
-    returns: Any
+    returns: Array item
     description: Returns a random element from an array.
   - funcName: removeDuplicates
     returns: Array

@@ -1,6 +1,6 @@
 # GitLab
 
-[GitLab](https://gitlab.com){:target="_blank" .external-link} node allows you to automate work in the GitLab platform and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, which includes basic operations like creating, updating, deleting, and editing issues, repositories, releases and users. 
+GitLab node allows you to automate work in the GitLab platform and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, which includes basic operations like creating, updating, deleting, and editing issues, repositories, releases and users. 
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 

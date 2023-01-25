@@ -1,6 +1,6 @@
 # Automizy
 
-[Automizy](https://automizy.com/){:target=_blank .external-link}node allows you to automate work in the Automizy platform and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, which includes basic operations like creating, reading, listing, updating & deleting contacts, and lists
+Automizy node allows you to automate work in the Automizy platform and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, which includes basic operations like creating, reading, listing, updating & deleting contacts, and lists
 
 On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 

@@ -1,6 +1,6 @@
 # ClickUp
 
-[ClickUp](https://clearbit.com/){:target="_blank" .external-link} node allows you to automate work in the Clearbit platform and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, which includes basic operations like auto-complete and looking up companies and persons.
+ClickUp node allows you to automate work in the Clearbit platform and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, which includes basic operations like auto-complete and looking up companies and persons.
 
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 

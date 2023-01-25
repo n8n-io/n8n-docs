@@ -1,14 +1,14 @@
 # Copper
 
-[Cortex](https://github.com/TheHive-Project/CortexDocs/){:target="_blank" .external-link} node allows you to automate work in the Cortex platform and integrate Cortex with other applications. n8n has built-in support for a wide range of Cortex features, which includes basic operations like getting, and executing responders, analyzers, and jobs.
+Copper node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, which includes basic operations like getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
 
-On this page, you'll find a list of operations the Cortex node supports and links to more resources.
+On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Cortex credentials](https://docs.n8n.io/integrations/builtin/credentials/cortex/) for guidance on setting up authentication. 
+    Refer to the [Copper credentials](https://docs.n8n.io/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Cortex integrations](https://n8n.io/integrations/cortex/){:target="_blank" .external-link} list.
+    For example, usage and templates to help you get started, take a look at n8n's [Copper integrations](https://n8n.io/integrations/copper/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,6 +1,6 @@
 # Grist
 
-[Grist](https://getgrist.com/){:target="_blank" .external-link} node allows you to automate work in the Grist platform and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, which includes basic operations like creating, updating, deleting, and reading rows in a table. 
+Grist node allows you to automate work in the Grist platform and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, which includes basic operations like creating, updating, deleting, and reading rows in a table. 
 
 On this page, you'll find a list of operations the Grist node supports and links to more resources.
 

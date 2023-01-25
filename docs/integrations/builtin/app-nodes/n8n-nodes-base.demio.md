@@ -1,6 +1,6 @@
 # Demio
 
-[Demio](https://demio.com){:target="_blank" .external-link} node allows you to automate work in the Demio platform and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, which includes basic operations like getting, and registering events and reports.
+Demio node allows you to automate work in the Demio platform and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, which includes basic operations like getting, and registering events and reports.
 
 On this page, you'll find a list of operations the Demio node supports and links to more resources.
 

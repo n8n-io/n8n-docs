@@ -1,6 +1,6 @@
 # Customer.io
 
-[Customer.io](https://customer.io){:target="_blank" .external-link} node allows you to automate work in the Customer.io platform and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, which includes basic operations like creating, deleting, adding/removing, and getting customers, events, campaigns, and segments.
+Customer.io node allows you to automate work in the Customer.io platform and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, which includes basic operations like creating, deleting, adding/removing, and getting customers, events, campaigns, and segments.
 
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 

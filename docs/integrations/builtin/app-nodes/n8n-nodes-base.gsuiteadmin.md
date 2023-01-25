@@ -1,6 +1,6 @@
 # G Suite Admin
 
-[G Suite Admin](https://developers.google.com/admin-sdk){:target="_blank" .external-link} node allows you to automate work in the G Suite Admin platform and integrate G Suite Admin with other applications. n8n has built-in support for a wide range of G Suite Admin features, which includes basic operations like creating, updating, deleting, and getting users, and groups. 
+G Suite Admin node allows you to automate work in the G Suite Admin platform and integrate G Suite Admin with other applications. n8n has built-in support for a wide range of G Suite Admin features, which includes basic operations like creating, updating, deleting, and getting users, and groups. 
 
 On this page, you'll find a list of operations the G Suite Admin node supports and links to more resources.
 

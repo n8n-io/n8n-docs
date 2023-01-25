@@ -1,6 +1,6 @@
 # GetResponse
 
-[GetResponse](https://getresponse.com){:target="_blank" .external-link} node allows you to automate work in the GetResponse platform and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, which includes basic operations like creating, updating, deleting, and getting contacts. 
+GetResponse node allows you to automate work in the GetResponse platform and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, which includes basic operations like creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 

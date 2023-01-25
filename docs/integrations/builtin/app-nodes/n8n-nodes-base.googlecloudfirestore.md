@@ -1,6 +1,6 @@
 # Google Cloud Firestore
 
-[Google Cloud Firestore](https://firebase.google.com/docs/firestore/){:target="_blank" .external-link} node allows you to automate work in the Google Cloud Firestore platform and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, which includes basic operations like creating, deleting, and getting documents and collections. 
+Google Cloud Firestore node allows you to automate work in the Google Cloud Firestore platform and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, which includes basic operations like creating, deleting, and getting documents and collections. 
 
 On this page, you'll find a list of operations the Google Cloud Firestore node supports and links to more resources.
 

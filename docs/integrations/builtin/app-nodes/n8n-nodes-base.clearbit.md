@@ -1,6 +1,6 @@
 # Clearbit
 
-[Clearbit](https://clearbit.com/){:target="_blank" .external-link} node allows you to automate work in the Clearbit platform and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, which includes basic operations like auto-complete and looking up companies and persons.
+Clearbit node allows you to automate work in the Clearbit platform and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, which includes basic operations like auto-complete and looking up companies and persons.
 
 On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
 

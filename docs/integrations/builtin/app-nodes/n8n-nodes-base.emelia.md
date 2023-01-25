@@ -1,6 +1,6 @@
 # Emelia
 
-[Emelia](https://emelia.io){:target="_blank" .external-link} node allows you to automate work in the Emelia platform and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, which includes basic operations like adding, creating, getting, and pausing campaigns and contact lists. 
+Emelia node allows you to automate work in the Emelia platform and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, which includes basic operations like adding, creating, getting, and pausing campaigns and contact lists. 
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 

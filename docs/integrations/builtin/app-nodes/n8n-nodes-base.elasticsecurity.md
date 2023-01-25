@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Elastic Security node support
     Refer to the [Elastic Security credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elasticsecurity){:target="_blank" .external-link} list.
+    For example, usage and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elastic-security){:target="_blank" .external-link} list.
 
 ## Basic operations
 

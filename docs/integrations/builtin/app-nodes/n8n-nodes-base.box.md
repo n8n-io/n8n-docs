@@ -1,6 +1,6 @@
 # Box
 
-[Box](https://www.box.com/){:target=_blank .external-link} node allows you to automate work in the Box platform and integrate Box with other applications. n8n has built-in support for a wide range of Box features, which includes basic operations like creating, copying, deleting, searching, uploading, and downloading files and folders
+Box node allows you to automate work in the Box platform and integrate Box with other applications. n8n has built-in support for a wide range of Box features, which includes basic operations like creating, copying, deleting, searching, uploading, and downloading files and folders
 
 On this page, you'll find a list of operations the Box node supports and links to more resources.
 

@@ -69,3 +69,7 @@ If using the OAuth authentication method, you might see the warning **Google has
 1. Select **Advanced**.
 2. Select **Go to CREDENTIALS_NAME (unsafe)**. `CREDENTIALS_NAME` is the name of the credentials created by the third party.
 3. Grant the requested permissions.
+
+### Google Cloud app becoming unauthorized
+
+For Google Cloud external apps with a publishing status of testing, consent and tokens expire after seven days. Refer to [Google Cloud Platform Console Help | Setting up your OAuth consent screen](https://support.google.com/cloud/answer/10311615?hl=en#zippy=%2Ctesting){:target=_blank .external-link} for more information. To resolve this, reconnec the app in the n8n credentials modal.

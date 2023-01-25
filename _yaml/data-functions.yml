@@ -62,9 +62,10 @@ df_string:
         longName: String
         type: String
         description: Which quote mark style to use.
-        default: \"
+        default: >
+               " 
     returns: String
-    description: Returns a string wrapped in the quotation marks. Default quotation is ".
+    description: Returns a string wrapped in the quotation marks. Default quotation is <code>"</code>.
   - funcName: removeMarkdown
     returns: String
     description: Removes Markdown formatting from a string.
@@ -188,6 +189,13 @@ df_number:
     returns: Boolean
     description: Returns true if the number is odd. Only works on whole numbers.
   - funcName: round
+    args:
+      - argName: decimalPlaces
+        optional: true
+        longName: Number
+        type: Number
+        default: 0
+        description: How many decimal places to round to.
     returns: Number
     description: Returns the value of a number rounded to the nearest whole number.
 df_date:
@@ -295,9 +303,10 @@ df_date:
   - funcName: toLocaleString
     args:
       - argName: locales
-        optional: false
+        optional: true
         longName: LanguageCode
         type: String enum
+        default: Your local settings
         description: An IETF BCP 47 language tag.
     returns: String
     description: Converts a Date to a string of a BCP 47 language code setting. If you don't provide an argument, this function uses your local settings.

@@ -15,8 +15,9 @@
 <div class="dt-func-args">
 	<span class="dt-func-name" id="[[funcName]]-[[arg.argName]]">[[arg.argName]]</span><span class="dt-func-optional">[[% if arg.optional %]]Optional[[% else %]]Required[[% endif %]]</span><span class="dt-func-arg-type">[[ arg.type ]]</span><a class="dt-func-arg-name-anchor" href="#[[funcName]]-[[arg.argName]]"></a> 
 	<p class="dt-func-args-p">[[arg.description]]</p>
-	<div class="dt-func-options">[[% if arg.options %]]
-		<p class="dt-func-args-p">Default: <code>[[ arg.default ]]</code></p>
+	<div class="dt-func-options">[[% if arg.default %]]
+		<p class="dt-func-args-p">Default: <code>[[ arg.default ]]</code></p>[[% endif %]]
+		[[% if arg.options %]]
 		<p class="dt-func-args-p">One of: [[% for option in arg.options %]]
 		<code>[[option]]</code>[[ "," if not loop.last ]]
 		[[% endfor %]]

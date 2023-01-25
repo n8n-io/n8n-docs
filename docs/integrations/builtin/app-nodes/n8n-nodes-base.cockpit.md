@@ -1,6 +1,6 @@
 # Cockpit
 
-[Cockpit](https://www.getcockpit.com/){:target="_blank" .external-link} node allows you to automate work in the Cockpit platform and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, which includes basic operations like creating, getting, and deleting collections, forms, and singleton.
+Cockpit node allows you to automate work in the Cockpit platform and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, which includes basic operations like creating, getting, and deleting collections, forms, and singleton.
 
 On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
 

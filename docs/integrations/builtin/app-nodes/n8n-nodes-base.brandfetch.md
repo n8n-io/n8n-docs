@@ -1,6 +1,6 @@
 # Brandfetch
 
-[Brandfetch](https://www.Brandfetch.com/){:target=_blank .external-link} node allows you to automate work in the Brandfetch platform and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, which includes basic operations like returning a company’s information
+Brandfetch node allows you to automate work in the Brandfetch platform and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, which includes basic operations like returning a company’s information
 
 On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 

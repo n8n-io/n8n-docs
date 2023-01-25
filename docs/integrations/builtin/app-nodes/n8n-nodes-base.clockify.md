@@ -1,6 +1,6 @@
 # Clockify
 
-[Clockify](https://clockify.me/){:target="_blank" .external-link} node allows you to automate work in the Clockify platform and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, which includes basic operations like creating, updating, getting, and deleting tasks, time entries, projects, and tags.
+Clockify node allows you to automate work in the Clockify platform and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, which includes basic operations like creating, updating, getting, and deleting tasks, time entries, projects, and tags.
 
 On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 

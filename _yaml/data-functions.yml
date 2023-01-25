@@ -194,7 +194,7 @@ df_number:
         optional: true
         longName: Number
         type: Number
-        default: 0
+        default: "0"
         description: How many decimal places to round to.
     returns: Number
     description: Returns the value of a number rounded to the nearest whole number.
@@ -257,7 +257,7 @@ df_date:
         longName: Number
         type: Number
         description: The number of units. For example, to check if the date is in the last nine weeks, enter 9.
-        default: 0
+        default: "0"
       - argName: unit
         optional: true
         longName: DurationUnit

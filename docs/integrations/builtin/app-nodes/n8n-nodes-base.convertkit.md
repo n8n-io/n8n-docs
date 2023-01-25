@@ -1,6 +1,6 @@
 # ConvertKit
 
-[Copper](https://www.copper.com/){:target="_blank" .external-link} node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, which includes basic operations like creating, deleting, getting, and updating companies, customer sources, leads, projects, and persons.
+Copper node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, which includes basic operations like creating, deleting, getting, and updating companies, customer sources, leads, projects, and persons.
 
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 

@@ -15,6 +15,8 @@ n8n supports two libraries:
 - [Luxon](https://github.com/moment/luxon/), for working with data and time.
 - [JMESPath](https://jmespath.org/), for querying JSON.
 
+!!! note "Known issue with optional chaining"
+	Starting in n8n 0.211.0 there is a known issue when using the [optional chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining){:target=_blank .external-link} in expressions. If you encounter errors, avoid using the operator for now.
 
 ## Writing expressions
 

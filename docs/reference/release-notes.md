@@ -156,6 +156,10 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 * Upgrade class-validator to address CVE-2019-18413.
 * Zoom Node: Add notice about deprecation of Zoom JWT app support.
 
+### Known issues
+
+You may encounter errors when using the [optional chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining){:target=_blank .external-link} in expressions. If this happens, avoid using the operator for now.
+
 </div>
 
 <div id="02102" markdown>

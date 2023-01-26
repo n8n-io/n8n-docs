@@ -52,9 +52,6 @@ df_string:
   - funcName: isURL
     returns: Boolean
     description: See <a href="#string-isUrl">isUrl</a>
-  - funcName: length
-    returns: Number
-    description: Returns the character count of a string.
   # - funcName: quote
   #   args:
   #     - argName: mark
@@ -316,16 +313,6 @@ df_date:
   #       options:  *df_durationUnit
   #   returns: Date
   #   description: Adds a given time period from a Date.
-  # - funcName: toLocaleString
-  #   args:
-  #     - argName: locales
-  #       optional: true
-  #       longName: LanguageCode
-  #       type: String enum
-  #       default: Your local settings
-  #       description: An IETF BCP 47 language tag.
-  #   returns: String
-  #   description: Converts a Date to a string of a BCP 47 language code setting. If you don't provide an argument, this function uses your local settings.
 df_array:
   - funcName: average
     returns: Number
@@ -342,9 +329,6 @@ df_array:
   - funcName: compact
     returns: Array
     description: Removes empty values from the array.
-  - funcName: count
-    returns: Number
-    description: Returns the number of elements in an array.
   # - funcName: difference
   #   args:
   #     - argName: arr
@@ -375,9 +359,6 @@ df_array:
   - funcName: last
     returns: Array item
     description: Returns the last element of the array.
-  - funcName: length
-    returns: Number
-    description: Returns the number of elements in an array.
   - funcName: max
     returns: Number
     description: Returns the highest value in an array.
@@ -428,9 +409,6 @@ df_array:
   #       description: The new name.
   #   returns: Array
   #   description: Renames all matching keys in the array. You can rename more than one key by entering a series of comma separated strings, in the pattern oldKeyName, newKeyName.
-  - funcName: size
-    returns: Number
-    description: See <a href="#array-length">length</a>
   # - funcName: smartJoin
   #   args:
   #     - argName: keyField
@@ -460,7 +438,7 @@ df_array:
   #       type: Array
   #       description: The array to compare to the base array.
   #   returns: Array
-  #   description: Returns the elements in common between two arrays.
+  #   description: Concatenates two arrays and then removes duplicate.
   # - funcName: unique
   #   args:
   #     - argName: key

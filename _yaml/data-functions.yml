@@ -49,9 +49,6 @@ df_string:
   - funcName: isUrl
     returns: Boolean
     description: Checks if a string is a valid URL.
-  - funcName: isURL
-    returns: Boolean
-    description: See <a href="#string-isUrl">isUrl</a>
   # - funcName: quote
   #   args:
   #     - argName: mark

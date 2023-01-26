@@ -5,7 +5,7 @@ description: Use tags to label workflows, making it easier to browse your workfl
 
 # Tags
 
-Workflow tags allow you to label your workflows. You can then filer workflows by tag.
+Workflow tags allow you to label your workflows. You can then filter workflows by tag.
 
 Tags are global. This means when you create a tag, it's available to all users on your n8n instance.
 
@@ -25,7 +25,7 @@ When browsing the workflows on your instance, you can filter by tag.
 
 1. On the **Workflows** page, select **Filters**.
 2. Select **Tags**.
-3.Select the tag or tags you want to filter by. n8n lists the workflows with that tag.
+3. Select the tag or tags you want to filter by. n8n lists the workflows with that tag.
 
 ## Manage tags
 

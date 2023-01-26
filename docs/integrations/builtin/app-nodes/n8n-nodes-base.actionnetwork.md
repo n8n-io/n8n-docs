@@ -7,7 +7,7 @@ The Action Network node allows you to automate work in Action Network and integr
 On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Action Network credentials](docs.n8n.io/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 
+    Refer to the [Action Network credentials](https://docs.n8n.io/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For example, usage and templates to help you get started, take a look at n8n's [Action Network integrations](https://n8n.io/integrations/action-network/){:target="_blank" .external-link} list.

@@ -108,6 +108,7 @@ nav:
         - Connections: workflows/components/connections.md
         - Sticky Notes: workflows/components/sticky-notes.md
       - Executions: workflows/executions.md
+      - Tags: workflows/tags.md
       - Export and import: workflows/export-import.md
       - Templates: workflows/templates.md
       - Sharing: workflows/sharing.md

@@ -2,7 +2,7 @@
 
 Freshservice node allows you to automate work in the Freshservice platform and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshdesk features, which includes basic operations like creating, updating, deleting, and getting agent information and departments.
 
-On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
+On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
 !!! note "Credentials"
     Refer to the [Freshservice credentials](https://docs.n8n.io/integrations/builtin/credentials/freshservice/) for guidance on setting up authentication. 

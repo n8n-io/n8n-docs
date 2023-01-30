@@ -1,6 +1,6 @@
 # Cockpit
 
-Cockpit node allows you to automate work in the Cockpit platform and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, which includes basic operations like creating, getting, and deleting collections, forms, and singleton.
+The Cockpit node allows you to automate work in the Cockpit platform and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, which includes basic operations like creating, getting, and deleting collections, forms, and singleton.
 
 On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Cockpit node supports and lin
     Refer to the [Cockpit credentials](https://docs.n8n.io/integrations/builtin/credentials/cockpit/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Cockpit integrations](https://n8n.io/integrations/cockpit/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Cockpit integrations](https://n8n.io/integrations/cockpit/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

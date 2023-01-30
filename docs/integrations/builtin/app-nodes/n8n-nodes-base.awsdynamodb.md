@@ -1,6 +1,6 @@
 # AWS DynamoDB
 
-AWS DynamoDB node allows you to automate work in the AWS DynamoDB platform and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, which includes basic operations like creating, reading, updating & deleting items, and records on a database
+The AWS DynamoDB node allows you to automate work in the AWS DynamoDB platform and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, which includes basic operations like creating, reading, updating & deleting items, and records on a database
 
 On this page, you'll find a list of operations the AWS DynamoDB node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the AWS DynamoDB node supports an
    Refer to the [AWS DynamoDB credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples & Templates"
-   For example, usage and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
+   For usage examples and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
 
 
 

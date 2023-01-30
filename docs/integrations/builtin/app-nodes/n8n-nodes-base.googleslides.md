@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Google Slides node supports a
     Refer to the [Google Slides credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Google Slides integrations](https://n8n.io/integrations/google-slides/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Google Slides integrations](https://n8n.io/integrations/google-slides/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

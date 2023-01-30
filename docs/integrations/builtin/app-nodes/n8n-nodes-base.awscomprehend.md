@@ -1,6 +1,6 @@
 # AWS Comprehend
 
-AWS Comprehend node allows you to automate work in the AWS Comprehend platform and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, which includes basic operations like identifying and analyzing texts.
+The AWS Comprehend node allows you to automate work in the AWS Comprehend platform and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, which includes basic operations like identifying and analyzing texts.
 
 On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the AWS Comprehend node supports 
     Refer to the [AWS Comprehend credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples & Templates"
-    For example, usage and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

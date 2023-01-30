@@ -1,6 +1,6 @@
 # CrateDB
 
-CrateDB node allows you to automate work in the CrateDB platform and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, which includes basic operations like executing, inserting, and updating rows in the database.
+The CrateDB node allows you to automate work in the CrateDB platform and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, which includes basic operations like executing, inserting, and updating rows in the database.
 
 On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the CrateDB node supports and lin
     Refer to the [CrateDB credentials](https://docs.n8n.io/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [CrateDB integrations](https://n8n.io/integrations/cratedb/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [CrateDB integrations](https://n8n.io/integrations/cratedb/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

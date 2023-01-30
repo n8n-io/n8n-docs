@@ -1,6 +1,6 @@
 # Drift
 
-Drift node allows you to automate work in the Drift platform and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, which includes basic operations like creating, updating, deleting, and getting contacts. 
+The Drift node allows you to automate work in the Drift platform and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, which includes basic operations like creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Drift node supports and links
     Refer to the [Drift credentials](https://docs.n8n.io/integrations/builtin/credentials/drift/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Drift integrations](https://n8n.io/integrations/drift/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Drift integrations](https://n8n.io/integrations/drift/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,6 +1,6 @@
 # Airtable
 
-Airtable node allows you to automate work in the Airtable platform and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, which includes basic operations like creating, reading, listing, updating & deleting tables.
+The Airtable node allows you to automate work in the Airtable platform and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, which includes basic operations like creating, reading, listing, updating & deleting tables.
 
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Airtable node supports and li
 	Refer to the [Airtable credentials](https://docs.n8n.io/integrations/builtin/credentials/agilecrm/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-	For example, usage and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/agile-crm/){:target="_blank" .external-link} list.
+	For usage examples and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/agile-crm/){:target="_blank" .external-link} list.
 
 
 

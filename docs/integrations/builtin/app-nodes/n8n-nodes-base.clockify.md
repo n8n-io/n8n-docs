@@ -1,6 +1,6 @@
 # Clockify
 
-Clockify node allows you to automate work in the Clockify platform and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, which includes basic operations like creating, updating, getting, and deleting tasks, time entries, projects, and tags.
+The Clockify node allows you to automate work in the Clockify platform and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, which includes basic operations like creating, updating, getting, and deleting tasks, time entries, projects, and tags.
 
 On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Clockify node supports and li
     Refer to the [Clockify credentials](https://docs.n8n.io/integrations/builtin/credentials/clockify/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Clockify integrations](https://n8n.io/integrations/clockify/){:target="_blank" .external-link} list.
+    For usage and templates to help you get started, take a look at n8n's [Clockify integrations](https://n8n.io/integrations/clockify/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

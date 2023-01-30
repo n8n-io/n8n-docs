@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Customer.io node supports and
     Refer to the [Customer.io credentials](https://docs.n8n.io/integrations/builtin/credentials/customerio/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Customer.io integrations](https://n8n.io/integrations/customerio/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Customer.io integrations](https://n8n.io/integrations/customerio/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

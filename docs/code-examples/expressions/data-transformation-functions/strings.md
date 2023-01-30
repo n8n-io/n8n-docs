@@ -7,7 +7,8 @@ description: A reference document listing built-in convenience functions to supp
 
 A reference document listing built-in convenience functions to support data transformation in expressions for strings.
 
-You can use any JavaScript in expressions. Refer to [Expressions](/code-examples/expressions/) for more information.
+!!! note "JavaScript in expressions"
+		You can use any JavaScript in expressions. Refer to [Expressions](/code-examples/expressions/) for more information.
 
 [[% import "_macros/data-functions.html" as dataFunctions %]]
 

@@ -1,6 +1,6 @@
 # Contentful
 
-Contentful node allows you to automate work in the Contentful platform and integrate Contentful with other applications. n8n has built-in support for a wide range of Contentful features, which includes basic operations like getting assets, content types, entries, locales, and space.
+The Contentful node allows you to automate work in the Contentful platform and integrate Contentful with other applications. n8n has built-in support for a wide range of Contentful features, which includes basic operations like getting assets, content types, entries, locales, and space.
 
 On this page, you'll find a list of operations the Contentful node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Contentful node supports and 
     Refer to the [Contentful  credentials](https://docs.n8n.io/integrations/builtin/credentials/contentful/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Contentful integrations](https://n8n.io/integrations/contentful/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Contentful integrations](https://n8n.io/integrations/contentful/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

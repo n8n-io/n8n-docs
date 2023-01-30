@@ -1,5 +1,67 @@
 # Release notes
 
+<div id="02130" markdown>
+
+## n8n@0.213.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.212.1...n8n@0.213.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-27
+
+This release introduces LDAP, and a new node for working with HTML in n8n. It also contains node enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### LDAP
+
+This release introduces support for LDAP on Self-hosted Enterprise and custom Cloud plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
+
+</div>
+
+* Simplify the Node Details View by moving authentication details to the Credentials modal.
+* Improve workflow list performance.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### HTML node
+
+n8n has a new [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/). This replaces the HTML Extract node, and adds new functionality to generate HTML templates.
+
+</div>
+
+### Node enhancements
+
+* GitLab node: add file resource and operations.
+* JIRA Software node: introduce the resource locator component to improve UX.
+* Send Email node: this node has been overhauled.
+
+### Bug fixes
+
+* Core: don't crash express app on unhandled rejected promises.
+* Core: handle missing binary metadata in download URLs.
+* Core: upsert (update and insert) credentials and workflows in the `import:` commands.
+* Core: validate numeric IDs in the public API.
+* Editor: don't request workflow data twice when opening a workflow.
+* Editor: execution list micro optimization.
+* Editor: fix node authentication options ordering and hiding options based on node version.
+* Editor: fix save modal appearing after duplicating a workflow.
+* Editor: prevent workflow execution list infinite no network error.
+* Extension being too eager and making calls when it shouldn't.
+* Google Drive Node: use the correct MIME type on converted downloads.
+* HelpScout Node: fix tag search not working when getting all conversations.
+* Notion (Beta) Node: fix create database page with multiple relation IDs not working.
+* Update **Sign in with Google** button to properly match design guidelines.
+
+### Contributors
+
+* [Devin Buhl](https://github.com/onedr0p){:target=_blank .external-link} 
+* [Sven Ziegler](https://github.com/svzi){:target=_blank .external-link} 
+
+</div>
+
 <div id="02121" markdown>
 
 ## n8n@0.212.1

@@ -8,21 +8,27 @@
 
 ## Basic Operations
 
+* File
+	* Create
+	* Delete
+	* Edit
+	* Get
+	* List
 * Issue
     * Create a new issue
     * Create a new comment on an issue
     * Edit an issue
     * Get the data of a single issue
     * Lock an issue
-* Repository
-    * Get the data of a single repository
-    * Returns issues of a repository
 * Release
     * Create a new release
     * Delete a new release
     * Get a new release
     * Get all releases
     * Update a new release
+* Repository
+    * Get the data of a single repository
+    * Returns issues of a repository
 * User
     * Returns the repositories of a user
 

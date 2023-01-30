@@ -30,7 +30,7 @@ _Briefly summarize the functionality._
 * _Bullet list_
 * _Of available operations_.
 
-## Relates resources
+## Related resources
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
 View [example workflows and related content](){:target=_blank .external-link} on n8n's website.

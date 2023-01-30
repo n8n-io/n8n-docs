@@ -1,6 +1,6 @@
 # Google Perspective
 
-Google Perspective node allows you to automate work in the Google Perspective platform and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, which includes basic operations like analyzing comments.
+The Google Perspective node allows you to automate work in the Google Perspective platform and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, which includes basic operations like analyzing comments.
 
 On this page, you'll find a list of operations the Google Perspective node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Google Perspective node suppo
     Refer to the [Google Perspective credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Google Perspective integrations](https://n8n.io/integrations/google-perspective/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Google Perspective integrations](https://n8n.io/integrations/google-perspective/){:target="_blank" .external-link} list.
 
 ## Basic operations
 

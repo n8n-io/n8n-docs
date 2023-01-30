@@ -1,6 +1,6 @@
 # Citrix ADC
 
-Citrix ADC node allows you to automate work in the Citrix ADC platform and integrate Citrix ADC with other applications. n8n has built-in support for a wide range of Citrix ADC features, which includes basic operations like creating and installing certificates and files.
+The Citrix ADC node allows you to automate work in the Citrix ADC platform and integrate Citrix ADC with other applications. n8n has built-in support for a wide range of Citrix ADC features, which includes basic operations like creating and installing certificates and files.
 
 On this page, you'll find a list of operations the Citrix ADC node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Citrix ADC node supports and 
     Refer to the [Citrix ADC credentials](https://docs.n8n.io/integrations/builtin/credentials/citrixadc/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Citrix ADC integrations](https://n8n.io/integrations/citrix-adc/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Citrix ADC integrations](https://n8n.io/integrations/citrix-adc/){:target="_blank" .external-link} list.
 
 
 ## Operations

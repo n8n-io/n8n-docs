@@ -1,6 +1,6 @@
 # Elastic Security
 
-Elastic Security node allows you to automate work in the Elastic Security platform and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, which includes basic operations like creating, updating, deleting, retrieving, and getting cases.
+The Elastic Security node allows you to automate work in the Elastic Security platform and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, which includes basic operations like creating, updating, deleting, retrieving, and getting cases.
 
 On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Elastic Security node support
     Refer to the [Elastic Security credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elastic-security){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elastic-security){:target="_blank" .external-link} list.
 
 ## Basic operations
 

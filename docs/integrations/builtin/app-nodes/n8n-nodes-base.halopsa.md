@@ -1,6 +1,6 @@
 # HaloPSA
 
-HaloPSA node allows you to automate work in the HaloPSA platform and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HaloPSA features, which includes basic operations like creating, updating, deleting, and getting clients, sites and tickets. 
+The HaloPSA node allows you to automate work in the HaloPSA platform and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HaloPSA features, which includes basic operations like creating, updating, deleting, and getting clients, sites and tickets. 
 
 On this page, you'll find a list of operations the HaloPSA node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the HaloPSA node supports and lin
     Refer to the [HaloPSA credentials](https://docs.n8n.io/integrations/builtin/credentials/halopsa/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [HaloPSA integrations](https://n8n.io/integrations/halopsa/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [HaloPSA integrations](https://n8n.io/integrations/halopsa/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

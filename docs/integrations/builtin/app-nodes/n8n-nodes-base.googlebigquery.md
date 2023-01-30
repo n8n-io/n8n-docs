@@ -1,6 +1,6 @@
 # Google BigQuery
 
-Google BigQuery node allows you to automate work in the Google BigQuery platform and integrate Google BigQuery with other applications. n8n has built-in support for a wide range of Google BigQuery features, which includes basic operations like creating, and retrieving records.
+The Google BigQuery node allows you to automate work in the Google BigQuery platform and integrate Google BigQuery with other applications. n8n has built-in support for a wide range of Google BigQuery features, which includes basic operations like creating, and retrieving records.
 
 On this page, you'll find a list of operations the Google BigQuery node supports and links to more resources.
 
@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Google BigQuery node supports
     Refer to the [Google BigQuery credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For example, usage and templates to help you get started, take a look at n8n's [Google BigQuery integrations](https://n8n.io/integrations/google-bigquery/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Google BigQuery integrations](https://n8n.io/integrations/google-bigquery/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

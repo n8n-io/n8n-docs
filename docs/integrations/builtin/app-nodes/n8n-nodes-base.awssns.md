@@ -1,12 +1,14 @@
 # AWS SNS
 
-AWS SNS node allows you to automate work in the AWS SNS platform and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, which includes basic operations like publishing messages.
+The AWS SNS node allows you to automate work in the AWS SNS platform and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, which includes basic operations like publishing messages.
 
 On this page, you'll find a list of operations the AWS SNS node supports and links to more resources.
 
-!!! note "Credentials" Refer to the [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+!!! note "Credentials" 
+    Refer to the [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
-!!! note "Examples & Templates" For example, usage and templates to help you get started, take a look at n8n's [AWS SNS integrations](https://n8n.io/integrations/aws-sns/){:target=_blank .external-link} list.
+!!! note "Examples & Templates" 
+    For usage examples and templates to help you get started, take a look at n8n's [AWS SNS integrations](https://n8n.io/integrations/aws-sns/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

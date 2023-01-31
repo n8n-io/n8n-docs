@@ -10,9 +10,9 @@ The HTML node provides operations to help you work with HTML in n8n.
 * Generate HTML template
 * Extract HTML content
 
-<!-- ## Related resources
+## Related resources
 
-View [example workflows and related content](){:target=_blank .external-link} on n8n's website. -->
+View [example workflows and related content](https://n8n.io/integrations/html/){:target=_blank .external-link} on n8n's website.
 
 ## Generate HTML template
 

@@ -1,4 +1,4 @@
-# HTML Extract
+# HTML
 
 The HTML node provides operations to help you work with HTML in n8n.
 

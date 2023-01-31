@@ -18,7 +18,7 @@ Download the app from the link below:
 	* Version updates lag behind other platforms
 
 !!! note "Keep in mind"
-    If you have already installed n8n locally via `npm`, the desktop app will connect to the existing `sqlite` database.
+    If you have already installed n8n locally using `npm`, the desktop app will connect to the existing `sqlite` database.
 
 
 !!! note "Tunnel credentials"

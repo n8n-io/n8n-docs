@@ -1,6 +1,6 @@
 # Desktop app
 
-The n8n desktop app is the fastest way to try n8n on Windows or Mac computers (support for Linux is coming soon). 
+The n8n desktop app is the fastest way to try n8n on Windows or Mac computers. 
 
 ## Install Desktop
 
@@ -9,6 +9,13 @@ Download the app from the link below:
 [Download for Windows](https://downloads.n8n.io/file/n8n-downloads/n8n-win.zip)
 
 [Download for macOS](https://downloads.n8n.io/file/n8n-downloads/n8n-mac.zip)
+
+!!! warning "For testing only"
+	The desktop app is a quick way to try out n8n. You shouldn't use it in production:
+
+	* No access to community nodes
+	* Nodes may not update to new versions
+	* Version updates lag behind other platforms
 
 !!! note "Keep in mind"
     If you have already installed n8n locally via `npm`, the desktop app will connect to the existing `sqlite` database.

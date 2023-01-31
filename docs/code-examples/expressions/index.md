@@ -23,9 +23,9 @@ n8n supports two libraries:
 
 To use an expression to set a parameter value:
 
-1. Select **Parameter options** for the parameter where you want to use an expression.
-2. Select **Add expression**.
-3. Write your expression in the expression editor. You can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
+1. Hover over the parameter where you want to use an expression.
+2. Select **Expressions** in the **Fixed/Expression** toggle.
+3. Write your expression in the parameter, or select **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png)</span> to open the expressions editor. If you use the expressions editor, you can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
 
 
 ### Example: Get data from webhook body

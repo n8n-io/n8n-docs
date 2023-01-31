@@ -2,6 +2,9 @@
 
 The HTML node provides operations to help you work with HTML in n8n.
 
+!!! note "HTML Extract node"
+	The HTML node replaces the HTML Extract node from version 0.213.0 onwards. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}.
+
 ## Operations
 
 * Generate HTML template

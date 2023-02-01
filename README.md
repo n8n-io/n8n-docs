@@ -15,6 +15,10 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 ### Steps
 
+For members of the n8n GitHub organization:
+
+1. Set up an SSH token and add it to your GitHub account. Refer to [GitHub | About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) for guidance.
+
 ```bash
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs

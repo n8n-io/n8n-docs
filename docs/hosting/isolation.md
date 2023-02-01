@@ -1,8 +1,8 @@
 # Isolating n8n
 
-By default even a self-hosted n8n instance would send certain data to n8n.io/n8n.cloud servers. This allows n8n to provide users with notifcations on available updates or to allow access to workflow templates for example. However, in some enviroments it might be necessary to prevent n8n from communicating with these servers.
+By default, even a self-hosted n8n instance would send certain data to the n8n.io/n8n.cloud servers. This allows n8n to notify users of available updates or provide access to workflow templates, for example. However, in some environments it may be necessary to prevent n8n from communicating with these servers.
 
-Such a behaviour can be achieved by setting the below [environment variables](/hosting/environment-variables/):
+This can be achieved by setting the following [environment variables](/hosting/environment-variables/):
 
 ```
 - N8N_DIAGNOSTICS_ENABLED=false

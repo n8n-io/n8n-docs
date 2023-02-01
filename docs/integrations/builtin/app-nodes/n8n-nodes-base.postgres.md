@@ -72,7 +72,7 @@ When creating a query to run on a Postgres database, you can use the **Query Par
 For example, you want to find a person by their email address. Given the following input data:
 
 ```json
-{
+[
     {
         "email": "alex@example.com",
         "name": "Alex",
@@ -83,7 +83,7 @@ For example, you want to find a person by their email address. Given the followi
         "name": "Jamie",
         "age": 33 
     }
-}
+]
 ```
 
 You can write a query like:
@@ -92,13 +92,6 @@ You can write a query like:
 SELECT * FROM users WHERE email = $1;
 ```
 
-Then in **Query Parameters**, map the value to `email` by dragging and dropping the **email** column head from the **INPUT** view into **Query Parameters**:
+Then in **Query Parameters**, provide the field name `email` to use in place of `$1`:
 
 ![Screenshot of the query parameters and input data fields](/_images/integrations/builtin/app-nodes/postgres/use-query-parameters.png)
-
-
-
-
-
-
-

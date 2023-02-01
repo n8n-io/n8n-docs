@@ -15,24 +15,33 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 ### Steps
 
-For members of the n8n GitHub organization:
+#### For members of the n8n GitHub organization:
 
 1. Set up an SSH token and add it to your GitHub account. Refer to [GitHub | About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) for guidance.
+2. Then run these commands:
 
-```bash
+	```bash
+	git clone https://github.com/n8n-io/n8n-docs.git
+	cd n8n-docs
+	pip install -r requirements.txt
+	pip install _submodules/insiders
+	```
+
+#### For external contributors:
+
+Rely on the preview builds on pull requests, or use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
+
+```
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
-pip install _submodules/mkdocs-material-insiders
-
-# External contributors: rely on the preview builds on pull requests, or 
-# use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
 pip install mkdocs-material
+```
 
-# Serve a local preview
+#### To serve a local preview:
+
+```
 mkdocs serve
-# Or build
-mkdocs build
 ```
 
 ## Contributing

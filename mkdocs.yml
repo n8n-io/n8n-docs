@@ -505,6 +505,7 @@ nav:
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
+    - Isolation: hosting/isolation.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

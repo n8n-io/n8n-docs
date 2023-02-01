@@ -489,6 +489,7 @@ nav:
       - hosting/environment-variables/index.md
       - Configuration methods: hosting/environment-variables/configuration-methods.md    
       - Environment variables reference: hosting/environment-variables/environment-variables.md
+      - Isolating n8n: hosting/environment-variables/isolation.md
     - Supported databases and settings: hosting/supported-databases-settings.md
     - Authentication:
       - hosting/authentication/index.md
@@ -505,7 +506,6 @@ nav:
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
-    - Isolation: hosting/isolation.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

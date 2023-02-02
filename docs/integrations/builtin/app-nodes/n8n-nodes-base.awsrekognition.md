@@ -7,7 +7,7 @@ On this page, you'll find a list of operations the AWS Rekognition node supports
 !!! note "Credentials"
   Refer to the [AWS Rekognition credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
-!!! note "Examples & Templates"
+!!! note "Examples and Templates"
   For usage examples and templates to help you get started, take a look at n8n's [AWS Rekognition integrations](https://n8n.io/integrations/aws-rekognition/){:target=_blank .external-link} list.
 
 

@@ -29,7 +29,7 @@ su - ${USER}
 
 ### 3. Install Docker-Compose
 
-This can vary depending on the Linux distribution used. You can find detailed instructions [here in the Docker documentation](https://docs.docker.com/compose/).
+This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/compose/){:target=_blank .external-link}.
 
 The example below is for Ubuntu:
 

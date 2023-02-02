@@ -7,7 +7,7 @@ On this page, you'll find a list of operations the Chargebee node supports and l
 !!! note "Credentials"
   Refer to the [Chargebee credentials](https://docs.n8n.io/integrations/builtin/credentials/chargebee/) for guidance on setting up authentication. 
 
-!!! note "Examples & Templates"
+!!! note "Examples the Templates"
   For usage examples and templates to help you get started, take a look at n8n's [Chargebee integrations](https://n8n.io/integrations/chargebee/){:target=_blank .external-link} list.
 
 

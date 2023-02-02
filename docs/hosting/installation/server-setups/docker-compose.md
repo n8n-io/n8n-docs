@@ -4,7 +4,7 @@ If you have already installed Docker and Docker-Compose, then you can start with
 
 ### 1. Install Docker
 
-This can vary depending on the Linux distribution used. You can find detailed instructions [here in the Docker documentation](https://docs.docker.com/engine/install/). The below example is for Ubuntu:
+This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/engine/install/){:target=_blank .external-link}. The following example is for Ubuntu:
 
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc

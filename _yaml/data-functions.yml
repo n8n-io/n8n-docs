@@ -383,47 +383,46 @@ df_array:
   - funcName: randomItem
     returns: Array item
     description: Returns a random element from an array.
-  # - funcName: removeDuplicates
-  #   args:
-  #     - argName: key
-  #       optional: true
-  #       longName: String
-  #       type: String
-  #       description: A key, or comma-separated list of keys, to check for duplicates.
-  #   returns: Array
-  #   description: Removes duplicates from an array.
-  # - funcName: renameKeys
-  #   args:
-  #     - argName: from
-  #       optional: false
-  #       longName: String
-  #       type: String
-  #       description: The key you want to rename.
-  #     - argName: to
-  #       optional: false
-  #       longName: String
-  #       type: String
-  #       description: The new name.
-  #   returns: Array
-  #   description: Renames all matching keys in the array. You can rename more than one key by entering a series of comma separated strings, in the pattern oldKeyName, newKeyName.
-  # - funcName: smartJoin
-  #   args:
-  #     - argName: keyField
-  #       optional: false
-  #       longName: String
-  #       type: String
-  #       description: The key to join.
-  #     - argName: nameField
-  #       optional: false
-  #       longName: String
-  #       type: String
-  #       description: The value to join.
-  #   returns: Array
-  #   description: Operates on an array of objects where each object contains key-value pairs. Creates a new object containing key-value pairs, where the key is the value of the first pair, and the value is the value of the second pair. Removes non-matching and empty values and trims any whitespace before joining.
-  #   examples:
-  #     - exampleName: Basic usage
-  #       code: _macros/data-function-code/smartjoin-code.md
-  #       output: _macros/data-function-code/smartjoin-output.md
+  - funcName: removeDuplicates
+    args:
+      - argName: key
+        optional: true
+        longName: String
+        type: String
+        description: A key, or comma-separated list of keys, to check for duplicates.
+    returns: Array
+    description: Removes duplicates from an array.
+  - funcName: renameKeys
+    args:
+      - argName: from
+        optional: false
+        longName: String
+        type: String
+        description: The key you want to rename.
+      - argName: to
+        optional: false
+        longName: String
+        type: String
+        description: The new name.
+    returns: Array
+    description: Renames all matching keys in the array. You can rename more than one key by entering a series of comma separated strings, in the pattern oldKeyName, newKeyName.
+  - funcName: smartJoin
+    args:
+      - argName: keyField
+        optional: false
+        longName: String
+        type: String
+        description: The key to join.
+      - argName: nameField
+        optional: false
+        longName: String
+        type: String
+        description: The value to join.
+    returns: Array
+    description: Operates on an array of objects where each object contains key-value pairs. Creates a new object containing key-value pairs, where the key is the value of the first pair, and the value is the value of the second pair. Removes non-matching and empty values and trims any whitespace before joining.
+    examples:
+      - exampleName: Basic usage
+        code: smartjoin
   - funcName: sum
     returns: Number
     description: Returns the total sum all the values in an array of parsable numbers.

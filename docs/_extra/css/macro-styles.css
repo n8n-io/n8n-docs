@@ -15,7 +15,7 @@
 }
 
 .dt-func-wrapper {
-	/* border-bottom: 1px solid var(--color-foreground-base); */
+	
 	margin-bottom: 2em;
 }
 
@@ -75,17 +75,21 @@
 	transition: color .25s,opacity 125ms;
 }
 
-
-
 .dt-func-args-p {
 	margin: 0;
 }
 
 .dt-func-hr {
-	margin: 2.5em 0 2.5em 0 !important;
+	margin: 4.5em 0 4.5em 0 !important;
 }
 
 .dt-func-example-code {
 	font-weight: bold;
+}
+
+.dt-func-background-box {
+	background-color: var(--color-background-light);
+	border: 1px solid var(--color-foreground-base);
+	padding: 1em;
 }
 

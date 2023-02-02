@@ -7,7 +7,7 @@ On this page, you'll find a list of operations the Beereminder node supports and
 !!! note "Credentials"
   Refer to the [Beereminder credentials](https://docs.n8n.io/integrations/builtin/credentials/beeminder/) for guidance on setting up authentication. 
 
-!!! note "Examples & Templates"
+!!! note "Examples and Templates"
   For usage examples and templates to help you get started, take a look at n8n's [Beereminder integrations](https://n8n.io/integrations/beeminder/){:target=_blank .external-link} list.
 
 

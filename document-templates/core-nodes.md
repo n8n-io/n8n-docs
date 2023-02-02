@@ -25,12 +25,15 @@ _Briefly summarize the functionality._
 !!! note "Credentials"
     You can find authentication information for this node _here (link to credentials doc)_.
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} list.
+
 ## Operations
 
 * _Bullet list_
 * _Of available operations_.
 
-## Relates resources
+## Related resources
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
 View [example workflows and related content](){:target=_blank .external-link} on n8n's website.

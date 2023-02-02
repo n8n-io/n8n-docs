@@ -21,9 +21,8 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 2. Then run these commands:
 
 	```bash
-	git clone git@github.com:n8n-io/n8n-docs.git
+	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
-	git submodule update
 	pip install -r requirements.txt
 	pip install _submodules/insiders
 	```

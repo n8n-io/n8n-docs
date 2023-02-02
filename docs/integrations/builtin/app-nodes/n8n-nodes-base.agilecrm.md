@@ -1,6 +1,6 @@
 # Agile CRM
 
-The Agile CRM node allows you to automate work in the Agile CRM platform and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, which includes basic operations like creating, getting, updating & deleting companies, contracts, and deals.
+The Agile CRM node allows you to automate work in the Agile CRM platform and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, which includes basic operations like creating, getting, updating and deleting companies, contracts, and deals.
 
 On this page, you'll find a list of operations the Agility CRM node supports and links to more resources.
 

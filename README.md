@@ -23,6 +23,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	```bash
 	git clone git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
+	git submodule update
 	pip install -r requirements.txt
 	pip install _submodules/insiders
 	```

@@ -7,7 +7,7 @@ On this page, you'll find a list of operations the Bubble node supports and link
 !!! note "Credentials"
   Refer to the [Bubble credentials](https://docs.n8n.io/integrations/builtin/credentials/bubble/) for guidance on setting up authentication. 
 
-!!! note "Examples & Templates"
+!!! note "Examples the Templates"
   For usage examples and templates to help you get started, take a look at n8n's [Bubble integrations](https://n8n.io/integrations/bubble/){:target=_blank .external-link} list.
 
 

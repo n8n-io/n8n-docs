@@ -12,20 +12,35 @@
     * Create a new client
     * Update an existing client
     * Delete a client
+    * Perform actions on an client (ex. archive, restore)
     * Get data of a client
     * Get data of all clients
+* Vendor
+    * Create a new vendor
+    * Update an existing vendor
+    * Delete a vendor
+    * Perform actions on an vendor (ex. archive, restore)
+    * Get data of a vendor
+    * Get data of all vendor
 * Invoice
     * Create a new invoice
     * Update an existing invoice
     * Delete a invoice
-    * Email an invoice
+    * Perform actions on an invoice (ex. email, archive, restore)
     * Get data of a invoice
     * Get data of all invoices
+* Recurring Invoice
+    * Create a new recurring invoice
+    * Update an existing recurring invoice
+    * Delete a recurring invoice
+    * Perform actions on an recurring invoice (ex. email, archive, restore)
+    * Get data of a recurring invoice
+    * Get data of all recurring invoices
 * Quote
     * Create a new quote
     * Update an existing quote
     * Delete a quote
-    * Email an quote
+    * Perform actions on a quote (ex. email, archive, restore)
     * Get data of a quote
     * Get data of all quotes
 * Payment
@@ -40,12 +55,48 @@
     * Delete an expense
     * Get data of an expense
     * Get data of all expenses
+* Recurring Expense
+    * Create a new recurring expense
+    * Update an existing recurring expense
+    * Delete an recurring expense
+    * Get data of an recurring expense
+    * Get data of all recurring expenses
+* Project
+    * Create a new project
+    * Update an existing project
+    * Delete a project
+    * Get data of a project
+    * Get data of all project
 * Task
     * Create a new task
     * Update an existing task
     * Delete a task
     * Get data of a task
     * Get data of all tasks
+* Product
+    * Create a new product
+    * Update an existing product
+    * Delete a product
+    * Get data of a product
+    * Get data of all products
+* Purchase Order
+    * Create a new purchase order
+    * Update an existing purchase order
+    * Delete a purchase order
+    * Get data of a purchase order
+    * Get data of all purchase order
+* Bank Transaction
+    * Create a new transaction
+    * Update an existing transaction
+    * Delete a transaction
+    * Get data of a transaction
+    * Get data of all transactions
+* Credit
+    * Create a new credit
+    * Update an existing credit
+    * Delete a credit
+    * Get data of a credit
+    * Get data of all credits
 
 ## Example Usage
 

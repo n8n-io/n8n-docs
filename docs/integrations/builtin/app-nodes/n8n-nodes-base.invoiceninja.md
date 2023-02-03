@@ -79,6 +79,12 @@
     * Delete a product
     * Get data of a product
     * Get data of all products
+* Subscription
+    * Create a new subscription
+    * Update an existing subscription
+    * Delete a subscription
+    * Get data of a subscription
+    * Get data of all subscription
 * Purchase Order
     * Create a new purchase order
     * Update an existing purchase order

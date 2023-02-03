@@ -5,11 +5,86 @@
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceNinja/).
 
+## Available Events
 
+* Client
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Vendor
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Invoice
+    * was created
+    * was updated
+    * was sent
+    * was delayed
+    * was reminded
+    * was archived
+    * was restored
+    * was deleted
+* Quote
+    * was created
+    * was updated
+    * was send
+    * was accepted
+    * was expired
+    * was archived
+    * was restored
+    * was deleted
+* Payment
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Expense
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Project
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Task
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Product
+    * was created
+    * was updated
+    * was archived
+    * was restored
+    * was deleted
+* Purchase Order
+    * was created
+    * was updated
+    * was sent
+    * was archived
+    * was restored
+    * was deleted
+* Credit
+    * was created
+    * was updated
+    * was sent
+    * was archived
+    * was restored
+    * was deleted
 
 ## Example Usage
 
-This workflow allows you to receive updates when new invoices are created in Invoice Ninja. You can also find the [workflow](https://n8n.io/workflows/535) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive updates from Invoice Ninja for specific resources. You can also find the [workflow](https://n8n.io/workflows/535) on the website. This example usage workflow would use the following node.
 
 - [Invoice Ninja Trigger]()
 

@@ -21,7 +21,7 @@
     * Delete a vendor
     * Perform actions on an vendor (ex. archive, restore)
     * Get data of a vendor
-    * Get data of all vendor
+    * Get data of all vendors
 * Invoice
     * Create a new invoice
     * Update an existing invoice
@@ -66,7 +66,7 @@
     * Update an existing project
     * Delete a project
     * Get data of a project
-    * Get data of all project
+    * Get data of all projects
 * Task
     * Create a new task
     * Update an existing task
@@ -84,7 +84,7 @@
     * Update an existing purchase order
     * Delete a purchase order
     * Get data of a purchase order
-    * Get data of all purchase order
+    * Get data of all purchase orders
 * Bank Transaction
     * Create a new transaction
     * Update an existing transaction

@@ -1,5 +1,26 @@
 # Release notes
 
+<div id="02141" markdown>
+
+## n8n@0.214.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.0...n8n@0.214.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-06
+
+This is a bug fix release. It also contains an overhaul of the Slack node.
+
+### Node enhancements
+
+This release includes an overhaul of the Slack node, adding new operations and a better user interface.
+
+### Bug fixes
+
+* Editor: fix an issue with mapping to empty expression input.
+* Editor: fix merge node connectors.
+* Editor: fix multiple-output endpoints success style after connection is detached.
+
+</div>
+
 <div id="02140" markdown>
 
 ## n8n@0.214.0
@@ -11,13 +32,20 @@ This release contains new features, node enhancements, and bug fixes. The expres
 
 ### New features
 
+<div class="n8n-new-features" markdown>
+
+#### Autocomplete in the Extension editor
+
+[Data transformation functions](/code-examples/expressions/data-transformation-functions/) now have autocomplete support in the Expression editor.
+
+</div>
+
 * Core: export OpenAPI spec for external tools.
 * Core: set custom Cache-Control headers for static assets.
 * Core: simplify pagination in declarative node design.
 * Editor: support mapping keys with drag and drop. Any field with the hint **Enter the field name as text** should now support mapping a data key using drag and drop. Node builders can enable this in their own nodes. Refer to [Creating nodes | UI elements](/integrations/creating-nodes/build/reference/ui-elements#support-drag-and-drop-for-data-keys) for more information.
 * Editor: add the [HTML editor component](/integrations/creating-nodes/build/reference/ui-elements#html) for use in parameters. This means node builders can now use the HTML editor that n8n uses in the HTML node as a UI component.
 * Editor: append expressions in fixed values when mapping to string and JSON inputs.
-* Editor: autocompletion for extensions in the expression editor.
 * Editor: continue to show mapping tooltip after dismiss.
 * Editor: roll out schema view.
 

@@ -10,7 +10,7 @@
 * Image
 	* Create
 * Text
-	* complete
+	* Complete
 	* Edit
 	* Moderate
 

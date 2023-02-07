@@ -43,3 +43,7 @@ This approach is more complex and means re-building the workflows causing the is
 Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two additional nodes: the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node to start the sub-workflow.
 
 However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a very small result set to the main workflow, the memory consumption is significantly reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
+
+### Increase old memory
+
+This only applies when self-hosting n8n. When encountering `JavaScript heap out of memory` errors, it often makes sense to make memory available to the old memory section of the V8 JavaScript engine. In Node.js this can be achieved by setting the respective [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes) `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions).

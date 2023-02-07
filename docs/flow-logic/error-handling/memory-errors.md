@@ -46,4 +46,4 @@ However, as long as your sub-workflow does the heavy lifting for each batch and 
 
 ### Increase old memory
 
-This only applies when self-hosting n8n. When encountering `JavaScript heap out of memory` errors, it often makes sense to make memory available to the old memory section of the V8 JavaScript engine. In Node.js this can be achieved by setting the respective [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes) `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions).
+This only applies to self-hosting n8n. When encountering `JavaScript heap out of memory` errors, it is often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. This can be achieved by setting the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes) `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions).

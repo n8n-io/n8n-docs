@@ -113,6 +113,11 @@
     * Perform actions on a credit (ex. mark_sent, email, archive, restore)
     * Get data of a credit
     * Get data of all credits
+* Document
+    * Upload a document
+    * Delete a document
+    * Get data of a document (+ download)
+    * Get data of all documents
 * System / Other
     * Get metadata of the system
 

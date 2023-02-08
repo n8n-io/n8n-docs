@@ -12,7 +12,7 @@
     * Create a new client
     * Update an existing client
     * Delete a client
-    * Perform actions on an client (ex. archive, restore)
+    * Perform actions on an client (ex. merge, archive, restore, purge, client_statement)
     * Get data of a client
     * Get data of all clients
 * Vendor
@@ -26,22 +26,22 @@
     * Create a new invoice
     * Update an existing invoice
     * Delete a invoice
-    * Perform actions on an invoice (ex. email, archive, restore)
-    * Get data of a invoice
+    * Perform actions on an invoice (ex. auto_bill, clone, mark_sent, mark_payed, cancel, email, archive, restore)
+    * Get data of a invoice (+ download pdf)
     * Get data of all invoices
 * Recurring Invoice
     * Create a new recurring invoice
     * Update an existing recurring invoice
     * Delete an recurring invoice
-    * Perform actions on an recurring invoice (ex. email, archive, restore)
-    * Get data of an recurring invoice
+    * Perform actions on an recurring invoice (ex. start, stop, email, archive, restore)
+    * Get data of an recurring invoice (+ download pdf)
     * Get data of all recurring invoices
 * Quote
     * Create a new quote
     * Update an existing quote
     * Delete a quote
-    * Perform actions on a quote (ex. email, archive, restore)
-    * Get data of a quote
+    * Perform actions on a quote (ex. approve, clone, mark_sent, cancel, email, archive, restore)
+    * Get data of a quote (+ download pdf)
     * Get data of all quotes
 * Payment
     * Create a new payment
@@ -61,7 +61,7 @@
     * Create a new recurring expense
     * Update an existing recurring expense
     * Delete an recurring expense
-    * Perform actions on an recurring expense (ex. archive, restore)
+    * Perform actions on an recurring expense (ex. start, stop, email, archive, restore)
     * Get data of an recurring expense
     * Get data of all recurring expenses
 * Project
@@ -96,23 +96,25 @@
     * Create a new purchase order
     * Update an existing purchase order
     * Delete a purchase order
-    * Perform actions on a purchase order (ex. archive, restore)
-    * Get data of a purchase order
+    * Perform actions on a purchase order (ex. add_to_inventory, cancel, expense, mark_sent, email, archive, restore)
+    * Get data of a purchase order (+ download pdf)
     * Get data of all purchase orders
 * Bank Transaction
     * Create a new transaction
     * Update an existing transaction
     * Delete a transaction
-    * Perform actions on a transaction (ex. archive, restore)
+    * Perform actions on a transaction (ex. convert, archive, restore)
     * Get data of a transaction
     * Get data of all transactions
 * Credit
     * Create a new credit
     * Update an existing credit
     * Delete a credit
-    * Perform actions on a credit (ex. archive, restore)
+    * Perform actions on a credit (ex. mark_sent, email, archive, restore)
     * Get data of a credit
     * Get data of all credits
+* System / Other
+    * Get metadata of the system
 
 ## Example Usage
 

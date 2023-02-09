@@ -2,7 +2,7 @@
 
 
 
-The Action Network node allows you to automate work in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, which includes creating, updating, and deleting events, people, tags, and signatures. 
+The Action Network node allows you to automate work in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures. 
 
 On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 

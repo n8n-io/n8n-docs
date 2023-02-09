@@ -1,6 +1,6 @@
 # Affinity
 
-The Affinity node allows you to automate work in the Affinity platform and integrate Affinity with other applications. n8n has built-in support for a wide range of Affinity features, which includes creating, getting, updating and deleting lists, entries, organization, and persons.
+The Affinity node allows you to automate work in the Affinity platform and integrate Affinity with other applications. n8n has built-in support for a wide range of Affinity features, including creating, getting, updating and deleting lists, entries, organization, and persons.
 
 On this page, you'll find a list of operations the Affinity node supports and links to more resources.
 

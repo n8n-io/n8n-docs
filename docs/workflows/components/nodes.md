@@ -4,7 +4,7 @@ description: A node is an entry point for retrieving data, a function to process
 
 # Nodes
 
-Nodes are the key building blocks of a workflow. Nodes perform a range of actions, including:
+Nodes are the key building blocks of a workflow. They perform a range of actions, including:
 
 * Starting the workflow.
 * Fetching and sending data.
@@ -24,7 +24,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 ### Add a node to an empty workflow
 
 1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse trigger nodes.
-2. Select the trigger you want to use. 
+2. Select the trigger you want to use.
 
 	!!! note "Choose the correct app event"
 			If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. However, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see a recommended operation at the top of the available operations list.
@@ -41,10 +41,10 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png)</span>: remove the node from the workflow.
-* **Pause** <span class="inline-image">![Pause node icon](/_images/common-icons/pause-node.png)</span>: Deactivate the node. This is useful when creating and debugging workflows, as it allows you to avoid executing a specific node, without disconnecting it. When you pause a node, the data passes through the node without changing.
-* **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/common-icons/duplicate-node.png)</span>: copy the node. n8n adds the copy to the canvas.
-* **Play** <span class="inline-image">![Run node icon](/_images/common-icons/play-node.png)</span>: run the node.
+* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png)</span> : remove the node from the workflow.
+* **Pause** <span class="inline-image">![Pause node icon](/_images/common-icons/pause-node.png)</span> : deactivate the node. This is useful when creating and debugging workflows, as it allows you to avoid executing a specific node, without disconnecting it. When you pause a node, the data passes through the node without changing.
+* **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/common-icons/duplicate-node.png)</span> : copy the node. n8n adds the copy to the canvas.
+* **Play** <span class="inline-image">![Run node icon](/_images/common-icons/play-node.png)</span> : run the node.
 
 ## Node settings
 

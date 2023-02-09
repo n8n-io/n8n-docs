@@ -7,7 +7,7 @@ You can use these credentials to authenticate the following nodes with Invoice N
 
 ## Prerequisites
 
-Create an [Invoice Ninja](https://www.invoiceninja.com/) account.
+Create an [Invoice Ninja](https://www.invoiceninja.com/) account or setup your [Self Hosted Instance](https://www.invoiceninja.org/).
 
 ## Using Access Token
 
@@ -18,3 +18,8 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/) account.
 5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
 
 ![Getting Invoice Ninja credentials](/_images/integrations/builtin/credentials/invoiceninja/using-access-token.gif)
+
+
+## Using Password
+
+Some operations require the usage of an additionaly password. This password is the same, as for your user-account, which created the token.

@@ -1,6 +1,6 @@
 # AWS Lambda
 
-The AWS Lambda node allows you to automate work in the AWS Lambda platform and integrate AWS Lambda with other applications. n8n has built-in support for a wide range of AWS Lambda features, which includes basic operations like invoking functions.
+The AWS Lambda node allows you to automate work in the AWS Lambda platform and integrate AWS Lambda with other applications. n8n has built-in support for a wide range of AWS Lambda features, including invoking functions.
 
 On this page, you'll find a list of operations the AWS Lambda node supports and links to more resources.
 

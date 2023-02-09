@@ -2,7 +2,7 @@
 description: A connection establishes a link between nodes to route data through the workflow. 
 ---
 
-# Connection
+# Connections
 
 A connection establishes a link between nodes to route data through the workflow. A connection between two nodes passes data from one node's output to another node's input.
 

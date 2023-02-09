@@ -2,7 +2,7 @@
 description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
 ---
 
-# Node
+# Nodes
 
 Nodes are the key building blocks of a workflow. Nodes perform a range of actions, including:
 

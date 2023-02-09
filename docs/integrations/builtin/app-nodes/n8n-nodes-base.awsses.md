@@ -1,6 +1,6 @@
 # AWS SES
 
-The AWS SES node allows you to automate work in the AWS SES platform and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, which includes basic operations like creating, getting, deleting, sending, updating, and adding templates and emails.
+The AWS SES node allows you to automate work in the AWS SES platform and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
 
 On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 

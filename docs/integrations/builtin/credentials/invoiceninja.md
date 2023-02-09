@@ -11,13 +11,24 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/) account or setup your [
 
 ## Using Access Token
 
+### Version 4
+
 1. Access your Invoice Ninja dashboard.
 2. Click on Settings in the bottom left.
 3. Scroll down to API keys.
 4. Add new token.
 5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
 
-![Getting Invoice Ninja credentials](/_images/integrations/builtin/credentials/invoiceninja/using-access-token.gif)
+![Getting Invoice Ninja V4 credentials](/_images/integrations/builtin/credentials/invoiceninja/using-access-token-v4.gif)
+
+### Version 5
+
+1. Access your Invoice Ninja dashboard.
+2. Click on Settings in the bottom left.
+2. Click on Account Management in the settings categories.
+3. Click on Button "API Tokens".
+4. Click on "Create" and add a new token.
+5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
 
 
 ## Using Password

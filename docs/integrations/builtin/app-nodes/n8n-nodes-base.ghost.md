@@ -1,6 +1,6 @@
 # Ghost
 
-The Ghost node allows you to automate work in the Ghost platform and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, which includes basic operations like creating, updating, deleting, and getting posts for the Admin and content API. 
+The Ghost node allows you to automate work in the Ghost platform and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, including creating, updating, deleting, and getting posts for the Admin and content API. 
 
 On this page, you'll find a list of operations the Ghost node supports and links to more resources.
 

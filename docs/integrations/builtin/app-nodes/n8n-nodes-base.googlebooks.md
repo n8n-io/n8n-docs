@@ -1,6 +1,6 @@
 # Google Books
 
-The Google Books node allows you to automate work in the Google Books platform and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, which includes basic operations like retrieving, getting and removing bookshelf resources and volume.
+The Google Books node allows you to automate work in the Google Books platform and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving, getting and removing bookshelf resources and volume.
 
 On this page, you'll find a list of operations the Google Books node supports and links to more resources.
 

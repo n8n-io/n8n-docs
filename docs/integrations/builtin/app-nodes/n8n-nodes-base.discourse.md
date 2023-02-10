@@ -1,6 +1,6 @@
 # Discourse
 
-The Discourse node allows you to automate work in the Discourse platform and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, which includes basic operations like creating, getting, updating, and removing categories, groups, posts, and users.
+The Discourse node allows you to automate work in the Discourse platform and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
 
 On this page, you'll find a list of operations the Discourse node supports and links to more resources.
 

@@ -1,6 +1,6 @@
 # GitHub
 
-The GitHub node allows you to automate work in the GitHub platform and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, which includes basic operations like creating, updating, deleting, and editing files, repositories, issues, releases, users. 
+The GitHub node allows you to automate work in the GitHub platform and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, releases, users. 
 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 

@@ -1,6 +1,6 @@
 # Google Contacts
 
-The Google Contacts node allows you to automate work in the Google Contacts platform and integrate Google Contacts with other applications. n8n has built-in support for a wide range of Google Contacts features, which includes basic operations like creating, updating, retrieving, deleting, and getting contacts. 
+The Google Contacts node allows you to automate work in the Google Contacts platform and integrate Google Contacts with other applications. n8n has built-in support for a wide range of Google Contacts features, including creating, updating, retrieving, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the Google Contacts node supports and links to more resources.
 

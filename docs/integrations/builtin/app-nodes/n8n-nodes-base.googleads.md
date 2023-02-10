@@ -1,6 +1,6 @@
 # Google Ads
 
-The Google Ads node allows you to automate work in the Google Ads platform and integrate Google Ads with other applications. n8n has built-in support for a wide range of Google Ads features, which includes basic operations like getting campaigns. 
+The Google Ads node allows you to automate work in the Google Ads platform and integrate Google Ads with other applications. n8n has built-in support for a wide range of Google Ads features, including getting campaigns. 
 
 On this page, you'll find a list of operations the Google Ads node supports and links to more resources.
 

@@ -1,6 +1,6 @@
 # GoToWebinar
 
-The GoToWebinar node allows you to automate work in the GoToWebinar platform and integrate GoToWebinar with other applications. n8n has built-in support for a wide range of GoToWebinar features, which includes basic operations like creating, getting, and deleting attendees, organizers, and registrants.
+The GoToWebinar node allows you to automate work in the GoToWebinar platform and integrate GoToWebinar with other applications. n8n has built-in support for a wide range of GoToWebinar features, including creating, getting, and deleting attendees, organizers, and registrants.
 
 On this page, you'll find a list of operations the GoToWebinar node supports and links to more resources.
 

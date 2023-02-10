@@ -1,6 +1,6 @@
 # Beeminder
 
-The Beeminder node allows you to automate work in the Beereminder platform and integrate Beereminder with other applications. n8n has built-in support for a wide range of Beereminder features, which includes basic operations like creating, deleting, and updating datapoints.
+The Beeminder node allows you to automate work in the Beereminder platform and integrate Beereminder with other applications. n8n has built-in support for a wide range of Beereminder features, including creating, deleting, and updating datapoints.
 
 On this page, you'll find a list of operations the Beereminder node supports and links to more resources.
 

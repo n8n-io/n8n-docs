@@ -1,6 +1,6 @@
 # Copper
 
-The Copper node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, which includes basic operations like getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
+The Copper node allows you to automate work in the Copper platform and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
 
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 

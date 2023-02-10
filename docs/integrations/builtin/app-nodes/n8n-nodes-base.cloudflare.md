@@ -1,6 +1,6 @@
 # Cloudflare
 
-The Cloudflare node allows you to automate work in the Cloudflare platform and integrate Cloudflare with other applications. n8n has built-in support for a wide range of Cloudflare features, which includes basic operations like deleting, getting, and uploading zone certificates.
+The Cloudflare node allows you to automate work in the Cloudflare platform and integrate Cloudflare with other applications. n8n has built-in support for a wide range of Cloudflare features, including deleting, getting, and uploading zone certificates.
 
 On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
 

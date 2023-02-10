@@ -1,6 +1,6 @@
 # CircleCI
 
-The CircleCI node allows you to automate work in the CircleCI platform and integrate CircleCI with other applications. n8n has built-in support for a wide range of CircleCI features, which includes basic operations like getting and triggering pipelines.
+The CircleCI node allows you to automate work in the CircleCI platform and integrate CircleCI with other applications. n8n has built-in support for a wide range of CircleCI features, including getting and triggering pipelines.
 
 On this page, you'll find a list of operations the CircleCI node supports and links to more resources.
 

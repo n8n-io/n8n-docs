@@ -1,6 +1,6 @@
 # Gotify
 
-The Gotify node allows you to automate work in the Gotify platform and integrate Drift with other applications. n8n has built-in support for a wide range of Gotify features, which includes basic operations like creating, deleting, and getting messages. 
+The Gotify node allows you to automate work in the Gotify platform and integrate Drift with other applications. n8n has built-in support for a wide range of Gotify features, including creating, deleting, and getting messages. 
 
 On this page, you'll find a list of operations the Gotify node supports and links to more resources.
 

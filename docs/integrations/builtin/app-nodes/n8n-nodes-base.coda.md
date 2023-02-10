@@ -1,6 +1,6 @@
 # Coda
 
-The Coda node allows you to automate work in the Coda platform and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, which includes basic operations like creating, getting, and deleting controls, formulas, tables, and views.
+The Coda node allows you to automate work in the Coda platform and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, including creating, getting, and deleting controls, formulas, tables, and views.
 
 On this page, you'll find a list of operations the Coda node supports and links to more resources.
 

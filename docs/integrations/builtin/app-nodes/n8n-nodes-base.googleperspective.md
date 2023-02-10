@@ -1,6 +1,6 @@
 # Google Perspective
 
-The Google Perspective node allows you to automate work in the Google Perspective platform and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, which includes basic operations like analyzing comments.
+The Google Perspective node allows you to automate work in the Google Perspective platform and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, including analyzing comments.
 
 On this page, you'll find a list of operations the Google Perspective node supports and links to more resources.
 

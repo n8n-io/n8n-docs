@@ -1,6 +1,6 @@
 # Google Drive
 
-The Google Drive node allows you to automate work in the Google Drive platform and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, which includes basic operations like creating, updating, listing, deleting, and getting drives, files, and folders. 
+The Google Drive node allows you to automate work in the Google Drive platform and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, including creating, updating, listing, deleting, and getting drives, files, and folders. 
 
 On this page, you'll find a list of operations the Google Drive node supports and links to more resources.
 

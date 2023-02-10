@@ -1,6 +1,6 @@
 # Google Calendar
 
-The Google Calendar node allows you to automate work in the Google Calendar platform and integrate Google Calendar with other applications. n8n has built-in support for a wide range of Google Calendar features, which includes basic operations like adding, retrieving, deleting and updating calendar events.
+The Google Calendar node allows you to automate work in the Google Calendar platform and integrate Google Calendar with other applications. n8n has built-in support for a wide range of Google Calendar features, including adding, retrieving, deleting and updating calendar events.
 
 On this page, you'll find a list of operations the Google Calendar node supports and links to more resources.
 

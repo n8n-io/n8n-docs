@@ -35,7 +35,7 @@
 
 ## Related resources
 
-n8n provides an app node for _Name_. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/).
+n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/).
 
 View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} on n8n's website.
 

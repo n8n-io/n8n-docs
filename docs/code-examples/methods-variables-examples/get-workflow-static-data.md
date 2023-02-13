@@ -1,3 +1,9 @@
+---
+tags:
+  - static data
+  - global variables
+---
+
 # `$getWorkflowStaticData(type)`
 
 This gives access to the static workflow data.

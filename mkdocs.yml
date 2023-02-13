@@ -29,7 +29,7 @@ copyright: >
 extra:
   analytics:
     provider: google
-    property: UA-146470481-3
+    property: GTM-5B8KCRR
   consent:
     title: Cookie consent
     description: >- 

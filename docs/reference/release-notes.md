@@ -1,6 +1,21 @@
 # Release notes
 
 
+<div id="02143" markdown>
+
+## n8n@0.214.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.2...n8n@0.214.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-09
+
+This is a bug fix release.
+
+### Bug fixes
+
+Editor:prevent creation of input connections for nodes without input slot.
+
+</div>
+
 <div id="02142" markdown>
 
 ## n8n@0.214.2

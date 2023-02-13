@@ -27,9 +27,6 @@ theme:
 copyright: >
   <a href="#__consent">Change cookie settings</a>
 extra:
-  analytics:
-    provider: google
-    property: UA-146470481-3
   consent:
     title: Cookie consent
     description: >- 

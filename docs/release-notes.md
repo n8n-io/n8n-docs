@@ -1,5 +1,17 @@
+--- 
+title: Release notes
+description: Release notes detailing new features and bug fixes for n8n.
+tags:
+  - release
+  - release notes
+  - changelog
+hide:
+  - tags
+---
+
 # Release notes
 
+New features and bug fixes for n8n.
 
 <div id="02152" markdown>
 
@@ -4171,7 +4183,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 - Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-- Added new Editor UI shortcuts. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/reference/keyboard-shortcuts/) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes

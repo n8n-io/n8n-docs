@@ -194,9 +194,9 @@ nav:
       - LDAP: user-management/ldap.md
     - Log streaming: log-streaming.md
     - Security audit: security-audit.md
+    - Release notes: release-notes.md
     - Reference:
       - reference/index.md
-      - Release notes: reference/release-notes.md
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
       - Update n8n: reference/update.md

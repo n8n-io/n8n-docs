@@ -5,6 +5,8 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 * [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. 
 * [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ## Create a Droplet
 
 1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 

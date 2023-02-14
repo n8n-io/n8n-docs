@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 /security-audit/   /hosting/security-audit/
 /reference/data-collection/   /privacy-security/data-collection/
 
+=======
+
+/reference/release-notes/   /release-notes/
+>>>>>>> main
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
 
 # License release 2022/2023

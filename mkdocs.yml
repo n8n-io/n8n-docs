@@ -202,9 +202,9 @@ nav:
         - Data encryption: privacy-security/data-encryption.md
         - Corporate security: privacy-security/corporate-security.md
         - What you can do: privacy-security/what-you-can-do.md
+    - Release notes: release-notes.md
     - Reference:
       - reference/index.md
-      - Release notes: reference/release-notes.md
       - CLI commands: reference/cli-commands.md
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
       - Update n8n: reference/update.md

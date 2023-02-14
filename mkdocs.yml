@@ -203,7 +203,11 @@ nav:
         - Third-party accounts: privacy-security/third-party-auth.md
         - Cloud hosting: privacy-security/cloud-hosting.md
         - Data encryption: privacy-security/data-encryption.md
+        - Email security: privacy-security/email-security.md
         - Corporate security: privacy-security/corporate-security.md
+        - Development: privacy-security/development.md
+        - Monitoring: privacy-security/monitoring.md
+        - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
     - Reference:

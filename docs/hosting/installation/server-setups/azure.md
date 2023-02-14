@@ -4,7 +4,9 @@ This hosting guide shows you how to self-host n8n on Azure. It uses n8n with Pos
 
 ## Prerequisites
 
-- [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank" .external-link}
+You need [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank" .external-link}
+
+--8<-- "_snippets/self-hosting/warning.md"
 
 ## Hosting options
 

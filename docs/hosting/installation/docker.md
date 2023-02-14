@@ -13,6 +13,8 @@ Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/)
 !!! note "Linux Users "
     Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 
 ## Starting n8n
 

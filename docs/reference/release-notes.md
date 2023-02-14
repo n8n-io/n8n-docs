@@ -1,6 +1,17 @@
 # Release notes
 
 
+<div id="02152" markdown>
+
+## n8n@0.215.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.1...n8n@0.215.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-14
+
+This is a bug fix release. It solves an issue that was causing webhooks to be removed when they shouldn't be.
+
+</div>
+
 <div id="02151" markdown>
 
 ## n8n@0.215.1

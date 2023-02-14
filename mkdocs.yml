@@ -197,7 +197,10 @@ nav:
         - privacy-security/index.md
         - GDPR: privacy-security/gdpr.md
         - Data collection: privacy-security/data-collection.md
+        - PID retention and deletion: privacy-security/identifying-data.md
+        - Payment processor: privacy-security/payment-processor.md
         - User accounts: privacy-security/user-accounts.md
+        - Third-party accounts: privacy-security/third-party-auth.md
         - Cloud hosting: privacy-security/cloud-hosting.md
         - Data encryption: privacy-security/data-encryption.md
         - Corporate security: privacy-security/corporate-security.md

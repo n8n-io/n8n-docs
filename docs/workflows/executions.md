@@ -6,13 +6,17 @@ description: An execution is a single run of a workflow.
 
 An execution is a single run of a workflow.
 
-To browse all executions:
+## Browse all executions
 
 Select the **Executions**  in the left menu to view your executions history. n8n opens the **Workflow Executions** modal. You can then open and view individual executions.
 
-To view executions for a single workflow:
+!!! note "Deleted workflows"
+	When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
+
+## View executions for a single workflow
 
 In the workflow, select **Executions** in the top menu. You can preview all executions of that workflow.
+
 
 ## Retry failed workflows
 

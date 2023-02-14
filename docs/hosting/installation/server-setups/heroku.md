@@ -7,6 +7,8 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 - [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres){:target="_blank" .external-link} to host n8n's data storage.
 - A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 
 ## Use the deployment template to create a Heroku project
 

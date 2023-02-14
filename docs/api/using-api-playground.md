@@ -18,11 +18,25 @@ For n8n Cloud users, the API playground path contains your cloud instance URL:
 <your-cloud-instance>/api/v<version-number>/docs
 ```
 
+!!! warning "Real data"
+    If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.
+
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell
-/api/credentials/schema/{id}
+<your-cloud-instance>/api/v<version-number>/credentials/schema/{credentialTypeName}
 ```
 
-!!! warning "Real data"
-    If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.
+!!! note "How to find `credentialTypeName`"
+    To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api` :
+```json
+{
+    ...,
+    "credentials": {
+        "googleDriveOAuth2Api": {
+        "id": "9",
+        "name": "Google Drive"
+        }
+    }
+}
+``` 

@@ -3,7 +3,7 @@
 Use the Schedule Trigger node run workflows at fixed intervals and times. This works in a similar way to the cron software utility in Unix-like systems.
 
 !!! note "Cron node"
-	The Code node replaces the Cron node from version 0.199.0 onwards. If you're using an older version of n8n, you can still view the [Cron node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.cron.md){:target=_blank .external-link}.
+	The Schedule Trigger node replaces the Cron node from version 0.199.0 onwards. If you're using an older version of n8n, you can still view the [Cron node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.cron.md){:target=_blank .external-link}.
 
 !!! note "Keep in mind" 
 	1. If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 

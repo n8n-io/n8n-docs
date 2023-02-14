@@ -3,7 +3,6 @@
 !!! note "File-based configuration"
     You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
 
-
 ## Credentials
 
 Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
@@ -77,6 +76,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/reference/data-collection/) with n8n |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | String | `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io` | Telemetry configuration for the frontend. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the backend. |
+| `N8N_PUSH_BACKEND` | String | `sse` | Choose whether the n8n backend uses server-sent events (`sse`) or WebSockets (`websocket`) to send changes to the UI. |
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 
@@ -89,7 +89,6 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_BINARY_DATA_TTL` | Number | `60` | Time to live (in minutes) for binary data of unsaved executions. |
 | `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | Number | `1440` | Time to live (in minutes) for persisted data. |
-
 
 ## User management and SMTP
 
@@ -109,14 +108,21 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
 
-
 ## Endpoints
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_PAYLOAD_SIZE_MAX` | Number | `16` | The maximum payload size in MB. |
-| `N8N_METRICS` | Boolean | `false` | Whether to enable the metrics endpoint. |
-| `N8N_METRICS_PREFIX` | String | `n8n_` | Optional prefix for metrics names. |
+| `N8N_METRICS` | Boolean | `false` | Whether to enable the `/metrics` endpoint. |
+| `N8N_METRICS_PREFIX` | String | `n8n_` | Optional prefix for n8n specific metrics names. |
+| `N8N_METRICS_INCLUDE_DEFAULT_METRICS` | Boolean | `true` | Whether to expose default system and node.js metrics. |
+| `N8N_METRICS_INCLUDE_WORKFLOW_ID_LABEL` | Boolean | `false` | Whether to include a label for the workflow ID on workflow metrics. |
+| `N8N_METRICS_INCLUDE_NODE_TYPE_LABEL` | Boolean | `false` | Whether to include a label for the node type on node metrics. |
+| `N8N_METRICS_INCLUDE_CREDENTIAL_TYPE_LABEL` | Boolean | `false` | Whether to include a label for the credential type on credential metrics. |
+| `N8N_METRICS_INCLUDE_API_ENDPOINTS` | Boolean | `false` | Whether to expose metrics for API endpoints. |
+| `N8N_METRICS_INCLUDE_API_PATH_LABEL` | Boolean | `false` | Whether to include a label for the path of API invocations. |
+| `N8N_METRICS_INCLUDE_API_METHOD_LABEL` | Boolean | `false` | Whether to include a label for the HTTP method (GET, POST, ...) of API invocations. |
+| `N8N_METRICS_INCLUDE_API_STATUS_CODE_LABEL` | Boolean | `false` | Whether to include a label for the HTTP status code (200, 404, ...) of API invocations. |
 | `N8N_ENDPOINT_REST` | String | `rest` | The path used for REST endpoint. |
 | `N8N_ENDPOINT_WEBHOOK` | String | `webhook` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | String | `webhook-test` | The path used for test-webhook endpoint. |
@@ -234,6 +240,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
 | `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | Whether to show onboarding tips when creating a new workflow (true) or not (false). |
 | `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
+| `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION` | String | `workflowsFromSameOwner` | Which workflows can call a workflow. Options are: `any`, `none`, `workflowsFromAList`, `workflowsFromSameOwner`. This feature requires [Workflow sharing](/workflows/sharing/). |
 
 ## License
 

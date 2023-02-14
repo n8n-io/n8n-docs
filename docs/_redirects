@@ -1,4 +1,7 @@
 
+/reference/release-notes/   /release-notes/
+/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
+
 # License release 2022/2023
 
 /reference/license/   /choose-n8n/faircode-license/
@@ -399,8 +402,8 @@
 /nodes/n8n-nodes-base.highlevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/
 /nodes/n8n-nodes-base.homeAssistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/
 /nodes/n8n-nodes-base.homeassistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/
-/nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/
-/nodes/n8n-nodes-base.htmlextract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/
+/nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/
+/nodes/n8n-nodes-base.htmlextract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/
 /nodes/n8n-nodes-base.httpRequest/		/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/
 /nodes/n8n-nodes-base.httprequest/      /integrations/builtin/core-nodes/n8n-nodes-base.httprequest/
 /nodes/n8n-nodes-base.hubspot/		/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/

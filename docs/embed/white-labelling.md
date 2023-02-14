@@ -1,5 +1,7 @@
 # White labelling
 
+--8<-- "_snippets/embed-license.md"
+
 White labelling n8n means customizing the frontend styling and assets to match your brand identity. The process involves changing two packages in n8n's source code [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n){:target=_blank .external-link}:
 
 * [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link}: n8n's [storybook](https://storybook.js.org/){:target=_blank .external-link} design system with CSS styles and Vue.js components

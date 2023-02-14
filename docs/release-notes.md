@@ -1,4 +1,326 @@
+--- 
+title: Release notes
+description: Release notes detailing new features and bug fixes for n8n.
+tags:
+  - release
+  - release notes
+  - changelog
+hide:
+  - tags
+---
+
 # Release notes
+
+New features and bug fixes for n8n.
+
+<div id="02152" markdown>
+
+## n8n@0.215.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.1...n8n@0.215.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-14
+
+This is a bug fix release. It solves an issue that was causing webhooks to be removed when they shouldn't be.
+
+</div>
+
+<div id="02151" markdown>
+
+## n8n@0.215.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.0...n8n@0.215.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-11
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: fix issue causing worker and webhook service to close on start.
+* Core: handle versioned custom nodes correctly.
+
+</div>
+
+<div id="02150" markdown>
+
+## n8n@0.215.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.3...n8n@0.215.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-10
+
+This release contains new features, node enhancements, and bug fixes.
+
+### New features
+
+* Refactor the n8n Desktop user management experience.
+* Core: add support for WebSockets as an alternative to server-sent events. This introduces a new way for n8n's backend to push changes to the UI. The default is still server-sent events. If you're experiencing issues with the UI not updating, try changing to WebSockets by setting the `N8N_PUSH_BACKEND` environment variable to `websocket`. 
+* Editor: add autocomplete for objects.
+* Editor: add autocomplete for expressions to the HTML editor component.
+
+
+### Node enhancements
+
+* Edit Image node: add support for WebP image format.
+* HubSpot trigger node: add conversation events.
+
+
+### Bug fixes
+
+* Core: disable transactions on SQLite migrations that use PRAGMA foreign_keys.
+* Core: ensure expression extension doesn't fail with optional chaining.
+* Core: fix import command for workflows with old format (affects workflows created before user management was introduced).
+* Core: stop copying icons to cache.
+* Editor: prevent creation of input connections for nodes without input slot.
+* Error workflow now correctly checks for subworkflow permissions.
+* ActiveCampaign Node: fix additional fields not being sent when updating account contacts.
+* Linear Node: fix issue with Issue States not loading correctly.
+* MySQL migration parses database contents if necessary (fix for MariaDB).
+
+### Contributors
+
+[Kirill](https://github.com/chrtkv){:target=_blank .external-link}
+
+</div>
+
+<div id="02143" markdown>
+
+## n8n@0.214.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.2...n8n@0.214.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-09
+
+This is a bug fix release.
+
+### Bug fixes
+
+Editor: prevent creation of input connections for nodes without input slot.
+
+</div>
+
+<div id="02142" markdown>
+
+## n8n@0.214.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.1...n8n@0.214.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-06
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: correctly show OAuth reconnect button.
+* Editor: fix resolvable highlighting for HTML editor.
+
+</div>
+
+<div id="02141" markdown>
+
+## n8n@0.214.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.0...n8n@0.214.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-06
+
+This is a bug fix release. It also contains an overhaul of the Slack node.
+
+### Node enhancements
+
+This release includes an overhaul of the Slack node, adding new operations and a better user interface.
+
+### Bug fixes
+
+* Editor: fix an issue with mapping to empty expression input.
+* Editor: fix merge node connectors.
+* Editor: fix multiple-output endpoints success style after connection is detached.
+
+</div>
+
+<div id="02140" markdown>
+
+## n8n@0.214.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.213.0...n8n@0.214.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-03
+
+This release contains new features, node enhancements, and bug fixes. The expressions editor now supports autocomplete for some [built in data transformation functions](/code-examples/expressions/data-transformation-functions/). The new features also include two of interest to node builders: a way to allow users to drag and drop data keys, and the new HTML editor component.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### Autocomplete in the Extension editor
+
+[Data transformation functions](/code-examples/expressions/data-transformation-functions/) now have autocomplete support in the Expression editor.
+
+</div>
+
+* Core: export OpenAPI spec for external tools.
+* Core: set custom Cache-Control headers for static assets.
+* Core: simplify pagination in declarative node design.
+* Editor: support mapping keys with drag and drop. Any field with the hint **Enter the field name as text** should now support mapping a data key using drag and drop. Node builders can enable this in their own nodes. Refer to [Creating nodes | UI elements](/integrations/creating-nodes/build/reference/ui-elements#support-drag-and-drop-for-data-keys) for more information.
+* Editor: add the [HTML editor component](/integrations/creating-nodes/build/reference/ui-elements#html) for use in parameters. This means node builders can now use the HTML editor that n8n uses in the HTML node as a UI component.
+* Editor: append expressions in fixed values when mapping to string and JSON inputs.
+* Editor: continue to show mapping tooltip after dismiss.
+* Editor: roll out schema view.
+
+
+### Node enhancements
+
+* FTP Node: stream binary data for uploads and downloads.
+* Notion Node: add support for image blocks.
+* OpenAI Node: add **Frequency Penalty** and **Presence Penalty** to the node options for the text resource.
+* Salesforce Node: add **Has Opted Out Of Email** field to lead resource options.
+* SSH Node: stream binary data for uploads and downloads.
+* Write Binary File Node: stream binary data for writes.
+* YouTube Node: switch upload operation over to streaming and resumable uploads API.
+
+### Bug fixes
+
+* Add paired item to the most used nodes.
+* Core: fix OAuth2 client credentials not always working.
+* Core: fix populating of node custom API call options.
+* Core: fix value resolution in declarative node design.
+* Core: prevent shared user details being saved alongside execution data.
+* Core: revert custom API option injecting.
+* Editor: add SMTP info translation link slot.
+* Editor: change executions title to match menu.
+* Editor: fix JSON field completions while typing.
+* Editor: handling router errors when navigation is canceled by user.
+* Editor: set max width for executions list.
+* Editor: stop unsaved changes popup display when navigating away from an untouched workflow.
+* Editor: fix workflow executions view.
+* Invoice Ninja Node: fix line items not being correctly set for quotes and invoices.
+* Linear Node: fix pagination issue for get all issues.
+* Mailchimp Trigger Node: fix webhook recreation.
+* Prevent unnecessarily touching `updatedAt` when n8n starts.
+* Schedule Trigger Node: change scheduler behaviour for intervals days and hours.
+* Set Node: fix behaviour when selecting `continueOnFail` and `pairedItem`.
+
+</div>
+
+<div id="02130" markdown>
+
+## n8n@0.213.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.212.1...n8n@0.213.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-27
+
+This release introduces LDAP, and a new node for working with HTML in n8n. It also contains node enhancements and bug fixes.
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+#### LDAP
+
+This release introduces support for LDAP on Self-hosted Enterprise and custom Cloud plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
+
+</div>
+
+* Simplify the Node Details View by moving authentication details to the Credentials modal.
+* Improve workflow list performance.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### HTML node
+
+n8n has a new [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/). This replaces the HTML Extract node, and adds new functionality to generate HTML templates.
+
+</div>
+
+### Node enhancements
+
+* GitLab node: add file resource and operations.
+* JIRA Software node: introduce the resource locator component to improve UX.
+* Send Email node: this node has been overhauled.
+
+### Bug fixes
+
+* Core: don't crash express app on unhandled rejected promises.
+* Core: handle missing binary metadata in download URLs.
+* Core: upsert (update and insert) credentials and workflows in the `import:` commands.
+* Core: validate numeric IDs in the public API.
+* Editor: don't request workflow data twice when opening a workflow.
+* Editor: execution list micro optimization.
+* Editor: fix node authentication options ordering and hiding options based on node version.
+* Editor: fix save modal appearing after duplicating a workflow.
+* Editor: prevent workflow execution list infinite no network error.
+* Extension being too eager and making calls when it shouldn't.
+* Google Drive Node: use the correct MIME type on converted downloads.
+* HelpScout Node: fix tag search not working when getting all conversations.
+* Notion (Beta) Node: fix create database page with multiple relation IDs not working.
+* Update **Sign in with Google** button to properly match design guidelines.
+
+### Contributors
+
+* [Devin Buhl](https://github.com/onedr0p){:target=_blank .external-link} 
+* [Sven Ziegler](https://github.com/svzi){:target=_blank .external-link} 
+
+</div>
+
+<div id="02121" markdown>
+
+## n8n@0.212.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.212.0...n8n@0.212.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-23
+
+This release includes an overhaul of the Google Analytics node, and bug fixes.
+
+### Node enhancements
+
+This release includes an overhaul of the Google Analytics node. This brings the node's code and components in line with n8n's latest node building styles, and adds support for GA4 properties.
+
+### Bug fixes
+
+* Add schema to Postgres migrations.
+* Core: fix execute-once incoming data handling.
+* Core: fix expression extension miss-detection.
+* Core: fix onWorkflowPostExecute not being called.
+* Core: fix URL in error handling for the error Trigger.
+* Core: make pinned data with webhook responding on last node manual-only.
+* Editor: making parameter input components label configurable.
+* Editor: remove infinite loading in not found workflow level execution.
+* Linear Node: fix issue with single item not being returned.
+* Notion (Beta) Node: fix create database page fails if relation parameter is empty/undefined.
+
+</div>
+
+<div id="02120" markdown>
+
+## n8n@0.212.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.211.2...n8n@0.212.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-01-19
+
+This release contains enhancements to the Item Lists node, and bug fixes.
+
+### New features
+
+This release adds experimental support for more Prometheus metrics. Self-hosting users can configure Prometheus using [environment variables](/hosting/environment-variables/environment-variables/).
+
+### Node enhancements
+
+<div class="n8n-new-features" markdown>
+
+The [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) now supports a Summarize operation. This acts similarly to generating pivot tables in Excel, allowing you to aggregate and compare data.
+
+</div>
+
+### Bug fixes
+
+* Core: revert a lint rule `@typescript-eslint/prefer-nullish-coalescing`.
+* Editor: allow special characters in node selector completion.
+* GitLab Node: update the credential test endpoint.
+* Gmail Trigger Node: resolve an issue that was preventing filter by labels from working.
+* HTTP Request Node: ensure node enforces the requirement for valid JSON input.
+* HTTP Request Node: convert responses to text for all formats, including JSON.
+
+### Contributors
+
+[Sven Ziegler](https://github.com/svzi){:target=_blank .external-link}
+
+</div>
 
 <div id="02112" markdown>
 
@@ -91,6 +413,10 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 * Run every database migration inside a transaction.
 * Upgrade class-validator to address CVE-2019-18413.
 * Zoom Node: Add notice about deprecation of Zoom JWT app support.
+
+### Known issues
+
+You may encounter errors when using the [optional chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining){:target=_blank .external-link} in expressions. If this happens, avoid using the operator for now.
 
 </div>
 
@@ -3857,7 +4183,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 - Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-- Added new Editor UI shortcuts. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/reference/keyboard-shortcuts/) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes

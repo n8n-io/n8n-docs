@@ -18,10 +18,17 @@ Match the brand name exactly. For example, GitHub NOT Github
 -->
 # <Name> trigger
 
-_Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website._
+_Briefly summarize the node. For example:_ 
+
+_The Action Network trigger node allows you to respond to events in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network events, which includes . . ._
+
+_On this page, you'll find a list of operations the Action Network node supports, and links to more resources._
 
 !!! note "Credentials"
     You can find authentication information for this node _here (link to credentials doc)_.
+
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} page.
 
 ## Events
 

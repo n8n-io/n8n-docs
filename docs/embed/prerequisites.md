@@ -1,5 +1,7 @@
 # Prerequisites
 
+--8<-- "_snippets/embed-license.md"
+
 The requirements provided here are an example based on n8n Cloud and are for illustrative purposes only. Your requirements may vary depending on the number of users, workflows, and executions. Contact n8n for more information.
 
 | Component | Sizing | Supported |

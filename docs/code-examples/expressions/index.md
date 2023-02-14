@@ -15,15 +15,17 @@ n8n supports two libraries:
 - [Luxon](https://github.com/moment/luxon/), for working with data and time.
 - [JMESPath](https://jmespath.org/), for querying JSON.
 
+!!! note "Known issue with optional chaining"
+	Starting in n8n 0.211.0 there is a known issue when using the [optional chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining){:target=_blank .external-link} in expressions. If you encounter errors, avoid using the operator for now.
 
 ## Writing expressions
 
 
 To use an expression to set a parameter value:
 
-1. Select **Parameter options** for the parameter where you want to use an expression.
-2. Select **Add expression**.
-3. Write your expression in the expression editor. You can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
+1. Hover over the parameter where you want to use an expression.
+2. Select **Expressions** in the **Fixed/Expression** toggle.
+3. Write your expression in the parameter, or select **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png)</span> to open the expressions editor. If you use the expressions editor, you can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
 
 
 ### Example: Get data from webhook body

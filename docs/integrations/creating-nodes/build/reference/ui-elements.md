@@ -88,6 +88,17 @@ String field with more than one row:
 
 ![Multiple rows](/_images/integrations/creating-nodes/multiple-rows.png)
 
+### Support drag and drop for data keys
+
+Users can drag and drop data values to map them to fields. Dragging and dropping creates an expression to load the data value. n8n supports this automatically.
+
+You need to add an extra configuration option to support dragging and dropping data keys:
+
+* `requiresDataPath: 'single'`: for fields that require a single string.
+* `requiresDataPath: 'multiple'`: for fields that can accept a comma-separated list of string.
+
+The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/CompareDatasets/CompareDatasets.node.ts){:target=_blank .external-link} has examples.
+
 ## Number
 
 Basic configuration:
@@ -533,6 +544,24 @@ Refer to the following for live examples:
 * Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
 
 
+## HTML
 
+The HTML editor allows users to create HTML templates in their workflows. The editor supports standard HTML, CSS in `<style>` tags, and expressions wrapped in `{{}}`. Users can add `<script>` tags to pull in additional JavaScript. n8n doesn't run this JavaScript during workflow execution.
+
+```js
+{
+	displayName: 'HTML Template', // The value the user sees in the UI
+	name: 'html', // The name used to reference the element UI within the code
+	type: 'string',
+	typeOptions: {
+		editor: 'htmlEditor',
+	},
+	default: placeholder, // Loads n8n's placeholder HTML template
+	noDataExpression: true, // Prevent using an expression for the field
+	description: 'HTML template to render',
+},
+```
+
+Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
 
 

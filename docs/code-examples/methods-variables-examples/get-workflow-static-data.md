@@ -2,6 +2,8 @@
 tags:
   - static data
   - global variables
+hide:
+  - tags
 ---
 
 # `$getWorkflowStaticData(type)`

@@ -26,3 +26,7 @@
 	Manage data, modes, and processes to keep n8n running smoothly at scale.
 
 	[:octicons-arrow-right-24: Scaling](/hosting/scaling/)
+
+</div>
+
+--8<-- "_snippets/self-hosting/warning.md"

@@ -2,6 +2,8 @@
 
 If you have already installed Docker and Docker-Compose, then you can start with step 4.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ### 1. Install Docker
 
 This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/engine/install/){:target=_blank .external-link}. The following example is for Ubuntu:

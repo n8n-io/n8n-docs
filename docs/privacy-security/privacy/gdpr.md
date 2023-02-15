@@ -17,5 +17,8 @@ You can find a list of n8n subprocessors [here](https://n8n.io/legal/){:target=
 
 [TODO: how do they do this?]
 
+## GDPR for self-hosted users
+
+--8<-- "_snippets/privacy-security/gdpr-self-hosted.md"
 
 

@@ -9,6 +9,12 @@ n8n is committed to the privacy and security of your data. This section outlines
 
 n8n is in the process of demonstrating [SOC 2](https://soc2.co.uk/){:target=_blank .external-link} compliance. If you want n8n to notify you once the SOC 2 report is available, submit your email. [TODO: form link]
 
-If you have any questions related to data privacy, email privacy@n8n.io. If you have any security-related questions, or if you want to report a suspected vulnerability, email security@n8n.io.
+If you have any questions related to data privacy, email privacy@n8n.io. 
+
+If you have any security-related questions, or if you want to report a suspected vulnerability, email security@n8n.io.
+
+[[% import "_macros/section-toc.html" as sectionToc %]]
+
+[[ sectionToc.sectionToc(page) ]]
 
 

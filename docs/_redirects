@@ -98,7 +98,6 @@
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
 
-# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 

@@ -191,6 +191,7 @@ nav:
       - Account types: user-management/account-types.md
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
+      - 2FA: user-management/two-factor-auth.md
       - LDAP: user-management/ldap.md
     - Log streaming: log-streaming.md
     - Security audit: security-audit.md

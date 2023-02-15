@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 /security-audit/   /hosting/security-audit/
-/reference/data-collection/   /privacy-security/data-collection/
-
-=======
-
+/reference/data-collection/   /privacy-security/privacy/data-collection/
 /reference/release-notes/   /release-notes/
->>>>>>> main
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
 
 # License release 2022/2023
@@ -136,7 +131,7 @@
 /reference/data/database.html                        /hosting/databases/
 /reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
-/reference/telemetry.html                            /privacy-security/data-collection/
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	

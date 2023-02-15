@@ -1,5 +1,4 @@
 ---
-title: Privacy
 description: Data privacy at n8n
 ---
 
@@ -7,10 +6,6 @@ description: Data privacy at n8n
 
 This section describes n8n's data privacy practices.
 
-- [GDPR](/privacy-security/privacy/gdpr/)
-- [Data collection](/privacy-security/privacy/data-collection/)
-- [PID retention and deletion](/privacy-security/privacy/identifying-data/)
-- [Payment processor](/privacy-security/privacy/payment-processor/)
+[[% import "_macros/section-toc.html" as sectionToc %]]
 
-
-
+[[ sectionToc.sectionToc(page) ]]

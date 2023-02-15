@@ -1,0 +1,9 @@
+[[% macro sectionToc(page) %]]
+<ul>
+[[% for child in page.parent.children %]]
+[[% if child.title != page.title %]]
+<li><a href="/[[ child.url ]]">[[ child.title ]]</a></li>
+[[% endif %]]
+[[% endfor %]]
+</ul>
+[[% endmacro %]]

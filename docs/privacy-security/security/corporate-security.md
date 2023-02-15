@@ -20,12 +20,11 @@ n8n provides hardware to all new hires. These machines run a local agent that se
 - Anti-malware software
 - Screen lock
 
-and more.
 
 ### System access
 
-n8n grants employees access to systems on a least-privilege basis. This means that employees only have access to the data they need to perform their job. System access is reviewed quarterly, on any change in role, or upon termination.
+n8n grants employees access to systems on a least-privilege basis. This means that employees only have access to the data they need to perform their job. The company reviews system access quarterly, on any change in role, and upon termination.
 
 ### Security training
 
-Employees receive privacy and security training during onboarding as well as on an ongoing basis. All employees are required to read and sign n8n's comprehensive information security policy covering the security, availability, and confidentiality of n8n services.
+Employees receive privacy and security training during onboarding as well as on an ongoing basis. n8n requires all employees to read and sign n8n's comprehensive information security policy covering the security, availability, and confidentiality of n8n services.

@@ -9,4 +9,4 @@ n8n implements incident response best practices for identifying, documenting, re
 
 n8n publishes incident notifications to a status page at [https://status.n8n.cloud/](https://status.n8n.cloud/){:target=_blank .external-link}.
 
-n8n notifies customers of any data breaches according to our [Data Protection Addendum](https://n8n.io/legal/){:target=_blank .external-link}.
+n8n notifies customers of any data breaches according to the company's [Data Protection Addendum](https://n8n.io/legal/){:target=_blank .external-link}.

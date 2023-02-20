@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Hacker News node supports and
     This node doesn't require authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Disqus integrations](https://n8n.io/integrations/hacker-news/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Hacker News integrations](https://n8n.io/integrations/hacker-news/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

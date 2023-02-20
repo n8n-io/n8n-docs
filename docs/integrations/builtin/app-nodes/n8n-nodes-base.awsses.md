@@ -1,11 +1,11 @@
 # AWS SES
 
-The AWS SES node allows you to automate work in the AWS SES platform and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
+The AWS SES node allows you to automate work in AWS SES and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
 
 On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to the [AWS SES credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+  Refer to [AWS SES credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
   For usage examples and templates to help you get started, take a look at n8n's [AWS SES integrations](https://n8n.io/integrations/aws-ses/){:target=_blank .external-link} list.

@@ -1,6 +1,6 @@
 # Bitly
 
-The Bitly node allows you to automate work in Bitly and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, including creating, getting, and updating links.
+The Bitly node allows you to automate work in Bitly, and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, including creating, getting, and updating links.
 
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 

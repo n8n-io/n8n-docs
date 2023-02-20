@@ -1,11 +1,11 @@
 # Adalo
 
-The Adalo node allows you to automate work in the Adalo platform and integrate Adalo with other applications. n8n has built-in support for a wide range of Adalo features, including like creating, getting, updating and deleting databases, records, and collections.
+The Adalo node allows you to automate work in Adalo and integrate Adalo with other applications. n8n has built-in support for a wide range of Adalo features, including like creating, getting, updating and deleting databases, records, and collections.
 
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
 !!! note "Credentials"
-	Refer to the [Adalo credentials](https://docs.n8n.io/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
+	Refer to [Adalo credentials](https://docs.n8n.io/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
 	
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, take a look at n8n's [Adalo integrations list](https://n8n.io/integrations/adalo/){:target=_blank .external-link}.

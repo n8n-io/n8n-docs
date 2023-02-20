@@ -1,6 +1,6 @@
 # ActiveCampaign
 
-The ActiveCampaign node allows you to automate work in ActiveCampaign and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
+The ActiveCampaign node allows you to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
 
 On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 

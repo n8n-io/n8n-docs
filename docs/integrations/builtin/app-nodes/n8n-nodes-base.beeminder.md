@@ -1,6 +1,6 @@
 # Beeminder
 
-The Beeminder node allows you to automate work in Beeminder and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating datapoints.
+The Beeminder node allows you to automate work in Beeminder, and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating datapoints.
 
 On this page, you'll find a list of operations the Beeminder node supports and links to more resources.
 

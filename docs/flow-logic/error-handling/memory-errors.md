@@ -4,7 +4,7 @@ n8n doesn't restrict the amount of data each node can fetch and process. While t
 
 ## Identifying out of memory situations
 
-n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it.)**.
+n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.
 
 Error messages including **Problem running workflow**, **Connection Lost**, or **503 Service Temporarily Unavailable** suggest that an n8n instance has become unavailable. 
 

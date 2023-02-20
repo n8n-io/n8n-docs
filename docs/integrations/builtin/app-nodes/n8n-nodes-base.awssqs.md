@@ -1,11 +1,11 @@
 # AWS SQS
 
-The AWS SQS node allows you to automate work in the AWS SNS platform and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, including publishing messages.
+The AWS SQS node allows you to automate work in AWS SNS and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, including publishing messages.
 
 On this page, you'll find a list of operations the AWS SNS node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to the [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+  Refer to  [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
   For usage examples and templates to help you get started, take a look at n8n's [AWS SNS integrations](https://n8n.io/integrations/aws-sqs/){:target=_blank .external-link} list.

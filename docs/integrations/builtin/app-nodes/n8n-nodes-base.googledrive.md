@@ -1,11 +1,11 @@
 # Google Drive
 
-The Google Drive node allows you to automate work in the Google Drive platform and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, including creating, updating, listing, deleting, and getting drives, files, and folders. 
+The Google Drive node allows you to automate work in Google Drive, and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, including creating, updating, listing, deleting, and getting drives, files, and folders. 
 
 On this page, you'll find a list of operations the Google Drive node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Google Drive credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Drive credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Drive integrations](https://n8n.io/integrations/google-drive/){:target="_blank" .external-link} list.

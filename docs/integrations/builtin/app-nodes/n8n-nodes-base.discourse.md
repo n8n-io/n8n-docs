@@ -1,11 +1,11 @@
 # Discourse
 
-The Discourse node allows you to automate work in the Discourse platform and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
+The Discourse node allows you to automate work in Discourse, and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
 
 On this page, you'll find a list of operations the Discourse node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Discourse credentials](https://docs.n8n.io/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
+    Refer to [Discourse credentials](https://docs.n8n.io/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Discourse integrations](https://n8n.io/integrations/discourse/){:target="_blank" .external-link} list.

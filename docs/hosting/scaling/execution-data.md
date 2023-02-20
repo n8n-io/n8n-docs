@@ -56,6 +56,8 @@ n8n:
 
 You can enable data pruning to automatically delete executions after a given time period. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
 
+You can choose to prune executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records.
+
 
 ```sh
 # npm
@@ -64,6 +66,9 @@ export EXECUTIONS_DATA_PRUNE=true
 
 # Number of hours after execution that n8n deletes data
 export EXECUTIONS_DATA_MAX_AGE=168
+
+# Number of executions to store
+export EXECUTIONS_DATA_PRUNE_MAX_COUNT=
 ```
 
 ```sh
@@ -73,6 +78,7 @@ docker run -it --rm \
 	-p 5678:5678 \
 	-e EXECUTIONS_DATA_PRUNE=true \
 	-e EXECUTIONS_DATA_MAX_AGE=168 \
+	-e EXECUTIONS_DATA_PRUNE_MAX_COUNT= \
 	n8nio/n8n
 ```
 
@@ -82,10 +88,9 @@ n8n:
     environment:
       - EXECUTIONS_DATA_PRUNE=true
       - EXECUTIONS_DATA_MAX_AGE=168
+	  - EXECUTIONS_DATA_PRUNE_MAX_COUNT=
 ```
 
-
-You can choose to prune executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records.
 
 !!! note "SQLite"
     If you run n8n using the default SQLite database, the disk-space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.

@@ -1,11 +1,11 @@
 # GetResponse
 
-GetResponse node allows you to automate work in the GetResponse platform and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, including creating, updating, deleting, and getting contacts. 
+GetResponse node allows you to automate work in GetResponse, and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, including creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [GetResponse credentials](https://docs.n8n.io/integrations/builtin/credentials/getresponse/) for guidance on setting up authentication. 
+    Refer to [GetResponse credentials](https://docs.n8n.io/integrations/builtin/credentials/getresponse/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [GetResponse integrations](https://n8n.io/integrations/getresponse/){:target="_blank" .external-link} list.

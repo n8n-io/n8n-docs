@@ -1,6 +1,6 @@
 # Discord
 
-The Discord node allows you to automate work in Discord, and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, including sending messages in a Discord channel
+The Discord node allows you to automate work in Discord, and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, including sending messages in a Discord channel.
 
 On this page, you'll find a list of operations the Discord node supports and links to more resources.
 

@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the AWS Certificate Manager node 
     Refer to [AWS Certificate Manager credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [AWS Certificate Manager](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} integrations list.
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Certificate Manager](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} integrations list.
 
 ## Operations
 

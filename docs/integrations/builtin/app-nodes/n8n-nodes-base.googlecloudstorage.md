@@ -2,7 +2,7 @@
 
 The Google Cloud Storage node allows you to automate work in Google Cloud Storage, and integrate Google Cloud Storage with other applications. n8n has built-in support for a wide range of Google Cloud Storage features, including creating, updating, deleting, and getting buckets and objects. 
 
-On this page, you'll find a list of operations the Drift node supports and links to more resources.
+On this page, you'll find a list of operations the Google Cloud Storage node supports and links to more resources.
 
 !!! note "Credentials"
     Refer to [Google Cloud Storage credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 

@@ -5,7 +5,7 @@ The Airtable node allows you to automate work in the Airtable platform and integ
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
 !!! note "Credentials"
-	Refer to the [Airtable credentials](https://docs.n8n.io/integrations/builtin/credentials/agilecrm/) for guidance on setting up authentication. 
+	Refer to [Airtable credentials](https://docs.n8n.io/integrations/builtin/credentials/agilecrm/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/agile-crm/){:target="_blank" .external-link} list.

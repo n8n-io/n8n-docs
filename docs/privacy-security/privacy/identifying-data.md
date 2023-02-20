@@ -14,7 +14,7 @@ n8n only retains data for as long as necessary to provide the core service.
 
 For n8n Cloud, n8n stores your workflow code, credentials, and other data indefinitely, until you choose to delete it or close your account. The platform stores execution data according to the retention rules on your account.
 
-n8n deletes most internal application logs and logs tied to subprocessors within 30 days. The company retains a subset of logs for longer periods where required for security investigations. [TODO: what about analytics]
+n8n deletes most internal application logs and logs tied to subprocessors within 30 days. The company retains a subset of logs for longer periods where required for security investigations.
 
 ### PID deletion
 

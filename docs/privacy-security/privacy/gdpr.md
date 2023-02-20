@@ -15,7 +15,7 @@ You can find a list of n8n subprocessors [here](https://n8n.io/legal/){:target=
 
 ## Submitting a GDPR deletion request
 
-[TODO: how do they do this?]
+Email privacy@n8n.io to request data deletion.
 
 ## GDPR for self-hosted users
 

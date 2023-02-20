@@ -1,6 +1,6 @@
 # Airtable
 
-The Airtable node allows you to automate work in Airtable and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
+The Airtable node allows you to automate work in Airtable, and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
 
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 

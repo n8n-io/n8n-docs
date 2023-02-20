@@ -1,11 +1,11 @@
 # AWS Transcribe
 
-The AWS Transcribe node allows you to automate work in the AWS Transcribe platform and integrate AWS Transcribe with other applications. n8n has built-in support for a wide range of AWS Transcribe features, including creating, deleting, and getting transcription jobs.
+The AWS Transcribe node allows you to automate work in AWS Transcribe and integrate AWS Transcribe with other applications. n8n has built-in support for a wide range of AWS Transcribe features, including creating, deleting, and getting transcription jobs.
 
 On this page, you'll find a list of operations the AWS Transcribe node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to the [AWS Transcribe credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+  Refer to [AWS Transcribe credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
   For usage examples and templates to help you get started, take a look at n8n's [AWS Transcribe integrations](https://n8n.io/integrations/aws-transcribe/){:target=_blank .external-link} list.

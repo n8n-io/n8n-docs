@@ -5,7 +5,7 @@ The Bitwarden node allows you to automate work in Bitwarden, and integrate Bitwa
 On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [Bitwarden credential](https://docs.n8n.io/integrations/builtin/credentials/bitwarden/) for guidance on setting up authentication. 
+  Refer to [Bitwarden credentials](https://docs.n8n.io/integrations/builtin/credentials/bitwarden/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
  For usage examples and templates to help you get started, take a look at n8n's [Bitwarden integrations](https://n8n.io/integrations/bitwarden/){:target=_blank .external-link} list.

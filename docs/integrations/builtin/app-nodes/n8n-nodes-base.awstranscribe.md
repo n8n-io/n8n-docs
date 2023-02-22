@@ -1,17 +1,9 @@
 # AWS Transcribe
 
-The AWS Transcribe node allows you to automate work in AWS Transcribe, and integrate AWS Transcribe with other applications. n8n has built-in support for a wide range of AWS Transcribe features, including creating, deleting, and getting transcription jobs.
-
-On this page, you'll find a list of operations the AWS Transcribe node supports and links to more resources.
+[AWS Transcribe](https://aws.amazon.com/transcribe/) is a service that recognizes speech in your audio or video and transcribes that speech into text.
 
 !!! note "Credentials"
-  Refer to [AWS Transcribe credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [AWS Transcribe integrations](https://n8n.io/integrations/aws-transcribe/){:target=_blank .external-link} list.
-
-
-
+    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
 
 
 ## Basic Operations
@@ -24,9 +16,9 @@ On this page, you'll find a list of operations the AWS Transcribe node supports 
 
 
 ## Example Usage
-⁶
+
 This workflow allows you to create transcription jobs for all your audio and video files stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1111) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/buil           5tin/core-nodes/n8n-nodes-base.start/)
+- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awsS3/)
 - [AWS Transcribe]()
 

@@ -9,17 +9,16 @@
 ## Operations
 
 * Document
-    * Create
+  * Create
 	* Delete
 * Sheet within document
-    * Append: append data to a sheet
 	* Append or update: append a new row, or update the current one if it already exists.
-    * Clear: clear all data from a sheet
-    * Create: create a new sheet
-    * Delete: delete columns and rows from a sheet
-    * Read rows: read all rows in a sheet.
-    * Remove: remove a sheet
-    * Update: update rows in a sheet
+	* Clear: clear all data from a sheet
+	* Create: create a new sheet
+	* Delete: delete columns and rows from a sheet
+	* Read rows: read all rows in a sheet.
+	* Remove: remove a sheet
+	* Update: update rows in a sheet
 
 ## Related resources
 
@@ -71,6 +70,9 @@ To read from a sheet:
 2. In **Resource**, select **Sheet Within Document**.
 3. In **Operation**, select **Read Rows**.
 4. Choose the **Document** and **Sheet** you want to read from.
+
+!!! note "First row"
+	n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
 
 ### Filters
 

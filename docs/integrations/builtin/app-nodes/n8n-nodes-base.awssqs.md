@@ -5,10 +5,10 @@ The AWS SQS node allows you to automate work in AWS SNS, and integrate AWS SQS w
 On this page, you'll find a list of operations the AWS SQS node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to  [AWS SQS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+    Refer to  [AWS SQS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [AWS SQS integrations](https://n8n.io/integrations/aws-sqs/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [AWS SQS integrations](https://n8n.io/integrations/aws-sqs/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

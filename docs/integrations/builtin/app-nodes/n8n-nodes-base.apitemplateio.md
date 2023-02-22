@@ -1,14 +1,14 @@
 # APITemplate.io
 
-The APITemplate node allows you to automate work in APITemplate, and integrate APITemplate with other applications. n8n has built-in support for a wide range of APITemplate features, including getting and creating, accounts and PDFs
+The APITemplate.io node allows you to automate work in APITemplate.io, and integrate APITemplate.io with other applications. n8n has built-in support for a wide range of APITemplate.io features, including getting and creating, accounts and PDFs
 
-On this page, you'll find a list of operations the APITemplate node supports and links to more resources.
+On this page, you'll find a list of operations the APITemplate.io node supports and links to more resources.
 
 !!! note "Credentials"
-	Refer to [APITemplate credentials](https://docs.n8n.io/integrations/builtin/credentials/apitemplateio/) for guidance on setting up authentication. 
+	Refer to [APITemplate.io credentials](https://docs.n8n.io/integrations/builtin/credentials/apitemplateio/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [APITemplate integrations](https://n8n.io/integrations/apitemplateio/){:target="_blank" .external-link} list.
+	For usage examples and templates to help you get started, take a look at n8n's [APITemplate.io integrations](https://n8n.io/integrations/apitemplateio/){:target="_blank" .external-link} list.
 
 
 

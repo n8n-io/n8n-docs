@@ -1,9 +1,14 @@
 # Google Chat
 
-[Google Chat](https://chat.google.com/) is a messaging platform.
+The Google Chat node allows you to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting, creating, updating, and deleting memebers, spaces and messages. 
+
+On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Chat credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Chat integrations](https://n8n.io/integrations/google-chat/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

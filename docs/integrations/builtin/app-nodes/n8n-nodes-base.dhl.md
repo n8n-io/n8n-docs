@@ -1,14 +1,16 @@
 # DHL
 
-The DHL node allows you to automate work in DHL, and integrate DHL with other applications. n8n has built-in support for a wide range of DHL features, including tracking shipment. 
+The [DHL Shipment Tracking](https://developer.dhl.com/api-reference/shipment-tracking/) provides shipment status reports for services provided by DPDHL under these brand names:
 
-On this page, you'll find a list of operations the DHL node supports and links to more resources.
+- Post & Parcel Germany
+- DHL Global Forwarding
+- DHL Freight
+- DHL Express
+- DHL Supply Chain
+- DHL eCommerce Solutions (Asia-Pacific, US, Canada, EU)
 
 !!! note "Credentials"
-    Refer to [DHL credentials](https://docs.n8n.io/integrations/builtin/credentials/dhl/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [DHL  integrations](https://n8n.io/integrations/dhl/){:target="_blank" .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/dhl/).
 
 
 ## Basic Operations

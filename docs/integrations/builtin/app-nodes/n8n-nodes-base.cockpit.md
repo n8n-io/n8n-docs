@@ -1,14 +1,9 @@
 # Cockpit
 
-The Cockpit node allows you to automate work in Cockpit, and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, including creating, getting, and deleting collections, forms, and singleton.
-
-On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
+[Cockpit](https://getcockpit.com/) is a headless CMS with an API-first approach that puts content first. It is designed to simplify the process of publication by separating content management from content consumption on the client side.
 
 !!! note "Credentials"
-    Refer to [Cockpit credentials](https://docs.n8n.io/integrations/builtin/credentials/cockpit/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Cockpit integrations](https://n8n.io/integrations/cockpit/){:target="_blank" .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/cockpit/).
 
 
 ## Basic Operations

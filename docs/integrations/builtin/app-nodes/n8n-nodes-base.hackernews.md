@@ -1,14 +1,9 @@
 # Hacker News
 
-The Hacker News node allows you to automate work in Hacker News, and integrate Hacker News with other applications. n8n has built-in support for a wide range of Hacker News features, including getting articles, and users. 
-
-On this page, you'll find a list of operations the Hacker News node supports and links to more resources.
+[Hacker News](https://news.ycombinator.com/) is a social news website focusing on computer science and entrepreneurship.
 
 !!! note "Credentials"
-    This node doesn't require authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Hacker News integrations](https://n8n.io/integrations/hacker-news/){:target="_blank" .external-link} list.
+    The Hacker News node does not require authentication.
 
 
 ## Basic Operations

@@ -1,14 +1,9 @@
 # Bannerbear
 
-Bannerbear node allows you to automate work in Bannerbear, and integrate Bannerbear with other applications. n8n has built-in support for a wide range of Bannerbear features, including creating and getting images and templates.
-
-On this page, you'll find a list of operations the Bannerbear node supports and links to more resources.
+[Bannerbear](https://www.bannerbear.com/) is an API-based image generation service that automatically generates variations of graphic templates.
 
 !!! note "Credentials"
-  Refer to [Bannerbear credentials](https://docs.n8n.io/integrations/builtin/credentials/bannerbear/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [Bannerbear integrations](https://n8n.io/integrations/bannerbear/){:target=_blank .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/bannerbear/).
 
 
 ## Basic Operations

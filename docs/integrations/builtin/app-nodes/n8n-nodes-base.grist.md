@@ -1,14 +1,9 @@
 # Grist
 
-The Grist node allows you to automate work in Grist, and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, including creating, updating, deleting, and reading rows in a table. 
-
-On this page, you'll find a list of operations the Grist node supports and links to more resources.
+[Grist](https://getgrist.com/) combines the flexibility of a spreadsheet with the robustness of a database to organize your data, your way.
 
 !!! note "Credentials"
-    Refer to [Grist credentials](https://docs.n8n.io/integrations/builtin/credentials/grist/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Grist integrations](https://n8n.io/integrations/grist/){:target="_blank" .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/grist/).
 
 
 ## Basic operations

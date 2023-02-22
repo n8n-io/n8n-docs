@@ -1,14 +1,9 @@
 # Grafana
 
-The Grafana node allows you to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
-
-On this page, you'll find a list of operations the Grafana node supports and links to more resources.
+[Grafana](https://grafana.com/) is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
 
 !!! note "Credentials"
-    Refer to [Grafana credentials](https://docs.n8n.io/integrations/builtin/credentials/grafana/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Grafana integrations](https://n8n.io/integrations/grafana/){:target="_blank" .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/grafana/).
 
 
 ## Basic Operations

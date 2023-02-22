@@ -5,10 +5,10 @@ Bannerbear node allows you to automate work in Bannerbear, and integrate Bannerb
 On this page, you'll find a list of operations the Bannerbear node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [Bannerbear credentials](https://docs.n8n.io/integrations/builtin/credentials/bannerbear/) for guidance on setting up authentication. 
+    Refer to [Bannerbear credentials](https://docs.n8n.io/integrations/builtin/credentials/bannerbear/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [Bannerbear integrations](https://n8n.io/integrations/bannerbear/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Bannerbear integrations](https://n8n.io/integrations/bannerbear/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

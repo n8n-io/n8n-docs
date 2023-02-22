@@ -5,10 +5,10 @@ The Bitly node allows you to automate work in Bitly, and integrate Bitly with ot
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [Bitly credentials](https://docs.n8n.io/integrations/builtin/credentials/bitly/) for guidance on setting up authentication. 
+    Refer to [Bitly credentials](https://docs.n8n.io/integrations/builtin/credentials/bitly/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [Bitly integrations](https://n8n.io/integrations/bitly/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Bitly integrations](https://n8n.io/integrations/bitly/){:target=_blank .external-link} list.
 
 
 ## Basic Operations

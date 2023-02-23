@@ -1,9 +1,14 @@
 # Home Assistant
 
-[Home Assistant](https://www.home-assistant.io/) is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.
+The Home Assistant node allows you to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configs, logs, services, and templates. 
+
+On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/homeassistant/).
+    Refer to [Home Assistant credentials](https://docs.n8n.io/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link
 
 
 ## Basic operations

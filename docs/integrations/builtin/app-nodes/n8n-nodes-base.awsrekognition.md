@@ -1,8 +1,6 @@
 # AWS Rekognition
 
-The AWS Rekognition node allows you to automate work in AWS Rekognition, and integrate AWS Rekognition with other applications. n8n has built-in support for a wide range of AWS Rekognition features, including analyzing images.
-
-On this page, you'll find a list of operations the AWS Rekognition node supports and links to more resources.
+[AWS Rekognition](https://aws.amazon.com/rekognition/) allows you to add image and video analysis to your applications. With AWS Rekognition, you can identify faces, labels, and celebrities in images.
 
 !!! note "Credentials"
     Refer to [AWS Rekognition credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 

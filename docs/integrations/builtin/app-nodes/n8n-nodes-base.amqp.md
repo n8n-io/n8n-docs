@@ -1,14 +1,10 @@
 # AMQP Sender
 
-The AMQP Sender node allows you to automate work in AMQP Sender, and integrate AMQP Sender with other applications. n8n has built-in support for a wide range of AMQP Sender features, including sending messages.
-
-On this page, you'll find a list of operations the AMQP Sender node supports and links to more resources.
+[AMQP](https://www.amqp.org/) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. This node supports AMQP 1.0 compatible message brokers.
 
 !!! note "Credentials"
-	Refer to [AMQP Sender credentials](https://docs.n8n.io/integrations/builtin/credentials/amqp/) for guidance on setting up authentication. 
+    You can find authentication information for this node [here](/integrations/builtin/credentials/amqp/).
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [AMQP Sender integrations](https://n8n.io/integrations/amqp-sender/){:target="_blank" .external-link} list.
 
 ## Basic Operations
 

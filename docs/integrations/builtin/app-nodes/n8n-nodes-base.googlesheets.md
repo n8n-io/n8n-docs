@@ -1,30 +1,24 @@
 # Google Sheets
 
-The Google Sheets node allows you to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
-
-On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
+[Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
 
 !!! note "Credentials"
-    Refer to [Google Sheets credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Google Sheets integrations](https://n8n.io/integrations/google-sheets/){:target="_blank" .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
 
 
 ## Operations
 
 * Document
-    * Create
+  * Create
 	* Delete
 * Sheet within document
-    * Append: append data to a sheet
 	* Append or update: append a new row, or update the current one if it already exists.
-    * Clear: clear all data from a sheet
-    * Create: create a new sheet
-    * Delete: delete columns and rows from a sheet
-    * Read rows: read all rows in a sheet.
-    * Remove: remove a sheet
-    * Update: update rows in a sheet
+	* Clear: clear all data from a sheet
+	* Create: create a new sheet
+	* Delete: delete columns and rows from a sheet
+	* Read rows: read all rows in a sheet.
+	* Remove: remove a sheet
+	* Update: update rows in a sheet
 
 ## Related resources
 
@@ -76,6 +70,9 @@ To read from a sheet:
 2. In **Resource**, select **Sheet Within Document**.
 3. In **Operation**, select **Read Rows**.
 4. Choose the **Document** and **Sheet** you want to read from.
+
+!!! note "First row"
+	n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
 
 ### Filters
 

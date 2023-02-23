@@ -1,16 +1,12 @@
 # Autopilot
 
-The Autopilot node allows you to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, reading, listing, updating, removing contact journey, and lists.
-
-On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
+[Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 
 !!! note "Credentials"
     Refer to [Autopilot credentials](https://docs.n8n.io/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
     For usage examples and templates to help you get started, take a look at n8n's [Autopilot integrations](https://n8n.io/integrations/autopilot/){:target=_blank .external-link} list.
-
-
 
 
 ## Basic Operations

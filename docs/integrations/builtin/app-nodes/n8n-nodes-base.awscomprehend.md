@@ -1,14 +1,9 @@
 # AWS Comprehend
 
-The AWS Comprehend node allows you to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
-
-On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
+[AWS Comprehend](https://aws.amazon.com/comprehend/) is a natural language processing (NLP) service that uses machine learning to find insights and relationships in a text.
 
 !!! note "Credentials"
-    Refer to [AWS Comprehend credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
 
 
 ## Basic Operations

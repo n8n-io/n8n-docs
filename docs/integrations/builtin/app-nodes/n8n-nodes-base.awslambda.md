@@ -1,9 +1,15 @@
 # AWS Lambda
 
-[AWS Lambda](https://aws.amazon.com/lambda/) is an event-driven, serverless computing platform provided by Amazon as a part of Amazon Web Services. It is a computing service that runs code in response to events and automatically manages the computing resources required by that code.
+The AWS Lambda node allows you to automate work in AWS Lambda, and integrate AWS Lambda with other applications. n8n has built-in support for a wide range of AWS Lambda features, including invoking functions.
+
+On this page, you'll find a list of operations the AWS Lambda node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+    Refer to [AWS Lambda credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Lambda integrations](https://n8n.io/integrations/aws-lambda/){:target=_blank .external-link} list.
+
 
 
 ## Basic Operations

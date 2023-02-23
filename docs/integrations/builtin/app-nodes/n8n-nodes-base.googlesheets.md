@@ -1,9 +1,14 @@
 # Google Sheets
 
-[Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
+The Google Sheets node allows you to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
+
+On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Sheets integrations](https://n8n.io/integrations/google-sheets/){:target="_blank" .external-link} list.
 
 
 ## Operations

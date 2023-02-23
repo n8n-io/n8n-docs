@@ -1,9 +1,14 @@
 # Emelia
 
-[Emelia](https://emelia.io) is a cold-mailing tool.
+The Emelia node allows you to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including adding, creating, getting, and pausing campaigns and contact lists. 
+
+On this page, you'll find a list of operations the Emelia node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/emelia/).
+    Refer to [Emelia credentials](/integrations/builtin/credentials/emelia/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Emelia integrations](https://n8n.io/integrations/emelia/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

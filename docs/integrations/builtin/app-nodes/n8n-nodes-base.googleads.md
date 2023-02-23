@@ -1,9 +1,15 @@
-# Google Ads node
+# Google Ads
 
-[Google Ads](https://ads.google.com/){:targe=_blank .external-link} is a digital advertising service.
+The Google Ads node allows you to automate work in Google Ads, and integrate Google Ads with other applications. n8n has built-in support for a wide range of Google Ads features, including getting campaigns. 
+
+On this page, you'll find a list of operations the Google Ads node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Ads credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Ads integrations](https://n8n.io/integrations/google-ads/){:target="_blank" .external-link} list.
+
 
 ## Basic operations
 

@@ -1,9 +1,14 @@
 # Baserow
 
-[Baserow](https://baserow.io/) is an open source no-code database and Airtable alternative.
+The Baserow node allows you to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
+
+On this page, you'll find a list of operations the Baserow node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/baserow/).
+  Refer to [Baserow credentials](https://docs.n8n.io/integrations/builtin/credentials/baserow/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+  For usage examples and templates to help you get started, take a look at n8n's [Baserow integrations](https://n8n.io/integrations/baserow/){:target=_blank .external-link} list.
 
 
 ## Basic operations

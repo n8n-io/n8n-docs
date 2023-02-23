@@ -5,10 +5,11 @@ The AWS Lambda node allows you to automate work in AWS Lambda, and integrate AWS
 On this page, you'll find a list of operations the AWS Lambda node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [AWS Lambda credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+    Refer to [AWS Lambda credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [AWS Lambda integrations](https://n8n.io/integrations/aws-lambda/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Lambda integrations](https://n8n.io/integrations/aws-lambda/){:target=_blank .external-link} list.
+
 
 
 ## Basic Operations

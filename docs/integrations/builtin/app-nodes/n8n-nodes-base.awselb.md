@@ -5,14 +5,11 @@ The AWS Elastic Load Balancing node allows you to automate work in AWS ELB, and 
 On this page, you'll find a list of operations the AWS ELB node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [AWS ELB credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+    Refer to [AWS ELB credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [AWS Elastic Load Balancing integrations](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Elastic Load Balancing integrations](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} list.
 
-
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
 
 ## Operations
 

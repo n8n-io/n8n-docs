@@ -5,10 +5,11 @@ The Beeminder node allows you to automate work in Beeminder, and integrate Beemi
 On this page, you'll find a list of operations the Beeminder node supports and links to more resources.
 
 !!! note "Credentials"
-  Refer to [Beeminder credentials](https://docs.n8n.io/integrations/builtin/credentials/beeminder/) for guidance on setting up authentication. 
+    Refer to [Beeminder credentials](https://docs.n8n.io/integrations/builtin/credentials/beeminder/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
-  For usage examples and templates to help you get started, take a look at n8n's [Beeminder integrations](https://n8n.io/integrations/beeminder/){:target=_blank .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Beeminder integrations](https://n8n.io/integrations/beeminder/){:target=_blank .external-link} list.
+
 
 
 

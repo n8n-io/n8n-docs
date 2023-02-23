@@ -21,15 +21,10 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
+If you have no workflows, n8n takes you directly to the canvas, so you can start building. If you already built a workflow, n8n takes you to the **Workflows** list. Select **Add workflow** to create a new workflow for this tutorial.
 
-## Step two: Create a new workflow
 
-Create a blank workflow:
-
-1. On the **Workflows** list, select **Add Workflow**.
-2. Rename the workflow to something meaningful, such as **Quickstart**: select the current workflow name, and replace it.
-
-## Step three: Add a trigger node
+## Step two: Add a trigger node
 
 n8n provides two ways to start a workflow:
 
@@ -47,7 +42,7 @@ For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n
 7. Close the node details view to return to the canvas.
 
 
-## Step four: Add the NASA node and set up credentials
+## Step three: Add the NASA node and set up credentials
 
 The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
 
@@ -79,7 +74,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
 8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
 9. Close the NASA node to return to the workflow canvas.
 
-## Step five: Add logic with the If node
+## Step four: Add logic with the If node
 
 n8n supports complex logic in workflows. In this tutorial, use the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
 
@@ -104,7 +99,7 @@ Add the If node:
 !!! note "Weeks without large solar flares"
     In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
 
-## Step six: Output data from your workflow
+## Step five: Output data from your workflow
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page. 
 
@@ -128,7 +123,7 @@ The last step of the workflow is to send the two reports about solar flares. For
     1. Hover over the Postbin node, then select **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/common-icons/duplicate-node.png)</span> to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
-## Step seven: Test the workflow
+## Step six: Test the workflow
 
 1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 2. Go back to your Postbin bin. Refresh the page to see the output.

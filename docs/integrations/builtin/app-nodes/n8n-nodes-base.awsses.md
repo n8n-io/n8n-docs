@@ -1,6 +1,8 @@
 # AWS SES
 
-[AWS SES](https://aws.amazon.com/ses/) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
+The AWS SES node allows you to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
+
+On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 
 !!! note "Credentials"
     Refer to [AWS SES credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 

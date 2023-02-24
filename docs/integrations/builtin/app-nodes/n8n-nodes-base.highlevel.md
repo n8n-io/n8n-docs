@@ -1,6 +1,6 @@
 # HighLevel
 
-The HighLevel node allows you to automate work in HighLevel, and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks. 
+The HighLevel node allows you to automate work in HighLevel, and integrate HighLevel with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks. 
 
 On this page, you'll find a list of operations the HighLevel node supports and links to more resources.
 

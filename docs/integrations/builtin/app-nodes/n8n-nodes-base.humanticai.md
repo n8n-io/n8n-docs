@@ -1,6 +1,6 @@
 # Humantic AI
 
-The Humantic AI node allows you to automate work in Humantic AI, and integrate HaloPSA with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
+The Humantic AI node allows you to automate work in Humantic AI, and integrate Humantic AI with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
 
 On this page, you'll find a list of operations the Humantic AI node supports and links to more resources.
 

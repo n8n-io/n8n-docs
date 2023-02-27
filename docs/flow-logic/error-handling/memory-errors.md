@@ -4,11 +4,13 @@ n8n doesn't restrict the amount of data each node can fetch and process. While t
 
 ## Identifying out of memory situations
 
-Error messages including **Problem running workflow**, **Connection Lost**, or **503 Service Temporarily Unavailable** suggest that an n8n instance has become unavailable. The execution list shows an **Unknown** status for the executions.
+n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.
+
+Error messages including **Problem running workflow**, **Connection Lost**, or **503 Service Temporarily Unavailable** suggest that an n8n instance has become unavailable. 
 
 When self-hosting n8n, you may also see error messages such as **Allocation failed - JavaScript heap out of memory** in your server logs. 
 
-In most environments (including n8n cloud), n8n restarts automatically when encountering such an issue. However, when running n8n from the command line you might need to restart it manually.
+On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when encountering such an issue. However, when running n8n with npm you might need to restart it manually.
 
 ## Typical causes
 
@@ -17,7 +19,7 @@ Such problems occur when a workflow execution requires more memory than availabl
 - Amount of [JSON data](/data/data-structure/).
 - Size of binary data.
 - Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Code node can increase memory consumption significantly.
+- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Function node can increase memory consumption significantly.
 - Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
 - Additional workflows running at the same time.
 
@@ -46,4 +48,8 @@ However, as long as your sub-workflow does the heavy lifting for each batch and 
 
 ### Increase old memory
 
-This only applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it is often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
+This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it is often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
+
+## Avoid the n8n instance crashing when a workflow crashes
+
+This applies to self-hosting n8n. To avoid the entire n8n instance crashing when a workflow runs out of memory, you can run n8n in own mode rather than main mode. Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more information.

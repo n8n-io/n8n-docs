@@ -152,6 +152,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `false` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_TIMEOUT` | Number | `3600` | The timeout (in seconds) after n8n prunes execution data. |
+| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `0` (no limit) | Maximum number of executions to keep in the database. |
 
 ## Logs
 

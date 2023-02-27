@@ -1,9 +1,15 @@
 # Airtable
 
-[Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
+The Airtable node allows you to automate work in Airtable, and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
+
+On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/airtable/).
+	Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/airtable/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations

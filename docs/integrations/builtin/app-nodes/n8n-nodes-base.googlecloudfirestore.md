@@ -1,9 +1,14 @@
 # Google Cloud Firestore
 
-[Google Cloud Firestore](https://firebase.google.com/docs/firestore/) is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud. It keeps your data in-sync across client apps through real-time listeners and offers offline support for mobile and web.
+The Google Cloud Firestore node allows you to automate work in Google Cloud Firestore, and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, including creating, deleting, and getting documents and collections. 
+
+On this page, you'll find a list of operations the Google Cloud Firestore node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Cloud Firestore credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Firestore integrations](https://n8n.io/integrations/google-cloud-firestore/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

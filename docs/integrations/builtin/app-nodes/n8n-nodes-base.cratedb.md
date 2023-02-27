@@ -1,9 +1,14 @@
 # CrateDB
 
-[CrateDB](https://crate.io/) is an open-source distributed SQL database management system that integrates a fully searchable document-oriented data store based on a shared-nothing architecture, and is designed for high scalability.
+The CrateDB node allows you to automate work in CrateDB, and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, including executing, inserting, and updating rows in the database.
+
+On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/cratedb/).
+    Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [CrateDB integrations](https://n8n.io/integrations/cratedb/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,15 @@
 # Bitwarden
 
-[Bitwarden](https://www.bitwarden.com/) is an open-source password management solution for individuals, teams, and business organizations.
+The Bitwarden node allows you to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
+
+On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/bitwarden/).
+    Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Bitwarden integrations](https://n8n.io/integrations/bitwarden/){:target=_blank .external-link} list.
+
 
 
 

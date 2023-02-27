@@ -13,7 +13,24 @@ hide:
 
 New features and bug fixes for n8n.
 
-<div id="0217.1" markdown>
+<div id="02172" markdown>
+
+## n8n@0.217.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.1...n8n@0.217.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-27
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: fix issue with execution pruning queries.
+* Core: fix for workflow filtering by tag.
+* Core: revert isPending check on the user entity.
+
+</div>
+
+<div id="02171" markdown>
 
 ## n8n@0.217.1
 
@@ -28,7 +45,7 @@ Prevent executions appearing to run forever.
 
 </div>
 
-<div id="0217.0" markdown>
+<div id="02170" markdown>
 
 ## n8n@0.217.0
 
@@ -76,7 +93,7 @@ This release contains new features and bug fixes. It includes improvements to th
 
 </div>
 
-<div id="0216.2" markdown>
+<div id="02162" markdown>
 
 ## n8n@0.216.2
 
@@ -91,7 +108,7 @@ Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnec
 
 </div>
 
-<div id="0215.3" markdown>
+<div id="02153" markdown>
 
 ## n8n@0.215.3
 
@@ -110,7 +127,7 @@ This is a bug fix release. It contains an important security fix.
 
 </div>
 
-<div id="0214.4" markdown>
+<div id="02144" markdown>
 
 ## n8n@0.214.4
 

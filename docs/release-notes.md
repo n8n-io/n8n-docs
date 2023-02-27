@@ -35,7 +35,8 @@ Prevent executions appearing to run forever.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.217.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-02-23
 
-This release contains new features and bug fixes. It includes improvements to the nodes panel and executions list.
+This release contains new features and bug fixes. It includes improvements to the nodes panel and executions list. It also deprecates the Read Binary File node.
+
 
 ### New features
 
@@ -44,10 +45,10 @@ This release contains new features and bug fixes. It includes improvements to th
 * Core: add configurable execution history limit. Use this to improve performance when self-hosting. Refer to [Execution Data | Enable data pruning ](/hosting/scaling/execution-data#Enable-data-pruning) for more information.
 * Core: add execution runData recovery and status field. This allows us to show execution statuses on the **Executions** list.
 * Core: add SAML feature flag. This is preparatory for an upcoming feature.
-* Deprecate Read Binary File node.
 * Editor: improvements to the nodes panel search. When searching in root view, n8n now displays results from both trigger and regular nodes. When searching in a category view, n8n shows results from the category, and also suggests results from other categories.
 * Hide sensitive value in authentication header credentials and authentication query credentials.
 * Support feature flag evaluation server side.
+* Deprecate the Read Binary File node. Use the [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node instead.
 
 
 ### Bug fixes

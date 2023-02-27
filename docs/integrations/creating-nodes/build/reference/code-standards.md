@@ -95,9 +95,13 @@ You can see an example in the code of the [ReadBinaryFile-Node](https://github.c
 Some third-party services have their own libraries on npm, which make it easier to create an integration. The problem with these packages is that you add another dependency (plus all the dependencies of the dependencies). This adds more and more code, which has to be loaded, can introduce security vulnerabilities, bugs, and so on. Instead, use the built-in module:
 
 ```typescript
+// If no auth needed
 const response = await this.helpers.httpRequest(options);
+
+// If auth needed
+const response = await this.helpers.httpRequestWithAuthentication(options);
 ```
 
 This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
 
-Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for documentation and migration instructions for the deprecated `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the deprecated `this.helpers.request`.

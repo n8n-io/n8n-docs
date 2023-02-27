@@ -14,3 +14,15 @@ The performance of n8n depends on many factors: the type of workflow, the resour
 
 ## Single instance performance
 
+<figure markdown>
+  ![Graph showing n8n response times by requests per second](/_images/hosting/scaling/benchmarking-single-instance-100-140.png)
+  <figcaption>This graph shows the percentage of requests getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Graph showing n8n response times by requests per second](/_images/hosting/scaling/benchmarking-single-instance-100-250.png)
+  <figcaption>This graph shows the percentage of requests getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.</figcaption>
+</figure>
+
+
+

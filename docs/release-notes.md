@@ -13,6 +13,120 @@ hide:
 
 New features and bug fixes for n8n.
 
+<div id="0217.1" markdown>
+
+## n8n@0.217.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.0...n8n@0.217.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-24
+
+This is a bug fix release.
+
+### Bug fixes
+
+Prevent executions appearing to run forever.
+
+</div>
+
+<div id="0217.0" markdown>
+
+## n8n@0.217.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.217.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+### New features
+
+* Add new event hooks to support telemetry around the new onboarding experience.
+* Update nodes to set required path type.
+* Core: add configurable execution history limit. Use this to improve performance when self-hosting. Refer to [Execution Data | Enable data pruning ](/hosting/scaling/execution-data#Enable-data-pruning) for more information.
+* Core: add execution runData recovery and status field. This allows us to show execution statuses on the **Executions** list.
+* Core: add SAML feature flag. This is preparatory for an upcoming feature.
+* Deprecate Read Binary File node.
+* Editor: improvements to the nodes panel search. When searching in root view, n8n now displays results from both trigger and regular nodes. When searching in a category view, n8n shows results from the category, and also suggests results from other categories.
+* Hide sensitive value in authentication header credentials and authentication query credentials.
+* Support feature flag evaluation server side.
+
+
+### Bug fixes
+
+* Baserow Node: fix issue with **Get All** not correctly using filters.
+* Compare Datasets Node: UI tweaks and fixes.
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: fix execution status filters.
+* Core: user update endpoint should only allow updating email, firstName, and lastName.
+* Discord Node: fix wrong error message being displayed.
+* Discourse Node: fix issue with credential test not working.
+* Editor: apply correct IRunExecutionData to finished workflow.
+* Editor: fix an issue with zoom and canvas nodes connections.
+* Editor: fix unexpected date rendering on front-end.
+* Editor: remove `crashed` status from filter.
+* Fix typo in error messages when a property doesn't exist.
+* Fixes an issue when saving an active workflow without triggers would cause n8n to be stuck.
+* Google Calendar Node: fix incorrect labels for start and end times when getting all events.
+* Postgres Node: fix for tables containing field named JSON.
+* AWS S3 Node: fix issue with get many buckets not outputting data.
+
+
+</div>
+
+<div id="0216.2" markdown>
+
+## n8n@0.216.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.216.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release.
+
+### Bug fixes
+
+Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+
+</div>
+
+<div id="0215.3" markdown>
+
+## n8n@0.215.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.2...n8n@0.215.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release. It contains an important security fix.
+
+### Bug fixes
+
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: the user update endpoint should only allow updating email, first name, and last name.
+
+</div>
+
+<div id="0214.4" markdown>
+
+## n8n@0.214.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.3...n8n@0.214.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release. It contains an important security fix.
+
+### Bug fixes
+
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: the user update endpoint should only allow updating email, first name, and last name.
+
+</div>
+
+
 <div id="02161" markdown>
 
 ## n8n@0.216.1

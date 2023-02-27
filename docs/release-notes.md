@@ -35,6 +35,8 @@ Prevent executions appearing to run forever.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.217.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-02-23
 
+This release contains new features and bug fixes. It includes improvements to the nodes panel and executions list.
+
 ### New features
 
 * Add new event hooks to support telemetry around the new onboarding experience.

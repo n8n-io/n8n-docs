@@ -195,22 +195,8 @@ nav:
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md
-        - Privacy:
-          - privacy-security/privacy/index.md
-          - GDPR: privacy-security/privacy/gdpr.md
-          - Data collection: privacy-security/privacy/data-collection.md
-          - PID retention and deletion: privacy-security/privacy/identifying-data.md
-          - Payment processor: privacy-security/privacy/payment-processor.md
-        - Security:
-          - privacy-security/security/index.md
-          - User accounts: privacy-security/security/user-accounts.md
-          - Third-party accounts: privacy-security/security/third-party-auth.md
-          - Cloud hosting: privacy-security/security/cloud-hosting.md
-          - Data encryption: privacy-security/security/data-encryption.md
-          - Development: privacy-security/security/development.md
-          - Monitoring: privacy-security/security//monitoring.md
-          - Email security: privacy-security/security/email-security.md
-          - Corporate security: privacy-security/security/corporate-security.md
+        - Privacy: privacy-security/privacy.md
+        - Security: privacy-security/security.md
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md

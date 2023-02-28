@@ -1,9 +1,14 @@
 # Mattermost
 
-[Mattermost](https://mattermost.org/) is an open-source, self-hostable online chat service with file sharing, search, and integrations. It is designed as an internal chat for organisations and companies.
+The Mattermost node allows you to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, updating, deleting, and getting channels, messages, reactions, and users.
+
+On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mattermost/).
+    Refer to [Mattermost credentials](https://docs.n8n.io/integrations/builtin/credentials/mattermost/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Mattermost integrations](https://n8n.io/integrations/mattermost/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

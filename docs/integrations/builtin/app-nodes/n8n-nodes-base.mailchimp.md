@@ -1,9 +1,14 @@
 # Mailchimp
 
-[Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
+The Mailchimp node allows you to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, deleting, and getting campaigns, lists, and members. 
+
+On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mailchimp/).
+    Refer to [Mailchimp credentials](https://docs.n8n.io/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Mailchimp integrations](https://n8n.io/integrations/mailchimp/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

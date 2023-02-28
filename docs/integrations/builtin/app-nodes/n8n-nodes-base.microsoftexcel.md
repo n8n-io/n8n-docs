@@ -1,9 +1,15 @@
 # Microsoft Excel
 
-[Microsoft Excel](https://office.live.com/start/excel.aspx) is a spreadsheet developed by Microsoft. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications.
+The Microsoft Excel node allows you to automate work in Microsoft Excel, and integrate Microsoft Excel with other applications. n8n has built-in support for a wide range of Microsoft Excel features, including adding, retrieving, and getting tables, workbooks, and worksheets. 
+
+On this page, you'll find a list of operations the Microsoft Excel node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+    Refer to [Microsoft Excel credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft Excel integrations](https://n8n.io/integrations/microsoft-excel/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations

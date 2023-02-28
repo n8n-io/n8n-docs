@@ -1,9 +1,14 @@
 # Mandrill
 
-[Mandrill](https://mandrillapp.com/) is a transactional email service developed by MailChimp.
+The Mandrill node allows you to automate work in Mandrill, and integrate Mandrill with other applications. n8n has built-in support for a wide range of Mandrill features, including sending messages. 
+
+On this page, you'll find a list of operations the Mandrill node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mandrill/).
+    Refer to [Mandrill credentials](https://docs.n8n.io/integrations/builtin/credentials/mandrill/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Mandrill integrations](https://n8n.io/integrations/mandrill/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,15 @@
 # Metabase
 
-[Metabase](https://www.metabase.com/){:target=_blank .external-link} is a business data analysis tool.
+The Metabase node allows you to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
+
+On this page, you'll find a list of operations the Metabase node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/metabase/).
+    Refer to [Metabase credentials](https://docs.n8n.io/integrations/builtin/credentials/metabase/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Metabase integrations](https://n8n.io/integrations/metabase/){:target="_blank" .external-link} list.
+	
 
 ## Resources and operations
 

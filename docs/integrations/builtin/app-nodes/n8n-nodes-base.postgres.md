@@ -1,9 +1,14 @@
 # Postgres
 
-[PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
+The Postgres node allows you to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing, inserting, and updating rows. 
+
+On this page, you'll find a list of operations the Postgres node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).
+    Refer to [Postgres credentials](https://docs.n8n.io/integrations/builtin/credentials/postgres/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Postgres integrations](https://n8n.io/integrations/postgres/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

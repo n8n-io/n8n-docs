@@ -1,9 +1,14 @@
 # OpenWeatherMap
 
-[OpenWeatherMap](https://openweathermap.org/) is an online service that provides weather data. It provides current weather data, forecasts, and historical data.
+The OpenWeatherMap node allows you to automate work in OpenWeatherMap, and integrate OpenWeatherMap with other applications. n8n has built-in support for a wide range of OpenWeatherMap features, including returning weather data. 
+
+On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/openweathermap/).
+    Refer to [OpenWeatherMap credentials](https://docs.n8n.io/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [OpenWeatherMap integrations](https://n8n.io/integrations/openweathermap/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

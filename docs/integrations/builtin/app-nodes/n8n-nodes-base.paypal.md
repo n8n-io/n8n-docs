@@ -1,9 +1,14 @@
 # PayPal
 
-[PayPal](https://paypal.com) is a digital payment service that supports online funds transfers and that customers can use when shopping online.
+The PayPal node allows you to automate work in PayPal, and integrate PayPal with other applications. n8n has built-in support for a wide range of PayPal features, including creating, and canceling payouts and payout items. 
+
+On this page, you'll find a list of operations the PayPal node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/paypal/).
+    Refer to [PayPal credentials](https://docs.n8n.io/integrations/builtin/credentials/paypal/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [PayPal integrations](https://n8n.io/integrations/paypal/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

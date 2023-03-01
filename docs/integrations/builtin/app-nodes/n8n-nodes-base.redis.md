@@ -1,9 +1,14 @@
 # Redis
 
-[Redis](https://redis.io/) is an open-source, in-memory data structure store, used as a database, cache and message broker.
+The Redis node allows you to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including creating, updating, deleting, and getting keys, value, and information. 
+
+On this page, you'll find a list of operations the Redis node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
+    Refer to [Redis credentials](https://docs.n8n.io/integrations/builtin/credentials/redis/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Redis integrations](https://n8n.io/integrations/redis/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

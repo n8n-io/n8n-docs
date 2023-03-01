@@ -1,9 +1,14 @@
 # Nextcloud
 
-[Nextcloud](https://nextcloud.com/) is a free and open-source suite of client-server software for creating and using file hosting services.
+The Nextcloud node allows you to automate work in Nextcloud, and integrate Nextcloud with other applications. n8n has built-in support for a wide range of Nextcloud features, including creating, updating, deleting, and getting files, folders and users. 
+
+On this page, you'll find a list of operations the Nextcloud node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/nextcloud/).
+    Refer to [Nextcloud credentials](https://docs.n8n.io/integrations/builtin/credentials/nextcloud/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Nextcloud integrations](https://n8n.io/integrations/nextcloud/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # ProfitWell
 
-[ProfitWell](https://www.profitwell.com/) provides real-time subscription financial metrics.
+The ProfitWell node allows you to automate work in ProfitWell, and integrate ProfitWell with other applications. n8n has built-in support for a wide range of ProfitWell features, including getting and retrieving companies, and metrics. 
+
+On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/profitwell/).
+    Refer to [ProfitWell credentials](https://docs.n8n.io/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [ProfitWell integrations](https://n8n.io/integrations/profitwell/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

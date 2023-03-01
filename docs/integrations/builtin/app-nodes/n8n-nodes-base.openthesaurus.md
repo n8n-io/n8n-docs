@@ -1,9 +1,14 @@
 # OpenThesaurus
 
-[OpenThesaurus](https://www.openthesaurus.de/) is a free German dictionary for synonyms.
+The OpenThesaurus node allows you to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n has built-in support for a wide range of OpenThesaurus features, including getting synonyms. 
+
+On this page, you'll find a list of operations the OpenThesaurus node supports and links to more resources.
 
 !!! note "Credentials"
-    The OpenThesaurus node does not require authentication.
+    OpenThesaurus node does not require authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [OpenThesaurus integrations](https://n8n.io/integrations/openthesaurus/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Pushcut
 
-[Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
+The Pushcut node allows you to automate work in Pushcut, and integrate Pushcut with other applications. n8n has built-in support for a wide range of Pushcut features, including sending notifications. 
+
+On this page, you'll find a list of operations the Pushcut node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut/).
+    Refer to [Pushcut credentials](https://docs.n8n.io/integrations/builtin/credentials/pushcut/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Pushcut integrations](https://n8n.io/integrations/pushcut/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

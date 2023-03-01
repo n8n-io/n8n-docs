@@ -1,9 +1,14 @@
 # PostHog
 
-[PostHog](https://posthog.com) is an open-source product analytics platform. It provides tools to improve your product, such as session recording, heatmaps, and feature flags.
+The PostHog node allows you to automate work in PostHog, and integrate PostHog with other applications. n8n has built-in support for a wide range of PostHog features, including creating, and track aliases, events, and tracks. 
+
+On this page, you'll find a list of operations the PostHog node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/posthog/).
+    Refer to [PostHog credentials](https://docs.n8n.io/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [PostHog integrations](https://n8n.io/integrations/posthog/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -15,8 +15,19 @@ Select the **Executions**  in the left menu to view your executions history. n8n
 
 ## View executions for a single workflow
 
-In the workflow, select **Executions** in the top menu. You can preview all executions of that workflow.
+In the workflow, select the **Executions** tab in the top menu. You can preview all executions of that workflow.
 
+## Filter the executions list
+
+TODO
+
+https://www.notion.so/n8n/Executions-list-improvements-a6787232db6248ac8d80dff436ee7fd3#55ee785011534424b135daa61ac3f609
+
+## Add custom filters
+
+TODO
+
+https://www.notion.so/n8n/Executions-list-improvements-a6787232db6248ac8d80dff436ee7fd3?pvs=4#61dc6c39bf774abe8233145f835c4cfc
 
 ## Retry failed workflows
 

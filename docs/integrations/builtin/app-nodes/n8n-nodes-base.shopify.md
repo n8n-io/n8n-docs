@@ -1,9 +1,14 @@
 # Shopify
 
-[Shopify](https://www.shopify.com/) is an e-commerce platform that allows users to set up an online store and sell their products.
+The Shopify node allows you to automate work in Shopify, and integrate Shopify with other applications. n8n has built-in support for a wide range of Shopify features, including creating, updating, deleting, and getting order, and products. 
+
+On this page, you'll find a list of operations the Shopify node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/shopify/).
+    Refer to [Shopify credentials](https://docs.n8n.io/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [HaloPSA integrations](https://n8n.io/integrations/shopify/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

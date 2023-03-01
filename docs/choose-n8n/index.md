@@ -18,6 +18,8 @@ There are a few different ways to set up n8n depending on how you intend to use 
 	* [Server setup guides](/hosting/installation/server-setups/) for popular platforms
 * [Embed](/embed/): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n for pricing and support on the [Embed website](https://n8n.io/embed/){:target=_blank .external-link}.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 
 ## Licenses
 

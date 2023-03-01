@@ -1,9 +1,14 @@
 # MSG91
 
-[MSG91](https://msg91.com/) is an enterprise SMS Solution providing Bulk SMS, Transactional SMS API, Regional SMS, OTP Verification APIs, Promotional SMS via powerful, and a robust SMS Gateway.
+The MSG91 node allows you to automate work in MSG91, and integrate MSG91 with other applications. n8n has built-in support for a wide range of MSG91 features, including sending SMS. 
+
+On this page, you'll find a list of operations the MSG91 node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/msg91/).
+    Refer to [MSG91 credentials](https://docs.n8n.io/integrations/builtin/credentials/msg91/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MSG91 integrations](https://n8n.io/integrations/msg91/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

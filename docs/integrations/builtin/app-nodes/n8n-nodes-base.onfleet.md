@@ -1,9 +1,14 @@
 # Onfleet
 
-[Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
+The Onfleet node allows you to automate work in Onfleet, and integrate Onfleet with other applications. n8n has built-in support for a wide range of Onfleet features, including creating, updating, deleting, and getting admins, containers, destinations, and hubs. 
+
+On this page, you'll find a list of operations the Onfleet node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet/).
+    Refer to [Onfleet credentials](https://docs.n8n.io/integrations/builtin/credentials/onfleet/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Onfleet integrations](https://n8n.io/integrations/onfleet/){:target="_blank" .external-link} list.
 
 
 ## Operations

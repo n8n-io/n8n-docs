@@ -4,7 +4,7 @@ description: n8n's security policies
 
 # Security
 
-This page describes n8n's security privacy practices.
+This page describes n8n's security practices.
 
 ## User accounts, authentication, and authorization
 
@@ -64,7 +64,7 @@ n8n encrypts customer data at rest in your instance's mounted volume. n8n uses 
 
 Self-hosters must:
 
-* Set up a reverse proxy in front of your n8n instance to handle TLS.
+* Make sure data is encrypted in transit by setting up a reverse proxy in front of the n8n instance to handle TLS.
 * Handle encrypting data at rest.
 
 ## Development

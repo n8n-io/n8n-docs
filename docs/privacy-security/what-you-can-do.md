@@ -21,6 +21,7 @@ If you self-host n8n, there are additional steps you can take:
 * Run a [Security audit](/hosting/security-audit/).
 * Be aware of the [Risks](/integrations/community-nodes/risks/) when installing community nodes, or choose to disable them.
 * Make sure users can't import external modules in the Code node. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/environment-variables/environment-variables/#nodes) for more information.
+* Choose to exclude certain nodes. For example, you can disable nodes like Execute Command or SSH. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/environment-variables/environment-variables/#nodes) for more information.
 * For maximum privacy, you can [Isolate n8n](/hosting/environment-variables/configuration-examples/isolation/).
 
 ### GDPR for self-hosted users

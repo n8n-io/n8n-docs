@@ -12,7 +12,7 @@ This page describes n8n's security practices.
 
 When you sign up for an n8n cloud account, you create an account directly with n8n. 
 
-When you create an account on n8n.cloud with a username and password, n8n implements best account security practices. For example, n8n salts and hashes your password, then stores the hashed password in a database which is encrypted at rest.
+When you create an account on n8n.cloud with a username and password, n8n implements best practices for account. For example, n8n salts and hashes your password, then stores the hashed password in a database which is encrypted at rest.
 
 ### Self-hosted
 

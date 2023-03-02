@@ -18,11 +18,6 @@ Select **All executions** <span class="inline-image">![All executions menu icon]
 
 You can filter the executions list.
 
-!!! info "Feature availability"		
-		Available on:
-
-		* Cloud: Start, Pro, and Power
-		* Self-Hosted: Team and Enterprise
 
 1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png)</span> to open the list.
 2. Select **Filters**.
@@ -31,6 +26,12 @@ You can filter the executions list.
 	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
 	* **Execution start**: see executions that started in the given time.
 	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/execution/custom-executions-data/) for information on adding custom data.
+
+		!!! info "Feature availability"		
+			Custom executions data is available on:
+
+			* Cloud: Start, Pro, and Power
+			* Self-Hosted: Team and Enterprise
 
 ## Retry failed workflows
 

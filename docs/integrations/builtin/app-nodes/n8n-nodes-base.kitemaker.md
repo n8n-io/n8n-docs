@@ -1,6 +1,6 @@
 # Kitemaker
 
-The Kitemaker node allows you to automate work in Kitemaker, and integrate Kitemaker with other applications. n8n has built-in support for a wide range of Kitemaker features, including creating, updating, deleting, retrieving, and getting organizations, spaces, and users. 
+The Kitemaker node allows you to automate work in Kitemaker, and integrate Kitemaker with other applications. n8n has built-in support for a wide range of Kitemaker features, including retrieving data on organizations, spaces and users, as well as creating, getting, and updating work items. 
 
 On this page, you'll find a list of operations the Kitemaker node supports and links to more resources.
 

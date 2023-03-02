@@ -1,6 +1,6 @@
 # Line
 
-The Line node allows you to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including creating, updating, deleting, and sending notifications. 
+The Line node allows you to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including sending notifications. 
 
 On this page, you'll find a list of operations the Line node supports and links to more resources.
 

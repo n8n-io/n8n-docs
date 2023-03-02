@@ -1,6 +1,6 @@
 # Hunter
 
-The Hunter node allows you to automate work in Hunter, and integrate Hunter with other applications. n8n has built-in support for a wide range of Hunter features, including getting, generating, and verifying emails. 
+The Hunter node allows you to automate work in Hunter, and integrate Hunter with other applications. n8n has built-in support for a wide range of Hunter features, including getting, generating, and verifying email address. 
 
 On this page, you'll find a list of operations the Hunter node supports and links to more resources.
 

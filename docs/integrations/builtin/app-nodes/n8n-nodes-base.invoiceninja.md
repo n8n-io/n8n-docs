@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Invoice Ninja node supports a
     Refer to [Invoice Ninja credentials](https://docs.n8n.io/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Invoice Ninja integrations](https://n8n.io/integrations/invoice-ninja/){:target="_blank" .external-link) list.
+    For usage examples and templates to help you get started, take a look at n8n's [Invoice Ninja integrations](https://n8n.io/integrations/invoice-ninja/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

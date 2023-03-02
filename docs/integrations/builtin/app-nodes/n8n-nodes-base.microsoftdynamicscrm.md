@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Microsoft Dynamics CRM node s
     Refer to [Microsoft Dynamics CRM credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Microsoft Dynamics CRM integrations](https://n8n.io/integrations/microsoft/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft Dynamics CRM integrations](https://n8n.io/integrations/microsoft-dynamics-crm/){:target="_blank" .external-link} list.
 
 
 

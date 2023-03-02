@@ -13,6 +13,23 @@ The **Executions** list in a workflow shows all executions for that workflow.
 
 In the workflow, select the **Executions** tab in the top menu. You can preview all executions of that workflow.
 
+## Filter executions
+
+You can filter the executions list.
+
+!!! info "Feature availability"		
+		Available on:
+
+		* Cloud: Start, Pro, and Power
+		* Self-Hosted: Team and Enterprise
+
+1. In your workflow, select **Executions**.	
+2. Select **Filters**.
+3. Enter your filters. You can filter by:
+	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
+	* **Execution start**: see executions that started in the given time.
+	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/execution/custom-executions-data/) for information on adding custom data.
+
 ## Retry failed workflows
 
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:

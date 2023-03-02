@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the Home Assistant node supports 
     Refer to [Home Assistant credentials](https://docs.n8n.io/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link) list.
+    For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link} list.
 
 
 ## Basic operations

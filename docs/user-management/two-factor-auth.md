@@ -8,7 +8,7 @@ Two factor authentication (2FA) adds a second authentication method on top of us
 
 !!! info "Feature availability"		
 		* Requires user management enabled and set up
-		* [TODO: any other platform/pricing reqs]
+		* Available on all paid n8n versions
 
 
 ## Enable 2FA

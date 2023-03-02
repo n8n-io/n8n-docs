@@ -1,9 +1,14 @@
 # ClickUp
 
-[ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
+The ClickUp node allows you to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
+
+On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clickup/).
+    Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [ClickUp integrations](https://n8n.io/integrations/clickup/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

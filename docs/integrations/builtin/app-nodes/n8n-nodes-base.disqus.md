@@ -1,9 +1,14 @@
 # Disqus
 
-[Disqus](https://disqus.com/) is a worldwide blog comment hosting service for web sites and online communities that use a networked platform. The company's platform includes various features, such as social integration, social networking, user profiles, spam and moderation tools, analytics, email notifications, and mobile commenting.
+The Disqus node allows you to automate work in Disqus, and integrate Disqus with other applications. n8n has built-in support for a wide range of Disqus features, including returning forums.
+
+On this page, you'll find a list of operations the Disqus node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/disqus/).
+    Refer to [Disqus credentials](/integrations/builtin/credentials/disqus/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Disqus integrations](https://n8n.io/integrations/disqus/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # AWS Certificate Manager
 
-[AWS Certificate Manager](https://aws.amazon.com/certificate-manager/){:target=_blank .external-link}  is a service that lets you provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.
+The AWS Certificate Manager node allows you to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
+
+On this page, you'll find a list of operations the AWS Certificate Manager node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+    Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Certificate Manager](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} integrations list.
 
 ## Operations
 

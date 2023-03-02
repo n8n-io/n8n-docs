@@ -1,9 +1,14 @@
 # Google Slides
 
-[Google Slides](https://www.google.com/slides) is a web-based presentation program that is part of Google's office software suite within its Google Drive service. It allows you to create, edit, and collaborate.
+The Google Slides node allows you to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating, getting and replacing pages and presentation. 
+
+On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Slides credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Slides integrations](https://n8n.io/integrations/google-slides/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

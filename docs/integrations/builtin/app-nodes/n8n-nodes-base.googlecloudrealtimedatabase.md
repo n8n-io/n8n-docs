@@ -1,9 +1,14 @@
 # Google Cloud Realtime Database
 
-[Google Cloud Realtime Database](https://firebase.google.com/docs/database/) is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.
+The Google Cloud Realtime Database node allows you to automate work in Google Cloud Realtime Database, and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, including writing, deleting, getting, and appending databases.
+
+On this page, you'll find a list of operations the Google Cloud Realtime Database node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Realtime Database integrations](https://n8n.io/integrations/google-cloud-realtime-database/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

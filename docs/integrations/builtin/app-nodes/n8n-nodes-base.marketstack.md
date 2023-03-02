@@ -1,6 +1,6 @@
 # Marketstack
 
-The Marketstack node allows you to automate work in Marketstack, and integrate Marketstack with other applications. n8n has built-in support for a wide range of Marketstack features, including creating, updating, deleting, and getting exchanges, end-of-data, and tickers. 
+The Marketstack node allows you to automate work in Marketstack, and integrate Marketstack with other applications. n8n has built-in support for a wide range of Marketstack features, including getting exchanges, end-of-day data, and tickers. 
 
 On this page, you'll find a list of operations the Marketstack node supports and links to more resources.
 

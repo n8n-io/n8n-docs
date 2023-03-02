@@ -1,9 +1,14 @@
 # HubSpot
 
-[HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
+The HubSpot node allows you to automate work in HubSpot, and integrate HubSpot with other applications. n8n has built-in support for a wide range of HubSpot features, including creating, updating, deleting, and getting contacts, deals, lists, engagements and companies. 
+
+On this page, you'll find a list of operations the HubSpot node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot/).
+    Refer to [HubSpot credentials](https://docs.n8n.io/integrations/builtin/credentials/hubspot/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [HubSpot integrations](https://n8n.io/integrations/hubspot/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

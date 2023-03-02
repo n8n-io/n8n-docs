@@ -1,6 +1,6 @@
 # Lemlist
 
-The Lemlist node allows you to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including creating, updating, deleting, and getting activities, campaigns, leads, and teams. 
+The Lemlist node allows you to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
 
 On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
 

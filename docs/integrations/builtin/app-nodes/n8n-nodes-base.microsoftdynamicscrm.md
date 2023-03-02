@@ -1,6 +1,6 @@
 # Microsoft Dynamics CRM
 
-The Microsoft Dynamics CRM node allows you to automate work in Microsoft Dynamics CRM, and integrate Microsoft Dynamics CRM with other applications. n8n has built-in support for a wide range of Microsoft Dynamics CRM features, including creating, updating, deleting, and getting clients, sites and tickets. 
+The Microsoft Dynamics CRM node allows you to automate work in Microsoft Dynamics CRM, and integrate Microsoft Dynamics CRM with other applications. n8n has built-in support for a wide range of Microsoft Dynamics CRM features, including creating, updating, deleting, and getting accounts. 
 
 On this page, you'll find a list of operations the Microsoft Dynamics CRM node supports and links to more resources.
 

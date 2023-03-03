@@ -1,6 +1,6 @@
 # Microsoft Excel
 
-The Microsoft Excel node allows you to automate work in Microsoft Excel, and integrate Microsoft Excel with other applications. n8n has built-in support for a wide range of Microsoft Excel features, including adding, retrieving, and getting tables, workbooks, and worksheets. 
+The Microsoft Excel node allows you to automate work in Microsoft Excel, and integrate Microsoft Excel with other applications. n8n has built-in support for a wide range of Microsoft Excel features, including adding and retrieving tables, and workbooks, as well as getting worksheets. 
 
 On this page, you'll find a list of operations the Microsoft Excel node supports and links to more resources.
 

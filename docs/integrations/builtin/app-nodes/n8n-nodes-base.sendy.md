@@ -1,6 +1,6 @@
 # Sendy
 
-The Sendy node allows you to automate work in Sendy, and integrate Sendy with other applications. n8n has built-in support for a wide range of Sendy features, including creating, updating, deleting, and getting campaigns.
+The Sendy node allows you to automate work in Sendy, and integrate Sendy with other applications. n8n has built-in support for a wide range of Sendy features, including creating campaigns, and adding, counting, deleting, and getting subscribers.
 
 On this page, you'll find a list of operations the Sendy node supports and links to more resources.
 

@@ -1,6 +1,6 @@
 # Orbit
 
-The Orbit node allows you to automate work in Orbit, and integrate Orbit with other applications. n8n has built-in support for a wide range of Orbit features, including creating, updating, deleting, and getting activities, members, notes, and posts. 
+The Orbit node allows you to automate work in Orbit, and integrate Orbit with other applications. n8n has built-in support for a wide range of Orbit features, including creating, and getting activities, deleting, looking up, and updating memebers, as well as deleting and creating posts. 
 
 On this page, you'll find a list of operations the Orbit node supports and links to more resources.
 

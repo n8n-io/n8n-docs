@@ -1,6 +1,6 @@
 # One Simple API
 
-The One Simple API node allows you to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting, and generating profiles, websites and utilities. 
+The One Simple API node allows you to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
 
 On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 

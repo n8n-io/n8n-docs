@@ -1,6 +1,6 @@
 # Nextcloud
 
-The Nextcloud node allows you to automate work in Nextcloud, and integrate Nextcloud with other applications. n8n has built-in support for a wide range of Nextcloud features, including creating, updating, deleting, and getting files, folders and users. 
+The Nextcloud node allows you to automate work in Nextcloud, and integrate Nextcloud with other applications. n8n has built-in support for a wide range of Nextcloud features, including creating, updating, deleting, and getting files, and folders as well as retrieving, and inviting users. 
 
 On this page, you'll find a list of operations the Nextcloud node supports and links to more resources.
 

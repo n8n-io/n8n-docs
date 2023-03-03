@@ -1,6 +1,6 @@
 # Netlify
 
-The Netlify node allows you to automate work in Netlify, and integrate Netlify with other applications. n8n has built-in support for a wide range of Netlify features, including creating, updating, deleting, and getting deployments, and sites. 
+The Netlify node allows you to automate work in Netlify, and integrate Netlify with other applications. n8n has built-in support for a wide range of Netlify features, including getting and canceling deployments, as well as deleting, and returning sites. 
 
 On this page, you'll find a list of operations the Netlify node supports and links to more resources.
 

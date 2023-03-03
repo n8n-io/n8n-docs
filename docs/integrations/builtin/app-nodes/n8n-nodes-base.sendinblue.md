@@ -1,6 +1,6 @@
 # Sendinblue
 
-The Sendinblue node allows you to automate work in Sendinblue, and integrate Sendinblue with other applications. n8n has built-in support for a wide range of Sendinblue features, including creating, updating, deleting, and getting contacts, attributes, emails and senders. 
+The Sendinblue node allows you to automate work in Sendinblue, and integrate Sendinblue with other applications. n8n has built-in support for a wide range of Sendinblue features, including creating, updating, deleting, and getting contacts, attributes, as well as sending emails. 
 
 On this page, you'll find a list of operations the Sendinblue node supports and links to more resources.
 

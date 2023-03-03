@@ -1,6 +1,6 @@
 # SendGrid
 
-The SendGrid node allows you to automate work in SendGrid, and integrate SendGrid with other applications. n8n has built-in support for a wide range of SendGrid features, including creating, updating, deleting, and getting contacts, lists, and emails. 
+The SendGrid node allows you to automate work in SendGrid, and integrate SendGrid with other applications. n8n has built-in support for a wide range of SendGrid features, including creating, updating, deleting, and getting contacts, and lists, as well as sending emails. 
 
 On this page, you'll find a list of operations the SendGrid node supports and links to more resources.
 

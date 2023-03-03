@@ -1,6 +1,6 @@
 # SeaTable
 
-The SeaTable node allows you to automate work in SeaTable, and integrate SeaTable with other applications. n8n has built-in support for a wide range of SeaTable features, including creating, updating, deleting, and getting rows. 
+The SeaTable node allows you to automate work in SeaTable, and integrate SeaTable with other applications. n8n has built-in support for a wide range of SeaTable features, including creating, updating, deleting, updating, and getting rows. 
 
 On this page, you'll find a list of operations the SeaTable node supports and links to more resources.
 

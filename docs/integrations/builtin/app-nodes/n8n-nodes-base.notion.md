@@ -1,6 +1,6 @@
 # Notion
 
-The Notion node allows you to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including creating, updating, deleting, and getting blocks, databases, pages, and users. 
+The Notion node allows you to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including getting and serching databases, creating pages, and getting users.
 
 On this page, you'll find a list of operations the Notion node supports and links to more resources.
 

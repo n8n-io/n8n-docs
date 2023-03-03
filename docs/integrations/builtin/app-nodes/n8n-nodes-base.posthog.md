@@ -1,6 +1,6 @@
 # PostHog
 
-The PostHog node allows you to automate work in PostHog, and integrate PostHog with other applications. n8n has built-in support for a wide range of PostHog features, including creating, and track aliases, events, and tracks. 
+The PostHog node allows you to automate work in PostHog, and integrate PostHog with other applications. n8n has built-in support for a wide range of PostHog features, including creating aliases, events, and identity, as well as tracking pages.
 
 On this page, you'll find a list of operations the PostHog node supports and links to more resources.
 

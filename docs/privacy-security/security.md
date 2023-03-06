@@ -16,7 +16,7 @@ When you create an account on n8n.cloud with a username and password, n8n implem
 
 ### Self-hosted
 
-n8n salts and hashes the passwords of self-hosted users on account creation. However, encrypting other data at rest is the responsibility of the user.
+n8n salts and hashes the passwords of self-hosted users on account creation. However, encrypting other data at rest is the responsibility of the user. Refer to [Data encryption | Self-hosted n8n](#self-hosted-n8n) for more information.
 
 ## Third-party accounts
 
@@ -65,7 +65,7 @@ n8n encrypts customer data at rest in your instance's mounted volume. n8n uses 
 Self-hosters must:
 
 * Make sure data is encrypted in transit by setting up a reverse proxy in front of the n8n instance to handle TLS.
-* Handle encrypting data at rest.
+* Handle encrypting data at rest. This can be achieved by using encrypted partitions, or encryption at the hardware level, and ensuring n8n and its database is written to that location. Cloud providers typically offer storage systems with disk encryption built-in.
 
 ## Development
 

@@ -2,13 +2,13 @@
 description: n8n performance and resource consumption benchmarking.
 ---
 
-# Benchmarking
+# Performance and benchmarking
+
+n8n can handle up to 220 workflow executions per second on a single instance, with the ability to scale up further by adding more instances.
 
 This document outlines n8n's performance benchmarking. It describes the factors that affect performance, and includes two example benchmarks.
 
 ## Performance factors
-
-n8n can handle up to 220 workflow executions per second on a single instance, with the ability to scale up further by adding more instances.
 
 The performance of n8n depends on factors including: 
 

@@ -34,7 +34,7 @@ _Link to product's docs for this auth method._
 	
 _STOP AND THINK: does this node require a step by step? If authentication is easy to set up, or if this node isn't heavily used, consider leaving out the step by step to minimise maintenance._
 
-_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (https://docs.n8n.io/integrations/builtin/credentials/asana/)_
+_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (/integrations/builtin/credentials/asana/)_
 
 <!-- 
 Add any other sections here. 

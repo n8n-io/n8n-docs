@@ -21,13 +21,10 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
+## Step two: New workflow
 
-## Step two: Create a new workflow
+If you have no workflows, n8n takes you directly to the canvas, so you can start building. If you already built a workflow, n8n takes you to the **Workflows** list. Select **Add workflow** to create a new workflow for this tutorial.
 
-Create a blank workflow:
-
-1. On the **Workflows** list, select **Add Workflow**.
-2. Rename the workflow to something meaningful, such as **Quickstart**: select the current workflow name, and replace it.
 
 ## Step three: Add a trigger node
 

@@ -5,7 +5,7 @@ The Clockify node allows you to automate work in Clockify, and integrate Clockif
 On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Clockify credentials](https://docs.n8n.io/integrations/builtin/credentials/clockify/) for guidance on setting up authentication. 
+    Refer to [Clockify credentials](/integrations/builtin/credentials/clockify/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Clockify integrations](https://n8n.io/integrations/clockify/){:target="_blank" .external-link} list.

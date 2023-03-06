@@ -5,7 +5,7 @@ The Copper node allows you to automate work in Copper, and integrate Copper with
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Copper credentials](https://docs.n8n.io/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+    Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Copper integrations](https://n8n.io/integrations/copper/){:target="_blank" .external-link} list.

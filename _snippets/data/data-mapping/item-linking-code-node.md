@@ -16,6 +16,7 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 		"json": {
 			. . . 
 		},
+		// The index of the input item that generated this output item
 		"pairedItem": 0
 	}
 ]

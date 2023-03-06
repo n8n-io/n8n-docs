@@ -5,7 +5,7 @@ The E-goi node allows you to automate work in E-goi, and integrate E-goi with ot
 On this page, you'll find a list of operations the E-goi node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [E-goi credentials](https://docs.n8n.io/integrations/builtin/credentials/egoi/) for guidance on setting up authentication. 
+    Refer to [E-goi credentials](/integrations/builtin/credentials/egoi/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [E-goi integrations](https://n8n.io/integrations/e-goi/){:target="_blank" .external-link} list.

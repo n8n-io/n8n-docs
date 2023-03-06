@@ -14,7 +14,7 @@ The performance of n8n depends on factors including:
 
 * The type of workflow
 * The resources available to n8n
-* How you configure n8n's scaling options. 
+* How you configure n8n's scaling options
 
 
 ## Run your own benchmarking

@@ -722,7 +722,7 @@ This release introduces [log streaming](/log-streaming/) for users on Enterprise
 
 #### Security audit
 
-This release adds a [security audit](/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+This release adds a [security audit](/hosting/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 
 </div>
 

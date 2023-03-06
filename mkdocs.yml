@@ -193,7 +193,12 @@ nav:
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
     - Log streaming: log-streaming.md
-    - Security audit: security-audit.md
+    - Privacy and security:
+        - privacy-security/index.md
+        - Privacy: privacy-security/privacy.md
+        - Security: privacy-security/security.md
+        - Incident response: privacy-security/incident-response.md
+        - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
     - Reference:
       - reference/index.md
@@ -201,7 +206,6 @@ nav:
       - Keyboard shortcuts: reference/keyboard-shortcuts.md
       - Update n8n: reference/update.md
       - Glossary: reference/glossary.md
-      - Data collection: reference/data-collection.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -515,6 +519,7 @@ nav:
       - User management: hosting/authentication/user-management-self-hosted.md
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
+    - Security audit: hosting/security-audit.md
     - Logging: hosting/logging.md
     - Scaling:
       - hosting/scaling/index.md

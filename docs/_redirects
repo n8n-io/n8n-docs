@@ -1,3 +1,5 @@
+/security-audit/   /hosting/security-audit/
+/reference/data-collection/   /privacy-security/privacy/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/
 
@@ -99,7 +101,6 @@
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
 
-# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 
@@ -132,7 +133,7 @@
 /reference/data/database.html                        /hosting/databases/
 /reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
-/reference/telemetry.html                            /reference/data-collection/
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	

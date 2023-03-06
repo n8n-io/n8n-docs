@@ -523,6 +523,7 @@ nav:
     - Logging: hosting/logging.md
     - Scaling:
       - hosting/scaling/index.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md

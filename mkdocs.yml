@@ -200,12 +200,7 @@ nav:
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
-    - Reference:
-      - reference/index.md
-      - CLI commands: reference/cli-commands.md
-      - Keyboard shortcuts: reference/keyboard-shortcuts.md
-      - Update n8n: reference/update.md
-      - Glossary: reference/glossary.md
+    - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -531,6 +526,7 @@ nav:
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
+    - CLI commands: hosting/cli-commands.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

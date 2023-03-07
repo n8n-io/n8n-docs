@@ -50,6 +50,8 @@ This release contains node enhancements, bug fixes, and new features that lay gr
 * Show RabbitMQ node in the nodes panel.
 * Stop showing mapping hint after mapping.
 
+--8<-- "_snippets/update-n8n.md"
+
 
 </div>
 
@@ -130,6 +132,7 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -239,6 +242,8 @@ This release contains new features, node enhancements, and bug fixes.
 ### Contributors
 
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 

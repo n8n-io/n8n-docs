@@ -1,3 +1,7 @@
+/reference/   /
+/reference/keyboard-shortcuts/   /keyboard-shortcuts/
+/reference/cli-commands/   /hosting/cli-commands/
+/reference/update/   /release-notes/
 /security-audit/   /hosting/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
@@ -128,7 +132,7 @@
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/environment-variables/
-/reference/start-workflows-via-cli.html              /reference/cli-commands/
+/reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
 /reference/data/understanding-database.html          /hosting/supported-databases-settings/

@@ -50,6 +50,8 @@ This release contains node enhancements, bug fixes, and new features that lay gr
 * Show RabbitMQ node in the nodes panel.
 * Stop showing mapping hint after mapping.
 
+--8<-- "_snippets/update-n8n.md"
+
 
 </div>
 
@@ -130,6 +132,7 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -239,6 +242,8 @@ This release contains new features, node enhancements, and bug fixes.
 ### Contributors
 
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -4412,7 +4417,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 - Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/reference/keyboard-shortcuts/) for details.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/keyboard-shortcuts/) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes
@@ -5134,7 +5139,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
 - The code editor does not get closed when clicked anywhere outside the editor
-- Added CLI commands to [export](/reference/cli-commands/#export-workflows-and-credentials) and [import](/reference/cli-commands/#import-workflows-and-credentials) credentials and workflows
+- Added CLI commands to [export](/hosting/cli-commands/#export-workflows-and-credentials) and [import](/hosting/cli-commands/#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 
 

@@ -14,7 +14,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions to transform data in your nodes. You can use JavaScript in expressions, as well as n8n's built-in methods and variables.
+	Use expressions to transform data in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) and [Data transformation functions](/code-examples/expressions/data-transformation-functions/).
 
 	[:octicons-arrow-right-24: Expressions](/code-examples/expressions/)
 

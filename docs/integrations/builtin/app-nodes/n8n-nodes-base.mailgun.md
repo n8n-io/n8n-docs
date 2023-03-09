@@ -1,6 +1,6 @@
 # Mailgun
 
-The Mailgun node allows you to automate work in Mailgun, and integrate Mailgun with other applications. n8n has built-in support for a wide range of Mailgun features, including sending emails. 
+The Mailgun node allows you to automate work in Mailgun, and integrate Mailgun with other applications. n8n has built-in support for sending emails with Mailgun. 
 
 On this page, you'll find a list of operations the Mailgun node supports and links to more resources.
 

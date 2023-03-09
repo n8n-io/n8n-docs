@@ -1,9 +1,14 @@
 # Medium
 
-[Medium](https://www.medium.com/) is an online publishing platform and home to a diverse array of stories, ideas, and perspectives. It empowers writers to share their work and ideas with the readers.
+The Medium node allows you to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
+
+On this page, you'll find a list of operations the Medium node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/medium/).
+    Refer to [Medium credentials](https://docs.n8n.io/integrations/builtin/credentials/medium/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Medium integrations](https://n8n.io/integrations/medium/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

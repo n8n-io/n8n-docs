@@ -1,6 +1,6 @@
 # OpenAI
 
-The OpenAI node allows you to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images, and completing, as well as moderating, and editing texts. 
+The OpenAI node allows you to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and chats, as well as moderating, and editing texts. 
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 

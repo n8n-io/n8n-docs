@@ -1,6 +1,7 @@
 # JavaScript examples
 
-In n8n, you can write custom JavaScript code snippets to add, remove, and update the data you receive from a node. You can also use code snippets to modify the data structure of the data returned by a node.
+In n8n, you can write custom JavaScript code within your workflow, using the [Code node](/code-examples/javascript-functions/code-node/).
 
+[[% import "_macros/section-toc.html" as sectionToc %]]
 
-For each section, we'll share code snippets that can be used in the Code node as well as the expressions. You can read more about [Expressions](/code-examples/expressions/) and adding code snippets to the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node in our documentation.
+[[ sectionToc.sectionToc(page) ]]

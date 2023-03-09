@@ -22,7 +22,7 @@ There are two places in your workflows where you can use code:
 
 	The Code node allows you to add JavaScript to your workflow.
 
-	[:octicons-arrow-right-24: Code node](/code-examples/code-node/)
+	[:octicons-arrow-right-24: Code node](/code-examples/javascript-functions/code-node/)
 
 </div>
 

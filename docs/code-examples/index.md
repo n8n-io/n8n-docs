@@ -26,6 +26,20 @@ There are two places in your workflows where you can use code:
 
 </div>
 
+## Technical nodes
+
+n8n provides [Core nodes](/integrations/builtin/core-nodes/), which add key functionality.
+
+### Write a backend
+
+The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code-examples/javascript-functions/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
+
+This allows you to do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
+
+### Represent complex logic
+
+You can build complex flows, using nodes like [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/), [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch/), and [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) nodes. Refer to [Flow logic](/flow-logic/) for more information.
+
 
 ## Other developer resources
 

@@ -1,6 +1,6 @@
 # Mandrill
 
-The Mandrill node allows you to automate work in Mandrill, and integrate Mandrill with other applications. n8n has built-in support for a wide range of Mandrill features, including sending messages. 
+The Mandrill node allows you to automate work in Mandrill, and integrate Mandrill with other applications. n8n has built-in support for a wide range of Mandrill features, including sending messages based on templates or HTML. 
 
 On this page, you'll find a list of operations the Mandrill node supports and links to more resources.
 

@@ -193,15 +193,14 @@ nav:
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
     - Log streaming: log-streaming.md
-    - Security audit: security-audit.md
+    - Privacy and security:
+        - privacy-security/index.md
+        - Privacy: privacy-security/privacy.md
+        - Security: privacy-security/security.md
+        - Incident response: privacy-security/incident-response.md
+        - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
-    - Reference:
-      - reference/index.md
-      - CLI commands: reference/cli-commands.md
-      - Keyboard shortcuts: reference/keyboard-shortcuts.md
-      - Update n8n: reference/update.md
-      - Glossary: reference/glossary.md
-      - Data collection: reference/data-collection.md
+    - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -515,9 +514,11 @@ nav:
       - User management: hosting/authentication/user-management-self-hosted.md
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
+    - Security audit: hosting/security-audit.md
     - Logging: hosting/logging.md
     - Scaling:
       - hosting/scaling/index.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
@@ -525,6 +526,7 @@ nav:
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
+    - CLI commands: hosting/cli-commands.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

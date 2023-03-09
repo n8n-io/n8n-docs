@@ -1,3 +1,11 @@
+/reference/   /
+/reference/keyboard-shortcuts/   /keyboard-shortcuts/
+/reference/cli-commands/   /hosting/cli-commands/
+/reference/update/   /release-notes/
+/security-audit/   /hosting/security-audit/
+/reference/data-collection/   /privacy-security/privacy/
+
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/
 
 /reference/release-notes/   /release-notes/
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
@@ -97,7 +105,6 @@
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
 
-# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 
@@ -125,12 +132,12 @@
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/environment-variables/
-/reference/start-workflows-via-cli.html              /reference/cli-commands/
+/reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
 /reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
-/reference/telemetry.html                            /reference/data-collection/
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	

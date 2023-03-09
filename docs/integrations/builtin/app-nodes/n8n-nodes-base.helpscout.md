@@ -1,6 +1,8 @@
 # Help Scout
 
-The Help Scout node allows you to automate work in Help Scout, and integrate Help Scout with other applications. n8n has built-in support for a wide range of Help Scout features, including creating, updating, deleting, and getting converstations, customers, threads and mailboxes.
+
+The Help Scout node allows you to automate work in Help Scout, and integrate Help Scout with other applications. n8n has built-in support for a wide range of Help Scout features, including creating, updating, deleting, and getting conversations, and customers.
+
 
 On this page, you'll find a list of operations the Help Scout node supports and links to more resources.
 
@@ -8,7 +10,7 @@ On this page, you'll find a list of operations the Help Scout node supports and 
     Refer to [Help Scout credentials](https://docs.n8n.io/integrations/builtin/credentials/helpscout/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Help Scout integrations](https://n8n.io/integrations/helpscout/){:target="_blank" .external-link}
+    For usage examples and templates to help you get started, take a look at n8n's [Help Scout integrations](https://n8n.io/integrations/helpscout/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

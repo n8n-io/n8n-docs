@@ -13,6 +13,183 @@ hide:
 
 New features and bug fixes for n8n.
 
+<div id="02180" markdown>
+
+## n8n@0.218.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.2...n8n@0.218.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-02
+
+This release contains node enhancements, bug fixes, and new features that lay groundwork for upcoming releases, along with some UX improvements.
+
+### New features
+
+* Add distribution test tracking.
+* Add events to enable onboarding checklist.
+* Core: add SAML login setup (for upcoming feature).
+* Core: add SAML settings and consolidate LDAP under SSO (for upcoming feature).
+* Editor: add missing documentation to autocomplete items for inline code editor.
+* Editor: Show parameter hint on multiline inputs.
+
+### Node enhancements
+
+* JIRA node: support binary streaming for very large binary files.
+* OpenAI node: add support for ChatGPT.
+* Telegram node: add parse mode option to Send Document operation.
+
+### Bug fixes
+
+* Core: fix execution pruning queries.
+* Core: fix filtering workflow by tags.
+* Core: revert isPending check on the user entity.
+* Fix issues with nodes missing in nodes panel.
+* Fix mapping paths when appending to empty expression.
+* Item Lists Node: tweak item list summarize field naming.
+* Prevent executions from displaying as running forever.
+* Show Execute Workflow node in the nodes panel.
+* Show RabbitMQ node in the nodes panel.
+* Stop showing mapping hint after mapping.
+
+--8<-- "_snippets/update-n8n.md"
+
+
+</div>
+
+<div id="02172" markdown>
+
+## n8n@0.217.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.1...n8n@0.217.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-27
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: fix issue with execution pruning queries.
+* Core: fix for workflow filtering by tag.
+* Core: revert isPending check on the user entity.
+
+</div>
+
+<div id="02171" markdown>
+
+## n8n@0.217.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.0...n8n@0.217.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-24
+
+This is a bug fix release.
+
+### Bug fixes
+
+Prevent executions appearing to run forever.
+
+</div>
+
+<div id="02170" markdown>
+
+## n8n@0.217.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.217.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This release contains new features and bug fixes. It includes improvements to the nodes panel and executions list. It also deprecates the Read Binary File node.
+
+
+### New features
+
+* Add new event hooks to support telemetry around the new onboarding experience.
+* Update nodes to set required path type.
+* Core: add configurable execution history limit. Use this to improve performance when self-hosting. Refer to [Execution Data | Enable data pruning ](/hosting/scaling/execution-data#enable-data-pruning) for more information.
+* Core: add execution runData recovery and status field. This allows us to show execution statuses on the **Executions** list.
+* Core: add SAML feature flag. This is preparatory for an upcoming feature.
+* Editor: improvements to the nodes panel search. When searching in root view, n8n now displays results from both trigger and regular nodes. When searching in a category view, n8n shows results from the category, and also suggests results from other categories.
+* Hide sensitive value in authentication header credentials and authentication query credentials.
+* Support feature flag evaluation server side.
+* Deprecate the Read Binary File node. Use the [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node instead.
+
+
+### Bug fixes
+
+* Baserow Node: fix issue with **Get All** not correctly using filters.
+* Compare Datasets Node: UI tweaks and fixes.
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: fix execution status filters.
+* Core: user update endpoint should only allow updating email, firstName, and lastName.
+* Discord Node: fix wrong error message being displayed.
+* Discourse Node: fix issue with credential test not working.
+* Editor: apply correct IRunExecutionData to finished workflow.
+* Editor: fix an issue with zoom and canvas nodes connections.
+* Editor: fix unexpected date rendering on front-end.
+* Editor: remove `crashed` status from filter.
+* Fix typo in error messages when a property doesn't exist.
+* Fixes an issue when saving an active workflow without triggers would cause n8n to be stuck.
+* Google Calendar Node: fix incorrect labels for start and end times when getting all events.
+* Postgres Node: fix for tables containing field named JSON.
+* AWS S3 Node: fix issue with get many buckets not outputting data.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
+<div id="02162" markdown>
+
+## n8n@0.216.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.1...n8n@0.216.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release.
+
+### Bug fixes
+
+Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+
+</div>
+
+<div id="02153" markdown>
+
+## n8n@0.215.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.2...n8n@0.215.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release. It contains an important security fix.
+
+### Bug fixes
+
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: the user update endpoint should only allow updating email, first name, and last name.
+
+</div>
+
+<div id="02144" markdown>
+
+## n8n@0.214.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.3...n8n@0.214.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-02-23
+
+This is a bug fix release. It contains an important security fix.
+
+### Bug fixes
+
+* Core: don't allow arbitrary path traversal in BinaryDataManager.
+* Core: don't allow arbitrary path traversal in the credential-translation endpoint.
+* Core: don't explicitly bypass authentication on URLs containing `.svg`.
+* Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+* Core: the user update endpoint should only allow updating email, first name, and last name.
+
+</div>
+
+
 <div id="02161" markdown>
 
 ## n8n@0.216.1
@@ -65,6 +242,8 @@ This release contains new features, node enhancements, and bug fixes.
 ### Contributors
 
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -548,7 +727,7 @@ This release introduces [log streaming](/log-streaming/) for users on Enterprise
 
 #### Security audit
 
-This release adds a [security audit](/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+This release adds a [security audit](/hosting/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 
 </div>
 
@@ -4238,7 +4417,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 - Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/reference/keyboard-shortcuts/) for details.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/keyboard-shortcuts/) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes
@@ -4960,7 +5139,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
 - The code editor does not get closed when clicked anywhere outside the editor
-- Added CLI commands to [export](/reference/cli-commands/#export-workflows-and-credentials) and [import](/reference/cli-commands/#import-workflows-and-credentials) credentials and workflows
+- Added CLI commands to [export](/hosting/cli-commands/#export-workflows-and-credentials) and [import](/hosting/cli-commands/#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 
 

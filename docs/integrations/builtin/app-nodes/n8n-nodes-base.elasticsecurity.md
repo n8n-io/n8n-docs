@@ -5,7 +5,7 @@ The Elastic Security node allows you to automate work in Elastic Security, and i
 On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Elastic Security credentials](https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity/) for guidance on setting up authentication. 
+    Refer to [Elastic Security credentials](/integrations/builtin/credentials/elasticsecurity/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Elastic Security integrations](https://n8n.io/integrations/elastic-security){:target="_blank" .external-link} list.

@@ -1,6 +1,6 @@
 # QuestDB
 
-The QuestDB node allows you to automate work in QuestDB, and integrate QuestDB with other applications. n8n has built-in support for a wide range of QuestDB features, including executing, and inserting queries, and rows. 
+The QuestDB node allows you to automate work in QuestDB, and integrate QuestDB with other applications. n8n has built-in support for a wide range of QuestDB features, including executing a SQL query and inserting rows in database. 
 
 On this page, you'll find a list of operations the QuestDB node supports and links to more resources.
 

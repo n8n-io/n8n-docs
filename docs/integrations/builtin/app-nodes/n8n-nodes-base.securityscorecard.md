@@ -1,6 +1,6 @@
 # SecurityScorecard
 
-The SecurityScorecard node allows you to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting companies, industries, invites, and portfolio. 
+The SecurityScorecard node allows you to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting portfolio, as well as getting a company's data.
 
 On this page, you'll find a list of operations the SecurityScorecard node supports and links to more resources.
 

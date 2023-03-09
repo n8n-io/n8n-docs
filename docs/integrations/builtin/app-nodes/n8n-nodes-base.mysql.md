@@ -1,6 +1,6 @@
 # MySQL
 
-The MySQL node allows you to automate work in MySQL, and integrate MySQL with other applications. n8n has built-in support for a wide range of MySQL features, including executing, inserting, and updating rows.
+The MySQL node allows you to automate work in MySQL, and integrate MySQL with other applications. n8n has built-in support for a wide range of MySQL features, including executing an SQL query, as well as inserting, and updating rows in a database.
 
 On this page, you'll find a list of operations the MySQL node supports and links to more resources.
 

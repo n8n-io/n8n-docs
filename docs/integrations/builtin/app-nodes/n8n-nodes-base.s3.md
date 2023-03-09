@@ -1,6 +1,6 @@
 # S3
 
-The S3 node allows you to automate work in S3, and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, updating, deleting, and getting buckets, files, and folders. 
+The S3 node allows you to automate work in S3, and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. 
 
 On this page, you'll find a list of operations the S3 node supports and links to more resources.
 

@@ -1,9 +1,14 @@
 # Humantic AI
 
-[Humantic AI](https://humantic.ai/) provides AI-driven behavior and personality assessment of a candidate.
+The Humantic AI node allows you to automate work in Humantic AI, and integrate Humantic AI with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
+
+On this page, you'll find a list of operations the Humantic AI node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/humanticai/).
+    Refer to [Humantic AI credentials](https://docs.n8n.io/integrations/builtin/credentials/humanticai/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Humantic AI integrations](https://n8n.io/integrations/humantic-ai/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

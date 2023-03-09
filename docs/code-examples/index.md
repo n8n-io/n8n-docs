@@ -14,7 +14,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions to transform data in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) and [Data transformation functions](/code-examples/expressions/data-transformation-functions/).
+	Use expressions to transform [data](/data/) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) and [Data transformation functions](/code-examples/expressions/data-transformation-functions/).
 
 	[:octicons-arrow-right-24: Expressions](/code-examples/expressions/)
 
@@ -28,18 +28,25 @@ There are two places in your workflows where you can use code:
 
 ## Technical nodes
 
-n8n provides [Core nodes](/integrations/builtin/core-nodes/), which add key functionality.
+n8n provides core nodes, which simplify adding key functionality such as API requests, webhooks, scheduling, and file handling.
 
-### Write a backend
+<div class="grid-cards-vertical cards" markdown>
 
-The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code-examples/javascript-functions/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
+- __Write a backend__
 
-This allows you to do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
+	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code-examples/javascript-functions/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
 
-### Represent complex logic
+	This allows you to do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
 
-You can build complex flows, using nodes like [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/), [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch/), and [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) nodes. Refer to [Flow logic](/flow-logic/) for more information.
+	[:octicons-arrow-right-24: Core nodes](/integrations/builtin/core-nodes/)
 
+- __Represent complex logic__
+
+	You can build complex flows, using nodes like [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/), [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch/), and [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) nodes. 
+
+	[:octicons-arrow-right-24: Flow logic](/flow-logic/)
+
+</div>
 
 ## Other developer resources
 

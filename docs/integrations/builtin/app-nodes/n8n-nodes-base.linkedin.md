@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the LinkedIn node supports and li
     Refer to [LinkedIn credentials](https://docs.n8n.io/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [LinkedIn integrations](https://n8n.io/integrations/linkedIn/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [LinkedIn integrations](https://n8n.io/integrations/linkedin/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

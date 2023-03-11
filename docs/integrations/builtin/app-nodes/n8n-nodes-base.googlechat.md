@@ -1,6 +1,6 @@
 # Google Chat
 
-The Google Chat node allows you to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting, creating, updating, and deleting memebers, spaces and messages. 
+The Google Chat node allows you to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting membership and spaces, as well as creating and deleting messages. 
 
 On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
 

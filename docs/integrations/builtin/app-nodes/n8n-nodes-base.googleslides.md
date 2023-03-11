@@ -1,6 +1,6 @@
 # Google Slides
 
-The Google Slides node allows you to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating, getting and replacing pages and presentation. 
+The Google Slides node allows you to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating presentations, and getting pages. 
 
 On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
 

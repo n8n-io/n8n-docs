@@ -1,6 +1,6 @@
 # Postgres
 
-The Postgres node allows you to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing queries, as well as inserting, and updating rows in a database. 
+The Postgres node allows you to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing queries, as well as inserting and updating rows in a database. 
 
 On this page, you'll find a list of operations the Postgres node supports and links to more resources.
 

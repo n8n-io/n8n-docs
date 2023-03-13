@@ -5,10 +5,10 @@ The Facebook Graph API node allows you to automate work in Facebook Graph API, a
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Facebook Graph API credentials](https://docs.n8n.io/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
+    Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebookgraph/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebook-graph-api/){:target="_blank" .external-link} list.
 
 
 ## Basic operations

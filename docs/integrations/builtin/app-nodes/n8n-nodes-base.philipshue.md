@@ -1,9 +1,14 @@
 # Philips Hue
 
-[Philips Hue](https://www.philips-hue.com/) is a line of smart color-changing LED lamps and bulbs that can be controlled wirelessly.
+The Philips Hue node allows you to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
+
+On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/philipshue/).
+    Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Philips Hue integrations](https://n8n.io/integrations/philips-hue/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

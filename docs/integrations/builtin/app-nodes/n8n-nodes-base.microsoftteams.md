@@ -1,6 +1,6 @@
 # Microsoft Teams
 
-The Microsoft Teams node allows you to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including creating, updating, deleting, and getting clients, sites and tickets. 
+The Microsoft Teams node allows you to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including creating and deleting, channels, messages, and tasks. 
 
 On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
 

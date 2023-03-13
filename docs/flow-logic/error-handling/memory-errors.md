@@ -10,7 +10,7 @@ Error messages including **Problem running workflow**, **Connection Lost**, or *
 
 When self-hosting n8n, you may also see error messages such as **Allocation failed - JavaScript heap out of memory** in your server logs. 
 
-In most environments (including n8n cloud), n8n restarts automatically when encountering such an issue. However, when running n8n from the command line you might need to restart it manually.
+On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when encountering such an issue. However, when running n8n with npm you might need to restart it manually.
 
 ## Typical causes
 
@@ -50,6 +50,6 @@ However, as long as your sub-workflow does the heavy lifting for each batch and 
 
 This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it is often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
 
-## Avoid the n8n instance crashing
+## Avoid the n8n instance crashing when a workflow crashes
 
 This applies to self-hosting n8n. To avoid the entire n8n instance crashing when a workflow runs out of memory, you can run n8n in own mode rather than main mode. Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more information.

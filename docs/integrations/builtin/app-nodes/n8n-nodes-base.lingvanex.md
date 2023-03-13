@@ -1,9 +1,14 @@
 # LingvaNex
 
-[LingvaNex](https://lingvanex.com) is a service that translates text, web pages, text on images, documents between English and over 112 other languages.
+The LingvaNex node allows you to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
+
+On this page, you'll find a list of operations the LingvaNex node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/lingvanex/).
+    Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [LingvaNex integrations](https://n8n.io/integrations/lingvanex/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

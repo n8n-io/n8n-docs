@@ -1,9 +1,14 @@
 # Pushbullet
 
-[Pushbullet](https://www.pushbullet.com/) connects your devices and allows you to see your phone's notifications on your computer, transfer links, and files between devices.
+The Pushbullet node allows you to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
+
+On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushbullet/).
+    Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Pushbullet integrations](https://n8n.io/integrations/pushbullet/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

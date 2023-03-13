@@ -1,6 +1,6 @@
 # MQTT
 
-The MQTT node allows you to automate work in MQTT, and integrate MQTT with other applications. n8n has built-in support for a wide range of MQTT features, including transporting messages. 
+The MQTT node allows you to automate work in MQTT, and integrate MQTT with other applications. n8n supports transporting messages with MQTT.
 
 On this page, you'll find a list of operations the MQTT node supports and links to more resources.
 

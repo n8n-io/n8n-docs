@@ -5,7 +5,7 @@ The Pushover node allows you to automate work in Pushover, and integrate Pushove
 On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Pushover credentials](https://docs.n8n.io/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
+    Refer to [Pushover credentials](/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Pushover integrations](https://n8n.io/integrations/pushover/){:target="_blank" .external-link} list.

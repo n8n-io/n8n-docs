@@ -5,7 +5,7 @@ The One Simple API node allows you to automate work in One Simple API, and integ
 On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [One Simple API credentials](https://docs.n8n.io/integrations/builtin/credentials/onesimpleapi/) for guidance on setting up authentication. 
+    Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [One Simple API integrations](https://n8n.io/integrations/one-simple-api/){:target="_blank" .external-link} list.

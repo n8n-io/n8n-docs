@@ -5,7 +5,7 @@ The Microsoft OneDrive node allows you to automate work in Microsoft OneDrive, a
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft OneDrive credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+    Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive/){:target="_blank" .external-link} list.

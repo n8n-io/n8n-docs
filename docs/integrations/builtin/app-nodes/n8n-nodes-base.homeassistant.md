@@ -5,7 +5,7 @@ The Home Assistant node allows you to automate work in Home Assistant, and integ
 On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Home Assistant credentials](https://docs.n8n.io/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
+    Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link} list.

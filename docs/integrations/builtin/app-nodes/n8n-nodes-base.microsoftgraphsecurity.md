@@ -5,7 +5,7 @@ The Microsoft Graph Security node allows you to automate work in Microsoft Graph
 On this page, you'll find a list of operations the Microsoft Graph Security node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft Graph Security credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+    Refer to [Microsoft Graph Security credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft Graph Security integrations](https://n8n.io/integrations/microsoft-graph-security/){:target="_blank" .external-link} list.

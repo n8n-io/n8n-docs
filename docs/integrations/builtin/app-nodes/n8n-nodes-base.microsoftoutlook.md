@@ -5,7 +5,7 @@ The Microsoft Outlook node allows you to automate work in Microsoft Outlook, and
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft Outlook credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+    Refer to [Microsoft Outlook credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft Outlook integrations](https://n8n.io/integrations/microsoft-outlook/){:target="_blank" .external-link} list.

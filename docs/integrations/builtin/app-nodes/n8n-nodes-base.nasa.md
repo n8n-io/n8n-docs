@@ -5,7 +5,7 @@ The NASA node allows you to automate work in NASA, and integrate NASA with other
 On this page, you'll find a list of operations the NASA node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [NASA credentials](https://docs.n8n.io/integrations/builtin/credentials/nasa/) for guidance on setting up authentication. 
+    Refer to [NASA credentials](/integrations/builtin/credentials/nasa/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [NASA integrations](https://n8n.io/integrations/nasa/){:target="_blank" .external-link} list.

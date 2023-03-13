@@ -5,7 +5,7 @@ The Pipedrive node allows you to automate work in Pipedrive, and integrate Piped
 On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Pipedrive credentials](https://docs.n8n.io/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
+    Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Pipedrive integrations](https://n8n.io/integrations/pipedrive/){:target="_blank" .external-link} list.

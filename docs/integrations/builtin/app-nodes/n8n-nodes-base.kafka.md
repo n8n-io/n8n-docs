@@ -5,7 +5,7 @@ The Kafka node allows you to automate work in Kafka, and integrate Kafka with ot
 On this page, you'll find a list of operations the Kafka node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Kafka credentials](https://docs.n8n.io/integrations/builtin/credentials/kafka/) for guidance on setting up authentication. 
+    Refer to [Kafka credentials](/integrations/builtin/credentials/kafka/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Kafka integrations](https://n8n.io/integrations/kafka/){:target="_blank" .external-link} list.

@@ -5,7 +5,7 @@ The OpenWeatherMap node allows you to automate work in OpenWeatherMap, and integ
 On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [OpenWeatherMap credentials](https://docs.n8n.io/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
+    Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [OpenWeatherMap integrations](https://n8n.io/integrations/openweathermap/){:target="_blank" .external-link} list.

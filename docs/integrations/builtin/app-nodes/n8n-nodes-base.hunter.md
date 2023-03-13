@@ -5,7 +5,7 @@ The Hunter node allows you to automate work in Hunter, and integrate Hunter with
 On this page, you'll find a list of operations the Hunter node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Hunter credentials](https://docs.n8n.io/integrations/builtin/credentials/hunter/) for guidance on setting up authentication. 
+    Refer to [Hunter credentials](/integrations/builtin/credentials/hunter/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Hunter integrations](https://n8n.io/integrations/hunter/){:target="_blank" .external-link} list.

@@ -5,7 +5,7 @@ The Reddit node allows you to automate work in Reddit, and integrate Reddit with
 On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Reddit credentials](https://docs.n8n.io/integrations/builtin/credentials/reddit/) for guidance on setting up authentication. 
+    Refer to [Reddit credentials](/integrations/builtin/credentials/reddit/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Reddit integrations](https://n8n.io/integrations/reddit/){:target="_blank" .external-link} list.

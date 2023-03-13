@@ -5,7 +5,7 @@ The NocoDB node allows you to automate work in NocoDB, and integrate NocoDB with
 On this page, you'll find a list of operations the NocoDB node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [NocoDB credentials](https://docs.n8n.io/integrations/builtin/credentials/nocodb/) for guidance on setting up authentication. 
+    Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [NocoDB integrations](https://n8n.io/integrations/nocodb/){:target="_blank" .external-link} list.

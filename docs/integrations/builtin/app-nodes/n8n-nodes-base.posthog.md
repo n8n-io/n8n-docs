@@ -5,7 +5,7 @@ The PostHog node allows you to automate work in PostHog, and integrate PostHog w
 On this page, you'll find a list of operations the PostHog node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [PostHog credentials](https://docs.n8n.io/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
+    Refer to [PostHog credentials](/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [PostHog integrations](https://n8n.io/integrations/posthog/){:target="_blank" .external-link} list.

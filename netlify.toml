@@ -1,3 +1,7 @@
 [build]
   command = "pip install _submodules/insiders && mkdocs build"
   publish = "site"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"

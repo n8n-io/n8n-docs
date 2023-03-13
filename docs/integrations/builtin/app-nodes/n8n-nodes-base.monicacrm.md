@@ -1,9 +1,15 @@
 # Monica CRM
 
-[Monica CRM](https://www.monicahq.com/) is an open-source web application to organize and record your interactions with your loved ones.
+The Monica CRM node allows you to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
+
+On this page, you'll find a list of operations the Monica CRM node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/monicacrm/).
+    Refer to [Monica CRM credentials](https://docs.n8n.io/integrations/builtin/credentials/monicacrm/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Monica CRM integrations](https://n8n.io/integrations/monica-crm/){:target="_blank" .external-link} list.
+
 
 
 ## Basic operations

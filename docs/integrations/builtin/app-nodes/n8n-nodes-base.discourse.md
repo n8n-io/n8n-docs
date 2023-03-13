@@ -5,7 +5,7 @@ The Discourse node allows you to automate work in Discourse, and integrate Disco
 On this page, you'll find a list of operations the Discourse node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Discourse credentials](https://docs.n8n.io/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
+    Refer to [Discourse credentials](/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Discourse integrations](https://n8n.io/integrations/discourse/){:target="_blank" .external-link} list.

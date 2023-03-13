@@ -1,9 +1,14 @@
 # Raindrop
 
-[Raindrop](https://raindrop.io) is a bookmarking tool that allows you to organize your bookmarks.
+The Raindrop node allows you to automate work in Raindrop, and integrate Raindrop with other applications. n8n has built-in support for a wide range of Raindrop features, including getting users, deleting tags, and creating, updating, deleting and getting collections and bookmarks. 
+
+On this page, you'll find a list of operations the Raindrop node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/raindrop/).
+    Refer to [Raindrop credentials](/integrations/builtin/credentials/raindrop/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Raindrop integrations](https://n8n.io/integrations/raindrop/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

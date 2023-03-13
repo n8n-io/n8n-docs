@@ -5,7 +5,7 @@ The LinkedIn node allows you to automate work in LinkedIn, and integrate LinkedI
 On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [LinkedIn credentials](https://docs.n8n.io/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
+    Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [LinkedIn integrations](https://n8n.io/integrations/linkedin/){:target="_blank" .external-link} list.

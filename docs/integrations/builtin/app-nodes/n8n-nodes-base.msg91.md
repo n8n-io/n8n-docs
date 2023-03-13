@@ -1,6 +1,6 @@
 # MSG91
 
-The MSG91 node allows you to automate work in MSG91, and integrate MSG91 with other applications. n8n has built-in support for a wide range of MSG91 features, including sending SMS. 
+The MSG91 node allows you to automate work in MSG91, and integrate MSG91 with other applications. n8n supports sending SMS with MSG91.
 
 On this page, you'll find a list of operations the MSG91 node supports and links to more resources.
 

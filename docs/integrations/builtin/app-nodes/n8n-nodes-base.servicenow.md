@@ -1,9 +1,14 @@
 # ServiceNow
 
-[ServiceNow](https://www.servicenow.com/) is a cloud computing platform to help companies manage digital workflows for their operations.
+The ServiceNow node allows you to automate work in ServiceNow, and integrate ServiceNow with other applications. n8n has built-in support for a wide range of ServiceNow features, including getting business services, departments, configuration items, and dictionary as well as creating, updating, and deleting incidents, users, and table records. 
+
+On this page, you'll find a list of operations the ServiceNow node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/servicenow/).
+    Refer to [ServiceNow credentials](https://docs.n8n.io/integrations/builtin/credentials/servicenow/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [ServiceNow integrations](https://n8n.io/integrations/servicenow/){:target="_blank" .external-link} list.
 
 
 ## Basic operations

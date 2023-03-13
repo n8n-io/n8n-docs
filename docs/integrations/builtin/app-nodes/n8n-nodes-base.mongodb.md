@@ -1,9 +1,15 @@
 # MongoDB
 
-[MongoDB](https://www.mongodb.com/) is a cross-platform document-oriented database program developed by MongoDB Inc. It is classified as a NoSQL database program. MongoDB uses JSON-like documents with optional schemas.
+The MongoDB node allows you to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
+
+On this page, you'll find a list of operations the MongoDB node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mongodb/).
+    Refer to [MongoDB credentials](/integrations/builtin/credentials/mongodb/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MongoDB integrations](https://n8n.io/integrations/mongodb/){:target="_blank" .external-link} list.
+
 
 
 ## Operations

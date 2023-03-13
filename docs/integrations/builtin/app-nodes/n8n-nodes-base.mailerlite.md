@@ -1,9 +1,14 @@
 # MailerLite
 
-[MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
+The MailerLite node allows you to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
+
+On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite/).
+    Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MailerLite integrations](https://n8n.io/integrations/mailerlite/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Lemlist
 
-[Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
+The Lemlist node allows you to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
+
+On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist/).
+    Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Lemlist integrations](https://n8n.io/integrations/lemlist/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

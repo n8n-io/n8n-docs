@@ -1,9 +1,15 @@
 # Microsoft OneDrive
 
-[Microsoft OneDrive](https://onedrive.live.com/) is a file hosting service and synchronization service operated by Microsoft.
+The Microsoft OneDrive node allows you to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
+
+On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+    Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive/){:target="_blank" .external-link} list.
+
 
 
 ## Operations

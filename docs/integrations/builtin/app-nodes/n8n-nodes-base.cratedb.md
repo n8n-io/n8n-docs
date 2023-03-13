@@ -5,7 +5,7 @@ The CrateDB node allows you to automate work in CrateDB, and integrate CrateDB w
 On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [CrateDB credentials](https://docs.n8n.io/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
+    Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [CrateDB integrations](https://n8n.io/integrations/cratedb/){:target="_blank" .external-link} list.

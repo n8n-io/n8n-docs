@@ -7,6 +7,7 @@ On this page, you'll find a list of operations the Google Chat node supports and
 !!! note "Credentials"
     Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
+
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Chat integrations](https://n8n.io/integrations/google-chat/){:target="_blank" .external-link} list.
 

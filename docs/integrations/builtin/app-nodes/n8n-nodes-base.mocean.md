@@ -1,9 +1,15 @@
 # Mocean
 
-[Mocean](https://www.moceanapi.com/) makes sending and receiving SMS easy. It also has voice API which allows you to make outbound and inbound calls.
+The Mocean node allows you to automate work in Mocean, and integrate Mocean with other applications. n8n has built-in support for a wide range of Mocean features, including sending SMS, and voice messages. 
+
+On this page, you'll find a list of operations the Mocean node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mocean/).
+    Refer to [Mocean credentials](/integrations/builtin/credentials/mocean/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Mocean integrations](https://n8n.io/integrations/mocean/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations

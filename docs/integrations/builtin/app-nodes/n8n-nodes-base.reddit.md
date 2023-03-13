@@ -1,9 +1,14 @@
 # Reddit
 
-[Reddit](https://www.reddit.com) is a social news aggregation, web content rating, and discussion website.
+The Reddit node allows you to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
+
+On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/reddit/).
+    Refer to [Reddit credentials](/integrations/builtin/credentials/reddit/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Reddit integrations](https://n8n.io/integrations/reddit/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

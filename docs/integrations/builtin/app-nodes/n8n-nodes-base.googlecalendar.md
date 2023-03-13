@@ -5,7 +5,7 @@ The Google Calendar node allows you to automate work in Google Calendar, and int
 On this page, you'll find a list of operations the Google Calendar node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Google Calendar credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Calendar integrations](https://n8n.io/integrations/google-calendar/){:target="_blank" .external-link} list.

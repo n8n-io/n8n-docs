@@ -1,9 +1,14 @@
 # Quick Base
 
-[Quick Base](https://www.quickbase.com/) is a low-code application development platform. It allows you to connect data, integrate your systems in real-time, and orchestrate automated workflows using simple business logic.
+The Quick Base node allows you to automate work in Quick Base, and integrate Quick Base with other applications. n8n has built-in support for a wide range of Quick Base features, including creating, updating, deleting, and getting records, as well as getting fields, and downloading files. 
+
+On this page, you'll find a list of operations the Quick Base node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/quickbase/).
+    Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Quick Base integrations](https://n8n.io/integrations/quick-base/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

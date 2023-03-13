@@ -1,9 +1,14 @@
 # Rundeck
 
-[Rundeck](https://www.rundeck.com/) is an open-source runbook automation for incident management, business continuity, and self-service operations.
+The Rundeck node allows you to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
+
+On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/rundeck/).
+    Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Rundeck integrations](https://n8n.io/integrations/rundeck/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

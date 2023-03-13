@@ -1,9 +1,14 @@
 # Pushover
 
-[Pushover](https://www.pushover.net/) is a simple push notification service that integrates easily into web apps, network monitors, shell scripts, servers, and anything else that needs to send alerts to your Android, iPhone, iPad, and Desktop.
+The Pushover node allows you to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
+
+On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushover/).
+    Refer to [Pushover credentials](https://docs.n8n.io/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Pushover integrations](https://n8n.io/integrations/pushover/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

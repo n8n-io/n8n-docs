@@ -1,9 +1,14 @@
 # Peekalink
 
-[Peekalink](https://peekalink.io) is an API that allows developers to preview links on the web.
+The Peekalink node allows you to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
+
+On this page, you'll find a list of operations the Peekalink node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/peekalink/).
+    Refer to [Peekalink credentials](https://docs.n8n.io/integrations/builtin/credentials/peekalink/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Peekalink integrations](https://n8n.io/integrations/peekalink/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Microsoft SQL
 
-[Microsoft SQL](https://www.microsoft.com/en-us/sql-server) is a relational database management system. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.
+The Microsoft SQL node allows you to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
+
+On this page, you'll find a list of operations the Microsoft SQL node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoftsql/).
+    Refer to [Microsoft SQL credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoftsql/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft SQL integrations](https://n8n.io/integrations/microsoft-sql/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

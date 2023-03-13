@@ -1,9 +1,14 @@
 # Jira
 
-[Jira](https://www.atlassian.com/software/jira) is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
+The Jira node allows you to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
+
+On this page, you'll find a list of operations the Jira node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/jira/).
+    Refer to [Jira credentials](https://docs.n8n.io/integrations/builtin/credentials/jira/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Jira integrations](https://n8n.io/integrations/jira-software/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

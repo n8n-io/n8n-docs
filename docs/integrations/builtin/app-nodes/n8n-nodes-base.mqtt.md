@@ -1,9 +1,15 @@
 # MQTT
 
-[MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
+The MQTT node allows you to automate work in MQTT, and integrate MQTT with other applications. n8n supports transporting messages with MQTT.
+
+On this page, you'll find a list of operations the MQTT node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mqtt/).
+    Refer to [MQTT credentials](https://docs.n8n.io/integrations/builtin/credentials/mqtt/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MQTT integrations](https://n8n.io/integrations/mqtt/){:target="_blank" .external-link} list.
+
 
 
 ## Example Usage

@@ -5,7 +5,7 @@ The Google Cloud Natural Language node allows you to automate work in Google Clo
 On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Google Cloud Natural Language credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Natural Language integrations](https://n8n.io/integrations/google-cloud-natural-language/){:target="_blank" .external-link} list.

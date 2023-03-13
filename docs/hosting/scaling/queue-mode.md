@@ -103,7 +103,7 @@ When running n8n with queues, all the production workflow executions get process
 Redis is used as the message broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
 
 !!! note "Migrate data"
-    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/reference/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
+    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
 
 
 ## Webhook processors

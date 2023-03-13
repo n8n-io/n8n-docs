@@ -1,9 +1,14 @@
 # Invoice Ninja
 
-[Invoice Ninja](https://www.invoiceninja.com/) is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
+The Invoice Ninja node allows you to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
+
+On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceninja/).
+    Refer to [Invoice Ninja credentials](https://docs.n8n.io/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Invoice Ninja integrations](https://n8n.io/integrations/invoice-ninja/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

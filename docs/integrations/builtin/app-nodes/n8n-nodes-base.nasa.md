@@ -1,6 +1,6 @@
 # NASA
 
-The NASA node allows you to automate work in NASA, and integrate NASA with other applications. n8n has built-in support for a wide range of NASA features, including retrieving earth assets, earth imagery, feeds, and looking up asteroids. 
+The NASA node allows you to automate work in NASA, and integrate NASA with other applications. n8n has built-in support for a wide range of NASA features, including retrieving imagery and data. 
 
 On this page, you'll find a list of operations the NASA node supports and links to more resources.
 

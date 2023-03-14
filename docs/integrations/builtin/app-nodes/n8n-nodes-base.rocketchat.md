@@ -1,6 +1,6 @@
 # Rocket.Chat
 
-The Rocket.Chat node allows you to automate work in Rocket.Chat, and integrate Rocket.Chat with other applications. n8n has built-in support for a wide range of Rocket.Chat features, including posting a message to a channel or a direct message. 
+The Rocket.Chat node allows you to automate work in Rocket.Chat, and integrate Rocket.Chat with other applications. n8n supports posting messages to channels, and sending direct messages, with Rocket.Chat. 
 
 On this page, you'll find a list of operations the Rocket.Chat node supports and links to more resources.
 

@@ -1,9 +1,14 @@
 # RabbitMQ
 
-[RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.
+The RabbitMQ node allows you to automate work in RabbitMQ, and integrate RabbitMQ with other applications. n8n has built-in support for a wide range of RabbitMQ features, including accepting, and forwarding messages. 
+
+On this page, you'll find a list of operations the RabbitMQ node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/rabbitmq/).
+    Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [RabbitMQ integrations](https://n8n.io/integrations/rabbitmq/){:target="_blank" .external-link} list.
 
 
 ## Example Usage

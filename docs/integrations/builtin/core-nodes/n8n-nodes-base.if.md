@@ -1,6 +1,16 @@
-# IF
+---
+tags:
+  - if
+  - if node
+hide:
+  - tags
+search:
+  boost: 5
+---
 
-The IF node is used to split a workflow conditionally based on comparison operations.
+# If
+
+The If node is used to split a workflow conditionally based on comparison operations.
 
 ## Node Reference
 

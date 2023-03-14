@@ -1,9 +1,14 @@
 # Segment
 
-[Segment](https://segment.com/) is a customer data platform (CDP) that helps you collect, clean, and control your customer data.
+The Segment node allows you to automate work in Segment, and integrate Segment with other applications. n8n has built-in support for a wide range of Segment features, including adding users to groups, creating identities, and tracking activities. 
+
+On this page, you'll find a list of operations the Segment node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/segment/).
+    Refer to [Segment credentials](/integrations/builtin/credentials/segment/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Segment integrations](https://n8n.io/integrations/segment/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

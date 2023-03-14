@@ -29,4 +29,11 @@ The endpoints are:
 | GET | /templates/categories |
 | GET | /health |
 
-To learn about the data structure, try out the endpoints. You can also [contact us](mailto:support@n8n.io) for more support.
+To learn about the data structure, try out n8n's API endpoints:
+
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)  
+[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)  
+[https://api.n8n.io/templates/workflows](https://api.n8n.io/templates/workflows)  
+[https://api.n8n.io/health](https://api.n8n.io/health)  
+
+You can also [contact us](mailto:support@n8n.io) for more support.

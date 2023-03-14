@@ -13,6 +13,102 @@ hide:
 
 New features and bug fixes for n8n.
 
+<div id="02191" markdown>
+
+## n8n@0.219.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.219.0...n8n@0.219.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-10
+
+This is a bug fix release. It resolves an issue with the HTTP Request node by removing the streaming response.
+
+</div>
+
+<div id="02190" markdown>
+
+## n8n@0.219.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.218.0...n8n@0.219.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-09
+
+### New features
+
+* Core: add `advancedFilters` feature flag.
+* Core: add SAML post and test endpoints.
+* Core: add SAML XML validation.
+* Core: limit user changes when SAML is enabled.
+* Core: refactor and add SAML preferences for service provider instance.
+* Editor: don't automatically add the manual trigger when the user adds another node.
+* Editor: redirect users to canvas if they don't have any workflows.
+
+### Node enhancements
+
+* Cal Trigger Node: update to support v2 webhooks.
+* HTTP Request Node: move from binary buffer to binary streaming.
+* Mattermost Node: add self signed certificate support.
+* Microsoft SQL Node: add support for self signed certificates.
+* Mindee Node: add support for v4 API.
+* Slack Node: move from binary buffer to binary streaming.
+
+### Bug fixes
+
+* Core: allow serving icons for custom nodes with npm scoped names.
+* Core: rename `advancedFilters` to `advancedExecutionFilters`.
+* Editor: fix ElButton overrides.
+* Editor: only fetch new versions at app launch.
+* Fetch credentials on workflows view to include in duplicated workflows.
+* Fix color discrepancies for executions list items.
+* OpenAI Node: fix issue with expressions not working with chat complete.
+* OpenAI Node: simplify code.
+
+### Contributors
+
+[Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
+
+</div>
+
+<div id="02180" markdown>
+
+## n8n@0.218.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.217.2...n8n@0.218.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-02
+
+This release contains node enhancements, bug fixes, and new features that lay groundwork for upcoming releases, along with some UX improvements.
+
+### New features
+
+* Add distribution test tracking.
+* Add events to enable onboarding checklist.
+* Core: add SAML login setup (for upcoming feature).
+* Core: add SAML settings and consolidate LDAP under SSO (for upcoming feature).
+* Editor: add missing documentation to autocomplete items for inline code editor.
+* Editor: Show parameter hint on multiline inputs.
+
+### Node enhancements
+
+* JIRA node: support binary streaming for very large binary files.
+* OpenAI node: add support for ChatGPT.
+* Telegram node: add parse mode option to Send Document operation.
+
+### Bug fixes
+
+* Core: fix execution pruning queries.
+* Core: fix filtering workflow by tags.
+* Core: revert isPending check on the user entity.
+* Fix issues with nodes missing in nodes panel.
+* Fix mapping paths when appending to empty expression.
+* Item Lists Node: tweak item list summarize field naming.
+* Prevent executions from displaying as running forever.
+* Show Execute Workflow node in the nodes panel.
+* Show RabbitMQ node in the nodes panel.
+* Stop showing mapping hint after mapping.
+
+--8<-- "_snippets/update-n8n.md"
+
+
+</div>
+
 <div id="02172" markdown>
 
 ## n8n@0.217.2
@@ -90,6 +186,7 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -199,6 +296,8 @@ This release contains new features, node enhancements, and bug fixes.
 ### Contributors
 
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -682,7 +781,7 @@ This release introduces [log streaming](/log-streaming/) for users on Enterprise
 
 #### Security audit
 
-This release adds a [security audit](/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+This release adds a [security audit](/hosting/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 
 </div>
 
@@ -4372,7 +4471,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 - Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/reference/keyboard-shortcuts/) for details.
+- Added new Editor UI shortcuts. See [Keyboard Shortcuts](/keyboard-shortcuts/) for details.
 - Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes
@@ -5094,7 +5193,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
 - The code editor does not get closed when clicked anywhere outside the editor
-- Added CLI commands to [export](/reference/cli-commands/#export-workflows-and-credentials) and [import](/reference/cli-commands/#import-workflows-and-credentials) credentials and workflows
+- Added CLI commands to [export](/hosting/cli-commands/#export-workflows-and-credentials) and [import](/hosting/cli-commands/#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 
 

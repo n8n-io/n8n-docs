@@ -5,7 +5,7 @@ The Gmail node allows you to automate work in Gmail, and integrate Gmail with ot
 On this page, you'll find a list of operations the Gmail node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Gmail credentials](/integrations/builtin/credentials/gmail/) for guidance on setting up authentication. 
+    Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Gmail integrations](https://n8n.io/integrations/gmail/){:target="_blank" .external-link} list.

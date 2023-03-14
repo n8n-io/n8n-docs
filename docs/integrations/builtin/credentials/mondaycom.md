@@ -1,18 +1,18 @@
 # monday.com
 
-You can use these credentials to authenticate the following nodes with monday.com.
+You can use these credentials to authenticate the following nodes:
 
 - [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/)
 
 ## Prerequisites
 
-Create a [monday.com](https://monday.com/) account.
+Create a [monday.com](https://monday.com/){:target=_blank .external-link} account.
 
-## Using Access Token
-1. Access your monday.com dashboard.
-2. Click on the user icon in the bottom left.
-3. Click on Admin.
-4. Click on API and generate an API V2 Token.
-5. Use the token in your monday.com node credentials in n8n.
+## Authentication
 
-![Getting Monday.com credentials](/_images/integrations/builtin/credentials/mondaycom/using-access-token.gif)
+You can authenticate using an access token or OAuth:
+
+* Refer to [Monday Developers | Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} for information on getting your access token.
+* Refer to [Monday Developers | OAuth ](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on setting up OAuth. You need to register a monday app, and get the client ID and client secret. Give it the scopes boards:write and boards:read.
+
+

@@ -5,7 +5,7 @@ The Microsoft SQL node allows you to automate work in Microsoft SQL, and integra
 On this page, you'll find a list of operations the Microsoft SQL node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft SQL credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoftsql/) for guidance on setting up authentication. 
+    Refer to [Microsoft SQL credentials](/integrations/builtin/credentials/microsoftsql/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft SQL integrations](https://n8n.io/integrations/microsoft-sql/){:target="_blank" .external-link} list.

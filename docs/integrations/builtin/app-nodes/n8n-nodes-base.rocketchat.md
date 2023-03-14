@@ -5,7 +5,7 @@ The Rocket.Chat node allows you to automate work in Rocket.Chat, and integrate R
 On this page, you'll find a list of operations the Rocket.Chat node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Rocket.Chat credentials](https://docs.n8n.io/integrations/builtin/credentials/rocketchat/) for guidance on setting up authentication. 
+    Refer to [Rocket.Chat credentials](/integrations/builtin/credentials/rocketchat/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Rocket.Chat integrations](https://n8n.io/integrations/rocketchat/){:target="_blank" .external-link} list.

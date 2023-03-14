@@ -5,7 +5,7 @@ The Microsoft Teams node allows you to automate work in Microsoft Teams, and int
 On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+    Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft Teams integrations](https://n8n.io/integrations/microsoft-teams/){:target="_blank" .external-link} list.

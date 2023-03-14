@@ -1,6 +1,6 @@
 # Autopilot
 
-The Autopilot node allows you to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, reading, listing, updating, removing contact journey, and lists.
+The Autopilot node allows you to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, deleting, and updating contacts, as well as adding contacts to a list.
 
 On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
 

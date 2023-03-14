@@ -69,6 +69,24 @@ Output all possible item combinations, while merging fields with the same name.
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
 
+#### Options
+
+When combining branches, you can set **Options**:
+
+For all modes:
+
+* **Clash handling**: choose how to merge when branches clash, or when there are sub-fields.
+* **Fuzzy compare**: whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
+
+When merging by field:
+
+* **Disable dot notation**: this prevents accessing child fields using `parent.child` in the field name.
+* **Multiple matches**: choose how n8n handles multiple matches when comparing branches.
+
+When merging by position:
+
+**Include Any Unpaired Items**: choose whether to keep or discard unpaired items.
+
 ### Choose branch
 
 Choose which input to keep. This option always waits until the data from both inputs is available. You can keep the data from Input 1 or Input 2, or you can output a single empty item. The node outputs the data from the chosen input, without changing it.

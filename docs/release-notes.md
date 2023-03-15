@@ -15,31 +15,9 @@ New features and bug fixes for n8n.
 
 You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
 
-<div id="02154" markdown>
 
-## n8n@0.215.4
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215.4){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-03-14
 
-This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-</div>
-
-<div id="02145" markdown>
-
-## n8n@0.214.5
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214.5){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-03-14
-
-This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-</div>
 
 <div id="02191" markdown>
 
@@ -54,18 +32,7 @@ This is a bug fix release. It resolves an issue with the HTTP Request node by re
 
 </div>
 
-<div id="02163" markdown>
 
-## n8n@0.216.3
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.2...n8n@0.216.3){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-03-09
-
-This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-</div>
 
 <div id="02190" markdown>
 
@@ -235,6 +202,19 @@ This release contains new features and bug fixes. It includes improvements to th
 
 </div>
 
+<div id="02163" markdown>
+
+## n8n@0.216.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.2...n8n@0.216.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-09
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
 <div id="02162" markdown>
 
 ## n8n@0.216.2
@@ -247,6 +227,19 @@ This is a bug fix release.
 ### Bug fixes
 
 Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
+
+</div>
+
+<div id="02154" markdown>
+
+## n8n@0.215.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-14
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -268,6 +261,20 @@ This is a bug fix release. It contains an important security fix.
 * Core: the user update endpoint should only allow updating email, first name, and last name.
 
 </div>
+
+<div id="02145" markdown>
+
+## n8n@0.214.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-14
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
 
 <div id="02144" markdown>
 

@@ -1,3 +1,12 @@
+---
+description: Guidance on configuring and using the webhook node in n8n.
+tags:
+  - webhook set route parameters
+  - get webhook URL
+hide:
+  - tags
+---
+
 # Webhook
 
 The Webhook node allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook){:target=_blank .external-link}, which can receive data from apps and services when an event occurs. It's a trigger node, which means it can start an n8n workflow. This allows services to connect to n8n and run a workflow.
@@ -32,55 +41,71 @@ When working with a Production webhook, ensure that you have saved and activated
 
 These are the main node configuration fields.
 
-* **Webhook URLs**
-    - **Production**: a production webhook is only registered when a workflow has been activated (via the switch on the top right of the page). You will never see its data in the Editor UI. To save the executions, you can either set that as a global default or you can specify that on a per-workflow basis in the workflow settings. You will then see the data from the workflow under ‘Past Executions'.
-    - **Test**: A Test webhook is only registered in the time between executing a workflow via the UI and until the first call gets made (when it displays “waiting for Webhook call”). After the Test webhook gets called for the first time, it displays the data in the Editor UI, and then gets deactivated.
-
-* **Authentication** [TODO]: The Webhook node supports two methods of authenticating a request that it receives:
-	* [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link}: a method of authentication where you must include the username and password in the request header.
-	* [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target=_blank .external-link}: a method of authentication where the specified header parameter must be passed along with the request. This method can be used when you want to authenticate using an API key or an access token, for example.
-		!!! tip  Keep in mind
-    		The **Credential Data** required for Header Auth credentials will vary on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` would be `Authorization` and the `Value` would be `Bearer <token>`.
-		
-
-* **HTTP Method**: the Webhook node supports standard [HTTP Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}.
-* **Path**: by default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. You can manually specify a URL path. For example, you may need to do this if you use n8n to prototype an API, and want consistent endpoint URLs.
-* **Respond**:
-    - **Immediately**: the Webhook node returns the response code and the message **Workflow got started**.
-    - **When Last Node Finishes**: the Webhook node returns the response code and the data output from the last node executed in the workflow.
-		- **Using 'Respond to Webhook' Node**: the Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
-* **Response Code**: customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} that the Webhook node returns upon successful execution.
-* **Response Data**: choose what data to include in the response body.
-
-## Node options
-
-[TODO: might want a table. Availability is a pain]
-
-Select **Add Option** to view more configuration options. The available options depend on your node parameters.
-
-* **Binary Data**: this option is available when the Webhook node is set to receive POST requests. Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
-* **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
-* **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
-* **Response Content-Type**: choose the format for the webhook body.
-* **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
-* **Property Name**: by default, n8n returns all available data. For example, if you choose to respond when the last node finishes, n8n returns all data from the last node. You can choose to return 
-
-
-## Get the webhook URLs
+### Webhook URLs
 
 The Webhook node has two URLs: test URL and production URL. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ![Screenshot of the webhook URLs](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
 
-## Add route parameters
+* **Test**: n8n registers a test webhook when you select **Listen for event** or **Execute workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
+* **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Execution** tab in the workflow, then select the workflow execution you want to view.
 
-Use the **Path** field to add route parameters to the webhook URL path. This is useful when creating an API. The **Path** field can take the following values:
+
+### Authentication
+
+You can require authentication for any service calling your webhook URL.
+
+* [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the username and password in the request header.
+* [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the specified header parameter. For example, use this method when you want to authenticate using an API key or an access token.
+		
+	!!! note  Credential data can vary
+			The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
+		
+
+### HTTP Method
+
+The Webhook node supports standard [HTTP Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}.
+
+### Path
+
+By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. 
+
+You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API, and want consistent endpoint URLs.
+
+The **Path** field can take the following formats:
 
 - `/:variable`
 - `/path/:variable`
 - `/:variable/path`
 - `/:variable1/path/:variable2`
 - `/:variable1/:variable2`
+
+### Respond
+
+* **Immediately**: the Webhook node returns the response code and the message **Workflow got started**.
+* **When Last Node Finishes**: the Webhook node returns the response code and the data output from the last node executed in the workflow.
+* **Using 'Respond to Webhook' Node**: the Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+
+### Response Code
+
+Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} that the Webhook node returns upon successful execution.
+
+### Response Data
+
+Choose what data to include in the response body.
+
+## Node options
+
+Select **Add Option** to view more configuration options. The available options depend on your node parameters.
+
+* **Binary Data**: this option is available when you set the Webhook node to receive POST, PATCH, or PUT requests. Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
+* **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
+* **No Response Body**: available when you set **Respond** to **Immediately**. Enable this to prevent n8n sending a body with the response.
+* **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
+* **Response Content-Type**: choose the format for the webhook body.
+* **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Property Name**: available when you set **Respond** to **Immediately** and your response data format is JSON. By default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
+
 
 ## Use the HTTP Request node to trigger the Webhook node
 
@@ -129,7 +154,7 @@ Replace `/path/to/file` with the path of the file you want to send.
 
 ## Send a response of type string
 
-To send a response of type string:
+By default, the response format is JSON or an array. To send a response of type string:
 
 1. Select **Response Mode** > **When Last Node Finishes**.
 2. Select **Response Data** > **First Entry JSON**.

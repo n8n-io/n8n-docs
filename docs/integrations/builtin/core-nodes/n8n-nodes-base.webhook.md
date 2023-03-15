@@ -98,14 +98,25 @@ Choose what data to include in the response body.
 
 Select **Add Option** to view more configuration options. The available options depend on your node parameters.
 
-* **Binary Data**: this option is available when you set the Webhook node to receive POST, PATCH, or PUT requests. Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
+
+* **Binary Data**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
 * **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
 * **No Response Body**: available when you set **Respond** to **Immediately**. Enable this to prevent n8n sending a body with the response.
 * **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: choose the format for the webhook body.
 * **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
-* **Property Name**: available when you set **Respond** to **Immediately** and your response data format is JSON. By default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
+* **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
 
+
+| Option | Required node configuration |
+| ------ | --------------------------- | 
+| Binary data | Either: <br /> HTTP Method > POST <br /> HTTP Method > PATCH <br /> HTTP Method > PUT |
+| Ignore Bots | Any |
+| No Response Body | Respond > Immediately |
+| Raw Body | Any |
+| Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
+| Response Headers | Any |
+| Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 
 ## Use the HTTP Request node to trigger the Webhook node
 

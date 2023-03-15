@@ -13,6 +13,8 @@ hide:
 
 New features and bug fixes for n8n.
 
+You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
+
 <div id="02191" markdown>
 
 ## n8n@0.219.1

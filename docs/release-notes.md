@@ -432,6 +432,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.213.0...n8n@0.214
 
 This release contains new features, node enhancements, and bug fixes. The expressions editor now supports autocomplete for some [built in data transformation functions](/code-examples/expressions/data-transformation-functions/). The new features also include two of interest to node builders: a way to allow users to drag and drop data keys, and the new HTML editor component.
 
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change to Luxon. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02140){:target=_blank .external-link}.
+
 ### New features
 
 <div class="n8n-new-features" markdown>

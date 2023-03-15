@@ -49,7 +49,7 @@ These are the main node configuration fields.
     - **Immediately**: the Webhook node returns the response code and the message **Workflow got started**.
     - **When Last Node Finishes**: the Webhook node returns the response code and the data output from the last node executed in the workflow.
 		- **Using 'Respond to Webhook' Node**: the Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
-* **Response Code**: customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blanke .external-link} that the Webhook node returns upon successful execution.
+* **Response Code**: customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} that the Webhook node returns upon successful execution.
 * **Response Data**: choose what data to include in the response body.
 
 ## Node options

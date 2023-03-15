@@ -31,6 +31,17 @@ You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subproce
 
 Email privacy@n8n.io to request data deletion.
 
+### Sub-processors
+
+This is a list of sub-processors authorized to process customer data for n8n's service. n8n audits each sub-processor's security controls and applicable regulations for the protection of personal data.
+
+| Sub-processor name | Contact details | Geographic location of processing |
+| ------------------ | --------------- | --------------------------------- |
+| Microsoft Azure | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | Germany (West Central Region) |
+| Hetzner Online | Hetzner Online GmbH <br /> Industriestr. 25 <br /> 91710 Gunzenhausen <br /> Germany <br /> data-protection@hetzner.com | Germany |
+
+Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=n8n.io){:target=_blank .external-link} to receive updates when n8n adds or changes a sub-processor.
+
 ### GDPR for self-hosted users
 
 --8<-- "_snippets/privacy-security/gdpr-self-hosted.md"

@@ -15,6 +15,32 @@ New features and bug fixes for n8n.
 
 You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
 
+<div id="02154" markdown>
+
+## n8n@0.215.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-14
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
+<div id="02145" markdown>
+
+## n8n@0.214.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-14
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
 <div id="02191" markdown>
 
 ## n8n@0.219.1
@@ -23,6 +49,21 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.219.0...n8n@0.219
 **Release date:** 2023-03-10
 
 This is a bug fix release. It resolves an issue with the HTTP Request node by removing the streaming response.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
+
+<div id="02163" markdown>
+
+## n8n@0.216.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.2...n8n@0.216.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-09
+
+This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 
@@ -66,6 +107,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.218.0...n8n@0.219
 ### Contributors
 
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 

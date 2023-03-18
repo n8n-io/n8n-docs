@@ -1,9 +1,14 @@
 # Spontit
 
-[Spontit](https://www.spontit.com/) enables you to send push notifications without your app or website. You can create different channels and send push notifications to specific followers.
+The Spontit node allows you to automate work in Spontit, and integrate Spontit with other applications. n8n has built-in support for a wide range of Spontit features, including creating a push notification. 
+
+On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/spontit/).
+    Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Spontit integrations](https://n8n.io/integrations/spontit/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

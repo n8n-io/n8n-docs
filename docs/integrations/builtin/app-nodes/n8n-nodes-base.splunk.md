@@ -1,9 +1,14 @@
 # Splunk
 
-[Splunk](https://www.splunk.com/) produces software for searching, monitoring, and analyzing machine-generated data via a Web-style interface. It indexes and correlates information in a container that makes it searchable, and makes it possible to generate alerts, reports and visualizations.
+The Splunk node allows you to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including retrieving fired alerts reports, as well as deleting and retrieving search configuration. 
+
+On this page, you'll find a list of operations the Splunk node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/splunk/).
+    Refer to [Splunk credentials](/integrations/builtin/credentials/splunk/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Splunk integrations](https://n8n.io/integrations/splunk/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

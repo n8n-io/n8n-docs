@@ -1,9 +1,14 @@
 # UptimeRobot
 
-[UptimeRobot](https://uptimerobot.com/) is an uptime monitoring service. It monitors your website every 5 mins. You can set an HTTP/S, ping, port, keyword, or heartbeat monitor and get notifications to your email, phone, Telegram, Slack, Twitter, etc.
+The UptimeRobot node allows you to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
+
+On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uptimerobot/).
+    Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [UptimeRobot integrations](https://n8n.io/integrations/uptimerobot/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

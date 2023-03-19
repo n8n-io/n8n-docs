@@ -1,9 +1,14 @@
 # Todoist
 
-[Todoist](https://todoist.com/) is a task management software that can be used for small teams, individuals and professionals to manage anything from a shopping list to major projects at work.
+The Todoist node allows you to automate work in Todoist, and integrate Todoist with other applications. n8n has built-in support for a wide range of Todoist features, including creating, updating, deleting, and getting tasks. 
+
+On this page, you'll find a list of operations the Todoist node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/todoist/).
+    Refer to [Todoist credentials](/integrations/builtin/credentials/todoist/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Todoist integrations](https://n8n.io/integrations/todoist/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

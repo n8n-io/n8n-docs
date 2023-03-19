@@ -1,9 +1,14 @@
 # urlscan.io
 
-[urlscan.io](https://urlscan.io/) is a free service to scan and analyse websites. When a URL is submitted to urlscan.io, an automated process will browse to the URL like a regular user and record the activity that this page navigation creates.
+The urlscan.io node allows you to automate work in urlscan.io, and integrate urlscan.io with other applications. n8n has built-in support for a wide range of urlscan.io features, including getting, and performing scans. 
+
+On this page, you'll find a list of operations the urlscan.io node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/urlscanio/).
+    Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [urlscan.io integrations](https://n8n.io/integrations/urlscanio/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

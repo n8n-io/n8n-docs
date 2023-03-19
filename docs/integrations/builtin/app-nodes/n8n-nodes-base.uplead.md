@@ -1,9 +1,14 @@
 # UpLead
 
-[UpLead](https://www.uplead.com/) helps increase sales by quickly finding, connecting, and engaging with qualified prospects.
+The UpLead node allows you to automate work in UpLead, and integrate UpLead with other applications. n8n has built-in support for a wide range of UpLead features, including getting company information. 
+
+On this page, you'll find a list of operations the UpLead node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uplead/).
+    Refer to [UpLead credentials](/integrations/builtin/credentials/uplead/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [UpLead integrations](https://n8n.io/integrations/uplead/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Twake
 
-[Twake](https://twake.app/) is an open-source collaborative workspace. It can be self-hosted and easily integrated into your teams. Twake offers features for collaboration like team chat, team calendar, video call, todo list, and storage space.
+The Twake node allows you to automate work in Twake, and integrate Twake with other applications. n8n has built-in support for a wide range of Twake features, including sending messages. 
+
+On this page, you'll find a list of operations the Twake node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/twake/).
+    Refer to [Twake credentials](/integrations/builtin/credentials/halopsa/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Twake integrations](https://n8n.io/integrations/halopsa/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

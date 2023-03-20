@@ -16,7 +16,40 @@ New features and bug fixes for n8n.
 You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
 
 
+<div id="02200" markdown>
 
+## n8n@0.220.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.219.1...n8n@0.220.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-16
+
+This release adds schema view to the node output panel, and includes node enhancements and bug fixes.
+
+### New features
+
+Core: improve SAML connection test.
+Editor: add basic Datatable and Pagination components.
+Editor: add support for schema view in the NDV output.
+Editor: don't show actions panel for single-action nodes.
+
+### Node enhancements
+
+* Item Lists Node: update actions text.
+* OpenAI Node: add support for GPT4 on chat completion.
+* Split In Batches Node: make it easier to combine processed data.
+
+### Bug fixes
+
+* Core: initialize license and LDAP in the correct order.
+* Editor: display correct error message for `$env` access.
+* Editor: fix autocomplete for complex expressions.
+* Editor: fix owner set-up checkbox wording.
+* Editor: properly handle mapping of dragged expression if it contains hyphen.
+* Metabase Node: fix issue with question results not correctly being returned.
+
+--8<-- "_snippets/update-n8n.md"
+
+</div>
 
 
 <div id="02191" markdown>

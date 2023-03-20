@@ -1,9 +1,14 @@
 # Zammad
 
-[Zammad](https://zammad.com/) is a free helpdesk and issue tracking system.
+The Zammad node allows you to automate work in Zammad, and integrate Zammad with other applications. n8n has built-in support for a wide range of Zammad features, including creating, retrieving, and deleting groups and organizations.
+
+On this page, you'll find a list of operations the Zammad node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/zammad/).
+    Refer to [Zammad credentials](/integrations/builtin/credentials/zammad/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Zammad integrations](https://n8n.io/integrations/zammad/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

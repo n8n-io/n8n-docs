@@ -12,11 +12,11 @@ When the node execution completes, it combines all the data and returns it throu
 - **Options**
     - **Reset:** if set to true, the node will reset.
 
-!!! warning
-    n8n natively processes incoming items. You may not need the Split In Batches node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
+!!! note "Check if you need this node"
+    n8n automatically processes incoming items. You may not need the SplitInBatches node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
 
 
-## Example usage: read RSS feed from two different sources
+## Example usage: Read RSS feed from two different sources
 
 This workflow allows you to read an RSS feed from two different sources using the Split In Batches node. You need the Split in Batches node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687){:target=_blank .external-link} on n8n.io.
 

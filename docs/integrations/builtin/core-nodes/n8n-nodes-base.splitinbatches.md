@@ -24,7 +24,7 @@ The example walks through building the workflow, but assumes you are already fam
 
 The final workflow looks like this:
 
-![A workflow with the Split In Batches node](/_images/integrations/builtin/core-nodes/splitinbatches/workflow.png) [TODO: update]
+![A workflow with the Split In Batches node](/_images/integrations/builtin/core-nodes/splitinbatches/workflow.png)
 
 1. Add the manual trigger.
 2. Add the Code node.

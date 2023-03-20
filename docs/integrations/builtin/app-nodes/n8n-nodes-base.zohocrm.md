@@ -1,9 +1,14 @@
 # Zoho CRM
 
-[Zoho CRM](https://www.zoho.com/crm/) is an online Sales CRM software that manages sales, marketing and support.
+The Zoho CRM node allows you to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
+
+On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/zoho/).
+    Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Zoho CRM integrations](https://n8n.io/integrations/zoho-crm/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

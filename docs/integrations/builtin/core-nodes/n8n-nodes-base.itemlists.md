@@ -6,11 +6,13 @@ The Item Lists node simplifies working with returned data that contain lists (ar
 
 The Item Lists node enables you to perform the following operations:
 
-* Split Out Items: create separate items from a list of data within an item.
-* Aggregate Items: merge multiple items into a single new item.
+* Concatenate Items: merge multiple items into a single new item.
+* Limit: remove items beyond a defined maximum number.
 * Remove Duplicates: remove extraneous items.
 * Sort: change the ordering of items.
-* Limit: remove items beyond a defined maximum number.
+* Split Out Items: create separate items from a list of data within an item.
+* Summarize: aggregate items together. Similar to a pivot table.
+
 
 
 ### Split Out Items

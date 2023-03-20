@@ -1,9 +1,14 @@
 # Wise
 
-[Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
+The Wise node allows you to automate work in Wise, and integrate Wise with other applications. n8n has built-in support for a wide range of Wise features, including getting profiles, exchange rates, and reciepients. 
+
+On this page, you'll find a list of operations the Wise node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/wise/).
+    Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Wise integrations](https://n8n.io/integrations/wise/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

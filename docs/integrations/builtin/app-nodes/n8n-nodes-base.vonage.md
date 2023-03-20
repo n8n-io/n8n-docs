@@ -1,9 +1,14 @@
 # Vonage
 
-[Vonage](https://vonage.com/) provides unified communications, contact centers, and programmable communications APIs.
+The Vonage node allows you to automate work in Vonage, and integrate Vonage with other applications. n8n has built-in support for a wide range of Vonage features, including sending SMS. 
+
+On this page, you'll find a list of operations the Vonage node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/vonage/).
+    Refer to [Vonage credentials](/integrations/builtin/credentials/vonage/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Vonage integrations](https://n8n.io/integrations/vonage/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

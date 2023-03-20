@@ -25,8 +25,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.219.1...n8n@0.220
 
 This release adds schema view to the node output panel, and includes node enhancements and bug fixes.
 
---8<-- "_snippets/update-n8n.md"
-
 ### New features
 
 Core: improve SAML connection test.
@@ -48,6 +46,8 @@ Editor: don't show actions panel for single-action nodes.
 * Editor: fix owner set-up checkbox wording.
 * Editor: properly handle mapping of dragged expression if it contains hyphen.
 * Metabase Node: fix issue with question results not correctly being returned.
+
+--8<-- "_snippets/update-n8n.md"
 
 </div>
 

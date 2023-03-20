@@ -1,9 +1,14 @@
 # WordPress
 
-[WordPress](https://wordpress.org/) is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.
+The WordPress node allows you to automate work in WordPress, and integrate WordPress with other applications. n8n has built-in support for a wide range of WordPress features, including creating, updating, and getting posts and users.
+
+On this page, you'll find a list of operations the WordPress node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/wordpress/).
+    Refer to [WordPress credentials](/integrations/builtin/credentials/wordpress/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [WordPress integrations](https://n8n.io/integrations/wordpress/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

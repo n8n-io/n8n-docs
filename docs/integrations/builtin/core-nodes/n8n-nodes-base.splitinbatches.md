@@ -8,7 +8,7 @@ When the node execution completes, it combines all the data and returns it throu
 
 ## Node reference
 
-- **Batch Size:** the number of items to return with each call.
+- **Batch Size**: the number of items to return with each call.
 - **Options**
     - **Reset:** if set to true, the node will reset.
 

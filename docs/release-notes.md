@@ -27,10 +27,10 @@ This release adds schema view to the node output panel, and includes node enhanc
 
 ### New features
 
-Core: improve SAML connection test.
-Editor: add basic Datatable and Pagination components.
-Editor: add support for schema view in the NDV output.
-Editor: don't show actions panel for single-action nodes.
+* Core: improve SAML connection test.
+* Editor: add basic Datatable and Pagination components.
+* Editor: add support for schema view in the NDV output.
+* Editor: don't show actions panel for single-action nodes.
 
 ### Node enhancements
 

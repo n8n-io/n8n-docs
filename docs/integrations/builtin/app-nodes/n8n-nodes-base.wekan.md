@@ -1,9 +1,14 @@
 # Wekan
 
-[Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.
+The Wekan node allows you to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
+
+On this page, you'll find a list of operations the Wekan node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/wekan/).
+    Refer to [Wekan credentials](/integrations/builtin/credentials/wekan/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Wekan integrations](https://n8n.io/integrations/wekan/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

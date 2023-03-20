@@ -1,9 +1,14 @@
 # Xero
 
-Xero offers an online cloud-based SaaS accounting software platform for small and medium-sized businesses.
+The Xero node allows you to automate work in Xero, and integrate Xero with other applications. n8n has built-in support for a wide range of Xero features, including creating, updating, and getting contacts and invoices. 
+
+On this page, you'll find a list of operations the Xero node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/xero/).
+    Refer to [Xero credentials](/integrations/builtin/credentials/xero/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Xero integrations](https://n8n.io/integrations/xero/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

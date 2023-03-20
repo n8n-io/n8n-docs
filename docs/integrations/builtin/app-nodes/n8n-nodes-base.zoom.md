@@ -1,9 +1,14 @@
 # Zoom
 
-[Zoom](https://zoom.us/) is a communications technology company that provides videotelephony and online chat services through a cloud-based peer-to-peer software platform and is used for teleconferencing, telecommuting, distance education, and social relations.
+The Zoom node allows you to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings. 
+
+On this page, you'll find a list of operations the Zoom node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/zoom/).
+    Refer to [Zoom credentials](/integrations/builtin/credentials/zoom/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Zoom integrations](https://n8n.io/integrations/zoom/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

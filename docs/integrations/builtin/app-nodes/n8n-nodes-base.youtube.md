@@ -1,9 +1,14 @@
 # YouTube
 
-[YouTube](https://www.youtube.com) is an online video-sharing platform. YouTube allows users to upload, view, rate, share, add to playlists, report, comment on videos, and subscribe to other users.
+The YouTube node allows you to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving, and updating channels, as well as creating and deleting playlists. 
+
+On this page, you'll find a list of operations the YouTube node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [YouTube credentials](/integrations/builtin/credentials/youtube/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [YouTube integrations](https://n8n.io/integrations/youtube/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

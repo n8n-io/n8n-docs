@@ -1,6 +1,6 @@
 # Twitter
 
-The Twitter node allows you to automate work in Twitter, and integrate Twitter with other applications. n8n has built-in support for a wide range of Twitter features, including create a direct message, and deleting, searching, liking and retweeting a tweet. 
+The Twitter node allows you to automate work in Twitter, and integrate Twitter with other applications. n8n has built-in support for a wide range of Twitter features, including creating direct messages, and deleting, searching, liking and retweeting a tweet. 
 
 On this page, you'll find a list of operations the Twitter node supports and links to more resources.
 

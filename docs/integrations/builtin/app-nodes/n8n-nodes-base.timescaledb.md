@@ -8,7 +8,7 @@ On this page, you'll find a list of operations the TimescaleDB node supports and
     Refer to [TimescaleDB credentials](https://docs.n8n.io/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [TimescaleDB integrations](https://n8n.io/integrations/halopsa/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [TimescaleDB integrations](https://n8n.io/integrations/timescaledb/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

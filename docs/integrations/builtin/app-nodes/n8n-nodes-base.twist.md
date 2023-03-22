@@ -1,6 +1,6 @@
 # Twist
 
-The Twist node allows you to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including archiving a channel, as well as creating/deleting comments on a thread. 
+The Twist node allows you to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including archiving a channel, as well as creating and deleting comments on a thread. 
 
 On this page, you'll find a list of operations the Twist node supports and links to more resources.
 

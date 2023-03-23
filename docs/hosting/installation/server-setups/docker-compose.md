@@ -85,7 +85,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
-    image: n8nio/n8n
+    image: docker.n8n.io/n8nio/n8n
     restart: always
     ports:
       - "127.0.0.1:5678:5678"
@@ -195,7 +195,7 @@ sudo docker-compose stop
 ### 9. Done
 
 n8n will now be reachable using the above defined subdomain + domain combination.
-The above example would result in: https://n8n.example.com
+The above example would result in: <https://n8n.example.com>
 
 n8n will only be reachable using `https` and not using `http`.
 

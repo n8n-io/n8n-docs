@@ -1,6 +1,6 @@
 # Zulip
 
-The Zulip node allows you to automate work in Zulip, and integrate Zulip with other applications. n8n has built-in support for a wide range of Zulip features, including creating, deleting, and getting users, streams, as well as sending messages . 
+The Zulip node allows you to automate work in Zulip, and integrate Zulip with other applications. n8n has built-in support for a wide range of Zulip features, including creating, deleting, and getting users, streams, as well as sending messages. 
 
 On this page, you'll find a list of operations the Zulip node supports and links to more resources.
 

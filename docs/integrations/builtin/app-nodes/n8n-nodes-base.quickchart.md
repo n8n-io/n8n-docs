@@ -5,7 +5,7 @@ The QuickChart node allows you to automate work in QuickChart, and integrate Qui
 On this page, you'll find a list of operations the QuickChart node supports and links to more resources.
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [ActiveCampaign integrations](https://n8n.io/integrations/quickchart/){:target="_blank" .external-link} list.
+	For usage examples and templates to help you get started, take a look at n8n's [QuickChart integrations](https://n8n.io/integrations/quickchart/){:target="_blank" .external-link} list.
 
 ## Operations
 

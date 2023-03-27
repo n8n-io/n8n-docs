@@ -1,6 +1,6 @@
 # urlscan.io
 
-The urlscan.io node allows you to automate work in urlscan.io, and integrate urlscan.io with other applications. n8n has built-in support for a wide range of urlscan.io features, including getting, and performing scans. 
+The urlscan.io node allows you to automate work in urlscan.io, and integrate urlscan.io with other applications. n8n has built-in support for a wide range of urlscan.io features, including getting and performing scans. 
 
 On this page, you'll find a list of operations the urlscan.io node supports and links to more resources.
 

@@ -1,9 +1,14 @@
 # Trello
 
-[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
+The Trello node allows you to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
+
+On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/trello/).
+    Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Trello integrations](https://n8n.io/integrations/trello/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

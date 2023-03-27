@@ -69,6 +69,8 @@ This release adds a node for [QuickChart](https://quickchart.io/){:target=_blank
 * HTTP Request Node: fix AWS credentials to automatically deconstruct the URL.
 * Split In Batches Node: roll back changes in v1 and create v2.
 
+--8<-- "_snippets/update-n8n.md"
+
 </div>
 
 <div id="02201" markdown>

@@ -1,9 +1,14 @@
 # Twilio
 
-[Twilio](https://www.twilio.com/) is a cloud communications platform as a service company. Twilio allows software developers to programmatically make and receive phone calls, send and receive text messages, and perform other communication functions using its web service APIs.
+The Twilio node allows you to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
+
+On this page, you'll find a list of operations the Twilio node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/twilio/).
+    Refer to [Twilio credentials](/integrations/builtin/credentials/twilio/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Twilio integrations](https://n8n.io/integrations/twilio/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

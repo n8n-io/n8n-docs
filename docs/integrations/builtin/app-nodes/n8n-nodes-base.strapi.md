@@ -1,9 +1,14 @@
 # Strapi
 
-[Strapi](https://www.strapi.io/) is an open-source Headless CMS that gives developers the freedom to choose their tools and frameworks while also allowing editors to easily manage and distribute their content.
+The Strapi node allows you to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
+
+On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/strapi/).
+    Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
 
 
 !!! warning "Strapi Version 4"

@@ -1,6 +1,6 @@
 # Spontit
 
-The Spontit node allows you to automate work in Spontit, and integrate Spontit with other applications. n8n has built-in support for a wide range of Spontit features, including creating a push notification. 
+The Spontit node allows you to automate work in Spontit, and integrate Spontit with other applications. n8n supports creating push notifications with Spontit. 
 
 On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 

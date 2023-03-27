@@ -1,6 +1,6 @@
 # UpLead
 
-The UpLead node allows you to automate work in UpLead, and integrate UpLead with other applications. n8n has built-in support for a wide range of UpLead features, including getting company information. 
+The UpLead node allows you to automate work in UpLead, and integrate UpLead with other applications. n8n supports several UpLead operations, including getting company information. 
 
 On this page, you'll find a list of operations the UpLead node supports and links to more resources.
 

@@ -6,11 +6,12 @@
     You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
 
 ## Operations
-
+* Chat
+	* Create
 * Image
 	* Create
 * Text
-	* complete
+	* Complete
 	* Edit
 	* Moderate
 

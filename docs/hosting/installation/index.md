@@ -1,5 +1,7 @@
 # Installation
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ## Installation guides for n8n
 
 * [npm](/hosting/installation/npm/)
@@ -22,3 +24,5 @@ Starting points for a Kubernetes setup:
 Configuration guides to help you get started on other platforms:
 
 * [Docker Compose](/hosting/installation/server-setups/docker-compose/)
+
+

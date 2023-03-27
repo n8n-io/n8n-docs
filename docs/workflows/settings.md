@@ -16,7 +16,7 @@ To open the settings:
 The following settings are available:
 
 * **Error Workflow**: select a workflow to trigger if the current workflow fails. See [Error workflows](/flow-logic/error-handling/error-workflows/) for more details.
-* **This workflow can be called by**: choose whether other workflow can call this workflow.
+* **This workflow can be called by**: choose whether other workflow can call this workflow. Requires [Workflow sharing](/workflows/sharing/).
 * **Timezone**: sets the timezone for the workflow to use. The default timezone is EDT (New York). The timezone setting is  important for the Schedule trigger node.
 * **Save failed production executions**: whether n8n should save failed executions for active workflows.
 * **Save successful production executions**: whether n8n should save successful executions for active workflows.

@@ -1,3 +1,8 @@
 [build]
-  command = "pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.0.5-insiders-4.28.1 && mkdocs build"
+  command = "pip install _submodules/insiders && mkdocs build"
   publish = "site"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+		Content-Security-Policy = "frame-ancestors 'none'"

@@ -18,10 +18,17 @@ Match the brand name exactly. For example, GitHub NOT Github
 -->
 # <Name> trigger
 
-_Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website._
+_Briefly summarize the node. For example:_ 
+
+_The Action Network trigger node allows you to respond to events in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network events, which includes . . ._
+
+_On this page, you'll find a list of operations the Action Network node supports, and links to more resources._
 
 !!! note "Credentials"
     You can find authentication information for this node _here (link to credentials doc)_.
+
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} page.
 
 ## Events
 
@@ -30,15 +37,15 @@ _Briefly summarize the service. This should be one or two sentences, and can oft
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [_Name's_ documentation]() for details about the operations.
-
 <!-- provide a link to the app node docs, if there is a trigger node for this service -->
 n8n provides an app node for _Name_. You can find the node docs [here]().
 
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
 View [example workflows and related content](){:target=_blank .external-link} on n8n's website.
+
+<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
+Refer to [_Name's_ documentation](){:target=_blank .external-link} for details about their API.
 
 <!-- 
 Add any other sections here. 

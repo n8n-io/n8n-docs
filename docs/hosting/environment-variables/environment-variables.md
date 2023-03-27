@@ -73,9 +73,10 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_VERSION_NOTIFICATIONS_ENABLED` | Boolean | `true` | When enabled, n8n sends notifications of new versions and security updates. |
 | `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | String | `https://api.n8n.io/versions/` | The endpoint to retrieve where version information. |
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | String | `https://docs.n8n.io/getting-started/installation/updating.html` | The URL displayed in the New Versions panel for additional information. |
-| `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/reference/data-collection/) with n8n |
+| `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/privacy-security/data-collection/) with n8n |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | String | `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io` | Telemetry configuration for the frontend. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the backend. |
+| `N8N_PUSH_BACKEND` | String | `sse` | Choose whether the n8n backend uses server-sent events (`sse`) or WebSockets (`websocket`) to send changes to the UI. |
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 
@@ -151,6 +152,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `false` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_TIMEOUT` | Number | `3600` | The timeout (in seconds) after n8n prunes execution data. |
+| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `0` (no limit) | Maximum number of executions to keep in the database. |
 
 ## Logs
 
@@ -176,7 +178,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `N8N_EVENTBUS_CHECKUNSENTINTERVAL` | Number | `0` | How often (in milliseconds) to check for unsent event messages. Can in rare cases cause a message to be sent twice. Set to `0` to disable it. |
 | `N8N_EVENTBUS_LOGWRITER_SYNCFILEACCESS` | Boolean | `false` | Whether all file access happens synchronously within the thread (true) or not (false). |
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | How many event log files to keep. |
-| `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `102400` | Maximum size (in bytes) of an event log file before a new one is started. |
+| `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one is started. |
 | `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
 
 ## Nodes
@@ -189,6 +191,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
 | `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to additional directories containing your custom nodes. |
+| `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | Whether community nodes are enabled (true) or not (false). |
 
 ## Queues
 
@@ -239,6 +242,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
 | `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | Whether to show onboarding tips when creating a new workflow (true) or not (false). |
 | `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
+| `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION` | String | `workflowsFromSameOwner` | Which workflows can call a workflow. Options are: `any`, `none`, `workflowsFromAList`, `workflowsFromSameOwner`. This feature requires [Workflow sharing](/workflows/sharing/). |
 
 ## License
 

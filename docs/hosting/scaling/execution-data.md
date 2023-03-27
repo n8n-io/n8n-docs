@@ -1,35 +1,35 @@
 # Execution data
 
-Depending on your executions settings and volume, your n8n database can quickly swell in size and eventually run out of storage.
 
-To avoid this and ensure continued proper functionality, it is recommended to ensure you are only saving the desired data and to enable pruning of old executions data.
+Depending on your executions settings and volume, your n8n database can quickly grow in size and eventually run out of storage.
 
-This is done by configuring the corresponding [environment variables](/hosting/environment-variables/environment-variables/#executions).
 
-## Saving data
+To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.
 
-You can select which executions data is saved, for example only those executions that result in an `Error`, so that only those records you want to keep are saved in the database.
+To do this, configure the corresponding [environment variables](/hosting/environment-variables/environment-variables/#executions).
 
-<code-group>
-<code-block title="npm">
+## Reduce saved data
+
+You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
+
 ```sh
-// Save executions ending in errors
+# npm
+# Save executions ending in errors
 export EXECUTIONS_DATA_SAVE_ON_ERROR=all
 
-// Save successful executions
+# Save successful executions
 export EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
 
-// Don't save node progress for each execution
+# Don't save node progress for each execution
 export EXECUTIONS_DATA_SAVE_ON_PROGRESS=false
 
-// Don't save manually launched executions
+# Don't save manually launched executions
 export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 
 ```
-</code-block>
 
-<code-block title="Docker">
 ```sh
+# Docker
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -40,10 +40,9 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-</code-block>
 
-<code-block title="docker-compose.yaml">
 ```yaml
+# Docker Compose
 n8n:
     environment:
       - EXECUTIONS_DATA_SAVE_ON_ERROR=all
@@ -51,30 +50,34 @@ n8n:
       - EXECUTIONS_DATA_SAVE_ON_PROGRESS=true
       - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 ```
-</code-block>
-</code-group>
 
-!!! note "Keep in mind"
-    These settings can also be configured on an individual workflow basis via the [workflow settings](/workflows/workflows/#workflow-settings).
 
-### Enable data pruning
+## Enable data pruning
 
-You can enable data pruning to automatically delete execution data older than a desired time period. If no `EXECUTIONS_DATA_MAX_AGE` is set, then 336 hours (14 days) is used by default.
 
-<code-group>
-<code-block title="npm">
+!!! note "Configuration at workflow level"
+    You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
+
+
+You can enable data pruning to automatically delete executions after a given time period. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
+
+You can choose to prune executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records. This can help with database performance issues, especially if you use SQLite.
+
+
 ```sh
-// Activate automatic data pruning
+# npm
+# Activate automatic data pruning
 export EXECUTIONS_DATA_PRUNE=true
 
-// Number of hours after execution data will be deleted
+# Number of hours after execution that n8n deletes data
 export EXECUTIONS_DATA_MAX_AGE=168
 
+# Number of executions to store
+export EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
 ```
-</code-block>
 
-<code-block title="Docker">
 ```sh
+# Docker
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -83,17 +86,15 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-</code-block>
-
-<code-block title="docker-compose.yaml">
 ```yaml
+# Docker Compose
 n8n:
     environment:
       - EXECUTIONS_DATA_PRUNE=true
       - EXECUTIONS_DATA_MAX_AGE=168
+	  	- EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
 ```
-</code-block>
-</code-group>
 
-!!! note "Keep in mind"
-    If you are running n8n using the default SQLite database, the disk-space of any pruned data is not automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.
+
+!!! note "SQLite"
+    If you run n8n using the default SQLite database, the disk-space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.

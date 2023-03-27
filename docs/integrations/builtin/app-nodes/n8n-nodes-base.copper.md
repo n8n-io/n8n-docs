@@ -1,9 +1,14 @@
 # Copper
 
-[Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite, targeted towards small and medium-sized businesses.
+The Copper node allows you to automate work in Copper, and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
+
+On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).
+    Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Copper integrations](https://n8n.io/integrations/copper/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

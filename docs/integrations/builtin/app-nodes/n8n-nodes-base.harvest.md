@@ -1,9 +1,14 @@
 # Harvest
 
-[Harvest](https://www.getharvest.com/) is a web-based time tracking tool that helps with its simple time tracking, fast online invoicing, and powerful reporting software.
+The Harvest node allows you to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
+
+On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/harvest/).
+    Refer to [Harvest credentials](/integrations/builtin/credentials/harvest/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Harvest integrations](https://n8n.io/integrations/harvest/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

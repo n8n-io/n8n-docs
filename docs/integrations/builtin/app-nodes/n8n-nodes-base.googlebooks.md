@@ -1,9 +1,15 @@
 # Google Books
 
-[Google Books](https://books.google.com) is a service from Google to browse, buy, or borrow books online.
+The Google Books node allows you to automate work in Google Books, and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving a specific bookshelf resource for the specified user, adding volume to a bookshelf, and getting volume.
+
+On this page, you'll find a list of operations the Google Books node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Books integrations](https://n8n.io/integrations/google-books/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

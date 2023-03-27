@@ -1,9 +1,15 @@
 # Microsoft Outlook
 
-[Microsoft Outlook](https://outlook.live.com/) is a personal information manager software system from Microsoft. Microsoft Outlook is an email client that includes calendaring, task managing, contact managing, note-taking, journal logging, and web browsing.
+The Microsoft Outlook node allows you to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
+
+On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+    Refer to [Microsoft Outlook credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft Outlook integrations](https://n8n.io/integrations/microsoft-outlook/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations

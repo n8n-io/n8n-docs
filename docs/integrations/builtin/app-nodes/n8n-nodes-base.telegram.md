@@ -1,9 +1,14 @@
 # Telegram
 
-[Telegram](https://telegram.org) is a cloud-based instant messaging and voice-over-IP service.
+The Telegram node allows you to automate work in Telegram, and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
+
+On this page, you'll find a list of operations the Telegram node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).
+    Refer to [Telegram credentials](/integrations/builtin/credentials/telegram/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Telegram integrations](https://n8n.io/integrations/telegram/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

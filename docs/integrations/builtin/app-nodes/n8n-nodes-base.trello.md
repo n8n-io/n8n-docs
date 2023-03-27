@@ -1,6 +1,6 @@
 # Trello
 
-The Trello node allows you to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating, and deleting attachments, as well as adding new members. 
+The Trello node allows you to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
 
 On this page, you'll find a list of operations the Trello node supports and links to more resources.
 

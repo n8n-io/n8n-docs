@@ -1,6 +1,6 @@
 # Twilio
 
-The Twilio node allows you to automate work in Twilio, and integrate Twilio with other applications. n8n has built-in support for a wide range of Twilio features, including sending MMS/SMS and Whatsapp Messages. 
+The Twilio node allows you to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
 
 On this page, you'll find a list of operations the Twilio node supports and links to more resources.
 

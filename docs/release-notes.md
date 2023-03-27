@@ -15,6 +15,72 @@ New features and bug fixes for n8n.
 
 You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
 
+<div id="02212" markdown>
+
+## n8n@0.221.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.1...n8n@0.221.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-24
+
+This is a bug fix release. It fixes an issue with `properties.success` that was causing `executionStatus` to sometimes be incorrect.
+
+</div>
+
+
+<div id="02211" markdown>
+
+## n8n@0.221.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.0...n8n@0.221.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-23
+
+This is a bug fix release. It ensures the job queue is initiated before starting the webhook server.
+
+</div>
+
+<div id="02210" markdown>
+
+## n8n@0.221.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.220.1...n8n@0.221.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-23
+
+### New features
+
+* Core: n8n now augments data rather than copying it in the Code node. This is a performance improvement.
+* Editor: you can now move the canvas by holding `Space` and dragging with the mouse, or by holding the middle mouse button and dragging.
+* Editor: add authentication type recommendations in the credentials modal.
+* Editor: add the SSO login button.
+
+### New nodes
+
+This release adds a node for [QuickChart](https://quickchart.io/){:target=_blank .external-link}, an open source chart generation tool.
+
+### Bug fixes
+
+* Core: ensure n8n calls available error workflows in main mode recovery.
+* Core: fix telemetry execution status for manual workflows executions.
+* Core: return SAML attributes after connection test.
+* Editor: disable mapping tooltip for display modes that don't support mapping.
+* Editor: fix execution list item selection.
+* Editor: fix for large notifications being cut off.
+* Editor: fix redo in code and expression editor.
+* Editor: fix the canvas node distance when automatically injecting manual trigger.
+* HTTP Request Node: fix AWS credentials to automatically deconstruct the URL.
+* Split In Batches Node: roll back changes in v1 and create v2.
+
+</div>
+
+<div id="02201" markdown>
+
+## n8n@0.220.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.220.0...n8n@0.220.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-03-22
+
+This is a bug fix release. It reverts changes to version 1 of the Split In Batches node, and creates a version 2 containing the updates.
+
+</div>
 
 <div id="02200" markdown>
 

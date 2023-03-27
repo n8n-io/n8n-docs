@@ -64,4 +64,10 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 	[:octicons-arrow-right-24: Hosting](/hosting/)
 
+- __Build your own nodes__
+
+	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}.
+
+	[:octicons-arrow-right-24: Creating nodes](/integrations/creating-nodes/)
+
 </div>

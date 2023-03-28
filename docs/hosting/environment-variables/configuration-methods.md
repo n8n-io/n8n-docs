@@ -27,7 +27,7 @@ docker run -it --rm \
  -e N8N_BASIC_AUTH_ACTIVE="true" \
  -e N8N_BASIC_AUTH_USER="<user>" \
  -e N8N_BASIC_AUTH_PASSWORD="<password>" \
- n8nio/n8n
+ docker.n8n.io/n8nio/n8n
 ```
 
 ## Set environment variables using a file

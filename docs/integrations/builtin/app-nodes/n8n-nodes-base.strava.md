@@ -1,9 +1,14 @@
 # Strava
 
-[Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
+The Strava node allows you to automate work in Strava, and integrate Strava with other applications. n8n has built-in support for a wide range of Strava features, including creating new activities, and getting activity information. 
+
+On this page, you'll find a list of operations the Strava node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
+    Refer to [Strava credentials](/integrations/builtin/credentials/strava/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Strava integrations](https://n8n.io/integrations/strava/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Snowflake
 
-[Snowflake](https://snowflake.com) is a cloud data platform that provides a data warehouse-as-a-service designed for the cloud.
+The Snowflake node allows you to automate work in Snowflake, and integrate Snowflake with other applications. n8n has built-in support for a wide range of Snowflake features, including executing SQL queries, and inserting rows in a database. 
+
+On this page, you'll find a list of operations the Snowflake node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/snowflake/).
+    Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Snowflake integrations](https://n8n.io/integrations/snowflake/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,9 +1,14 @@
 # Unleashed Software
 
-[Unleashed Software](https://www.unleashedsoftware.com) is a cloud app that gives product businesses the freedom to better make, manage and move products by enabling them to achieve complete clarity and control over suppliers, production, warehouses, and sales.
+The Unleashed Software node allows you to automate work in Unleashed Software, and integrate Unleashed Software with other applications. n8n has built-in support for a wide range of Unleashed Software features, including getting sales orders and stock on hand. 
+
+On this page, you'll find a list of operations the Unleashed Software node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/unleashedsoftware/).
+    Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Unleashed Software integrations](https://n8n.io/integrations/unleashed-software/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

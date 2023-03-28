@@ -25,8 +25,10 @@ n8n provides keyboard shortcuts for some actions.
 
 ### Move the canvas
 
- - **Ctrl** + **Left Mouse Button**: move node view
- - **Ctrl** + **Middle mouse button**: move node view
+ - **Ctrl** + **Left Mouse Button** + drag: move node view
+ - **Ctrl** + **Middle mouse button** + drag: move node view
+ - **Space** + drag: move node view
+ - **Middle mouse button** + drag: move node view
  - Two fingers on a touch screen: move node view
 
 ### Canvas zoom

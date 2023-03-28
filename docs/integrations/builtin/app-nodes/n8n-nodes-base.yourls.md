@@ -1,6 +1,6 @@
 # Yourls
 
-The Yourls node allows you to automate work in Yourls, and integrate Yourls with other applications. n8n has built-in support for a wide range of Yourls features, including expanding and shortnen URLs. 
+The Yourls node allows you to automate work in Yourls, and integrate Yourls with other applications. n8n has built-in support for a wide range of Yourls features, including expanding and shortening URLs. 
 
 On this page, you'll find a list of operations the Yourls node supports and links to more resources.
 

@@ -25,7 +25,7 @@ description: Documentation for the <node-name> credentials. Use these credential
 The title should be the name of the integration.
 Match the brand name exactly. For example, GitHub NOT Github
 -->
-# _Name_
+# _Name_ credentials
 
 You can use these credentials to authenticate the following nodes:
 

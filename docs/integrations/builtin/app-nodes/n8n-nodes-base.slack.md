@@ -1,7 +1,6 @@
 # Slack
 
-The Slack node allows you to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archive, and close channels, get files, and delete messages. 
-
+The Slack node allows you to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archiving, and closing channels, getting users and files, as well as deleting messages.
 On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
 !!! note "Credentials"

@@ -18,7 +18,7 @@ Set the meta title and meta description in the frontmatter
 
 ---
 title: <node-name> credentials - n8n Documentation
-description: Documentation for the <node-name> node credentials. Use these credentials to authenticate <node-name> in n8n, a workflow automation platform.
+description: Documentation for the <node-name> credentials. Use these credentials to authenticate <node-name> in n8n, a workflow automation platform.
 ---
 
 <!-- 

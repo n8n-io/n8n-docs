@@ -18,7 +18,7 @@ Set the meta title and meta description in the frontmatter
 
 ---
 title: <node-name> trigger node - n8n Documentation
-description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Documentation for the <node-name> trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
 <!-- 

@@ -1,4 +1,4 @@
-# SurveyMonkey Trigger
+# SurveyMonkey trigger
 
 [SurveyMonkey](https://www.surveymonkey.com/) is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
 

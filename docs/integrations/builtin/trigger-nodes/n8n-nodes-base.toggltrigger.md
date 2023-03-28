@@ -1,4 +1,4 @@
-# Toggl Trigger
+# Toggl trigger
 
 [Toggl](https://toggl.com/) is a time tracking app that offers online time tracking and reporting services through their website along with mobile and desktop applications.
 

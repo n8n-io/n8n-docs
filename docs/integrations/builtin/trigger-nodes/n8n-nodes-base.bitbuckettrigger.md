@@ -1,4 +1,4 @@
-# Bitbucket Trigger
+# Bitbucket trigger
 
 [Bitbucket](https://bitbucket.org/) is a web-based version control repository hosting service owned by Atlassian, for source code and development projects that use either Mercurial or Git revision control systems.
 

@@ -1,4 +1,4 @@
-# Formstack Trigger
+# Formstack trigger
 
 [Formstack](https://www.formstack.com/) is a workplace productivity platform that helps organizations streamline digital work through no-code online forms, documents, and signatures.
 

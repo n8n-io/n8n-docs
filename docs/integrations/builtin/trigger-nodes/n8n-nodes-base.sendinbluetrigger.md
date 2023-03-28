@@ -1,4 +1,4 @@
-# Sendinblue Trigger
+# Sendinblue trigger
 
 Sendinblue is a digital marketing platform to help users grow their business.
 

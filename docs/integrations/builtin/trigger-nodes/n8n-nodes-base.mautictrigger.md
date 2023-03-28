@@ -1,4 +1,4 @@
-# Mautic Trigger
+# Mautic trigger
 
 [Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 

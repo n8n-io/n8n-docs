@@ -1,4 +1,4 @@
-# Autopilot Trigger
+# Autopilot trigger
 
 [Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 

@@ -1,4 +1,4 @@
-# Cal Trigger
+# Cal trigger
 
 [Cal](https://cal.com/) is the event-juggling scheduler for everyone. Focus on meeting, not making meetings.
 

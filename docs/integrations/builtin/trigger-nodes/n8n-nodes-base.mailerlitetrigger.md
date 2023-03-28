@@ -1,4 +1,4 @@
-# MailerLite Trigger
+# MailerLite trigger
 
 [MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
 

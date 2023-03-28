@@ -1,4 +1,4 @@
-# RabbitMQ Trigger
+# RabbitMQ trigger
 
 [RabbitMQ](https://www.rabbitmq.com) is an open-source message broker that accepts and forwards messages.
 

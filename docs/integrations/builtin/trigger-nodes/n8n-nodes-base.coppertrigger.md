@@ -1,4 +1,4 @@
-# Copper Trigger
+# Copper trigger
 
 [Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite. It is mainly targeted towards small and medium-sized businesses.
 

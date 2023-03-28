@@ -1,4 +1,4 @@
-# Kafka Trigger
+# Kafka trigger
 
 [Kafka](https://kafka.apache.org/) is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 

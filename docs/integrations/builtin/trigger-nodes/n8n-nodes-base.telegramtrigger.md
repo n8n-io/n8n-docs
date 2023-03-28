@@ -1,4 +1,4 @@
-# Telegram Trigger
+# Telegram trigger
 
 [Telegram](https://telegram.org/) is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type.
 

@@ -1,4 +1,4 @@
-# GetResponse Trigger
+# GetResponse trigger
 
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 

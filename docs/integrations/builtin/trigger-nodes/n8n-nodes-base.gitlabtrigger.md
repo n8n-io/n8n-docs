@@ -1,4 +1,4 @@
-# GitLab Trigger
+# GitLab trigger
 
 [GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
 

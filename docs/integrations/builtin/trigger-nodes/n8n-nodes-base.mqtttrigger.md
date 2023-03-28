@@ -1,4 +1,4 @@
-# MQTT Trigger
+# MQTT trigger
 
 [MQTT](https://mqtt.org) is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 

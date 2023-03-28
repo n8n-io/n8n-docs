@@ -1,4 +1,4 @@
-# JotForm Trigger
+# JotForm trigger
 
 [JotForm](https://www.jotform.com/) is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
 

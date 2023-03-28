@@ -1,4 +1,4 @@
-# Google Calendar Trigger
+# Google Calendar trigger
 
 [Google Calendar](https://www.google.com/calendar/) is a time-management and scheduling calendar service developed by Google.
 

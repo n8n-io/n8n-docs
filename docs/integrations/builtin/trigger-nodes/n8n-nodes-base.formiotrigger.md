@@ -1,4 +1,4 @@
-# Form.io Trigger
+# Form.io trigger
 
 [Form.io](https://www.form.io/) is an enterprise class combined form and API data management platform for building complex form-based business process applications.
 

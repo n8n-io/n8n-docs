@@ -1,4 +1,4 @@
-# Acuity Scheduling Trigger
+# Acuity Scheduling trigger
 
 [Acuity Scheduling](https://acuityscheduling.com/) is a cloud-based appointment scheduling software solution that enables business owners to manage their appointments online. It has the capability to automatically sync calendars according to users' time zones and can send regular alerts and reminders to users regarding their appointment schedules.
 

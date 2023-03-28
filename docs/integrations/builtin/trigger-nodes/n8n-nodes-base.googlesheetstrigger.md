@@ -1,4 +1,4 @@
-# Google Sheets Trigger
+# Google Sheets trigger
 
 [Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
 

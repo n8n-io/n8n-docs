@@ -1,4 +1,4 @@
-# Shopify Trigger
+# Shopify trigger
 
 [Shopify](https://www.shopify.com/) is an e-commerce platform that allows users to set up an online store and sell their products.
 

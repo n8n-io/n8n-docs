@@ -1,4 +1,4 @@
-# Clockify Trigger
+# Clockify trigger
 
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 

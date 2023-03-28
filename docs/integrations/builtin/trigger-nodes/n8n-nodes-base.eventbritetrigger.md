@@ -1,4 +1,4 @@
-# Eventbrite Trigger
+# Eventbrite trigger
 
 [Eventbrite](https://www.eventbrite.com/) is an event management and ticketing website. The service allows users to browse, create, and promote local events.
 

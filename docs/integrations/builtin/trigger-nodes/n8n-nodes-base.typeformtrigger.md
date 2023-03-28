@@ -1,4 +1,4 @@
-# Typeform Trigger
+# Typeform trigger
 
 [Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 

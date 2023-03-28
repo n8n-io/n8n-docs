@@ -1,4 +1,4 @@
-# Pushcut Trigger
+# Pushcut trigger
 
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 

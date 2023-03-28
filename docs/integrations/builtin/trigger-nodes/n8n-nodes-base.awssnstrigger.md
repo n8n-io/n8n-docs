@@ -1,4 +1,4 @@
-# AWS SNS Trigger
+# AWS SNS trigger
 
 [AWS SNS](https://aws.amazon.com/sns/) is a notification service provided as part of Amazon Web Services. It provides a low-cost infrastructure for the mass delivery of messages, predominantly to mobile users.
 

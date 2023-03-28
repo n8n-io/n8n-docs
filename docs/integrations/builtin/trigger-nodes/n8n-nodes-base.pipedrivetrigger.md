@@ -1,4 +1,4 @@
-# Pipedrive Trigger
+# Pipedrive trigger
 
 [Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 

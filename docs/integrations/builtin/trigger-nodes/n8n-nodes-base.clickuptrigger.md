@@ -1,4 +1,4 @@
-# ClickUp Trigger
+# ClickUp trigger
 
 [ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
 

@@ -1,4 +1,4 @@
-# ConvertKit Trigger
+# ConvertKit trigger
 
 [ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
 

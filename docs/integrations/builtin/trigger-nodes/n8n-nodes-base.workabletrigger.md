@@ -1,4 +1,4 @@
-# Workable Trigger
+# Workable trigger
 
 [Workable](https://www.workable.com/) is a recruiting platform.
 

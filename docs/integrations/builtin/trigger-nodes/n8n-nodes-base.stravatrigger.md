@@ -1,4 +1,4 @@
-# Strava Trigger
+# Strava trigger
 
 [Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 

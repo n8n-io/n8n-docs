@@ -1,4 +1,4 @@
-# Asana Trigger
+# Asana trigger
 
 [Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
 

@@ -1,4 +1,4 @@
-# Figma Trigger (Beta)
+# Figma trigger (Beta)
 
 [Figma](https://www.figma.com/) is a prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
 

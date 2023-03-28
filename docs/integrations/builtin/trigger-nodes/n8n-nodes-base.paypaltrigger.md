@@ -1,4 +1,4 @@
-# PayPal Trigger
+# PayPal trigger
 
 [PayPal](https://paypal.com) is a digital payment service that supports online fund transfers that customers can use when shopping online.
 

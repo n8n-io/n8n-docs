@@ -1,4 +1,4 @@
-# Trello Trigger
+# Trello trigger
 
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 

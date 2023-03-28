@@ -1,4 +1,4 @@
-# Wufoo Trigger
+# Wufoo trigger
 
 [Wufoo](https://wufoo.com) is an online form builder that helps you create custom HTML forms without writing code.
 

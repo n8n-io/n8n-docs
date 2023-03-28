@@ -1,4 +1,4 @@
-# Emelia Trigger
+# Emelia trigger
 
 [Emelia](https://emelia.io) is a cold-mailing tool.
 

@@ -1,4 +1,4 @@
-# Box Trigger
+# Box trigger
 
 [Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files that are uploaded to its servers.
 

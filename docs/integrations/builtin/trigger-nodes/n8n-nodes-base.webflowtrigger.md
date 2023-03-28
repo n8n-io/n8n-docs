@@ -1,4 +1,4 @@
-# Webflow Trigger
+# Webflow trigger
 
 [Webflow](https://webflow.com) is an application that allows you to build responsive websites with browser-based visual editing software.
 

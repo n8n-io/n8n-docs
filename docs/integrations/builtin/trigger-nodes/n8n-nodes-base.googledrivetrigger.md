@@ -1,4 +1,4 @@
-# Google Drive Trigger
+# Google Drive trigger
 
 [Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 

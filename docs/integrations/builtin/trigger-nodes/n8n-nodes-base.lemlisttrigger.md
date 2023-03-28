@@ -1,4 +1,4 @@
-# Lemlist Trigger
+# Lemlist trigger
 
 [Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 

@@ -1,4 +1,4 @@
-# Invoice Ninja Trigger
+# Invoice Ninja trigger
 
 [Invoice Ninja](https://www.invoiceninja.com/) is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
 

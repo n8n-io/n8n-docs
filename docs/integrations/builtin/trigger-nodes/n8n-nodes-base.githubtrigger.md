@@ -1,4 +1,4 @@
-# GitHub Trigger
+# GitHub trigger
 
 [GitHub](https://github.com/) provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 

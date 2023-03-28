@@ -1,4 +1,4 @@
-# Webex by Cisco Trigger
+# Webex by Cisco trigger
 
 [Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
 

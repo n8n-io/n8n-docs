@@ -1,4 +1,4 @@
-# Calendly Trigger
+# Calendly trigger
 
 [Calendly](https://calendly.com/) is an automated scheduling software that is designed to make the process of finding meeting times easy.
 

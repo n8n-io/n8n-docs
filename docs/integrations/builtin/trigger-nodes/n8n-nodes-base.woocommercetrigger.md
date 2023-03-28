@@ -1,4 +1,4 @@
-# WooCommerce Trigger
+# WooCommerce trigger
 
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 

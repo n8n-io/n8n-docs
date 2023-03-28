@@ -1,4 +1,4 @@
-# Netlify Trigger
+# Netlify trigger
 
 [Netlify](https://netlify.com/) offers hosting and serverless backend services for web applications and static websites.
 

@@ -1,4 +1,4 @@
-# Help Scout Trigger
+# Help Scout trigger
 
 [Help Scout](https://www.helpscout.com/) is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
 

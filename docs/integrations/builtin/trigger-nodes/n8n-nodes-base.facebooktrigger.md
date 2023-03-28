@@ -1,4 +1,4 @@
-# Facebook Trigger
+# Facebook trigger
 
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 

@@ -1,4 +1,4 @@
-# Gmail Trigger
+# Gmail trigger
 
 [Gmail](https://www.gmail.com) is an email service developed by Google.
 

@@ -1,4 +1,4 @@
-# Linear Trigger
+# Linear trigger
 
 [Linear](https://linear.app/) is a SaaS issue tracking tool.
 

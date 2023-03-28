@@ -1,4 +1,4 @@
-# Postmark Trigger
+# Postmark trigger
 
 [Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
 

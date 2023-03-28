@@ -1,4 +1,4 @@
-# Gumroad Trigger
+# Gumroad trigger
 
 [Gumroad](https://gumroad.com) is an online platform that enables creators to sell products directly to consumers.
 

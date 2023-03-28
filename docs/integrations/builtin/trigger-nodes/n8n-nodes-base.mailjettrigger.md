@@ -1,4 +1,4 @@
-# Mailjet Trigger
+# Mailjet trigger
 
 [Mailjet](https://www.mailjet.com/) is a cloud-based email sending and tracking system. The platform allows professionals to send both marketing emails and transactional emails. It includes tools for designing emails, sending massive volumes and tracking these messages.
 

@@ -1,4 +1,4 @@
-# Affinity Trigger
+# Affinity trigger
 
 [Affinity](https://www.affinity.co/) is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
 

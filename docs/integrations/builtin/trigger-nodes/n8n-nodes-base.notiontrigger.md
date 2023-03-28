@@ -1,4 +1,4 @@
-# Notion Trigger
+# Notion trigger
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 

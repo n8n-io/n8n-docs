@@ -1,4 +1,4 @@
-# SeaTable Trigger
+# SeaTable trigger
 
 [SeaTable](https://seatable.co) is a collaborative database application with a spreadsheet interface.
 

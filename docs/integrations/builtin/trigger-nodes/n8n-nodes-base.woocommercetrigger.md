@@ -1,5 +1,5 @@
 ---
-title: WooCommerce trigger node - n8n Documentation
+title: WooCommerce trigger
 description: Documentation for the WooCommerce trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

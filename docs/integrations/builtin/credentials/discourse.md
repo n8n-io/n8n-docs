@@ -1,5 +1,5 @@
 ---
-title: Discourse credentials - n8n Documentation
+title: Discourse credentials
 description: Documentation for Discourse credentials. Use these credentials to authenticate Discourse in n8n, a workflow automation platform.
 ---
 

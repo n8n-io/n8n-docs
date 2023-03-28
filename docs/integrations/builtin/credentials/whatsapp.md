@@ -1,5 +1,5 @@
 ---
-title: WhatsApp Business credentials - n8n Documentation
+title: WhatsApp Business credentials
 description: Documentation for WhatsApp Business credentials. Use these credentials to authenticate WhatsApp Business in n8n, a workflow automation platform.
 ---
 

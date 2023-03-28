@@ -1,5 +1,5 @@
 ---
-title: Hunter node - n8n Documentation
+title: Hunter
 description: Documentation for the Hunter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

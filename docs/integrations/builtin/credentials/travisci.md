@@ -1,5 +1,5 @@
 ---
-title: Travis CI credentials - n8n Documentation
+title: Travis CI credentials
 description: Documentation for Travis CI credentials. Use these credentials to authenticate Travis CI in n8n, a workflow automation platform.
 ---
 

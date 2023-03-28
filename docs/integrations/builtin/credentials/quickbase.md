@@ -1,5 +1,5 @@
 ---
-title: Quick Base credentials - n8n Documentation
+title: Quick Base credentials
 description: Documentation for Quick Base credentials. Use these credentials to authenticate Quick Base in n8n, a workflow automation platform.
 ---
 

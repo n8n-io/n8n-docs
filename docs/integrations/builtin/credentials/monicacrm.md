@@ -1,5 +1,5 @@
 ---
-title: Monica CRM credentials - n8n Documentation
+title: Monica CRM credentials
 description: Documentation for Monica CRM credentials. Use these credentials to authenticate Monica CRM in n8n, a workflow automation platform.
 ---
 

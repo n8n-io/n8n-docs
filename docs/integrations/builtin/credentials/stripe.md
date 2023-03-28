@@ -1,5 +1,5 @@
 ---
-title: Stripe credentials - n8n Documentation
+title: Stripe credentials
 description: Documentation for Stripe credentials. Use these credentials to authenticate Stripe in n8n, a workflow automation platform.
 ---
 

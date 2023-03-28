@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel node - n8n Documentation
+title: Microsoft Excel
 description: Documentation for the Microsoft Excel node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

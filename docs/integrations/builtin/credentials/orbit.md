@@ -1,5 +1,5 @@
 ---
-title: Orbit credentials - n8n Documentation
+title: Orbit credentials
 description: Documentation for Orbit credentials. Use these credentials to authenticate Orbit in n8n, a workflow automation platform.
 ---
 

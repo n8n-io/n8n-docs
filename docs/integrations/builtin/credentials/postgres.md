@@ -1,5 +1,5 @@
 ---
-title: Postgres credentials - n8n Documentation
+title: Postgres credentials
 description: Documentation for Postgres credentials. Use these credentials to authenticate Postgres in n8n, a workflow automation platform.
 ---
 

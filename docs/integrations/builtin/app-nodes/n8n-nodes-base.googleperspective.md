@@ -1,5 +1,5 @@
 ---
-title: Google Perspective node - n8n Documentation
+title: Google Perspective
 description: Documentation for the Google Perspective node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

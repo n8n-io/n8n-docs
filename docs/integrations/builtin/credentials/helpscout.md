@@ -1,5 +1,5 @@
 ---
-title: Help Scout credentials - n8n Documentation
+title: Help Scout credentials
 description: Documentation for Help Scout credentials. Use these credentials to authenticate Help Scout in n8n, a workflow automation platform.
 ---
 

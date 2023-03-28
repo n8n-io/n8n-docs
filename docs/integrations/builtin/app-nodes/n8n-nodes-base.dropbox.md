@@ -1,5 +1,5 @@
 ---
-title: Dropbox node - n8n Documentation
+title: Dropbox
 description: Documentation for the Dropbox node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

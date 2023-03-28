@@ -1,5 +1,5 @@
 ---
-title: NocoDB credentials - n8n Documentation
+title: NocoDB credentials
 description: Documentation for NocoDB credentials. Use these credentials to authenticate NocoDB in n8n, a workflow automation platform.
 ---
 

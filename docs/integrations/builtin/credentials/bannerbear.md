@@ -1,5 +1,5 @@
 ---
-title: Bannerbear credentials - n8n Documentation
+title: Bannerbear credentials
 description: Documentation for Bannerbear credentials. Use these credentials to authenticate Bannerbear in n8n, a workflow automation platform.
 ---
 

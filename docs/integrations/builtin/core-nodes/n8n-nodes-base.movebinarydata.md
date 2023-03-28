@@ -1,5 +1,5 @@
 ---
-title: Move Binary Data node - n8n Documentation
+title: Move Binary Data
 description: Documentation for the Move Binary Data node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

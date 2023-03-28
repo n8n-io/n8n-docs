@@ -1,5 +1,5 @@
 ---
-title: Mailchimp trigger node - n8n Documentation
+title: Mailchimp trigger
 description: Documentation for the Mailchimp trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

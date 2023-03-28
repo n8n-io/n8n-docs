@@ -1,5 +1,5 @@
 ---
-title: Intercom credentials - n8n Documentation
+title: Intercom credentials
 description: Documentation for Intercom credentials. Use these credentials to authenticate Intercom in n8n, a workflow automation platform.
 ---
 

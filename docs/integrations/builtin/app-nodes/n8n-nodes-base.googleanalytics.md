@@ -1,5 +1,5 @@
 ---
-title: Google Analytics node - n8n Documentation
+title: Google Analytics
 description: Documentation for the Google Analytics node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

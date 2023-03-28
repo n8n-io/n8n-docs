@@ -1,5 +1,5 @@
 ---
-title: Automizy credentials - n8n Documentation
+title: Automizy credentials
 description: Documentation for Automizy credentials. Use these credentials to authenticate Automizy in n8n, a workflow automation platform.
 ---
 

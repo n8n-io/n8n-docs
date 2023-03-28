@@ -1,5 +1,5 @@
 ---
-title: DHL credentials - n8n Documentation
+title: DHL credentials
 description: Documentation for DHL credentials. Use these credentials to authenticate DHL in n8n, a workflow automation platform.
 ---
 

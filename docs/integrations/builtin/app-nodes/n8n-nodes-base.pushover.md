@@ -1,5 +1,5 @@
 ---
-title: Pushover node - n8n Documentation
+title: Pushover
 description: Documentation for the Pushover node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

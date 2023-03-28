@@ -1,5 +1,5 @@
 ---
-title: ActiveCampaign trigger node - n8n Documentation
+title: ActiveCampaign trigger
 description: Documentation for the ActiveCampaign trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

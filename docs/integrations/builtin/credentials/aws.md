@@ -1,5 +1,5 @@
 ---
-title: AWS credentials - n8n Documentation
+title: AWS credentials
 description: Documentation for AWS credentials. Use these credentials to authenticate AWS in n8n, a workflow automation platform.
 ---
 

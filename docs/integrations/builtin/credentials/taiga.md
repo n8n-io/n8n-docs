@@ -1,5 +1,5 @@
 ---
-title: Taiga credentials - n8n Documentation
+title: Taiga credentials
 description: Documentation for Taiga credentials. Use these credentials to authenticate Taiga in n8n, a workflow automation platform.
 ---
 

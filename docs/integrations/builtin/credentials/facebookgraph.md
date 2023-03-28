@@ -1,5 +1,5 @@
 ---
-title: Facebook Graph API credentials - n8n Documentation
+title: Facebook Graph API credentials
 description: Documentation for Facebook Graph API credentials. Use these credentials to authenticate Facebook Graph API in n8n, a workflow automation platform.
 ---
 

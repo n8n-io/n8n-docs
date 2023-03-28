@@ -1,5 +1,5 @@
 ---
-title: AWS Textract node - n8n Documentation
+title: AWS Textract
 description: Documentation for the AWS Textract node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

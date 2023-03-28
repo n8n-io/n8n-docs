@@ -1,5 +1,5 @@
 ---
-title: HTML node - n8n Documentation
+title: HTML
 description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

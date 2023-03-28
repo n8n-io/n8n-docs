@@ -1,5 +1,5 @@
 ---
-title: Dropcontact credentials - n8n Documentation
+title: Dropcontact credentials
 description: Documentation for Dropcontact credentials. Use these credentials to authenticate Dropcontact in n8n, a workflow automation platform.
 ---
 

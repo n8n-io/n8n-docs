@@ -1,5 +1,5 @@
 ---
-title: Freshdesk node - n8n Documentation
+title: Freshdesk
 description: Documentation for the Freshdesk node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

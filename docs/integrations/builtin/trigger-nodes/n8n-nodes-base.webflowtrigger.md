@@ -1,5 +1,5 @@
 ---
-title: Webflow trigger node - n8n Documentation
+title: Webflow trigger
 description: Documentation for the Webflow trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

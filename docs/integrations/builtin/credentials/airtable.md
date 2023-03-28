@@ -1,5 +1,5 @@
 ---
-title: Airtable credentials - n8n Documentation
+title: Airtable credentials
 description: Documentation for Airtable credentials. Use these credentials to authenticate Airtable in n8n, a workflow automation platform.
 ---
 

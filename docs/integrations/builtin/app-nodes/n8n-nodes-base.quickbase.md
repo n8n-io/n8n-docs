@@ -1,5 +1,5 @@
 ---
-title: Quick Base node - n8n Documentation
+title: Quick Base
 description: Documentation for the Quick Base node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

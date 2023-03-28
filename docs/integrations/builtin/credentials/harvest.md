@@ -1,5 +1,5 @@
 ---
-title: Harvest credentials - n8n Documentation
+title: Harvest credentials
 description: Documentation for Harvest credentials. Use these credentials to authenticate Harvest in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Mailcheck credentials - n8n Documentation
+title: Mailcheck credentials
 description: Documentation for Mailcheck credentials. Use these credentials to authenticate Mailcheck in n8n, a workflow automation platform.
 ---
 

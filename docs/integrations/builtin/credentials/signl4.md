@@ -1,5 +1,5 @@
 ---
-title: SIGNL4 credentials - n8n Documentation
+title: SIGNL4 credentials
 description: Documentation for SIGNL4 credentials. Use these credentials to authenticate SIGNL4 in n8n, a workflow automation platform.
 ---
 

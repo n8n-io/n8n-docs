@@ -1,5 +1,5 @@
 ---
-title: CrateDB node - n8n Documentation
+title: CrateDB
 description: Documentation for the CrateDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

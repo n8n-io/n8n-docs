@@ -1,9 +1,9 @@
 ---
-title: Execute Workflow Trigger node - n8n Documentation
-description: Documentation for the Execute Workflow Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Execute Workflow trigger
+description: Documentation for the Execute Workflow trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
-# Execute Workflow Trigger
+# Execute Workflow trigger
 
 Use this node to start a workflow in response to another workflow. It should be the first node in the workflow.
 

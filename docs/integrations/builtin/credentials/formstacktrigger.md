@@ -1,5 +1,5 @@
 ---
-title: Formstack Trigger credentials - n8n Documentation
+title: Formstack Trigger credentials
 description: Documentation for Formstack Trigger credentials. Use these credentials to authenticate Formstack Trigger in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Zoho credentials - n8n Documentation
+title: Zoho credentials
 description: Documentation for Zoho credentials. Use these credentials to authenticate Zoho in n8n, a workflow automation platform.
 ---
 

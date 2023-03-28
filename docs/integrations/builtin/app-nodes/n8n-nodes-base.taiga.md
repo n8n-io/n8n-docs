@@ -1,5 +1,5 @@
 ---
-title: Taiga node - n8n Documentation
+title: Taiga
 description: Documentation for the Taiga node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

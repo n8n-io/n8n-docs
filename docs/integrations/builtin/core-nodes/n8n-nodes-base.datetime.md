@@ -1,5 +1,5 @@
 ---
-title: Date & Time node - n8n Documentation
+title: Date & Time
 description: Documentation for the Date & Time node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Plivo credentials - n8n Documentation
+title: Plivo credentials
 description: Documentation for Plivo credentials. Use these credentials to authenticate Plivo in n8n, a workflow automation platform.
 ---
 

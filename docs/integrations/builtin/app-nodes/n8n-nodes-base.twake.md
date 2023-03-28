@@ -1,5 +1,5 @@
 ---
-title: Twake node - n8n Documentation
+title: Twake
 description: Documentation for the Twake node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

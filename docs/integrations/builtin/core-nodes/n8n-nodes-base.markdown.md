@@ -1,5 +1,5 @@
 ---
-title: Markdown node - n8n Documentation
+title: Markdown
 description: Documentation for the Markdown node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Line node - n8n Documentation
+title: Line
 description: Documentation for the Line node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

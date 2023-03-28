@@ -1,5 +1,5 @@
 ---
-title: FileMaker credentials - n8n Documentation
+title: FileMaker credentials
 description: Documentation for FileMaker credentials. Use these credentials to authenticate FileMaker in n8n, a workflow automation platform.
 ---
 

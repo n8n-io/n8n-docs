@@ -1,5 +1,5 @@
 ---
-title: Metabase credentials - n8n Documentation
+title: Metabase credentials
 description: Documentation for Metabase credentials. Use these credentials to authenticate Metabase in n8n, a workflow automation platform.
 ---
 

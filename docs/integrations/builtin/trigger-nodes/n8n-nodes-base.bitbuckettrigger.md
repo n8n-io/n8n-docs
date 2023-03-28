@@ -1,5 +1,5 @@
 ---
-title: Bitbucket trigger node - n8n Documentation
+title: Bitbucket trigger
 description: Documentation for the Bitbucket trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

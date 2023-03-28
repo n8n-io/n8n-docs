@@ -1,5 +1,5 @@
 ---
-title: Unleashed Software credentials - n8n Documentation
+title: Unleashed Software credentials
 description: Documentation for Unleashed Software credentials. Use these credentials to authenticate Unleashed Software in n8n, a workflow automation platform.
 ---
 

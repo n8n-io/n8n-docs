@@ -1,5 +1,5 @@
 ---
-title: MongoDB credentials - n8n Documentation
+title: MongoDB credentials
 description: Documentation for MongoDB credentials. Use these credentials to authenticate MongoDB in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: MSG91 credentials - n8n Documentation
+title: MSG91 credentials
 description: Documentation for MSG91 credentials. Use these credentials to authenticate MSG91 in n8n, a workflow automation platform.
 ---
 

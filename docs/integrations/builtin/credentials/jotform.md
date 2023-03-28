@@ -1,5 +1,5 @@
 ---
-title: JotForm credentials - n8n Documentation
+title: JotForm credentials
 description: Documentation for JotForm credentials. Use these credentials to authenticate JotForm in n8n, a workflow automation platform.
 ---
 

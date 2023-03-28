@@ -1,5 +1,5 @@
 ---
-title: Netlify node - n8n Documentation
+title: Netlify
 description: Documentation for the Netlify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

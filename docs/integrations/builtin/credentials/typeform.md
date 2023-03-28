@@ -1,5 +1,5 @@
 ---
-title: Typeform credentials - n8n Documentation
+title: Typeform credentials
 description: Documentation for Typeform credentials. Use these credentials to authenticate Typeform in n8n, a workflow automation platform.
 ---
 

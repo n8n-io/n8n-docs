@@ -1,5 +1,5 @@
 ---
-title: AWS DynamoDB node - n8n Documentation
+title: AWS DynamoDB
 description: Documentation for the AWS DynamoDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

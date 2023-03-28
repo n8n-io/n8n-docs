@@ -1,5 +1,5 @@
 ---
-title: Linear credentials - n8n Documentation
+title: Linear credentials
 description: Documentation for Linear credentials. Use these credentials to authenticate Linear in n8n, a workflow automation platform.
 ---
 

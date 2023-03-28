@@ -1,5 +1,5 @@
 ---
-title: Elastic Security credentials - n8n Documentation
+title: Elastic Security credentials
 description: Documentation for Elastic Security credentials. Use these credentials to authenticate Elastic Security in n8n, a workflow automation platform.
 ---
 

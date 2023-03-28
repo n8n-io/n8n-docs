@@ -1,5 +1,5 @@
 ---
-title: ServiceNow credentials - n8n Documentation
+title: ServiceNow credentials
 description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
 ---
 

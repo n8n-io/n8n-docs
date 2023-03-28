@@ -1,5 +1,5 @@
 ---
-title: Facebook App credentials - n8n Documentation
+title: Facebook App credentials
 description: Documentation for Facebook App credentials. Use these credentials to authenticate Facebook App in n8n, a workflow automation platform.
 ---
 

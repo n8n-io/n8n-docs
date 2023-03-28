@@ -1,5 +1,5 @@
 ---
-title: Agile CRM credentials - n8n Documentation
+title: Agile CRM credentials
 description: Documentation for Agile CRM credentials. Use these credentials to authenticate Agile CRM in n8n, a workflow automation platform.
 ---
 

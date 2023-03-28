@@ -1,5 +1,5 @@
 ---
-title: Git node - n8n Documentation
+title: Git
 description: Documentation for the Git node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: HaloPSA credentials - n8n Documentation
+title: HaloPSA credentials
 description: Documentation for HaloPSA credentials. Use these credentials to authenticate HaloPSA in n8n, a workflow automation platform.
 ---
 

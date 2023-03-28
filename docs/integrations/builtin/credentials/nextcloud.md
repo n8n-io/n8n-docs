@@ -1,5 +1,5 @@
 ---
-title: Nextcloud credentials - n8n Documentation
+title: Nextcloud credentials
 description: Documentation for Nextcloud credentials. Use these credentials to authenticate Nextcloud in n8n, a workflow automation platform.
 ---
 

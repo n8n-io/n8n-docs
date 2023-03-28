@@ -1,5 +1,5 @@
 ---
-title: Twist node - n8n Documentation
+title: Twist
 description: Documentation for the Twist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

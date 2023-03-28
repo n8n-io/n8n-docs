@@ -1,5 +1,5 @@
 ---
-title: Hunter credentials - n8n Documentation
+title: Hunter credentials
 description: Documentation for Hunter credentials. Use these credentials to authenticate Hunter in n8n, a workflow automation platform.
 ---
 

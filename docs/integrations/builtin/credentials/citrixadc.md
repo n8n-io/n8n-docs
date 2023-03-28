@@ -1,5 +1,5 @@
 ---
-title: Citrix ADC credentials - n8n Documentation
+title: Citrix ADC credentials
 description: Documentation for Citrix ADC credentials. Use these credentials to authenticate Citrix ADC in n8n, a workflow automation platform.
 ---
 

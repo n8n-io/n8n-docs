@@ -1,5 +1,5 @@
 ---
-title: HubSpot trigger node - n8n Documentation
+title: HubSpot trigger
 description: Documentation for the HubSpot trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

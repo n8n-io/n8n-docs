@@ -1,5 +1,5 @@
 ---
-title: SSH credentials - n8n Documentation
+title: SSH credentials
 description: Documentation for SSH credentials. Use these credentials to authenticate SSH in n8n, a workflow automation platform.
 ---
 

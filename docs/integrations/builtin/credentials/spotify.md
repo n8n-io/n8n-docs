@@ -1,5 +1,5 @@
 ---
-title: Spotify credentials - n8n Documentation
+title: Spotify credentials
 description: Documentation for Spotify credentials. Use these credentials to authenticate Spotify in n8n, a workflow automation platform.
 ---
 

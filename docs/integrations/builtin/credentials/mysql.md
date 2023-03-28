@@ -1,5 +1,5 @@
 ---
-title: MySQL credentials - n8n Documentation
+title: MySQL credentials
 description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
 ---
 

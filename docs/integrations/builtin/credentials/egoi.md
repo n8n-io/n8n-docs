@@ -1,5 +1,5 @@
 ---
-title: E-goi credentials - n8n Documentation
+title: E-goi credentials
 description: Documentation for E-goi credentials. Use these credentials to authenticate E-goi in n8n, a workflow automation platform.
 ---
 

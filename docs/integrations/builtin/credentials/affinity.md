@@ -1,5 +1,5 @@
 ---
-title: Affinity credentials - n8n Documentation
+title: Affinity credentials
 description: Documentation for Affinity credentials. Use these credentials to authenticate Affinity in n8n, a workflow automation platform.
 ---
 

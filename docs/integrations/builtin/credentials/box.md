@@ -1,5 +1,5 @@
 ---
-title: Box credentials - n8n Documentation
+title: Box credentials
 description: Documentation for Box credentials. Use these credentials to authenticate Box in n8n, a workflow automation platform.
 ---
 

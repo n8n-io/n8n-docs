@@ -1,5 +1,5 @@
 ---
-title: Demio credentials - n8n Documentation
+title: Demio credentials
 description: Documentation for Demio credentials. Use these credentials to authenticate Demio in n8n, a workflow automation platform.
 ---
 

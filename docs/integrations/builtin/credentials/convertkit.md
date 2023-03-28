@@ -1,5 +1,5 @@
 ---
-title: ConvertKit credentials - n8n Documentation
+title: ConvertKit credentials
 description: Documentation for ConvertKit credentials. Use these credentials to authenticate ConvertKit in n8n, a workflow automation platform.
 ---
 

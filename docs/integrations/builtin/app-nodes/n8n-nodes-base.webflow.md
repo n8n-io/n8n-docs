@@ -1,5 +1,5 @@
 ---
-title: Webflow node - n8n Documentation
+title: Webflow
 description: Documentation for the Webflow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

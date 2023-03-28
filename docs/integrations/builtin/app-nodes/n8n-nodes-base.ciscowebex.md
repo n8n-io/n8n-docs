@@ -1,5 +1,5 @@
 ---
-title: Webex by Cisco node - n8n Documentation
+title: Webex by Cisco
 description: Documentation for the Webex by Cisco node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

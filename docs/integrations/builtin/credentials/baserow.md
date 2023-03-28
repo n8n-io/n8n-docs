@@ -1,5 +1,5 @@
 ---
-title: Baserow credentials - n8n Documentation
+title: Baserow credentials
 description: Documentation for Baserow credentials. Use these credentials to authenticate Baserow in n8n, a workflow automation platform.
 ---
 

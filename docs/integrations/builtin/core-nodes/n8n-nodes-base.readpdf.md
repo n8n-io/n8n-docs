@@ -1,5 +1,5 @@
 ---
-title: Read PDF node - n8n Documentation
+title: Read PDF
 description: Documentation for the Read PDF node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ConvertKit node - n8n Documentation
+title: ConvertKit
 description: Documentation for the ConvertKit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

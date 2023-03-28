@@ -1,5 +1,5 @@
 ---
-title: Split In Batches node - n8n Documentation
+title: Split In Batches
 description: Documentation for the Split In Batches node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

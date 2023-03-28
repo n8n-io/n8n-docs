@@ -1,5 +1,5 @@
 ---
-title: PostHog credentials - n8n Documentation
+title: PostHog credentials
 description: Documentation for PostHog credentials. Use these credentials to authenticate PostHog in n8n, a workflow automation platform.
 ---
 

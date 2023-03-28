@@ -1,5 +1,5 @@
 ---
-title: Oura credentials - n8n Documentation
+title: Oura credentials
 description: Documentation for Oura credentials. Use these credentials to authenticate Oura in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Pushcut credentials - n8n Documentation
+title: Pushcut credentials
 description: Documentation for Pushcut credentials. Use these credentials to authenticate Pushcut in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Git credentials - n8n Documentation
+title: Git credentials
 description: Documentation for Git credentials. Use these credentials to authenticate Git in n8n, a workflow automation platform.
 ---
 

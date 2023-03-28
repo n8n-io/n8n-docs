@@ -1,5 +1,5 @@
 ---
-title: Harvest node - n8n Documentation
+title: Harvest
 description: Documentation for the Harvest node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

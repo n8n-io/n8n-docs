@@ -1,5 +1,5 @@
 ---
-title: Freshworks CRM credentials - n8n Documentation
+title: Freshworks CRM credentials
 description: Documentation for Freshworks CRM credentials. Use these credentials to authenticate Freshworks CRM in n8n, a workflow automation platform.
 ---
 

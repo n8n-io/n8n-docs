@@ -1,5 +1,5 @@
 ---
-title: Customer.io trigger node - n8n Documentation
+title: Customer.io trigger
 description: Documentation for the Customer.io trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

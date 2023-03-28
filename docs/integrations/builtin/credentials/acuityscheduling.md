@@ -1,5 +1,5 @@
 ---
-title: Acuity Scheduling credentials - n8n Documentation
+title: Acuity Scheduling credentials
 description: Documentation for Acuity Scheduling credentials. Use these credentials to authenticate Acuity Scheduling in n8n, a workflow automation platform.
 ---
 

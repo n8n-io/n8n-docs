@@ -1,5 +1,5 @@
 ---
-title: Bitwarden credentials - n8n Documentation
+title: Bitwarden credentials
 description: Documentation for Bitwarden credentials. Use these credentials to authenticate Bitwarden in n8n, a workflow automation platform.
 ---
 

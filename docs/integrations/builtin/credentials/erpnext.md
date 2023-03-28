@@ -1,5 +1,5 @@
 ---
-title: ERPNext credentials - n8n Documentation
+title: ERPNext credentials
 description: Documentation for ERPNext credentials. Use these credentials to authenticate ERPNext in n8n, a workflow automation platform.
 ---
 

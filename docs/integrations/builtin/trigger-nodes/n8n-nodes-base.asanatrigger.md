@@ -1,5 +1,5 @@
 ---
-title: Asana trigger node - n8n Documentation
+title: Asana trigger
 description: Documentation for the Asana trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

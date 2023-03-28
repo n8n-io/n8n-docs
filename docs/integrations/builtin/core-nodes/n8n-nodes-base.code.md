@@ -1,5 +1,5 @@
 ---
-title: Code node - n8n Documentation
+title: Code
 description: Documentation for the Code node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

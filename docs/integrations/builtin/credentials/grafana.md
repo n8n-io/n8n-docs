@@ -1,5 +1,5 @@
 ---
-title: Grafana credentials - n8n Documentation
+title: Grafana credentials
 description: Documentation for Grafana credentials. Use these credentials to authenticate Grafana in n8n, a workflow automation platform.
 ---
 

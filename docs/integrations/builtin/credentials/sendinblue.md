@@ -1,5 +1,5 @@
 ---
-title: Sendinblue credentials - n8n Documentation
+title: Sendinblue credentials
 description: Documentation for Sendinblue credentials. Use these credentials to authenticate Sendinblue in n8n, a workflow automation platform.
 ---
 

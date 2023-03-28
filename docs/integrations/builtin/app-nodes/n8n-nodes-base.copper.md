@@ -1,5 +1,5 @@
 ---
-title: Copper node - n8n Documentation
+title: Copper
 description: Documentation for the Copper node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

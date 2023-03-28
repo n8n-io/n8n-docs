@@ -1,5 +1,5 @@
 ---
-title: Jira credentials - n8n Documentation
+title: Jira credentials
 description: Documentation for Jira credentials. Use these credentials to authenticate Jira in n8n, a workflow automation platform.
 ---
 

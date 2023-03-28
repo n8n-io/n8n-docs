@@ -1,5 +1,5 @@
 ---
-title: Mocean node - n8n Documentation
+title: Mocean
 description: Documentation for the Mocean node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

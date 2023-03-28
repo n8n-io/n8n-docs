@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch credentials - n8n Documentation
+title: Elasticsearch credentials
 description: Documentation for Elasticsearch credentials. Use these credentials to authenticate Elasticsearch in n8n, a workflow automation platform.
 ---
 

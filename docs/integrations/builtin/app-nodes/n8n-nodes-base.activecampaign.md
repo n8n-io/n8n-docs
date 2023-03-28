@@ -1,5 +1,5 @@
 ---
-title: ActiveCampaign node - n8n Documentation
+title: ActiveCampaign
 description: Documentation for the ActiveCampaign node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

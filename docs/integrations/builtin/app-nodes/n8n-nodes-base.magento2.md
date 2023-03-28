@@ -1,5 +1,5 @@
 ---
-title: Magento 2 node - n8n Documentation
+title: Magento 2
 description: Documentation for the Magento 2 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

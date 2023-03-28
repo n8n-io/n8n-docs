@@ -1,5 +1,5 @@
 ---
-title: Start node - n8n Documentation
+title: Start
 description: Documentation for the Start node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
@@ -12,7 +12,7 @@ The start node is the first node in a workflow. It exists by default when you cr
 
 ![A new workflow with the Start node](/_images/integrations/builtin/core-nodes/start/workflow.png)
 
-In case there is no Trigger node in the workflow, the workflow always starts from the Start node. The Start node cannot be deleted. Even if a workflow contains a Trigger node, there would still be a Start node.
+In case there is no trigger node in the workflow, the workflow always starts from the Start node. The Start node cannot be deleted. Even if a workflow contains a trigger node, there would still be a Start node.
 
 
 ## FAQs

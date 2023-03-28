@@ -1,5 +1,5 @@
 ---
-title: HTTP Request credentials - n8n Documentation
+title: HTTP Request credentials
 description: Documentation for HTTP Request credentials. Use these credentials to authenticate HTTP Request in n8n, a workflow automation platform.
 ---
 

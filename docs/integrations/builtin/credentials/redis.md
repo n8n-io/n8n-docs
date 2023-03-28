@@ -1,5 +1,5 @@
 ---
-title: Redis credentials - n8n Documentation
+title: Redis credentials
 description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
 ---
 

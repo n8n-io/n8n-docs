@@ -1,5 +1,5 @@
 ---
-title: Stripe trigger node - n8n Documentation
+title: Stripe trigger
 description: Documentation for the Stripe trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Google credentials - n8n Documentation
+title: Google credentials
 description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 ---
 

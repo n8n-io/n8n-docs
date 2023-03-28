@@ -1,5 +1,5 @@
 ---
-title: Elastic Security node - n8n Documentation
+title: Elastic Security
 description: Documentation for the Elastic Security node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

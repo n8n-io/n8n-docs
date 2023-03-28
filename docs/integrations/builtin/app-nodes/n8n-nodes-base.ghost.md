@@ -1,5 +1,5 @@
 ---
-title: Ghost node - n8n Documentation
+title: Ghost
 description: Documentation for the Ghost node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Supabase node - n8n Documentation
+title: Supabase
 description: Documentation for the Supabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

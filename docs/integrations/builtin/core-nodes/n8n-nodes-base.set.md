@@ -1,5 +1,5 @@
 ---
-title: Set node - n8n Documentation
+title: Set
 description: Documentation for the Set node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

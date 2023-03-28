@@ -1,5 +1,5 @@
 ---
-title: FTP node - n8n Documentation
+title: FTP
 description: Documentation for the FTP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

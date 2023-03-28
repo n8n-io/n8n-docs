@@ -1,5 +1,5 @@
 ---
-title: Invoice Ninja trigger node - n8n Documentation
+title: Invoice Ninja trigger
 description: Documentation for the Invoice Ninja trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Write Binary File node - n8n Documentation
+title: Write Binary File
 description: Documentation for the Write Binary File node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

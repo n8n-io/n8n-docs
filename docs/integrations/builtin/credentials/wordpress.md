@@ -1,5 +1,5 @@
 ---
-title: WordPress credentials - n8n Documentation
+title: WordPress credentials
 description: Documentation for WordPress credentials. Use these credentials to authenticate WordPress in n8n, a workflow automation platform.
 ---
 

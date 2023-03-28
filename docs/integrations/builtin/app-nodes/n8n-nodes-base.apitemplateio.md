@@ -1,5 +1,5 @@
 ---
-title: APITemplate.io node - n8n Documentation
+title: APITemplate.io
 description: Documentation for the APITemplate.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

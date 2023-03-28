@@ -1,5 +1,5 @@
 ---
-title: MessageBird credentials - n8n Documentation
+title: MessageBird credentials
 description: Documentation for MessageBird credentials. Use these credentials to authenticate MessageBird in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Outlook node - n8n Documentation
+title: Microsoft Outlook
 description: Documentation for the Microsoft Outlook node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

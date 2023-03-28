@@ -1,5 +1,5 @@
 ---
-title: Reddit node - n8n Documentation
+title: Reddit
 description: Documentation for the Reddit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

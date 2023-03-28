@@ -1,5 +1,5 @@
 ---
-title: Wufoo credentials - n8n Documentation
+title: Wufoo credentials
 description: Documentation for Wufoo credentials. Use these credentials to authenticate Wufoo in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Figma credentials - n8n Documentation
+title: Figma credentials
 description: Documentation for Figma credentials. Use these credentials to authenticate Figma in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Asana credentials - n8n Documentation
+title: Asana credentials
 description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
 ---
 

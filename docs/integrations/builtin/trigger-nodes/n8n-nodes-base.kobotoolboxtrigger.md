@@ -1,5 +1,5 @@
 ---
-title: KoBo Toolbox trigger node - n8n Documentation
+title: KoBo Toolbox trigger
 description: Documentation for the KoBo Toolbox trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

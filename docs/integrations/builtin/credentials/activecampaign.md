@@ -1,5 +1,5 @@
 ---
-title: ActiveCampaign credentials - n8n Documentation
+title: ActiveCampaign credentials
 description: Documentation for ActiveCampaign credentials. Use these credentials to authenticate ActiveCampaign in n8n, a workflow automation platform.
 ---
 

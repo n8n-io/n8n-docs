@@ -1,5 +1,5 @@
 ---
-title: Execute Workflow node - n8n Documentation
+title: Execute Workflow
 description: Documentation for the Execute Workflow node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: BambooHR credentials - n8n Documentation
+title: BambooHR credentials
 description: Documentation for BambooHR credentials. Use these credentials to authenticate BambooHR in n8n, a workflow automation platform.
 ---
 

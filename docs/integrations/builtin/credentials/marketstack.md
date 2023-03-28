@@ -1,5 +1,5 @@
 ---
-title: Marketstack credentials - n8n Documentation
+title: Marketstack credentials
 description: Documentation for Marketstack credentials. Use these credentials to authenticate Marketstack in n8n, a workflow automation platform.
 ---
 

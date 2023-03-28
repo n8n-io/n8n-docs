@@ -1,5 +1,5 @@
 ---
-title: Todoist credentials - n8n Documentation
+title: Todoist credentials
 description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
 ---
 

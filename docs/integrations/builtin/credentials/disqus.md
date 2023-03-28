@@ -1,5 +1,5 @@
 ---
-title: Disqus credentials - n8n Documentation
+title: Disqus credentials
 description: Documentation for Disqus credentials. Use these credentials to authenticate Disqus in n8n, a workflow automation platform.
 ---
 

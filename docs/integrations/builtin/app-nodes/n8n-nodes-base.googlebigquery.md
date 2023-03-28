@@ -1,5 +1,5 @@
 ---
-title: Google BigQuery node - n8n Documentation
+title: Google BigQuery
 description: Documentation for the Google BigQuery node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Zammad credentials - n8n Documentation
+title: Zammad credentials
 description: Documentation for Zammad credentials. Use these credentials to authenticate Zammad in n8n, a workflow automation platform.
 ---
 

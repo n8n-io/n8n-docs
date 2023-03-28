@@ -1,5 +1,5 @@
 ---
-title: Keap credentials - n8n Documentation
+title: Keap credentials
 description: Documentation for Keap credentials. Use these credentials to authenticate Keap in n8n, a workflow automation platform.
 ---
 

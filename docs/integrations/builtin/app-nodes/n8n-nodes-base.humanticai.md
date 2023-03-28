@@ -1,5 +1,5 @@
 ---
-title: Humantic AI node - n8n Documentation
+title: Humantic AI
 description: Documentation for the Humantic AI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

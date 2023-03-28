@@ -1,5 +1,5 @@
 ---
-title: KoBo Toolbox credentials - n8n Documentation
+title: KoBo Toolbox credentials
 description: Documentation for KoBo Toolbox credentials. Use these credentials to authenticate KoBo Toolbox in n8n, a workflow automation platform.
 ---
 

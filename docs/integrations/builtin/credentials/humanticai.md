@@ -1,5 +1,5 @@
 ---
-title: Humantic AI credentials - n8n Documentation
+title: Humantic AI credentials
 description: Documentation for Humantic AI credentials. Use these credentials to authenticate Humantic AI in n8n, a workflow automation platform.
 ---
 

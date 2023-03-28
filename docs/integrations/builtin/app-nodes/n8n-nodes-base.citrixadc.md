@@ -1,5 +1,5 @@
 ---
-title: Citrix ADC node - n8n Documentation
+title: Citrix ADC
 description: Documentation for the Citrix ADC node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

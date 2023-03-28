@@ -1,5 +1,5 @@
 ---
-title: Paddle node - n8n Documentation
+title: Paddle
 description: Documentation for the Paddle node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

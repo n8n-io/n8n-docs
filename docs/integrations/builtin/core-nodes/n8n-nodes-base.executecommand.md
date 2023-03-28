@@ -1,5 +1,5 @@
 ---
-title: Execute Command node - n8n Documentation
+title: Execute Command
 description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
@@ -26,7 +26,7 @@ The Execute Command node has two properties:
 
 This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow triggers twice a day, and if the memory usage exceeds 80%, it sends an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
 
-- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
+- [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [Execute Command]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)
 - [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio/)

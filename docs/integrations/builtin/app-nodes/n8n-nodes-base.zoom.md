@@ -1,5 +1,5 @@
 ---
-title: Zoom node - n8n Documentation
+title: Zoom
 description: Documentation for the Zoom node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

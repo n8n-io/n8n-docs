@@ -1,5 +1,5 @@
 ---
-title: Keap node - n8n Documentation
+title: Keap
 description: Documentation for the Keap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: LinkedIn node - n8n Documentation
+title: LinkedIn
 description: Documentation for the LinkedIn node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

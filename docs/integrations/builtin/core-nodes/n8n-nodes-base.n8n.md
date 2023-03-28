@@ -1,5 +1,5 @@
 ---
-title: n8n node - n8n Documentation
+title: n8n
 description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

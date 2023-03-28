@@ -1,5 +1,5 @@
 ---
-title: Snowflake credentials - n8n Documentation
+title: Snowflake credentials
 description: Documentation for Snowflake credentials. Use these credentials to authenticate Snowflake in n8n, a workflow automation platform.
 ---
 

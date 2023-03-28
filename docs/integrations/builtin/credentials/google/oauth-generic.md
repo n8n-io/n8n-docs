@@ -1,5 +1,5 @@
 ---
-title: Google OAuth2 generic - n8n Documentation
+title: Google OAuth2 generic
 description: Documentation for generic OAuth2 Google credentials. Use these credentials to authenticate Google services in n8n, a workflow automation platform.
 ---
 

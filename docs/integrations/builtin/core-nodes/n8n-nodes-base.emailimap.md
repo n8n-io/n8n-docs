@@ -1,9 +1,9 @@
 ---
-title: Email Trigger (IMAP) node - n8n Documentation
-description: Documentation for the Email Trigger (IMAP) node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Email trigger (IMAP)
+description: Documentation for the Email trigger (IMAP) node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
-# Email Trigger (IMAP)
+# Email trigger (IMAP)
 
 The IMAP Email node allows you to receive emails using an IMAP email server. This node is a trigger node.
 

@@ -1,5 +1,5 @@
 ---
-title: CoinGecko node - n8n Documentation
+title: CoinGecko
 description: Documentation for the CoinGecko node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

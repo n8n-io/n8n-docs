@@ -1,5 +1,5 @@
 ---
-title: Medium credentials - n8n Documentation
+title: Medium credentials
 description: Documentation for Medium credentials. Use these credentials to authenticate Medium in n8n, a workflow automation platform.
 ---
 

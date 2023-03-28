@@ -1,5 +1,5 @@
 ---
-title: Cal credentials - n8n Documentation
+title: Cal credentials
 description: Documentation for Cal credentials. Use these credentials to authenticate Cal in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: SIGNL4 node - n8n Documentation
+title: SIGNL4
 description: Documentation for the SIGNL4 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

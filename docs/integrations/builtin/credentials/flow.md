@@ -1,5 +1,5 @@
 ---
-title: Flow credentials - n8n Documentation
+title: Flow credentials
 description: Documentation for Flow credentials. Use these credentials to authenticate Flow in n8n, a workflow automation platform.
 ---
 

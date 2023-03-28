@@ -1,5 +1,5 @@
 ---
-title: Brandfetch credentials - n8n Documentation
+title: Brandfetch credentials
 description: Documentation for Brandfetch credentials. Use these credentials to authenticate Brandfetch in n8n, a workflow automation platform.
 ---
 

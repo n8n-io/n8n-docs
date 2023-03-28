@@ -1,5 +1,5 @@
 ---
-title: Form.io Trigger credentials - n8n Documentation
+title: Form.io Trigger credentials
 description: Documentation for Form.io Trigger credentials. Use these credentials to authenticate Form.io Trigger in n8n, a workflow automation platform.
 ---
 

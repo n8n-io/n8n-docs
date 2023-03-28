@@ -1,5 +1,5 @@
 ---
-title: Pushbullet credentials - n8n Documentation
+title: Pushbullet credentials
 description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
 ---
 

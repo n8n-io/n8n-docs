@@ -1,5 +1,5 @@
 ---
-title: Help Scout node - n8n Documentation
+title: Help Scout
 description: Documentation for the Help Scout node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

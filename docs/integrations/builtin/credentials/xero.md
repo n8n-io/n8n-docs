@@ -1,5 +1,5 @@
 ---
-title: Xero credentials - n8n Documentation
+title: Xero credentials
 description: Documentation for Xero credentials. Use these credentials to authenticate Xero in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: YouTube node - n8n Documentation
+title: YouTube
 description: Documentation for the YouTube node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

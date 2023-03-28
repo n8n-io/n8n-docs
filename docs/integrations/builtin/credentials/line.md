@@ -1,5 +1,5 @@
 ---
-title: Line credentials - n8n Documentation
+title: Line credentials
 description: Documentation for Line credentials. Use these credentials to authenticate Line in n8n, a workflow automation platform.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Netlify credentials - n8n Documentation
+title: Netlify credentials
 description: Documentation for Netlify credentials. Use these credentials to authenticate Netlify in n8n, a workflow automation platform.
 ---
 

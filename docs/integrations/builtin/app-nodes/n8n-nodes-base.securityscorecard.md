@@ -1,5 +1,5 @@
 ---
-title: SecurityScorecard node - n8n Documentation
+title: SecurityScorecard
 description: Documentation for the SecurityScorecard node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

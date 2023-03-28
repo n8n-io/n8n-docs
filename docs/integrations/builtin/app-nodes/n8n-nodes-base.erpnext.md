@@ -1,5 +1,5 @@
 ---
-title: ERPNext node - n8n Documentation
+title: ERPNext
 description: Documentation for the ERPNext node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -1,9 +1,14 @@
 # Storyblok
 
-[Storyblok](https://www.storyblok.com/) is a headless content management system with a visual editor. It provides developers with all the flexibility they need to build reliable and fast websites, while giving content creators with no coding skills the ability to edit content independently of the developer.
+The Storyblok node allows you to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
+
+On this page, you'll find a list of operations the Storyblok node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/storyblok/).
+    Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Storyblok integrations](https://n8n.io/integrations/storyblok/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

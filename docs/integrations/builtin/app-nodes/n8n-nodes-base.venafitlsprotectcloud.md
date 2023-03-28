@@ -1,11 +1,14 @@
 # Venafi TLS Protect Cloud
 
-[Venafi](https://www.venafi.com/){:target=_blank .external-link} is a cybersecurity company providing services for machine identity management. They offer solutions to manage and protect identities for a wide range of machine types, delivering global visibility, lifecycle automation, and actionable intelligence.
+The Venafi TLS Protect Cloud node allows you to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
 
-The n8n Venafi TLS Protect Cloud node allows you to integrate with the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/){:target=_blank} service.
+On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud/).
+    Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Cloud integrations](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target="_blank" .external-link} list.
 
 ## Operations
 

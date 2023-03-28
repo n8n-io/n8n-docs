@@ -1,3 +1,8 @@
+---
+title: Travis CI node - n8n Documentation
+description: Documentation for the Travis CI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Travis CI
 
 The Travis CI node allows you to automate work in Travis CI, and integrate Travis CI with other applications. n8n has built-in support for a wide range of Travis CI features, including cancelling and getting builds. 
@@ -44,3 +49,4 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Travis CI node to trigger a build](/_images/integrations/builtin/app-nodes/travisci/travisci_node.png)
+

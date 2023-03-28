@@ -1,3 +1,8 @@
+---
+title: Reddit node - n8n Documentation
+description: Documentation for the Reddit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Reddit
 
 The Reddit node allows you to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
@@ -90,3 +95,4 @@ This node will add a comment to the post that we created earlier.
 In the screenshot below, you will notice that the node comments on the post that we created earlier.
 
 ![Using the Reddit node to create a comment](/_images/integrations/builtin/app-nodes/reddit/reddit2_node.png)
+

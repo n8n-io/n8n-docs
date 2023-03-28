@@ -1,3 +1,8 @@
+---
+title: WordPress node - n8n Documentation
+description: Documentation for the WordPress node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # WordPress
 
 [WordPress](https://wordpress.org/) is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.
@@ -54,3 +59,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the WordPress node to update the post](/_images/integrations/builtin/app-nodes/wordpress/wordpress1_node.png)
+

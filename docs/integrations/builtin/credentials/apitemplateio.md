@@ -1,3 +1,8 @@
+---
+title: APITemplate.io credentials - n8n Documentation
+description: Documentation for APITemplate.io credentials. Use these credentials to authenticate APITemplate.io in n8n, a workflow automation platform.
+---
+
 # APITemplate.io credentials
 
 You can use these credentials to authenticate the following nodes with APITemplate.io.
@@ -23,3 +28,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/NUAkybjCGa8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

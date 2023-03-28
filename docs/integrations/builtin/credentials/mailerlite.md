@@ -1,3 +1,8 @@
+---
+title: MailerLite credentials - n8n Documentation
+description: Documentation for MailerLite credentials. Use these credentials to authenticate MailerLite in n8n, a workflow automation platform.
+---
+
 # MailerLite credentials
 
 You can use these credentials to authenticate the following nodes with MailerLite.
@@ -18,3 +23,4 @@ Create a [MailerLite](https://MailerLite.com) account.
 5. Copy the ***API key*** that is displayed and use it with your MailerLite node credentials in n8n.
 
 ![Getting MailerLite credentials](/_images/integrations/builtin/credentials/mailerlite/using-api-key.gif)
+

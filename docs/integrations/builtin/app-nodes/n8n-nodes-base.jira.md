@@ -1,3 +1,8 @@
+---
+title: Jira node - n8n Documentation
+description: Documentation for the Jira node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Jira
 
 The Jira node allows you to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
@@ -75,6 +80,7 @@ For example, if you want to receive all the issues of a project named `n8n`, fol
 This query will fetch all the issues in the project named `n8n`. Enter the name of your project instead of `n8n` to fetch all the issues for your project.
 
 You can refer to the [official documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about JQL to learn more about it.
+
 
 
 

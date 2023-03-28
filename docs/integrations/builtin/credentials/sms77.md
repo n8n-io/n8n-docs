@@ -1,3 +1,8 @@
+---
+title: sms77 credentials - n8n Documentation
+description: Documentation for sms77 credentials. Use these credentials to authenticate sms77 in n8n, a workflow automation platform.
+---
+
 # sms77 credentials
 
 You can use these credentials to authenticate the following nodes with sms77.
@@ -16,3 +21,4 @@ Create an [sms77](https://sms77.io/) account.
 4. Use the API key provided with your sms77 node credentials in n8n.
 
 ![Getting sms77 credentials](/_images/integrations/builtin/credentials/sms77/using-access-token.gif)
+

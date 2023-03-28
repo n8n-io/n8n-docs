@@ -1,3 +1,8 @@
+---
+title: The Hive trigger node - n8n Documentation
+description: Documentation for the The Hive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # The Hive trigger
 
 [TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
@@ -58,3 +63,4 @@ curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/jso
     ]
 }'
 ```
+

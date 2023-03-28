@@ -1,3 +1,8 @@
+---
+title: Raindrop node - n8n Documentation
+description: Documentation for the Raindrop node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Raindrop
 
 The Raindrop node allows you to automate work in Raindrop, and integrate Raindrop with other applications. n8n has built-in support for a wide range of Raindrop features, including getting users, deleting tags, and creating, updating, deleting and getting collections and bookmarks. 
@@ -109,3 +114,4 @@ This node will return the information about the bookmark that we created earlier
 In the screenshot below, you will notice that the node returns the information on the bookmark that we created earlier.
 
 ![Using the Raindrop node to get a bookmark](/_images/integrations/builtin/app-nodes/raindrop/raindrop3_node.png)
+

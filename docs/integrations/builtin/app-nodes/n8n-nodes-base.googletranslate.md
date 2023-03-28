@@ -1,3 +1,8 @@
+---
+title: Google Translate node - n8n Documentation
+description: Documentation for the Google Translate node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Translate
 
 The Google Translate node allows you to automate work in Google Translate, and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, including translating languages.
@@ -43,3 +48,4 @@ This node will translate the text `Hello from n8n!` to German. You can enter a d
 In the screenshot below, you will notice that the node translates the text `Hello from n8n!` to German.
 
 ![Using the Google Translate node to translate text in German](/_images/integrations/builtin/app-nodes/googletranslate/googletranslate_node.png)
+

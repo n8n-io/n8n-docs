@@ -1,3 +1,8 @@
+---
+title: Pushover credentials - n8n Documentation
+description: Documentation for Pushover credentials. Use these credentials to authenticate Pushover in n8n, a workflow automation platform.
+---
+
 # Pushover credentials
 
 You can use these credentials to authenticate the following nodes with Pushover.
@@ -18,3 +23,4 @@ Create a [Pushover](https://pushover.net) account.
 6. Use this ***API Key*** with your Pushover node credentials in n8n.
 
 ![Getting Pushover credentials](/_images/integrations/builtin/credentials/pushover/using-api-key.gif)
+

@@ -1,3 +1,8 @@
+---
+title: Postmark trigger node - n8n Documentation
+description: Documentation for the Postmark trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Postmark trigger
 
 [Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
@@ -26,4 +31,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Postmark Trigger node.
+
 

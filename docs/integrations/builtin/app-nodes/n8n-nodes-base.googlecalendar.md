@@ -1,3 +1,8 @@
+---
+title: Google Calendar node - n8n Documentation
+description: Documentation for the Google Calendar node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Calendar
 
 The Google Calendar node allows you to automate work in Google Calendar, and integrate Google Calendar with other applications. n8n has built-in support for a wide range of Google Calendar features, including adding, retrieving, deleting and updating calendar events.
@@ -43,6 +48,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the start date of your event in the *Start* field.
 4. Enter the end date of your event in the *End* field.
 5. Click on *Execute Node* to run the workflow.
+
 
 
 

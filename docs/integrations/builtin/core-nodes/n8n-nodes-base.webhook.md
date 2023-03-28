@@ -1,3 +1,8 @@
+---
+title: Webhook node - n8n Documentation
+description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Webhook
 
 The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
@@ -227,6 +232,7 @@ To send a response of type string, follow the steps mentioned below.
 9. Toggle ***Keep Only Set*** to `true`.
 
 When the Webhook gets called, it will send the string response that was set in the Set node.
+
 
 
 

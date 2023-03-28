@@ -1,3 +1,8 @@
+---
+title: Start node - n8n Documentation
+description: Documentation for the Start node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Start
 
 !!! warning "Deprecated"
@@ -15,6 +20,7 @@ In case there is no Trigger node in the workflow, the workflow always starts fro
 ### When is it necessary to use the Start node?
 
 When using the *Execute Workflow* node in workflow A to execute workflow B, the *Start* node will act as the trigger node in workflow B. The second node in workflow B needs to be connected to the Start node for the workflow to execute correctly.
+
 
 
 

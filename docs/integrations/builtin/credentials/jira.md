@@ -1,3 +1,8 @@
+---
+title: Jira credentials - n8n Documentation
+description: Documentation for Jira credentials. Use these credentials to authenticate Jira in n8n, a workflow automation platform.
+---
+
 # Jira credentials
 
 You can use these credentials to authenticate the following nodes with Jira.
@@ -18,3 +23,4 @@ Create a [Jira](https://www.JIRA.com/) account.
 5. Select **Create and manage API tokens**.
 6. Create API token.
 7. Use the API token in the Jira node credentials in n8n, along with the email address and Jira domain.
+

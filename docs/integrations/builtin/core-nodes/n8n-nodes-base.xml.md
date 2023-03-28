@@ -1,3 +1,8 @@
+---
+title: XML node - n8n Documentation
+description: Documentation for the XML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # XML
 
 The XML node is useful to convert data from and to XML.
@@ -54,3 +59,4 @@ The start node exists by default when you create a new workflow.
 2. Click on ***Execute Node*** to run the node.
 
 ![Convert JSON to XML using the XML node](/_images/integrations/builtin/core-nodes/xml/xml_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: Intercom node - n8n Documentation
+description: Documentation for the Intercom node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Intercom
 
 The Intercom node allows you to automate work in Intercom, and integrate Intercom with other applications. n8n has built-in support for a wide range of Intercom features, including creating, updating, deleting, and getting companies, leads, and users. 
@@ -52,3 +57,4 @@ The start node exists by default when you create a new workflow.
 2. Select 'Email' from the dropdown list for the *Identifier Type* field.
 3. Enter the email in the *Value* field.
 4. Click on *Execute Node* to run the workflow.
+

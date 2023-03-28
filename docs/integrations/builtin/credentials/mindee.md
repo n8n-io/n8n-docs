@@ -1,3 +1,8 @@
+---
+title: Mindee credentials - n8n Documentation
+description: Documentation for Mindee credentials. Use these credentials to authenticate Mindee in n8n, a workflow automation platform.
+---
+
 # Mindee credentials
 
 You can use these credentials to authenticate the following nodes with Mindee.
@@ -20,3 +25,4 @@ Create a [Mindee](https://mindee.com) account.
 8. Use this API key with your Mindee node credentials in n8n.
 
 ![Getting Mindee credentials](/_images/integrations/builtin/credentials/mindee/using-api-key.gif)
+

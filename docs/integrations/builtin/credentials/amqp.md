@@ -1,3 +1,8 @@
+---
+title: AMQP credentials - n8n Documentation
+description: Documentation for AMQP credentials. Use these credentials to authenticate AMQP in n8n, a workflow automation platform.
+---
+
 # AMQP credentials
 
 You can use these credentials to authenticate the following nodes with AMQP.
@@ -14,3 +19,4 @@ You need to have a AMQP 1.0 compatible message broker installed.
 Use your Hostname, Port, User, and Password as the AMQP Sender credential data in n8n.
 
 **Note:** The default username for ActiveMQ is `admin` and the default password is `admin`.
+

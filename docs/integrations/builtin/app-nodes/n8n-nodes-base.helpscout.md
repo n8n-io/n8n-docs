@@ -1,3 +1,8 @@
+---
+title: Help Scout node - n8n Documentation
+description: Documentation for the Help Scout node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Help Scout
 
 
@@ -53,3 +58,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Mailbox' option from the *Resource* dropdown list.
 3. Select the 'Get All' option from the *Operation* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

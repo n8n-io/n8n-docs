@@ -1,3 +1,8 @@
+---
+title: Asana credentials - n8n Documentation
+description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
+---
+
 # Asana credentials
 
 You can use these credentials to authenticate the following nodes with Asana.
@@ -43,3 +48,4 @@ Create an [Asana](https://www.Asana.com/) account.
 9. Copy the token and use it with your Asana node credentials in n8n.
 
 ![Getting Asana credentials](/_images/integrations/builtin/credentials/asana/using-access-token.gif)
+

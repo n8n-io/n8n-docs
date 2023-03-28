@@ -1,3 +1,8 @@
+---
+title: Activation Trigger node - n8n Documentation
+description: Documentation for the Activation Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Activation Trigger
 
 The Activation Trigger node gets triggered when an event gets fired by n8n or a workflow.
@@ -55,3 +60,4 @@ This node will send a message in the `workflow` channel on Mattermost.
 In the screenshot below, you will notice that the node sends a message to Mattermost.
 
 ![Using the Mattermost node to send a message to a channel](/_images/integrations/builtin/core-nodes/activationtrigger/mattermost_node.png)
+

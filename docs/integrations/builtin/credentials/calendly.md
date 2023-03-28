@@ -1,3 +1,8 @@
+---
+title: Calendly credentials - n8n Documentation
+description: Documentation for Calendly credentials. Use these credentials to authenticate Calendly in n8n, a workflow automation platform.
+---
+
 # Calendly credentials
 
 You can use these credentials to authenticate the following nodes with Calendly.
@@ -16,3 +21,4 @@ Create a [Calendly](https://www.calendly.com/) premium account.
 
 
 ![Getting Calendly credentials](/_images/integrations/builtin/credentials/calendly/using-access-token.gif)
+

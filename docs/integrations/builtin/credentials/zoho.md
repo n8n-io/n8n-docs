@@ -1,3 +1,8 @@
+---
+title: Zoho credentials - n8n Documentation
+description: Documentation for Zoho credentials. Use these credentials to authenticate Zoho in n8n, a workflow automation platform.
+---
+
 # Zoho credentials
 
 You can use these credentials to authenticate the following nodes with Zoho.
@@ -24,3 +29,4 @@ Create a [Zoho](https://www.zoho.com/) account.
 8. Click the *Save* button to save your credentials.
 
 ![Getting Zoho credentials](/_images/integrations/builtin/credentials/zoho/getting-oauth-credentials.gif)
+

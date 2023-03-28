@@ -1,3 +1,8 @@
+---
+title: FTP credentials - n8n Documentation
+description: Documentation for FTP credentials. Use these credentials to authenticate FTP in n8n, a workflow automation platform.
+---
+
 # FTP credentials
 
 You can use these credentials to authenticate the following nodes with FTP.
@@ -13,3 +18,4 @@ Create an account on an FTP server.
 1. Retrieve your login credentials, FTP/SFTP host, and port parameters.
 2. Use the login credentials, FTP/SFTP host, and port parameters with your FTP node credentials in n8n.
 3. Click on the ***Save*** button to save your credentials.
+

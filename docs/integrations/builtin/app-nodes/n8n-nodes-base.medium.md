@@ -1,3 +1,8 @@
+---
+title: Medium node - n8n Documentation
+description: Documentation for the Medium node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Medium
 
 The Medium node allows you to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
@@ -43,6 +48,7 @@ The start node exists by default when you create a new workflow.
 5. Select the format from the ***Content Format*** dropdown list.
 6. Enter conent of the post in the ***Content*** field.
 7. Click on ***Execute Node*** to run the workflow.
+
 
 
 

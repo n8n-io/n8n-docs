@@ -1,3 +1,8 @@
+---
+title: Bitwarden node - n8n Documentation
+description: Documentation for the Bitwarden node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Bitwarden
 
 The Bitwarden node allows you to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
@@ -114,3 +119,4 @@ This node will get all the members in the group that we created earlier.
 In the screenshot below, you will notice that the node retrieves the members in the group.
 
 ![Using the Bitwarden node to get members in a group](/_images/integrations/builtin/app-nodes/bitwarden/bitwarden3_node.png)
+

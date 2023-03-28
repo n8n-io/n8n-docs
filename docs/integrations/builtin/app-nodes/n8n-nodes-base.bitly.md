@@ -1,3 +1,8 @@
+---
+title: Bitly node - n8n Documentation
+description: Documentation for the Bitly node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Bitly
 
 The Bitly node allows you to automate work in Bitly, and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, including creating, getting, and updating links.
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Bitly node. You can find out how to do that [here](/integrations/builtin/credentials/bitly/).
 2. Enter the URL in the *Long URL* field.
 3. Click on *Execute Node* to run the workflow.
+

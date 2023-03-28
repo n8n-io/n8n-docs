@@ -1,3 +1,8 @@
+---
+title: Twitter node - n8n Documentation
+description: Documentation for the Twitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Twitter
 
 [Twitter](https://twitter.com/) is a microblogging and social networking service on which users post and interact with messages known as "tweets".
@@ -36,3 +41,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Twitter node. You can find out how to do that [here](/integrations/builtin/credentials/twitter/).
 2. Type the message you want to tweet in the *Text* field.
 3. Click on *Execute Node* to run the workflow.
+

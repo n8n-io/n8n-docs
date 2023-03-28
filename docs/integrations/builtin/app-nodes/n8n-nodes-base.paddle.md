@@ -1,3 +1,8 @@
+---
+title: Paddle node - n8n Documentation
+description: Documentation for the Paddle node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Paddle
 
 [Paddle](https://www.paddle.com/) is an all-in-one SaaS Commerce platform for software and SaaS companies to run and grow their business.
@@ -48,3 +53,4 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Paddle node to create a coupon](/_images/integrations/builtin/app-nodes/paddle/paddle_node.png)
+

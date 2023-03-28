@@ -1,3 +1,8 @@
+---
+title: Airtable node - n8n Documentation
+description: Documentation for the Airtable node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Airtable
 
 The Airtable node allows you to automate work in Airtable, and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
@@ -141,6 +146,7 @@ To filter records from your Airtable base, use the ***Filter By Formula*** optio
 Similarly, if you want to return all the users that do not belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
 
 Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
+
 
 
 

@@ -1,3 +1,8 @@
+---
+title: Redis credentials - n8n Documentation
+description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
+---
+
 # Redis credentials
 
 You can use these credentials to authenticate the following nodes with Redis.
@@ -14,3 +19,4 @@ Create an user account on a Redis server.
 2. Use the credentials and connection parameters with your Redis node credentials in n8n.
 
 ![Getting Redis credentials](/_images/integrations/builtin/credentials/redis/using-database-connection.gif)
+

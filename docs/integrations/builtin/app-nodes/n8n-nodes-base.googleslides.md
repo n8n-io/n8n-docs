@@ -1,3 +1,8 @@
+---
+title: Google Slides node - n8n Documentation
+description: Documentation for the Google Slides node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Slides
 
 The Google Slides node allows you to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating presentations, and getting pages. 
@@ -77,3 +82,4 @@ This node will return thumbnails of the pages that were returned by the previous
 In the screenshot below, you will notice that the node returns thumbnails of the pages that were returned by the previous node.
 
 ![Using the Google Slides node to get thumbnails of the slides](/_images/integrations/builtin/app-nodes/googleslides/googleslides1_node.png)
+

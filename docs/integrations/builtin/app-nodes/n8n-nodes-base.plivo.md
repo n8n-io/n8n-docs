@@ -1,3 +1,8 @@
+---
+title: Plivo node - n8n Documentation
+description: Documentation for the Plivo node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Plivo
 
 The Plivo node allows you to automate work in Plivo, and integrate Plivo with other applications. n8n has built-in support for a wide range of Plivo features, including making calls, and sending SMS/MMS. 
@@ -74,4 +79,5 @@ In the screenshot below, you will notice that the node sends an SMS to the phone
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

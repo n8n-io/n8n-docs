@@ -1,3 +1,8 @@
+---
+title: Wise node - n8n Documentation
+description: Documentation for the Wise node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Wise
 
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
@@ -109,3 +114,4 @@ This node will return the information of the transfer that we executed in the pr
 In the screenshot below, you will notice that the node returns the information about the transfer that we executed in the previous node.
 
 ![Using the Wise node to get a transfer](/_images/integrations/builtin/app-nodes/wise/wise3_node.png)
+

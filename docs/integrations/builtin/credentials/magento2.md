@@ -1,3 +1,8 @@
+---
+title: Magento 2 credentials - n8n Documentation
+description: Documentation for Magento 2 credentials. Use these credentials to authenticate Magento 2 in n8n, a workflow automation platform.
+---
+
 # Magento 2 credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -26,3 +31,4 @@ From n8n:
 1. Enter the **Host** address of your Magento store.
 2. Enter the **Access Token** obtained above.
 3. Click **Save** to create the credentials.
+

@@ -1,3 +1,8 @@
+---
+title: Write Binary File node - n8n Documentation
+description: Documentation for the Write Binary File node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Write Binary File
 
 The Write Binary File node is used to write a file to the host machine that runs n8n.
@@ -42,3 +47,4 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the path to which the file should be written along with the file name in the ***File Name*** field.
 2. Click on ***Execute Node*** to run the node.
+

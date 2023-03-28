@@ -1,3 +1,8 @@
+---
+title: Humantic AI credentials - n8n Documentation
+description: Documentation for Humantic AI credentials. Use these credentials to authenticate Humantic AI in n8n, a workflow automation platform.
+---
+
 # Humantic AI credentials
 
 You can use these credentials to authenticate the following nodes with Humantic AI.
@@ -15,3 +20,4 @@ You can use these credentials to authenticate the following nodes with Humantic 
 7. Use the provided ***api key*** with your Humantic AI API credentials in n8n.
 
 ![Getting Humantic AI credentials](/_images/integrations/builtin/credentials/humanticai/using-api-key.gif)
+

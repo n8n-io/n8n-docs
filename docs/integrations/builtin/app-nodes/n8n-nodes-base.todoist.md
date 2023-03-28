@@ -1,3 +1,8 @@
+---
+title: Todoist node - n8n Documentation
+description: Documentation for the Todoist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Todoist
 
 The Todoist node allows you to automate work in Todoist, and integrate Todoist with other applications. n8n has built-in support for a wide range of Todoist features, including creating, updating, deleting, and getting tasks. 
@@ -42,6 +47,7 @@ The start node exists by default when you create a new workflow.
 2. Select your project from the *Project* dropdown list.
 3. Enter the content for the task in the *Content* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

@@ -1,3 +1,8 @@
+---
+title: Workflow Trigger node - n8n Documentation
+description: Documentation for the Workflow Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Workflow Trigger
 
 The Workflow Trigger node gets triggered when a workflow is updated or activated.
@@ -50,3 +55,4 @@ This node will send a message in the `workflow` channel on Mattermost.
 In the screenshot below, you will notice that the node sends a message to Mattermost.
 
 ![Using the Mattermost node to send a message to a channel](/_images/integrations/builtin/core-nodes/workflowtrigger/mattermost_node.png)
+

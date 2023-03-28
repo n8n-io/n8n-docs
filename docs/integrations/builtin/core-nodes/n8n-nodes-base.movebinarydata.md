@@ -1,3 +1,8 @@
+---
+title: Move Binary Data node - n8n Documentation
+description: Documentation for the Move Binary Data node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Move Binary Data
 
 The Move Binary Data node is useful to move data between binary and JSON properties.
@@ -70,3 +75,4 @@ The start node exists by default when you create a new workflow.
 2. Click on ***Execute Node*** to run the node.
 
 ![Writing a file to the disk using the Write Binary File node](/_images/integrations/builtin/core-nodes/movebinarydata/writebinaryfile_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: Stripe node - n8n Documentation
+description: Documentation for the Stripe node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Stripe
 
 The Stripe node allows you to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
@@ -91,3 +96,4 @@ The start node exists by default when you create a new workflow.
     * **Type**: The type of token to create, **Card Token** by default.
 
 ![The Stripe2 node](/_images/integrations/builtin/app-nodes/stripe/stripe2_node.png)
+

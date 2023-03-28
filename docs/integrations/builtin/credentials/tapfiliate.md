@@ -1,3 +1,8 @@
+---
+title: Tapfiliate credentials - n8n Documentation
+description: Documentation for Tapfiliate credentials. Use these credentials to authenticate Tapfiliate in n8n, a workflow automation platform.
+---
+
 # Tapfiliate credentials
 
 You can use these credentials to authenticate the following nodes with Tapfiliate.
@@ -24,3 +29,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/xc8y_ieaepk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

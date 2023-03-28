@@ -1,3 +1,8 @@
+---
+title: Rename Keys node - n8n Documentation
+description: Documentation for the Rename Keys node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Rename Keys
 The Rename Keys node is used to rename the keys of a key-value pair in n8n.
 
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 2. Enter the name of the key you created in the previous step in the ***Current Key Name*** field.
 3. Enter the new name that you would like to give the key in the ***New Key Name*** field.
 4. Click on ***Execute Node*** to run the workflow.
+

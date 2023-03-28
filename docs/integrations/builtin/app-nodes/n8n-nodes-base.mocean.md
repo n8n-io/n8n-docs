@@ -1,3 +1,8 @@
+---
+title: Mocean node - n8n Documentation
+description: Documentation for the Mocean node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mocean
 
 The Mocean node allows you to automate work in Mocean, and integrate Mocean with other applications. n8n has built-in support for a wide range of Mocean features, including sending SMS, and voice messages. 
@@ -44,3 +49,4 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Mocean node to send an SMS](/_images/integrations/builtin/app-nodes/mocean/mocean_node.png)
+

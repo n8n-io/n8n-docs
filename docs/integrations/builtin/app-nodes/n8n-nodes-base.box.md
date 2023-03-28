@@ -1,3 +1,8 @@
+---
+title: Box node - n8n Documentation
+description: Documentation for the Box node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Box
 
 The Box node allows you to automate work in Box, and integrate Box with other applications. n8n has built-in support for a wide range of Box features, including creating, copying, deleting, searching, uploading, and downloading files and folders.
@@ -50,3 +55,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Folder' option from the *Resource* dropdown list.
 3. Enter the name of the folder in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+

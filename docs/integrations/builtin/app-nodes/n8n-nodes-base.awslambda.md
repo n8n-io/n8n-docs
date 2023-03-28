@@ -1,3 +1,8 @@
+---
+title: AWS Lambda node - n8n Documentation
+description: Documentation for the AWS Lambda node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Lambda
 
 The AWS Lambda node allows you to automate work in AWS Lambda, and integrate AWS Lambda with other applications. n8n has built-in support for a wide range of AWS Lambda features, including invoking functions.
@@ -35,3 +40,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the AWS Lambda node. You can find out how to do that [here](/integrations/builtin/credentials/aws/).
 2. Select the function that you want to invoke from the *Function* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

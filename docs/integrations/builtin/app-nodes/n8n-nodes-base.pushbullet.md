@@ -1,3 +1,8 @@
+---
+title: Pushbullet node - n8n Documentation
+description: Documentation for the Pushbullet node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Pushbullet
 
 The Pushbullet node allows you to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
@@ -69,3 +74,4 @@ This node will send a push notification with the weather update to the default d
 In the screenshot below, you will notice that the node sends a push notification to the default device with the weather update.
 
 ![Using the Pushbullet node to send weather updates via a push notification](/_images/integrations/builtin/app-nodes/pushbullet/pushbullet_node.png)
+

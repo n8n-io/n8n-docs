@@ -1,3 +1,8 @@
+---
+title: RSS Read node - n8n Documentation
+description: Documentation for the RSS Read node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # RSS Read
 
 The RSS Read node is used to read data from RSS feeds published on the internet.
@@ -27,6 +32,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the URL of the RSS feed that you want to read in the *URL* field.
 2. Click on *Execute Node* to run the workflow.
+
 
 
 

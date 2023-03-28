@@ -1,3 +1,8 @@
+---
+title: PayPal node - n8n Documentation
+description: Documentation for the PayPal node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # PayPal
 
 [PayPal](https://paypal.com) is a digital payment service that supports online funds transfers and that customers can use when shopping online.
@@ -34,3 +39,4 @@ The Start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the PayPal node. You can find out how to do that [here](/integrations/builtin/credentials/paypal/).
 2. Enter an ID in the *Sender Batch ID* field.
 3. Click on *Execute Node* to run the workflow.
+

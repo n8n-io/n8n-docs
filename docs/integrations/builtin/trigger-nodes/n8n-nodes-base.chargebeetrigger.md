@@ -1,3 +1,8 @@
+---
+title: Chargebee trigger node - n8n Documentation
+description: Documentation for the Chargebee trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Chargebee trigger
 
 [Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
@@ -38,3 +43,4 @@ The final workflow should look like the following image.
 5. Click on the *Add Webhook* button.
 6. Enter the Webhook Name and the Webhook URL.
 7. Click on the *Create* button.
+

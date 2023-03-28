@@ -1,3 +1,8 @@
+---
+title: KoBo Toolbox trigger node - n8n Documentation
+description: Documentation for the KoBo Toolbox trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # KoBo Toolbox trigger
 
 [KoBo toolbox](https://www.kobotoolbox.org/) is a field survey and data collection tool that makes it easy to design interactive forms to be completed offline from mobile devices. It is available both as a free cloud solution or as a self-hosted version.

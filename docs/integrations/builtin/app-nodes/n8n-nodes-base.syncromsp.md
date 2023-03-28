@@ -1,3 +1,8 @@
+---
+title: SyncroMSP node - n8n Documentation
+description: Documentation for the SyncroMSP node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SyncroMSP
 
 The SyncroMSP node allows you to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
@@ -37,3 +42,4 @@ On this page, you'll find a list of operations the SyncroMSP node supports and l
     * Retrieve ticket
     * Retrieve all tickets
     * Update ticket
+

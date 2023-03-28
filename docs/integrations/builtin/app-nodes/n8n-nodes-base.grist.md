@@ -1,3 +1,8 @@
+---
+title: Grist node - n8n Documentation
+description: Documentation for the Grist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Grist
 
 The Grist node allows you to automate work in Grist, and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, including creating, updating, deleting, and reading rows in a table. 
@@ -121,3 +126,4 @@ You can obtain it with the expression `{{$node["GristNodeName"].json["id"]}}`.
 - Click on ***Add Option*** and select 'Filter' from the dropdown list.
 - You can add filters for any number of columns. The result will only include records which match all the columns.
 - For each column, you can enter any number of values separated by commas. The result will include records which match any of the values for that column.
+

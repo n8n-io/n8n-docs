@@ -1,3 +1,8 @@
+---
+title: Toggl credentials - n8n Documentation
+description: Documentation for Toggl credentials. Use these credentials to authenticate Toggl in n8n, a workflow automation platform.
+---
+
 # Toggl credentials
 
 You can use these credentials to authenticate the following nodes with Toggl.
@@ -11,3 +16,4 @@ Create a [Toggl](https://toggl.com/) account.
 ## Using Username and Password
 
 1. Use your Toggle username and password with your node credentials in n8n.
+

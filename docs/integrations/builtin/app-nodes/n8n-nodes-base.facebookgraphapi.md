@@ -1,3 +1,8 @@
+---
+title: Facebook Graph API node - n8n Documentation
+description: Documentation for the Facebook Graph API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Facebook Graph API
 
 The Facebook Graph API node allows you to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
@@ -63,3 +68,4 @@ The start node exists by default when you create a new workflow.
 4. Click on the *Add Field* button and enter `first_name` in the *Name* field.
 5. Click on the *Add Field* button and enter `last_name` in the *Name* field.
 6. Click on *Execute Node* to run the workflow.
+

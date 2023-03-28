@@ -1,3 +1,8 @@
+---
+title: OpenThesaurus node - n8n Documentation
+description: Documentation for the OpenThesaurus node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # OpenThesaurus
 
 The OpenThesaurus node allows you to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n supports synonym look-up for German words. 
@@ -39,3 +44,4 @@ This node will return synonyms of the word `Hallo` in German. If you want to get
 In the screenshot below, you will notice that the node returns the synonyms of the word `Hallo`.
 
 ![Using the OpenThesaurus node to get the synonyms of the word Hallo](/_images/integrations/builtin/app-nodes/openthesaurus/openthesaurus_node.png)
+

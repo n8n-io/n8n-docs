@@ -1,3 +1,8 @@
+---
+title: AWS Elastic Load Balancing node - n8n Documentation
+description: Documentation for the AWS Elastic Load Balancing node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Elastic Load Balancing
 
 The AWS Elastic Load Balancing node allows you to automate work in AWS ELB, and integrate AWS ELB with other applications. n8n has built-in support for a wide range of AWS ELB features, including adding, getting, removing, deleting certificates and load balancers.
@@ -30,3 +35,4 @@ This node supports creating and managing application and network load balancers.
 Refer to [AWS ELB's documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html){:target=_blank .external-link} for more information on this service.
 
 View [example workflows and related content](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} on n8n's website.
+

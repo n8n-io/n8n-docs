@@ -1,3 +1,8 @@
+---
+title: Schedule Trigger node - n8n Documentation
+description: Documentation for the Schedule Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Schedule Trigger
 
 Use the Schedule Trigger node run workflows at fixed intervals and times. This works in a similar way to the cron software utility in Unix-like systems.
@@ -50,3 +55,4 @@ The sixth asterisk in the cron expression represents seconds. Setting this is op
 | * | * | * | * | * | * |
 |---|---|---|---|---|---|
 |second|minute|hour|day|week|month|
+

@@ -1,3 +1,8 @@
+---
+title: Autopilot node - n8n Documentation
+description: Documentation for the Autopilot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Autopilot
 
 The Autopilot node allows you to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, deleting, and updating contacts, as well as adding contacts to a list.
@@ -104,3 +109,4 @@ This node returns all the contacts of the `n8n-docs` list that we created using 
 In the screenshot below, you will notice that the node returns all the contacts that are present in the list `n8n-docs`.
 
 ![Using the Autopilot node to get all the contacts in a list](/_images/integrations/builtin/app-nodes/autopilot/autopilot3_node.png)
+

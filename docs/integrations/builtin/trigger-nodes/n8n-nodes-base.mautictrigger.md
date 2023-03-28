@@ -1,3 +1,8 @@
+---
+title: Mautic trigger node - n8n Documentation
+description: Documentation for the Mautic trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mautic trigger
 
 [Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
@@ -54,4 +59,5 @@ In the screenshot below, you will notice that the node sends an SMS to the submi
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mautic Trigger node.
+
 

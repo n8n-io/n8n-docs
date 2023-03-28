@@ -1,3 +1,8 @@
+---
+title: Formstack Trigger credentials - n8n Documentation
+description: Documentation for Formstack Trigger credentials. Use these credentials to authenticate Formstack Trigger in n8n, a workflow automation platform.
+---
+
 # Formstack Trigger credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -51,3 +56,4 @@ From n8n:
 10. Click the circle button to initiate the OAuth2 flow.
 11. In the modal window select **Authorize**.
 12. Click **Create** to save your new credentials.
+

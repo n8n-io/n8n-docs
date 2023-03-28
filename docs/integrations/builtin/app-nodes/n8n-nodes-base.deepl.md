@@ -1,3 +1,8 @@
+---
+title: DeepL node - n8n Documentation
+description: Documentation for the DeepL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # DeepL
 
 The DeepL node allows you to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
@@ -57,3 +62,4 @@ This node will translate the cocktail instructions that we got from the previous
 In the screenshot below, you will notice that the node translates the instructions of the cocktail to French.
 
 ![Using the DeepL node to translate the instructions to French](/_images/integrations/builtin/app-nodes/deepl/deepl_node.png)
+

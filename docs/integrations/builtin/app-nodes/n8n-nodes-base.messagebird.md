@@ -1,3 +1,8 @@
+---
+title: MessageBird node - n8n Documentation
+description: Documentation for the MessageBird node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MessageBird
 
 The MessageBird node allows you to automate work in MessageBird, and integrate MessageBird with other applications. n8n has built-in support for a wide range of MessageBird features, including sending messages, and getting balances. 
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the phone number to which you'll be sending the message in the *To* field.
 4. Enter you message in the *Message* field.
 5. Click on *Execute Node* to run the workflow.
+

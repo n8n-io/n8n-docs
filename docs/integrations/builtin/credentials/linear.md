@@ -1,3 +1,8 @@
+---
+title: Linear credentials - n8n Documentation
+description: Documentation for Linear credentials. Use these credentials to authenticate Linear in n8n, a workflow automation platform.
+---
+
 # Linear credentials
 
 You can use these credentials to authenticate the following nodes with Linear.
@@ -14,3 +19,4 @@ Create a [Linear](https://linear.app/) account.
 1. Open the [Linear API settings](https://linear.app/settings/api).
 2. Click on the **Create key** button.
 3. Copy the key into **API Key** field of the credentials screen in n8n.
+

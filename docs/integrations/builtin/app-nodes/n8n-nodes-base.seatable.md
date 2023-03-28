@@ -1,3 +1,8 @@
+---
+title: SeaTable node - n8n Documentation
+description: Documentation for the SeaTable node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SeaTable
 
 [SeaTable](https://seatable.co) is a collaborative database application with a spreadsheet interface.
@@ -14,3 +19,4 @@
     * Get
     * Get All
     * Update
+

@@ -1,3 +1,8 @@
+---
+title: urlscan.io credentials - n8n Documentation
+description: Documentation for urlscan.io credentials. Use these credentials to authenticate urlscan.io in n8n, a workflow automation platform.
+---
+
 # urlscan.io credentials
 
 You can use these credentials to authenticate the following nodes with UptimeRobot.
@@ -21,4 +26,5 @@ From n8n:
 
 5. Enter the **API Key** obtained above.
 6. Click **Save** to create your credentials.
+
 

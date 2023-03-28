@@ -1,3 +1,8 @@
+---
+title: Clearbit credentials - n8n Documentation
+description: Documentation for Clearbit credentials. Use these credentials to authenticate Clearbit in n8n, a workflow automation platform.
+---
+
 # Clearbit credentials
 
 You can use these credentials to authenticate the following nodes with Clearbit.
@@ -19,3 +24,4 @@ Create a [Clearbit](https://www.clearbit.com/) account.
 
 
 ![Getting Clearbit credentials](/_images/integrations/builtin/credentials/clearbit/using-access-token.gif)
+

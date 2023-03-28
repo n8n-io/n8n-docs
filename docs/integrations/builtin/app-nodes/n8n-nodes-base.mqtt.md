@@ -1,3 +1,8 @@
+---
+title: MQTT node - n8n Documentation
+description: Documentation for the MQTT node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MQTT
 
 The MQTT node allows you to automate work in MQTT, and integrate MQTT with other applications. n8n supports transporting messages with MQTT.
@@ -92,4 +97,5 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

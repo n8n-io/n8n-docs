@@ -1,3 +1,8 @@
+---
+title: HubSpot trigger node - n8n Documentation
+description: Documentation for the HubSpot trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # HubSpot trigger
 
 [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
@@ -40,3 +45,4 @@ n8n provides an app node for HubSpot. You can find the node docs [here](/integra
 View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [HubSpot's documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for details about their API.
+

@@ -1,3 +1,8 @@
+---
+title: Storyblok credentials - n8n Documentation
+description: Documentation for Storyblok credentials. Use these credentials to authenticate Storyblok in n8n, a workflow automation platform.
+---
+
 # Storyblok credentials
 
 You can use these credentials to authenticate the following nodes with Storyblok.
@@ -34,3 +39,4 @@ Create a [Storyblok](https://www.storyblok.com/) account.
 
 - [Content API Documentation](https://www.storyblok.com/docs/api/content-delivery#topics/authentication)
 - [Management API Documentation](https://www.storyblok.com/docs/api/management#topics/authentication)
+

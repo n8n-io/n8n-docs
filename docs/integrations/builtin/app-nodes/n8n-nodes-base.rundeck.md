@@ -1,3 +1,8 @@
+---
+title: Rundeck node - n8n Documentation
+description: Documentation for the Rundeck node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Rundeck
 
 The Rundeck node allows you to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
@@ -49,3 +54,4 @@ The start node exists by default when you create a new workflow.
 4. Under 'All Jobs', click on the name of the job you want to use with n8n.
 5. In the top left corner, under the name of the job, copy the string that is displayed in smaller font below the job name. This is your job ID.
 6. Paste this job ID in the `Job Id` field in n8n.
+

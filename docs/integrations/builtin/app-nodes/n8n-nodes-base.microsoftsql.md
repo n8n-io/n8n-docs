@@ -1,3 +1,8 @@
+---
+title: Microsoft SQL node - n8n Documentation
+description: Documentation for the Microsoft SQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft SQL
 
 The Microsoft SQL node allows you to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 2. Select 'Execute Query' from the *Operation* dropdown list.
 3. Enter your SQL query in the *Query* field.
 4. Click on *Execute Node* to run the workflow.
+

@@ -1,3 +1,8 @@
+---
+title: Strava node - n8n Documentation
+description: Documentation for the Strava node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Strava
 
 The Strava node allows you to automate work in Strava, and integrate Strava with other applications. n8n has built-in support for a wide range of Strava features, including creating new activities, and getting activity information. 
@@ -89,6 +94,7 @@ This node returns the information of the activity that we created using the Stra
 In the screenshot below, you will notice that the node returns the information of the activity that we specified in this node.
 
 ![Using the Strava node to get an issue](/_images/integrations/builtin/app-nodes/strava/strava2_node.png)
+
 
 
 

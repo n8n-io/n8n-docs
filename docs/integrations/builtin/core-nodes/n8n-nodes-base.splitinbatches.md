@@ -1,3 +1,8 @@
+---
+title: Split In Batches node - n8n Documentation
+description: Documentation for the Split In Batches node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Split In Batches
 
 The Split In Batches node helps you loop through data.
@@ -58,3 +63,4 @@ To check if the node still has items to process, use the following expression: `
 ## Get the current running index of the node
 
 To get the current running index of the node, use the following expression: `{{$node["SplitInBatches"].context["currentRunIndex"];}}`.
+

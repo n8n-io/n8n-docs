@@ -1,3 +1,8 @@
+---
+title: Google Sheets trigger node - n8n Documentation
+description: Documentation for the Google Sheets trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Sheets trigger
 
 [Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
@@ -18,3 +23,4 @@ Refer to [Google Sheet's API documentation](https://developers.google.com/sheets
 n8n provides an app node for Google Sheets. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/).
 
 View [example workflows and related content](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} on n8n's website.
+

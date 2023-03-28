@@ -1,3 +1,8 @@
+---
+title: Google credentials - n8n Documentation
+description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+---
+
 # Google credentials
 
 This section contains:
@@ -47,6 +52,7 @@ Once configured, you can use your credentials to authenticate the following node
     * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
     * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
     * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+
 
 
 

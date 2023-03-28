@@ -1,3 +1,8 @@
+---
+title: HighLevel node - n8n Documentation
+description: Documentation for the HighLevel node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # HighLevel
 
 The HighLevel node allows you to automate work in HighLevel, and integrate HighLevel with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks. 
@@ -40,3 +45,4 @@ HighLevel has [API documentation and support forums](https://help.gohighlevel.co
 	* Get
 	* Get All
 	* Update
+

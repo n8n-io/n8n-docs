@@ -1,3 +1,8 @@
+---
+title: ConvertKit node - n8n Documentation
+description: Documentation for the ConvertKit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ConvertKit
 
 The ConvertKit node allows you to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
@@ -83,3 +88,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the ConvertKit node to add the subscriber to the tag](/_images/integrations/builtin/app-nodes/convertkit/convertkit2_node.png)
+

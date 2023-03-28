@@ -1,3 +1,8 @@
+---
+title: monday.com node - n8n Documentation
+description: Documentation for the monday.com node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # monday.com
 
 [monday.com](https://monday.com/) is a work operating system that enables organizations to manage tasks, projects, and team work.
@@ -51,3 +56,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Get' option from the *Operation* dropdown list.
 3. Select the board you want to get from the *Board ID* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

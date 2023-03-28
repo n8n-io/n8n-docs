@@ -1,3 +1,8 @@
+---
+title: Xero credentials - n8n Documentation
+description: Documentation for Xero credentials. Use these credentials to authenticate Xero in n8n, a workflow automation platform.
+---
+
 # Xero credentials
 
 You can use these credentials to authenticate the following nodes with Xero.
@@ -19,3 +24,4 @@ Create a [Xero](https://www.xero.com/) account.
 7. Click the *Save* button to save your credentials.
 
 ![Getting Xero Oauth Credentials](/_images/integrations/builtin/credentials/xero/using-oauth.gif)
+

@@ -1,3 +1,8 @@
+---
+title: WooCommerce node - n8n Documentation
+description: Documentation for the WooCommerce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # WooCommerce
 
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
@@ -86,3 +91,4 @@ This node will get the information about the product that we created using the W
 In the screenshot below, you will notice that the node returns the information about the product that we created using the WooCommerce node.
 
 ![Using the WooCommerce node to get the information of a product](/_images/integrations/builtin/app-nodes/woocommerce/woocommerce2_node.png)
+

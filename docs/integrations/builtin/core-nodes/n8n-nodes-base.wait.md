@@ -1,3 +1,8 @@
+---
+title: Wait node - n8n Documentation
+description: Documentation for the Wait node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Wait
 
 The Wait node is used to create a pause of any desired duration in your workflows. When the workflow is paused the execution data is offloaded to the database, and when the resume condition is met it is reloaded and the execution continues.
@@ -124,3 +129,4 @@ In this node set the `id` of the user and new **Verified** boolean value to true
 Finally you update the table to reflect this newly created *Verified* field:
 
 ![Airtable node configuration](/_images/integrations/builtin/core-nodes/wait/airtable_node_2.png)
+

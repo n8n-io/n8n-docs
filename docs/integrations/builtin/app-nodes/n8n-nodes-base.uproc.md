@@ -1,3 +1,8 @@
+---
+title: uProc node - n8n Documentation
+description: Documentation for the uProc node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # uProc
 
 [uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
@@ -542,3 +547,4 @@ This node will send the screenshot that we received from the previous node.
 In the screenshot below, you will notice that the node sends the screenshot image to the channel that we specify.
 
 ![Using the Telegram node to send the image of the screenshot](/_images/integrations/builtin/app-nodes/uproc/telegram_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: Action Network node - n8n Documentation
+description: Documentation for the Action Network node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Action Network
 
 
@@ -96,3 +101,4 @@ The start node exists by default when you create a new workflow.
 3. Enable the **Simple** toggle to return an easier to view response as opposed to the complete raw data.
 
 ![Action Network2 node](/_images/integrations/builtin/app-nodes/actionnetwork/action_network_node2.png)
+

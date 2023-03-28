@@ -1,3 +1,8 @@
+---
+title: Webex by Cisco credentials - n8n Documentation
+description: Documentation for Webex by Cisco credentials. Use these credentials to authenticate Webex by Cisco in n8n, a workflow automation platform.
+---
+
 # Webex by Cisco credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -40,3 +45,4 @@ From n8n:
 8. Under ***Credential Data***, enter the ***Client ID*** and ***Client Secret*** obtained above.
 9. Under ***OAuth***, click the circle button to initiate authentication. A popup may appear prompting you to login to your Webex by Cisco account.
 10. After authentication is complete, click **Create** to save your new credentials.
+

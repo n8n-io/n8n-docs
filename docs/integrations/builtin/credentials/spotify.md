@@ -1,3 +1,8 @@
+---
+title: Spotify credentials - n8n Documentation
+description: Documentation for Spotify credentials. Use these credentials to authenticate Spotify in n8n, a workflow automation platform.
+---
+
 # Spotify credentials
 
 You can use these credentials to authenticate the following nodes with Spotify.
@@ -21,3 +26,4 @@ Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) acco
 4. Open the app settings and add the n8n provided redirect URL to the app's redirect URI list. Redirect URL Explanation [here](/).
 
 ![The Spotify App Dashboard](/_images/integrations/builtin/credentials/spotify/dashboard.gif)
+

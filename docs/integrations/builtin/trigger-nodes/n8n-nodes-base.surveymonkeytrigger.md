@@ -1,3 +1,8 @@
+---
+title: SurveyMonkey trigger node - n8n Documentation
+description: Documentation for the SurveyMonkey trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SurveyMonkey trigger
 
 [SurveyMonkey](https://www.surveymonkey.com/) is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
@@ -28,4 +33,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the SurveyMonkey Trigger node.
+
 

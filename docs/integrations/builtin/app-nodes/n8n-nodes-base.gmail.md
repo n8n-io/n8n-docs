@@ -1,3 +1,8 @@
+---
+title: Gmail node - n8n Documentation
+description: Documentation for the Gmail node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Gmail
 
 The Gmail node allows you to automate work in Gmail, and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, including creating, updating, deleting, and getting drafts, messages, labels, thread.  
@@ -50,5 +55,6 @@ Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/
 n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/).
 
 View [example workflows and related content](https://n8n.io/integrations/gmail/){:target=_blank .external-link} on our website.
+
 
 

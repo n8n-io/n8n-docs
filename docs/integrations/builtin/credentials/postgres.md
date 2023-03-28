@@ -1,3 +1,8 @@
+---
+title: Postgres credentials - n8n Documentation
+description: Documentation for Postgres credentials. Use these credentials to authenticate Postgres in n8n, a workflow automation platform.
+---
+
 # Postgres credentials
 
 You can use these credentials to authenticate the following nodes with Postgres.
@@ -14,3 +19,4 @@ Create an user account on a Postgres server.
 2. Use the credentials and connection parameters with your Postgres node credentials in n8n.
 
 ![Getting Postgres credentials](/_images/integrations/builtin/credentials/postgres/using-database-connection.gif)
+

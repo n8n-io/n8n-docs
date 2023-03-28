@@ -1,3 +1,8 @@
+---
+title: Git node - n8n Documentation
+description: Documentation for the Git node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Git
 
 [Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
@@ -91,3 +96,4 @@ This node will push the changes to a cloud repository.
 In the screenshot below, you will notice that the node pushes the local changes to a cloud repository.
 
 ![Using the Git node to push the changes](/_images/integrations/builtin/core-nodes/git/git3_node.png)
+

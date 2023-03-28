@@ -1,3 +1,8 @@
+---
+title: Medium credentials - n8n Documentation
+description: Documentation for Medium credentials. Use these credentials to authenticate Medium in n8n, a workflow automation platform.
+---
+
 # Medium credentials
 
 You can use these credentials to authenticate the following nodes with Medium.
@@ -40,3 +45,4 @@ You can use these credentials to authenticate the following nodes with Medium.
 8. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Medium Access Token](/_images/integrations/builtin/credentials/medium/using-access-token.gif)
+

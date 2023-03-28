@@ -1,3 +1,8 @@
+---
+title: Crypto node - n8n Documentation
+description: Documentation for the Crypto node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Crypto
 
 The Crypto node is used to encrypt data in workflows.
@@ -41,3 +46,4 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the data that you want to encrypt in the *Value* field.
 2. Click on *Execute Node* to run the workflow.
+

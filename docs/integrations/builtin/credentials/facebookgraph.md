@@ -1,3 +1,8 @@
+---
+title: Facebook Graph API credentials - n8n Documentation
+description: Documentation for Facebook Graph API credentials. Use these credentials to authenticate Facebook Graph API in n8n, a workflow automation platform.
+---
+
 # Facebook Graph API credentials
 
 You can use these credentials to authenticate the following nodes with Facebook.
@@ -21,3 +26,4 @@ Create a [Facebook](https://www.facebook.com/) account.
 6. Use generated access token with your Facebook node credentials in n8n.
 
 ![Getting Facebook credentials](/_images/integrations/builtin/credentials/facebookgraphapi/using-access-token.gif)
+

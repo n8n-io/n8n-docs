@@ -1,3 +1,8 @@
+---
+title: Nextcloud credentials - n8n Documentation
+description: Documentation for Nextcloud credentials. Use these credentials to authenticate Nextcloud in n8n, a workflow automation platform.
+---
+
 # Nextcloud credentials
 
 You can use these credentials to authenticate the following nodes with Nextcloud.
@@ -27,3 +32,4 @@ Create a [Nextcloud](https://nextcloud.com/) account.
 ## Using Username and Password
 
 Use your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html) along with your Nextcloud username and password in the node credentials.
+

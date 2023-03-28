@@ -1,3 +1,8 @@
+---
+title: Bubble node - n8n Documentation
+description: Documentation for the Bubble node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Bubble
 
 The Bubble node allows you to automate work in Bubble, and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, including creating, deleting, getting, and updating objects.
@@ -88,3 +93,4 @@ This node will retrieve the information of the object that we created earlier.
 In the screenshot below, you will notice that the node retrieves the information of the object that we created earlier.
 
 ![Using the Bubble node to retrieve the information of an object](/_images/integrations/builtin/app-nodes/bubble/bubble2_node.png)
+

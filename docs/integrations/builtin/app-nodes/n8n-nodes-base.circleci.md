@@ -1,3 +1,8 @@
+---
+title: CircleCI node - n8n Documentation
+description: Documentation for the CircleCI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # CircleCI
 
 The CircleCI node allows you to automate work in CircleCI, and integrate CircleCI with other applications. n8n has built-in support for a wide range of CircleCI features, including getting and triggering pipelines.
@@ -41,3 +46,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the project slug in the *Project Slug* field.
 4. Enter the number of the pipeline in CircleCI that you want to get in the *Pipeline Number* field.
 5. Click on *Execute Node* to run the workflow.
+

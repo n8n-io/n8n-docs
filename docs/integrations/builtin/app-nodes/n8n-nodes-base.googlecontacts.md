@@ -1,3 +1,8 @@
+---
+title: Google Contacts node - n8n Documentation
+description: Documentation for the Google Contacts node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Contacts
 
 The Google Contacts node allows you to automate work in Google Contacts, and integrate Google Contacts with other applications. n8n has built-in support for a wide range of Google Contacts features, including creating, updating, retrieving, deleting, and getting contacts. 
@@ -78,3 +83,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the Google Contacts node to get the contact](/_images/integrations/builtin/app-nodes/googlecontacts/googlecontacts2_node.png)
+

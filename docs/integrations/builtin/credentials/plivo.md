@@ -1,3 +1,8 @@
+---
+title: Plivo credentials - n8n Documentation
+description: Documentation for Plivo credentials. Use these credentials to authenticate Plivo in n8n, a workflow automation platform.
+---
+
 # Plivo credentials
 
 You can use these credentials to authenticate the following nodes with Plivo.
@@ -23,3 +28,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/Zui5fzFtO1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

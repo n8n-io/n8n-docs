@@ -1,3 +1,8 @@
+---
+title: Postgres node - n8n Documentation
+description: Documentation for the Postgres node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Postgres
 
 The Postgres node allows you to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing queries, as well as inserting and updating rows in a database. 
@@ -100,3 +105,4 @@ SELECT * FROM users WHERE email = $1;
 Then in **Query Parameters**, provide the field name `email` to use in place of `$1`:
 
 ![Screenshot of the query parameters and input data fields](/_images/integrations/builtin/app-nodes/postgres/use-query-parameters.png)
+

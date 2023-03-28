@@ -1,3 +1,8 @@
+---
+title: Gotify credentials - n8n Documentation
+description: Documentation for Gotify credentials. Use these credentials to authenticate Gotify in n8n, a workflow automation platform.
+---
+
 # Gotify credentials
 
 You can use these credentials to authenticate the following nodes with Gotify.
@@ -25,3 +30,4 @@ Install [Gotify](https://gotify.net/docs/install) on your server.
 11. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Gotify credentials](/_images/integrations/builtin/credentials/gotify/using-api.gif)
+

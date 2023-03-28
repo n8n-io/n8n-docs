@@ -1,3 +1,8 @@
+---
+title: Disqus credentials - n8n Documentation
+description: Documentation for Disqus credentials. Use these credentials to authenticate Disqus in n8n, a workflow automation platform.
+---
+
 # Disqus credentials
 
 You can use these credentials to authenticate the following nodes with Disqus.
@@ -15,3 +20,4 @@ Create a [Disqus](https://www.disqus.com/) account.
 3. Click on ***Details*** at the top and use the provided 'API Key' with your Disqus node credentials in n8n.
 
 ![Getting Disqus credentials](/_images/integrations/builtin/credentials/disqus/using-access-token.gif)
+

@@ -1,3 +1,8 @@
+---
+title: Venafi TLS Protect Cloud node - n8n Documentation
+description: Documentation for the Venafi TLS Protect Cloud node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Venafi TLS Protect Cloud
 
 The Venafi TLS Protect Cloud node allows you to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
@@ -33,3 +38,4 @@ n8n also provides:
 
 * A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) for Venafi TLS Protect Cloud.
 * A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/) for Venafi TLS Protect Datacenter.
+

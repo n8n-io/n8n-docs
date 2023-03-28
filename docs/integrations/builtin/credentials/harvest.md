@@ -1,3 +1,8 @@
+---
+title: Harvest credentials - n8n Documentation
+description: Documentation for Harvest credentials. Use these credentials to authenticate Harvest in n8n, a workflow automation platform.
+---
+
 # Harvest credentials
 
 You can use these credentials to authenticate the following nodes with Harvest.
@@ -30,3 +35,4 @@ Create a [Harvest](https://www.getharvest.com/) account.
 5. Use the token with Harvest node credentials in n8n.
 
 ![Getting Harvest Access Token credentials](/_images/integrations/builtin/credentials/harvest/using-access-token.gif)
+

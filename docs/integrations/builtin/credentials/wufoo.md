@@ -1,3 +1,8 @@
+---
+title: Wufoo credentials - n8n Documentation
+description: Documentation for Wufoo credentials. Use these credentials to authenticate Wufoo in n8n, a workflow automation platform.
+---
+
 # Wufoo credentials
 
 You can use these credentials to authenticate the following nodes with Wufoo.
@@ -18,3 +23,4 @@ Create a [Wufoo](https://wufoo.com) account.
 6. Use this ***API Key*** and ***Subdomain*** with your Wufoo Trigger node credentials in n8n.
 
 ![Getting Wufoo credentials](/_images/integrations/builtin/credentials/wufoo/using-api-key.gif)
+

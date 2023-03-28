@@ -1,3 +1,8 @@
+---
+title: Onfleet node - n8n Documentation
+description: Documentation for the Onfleet node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Onfleet
 
 [Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
@@ -54,3 +59,4 @@
     * Get all Onfleet workers
     * Get a specific Onfleet worker schedule
     * Update an Onfleet worker
+

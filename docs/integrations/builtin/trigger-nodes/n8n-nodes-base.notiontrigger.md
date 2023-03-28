@@ -1,3 +1,8 @@
+---
+title: Notion trigger node - n8n Documentation
+description: Documentation for the Notion trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Notion trigger
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
@@ -19,3 +24,4 @@ n8n provides an app node for Notion. You can find the node docs [here](/integrat
 View [example workflows and related content](https://n8n.io/integrations/notion-trigger-beta/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+

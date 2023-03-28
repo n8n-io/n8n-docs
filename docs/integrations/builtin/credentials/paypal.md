@@ -1,3 +1,8 @@
+---
+title: PayPal credentials - n8n Documentation
+description: Documentation for PayPal credentials. Use these credentials to authenticate PayPal in n8n, a workflow automation platform.
+---
+
 # PayPal credentials
 
 You can use these credentials to authenticate the following nodes with PayPal.
@@ -20,4 +25,5 @@ Create a [PayPal](https://paypal.com/) account.
 7. Choose the environment: sandbox or live.
 
 ![Getting PayPal credentials](/_images/integrations/builtin/credentials/paypal/using-oauth.gif)
+
 

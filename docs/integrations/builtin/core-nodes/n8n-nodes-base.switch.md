@@ -1,3 +1,8 @@
+---
+title: Switch node - n8n Documentation
+description: Documentation for the Switch node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Switch
 
 The Switch node is used to route a workflow conditionally based on comparison operations. It is similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node, but supports up to four conditional routes.
@@ -141,6 +146,7 @@ return [
 **Note:** Notice that none of the ids made their way to this node since the values of the all the ids were either 0, 1, or 2.
 
 ![Using the NoOp node for route 3](/_images/integrations/builtin/core-nodes/switch/noop_node.png)
+
 
 
 

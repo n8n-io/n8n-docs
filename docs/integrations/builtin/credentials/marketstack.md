@@ -1,3 +1,8 @@
+---
+title: Marketstack credentials - n8n Documentation
+description: Documentation for Marketstack credentials. Use these credentials to authenticate Marketstack in n8n, a workflow automation platform.
+---
+
 # Marketstack credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -20,3 +25,4 @@ From n8n:
 3. Enter a descriptive ***Credentials Name***.
 4. Under ***Credential Data***, enter the key obtained above in the corresponding field.
 5. Click **Save** to create your new credentials.
+

@@ -1,3 +1,8 @@
+---
+title: CircleCI credentials - n8n Documentation
+description: Documentation for CircleCI credentials. Use these credentials to authenticate CircleCI in n8n, a workflow automation platform.
+---
+
 # CircleCI credentials
 
 You can use these credentials to authenticate the following nodes with CircleCI.
@@ -18,3 +23,4 @@ Create a [CircleCI](https://circleci.com/) account.
 5. Copy the generated API Token and use it with your CircleCI API node credentials in n8n.
 
 ![Getting CircleCI credentials](/_images/integrations/builtin/credentials/circleci/using-access-token.gif)
+

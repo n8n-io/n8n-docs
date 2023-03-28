@@ -1,3 +1,8 @@
+---
+title: Pushbullet credentials - n8n Documentation
+description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
+---
+
 # Pushbullet credentials
 
 You can use these credentials to authenticate the following nodes with Pushbullet.
@@ -22,3 +27,4 @@ Create a [Pushbullet](https://www.pushbullet.com/) account.
 
 
 ![Getting Pushbullet credentials](/_images/integrations/builtin/credentials/pushbullet/using-oauth.gif)
+

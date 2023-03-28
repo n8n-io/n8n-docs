@@ -1,3 +1,8 @@
+---
+title: Workable trigger node - n8n Documentation
+description: Documentation for the Workable trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Workable trigger
 
 [Workable](https://www.workable.com/) is a recruiting platform.
@@ -10,3 +15,4 @@
 
 - **Candidate Created**
 - **Candidate Moved**
+

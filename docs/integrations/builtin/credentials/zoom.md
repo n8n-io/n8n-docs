@@ -1,3 +1,8 @@
+---
+title: Zoom credentials - n8n Documentation
+description: Documentation for Zoom credentials. Use these credentials to authenticate Zoom in n8n, a workflow automation platform.
+---
+
 # Zoom credentials
 
 You can use these credentials to authenticate the following nodes with Zoom.
@@ -39,3 +44,4 @@ Create a [Zoom](https://zoom.us/) account.
 6. Use the JWT token you copied with your Zoom API credentials in n8n.
 
 ![Getting Zoom JWT credentials](/_images/integrations/builtin/credentials/zoom/using-access-token.gif)
+

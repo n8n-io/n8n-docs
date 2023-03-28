@@ -1,3 +1,8 @@
+---
+title: Freshworks CRM credentials - n8n Documentation
+description: Documentation for Freshworks CRM credentials. Use these credentials to authenticate Freshworks CRM in n8n, a workflow automation platform.
+---
+
 # Freshworks CRM credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -23,3 +28,4 @@ From n8n:
 6. Under ***Credential Data***, enter the API Key obtained above in the corresponding field.
 7. In the ***Domain*** field enter the subdomain of your Freshworks CRM account. This is part of the URL, for example `https://<subdomain>.myfreshworks.com/`.
 8. Click **Save** to create your new credentials.
+

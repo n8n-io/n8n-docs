@@ -1,3 +1,8 @@
+---
+title: AWS DynamoDB node - n8n Documentation
+description: Documentation for the AWS DynamoDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS DynamoDB
 
 The AWS DynamoDB node allows you to automate work in AWS DynamoDB, and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, including creating, reading, updating, deleting items, and records on a database.
@@ -21,3 +26,4 @@ On this page, you'll find a list of operations the AWS DynamoDB node supports an
   * Delete an item
   * Get an item
   * Get all items
+

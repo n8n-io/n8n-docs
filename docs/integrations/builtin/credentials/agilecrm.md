@@ -1,3 +1,8 @@
+---
+title: Agile CRM credentials - n8n Documentation
+description: Documentation for Agile CRM credentials. Use these credentials to authenticate Agile CRM in n8n, a workflow automation platform.
+---
+
 # Agile CRM credentials
 
 You can use these credentials to authenticate the following nodes with Agile CRM.
@@ -19,3 +24,4 @@ Create an [Agile CRM](https://www.agilecrm.com/) account.
 
 
 ![Getting AgileCrm credentials](/_images/integrations/builtin/credentials/agilecrm/using-access-token.gif)
+

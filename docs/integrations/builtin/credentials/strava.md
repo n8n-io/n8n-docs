@@ -1,3 +1,8 @@
+---
+title: Strava credentials - n8n Documentation
+description: Documentation for Strava credentials. Use these credentials to authenticate Strava in n8n, a workflow automation platform.
+---
+
 # Strava credentials
 
 You can use these credentials to authenticate the following nodes with Strava.
@@ -22,3 +27,4 @@ Create a [Strava](https://Strava.com) account.
 9. Use this ***Client ID*** and ***Client Secret*** with your Strava node credentials in n8n.
 
 ![Getting Strava credentials](/_images/integrations/builtin/credentials/strava/using-oauth.gif)
+

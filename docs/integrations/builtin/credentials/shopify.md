@@ -1,3 +1,8 @@
+---
+title: Shopify credentials - n8n Documentation
+description: Documentation for Shopify credentials. Use these credentials to authenticate Shopify in n8n, a workflow automation platform.
+---
+
 # Shopify credentials
 
 You can use these credentials to authenticate the following nodes with Shopify.
@@ -20,3 +25,4 @@ Create a [Shopify](https://shopify.com/) account.
 **Note:** Use the subdomain without `.myshopify.com` in n8n.
 
 ![Getting Shopify credentials](/_images/integrations/builtin/credentials/shopify/using-oauth.gif)
+

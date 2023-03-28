@@ -1,3 +1,8 @@
+---
+title: Merge node - n8n Documentation
+description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Merge
 
 Use the Merge node to combine data from two streams, once data of both streams is available.
@@ -213,3 +218,4 @@ Output in table view:
 n8n provides an example workflow that demonstrates key Merge node concepts.
 
 Go to [Joining different datasets](https://n8n.io/workflows/1747-joining-different-datasets/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.
+

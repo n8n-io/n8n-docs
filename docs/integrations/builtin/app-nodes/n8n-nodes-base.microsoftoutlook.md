@@ -1,3 +1,8 @@
+---
+title: Microsoft Outlook node - n8n Documentation
+description: Documentation for the Microsoft Outlook node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft Outlook
 
 The Microsoft Outlook node allows you to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
@@ -123,3 +128,4 @@ This node will send the draft message that we created using the Microsoft Outloo
 In the screenshot below, you will notice that the node sends the draft message that we created using the Microsoft Outlook node to a recipient.
 
 ![Using the Microsoft Outlook node to send a draft](/_images/integrations/builtin/app-nodes/microsoftoutlook/microsoftoutlook2_node.png)
+

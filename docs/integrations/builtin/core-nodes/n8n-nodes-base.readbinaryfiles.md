@@ -1,3 +1,8 @@
+---
+title: Read Binary Files node - n8n Documentation
+description: Documentation for the Read Binary Files node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Read Binary Files
 
 The Read Binary Files node reads files from the host machine that runs n8n.
@@ -15,6 +20,7 @@ View [example workflows and related content](https://n8n.io/integrations/read-bi
 If you run n8n in Docker, your command runs in the n8n container and not the Docker host.
 
 This node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+
 
 
 

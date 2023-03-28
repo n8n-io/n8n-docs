@@ -1,3 +1,8 @@
+---
+title: ActiveCampaign credentials - n8n Documentation
+description: Documentation for ActiveCampaign credentials. Use these credentials to authenticate ActiveCampaign in n8n, a workflow automation platform.
+---
+
 # ActiveCampaign credentials
 
 You can use these credentials to authenticate the following nodes with ActiveCampaign.
@@ -20,3 +25,4 @@ Create an [ActiveCampaign](https://www.activecampaign.com/) account.
 
 
 ![Getting ActiveCampaign credentials](/_images/integrations/builtin/credentials/activecampaign/using-access-token.gif)
+

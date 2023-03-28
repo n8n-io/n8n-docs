@@ -1,3 +1,8 @@
+---
+title: Agile CRM node - n8n Documentation
+description: Documentation for the Agile CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Agile CRM
 
 The Agile CRM node allows you to automate work in Agile CRM, and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, including creating, getting, updating and deleting companies, contracts, and deals.
@@ -56,3 +61,4 @@ The start node exists by default when you create a new workflow.
 6. Click on *Add Field* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.
 8. Click on *Execute Node* to run the workflow.
+

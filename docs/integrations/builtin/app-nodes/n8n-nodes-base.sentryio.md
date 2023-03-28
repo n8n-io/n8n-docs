@@ -1,3 +1,8 @@
+---
+title: Sentry.io node - n8n Documentation
+description: Documentation for the Sentry.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Sentry.io
 
 [Sentry.io](https://sentry.io){:target=_blank .external-link} is a service that helps you monitor and fix crashes in realtime. Sentry's platform helps every developer diagnose, fix, and optimize the performance of their code.
@@ -46,3 +51,4 @@
 Refer to [Sentry.io's documentation](https://docs.sentry.io/api/){:target=_blank .external-link} for more information about the service.
 	
 View [example workflows and related content](https://n8n.io/integrations/sentryio/){:target=_blank .external-link} on n8n's website.
+

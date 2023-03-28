@@ -1,3 +1,8 @@
+---
+title: GitHub node - n8n Documentation
+description: Documentation for the GitHub node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # GitHub
 
 The GitHub node allows you to automate work in GitHub, and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, releases, and users. 
@@ -69,6 +74,7 @@ The start node exists by default when you create a new workflow.
 4. Enter the repository owner in the *Repository Owner* field.
 5. Enter the repository name in the *Repository Name* field.
 6. Click on *Execute Node* to run the workflow.
+
 
 
 

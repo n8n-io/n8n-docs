@@ -1,3 +1,8 @@
+---
+title: Magento 2 node - n8n Documentation
+description: Documentation for the Magento 2 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Magento 2
 
 The Magento 2 node allows you to automate work in Magento 2, and integrate Magento 2 with other applications. n8n has built-in support for a wide range of Magento 2 features, including creating, updating, deleting, and getting customers, invoices, orders, and projects. 
@@ -32,3 +37,4 @@ On this page, you'll find a list of operations the Magento 2 node supports and l
     * Get a product
     * Get all producs
     * Update a product
+

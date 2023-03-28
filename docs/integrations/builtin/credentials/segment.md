@@ -1,3 +1,8 @@
+---
+title: Segment credentials - n8n Documentation
+description: Documentation for Segment credentials. Use these credentials to authenticate Segment in n8n, a workflow automation platform.
+---
+
 # Segment credentials
 
 You can use these credentials to authenticate the following nodes with Segment.
@@ -18,3 +23,4 @@ Create a [Segment](https://segment.com/) account.
 6. Use session write key for your Segment node credentials in n8n.
 
 ![Getting Segment credentials](/_images/integrations/builtin/credentials/segment/using-access-token.gif)
+

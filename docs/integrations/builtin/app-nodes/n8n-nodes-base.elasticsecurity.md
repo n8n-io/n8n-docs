@@ -1,3 +1,8 @@
+---
+title: Elastic Security node - n8n Documentation
+description: Documentation for the Elastic Security node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Elastic Security
 
 The Elastic Security node allows you to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
@@ -30,3 +35,4 @@ On this page, you'll find a list of operations the Elastic Security node support
     * Remove a tag from a case
 * Connector
     * Create a connector
+

@@ -1,3 +1,8 @@
+---
+title: Quick Base node - n8n Documentation
+description: Documentation for the Quick Base node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Quick Base
 
 The Quick Base node allows you to automate work in Quick Base, and integrate Quick Base with other applications. n8n has built-in support for a wide range of Quick Base features, including creating, updating, deleting, and getting records, as well as getting fields, and downloading files. 
@@ -126,3 +131,4 @@ This node returns all the records from Quick Base.
 In the screenshot below, you will notice that the node returns all the records from Quick Base.
 
 ![Using the Quick Base node to get all the records](/_images/integrations/builtin/app-nodes/quickbase/quickbase2_node.png)
+

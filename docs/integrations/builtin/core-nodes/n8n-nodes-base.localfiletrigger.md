@@ -1,3 +1,8 @@
+---
+title: Local File Trigger node - n8n Documentation
+description: Documentation for the Local File Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Local File Trigger
 
 The [Local File Trigger]() node starts a workflow when changes on the file system are detected. These changes involve a file or folder geting added, changed or deleted.
@@ -15,3 +20,4 @@ The [Local File Trigger]() node starts a workflow when changes on the file syste
 		- ***Include Linked Files/Folders:*** Also watch for changes to linked files or folders.
 		- ***Ignore:*** Files or paths to ignore. The whole path is tested, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch) syntax.
 		- ***Max Folder Depth:*** How deep into the folder structure to watch for changes.
+

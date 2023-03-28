@@ -1,3 +1,8 @@
+---
+title: Clearbit node - n8n Documentation
+description: Documentation for the Clearbit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Clearbit
 
 The Clearbit node allows you to automate work in Clearbit, and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, including auto-completing and looking up companies and persons.
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Person' option from the *Resource* dropdown list.
 3. Enter the email of the person you want to look up in the *Email* field.
 4. Click on *Execute Node* to run the workflow.
+

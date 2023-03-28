@@ -1,3 +1,8 @@
+---
+title: E-goi credentials - n8n Documentation
+description: Documentation for E-goi credentials. Use these credentials to authenticate E-goi in n8n, a workflow automation platform.
+---
+
 # E-goi credentials
 
 You can use these credentials to authenticate the following nodes with E-goi.
@@ -15,3 +20,4 @@ Create an [E-goi](https://www.e-goi.com/) account.
 3. Copy the ***API key*** that is displayed and use it with your E-goi node credentials in n8n.
 
 ![Getting E-goi API credentials](/_images/integrations/builtin/credentials/egoi/using-api.gif)
+

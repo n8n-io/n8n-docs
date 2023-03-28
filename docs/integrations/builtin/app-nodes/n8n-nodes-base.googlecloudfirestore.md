@@ -1,3 +1,8 @@
+---
+title: Google Cloud Firestore node - n8n Documentation
+description: Documentation for the Google Cloud Firestore node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Cloud Firestore
 
 The Google Cloud Firestore node allows you to automate work in Google Cloud Firestore, and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, including creating, deleting, and getting documents. 
@@ -126,3 +131,4 @@ This node will get the document that we created using the Google Cloud Firestore
 In the screenshot below, you will notice that the node returns the document that we created using the Google Cloud Firestore node.
 
 ![Using the Google Cloud Firestore node to get a document](/_images/integrations/builtin/app-nodes/googlecloudfirestore/googlecloudfirestore2_node.png)
+

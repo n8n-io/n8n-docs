@@ -1,3 +1,8 @@
+---
+title: KoBo Toolbox node - n8n Documentation
+description: Documentation for the KoBo Toolbox node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # KoBo Toolbox
 
 The KoBo Toolbox node allows you to automate work in KoBo Toolbox, and integrate KoBo Toolbox with other applications. n8n has built-in support for a wide range of KoBo Toolbox features, including creating, updating, deleting, and getting files, forms, hooks, and submissions. 
@@ -173,3 +178,4 @@ With reformatting enabled, and the appropriate masks for multi-select and number
   "submitted_by": null
 }
 ```
+

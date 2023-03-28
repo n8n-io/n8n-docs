@@ -1,3 +1,8 @@
+---
+title: Iterable node - n8n Documentation
+description: Documentation for the Iterable node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Iterable
 
 The Iterable node allows you to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating, recording, deleting, and getting events, users and lists. 
@@ -86,3 +91,4 @@ This node will get the information of the user that we created using the Iterabl
 In the screenshot below, you will notice that the node gets the information of the user that we created using the Iterable node.
 
 ![Using the Iterable node to get the user's information](/_images/integrations/builtin/app-nodes/iterable/iterable2_node.png)
+

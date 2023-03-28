@@ -1,3 +1,8 @@
+---
+title: AWS Certificate Manager node - n8n Documentation
+description: Documentation for the AWS Certificate Manager node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Certificate Manager
 
 The AWS Certificate Manager node allows you to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
@@ -24,3 +29,4 @@ On this page, you'll find a list of operations the AWS Certificate Manager node 
 Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} for more information on this service.
 
 View [example workflows and related content](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} on n8n's website.
+

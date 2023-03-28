@@ -1,3 +1,8 @@
+---
+title: SecurityScorecard node - n8n Documentation
+description: Documentation for the SecurityScorecard node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SecurityScorecard
 
 [SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
@@ -92,3 +97,4 @@ This node will download the report that got returned by the previous node.
 In the screenshot below, you will notice that the node downloads the report that was returned by the previous node.
 
 ![Using the SecurityScorecard node to download a report](/_images/integrations/builtin/app-nodes/securityscorecard/securityscorecard2_node.png)
+

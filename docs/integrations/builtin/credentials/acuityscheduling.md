@@ -1,3 +1,8 @@
+---
+title: Acuity Scheduling credentials - n8n Documentation
+description: Documentation for Acuity Scheduling credentials. Use these credentials to authenticate Acuity Scheduling in n8n, a workflow automation platform.
+---
+
 # Acuity Scheduling credentials
 
 You can use these credentials to authenticate the following nodes with Acuity Scheduling.
@@ -37,3 +42,4 @@ Create an [Acuity Scheduling](https://acuityscheduling.com/) account.
 5. Use these credentials with your Acuity Scheduling node credentials in n8n.
 
 ![Getting Acuity Scheduling credentials](/_images/integrations/builtin/credentials/acuityscheduling/using-access-token.gif)
+

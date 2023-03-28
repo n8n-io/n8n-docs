@@ -1,3 +1,8 @@
+---
+title: QuickChart node - n8n Documentation
+description: Documentation for the QuickChart node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # QuickChart
 
 The QuickChart node allows you to automate work in QuickChart, and integrate QuickChart with other applications. n8n has built-in support for a wide range of QuickChart chart types, including bar, doughnut, line, pie, and polar charts.
@@ -21,3 +26,4 @@ Create a chart by selecting the chart type:
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/quickchart/){:target=_blank .external-link} on n8n's website.
+

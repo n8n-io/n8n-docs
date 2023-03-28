@@ -1,3 +1,8 @@
+---
+title: Copper node - n8n Documentation
+description: Documentation for the Copper node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Copper
 
 The Copper node allows you to automate work in Copper, and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
@@ -121,3 +126,4 @@ This node will retrieve the information of the person that we created earlier.
 In the screenshot below, you will notice that the node retrieves the information of the person that we created earlier.
 
 ![Using the Copper node to retrieve the information of a person](/_images/integrations/builtin/app-nodes/copper/copper2_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: DHL credentials - n8n Documentation
+description: Documentation for DHL credentials. Use these credentials to authenticate DHL in n8n, a workflow automation platform.
+---
+
 # DHL credentials
 
 You can use these credentials to authenticate the following nodes with DHL.
@@ -18,3 +23,4 @@ You can use these credentials to authenticate the following nodes with DHL.
 6. Click on the ***Add app*** button.
 7. Back on the apps page, click on your newly created app.
 8. Click the ***Show key*** link to reveal your access token. Use the token with your DHL credentials in n8n.
+

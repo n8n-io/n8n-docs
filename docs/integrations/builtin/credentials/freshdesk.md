@@ -1,3 +1,8 @@
+---
+title: Freshdesk credentials - n8n Documentation
+description: Documentation for Freshdesk credentials. Use these credentials to authenticate Freshdesk in n8n, a workflow automation platform.
+---
+
 # Freshdesk credentials
 
 You can use these credentials to authenticate the following nodes with Freshdesk.
@@ -17,3 +22,4 @@ Create a [Freshdesk](https://freshdesk.com/) account.
 5. Use provided API key and your subdomain (i.e n8n) with your Freshdesk node credentials in n8n.
 
 ![Getting Freshdesk credentials](/_images/integrations/builtin/credentials/freshdesk/using-access-token.gif)
+

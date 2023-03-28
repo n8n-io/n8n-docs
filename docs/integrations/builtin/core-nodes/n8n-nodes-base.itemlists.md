@@ -1,3 +1,8 @@
+---
+title: Item Lists node - n8n Documentation
+description: Documentation for the Item Lists node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Item Lists
 
 The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to change the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes or write custom JavaScript.
@@ -106,3 +111,4 @@ When using the Summarize operation, configure the following parameters and optio
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/item-lists/){:target=_blank .external-link} on n8n's website.
+

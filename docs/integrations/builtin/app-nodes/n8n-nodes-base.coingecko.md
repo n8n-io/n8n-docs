@@ -1,3 +1,8 @@
+---
+title: CoinGecko node - n8n Documentation
+description: Documentation for the CoinGecko node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # CoinGecko
 
 The CoinGecko node allows you to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
@@ -107,6 +112,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/coingecko/noop_node.png)
+
 
 
 

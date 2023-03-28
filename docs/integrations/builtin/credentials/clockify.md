@@ -1,3 +1,8 @@
+---
+title: Clockify credentials - n8n Documentation
+description: Documentation for Clockify credentials. Use these credentials to authenticate Clockify in n8n, a workflow automation platform.
+---
+
 # Clockify credentials
 
 You can use these credentials to authenticate the following nodes with Clockify.
@@ -19,3 +24,4 @@ Create a [Clockify](https://www.clockify.com/) account.
 
 
 ![Getting Clockify credentials](/_images/integrations/builtin/credentials/clockify/using-access-token.gif)
+

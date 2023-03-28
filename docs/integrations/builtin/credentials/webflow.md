@@ -1,3 +1,8 @@
+---
+title: Webflow credentials - n8n Documentation
+description: Documentation for Webflow credentials. Use these credentials to authenticate Webflow in n8n, a workflow automation platform.
+---
+
 # Webflow credentials
 
 You can use these credentials to authenticate the following nodes with Webflow.
@@ -43,3 +48,4 @@ Create a [Webflow](https://webflow.com/) account.
 7. Use the api token with your Webflow node credentials in n8n.
 
 ![Getting Webflow credentials](/_images/integrations/builtin/credentials/webflow/using-access-token.gif)
+

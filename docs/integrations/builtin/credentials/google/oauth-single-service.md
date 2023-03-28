@@ -1,3 +1,8 @@
+---
+title: Google OAuth2 single service - n8n Documentation
+description: Documentation for single service OAuth2 Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+---
+
 # Google: OAuth2 single service
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
@@ -73,3 +78,4 @@ If using the OAuth authentication method, you might see the warning **Google has
 ### Google Cloud app becoming unauthorized
 
 For Google Cloud apps with **Publishing status** set to **Testing** and **User type** set to **External**, consent and tokens expire after seven days. Refer to [Google Cloud Platform Console Help | Setting up your OAuth consent screen](https://support.google.com/cloud/answer/10311615?hl=en#zippy=%2Ctesting){:target=_blank .external-link} for more information. To resolve this, reconnect the app in the n8n credentials modal.
+

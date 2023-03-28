@@ -1,3 +1,8 @@
+---
+title: Slack node - n8n Documentation
+description: Documentation for the Slack node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Slack
 
 [Slack](https://slack.com) is a business communication platform offering many IRC-style features, including persistent chat rooms (channels), private groups, and direct messaging.
@@ -61,3 +66,4 @@
 Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .external-link} for more information about the service.
 	
 View [example workflows and related content](https://n8n.io/integrations/slack/){:target=_blank .external-link} on n8n's website.
+

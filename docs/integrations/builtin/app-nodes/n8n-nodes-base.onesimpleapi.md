@@ -1,3 +1,8 @@
+---
+title: One Simple API node - n8n Documentation
+description: Documentation for the One Simple API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # One Simple API
 
 The One Simple API node allows you to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
@@ -27,3 +32,4 @@ On this page, you'll find a list of operations the One Simple API node supports 
     * Generate a PDF from a webpage
     * Get SEO information from website
     * Create a screenshot from a webpage
+

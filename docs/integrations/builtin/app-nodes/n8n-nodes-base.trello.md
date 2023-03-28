@@ -1,3 +1,8 @@
+---
+title: Trello node - n8n Documentation
+description: Documentation for the Trello node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Trello
 
 The Trello node allows you to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
@@ -95,6 +100,7 @@ The start node exists by default when you create a new workflow.
 3. Open the card, add '.json' at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
 5. Copy `idList`and paste it in the *List ID* field in n8n.
+
 
 
 

@@ -1,3 +1,8 @@
+---
+title: Asana node - n8n Documentation
+description: Documentation for the Asana node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Asana
 
 The Asana node allows you to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
@@ -62,6 +67,7 @@ The start node exists by default when you create a new workflow.
 2. Select your workspace from the *Workspace* dropdown list.
 3. Enter the name of the task in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

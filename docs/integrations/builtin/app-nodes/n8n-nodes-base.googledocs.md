@@ -1,3 +1,8 @@
+---
+title: Google Docs node - n8n Documentation
+description: Documentation for the Google Docs node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Docs
 
 The Google Docs node allows you to automate work in Google Docs, and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, including creating, updating, and getting documents. 
@@ -58,3 +63,4 @@ The **Document** resource is selected by default. Configure the remaining parame
     - **Text:** Enter the text to be inserted.
 
 ![Updating text in a file with the Google Docs node](/_images/integrations/builtin/app-nodes/googledocs/googledocs1_node.png)
+

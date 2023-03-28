@@ -1,3 +1,8 @@
+---
+title: ConvertKit trigger node - n8n Documentation
+description: Documentation for the ConvertKit trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ConvertKit trigger
 
 [ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
@@ -25,4 +30,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ConvertKit Trigger node.
+
 

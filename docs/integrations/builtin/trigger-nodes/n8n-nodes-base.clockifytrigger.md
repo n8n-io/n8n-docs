@@ -1,3 +1,8 @@
+---
+title: Clockify trigger node - n8n Documentation
+description: Documentation for the Clockify trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Clockify trigger
 
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
@@ -29,4 +34,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
+
 

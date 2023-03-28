@@ -1,3 +1,8 @@
+---
+title: YouTube node - n8n Documentation
+description: Documentation for the YouTube node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # YouTube
 
 The YouTube node allows you to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
@@ -102,6 +107,7 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the YouTube node to add the video to the playlist](/_images/integrations/builtin/app-nodes/youtube/youtube2_node.png)
+
 
 
 

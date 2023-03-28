@@ -1,3 +1,8 @@
+---
+title: Bitly credentials - n8n Documentation
+description: Documentation for Bitly credentials. Use these credentials to authenticate Bitly in n8n, a workflow automation platform.
+---
+
 # Bitly credentials
 
 You can use these credentials to authenticate the following nodes with Bitly.
@@ -36,3 +41,4 @@ Create a [Bitly](https://www.bitly.com/) account.
 
 
 ![Getting Bitly credentials](/_images/integrations/builtin/credentials/bitly/using-access-token.gif)
+

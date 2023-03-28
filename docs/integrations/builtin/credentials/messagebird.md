@@ -1,3 +1,8 @@
+---
+title: MessageBird credentials - n8n Documentation
+description: Documentation for MessageBird credentials. Use these credentials to authenticate MessageBird in n8n, a workflow automation platform.
+---
+
 # MessageBird credentials
 
 You can use these credentials to authenticate the following nodes with MessageBird.
@@ -17,3 +22,4 @@ Create a [MessageBird](https://www.messagebird.com/en/) account.
 5. Use this API key with your MessageBird API node credentials in n8n.
 
 ![Getting MessageBird API credentials](/_images/integrations/builtin/credentials/messagebird/using-access-token.gif)
+

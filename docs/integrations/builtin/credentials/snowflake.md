@@ -1,3 +1,8 @@
+---
+title: Snowflake credentials - n8n Documentation
+description: Documentation for Snowflake credentials. Use these credentials to authenticate Snowflake in n8n, a workflow automation platform.
+---
+
 # Snowflake credentials
 
 You can use these credentials to authenticate the following nodes with Snowflake.
@@ -17,3 +22,4 @@ Create a [Snowflake](https://www.snowflake.com/) account.
 ## Further Reference
 
 - [Snowflake API Documentation](https://api.Snowflake.com/)
+

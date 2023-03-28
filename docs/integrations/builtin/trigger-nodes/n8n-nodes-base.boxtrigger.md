@@ -1,3 +1,8 @@
+---
+title: Box trigger node - n8n Documentation
+description: Documentation for the Box trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Box trigger
 
 [Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files that are uploaded to its servers.
@@ -36,3 +41,4 @@ The final workflow should look like the following image.
 1. Open the file/folder that you would like to monitor.
 2. Copy the string of charatcters after `folder/` in your URL. This is the target ID. For example, if the URL is `https://app.box.com/folder/12345`, then `12345` is the target ID.
 3. Paste it in the *Target ID* field in n8n.
+

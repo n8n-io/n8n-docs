@@ -1,3 +1,8 @@
+---
+title: Google Drive trigger node - n8n Documentation
+description: Documentation for the Google Drive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Drive trigger
 
 [Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
@@ -41,4 +46,5 @@ In the screenshot below you can see the file returned by the node.
 4. Click on the gear icon next to the ***Text*** field and choose ***Add Expression***.
 5. Enter `A file in your Google Drive file folder has been created: {{$json["name"]}}` and close the expression editor.
 6. Click on ***Execute Node* to execute the node.
+
 

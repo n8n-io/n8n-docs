@@ -1,3 +1,8 @@
+---
+title: Splunk credentials - n8n Documentation
+description: Documentation for Splunk credentials. Use these credentials to authenticate Splunk in n8n, a workflow automation platform.
+---
+
 # Splunk credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -21,3 +26,4 @@ From n8n:
 4. Enter your API key and application Base URL (e.g. `https://localhost:8089`).
 5. Use the toggle to select if you want to **Allow Unauthorized Certificates**.
 6. Click **Save** to create your credentials.
+

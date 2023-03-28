@@ -1,3 +1,8 @@
+---
+title: Home Assistant node - n8n Documentation
+description: Documentation for the Home Assistant node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Home Assistant
 
 The Home Assistant node allows you to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configs, logs, services, and templates. 
@@ -56,3 +61,4 @@ The start node exists by default when you create a new workflow.
 4. Click on **Execute Node** to run the workflow.
 
 ![The Home Assistant node](/_images/integrations/builtin/app-nodes/homeassistant/home_assistant_node.png)
+

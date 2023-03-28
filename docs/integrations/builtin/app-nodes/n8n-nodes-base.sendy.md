@@ -1,3 +1,8 @@
+---
+title: Sendy node - n8n Documentation
+description: Documentation for the Sendy node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Sendy
 
 The Sendy node allows you to automate work in Sendy, and integrate Sendy with other applications. n8n has built-in support for a wide range of Sendy features, including creating campaigns, and adding, counting, deleting, and getting subscribers.
@@ -73,3 +78,4 @@ This node will create a campaign with the title 'Welcome to n8n' and send it to 
 In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list that we specify.
 
 ![Using the Sendy node to create and send a campaign to a list](/_images/integrations/builtin/app-nodes/sendy/sendy1_node.png)
+

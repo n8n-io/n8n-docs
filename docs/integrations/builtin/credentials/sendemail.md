@@ -1,3 +1,8 @@
+---
+title: Send Email credentials - n8n Documentation
+description: Documentation for Send Email credentials. Use these credentials to authenticate Send Email in n8n, a workflow automation platform.
+---
+
 # Send Email credentials
 
 You can use these credentials to authenticate the following nodes with SMTP.
@@ -12,3 +17,4 @@ Create an email account on a service with SMTP support.
 
 1. Retrieve your login credentials and SMTP connection parameters.
 2. Use the login credentials and SMTP connection parameters with your Send Email node credentials in n8n.
+

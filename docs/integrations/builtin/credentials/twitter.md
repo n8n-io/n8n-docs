@@ -1,3 +1,8 @@
+---
+title: Twitter credentials - n8n Documentation
+description: Documentation for Twitter credentials. Use these credentials to authenticate Twitter in n8n, a workflow automation platform.
+---
+
 # Twitter credentials
 
 You can use these credentials to authenticate the following nodes with Twitter.
@@ -39,3 +44,4 @@ Create a [Twitter developer account](https://developer.twitter.com/).
 ## Further Reference
 
 - [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)
+

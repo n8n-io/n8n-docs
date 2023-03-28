@@ -1,3 +1,8 @@
+---
+title: IMAP credentials - n8n Documentation
+description: Documentation for IMAP credentials. Use these credentials to authenticate IMAP in n8n, a workflow automation platform.
+---
+
 # IMAP credentials
 
 You can use these credentials to authenticate the following nodes with IMAP.
@@ -102,3 +107,4 @@ If you receive a connection error while configuring the credentials for your Out
 - [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html)
 - [Sign in with App Passwords for your Yahoo mail Account](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html)
 - [POP, IMAP, and SMTP settings for Outlook.com](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040)
+

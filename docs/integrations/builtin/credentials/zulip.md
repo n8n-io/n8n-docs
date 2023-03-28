@@ -1,3 +1,8 @@
+---
+title: Zulip credentials - n8n Documentation
+description: Documentation for Zulip credentials. Use these credentials to authenticate Zulip in n8n, a workflow automation platform.
+---
+
 # Zulip credentials
 
 You can use these credentials to authenticate the following nodes with Zulip.
@@ -17,3 +22,4 @@ Create a [Zulip](https://zulip.com/) account.
 5. Use your Email, URL, and API Key in your Zulip credentials.
 
 ![Getting Zulip credentials](/_images/integrations/builtin/credentials/zulip/using-access-token.gif)
+

@@ -1,3 +1,8 @@
+---
+title: Jenkins node - n8n Documentation
+description: Documentation for the Jenkins node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Jenkins
 
 The Jenkins node allows you to automate work in Jenkins, and integrate Jenkins with other applications. n8n has built-in support for a wide range of Jenkins features, including creating, canceling, putting, and restarting jobs, instances, and builds. 
@@ -49,3 +54,4 @@ The start node exists by default when you create a new workflow.
 3. *Get All Builds* is not selected in *Operations* dropdown.
 4. Adjust the *depth* or add optional parameter by clickin *Add Field* button
 5. Click on *Execute Node* to run the workflow.
+

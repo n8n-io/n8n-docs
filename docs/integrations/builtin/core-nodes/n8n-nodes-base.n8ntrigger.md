@@ -1,3 +1,8 @@
+---
+title: n8n Trigger node - n8n Documentation
+description: Documentation for the n8n Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # n8n Trigger
 
 The n8n Trigger node gets triggered when the n8n instance is started or restarted. The n8n Trigger node can be used to notify when the n8n instance starts.
@@ -44,4 +49,5 @@ In the screenshot below, you will notice that the node sends a message to Matter
 
 !!! note "Activate workflow for production"
     This example workflow uses the n8n Trigger node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow.
+
 

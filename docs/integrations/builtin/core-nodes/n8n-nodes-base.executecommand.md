@@ -1,3 +1,8 @@
+---
+title: Execute Command node - n8n Documentation
+description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Execute Command
 
 The Execute Command node runs shell commands on the host machine that runs n8n.
@@ -136,3 +141,4 @@ If you want to run the curl command in the Execute Command node, you will have t
 
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
 5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
+

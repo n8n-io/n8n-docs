@@ -1,3 +1,8 @@
+---
+title: MISP node - n8n Documentation
+description: Documentation for the MISP node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MISP
 
 [MISP](https://www.misp-project.org/) is an open source threat intelligence platform. The project develops utilities and documentation for more effective threat intelligence. 
@@ -59,3 +64,4 @@
 * Warninglist
     * Get
     * Get All
+

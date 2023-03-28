@@ -1,3 +1,8 @@
+---
+title: BambooHR node - n8n Documentation
+description: Documentation for the BambooHR node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # BambooHR
 
 The BambooHR node allows you to automate work in BambooHR, and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, including creating, deleting, downloading, and getting company reports, employee documents, and files.
@@ -33,3 +38,4 @@ On this page, you'll find a list of operations the BambooHR node supports and li
     * Get all company files
     * Update a company file
     * Upload a company file
+

@@ -1,3 +1,8 @@
+---
+title: Netlify node - n8n Documentation
+description: Documentation for the Netlify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Netlify
 
 The Netlify node allows you to automate work in Netlify, and integrate Netlify with other applications. n8n has built-in support for a wide range of Netlify features, including getting and cancelling deployments, as well as deleting, and getting sites. 
@@ -22,3 +27,4 @@ On this page, you'll find a list of operations the Netlify node supports and lin
     * Delete a site
     * Get a site
     * Returns all sites
+

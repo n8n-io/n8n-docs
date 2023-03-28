@@ -1,3 +1,8 @@
+---
+title: Redis node - n8n Documentation
+description: Documentation for the Redis node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Redis
 
 The Redis node allows you to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the redis channel.  
@@ -42,6 +47,7 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Get' option from the *Operation* dropdown list.
 3. Enter the key for which you want to retrieve the value in the *Key* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

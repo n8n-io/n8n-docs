@@ -1,3 +1,8 @@
+---
+title: SendGrid node - n8n Documentation
+description: Documentation for the SendGrid node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SendGrid
 
 The SendGrid node allows you to automate work in SendGrid, and integrate SendGrid with other applications. n8n has built-in support for a wide range of SendGrid features, including creating, updating, deleting, and getting contacts, and lists, as well as sending emails. 
@@ -91,3 +96,4 @@ This node will return the information of the contact that we created using the S
 In the screenshot below, you will notice that the node returns the information of the contact that we created using the SendGrid node.
 
 ![Using the SendGrid node to get information of a contact](/_images/integrations/builtin/app-nodes/sendgrid/sendgrid2_node.png)
+

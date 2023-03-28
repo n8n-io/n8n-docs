@@ -1,3 +1,8 @@
+---
+title: Execute Workflow node - n8n Documentation
+description: Documentation for the Execute Workflow node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Execute Workflow
 
 Use the Execute Workflow node to run a different workflow on the host machine that runs n8n.
@@ -27,3 +32,4 @@ The Execute Workflow node has two properties:
 Let's say that there's a Execute Workflow node in **Workflow A**. The Execute Workflow node calls another workflow, **Workflow B**.
 - The Execute Workflow node passes the data to the Start node of **Workflow B**.
 - The last node of **Workflow B** sends the data back to the Execute Workflow node in **Workflow A**.
+

@@ -1,3 +1,8 @@
+---
+title: AWS Transcribe node - n8n Documentation
+description: Documentation for the AWS Transcribe node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Transcribe
 
 The AWS Transcribe node allows you to automate work in AWS Transcribe, and integrate AWS Transcribe with other applications. n8n has built-in support for a wide range of AWS Transcribe features, including creating, deleting, and getting transcription jobs.
@@ -65,3 +70,4 @@ This node will create a transcription job for the files that get returned by the
 In the screenshot below, you will notice that the node creates a transcription job for the files stored in an S3 bucket.
 
 ![Using the AWS Transcribe node to create a transcription job](/_images/integrations/builtin/app-nodes/awstranscribe/awstranscribe_node.png)
+

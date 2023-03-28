@@ -1,3 +1,8 @@
+---
+title: Grafana credentials - n8n Documentation
+description: Documentation for Grafana credentials. Use these credentials to authenticate Grafana in n8n, a workflow automation platform.
+---
+
 # Grafana credentials
 
 You can use these credentials to authenticate the following nodes with Grafana.
@@ -15,3 +20,4 @@ You can use these credentials to authenticate the following nodes with Grafana.
 3. Click ***Add*** and copy the key shown.
 4. Use the key with your Grafana credentials in n8n.
 5. Enter the base URL of your instance (e.g. `https://n8n.grafana.net`) in n8n.
+

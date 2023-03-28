@@ -1,3 +1,8 @@
+---
+title: Mailchimp node - n8n Documentation
+description: Documentation for the Mailchimp node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mailchimp
 
 The Mailchimp node allows you to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
@@ -54,3 +59,4 @@ The start node exists by default when you create a new workflow.
 5. Enter the email address in the *Email* field.
 6. Select the status from the *Status* dropdown list.
 8. Click on *Execute Node* to run the workflow.
+

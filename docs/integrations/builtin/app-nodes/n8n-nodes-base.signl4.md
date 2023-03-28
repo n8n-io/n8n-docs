@@ -1,3 +1,8 @@
+---
+title: SIGNL4 node - n8n Documentation
+description: Documentation for the SIGNL4 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SIGNL4
 
 The SIGNL4 node allows you to automate work in SIGNL4, and integrate SIGNL4 with other applications. n8n supports sending and resolving alerts with SIGNL4.
@@ -38,3 +43,4 @@ The start node exists by default when you create a new workflow.
 3. Click on the *Add Field* button and select 'Title'.
 4. Enter a title in the *Title* field.
 5. Click on *Execute Node* to run the workflow.
+

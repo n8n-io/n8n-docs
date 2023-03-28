@@ -1,3 +1,8 @@
+---
+title: Google Cloud Storage node - n8n Documentation
+description: Documentation for the Google Cloud Storage node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Cloud Storage
 
 The Google Cloud Storage node allows you to automate work in Google Cloud Storage, and integrate Google Cloud Storage with other applications. n8n has built-in support for a wide range of Google Cloud Storage features, including creating, updating, deleting, and getting buckets and objects. 
@@ -28,3 +33,4 @@ On this page, you'll find a list of operations the Google Cloud Storage node sup
 ## Related resources
 
 Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} for detailed information about the API that this node integrates with.
+

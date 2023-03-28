@@ -1,3 +1,8 @@
+---
+title: UptimeRobot node - n8n Documentation
+description: Documentation for the UptimeRobot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # UptimeRobot
 
 The UptimeRobot node allows you to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
@@ -103,3 +108,4 @@ This node will get the information of the monitor that we created in the previou
 In the screenshot below, you will notice that the node returns the information of the monitor that we created earlier.
 
 ![Using the UptimeRobot node to retrieve information of a monitor](/_images/integrations/builtin/app-nodes/uptimerobot/uptimerobot2_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: UpLead node - n8n Documentation
+description: Documentation for the UpLead node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # UpLead
 
 The UpLead node allows you to automate work in UpLead, and integrate UpLead with other applications. n8n supports several UpLead operations, including getting company information. 
@@ -37,3 +42,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the UpLead node. You can find out how to do that [here](/integrations/builtin/credentials/uplead/).
 2. Enter the name of the company in the *Company* field. For example, I entered `Apple`.
 3. Click on *Execute Node* to run the workflow.
+

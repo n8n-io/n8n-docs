@@ -1,4 +1,4 @@
-# Quick Base
+# Quick Base credentials
 
 You can use these credentials to authenticate the following nodes with Quick Base.
 

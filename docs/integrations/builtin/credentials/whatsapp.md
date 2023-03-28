@@ -1,4 +1,4 @@
-# WhatsApp Business
+# WhatsApp Business credentials
 
 You can use these credentials to authenticate with the [WhatsApp](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node.
 

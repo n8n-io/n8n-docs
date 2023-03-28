@@ -1,4 +1,4 @@
-# HubSpot
+# HubSpot credentials
 
 You can use these credentials to authenticate the following nodes with HubSpot.
 

@@ -1,4 +1,4 @@
-# Venafi TLS Protect Cloud
+# Venafi TLS Protect Cloud credentials
 
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Cloud:
 

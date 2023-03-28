@@ -1,4 +1,4 @@
-# Venafi TLS Protect Datacenter
+# Venafi TLS Protect Datacenter credentials
 
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Datacenter:
 

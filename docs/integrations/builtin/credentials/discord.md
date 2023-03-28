@@ -1,4 +1,4 @@
-# Discord
+# Discord credentials
 You can follow these instructions to create a webhook in Discord to use with the following nodes.
 
 - [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/)

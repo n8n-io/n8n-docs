@@ -1,4 +1,4 @@
-# sms77
+# sms77 credentials
 
 You can use these credentials to authenticate the following nodes with sms77.
 

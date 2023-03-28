@@ -1,4 +1,4 @@
-# JotForm
+# JotForm credentials
 
 You can use these credentials to authenticate the following nodes with JotForm.
 

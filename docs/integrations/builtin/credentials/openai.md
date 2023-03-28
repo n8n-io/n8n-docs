@@ -1,4 +1,4 @@
-# OpenAI
+# OpenAI credentials
 
 You can use these credentials to authenticate the following nodes with the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-base.openai/)
 

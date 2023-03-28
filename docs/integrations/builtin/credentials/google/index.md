@@ -1,4 +1,4 @@
-# Google
+# Google credentials
 
 This section contains:
 

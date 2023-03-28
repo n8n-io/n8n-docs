@@ -1,4 +1,4 @@
-# HTTP Request
+# HTTP Request credentials
 
 You can use these credentials to authenticate the following nodes:
 

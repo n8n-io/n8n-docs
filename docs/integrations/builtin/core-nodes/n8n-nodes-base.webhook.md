@@ -19,9 +19,10 @@ The webhook allows you to trigger workflows from services that don't have a dedi
 	For usage examples and templates to help you get started, refer to n8n's [Webhook integrations](https://n8n.io/integrations/webhook/){:target=_blank .external-link} list.
 
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed//videoseries?list=PLlET0GsrLUL5niZQDjW56b_AxpvnEZyps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+
+<video width="840" controls>
+<source src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" type="video/mp4">
+</video>
 
 
 ## Build and test workflows
@@ -96,14 +97,15 @@ Choose what data to include in the response body.
 
 ## Node options
 
-Select **Add Option** to view more configuration options. The available options depend on your node parameters.
+Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
 
 * **Binary Data**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
 * **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
-* **No Response Body**: available when you set **Respond** to **Immediately**. Enable this to prevent n8n sending a body with the response.
+* **No Response Body**: enable this to prevent n8n sending a body with the response.
 * **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: choose the format for the webhook body.
+* **Response Data**: send custom data with the response.
 * **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
 
@@ -115,6 +117,7 @@ Select **Add Option** to view more configuration options. The available options 
 | No Response Body | Respond > Immediately |
 | Raw Body | Any |
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
+| Response Data | Respond > Immediately |
 | Response Headers | Any |
 | Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 

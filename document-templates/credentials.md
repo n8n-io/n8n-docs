@@ -12,6 +12,15 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+<!--
+Set the meta title and meta description in the frontmatter
+-->
+
+---
+title: <node-name> credentials - n8n Documentation
+description: Documentation for the <node-name> node credentials in n8n, a workflow automation platform.
+---
+
 <!-- 
 The title should be the name of the integration.
 Match the brand name exactly. For example, GitHub NOT Github

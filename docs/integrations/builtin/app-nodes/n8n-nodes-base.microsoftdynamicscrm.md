@@ -1,3 +1,8 @@
+---
+title: Microsoft Dynamics CRM
+description: Documentation for the Microsoft Dynamics CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft Dynamics CRM
 
 The Microsoft Dynamics CRM node allows you to automate work in Microsoft Dynamics CRM, and integrate Microsoft Dynamics CRM with other applications. n8n has built-in support for  creating, updating, deleting, and getting Microsoft Dynamics CRM accounts. 
@@ -20,3 +25,4 @@ On this page, you'll find a list of operations the Microsoft Dynamics CRM node s
     * Get
     * Get All
     * Update
+

@@ -1,3 +1,8 @@
+---
+title: Segment
+description: Documentation for the Segment node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Segment
 
 The Segment node allows you to automate work in Segment, and integrate Segment with other applications. n8n has built-in support for a wide range of Segment features, including adding users to groups, creating identities, and tracking activities. 
@@ -42,3 +47,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the ID of the user in the *User ID* field.
 4. Enter the name of event in the *Event* field.
 5. Click on *Execute Node* to run the workflow.
+

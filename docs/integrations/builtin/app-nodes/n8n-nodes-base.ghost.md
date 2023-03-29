@@ -1,3 +1,8 @@
+---
+title: Ghost
+description: Documentation for the Ghost node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Ghost
 
 The Ghost node allows you to automate work in Ghost, and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, including creating, updating, deleting, and getting posts for the Admin and content API. 
@@ -92,3 +97,4 @@ This node returns information about the post that we created using the Ghost nod
 In the screenshot below, you will notice that the node returns information about the post that we specified.
 
 ![Using the Ghost node to get information of a post](/_images/integrations/builtin/app-nodes/ghost/ghost2_node.png)
+

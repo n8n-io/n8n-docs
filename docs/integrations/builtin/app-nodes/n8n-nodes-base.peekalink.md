@@ -1,3 +1,8 @@
+---
+title: Peekalink
+description: Documentation for the Peekalink node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Peekalink
 
 The Peekalink node allows you to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
@@ -86,3 +91,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/peekalink/noop_node.png)
+

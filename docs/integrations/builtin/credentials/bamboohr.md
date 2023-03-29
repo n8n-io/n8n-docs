@@ -1,4 +1,9 @@
-# BambooHR
+---
+title: BambooHR credentials
+description: Documentation for BambooHR credentials. Use these credentials to authenticate BambooHR in n8n, a workflow automation platform.
+---
+
+# BambooHR credentials
 
 You can use these credentials to authenticate the following nodes with BambooHR.
 
@@ -16,3 +21,4 @@ Create a [BambooHR](https://www.bamboohr.com/) account.
 4. Copy the key provided by BambooHR into the *API Key* field of n8n's credentials modal.
 5. Enter your subdomain (the part between `https://` and `.bamboohr.com`) in the *Subdomain* field of n8n's credentials modal.
 6. Click on *Save*.
+

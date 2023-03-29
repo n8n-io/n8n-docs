@@ -1,3 +1,8 @@
+---
+title: Google Cloud Natural Language
+description: Documentation for the Google Cloud Natural Language node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Cloud Natural Language
 
 The Google Cloud Natural Language node allows you to automate work in Google Cloud Natural Language, and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, including analyzing documents.
@@ -97,4 +102,5 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 !!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+
 

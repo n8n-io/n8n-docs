@@ -1,3 +1,8 @@
+---
+title: Phantombuster
+description: Documentation for the Phantombuster node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Phantombuster
 
 The Phantombuster node allows you to automate work in Phantombuster, and integrate Phantombuster with other applications. n8n has built-in support for a wide range of Phantombuster features, including adding, deleting, and getting agents. 
@@ -85,3 +90,4 @@ This node will append the data that we set in the previous node to a table. Crea
 In the screenshot below, you will notice that the node appends the data that we had set in the previous node.
 
 ![Using the Airtable node to insert data into an Airtable table](/_images/integrations/builtin/app-nodes/phantombuster/airtable_node.png)
+

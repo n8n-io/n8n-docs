@@ -1,3 +1,8 @@
+---
+title: Taiga
+description: Documentation for the Taiga node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Taiga
 
 The Taiga node allows you to automate work in Taiga, and integrate Taiga with other applications. n8n has built-in support for a wide range of Taiga features, including creating, updating, deleting, and getting issues. 
@@ -75,3 +80,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the Taiga node to get an issue](/_images/integrations/builtin/app-nodes/taiga/taiga2_node.png)
+

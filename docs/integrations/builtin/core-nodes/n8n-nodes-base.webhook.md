@@ -1,6 +1,11 @@
+---
+title: Webhook
+description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Webhook
 
-The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a Trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
+The Webhook node is one of the most powerful nodes in n8n. It allows you to create [webhooks](https://en.wikipedia.org/wiki/Webhook) which can be used to receive data from apps and services when an event occurs. It is a trigger node, which means that it serves as the starting point for an n8n workflow. This allows several different services to connect to n8n and run a workflow when data is received.
 
 !!! note "Keep in mind"
     1. When using the Webhook node on the localhost, ensure that n8n is running with the tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
@@ -125,7 +130,7 @@ In the screenshot below, you will notice that the node sets the values of `temp`
 Save the workflow and execute it again by clicking on the ***Execute Workflow*** button in the Editor UI. This time you will receive the temperature and description as the response in the browser.
 
 !!! note "Activate workflow for production"
-    This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
+    This example workflow uses the Webhook node, which is a trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
 
 
 
@@ -227,6 +232,7 @@ To send a response of type string, follow the steps mentioned below.
 9. Toggle ***Keep Only Set*** to `true`.
 
 When the Webhook gets called, it will send the string response that was set in the Set node.
+
 
 
 

@@ -1,4 +1,9 @@
-# Bitwarden
+---
+title: Bitwarden credentials
+description: Documentation for Bitwarden credentials. Use these credentials to authenticate Bitwarden in n8n, a workflow automation platform.
+---
+
+# Bitwarden credentials
 
 You can use these credentials to authenticate the following nodes with Bitwarden.
 
@@ -30,3 +35,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
     <iframe width="840" height="472.5" src="https://www.youtube.com/embed/lK-XdhKDSkk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

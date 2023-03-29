@@ -1,3 +1,8 @@
+---
+title: Mattermost
+description: Documentation for the Mattermost node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mattermost
 
 [Mattermost](https://mattermost.org/) is an open-source, self-hostable online chat service with file sharing, search, and integrations. It is designed as an internal chat for organisations and companies.
@@ -53,6 +58,7 @@ To find the channel ID in Mattermost:
 1. Select the channel from the left sidebar.
 2. Select the channel name at the top.
 3. Select **View Info**.
+
 
 
 

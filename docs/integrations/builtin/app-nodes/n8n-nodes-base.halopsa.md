@@ -1,3 +1,8 @@
+---
+title: HaloPSA
+description: Documentation for the HaloPSA node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # HaloPSA
 
 The HaloPSA node allows you to automate work in HaloPSA, and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HaloPSA features, including creating, updating, deleting, and getting clients, sites and tickets. 
@@ -63,3 +68,4 @@ This node will create a new client in HaloPSA.
 In the below screenshot you can see how the node creates a new client in HaloPSA.
 
 ![Using the HaloPSA node to create a client](/_images/integrations/builtin/app-nodes/halopsa/halopsa-client-create.png)
+

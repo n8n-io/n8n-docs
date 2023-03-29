@@ -1,3 +1,8 @@
+---
+title: Kitemaker
+description: Documentation for the Kitemaker node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Kitemaker
 
 The Kitemaker node allows you to automate work in Kitemaker, and integrate Kitemaker with other applications. n8n has built-in support for a wide range of Kitemaker features, including retrieving data on organizations, spaces and users, as well as creating, getting, and updating work items. 
@@ -84,3 +89,4 @@ This node will retrieve the information about the item that we created earlier.
 In the screenshot below, you will notice that the node retrieves the information of the work item that we created earlier.
 
 ![Using the Kitemaker node to retrieve the information of a work item](/_images/integrations/builtin/app-nodes/kitemaker/kitemaker2_node.png)
+

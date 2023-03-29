@@ -1,3 +1,8 @@
+---
+title: Vonage
+description: Documentation for the Vonage node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Vonage
 
 The Vonage node allows you to automate work in Vonage, and integrate Vonage with other applications. n8n supports sending SMS with Vonage. 
@@ -68,6 +73,7 @@ This node will send an SMS with the weather update, which was sent by the previo
 In the screenshot below, you will notice that the node sends an SMS to the phone number that we specified with the weather update, which was sent by the previous node.
 
 ![Using the Vonage node to send weather updates via SMS](/_images/integrations/builtin/app-nodes/vonage/vonage_node.png)
+
 
 
 

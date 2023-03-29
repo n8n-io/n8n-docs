@@ -1,3 +1,8 @@
+---
+title: HubSpot
+description: Documentation for the HubSpot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # HubSpot
 
 The HubSpot node allows you to automate work in HubSpot, and integrate HubSpot with other applications. n8n has built-in support for a wide range of HubSpot features, including creating, updating, deleting, and getting contacts, deals, lists, engagements and companies. 
@@ -77,6 +82,7 @@ The start node exists by default when you create a new workflow.
 3. Select the 'Get' option under the *Operation* field.
 4. Enter the contact ID under the *Contact ID* field.
 3. Click on *Execute Node* to run the workflow.
+
 
 
 

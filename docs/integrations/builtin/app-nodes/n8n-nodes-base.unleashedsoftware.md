@@ -1,3 +1,8 @@
+---
+title: Unleashed Software
+description: Documentation for the Unleashed Software node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Unleashed Software
 
 The Unleashed Software node allows you to automate work in Unleashed Software, and integrate Unleashed Software with other applications. n8n has built-in support for a wide range of Unleashed Software features, including getting sales orders and stock on hand. 
@@ -42,3 +47,4 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Unleashed Software node to get the list of completed sales order](/_images/integrations/builtin/app-nodes/unleashedsoftware/unleashedsoftware_node.png)
+

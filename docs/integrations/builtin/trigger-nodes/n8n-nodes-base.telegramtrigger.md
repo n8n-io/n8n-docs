@@ -1,4 +1,9 @@
-# Telegram Trigger
+---
+title: Telegram trigger
+description: Documentation for the Telegram trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Telegram trigger
 
 [Telegram](https://telegram.org/) is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type.
 
@@ -78,6 +83,7 @@ In the screenshot below, you will notice that the node sends a reply to the mess
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Telegram Trigger node.
+
 
 
 

@@ -1,3 +1,8 @@
+---
+title: Salesforce
+description: Documentation for the Salesforce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Salesforce
 
 [Salesforce](https://www.salesforce.com/) is a cloud-based software company. It provides customer relationship management service and also sells a complementary suite of enterprise applications focused on customer service, marketing automation, analytics, and application development.
@@ -143,4 +148,5 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the node.
 
 ![Add a note to a lead with the Salesforce node](/_images/integrations/builtin/app-nodes/salesforce/salesforce2_node.png)
+
 

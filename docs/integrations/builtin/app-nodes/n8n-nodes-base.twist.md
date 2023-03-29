@@ -1,3 +1,8 @@
+---
+title: Twist
+description: Documentation for the Twist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Twist
 
 [Twist](https://twist.com) is a communication app that helps teams balance focused work with collaborative conversations.
@@ -119,3 +124,4 @@ To get the User ID for a user follow the steps mentioned below
 1. Click on the ***Team*** tab.
 2. Click on a user's avatar.
 3. Copy the string of characters located after `/u/` in your Twist URL. This string is the User ID. For example, if the URL is `https://twist.com/a/4qw45/people/u/475370` the User ID will be `475370`.
+

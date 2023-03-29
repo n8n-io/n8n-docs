@@ -1,3 +1,8 @@
+---
+title: Microsoft Teams
+description: Documentation for the Microsoft Teams node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft Teams
 
 The Microsoft Teams node allows you to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including creating and deleting, channels, messages, and tasks. 
@@ -82,4 +87,5 @@ The start node exists by default when you create a new workflow.
 9. Click on ***Execute Node*** to run the node.
 
 ![Send a message with the Microsoft Teams node](/_images/integrations/builtin/app-nodes/microsoftteams/microsoftteams2_node.png)
+
 

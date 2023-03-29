@@ -1,4 +1,9 @@
-# NocoDB
+---
+title: NocoDB credentials
+description: Documentation for NocoDB credentials. Use these credentials to authenticate NocoDB in n8n, a workflow automation platform.
+---
+
+# NocoDB credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -36,3 +41,4 @@ From n8n:
     * ***API Token***: The authentication token for your NocoDB project, obtained when enabling API access (above).
     * ***Host***: The host of your NocoDB instance, for example `http://localhost:8080`.
 3. Click **Create** to save your new credentials.
+

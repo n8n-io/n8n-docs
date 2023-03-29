@@ -1,3 +1,8 @@
+---
+title: Wekan
+description: Documentation for the Wekan node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Wekan
 
 The Wekan node allows you to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
@@ -159,3 +164,4 @@ In the screenshot below, you will notice that the node updates the list id of th
 ### How to load all the parameters for the node?
 
 To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn how to change permissions.
+

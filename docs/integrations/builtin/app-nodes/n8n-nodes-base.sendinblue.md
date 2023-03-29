@@ -1,3 +1,8 @@
+---
+title: Sendinblue
+description: Documentation for the Sendinblue node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Sendinblue
 
 The Sendinblue node allows you to automate work in Sendinblue, and integrate Sendinblue with other applications. n8n has built-in support for a wide range of Sendinblue features, including creating, updating, deleting, and getting contacts, attributes, as well as sending emails. 
@@ -31,3 +36,4 @@ On this page, you'll find a list of operations the Sendinblue node supports and 
     * Create
     * Delete
     * Get All
+

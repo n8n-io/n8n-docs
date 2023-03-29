@@ -1,3 +1,8 @@
+---
+title: urlscan.io
+description: Documentation for the urlscan.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # urlscan.io
 
 The urlscan.io node allows you to automate work in urlscan.io, and integrate urlscan.io with other applications. n8n has built-in support for a wide range of urlscan.io features, including getting and performing scans. 
@@ -17,3 +22,4 @@ On this page, you'll find a list of operations the urlscan.io node supports and 
     * Get
     * Get All
     * Perform
+

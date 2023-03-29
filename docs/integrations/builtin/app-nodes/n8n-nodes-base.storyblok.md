@@ -1,3 +1,8 @@
+---
+title: Storyblok
+description: Documentation for the Storyblok node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Storyblok
 
 The Storyblok node allows you to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
@@ -77,3 +82,4 @@ This node will publish the stories that were returned by the previous node.
 In the screenshot below, you will notice that the node publishes the stories that were returned by the previous node.
 
 ![Using the Storyblok node to publish stories](/_images/integrations/builtin/app-nodes/storyblok/storyblok1_node.png)
+

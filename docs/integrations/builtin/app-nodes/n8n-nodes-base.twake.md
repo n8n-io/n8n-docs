@@ -1,3 +1,8 @@
+---
+title: Twake
+description: Documentation for the Twake node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Twake
 
 [Twake](https://twake.app/) is an open-source collaborative workspace. It can be self-hosted and easily integrated into your teams. Twake offers features for collaboration like team chat, team calendar, video call, todo list, and storage space.
@@ -35,3 +40,4 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the Twake node to send a message](/_images/integrations/builtin/app-nodes/twake/twake_node.png)
+

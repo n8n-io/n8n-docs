@@ -1,3 +1,8 @@
+---
+title: TheHive
+description: Documentation for the TheHive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # TheHive
 
 The TheHive node allows you to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
@@ -126,3 +131,4 @@ This node will return the information of the case that we created in the previou
 In the screenshot below, you will notice that the node returns the information of the case that we created earlier.
 
 ![Using TheHive node to return the information a case](/_images/integrations/builtin/app-nodes/thehive/thehive2_node.png)
+

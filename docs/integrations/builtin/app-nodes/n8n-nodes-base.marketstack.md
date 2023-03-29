@@ -1,3 +1,8 @@
+---
+title: Marketstack
+description: Documentation for the Marketstack node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Marketstack
 
 The Marketstack node allows you to automate work in Marketstack, and integrate Marketstack with other applications. n8n has built-in support for a wide range of Marketstack features, including getting exchanges, end-of-day data, and tickers. 
@@ -46,3 +51,4 @@ The start node exists by default when you create a new workflow.
 3. Click on **Execute Node** to run the workflow.
 
 ![The Marketstack node](/_images/integrations/builtin/app-nodes/marketstack/marketstack_node.png)
+

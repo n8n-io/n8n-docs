@@ -1,3 +1,8 @@
+---
+title: Mandrill
+description: Documentation for the Mandrill node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mandrill
 
 [Mandrill](https://mandrillapp.com/) is a transactional email service developed by MailChimp.
@@ -34,6 +39,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the email address from which you want to send the email in the *From Email* field.
 4. Enter the recipient email address in the *To Email* field.
 5. Click on *Execute Node* to run the workflow.
+
 
 
 

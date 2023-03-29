@@ -1,4 +1,9 @@
-# Customer.io Trigger
+---
+title: Customer.io trigger
+description: Documentation for the Customer.io trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Customer.io trigger
 
 [Customer.io](https://customer.io/) enables users to send newsletters to selected segments of customers using their website data. You can send targeted emails, push notifications, and SMS to lower churn, create stronger relationships, and drive subscriptions.
 
@@ -24,3 +29,4 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Customer.io Trigger node.
+

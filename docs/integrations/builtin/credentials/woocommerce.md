@@ -1,4 +1,9 @@
-# WooCommerce
+---
+title: WooCommerce credentials
+description: Documentation for WooCommerce credentials. Use these credentials to authenticate WooCommerce in n8n, a workflow automation platform.
+---
+
+# WooCommerce credentials
 
 You can use these credentials to authenticate the following nodes with WooCommerce.
 
@@ -22,3 +27,4 @@ Install the [WooCommerce](https://woocommerce.com/) plugin on your WordPress web
 9. Use your WooCommerce website URL, Consumer key & Consumer secret with your WooCommerce node credentials in n8n.
 
 ![Getting WooCommerce credentials](/_images/integrations/builtin/credentials/woocommerce/using-access-token.gif)
+

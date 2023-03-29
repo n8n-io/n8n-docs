@@ -1,3 +1,8 @@
+---
+title: MSG91
+description: Documentation for the MSG91 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MSG91
 
 The MSG91 node allows you to automate work in MSG91, and integrate MSG91 with other applications. n8n supports sending SMS with MSG91.
@@ -45,3 +50,4 @@ The start node exists by default when you create a new workflow.
 
 1. Log in to your MSG91 dasboard and click on 'Sender Id' in the left panel.
 2. If you don't already have one, click on *Add Sender Id +*, fill in the details, and click on the *Save Sender Id* button.
+

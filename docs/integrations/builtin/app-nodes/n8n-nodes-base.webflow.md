@@ -1,3 +1,8 @@
+---
+title: Webflow
+description: Documentation for the Webflow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Webflow
 
 The Webflow node allows you to automate work in Webflow, and integrate Webflow with other applications. n8n has built-in support for a wide range of Webflow features, including creating, updating, deleting, and getting items. 
@@ -113,3 +118,4 @@ This node will retrieve the information about the item that we created earlier.
 In the screenshot below, you will notice that the node retrieves the information of the item that we created earlier.
 
 ![Using the Webflow node to retrieve the information of an item](/_images/integrations/builtin/app-nodes/webflow/webflow2_node.png)
+

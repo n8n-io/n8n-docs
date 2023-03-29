@@ -2,8 +2,9 @@
 title: Webhook
 description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 tags:
-  - webhook set route parameters
-  - get webhook URL
+  - "webhook set route parameters"
+  - "get webhook URL"
+  - "call workflow externally"
 hide:
   - tags
 ---

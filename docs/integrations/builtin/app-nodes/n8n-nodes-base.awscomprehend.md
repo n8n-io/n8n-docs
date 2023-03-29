@@ -1,3 +1,8 @@
+---
+title: AWS Comprehend
+description: Documentation for the AWS Comprehend node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Comprehend
 
 The AWS Comprehend node allows you to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
@@ -102,4 +107,5 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 !!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+
 

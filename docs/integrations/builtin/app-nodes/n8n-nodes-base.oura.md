@@ -1,3 +1,8 @@
+---
+title: Oura
+description: Documentation for the Oura node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Oura
 
 The Oura node allows you to automate work in Oura, and integrate Oura with other applications. n8n has built-in support for a wide range of Oura features, including getting profiles, and summaries. 
@@ -97,4 +102,5 @@ In the screenshot below, you will notice that the node appends the data that we 
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

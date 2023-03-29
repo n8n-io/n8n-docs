@@ -1,3 +1,8 @@
+---
+title: Matrix
+description: Documentation for the Matrix node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Matrix
 
 The Matrix node allows you to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
@@ -154,6 +159,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/matrix/noop_node.png)
+
 
 
 

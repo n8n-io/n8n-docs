@@ -1,3 +1,8 @@
+---
+title: Metabase
+description: Documentation for the Metabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Metabase
 
 The Metabase node allows you to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
@@ -27,3 +32,4 @@ On this page, you'll find a list of operations the Metabase node supports and li
     * Get
     * Get All
     * Result Data
+

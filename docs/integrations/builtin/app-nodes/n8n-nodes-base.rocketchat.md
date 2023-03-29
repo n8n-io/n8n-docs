@@ -1,3 +1,8 @@
+---
+title: Rocket.Chat
+description: Documentation for the Rocket.Chat node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Rocket.Chat
 
 The Rocket.Chat node allows you to automate work in Rocket.Chat, and integrate Rocket.Chat with other applications. n8n supports posting messages to channels, and sending direct messages, with Rocket.Chat. 
@@ -36,6 +41,7 @@ The start node exists by default when you create a new workflow.
 2. Enter the name of the channel where you want to post the message in the *Channel* field. For example, `#general`.
 3. Enter the message in the *Text* field.
 5. Click on *Execute Node* to run the workflow.
+
 
 
 

@@ -1,4 +1,9 @@
-# monday.com
+---
+title: monday.com credentials
+description: Documentation for monday.com credentials. Use these credentials to authenticate monday.com in n8n, a workflow automation platform.
+---
+
+# monday.com credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -14,5 +19,6 @@ You can authenticate using an access token or OAuth:
 
 * Refer to [Monday Developers | Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} for information on getting your access token.
 * Refer to [Monday Developers | OAuth ](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on setting up OAuth. You need to register a monday app, and get the client ID and client secret. Give it the scopes boards:write and boards:read.
+
 
 

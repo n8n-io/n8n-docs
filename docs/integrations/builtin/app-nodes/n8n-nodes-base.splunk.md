@@ -1,3 +1,8 @@
+---
+title: Splunk
+description: Documentation for the Splunk node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Splunk
 
 The Splunk node allows you to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including retrieving fired alerts reports, as well as deleting and retrieving search configuration. 
@@ -32,3 +37,4 @@ On this page, you'll find a list of operations the Splunk node supports and link
     * Retrieve an user
     * Retrieve all users
     * Update an user
+

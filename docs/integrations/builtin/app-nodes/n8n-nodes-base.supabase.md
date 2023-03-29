@@ -1,3 +1,8 @@
+---
+title: Supabase
+description: Documentation for the Supabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Supabase
 
 The Supabase node allows you to automate work in Supabase, and integrate Supabase with other applications. n8n has built-in support for a wide range of Supabase features, including creating, deleting, and getting rows. 
@@ -19,3 +24,4 @@ On this page, you'll find a list of operations the Supabase node supports and li
     * Get a row
     * Get all rows
     * Update a row
+

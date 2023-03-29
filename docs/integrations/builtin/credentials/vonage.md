@@ -1,4 +1,9 @@
-# Vonage
+---
+title: Vonage credentials
+description: Documentation for Vonage credentials. Use these credentials to authenticate Vonage in n8n, a workflow automation platform.
+---
+
+# Vonage credentials
 
 You can use these credentials to authenticate the following nodes with Vonage.
 
@@ -15,3 +20,4 @@ Create a [Vonage](https://vonage.com) account.
 3. Use this ***API Key*** and ***API Secret*** with your Vonage node credentials in n8n.
 
 ![Getting Vonage credentials](/_images/integrations/builtin/credentials/vonage/using-api.gif)
+

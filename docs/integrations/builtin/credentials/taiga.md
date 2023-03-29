@@ -1,4 +1,9 @@
-# Taiga
+---
+title: Taiga credentials
+description: Documentation for Taiga credentials. Use these credentials to authenticate Taiga in n8n, a workflow automation platform.
+---
+
+# Taiga credentials
 
 You can use these credentials to authenticate the following nodes with Taiga.
 
@@ -14,3 +19,4 @@ Create a [Taiga](https://taiga.io/) account.
 Use your username and password with the Taiga node credentials in n8n.
 
 **Note:** For self-hosted instances, you will have to additionally use your Taiga URL with the Taiga node credentials in n8n.
+

@@ -1,3 +1,8 @@
+---
+title: OpenWeatherMap
+description: Documentation for the OpenWeatherMap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # OpenWeatherMap
 
 The OpenWeatherMap node allows you to automate work in OpenWeatherMap, and integrate OpenWeatherMap with other applications. n8n supports retrieving current and upcoming weather data with OpenWeatherMap.
@@ -35,6 +40,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Enter the name of the city in the *City* field.
 3. Click on *Execute Node* to run the workflow.
+
 
 
 

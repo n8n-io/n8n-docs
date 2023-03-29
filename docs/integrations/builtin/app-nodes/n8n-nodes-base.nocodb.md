@@ -1,3 +1,8 @@
+---
+title: NocoDB
+description: Documentation for the NocoDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # NocoDB
 
 The NocoDB node allows you to automate work in NocoDB, and integrate NocoDB with other applications. n8n has built-in support for a wide range of NocoDB features, including creating, updating, deleting, and retrieving rows. 
@@ -47,3 +52,4 @@ The start node exists by default when you create a new workflow.
 7. Click on **Execute Node** to run the workflow.
 
 ![The NocoDB node](/_images/integrations/builtin/app-nodes/nocodb/nocodb_node.png)
+

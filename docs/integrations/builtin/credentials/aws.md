@@ -1,4 +1,9 @@
-# AWS
+---
+title: AWS credentials
+description: Documentation for AWS credentials. Use these credentials to authenticate AWS in n8n, a workflow automation platform.
+---
+
+# AWS credentials
 
 You can use these credentials to authenticate the following nodes with AWS.
 
@@ -39,3 +44,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/zJgHOSSwC4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

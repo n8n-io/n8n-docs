@@ -1,3 +1,8 @@
+---
+title: Zulip
+description: Documentation for the Zulip node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Zulip
 
 The Zulip node allows you to automate work in Zulip, and integrate Zulip with other applications. n8n has built-in support for a wide range of Zulip features, including creating, deleting, and getting users and streams, as well as sending messages. 
@@ -53,3 +58,4 @@ The start node exists by default when you create a new workflow.
 2. Select the user you want to send a private message to from the *To* dropdown list.
 3. Type the message you want to post in the *Content* field.
 4. Click on *Execute Node* to run the workflow.
+

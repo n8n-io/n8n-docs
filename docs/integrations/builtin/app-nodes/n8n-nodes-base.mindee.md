@@ -1,3 +1,8 @@
+---
+title: Mindee
+description: Documentation for the Mindee node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mindee
 
 The Mindee node allows you to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
@@ -61,6 +66,7 @@ This node will get the image of the receipt (binary data) from the HTTP Request 
 In the screenshot below, you will notice that the node extracts the information from the image that it got from the HTTP Request node.
 
 ![Using the Mindee node to extract information from receipt](/_images/integrations/builtin/app-nodes/mindee/mindee_node.png)
+
 
 
 

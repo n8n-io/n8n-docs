@@ -1,3 +1,8 @@
+---
+title: Linear
+description: Documentation for the Linear node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Linear
 
 The Linear node allows you to automate work in Linear, and integrate Linear with other applications. n8n has built-in support for a wide range of Linear features, including creating, updating, deleting, and getting issues. 
@@ -18,3 +23,4 @@ On this page, you'll find a list of operations the Linear node supports and link
     * Get
     * Get All
     * Update
+

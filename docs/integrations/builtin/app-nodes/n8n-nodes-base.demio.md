@@ -1,3 +1,8 @@
+---
+title: Demio
+description: Documentation for the Demio node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Demio
 
 The Demio node allows you to automate work in Demio, and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, including getting, and registering events and reports.
@@ -69,4 +74,5 @@ In the screenshot below, you will notice that the node registers the user for an
 
 !!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+
 

@@ -1,3 +1,8 @@
+---
+title: TimescaleDB
+description: Documentation for the TimescaleDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # TimescaleDB
 
 [TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.
@@ -99,3 +104,4 @@ In the screenshot below, you will notice that the node inserts the data from the
 
 ### How to specify the data type of a column?
 To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
+

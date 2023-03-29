@@ -1,4 +1,9 @@
-# SurveyMonkey
+---
+title: SurveyMonkey credentials
+description: Documentation for SurveyMonkey credentials. Use these credentials to authenticate SurveyMonkey in n8n, a workflow automation platform.
+---
+
+# SurveyMonkey credentials
 
 You can use these credentials to authenticate the following nodes with SurveyMonkey.
 
@@ -32,3 +37,4 @@ Create a [SurveyMonkey](https://surveymonkey.com/) account.
 8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in n8n.
 
 ![Getting SurveyMonkey credentials](/_images/integrations/builtin/credentials/surveymonkey/getting-credentials.gif)
+

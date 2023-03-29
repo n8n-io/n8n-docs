@@ -1,4 +1,9 @@
-# Taiga Trigger
+---
+title: Taiga trigger
+description: Documentation for the Taiga trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Taiga trigger
 
 [Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
 
@@ -24,4 +29,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Taiga Trigger node.
+
 

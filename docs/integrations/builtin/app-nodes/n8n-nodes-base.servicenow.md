@@ -1,3 +1,8 @@
+---
+title: ServiceNow
+description: Documentation for the ServiceNow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ServiceNow
 
 The ServiceNow node allows you to automate work in ServiceNow, and integrate ServiceNow with other applications. n8n has built-in support for a wide range of ServiceNow features, including getting business services, departments, configuration items, and dictionary as well as creating, updating, and deleting incidents, users, and table records. 
@@ -69,3 +74,4 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the workflow.
 
 ![The ServiceNow node](/_images/integrations/builtin/app-nodes/servicenow/servicenow_node.png)
+

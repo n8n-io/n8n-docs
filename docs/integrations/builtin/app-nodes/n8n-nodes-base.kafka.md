@@ -1,3 +1,8 @@
+---
+title: Kafka
+description: Documentation for the Kafka node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Kafka
 
 The Kafka node allows you to automate work in Kafka, and integrate Kafka with other applications. n8n has built-in support for a wide range of Kafka features, including sending messages. 
@@ -95,4 +100,5 @@ In the screenshot below, you will notice that the node sends the data from the p
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

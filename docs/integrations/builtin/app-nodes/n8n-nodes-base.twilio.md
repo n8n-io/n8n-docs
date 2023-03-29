@@ -1,3 +1,8 @@
+---
+title: Twilio
+description: Documentation for the Twilio node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Twilio
 
 The Twilio node allows you to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
@@ -38,6 +43,7 @@ The start node exists by default when you create a new workflow.
 4. In case you want to send a Whatsapp message, toggle the *To Whatsapp* button.
 5. Enter you message in the *Message* field.
 6. Click on *Execute Node* to run the workflow.
+
 
 
 

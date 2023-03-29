@@ -1,3 +1,8 @@
+---
+title: Snowflake
+description: Documentation for the Snowflake node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Snowflake
 
 The Snowflake node allows you to automate work in Snowflake, and integrate Snowflake with other applications. n8n has built-in support for a wide range of Snowflake features, including executing SQL queries, and inserting rows in a database. 
@@ -108,3 +113,4 @@ This node will update the value of the `name` column for the id `1`.
 In the screenshot below, you will notice that the node updates the value of the name field for the record with id `1`.
 
 ![Using the Snowflake node to update data](/_images/integrations/builtin/app-nodes/snowflake/snowflake2_node.png)
+

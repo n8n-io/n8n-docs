@@ -1,3 +1,8 @@
+---
+title: Strapi
+description: Documentation for the Strapi node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Strapi
 
 The Strapi node allows you to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
@@ -123,3 +128,4 @@ This node returns information about the entry that we created using the Strapi n
 In the screenshot below, you will notice that the node returns information about the entry that we specified.
 
 ![Using the Strapi node to get information of an entry](/_images/integrations/builtin/app-nodes/strapi/strapi2_node.png)
+

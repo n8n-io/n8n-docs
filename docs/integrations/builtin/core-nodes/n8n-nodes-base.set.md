@@ -1,3 +1,8 @@
+---
+title: Set
+description: Documentation for the Set node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Set
 
 The Set node allows you to set workflow data. This node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
@@ -51,6 +56,7 @@ You can deactivate this behaviour by clicking on the *Add Option* button and set
 ```json
 { "number.one": 20 }
 ```
+
 
 
 

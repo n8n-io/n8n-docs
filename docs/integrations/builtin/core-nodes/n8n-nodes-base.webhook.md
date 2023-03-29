@@ -1,5 +1,6 @@
 ---
-description: Guidance on configuring and using the webhook node in n8n.
+title: Webhook
+description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 tags:
   - webhook set route parameters
   - get webhook URL
@@ -95,6 +96,7 @@ Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/
 
 Choose what data to include in the response body.
 
+
 ## Node options
 
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
@@ -181,6 +183,7 @@ By default, the response format is JSON or an array. To send a response of type 
 9. Toggle **Keep Only Set** to on (green).
 
 When you call the Webhook, it sends the string response from the Set node.
+
 
 
 

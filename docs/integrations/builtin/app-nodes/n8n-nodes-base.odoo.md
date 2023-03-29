@@ -1,3 +1,8 @@
+---
+title: Odoo
+description: Documentation for the Odoo node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Odoo
 
 The Odoo node allows you to automate work in Odoo, and integrate Odoo with other applications. n8n has built-in support for a wide range of Odoo features, including creating, updating, deleting, and getting contracts, resources, and opportunities. 
@@ -37,5 +42,6 @@ On this page, you'll find a list of operations the Odoo node supports and links 
     * Get an opportunity
     * Get all opportunities
     * Update an opportunity
+
 
 

@@ -1,3 +1,8 @@
+---
+title: Pushover
+description: Documentation for the Pushover node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Pushover
 
 The Pushover node allows you to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
@@ -69,3 +74,4 @@ This node will send a push notification with the weather update, which was sent 
 In the screenshot below, you will notice that the node sends a push notification to a device with the weather update.
 
 ![Using the Pushover node to send weather updates via a push notification](/_images/integrations/builtin/app-nodes/pushover/pushover_node.png)
+

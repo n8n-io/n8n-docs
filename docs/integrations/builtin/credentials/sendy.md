@@ -1,4 +1,9 @@
-# Sendy
+---
+title: Sendy credentials
+description: Documentation for Sendy credentials. Use these credentials to authenticate Sendy in n8n, a workflow automation platform.
+---
+
+# Sendy credentials
 
 You can use these credentials to authenticate the following nodes with Sendy.
 
@@ -16,3 +21,4 @@ Host a [Sendy](https://sendy.co/get-started) application.
 4. Use this API key and the installation URL with your Sendy node credentials in n8n.
 
 ![Getting Sendy credentials](/_images/integrations/builtin/credentials/sendy/using-api.gif)
+

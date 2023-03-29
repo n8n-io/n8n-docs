@@ -1,3 +1,8 @@
+---
+title: Stackby
+description: Documentation for the Stackby node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Stackby
 
 The Stackby node allows you to automate work in Stackby, and integrate Stackby with other applications. n8n has built-in support for a wide range of Stackby features, including appending, deleting, listing and reading. 
@@ -80,3 +85,4 @@ This node will list all the records from a table.
 In the screenshot below, you will notice that the node returns all the entries that are stored in the table.
 
 ![Using the Stackby node to read data from a Stackby table](/_images/integrations/builtin/app-nodes/stackby/stackby1_node.png)
+

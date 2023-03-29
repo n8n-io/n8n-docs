@@ -1,3 +1,8 @@
+---
+title: Shopify
+description: Documentation for the Shopify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Shopify
 
 [Shopify](https://www.shopify.com/) is an e-commerce platform that allows users to set up an online store and sell their products.
@@ -41,3 +46,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Shopify node. You can find out how to do that [here](/integrations/builtin/credentials/shopify/).
 2. Select 'Get All' from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

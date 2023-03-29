@@ -1,4 +1,9 @@
-# Dropcontact
+---
+title: Dropcontact credentials
+description: Documentation for Dropcontact credentials. Use these credentials to authenticate Dropcontact in n8n, a workflow automation platform.
+---
+
+# Dropcontact credentials
 
 You can use these credentials to authenticate the following nodes with Dropcontact.
 
@@ -17,3 +22,4 @@ Create an account on a [Dropcontact](https://www.dropcontact.com/) app.
 5. Click on the ***Save*** button to create your credentials.
 
 ![Getting Dropcontact API credentials](/_images/integrations/builtin/credentials/dropcontact/apikeydropcontact.png)
+

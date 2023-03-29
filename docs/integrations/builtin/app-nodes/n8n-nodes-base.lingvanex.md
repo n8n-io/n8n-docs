@@ -1,3 +1,8 @@
+---
+title: LingvaNex
+description: Documentation for the LingvaNex node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # LingvaNex
 
 The LingvaNex node allows you to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
@@ -55,6 +60,7 @@ This node will translate the cocktail instructions that we got from the previous
 In the screenshot below, you will notice that the node translates the instructions of the cocktail to Italian.
 
 ![Using the LingvaNex node to translate the instructions to Italian](/_images/integrations/builtin/app-nodes/lingvanex/lingvanex_node.png)
+
 
 
 

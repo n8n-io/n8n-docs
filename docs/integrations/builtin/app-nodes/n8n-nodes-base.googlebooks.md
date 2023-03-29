@@ -1,3 +1,8 @@
+---
+title: Google Books
+description: Documentation for the Google Books node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Books
 
 The Google Books node allows you to automate work in Google Books, and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving a specific bookshelf resource for the specified user, adding volume to a bookshelf, and getting volume.
@@ -87,3 +92,4 @@ This node will return all the volumes in a bookshelf.
 In the screenshot below, you will notice that this node returns all the volumes in the bookshelf that we specified.
 
 ![Using the Google Books node to get all the volumes in a bookshelf](/_images/integrations/builtin/app-nodes/googlebooks/googlebooks2_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: Grafana
+description: Documentation for the Grafana node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Grafana
 
 The Grafana node allows you to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
@@ -33,3 +38,4 @@ On this page, you'll find a list of operations the Grafana node supports and lin
     * Delete a user from the current organization
     * Retrieve all users in the current organization
     * Update a user in the current organization
+

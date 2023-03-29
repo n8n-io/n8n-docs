@@ -21,17 +21,15 @@ The webhook allows you to trigger workflows from services that don't have a dedi
 
 
 
-<video width="840" controls>
-<source src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" type="video/mp4">
-</video>
-
-
 ## Build and test workflows
 
 While building or testing a workflow, use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Execute Node** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
 When using the Webhook node on the localhost, run n8n in tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
 
+<video width="840" controls>
+<source src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" type="video/mp4">
+</video>
 
 ## Production workflows
 

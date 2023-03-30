@@ -1,3 +1,8 @@
+---
+title: FileMaker
+description: Documentation for the FileMaker node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # FileMaker
 
 The FileMaker node allows you to automate work in FileMaker, and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, including creating, finding, getting, editing, and duplicating files.
@@ -5,7 +10,7 @@ The FileMaker node allows you to automate work in FileMaker, and integrate FileM
 On this page, you'll find a list of operations the FileMaker node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [FileMaker credentials](https://docs.n8n.io/integrations/builtin/credentials/filemaker/) for guidance on setting up authentication. 
+    Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [FileMaker integrations](https://n8n.io/integrations/filemaker/){:target="_blank" .external-link} list.
@@ -90,3 +95,4 @@ This node will get the information about the record that we created earlier.
 In the screenshot below, you will notice that the node returns the information of the record.
 
 ![Using the FileMaker node to return the information a record](/_images/integrations/builtin/app-nodes/filemaker/filemaker2_node.png)
+

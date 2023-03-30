@@ -1,4 +1,9 @@
-# Beeminder
+---
+title: Beeminder credentials
+description: Documentation for Beeminder credentials. Use these credentials to authenticate Beeminder in n8n, a workflow automation platform.
+---
+
+# Beeminder credentials
 
 You can use these credentials to authenticate the following nodes with Beeminder.
 
@@ -25,3 +30,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
     <iframe width="840" height="472.5" src="https://www.youtube.com/embed/nBrZAyBx9mA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

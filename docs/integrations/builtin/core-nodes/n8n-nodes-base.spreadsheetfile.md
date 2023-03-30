@@ -1,3 +1,8 @@
+---
+title: Spreadsheet File
+description: Documentation for the Spreadsheet File node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Spreadsheet File
 
 The Spreadsheet File node is used to access data from spreadsheet files.
@@ -54,6 +59,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the *Property Name* you used in the previous node in the *Binary Property* field.
 2. Click on *Execute Node* to run the workflow.
+
 
 
 

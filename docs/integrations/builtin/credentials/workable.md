@@ -1,4 +1,9 @@
-# Workable
+---
+title: Workable credentials
+description: Documentation for Workable credentials. Use these credentials to authenticate Workable in n8n, a workflow automation platform.
+---
+
+# Workable credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -17,3 +22,4 @@ Create a [Workable](https://www.workable.com/) account.
 6. Paste the token in the **Access Token** field of the **Workable API** credentials screen in n8n.
 7. Add the part between `https://` and `.workable.com` of your Workable subdomain in the Subdomain field of the n8n credentials screen.
 8. Click the **Save** button to save your credentials in n8n.
+

@@ -1,4 +1,9 @@
-# Mailcheck
+---
+title: Mailcheck credentials
+description: Documentation for Mailcheck credentials. Use these credentials to authenticate Mailcheck in n8n, a workflow automation platform.
+---
+
+# Mailcheck credentials
 
 You can use these credentials to authenticate the following nodes with Mailcheck.
 
@@ -26,3 +31,4 @@ The following video demonstrates the steps mentioned above.
 </div>
 
 Please reach out to Mailcheck support should you have any questions [support@mailcheck.co](mailto:support+n8n@mailcheck.co)
+

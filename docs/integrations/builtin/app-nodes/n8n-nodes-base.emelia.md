@@ -1,11 +1,16 @@
+---
+title: Emelia
+description: Documentation for the Emelia node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Emelia
 
-The Emelia node allows you to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including adding, creating, getting, and pausing campaigns and contact lists. 
+The Emelia node allows you to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including creating campaigns, and adding contacts to a list. 
 
 On this page, you'll find a list of operations the Emelia node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Emelia credentials](https://docs.n8n.io/integrations/builtin/credentials/emelia/) for guidance on setting up authentication. 
+    Refer to [Emelia credentials](/integrations/builtin/credentials/emelia/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Emelia integrations](https://n8n.io/integrations/emelia/){:target="_blank" .external-link} list.
@@ -81,3 +86,4 @@ This node will get the information about the campaign that we created earlier.
 In the screenshot below, you will notice that the node returns the information of the campaign.
 
 ![Using the Emelia node to return the information a campaign](/_images/integrations/builtin/app-nodes/emelia/emelia2_node.png)
+

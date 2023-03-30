@@ -1,3 +1,8 @@
+---
+title: Flow
+description: Documentation for the Flow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Flow
 
 The Flow node allows you to automate work in Flow, and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, including creating, updating, and getting tasks.
@@ -5,7 +10,7 @@ The Flow node allows you to automate work in Flow, and integrate Flow with other
 On this page, you'll find a list of operations the Flow node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Flow credentials](https://docs.n8n.io/integrations/builtin/credentials/flow/) for guidance on setting up authentication. 
+    Refer to [Flow credentials](/integrations/builtin/credentials/flow/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Flow integrations](https://n8n.io/integrations/flow/){:target="_blank" .external-link} list.
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Toggle the *Return All* slider to true.
 4. Click on *Execute Node* to run the workflow.
+

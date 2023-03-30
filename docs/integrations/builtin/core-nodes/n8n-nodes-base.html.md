@@ -1,3 +1,8 @@
+---
+title: HTML
+description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # HTML
 
 The HTML node provides operations to help you work with HTML in n8n.
@@ -46,6 +51,7 @@ Extract contents from an HTML-formatted source. The source can be in JSON, or a 
 	- **Return Array**: returns the values as an array so that if n8n finds multiple values, it returns them as individual items in an array. If you don't set this, n8n returns all values as a single string.
 - **Options**:
 	- **Trim Values**: removes all spaces and newlines from the beginning and end of the values.
+
 
 
 

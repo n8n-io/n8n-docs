@@ -1,4 +1,9 @@
-# Bannerbear
+---
+title: Bannerbear credentials
+description: Documentation for Bannerbear credentials. Use these credentials to authenticate Bannerbear in n8n, a workflow automation platform.
+---
+
+# Bannerbear credentials
 
 You can use these credentials to authenticate the following nodes with Bannerbear.
 
@@ -20,3 +25,4 @@ Create a [BannerBear](https://www.BannerBear.com/) account.
 
 
 ![Getting Bannerbear credentials](/_images/integrations/builtin/credentials/bannerbear/using-access-token.gif)
+

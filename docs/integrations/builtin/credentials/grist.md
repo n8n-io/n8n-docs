@@ -1,4 +1,9 @@
-# Grist
+---
+title: Grist credentials
+description: Documentation for Grist credentials. Use these credentials to authenticate Grist in n8n, a workflow automation platform.
+---
+
+# Grist credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -22,3 +27,4 @@ From n8n:
 4. Use the dropdown to select if your are using a *Free* or *Paid* plan.
 5. For *Paid* plans, enter your **Custom Subdomain** (e.g. `<subdomain>.getgrist.com`).
 6. Click on the ***Create*** button to create the credentials.
+

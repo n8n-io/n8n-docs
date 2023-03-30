@@ -1,9 +1,19 @@
+---
+title: Postgres
+description: Documentation for the Postgres node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Postgres
 
-[PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
+The Postgres node allows you to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing queries, as well as inserting and updating rows in a database. 
+
+On this page, you'll find a list of operations the Postgres node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).
+    Refer to [Postgres credentials](/integrations/builtin/credentials/postgres/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Postgres integrations](https://n8n.io/integrations/postgres/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -95,3 +105,4 @@ SELECT * FROM users WHERE email = $1;
 Then in **Query Parameters**, provide the field name `email` to use in place of `$1`:
 
 ![Screenshot of the query parameters and input data fields](/_images/integrations/builtin/app-nodes/postgres/use-query-parameters.png)
+

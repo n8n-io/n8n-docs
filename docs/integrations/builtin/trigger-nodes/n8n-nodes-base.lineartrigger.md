@@ -1,4 +1,9 @@
-# Linear Trigger
+---
+title: Linear trigger
+description: Documentation for the Linear trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Linear trigger
 
 [Linear](https://linear.app/) is a SaaS issue tracking tool.
 
@@ -14,3 +19,4 @@
 - Issue Comment
 - Issue Label
 - Project
+

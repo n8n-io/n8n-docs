@@ -1,4 +1,9 @@
-# Travis CI
+---
+title: Travis CI credentials
+description: Documentation for Travis CI credentials. Use these credentials to authenticate Travis CI in n8n, a workflow automation platform.
+---
+
+# Travis CI credentials
 
 You can use these credentials to authenticate the following nodes with Travis CI.
 
@@ -18,3 +23,4 @@ Create a [Travis CI](https://travis-ci.org/) account.
 6. Click on the ***Save*** button to save your credentials.
 
 ![Getting Travis CI credentials](/_images/integrations/builtin/credentials/travisci/using-access-token.gif)
+

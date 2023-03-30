@@ -1,9 +1,19 @@
+---
+title: Salesmate
+description: Documentation for the Salesmate node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Salesmate
 
-[Salesmate](https://www.salesmate.io/) is a cloud-based CRM solution that caters to small and midsize businesses across various industries. Key features include contact management, sales pipeline management, email marketing and internal chat and phone integration.
+The Salesmate node allows you to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
+
+On this page, you'll find a list of operations the Salesmate node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/salesmate/).
+    Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Salesmate integrations](https://n8n.io/integrations/salesmate/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -48,3 +58,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the name of the company in the *Name* field.
 4. Select the owner from the *Owner* dropdown list.
 5. Click on *Execute Node* to run the workflow.
+

@@ -1,4 +1,9 @@
-# HaloPSA
+---
+title: HaloPSA credentials
+description: Documentation for HaloPSA credentials. Use these credentials to authenticate HaloPSA in n8n, a workflow automation platform.
+---
+
+# HaloPSA credentials
 
 You can use these credentials to authenticate the following nodes with HaloPSA.
 
@@ -27,3 +32,4 @@ Create a [HaloPSA](https://halopsa.com/) account.
 
 !['Resource Server', 'Authorisation Server', 'and Tenant'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-1.jpg)
 !['Cliend ID' and 'Client Secret'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-2.jpg)
+

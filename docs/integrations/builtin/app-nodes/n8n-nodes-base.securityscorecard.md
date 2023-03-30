@@ -1,9 +1,19 @@
+---
+title: SecurityScorecard
+description: Documentation for the SecurityScorecard node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SecurityScorecard
 
-[SecurityScorecard](https://securityscorecard.com) enables organizations to prove and maintain compliance with leading regulations and standards mandates that include PCI, NIST, SOX, GDPR, and many others.
+The SecurityScorecard node allows you to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting portfolio, as well as getting a company's data.
+
+On this page, you'll find a list of operations the SecurityScorecard node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/securityscorecard/).
+    Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [SecurityScorecard integrations](https://n8n.io/integrations/securityscorecard/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -92,3 +102,4 @@ This node will download the report that got returned by the previous node.
 In the screenshot below, you will notice that the node downloads the report that was returned by the previous node.
 
 ![Using the SecurityScorecard node to download a report](/_images/integrations/builtin/app-nodes/securityscorecard/securityscorecard2_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: AWS SES
+description: Documentation for the AWS SES node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS SES
 
 The AWS SES node allows you to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
@@ -5,7 +10,7 @@ The AWS SES node allows you to automate work in AWS SES, and integrate AWS SES w
 On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [AWS SES credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+    Refer to [AWS SES credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
     For usage examples and templates to help you get started, take a look at n8n's [AWS SES integrations](https://n8n.io/integrations/aws-ses/){:target=_blank .external-link} list.
@@ -53,6 +58,7 @@ The start node exists by default when you create a new workflow.
 4. Enter the email address from which you want to send the email in the *From Email* field.
 5. Click on the *Add To Email* button and add your recipient email addresses.
 6. Click on *Execute Node* to run the workflow.
+
 
 
 

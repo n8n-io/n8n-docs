@@ -1,11 +1,16 @@
+---
+title: Brandfetch
+description: Documentation for the Brandfetch node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Brandfetch
 
-The Brandfetch node allows you to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information
+The Brandfetch node allows you to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
 
 On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Brandfetch credentials](https://docs.n8n.io/integrations/builtin/credentials/brandfetch/) for guidance on setting up authentication. 
+    Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
     For usage examples and templates to help you get started, take a look at n8n's [Brandfetch integrations](https://n8n.io/integrations/brandfetch/){:target=_blank .external-link} list.
@@ -99,3 +104,4 @@ This node will append the data that we set in the previous node to a table. Crea
 In the screenshot below, you will notice that the node appends the data that we had set in the previous node.
 
 ![Using the Airtable node to insert data into an Airtable table](/_images/integrations/builtin/app-nodes/brandfetch/airtable_node.png)
+

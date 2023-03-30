@@ -1,3 +1,8 @@
+---
+title: Dropbox
+description: Documentation for the Dropbox node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Dropbox
 
 The Dropbox node allows you to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
@@ -5,7 +10,7 @@ The Dropbox node allows you to automate work in Dropbox, and integrate Dropbox w
 On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Dropbox credentials](https://docs.n8n.io/integrations/builtin/credentials/dropbox/) for guidance on setting up authentication. 
+    Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Dropbox integrations](https://n8n.io/integrations/dropbox/){:target="_blank" .external-link} list.
@@ -78,3 +83,4 @@ The Start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![List the contents of a Dropbox folder using the Dropbox node](/_images/integrations/builtin/app-nodes/dropbox/dropbox2_node.png)
+

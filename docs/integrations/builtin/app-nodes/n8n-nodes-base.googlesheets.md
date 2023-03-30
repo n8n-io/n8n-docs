@@ -1,3 +1,8 @@
+---
+title: Google Sheets
+description: Documentation for the Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Sheets
 
 The Google Sheets node allows you to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
@@ -5,7 +10,7 @@ The Google Sheets node allows you to automate work in Google Sheets, and integra
 On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Google Sheets credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Sheets integrations](https://n8n.io/integrations/google-sheets/){:target="_blank" .external-link} list.
@@ -115,5 +120,6 @@ You can choose how to format the data in cells:
 2. In **Cell Format**, select one of:
 	* **Let n8n format**: the new cells in your sheet keep the data type of the data in n8n.
 	* **Let Google Sheets format**: allow Google Sheets to style the cells as if you typed the data directly into the cells.
+
 
 

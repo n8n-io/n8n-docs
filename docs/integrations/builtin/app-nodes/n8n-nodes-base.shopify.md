@@ -1,6 +1,6 @@
 # Shopify
 
-The Shopify node allows you to automate work in Shopify, and integrate Shopify with other applications. n8n has built-in support for a wide range of Shopify features, including creating, updating, deleting, and getting order, and products. 
+The Shopify node allows you to automate work in Shopify, and integrate Shopify with other applications. n8n has built-in support for a wide range of Shopify features, including creating, updating, deleting, and getting orders and products. 
 
 On this page, you'll find a list of operations the Shopify node supports and links to more resources.
 

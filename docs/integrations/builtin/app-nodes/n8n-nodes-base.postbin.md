@@ -1,12 +1,28 @@
 ---
-title: Postbin
-description: Documentation for the Postbin node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: PostBin
+description: Documentation for the PostBin node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
 # Postbin
 
-[Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} is a service that collects all requests to a URL, which you can use to test your API Clients or your WebHooks.
+PostBin is a service that helps you test API clients and webhooks. The PostBin node allows you to automate work in Postbin, and integrate PostBin with other applications. n8n has built-in support for a wide range of PostBin features, including creating and deleting bins, and getting and sending requests. 
 
+On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
+
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Postbin integrations](https://n8n.io/integrations/postbin/){:target="_blank" .external-link} list.
+
+# Operations
+
+* Bin
+	* Create
+	* Get
+	* Delete
+* Request
+	* Get
+	* Remove First
+	* Send
 
 ## Send requests
 

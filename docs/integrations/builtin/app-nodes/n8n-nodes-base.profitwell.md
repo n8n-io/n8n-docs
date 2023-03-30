@@ -1,6 +1,6 @@
 # ProfitWell
 
-The ProfitWell node allows you to automate work in ProfitWell, and integrate ProfitWell with other applications. n8n has built-in support for a wide range of ProfitWell features, including getting your company's account settings and retrieving financial metrics. 
+The ProfitWell node allows you to automate work in ProfitWell, and integrate ProfitWell with other applications. n8n supports getting your company's account settings and retrieving financial metrics from ProfitWell.
 
 On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 

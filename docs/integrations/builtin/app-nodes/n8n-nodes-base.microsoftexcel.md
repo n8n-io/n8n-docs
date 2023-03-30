@@ -1,3 +1,8 @@
+---
+title: Microsoft Excel
+description: Documentation for the Microsoft Excel node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft Excel
 
 [Microsoft Excel](https://office.live.com/start/excel.aspx) is a spreadsheet developed by Microsoft. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications.
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Microsoft Excel node. You can find out how to do that [here](/integrations/builtin/credentials/microsoft/).
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

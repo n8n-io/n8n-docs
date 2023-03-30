@@ -25,6 +25,7 @@
     --color-background-light: #f2f4f8;
     --color-foreground-base: #dbdfe7;
 
+
     /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/?h=font#additional-fonts */
     --md-text-font: "Moderat-Regular-Web";
 	/* https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions */
@@ -126,6 +127,10 @@
     padding: 1em;
 }
 
+.n8n-new-features p {
+	margin: 0;
+}
+
 .n8n-new-features > h4 {
     margin-top: 0;
 }
@@ -170,6 +175,12 @@
 
 .md-typeset :is(.emojione,.twemoji,.gemoji) svg {
 	border: none;
+}
+
+/* reduce padding between title and breadcrumbs */
+
+.md-content__inner {
+	padding-top: 0;
 }
 
 /* dark mode */  

@@ -1,3 +1,8 @@
+---
+title: Orbit
+description: Documentation for the Orbit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Orbit
 
 [Orbit](https://orbit.love) is a platform for managing and growing communities.
@@ -111,6 +116,7 @@ This node will create a post for the member that we created using the Orbit node
 In the screenshot below, you will notice that the node creates a post for the member that we created using the Orbit node.
 
 ![Using the Orbit node to create a post for a member](/_images/integrations/builtin/app-nodes/orbit/orbit3_node.png)
+
 
 
 

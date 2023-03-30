@@ -5,6 +5,8 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 * [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. 
 * [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ## Create a Droplet
 
 1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 
@@ -81,6 +83,8 @@ nano .env
 
 The file contains inline comments to help you know what to change.
 
+Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
+
 ## The Docker Compose file
 
 The Docker Compose file (`docker-compose.yml`) defines the services the application needs, in this case Caddy and n8n.
@@ -117,7 +121,7 @@ n8n.<domain>.<suffix> {
 Start n8n and Caddy with the following command:
 
 ```shell
-docker-compose up -d
+docker compose up -d
 ```
 
 This may take a few minutes.
@@ -131,5 +135,9 @@ In your browser, open the URL formed of the subdomain and domain name defined ea
 You can stop n8n and Caddy with the following command:
 
 ```shell
-sudo docker-compose stop
+sudo docker compose stop
 ```
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

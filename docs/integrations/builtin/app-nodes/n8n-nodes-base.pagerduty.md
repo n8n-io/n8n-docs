@@ -1,3 +1,8 @@
+---
+title: PagerDuty
+description: Documentation for the PagerDuty node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # PagerDuty
 
 [PagerDuty](https://www.pagerduty.com/) is a cloud computing company that produces a SaaS incident response platform for IT departments.
@@ -77,6 +82,7 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the PagerDuty node to get an incident](/_images/integrations/builtin/app-nodes/pagerduty/pagerduty2_node.png)
+
 
 
 

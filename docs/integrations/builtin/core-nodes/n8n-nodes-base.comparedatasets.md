@@ -1,3 +1,8 @@
+---
+title: Compare Datasets
+description: Documentation for the Compare Datasets node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Compare Datasets
 
 The Compare Datasets node helps you compare data from two input streams.
@@ -11,6 +16,14 @@ The Compare Datasets node helps you compare data from two input streams.
 	* **Use Input B Version**
 	* **Use a Mix of Versions**
 	* **Include Both Versions**
+
+## Understand item comparison
+
+Item comparison is a two stage process:
+
+1. n8n checks if the values of the fields you selected to compare match across both inputs.
+2. If the fields to compare match, n8n then compares all fields within the items, to determine if the items are the same or different.
+
 
 ## Options
 
@@ -151,3 +164,4 @@ There are four output options:
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/compare-datasets/){:target=_blank .external-link} on n8n's website.
+

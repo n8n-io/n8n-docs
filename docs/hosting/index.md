@@ -13,7 +13,7 @@
 
 	Learn how to configure n8n with environment variables.
 
-	[:octicons-arrow-right-24: Configuration](/hosting/configuration/)
+	[:octicons-arrow-right-24: Configuration](/hosting/environment-variables/)
 
 - __Users and authentication__
 
@@ -26,3 +26,7 @@
 	Manage data, modes, and processes to keep n8n running smoothly at scale.
 
 	[:octicons-arrow-right-24: Scaling](/hosting/scaling/)
+
+</div>
+
+--8<-- "_snippets/self-hosting/warning.md"

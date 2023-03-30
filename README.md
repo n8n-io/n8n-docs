@@ -10,30 +10,39 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 ### Prerequisites
 
 * Python 3.8 or above
+* Pip
 * We recommend using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
 
 ### Steps
 
-```bash
+#### For members of the n8n GitHub organization:
+
+1. Set up an SSH token and add it to your GitHub account. Refer to [GitHub | About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) for guidance.
+2. Then run these commands:
+
+	```bash
+	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
+	cd n8n-docs
+	pip install -r requirements.txt
+	pip install _submodules/insiders
+	```
+
+#### For external contributors:
+
+Rely on the preview builds on pull requests, or use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
+
+```
 git clone https://github.com/n8n-io/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
-
-# n8n organization members: 
-# Outside your docs project, do:
-git clone https://github.com/n8n-io/mkdocs-material-insiders.git mkdocs-material
-# Navigate back into the docs project and run:
-pip install -e <path-to-mkdocs-material>
-
-# External contributors: rely on the preview builds on pull requests, or 
-# use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
 pip install mkdocs-material
+```
 
-# Serve a local preview
+#### To serve a local preview:
+
+```
 mkdocs serve
-# Or build
-mkdocs build
 ```
 
 ## Contributing

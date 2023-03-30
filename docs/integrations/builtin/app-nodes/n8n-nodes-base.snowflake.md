@@ -1,9 +1,19 @@
+---
+title: Snowflake
+description: Documentation for the Snowflake node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Snowflake
 
-[Snowflake](https://snowflake.com) is a cloud data platform that provides a data warehouse-as-a-service designed for the cloud.
+The Snowflake node allows you to automate work in Snowflake, and integrate Snowflake with other applications. n8n has built-in support for a wide range of Snowflake features, including executing SQL queries, and inserting rows in a database. 
+
+On this page, you'll find a list of operations the Snowflake node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/snowflake/).
+    Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Snowflake integrations](https://n8n.io/integrations/snowflake/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -103,3 +113,4 @@ This node will update the value of the `name` column for the id `1`.
 In the screenshot below, you will notice that the node updates the value of the name field for the record with id `1`.
 
 ![Using the Snowflake node to update data](/_images/integrations/builtin/app-nodes/snowflake/snowflake2_node.png)
+

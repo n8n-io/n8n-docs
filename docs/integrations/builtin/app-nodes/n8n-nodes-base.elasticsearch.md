@@ -1,9 +1,19 @@
+---
+title: Elasticsearch
+description: Documentation for the Elasticsearch node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Elasticsearch
 
-[Elasticsearch](https://www.elastic.co/) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+The Elasticsearch node allows you to automate work in Elasticsearch, and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, including creating, updating, deleting, and getting documents and indexes. 
+
+On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/elasticsearch/).
+    Refer to [Elasticsearch credentials](/integrations/builtin/credentials/elasticsearch/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Elasticsearch integrations](https://n8n.io/integrations/elasticsearch/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -43,3 +53,4 @@ The Start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the Elasticsearch node ](/_images/integrations/builtin/app-nodes/elasticsearch/elasticsearch_node.png)
+

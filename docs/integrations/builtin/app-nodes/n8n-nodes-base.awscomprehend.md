@@ -1,9 +1,19 @@
+---
+title: AWS Comprehend
+description: Documentation for the AWS Comprehend node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Comprehend
 
-[AWS Comprehend](https://aws.amazon.com/comprehend/) is a natural language processing (NLP) service that uses machine learning to find insights and relationships in a text.
+The AWS Comprehend node allows you to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
+
+On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+    Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+    For usage examples and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
 
 
 ## Basic Operations
@@ -97,4 +107,5 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 !!! note "Activate workflow for production"
     This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+
 

@@ -1,9 +1,19 @@
+---
+title: SyncroMSP
+description: Documentation for the SyncroMSP node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # SyncroMSP
 
-[SyncroMSP](https://syncromsp.com/) is a cloud-based remote monitoring and management platform (RMM).
+The SyncroMSP node allows you to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
+
+On this page, you'll find a list of operations the SyncroMSP node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/syncromsp/).
+    Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [SyncroMSP integrations](https://n8n.io/integrations/syncromsp/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -32,3 +42,4 @@
     * Retrieve ticket
     * Retrieve all tickets
     * Update ticket
+

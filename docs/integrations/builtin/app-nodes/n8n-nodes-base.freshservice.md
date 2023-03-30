@@ -1,9 +1,19 @@
+---
+title: Freshservice
+description: Documentation for the Freshservice node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Freshservice
 
-[Freshservice](https://www.freshservice.com/) is a cloud-based IT Service Management solution.
+The Freshservice node allows you to automate work in Freshservice and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting agent information and departments.
+
+On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/freshservice/).
+    Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Freshservice integrations](https://n8n.io/integrations/freshservice/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -120,3 +130,4 @@ The start node exists by default when you create a new workflow.
 5. From the *Add Filter* dropdown select **Priority**.
 6. From the new *Priority* dropdown select **Urgent**.
 5. Click on **Execute Node** to run the workflow.
+

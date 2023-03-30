@@ -14,6 +14,8 @@ The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS
 
 While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html){:target=_blank .external-link}, and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html){:target=_blank .external-link}.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ## Create a cluster
 
 Use the eksctl tool to create a cluster specifying a name and a region with the following command:
@@ -111,6 +113,8 @@ n8n needs some environment variables set to pass to the application running in t
 
 The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
 
+Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
+
 ## Deployments
 
 The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
@@ -163,3 +167,7 @@ If you need to delete the setup, you can remove the resources created by the man
 ```shell
 kubectl delete -f .
 ```
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

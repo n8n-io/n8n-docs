@@ -1,3 +1,8 @@
+---
+title: Zoom
+description: Documentation for the Zoom node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Zoom
 
 [Zoom](https://zoom.us/) is a communications technology company that provides videotelephony and online chat services through a cloud-based peer-to-peer software platform and is used for teleconferencing, telecommuting, distance education, and social relations.
@@ -34,3 +39,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Zoom node. You can find out how to do that [here](/integrations/builtin/credentials/zoom/).
 2. Enter the topic of the meeting in the *Topic* field.
 3. Click on *Execute Node* to run the workflow.
+

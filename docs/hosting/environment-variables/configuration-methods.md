@@ -22,12 +22,12 @@ In Docker you can use the `-e` flag from the command line:
 
 ```bash
 docker run -it --rm \
-	--name n8n \
-	-p 5678:5678 \
-	-e N8N_BASIC_AUTH_ACTIVE="true" \
-	-e N8N_BASIC_AUTH_USER="<user>" \
-	-e N8N_BASIC_AUTH_PASSWORD="<password>" \
-	n8nio/n8n
+ --name n8n \
+ -p 5678:5678 \
+ -e N8N_BASIC_AUTH_ACTIVE="true" \
+ -e N8N_BASIC_AUTH_USER="<user>" \
+ -e N8N_BASIC_AUTH_PASSWORD="<password>" \
+ docker.n8n.io/n8nio/n8n
 ```
 
 ## Set environment variables using a file
@@ -52,29 +52,29 @@ For example:
 
 ```json
 {
-	"executions": {
-		"process": "main",
-		"saveDataOnSuccess": "none"
-	},
-	"generic": {
-		"timezone": "Europe/Berlin"
-	},
-	"security": {
-		"basicAuth": {
-			"active": true,
-			"user": "frank",
-			"password": "some-secure-password"
-		}
-	},
-	"nodes": {
-		"exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
-	}
+ "executions": {
+  "process": "main",
+  "saveDataOnSuccess": "none"
+ },
+ "generic": {
+  "timezone": "Europe/Berlin"
+ },
+ "security": {
+  "basicAuth": {
+   "active": true,
+   "user": "frank",
+   "password": "some-secure-password"
+  }
+ },
+ "nodes": {
+  "exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
+ }
 }
 ```
 
 ### Docker
 
-In Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file. 
+In Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file.
 
 For example:
 
@@ -92,33 +92,33 @@ You can append `_FILE` to some individual environment variables to provide their
 
 The following environment variables support file input:
 
-  - `CREDENTIALS_OVERWRITE_DATA_FILE`
-  - `DB_TYPE_FILE`
-  - `DB_MYSQLDB_DATABASE_FILE`
-  - `DB_MYSQLDB_HOST_FILE`
-  - `DB_MYSQLDB_PORT_FILE`	
-  - `DB_MYSQLDB_USER_FILE`
-  - `DB_MYSQLDB_PASSWORD_FILE`
-  - `DB_POSTGRESDB_DATABASE_FILE`
-  - `DB_POSTGRESDB_HOST_FILE`
-  - `DB_POSTGRESDB_PASSWORD_FILE`
-  - `DB_POSTGRESDB_PORT_FILE`
-  - `DB_POSTGRESDB_SSL_CA_FILE`
-  - `DB_POSTGRESDB_SSL_CERT_FILE`
-  - `DB_POSTGRESDB_SSL_KEY_FILE`
-  - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
-  - `DB_POSTGRESDB_USER_FILE`
-  - `DB_POSTGRESDB_SCHEMA_FILE`
-  - `N8N_BASIC_AUTH_PASSWORD_FILE`
-  - `N8N_BASIC_AUTH_USER_FILE`
-  - `N8N_BASIC_AUTH_HASH_FILE`
-  - `N8N_JWT_AUTH_HEADER_FILE`
-  - `N8N_JWKS_URI_FILE`
-  - `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
-  - `N8N_JWT_ISSUER_FILE`
-  - `N8N_JWT_NAMESPACE_FILE`
-  - `N8N_JWT_ALLOWED_TENANT_FILE`
-  - `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
+- `CREDENTIALS_OVERWRITE_DATA_FILE`
+- `DB_TYPE_FILE`
+- `DB_MYSQLDB_DATABASE_FILE`
+- `DB_MYSQLDB_HOST_FILE`
+- `DB_MYSQLDB_PORT_FILE`
+- `DB_MYSQLDB_USER_FILE`
+- `DB_MYSQLDB_PASSWORD_FILE`
+- `DB_POSTGRESDB_DATABASE_FILE`
+- `DB_POSTGRESDB_HOST_FILE`
+- `DB_POSTGRESDB_PASSWORD_FILE`
+- `DB_POSTGRESDB_PORT_FILE`
+- `DB_POSTGRESDB_SSL_CA_FILE`
+- `DB_POSTGRESDB_SSL_CERT_FILE`
+- `DB_POSTGRESDB_SSL_KEY_FILE`
+- `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
+- `DB_POSTGRESDB_USER_FILE`
+- `DB_POSTGRESDB_SCHEMA_FILE`
+- `N8N_BASIC_AUTH_PASSWORD_FILE`
+- `N8N_BASIC_AUTH_USER_FILE`
+- `N8N_BASIC_AUTH_HASH_FILE`
+- `N8N_JWT_AUTH_HEADER_FILE`
+- `N8N_JWKS_URI_FILE`
+- `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
+- `N8N_JWT_ISSUER_FILE`
+- `N8N_JWT_NAMESPACE_FILE`
+- `N8N_JWT_ALLOWED_TENANT_FILE`
+- `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
 
 ## Examples
 
@@ -126,7 +126,6 @@ The following environment variables support file input:
 
 !!! warning "Requires manual UI build"
     This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
-
 
 Tells the front end how to reach the REST API of the back end:
 
@@ -233,6 +232,9 @@ export WEBHOOK_URL=https://n8n.example.com/
 
 ### Prometheus
 
+!!! note "Experimental"
+    Prometheus metrics are an experimental feature.
+
 To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.
@@ -241,11 +243,4 @@ The `/metrics` endpoint is disabled by default, but it's possible to enable it u
 export N8N_METRICS=true
 ```
 
-It's also possible to overwrite the prefix of the metric names by setting the `N8N_METRICS_PREFIX` environment variable.
-
-```bash
-export N8N_METRICS_PREFIX=n8n_
-```
-
-!!! note "Metrics and webhooks"
-  At the moment, n8n doesn't support metrics for webhooks.
+Refer to the respective [Environment Variables](/hosting/environment-variables/environment-variables/#endpoints) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.

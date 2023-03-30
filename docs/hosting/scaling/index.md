@@ -1,3 +1,7 @@
 # Scaling n8n
 
-n8n can be run in different [modes](/hosting/scaling/execution-modes-processes/) depending on your needs. The `queue` mode provides the best scalability, and its configuration is detailed in [Queue mode](/hosting/scaling/queue-mode/).
+When running n8n at scale, with a large number of users, workflows, or executions, you need to change your n8n configuration to ensure good performance.
+
+n8n can run in different [modes](/hosting/scaling/execution-modes-processes/) depending on your needs. The `queue` mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for configuration details.
+
+You can configure data saving and pruning to improve database performance. Refer to [Execution data](/hosting/scaling/execution-data/) for details.

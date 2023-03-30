@@ -1,9 +1,19 @@
+---
+title: Hunter
+description: Documentation for the Hunter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Hunter
 
-[Hunter](https://hunter.io/) is a company that produces a platform that helps find and verify professional email addresses.
+The Hunter node allows you to automate work in Hunter, and integrate Hunter with other applications. n8n has built-in support for a wide range of Hunter features, including getting, generating, and verifying email addresses. 
+
+On this page, you'll find a list of operations the Hunter node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/hunter/).
+    Refer to [Hunter credentials](/integrations/builtin/credentials/hunter/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Hunter integrations](https://n8n.io/integrations/hunter/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -33,3 +43,4 @@ The start node exists by default when you create a new workflow.
 2. Select 'Email Verifier' from the *Operation* dropdown list.
 3. Enter the email in the *Email* field.
 4. Click on *Execute Node* to run the workflow.
+

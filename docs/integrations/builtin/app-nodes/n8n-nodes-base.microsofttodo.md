@@ -1,9 +1,20 @@
+---
+title: Microsoft To Do
+description: Documentation for the Microsoft To Do node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft To Do
 
-[Microsoft To Do](https://todo.microsoft.com) is a cloud-based task management application. It allows users to manage their tasks from a smartphone, tablet, and computer.
+The Microsoft To Do node allows you to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
+
+On this page, you'll find a list of operations the Microsoft To Do node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+    Refer to [Microsoft To Do credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Microsoft To Do integrations](https://n8n.io/integrations/microsoft-to-do/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations
@@ -93,3 +104,4 @@ This node will get the task that we created earlier.
 In the screenshot below, you will notice that the node fetches the information of the task that we created earlier.
 
 ![Retrieve the information of tasks using the Microsoft To Do node](/_images/integrations/builtin/app-nodes/microsofttodo/microsofttodo2_node.png)
+

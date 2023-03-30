@@ -1,4 +1,9 @@
-# Phantombuster
+---
+title: Phantombuster credentials
+description: Documentation for Phantombuster credentials. Use these credentials to authenticate Phantombuster in n8n, a workflow automation platform.
+---
+
+# Phantombuster credentials
 
 You can use these credentials to authenticate the following nodes with Phantombuster.
 
@@ -17,3 +22,4 @@ Create a [Phantombuster](https://www.phantombuster.com/) account.
 5. Use this ***API Key*** with your Phantombuster node credentials in n8n.
 
 ![Getting Phantombuster credentials](/_images/integrations/builtin/credentials/phantombuster/using-api.gif)
+

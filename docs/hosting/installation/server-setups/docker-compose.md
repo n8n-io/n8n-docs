@@ -2,26 +2,22 @@
 
 If you have already installed Docker and Docker-Compose, then you can start with step 4.
 
+--8<-- "_snippets/self-hosting/warning.md"
+
 ### 1. Install Docker
 
-This can vary depending on the Linux distribution used. The below example is for Ubuntu:
+This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/engine/install/){:target=_blank .external-link}. The following example is for Ubuntu:
 
 ```bash
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Depending on Version:
-
-# Ubuntu 18.04:
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-
-# Ubuntu 20.04
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-
-sudo apt update
-sudo apt upgrade -y
-sudo apt install docker-ce -y
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
 ### 2. Optional: Non-root user access
@@ -35,13 +31,12 @@ su - ${USER}
 
 ### 3. Install Docker-Compose
 
-This can vary depending on the Linux distribution used. Before proceeding check the latest version of Docker Compose v1 [on the repository's release page](https://github.com/docker/compose/releases) and replace the `1.29.2` below. Should you wish to use Docker Compose v2 instead you can find detailed instructions [here in the Docker documentation](https://docs.docker.com/compose/cli-command/).
+This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/compose/){:target=_blank .external-link}.
 
 The example below is for Ubuntu:
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo apt-get install docker-compose-plugin
 ```
 
 ### 4. DNS setup
@@ -54,7 +49,7 @@ Name: n8n (or the desired subdomain)
 IP address: <IP_OF_YOUR_SERVER>
 ```
 
-### 5. Create docker-compose file
+### 5. Create Docker Compose file
 
 Create a `docker-compose.yml` file. Paste the following in the file:
 
@@ -85,7 +80,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
-    image: n8nio/n8n
+    image: docker.n8n.io/n8nio/n8n
     restart: always
     ports:
       - "127.0.0.1:5678:5678"
@@ -178,26 +173,30 @@ The folder can be created like this:
 mkdir /root/n8n/
 ```
 
-### 8. Start docker-compose
+### 8. Start Docker Compose
 
 n8n can now be started via:
 
 ```bash
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 To stop the container:
 
 ```bash
-sudo docker-compose stop
+sudo docker compose stop
 ```
 
 ### 9. Done
 
 n8n will now be reachable using the above defined subdomain + domain combination.
-The above example would result in: https://n8n.example.com
+The above example would result in: <https://n8n.example.com>
 
 n8n will only be reachable using `https` and not using `http`.
 
 !!! warning "Secure your n8n instance"
     Make sure that you [set up authentication](/hosting/authentication/) your n8n instance.
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

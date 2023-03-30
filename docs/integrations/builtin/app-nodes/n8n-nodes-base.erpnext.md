@@ -1,9 +1,19 @@
+---
+title: ERPNext
+description: Documentation for the ERPNext node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ERPNext
 
-[ERPNext](https://erpnext.com) is an open-source integrated Enterprise Resource Planning software. It is a generic ERP software used by manufacturers, distributors, and services companies.
+The ERPNext node allows you to automate work in ERPNext, and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, including creating, updating, retrieving, and deleting documents. 
+
+On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/erpnext/).
+    Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [ERPNext integrations](https://n8n.io/integrations/erpnext/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -85,3 +95,4 @@ This node will get the information about the item that we created earlier.
 In the screenshot below, you will notice that the node returns the information of the item.
 
 ![Using the ERPNext node to return the information an item](/_images/integrations/builtin/app-nodes/erpnext/erpnext2_node.png)
+

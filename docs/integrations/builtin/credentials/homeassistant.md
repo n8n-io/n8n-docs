@@ -1,4 +1,9 @@
-# Home Assistant
+---
+title: Home Assistant credentials
+description: Documentation for Home Assistant credentials. Use these credentials to authenticate Home Assistant in n8n, a workflow automation platform.
+---
+
+# Home Assistant credentials
 
 You can use these credentials to authenticate the following nodes with Home Assistant.
 
@@ -16,3 +21,4 @@ You can use these credentials to authenticate the following nodes with Home Assi
 2. Open your user profile page and navigate to the **Long-Lived Access Tokens** section.
 3. Generate a new token and copy it.
 4. Use that token with your Home Assistant node credentials in n8n.
+

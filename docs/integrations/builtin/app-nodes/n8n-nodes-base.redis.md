@@ -1,9 +1,19 @@
+---
+title: Redis
+description: Documentation for the Redis node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Redis
 
-[Redis](https://redis.io/) is an open-source, in-memory data structure store, used as a database, cache and message broker.
+The Redis node allows you to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the redis channel.  
+
+On this page, you'll find a list of operations the Redis node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
+    Refer to [Redis credentials](/integrations/builtin/credentials/redis/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Redis integrations](https://n8n.io/integrations/redis/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -37,6 +47,7 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Get' option from the *Operation* dropdown list.
 3. Enter the key for which you want to retrieve the value in the *Key* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

@@ -5,7 +5,7 @@ The Microsoft Excel node allows you to automate work in Microsoft Excel, and int
 On this page, you'll find a list of operations the Microsoft Excel node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Microsoft Excel credentials](https://docs.n8n.io/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+    Refer to [Microsoft Excel credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Microsoft Excel integrations](https://n8n.io/integrations/microsoft-excel/){:target="_blank" .external-link} list.

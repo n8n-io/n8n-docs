@@ -6,11 +6,7 @@ description: Add custom data to your workflow executions using the Code node. Yo
 
 You can set custom data on your workflow using the Code node. n8n records this with each execution. You can then use this data when filtering the executions list.
 
-!!! info "Feature availability"		
-	Custom executions data is available on:
-
-	* Cloud: Start, Pro, and Power
-	* Self-Hosted: Team and Enterprise
+--8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
 ## Set custom executions data
 

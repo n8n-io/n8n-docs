@@ -5,10 +5,15 @@ description: Documentation for the TimescaleDB node in n8n, a workflow automatio
 
 # TimescaleDB
 
-[TimescaleDB](https://www.timescale.com/) is an open-source time-series SQL database optimized for fast ingest and complex queries.
+The TimescaleDB node allows you to automate work in TimescaleDB, and integrate TimescaleDB with other applications. n8n has built-in support for a wide range of TimescaleDB features, including executing an SQL query, as well as inserting and updating rows in a database. 
+
+On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/timescaledb/).
+    Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [TimescaleDB integrations](https://n8n.io/integrations/timescaledb/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

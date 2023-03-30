@@ -1,6 +1,6 @@
 # Twake
 
-The Twake node allows you to automate work in Twake, and integrate Twake with other applications. n8n has built-in support for a wide range of Twake features, including sending messages. 
+The Twake node allows you to automate work in Twake, and integrate Twake with other applications. n8n supports sending messages with Twake.
 
 On this page, you'll find a list of operations the Twake node supports and links to more resources.
 

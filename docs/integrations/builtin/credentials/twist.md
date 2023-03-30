@@ -1,4 +1,9 @@
-# Twist
+---
+title: Twist credentials
+description: Documentation for Twist credentials. Use these credentials to authenticate Twist in n8n, a workflow automation platform.
+---
+
+# Twist credentials
 
 You can use these credentials to authenticate the following nodes with Twist.
 
@@ -46,3 +51,4 @@ export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Start your n8n instance.
 4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.
+

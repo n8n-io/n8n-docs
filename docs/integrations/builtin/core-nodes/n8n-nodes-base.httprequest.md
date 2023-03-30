@@ -1,3 +1,8 @@
+---
+title: HTTP Request
+description: Documentation for the HTTP Request node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # HTTP Request
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API.
@@ -125,3 +130,4 @@ When you execute the node, n8n includes the headers, status code, and status mes
 2. In **Body Content Type**, select **Raw**.
 3. In **Content Type**, enter `application/xml`.
 4. Enter the XML data in the **Body** field.
+

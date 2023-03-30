@@ -1,4 +1,9 @@
-# Ghost
+---
+title: Ghost credentials
+description: Documentation for Ghost credentials. Use these credentials to authenticate Ghost in n8n, a workflow automation platform.
+---
+
+# Ghost credentials
 
 You can use these credentials to authenticate the following nodes with Ghost.
 
@@ -27,3 +32,4 @@ Create a [Ghost](https://ghost.org/) account.
 6. Use this ***URL*** and ***Content API Key*** with your Ghost node credentials in n8n.
 
 ![Getting Ghost credentials](/_images/integrations/builtin/credentials/ghost/using-api.gif)
+

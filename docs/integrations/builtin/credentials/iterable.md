@@ -1,4 +1,9 @@
-# Iterable
+---
+title: Iterable credentials
+description: Documentation for Iterable credentials. Use these credentials to authenticate Iterable in n8n, a workflow automation platform.
+---
+
+# Iterable credentials
 
 You can use these credentials to authenticate the following nodes with Iterable.
 
@@ -19,3 +24,4 @@ Create an [Iterable](https://iterable.com) account.
 7. Use this ***API key*** with your Iterable node credentials in n8n.
 
 ![Getting Iterable credentials](/_images/integrations/builtin/credentials/iterable/using-api-key.gif)
+

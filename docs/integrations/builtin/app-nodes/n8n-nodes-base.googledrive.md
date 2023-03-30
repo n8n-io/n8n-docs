@@ -1,3 +1,8 @@
+---
+title: Google Drive
+description: Documentation for the Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Drive
 
 The Google Drive node allows you to automate work in Google Drive, and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, including creating, updating, listing, deleting, and getting drives, files, and folders. 
@@ -5,7 +10,7 @@ The Google Drive node allows you to automate work in Google Drive, and integrate
 On this page, you'll find a list of operations the Google Drive node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Google Drive credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Drive credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [Google Drive integrations](https://n8n.io/integrations/google-drive/){:target="_blank" .external-link} list.
@@ -70,6 +75,7 @@ To list all the files and folders within a folder, follow the steps mentioned be
 3. Enter `'FOLDER_ID' in parents` in the ***Query String*** field. Replace `FOLDER_ID` with the folder ID you copied in the previous step.
 
 There are several additional options available to fine grain the listed results. Refer to [Search for files and folders: Querystring](https://developers.google.com/drive/api/v3/search-files#query_string_examples) for more information.
+
 
 
 

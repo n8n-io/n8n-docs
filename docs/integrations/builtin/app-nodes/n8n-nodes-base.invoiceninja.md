@@ -1,3 +1,8 @@
+---
+title: Invoice Ninja
+description: Documentation for the Invoice Ninja node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Invoice Ninja
 
 The Invoice Ninja node allows you to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
@@ -5,10 +10,10 @@ The Invoice Ninja node allows you to automate work in Invoice Ninja, and integra
 On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Invoice Ninja credentials](https://docs.n8n.io/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
+    Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Invoice Ninja integrations](https://n8n.io/integrations/invoice-ninja/){:target="_blank" .external-link) list.
+    For usage examples and templates to help you get started, take a look at n8n's [Invoice Ninja integrations](https://n8n.io/integrations/invoice-ninja/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -66,3 +71,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Invoice Ninja node. You can find out how to do that [here](/integrations/builtin/credentials/invoiceninja/).
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

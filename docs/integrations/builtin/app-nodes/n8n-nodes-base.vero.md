@@ -1,9 +1,19 @@
+---
+title: Vero
+description: Documentation for the Vero node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Vero
 
-[Vero](https://www.getvero.com/) is a messaging platform that helps manage real-time data to create a better customer experience.
+The Vero node allows you to automate work in Vero, and integrate Vero with other applications. n8n has built-in support for a wide range of Vero features, including creating and deleting users. 
+
+On this page, you'll find a list of operations the Vero node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/vero/).
+    Refer to [Vero credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Vero integrations](https://n8n.io/integrations/vero/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -39,3 +49,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Vero node. You can find out how to do that [here](/integrations/builtin/credentials/vero/).
 2. Enter the unique identifier of the user in the *ID* field.
 3. Click on *Execute Node* to run the workflow.
+

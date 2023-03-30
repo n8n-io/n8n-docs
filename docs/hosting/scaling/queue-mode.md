@@ -3,7 +3,7 @@
 n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.
 
 !!! note "Binary data storage"
-	n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
+ n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 
 ## How it works
 
@@ -36,7 +36,6 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 !!! note "Database considerations"
     We recommend using a database like MySQL or Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database is not recommended.
 
-
 Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
 
 ```bash
@@ -49,7 +48,6 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 !!! note "Keep in mind"
     You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
-
 
 To run Redis in a Docker container, follow the instructions below.
 
@@ -90,8 +88,9 @@ Start worker processes by running the following command from the root directory:
 ```
 
 If you're using Docker, use the following command:
+
 ```
-docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n worker
+docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n n8n worker
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
@@ -103,14 +102,12 @@ When running n8n with queues, all the production workflow executions get process
 Redis is used as the message broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
 
 !!! note "Migrate data"
-    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/reference/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
-
+    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
 
 ## Webhook processors
 
 !!! note "Keep in mind"
     Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
-
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
 
@@ -119,18 +116,21 @@ This method allows n8n to process a huge number of parallel requests. All you ha
 We do not recommend adding the main process to the load balancer pool. If the main process is added to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
 
 You can start the webhook processor by executing the following command from the root directory:
+
 ```
 ./packages/cli/bin/n8n webhook
 ```
 
 If you're using Docker, use the following command:
+
 ```
-docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n webhook
+docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n n8n webhook
 ```
 
 ### Configure webhook URL
 
 To configure your webhook URL, execute the following command on the machine running the main n8n instance:
+
 ```bash
 export WEBHOOK_URL=https://your-webhook-url.com
 ```
@@ -153,6 +153,7 @@ You can change this path in the configuration file via `endpoints.webhook` or vi
 You have webhook processors to execute the workflows. You can disable the webhook processing in the main process. This will make sure to execute all webhook executions in the webhook processors. In the configuration file set `endpoints.disableProductionWebhooksOnMainProcess` to `true` so that n8n does not process webhook requests on the main process.
 
 Alternatively, you can use the following command:
+
 ```bash
 export N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 ```
@@ -175,7 +176,6 @@ export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 
 !!! warning "Keep in mind"
     Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
-
 
 ## Configure worker concurrency
 

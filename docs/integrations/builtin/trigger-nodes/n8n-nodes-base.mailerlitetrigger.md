@@ -1,4 +1,9 @@
-# MailerLite Trigger
+---
+title: MailerLite trigger
+description: Documentation for the MailerLite trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# MailerLite trigger
 
 [MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
 
@@ -80,4 +85,5 @@ In the screenshot below, you will notice that the node adds the information of t
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the MailerLite Trigger node.
+
 

@@ -1,3 +1,8 @@
+---
+title: Edit Image
+description: Documentation for the Edit Image node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Edit Image
 
 The Edit Image node allows you to manipulate and edit images.
@@ -38,3 +43,4 @@ The Edit Image node allows you to manipulate and edit images.
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/edit-image/){:target=_blank .external-link} on n8n's website.
+

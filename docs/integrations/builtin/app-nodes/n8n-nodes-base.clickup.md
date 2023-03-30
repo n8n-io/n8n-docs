@@ -1,3 +1,8 @@
+---
+title: ClickUp
+description: Documentation for the ClickUp node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ClickUp
 
 The ClickUp node allows you to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
@@ -5,7 +10,7 @@ The ClickUp node allows you to automate work in ClickUp, and integrate ClickUp w
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [ClickUp credentials](https://docs.n8n.io/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
+    Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [ClickUp integrations](https://n8n.io/integrations/clickup/){:target="_blank" .external-link} list.
@@ -108,6 +113,7 @@ The start node exists by default when you create a new workflow.
 5. Select your list ID from the *List ID* dropdown list.
 6. Enter the name of the task in the *Name* field.
 7. Click on *Execute Node* to run the workflow.
+
 
 
 

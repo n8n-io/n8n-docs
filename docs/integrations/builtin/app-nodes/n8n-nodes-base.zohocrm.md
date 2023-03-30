@@ -1,9 +1,19 @@
+---
+title: Zoho CRM
+description: Documentation for the Zoho CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Zoho CRM
 
-[Zoho CRM](https://www.zoho.com/crm/) is an online Sales CRM software that manages sales, marketing and support.
+The Zoho CRM node allows you to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
+
+On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/zoho/).
+    Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Zoho CRM integrations](https://n8n.io/integrations/zoho-crm/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -99,3 +109,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Zoho CRM node. You can find out how to do that [here](/integrations/builtin/credentials/zoho/).
 2. Select the 'Get All' option from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

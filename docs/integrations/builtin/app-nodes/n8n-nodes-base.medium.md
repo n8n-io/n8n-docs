@@ -1,9 +1,19 @@
+---
+title: Medium
+description: Documentation for the Medium node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Medium
 
-[Medium](https://www.medium.com/) is an online publishing platform and home to a diverse array of stories, ideas, and perspectives. It empowers writers to share their work and ideas with the readers.
+The Medium node allows you to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
+
+On this page, you'll find a list of operations the Medium node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/medium/).
+    Refer to [Medium credentials](/integrations/builtin/credentials/medium/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Medium integrations](https://n8n.io/integrations/medium/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -38,6 +48,7 @@ The start node exists by default when you create a new workflow.
 5. Select the format from the ***Content Format*** dropdown list.
 6. Enter conent of the post in the ***Content*** field.
 7. Click on ***Execute Node*** to run the workflow.
+
 
 
 

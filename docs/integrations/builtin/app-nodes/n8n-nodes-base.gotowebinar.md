@@ -1,3 +1,8 @@
+---
+title: GoToWebinar
+description: Documentation for the GoToWebinar node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # GoToWebinar
 
 The GoToWebinar node allows you to automate work in GoToWebinar, and integrate GoToWebinar with other applications. n8n has built-in support for a wide range of GoToWebinar features, including creating, getting, and deleting attendees, organizers, and registrants.
@@ -5,7 +10,7 @@ The GoToWebinar node allows you to automate work in GoToWebinar, and integrate G
 On this page, you'll find a list of operations the GoToWebinar node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [GoToWebinar credentials](https://docs.n8n.io/integrations/builtin/credentials/gotowebinar/) for guidance on setting up authentication. 
+    Refer to [GoToWebinar credentials](/integrations/builtin/credentials/gotowebinar/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [GoToWebinar integrations](https://n8n.io/integrations/gotowebinar/){:target="_blank" .external-link} list.
@@ -106,3 +111,4 @@ This node will get the information about the webinar that we created earlier.
 In the screenshot below, you will notice that the node returns the information about the webinar.
 
 ![Using the GoToWebinar node to get information of a webinar](/_images/integrations/builtin/app-nodes/gotowebinar/gotowebinar2_node.png)
+

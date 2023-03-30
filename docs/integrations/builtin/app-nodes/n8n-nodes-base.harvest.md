@@ -1,3 +1,8 @@
+---
+title: Harvest
+description: Documentation for the Harvest node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Harvest
 
 The Harvest node allows you to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
@@ -5,10 +10,10 @@ The Harvest node allows you to automate work in Harvest, and integrate Harvest w
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [Harvest credentials](https://docs.n8n.io/integrations/builtin/credentials/harvest/) for guidance on setting up authentication. 
+    Refer to [Harvest credentials](/integrations/builtin/credentials/harvest/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Harvest integrations](https://n8n.io/integrations/harvest/){:target="_blank" .external-link
+    For usage examples and templates to help you get started, take a look at n8n's [Harvest integrations](https://n8n.io/integrations/harvest/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -96,3 +101,4 @@ The start node exists by default when you create a new workflow.
 3. Select the 'Create' option from the *Operation* dropdown list.
 4. Enter the name of the client in the *Name* field.
 5. Click on *Execute Node* to run the workflow.
+

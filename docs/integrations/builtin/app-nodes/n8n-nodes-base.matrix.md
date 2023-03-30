@@ -1,9 +1,19 @@
+---
+title: Matrix
+description: Documentation for the Matrix node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Matrix
 
-[Matrix](https://matrix.org) is an open standard for interoperable, decentralized, real-time communication over IP.
+The Matrix node allows you to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
+
+On this page, you'll find a list of operations the Matrix node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/matrix/).
+    Refer to [Matrix credentials](/integrations/builtin/credentials/matrix/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Matrix integrations](https://n8n.io/integrations/matrix/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -149,6 +159,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/matrix/noop_node.png)
+
 
 
 

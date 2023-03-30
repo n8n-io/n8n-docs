@@ -1,9 +1,19 @@
+---
+title: Lemlist
+description: Documentation for the Lemlist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Lemlist
 
-[Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
+The Lemlist node allows you to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
+
+On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist/).
+    Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Lemlist integrations](https://n8n.io/integrations/lemlist/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -87,3 +97,4 @@ This node will return the information of the leads that we created in the previo
 In the screenshot below, you will notice that the node returns the information about the leads we created in the previous node.
 
 ![Using the Lemlist node to get information about the leads](/_images/integrations/builtin/app-nodes/lemlist/lemlist1_node.png)
+

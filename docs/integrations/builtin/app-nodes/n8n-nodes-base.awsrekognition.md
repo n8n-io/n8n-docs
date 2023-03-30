@@ -1,3 +1,8 @@
+---
+title: AWS Rekognition
+description: Documentation for the AWS Rekognition node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Rekognition
 
 The AWS Rekognition node allows you to automate work in AWS Rekognition, and integrate AWS Rekognition with other applications. n8n has built-in support for a wide range of AWS Rekognition features, including analyzing images.
@@ -5,7 +10,7 @@ The AWS Rekognition node allows you to automate work in AWS Rekognition, and int
 On this page, you'll find a list of operations the AWS Rekognition node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [AWS Rekognition credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+    Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates"
     For usage examples and templates to help you get started, take a look at n8n's [AWS Rekognition integrations](https://n8n.io/integrations/aws-rekognition/){:target=_blank .external-link} list.
@@ -59,3 +64,4 @@ This node will detect faces in the image that we fetched in the previous node. Y
 In the screenshot below, you will observe that the node detects the face in the image that we got from the HTTP Request node.
 
 ![Using the AWS Rekognition node to detect faces in an image](/_images/integrations/builtin/app-nodes/awsrekognition/awsrekognition_node.png)
+

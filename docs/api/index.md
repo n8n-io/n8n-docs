@@ -11,7 +11,7 @@ Using n8n's public API, you can programmatically perform many of the same tasks 
 * Using the [built-in API playground](/api/using-api-playground/)
 * [Endpoint reference](/api/api-reference/)
 
-
+n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) to access the API in your workflows.
 
 ## Learn about REST APIs
 

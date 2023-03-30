@@ -16,3 +16,6 @@ You can report bad community nodes to [security@n8n.io](mailto: security@n8n.io)
 
 <!-- vale on -->
 
+## Disable community nodes
+
+You can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`.

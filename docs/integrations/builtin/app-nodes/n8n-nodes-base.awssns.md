@@ -1,3 +1,8 @@
+---
+title: AWS SNS
+description: Documentation for the AWS SNS node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS SNS
 
 The AWS SNS node allows you to automate work in AWS SNS, and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, including publishing messages.
@@ -5,7 +10,7 @@ The AWS SNS node allows you to automate work in AWS SNS, and integrate AWS SNS w
 On this page, you'll find a list of operations the AWS SNS node supports and links to more resources.
 
 !!! note "Credentials" 
-    Refer to [AWS SNS credentials](https://docs.n8n.io/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+    Refer to [AWS SNS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 
 !!! note "Examples and Templates" 
     For usage examples and templates to help you get started, take a look at n8n's [AWS SNS integrations](https://n8n.io/integrations/aws-sns/){:target=_blank .external-link} list.
@@ -36,3 +41,4 @@ The start node exists by default when you create a new workflow.
 3. Enter a subject for your message in the *Subject* field.
 4. Enter your message in the *Message* field.
 5. Click on *Execute Node* to run the workflow.
+

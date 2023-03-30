@@ -1,4 +1,9 @@
-# Kafka Trigger
+---
+title: Kafka trigger
+description: Documentation for the Kafka trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Kafka trigger
 
 [Kafka](https://kafka.apache.org/) is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
@@ -84,4 +89,5 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Kafka Trigger node.
+
 

@@ -1,9 +1,19 @@
+---
+title: Spontit
+description: Documentation for the Spontit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Spontit
 
-[Spontit](https://www.spontit.com/) enables you to send push notifications without your app or website. You can create different channels and send push notifications to specific followers.
+The Spontit node allows you to automate work in Spontit, and integrate Spontit with other applications. n8n supports creating push notifications with Spontit. 
+
+On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/spontit/).
+    Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Spontit integrations](https://n8n.io/integrations/spontit/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -39,7 +49,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -66,3 +76,4 @@ In the screenshot below, you will notice that the node sends a push notification
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+

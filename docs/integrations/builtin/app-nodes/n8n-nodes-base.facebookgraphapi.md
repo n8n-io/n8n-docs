@@ -1,9 +1,19 @@
+---
+title: Facebook Graph API
+description: Documentation for the Facebook Graph API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Facebook Graph API
 
-[Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
+The Facebook Graph API node allows you to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
+
+On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookGraph/).
+    Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebook-graph-api/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -52,9 +62,10 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Facebook Graph API node
 
-1. First of all, you'll have to enter credentials for the Facebook Graph API node. You can find out how to do that [here](/integrations/builtin/credentials/facebookGraph/).
+1. First of all, you'll have to enter credentials for the Facebook Graph API node. You can find out how to do that [here](/integrations/builtin/credentials/facebookgraph/).
 2. Enter `me` in the *Node* field.
 3. Click on the *Add Option* button and select 'Fields' from the dropdown list.
 4. Click on the *Add Field* button and enter `first_name` in the *Name* field.
 5. Click on the *Add Field* button and enter `last_name` in the *Name* field.
 6. Click on *Execute Node* to run the workflow.
+

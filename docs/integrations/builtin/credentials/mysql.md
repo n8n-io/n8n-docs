@@ -1,4 +1,9 @@
-# MySQL
+---
+title: MySQL credentials
+description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
+---
+
+# MySQL credentials
 
 You can use these credentials to authenticate the following nodes with MySQL.
 
@@ -13,4 +18,5 @@ Create an user account on a MySQL server.
 1. Retrieve your MySQL credentials and connection parameters.
 2. Use the credentials and connection parameters with your MySQL node credentials in n8n.
 
-![Getting MySQL credentials](/_images/integrations/builtin/credentials/mySql/using-database-connection.gif)
+![Getting MySQL credentials](/_images/integrations/builtin/credentials/mysql/using-database-connection.gif)
+

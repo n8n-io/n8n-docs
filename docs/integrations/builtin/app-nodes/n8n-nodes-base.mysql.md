@@ -1,9 +1,20 @@
+---
+title: MySQL
+description: Documentation for the MySQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MySQL
 
-[MySQL](https://www.mysql.com/) is an open-source relational database management system. MySQL has stand-alone clients that allow users to interact directly with a MySQL database using SQL, but more often MySQL is used with other programs to implement applications that need relational database capability.
+The MySQL node allows you to automate work in MySQL, and integrate MySQL with other applications. n8n has built-in support for a wide range of MySQL features, including executing an SQL query, as well as inserting, and updating rows in a database.
+
+On this page, you'll find a list of operations the MySQL node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mySql/).
+    Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MySQL integrations](https://n8n.io/integrations/mysql/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations
@@ -29,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. MySQL node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the MySQL node. You can find out how to do that [here](/integrations/builtin/credentials/mySql/).
+1. First of all, you'll have to enter credentials for the MySQL node. You can find out how to do that [here](/integrations/builtin/credentials/mysql/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name VARCHAR(255), PRIMARY KEY (id));`.
 4. Click on ***Execute Node*** to run the node.
@@ -56,3 +67,4 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the MySQL node to insert data into a table](/_images/integrations/builtin/app-nodes/mysql/mysql1_node.png)
+

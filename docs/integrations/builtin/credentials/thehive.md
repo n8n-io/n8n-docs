@@ -1,4 +1,9 @@
-# TheHive
+---
+title: TheHive credentials
+description: Documentation for TheHive credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
+---
+
+# TheHive credentials
 
 You can use these credentials to authenticate the following nodes with The Hive.
 
@@ -16,3 +21,4 @@ Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/ins
 4. Use this ***API Key*** and your instance ***URL*** with your TheHive node credentials in n8n.
 
 ![Getting TheHive credentials](/_images/integrations/builtin/credentials/thehive/using-api.gif)
+

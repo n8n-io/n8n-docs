@@ -1,9 +1,19 @@
+---
+title: ProfitWell
+description: Documentation for the ProfitWell node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ProfitWell
 
-[ProfitWell](https://www.profitwell.com/) provides real-time subscription financial metrics.
+The ProfitWell node allows you to automate work in ProfitWell, and integrate ProfitWell with other applications. n8n supports getting your company's account settings and retrieving financial metrics from ProfitWell.
+
+On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/profitWell/).
+    Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [ProfitWell integrations](https://n8n.io/integrations/profitwell/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -41,7 +51,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return monthly financial metrics.
 
-1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/integrations/builtin/credentials/profitWell/).
+1. First of all, you'll have to enter credentials for the ProfitWell node. You can find out how to do that [here](/integrations/builtin/credentials/profitwell/).
 2. Select 'Monthly' from the ***Type*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
@@ -74,4 +84,5 @@ In the screenshot below, you will notice that the node sends a message with the 
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

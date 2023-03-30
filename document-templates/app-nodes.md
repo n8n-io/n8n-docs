@@ -12,16 +12,32 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+<!--
+Set the meta title and meta description in the frontmatter
+-->
+
+---
+title: <node-name> node - n8n Documentation
+description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 <!-- 
 The title should be the name of the integration 
 Match the brand name exactly. For example, GitHub NOT Github
 -->
 # _Name_
 
-_Briefly summarize the service. This should be one or two sentences, and can often be copied from a product's own website. Include a link to the service's homepage._
+_Briefly summarize the node. For example:_ 
+
+_The Action Network node allows you to automate work in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, which includes creating, updating, and deleting events, people, tags, and signatures._
+
+_On this page, you'll find a list of operations the Action Network node supports, and links to more resources._
 
 !!! note "Credentials"
     You can find authentication information for this node _here (link to credentials doc)_.
+
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} page.
 	
 ## Operations
 

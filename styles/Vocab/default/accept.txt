@@ -16,6 +16,7 @@ enum
 Fargate
 Firestore
 GIMP
+Hetzner
 invalid
 kubectl
 Kafka
@@ -43,6 +44,8 @@ Tooltip
 tooltip
 Trello
 Twilio
+Typeahead
+typeahead
 Unformatted
 unformatted
 URI

@@ -1,14 +1,54 @@
+
+/code-examples/console-log/   /code-examples/javascript-functions/console-log/
+
+/reference/   /
+/reference/keyboard-shortcuts/   /keyboard-shortcuts/
+/reference/cli-commands/   /hosting/cli-commands/
+/reference/update/   /release-notes/
+/security-audit/   /hosting/security-audit/
+/reference/data-collection/   /privacy-security/privacy/
+
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/
+
+/reference/release-notes/   /release-notes/
+/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
+
+# License release 2022/2023
+
+/reference/license/   /choose-n8n/faircode-license/
+
+# Workflows refactor 2022
+
+/workflows/workflows/   /workflows/
+/workflows/items/   /data/data-structure/
+/workflows/nodes/   /workflows/components/nodes/
+/workflows/connections/   /workflows/components/connections/
+/workflows/sticky-notes/   /workflows/components/sticky-notes/
+
+
 # Hosting user paths 2022
 
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /choose-n8n/cloud/
 /hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat
+/hosting/environment-variables/   /hosting/environment-variables/environment-variables/
+/hosting/updating/   /reference/update/
+/hosting/updating/cloud/   /choose-n8n/cloud/
+/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/npm/   /choose-n8n/npm/
+/hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
+/hosting/databases/structure/   /hosting/architecture/database-structure/
+/hosting/security/   /hosting/authentication/
+/hosting/user-management/   /user-management/
+/hosting/configuration/   /hosting/environment-variables/configuration-methods/
+
 
 # 2022 SEO audit
 
 /nodes/expressions/expressions.html   /code-examples/expressions/
 /nodes/expressions.html   /code-examples/expressions/
-/reference/configuration.html   /hosting/configuration/
+/reference/configuration.html  /hosting/environment-variables/configuration-methods/
 /getting-started/installation/index.html   /hosting/options/
 /getting-started/create-your-first-workflow/    /try-it-out/
 /reference/scaling-n8n.html   /hosting/scaling/
@@ -68,7 +108,6 @@
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
 
-# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 
@@ -90,22 +129,22 @@
 /getting-started/installation/                       /hosting/options/
 /getting-started/installation/docker-quickstart.html /hosting/installation/docker/
 /getting-started/installation/updating.html          /hosting/updating/
-/getting-started/installation/advanced/configuration.html /hosting/configuration/
+/getting-started/installation/advanced/configuration.html /hosting/environment-variables/configuration-methods/
 /getting-started/installation/advanced/maintenance.html /hosting/scaling/execution-data/
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
-/reference/user-management.html                      /hosting/user-management/
+/reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/environment-variables/
-/reference/start-workflows-via-cli.html              /reference/cli-commands/
+/reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/databases/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
-/reference/telemetry.html                            /reference/data-collection/
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/server-setups/  
+/reference/server-setup.html                         /hosting/installation/server-setups/  
 
 # The nodes library . . . may the odds be ever in your favour
 
@@ -373,8 +412,8 @@
 /nodes/n8n-nodes-base.highlevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/
 /nodes/n8n-nodes-base.homeAssistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/
 /nodes/n8n-nodes-base.homeassistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/
-/nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/
-/nodes/n8n-nodes-base.htmlextract/		/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/
+/nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/
+/nodes/n8n-nodes-base.htmlextract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/
 /nodes/n8n-nodes-base.httpRequest/		/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/
 /nodes/n8n-nodes-base.httprequest/      /integrations/builtin/core-nodes/n8n-nodes-base.httprequest/
 /nodes/n8n-nodes-base.hubspot/		/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/

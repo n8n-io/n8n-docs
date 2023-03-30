@@ -1,5 +1,7 @@
 # Workflow management in Embed
 
+--8<-- "_snippets/embed-license.md"
+
 When managing an embedded n8n deployment, spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
 
 | Solution | Pros | Cons |

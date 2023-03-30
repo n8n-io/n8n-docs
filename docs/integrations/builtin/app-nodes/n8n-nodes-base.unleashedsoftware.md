@@ -1,9 +1,19 @@
+---
+title: Unleashed Software
+description: Documentation for the Unleashed Software node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Unleashed Software
 
-[Unleashed Software](https://www.unleashedsoftware.com) is a cloud app that gives product businesses the freedom to better make, manage and move products by enabling them to achieve complete clarity and control over suppliers, production, warehouses, and sales.
+The Unleashed Software node allows you to automate work in Unleashed Software, and integrate Unleashed Software with other applications. n8n has built-in support for a wide range of Unleashed Software features, including getting sales orders and stock on hand. 
+
+On this page, you'll find a list of operations the Unleashed Software node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/unleashedSoftware/).
+    Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Unleashed Software integrations](https://n8n.io/integrations/unleashed-software/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -30,10 +40,11 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Unleashed Software node
 
-1. First of all, you'll have to enter credentials for the Unleashed Software node. You can find out how to do that [here](/integrations/builtin/credentials/unleashedSoftware/).
+1. First of all, you'll have to enter credentials for the Unleashed Software node. You can find out how to do that [here](/integrations/builtin/credentials/unleashedsoftware/).
 2. Toggle ***Return All*** to true.
 3. Click on the ***Add Filter*** button and select 'Order Status' from the dropdown list.
 4. Select 'Completed' from the ***Order Status*** dropdown list.
 5. Click on ***Execute Node*** to run the node.
 
 ![Using the Unleashed Software node to get the list of completed sales order](/_images/integrations/builtin/app-nodes/unleashedsoftware/unleashedsoftware_node.png)
+

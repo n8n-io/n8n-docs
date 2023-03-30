@@ -1,3 +1,8 @@
+---
+title: Respond to Webhook
+description: Documentation for the Respond to Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Respond to Webhook
 
 The *Respond to Webhook* node can be used in workflows with a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node. It allows controlling the response to incoming webhooks. In the Webhook node, the **Using 'Respond to Webhook' node** option would need to be selected in the **Response** dropdown for the *Respond to Webhook* node to work.
@@ -63,3 +68,4 @@ This node will define the response to the request received in the previous step.
 7. Open the **Test URL** from the *Webhook* node in a new browser tab. The browser should now show the page added defined in the **Response Body** field of the *Respond to Webhook* node.
 
 ![The Respond to Webhook node](/_images/integrations/builtin/core-nodes/respondtowebhook/respond_to_webhook_node.png)
+

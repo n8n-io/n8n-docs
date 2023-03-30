@@ -1,9 +1,14 @@
-# Invoice Ninja Trigger
+---
+title: Invoice Ninja trigger
+description: Documentation for the Invoice Ninja trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Invoice Ninja trigger
 
 [Invoice Ninja](https://www.invoiceninja.com/) is a free "source available" online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking & time-tasks.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceNinja/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceninja/).
 
 ## Available Events
 
@@ -95,10 +100,11 @@ The final workflow should look like the following image.
 
 ### 1. Invoice Ninja Trigger node
 
-1. First of all, you'll have to enter credentials for the Invoice Ninja Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/invoiceNinja/).
+1. First of all, you'll have to enter credentials for the Invoice Ninja Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/invoiceninja/).
 2. Select the 'Invoice Created' option from the *Event* dropdown list to receive updates when a new invoice is created.
 3. Click on *Execute Node* to run the workflow.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Invoice Ninja Trigger node.
+
 

@@ -1,3 +1,8 @@
+---
+title: n8n
+description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # n8n
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/) in your workflows.
@@ -14,6 +19,8 @@ Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a l
 
 ## Operations
 
+* Audit
+	* Generate
 * Credential
 	* Create
 	* Delete
@@ -30,3 +37,4 @@ Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a l
 	* Get
 	* Get Many
 	* Update
+

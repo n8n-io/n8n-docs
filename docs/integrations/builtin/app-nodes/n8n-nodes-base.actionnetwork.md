@@ -1,9 +1,21 @@
+---
+title: Action Network
+description: Documentation for the Action Network node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Action Network
 
-[Action Network](https://actionnetwork.org/) is an open platform that empowers individuals and groups to organize for progressive causes.
+
+
+The Action Network node allows you to automate work in Action Network, and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures. 
+
+On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/actionNetwork/).
+    Refer to [Action Network credentials](/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Action Network integrations](https://n8n.io/integrations/action-network/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -55,7 +67,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Action Network node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionnetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Event** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
@@ -68,7 +80,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. Action Network1 node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionnetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Person** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
@@ -80,7 +92,7 @@ The start node exists by default when you create a new workflow.
 
 ### 4. Action Network2 node
 
-1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionNetwork/).
+1. First enter your credentials. You can find out how to do that [here](/integrations/builtin/credentials/actionnetwork/).
 2. Fill in the remaining parameters as follows:
     * **Resource**: Select **Attendance** from the dropdown list.
     * **Operation**: Select **Create** from the dropdown list.
@@ -89,3 +101,4 @@ The start node exists by default when you create a new workflow.
 3. Enable the **Simple** toggle to return an easier to view response as opposed to the complete raw data.
 
 ![Action Network2 node](/_images/integrations/builtin/app-nodes/actionnetwork/action_network_node2.png)
+

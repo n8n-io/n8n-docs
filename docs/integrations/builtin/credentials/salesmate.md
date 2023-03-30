@@ -1,4 +1,9 @@
-# Salesmate
+---
+title: Salesmate credentials
+description: Documentation for Salesmate credentials. Use these credentials to authenticate Salesmate in n8n, a workflow automation platform.
+---
+
+# Salesmate credentials
 
 You can use these credentials to authenticate the following nodes with Salesmate.
 
@@ -18,3 +23,4 @@ Create a [Salesmate](https://salesmate.io/) account.
 6. Use session key and domain name for your Salesmate node credentials in n8n.
 
 ![Getting Salesmate credentials](/_images/integrations/builtin/credentials/salesmate/using-access-token.gif)
+

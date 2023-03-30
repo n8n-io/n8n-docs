@@ -1,9 +1,14 @@
-# Webex by Cisco Trigger
+---
+title: Webex by Cisco trigger
+description: Documentation for the Webex by Cisco trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Webex by Cisco trigger
 
 [Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ciscoWebex/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/ciscowebex/).
 
 
 ## Example usage
@@ -18,11 +23,12 @@ The final workflow should look like the following image.
 
 ### 1. Webex by Cisco Trigger node
 
-1. First enter your credentials for node. You can find out how to do that [here](/integrations/builtin/credentials/ciscoWebex/).
+1. First enter your credentials for node. You can find out how to do that [here](/integrations/builtin/credentials/ciscowebex/).
 2. Select 'Meeting' from the *Resource* dropdown list.
 3. Select the events you want to receive updates for from the *Events* dropdown list.
 4. Click on *Execute Node* to run the workflow.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Webex by Cisco Trigger node.
+
 

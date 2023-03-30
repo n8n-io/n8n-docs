@@ -16,11 +16,30 @@ This error has two possible causes:
 * You've edited the pinned data and changed the number of items.
 
 
-## Errors when using the Function node
+## Errors when using the Code node
 
 If you see this error message:
 
 > ERROR: Can't get data for expression under '`<field-name>`' field
 
-You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Function node](/data/data-mapping/data-item-linking/item-linking-code-node/) for detailed guidance on handling item linking.
+You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle.
+
+To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0:
+
+```js
+[
+	{
+		"json": {
+			. . . 
+		},
+		// The index of the input item that generated this output item
+		"pairedItem": 0
+	}
+]
+```
+
+
+Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for detailed guidance on handling item linking.
+
+
 

@@ -1,9 +1,19 @@
+---
+title: Freshdesk
+description: Documentation for the Freshdesk node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Freshdesk
 
-[Freshdesk](https://freshdesk.com/) is a customer support software also classified as a ticketing software or a helpdesk that allows companies to effectively manage their customer care and support function.
+The Freshdesk node allows you to automate work in Freshdesk and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting contacts and tickets.
+
+On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/freshdesk/).
+    Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Freshdesk integrations](https://n8n.io/integrations/freshdesk/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -42,3 +52,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the requester email in the *Value* field.
 4. Select 'Open' from the *Status* Dropdown.
 5. Click on *Execute Node* to run the workflow.
+

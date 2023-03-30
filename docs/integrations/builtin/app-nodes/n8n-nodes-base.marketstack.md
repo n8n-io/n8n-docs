@@ -1,9 +1,19 @@
+---
+title: Marketstack
+description: Documentation for the Marketstack node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Marketstack
 
-[Marketstack](https://marketstack.com/) is a REST API that provides stock market data in JSON format. 
+The Marketstack node allows you to automate work in Marketstack, and integrate Marketstack with other applications. n8n has built-in support for a wide range of Marketstack features, including getting exchanges, end-of-day data, and tickers. 
+
+On this page, you'll find a list of operations the Marketstack node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/marketstack/).
+    Refer to [Marketstack credentials](/integrations/builtin/credentials/marketstack/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Marketstack integrations](https://n8n.io/integrations/marketstack/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -41,3 +51,4 @@ The start node exists by default when you create a new workflow.
 3. Click on **Execute Node** to run the workflow.
 
 ![The Marketstack node](/_images/integrations/builtin/app-nodes/marketstack/marketstack_node.png)
+

@@ -1,0 +1,95 @@
+:root { 
+	--color-purple: #8287EB;
+	--small-font: 0.6em;
+}
+
+.dt-func-title-h3 {
+	font-size: 1.2em !important;
+	font-family: 'menlo', monospace;
+	font-weight: 800 !important;
+}
+
+.dt-func-title-h4 {
+	font-weight: 600 !important;
+	margin: 2em 0 1em 0 !important;
+}
+
+.dt-func-wrapper {
+	
+	margin-bottom: 2em;
+}
+
+.dt-func-desc {
+
+}
+
+.dt-func-name {
+	font-family: 'menlo', monospace;
+	font-weight: bold;
+	padding: 0 0.5em 0 0;
+	text-transform: lowercase;
+}
+
+.dt-func-optional {
+	color: var(--color-purple);
+	font-size: var(--small-font);
+	font-weight: bold;
+	padding: 0 0.25em 0 0;
+	text-transform: uppercase;
+}
+
+.dt-func-options {
+
+}
+
+.dt-func-args {
+	/* border-top: 1px solid var(--color-foreground-base); */
+	margin-bottom: 1em;
+}
+
+.dt-func-arg-type {
+	color: var(--color-text-base);
+	font-size: var(--small-font);
+	text-transform: uppercase;
+}
+
+.dt-func-header-link {
+	display: inline-block;
+	opacity: 0;	
+}    
+
+.dt-func-header-link:hover, .dt-func-header-link:active, .dt-func-header-link:focus {
+	color: var(--md-typeset-a-color);
+	opacity: 1;
+	transition: color .25s,opacity 125ms;
+}
+
+.dt-func-arg-name-anchor {
+	display: inline-block;
+	opacity: 0;	
+}
+
+.dt-func-arg-name-anchor:hover, .dt-func-arg-name-anchor:active, .dt-func-arg-name-anchor:focus {
+	color: var(--md-typeset-a-color);
+	opacity: 1;
+	transition: color .25s,opacity 125ms;
+}
+
+.dt-func-args-p {
+	margin: 0;
+}
+
+.dt-func-hr {
+	margin: 4.5em 0 4.5em 0 !important;
+}
+
+.dt-func-example-code {
+	font-weight: bold;
+}
+
+.dt-func-background-box {
+	background-color: var(--color-background-light);
+	border: 1px solid var(--color-foreground-base);
+	padding: 1em;
+}
+

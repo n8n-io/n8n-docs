@@ -1,9 +1,19 @@
+---
+title: UptimeRobot
+description: Documentation for the UptimeRobot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # UptimeRobot
 
-[UptimeRobot](https://uptimerobot.com/) is an uptime monitoring service. It monitors your website every 5 mins. You can set an HTTP/S, ping, port, keyword, or heartbeat monitor and get notifications to your email, phone, Telegram, Slack, Twitter, etc.
+The UptimeRobot node allows you to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
+
+On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uptimeRobot/).
+    Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [UptimeRobot integrations](https://n8n.io/integrations/uptimerobot/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -53,7 +63,7 @@ The start node exists by default when you create a new workflow.
 
 This node will create a new monitor of the type `HTTP(S)`.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Select 'Monitor' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `n8n` in the ***Friendly Name*** field.
@@ -98,3 +108,4 @@ This node will get the information of the monitor that we created in the previou
 In the screenshot below, you will notice that the node returns the information of the monitor that we created earlier.
 
 ![Using the UptimeRobot node to retrieve information of a monitor](/_images/integrations/builtin/app-nodes/uptimerobot/uptimerobot2_node.png)
+

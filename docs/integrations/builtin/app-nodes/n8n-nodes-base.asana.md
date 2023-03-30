@@ -1,10 +1,19 @@
+---
+title: Asana
+description: Documentation for the Asana node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Asana
 
-[Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
+The Asana node allows you to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
+
+On this page, you'll find a list of operations the Asana node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
+	Refer to [Asana credentials](/integrations/builtin/credentials/asana/) for guidance on setting up authentication. 
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, take a look at n8n's [Asana integrations](https://n8n.io/integrations/asana/){:target="_blank" .external-link} list.
 
 ## Basic Operations
 
@@ -58,6 +67,7 @@ The start node exists by default when you create a new workflow.
 2. Select your workspace from the *Workspace* dropdown list.
 3. Enter the name of the task in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

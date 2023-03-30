@@ -1,9 +1,19 @@
+---
+title: Pushover
+description: Documentation for the Pushover node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Pushover
 
-[Pushover](https://www.pushover.net/) is a simple push notification service that integrates easily into web apps, network monitors, shell scripts, servers, and anything else that needs to send alerts to your Android, iPhone, iPad, and Desktop.
+The Pushover node allows you to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
+
+On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushover/).
+    Refer to [Pushover credentials](/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Pushover integrations](https://n8n.io/integrations/pushover/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -38,7 +48,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -64,3 +74,4 @@ This node will send a push notification with the weather update, which was sent 
 In the screenshot below, you will notice that the node sends a push notification to a device with the weather update.
 
 ![Using the Pushover node to send weather updates via a push notification](/_images/integrations/builtin/app-nodes/pushover/pushover_node.png)
+

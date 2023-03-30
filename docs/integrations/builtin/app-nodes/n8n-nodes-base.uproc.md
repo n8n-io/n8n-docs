@@ -1,9 +1,19 @@
+---
+title: uProc
+description: Documentation for the uProc node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # uProc
 
-[uProc](https://uproc.io/) is a data platform that allows to clean, verify, and enrich any data field.
+The uProc node allows you to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
+
+On this page, you'll find a list of operations the uProc node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/uProc/).
+    Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [uProc integrations](https://n8n.io/integrations/uproc/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -513,7 +523,7 @@ The start node exists by default when you create a new workflow.
 
 This node will return the screenshot of the n8n website. If you want to get the screenshot of a different website, enter the domain of that website instead.
 
-1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uProc/).
+1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uproc/).
 2. Select 'Image' from the ***Resource*** dropdown list.
 3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
 4. Enter `https://n8n.io` in the ***URL*** field.
@@ -542,3 +552,4 @@ This node will send the screenshot that we received from the previous node.
 In the screenshot below, you will notice that the node sends the screenshot image to the channel that we specify.
 
 ![Using the Telegram node to send the image of the screenshot](/_images/integrations/builtin/app-nodes/uproc/telegram_node.png)
+

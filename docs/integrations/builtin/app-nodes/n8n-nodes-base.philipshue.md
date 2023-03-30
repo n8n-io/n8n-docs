@@ -1,9 +1,19 @@
+---
+title: Philips Hue
+description: Documentation for the Philips Hue node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Philips Hue
 
-[Philips Hue](https://www.philips-hue.com/) is a line of smart color-changing LED lamps and bulbs that can be controlled wirelessly.
+The Philips Hue node allows you to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
+
+On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/philipsHue/).
+    Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Philips Hue integrations](https://n8n.io/integrations/philips-hue/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -31,8 +41,9 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Philips Hue node (update: light)
 
-1. First of all, you'll have to enter credentials for the Philips Hue node. You can find out how to do that [here](/integrations/builtin/credentials/philipsHue/).
+1. First of all, you'll have to enter credentials for the Philips Hue node. You can find out how to do that [here](/integrations/builtin/credentials/philipshue/).
 2. Enter the light id in the ***Light ID*** field.
 3. Click on ***Add Field*** and select 'Brightness' from the dropdown list.
 4. Enter a value between 1 and 254 for the brightness in the ***Brightness*** field.
 5. Click on ***Execute Node*** to run the node.
+

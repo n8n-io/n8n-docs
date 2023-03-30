@@ -1,0 +1,40 @@
+[[% macro dataFunctions(dataType, funcName, returnType, description, funcArgs, examples) %]]
+<div class="dt-func-wrapper" markdown>
+<h3 class="dt-func-title-h3" id="[[dataType]]-[[ funcName ]]">
+	[[funcName]]([[% if funcArgs %]][[% for arg in funcArgs %]][[arg.argName]][[% if arg.optional %]]?[[% endif %]]:
+	[[arg.longName]][[ ", " if not loop.last ]][[% endfor %]][[% endif %]]):
+	[[returnType]]
+</h3>
+<div class="dt-func-desc">
+[[description]]
+</div>
+[[% if funcArgs %]]
+
+<h4 class="dt-func-title-h4">Function parameters</h4>
+[[% for arg in funcArgs %]]
+<div class="dt-func-args">
+	<span class="dt-func-name" id="[[funcName]]-[[arg.argName]]">[[arg.argName]]</span><span class="dt-func-optional">[[% if arg.optional %]]Optional[[% else %]]Required[[% endif %]]</span><span class="dt-func-arg-type">[[ arg.type ]]</span> 
+	<p class="dt-func-args-p">[[arg.description]]</p>
+	<div class="dt-func-options">[[% if arg.default %]]
+		<p class="dt-func-args-p">Default: <code>[[ arg.default ]]</code></p>[[% endif %]]
+		[[% if arg.options %]]
+		<p class="dt-func-args-p">One of: [[% for option in arg.options %]]
+		<code>[[option]]</code>[[ "," if not loop.last ]]
+		[[% endfor %]]
+		</p>
+		[[% endif %]]</div>
+</div>
+[[% endfor %]]
+[[% endif %]]
+[[% if examples %]]
+<h4 class="dt-func-title-h4">Example[[% if example|length > 1 %]]s[[% endif %]]</h4>
+[[% for example in examples %]]
+[[% if example|length > 1 %]]
+<h5>[[ example.exampleName ]]</h5>
+[[% endif %]]
+--8<-- "_snippets/data-function-code/[[example.code]].md"
+[[% endfor %]]
+[[% endif %]]
+</div>
+<hr class="dt-func-hr" />
+[[% endmacro %]]

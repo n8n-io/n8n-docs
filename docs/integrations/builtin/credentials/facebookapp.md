@@ -1,10 +1,15 @@
-# Facebook App
+---
+title: Facebook App credentials
+description: Documentation for Facebook App credentials. Use these credentials to authenticate Facebook App in n8n, a workflow automation platform.
+---
+
+# Facebook App credentials
 
 You can use these credentials to authenticate the following nodes with Facebook.
 
 - [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/)
 
-**Note:** If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions mentioned in the [Facebook Graph API](/integrations/builtin/credentials/facebookGraph/) credentials documentation.
+**Note:** If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions mentioned in the [Facebook Graph API](/integrations/builtin/credentials/facebookgraph/) credentials documentation.
 
 ## Prerequisites
 
@@ -25,3 +30,4 @@ Create a [Facebook](https://www.facebook.com/) account.
 11. Use the app secret and the generated access token with your Facebook node credentials in n8n.
 
 ![Getting Facebook App credentials](/_images/integrations/builtin/credentials/facebookapp/using-app-access-token.gif)
+

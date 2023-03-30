@@ -1,4 +1,9 @@
-# Sendinblue
+---
+title: Sendinblue credentials
+description: Documentation for Sendinblue credentials. Use these credentials to authenticate Sendinblue in n8n, a workflow automation platform.
+---
+
+# Sendinblue credentials
 
 You can use these credentials to authenticate the following nodes with Sendinblue:
 

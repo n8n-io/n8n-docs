@@ -1,4 +1,9 @@
-# Invoice Ninja
+---
+title: Invoice Ninja credentials
+description: Documentation for Invoice Ninja credentials. Use these credentials to authenticate Invoice Ninja in n8n, a workflow automation platform.
+---
+
+# Invoice Ninja credentials
 
 You can use these credentials to authenticate the following nodes with Invoice Ninja.
 
@@ -19,6 +24,7 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/) account or setup your [
 4. Add new token.
 5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
 
+
 ![Getting Invoice Ninja V4 credentials](/_images/integrations/builtin/credentials/invoiceninja/using-access-token-v4.gif)
 
 ### Version 5
@@ -34,3 +40,4 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/) account or setup your [
 ## Using Password
 
 Some operations require the usage of an additionaly password. This password is the same, as for your user-account, which created the token.
+

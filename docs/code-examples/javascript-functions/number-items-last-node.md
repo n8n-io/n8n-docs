@@ -1,6 +1,6 @@
 # Get number of items returned by the last node
 
-Depending on your use-case, you might want to get the number of items returned by the last node. Use the following snippet in the Function node.
+Depending on your use-case, you might want to get the number of items returned by the last node. Use the following snippet in the Code node.
 
 ```js
 if (Object.keys(items[0].json).length === 0) {

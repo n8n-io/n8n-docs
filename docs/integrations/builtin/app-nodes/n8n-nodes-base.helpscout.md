@@ -1,9 +1,21 @@
+---
+title: Help Scout
+description: Documentation for the Help Scout node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Help Scout
 
-[Help Scout](https://www.helpscout.com/) is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
+
+The Help Scout node allows you to automate work in Help Scout, and integrate Help Scout with other applications. n8n has built-in support for a wide range of Help Scout features, including creating, updating, deleting, and getting conversations, and customers.
+
+
+On this page, you'll find a list of operations the Help Scout node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/helpScout/).
+    Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Help Scout integrations](https://n8n.io/integrations/helpscout/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -42,7 +54,8 @@ The start node exists by default when you create a new workflow.
 
 ### 2. Help Scout node
 
-1. First of all, you'll have to enter credentials for the Help Scout node. You can find out how to do that [here](/integrations/builtin/credentials/helpScout/).
+1. First of all, you'll have to enter credentials for the Help Scout node. You can find out how to do that [here](/integrations/builtin/credentials/helpscout/).
 2. Select the 'Mailbox' option from the *Resource* dropdown list.
 3. Select the 'Get All' option from the *Operation* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

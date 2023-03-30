@@ -1,9 +1,19 @@
+---
+title: Humantic AI
+description: Documentation for the Humantic AI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Humantic AI
 
-[Humantic AI](https://humantic.ai/) provides AI-driven behavior and personality assessment of a candidate.
+The Humantic AI node allows you to automate work in Humantic AI, and integrate Humantic AI with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
+
+On this page, you'll find a list of operations the Humantic AI node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/humanticAi/).
+    Refer to [Humantic AI credentials](/integrations/builtin/credentials/humanticai/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Humantic AI integrations](https://n8n.io/integrations/humantic-ai/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -32,7 +42,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new profile for a candidate in Humantic AI. We will create a new profile using the LinkedIn URL of a candidate.
 
-1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/builtin/credentials/humanticAi/).
+1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/builtin/credentials/humanticai/).
 2. Enter the LinkedIn URL of the candidate in the ***User ID*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -83,3 +93,4 @@ This node will return the `Hiring` persona for the candidate that we created usi
 In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node (column headers are not visible in the screenshot since we've scrolled down to show the data).
 
 ![Using the Humantic AI node to get the information of the candidate](/_images/integrations/builtin/app-nodes/humanticai/humanticai2_node.png)
+

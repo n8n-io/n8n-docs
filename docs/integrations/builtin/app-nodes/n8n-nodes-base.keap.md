@@ -1,9 +1,20 @@
+---
+title: Keap
+description: Documentation for the Keap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Keap
 
-[Keap](https://keap.com/) is an e-mail marketing and sales platform for small businesses, including products to manage and optimize the customer lifecycle, customer relationship management, marketing automation, lead capture, and e-commerce.
+The Keap node allows you to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
+
+On this page, you'll find a list of operations the Keap node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/keap/).
+    Refer to [Keap credentials](/integrations/builtin/credentials/keap/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Keap integrations](https://n8n.io/integrations/keap/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations
@@ -65,3 +76,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Contact' option from the *Resource* dropdown list.
 3. Select the 'Get All' option from the *Operation* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

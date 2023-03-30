@@ -12,6 +12,11 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+---
+title: <node-name> node - n8n Documentation
+description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 <!-- 
 The title should be the name of the node. Add "trigger" if it's a core trigger node. For example:
 Item Lists
@@ -21,27 +26,27 @@ Local File trigger
 
 _Briefly summarize the functionality._
 
-## Related resources
 
-### Credentials
+!!! note "Credentials"
+    You can find authentication information for this node _here (link to credentials doc)_.
 
-_Link to the credentials doc, if there is one. If this node doesn't need credentials, remove this section. Most core nodes don't have credentials._
-
-### Examples
-
-* _List of links_
-* _To blog posts_
-* _And integrations marketing pages_
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} list.
 
 ## Operations
 
 * _Bullet list_
 * _Of available operations_.
 
+## Related resources
+
+<!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
+View [example workflows and related content](){:target=_blank .external-link} on n8n's website.
+
+
+
 <!-- 
 Add any other sections here. 
 You should include: quirks, pain points, complex topics that trip people up
 You should not include: basic usage examples
 -->
-
-

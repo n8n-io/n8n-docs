@@ -5,10 +5,15 @@ description: Documentation for the Sentry.io node in n8n, a workflow automation 
 
 # Sentry.io
 
-[Sentry.io](https://sentry.io){:target=_blank .external-link} is a service that helps you monitor and fix crashes in realtime. Sentry's platform helps every developer diagnose, fix, and optimize the performance of their code.
+The Sentry.io node allows you to automate work in Sentry.io, and integrate Sentry.io with other applications. n8n has built-in support for a wide range of Sentry.io features, including creating, updating, deleting, and getting, issues, projects, and releases, as well as getting all events.
+
+On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sentryio/).
+    Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Sentry.io integrations](https://n8n.io/integrations/sentryio/){:target="_blank" .external-link} list.
 
 
 ## Operations

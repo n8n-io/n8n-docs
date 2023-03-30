@@ -4,7 +4,6 @@ The Postbin node allows you to automate work in Postbin, and integrate Postbin w
 
 On this page, you'll find a list of operations the Postbin node supports and links to more resources.
 
-!!! note "Credentials"
     Refer to [Postbin credentials](https://docs.n8n.io/integrations/builtin/credentials/postbin/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"

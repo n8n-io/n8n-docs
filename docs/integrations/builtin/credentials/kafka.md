@@ -1,4 +1,9 @@
-# Kafka
+---
+title: Kafka credentials
+description: Documentation for Kafka credentials. Use these credentials to authenticate Kafka in n8n, a workflow automation platform.
+---
+
+# Kafka credentials
 
 You can use these credentials to authenticate the following nodes with Kafka.
 
@@ -14,3 +19,4 @@ Have Kafka up and running. You can refer to the official [documentation](https:/
 1. Enter a client ID in the ***Client ID*** field.
 2. Retrieve the Kafka Brokers and credentials (if any).
 3. Use the ***Client ID***, ***Brokers*** (comma separated), ***Username***, and ***Password*** with your Kafka node credentials in n8n.
+

@@ -1,3 +1,8 @@
+---
+title: AWS Textract
+description: Documentation for the AWS Textract node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # AWS Textract
 
 The AWS Textract node allows you to automate work in AWS Textract, and integrate AWS Textract with other applications. n8n has built-in support for a wide range of AWS Textract features, including analyzing invoices.
@@ -56,3 +61,4 @@ This node will extract data from the receipt returned by the previous node.
 In the screenshot below, you can see the receipt data extracted by AWS Textract and returned by the node.
 
 ![Using the AWS Textract node to extract data from a receipt](/_images/integrations/builtin/app-nodes/awstextract/awstextract_node.png)
+

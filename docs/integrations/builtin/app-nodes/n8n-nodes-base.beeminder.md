@@ -1,3 +1,8 @@
+---
+title: Beeminder
+description: Documentation for the Beeminder node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Beeminder
 
 The Beeminder node allows you to automate work in Beeminder, and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating datapoints.
@@ -63,4 +68,5 @@ In the screenshot below, you will notice that the node creates a datapoint in Be
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
+
 

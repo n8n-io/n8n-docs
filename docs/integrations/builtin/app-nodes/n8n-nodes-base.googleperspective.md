@@ -1,3 +1,8 @@
+---
+title: Google Perspective
+description: Documentation for the Google Perspective node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Perspective
 
 The Google Perspective node allows you to automate work in Google Perspective, and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, including analyzing comments.
@@ -39,3 +44,4 @@ The Start node exists by default when you create a new workflow.
 5. Click on **Execute Node** to run the workflow.
 
 ![The Google Perspective node](/_images/integrations/builtin/app-nodes/googleperspective/googleperspective_node.png)
+

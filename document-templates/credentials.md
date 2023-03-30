@@ -12,13 +12,22 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+<!--
+Set the meta title and meta description in the frontmatter
+-->
+
+---
+title: <node-name> credentials - n8n Documentation
+description: Documentation for the <node-name> credentials. Use these credentials to authenticate <node-name> in n8n, a workflow automation platform.
+---
+
 <!-- 
 The title should be the name of the integration.
 Match the brand name exactly. For example, GitHub NOT Github
 -->
-# _Name_
+# _Name_ credentials
 
-You can use these credentials to authenticate the following nodes with:
+You can use these credentials to authenticate the following nodes:
 
 * _List of apps_
 * _That use these credentials_

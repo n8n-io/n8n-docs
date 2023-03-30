@@ -1,3 +1,8 @@
+---
+title: Contentful
+description: Documentation for the Contentful node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Contentful
 
 The Contentful node allows you to automate work in Contentful, and integrate Contentful with other applications. n8n has built-in support for a wide range of Contentful features, including getting assets, content types, entries, locales, and space.
@@ -48,3 +53,4 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the Contentful node to get all entries](/_images/integrations/builtin/app-nodes/contentful/contentful_node.png)
+

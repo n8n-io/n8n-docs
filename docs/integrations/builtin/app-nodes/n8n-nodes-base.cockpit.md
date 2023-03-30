@@ -1,6 +1,11 @@
+---
+title: Cockpit
+description: Documentation for the Cockpit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Cockpit
 
-The Cockpit node allows you to automate work in Cockpit, and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, including creating, getting, and deleting collections, forms, and singleton.
+The Cockpit node allows you to automate work in Cockpit, and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, including creating a collection entry, storing data from a form submission, and getting singletons.
 
 On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
 
@@ -41,3 +46,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Cockpit node. You can find out how to do that [here](/integrations/builtin/credentials/cockpit/).
 2. Select your collection from the *Collection* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+

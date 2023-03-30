@@ -156,7 +156,7 @@ nav:
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
-    - Expressions and JavaScript:
+    - Code in n8n:
       - code-examples/index.md
       - Built in methods and variables reference: code-examples/methods-variables-reference.md
       - Built-in methods and variables examples: 
@@ -170,8 +170,10 @@ nav:
         - workflow: code-examples/methods-variables-examples/workflow.md
       - Expressions:
         - code-examples/expressions/index.md
+        - Understand expressions: code-examples/expressions/understand-expressions.md
         - Date and time with Luxon: code-examples/expressions/luxon.md
         - JSON with JMESPath: code-examples/expressions/jmespath.md
+        - Check incoming data: code-examples/expressions/check-incoming-data.md
         - Data transformation functions: 
           - code-examples/expressions/data-transformation-functions/index.md
           - Arrays: code-examples/expressions/data-transformation-functions/arrays.md
@@ -180,14 +182,14 @@ nav:
           - Objects: code-examples/expressions/data-transformation-functions/objects.md
           - Strings: code-examples/expressions/data-transformation-functions/strings.md
       - JavaScript:
-        - code-examples/javascript-functions/index.md         
+        - code-examples/javascript-functions/index.md
+        - Code node: code-examples/javascript-functions/code-node.md
         - Date and time with Luxon: code-examples/javascript-functions/luxon.md
         - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
         - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
-        - Check incoming data: code-examples/javascript-functions/check-incoming-data.md
-      - Using console.log: code-examples/console-log.md
+        - Using console.log: code-examples/javascript-functions/console-log.md
     - User management:
       - user-management/index.md
       - Cloud setup: user-management/cloud-setup.md
@@ -197,15 +199,14 @@ nav:
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
     - Log streaming: log-streaming.md
-    - Security audit: security-audit.md
+    - Privacy and security:
+        - privacy-security/index.md
+        - Privacy: privacy-security/privacy.md
+        - Security: privacy-security/security.md
+        - Incident response: privacy-security/incident-response.md
+        - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
-    - Reference:
-      - reference/index.md
-      - CLI commands: reference/cli-commands.md
-      - Keyboard shortcuts: reference/keyboard-shortcuts.md
-      - Update n8n: reference/update.md
-      - Glossary: reference/glossary.md
-      - Data collection: reference/data-collection.md
+    - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -519,9 +520,11 @@ nav:
       - User management: hosting/authentication/user-management-self-hosted.md
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
+    - Security audit: hosting/security-audit.md
     - Logging: hosting/logging.md
     - Scaling:
       - hosting/scaling/index.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Execution data: hosting/scaling/execution-data.md
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
@@ -529,6 +532,7 @@ nav:
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
+    - CLI commands: hosting/cli-commands.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

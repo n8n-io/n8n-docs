@@ -1,3 +1,8 @@
+---
+title: Xero
+description: Documentation for the Xero node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Xero
 
 Xero offers an online cloud-based SaaS accounting software platform for small and medium-sized businesses.
@@ -39,3 +44,4 @@ The start node exists by default when you create a new workflow.
 2. Select 'Get All' from the *Operation* dropdown list.
 3. Select the organization for which you want to get the invoices from the *Organization ID* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

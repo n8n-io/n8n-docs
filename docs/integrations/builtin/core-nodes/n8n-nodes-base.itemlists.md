@@ -1,3 +1,8 @@
+---
+title: Item Lists
+description: Documentation for the Item Lists node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Item Lists
 
 The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to change the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes or write custom JavaScript.
@@ -6,11 +11,13 @@ The Item Lists node simplifies working with returned data that contain lists (ar
 
 The Item Lists node enables you to perform the following operations:
 
-* Split Out Items: create separate items from a list of data within an item.
-* Aggregate Items: merge multiple items into a single new item.
+* Concatenate Items: merge multiple items into a single new item.
+* Limit: remove items beyond a defined maximum number.
 * Remove Duplicates: remove extraneous items.
 * Sort: change the ordering of items.
-* Limit: remove items beyond a defined maximum number.
+* Split Out Items: create separate items from a list of data within an item.
+* Summarize: aggregate items together. Similar to a pivot table.
+
 
 
 ### Split Out Items
@@ -104,3 +111,4 @@ When using the Summarize operation, configure the following parameters and optio
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/item-lists/){:target=_blank .external-link} on n8n's website.
+

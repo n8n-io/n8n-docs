@@ -1,4 +1,9 @@
-# HubSpot
+---
+title: HubSpot credentials
+description: Documentation for HubSpot credentials. Use these credentials to authenticate HubSpot in n8n, a workflow automation platform.
+---
+
+# HubSpot credentials
 
 You can use these credentials to authenticate the following nodes with HubSpot.
 
@@ -65,3 +70,4 @@ Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} acco
 
 1. Follow the instructions in the [Private Apps Documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} to get your access token.
 2. Set the access token as the key in your HubSpot credentials in n8n.
+

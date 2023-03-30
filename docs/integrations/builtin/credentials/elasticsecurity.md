@@ -1,4 +1,9 @@
-# Elastic Security
+---
+title: Elastic Security credentials
+description: Documentation for Elastic Security credentials. Use these credentials to authenticate Elastic Security in n8n, a workflow automation platform.
+---
+
+# Elastic Security credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -23,3 +28,4 @@ You can use these credentials to authenticate the following nodes:
     * Password
     * Base URL: The application endpoint obtained above.
 2. Click ***Save*** to save your credentials.
+

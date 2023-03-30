@@ -1,3 +1,8 @@
+---
+title: Gotify
+description: Documentation for the Gotify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Gotify
 
 The Gotify node allows you to automate work in Gotify, and integrate Gotify with other applications. n8n has built-in support for a wide range of Gotify features, including creating, deleting, and getting messages. 
@@ -72,4 +77,5 @@ In the screenshot below, you will notice that the node sends a message with the 
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

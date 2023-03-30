@@ -1,4 +1,9 @@
-# Slack
+---
+title: Slack credentials
+description: Documentation for Slack credentials. Use these credentials to authenticate Slack in n8n, a workflow automation platform.
+---
+
+# Slack credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -88,5 +93,6 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/8x3BzKhl_ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 --->
+
 
 

@@ -1,16 +1,18 @@
+---
+title: CoinGecko
+description: Documentation for the CoinGecko node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # CoinGecko
 
 The CoinGecko node allows you to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
 
 On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [CoinGecko credentials](/integrations/builtin/credentials/coingecko/) for guidance on setting up authentication. 
-
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [CoinGecko integrations](https://n8n.io/integrations/coingecko/){:target="_blank" .external-link} list.
 
-## Basic Operations
+## Operations
 
 * Coin
     * Get a candlestick open-high-low-close chart for the selected currency
@@ -107,6 +109,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/coingecko/noop_node.png)
+
 
 
 

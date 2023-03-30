@@ -1,4 +1,9 @@
-# Pipedrive Trigger
+---
+title: Pipedrive trigger
+description: Documentation for the Pipedrive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Pipedrive trigger
 
 [Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 
@@ -25,4 +30,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pipedrive Trigger node.
+
 

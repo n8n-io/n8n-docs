@@ -1,4 +1,9 @@
-# ClickUp
+---
+title: ClickUp credentials
+description: Documentation for ClickUp credentials. Use these credentials to authenticate ClickUp in n8n, a workflow automation platform.
+---
+
+# ClickUp credentials
 
 You can use these credentials to authenticate the following nodes with ClickUp.
 
@@ -58,3 +63,4 @@ The following video demonstrates the steps to authenticate the ClickUp node on [
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/FMc8uiFT-Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

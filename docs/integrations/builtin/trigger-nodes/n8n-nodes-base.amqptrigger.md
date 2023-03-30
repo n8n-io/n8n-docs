@@ -1,4 +1,9 @@
-# AMQP Trigger
+---
+title: AMQP trigger
+description: Documentation for the AMQP trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# AMQP trigger
 
 [AMQP](https://www.amqp.org/) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. This node supports AMQP 1.0 compatible message brokers.
 
@@ -26,6 +31,7 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the AMQP Trigger node.
+
 
 
 

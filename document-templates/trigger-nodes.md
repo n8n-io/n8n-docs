@@ -12,6 +12,15 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+<!--
+Set the meta title and meta description in the frontmatter
+-->
+
+---
+title: <node-name> trigger node - n8n Documentation
+description: Documentation for the <node-name> trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 <!-- 
 The title should be the name of the integration, plus "trigger". For example, "Asana trigger"
 Match the brand name exactly. For example, GitHub NOT Github

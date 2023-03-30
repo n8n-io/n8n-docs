@@ -1,4 +1,9 @@
-# Wufoo Trigger
+---
+title: Wufoo trigger
+description: Documentation for the Wufoo trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Wufoo trigger
 
 [Wufoo](https://wufoo.com) is an online form builder that helps you create custom HTML forms without writing code.
 
@@ -24,4 +29,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Wufoo Trigger node.
+
 

@@ -1,4 +1,9 @@
-# WordPress
+---
+title: WordPress credentials
+description: Documentation for WordPress credentials. Use these credentials to authenticate WordPress in n8n, a workflow automation platform.
+---
+
+# WordPress credentials
 
 You can use these credentials to authenticate the following nodes with WordPress.
 
@@ -20,3 +25,4 @@ You can use these credentials to authenticate the following nodes with WordPress
 8. Paste the application password in the **Password** field in the 'WordPress API' credentials in n8n.
 9. Enter your WordPress website URL in the **WordPress URL** field in the 'WordPress API' credentials in n8n.
 10. Select **Save** to save the credentials.
+

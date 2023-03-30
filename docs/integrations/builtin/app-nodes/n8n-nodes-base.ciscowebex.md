@@ -1,3 +1,8 @@
+---
+title: Webex by Cisco
+description: Documentation for the Webex by Cisco node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Webex by Cisco
 
 The Webex by Cisco node allows you to automate work in Webex, and integrate Webex with other applications. n8n has built-in support for a wide range of Webex features, including creating, getting, updating, and deleting meetings and messages.
@@ -50,3 +55,4 @@ The final workflow should look like the following image.
 7. Click on *Execute Node* to run the workflow.
 
 ![The Webex by Cisco node](/_images/integrations/builtin/app-nodes/ciscowebex/webex_node.png)
+

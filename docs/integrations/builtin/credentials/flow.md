@@ -1,4 +1,9 @@
-# Flow
+---
+title: Flow credentials
+description: Documentation for Flow credentials. Use these credentials to authenticate Flow in n8n, a workflow automation platform.
+---
+
+# Flow credentials
 
 You can use these credentials to authenticate the following nodes with Flow.
 
@@ -19,3 +24,4 @@ Create a [Flow](https://www.getflow.com/) account.
 6. Use provided access token and organisation ID with your Flow node credentials in n8n.
 
 ![Getting Flow credentials](/_images/integrations/builtin/credentials/flow/using-access-token.gif)
+

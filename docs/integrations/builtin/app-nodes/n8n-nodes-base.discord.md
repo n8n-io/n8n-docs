@@ -1,3 +1,8 @@
+---
+title: Discord
+description: Documentation for the Discord node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Discord
 
 The Discord node allows you to automate work in Discord, and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, including sending messages in a Discord channel.
@@ -37,3 +42,4 @@ The start node exists by default when you create a new workflow.
 6. Click on **Execute Node** to run the workflow.
 
 ![Sending a message to a Discord channel using the Discord node](/_images/integrations/builtin/app-nodes/discord/discord_node.png)
+

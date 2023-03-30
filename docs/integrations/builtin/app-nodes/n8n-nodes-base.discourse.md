@@ -1,3 +1,8 @@
+---
+title: Discourse
+description: Documentation for the Discourse node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Discourse
 
 The Discourse node allows you to automate work in Discourse, and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
@@ -93,3 +98,4 @@ This node will retrieve the post that we updated previously.
 In the screenshot below, you notice that the node retrieves the post that we created earlier.
 
 ![Using the Discourse node to get a post](/_images/integrations/builtin/app-nodes/discourse/discourse2_node.png)
+

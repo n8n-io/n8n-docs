@@ -1,3 +1,8 @@
+---
+title: Postbin
+description: Documentation for the Postbin node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Postbin
 
 [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} is a service that collects all requests to a URL, which you can use to test your API Clients or your WebHooks.

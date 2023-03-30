@@ -1,4 +1,9 @@
-# Philips Hue
+---
+title: Philips Hue credentials
+description: Documentation for Philips Hue credentials. Use these credentials to authenticate Philips Hue in n8n, a workflow automation platform.
+---
+
+# Philips Hue credentials
 
 You can use these credentials to authenticate the following nodes with Philips Hue.
 
@@ -21,3 +26,4 @@ Create a [Philips Hue Developer](https://developers.meethue.com/) account.
 9. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Philips Hue credentials](/_images/integrations/builtin/credentials/philipshue/using-oauth.gif)
+

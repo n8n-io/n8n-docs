@@ -1,3 +1,8 @@
+---
+title: MySQL
+description: Documentation for the MySQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MySQL
 
 [MySQL](https://www.mysql.com/) is an open-source relational database management system. MySQL has stand-alone clients that allow users to interact directly with a MySQL database using SQL, but more often MySQL is used with other programs to implement applications that need relational database capability.
@@ -56,3 +61,4 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Using the MySQL node to insert data into a table](/_images/integrations/builtin/app-nodes/mysql/mysql1_node.png)
+

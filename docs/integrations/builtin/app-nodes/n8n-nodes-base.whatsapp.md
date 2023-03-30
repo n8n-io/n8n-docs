@@ -5,7 +5,7 @@ The WhatsApp Business node allows you to automate work in WhatsApp Business, and
 On this page, you'll find a list of operations the WhatsApp Business node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to [WhatsApp Business credentials](https://docs.n8n.io/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
+    Refer to [WhatsApp Business credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
 
 !!! note "Examples and templates"
     For usage examples and templates to help you get started, take a look at n8n's [WhatsApp Business integrations](https://n8n.io/integrations/whatsapp-business-cloud/){:target="_blank" .external-link} list.

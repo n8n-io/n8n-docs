@@ -5,10 +5,15 @@ description: Documentation for the Twist node in n8n, a workflow automation plat
 
 # Twist
 
-[Twist](https://twist.com) is a communication app that helps teams balance focused work with collaborative conversations.
+The Twist node allows you to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including creating conversations in a channel, as well as creating and deleting comments on a thread. 
+
+On this page, you'll find a list of operations the Twist node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/twist/).
+    Refer to [Twist credentials](/integrations/builtin/credentials/twist/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Twist integrations](https://n8n.io/integrations/twist/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

@@ -1,6 +1,6 @@
 # Onfleet
 
-The Onfleet node allows you to automate work in Onfleet, and integrate Onfleet with other applications. n8n has built-in support for a wide range of Onfleet features, including creating and deleting admins on Onfleet as well as retrieving organizations' details. 
+The Onfleet node allows you to automate work in Onfleet, and integrate Onfleet with other applications. n8n has built-in support for a wide range of Onfleet features, including creating and deleting tasks in Onfleet as well as retrieving organizations' details. 
 
 On this page, you'll find a list of operations the Onfleet node supports and links to more resources.
 

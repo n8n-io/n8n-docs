@@ -5,10 +5,15 @@ description: Documentation for the Salesforce node in n8n, a workflow automation
 
 # Salesforce
 
-[Salesforce](https://www.salesforce.com/) is a cloud-based software company. It provides customer relationship management service and also sells a complementary suite of enterprise applications focused on customer service, marketing automation, analytics, and application development.
+The Salesforce node allows you to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachements, cases, and leads, as well as uploading documents. 
+
+On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/salesforce/).
+    Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Salesforce integrations](https://n8n.io/integrations/salesforce/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations

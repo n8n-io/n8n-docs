@@ -62,7 +62,7 @@ This includes:
 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
-| `$env` | Contains [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
+| `$env` | Contains n8n instance configuration [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
 | `$execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information. | :white_check_mark: | 
 | `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
@@ -84,3 +84,4 @@ This includes:
 | ------ | ----------- | :-------------------------: |
 | `$evaluateExpression` | Evaluates a string as an expression | :white_check_mark: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | :white_check_mark: |
+| `$vars` | Contains the [Variables](/environments/variables/) available in the active environment. | :white_check_mark: |

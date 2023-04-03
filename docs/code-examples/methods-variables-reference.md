@@ -63,6 +63,7 @@ This includes:
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$env` | Contains [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
+| `$execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information. | :white_check_mark: | 
 | `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
 | `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/). | :white_check_mark: |

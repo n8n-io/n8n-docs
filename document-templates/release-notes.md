@@ -11,9 +11,6 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
-<!-- wrap the whole release note in a div so marketing can scrape it easily. The ID should be the release number.
-For example, 02102 for release 0.210.2 -->
-<div id="02102" markdown>
 
 ## n8n@<version-number>
 
@@ -58,4 +55,4 @@ _List external contributors. Do not use a bulleted list here._
 <!-- Include the "how to update" snippet -->
 --8<-- "_snippets/update-n8n.md"
 
-</div>
+

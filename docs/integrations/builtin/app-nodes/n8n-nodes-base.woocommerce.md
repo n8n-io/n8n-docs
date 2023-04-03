@@ -1,9 +1,19 @@
+---
+title: WooCommerce
+description: Documentation for the WooCommerce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # WooCommerce
 
-[WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
+The WooCommerce node allows you to automate work in WooCommerce, and integrate WooCommerce with other applications. n8n has built-in support for a wide range of WooCommerce features, including creating and deleting customers, orders, and products. 
+
+On this page, you'll find a list of operations the WooCommerce node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
+    Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [WooCommerce integrations](https://n8n.io/integrations/woocommerce/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -86,3 +96,4 @@ This node will get the information about the product that we created using the W
 In the screenshot below, you will notice that the node returns the information about the product that we created using the WooCommerce node.
 
 ![Using the WooCommerce node to get the information of a product](/_images/integrations/builtin/app-nodes/woocommerce/woocommerce2_node.png)
+

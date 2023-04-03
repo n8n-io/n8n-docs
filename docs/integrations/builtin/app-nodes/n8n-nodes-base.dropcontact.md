@@ -1,3 +1,8 @@
+---
+title: Dropcontact
+description: Documentation for the Dropcontact node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Dropcontact
 
 The Dropcontact node allows you to automate work in Dropcontact, and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, including  fetching contacts. 
@@ -103,3 +108,4 @@ This node will create new leads for a campaign in Lemlist.
 In the screenshot below, you will notice that the node creates new enriched leads in Lemlist.
 
 ![Using the Lemlist node](/_images/integrations/builtin/app-nodes/dropcontact/lemlist_node.png)
+

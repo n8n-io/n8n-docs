@@ -1,4 +1,9 @@
-# HTTP Request
+---
+title: HTTP Request credentials
+description: Documentation for HTTP Request credentials. Use these credentials to authenticate HTTP Request in n8n, a workflow automation platform.
+---
+
+# HTTP Request credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -74,4 +79,5 @@ Read more about [OAuth1](https://oauth.net/1/){:target=_blank .external-link}.
 3. Select **Save** to save your credentials.
 
 Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
+
 

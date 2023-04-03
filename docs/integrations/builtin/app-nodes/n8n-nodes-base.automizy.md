@@ -1,3 +1,8 @@
+---
+title: Automizy
+description: Documentation for the Automizy node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Automizy
 
 The Automizy node allows you to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
@@ -102,3 +107,4 @@ This node returns all the contacts of the `n8n-docs` list that we created using 
 In the screenshot below, you will notice that the node returns all the contacts that are present in the list `n8n-docs`.
 
 ![Using the Automizy node to get all the contacts in a list](/_images/integrations/builtin/app-nodes/automizy/automizy3_node.png)
+

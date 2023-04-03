@@ -1,4 +1,9 @@
-# Rocket.Chat
+---
+title: Rocket.Chat credentials
+description: Documentation for Rocket.Chat credentials. Use these credentials to authenticate Rocket.Chat in n8n, a workflow automation platform.
+---
+
+# Rocket.Chat credentials
 
 You can use these credentials to authenticate the following nodes with Rocket.Chat.
 
@@ -20,3 +25,4 @@ You can use these credentials to authenticate the following nodes with Rocket.Ch
 7. Copy the *User Id* and enter that in the *User Id* field in n8n.
 
 ![Getting Rocket.Chat credentials](/_images/integrations/builtin/credentials/rocketchat/using-access-token.gif)
+

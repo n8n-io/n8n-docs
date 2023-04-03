@@ -1,4 +1,9 @@
-# Affinity
+---
+title: Affinity credentials
+description: Documentation for Affinity credentials. Use these credentials to authenticate Affinity in n8n, a workflow automation platform.
+---
+
+# Affinity credentials
 
 You can use these credentials to authenticate the following nodes with Affinity.
 
@@ -22,3 +27,4 @@ Create an [Affinity](https://www.affinity.co/) account.
 
 
 ![Getting Affinity credentials](/_images/integrations/builtin/credentials/affinity/using-access-token.gif)
+

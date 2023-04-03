@@ -1,3 +1,8 @@
+---
+title: E-goi
+description: Documentation for the E-goi node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # E-goi
 
 The E-goi node allows you to automate work in E-goi, and integrate E-goi with other applications. n8n has built-in support for a wide range of E-goi features, including creating, updating, deleting, and getting contacts. 
@@ -85,3 +90,4 @@ This node will return the information of the contact that we created using the E
 In the screenshot below, you will notice that the node returns the information of the contact that we created using the E-goi node.
 
 ![Using the E-goi node to get the information of the contact](/_images/integrations/builtin/app-nodes/egoi/e-goi2_node.png)
+

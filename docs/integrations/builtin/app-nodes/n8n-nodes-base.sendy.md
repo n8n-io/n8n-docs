@@ -1,9 +1,19 @@
+---
+title: Sendy
+description: Documentation for the Sendy node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Sendy
 
-[Sendy](https://sendy.co) is a self-hosted email newsletter application that lets you send trackable emails via AWS SES.
+The Sendy node allows you to automate work in Sendy, and integrate Sendy with other applications. n8n has built-in support for a wide range of Sendy features, including creating campaigns, and adding, counting, deleting, and getting subscribers.
+
+On this page, you'll find a list of operations the Sendy node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sendy/).
+    Refer to [Sendy credentials](/integrations/builtin/credentials/sendy/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Sendy integrations](https://n8n.io/integrations/sendy/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -68,3 +78,4 @@ This node will create a campaign with the title 'Welcome to n8n' and send it to 
 In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list that we specify.
 
 ![Using the Sendy node to create and send a campaign to a list](/_images/integrations/builtin/app-nodes/sendy/sendy1_node.png)
+

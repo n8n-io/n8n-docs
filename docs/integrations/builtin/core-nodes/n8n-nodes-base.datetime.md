@@ -1,3 +1,8 @@
+---
+title: Date & Time
+description: Documentation for the Date & Time node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Date & Time
 
 The Date & Time node is used to manipulate date and time data and convert it to different formats.
@@ -79,3 +84,4 @@ You can use the following values in the ***From Format*** field:
 | MMMM DD YYYY HH\:mm\:ss | March 03 2021 08:00:00 | Month, date, year, hours, minutes, and seconds |
 | DD MMMM YYYY | 03 March 2021 | Date, month, and year |
 | DD MMMM YYYY HH\:mm\:ss | 03 March 2021 08:00:00 | Date, month, year, hours, minutes, and seconds |
+

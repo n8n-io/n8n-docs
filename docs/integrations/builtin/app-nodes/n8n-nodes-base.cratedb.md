@@ -1,3 +1,8 @@
+---
+title: CrateDB
+description: Documentation for the CrateDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # CrateDB
 
 The CrateDB node allows you to automate work in CrateDB, and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, including executing, inserting, and updating rows in the database.
@@ -67,6 +72,7 @@ The start node exists by default when you create a new workflow.
 
 ### How to specify the data type of a column?
 To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
+
 
 
 

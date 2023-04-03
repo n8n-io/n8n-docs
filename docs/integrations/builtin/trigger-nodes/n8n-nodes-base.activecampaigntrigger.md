@@ -1,4 +1,9 @@
-# ActiveCampaign Trigger
+---
+title: ActiveCampaign trigger
+description: Documentation for the ActiveCampaign trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# ActiveCampaign trigger
 
 [ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.
 
@@ -26,4 +31,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ActiveCampaign Trigger node.
+
 

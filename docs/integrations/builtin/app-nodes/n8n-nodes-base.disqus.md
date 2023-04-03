@@ -1,3 +1,8 @@
+---
+title: Disqus
+description: Documentation for the Disqus node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Disqus
 
 The Disqus node allows you to automate work in Disqus, and integrate Disqus with other applications. n8n has built-in support for a wide range of Disqus features, including returning forums.
@@ -38,3 +43,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Disqus node. You can find out how to do that [here](/integrations/builtin/credentials/disqus/).
 2. Enter the name of the forum in the *Forum name* field. For example, I entered `hackernoon`.
 3. Click on *Execute Node* to run the workflow.
+

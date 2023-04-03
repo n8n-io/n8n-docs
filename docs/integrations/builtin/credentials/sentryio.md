@@ -1,4 +1,9 @@
-# Sentry.io
+---
+title: Sentry.io credentials
+description: Documentation for Sentry.io credentials. Use these credentials to authenticate Sentry.io in n8n, a workflow automation platform.
+---
+
+# Sentry.io credentials
 
 You can use these credentials to authenticate the following nodes with Sentry.io.
 
@@ -34,3 +39,4 @@ Create a [Sentry.io](https://sentry.io/) account.
 5. Click on the ***Save*** button to save your credentials.
 
 ![Getting Sentry.io access token](/_images/integrations/builtin/credentials/sentryio/using-access-token.gif)
+

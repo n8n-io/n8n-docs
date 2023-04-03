@@ -23,22 +23,36 @@ has changed and saves it, if necessary.
 There are two types of static data, "global" and "node". Global static data is the
 same in the whole workflow. Every node in the workflow can access it. The node static data is unique to the node. Only the node that set it can retrieve it again.
 
-Example:
+Example with global data:
 
 ```javascript
 // Get the global workflow static data
-const staticData = $getWorkflowStaticData('global');
-// Get the static data of the node
-const staticData = $getWorkflowStaticData('node');
+const workflowStaticData = $getWorkflowStaticData('global');
 
 // Access its data
-const lastExecution = staticData.lastExecution;
+const lastExecution = workflowStaticData.lastExecution;
 
 // Update its data
-staticData.lastExecution = new Date().getTime();
+workflowStaticData.lastExecution = new Date().getTime();
 
 // Delete data
-delete staticData.lastExecution;
+delete workflowStaticData.lastExecution;
+```
+
+Example with node data:
+
+```js
+// Get the static data of the node
+const nodeStaticData = $getWorkflowStaticData('node');
+
+// Access its data
+const lastExecution = nodeStaticData.lastExecution;
+
+// Update its data
+nodeStaticData.lastExecution = new Date().getTime();
+
+// Delete data
+delete nodeStaticData.lastExecution;
 ```
 
 

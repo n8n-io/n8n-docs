@@ -1,3 +1,8 @@
+---
+title: G Suite Admin
+description: Documentation for the G Suite Admin node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # G Suite Admin
 
 The G Suite Admin node allows you to automate work in G Suite Admin, and integrate G Suite Admin with other applications. n8n has built-in support for a wide range of G Suite Admin features, including creating, updating, deleting, and getting users, and groups. 
@@ -105,3 +110,4 @@ You can include custom fields by following the steps mentioned below.
 1. Select 'Custom' from the ***Projection*** dropdown list.
 2. Click on the ***Add Options*** button and select 'Custom Schemas' from the dropdown list.
 3. Select the schema names you want to include from the ***Custom Schemas*** dropdown list.
+

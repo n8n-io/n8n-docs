@@ -1,4 +1,9 @@
-# Strapi
+---
+title: Strapi credentials
+description: Documentation for Strapi credentials. Use these credentials to authenticate Strapi in n8n, a workflow automation platform.
+---
+
+# Strapi credentials
 
 You can use these credentials to authenticate the following nodes with Strapi.
 
@@ -25,3 +30,4 @@ Install [Strapi](https://strapi.io/documentation/v3.x/getting-started/installati
 13. Use this email, password, and the URL of your Strapi instance with your Strapi node credentials in n8n.
 
 ![Getting Strapi credentials](/_images/integrations/builtin/credentials/strapi/using-api.gif)
+

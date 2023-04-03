@@ -1,3 +1,8 @@
+---
+title: Baserow
+description: Documentation for the Baserow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Baserow
 
 The Baserow node allows you to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
@@ -97,4 +102,5 @@ This node will delete all the rows listed from the previous node.
 5. Click on the gears icon next to the ***Row ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: ***Current Node > Input Data > JSON > id***. You can also add the following expression: `{{$json["id"]}}`.
 7.  Click on ***Execute Node*** to run the node.
+
 

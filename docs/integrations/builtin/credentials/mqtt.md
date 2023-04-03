@@ -1,4 +1,9 @@
-# MQTT
+---
+title: MQTT credentials
+description: Documentation for MQTT credentials. Use these credentials to authenticate MQTT in n8n, a workflow automation platform.
+---
+
+# MQTT credentials
 
 You can use these credentials to authenticate the following nodes with MQTT.
 
@@ -14,3 +19,4 @@ You need to have a MQTT broker installed.
 Use your Protocol, Host, Port, Username, and Password as the MQTT Trigger credential data in n8n.
 
 Optionally, you can enable SSL and provide a CA or Client certificate.
+

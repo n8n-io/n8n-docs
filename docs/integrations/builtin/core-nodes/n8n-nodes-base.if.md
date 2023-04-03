@@ -1,6 +1,18 @@
-# IF
+---
+title: 
+description: Documentation for the  node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+tags:
+  - if
+  - if node
+hide:
+  - tags
+search:
+  boost: 5
+---
 
-The IF node is used to split a workflow conditionally based on comparison operations.
+# If
+
+The If node is used to split a workflow conditionally based on comparison operations.
 
 ## Node Reference
 
@@ -116,6 +128,7 @@ return [
 **Note:** Notice that only the ID with the value 1 made its way to this *Set* node.
 
 ![Using the Set node to set a value when the condition is false](/_images/integrations/builtin/core-nodes/if/set1_node.png)
+
 
 
 

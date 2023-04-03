@@ -1,6 +1,11 @@
+---
+title: Customer.io
+description: Documentation for the Customer.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Customer.io
 
-The Customer.io node allows you to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating, deleting, adding/removing, and getting customers, events, campaigns, and segments.
+The Customer.io node allows you to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
 
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 
@@ -64,3 +69,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the Customer.io node to add the customer to a segment](/_images/integrations/builtin/app-nodes/customerio/customerio1_node.png)
+

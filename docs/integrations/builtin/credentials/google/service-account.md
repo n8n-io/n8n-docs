@@ -1,3 +1,8 @@
+---
+title: Google Service Account
+description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+---
+
 # Google: Service Account
 
 Using service accounts is more complex than OAuth2. Before you begin:
@@ -80,3 +85,4 @@ A Service Account can't access Google Drive files and folders that weren't share
 3. Right-click on the file or folder and select **Share**.
 4. Paste your Service Account email into **Add People and groups**.
 5. Select **Editor** for read-write access or **Viewer** for read-only access.
+

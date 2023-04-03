@@ -99,7 +99,11 @@ Some third-party services have their own libraries on npm, which make it easier 
 const response = await this.helpers.httpRequest(options);
 
 // If auth needed
-const response = await this.helpers.httpRequestWithAuthentication(options);
+const response = await this.helpers.httpRequestWithAuthentication.call(
+	this, 
+	'credentialTypeName', // For example: pipedriveApi
+	options,
+);
 ```
 
 This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.

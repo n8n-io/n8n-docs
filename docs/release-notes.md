@@ -13,14 +13,41 @@ hide:
 
 New features and bug fixes for n8n.
 
-You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the n8n GitHub repository.
 
+## n8n@0.222.1
 
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.0...n8n@0.222.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-04
+
+This is a bug fix release.
+
+## Bug fixes
+
+* AWS SNS Node: Fix an issue with messages failing to send if they contain certain characters.
+* Core: `augmentObject` should clone Buffer/Uint8Array instead of wrapping them in a proxy.
+* Core: `augmentObject` should use existing property descriptors whenever possible.
+* Core: Fix the issue of nodes not loading when run using npx.
+* Core: Improve Axios error handling in nodes.
+* Core: Password reset should pass in the correct values to external hooks.
+* Core: Prevent `augmentObject` from creating infinitely deep proxies.
+* Core: Use table-prefixes in queries in import commands.
+* Editor: Fix focused state in Code node editor.
+* Editor: Fix loading executions in long execution list.
+* Editor: Show correct status on canceled executions.
+* Gmail Node: Gmail Luxon object support, fix for timestamp.
+* HTTP Request Node: Detect mime-type from streaming responses.
+* HubSpot Trigger Node: Developer API key is required for webhooks.
+* Set Node: Convert string to number.
 
 ## n8n@0.222.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.2...n8n@0.222.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-03-30
+
+This release contains new features, including custom filters for the executions list, and a new node to filter items in your workflows.
+
+!!! note "Upgrade to 0.222.1"
+	Upgrade directly to 0.222.1.
 
 ### New features
 

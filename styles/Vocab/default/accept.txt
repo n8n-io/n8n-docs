@@ -30,6 +30,7 @@ n8n
 namespace
 Nodelinter
 npm
+npx
 onboarding
 Pipedrive
 Postbin

@@ -8,7 +8,7 @@ description: Variables allow you to store and reuse values in n8n workflows.
 	* Available on Self-hosted Enterprise and Power Cloud plans.
 	* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
 
-	Available in verion [TODO] and above.
+	Available in version [TODO] and above.
 
 Variables allow you to store and reuse values in n8n workflows. 
 
@@ -20,7 +20,7 @@ Variables allow you to store and reuse values in n8n workflows.
 To create a new variable:
 
 1. On the **Variables** page, select **Add Variable**.
-3. Enter a **Key** and **Value**.
+3. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 255 characters.
 4. Select **Save**. The variable is now available for use in all workflows in the n8n instance.
 
 ## Edit and delete variables

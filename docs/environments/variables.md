@@ -34,7 +34,7 @@ To edit or delete a variable:
 
 You can use variables in the Code node and in expressions:
 
-```js
+```javascript
 // Access a variable
 $vars.<variable-name>
 ```

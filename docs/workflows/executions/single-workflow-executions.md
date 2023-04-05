@@ -22,7 +22,7 @@ You can filter the executions list.
 3. Enter your filters. You can filter by:
 	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
 	* **Execution start**: see executions that started in the given time.
-	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/execution/custom-executions-data/) for information on adding custom data.
+	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for information on adding custom data.
 
 		--8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 

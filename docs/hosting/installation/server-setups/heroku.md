@@ -9,6 +9,8 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 
 ## Use the deployment template to create a Heroku project
 

@@ -16,6 +16,7 @@ Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Starting n8n
 

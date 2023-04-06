@@ -16,7 +16,7 @@ The If node is used to split a workflow conditionally based on comparison operat
 
 ## Node Reference
 
-You can add comparison conditions using the **Add Condition** dropdown. Conditions can be created based on the data type, the available comparison operations vary for each data type.
+Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
 
 **Boolean**
 

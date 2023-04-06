@@ -94,8 +94,6 @@ This release contains new features and bug fixes.
 * Redis Node: Fix issue with hash set not working as expected.
 * Set Node: Convert string to number.
 
-### Contributors
-
 --8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.222.1 (latest)

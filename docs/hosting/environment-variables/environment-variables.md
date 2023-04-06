@@ -80,6 +80,12 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 
+## Development 
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_DEV_RELOAD` | Boolean | `false` | Hot reload for n8n instance in development environment to reload custom nodes and credentials. |
+
+
 ## Binary data
 
 | Variable | Type  | Default  | Description |

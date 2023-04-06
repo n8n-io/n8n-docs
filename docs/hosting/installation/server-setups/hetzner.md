@@ -7,6 +7,8 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Create a server
 
 1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.

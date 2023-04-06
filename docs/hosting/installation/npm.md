@@ -2,6 +2,8 @@
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed.
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Try n8n with npx
 
 You can try n8n without installing it using npx.

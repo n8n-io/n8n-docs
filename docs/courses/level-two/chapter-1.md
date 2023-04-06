@@ -189,37 +189,30 @@ There are several ways to transform data for the purposes mentioned above:
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the Poemist API `https://www.poemist.com/api/v1/randompoems`. Transform the incoming data with the `Split Into Items` option and with the Code node.
+Use the HTTP Request node to make a GET request to the Poetry DB API `https://poetrydb.org/linecount/3`. Transform the incoming data with the Item Lists node and with the Code node.
 
 
 ??? note "Show me the solution"
 
-	To get the poems from the Poemist API, execute the *HTTP Request node* with the following parameters:
+	To get the poems from the Poetry DB API, execute the *HTTP Request node* with the following parameters:
 
 	- Authentication: None
 	- Request Method: GET
-	- URL: https://www.poemist.com/api/v1/randompoems
+	- URL: https://poetrydb.org/linecount/3
+	- Options > Response: Include Response Headers and Status
 
-	The result should look like this:
-
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_noSplitItems.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node without split items</i></figcaption></figure>
-
-
-	To transform the data from the HTTP Request node, toggle the switch `Split Into Items`. The result should look like this:
-
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_splitItems.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node with split items</i></figcaption></figure>
-
-	To transform the data with the Code node, connect this node to the *HTTP Request node* (without the toggle for splitting data) and write the following code in the JavaScript Code field:
+	To transform the data with the Code node, connect this node to the *HTTP Request node* and write the following code in the JavaScript Code field:
 
 	```js
-		return items[0].json.map(item => {
+		return items[0].json.body.map(item => {
 			return {
 				json: item
 			}
 		});
 	```
 
-	The result should look like this:
-
-	<figure><img src="/_images/courses/level-two/chapter-one/exercise_transforming_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Code node with code to transform items</i></figcaption></figure>
-
+	To transform the data with the Item Lists node, connect this node to the *HTTP Request node* and set the following parameters:
+	
+	- Operation: Split Out Items
+	- Field To Split Out: body
+	- Include: No Other Fields

@@ -18,16 +18,22 @@ This command will download everything that is needed to start n8n. You can then 
 
 ## Install globally with npm
 
-If you want to install n8n globally, use npm:
+To install n8n globally, use npm:
 
 ```bash
 npm install n8n -g
 ```
 
-To install/update to a specific version of n8n use the `@` syntax to specify the desired version. For example:
+To install or update to a specific version of n8n use the `@` syntax to specify the version. For example:
 
 ```bash
 npm install -g n8n@0.126.1
+```
+
+To install `next`:
+
+```bash
+npm install -g n8n@next
 ```
 
 After the installation, start n8n by running:

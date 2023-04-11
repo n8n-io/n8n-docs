@@ -4,6 +4,11 @@ description: How to enable 2FA for your n8n account
 
 # Two factor authentication (2FA)
 
+!!! info "Feature availability"		
+		* Requires user management enabled.
+		* You need access to the n8n instance owner account.
+		* Available from version [TODO].
+
 Two factor authentication (2FA) adds a second authentication method on top of username and password. This increases account security. n8n supports 2FA using an authenticator app.
 
 ## Enable 2FA
@@ -18,3 +23,7 @@ To enable 2FA in n8n:
 4. Enter the code from your app in **Code from authenticator app**.
 5. Select **Continue**. n8n displays recovery codes.
 6. Save the recovery codes. You need these to regain access to your account if you lose your authenticator.
+
+## Disable 2FA for your instance
+
+Self-hosted users can configure their n8n instance to disable 2FA for all users by setting `N8N_MFA_ENABLED` to false. Note that n8n ignores this if existing users have 2FA enabled. Refer to [Configuration methods](/hosting/environment-variables/configuration-methods/) for more information on configuring your n8n instance with environment variables.

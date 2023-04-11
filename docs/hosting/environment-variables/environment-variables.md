@@ -90,7 +90,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | Number | `1440` | Time to live (in minutes) for persisted data. |
 
-## User managementm SMTP, and two-factor authentication
+## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
 

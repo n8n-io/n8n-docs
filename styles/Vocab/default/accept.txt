@@ -1,5 +1,6 @@
 Adalo
 Asana
+Authentik
 Axios
 backend
 Beeminder
@@ -31,6 +32,7 @@ namespace
 Nodelinter
 npm
 npx
+Okta
 onboarding
 Pipedrive
 Postbin

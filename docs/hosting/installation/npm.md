@@ -24,6 +24,12 @@ If you want to install n8n globally, use npm:
 npm install n8n -g
 ```
 
+To install/update to a specific version of n8n use the `@` syntax to specify the desired version. For example:
+
+```bash
+npm install -g n8n@0.126.1
+```
+
 After the installation, start n8n by running:
 
 ```bash
@@ -41,16 +47,16 @@ Try out n8n using the [Quickstarts](/try-it-out/).
 
 ## Updating
 
-To update your n8n instance to the latest released version, run:
+To update your n8n instance to the `latest` version, run:
 
 ```bash
 npm update -g n8n
 ```
 
-To install/update to a specific version of n8n use the `@` syntax to specify the desired version. For example:
+To install the `next` version:
 
 ```bash
-npm install n8n@0.126.1
+npm update -g n8n@next
 ```
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"

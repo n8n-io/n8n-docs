@@ -13,3 +13,9 @@ Nodes in n8n can then request that credential information. As another layer of s
 To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saved under `~/.n8n/config`.
 
 To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](/credentials/).
+
+## Community nodes
+
+n8n supports custom nodes built by the community. Refer to [Community nodes](/integrations/community-nodes/) for guidance on installing and using these nodes.
+
+For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}, refer to [Creating nodes](/integrations/creating-nodes/) for more information.

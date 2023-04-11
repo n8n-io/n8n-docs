@@ -1,3 +1,8 @@
+---
+title: MongoDB
+description: Documentation for the MongoDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MongoDB
 
 The MongoDB node allows you to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
@@ -51,6 +56,7 @@ The start node exists by default when you create a new workflow.
 3. Enter the name of your MongoDB collection in the *Collection* field.
 4. Enter `my_key` in the *Fields* field.
 5. Click on *Execute Node* to run the workflow.
+
 
 
 

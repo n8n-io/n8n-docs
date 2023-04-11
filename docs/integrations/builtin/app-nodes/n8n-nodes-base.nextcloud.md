@@ -1,3 +1,8 @@
+---
+title: Nextcloud
+description: Documentation for the Nextcloud node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Nextcloud
 
 The Nextcloud node allows you to automate work in Nextcloud, and integrate Nextcloud with other applications. n8n has built-in support for a wide range of Nextcloud features, including creating, updating, deleting, and getting files, and folders as well as retrieving, and inviting users. 
@@ -84,3 +89,4 @@ The start node exists by default when you create a new workflow.
 5. Click on ***Execute Node*** to run the node.
 
 ![List the contents of a Nextcloud folder using the Nextcloud node](/_images/integrations/builtin/app-nodes/nextcloud/nextcloud2_node.png)
+

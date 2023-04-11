@@ -1,3 +1,8 @@
+---
+title: GitLab
+description: Documentation for the GitLab node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # GitLab
 
 The GitLab node allows you to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
@@ -59,3 +64,4 @@ The start node exists by default when you create a new workflow.
 4. Enter the project owner in the *Project Owner* field.
 5. Enter the project name in the *Project Name* field.
 6. Click on *Execute Node* to run the workflow.
+

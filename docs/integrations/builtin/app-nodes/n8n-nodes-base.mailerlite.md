@@ -1,3 +1,8 @@
+---
+title: MailerLite
+description: Documentation for the MailerLite node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MailerLite
 
 The MailerLite node allows you to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
@@ -83,3 +88,4 @@ This node will return the information of the subscriber that we created using th
 In the screenshot below, you will notice that the node returns the information of the subscriber that we created using the MailerLite node.
 
 ![Using the MailerLite node to get the information of the subscriber](/_images/integrations/builtin/app-nodes/mailerlite/mailerlite2_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: Philips Hue
+description: Documentation for the Philips Hue node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Philips Hue
 
 The Philips Hue node allows you to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
@@ -41,3 +46,4 @@ The start node exists by default when you create a new workflow.
 3. Click on ***Add Field*** and select 'Brightness' from the dropdown list.
 4. Enter a value between 1 and 254 for the brightness in the ***Brightness*** field.
 5. Click on ***Execute Node*** to run the node.
+

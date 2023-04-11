@@ -1,3 +1,8 @@
+---
+title: PostHog
+description: Documentation for the PostHog node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # PostHog
 
 The PostHog node allows you to automate work in PostHog, and integrate PostHog with other applications. n8n has built-in support for a wide range of PostHog features, including creating aliases, events, and identity, as well as tracking pages.
@@ -66,4 +71,5 @@ In the screenshot below, you will notice that the node creates a new event in Po
 
 !!! note "Activate workflow for production"
     This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
+
 

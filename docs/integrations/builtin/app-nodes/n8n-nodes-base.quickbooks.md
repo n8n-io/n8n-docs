@@ -1,3 +1,8 @@
+---
+title: QuickBooks
+description: Documentation for the QuickBooks node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # QuickBooks
 
 The QuickBooks node allows you to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
@@ -136,3 +141,4 @@ This node will send the invoice that we created in the previous node.
 In the screenshot below, you will notice that the node sends the invoice to the customer.
 
 ![Using the QuickBooks node to send an invoice to a customer](/_images/integrations/builtin/app-nodes/quickbooks/quickbooks2_node.png)
+

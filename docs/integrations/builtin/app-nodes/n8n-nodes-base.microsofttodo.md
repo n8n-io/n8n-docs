@@ -1,3 +1,8 @@
+---
+title: Microsoft To Do
+description: Documentation for the Microsoft To Do node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft To Do
 
 The Microsoft To Do node allows you to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
@@ -99,3 +104,4 @@ This node will get the task that we created earlier.
 In the screenshot below, you will notice that the node fetches the information of the task that we created earlier.
 
 ![Retrieve the information of tasks using the Microsoft To Do node](/_images/integrations/builtin/app-nodes/microsofttodo/microsofttodo2_node.png)
+

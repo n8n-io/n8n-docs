@@ -1,3 +1,8 @@
+---
+title: Affinity
+description: Documentation for the Affinity node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Affinity
 
 The Affinity node allows you to automate work in Affinity, and integrate Affinity with other applications. n8n has built-in support for a wide range of Affinity features, including creating, getting, updating and deleting lists, entries, organization, and persons.
@@ -55,3 +60,4 @@ The start node exists by default when you create a new workflow.
 2. Enter the name of the organization in the *Name* field.
 3. Enter the domain name of the organization in the *Domain* field.
 4. Click on *Execute Node* to run the workflow.
+

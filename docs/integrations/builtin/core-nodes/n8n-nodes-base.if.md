@@ -1,4 +1,6 @@
 ---
+title: 
+description: Documentation for the  node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 tags:
   - if
   - if node
@@ -14,7 +16,7 @@ The If node is used to split a workflow conditionally based on comparison operat
 
 ## Node Reference
 
-You can add comparison conditions using the **Add Condition** dropdown. Conditions can be created based on the data type, the available comparison operations vary for each data type.
+Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
 
 **Boolean**
 
@@ -126,6 +128,7 @@ return [
 **Note:** Notice that only the ID with the value 1 made its way to this *Set* node.
 
 ![Using the Set node to set a value when the condition is false](/_images/integrations/builtin/core-nodes/if/set1_node.png)
+
 
 
 

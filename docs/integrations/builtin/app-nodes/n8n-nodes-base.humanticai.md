@@ -1,3 +1,8 @@
+---
+title: Humantic AI
+description: Documentation for the Humantic AI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Humantic AI
 
 The Humantic AI node allows you to automate work in Humantic AI, and integrate Humantic AI with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
@@ -88,3 +93,4 @@ This node will return the `Hiring` persona for the candidate that we created usi
 In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node (column headers are not visible in the screenshot since we've scrolled down to show the data).
 
 ![Using the Humantic AI node to get the information of the candidate](/_images/integrations/builtin/app-nodes/humanticai/humanticai2_node.png)
+

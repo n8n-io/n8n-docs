@@ -4,3 +4,5 @@ N8N
 NPM
 nPM
 NPm
+NPX
+Npx

@@ -11,13 +11,13 @@ You're most likely familiar with HTML and XML.
 
     HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 
-If you need to process HTML or XML data in your n8n workflows, use the [HTML Extract node](/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+If you need to process HTML or XML data in your n8n workflows, use the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
 
-The HTML Extract node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
+The HTML node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the URL `https://www.daysoftheyear.com/days/mar/2022/`. Then, connect an HTML Extract node and configure it to extract the date of the returned events.
+Use the HTTP Request node to make a GET request to the URL `https://www.daysoftheyear.com/days/mar/2022/`. Then, connect an HTML node and configure it to extract the date of the returned events.
 
 ??? note "Show me the solution"
 
@@ -31,8 +31,9 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httpRequestNode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
-	Connect an HTML Extract node to the HTTP Request node and configure the former's parameters:
+	Connect an HTML node to the HTTP Request node and configure the former's parameters:
 
+	* Operation: Extract HTML Content
 	* Source Data: JSON
 	* JSON Property: data
 	* Extraction Values:  
@@ -56,7 +57,7 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 
 ??? note "Show me the solution"
 
-	Get data from the Poemist API using the HTTP Request node and connect an XML node to it with the following parameters:
+	Get data from the Poetry DB API using the HTTP Request node and connect an XML node to it with the following parameters:
 
 	- Mode: **JSON to XML**
 	- Property name: **data**
@@ -82,10 +83,8 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 
 If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
 
-You can also schedule workflows to run at a specific time, interval, or duration, using the two trigger nodes:
+You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
 
-- [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) triggers the workflow at fixed dates and/or times (for example, every Monday at 9am).
-- [Interval node](/integrations/builtin/core-nodes/n8n-nodes-base.interval/)} triggers the workflow in regular intervals of time (for example, every 10 minutes).
 
 In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
@@ -122,10 +121,16 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 			},
 			{
 				"parameters": {
-					"unit": "hours"
+					"rule": {
+						"interval": [
+							{
+								"field": "hours"
+							}
+						]
+					}
 				},
-				"name": "Interval",
-				"type": "n8n-nodes-base.interval",
+				"name": "Schedule Trigger",
+				"type": "n8n-nodes-base.scheduleTrigger",
 				"typeVersion": 1,
 				"position": [
 					520,
@@ -209,7 +214,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 					]
 				]
 			},
-			"Interval": {
+			"Schedule Trigger": {
 				"main": [
 					[
 						{
@@ -265,7 +270,6 @@ So far, you have mainly worked with text data. But what if you want to process d
 In n8n, you can process binary data with the following nodes:
 
 - [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/) to move data between binary and JSON properties.
-- [Read Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) to read a file from the host machine that runs n8n.
 - [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) to read multiple files from the host machine that runs n8n.
 - [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/) to write a file to the host machine that runs n8n.
 - [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
@@ -307,7 +311,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 				},
 				"name": "HTTP Request",
 				"type": "n8n-nodes-base.httpRequest",
-				"typeVersion": 1,
+				"typeVersion": 4,
 				"position": [
 					1340,
 					1080
@@ -349,7 +353,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 ### Exercise
 
-Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompoems` and move the returned data from JSON to binary. Then, write the new binary data to a file. Finally, to check that it worked out, read the generated binary file referencing it with an expression in the node.
+Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and move the returned data from JSON to binary. Then, write the new binary data to a file. Finally, to check that it worked out, read the generated binary file referencing it with an expression in the node.
 
 ??? note "Show me the solution"
 
@@ -376,14 +380,12 @@ Make an HTTP request to the Poemist API `https://www.poemist.com/api/v1/randompo
 			},
 			{
 				"parameters": {
-					"url": "https://www.poemist.com/api/v1/randompoems",
-					"options": {
-						"splitIntoItems": true
-					}
+					"url": "https://poetrydb.org/random/1",
+					"options": {}
 				},
 				"name": "HTTP Request",
 				"type": "n8n-nodes-base.httpRequest",
-				"typeVersion": 1,
+				"typeVersion": 4,
 				"position": [
 					520,
 					500

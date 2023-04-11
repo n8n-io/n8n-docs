@@ -1,3 +1,8 @@
+---
+title: LinkedIn
+description: Documentation for the LinkedIn node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # LinkedIn
 
 The LinkedIn node allows you to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
@@ -53,6 +58,7 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the node.
 
 ![Posting with the LinkedIn node](/_images/integrations/builtin/app-nodes/linkedin/linkedin_node.png)
+
 
 
 

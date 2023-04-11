@@ -1,4 +1,9 @@
-# Box
+---
+title: Box credentials
+description: Documentation for Box credentials. Use these credentials to authenticate Box in n8n, a workflow automation platform.
+---
+
+# Box credentials
 
 You can use these credentials to authenticate the following nodes with Box.
 
@@ -26,3 +31,4 @@ Create a [Box](https://www.box.com/) account.
 11. Click the *Save* button to save your credentials in n8n.
 
 ![Getting Box credentials](/_images/integrations/builtin/credentials/box/using-oauth.gif)
+

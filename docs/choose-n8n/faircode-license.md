@@ -42,7 +42,6 @@ Our license restricts use to "internal business purposes". In practice that mean
 All of the following examples are allowed under our license: 
 
 * Using n8n to sync the data you control as a company, for example from a CRM to an internal database .
-* Using n8n workflows to create backend logic for a product.
 * Creating an n8n node for your product, or any other integration between your product and n8n.
 * Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n.
 * Supporting n8n, for example by setting it up or maintaining it on an internal company server.

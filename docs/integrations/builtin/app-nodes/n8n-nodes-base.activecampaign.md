@@ -1,3 +1,8 @@
+---
+title: ActiveCampaign
+description: Documentation for the ActiveCampaign node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ActiveCampaign
 
 The ActiveCampaign node allows you to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
@@ -98,3 +103,4 @@ The start node exists by default when you create a new workflow.
 6. Click on *Add Field* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.
 8. Click on *Execute Node* to run the workflow.
+

@@ -1,3 +1,8 @@
+---
+title: Google Chat
+description: Documentation for the Google Chat node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Chat
 
 The Google Chat node allows you to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting membership and spaces, as well as creating and deleting messages. 
@@ -25,3 +30,4 @@ On this page, you'll find a list of operations the Google Chat node supports and
 * Space
     * Get a space
     * Get all spaces the caller is a member of
+

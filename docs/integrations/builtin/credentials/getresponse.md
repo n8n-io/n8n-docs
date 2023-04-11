@@ -1,4 +1,9 @@
-# GetResponse
+---
+title: GetResponse credentials
+description: Documentation for GetResponse credentials. Use these credentials to authenticate GetResponse in n8n, a workflow automation platform.
+---
+
+# GetResponse credentials
 
 You can use these credentials to authenticate the following nodes with GetResponse.
 
@@ -75,3 +80,4 @@ export WEBHOOK_URL=<YOUR-NGROK-URL>
 
 - [OAuth 2.0 - Authorization Code](https://apidocs.getresponse.com/v3/case-study/oauth2-authorization-code)
 - [Authentication - API key](https://apireference.getresponse.com/#section/Authentication)
+

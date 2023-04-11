@@ -4,6 +4,8 @@ If you have already installed Docker and Docker-Compose, then you can start with
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ### 1. Install Docker
 
 This can vary depending on the Linux distribution used. You can find detailed instructions in the [Docker documentation](https://docs.docker.com/engine/install/){:target=_blank .external-link}. The following example is for Ubuntu:
@@ -80,7 +82,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
-    image: n8nio/n8n
+    image: docker.n8n.io/n8nio/n8n
     restart: always
     ports:
       - "127.0.0.1:5678:5678"
@@ -190,7 +192,7 @@ sudo docker compose stop
 ### 9. Done
 
 n8n will now be reachable using the above defined subdomain + domain combination.
-The above example would result in: https://n8n.example.com
+The above example would result in: <https://n8n.example.com>
 
 n8n will only be reachable using `https` and not using `http`.
 

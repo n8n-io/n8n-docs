@@ -1,3 +1,8 @@
+---
+title: Coda
+description: Documentation for the Coda node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Coda
 
 The Coda node allows you to automate work in Coda, and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, including creating, getting, and deleting controls, formulas, tables, and views.
@@ -66,6 +71,7 @@ The start node exists by default when you create a new workflow.
 2. Select the name of your document from the *Doc* dropdown list.
 3. Select the name of your table from the *Table* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

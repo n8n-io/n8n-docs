@@ -1,3 +1,8 @@
+---
+title: Microsoft OneDrive
+description: Documentation for the Microsoft OneDrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Microsoft OneDrive
 
 The Microsoft OneDrive node allows you to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
@@ -48,3 +53,4 @@ To perform operations on folders, you need to supply the ID. You can find this:
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.
 	4. Select **Execute node**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
+

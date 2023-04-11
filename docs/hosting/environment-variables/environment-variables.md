@@ -179,7 +179,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `N8N_EVENTBUS_CHECKUNSENTINTERVAL` | Number | `0` | How often (in milliseconds) to check for unsent event messages. Can in rare cases cause a message to be sent twice. Set to `0` to disable it. |
 | `N8N_EVENTBUS_LOGWRITER_SYNCFILEACCESS` | Boolean | `false` | Whether all file access happens synchronously within the thread (true) or not (false). |
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | How many event log files to keep. |
-| `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `102400` | Maximum size (in bytes) of an event log file before a new one is started. |
+| `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one is started. |
 | `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
 
 ## Nodes

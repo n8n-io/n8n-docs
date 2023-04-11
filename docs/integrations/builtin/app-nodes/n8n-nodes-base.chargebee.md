@@ -1,3 +1,8 @@
+---
+title: Chargebee
+description: Documentation for the Chargebee node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Chargebee
 
 The Chargebee node allows you to automate work in Chargebee, and integrate Chargebee with other applications. n8n has built-in support for a wide range of Chargebee features, including creating customers, returning invoices, and canceling subscriptions.
@@ -47,3 +52,4 @@ The start node exists by default when you create a new workflow.
 6. Click on *Add Property* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.
 8. Click on *Execute Node* to run the workflow.
+

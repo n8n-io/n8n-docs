@@ -1,3 +1,8 @@
+---
+title: Monica CRM
+description: Documentation for the Monica CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Monica CRM
 
 The Monica CRM node allows you to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
@@ -104,3 +109,4 @@ The start node exists by default when you create a new workflow.
 5. Click on *Execute Node* to run the workflow.
 
 ![The Monica CRM node](/_images/integrations/builtin/app-nodes/monicacrm/monicacrm_node.png)
+

@@ -1,4 +1,9 @@
-# Keap
+---
+title: Keap credentials
+description: Documentation for Keap credentials. Use these credentials to authenticate Keap in n8n, a workflow automation platform.
+---
+
+# Keap credentials
 
 You can use these credentials to authenticate the following nodes with Keap.
 
@@ -24,3 +29,4 @@ Create a [Keap](https://keap.com/) account.
 8. Click the *Save* button to save your credentials.
 
 ![Getting Keap credentials](/_images/integrations/builtin/credentials/keap/getting-oauth-credentials.gif)
+

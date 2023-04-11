@@ -1,3 +1,8 @@
+---
+title: Mailjet
+description: Documentation for the Mailjet node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mailjet
 
 The Mailjet node allows you to automate work in Mailjet, and integrate Mailjet with other applications. n8n has built-in support for a wide range of Mailjet features, including sending emails, and sms. 
@@ -42,3 +47,4 @@ The start node exists by default when you create a new workflow.
 4. Enter the subject for the email in the *Subject* field.
 5. Enter the content of the email in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
+

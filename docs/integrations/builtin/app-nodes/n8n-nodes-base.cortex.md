@@ -1,3 +1,8 @@
+---
+title: Cortex
+description: Documentation for the Cortex node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Cortex
 
 The Cortex node allows you to automate work in Cortex, and integrate Cortex with other applications. n8n has built-in support for a wide range of Cortex features, including executing analyzers, and responders, as well as getting job details.
@@ -62,3 +67,4 @@ This node will return the job details for the analysis that we executed in the p
 In the screenshot below, you will notice that the node starts the analysis of the URL.
 
 ![Using the Cortex node to get job details](/_images/integrations/builtin/app-nodes/cortex/cortex1_node.png)
+

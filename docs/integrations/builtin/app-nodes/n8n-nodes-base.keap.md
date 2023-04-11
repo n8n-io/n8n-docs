@@ -1,3 +1,8 @@
+---
+title: Keap
+description: Documentation for the Keap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Keap
 
 The Keap node allows you to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
@@ -71,3 +76,4 @@ The start node exists by default when you create a new workflow.
 2. Select the 'Contact' option from the *Resource* dropdown list.
 3. Select the 'Get All' option from the *Operation* dropdown list.
 4. Click on *Execute Node* to run the workflow.
+

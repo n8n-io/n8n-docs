@@ -1,3 +1,8 @@
+---
+title: Bannerbear
+description: Documentation for the Bannerbear node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Bannerbear
 
 The Bannerbear node allows you to automate work in Bannerbear, and integrate Bannerbear with other applications. n8n has built-in support for a wide range of Bannerbear features, including creating and getting images and templates.
@@ -44,6 +49,7 @@ The start node exists by default when you create a new workflow.
 4. Click on the *Add Modification* button and select 'message' from the *Name* dropdown list.
 5. Enter the text in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
+
 
 
 

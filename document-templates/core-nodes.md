@@ -12,6 +12,11 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+---
+title: <node-name> - n8n Documentation
+description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 <!-- 
 The title should be the name of the node. Add "trigger" if it's a core trigger node. For example:
 Item Lists

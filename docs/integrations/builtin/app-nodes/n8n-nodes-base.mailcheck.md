@@ -1,3 +1,8 @@
+---
+title: Mailcheck
+description: Documentation for the Mailcheck node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Mailcheck
 
 The Mailcheck node allows you to automate work in Mailcheck, and integrate Mailcheck with other applications. n8n has built-in support for a wide range of Mailcheck features, including checking emails. 
@@ -99,3 +104,4 @@ This node will update the Valid field in the table.
 In the screenshot below, you will notice that the node updates the Valid field in the table.
 
 ![Using the Airtable node to update data of a record](/_images/integrations/builtin/app-nodes/mailcheck/airtable1_node.png)
+

@@ -1,3 +1,8 @@
+---
+title: GetResponse
+description: Documentation for the GetResponse node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # GetResponse
 
 The GetResponse node allows you to automate work in GetResponse, and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, including creating, updating, deleting, and getting contacts. 
@@ -90,3 +95,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 2. Click on ***Execute Node*** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/getresponse/noop_node.png)
+

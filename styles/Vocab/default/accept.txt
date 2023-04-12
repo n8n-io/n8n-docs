@@ -19,6 +19,7 @@ Firestore
 GIMP
 Hetzner
 invalid
+Keycloak
 kubectl
 Kafka
 Lemlist

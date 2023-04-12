@@ -17,7 +17,6 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 
 ## Enable SAML
 
-
 1. In n8n, go to **Settings** > **Authentication**. n8n shows a list of single sign-on options.
 1. Set **SAML 2.0** to **Activated**. You can't use SAML and LDAP at the same time.
 1. Make a note of the n8n **Redirect URL** and **Entity ID**.
@@ -37,6 +36,8 @@ These guides aren't full step-by-step guides. They provide documentation links, 
 #### Authentik
 
 #### Keycloak
+
+[TODO: different links for different hosting options, e.g. https://www.keycloak.org/getting-started/getting-started-docker]
 
 #### Okta
 

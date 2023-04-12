@@ -4,6 +4,8 @@ This section contains the node library: reference documentation for every built-
 
 --8<-- "_snippets/integrations/builtin/node-types.md"
 
+--8<-- "_snippets/integrations/builtin/node-operations.md"
+
 ## Credentials
 
 External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as credentials.

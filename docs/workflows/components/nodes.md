@@ -19,6 +19,8 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 --8<-- "_snippets/integrations/builtin/node-types.md"
 
+--8<-- "_snippets/integrations/builtin/node-operations.md"
+
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow

@@ -1,4 +1,4 @@
-## Node types
+## Node types: Trigger, App, and Core
 
 There are three node types in n8n: app nodes, trigger nodes, and core nodes.
 

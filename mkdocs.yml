@@ -82,6 +82,7 @@ markdown_extensions:
   - toc:
       permalink: "#"
 plugins:
+  - info
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav

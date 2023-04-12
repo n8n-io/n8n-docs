@@ -8,6 +8,8 @@ tags:
   - If node
 hide:
   - tags
+search:
+  boost: 5
 ---
 
 # If
@@ -28,8 +30,8 @@ Boolean:
 
 **Date & Time**
 
-- Occured After
-- Occured Before
+- Occurred After
+- Occurred Before
 
 
 **Number**

@@ -1,51 +1,66 @@
 ---
 title: If
-description: Documentation for the  node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+description: Documentation for the If node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 tags:
   - if
   - if node
+  - If
+  - If node
 hide:
   - tags
-search:
-  boost: 5
 ---
 
 # If
 
-The If node is used to split a workflow conditionally based on comparison operations.
+Use the If node to split a workflow conditionally based on comparison operations.
 
-## Node Reference
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [If integrations](https://n8n.io/integrations/if/){:target=_blank .external-link} list.
+
+## Node reference
 
 Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
 
-**Boolean**
+Boolean:
 
 - Equal
 - Not Equal
+
+**Date & Time**
+
+- Occured After
+- Occured Before
 
 
 **Number**
 
 - Smaller
-- Smaller Equal
+- Smaller or Equal
 - Equal
 - Not Equal
 - Larger
-- Larger Equal
+- Larger or Equal
 - Is Empty
+- Is Not Empty
 
 
 **String**
 
 - Contains
-- Equal
 - Not Contains
+- Ends With
+- Not Ends With
+- Equal
 - Not Equal
-- Regex
+- Regex Match
+- Regex Not Match
+- Starts With
+- Not Starts With
 - Is Empty
+- Is Not Empty
 
 
-You can choose to split a workflow when any of the specified conditions are met, or only when all the specified conditions are met using the options in the **Combine** dropdown list.
+UseYou can choose to split a workflow when the data meets any of the conditions, or all of the conditions. 
 
 ## Branch execution with If and Merge nodes
 

@@ -1,4 +1,9 @@
-# LinkedIn
+---
+title: LinkedIn credentials
+description: Documentation for LinkedIn credentials. Use these credentials to authenticate LinkedIn in n8n, a workflow automation platform.
+---
+
+# LinkedIn credentials
 
 You can use these credentials to authenticate the following nodes with LinkedIn.
 
@@ -46,3 +51,4 @@ Create a [LinkedIn](https://www.linkedin.com/) account.
 3. Click the checkbox to accept the terms and conditions and then click on the ***Add product*** button.
 
 **Note:** You will need to enable the ***Share on LinkedIn*** and ***Sign In with LinkedIn*** products to connect with n8n. If you would like to connect an organizational LinkedIn account to n8n, then you also additionally need to enable the ***Marketing Developer Platform*** product.
+

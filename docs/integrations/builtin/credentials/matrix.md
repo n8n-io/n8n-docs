@@ -1,4 +1,9 @@
-# Matrix
+---
+title: Matrix credentials
+description: Documentation for Matrix credentials. Use these credentials to authenticate Matrix in n8n, a workflow automation platform.
+---
+
+# Matrix credentials
 
 You can use these credentials to authenticate the following nodes with Matrix.
 
@@ -18,3 +23,4 @@ Create an account on a Matrix server.
 6. Click on ***click to reveal*** next to 'Access Token'.
 7. Copy the 'Homeserver URL' under the ***Advanced*** section if you are using a custom server.
 8. Use this Homeserver URL and Access Token with your Matrix node credentials in n8n.
+

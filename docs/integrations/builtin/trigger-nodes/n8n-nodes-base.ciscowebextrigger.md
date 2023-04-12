@@ -1,4 +1,9 @@
-# Webex by Cisco Trigger
+---
+title: Webex by Cisco trigger
+description: Documentation for the Webex by Cisco trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Webex by Cisco trigger
 
 [Webex by Cisco](https://webex.com/) is a web conferencing and videoconferencing application.
 
@@ -25,4 +30,5 @@ The final workflow should look like the following image.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Webex by Cisco Trigger node.
+
 

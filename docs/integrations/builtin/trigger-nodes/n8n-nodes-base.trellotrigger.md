@@ -1,4 +1,9 @@
-# Trello Trigger
+---
+title: Trello trigger
+description: Documentation for the Trello trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Trello trigger
 
 [Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
@@ -45,3 +50,4 @@ For this specific example, the List ID would be the Model ID.
 ### What is the Model ID?
 
 It is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
+

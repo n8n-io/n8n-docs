@@ -1,4 +1,9 @@
-# Spontit
+---
+title: Spontit credentials
+description: Documentation for Spontit credentials. Use these credentials to authenticate Spontit in n8n, a workflow automation platform.
+---
+
+# Spontit credentials
 
 You can use these credentials to authenticate the following nodes with Spontit.
 
@@ -22,3 +27,4 @@ Create a [Spontit](https://www.spontit.com/) account.
 ## Further Reference
 
 - [Spontit API Documentation](https://api.spontit.com/)
+

@@ -1,11 +1,20 @@
+---
+title: Google Analytics
+description: Documentation for the Google Analytics node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Analytics
 
-[Google Analytics](https://analytics.google.com/){:target="_blank" .external-link} node allows you to automate work in the Google Analytics platform and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, which includes basic operations like returning reports and user activities.
+The Google Analytics node allows you to automate work in Google Analytics, and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, including returning reports and user activities.
+
 
 On this page, you'll find a list of operations the Google Analytics node supports and links to more resources.
 
 !!! note "Credentials"
-    Refer to the [Google Analytics credentials](https://docs.n8n.io/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+    Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Analytics integrations](https://n8n.io/integrations/google-analytics/){:target="_blank" .external-link} list.
 
 
 ## Operations
@@ -20,3 +29,4 @@ On this page, you'll find a list of operations the Google Analytics node support
 Refer to [Google Analytics' documentation](https://developers.google.com/analytics){:target=_blank .external-link} for more information about the service.
 
 View [example workflows and related content](https://n8n.io/integrations/google-analytics/){:target=_blank .external-link} on n8n's website.
+

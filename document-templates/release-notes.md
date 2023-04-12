@@ -11,16 +11,18 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
-<!-- wrap the whole release note in a div so marketing can scrape it easily. The ID should be the release number.
-For example, 02102 for release 0.210.2 -->
-<div id="02102" markdown>
 
-## n8n@<version-number>
+## n8n@<version-number> (<next/latest>)
 
 View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>){:target=_blank .external-link} for this version.<br />
 **Release date:** _yyyy-MM-dd_
 
 _One or two sentence summary of release._
+
+<!--  Explain the different versions. This note should go on both the latest and next versions, and be updated as the version status updates. For the next version, add: "Use the next version to try n8n's newest features, and to help test -->
+
+!!! note "<Latest/Next> version"
+	This is the <Latest/Next> version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### New features
 
@@ -55,4 +57,7 @@ _Description of new feature. Link to new node doc._
 
 _List external contributors. Do not use a bulleted list here._
 
-</div>
+<!-- Include the "how to update" snippet -->
+--8<-- "_snippets/update-n8n.md"
+
+

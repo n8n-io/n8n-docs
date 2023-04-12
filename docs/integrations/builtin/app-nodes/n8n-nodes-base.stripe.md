@@ -1,9 +1,19 @@
+---
+title: Stripe
+description: Documentation for the Stripe node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Stripe
 
-[Stripe](https://stripe.com/) offers payment processing software and application programming interfaces for e-commerce websites and mobile applications.
+The Stripe node allows you to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
+
+On this page, you'll find a list of operations the Stripe node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/stripe/).
+    Refer to [Stripe credentials](/integrations/builtin/credentials/stripe/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Stripe integrations](https://n8n.io/integrations/stripe/){:target="_blank" .external-link} list.
 
 
 ## Basic operations
@@ -86,3 +96,4 @@ The start node exists by default when you create a new workflow.
     * **Type**: The type of token to create, **Card Token** by default.
 
 ![The Stripe2 node](/_images/integrations/builtin/app-nodes/stripe/stripe2_node.png)
+

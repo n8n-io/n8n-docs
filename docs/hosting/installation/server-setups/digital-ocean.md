@@ -7,6 +7,8 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Create a Droplet
 
 1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 

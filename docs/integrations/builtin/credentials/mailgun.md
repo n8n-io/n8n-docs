@@ -1,4 +1,9 @@
-# Mailgun
+---
+title: Mailgun credentials
+description: Documentation for Mailgun credentials. Use these credentials to authenticate Mailgun in n8n, a workflow automation platform.
+---
+
+# Mailgun credentials
 
 You can use these credentials to authenticate the following nodes with Mailgun.
 
@@ -17,3 +22,4 @@ Create a [Mailgun](https://www.mailgun.com/) account.
 5. Use the API key with Mailgun node credentials in n8n.
 
 ![Getting Mailgun credentials](/_images/integrations/builtin/credentials/mailgun/using-access-token.gif)
+

@@ -1,9 +1,19 @@
+---
+title: S3
+description: Documentation for the S3 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # S3
 
-S3 is an object storage service that allows you to block public access to all of your objects at the bucket or the account level with S3 Block Public Access. S3 maintains compliance programs, such as PCI-DSS, HIPAA/HITECH, FedRAMP, EU Data Protection Directive, and FISMA, to help you meet regulatory requirements.
+The S3 node allows you to automate work in S3, and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. 
+
+On this page, you'll find a list of operations the S3 node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/s3/).
+    Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [S3 integrations](https://n8n.io/integrations/s3/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -81,3 +91,4 @@ The start node exists by default when you create a new workflow.
 When uploading files to [Wasabi](https://wasabi.com/), permissions for the files must be set using the **ACL** dropdown and not the toggles.
 
 ![File permissions when using the S3 node with Wasabi](/_images/integrations/builtin/app-nodes/s3/acl_dropdown.png)
+

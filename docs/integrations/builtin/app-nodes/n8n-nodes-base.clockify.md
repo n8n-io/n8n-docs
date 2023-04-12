@@ -1,9 +1,19 @@
+---
+title: Clockify
+description: Documentation for the Clockify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Clockify
 
-[Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
+The Clockify node allows you to automate work in Clockify, and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, including creating, updating, getting, and deleting tasks, time entries, projects, and tags.
+
+On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clockify/).
+    Refer to [Clockify credentials](/integrations/builtin/credentials/clockify/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Clockify integrations](https://n8n.io/integrations/clockify/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -125,3 +135,4 @@ This node will add the project to the time entry that was created by the Clockif
 In the screenshot below, you will notice that the node has updated the time entry by adding the project ID we created in the Clockify node.
 
 ![Using the Clockify node to update the time entry](/_images/integrations/builtin/app-nodes/clockify/clockify3_node.png)
+

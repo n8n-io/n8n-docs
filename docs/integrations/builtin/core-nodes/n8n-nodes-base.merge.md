@@ -1,3 +1,8 @@
+---
+title: Merge
+description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # Merge
 
 Use the Merge node to combine data from two streams, once data of both streams is available.
@@ -68,6 +73,24 @@ Output all possible item combinations, while merging fields with the same name.
 ##### Field value clashes
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
+
+#### Options
+
+When combining branches, you can set **Options**:
+
+For all modes:
+
+* **Clash handling**: choose how to merge when branches clash, or when there are sub-fields.
+* **Fuzzy compare**: whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
+
+When merging by field:
+
+* **Disable dot notation**: this prevents accessing child fields using `parent.child` in the field name.
+* **Multiple matches**: choose how n8n handles multiple matches when comparing branches.
+
+When merging by position:
+
+**Include Any Unpaired Items**: choose whether to keep or discard unpaired items.
 
 ### Choose branch
 
@@ -195,3 +218,4 @@ Output in table view:
 n8n provides an example workflow that demonstrates key Merge node concepts.
 
 Go to [Joining different datasets](https://n8n.io/workflows/1747-joining-different-datasets/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.
+

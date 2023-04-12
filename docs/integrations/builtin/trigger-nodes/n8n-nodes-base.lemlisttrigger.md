@@ -1,4 +1,9 @@
-# Lemlist Trigger
+---
+title: Lemlist trigger
+description: Documentation for the Lemlist trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Lemlist trigger
 
 [Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
@@ -62,4 +67,5 @@ In the screenshot below, you will notice that the node sends a message with a re
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Lemlist Trigger node.
+
 

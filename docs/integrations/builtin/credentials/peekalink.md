@@ -1,4 +1,9 @@
-# Peekalink
+---
+title: Peekalink credentials
+description: Documentation for Peekalink credentials. Use these credentials to authenticate Peekalink in n8n, a workflow automation platform.
+---
+
+# Peekalink credentials
 
 You can use these credentials to authenticate the following nodes with Peekalink.
 
@@ -21,3 +26,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/JbCibwJPKqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

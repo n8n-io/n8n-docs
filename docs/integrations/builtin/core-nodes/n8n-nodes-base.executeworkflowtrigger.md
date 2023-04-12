@@ -1,4 +1,9 @@
-# Execute Workflow Trigger
+---
+title: Execute Workflow trigger
+description: Documentation for the Execute Workflow trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
+# Execute Workflow trigger
 
 Use this node to start a workflow in response to another workflow. It should be the first node in the workflow.
 
@@ -8,3 +13,4 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 * Break large workflows into smaller components.
 
 This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node.
+

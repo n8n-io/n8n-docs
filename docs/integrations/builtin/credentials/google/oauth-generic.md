@@ -1,3 +1,8 @@
+---
+title: Google OAuth2 generic
+description: Documentation for generic OAuth2 Google credentials. Use these credentials to authenticate Google services in n8n, a workflow automation platform.
+---
+
 # Google: OAuth2 generic
 
 This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations/).
@@ -96,3 +101,4 @@ If using the OAuth authentication method, you might see the warning **Google has
 1. Select**Advanced**.
 2. Select **Go to CREDENTIALS_NAME (unsafe)**. `CREDENTIALS_NAME` is the name of the credentials created by the third party.
 3. Grant the requested permissions.
+

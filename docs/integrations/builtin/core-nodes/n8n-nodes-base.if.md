@@ -19,22 +19,22 @@ Use the If node to split a workflow conditionally based on comparison operations
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [If integrations](https://n8n.io/integrations/if/){:target=_blank .external-link} list.
 
-## Node reference
+## Add conditions
 
 Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
 
-Boolean:
+**Boolean:**
 
 - Equal
 - Not Equal
 
-**Date & Time**
+**Date & Time:**
 
 - Occurred After
 - Occurred Before
 
 
-**Number**
+**Number:**
 
 - Smaller
 - Smaller or Equal
@@ -46,7 +46,7 @@ Boolean:
 - Is Not Empty
 
 
-**String**
+**String:**
 
 - Contains
 - Not Contains
@@ -61,8 +61,9 @@ Boolean:
 - Is Empty
 - Is Not Empty
 
+## Match any or match all
 
-UseYou can choose to split a workflow when the data meets any of the conditions, or all of the conditions. 
+You can choose to split a workflow when the data meets any of the conditions, or all of the conditions, by setting **Combine** to **ANY** or **ALL**.
 
 ## Branch execution with If and Merge nodes
 
@@ -71,6 +72,7 @@ UseYou can choose to split a workflow when the data meets any of the conditions,
 ## Example Usage
 
 This workflow executes two different *Set* nodes based on the output given by an *IF* node. You can also find the [workflow](https://n8n.io/workflows/581) on n8n.io. This example usage workflow would use the following nodes.
+
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/)
 - [IF]()

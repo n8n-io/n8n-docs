@@ -30,3 +30,37 @@ On this page, you'll find a list of operations the Postgres node supports and li
 
 View [example workflows and related content](https://n8n.io/integrations/postgres/){:target=_blank .external-link} on n8n's website.
 
+## Use query parameters
+
+When creating a query to run on a Postgres database, you can use the **Query Parameters** field in the **Additional Fields** section to load data into the query. n8n sanitizes data in query parameters, which prevents SQL injection.
+
+For example, you want to find a person by their email address. Given the following input data:
+
+```js
+[
+    {
+        "email": "alex@example.com",
+        "name": "Alex",
+        "age": 21 
+    },
+    {
+        "email": "jamie@example.com",
+        "name": "Jamie",
+        "age": 33 
+    }
+]
+```
+
+You can write a query like:
+
+```sql
+SELECT * FROM users WHERE email = $1;
+```
+
+Then in Query Parameters, provide the field value to use in place of $1:
+
+```
+$1:email
+```
+
+

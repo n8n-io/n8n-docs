@@ -44,7 +44,7 @@ This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-ba
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.223.0 (next)
+## n8n@0.223.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.223.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-05
@@ -113,7 +113,7 @@ This release contains new features and bug fixes.
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.222.2 (latest)
+## n8n@0.222.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.222.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-11

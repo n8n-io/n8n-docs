@@ -5,7 +5,7 @@ description: Using LDAP with n8n.
 # Lightweight Directory Access Protocol (LDAP)
 
 !!! info "Feature availability"		
-		* Available on Self-hosted Enterprise and custom Cloud plans.
+		* Available on Self-hosted Enterprise and Cloud Enterprise plans.
 		* You need access to the n8n instance owner account.
 		* You must enable user management. Refer to guides for [Cloud user management](/user-management/cloud-setup/) and [self-hosted user management](/hosting/authentication/user-management-self-hosted/).
 

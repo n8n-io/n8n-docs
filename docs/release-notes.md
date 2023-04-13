@@ -17,6 +17,33 @@ You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHAN
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
+## n8n@0.224.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.0...n8n@0.224.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-12
+
+This release contains a new node, updates, and bug fixes.
+
+### New nodes
+
+This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-base.totp/) node. This is a new core node. It provides a way to generate a TOTP (time-based one-time password) within your workflow.
+
+### Bug fixes
+
+* Code Node: Update vm2 to address CVE-2023-29017.
+* Core: App should not crash with a custom REST endpoint.
+* Core: Do not execute workflowExecuteBefore hook when resuming executions from a waiting state.
+* Core: Fix issue where sub workflows would display as running forever after failure to start.
+* Core: Update xml2js to address CVE-2023-0842.
+* Editor: Drop mergeDeep in favor of lodash merge.
+* HTTP Request Node: Restore detailed error message.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
+
 ## n8n@0.223.0 (next)
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.223.0){:target=_blank .external-link} for this version.<br />
@@ -82,17 +109,33 @@ This release contains new features and bug fixes.
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.222.1 (latest)
+## n8n@0.222.2 (latest)
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.0...n8n@0.222.1){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-04-04
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.222.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-11
 
 This is a bug fix release.
 
 !!! note "Latest version"
 	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
-## Bug fixes
+### Bug fixes
+
+* Code node: Update vm2 to address CVE-2023-29017.
+* Core: Update xml2js to address CVE-2023-0842.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
+
+## n8n@0.222.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.0...n8n@0.222.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-04
+
+This is a bug fix release.
+
+### Bug fixes
 
 * AWS SNS Node: Fix an issue with messages failing to send if they contain certain characters.
 * Core: `augmentObject` should clone Buffer/Uint8Array instead of wrapping them in a proxy.
@@ -180,6 +223,21 @@ This release introduces the [Filter](/integrations/builtin/core-nodes/n8n-nodes-
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.221.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.2...n8n@0.221.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-11
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Code node: Update vm2 to address CVE-2023-29017.
+* Core: Update xml2js to address CVE-2023-0842.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
 ## n8n@0.221.2
 

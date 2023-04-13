@@ -32,7 +32,7 @@ View [example workflows and related content](https://n8n.io/integrations/postgre
 
 ## Use query parameters
 
-When creating a query to run on a Postgres database, you can use the **Query Parameters** field in the **Additional Fields** section to load data into the query. n8n sanitizes data in query parameters, which prevents SQL injection.
+When creating a query to run on a Postgres database, you can use the **Query Parameters** field in the **Options** section to load data into the query. n8n sanitizes data in query parameters, which prevents SQL injection.
 
 For example, you want to find a person by their email address. Given the following input data:
 
@@ -54,13 +54,13 @@ For example, you want to find a person by their email address. Given the followi
 You can write a query like:
 
 ```sql
-SELECT * FROM users WHERE email = $1;
+SELECT * FROM $1:name WHERE email = $2;
 ```
 
-Then in Query Parameters, provide the field value to use in place of $1:
+Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use expressions so the node can pull the email address from each input item in turn:
 
 ```
-$1:email
+users, {{ $json.email }} 
 ```
 
 

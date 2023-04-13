@@ -17,10 +17,6 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 * [Creating nodes](/integrations/creating-nodes/) to start building your own nodes.
 
 
---8<-- "_snippets/integrations/builtin/node-types.md"
-
---8<-- "_snippets/integrations/builtin/node-operations.md"
-
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow
@@ -38,6 +34,8 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 ### Add a node to an existing workflow
 
 Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector. n8n opens the nodes panel, where you can search or browse all nodes.
+
+--8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Node controls
 

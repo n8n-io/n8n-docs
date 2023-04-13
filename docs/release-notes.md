@@ -54,6 +54,10 @@ This release contains new features and bug fixes.
 !!! note "Next version"
 	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
+
+
 ### New features
 
 * Core: Convert `eventBus` controller to decorator style and improve permissions.

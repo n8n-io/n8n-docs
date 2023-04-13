@@ -863,7 +863,7 @@ This release introduces LDAP, and a new node for working with HTML in n8n. It al
 
 #### LDAP
 
-This release introduces support for LDAP on Self-hosted Enterprise and custom Cloud plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
+This release introduces support for LDAP on Self-hosted Enterprise and Cloud Enterprise plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
 
 </div>
 

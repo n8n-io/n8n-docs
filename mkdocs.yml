@@ -504,10 +504,10 @@ nav:
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
         - Hetzner: hosting/installation/server-setups/hetzner.md
-        - Scaleway: hosting/installation/server-setups/scaleway.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Scaleway: hosting/installation/server-setups/scaleway.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
     - Environment variables: 
       - hosting/environment-variables/index.md

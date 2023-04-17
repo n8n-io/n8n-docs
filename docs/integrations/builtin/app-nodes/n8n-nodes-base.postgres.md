@@ -59,7 +59,8 @@ SELECT * FROM $1:name WHERE email = $2;
 
 Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use expressions so the node can pull the email address from each input item in turn:
 
-```
+```js
+// users is an example table name
 users, {{ $json.email }} 
 ```
 

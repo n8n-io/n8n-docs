@@ -1,7 +1,7 @@
 # Security Assertion Markup Language (SAML)
 
 !!! info "Feature availability"
-	* Available on Self-hosted Enterprise and Power Cloud plans.
+	* Available on Enterprise plans. [TODO: and?]
 	* You need access to the n8n instance owner account to enable and configure SAML
 
 	Available from version [TODO] onwards.
@@ -23,26 +23,39 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 1. Set up SAML with your IdP (identity provider). You need the redirect URL and entity ID. You may also need an email address and name for the IdP user.
 1. After completing setup in your IdP, download the metadata XML from your IdP.
 1. In n8n, copy the raw XML into **Identity Provider Settings**.
+1. Select **Save settings**, then **Test settings** to check your SAML setup is working.
 
-### Setup guidance for common IdPs
+## IdP setup overview
 
-These guides aren't full step-by-step guides. They provide documentation links, outline steps, and any n8n-specific details.
+The steps to configure the IdP vary depending on your chosen IdP. These are some common setup tasks:
 
-#### Auth0
+* Create an app for n8n.
+* Map n8n attributes to IdP attributes (first name, last name, email address, and UPN)
+
+## Setup resources for common IdPs
+
+Documentation links and n8n-specific details for common IdPs.
+
+### Auth0
 
 [Configure Auth0 as SAML Identity Provider | Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations){:target=_blank .external-link}
 
 
-#### Authentik
+### Authentik
 
-#### Keycloak
+### Keycloak
 
 [TODO: different links for different hosting options, e.g. https://www.keycloak.org/getting-started/getting-started-docker]
 
-#### Okta
+### Okta
+
+Workforce Identity
 
 [TODO: probably this but . . . https://help.okta.com/oie/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_SAML.htm]
 
-#### OneLogin
+### OneLogin
 
-#### PingIdentity
+### PingIdentity
+
+## Troubleshooting
+

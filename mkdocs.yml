@@ -199,7 +199,9 @@ nav:
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
-      - SAML: user-management/saml.md
+      - SAML: 
+        - user-management/saml/index.md
+        - user-management/saml/okta.md
     - Environments:
       - environments/index.md
       - Variables: environments/variables.md

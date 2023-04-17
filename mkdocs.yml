@@ -425,6 +425,7 @@ nav:
         - integrations/builtin/credentials/timescaledb.md
         - integrations/builtin/credentials/todoist.md
         - integrations/builtin/credentials/toggl.md
+        - integrations/builtin/credentials/totp.md
         - integrations/builtin/credentials/travisci.md
         - integrations/builtin/credentials/trello.md
         - integrations/builtin/credentials/twake.md

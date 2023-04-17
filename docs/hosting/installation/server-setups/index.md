@@ -5,6 +5,7 @@ Self-host with Docker Compose:
 * [Digital Ocean](/hosting/installation/server-setups/digital-ocean/)
 * [Heroku](/hosting/installation/server-setups/heroku/)
 * [Hetzner Cloud](/hosting/installation/server-setups/hetzner/)
+* [Scaleway](/hosting/installation/server-setups/scaleway/)
 
 Starting points for a Kubernetes setup:
 

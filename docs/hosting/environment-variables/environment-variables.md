@@ -143,8 +143,8 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | :------- | :---- | :------- | :---------- |
 | `EXECUTIONS_PROCESS` | Enum string: `main`, `own` | `own` | Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
-| `EXECUTIONS_TIMEOUT` | Number | `-1` | The maximum run time (in seconds) before stopping a workflow execution. Set to `-1` to disable. |
-| `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) for an individual workflow. |
+| `EXECUTIONS_TIMEOUT` | Number | `-1` | Whether executions should be stopped after this maximum execution time (in seconds). Can be overriden per workflow up to `EXECUTIONS_TIMEOUT_MAX`. Set to `-1` to disable. |
+| `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that can be configured for an individual workflow. |
 | `EXECUTIONS_DATA_SAVE_ON_ERROR` | Enum string: `all`, `none` | `all` | Whether n8n saves execution data on error. |
 | `EXECUTIONS_DATA_SAVE_ON_SUCCESS` | Enum string: `all`, `none` | `all` | Whether n8n saves execution data on success. |
 | `EXECUTIONS_DATA_SAVE_ON_PROGRESS` | Boolean | `false` | Whether to save progress for each node executed (true) or not (false). |

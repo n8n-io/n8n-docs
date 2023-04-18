@@ -17,20 +17,20 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 
 ## Enable SAML
 
-1. In n8n, go to **Settings** > **Authentication**. n8n shows a list of single sign-on options.
-1. Set **SAML 2.0** to **Activated**. You can't use SAML and LDAP at the same time.
+1. In n8n, go to **Settings** > **SSO**.
 1. Make a note of the n8n **Redirect URL** and **Entity ID**.
 1. Set up SAML with your IdP (identity provider). You need the redirect URL and entity ID. You may also need an email address and name for the IdP user.
 1. After completing setup in your IdP, download the metadata XML from your IdP.
 1. In n8n, copy the raw XML into **Identity Provider Settings**.
 1. Select **Save settings**, then **Test settings** to check your SAML setup is working.
+1. Set SAML 2.0 to **Activated**.
 
-## IdP setup overview
+## Generic IdP setup
 
 The steps to configure the IdP vary depending on your chosen IdP. These are some common setup tasks:
 
-* Create an app for n8n.
-* Map n8n attributes to IdP attributes (first name, last name, email address, and UPN)
+* Create an app for n8n in your IdP.
+* Map n8n attributes to IdP attributes: first name, last name, email address, and UPN (User Principal Name). n8n uses the email address as the unique ID in n8n. Map this to the UPN in your IdP.
 
 ## Setup resources for common IdPs
 
@@ -49,9 +49,7 @@ Documentation links and n8n-specific details for common IdPs.
 
 ### Okta
 
-Workforce Identity
-
-[TODO: probably this but . . . https://help.okta.com/oie/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_SAML.htm]
+n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/).
 
 ### OneLogin
 

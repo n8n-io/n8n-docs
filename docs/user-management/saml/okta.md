@@ -14,6 +14,8 @@ Set up SAML SSO in n8n with Okta.
 
 You need an Okta Workforce Identity account, and the redirect URL and entity ID from n8n's SAML settings.
 
+Okta Workforce may enforce two factor authentication for users, depending on your Okta configuration.
+
 ## Setup
 
 1. In your Okta admin panel, select **Applications** > **Applications**.
@@ -47,4 +49,4 @@ You need an Okta Workforce Identity account, and the redirect URL and entity ID 
 1. Get the metadata XML: on the **Sign On** tab, copy the Metadata URL. Navigate to it, and copy the XML. Paste this into **Identity Provider Settings** in n8n.
 1. Select **Save settings**.
 1. Select **Test settings**.
-1. [TODO: app auth seems required? and then invalid response issue . . .  ]
+

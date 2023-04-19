@@ -62,9 +62,9 @@ n8n collects selected usage and performance data to help diagnose problems and i
     - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
 - Data around workflow executions:  
     - Status
-		- The user ID of the user who ran the execution
-		- The first time a workflow loads data from an external source
-		- The first successful production (non-manual) workflow execution
+    - The user ID of the user who ran the execution
+    - The first time a workflow loads data from an external source
+    - The first successful production (non-manual) workflow execution
 - The domain of webhook calls, if specified (excluding subdomain).
 - When a user creates a [variable](/environments/variables/)
 - Details on how the UI is used (for example, navigation, nodes panel searches)

@@ -8,7 +8,7 @@ description: Variables allow you to store and reuse values in n8n workflows.
 	* Available on Self-hosted Enterprise and Power Cloud plans.
 	* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
 
-	Available in version [TODO] and above.
+	Available in version 0.225.0 and above.
 
 Variables allow you to store and reuse values in n8n workflows. 
 

@@ -13,4 +13,4 @@ Environments allow you to:
 * Share reusable values between users with [Variables](/environments/variables/).
 * Develop and test workflows, without impacting production workflows (coming soon)
 
-This feature is under development. As of [TODO: version and date], n8n supports [Variables](/environments/variables/).
+This feature is under development. As of version 0.225.0, n8n supports [Variables](/environments/variables/).

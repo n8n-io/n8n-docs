@@ -1,7 +1,7 @@
 # Security Assertion Markup Language (SAML)
 
 !!! info "Feature availability"
-	* Available on Enterprise plans. [TODO: and?]
+	* Available on Enterprise plans.
 	* You need access to the n8n instance owner account to enable and configure SAML
 
 	Available from version [TODO] onwards.

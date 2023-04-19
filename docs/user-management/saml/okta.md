@@ -48,5 +48,5 @@ Okta Workforce may enforce two factor authentication for users, depending on you
 	1. Select **Done**.
 1. Get the metadata XML: on the **Sign On** tab, copy the Metadata URL. Navigate to it, and copy the XML. Paste this into **Identity Provider Settings** in n8n.
 1. Select **Save settings**.
-1. Select **Test settings**.
+1. Select **Test settings**. n8n opens a new tab. If you're not currently logged in, Okta prompts you to sign in. n8n then displays a success message confirming the attributes returned by Okta.
 

@@ -40,6 +40,16 @@ The steps to configure the IdP vary depending on your chosen IdP. These are some
 
 Documentation links and n8n-specific details for common IdPs.
 
+| IdP | Documentation | Notes |
+| --- | ------------- | ----- |
+| Auth0 | [Configure Auth0 as SAML Identity Provider: Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations){:target=_blank .external-link} | |
+| Authentik | | |
+| Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started){:target=_blank .external-link} guide depending on your hosting. | |
+| Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/) | |
+| OneLogin | | |
+| PingIdentity | | |
+
+
 ### Auth0
 
 [Configure Auth0 as SAML Identity Provider | Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations){:target=_blank .external-link}
@@ -60,4 +70,5 @@ n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/).
 ### PingIdentity
 
 ## Troubleshooting
+
 

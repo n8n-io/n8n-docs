@@ -17,6 +17,8 @@ You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHAN
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
+--8<-- "_snippets/update-n8n.md"
+
 ## n8n@0.225.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225.0){:target=_blank .external-link} for this version.<br />

@@ -53,4 +53,4 @@ Setup:
   <figcaption>This graph shows the percentage of requests to the webhook trigger node getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.</figcaption>
 </figure>
 
-
+Multi-instance setups use [Queue mode](/hosting/scaling/queue-mode/).

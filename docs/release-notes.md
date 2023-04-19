@@ -33,7 +33,7 @@ This release introduces [Variables](/environments/variables/). You can now creat
 </div>
 
 * Core: Add support for Google Service account authentication in the HTTP Request node.
-* GitLab Node: Add Additional parameters for File List.
+* GitLab Node: Add **Additional Parameters** for the file list operation.
 * MySQL Node: This node has been overhauled.
 
 ### Bug fixes
@@ -51,7 +51,7 @@ This release introduces [Variables](/environments/variables/). You can now creat
 * Editor: Fix an issue that was preventing typing certain characters in the UI on devices with touchscreen.
 * Editor: Fix n8n-checkbox alignment.
 * Code Node: Handle user code returning null and undefined.
-* Github Trigger Node: Remove content_reference event.
+* GitHub Trigger Node: Remove content_reference event.
 * Google Sheets Trigger Node: Return actual error message.
 * HTTP Request Node: Fix `itemIndex` in HTTP Request errors.
 * NocoDB Node: Fix for updating or deleting rows with not default primary keys.

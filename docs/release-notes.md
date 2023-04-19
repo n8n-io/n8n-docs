@@ -17,6 +17,55 @@ You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHAN
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
+--8<-- "_snippets/update-n8n.md"
+
+## n8n@0.225.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-19
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+This release introduces [Variables](/environments/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/environments/) in n8n.
+
+</div>
+
+* Core: Add support for Google Service account authentication in the HTTP Request node.
+* GitLab Node: Add **Additional Parameters** for the file list operation.
+* MySQL Node: This node has been overhauled.
+
+### Bug fixes
+
+* Core: Fix broken API permissions in public API.
+* Core: Fix paired item returning wrong data.
+* Core: Improve SAML connection test result views.
+* Core: Make getExecutionId available on all nodes types.
+* Core: Skip SAML onboarding for users with first- and lastname.
+* Editor: Add padding to prepend input.
+* Editor: Clean up demo/video experiment.
+* Editor: Enterprise features missing with user management.
+* Editor: Fix moving canvas on middle click preventing lasso selection.
+* Editor: Make sure to redirect to blank canvas after personalisation modal.
+* Editor: Fix an issue that was preventing typing certain characters in the UI on devices with touchscreen.
+* Editor: Fix n8n-checkbox alignment.
+* Code Node: Handle user code returning null and undefined.
+* GitHub Trigger Node: Remove content_reference event.
+* Google Sheets Trigger Node: Return actual error message.
+* HTTP Request Node: Fix `itemIndex` in HTTP Request errors.
+* NocoDB Node: Fix for updating or deleting rows with not default primary keys.
+* OpenAI Node: Update models to only show those supported.
+* OpenAI Node: Update OpenAI Text Moderate input placeholder text.
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Eddy Hernandez](https://github.com/eddywashere){:target=_blank .external-link}  
+[Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}  
+[Jimw383](https://github.com/Jimw383){:target=_blank .external-link}  
+
+--8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.224.1
 
@@ -58,7 +107,6 @@ This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-ba
 
 [Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
---8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.223.0
 
@@ -1534,12 +1582,12 @@ This release contains usability enhancements for the expressions editor. The edi
 
 ### Bug fixes
 
-* core: ensure executions list is properly filtered for all users.
-* core: fix `$items().length` in Execute Once mode.
-* core: mark binary data to be deleted when pruning executions.
-* core: OAuth2 scope saved to database fix.
-* editor: fix slots rendering of NodeCreator's NoResults component.
-* editor: JSON view values can be mapped like keys.
+* Core: ensure executions list is properly filtered for all users.
+* Core: fix `$items().length` in Execute Once mode.
+* Core: mark binary data to be deleted when pruning executions.
+* Core: OAuth2 scope saved to database fix.
+* Editor: fix slots rendering of NodeCreator's NoResults component.
+* Editor: JSON view values can be mapped like keys.
 * AWS SNS Node: fix a pagination issue.
 * Google Sheets Node: fix exception if no matching rows are found.
 * Google Sheets Node: fix for append operation if no empty rows in sheet.
@@ -1649,10 +1697,10 @@ This release contains core product improvements and bug fixes.
 ### Bug fixes
 
 * API: Don't use names for type ORM connections.
-* core: Fix manual execution of pinned trigger on main mode.
-* core: Streamline multiple pinned triggers behavior.
-* editor: Curb argument linting for `$input.first()` and `$input.last()`
-* editor: Fix duplicate bug when new workflow is open.
+* Core: Fix manual execution of pinned trigger on main mode.
+* Core: Streamline multiple pinned triggers behavior.
+* Editor: Curb argument linting for `$input.first()` and `$input.last()`
+* Editor: Fix duplicate bug when new workflow is open.
 * Editor: Fix for incorrect execution saving indicator in executions view.
 * Editor: Fix for OAuth authorization.
 * Editor: Fix workflow activation from the Workflows view.

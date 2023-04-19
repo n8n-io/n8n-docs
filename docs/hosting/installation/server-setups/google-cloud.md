@@ -9,6 +9,8 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Hosting options
 
 Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).

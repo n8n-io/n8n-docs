@@ -38,11 +38,13 @@ export N8N_LOG_FILE_MAXCOUNT=60
 
 n8n uses standard log levels to report:
 
-- `error`: the most strict level. Outputs only errors and nothing else
-- `warning`: outputs errors and warning messages
+- `silent`: outputs nothing at all
+- `error`: outputs only errors and nothing else
+- `warn`: outputs errors and warning messages
 - `info`: contains useful information about progress
 - `verbose`: make n8n output additional information about progress that allows you to further understand what is happening
 - `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
+
 
 ## Development
 

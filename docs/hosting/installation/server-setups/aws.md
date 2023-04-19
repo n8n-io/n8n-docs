@@ -16,6 +16,8 @@ While not mentioned in the documentation for eksctl, you also need to [install t
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Create a cluster
 
 Use the eksctl tool to create a cluster specifying a name and a region with the following command:

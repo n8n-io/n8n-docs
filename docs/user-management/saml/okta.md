@@ -16,6 +16,8 @@ You need an Okta Workforce Identity account, and the redirect URL and entity ID 
 
 Okta Workforce may enforce two factor authentication for users, depending on your Okta configuration.
 
+Read the [Set up SAML](/user-management/saml/setup/) guide first.
+
 ## Setup
 
 1. In your Okta admin panel, select **Applications** > **Applications**.

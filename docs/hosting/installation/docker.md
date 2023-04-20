@@ -113,11 +113,14 @@ From your Docker Desktop, navigate to the **Images** tab and select **Pull** fro
 You can also use the command line to pull the latest, or a specific version:
 
 ```sh
-// Pull latest version
+// Pull latest (stable) version
 docker pull docker.n8n.io/n8nio/n8n
 
 // Pull specific version
 docker pull docker.n8n.io/n8nio/n8n:0.220.1
+
+// Pull next (unstable) version
+docker pull docker.n8nio/n8nio/n8n:next
 ```
 
 Stop the container and start it again. You can also use the command line:

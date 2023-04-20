@@ -63,7 +63,7 @@ Select **Add Option** to view and select these options.
 
 - **Batching**: control how to batch large responses.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
-- **Redirects**: choose whether to follow redirects. Disabled by default.
+- **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.

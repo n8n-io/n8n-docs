@@ -30,7 +30,14 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 The steps to configure the IdP vary depending on your chosen IdP. These are some common setup tasks:
 
 * Create an app for n8n in your IdP.
-* Map n8n attributes to IdP attributes: first name, last name, email address, and UPN (User Principal Name). n8n uses the email address as the unique ID in n8n. Map this to the UPN in your IdP.
+* Map n8n attributes to IdP attributes:
+
+	| Name | Name format | Value (IdP side) |
+	| ---- | ----------- | ---------------- |
+	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress | URI Reference | User email       |
+	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname    | URI Reference | User First Name  |
+	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname     | URI Reference | User Last Name   |
+	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn          | URI Reference | User Email       |
 
 ## Setup resources for common IdPs
 

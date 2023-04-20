@@ -17,7 +17,7 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 
 1. In n8n, go to **Settings** > **SSO**.
 1. Make a note of the n8n **Redirect URL** and **Entity ID**.
-1. Get the n8n metadata: copy the **Entity ID** URL into your browser and save the XML.
+	1. **Optional**: if your IdP allows you to set up SAML from imported metadata, navigate to the **Entity ID** URL and save the XML. 
 1. Set up SAML with your IdP (identity provider). You need the redirect URL and entity ID. You may also need an email address and name for the IdP user.
 1. After completing setup in your IdP, download the metadata XML from your IdP.
 1. In n8n, copy the raw XML into **Identity Provider Settings**.

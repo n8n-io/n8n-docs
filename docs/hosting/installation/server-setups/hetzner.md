@@ -32,7 +32,8 @@ The rest of this guide requires you to log in to the server using a terminal wit
 The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
 
 ```shell
-apt get update
+apt-get update
+apt-get upgrade
 apt install docker-compose-plugin
 ```
 

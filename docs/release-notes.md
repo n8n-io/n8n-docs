@@ -92,9 +92,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.224
 
 This is a bug fix release.
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-
 ### Bug fixes
 
 * Core: Fix paired item returning wrong data.
@@ -222,6 +219,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.2...n8n@0.222
 **Release date:** 2023-04-14
 
 This is a bug fix release.
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 

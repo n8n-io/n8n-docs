@@ -19,6 +19,25 @@ You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHAN
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.225.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.0...n8n@0.225.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-20
+
+This is a bug fix release.
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+### Bug fixes
+
+* Editor: Clean up demo and template callouts from workflows page.
+* Editor: Fix memory leak in Node Detail View by correctly unsubscribing from event buses.
+* Editor: Settings sidebar should disconnect from push when navigating away.
+* Notion Node: Update credential test to not require user permissions.
+
+--8<-- "_snippets/update-n8n.md"
+
 ## n8n@0.225.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225.0){:target=_blank .external-link} for this version.<br />
@@ -65,6 +84,29 @@ This release introduces [Variables](/environments/variables/). You can now creat
 [Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}  
 [Jimw383](https://github.com/Jimw383){:target=_blank .external-link}  
 
+
+## n8n@0.224.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.224.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-20
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Fix paired item returning wrong data.
+* Core: Make getExecutionId available on all nodes types.
+* Editor: Fix memory leak in Node Detail View by correctly unsubscribing from event buses.
+* Editor: Fix moving canvas on middle click preventing lasso selection.
+* Editor: Settings sidebar should disconnect from push when navigating away.
+* Google Sheets Trigger Node: Return actual error message.
+* HTTP Request Node: Fix `itemIndex` in HTTP Request errors.
+* Notion Node: Update credential test to not require user permissions.
+
+### Contributors
+
+[Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}
+
 --8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.224.1
@@ -72,10 +114,7 @@ This release introduces [Variables](/environments/variables/). You can now creat
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.0...n8n@0.224.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-14
 
-This release contains a new node, updates, and bug fixes.
-
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+This is a bug fix release.
 
 ### Bug fixes
 

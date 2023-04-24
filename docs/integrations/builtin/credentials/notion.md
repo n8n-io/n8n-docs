@@ -21,7 +21,7 @@ Notion provides access using API keys. To get and use the API key, you need:
 
 Follow Step 1 in the [Notion integration guide](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} to create your integration and get your Notion integration token (API key).
 
-For integration capabilities we recommend enabling the following for the node to fully function:
+On the **Capabilities** screen, enable the following:
 
 * Read content
 * Update content

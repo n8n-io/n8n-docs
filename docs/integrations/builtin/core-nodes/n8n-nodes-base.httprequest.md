@@ -80,7 +80,7 @@ Import a curl command:
 
 1. Select **Import cURL command**.
 2. Paste in your curl command.
-3. Select **Import**.
+3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
 
 
 ## Basic example

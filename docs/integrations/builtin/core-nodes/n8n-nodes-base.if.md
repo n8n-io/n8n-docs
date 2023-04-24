@@ -6,8 +6,6 @@ tags:
   - if node
 hide:
   - tags
-search:
-  boost: 5
 ---
 
 # If

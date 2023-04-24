@@ -6,7 +6,7 @@ theme:
   custom_dir: overrides
   favicon: _images/favicon.ico
   font: false
-  language: en
+  language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
       scheme: light

@@ -9,6 +9,8 @@ The HTTP Request node is one of the most versatile nodes in n8n. It allows you t
 
 When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
 
+There are two ways to create an HTTP request: configure the [node fields](#node-fields) or [import a curl command](#import-curl-command).
+
 ## Node fields
 
 ### Method
@@ -67,6 +69,18 @@ Select **Add Option** to view and select these options.
 - **Response**: provide settings about the expected API response.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
+
+## Import curl command
+
+[curl](https://curl.se/){:target=_blank .external-link} is a command line tool and library for transferring data with URLs.
+
+You can use curl to call REST APIs. If the API documentation of the service you want to use provides curl examples, you can copy them out of the documentation and into n8n to configure the HTTP Request node.
+
+Import a curl command:
+
+1. Select **Import cURL command**.
+2. Paste in your curl command.
+3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
 
 
 ## Basic example

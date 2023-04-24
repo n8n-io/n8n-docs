@@ -4,7 +4,8 @@
 1. Make a new branch, including the release number in the name. For example: 0.190.0-release-note
 2. Copy the template into the top of the release note file: https://github.com/n8n-io/n8n-docs/blob/main/docs/reference/release-notes.md (don't copy this comment).
 3. Add the link to the GitHub change comparison. For example: https://github.com/n8n-io/n8n/compare/n8n@0.189.1...n8n@0.190.0 You can find this link from the GitHub changelog doc: https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md
-4. Placeholder text is in _italic_. Make sure to replace it! Refer to the GitHub changelog to help get started: https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md For minor changes, you may be able to copy directly from that changelog. For larger features, or if anything is unclear, do some research and add more detail.
+4. Placeholder text is in <>. Make sure to replace it! 
+5. Refer to the GitHub changelog to help get started: https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md For minor changes, you may be able to copy directly from that changelog. For larger features, or if anything is unclear, do some research and add more detail.
 
 Make sure to refer to the style guide: https://github.com/n8n-io/n8n-docs/wiki
 You can find more info on working with the docs project in the README: https://github.com/n8n-io/n8n-docs/blob/main/README.md
@@ -12,19 +13,30 @@ You can find more info on working with the docs project in the README: https://g
 -->
 
 
-## n8n@<version-number> (<next/latest>)
+## n8n@<version-number>
 
 View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>){:target=_blank .external-link} for this version.<br />
-**Release date:** _yyyy-MM-dd_
+**Release date:** <yyyy-MM-dd>
 
 _One or two sentence summary of release._
+
+<!-- if this release contains breaking changes, include the breaking changes warning 
+
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
+
+-->
 
 <!--  Explain the different versions. This note should go on both the latest and next versions, and be updated as the version status updates. For the next version, add: "Use the next version to try n8n's newest features, and to help test -->
 
 !!! note "<Latest/Next> version"
 	This is the <Latest/Next> version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
+
 ### New features
+
+<!-- Use the new feature box for major new features. 
+This section should only contain new features that are likely to interest users -->
 
 <div class="n8n-new-features" markdown>
 
@@ -33,6 +45,7 @@ _One or two sentence summary of release._
 _Description of new feature. Link to docs if available._
 
 </div>
+
 
 ### New nodes
 
@@ -44,20 +57,12 @@ _Description of new feature. Link to new node doc._
 
 </div>
 
-### Node enhancements
-
-* _List any nodes with new functionality_
-* _Or other improvements._
-
-### Bug fixes
-
-* _List all bug fixes._
 
 ### Contributors
 
 _List external contributors. Do not use a bulleted list here._
 
-<!-- Include the "how to update" snippet -->
+<!-- Include the "how to update" snippet. Remove it from any previous versions. -->
 --8<-- "_snippets/update-n8n.md"
 
 

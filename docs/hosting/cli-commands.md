@@ -212,10 +212,20 @@ n8n import:credentials --separate --input=backups/latest/
 
 ## License
 
+### Clear
+
 Clear your existing license from n8n's database and reset n8n to default features:
 
 ```sh
 n8n license:clear
+```
+
+### Info
+
+Display information about the existing license:
+
+```sh
+n8n license:info
 ```
 
 ## User management

@@ -9,8 +9,6 @@ You can use these credentials to authenticate the following nodes with LinkedIn.
 
 - [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/)
 
-!!! note "Personal accounts and organization accounts"
-	The n8n node supports posting on LinkedIn as an individual. It doesn't support posting as an organization.
 
 ## Prerequisites
 
@@ -30,3 +28,5 @@ To enable OAuth, you need to:
 	* Provide a LinkedIn Company Page for **LinkedIn Page**. Refer to [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link} for more guidance.
 2. Enable APIs for your app. You need to enable **Share on LinkedIn** and **Sign In with LinkedIn**.
 
+!!! note "Posting from organization accounts"
+	To post as an organization, you need to put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.

@@ -32,7 +32,6 @@ For a detailed explanation of the license, refer to [Faircode license](/choose-n
 n8n offers the following free options:
 
 * The Desktop app
-* A free trial of Cloud (free for one month)
 * A free tier for self-hosted users
 
 ## Paid versions

@@ -19,15 +19,27 @@ You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHAN
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.225.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.1...n8n@0.225.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-25
+
+This is a bug fix release.
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+### Bug fixes
+
+* Core: Upgrade google-timezones-json to use the correct timezone for Sao Paulo.
+* Code Node: Update vm2 to address [CVE-2023-30547](https://github.com/advisories/GHSA-ch3r-j5x3-6q2m){:target=_blank .external-link}.
+
 ## n8n@0.225.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.0...n8n@0.225.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-20
 
 This is a bug fix release.
-
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 
@@ -83,6 +95,21 @@ This release introduces [Variables](/environments/variables/). You can now creat
 [Eddy Hernandez](https://github.com/eddywashere){:target=_blank .external-link}  
 [Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}  
 [Jimw383](https://github.com/Jimw383){:target=_blank .external-link}  
+
+## n8n@0.224.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.2...n8n@0.224.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-24
+
+This is a bug fix release.
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+### Bug fixes
+
+* Core: Upgrade google-timezones-json to use the correct timezone for Sao Paulo.
+* Code Node: Update vm2 to address [CVE-2023-30547](https://github.com/advisories/GHSA-ch3r-j5x3-6q2m){:target=_blank .external-link}.
 
 
 ## n8n@0.224.2
@@ -219,9 +246,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.2...n8n@0.222
 **Release date:** 2023-04-14
 
 This is a bug fix release.
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 

@@ -26,6 +26,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.1...n8n@0.225
 
 This is a bug fix release.
 
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 ### Bug fixes
 
 * Core: Upgrade google-timezones-json to use the correct timezone for Sao Paulo.
@@ -37,9 +40,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.0...n8n@0.225
 **Release date:** 2023-04-20
 
 This is a bug fix release.
-
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 
@@ -102,6 +102,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.2...n8n@0.224
 **Release date:** 2023-04-24
 
 This is a bug fix release.
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 
@@ -243,9 +246,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.2...n8n@0.222
 **Release date:** 2023-04-14
 
 This is a bug fix release.
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 

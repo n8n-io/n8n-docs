@@ -17,7 +17,8 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 ## Step one: Install and run n8n
 
-!!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
+!!! note "Cloud users"
+	Skip this section if you've already installed n8n or signed up for a Cloud account.
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 

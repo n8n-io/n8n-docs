@@ -199,8 +199,11 @@ nav:
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
-      - SAML:
+      - SAML: 
         - user-management/saml/index.md
+        - Set up SAML: user-management/saml/setup.md
+        - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+        - Troubleshooting: user-management/saml/troubleshooting.md
     - Environments:
       - environments/index.md
       - Variables: environments/variables.md

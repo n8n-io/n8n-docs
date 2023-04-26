@@ -1,5 +1,13 @@
 # Security Assertion Markup Language (SAML)
 
-This feature is coming soon. It will be available on Enterprise plans.
+!!! info "Feature availability"
+	* Available on Enterprise plans.
+	* You need access to the n8n instance owner account to enable and configure SAML
 
-Learn more about [n8n's tiers](https://n8n.io/pricing/?selfHosted=true){:target=_blank .external-link}, or [contact us](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link} to enquire about n8n's Enterprise offering for Cloud and Self-Hosted. 
+	Available from version 0.225.0 onwards.
+
+This section provides guidance on using SAML SSO (single sign-on) with n8n. It assumes you're familiar with SAML. If you're not, [SAML Explained in Plain English](https://www.onelogin.com/learn/saml){:target=_blank .external-link} can help you understand how SAML works, and its benefits.
+
+* [Set up SAML](/user-management/saml/setup/): a general guide to setting up SAML in n8n, and links to resources for common IdPs. Start here.
+* [Okta Workforce Identity SAML setup](/user-management/saml/okta/): step-by-step guidance to configuring Okta.
+* [Troubleshooting](/user-management/saml/troubleshooting/): a list of things to check if you encounter issues.

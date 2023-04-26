@@ -27,12 +27,13 @@ _One or two sentence summary of release._
 
 -->
 
-<!--  Explain the different versions. This note should go on both the latest and next versions, and be updated as the version status updates. For the next version, add: "Use the next version to try n8n's newest features, and to help test -->
+<!--  Explain the different versions. This note should go on both the latest and next versions, and be updated as the version status updates. For the next version, add: "Use the next version to try n8n's newest features, and to help test 
 
 !!! note "<Latest/Next> version"
 	This is the <Latest/Next> version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
-
+-->
+	
 ### New features
 
 <!-- Use the new feature box for major new features. 

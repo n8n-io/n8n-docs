@@ -120,7 +120,7 @@ docker pull docker.n8n.io/n8nio/n8n
 docker pull docker.n8n.io/n8nio/n8n:0.220.1
 
 // Pull next (unstable) version
-docker pull docker.n8nio/n8nio/n8n:next
+docker pull docker.n8n.io/n8nio/n8n:next
 ```
 
 Stop the container and start it again. You can also use the command line:

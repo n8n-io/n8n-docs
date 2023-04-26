@@ -12,7 +12,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
-| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :x: |
+| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :white_check_mark: |
 | `$input.all()` | All input items in current node. | :white_check_mark: |
 | `$input.first()` | First input item in current node. | :white_check_mark: |
 | `$input.last()` | Last input item in current node. | :white_check_mark: |

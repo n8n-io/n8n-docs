@@ -20,6 +20,8 @@ View the [commits](<url for GitHub's 'Comparing changes' view, comparing this re
 
 _One or two sentence summary of release._
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 <!-- if this release contains breaking changes, include the breaking changes warning 
 
 !!! warning "Breaking changes"

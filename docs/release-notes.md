@@ -13,11 +13,32 @@ hide:
 
 New features and bug fixes for n8n.
 
-You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the GitHub repository.
+You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} in the GitHub repository.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 --8<-- "_snippets/update-n8n.md"
+
+## n8n@0.226.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.2...n8n@0.226.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-26
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New features
+
+* A new command to get information about licenses for self-hosted users: 
+	```sh
+	n8n license:info
+	```
+
+### Node enhancements
+
+* Nodes that use SQL, such as the PostgresSQL node, now have a better SQL editor for writing custom queries.
+* An overhaul of the Google BigQuery node to support executing queries, improve the UI making it easier to configure, improve error handling, and fix issues.
 
 ## n8n@0.225.2
 

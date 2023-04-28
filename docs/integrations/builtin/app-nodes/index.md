@@ -1,4 +1,4 @@
-# App nodes library
+# Actions library
 
-This section provides information about n8n's app nodes.
+This section provides information about n8n's Actions.
 

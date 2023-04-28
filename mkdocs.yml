@@ -221,8 +221,8 @@ nav:
     - Built-in nodes:
       - integrations/builtin/index.md
       - Core nodes: integrations/builtin/core-nodes/
-      - App nodes: integrations/builtin/app-nodes/
-      - Trigger nodes: integrations/builtin/trigger-nodes/
+      - Actions: integrations/builtin/app-nodes/
+      - Triggers: integrations/builtin/trigger-nodes/
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -474,6 +474,7 @@ nav:
       - integrations/creating-nodes/index.md
       - Plan your node:
         - integrations/creating-nodes/plan/index.md
+        - Choose a node type: integrations/creating-nodes/plan/node-types.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md

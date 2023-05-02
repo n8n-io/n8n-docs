@@ -85,9 +85,9 @@ n8n delivers emails to users for email verification, error notifications, and mo
 
 n8n follows best practices for corporate security.
 
-### Background checks
+### Employment checks
 
-n8n performs background checks on all new hires.
+n8n performs employment checks on all new hires.
 
 ### Workstation security
 

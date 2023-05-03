@@ -16,5 +16,5 @@ In addition to using the built-in nodes, you can also install community-built no
 
 * If you want to create your own node, head over to the [Creating Nodes](/integrations/creating-nodes/) section.
 * Check out [Community nodes](/integrations/community-nodes) to learn about installing and managing community-built nodes.
-* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](/integrations/builtin/core-nodes/), [App nodes](/integrations/builtin/app-nodes/), and [Trigger nodes](/integrations/builtin/trigger-nodes/).
+* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](/integrations/builtin/core-nodes/), [Actions](/integrations/builtin/app-nodes/), and [Triggers](/integrations/builtin/trigger-nodes/).
 * If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/builtin/credentials/) section.

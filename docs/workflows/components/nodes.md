@@ -17,8 +17,6 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 * [Creating nodes](/integrations/creating-nodes/) to start building your own nodes.
 
 
---8<-- "_snippets/integrations/builtin/node-types.md"
-
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow
@@ -27,7 +25,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 2. Select the trigger you want to use.
 
 	!!! note "Choose the correct app event"
-			If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. However, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see a recommended operation at the top of the available operations list.
+			If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. However, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
 
 			For example, this is the trigger for Asana:
 
@@ -36,6 +34,8 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 ### Add a node to an existing workflow
 
 Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector. n8n opens the nodes panel, where you can search or browse all nodes.
+
+--8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Node controls
 

@@ -19,6 +19,19 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.227.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.2...n8n@0.227.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-26
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Node enhancements
+
+* An overhaul of the Microsoft Excel 365 node, improve the UI making it easier to configure, improve error handling, and fix issues.
+
 ## n8n@0.226.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.1...n8n@0.226.2){:target=_blank .external-link} for this version.<br />

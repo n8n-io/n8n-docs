@@ -5,7 +5,7 @@ description: Documentation for TOTP credentials. Use these credentials to authen
 
 # TOTP credentials
 
-You can use these credentials to authenticate the following nodes with ActiveCampaign.
+You can use these credentials to authenticate the following nodes with TOTP.
 
 - [TOTP](/integrations/builtin/app-nodes/n8n-nodes-base.totp/)
 

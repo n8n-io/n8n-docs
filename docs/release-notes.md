@@ -22,7 +22,7 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 ## n8n@0.227.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.2...n8n@0.227.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-04-26
+**Release date:** 2023-05-03
 
 This release contains new features, node enhancements, and bug fixes.
 

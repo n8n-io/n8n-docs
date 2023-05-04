@@ -362,6 +362,7 @@ nav:
         - integrations/builtin/credentials/nextcloud.md
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md

@@ -77,7 +77,7 @@ There are many [environment variables configurable in n8n](https://docs.n8n.io/r
 | Variable | Values | Description |
 | :------- | :----- | :---------- |
 | `EXECUTIONS_TIMEOUT` | `number` | The maximum amount of time (in seconds) a workflow is allowed to run. |
-| `EXECUTIONS_PROCESS` | `'main', 'own'` | If workflow executions should run in the main process or in their own process. The `main` setting requires fewer resources. |
+| `EXECUTIONS_PROCESS` | `'main', 'own'` | [DEPRECATED] If workflow executions should run in the main process or in their own process. The `main` setting requires fewer resources. |
 | `EXECUTIONS_DATA_PRUNE` | `boolean` | If data of past executions should be deleted automatically. |
 | `EXECUTIONS_DATA_MAX_AGE` | `number` | Number of hours after which old executions are deleted. |
 | `NODES_EXCLUDE` | `Array<string>` | Specific nodes that should not be made available. |

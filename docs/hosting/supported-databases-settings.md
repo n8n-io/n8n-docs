@@ -50,6 +50,12 @@ You can choose between these configurations:
 
 ## MySQL / MariaDB
 
+!!! warning "Deprecated in 0.227.0"
+	n8n deprecated usage of MySQL and MariaDB as backend databases since version 0.227.0. 
+	Support will continue until version 1.0 is released, when support will be completely removed.
+	We recommend you migrate to PostgreSQL. 
+	Check the documentation on [how to export and import workflows and credentials](/hosting/cli-commands.md) for instructions.
+
 To use MySQL or MariaDB, provide the following environment variables:
 
  - `DB_TYPE=mysqldb` or `DB_TYPE=mariadb`

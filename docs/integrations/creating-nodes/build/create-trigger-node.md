@@ -298,8 +298,8 @@ webhooks: [
 ```
 
 
-- **Test:** POST {{WEBHOOK_TUNNEL_URL || localhost}}/webhook-test/{{uuid}}/{{path}}
-- **Production:** POST {{WEBHOOK_TUNNEL_URL || localhost}}/webhook/{{uuid}}/{{path}}
+- **Test:** POST {{WEBHOOK_URL || localhost}}/webhook-test/{{uuid}}/{{path}}
+- **Production:** POST {{WEBHOOK_URL || localhost}}/webhook/{{uuid}}/{{path}}
 
 
 These URLs can be found in the node under the `Webhook URLs` label.

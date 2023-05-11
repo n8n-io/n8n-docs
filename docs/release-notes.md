@@ -19,10 +19,10 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.228.0
+## n8n@0.228.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-05-10
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
 
 This release contains new features, node enhancements, and bug fixes.
 

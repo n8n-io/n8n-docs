@@ -5,7 +5,7 @@ description: Environments offer users a way to safely develop and test workflows
 # Environments
 
 !!! info "Feature availability"
-	* Available on Self-hosted Enterprise and Power Cloud plans.
+	* Available on Self-hosted Enterprise and Pro Cloud plans.
 	* You need access to the n8n instance owner account to create and edit variables.
 
 Environments allow you to:

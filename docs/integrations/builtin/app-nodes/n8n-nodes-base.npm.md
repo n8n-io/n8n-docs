@@ -18,11 +18,12 @@ On this page, you'll find a list of operations the npm node supports and links t
 
 ## Operations
 * Package
-	* Get Package
-	* Get Package Version
+	* Get Package Metadata
+	* Get Package Versions
+	* Search for Packages
 * Distribution Tag
-	* Get Distribution Tags
-	* Update Distribution Tags
+	* Get All Tags
+	* Update a Tag
 
 ## Related resources
 

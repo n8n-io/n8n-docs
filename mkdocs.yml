@@ -1,4 +1,4 @@
-site_name: n8n Documentation
+site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
 theme:

@@ -1,4 +1,4 @@
-n8n is available as a [Cloud](/choose-n8n/cloud/) service, [desktop app](/choose-n8n/desktop-app/), [npm](/hosting/installation/npm/) module, and [Docker](/hosting/installation/docker/) image. For this quickstart, n8n recommends using the Desktop app.
+n8n is available as a [Cloud](/choose-n8n/cloud/) service, [npm](/hosting/installation/npm/) module, and [Docker](/hosting/installation/docker/) image. For this quickstart, n8n recommends using the Desktop app.
 
 !!! note "Linux users"
     This guide uses the n8n desktop app, which is available for Windows and Mac. If you're on Linux, sign up for a free [Cloud](/choose-n8n/cloud/) trial, or use [npm](/hosting/installation/npm/) or [Docker](/hosting/installation/docker/).

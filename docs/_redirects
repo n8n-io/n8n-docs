@@ -30,7 +30,7 @@
 
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /choose-n8n/cloud/
-/hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/   /reference/update/

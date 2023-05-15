@@ -12,7 +12,7 @@ You will:
 * Add a node and configure it using expressions.
 * Run your first workflow
 
-## Step one: Install and run n8n
+## Step one: Sign up for n8n
 
 !!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
 

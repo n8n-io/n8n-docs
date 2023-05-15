@@ -107,7 +107,6 @@ nav:
     - Choose your n8n:
       - choose-n8n/index.md
       - Set up Cloud: choose-n8n/cloud.md
-      - Install Desktop: choose-n8n/desktop-app.md
       - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md

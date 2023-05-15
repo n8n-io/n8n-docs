@@ -35,7 +35,7 @@
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /choose-n8n/cloud/
-/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/desktop/   /choose-n8n/
 /hosting/updating/npm/   /choose-n8n/npm/
 /hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/

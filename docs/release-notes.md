@@ -63,6 +63,18 @@ This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base
 
 [Adam Charnock](https://github.com/adamcharnock){:target=_blank .external-link}
 
+## n8n@227.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.227.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 
 ## n8n@0.227.0
 
@@ -83,9 +95,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.1...n8n@0.226
 **Release date:** 2023-05-03
 
 This is a bug fix release.
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

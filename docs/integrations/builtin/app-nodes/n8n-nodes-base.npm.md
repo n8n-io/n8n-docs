@@ -17,6 +17,7 @@ On this page, you'll find a list of operations the npm node supports and links t
 
 
 ## Operations
+
 * Package
 	* Get Package Metadata
 	* Get Package Versions

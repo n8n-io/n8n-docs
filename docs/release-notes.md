@@ -19,18 +19,47 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.228.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.1...n8n@0.228.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@0.228.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.1){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.228.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-11
 
 This release contains new features, node enhancements, and bug fixes.
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### npm node
 
 This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/) node. This is a new core node. It provides a way to query an npm registry within your workflow.
 
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+</div>
+
+### Contributors
+
+[Adam Charnock](https://github.com/adamcharnock){:target=_blank .external-link}
+
 
 ## n8n@0.227.0
 

@@ -46,16 +46,6 @@ This release contains new features, node enhancements, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-### New features
-
-<div class="n8n-new-features" markdown>
-
-#### Python support in the Code node
-
-This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/) node. This is a new core node. It provides a way to query an npm registry within your workflow.
-
-</div>
-
 ### New nodes
 
 <div class="n8n-new-features" markdown>

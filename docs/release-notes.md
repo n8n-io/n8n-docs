@@ -76,6 +76,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.2...n8n@0.226
 
 This release contains new features, node enhancements, and bug fixes.
 
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change to `extractDomain` and `isDomain`. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02260){:target=_blank .external-link}.
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### New features

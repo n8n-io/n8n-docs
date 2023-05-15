@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block htmltitle %}
+
+{% if page.meta and page.meta.title %}
+<title>{{ page.meta.title }} | {{ config.site_name }} </title>
+{% elif page.title and not page.is_homepage %}
+<title>{{ page.title | striptags }} | {{ config.site_name }}  </title>
+{% else %}
+<title>{{ config.site_name }}</title>
+{% endif %}
+
+{% endblock %}
+
 {% block libs %}
 	<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

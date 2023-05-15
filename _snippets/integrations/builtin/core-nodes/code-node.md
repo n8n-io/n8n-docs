@@ -14,21 +14,6 @@ There are two modes:
 * **Run Once for All Items**: this is the default. When your workflow runs, the code in the code node executes once, regardless of how many input items there are.
 * **Run Once for Each Item**: choose this if you want your code to run for every input item.
 
-### Choose a language (beta)
-
-From version 0.228.0, the Code node supports Python. This is a beta feature. To enable it, you must force n8n to use the Code node version 2 (the default is version 1). To do this:
-
-1. Export your workflow.
-2. Edit the JSON to change the version number:
-	```json
-	...
-	"name": "Code",
-  "type": "n8n-nodes-base.code",
-	// Change typeVersion from 1 to 2
-  "typeVersion": 2,
-	...
-	```
-3. Copy the JSON, and past it into your workflow.
 
 ### Supported JavaScript features
 

@@ -46,28 +46,6 @@ This release contains new features, node enhancements, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-### New features
-
-<div class="n8n-new-features" markdown>
-
-#### Python support in the Code node
-
-The Code node now supports Python. This is a beta feature. To enable it, you must force n8n to use the Code node version 2 (the default is version 1). To do this:
-
-1. Export your workflow.
-2. Edit the JSON to change the version number:
-	```json
-	...
-	"name": "Code",
-  "type": "n8n-nodes-base.code",
-	// Change typeVersion from 1 to 2
-  "typeVersion": 2,
-	...
-	```
-3. Copy the JSON, and past it into your workflow.
-
-</div>
-
 ### New nodes
 
 <div class="n8n-new-features" markdown>

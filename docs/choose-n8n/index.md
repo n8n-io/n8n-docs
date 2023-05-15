@@ -33,7 +33,7 @@ n8n offers the following free options:
 
 * The Desktop app
 * A free trial of Cloud
-* A free tier for self-hosted users
+* A free community version for self-hosted users
 
 ## Paid versions
 

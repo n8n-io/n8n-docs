@@ -230,9 +230,8 @@ n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_POR
 on port 5678 but is exposed to the web using the reverse proxy on port 443. In
 that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
 
-!!! warning "Deprecated in 0.227.0"
-	The flag `WEBHOOK_TUNNEL_URL` has been renamed to `WEBHOOK_URL` and has been deprecated since version 0.227.0. 
-	Make sure to use the correct variable `WEBHOOK_URL` as shown below.
+!!! warning "Deprecated"
+	n8n renamed `WEBHOOK_TUNNEL_URL` to `WEBHOOK_URL` in version 0.227.0. `WEBHOOK_TUNNEL_URL` is deprecated, and will be removed entirely in a future release. Use `WEBHOOK_URL` instead.
 
 
 ```bash

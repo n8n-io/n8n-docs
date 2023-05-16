@@ -6,7 +6,6 @@ description: Share credentials within an organization.
 
 !!! info "Feature availability"
 		* Available on some Cloud plans, and paid self-hosted plans.
-		* Not available on Desktop.
 		* Requires [User management](/user-management/).
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.

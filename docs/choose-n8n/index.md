@@ -11,7 +11,6 @@ This section contains information on n8n's range of platforms, pricing plans, an
 There are a few different ways to set up n8n depending on how you intend to use it:
 
 * [n8n Cloud](/choose-n8n/cloud/): hosted solution, no need to install anything.
-* [Desktop app](/choose-n8n/desktop-app/): the fastest way to try out n8n on your computer. Not for production use.
 * [Self-host](/hosting/): recommended method for production or customized use cases.
 	* [npm](/hosting/installation/npm/)
 	* [Docker](/hosting/installation/docker/)
@@ -31,9 +30,8 @@ For a detailed explanation of the license, refer to [Faircode license](/choose-n
 
 n8n offers the following free options:
 
-* The Desktop app
 * A free trial of Cloud
-* A free tier for self-hosted users
+* A free community version for self-hosted users
 
 ## Paid versions
 

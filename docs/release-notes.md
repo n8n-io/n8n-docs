@@ -19,6 +19,63 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.228.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.1...n8n@0.228.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+This is a bug fix release.
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.228.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### npm node
+
+This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/) node. This is a new core node. It provides a way to query an npm registry within your workflow.
+
+</div>
+
+### Contributors
+
+[Adam Charnock](https://github.com/adamcharnock){:target=_blank .external-link}
+
+## n8n@227.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.227.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
 ## n8n@0.227.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.2...n8n@0.227.0){:target=_blank .external-link} for this version.<br />
@@ -32,15 +89,21 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 * An overhaul of the Microsoft Excel 365 node, improve the UI making it easier to configure, improve error handling, and fix issues.
 
+### Deprecations
+
+This release deprecates the following:
+
+* The `EXECUTIONS_PROCESS` environment variable.
+* Running n8n in own mode. Main mode is now the default. Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+* The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
+* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in version 1.0. n8n recommends using PostgreSQL instead.
+
 ## n8n@0.226.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.1...n8n@0.226.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-03
 
 This is a bug fix release.
-
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -59,6 +122,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.2...n8n@0.226
 **Release date:** 2023-04-26
 
 This release contains new features, node enhancements, and bug fixes.
+
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change to `extractDomain` and `isDomain`. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02260){:target=_blank .external-link}.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -80,9 +146,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.1...n8n@0.225
 **Release date:** 2023-04-25
 
 This is a bug fix release.
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 ### Bug fixes
 

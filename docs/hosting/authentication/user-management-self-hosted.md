@@ -5,7 +5,6 @@ description: Configure self-hosted n8n for user management
 # Configure self-hosted n8n for user management
 
 !!! info "Feature availability"
-		* Not available on Desktop.
 		* Requires a paid plan.
 
 User management in n8n allows you to invite people to work in your n8n instance. 

@@ -1,4 +1,4 @@
-site_name: n8n Documentation
+site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
 theme:
@@ -107,7 +107,6 @@ nav:
     - Choose your n8n:
       - choose-n8n/index.md
       - Set up Cloud: choose-n8n/cloud.md
-      - Install Desktop: choose-n8n/desktop-app.md
       - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
@@ -362,6 +361,7 @@ nav:
         - integrations/builtin/credentials/nextcloud.md
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md

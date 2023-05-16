@@ -14,6 +14,7 @@ There are two modes:
 * **Run Once for All Items**: this is the default. When your workflow runs, the code in the code node executes once, regardless of how many input items there are.
 * **Run Once for Each Item**: choose this if you want your code to run for every input item.
 
+
 ### Supported JavaScript features
 
 The Code node supports:

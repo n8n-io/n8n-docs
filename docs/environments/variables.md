@@ -5,7 +5,7 @@ description: Variables allow you to store and reuse values in n8n workflows.
 # Variables
 
 !!! info "Feature availability"
-	* Available on Self-hosted Enterprise and Power Cloud plans.
+	* Available on Self-hosted Enterprise and Pro Cloud plans.
 	* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
 
 	Available in version 0.225.0 and above.

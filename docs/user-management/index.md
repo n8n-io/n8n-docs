@@ -5,8 +5,7 @@ description: User management in n8n
 # User management
 
 !!! info "Feature availability"		
-		* Available on self-hosted and selected Cloud plans. Refer to [Cloud Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
-		* Not available on Desktop.
+		* Available on self-hosted and selected Cloud plans. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
 
 User management in n8n allows you to invite people to work in your n8n instance. It includes:
 

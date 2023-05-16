@@ -89,6 +89,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 * An overhaul of the Microsoft Excel 365 node, improve the UI making it easier to configure, improve error handling, and fix issues.
 
+### Deprecations
+
+This release deprecates the following:
+
+* The `EXECUTIONS_PROCESS` environment variable.
+* Running n8n in own mode. Main mode is now the default. Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+* The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
+* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in version 1.0. n8n recommends using PostgreSQL instead.
+
 ## n8n@0.226.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.1...n8n@0.226.2){:target=_blank .external-link} for this version.<br />

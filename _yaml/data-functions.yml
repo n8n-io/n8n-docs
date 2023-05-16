@@ -29,6 +29,12 @@ df_string:
           - md5
           - base64
           - sha1
+          - sha224
+          - sha256
+          - sha384
+          - sha512
+          - sha3
+          - ripemd160
     returns: String
     description: Returns a string hashed with the given algorithm.
   - funcName: isDomain

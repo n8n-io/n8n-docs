@@ -146,12 +146,11 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 
 ### Execute all workflows in the same process
 
-All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your
-workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
+All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
 
-!!! warning "Deprecated in 0.227.0"
-	`own` mode has been deprecated and will be removed in the future, as well as the `EXECUTIONS_PROCESS` flag.
-	Please consider using [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+!!! warning "Deprecated"
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 0.227.0. They will be removed in a future release.
+	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 ```bash
 export EXECUTIONS_PROCESS=main

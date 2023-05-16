@@ -6,7 +6,7 @@ Set the n8n mode using the following [environment variables](/hosting/environmen
 
 | Variable | Options | Default | Description |
 | :------- | :------ | :------ | :--------- |
-| `EXECUTIONS_PROCESS` | [DEPRECATED] Enum string: `main`, `own` | `main` | Whether n8n executions run in their own process or the main process. |
+| `EXECUTIONS_PROCESS` | **Deprecated**. Enum string: `main`, `own` | `main` | Whether n8n executions run in their own process or the main process. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue. When you set this to `queue`, n8n ignores any `EXECUTION_PROCESS` setting and uses `main`. |
 
 ## Executions process

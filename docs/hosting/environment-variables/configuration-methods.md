@@ -234,6 +234,9 @@ that case, it's important to set the webhook URL manually so that n8n can displa
 export WEBHOOK_URL=https://n8n.example.com/
 ```
 
+!!! warning "WEBHOOK_TUNNEL_URL is deprecated"
+	n8n renamed `WEBHOOK_TUNNEL_URL` to `WEBHOOK_URL` in version 0.227.0. `WEBHOOK_TUNNEL_URL` is deprecated, and will be removed entirely in a future release. Use `WEBHOOK_URL` instead.
+
 ### Prometheus
 
 !!! note "Experimental"

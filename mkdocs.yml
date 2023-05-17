@@ -215,6 +215,7 @@ nav:
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
+    - v1.0 preview: 1-0-preview.md
     - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md

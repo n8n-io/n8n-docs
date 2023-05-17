@@ -36,7 +36,7 @@ n8n produces a nightly build of the 1.0 release candidate, with the latest chang
 To get the latest release candidate build, pull the Docker image:
 
 ```shell
-docker run --rm -it --name n8n-1 -p 5678:5678 -v ~/.n8n.docker:/home/node/.n8n n8nio/n8n:1.0.0-rc
+docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n:1.0.0-rc
 ```
 
 To report issues, use [GitHub issues](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link} or the [forum](https://community.n8n.io/){:target=_blank .external-link}. Use the `v1` label on your GitHub issue or forum post.

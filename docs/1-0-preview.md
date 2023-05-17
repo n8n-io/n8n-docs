@@ -22,7 +22,7 @@ n8n is preparing to release its 1.0 version. This document describes planned cha
 * Force all n8n instances to have an owner account. This makes [user management](/user-management/) mandatory, and removes support for other methods such as BasicAuth and JWT. It will include a change to n8n pricing plans to make user management is available to all tiers.
 * Remove support for MySQL and MariaDB as n8n backend databases.
 * Remove own mode. n8n will now run in main mode by default. Refer to [Execute all workflows in the same process](/hosting/environment-variables/configuration-methods/#execute-all-workflows-in-the-same-process) for more information on own and main mode. You should use [Queue mode](/hosting/scaling/queue-mode/) if you need scalability.
-* Ensure users can't install custom nodes in the `~/.n8n/node_modules` directory. Custom nodes and credentials will install to `~/.n8n/custom` (or the directory defined by `CUSTOME_EXTENSION_ENV`). Custom nodes that are npm packages will live in `~/.n8n/nodes`.
+* Ensure users can't install custom nodes in the `~/.n8n/node_modules` directory. Custom nodes and credentials will install to `~/.n8n/custom` (or the directory defined by `CUSTOM_EXTENSION_ENV`). Custom nodes that are npm packages will live in `~/.n8n/nodes`.
 * Changes to how the Merge node processes data. This relates to the improvements to data processing for multi-input nodes. [PR #4238](https://github.com/n8n-io/n8n/pull/4238){:target=_blank .external-link}.
 * Websockets will become the default method to update the n8n UI. Support for websockets was introduced in v0.215.0 ([PR #5443](https://github.com/n8n-io/n8n/pull/5443){:target=_blank .external-link}) but SSE (server side events) are still the default. [PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external-link}.
 * New behavior for [data transformation functions that operate on dates](/code-examples/expressions/data-transformation-functions/dates/). Currently, they return a Date object. The new behavior will ensure the return type matches the type of the object the function is called on.
@@ -38,6 +38,8 @@ To get the latest release candidate build, pull the Docker image:
 ```shell
 docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n:1.0.0-rc
 ```
+
+If you're already running n8n, modify the command to use different ports and a different name.
 
 To report issues, use [GitHub issues](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link} or the [forum](https://community.n8n.io/){:target=_blank .external-link}. Use the `v1` label on your GitHub issue or forum post.
 

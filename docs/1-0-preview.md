@@ -39,6 +39,8 @@ To get the latest release candidate build, pull the Docker image:
 docker run --rm -it --name n8n-1 -p 5678:5678 -v ~/.n8n.docker:/home/node/.n8n n8nio/n8n:1.0.0-rc
 ```
 
+To report issues, use [GitHub issues](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link} or the [forum](https://community.n8n.io/){:target=_blank .external-link}.
+
 ## Why is 1.0 important?
 
 Version 1.0 is a milestone in an application's development. It indicates that the software has enough major features, and enough stability, to be considered reliable and full-featured.

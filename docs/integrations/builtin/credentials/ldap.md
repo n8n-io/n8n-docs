@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes:
 * [LDAP](/integrations/builtin/app-nodes/n8n-nodes-base.ldap/)
 ## Prerequisites
 
-You will need your LDAP server address, binding dn for the user to authenticate with and the password for the user.
+You will need your LDAP server address, Bind DN for the user to authenticate with, and the password for the user.
 
 ## Using LDAP credentials
 

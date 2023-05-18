@@ -47,3 +47,9 @@ You can't change the workflow owner, except when deleting the user.
 | Share | :white_check_mark: | :x: |
 | Export | :white_check_mark: | :white_check_mark: |
 | Delete | :white_check_mark: | :x: |
+
+## Node editing restrictions with unshared credentials
+
+Sharing in n8n works on the principle of least privilege. This means that if a user shares a workflow with you, but they don't share their credentials, you can't edit the nodes within the workflow that use those credentials. You can view and run the workflow, and edit nodes that don't use unshared credentials.
+
+Refer to [Credential sharing](/credentials/credential-sharing/) for guidance on sharing credentials.

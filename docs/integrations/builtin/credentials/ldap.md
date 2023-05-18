@@ -1,13 +1,26 @@
-# LDAP
+---
+title: LDAP credentials - n8n Documentation
+description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
+---
+
+# ldap credentials
 
 You can use these credentials to authenticate the following nodes:
 
 * [LDAP](/integrations/builtin/app-nodes/n8n-nodes-base.ldap/)
-
 ## Prerequisites
 
-_Include info on services they need to sign up for_
+You will need your LDAP server address, binding dn for the user to authenticate with and the password for the user.
 
+## Using LDAP credentials
 
-## Using _Auth method_
-	
+1. Enter your LDAP server address
+2. Enter your port
+3. Enter your binding dn, If you are using Active Directory this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`
+4. Enter the password for the binding user
+
+You can find more information below for specific LDAP providers
+
+* [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap)
+* [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps)
+* [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm)

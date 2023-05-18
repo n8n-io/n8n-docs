@@ -327,6 +327,7 @@ nav:
         - integrations/builtin/credentials/keap.md
         - integrations/builtin/credentials/kitemaker.md
         - integrations/builtin/credentials/kobotoolbox.md
+        - integrations/builtin/credentials/ldap.md
         - integrations/builtin/credentials/lemlist.md
         - integrations/builtin/credentials/line.md
         - integrations/builtin/credentials/linear.md

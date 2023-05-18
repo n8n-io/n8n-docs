@@ -332,6 +332,7 @@ nav:
         - integrations/builtin/credentials/linear.md
         - integrations/builtin/credentials/lingvanex.md
         - integrations/builtin/credentials/linkedin.md
+        - integrations/builtin/credentials/lonescale.md
         - integrations/builtin/credentials/magento2.md
         - integrations/builtin/credentials/mailcheck.md
         - integrations/builtin/credentials/mailchimp.md

@@ -12,7 +12,7 @@ You will:
 * Add a node and configure it using expressions.
 * Run your first workflow
 
-## Step one: Install and run n8n
+## Step one: Sign up for n8n
 
 !!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
 
@@ -47,7 +47,7 @@ Add a third node to message each customer and tell them their description. The C
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. You're going to use [expressions](/code-examples/expressions/) to map in the **Customer ID** and create the **Message**:
 	1. Drag **customer_ID** from the **INPUT** panel into the **Customer ID** field in the node settings.
-    2. Hover over **Message**. Select the **Expression** tab. n8n opens the expressions editor for this field.
+    2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
     3. Copy this expression into the editor:
         ```
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}

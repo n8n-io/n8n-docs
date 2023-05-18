@@ -1,9 +1,21 @@
+---
+title: Baserow
+description: Documentation for the Baserow node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Baserow
 
-[Baserow](https://baserow.io/) is an open source no-code database and Airtable alternative.
+The Baserow node allows you to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
+
+On this page, you'll find a list of operations the Baserow node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/baserow/).
+    Refer to [Baserow credentials](/integrations/builtin/credentials/baserow/) for guidance on setting up authentication. 
+
+!!! note "Examples and Templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Baserow integrations](https://n8n.io/integrations/baserow/){:target=_blank .external-link} list.
+
+
 
 
 ## Basic operations
@@ -90,4 +102,5 @@ This node will delete all the rows listed from the previous node.
 5. Click on the gears icon next to the ***Row ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: ***Current Node > Input Data > JSON > id***. You can also add the following expression: `{{$json["id"]}}`.
 7.  Click on ***Execute Node*** to run the node.
+
 

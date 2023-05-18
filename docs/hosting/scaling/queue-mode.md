@@ -1,4 +1,9 @@
+# Queue mode
+
 n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.
+
+!!! note "Binary data storage"
+ 	n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 
 ## How it works
 
@@ -16,11 +21,11 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n will automatically generates an encryption key upon first startup. You can also provide your own custom key via [environment variable](/hosting/environment-variables/#deployment) if desired.
+n8n will automatically generates an encryption key upon first startup. You can also provide your own custom key via [environment variable](/hosting/environment-variables/environment-variables/#deployment) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
-Set the encryption key for each worker node in a [configuration file](/hosting/configuration/#configuration-via-file) or by setting the corresponding environment variable:
+Set the encryption key for each worker node in a [configuration file](/hosting/environment-variables/configuration-methods/) or by setting the corresponding environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
@@ -30,7 +35,6 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 
 !!! note "Database considerations"
     We recommend using a database like MySQL or Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database is not recommended.
-
 
 Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
 
@@ -44,7 +48,6 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 !!! note "Keep in mind"
     You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
-
 
 To run Redis in a Docker container, follow the instructions below.
 
@@ -65,17 +68,18 @@ You can also set the following optional configurations:
 
 | Via configuration file | Via environment variables | Description |
 | ------ | ------ | ----- |
+| `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
 | `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
-| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. | 
-| `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. | 
+| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. |
+| `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
 
 Now you can start your n8n instance and it will connect to your Redis instance.
 
 ### Start workers
 
-You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it is connected to your Redis instance and the n8n database. 
+You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it is connected to your Redis instance and the n8n database.
 
 Start worker processes by running the following command from the root directory:
 
@@ -84,8 +88,9 @@ Start worker processes by running the following command from the root directory:
 ```
 
 If you're using Docker, use the following command:
+
 ```
-docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n worker
+docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n n8n worker
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
@@ -97,14 +102,12 @@ When running n8n with queues, all the production workflow executions get process
 Redis is used as the message broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
 
 !!! note "Migrate data"
-    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/reference/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
-
+    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
 
 ## Webhook processors
 
 !!! note "Keep in mind"
     Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
-
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
 
@@ -113,18 +116,21 @@ This method allows n8n to process a huge number of parallel requests. All you ha
 We do not recommend adding the main process to the load balancer pool. If the main process is added to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
 
 You can start the webhook processor by executing the following command from the root directory:
+
 ```
 ./packages/cli/bin/n8n webhook
 ```
 
 If you're using Docker, use the following command:
+
 ```
-docker run --name n8n-queue -p 5679:5678 n8nio/n8n n8n webhook
+docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n n8n webhook
 ```
 
 ### Configure webhook URL
 
 To configure your webhook URL, execute the following command on the machine running the main n8n instance:
+
 ```bash
 export WEBHOOK_URL=https://your-webhook-url.com
 ```
@@ -147,6 +153,7 @@ You can change this path in the configuration file via `endpoints.webhook` or vi
 You have webhook processors to execute the workflows. You can disable the webhook processing in the main process. This will make sure to execute all webhook executions in the webhook processors. In the configuration file set `endpoints.disableProductionWebhooksOnMainProcess` to `true` so that n8n does not process webhook requests on the main process.
 
 Alternatively, you can use the following command:
+
 ```bash
 export N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 ```
@@ -169,7 +176,6 @@ export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 
 !!! warning "Keep in mind"
     Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
-
 
 ## Configure worker concurrency
 

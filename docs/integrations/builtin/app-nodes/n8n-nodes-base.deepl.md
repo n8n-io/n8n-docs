@@ -1,9 +1,20 @@
+---
+title: DeepL
+description: Documentation for the DeepL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # DeepL
 
-[DeepL](https://deepL.com) is a machine translation service that allows you to translate text to different languages.
+The DeepL node allows you to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
+
+On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/deepL/).
+    Refer to [DeepL credentials](/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [DeepL integrations](https://n8n.io/integrations/deepl/){:target="_blank" .external-link} list.
+
 
 
 ## Basic Operations
@@ -41,7 +52,7 @@ In the screenshot below, you will notice that the node makes a GET request to th
 
 This node will translate the cocktail instructions that we got from the previous node to French. To translate the instructions in your language, select your language instead.
 
-1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/integrations/builtin/credentials/deepL/).
+1. First of all, you'll have to enter credentials for the DeepL node. You can find out how to do that [here](/integrations/builtin/credentials/deepl/).
 
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Current Nodes > Input Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$json["drinks"][0]["strInstructions"]}}`.
@@ -51,3 +62,4 @@ This node will translate the cocktail instructions that we got from the previous
 In the screenshot below, you will notice that the node translates the instructions of the cocktail to French.
 
 ![Using the DeepL node to translate the instructions to French](/_images/integrations/builtin/app-nodes/deepl/deepl_node.png)
+

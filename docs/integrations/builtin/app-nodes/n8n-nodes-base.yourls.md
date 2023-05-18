@@ -1,9 +1,19 @@
+---
+title: Yourls
+description: Documentation for the Yourls node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Yourls
 
-[Yourls](http://yourls.org/) is a free and open-source software that allows you to run your URL shortening service.
+The Yourls node allows you to automate work in Yourls, and integrate Yourls with other applications. n8n has built-in support for a wide range of Yourls features, including expanding and shortening URLs. 
+
+On this page, you'll find a list of operations the Yourls node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/yourls/).
+    Refer to [Yourls credentials](/integrations/builtin/credentials/yourls/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Yourls integrations](https://n8n.io/integrations/yourls/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -54,3 +64,4 @@ This node will give us the statistics of the short URL that we specify. We will 
 In the screenshot below, you will notice that the node gives us the statistics of the short URL that we created in the previous node.
 
 ![Using the Yourls node to get the statistics of a short URL](/_images/integrations/builtin/app-nodes/yourls/yourls1_node.png)
+

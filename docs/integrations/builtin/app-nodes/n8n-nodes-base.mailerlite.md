@@ -1,9 +1,19 @@
+---
+title: MailerLite
+description: Documentation for the MailerLite node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # MailerLite
 
-[MailerLite](https://www.mailerlite.com/) is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
+The MailerLite node allows you to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
+
+On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mailerLite/).
+    Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [MailerLite integrations](https://n8n.io/integrations/mailerlite/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -32,7 +42,7 @@ The Start node exists by default when you create a new workflow.
 
 This node will create a new subscriber in MailerLite. We will add the name of the subscriber along with their email.
 
-1. First of all, you'll have to enter credentials for the MailerLite node. You can find out how to do that [here](/integrations/builtin/credentials/mailerLite/).
+1. First of all, you'll have to enter credentials for the MailerLite node. You can find out how to do that [here](/integrations/builtin/credentials/mailerlite/).
 
 2. Enter the email address in the ***Email*** field.
 3. Click on the ***Add Field*** button and select 'Name' from the dropdown list.
@@ -78,3 +88,4 @@ This node will return the information of the subscriber that we created using th
 In the screenshot below, you will notice that the node returns the information of the subscriber that we created using the MailerLite node.
 
 ![Using the MailerLite node to get the information of the subscriber](/_images/integrations/builtin/app-nodes/mailerlite/mailerlite2_node.png)
+

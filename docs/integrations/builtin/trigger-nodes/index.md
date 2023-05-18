@@ -1,3 +1,4 @@
-# Trigger nodes library
+# Triggers library
 
-This section provides information about n8n's trigger nodes.
+This section provides information about n8n's Triggers.
+

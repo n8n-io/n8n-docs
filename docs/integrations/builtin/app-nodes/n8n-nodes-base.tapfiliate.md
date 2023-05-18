@@ -1,9 +1,19 @@
+---
+title: Tapfiliate
+description: Documentation for the Tapfiliate node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Tapfiliate
 
-[Tapfiliate](https://tapfiliate.com) allows you to create, track, and grow your affiliate marketing programs.
+The Tapfiliate node allows you to automate work in Tapfiliate, and integrate Tapfiliate with other applications. n8n has built-in support for a wide range of Tapfiliate features, including creating and deleting affiliates, and adding affiliate metadata. 
+
+On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/tapfiliate/).
+    Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Tapfiliate integrations](https://n8n.io/integrations/tapfiliate/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -87,3 +97,4 @@ This node will add the affiliate that we created with the Tapfiliate node to an 
 In the screenshot below, you will notice that the node adds the affiliate to a program.
 
 ![Using the Tapfiliate node to add an affiliate to a program](/_images/integrations/builtin/app-nodes/tapfiliate/tapfiliate2_node.png)
+

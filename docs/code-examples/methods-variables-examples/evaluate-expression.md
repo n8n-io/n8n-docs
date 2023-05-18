@@ -4,7 +4,7 @@ Evaluates a given string as expression.
 
 If you don't provide `itemIndex`, n8n uses:
 
-* The data from item 0 in the Function node.
+* The data from item 0 in the Code node.
 * The data from the current item in the Function Item node.
 
 Example:

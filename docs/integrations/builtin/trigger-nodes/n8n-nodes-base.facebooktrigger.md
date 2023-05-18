@@ -1,9 +1,14 @@
-# Facebook Trigger
+---
+title: Facebook trigger
+description: Documentation for the Facebook trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# Facebook trigger
 
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookApp/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).
 
 
 ## Object
@@ -35,7 +40,7 @@ The final workflow should look like the following image.
 
 The Facebook Trigger node will trigger the workflow when a user updates their profile on Facebook.
 
-1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/facebookApp/).
+1. First of all, you'll have to enter credentials for the Facebook Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/facebookapp/).
 2. Select 'User' from the ***Object*** dropdown list.
 3. Enter your app ID in the ***App ID*** field.
 3. Click on ***Execute Node*** to run the node.
@@ -61,3 +66,4 @@ In the screenshot below, you will notice that the node sends a message about the
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Facebook Trigger node.
+

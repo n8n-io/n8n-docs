@@ -1,9 +1,19 @@
+---
+title: LinkedIn
+description: Documentation for the LinkedIn node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # LinkedIn
 
-[LinkedIn](https://www.linkedin.com/) is an employment-oriented online service. It is mainly used for professional networking, including employers posting jobs and job seekers posting their CVs.
+The LinkedIn node allows you to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
+
+On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/linkedIn/).
+    Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [LinkedIn integrations](https://n8n.io/integrations/linkedin/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -40,7 +50,7 @@ The start node exists by default when you create a new workflow.
 
 ### 3. LinkedIn node
 
-1. First of all, you'll have to enter credentials for the LinkedIn node. You can find out how to do that [here](/integrations/builtin/credentials/linkedIn/).
+1. First of all, you'll have to enter credentials for the LinkedIn node. You can find out how to do that [here](/integrations/builtin/credentials/linkedin/).
 2. Select 'Person' from the ***Post As*** dropdown list.
 3. Select the person you want to post as from the ***Person*** dropdown list.
 4. Enter a message in the ***Text*** field.
@@ -48,6 +58,7 @@ The start node exists by default when you create a new workflow.
 6. Click on ***Execute Node*** to run the node.
 
 ![Posting with the LinkedIn node](/_images/integrations/builtin/app-nodes/linkedin/linkedin_node.png)
+
 
 
 

@@ -1,4 +1,9 @@
-# Zendesk
+---
+title: Zendesk credentials
+description: Documentation for Zendesk credentials. Use these credentials to authenticate Zendesk in n8n, a workflow automation platform.
+---
+
+# Zendesk credentials
 
 You can use these credentials to authenticate the following nodes with Zendesk.
 
@@ -66,3 +71,4 @@ The following video demonstrates the steps mentioned above.
 To get your Zendesk subdomain, follow the steps mentioned below.
 1. Access your Zendesk dashboard.
 2. Copy the string of characters located between `https://` and `.zendesk.com/agent/dashboard` in your Zendesk URL. This string is the subdomain. For example, if your Zendesk URL is `https://example.zendesk.com/agent/dashboard`, the subdomain will be `example`.
+

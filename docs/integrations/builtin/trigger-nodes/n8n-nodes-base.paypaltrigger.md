@@ -1,9 +1,14 @@
-# PayPal Trigger
+---
+title: PayPal trigger
+description: Documentation for the PayPal trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
+# PayPal trigger
 
 [PayPal](https://paypal.com) is a digital payment service that supports online fund transfers that customers can use when shopping online.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/payPal/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/paypal/).
 
 
 ## Example Usage
@@ -18,10 +23,11 @@ The final workflow should look like the following image.
 
 ### 1. PayPal Trigger node
 
-1. First of all, you'll have to enter credentials for the PayPal Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/payPal/).
+1. First of all, you'll have to enter credentials for the PayPal Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/paypal/).
 2. Select 'Billing Plan Activated' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
 !!! note "Activate workflow for production"
     You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the PayPal Trigger node.
+
 

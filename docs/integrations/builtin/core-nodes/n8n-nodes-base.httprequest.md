@@ -1,8 +1,15 @@
+---
+title: HTTP Request
+description: Documentation for the HTTP Request node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+---
+
 # HTTP Request
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API.
 
 When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
+
+There are two ways to create an HTTP request: configure the [node fields](#node-fields) or [import a curl command](#import-curl-command).
 
 ## Node fields
 
@@ -41,7 +48,7 @@ Select **Generic Credential Type** to set up authentication using one of the fol
 - OAuth2
 - None
 	
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httpRequest/) for more information setting up each credential type.
+Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
 
 ### Parameters, headers, and body
 
@@ -58,10 +65,22 @@ Select **Add Option** to view and select these options.
 
 - **Batching**: control how to batch large responses.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
-- **Redirects**: choose whether to follow redirects. Disabled by default.
+- **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
+
+## Import curl command
+
+[curl](https://curl.se/){:target=_blank .external-link} is a command line tool and library for transferring data with URLs.
+
+You can use curl to call REST APIs. If the API documentation of the service you want to use provides curl examples, you can copy them out of the documentation and into n8n to configure the HTTP Request node.
+
+Import a curl command:
+
+1. Select **Import cURL command**.
+2. Paste in your curl command.
+3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
 
 
 ## Basic example
@@ -125,3 +144,4 @@ When you execute the node, n8n includes the headers, status code, and status mes
 2. In **Body Content Type**, select **Raw**.
 3. In **Content Type**, enter `application/xml`.
 4. Enter the XML data in the **Body** field.
+

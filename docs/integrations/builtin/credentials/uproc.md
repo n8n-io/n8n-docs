@@ -1,4 +1,9 @@
-# uProc
+---
+title: uProc credentials
+description: Documentation for uProc credentials. Use these credentials to authenticate uProc in n8n, a workflow automation platform.
+---
+
+# uProc credentials
 
 You can use these credentials to authenticate the following nodes with uProc.
 
@@ -16,3 +21,4 @@ Create a [uProc](https://uProc.io) account.
 4. Use the displayed ***Email*** and ***API Key (real)*** with your uProc node credentials in n8n.
 
 ![Getting uProc credentials](/_images/integrations/builtin/credentials/uproc/using-api.gif)
+

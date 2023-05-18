@@ -1,9 +1,19 @@
+---
+title: PagerDuty
+description: Documentation for the PagerDuty node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # PagerDuty
 
-[PagerDuty](https://www.pagerduty.com/) is a cloud computing company that produces a SaaS incident response platform for IT departments.
+The PagerDuty node allows you to automate work in PagerDuty, and integrate PagerDuty with other applications. n8n has built-in support for a wide range of PagerDuty features, including creating incident notes, as well as updating, and getting all log entries and users. 
+
+On this page, you'll find a list of operations the PagerDuty node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pagerDuty/).
+    Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [PagerDuty integrations](https://n8n.io/integrations/pagerduty/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -40,7 +50,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. PagerDuty node (create: incident)
 
-1. First of all, you'll have to enter credentials for the PagerDuty node. You can find out how to do that [here](/integrations/builtin/credentials/pagerDuty/).
+1. First of all, you'll have to enter credentials for the PagerDuty node. You can find out how to do that [here](/integrations/builtin/credentials/pagerduty/).
 2. Enter the title of the incident in the ***Title*** field.
 3. Select the ***Service ID*** from the dropdown list.
 4. Enter your email in the ***Email*** field.
@@ -77,6 +87,7 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the PagerDuty node to get an incident](/_images/integrations/builtin/app-nodes/pagerduty/pagerduty2_node.png)
+
 
 
 

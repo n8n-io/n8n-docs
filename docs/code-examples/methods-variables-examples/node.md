@@ -1,7 +1,7 @@
 # `$("<node-name>").item`
 
-!!! info "Not avaialble in Function node"
-		`$("<node-name>").item` isn't available in the Function node.
+!!! info "Not avaialble in Code node"
+		`$("<node-name>").item` isn't available in the Code node.
 
 
 Returns the data of a specified node.

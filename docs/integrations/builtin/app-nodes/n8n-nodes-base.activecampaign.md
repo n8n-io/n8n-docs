@@ -1,9 +1,19 @@
+---
+title: ActiveCampaign
+description: Documentation for the ActiveCampaign node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # ActiveCampaign
 
-[ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.
+The ActiveCampaign node allows you to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
+
+On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/activeCampaign/).
+	Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, take a look at n8n's [ActiveCampaign integrations](https://n8n.io/integrations/activecampaign/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -85,7 +95,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. ActiveCampaign node
 
-1. First of all, you'll have to enter credentials for the ActiveCampaign node. You can find out how to do that [here](/integrations/builtin/credentials/activeCampaign/).
+1. First of all, you'll have to enter credentials for the ActiveCampaign node. You can find out how to do that [here](/integrations/builtin/credentials/activecampaign/).
 2. Enter the email of the contact in the *Email* field.
 3. Toggle the *Update if exists* option to yes.
 4. Under the *Additional Fields* section, click on the *Add Field* button and select *First Name*.
@@ -93,3 +103,4 @@ The start node exists by default when you create a new workflow.
 6. Click on *Add Field* again and select *Last Name*.
 7. Enter the last name of the contact in the *Last name* field.
 8. Click on *Execute Node* to run the workflow.
+

@@ -2,21 +2,7 @@
 
 This section contains the node library: reference documentation for every built-in node in n8n, and their credentials.
 
-## Node types
-
-There are three node types in n8n: app nodes, trigger nodes, and core nodes.
-
-### App nodes
-
-These nodes provide integrations with external services.
-
-### Trigger nodes
-
-The trigger nodes start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute. This is because the other trigger nodes would not have any input as they're the nodes from which the execution of the workflow starts.
-
-### Core nodes
-
-Core nodes provide key functionality, such as describing workflow logic, or manipulating data. Some core nodes are trigger nodes (such as the Webhook Trigger Node).
+--8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Credentials
 
@@ -27,3 +13,9 @@ Nodes in n8n can then request that credential information. As another layer of s
 To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saved under `~/.n8n/config`.
 
 To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](/credentials/).
+
+## Community nodes
+
+n8n supports custom nodes built by the community. Refer to [Community nodes](/integrations/community-nodes/) for guidance on installing and using these nodes.
+
+For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}, refer to [Creating nodes](/integrations/creating-nodes/) for more information.

@@ -1,4 +1,9 @@
-# PagerDuty
+---
+title: PagerDuty credentials
+description: Documentation for PagerDuty credentials. Use these credentials to authenticate PagerDuty in n8n, a workflow automation platform.
+---
+
+# PagerDuty credentials
 
 You can use these credentials to authenticate the following nodes with PagerDuty.
 
@@ -38,3 +43,4 @@ Create a [PagerDuty](https://pagerduty.com/) account.
 5. Use this API key with your PagerDuty node credentials in n8n.
 
 ![Getting PagerDuty credentials](/_images/integrations/builtin/credentials/pagerduty/using-access-token.gif)
+

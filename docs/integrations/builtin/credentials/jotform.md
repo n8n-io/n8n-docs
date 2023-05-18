@@ -1,4 +1,9 @@
-# JotForm
+---
+title: JotForm credentials
+description: Documentation for JotForm credentials. Use these credentials to authenticate JotForm in n8n, a workflow automation platform.
+---
+
+# JotForm credentials
 
 You can use these credentials to authenticate the following nodes with JotForm.
 
@@ -17,3 +22,4 @@ Create a [JotForm](https://www.jotform.com/) account.
 5. Use the key with JotForm node credentials in n8n.
 
 ![Getting JotForm credentials](/_images/integrations/builtin/credentials/jotform/using-access-token.gif)
+

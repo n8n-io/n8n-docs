@@ -1,9 +1,19 @@
+---
+title: Google Cloud Realtime Database
+description: Documentation for the Google Cloud Realtime Database node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Google Cloud Realtime Database
 
-[Google Cloud Realtime Database](https://firebase.google.com/docs/database/) is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.
+The Google Cloud Realtime Database node allows you to automate work in Google Cloud Realtime Database, and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, including writing, deleting, getting, and appending databases.
+
+On this page, you'll find a list of operations the Google Cloud Realtime Database node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+    Refer to [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Realtime Database integrations](https://n8n.io/integrations/google-cloud-realtime-database/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -94,4 +104,5 @@ In the screenshot below, you will notice that the node pushes the data from the 
 
 !!! note "Activate workflow for production"
     This example workflow uses the Cron node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cron node.
+
 

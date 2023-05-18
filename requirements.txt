@@ -1,2 +1,2 @@
 mkdocs-literate-nav==0.4.1
-neoteroi-mkdocs==0.0.5
+mkdocs-macros-plugin==0.7.0

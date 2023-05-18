@@ -1,10 +1,20 @@
-# IF
+---
+title: If
+description: Documentation for the  node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+tags:
+  - if
+  - if node
+hide:
+  - tags
+---
 
-The IF node is used to split a workflow conditionally based on comparison operations.
+# If
+
+The If node is used to split a workflow conditionally based on comparison operations.
 
 ## Node Reference
 
-You can add comparison conditions using the **Add Condition** dropdown. Conditions can be created based on the data type, the available comparison operations vary for each data type.
+Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
 
 **Boolean**
 
@@ -76,7 +86,7 @@ return [
 ```
 2. Click on **Execute Node** to run the workflow.
 
-![Using the Function node to send data to the IF node](/_images/integrations/builtin/core-nodes/if/function_node.png)
+![Using the Code node to send data to the IF node](/_images/integrations/builtin/core-nodes/if/function_node.png)
 
 
 ### 3. IF node
@@ -116,6 +126,7 @@ return [
 **Note:** Notice that only the ID with the value 1 made its way to this *Set* node.
 
 ![Using the Set node to set a value when the condition is false](/_images/integrations/builtin/core-nodes/if/set1_node.png)
+
 
 
 

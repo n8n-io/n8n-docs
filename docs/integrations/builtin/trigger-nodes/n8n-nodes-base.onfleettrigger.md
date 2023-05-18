@@ -1,3 +1,8 @@
+---
+title: Onfleet trigger
+description: Documentation for the Onfleet trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Onfleet trigger
 
 [Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
@@ -26,3 +31,4 @@ Trigger a workflow on:
 * Worker created
 * Worker deleted
 * Worker duty
+

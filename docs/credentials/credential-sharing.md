@@ -5,12 +5,12 @@ description: Share credentials within an organization.
 # Credential sharing
 
 !!! info "Feature availability"
-		* Limited Cloud plans. Refer to [Cloud Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
-		* Not available outside Cloud.
+		* Available on some Cloud plans, and paid self-hosted plans.
+		* Requires [User management](/user-management/).
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
 
-To use credential sharing, you must enable [user management](/hosting/user-management/).
+To use credential sharing, you must enable [user management](/user-management/).
 
 ## Share a credential
 

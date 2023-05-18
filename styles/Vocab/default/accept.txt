@@ -1,5 +1,6 @@
 Adalo
 Asana
+Authentik
 Axios
 backend
 Beeminder
@@ -16,7 +17,9 @@ enum
 Fargate
 Firestore
 GIMP
+Hetzner
 invalid
+Keycloak
 kubectl
 Kafka
 Lemlist
@@ -29,10 +32,13 @@ n8n
 namespace
 Nodelinter
 npm
+npx
+Okta
 onboarding
 Pipedrive
 Postbin
 Postgres
+PostHog
 Realtime
 Serverless
 serverless
@@ -43,6 +49,8 @@ Tooltip
 tooltip
 Trello
 Twilio
+Typeahead
+typeahead
 Unformatted
 unformatted
 URI

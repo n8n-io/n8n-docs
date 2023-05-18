@@ -1,36 +1,48 @@
-# HubSpot Trigger
+---
+title: HubSpot trigger
+description: Documentation for the HubSpot trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
 
-[HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
+# HubSpot trigger
+
+[HubSpot](https://www.hubspot.com/){:target=_blank .external-link} provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 
 !!! note "Credentials"
-    For this node, you will have to retrieve the App ID and Client secret from the 'Using OAuth' section as well as the Developer API Key from the 'Using Developer API Key' section. You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot/).
+	You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot/).
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [HubSpot trigger](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} page.
 
-!!! note "Webhooks"
+!!! warning "Webhooks"
     If you activate a second trigger, the previous trigger stops working. This is because the trigger registers a new webhook with HubSpot when activated. HubSpot only allows one webhook at a time. 
 
+## Events
 
-## Example Usage
+* Company
+	* Created
+	* Deleted
+	* Property changed
+* Contact
+	* Created
+	* Deleted
+	* Privacy deleted
+	* Property changed
+* Conversation
+	* Created
+	* Deleted
+	* New message
+	* Privacy deletion
+	* Property changed
+* Deal
+	* Created
+	* Deleted
+	* Property changed
 
-This workflow allows you to receive updates when a new contact is created in HubSpot. You can also find the [workflow](https://n8n.io/workflows/628) on the website. This example usage workflow would use the following node.
+## Related resources
 
-- [HubSpot Trigger]()
+n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/).
 
-The final workflow should look like the following image.
+View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} on n8n's website.
 
-![A workflow with the HubSpot Trigger node](/_images/integrations/builtin/trigger-nodes/hubspottrigger/workflow.png)
-
-
-### 1. HubSpot Trigger node
-
-1. First of all, you'll have to enter credentials for the HubSpot Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/hubspot/).
-2. Enter the HubSpot App ID in the ***App ID*** field. You can find out how to obtain the ***App ID*** in the link above.
-3. Click on ***Execute Node*** to run the workflow.
-
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the HubSpot Trigger node.
-
-
-
-
+Refer to [HubSpot's documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for details about their API.
 

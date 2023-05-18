@@ -1,9 +1,19 @@
+---
+title: QuestDB
+description: Documentation for the QuestDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # QuestDB
 
-[QuestDB](https://questdb.io/) is an open-source NewSQL relational database designed to process time-series data, faster. QuestDB's stack is engineered from scratch, zero-GC Java and dependency-free. It supports a a Java API, SQL via HTTP and the PostgreSQL wire protocol.
+The QuestDB node allows you to automate work in QuestDB, and integrate QuestDB with other applications. n8n supports executing an SQL query and inserting rows in a database with QuestDB.
+
+On this page, you'll find a list of operations the QuestDB node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/questDb/).
+    Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [QuestDB integrations](https://n8n.io/integrations/questdb/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -29,7 +39,7 @@ The start node exists by default when you create a new workflow.
 
 ### 2. QuestDB node (Execute Query)
 
-1. First of all, you'll have to enter credentials for the QuestDB node. You can find out how to do that [here](/integrations/builtin/credentials/questDb/).
+1. First of all, you'll have to enter credentials for the QuestDB node. You can find out how to do that [here](/integrations/builtin/credentials/questdb/).
 2. Select 'Execute Query' from the ***Operation*** dropdown list.
 3. Enter the following SQL query in the ***Query*** field: `CREATE TABLE test (id INT, name STRING);`.
 4. Click on the ***Node*** tab and toggle ***Always Output Data*** to true.
@@ -63,6 +73,7 @@ The start node exists by default when you create a new workflow.
 
 ### How to specify the data type of a column?
 To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
+
 
 
 

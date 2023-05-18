@@ -1,9 +1,19 @@
+---
+title: Pushbullet
+description: Documentation for the Pushbullet node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+---
+
 # Pushbullet
 
-[Pushbullet](https://www.pushbullet.com/) connects your devices and allows you to see your phone's notifications on your computer, transfer links, and files between devices.
+The Pushbullet node allows you to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
+
+On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushbullet/).
+    Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
+
+!!! note "Examples and templates"
+    For usage examples and templates to help you get started, take a look at n8n's [Pushbullet integrations](https://n8n.io/integrations/pushbullet/){:target="_blank" .external-link} list.
 
 
 ## Basic Operations
@@ -41,7 +51,7 @@ In the screenshot below, you will notice that the Cron node is configured to tri
 
 This node will return data about the current weather in Berlin. To get the weather updates for your city, you can enter the name of your city instead.
 
-1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openWeatherMap/).
+1. First of all, you'll have to enter credentials for the OpenWeatherMap node. You can find out how to do that [here](/integrations/builtin/credentials/openweathermap/).
 2. Enter `berlin` in the ***City*** field.
 3. Click on ***Execute Node*** to run the node.
 
@@ -64,3 +74,4 @@ This node will send a push notification with the weather update to the default d
 In the screenshot below, you will notice that the node sends a push notification to the default device with the weather update.
 
 ![Using the Pushbullet node to send weather updates via a push notification](/_images/integrations/builtin/app-nodes/pushbullet/pushbullet_node.png)
+

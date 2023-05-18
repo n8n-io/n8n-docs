@@ -1,4 +1,9 @@
-# OpenWeatherMap
+---
+title: OpenWeatherMap credentials
+description: Documentation for OpenWeatherMap credentials. Use these credentials to authenticate OpenWeatherMap in n8n, a workflow automation platform.
+---
+
+# OpenWeatherMap credentials
 
 You can use these credentials to authenticate the following nodes with OpenWeatherMap.
 
@@ -16,3 +21,4 @@ Create a [OpenWeatherMap](https://openweathermap.org/) account.
 4. Use this API key with your OpenWeatherMap API node credentials in n8n.
 
 ![Getting OpenWeatherMap API credentials](/_images/integrations/builtin/credentials/openweathermap/using-access-token.gif)
+

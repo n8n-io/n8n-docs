@@ -1,5 +1,7 @@
 # Configuration
 
+--8<-- "_snippets/embed-license.md"
+
 ## Authentication
 
 You can secure n8n using Basic Authentication by setting the following environment variables:
@@ -75,10 +77,10 @@ There are many [environment variables configurable in n8n](https://docs.n8n.io/r
 | Variable | Values | Description |
 | :------- | :----- | :---------- |
 | `EXECUTIONS_TIMEOUT` | `number` | The maximum amount of time (in seconds) a workflow is allowed to run. |
-| `EXECUTIONS_PROCESS` | `'main', 'own'` | If workflow executions should run in the main process or in their own process. The `main` setting requires fewer resources. |
+| `EXECUTIONS_PROCESS` (**deprecated**) | `'main', 'own'` | **Deprecated**. If workflow executions should run in the main process or in their own process. The `main` setting requires fewer resources. |
 | `EXECUTIONS_DATA_PRUNE` | `boolean` | If data of past executions should be deleted automatically. |
 | `EXECUTIONS_DATA_MAX_AGE` | `number` | Number of hours after which old executions are deleted. |
-| `NODES_EXCLUDE` | `Array<string>` | Specific nodes that should not be made available. |
+| `NODES_EXCLUDE` | `Array<string>` | Specific nodes that shouldn't be made available. |
 | `NODES_INCLUDE` | `Array<string>` | Specific nodes that should be included. |
 | `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates should be enabled (true) or disabled (false) |
 | `N8N_TEMPLATES_HOST` | `string` | Defaults to https://api.n8n.io. Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](workflow-templates.md) for more information. |

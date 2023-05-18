@@ -1,4 +1,9 @@
-# ServiceNow
+---
+title: ServiceNow credentials
+description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
+---
+
+# ServiceNow credentials
 
 You can use these credentials to authenticate the following nodes with serviceNow.
 
@@ -33,3 +38,4 @@ From n8n:
     * ***Subdomain***: Enter the subdomain of your ServiceNow instance. This can be seen in your instance URL: `https://<subdomain>.service-now.com/`.
 7. From the ***OAuth*** section, click the circle button to establish the connection.
 8. Click ***Save*** to finalize your n8n credentials.
+

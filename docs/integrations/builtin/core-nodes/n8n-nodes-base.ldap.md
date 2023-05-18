@@ -11,7 +11,7 @@ This node allows you to interact with your LDAP servers to create, find and upda
     You can find authentication information for this node [here](/integrations/builtin/credentials/ldap/).
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [ldap integrations](https://n8n.io/integrations/ldap/){:target="_blank" .external-link} list.
+	For usage examples and templates to help you get started, refer to n8n's [LDAP integrations](https://n8n.io/integrations/ldap/){:target="_blank" .external-link} list.
 
 ## Operations
 

@@ -21,7 +21,7 @@ N8N_HOST:N8N_PORT/N8N_PATH/api/v<version-number>/docs
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell
-<your-cloud-instance>/api/v<version-number>/credentials/schema/{credentialTypeName}
+N8N_HOST:N8N_PORT/N8N_PATH/api/v<version-number>/credentials/schema/{credentialTypeName}
 ```
 
 !!! note "How to find `credentialTypeName`"

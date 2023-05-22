@@ -17,7 +17,7 @@ Currently the Code node supports JavaScript (node.js). v1.0 will add support for
 
 ### Improvements to data processing for multi-input nodes
 
-This change ensures predictable behavior. When building a node, it will be possible to control if incoming nodes get forced to execute (currently this is the default), and it'is possible to define which inputs are required. 
+This change ensures predictable behavior. Incoming nodes will no longer be forced to execute when the multi-input node runs.
 
 [PR #4238](https://github.com/n8n-io/n8n/pull/4238){:target=_blank .external-link}
 
@@ -29,7 +29,7 @@ Workflow executions will fail when there are syntax errors or runtime errors in 
 
 ### Force all n8n instances to have an owner account
 
-This makes [user management](/user-management/) mandatory, and removes support for other methods such as BasicAuth and JWT. It will include a change to n8n pricing plans to make user management is available to all tiers. Some tiers may still be limited to one user.
+This makes [user management](/user-management/) mandatory, and removes support for other methods such as BasicAuth and JWT. It will include a change to n8n Cloud pricing plans to make user management is available to all tiers. Some tiers may still be limited to one user.
 
 ### Remove support for MySQL and MariaDB as n8n backend databases
 
@@ -44,6 +44,10 @@ n8n will now run in main mode by default. Refer to [Execute all workflows in the
 ### Ensure users can't install custom nodes in the `~/.n8n/node_modules` directory
 
 Custom nodes and credentials will install to `~/.n8n/custom` (or the directory defined by `CUSTOM_EXTENSION_ENV`). Custom nodes that are npm packages will live in `~/.n8n/nodes`.
+
+### Change node execution order
+
+In multi-branch workflows, n8n has to decide what order to execute nodes on the branches. Currently, it executes the first node of each branch, then the second of each branch, and so on. The new order ensures each branch executes completely before starting the next one. Branches are ordered based position, from top to bottom. If two branches are at the same height, the leftmost executes first.
 
 ### Changes to how the Merge node processes data
 

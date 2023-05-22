@@ -49,6 +49,8 @@ Custom nodes and credentials will install to `~/.n8n/custom` (or the directory d
 
 In multi-branch workflows, n8n has to decide what order to execute nodes on the branches. Currently, it executes the first node of each branch, then the second of each branch, and so on. The new order ensures each branch executes completely before starting the next one. Branches are ordered based position, from top to bottom. If two branches are at the same height, the leftmost executes first.
 
+[PR #6246](https://github.com/n8n-io/n8n/pull/6246){:target=_blank .external-link}
+
 ### Changes to how the Merge node processes data
 
 This relates to the improvements to data processing for multi-input nodes. 

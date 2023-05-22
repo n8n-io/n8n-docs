@@ -29,13 +29,13 @@ Workflow executions will fail when there are syntax errors or runtime errors in 
 
 ### Force all n8n instances to have an owner account
 
-This makes [user management](/user-management/) mandatory, and removes support for other methods such as BasicAuth and JWT. It will include a change to n8n pricing plans to make user management is available to all tiers.
+This makes [user management](/user-management/) mandatory, and removes support for other methods such as BasicAuth and JWT. It will include a change to n8n pricing plans to make user management is available to all tiers. Some tiers may still be limited to one user.
 
 ### Remove support for MySQL and MariaDB as n8n backend databases
 
 The default database will remain SQLite. Postgres is the recommended alternative.
 
-### Remove own mode
+### Main mode as default
 
 n8n will now run in main mode by default. Refer to [Execute all workflows in the same process](/hosting/environment-variables/configuration-methods/#execute-all-workflows-in-the-same-process) for more information on own and main mode. You should use [Queue mode](/hosting/scaling/queue-mode/) if you need scalability.
 

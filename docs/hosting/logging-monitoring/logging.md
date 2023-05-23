@@ -1,8 +1,9 @@
 # Logging in n8n
 
-Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
+Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
 
-
+!!! note "Log streaming"
+	n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming/), in addition to the logging options described in this document.
 
 ## Setup
 
@@ -34,7 +35,7 @@ export N8N_LOG_FILE_MAXSIZE=50
 export N8N_LOG_FILE_MAXCOUNT=60
 ```
 
-### Log Levels
+### Log levels
 
 n8n uses standard log levels to report:
 

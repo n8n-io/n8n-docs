@@ -534,7 +534,10 @@ nav:
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
     - Security audit: hosting/security-audit.md
-    - Logging: hosting/logging.md
+    - Logging and monitoring:
+      - hosting/logging-monitoring/index.md
+      - Logging: hosting/logging-monitoring/logging.md
+      - Monitoring: hosting/logging-monitoring/monitoring.md
     - Scaling:
       - hosting/scaling/index.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md

@@ -37,7 +37,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 Save metadata for workflow executions. You can then search by this data in the **Executions** list.
 
-[Execution Data node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.executionData/).
+[Execution Data node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/).
 
 </div>
 
@@ -47,7 +47,7 @@ Save metadata for workflow executions. You can then search by this data in the *
 
 The LDAP node allows you to interact with your LDAP servers from your n8n workflows. 
 
-[LDAP node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.ldap/).
+[LDAP node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.ldap/).
 
 </div>
 
@@ -57,7 +57,7 @@ The LDAP node allows you to interact with your LDAP servers from your n8n workfl
 
 Integrate n8n with [LoneScale](https://www.lonescale.com/){:target=_blank .external-link}, a buying intents data platform.
 
-[LoneScale node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.lonescale/).
+[LoneScale node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale/).
 
 </div>
 

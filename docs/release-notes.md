@@ -47,7 +47,7 @@ Save metadata for workflow executions. You can then search by this data in the *
 
 The LDAP node allows you to interact with your LDAP servers from your n8n workflows. 
 
-[LDAP node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.ldap/).
+[LDAP node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.ldap/).
 
 </div>
 

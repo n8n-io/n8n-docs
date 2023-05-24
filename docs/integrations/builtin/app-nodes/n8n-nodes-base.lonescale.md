@@ -5,7 +5,7 @@ description: Documentation for the LoneScale node in n8n, a workflow automation 
 
 # LoneScale 
 
-The LoneScale node allows you to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for a wide range of LoneScale features, which includes creating, and updating .
+The LoneScale node allows you to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for managing Lists and Items in LoneScale. 
 
 On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 
@@ -18,9 +18,9 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 ## Operations
 
 * List
-  * Create
+	* Create
 * Item
-  * Create
+	* Create
 
 ## Related resources
 

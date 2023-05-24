@@ -7,7 +7,7 @@ description: Documentation for the LoneScale trigger node in n8n, a workflow aut
 
 The LoneScale trigger node allows you to respond to workflow events in LoneScale and integrate LoneScale with other applications.
 
-On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
+On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).

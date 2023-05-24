@@ -19,14 +19,6 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.229.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.229.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-05-17
-
-This release contains bug fixes, improves UI copy and error messages in some nodes, and other node enhancements.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@0.230.0
 
@@ -77,10 +69,10 @@ Integrate n8n with [LoneScale](https://www.lonescale.com/){:target=_blank .exter
 
 ## n8n@0.229.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.2...n8n@0.229.0){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.229.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-17
 
-This release contains new features, node enhancements, and bug fixes.
+This release contains bug fixes, improves UI copy and error messages in some nodes, and other node enhancements.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

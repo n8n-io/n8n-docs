@@ -33,10 +33,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.1...n8n@0.228.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-15
 
-This is a bug fix release.
-
 !!! note "Next version"
 	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -79,6 +80,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.227
 
 !!! note "Latest version"
 	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 This is a bug fix release.
 
@@ -3863,7 +3865,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 ### Contributors
 
-[alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [lsemaj](https://github.com/jamesliupenn), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [Saurabh Kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
+[alexwitkowski](https://github.com/awitkowski0), [IC1aki Breinbauer](https://github.com/quansenB), [lsemaj](https://github.com/jamesliupenn), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [Saurabh Kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
 
 ## n8n@0.164.1
 
@@ -3947,7 +3949,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
-[Iñaki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
+[IC1aki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
 
 ## n8n@0.162.0
 
@@ -4221,7 +4223,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
-[Mohammed Huzaif](https://github.com/huzaif-plivo), [Лебедев Иван](https://github.com/X-pech)
+[Mohammed Huzaif](https://github.com/huzaif-plivo), [PP5P1P5P4P5P2 PP2P0P=](https://github.com/X-pech)
 
 ## n8n@0.153.0
 
@@ -4267,7 +4269,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
-[pemontto](https://github.com/pemontto), [Jascha Lülsdorf](https://github.com/buelsenfrucht), [Jonathan Bennetts](https://github.com/Joffcom)
+[pemontto](https://github.com/pemontto), [Jascha LC<lsdorf](https://github.com/buelsenfrucht), [Jonathan Bennetts](https://github.com/Joffcom)
 
 ## n8n@0.152.0
 
@@ -4601,7 +4603,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SeaTable:](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/) Fixed issue when entering a Baser URI with a trailing slash.
 
 ### Contributors
-[Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
+[GC<nther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
 
 ## n8n@0.141.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.141.0...n8n@0.141.1) for this version.<br />
@@ -4679,7 +4681,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/) Fixed issue with adding contacts to lists.
 
 ### Contributors
-[Matías Aguirre](https://github.com/omab)
+[MatC-as Aguirre](https://github.com/omab)
 
 ## n8n@0.138.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.137.0...n8n@0.138.0) for this version.<br />
@@ -4742,7 +4744,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Wordpress:](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors
-[André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
+[AndrC) Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
 
 ## n8n@0.136.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.135.3...n8n@0.136.0) for this version.<br />
@@ -4871,7 +4873,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
 
 ### Contributors
-[Jacob Burrell](https://github.com/jacobburrell), [Лебедев Иван](https://github.com/X-pech)
+[Jacob Burrell](https://github.com/jacobburrell), [PP5P1P5P4P5P2 PP2P0P=](https://github.com/X-pech)
 
 ## n8n@0.132.2
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.1...n8n@0.132.2) for this version.<br />
@@ -4882,7 +4884,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Interval:](/integrations/builtin/core-nodes/n8n-nodes-base.interval/) Fixed issue with infinite executions.
 
 ### Contributors
-[Лебедев Иван](https://github.com/X-pech)
+[PP5P1P5P4P5P2 PP2P0P=](https://github.com/X-pech)
 
 ## n8n@0.132.1
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.132.0...n8n@0.132.1) for this version.<br />
@@ -5000,7 +5002,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SSH:](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/) Fixed issue with access rights when downloading files.
 
 ### Contributors
-[Jérémie Pardou-Piquemal](https://github.com/jrmi)
+[JC)rC)mie Pardou-Piquemal](https://github.com/jrmi)
 
 ## n8n@0.128.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.127.0...n8n@0.128.0) for this version.<br />

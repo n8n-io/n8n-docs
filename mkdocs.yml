@@ -328,11 +328,13 @@ nav:
         - integrations/builtin/credentials/keap.md
         - integrations/builtin/credentials/kitemaker.md
         - integrations/builtin/credentials/kobotoolbox.md
+        - integrations/builtin/credentials/ldap.md
         - integrations/builtin/credentials/lemlist.md
         - integrations/builtin/credentials/line.md
         - integrations/builtin/credentials/linear.md
         - integrations/builtin/credentials/lingvanex.md
         - integrations/builtin/credentials/linkedin.md
+        - integrations/builtin/credentials/lonescale.md
         - integrations/builtin/credentials/magento2.md
         - integrations/builtin/credentials/mailcheck.md
         - integrations/builtin/credentials/mailchimp.md

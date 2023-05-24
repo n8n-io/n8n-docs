@@ -1,0 +1,41 @@
+# Set up version control
+
+Link a Git repository to an n8n instance.
+
+### Prerequisites
+
+To use version control with n8n, you need a Git repository that allows SSH access. 
+
+For your first setup, configure the repository to support the environments you need:
+
+1. Create a new repository for use with n8n. 
+1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
+
+	!!! warning "Create branches before connecting n8n"
+		You must create the branches you need before connecting to n8n. n8n doesn't detect any branches created after connection.
+
+### Configure Git in n8n
+
+1. In n8n, go to **Settings** > **Version Control**.
+1. Enter the details for your Git repository:
+	1. **Git repository URL**: the SSH URL for your repository.
+	1. **Commit author name**: the username for the Git account that owns the repository.
+	1. **Commit author email**: the email address for the Git account that owns the repository.
+1. Copy the SSH key.
+
+### Set up Git access
+
+Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. 
+
+The steps depend on your Git provider:
+
+* [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link}
+* [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/){:target=_blank .external-link}
+
+### Connect n8n and configure your environment
+
+1. In **Settings** > **Version Control** in n8n, select **Connect**. n8n connects to your Git repository.
+1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
+1. **Optional**: select **Read-only instance** to prevent users editing workflows in this instance. This is useful for protecting production instances.
+1. Select **Save settings**.
+

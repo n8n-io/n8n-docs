@@ -38,17 +38,20 @@ Only define the values that need to be different from the default in your config
 
 ### npm
 
-Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`.
+Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`:
 
-```bash
-# Single file
-export N8N_CONFIG_FILES=/folder/my-config.json
+```shell
+# Bash - Single file
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
+# Bash - Multiple files are comma-separated
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
 
-# Multiple files are comma-separated
-export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
+# PowerShell - Single file, persist for current user
+# Note that setting scope (Process, User, Machine) has no effect on Unix systems 
+[Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
 ```
 
-For example:
+Example file:
 
 ```json
 {
@@ -71,6 +74,21 @@ For example:
  }
 }
 ```
+
+!!! note "Formatting as JSON"
+	You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
+
+	```json
+	{
+		"endpoints": {
+			"metrics": {
+				"enable": true
+			}
+		}
+	}
+	```
+
+	Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
 
 ### Docker
 
@@ -207,7 +225,7 @@ export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
 ### Timezone
 
-The default timezone is "America/New_York". For instance, the Cron node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+The default timezone is "America/New_York". For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin

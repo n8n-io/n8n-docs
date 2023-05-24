@@ -12,7 +12,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
-| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :x: |
+| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/) for more information on paired items and item linking. | :white_check_mark: |
 | `$input.all()` | All input items in current node. | :white_check_mark: |
 | `$input.first()` | First input item in current node. | :white_check_mark: |
 | `$input.last()` | Last input item in current node. | :white_check_mark: |
@@ -62,7 +62,7 @@ This includes:
 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
-| `$env` | Contains [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
+| `$env` | Contains n8n instance configuration [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
 | `$execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information. | :white_check_mark: | 
 | `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
@@ -77,10 +77,22 @@ This includes:
 | `$workflow.id` | The workflow ID. | :white_check_mark: |
 | `$workflow.name` | The workflow name. | :white_check_mark: |
 
+## Convenience methods
+
+n8n provides these methods to make it easier to perform common tasks in expressions.
+
+| Method | Description | Available in Code node? |
+| ------ | ----------- | :---------------------: |
+| `$if()` | The `$if()` function takes three parameters: a condition, the value to return if true, and the value to return if false. | :x: | 
+| `$max()` | Returns the highest of the provided numbers. | :x: |
+| `$min()` | Returns the lowest of the provided numbers. | :x: |
+
 
 ## Advanced
 
 | Method | Description | Available in Code node? |
-| ------ | ----------- | :-------------------------: |
+| ------ | ----------- | :---------------------: |
 | `$evaluateExpression` | Evaluates a string as an expression | :white_check_mark: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | :white_check_mark: |
+| `$vars` | Contains the [Variables](/environments/variables/) available in the active environment. | :white_check_mark: |
+

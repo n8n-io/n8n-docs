@@ -16,40 +16,19 @@ On this page, you'll find a list of operations the NocoDB node supports and link
     For usage examples and templates to help you get started, take a look at n8n's [NocoDB integrations](https://n8n.io/integrations/nocodb/){:target="_blank" .external-link} list.
 
 
-## Basic operations
+## Operations
 
 * Row
-    * Create a row
-    * Delete a row
-    * Retrieve all rows
-    * Retrieve a row
+    * Create
+    * Delete
+    * Get
+    * Get Many
     * Update a row
 
-## Example usage
+## Relates resources
 
-This workflow allows you to get all rows in your table.
-This example workflow use the following two nodes.
+Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
 
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [NocoDB]()
+View [example workflows and related content](https://n8n.io/integrations/nocodb/){:target=_blank .external-link} on n8n's website.
 
-The final workflow should look like the following image.
-
-![A workflow with the NocoDB node](/_images/integrations/builtin/app-nodes/nocodb/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. NocoDB node
-
-1. First enter your credentials for the NocoDB node. You can find out how to do that [here](/integrations/builtin/credentials/nocodb/).
-2. Select NocoDB version your project using.
-3. The **Row Resource** is selected by default.
-4. Select **Get All** from the **Operation** dropdown.
-5. Enter the NocoDB **Project Name**. (Project ID for older versions)
-6. Enter the name of the targeted **Table**.
-7. Click on **Execute Node** to run the workflow.
-
-![The NocoDB node](/_images/integrations/builtin/app-nodes/nocodb/nocodb_node.png)
 

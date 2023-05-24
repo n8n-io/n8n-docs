@@ -13,19 +13,301 @@ hide:
 
 New features and bug fixes for n8n.
 
-You can also view the [Changelog](https://github.com/n8n-io/n8n/blob/master/CHANGELOG.md){:target=_blank .external-link} in the GitHub repository.
+You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} in the GitHub repository.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
-## n8n@0.223.0 (next)
+--8<-- "_snippets/update-n8n.md"
+
+## n8n@0.229.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.229.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-17
+
+This release contains bug fixes, improves UI copy and error messages in some nodes, and other node enhancements.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.1...n8n@0.228.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+This is a bug fix release.
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.228.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.228.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.228.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-11
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### npm node
+
+This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/) node. This is a new core node. It provides a way to query an npm registry within your workflow.
+
+</div>
+
+### Contributors
+
+[Adam Charnock](https://github.com/adamcharnock){:target=_blank .external-link}
+
+## n8n@0.227.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.227.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-15
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@0.227.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.2...n8n@0.227.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-03
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Node enhancements
+
+* An overhaul of the Microsoft Excel 365 node, improve the UI making it easier to configure, improve error handling, and fix issues.
+
+### Deprecations
+
+This release deprecates the following:
+
+* The `EXECUTIONS_PROCESS` environment variable.
+* Running n8n in own mode. Main mode is now the default. Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+* The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
+* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in version 1.0. n8n recommends using PostgreSQL instead.
+
+## n8n@0.226.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.1...n8n@0.226.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-03
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.226.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.226.0...n8n@0.226.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-02
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.226.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.2...n8n@0.226.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-26
+
+This release contains new features, node enhancements, and bug fixes.
+
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change to `extractDomain` and `isDomain`. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02260){:target=_blank .external-link}.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New features
+
+* A new command to get information about licenses for self-hosted users: 
+	```sh
+	n8n license:info
+	```
+
+### Node enhancements
+
+* Nodes that use SQL, such as the PostgresSQL node, now have a better SQL editor for writing custom queries.
+* An overhaul of the Google BigQuery node to support executing queries, improve the UI making it easier to configure, improve error handling, and fix issues.
+
+## n8n@0.225.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.1...n8n@0.225.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-25
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Upgrade google-timezones-json to use the correct timezone for Sao Paulo.
+* Code Node: Update vm2 to address [CVE-2023-30547](https://github.com/advisories/GHSA-ch3r-j5x3-6q2m){:target=_blank .external-link}.
+
+## n8n@0.225.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.0...n8n@0.225.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-20
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Editor: Clean up demo and template callouts from workflows page.
+* Editor: Fix memory leak in Node Detail View by correctly unsubscribing from event buses.
+* Editor: Settings sidebar should disconnect from push when navigating away.
+* Notion Node: Update credential test to not require user permissions.
+
+--8<-- "_snippets/update-n8n.md"
+
+## n8n@0.225.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-19
+
+### New features
+
+<div class="n8n-new-features" markdown>
+
+This release introduces [Variables](/environments/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/environments/) in n8n.
+
+</div>
+
+* Core: Add support for Google Service account authentication in the HTTP Request node.
+* GitLab Node: Add **Additional Parameters** for the file list operation.
+* MySQL Node: This node has been overhauled.
+
+### Bug fixes
+
+* Core: Fix broken API permissions in public API.
+* Core: Fix paired item returning wrong data.
+* Core: Improve SAML connection test result views.
+* Core: Make getExecutionId available on all nodes types.
+* Core: Skip SAML onboarding for users with first- and lastname.
+* Editor: Add padding to prepend input.
+* Editor: Clean up demo/video experiment.
+* Editor: Enterprise features missing with user management.
+* Editor: Fix moving canvas on middle click preventing lasso selection.
+* Editor: Make sure to redirect to blank canvas after personalisation modal.
+* Editor: Fix an issue that was preventing typing certain characters in the UI on devices with touchscreen.
+* Editor: Fix n8n-checkbox alignment.
+* Code Node: Handle user code returning null and undefined.
+* GitHub Trigger Node: Remove content_reference event.
+* Google Sheets Trigger Node: Return actual error message.
+* HTTP Request Node: Fix `itemIndex` in HTTP Request errors.
+* NocoDB Node: Fix for updating or deleting rows with not default primary keys.
+* OpenAI Node: Update models to only show those supported.
+* OpenAI Node: Update OpenAI Text Moderate input placeholder text.
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Eddy Hernandez](https://github.com/eddywashere){:target=_blank .external-link}  
+[Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}  
+[Jimw383](https://github.com/Jimw383){:target=_blank .external-link}  
+
+## n8n@0.224.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.2...n8n@0.224.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-24
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Upgrade google-timezones-json to use the correct timezone for Sao Paulo.
+* Code Node: Update vm2 to address [CVE-2023-30547](https://github.com/advisories/GHSA-ch3r-j5x3-6q2m){:target=_blank .external-link}.
+
+
+## n8n@0.224.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.224.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-20
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Fix paired item returning wrong data.
+* Core: Make getExecutionId available on all nodes types.
+* Editor: Fix memory leak in Node Detail View by correctly unsubscribing from event buses.
+* Editor: Fix moving canvas on middle click preventing lasso selection.
+* Editor: Settings sidebar should disconnect from push when navigating away.
+* Google Sheets Trigger Node: Return actual error message.
+* HTTP Request Node: Fix `itemIndex` in HTTP Request errors.
+* Notion Node: Update credential test to not require user permissions.
+
+### Contributors
+
+[Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}
+
+--8<-- "_snippets/update-n8n.md"
+
+## n8n@0.224.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.0...n8n@0.224.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-14
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Fix broken API permissions in public API.
+* Editor: Fix an issue that was preventing typing certain characters in the UI on devices with touchscreen.
+
+## n8n@0.224.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.0...n8n@0.224.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-12
+
+This release contains a new node, updates, and bug fixes.
+
+### New nodes
+
+This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-base.totp/) node. This is a new core node. It provides a way to generate a TOTP (time-based one-time password) within your workflow.
+
+### Bug fixes
+
+* Code Node: Update vm2 to address CVE-2023-29017.
+* Core: App should not crash with a custom REST endpoint.
+* Core: Do not execute workflowExecuteBefore hook when resuming executions from a waiting state.
+* Core: Fix issue where sub workflows would display as running forever after failure to start.
+* Core: Update xml2js to address CVE-2023-0842.
+* Editor: Drop mergeDeep in favor of lodash merge.
+* HTTP Request Node: Restore detailed error message.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
+
+
+## n8n@0.223.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.223.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-05
 
 This release contains new features and bug fixes.
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+!!! warning "Breaking changes"
+    Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
+
 
 ### New features
 
@@ -82,17 +364,42 @@ This release contains new features and bug fixes.
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.222.1 (latest)
+## n8n@0.222.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.2...n8n@0.222.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-14
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Core: Fix broken API permissions in public API.
+* Editor: Fix an issue that was preventing typing certain characters in the UI on devices with touchscreen.
+
+## n8n@0.222.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.222.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-11
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Code node: Update vm2 to address CVE-2023-29017.
+* Core: Update xml2js to address CVE-2023-0842.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
+
+## n8n@0.222.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.0...n8n@0.222.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-04-04
 
 This is a bug fix release.
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-
-## Bug fixes
+### Bug fixes
 
 * AWS SNS Node: Fix an issue with messages failing to send if they contain certain characters.
 * Core: `augmentObject` should clone Buffer/Uint8Array instead of wrapping them in a proxy.
@@ -180,6 +487,21 @@ This release introduces the [Filter](/integrations/builtin/core-nodes/n8n-nodes-
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.221.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.2...n8n@0.221.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-04-11
+
+This is a bug fix release.
+
+### Bug fixes
+
+* Code node: Update vm2 to address CVE-2023-29017.
+* Core: Update xml2js to address CVE-2023-0842.
+
+### Contributors
+
+[Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
 ## n8n@0.221.2
 
@@ -801,7 +1123,7 @@ This release introduces LDAP, and a new node for working with HTML in n8n. It al
 
 #### LDAP
 
-This release introduces support for LDAP on Self-hosted Enterprise and custom Cloud plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
+This release introduces support for LDAP on Self-hosted Enterprise and Cloud Enterprise plans. Refer to [LDAP](/user-management/ldap/) for more information on this feature.
 
 </div>
 
@@ -1447,12 +1769,12 @@ This release contains usability enhancements for the expressions editor. The edi
 
 ### Bug fixes
 
-* core: ensure executions list is properly filtered for all users.
-* core: fix `$items().length` in Execute Once mode.
-* core: mark binary data to be deleted when pruning executions.
-* core: OAuth2 scope saved to database fix.
-* editor: fix slots rendering of NodeCreator's NoResults component.
-* editor: JSON view values can be mapped like keys.
+* Core: ensure executions list is properly filtered for all users.
+* Core: fix `$items().length` in Execute Once mode.
+* Core: mark binary data to be deleted when pruning executions.
+* Core: OAuth2 scope saved to database fix.
+* Editor: fix slots rendering of NodeCreator's NoResults component.
+* Editor: JSON view values can be mapped like keys.
 * AWS SNS Node: fix a pagination issue.
 * Google Sheets Node: fix exception if no matching rows are found.
 * Google Sheets Node: fix for append operation if no empty rows in sheet.
@@ -1562,10 +1884,10 @@ This release contains core product improvements and bug fixes.
 ### Bug fixes
 
 * API: Don't use names for type ORM connections.
-* core: Fix manual execution of pinned trigger on main mode.
-* core: Streamline multiple pinned triggers behavior.
-* editor: Curb argument linting for `$input.first()` and `$input.last()`
-* editor: Fix duplicate bug when new workflow is open.
+* Core: Fix manual execution of pinned trigger on main mode.
+* Core: Streamline multiple pinned triggers behavior.
+* Editor: Curb argument linting for `$input.first()` and `$input.last()`
+* Editor: Fix duplicate bug when new workflow is open.
 * Editor: Fix for incorrect execution saving indicator in executions view.
 * Editor: Fix for OAuth authorization.
 * Editor: Fix workflow activation from the Workflows view.

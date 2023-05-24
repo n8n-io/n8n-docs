@@ -11,13 +11,6 @@ n8n includes a CLI (command line interface), allowing you to perform actions usi
 You can use CLI commands with self-hosted n8n. Depending on how you choose to install n8n, there are differences in how to run the commands:
 
 * npm: the `n8n` command is directly available. The documentation uses this in the examples below.
-* Desktop app: in the examples below, replace `n8n` with the absolute path to the `n8n.cmd` file (Windows) or the n8n Desktop executable (Mac). The exact path depends on where you install your Node.js modules. For example, to export all workflow data:
-    ```sh
-    # Windows
-    "C:\Users\<username>\AppData\Local\Programs\n8n\resources\app\node_modules\n8n\bin\n8n.cmd" export:workflow --all
-    # Mac
-    /Users/<username>/Desktop/n8n.app/Contents/Resources/app/node_modules/n8n/bin/n8n export:workflow --all
-    ```
 * Docker: the `n8n` command is available within your Docker container:
     ```sh
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
@@ -212,10 +205,20 @@ n8n import:credentials --separate --input=backups/latest/
 
 ## License
 
+### Clear
+
 Clear your existing license from n8n's database and reset n8n to default features:
 
 ```sh
 n8n license:clear
+```
+
+### Info
+
+Display information about the existing license:
+
+```sh
+n8n license:info
 ```
 
 ## User management

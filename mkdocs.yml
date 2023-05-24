@@ -1,4 +1,4 @@
-site_name: n8n Documentation
+site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
 theme:
@@ -6,7 +6,7 @@ theme:
   custom_dir: overrides
   favicon: _images/favicon.ico
   font: false
-  language: en
+  language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
       scheme: light
@@ -108,8 +108,8 @@ nav:
     - Choose your n8n:
       - choose-n8n/index.md
       - Set up Cloud: choose-n8n/cloud.md
-      - Install Desktop: choose-n8n/desktop-app.md
       - Faircode license: choose-n8n/faircode-license.md
+      - Desktop (removed): choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md
@@ -172,6 +172,7 @@ nav:
         - (node-name).item: code-examples/methods-variables-examples/node.md
         - (node-name).all: code-examples/methods-variables-examples/all.md
         - runIndex: code-examples/methods-variables-examples/run-index.md
+        - vars: code-examples/methods-variables-examples/vars.md
         - workflow: code-examples/methods-variables-examples/workflow.md
       - Expressions:
         - code-examples/expressions/index.md
@@ -203,6 +204,14 @@ nav:
       - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
+      - SAML: 
+        - user-management/saml/index.md
+        - Set up SAML: user-management/saml/setup.md
+        - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+        - Troubleshooting: user-management/saml/troubleshooting.md
+    - Environments:
+      - environments/index.md
+      - Variables: environments/variables.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md
@@ -211,14 +220,15 @@ nav:
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
     - Release notes: release-notes.md
+    - v1.0 preview: 1-0-preview.md
     - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
       - integrations/builtin/index.md
       - Core nodes: integrations/builtin/core-nodes/
-      - App nodes: integrations/builtin/app-nodes/
-      - Trigger nodes: integrations/builtin/trigger-nodes/
+      - Actions: integrations/builtin/app-nodes/
+      - Triggers: integrations/builtin/trigger-nodes/
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -358,6 +368,7 @@ nav:
         - integrations/builtin/credentials/nextcloud.md
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
@@ -425,6 +436,7 @@ nav:
         - integrations/builtin/credentials/timescaledb.md
         - integrations/builtin/credentials/todoist.md
         - integrations/builtin/credentials/toggl.md
+        - integrations/builtin/credentials/totp.md
         - integrations/builtin/credentials/travisci.md
         - integrations/builtin/credentials/trello.md
         - integrations/builtin/credentials/twake.md
@@ -469,6 +481,7 @@ nav:
       - integrations/creating-nodes/index.md
       - Plan your node:
         - integrations/creating-nodes/plan/index.md
+        - Choose a node type: integrations/creating-nodes/plan/node-types.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
@@ -526,7 +539,10 @@ nav:
       - Basic auth: hosting/authentication/basic-auth.md
       - JWT: hosting/authentication/jwt.md
     - Security audit: hosting/security-audit.md
-    - Logging: hosting/logging.md
+    - Logging and monitoring:
+      - hosting/logging-monitoring/index.md
+      - Logging: hosting/logging-monitoring/logging.md
+      - Monitoring: hosting/logging-monitoring/monitoring.md
     - Scaling:
       - hosting/scaling/index.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md

@@ -2,7 +2,7 @@
 
 This section contains the node library: reference documentation for every built-in node in n8n, and their credentials.
 
---8<-- "_snippets/integrations/builtin/node-types.md"
+--8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Credentials
 

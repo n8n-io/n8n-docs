@@ -38,17 +38,20 @@ Only define the values that need to be different from the default in your config
 
 ### npm
 
-Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`.
+Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`:
 
-```bash
-# Single file
-export N8N_CONFIG_FILES=/folder/my-config.json
+```shell
+# Bash - Single file
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
+# Bash - Multiple files are comma-separated
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
 
-# Multiple files are comma-separated
-export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
+# PowerShell - Single file, persist for current user
+# Note that setting scope (Process, User, Machine) has no effect on Unix systems 
+[Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
 ```
 
-For example:
+Example file:
 
 ```json
 {
@@ -71,6 +74,21 @@ For example:
  }
 }
 ```
+
+!!! note "Formatting as JSON"
+	You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
+
+	```json
+	{
+		"endpoints": {
+			"metrics": {
+				"enable": true
+			}
+		}
+	}
+	```
+
+	Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
 
 ### Docker
 
@@ -146,8 +164,12 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 
 ### Execute all workflows in the same process
 
-All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your
-workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
+!!! warning "Deprecated"
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 0.227.0. They will be removed in a future release. Main mode is now the default, so this step is not needed for version 0.227.0 and above.
+	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+
+All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
+
 
 ```bash
 export EXECUTIONS_PROCESS=main
@@ -203,7 +225,7 @@ export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
 ### Timezone
 
-The default timezone is "America/New_York". For instance, the Cron node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+The default timezone is "America/New_York". For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin
@@ -229,6 +251,9 @@ that case, it's important to set the webhook URL manually so that n8n can displa
 ```bash
 export WEBHOOK_URL=https://n8n.example.com/
 ```
+
+!!! warning "WEBHOOK_TUNNEL_URL is deprecated"
+	n8n renamed `WEBHOOK_TUNNEL_URL` to `WEBHOOK_URL` in version 0.227.0. `WEBHOOK_TUNNEL_URL` is deprecated, and will be removed entirely in a future release. Use `WEBHOOK_URL` instead.
 
 ### Prometheus
 

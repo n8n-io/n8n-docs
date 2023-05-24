@@ -60,14 +60,15 @@ n8n collects selected usage and performance data to help diagnose problems and i
 - From node parameters:
     - The 'resource' and 'operation' that a node is set to (if applicable)
     - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
-- Data around workflow executions:
-		- Status
-		- The user ID of the user who ran the execution
-		- The first time a workflow loads data from an external source
-		- The first successful production (non-manual) workflow execution
+- Data around workflow executions:  
+    - Status
+    - The user ID of the user who ran the execution
+    - The first time a workflow loads data from an external source
+    - The first successful production (non-manual) workflow execution
 - The domain of webhook calls, if specified (excluding subdomain).
+- When a user creates a [variable](/environments/variables/)
 - Details on how the UI is used (for example, navigation, nodes panel searches)
-- Diagnostic information
+- Diagnostic information:
     - n8n version
     - Selected settings:
         - DB_TYPE

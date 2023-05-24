@@ -19,6 +19,54 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+
+## n8n@0.230.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.229.0...n8n@0.230.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-24
+
+This release contains new features, new nodes, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Execution Data
+
+Save metadata for workflow executions. You can then search by this data in the **Executions** list.
+
+[Execution Data node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### LDAP node
+
+The LDAP node allows you to interact with your LDAP servers from your n8n workflows. 
+
+[LDAP node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.ldap/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### LoneScale node
+
+Integrate n8n with [LoneScale](https://www.lonescale.com/){:target=_blank .external-link}, a buying intents data platform.
+
+[LoneScale node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale/).
+
+</div>
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Yann Aleman](https://github.com/SanYann){:target=_blank .external-link}
+
 ## n8n@0.229.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.229.0){:target=_blank .external-link} for this version.<br />
@@ -27,6 +75,11 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.0...n8n@0.229
 This release contains bug fixes, improves UI copy and error messages in some nodes, and other node enhancements.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Node enhancements
+
+The Google Ads node now supports v13.
+
 
 ## n8n@0.228.2
 

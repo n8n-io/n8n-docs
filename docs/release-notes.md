@@ -21,7 +21,7 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 ## n8n@0.230.2
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.1...n8n@0.230.2){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.1...n8n@0.230.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-25
 
 !!! note "Next version"
@@ -33,7 +33,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ## n8n@0.230.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.0...n8n@0.230.1){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.0...n8n@0.230.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-25
 
 This is a bug fix release.

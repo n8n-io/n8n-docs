@@ -60,9 +60,14 @@ You connect your n8n instance to a Git repository. You can save workflows, tags,
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
-#### One instance, one branch
-
-#### One instance, multiple branches
 
 #### Multiple instances, multiple branches
+
+
+
+#### One instance, one branch
+
+#### Multiple instances, one branch
+
+#### One instance, multiple branches
 

@@ -10,3 +10,4 @@ If your n8n instance [connects to a Git repository](/environments/version-contro
 
 ## Send your work to Git
 
+[TODO: what about creds?]

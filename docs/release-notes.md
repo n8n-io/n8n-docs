@@ -24,8 +24,6 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.0...n8n@0.230.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-25
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 
@@ -97,8 +95,9 @@ The Google Ads node now supports v13.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.228.1...n8n@0.228.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-15
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 This is a bug fix release.
 
@@ -140,6 +139,9 @@ This release introduces the [npm](/integrations/builtin/app-nodes/n8n-nodes-base
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.227.0...n8n@0.227.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-15
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 

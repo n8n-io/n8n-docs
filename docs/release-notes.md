@@ -30,6 +30,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### New features
 
+Notable new features.
+
+#### Resource mapper UI component
+
 This release includes a new UI component, the resource mapper. This component is useful for node creators. If your node does insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. Often it's necessary to use a Set node before a node that sends data, to get the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node.
 
 Refer to [Node user interface elements | Resource mapper](/integrations/creating-nodes/build/reference/ui-elements/#resource-mapper) for guidance for node builders.

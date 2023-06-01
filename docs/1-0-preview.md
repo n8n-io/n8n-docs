@@ -23,7 +23,7 @@ This change ensures predictable behavior. Incoming nodes will no longer be force
 
 ### Fail workflows on expression syntax or runtime errors
 
-Workflow executions will fail when there are syntax errors or runtime errors in expressions. For example, expressions that reference non-existent nodes.
+Workflow executions will fail when there are syntax errors or runtime errors in expressions. For example, expressions that reference non-existent nodes. Expressions already throw errors on the frontend. This change ensures they error on the backend as well.
 
 ## Expected breaking changes
 

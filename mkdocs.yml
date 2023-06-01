@@ -204,6 +204,7 @@ nav:
         - Set up SAML: user-management/saml/setup.md
         - Okta Workforce Identity SAML setup: user-management/saml/okta.md
         - Troubleshooting: user-management/saml/troubleshooting.md
+        - Manage users with SAML: user-management/saml/managing.md
     - Environments:
       - environments/index.md
       - Variables: environments/variables.md

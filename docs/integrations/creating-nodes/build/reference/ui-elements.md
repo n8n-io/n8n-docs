@@ -589,28 +589,15 @@ If your node performs insert, update, or upsert operations, you need to send dat
 	// See "Resource mapper type options interface" below for the full typeOptions specification
 	typeOptions: {
 		resourceMapper: {
-			// The name of the function where you fetch the schema
-			// Refer to next section for more detail
 			resourceMapperMethod: 'getMappingColumns',
-			// Choose the mode for your operation
-			// Supported modes: add, update, upsert
 			mode: 'update',
-			// Specify labels for fields in the UI
 			fieldWords: {
 				singular: 'column',
 				plural: 'columns',
 			},
-			// Whether n8n should display a UI input for every field when node first added to workflow
-			// Default is true
 			addAllFields: true, 
-			// Whether to support multi-key column matching
-			// multiKeyMatch is for update and upsert only
-			// Default is false
 			multiKeyMatch: true,
-			// Whether to support automatic mapping
-			// If false, n8n hides the mapping mode selector field and sets mappingMode to defineBelow
 			supportAutoMap: true,
-			// Labels for the matching columns selector
 			matchingFieldsLabels: {
 				title: 'Custom matching columns title',
 				description: 'Help text for custom matching columns',
@@ -631,13 +618,29 @@ The `typeOptions` section must implement the following interface:
 
 ```js
 export interface ResourceMapperTypeOptions {
+	// The name of the method where you fetch the schema
+	// Refer to the Resource mapper method section for more detail
 	resourceMapperMethod: string;
+	// Choose the mode for your operation
+	// Supported modes: add, update, upsert
 	mode: 'add' | 'update' | 'upsert';
+	// Specify labels for fields in the UI
 	fieldWords?: { singular: string; plural: string };
+	// Whether n8n should display a UI input for every field when node first added to workflow
+	// Default is true
 	addAllFields?: boolean;
+	// Specify a message to show if no fields are fetched from the service 
+	// (the call is successful but the response is empty)
 	noFieldsError?: string;
+	// Whether to support multi-key column matching
+	// multiKeyMatch is for update and upsert only
+	// Default is false
+	// If true, the node displays a multi-select dropdown for the matching column selector
 	multiKeyMatch?: boolean;
+	// Whether to support automatic mapping
+	// If false, n8n hides the mapping mode selector field and sets mappingMode to defineBelow
 	supportAutoMap?: boolean;
+	// Custom labels for the matching columns selector
 	matchingFieldsLabels?: {
 		title?: string;
 		description?: string;

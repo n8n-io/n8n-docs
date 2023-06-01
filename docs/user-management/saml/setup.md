@@ -53,15 +53,5 @@ Documentation links for common IdPs.
 | Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/) |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/r/en-us/pingone/pingone_p1sso_start){:target=_blank .external-link} |
 
-## Exempt users
 
-You can allow users to log in without using SAML. To do this:
-
-1. Go to **Settings** > **Users**.
-2. Select the menu icon by the user you want to exempt from SAML.
-3. Select **Allow Manual Login**.
-
-## Deleting users
-
-If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](/user-management/manage-users/) for guidance on deleting users.
 

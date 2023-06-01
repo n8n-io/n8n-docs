@@ -19,13 +19,42 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
-## n8n@0.230.1
+## n8n@0.231.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.223.0...n8n@0.230.1){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.2...n8n@0.231.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-31
+
+This release contains bug fixes and new features.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New features
+
+Notable new features.
+
+#### Resource mapper UI component
+
+This release includes a new UI component, the resource mapper. This component is useful for node creators. If your node does insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. Often it's necessary to use a Set node before a node that sends data, to get the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node.
+
+Refer to [Node user interface elements | Resource mapper](/integrations/creating-nodes/build/reference/ui-elements/#resource-mapper) for guidance for node builders.
+
+
+## n8n@0.230.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.1...n8n@0.230.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-25
 
 !!! note "Next version"
 	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@0.230.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.0...n8n@0.230.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-05-25
 
 This is a bug fix release.
 

@@ -3,7 +3,7 @@ title: Manage users with SAML
 description: How to manage users and user logins with SAML enabled.
 ---
 
-## Manage users with SAML
+# Manage users with SAML
 
 There are some user management tasks that are affected by SAML.
 

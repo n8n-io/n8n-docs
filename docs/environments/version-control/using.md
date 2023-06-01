@@ -1,3 +1,7 @@
+---
+description: How to use version control for environments in n8n.
+---
+
 # Using Version Control
 
 If your n8n instance [connects to a Git repository](/environments/version-control/setup/), you need to keep your work in sync with Git.

@@ -66,7 +66,7 @@ Support for websockets was introduced in v0.215.0 ([PR #5443](https://github.com
 
 ### New behavior for Date data transformation functions
 
- View a list of [data transformation functions that operate on dates](/code-examples/expressions/data-transformation-functions/dates/). Currently, they return a Date and sometimes Datetime (from Luxon). The new behavior will ensure the return type is always a string so that node input and output can be consistent.
+ View a list of [data transformation functions that operate on dates](/code-examples/expressions/data-transformation-functions/dates/). Currently, they may return a Date and sometimes Datetime (from Luxon). The new behavior will ensure the return type is always a string so that node input and output can be consistent.
 
 ### Fully remove the deprecated request library
 

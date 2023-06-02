@@ -37,7 +37,7 @@ We advise against using MySQL or MariaDB as their support will be phased out in 
 
 ### Main mode as default
 
-n8n will now run in `main` mode by default and `own` mode will be completely removed. Refer to [Execute all workflows in the same process](/hosting/environment-variables/configuration-methods/#execute-all-workflows-in-the-same-process) for more information on own and main mode. You should use [Queue mode](/hosting/scaling/queue-mode/) if you need scalability.
+Starting from v1.0, n8n will operate in `main` mode as the default option, and `own` mode will eventually be phased out. For detailed insights on `own` and `main` mode, please refer to the section on [Executing all workflows in the same process](/hosting/environment-variables/configuration-methods/#execute-all-workflows-in-the-same-process). If scalability is a requirement, it is recommended to utilize the [Queue mode](/hosting/scaling/queue-mode/).
 
 [PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external-link}
 

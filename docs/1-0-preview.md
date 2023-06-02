@@ -33,7 +33,7 @@ This makes [user management](/user-management/) mandatory, and removes support f
 
 ### Deprecation of MySQL and MariaDB as n8n backend databases
 
-Usage of MySQL or MariaDB is disencouraged and can be removed in the future. Support will continue after vv1 has been released but we recommend you migrating to PostgreSQL.
+We advise against using MySQL or MariaDB as their support will be phased out in the future. Instead, we highly recommend migrating to PostgreSQL for better compatibility and long-term support.
 
 ### Main mode as default
 

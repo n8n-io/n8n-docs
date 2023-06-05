@@ -21,7 +21,7 @@ description: Documentation for the Notion trigger node in n8n, a workflow automa
 
 n8n provides an app node for Notion. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.notion/).
 
-View [example workflows and related content](https://n8n.io/integrations/notion-trigger-beta/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/notion-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
 

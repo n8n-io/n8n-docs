@@ -41,15 +41,22 @@ This release includes a new UI component, the resource mapper. This component is
 
 Refer to [Node user interface elements | Resource mapper](/integrations/creating-nodes/build/reference/ui-elements/#resource-mapper) for guidance for node builders.
 
+## n8n@0.230.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.2...n8n@0.230.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-06-05
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@0.230.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.1...n8n@0.230.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-05-25
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-
 
 This is a bug fix release.
 

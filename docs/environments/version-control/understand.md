@@ -71,7 +71,14 @@ The relationship between n8n instances and Git branches is flexible. You can cre
 
 #### One instance, one branch
 
+![Diagram](/_images/environments/vc-one-one.png)
+
+
 #### Multiple instances, one branch
 
+![Diagram](/_images/environments/vc-multi-one.png)
+
 #### One instance, multiple branches
+
+![Diagram](/_images/environments/vc-one-multi.png)
 

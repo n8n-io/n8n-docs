@@ -7,4 +7,6 @@ description: Version control is part of environments in n8n. Linking your n8n in
 
 n8n uses Git-based version control to support environments. Linking your n8n instances to a Git repository allows you to create multiple n8n environments, backed by Git branches.
 
+Each environment has its own version of your workflows, tags, and variables.
+
 [TODO: section TOC]

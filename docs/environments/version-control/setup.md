@@ -20,7 +20,7 @@ For a new setup, configure the repository to support the environments you need:
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
 	!!! warning "Create branches before connecting n8n"
-		You must create the branches you need before connecting to n8n. n8n doesn't detect any branches created after connection.
+		You must create the branches you need before connecting to n8n. n8n doesn't detect any branches created after connection. [TODO: check this is still the case before publishing]
 
 ## Step 2: Configure Git in n8n
 

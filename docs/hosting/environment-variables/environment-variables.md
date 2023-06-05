@@ -145,7 +145,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `main` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
+| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `own` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that users can set for an individual workflow. |

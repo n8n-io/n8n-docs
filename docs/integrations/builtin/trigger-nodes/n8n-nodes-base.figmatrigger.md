@@ -1,5 +1,5 @@
 ---
-title: Figma trigger (Beta) node - n8n Documentation
+title: Figma trigger (Beta) node
 description: Documentation for the Figma trigger (Beta) node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

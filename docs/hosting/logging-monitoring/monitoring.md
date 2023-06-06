@@ -12,6 +12,9 @@ Access the endpoint:
 <your-instance-url>/metrics
 ```
 
+!!! info "Feature availability"
+	The `/metrics` endpoint isn't available on n8n Cloud.
+
 ## Enable metrics
 
 The `/metrics` endpoint is disabled by default. To enable it, configure your n8n instance:

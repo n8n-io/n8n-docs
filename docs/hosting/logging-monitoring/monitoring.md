@@ -23,4 +23,4 @@ The `/metrics` endpoint is disabled by default. To enable it, configure your n8n
 N8N_METRICS=true
 ```
 
-Refer to [Configuration methods](/hosting/environment-variables/configuration/) for more information on how to configure your instance using environment variables.
+Refer to [Configuration methods](/hosting/environment-variables/configuration-methods/) for more information on how to configure your instance using environment variables.

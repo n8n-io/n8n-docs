@@ -4,7 +4,7 @@ description: Get metrics for a health check
 
 # Monitoring
 
-There are two API endpoints you can call to check the status of your instance.
+There are two API endpoints you can call to check the status of your instance: `/healthz` and `/metrics`.
 
 ## healthz
 

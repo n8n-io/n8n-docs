@@ -99,6 +99,11 @@
     opacity: 1;
 }
 
+.md-banner {
+	background-color: black;
+	color: var(--md-footer-fg-color--light);
+}
+
 .md-typeset {
     font-size: 0.9rem;
 }

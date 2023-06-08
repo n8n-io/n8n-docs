@@ -28,6 +28,8 @@ On this page, you'll find a list of operations the Postgres node supports and li
 
 ## Related resources
 
+n8n provides a trigger node for Postgres. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger/).
+
 View [example workflows and related content](https://n8n.io/integrations/postgres/){:target=_blank .external-link} on n8n's website.
 
 ## Use query parameters

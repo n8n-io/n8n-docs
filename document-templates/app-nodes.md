@@ -17,7 +17,7 @@ Set the meta title and meta description in the frontmatter
 -->
 
 ---
-title: <node-name> - n8n Documentation
+title: <node-name>
 description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

@@ -17,7 +17,7 @@ Set the meta title and meta description in the frontmatter
 -->
 
 ---
-title: <node-name> trigger - n8n Documentation
+title: <node-name> trigger
 description: Documentation for the <node-name> trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
@@ -31,7 +31,7 @@ _Briefly summarize the node. For example:_
 
 _The Action Network trigger node allows you to respond to events in Action Network and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network events, which includes . . ._
 
-_On this page, you'll find a list of operations the Action Network node supports, and links to more resources._
+_On this page, you'll find a list of events the Action Network trigger node can respond to, and links to more resources._
 
 !!! note "Credentials"
     You can find authentication information for this node _here (link to credentials doc)_.

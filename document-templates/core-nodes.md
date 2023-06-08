@@ -13,7 +13,7 @@ You can find more info on working with the docs project in the README: https://g
 -->
 
 ---
-title: <node-name> - n8n Documentation
+title: <node-name>
 description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 

@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: n8n Public API
+  title: n8n Public API11
   description: n8n Public API
   termsOfService: 'https://n8n.io/legal/terms'
   contact:
@@ -23,6 +23,8 @@ tags:
     description: Operations about workflows
   - name: Credential
     description: Operations about credentials
+  - name: VersionControl
+    description: Operations about version control
 paths:
   /audit:
     post:
@@ -107,7 +109,7 @@ paths:
           description: The credential ID that needs to be deleted
           required: true
           schema:
-            type: number
+            type: string
       responses:
         '200':
           description: Operation successful.
@@ -421,6 +423,32 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '404':
           $ref: '#/components/responses/NotFound'
+  /version-control/pull:
+    post:
+      x-eov-operation-id: pull
+      x-eov-operation-handler: v1/handlers/versionControl/versionControl.handler
+      tags:
+        - VersionControl
+      summary: Pull changes from the remote repository
+      description: Requires the Version Control feature to be licensed and connected to a repository.
+      requestBody:
+        description: Pull options
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pull'
+      responses:
+        '200':
+          description: Import result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportResult'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
 components:
   schemas:
     Error:
@@ -568,9 +596,9 @@ components:
         - settings
       properties:
         id:
-          type: number
+          type: string
           readOnly: true
-          example: 1
+          example: 2tUt1wbLX592XDdX
         name:
           type: string
           example: Workflow 1
@@ -674,9 +702,9 @@ components:
       type: object
       properties:
         id:
-          type: number
+          type: string
           readOnly: true
-          example: 42
+          example: R2DjclaysHbqn778
         name:
           type: string
           example: Joe's Github Credentials
@@ -790,6 +818,72 @@ components:
                   - kind: community
                     nodeType: n8n-nodes-test.test
                     packageUrl: 'https://www.npmjs.com/package/n8n-nodes-test'
+    Pull:
+      type: object
+      properties:
+        force:
+          type: boolean
+          example: true
+        variables:
+          type: object
+          example:
+            foo: bar
+    ImportResult:
+      type: object
+      additionalProperties: true
+      properties:
+        variables:
+          type: object
+          properties:
+            added:
+              type: array
+              items:
+                type: string
+            changed:
+              type: array
+              items:
+                type: string
+        credentials:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              type:
+                type: string
+        workflows:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+        tags:
+          type: object
+          properties:
+            tags:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+            mappings:
+              type: array
+              items:
+                type: object
+                properties:
+                  workflowId:
+                    type: string
+                  tagId:
+                    type: string
   responses:
     NotFound:
       description: The specified resource was not found.
@@ -797,6 +891,8 @@ components:
       description: Unauthorized
     BadRequest:
       description: The request is invalid or provides malformed data.
+    Conflict:
+      description: Conflict
   parameters:
     Cursor:
       name: cursor
@@ -829,7 +925,7 @@ components:
       description: The ID of the workflow.
       required: true
       schema:
-        type: number
+        type: string
     IncludeData:
       name: includeData
       in: query

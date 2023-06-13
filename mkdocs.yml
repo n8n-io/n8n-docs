@@ -17,6 +17,7 @@ theme:
     - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path

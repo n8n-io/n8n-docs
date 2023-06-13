@@ -103,6 +103,10 @@
   background-color: black;
   color: var(--md-footer-fg-color--light);
   }
+
+	.md-footer {
+		border-top: 1px solid var(--color-background-dark);
+	}
   
   .md-typeset {
 	font-size: 0.9rem;

@@ -69,7 +69,7 @@ In n8n:
 
 ### Google hasn't verified this app
 
---8<-- "_snippets/integrations/credentials/google/unverified-app.md"
+--8<-- "_snippets/integrations/builtin/credentials/google/unverified-app.md"
 
 ### Google Cloud app becoming unauthorized
 

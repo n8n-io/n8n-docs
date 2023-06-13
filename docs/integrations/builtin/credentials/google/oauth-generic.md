@@ -96,5 +96,5 @@ n8n doesn't support all scopes. When creating a generic Google OAuth2 API creden
 
 ### Google hasn't verified this app
 
---8<-- "_snippets/integrations/credentials/google/unverified-app.md"
+--8<-- "_snippets/integrations/builtin/credentials/google/unverified-app.md"
 

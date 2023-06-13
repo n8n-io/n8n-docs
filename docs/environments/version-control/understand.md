@@ -1,4 +1,5 @@
 ---
+title: Understand environments and version control in n8n
 description: Understand the concepts behind version control and environments in n8n.
 ---
 

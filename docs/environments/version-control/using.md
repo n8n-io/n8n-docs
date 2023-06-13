@@ -1,8 +1,9 @@
 ---
+title: Using version control
 description: How to use version control for environments in n8n.
 ---
 
-# Using Version Control
+# Using version control
 
 If your n8n instance [connects to a Git repository](/environments/version-control/setup/), you need to keep your work in sync with Git.
 
@@ -32,7 +33,7 @@ n8n doesn't currently sync credentials and variable values with Git. You must se
 [TODO: TLDR is set up vars in n8n, push etc. as normal, then populate them using the API call]
 https://linear.app/n8n/issue/PAY-451/publicapi-endpoint-to-pull-changes-and-set-variables
 https://n8nio.slack.com/archives/C04NH65H7CM/p1685975159555309
-
+https://www.notion.so/n8n/Version-Control-Environments-How-to-use-4c29abfc1a034295b87c27c69205e066#71772e10aeea4b3cbed97cf2204e4f70
 
 ### Workaround two: Manage variables outside n8n
 

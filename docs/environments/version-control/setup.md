@@ -1,4 +1,5 @@
 ---
+title: Set up version control
 description: Link n8n to your Git provider and configure your environments.
 ---
 

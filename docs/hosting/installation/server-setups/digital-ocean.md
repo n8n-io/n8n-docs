@@ -72,7 +72,7 @@ The host operating system (the DigitalOcean Droplet) copies the three folders yo
 To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
 
 ```shell
-docker volume create caddy_data
+sudo docker volume create caddy_data
 ```
 
 ## Set up DNS
@@ -140,7 +140,7 @@ n8n.<domain>.<suffix> {
 Start n8n and Caddy with the following command:
 
 ```shell
-docker compose up -d
+sudo docker compose up -d
 ```
 
 This may take a few minutes.

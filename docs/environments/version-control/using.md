@@ -7,7 +7,6 @@ description: How to use version control for environments in n8n.
 
 If your n8n instance [connects to a Git repository](/environments/version-control/setup/), you need to keep your work in sync with Git.
 
-[TODO: before publishing, confirm members can use git, not just instance owners - they couldn't when you started drafting]
 
 ## Fetch other people's work
 
@@ -15,6 +14,8 @@ If your n8n instance [connects to a Git repository](/environments/version-contro
 
 ## Send your work to Git
 
+!!! note "Restricted to instance owners"
+	Ordinary users can't send work to Git.
 
 
 ## Copy work between environments
@@ -23,7 +24,7 @@ If your n8n instance [connects to a Git repository](/environments/version-contro
 
 ## Credentials and variable values
 
-n8n doesn't currently sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance.
+n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance.
 
 !!! note "Credential support coming soon"
 	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances, allowing credentials to work across environments.

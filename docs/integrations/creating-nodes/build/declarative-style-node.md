@@ -219,7 +219,6 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos',
 				},
 			},
 		},
@@ -238,6 +237,11 @@ Add the following to the `properties` array, after the `resource` object:
 		{name: 'Perseverance', value: 'perseverance'},
 		{name: 'Spirit', value: 'spirit'},
 	],
+	routing: {
+		request: {
+			url: '=/mars-photos/api/v1/rovers/{{$value}}/photos',
+		},
+	},
 	default: 'curiosity',
 	displayOptions: {
 		show: {

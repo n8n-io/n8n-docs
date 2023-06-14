@@ -17,6 +17,7 @@ theme:
     - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
@@ -210,11 +211,6 @@ nav:
     - Environments:
       - environments/index.md
       - Variables: environments/variables.md
-      - Version control:
-        - environments/version-control/index.md
-        - Understand: environments/version-control/understand.md
-        - Set up: environments/version-control/setup.md
-        - Use: environments/version-control/using.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

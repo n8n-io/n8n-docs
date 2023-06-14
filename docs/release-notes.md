@@ -35,6 +35,19 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a new trigger node for Postgres, which allows you to listen to events, as well as listen to custom channels. Refer to [Postgres trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger/) for more information.
 
+## n8n@0.231.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.231.1...n8n@0.231.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-06-14
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
 ## n8n@0.231.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.231.0...n8n@0.231.1){:target=_blank .external-link} for this version.<br />
@@ -68,10 +81,6 @@ Refer to [Node user interface elements | Resource mapper](/integrations/creating
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.230.2...n8n@0.230.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-05
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-
 
 This is a bug fix release.
 

@@ -44,34 +44,45 @@ To copy work between environments, you need to create a pull request and merge i
 
 n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. Refer to [Using | Credentials and variable values](/environments/using#credentials-and-variable-values) for more information.
 
-### Environment patterns
+## Environment patterns
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
-#### Multiple instances, multiple branches
+[TODO: more decision making help]
 
-This pattern involves having multiple n8n instances, each one linked to its own branch. This is the setup to use if you want different n8n instances for testing and production.
+### Multiple instances, multiple branches
+
+This pattern involves having multiple n8n instances, each one linked to its own branch. 
+
+This is the setup to use if you want different n8n instances for testing and production.
+
+[TODO: note that this is one possible multi-env setup, and main advantage is PR and safety]
 
 ![Diagram](/_images/environments/vc-multi-multi.png)
 
-#### One instance, one branch
+### Multiple instances, one branch
 
-This is the simplest pattern. It allows you to use your Git provider as a backup.
+Use this pattern if you want the same workflows, tags, and variables everywhere, but want to use them in different n8n instances. 
 
-![Diagram](/_images/environments/vc-one-one.png)
+[TODO: note this can also be used for test/prod type setups, but NOTE RISK]
 
-
-#### Multiple instances, one branch
-
-Use this pattern if you want the same workflows, tags, and variables everywhere, but want to use them in different n8n instances. This is useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
+This is useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
 
 ![Diagram](/_images/environments/vc-multi-one.png)
 
-#### One instance, multiple branches
+### One instance, multiple branches
 
-The instance owner can change which Git branch connects to the instance.
+The instance owner can change which Git branch connects to the instance. The full setup in this case is likely to be a [Multiple instances, multiple branches](#multiple-instances-multiple-branches) pattern, but with one instance switching between branches.
+
+This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users. In this case, 
 
 ![Diagram](/_images/environments/vc-one-multi.png)
+
+### One instance, one branch
+
+This is the simplest pattern.
+
+![Diagram](/_images/environments/vc-one-one.png)
 
 ## Git: Key terms and concepts
 

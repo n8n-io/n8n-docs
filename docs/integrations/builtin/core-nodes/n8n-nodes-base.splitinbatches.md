@@ -11,6 +11,9 @@ The node saves the original incoming data, and with each iteration, returns a pr
 
 When the node execution completes, it combines all the data and returns it through the **done** output.
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [Split In Batches integrations](https://n8n.io/integrations/split-in-batches/){:target=_blank .external-link} list.
+
 ## Node reference
 
 - **Batch Size**: the number of items to return with each call.
@@ -58,9 +61,11 @@ The final workflow looks like this:
 
 ## Check that the node has processed all items
 
-To check if the node still has items to process, use the following expression: `{{$node["SplitInBatches"].context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
+To check if the node still has items to process, use the following expression: `{{ $node["Example Split In Batches"].context["done"] }}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
 
 ## Get the current running index of the node
 
 To get the current running index of the node, use the following expression: `{{$node["SplitInBatches"].context["currentRunIndex"];}}`.
+
+
 

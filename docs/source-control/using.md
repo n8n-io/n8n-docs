@@ -1,19 +1,13 @@
 ---
-title: Using version control
-description: How to use version control for environments in n8n.
+title: Using source control
+description: How to use source control in n8n.
 ---
 
-# Using version control
+# Using source control
 
-If your n8n instance [connects to a Git repository](/environments/version-control/setup/), you need to keep your work in sync with Git.
+If your n8n instance [connects to a Git repository](/source-control/setup/), you need to keep your work in sync with Git.
 
-This document assumes some familiarity with:
-
-* Git concepts and terminology
-* How environments work in n8n
-* Your environments setups
-
-Refer to [Understand environments and version control in n8n](/environments/version-control/understand/) for an introduction to environments and Git.
+This document assumes some familiarity with Git concepts and terminology. Refer to [Understand source control in n8n](/source-control/understand/) for an introduction to how n8n works with Git.
 
 
 ## Fetch other people's work
@@ -48,19 +42,12 @@ To push work to Git:
 1. Enter a commit message. This should be a one sentence description of the changes you're making.
 1. Select **Commit and Push**. n8n sends the work to Git, and displays a success message on completion.
 
-
-## Copy work between environments
-
-
-
-### Automatic pulls
-
 ## Credentials and variable values
 
 n8n doesn't sync credentials and variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
 
 !!! note "Coming soon: credential support with secret managers"
-	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances, allowing credentials to work across environments.
+	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
 
 ## Manage variables using the API
 
@@ -76,10 +63,10 @@ Managing variables using the API has several advantages:
 
 For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link}, then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:targry=_blank .external-link}.
 
-To manage variables using an API call, make a `POST` request to `/version-control/pull`:
+To manage variables using an API call, make a `POST` request to `/source-control/pull`:
 
 ```curl
-	curl --location '<YOUR-INSTANCE-URL>/api/v1/version-control/pull' \
+	curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
 	--header 'Content-Type: application/json' \
 	--header 'X-N8N-API-KEY: <YOUR-API-KEY>' \
 	--data '{

@@ -212,12 +212,13 @@ nav:
       - environments/index.md
       - Understand: environments/understand.md
       - "Tutorial: Create environments with source control": environments/create-environments.md
+      - Copy work between environments: environments/copy-work.md
     - Source control:
-      - /source-control/index.md
-      - Understand: /source-control/understand.md
-      - Set up: /source-control/setup.md
-      - Use: /source-control/using.md
-    - Variables: /variables.md
+      - source-control/index.md
+      - Understand: source-control/understand.md
+      - Set up: source-control/setup.md
+      - Use: source-control/using.md
+    - Variables: variables.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

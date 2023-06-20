@@ -20,7 +20,7 @@ For a new setup, configure the repository to support the environments you need:
 1. Create a new repository for use with n8n. 
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
-To help decide what branches you need for your use case, refer to [Understand environments | Environment patterns](/environments/version-control/understand#environment-patterns).
+To help decide what branches you need for your use case, refer to [Understand environments | Environment patterns](/source-control/understand#environment-patterns).
 
 ## Step 2: Configure Git in n8n
 

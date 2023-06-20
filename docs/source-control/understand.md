@@ -6,11 +6,11 @@ description: Understand the concepts behind source control in n8n.
 # Understand source control in n8n
 
 
-!!! note "New to Git and version control?"
+!!! note "New to Git and source control?"
 	If you're new to Git, don't panic. You don't need to learn Git to use n8n. This document explains the concepts you need. However, you do need some Git knowledge to set up the environments, and to copy work between environments, as this happens in your Git provider.
 
-!!! note "Familiar with Git and version control?"
-	If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that version control in n8n doesn't support a pull request-style review and merge process (unless you do this outside n8n in your Git provider). Read the [Environments in n8n](#environments-in-n8n) section to understand how n8n uses Git to support environments.
+!!! note "Familiar with Git and source control?"
+	If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process (unless you do this outside n8n in your Git provider). Read the [Environments in n8n](#environments-in-n8n) section to understand how n8n uses Git to support environments.
 
 ## Source control patterns
 
@@ -54,7 +54,7 @@ This is the simplest pattern.
 
 ## Git: Key terms and concepts
 
-This section provides the concepts and terminology needed to save work to Git from n8n, and fetch changes from Git into n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/environments/version-control/setup/) should have some familiarity with Git and with their Git hosting provider.
+This section provides the concepts and terminology needed to save work to Git from n8n, and fetch changes from Git into n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control/setup/) should have some familiarity with Git and with their Git hosting provider.
 
 !!! note "This is a very brief introduction"
 	Git is a complex topic. This section provides a very brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
@@ -63,7 +63,7 @@ This section provides the concepts and terminology needed to save work to Git fr
 
 [Git](https://git-scm.com/){:target=_blank .external-link} is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/){:target=_blank .external-link} and [GitLab](https://about.gitlab.com/){:target=_blank .external-link}.
 
-### Branches: multiple copies of a project
+### Branches: Multiple copies of a project
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When their work is finished, their branch is merged back into the main branch.
 
@@ -73,16 +73,12 @@ Git uses branches to maintain multiple copies of a document alongside each other
 
 A common pattern when using Git is to install Git on your own computer, and use a Git provider such as GitHub to work with Git in the cloud. In effect, you have a Git repository (project) on GitHub, and work with copies of it on your local machine.
 
-n8n uses this pattern for version control and environments: you'll work with your workflows on your n8n instance, but send them to your Git provider to store them, and copy them between environments.
+n8n uses this pattern for source control: you'll work with your workflows on your n8n instance, but send them to your Git provider to store them.
 
-n8n uses a two [TODO: or three?] key Git processes:
+n8n uses three key Git processes:
 
 * **Push**: send work from your instance to Git. This saves a copy of your workflows, tags, and variables, to Git. You can choose which of these you want to save.
 * **Pull**: get the workflows, tags, and variables from Git and load it into n8n. 
 	!!! warning "Pulling overwrites your work"
 		If you have made changes to a workflow in n8n, you must push the changes to Git before pulling. When you pull, it overwrites any changes you've made if they aren't stored in Git.
-* **Commit**: a commit in n8n is a single occurrence of pushing work to Git. [TODO: hopefully we can remove commit language but add this to above list if needed]
-
-
-
-
+* **Commit**: a commit in n8n is a single occurrence of pushing work to Git. 

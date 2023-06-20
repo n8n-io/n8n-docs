@@ -1,3 +1,5 @@
+/environments/variables/   /variables/
+
 /hosting/logging/   /hosting/logging-monitoring/logging/
 /code-examples/console-log/   /code-examples/javascript-functions/console-log/
 

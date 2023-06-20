@@ -26,7 +26,7 @@ This is the setup to use if you want different n8n instances for testing and pro
 
 [TODO: note that this is one possible multi-env setup, and main advantage is PR and safety]
 
-![Diagram](/_images/environments/vc-multi-multi.png)
+![Diagram](/_images/source-control/vc-multi-multi.png)
 
 ### Multiple instances, one branch
 
@@ -36,7 +36,7 @@ Use this pattern if you want the same workflows, tags, and variables everywhere,
 
 This is useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
 
-![Diagram](/_images/environments/vc-multi-one.png)
+![Diagram](/_images/source-control/vc-multi-one.png)
 
 ### One instance, multiple branches
 
@@ -44,13 +44,13 @@ The instance owner can change which Git branch connects to the instance. The ful
 
 This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users. In this case, 
 
-![Diagram](/_images/environments/vc-one-multi.png)
+![Diagram](/_images/source-control/vc-one-multi.png)
 
 ### One instance, one branch
 
 This is the simplest pattern.
 
-![Diagram](/_images/environments/vc-one-one.png)
+![Diagram](/_images/source-control/vc-one-one.png)
 
 ## Git: Key terms and concepts
 
@@ -67,7 +67,7 @@ This section provides the concepts and terminology needed to save work to Git fr
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When their work is finished, their branch is merged back into the main branch.
 
-![Diagram](/_images/environments/simple-git-branch.png)
+![Diagram](/_images/source-control/simple-git-branch.png)
 
 ### Local and remote: Moving work between your machine and a Git provider
 

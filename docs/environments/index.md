@@ -1,21 +1,12 @@
 ---
-description: Environments offer users a way to safely develop and test workflows, without impacting production workflows.
+title: Creat environments
+description: Create environments in n8n using the source control feature.
 ---
 
-# Environments
+# Create environments
 
-!!! info "Feature availability: Variables"
-	* Available on Self-hosted Enterprise and Pro Cloud plans.
-	* You need access to the n8n instance owner account to create and edit variables.
+n8n supports Git-based source control to support environments. Linking your n8n instances to a Git repository allows you to create multiple n8n environments, backed by Git branches.
 
-!!! info "Feature availability: Version control"
-	* Available on Self-hosted Enterprise.
-	* You need access to the n8n instance owner account to set up version control.
+Each environment has its own version of your workflows, tags, and variables.
 
-Environments allow you to:
-
-* Share reusable values between users with [Variables](/environments/variables/).
-* Develop and test workflows, without impacting production workflows, using [Version control](/environments/version-control/).
-
-
-This feature is under development. As of version 0.225.0, n8n supports [Variables](/environments/variables/).
+[TODO]

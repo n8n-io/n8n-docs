@@ -18,7 +18,7 @@ Refer to [Understand environments and version control in n8n](/environments/vers
 
 ## Fetch other people's work
 
-To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/environments/pull-icon.png)</span> in the main menu.
+To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 
 --8<-- "_snippets/environments/push-pull-menu-state.md"
 
@@ -36,7 +36,7 @@ Select **Pull and override** if you want to override your local work with the co
 
 To push work to Git:
 
-1. Select **Push** <span class="inline-image">![Push icon](/_images/environments/push-icon.png)</span> in the main menu.
+1. Select **Push** <span class="inline-image">![Push icon](/_images/source-control/push-icon.png)</span> in the main menu.
 
 	--8<-- "_snippets/environments/push-pull-menu-state.md"
 

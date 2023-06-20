@@ -208,18 +208,16 @@ nav:
         - Okta Workforce Identity SAML setup: user-management/saml/okta.md
         - Troubleshooting: user-management/saml/troubleshooting.md
         - Manage users with SAML: user-management/saml/managing.md
-    - Environments:
+    - Create environments with source control:
       - environments/index.md
-      - Create environments with source control:
-        - environments/create/index.md
-        - Understand: environments/create/understand.md
-        - "Tutorial: Create environments with source control": environments/create/create-environments.md
-      - Source control:
-        - environments/source-control/index.md
-        - Understand: environments/source-control/understand.md
-        - Set up: environments/source-control/setup.md
-        - Use: environments/source-control/using.md
-      - Variables: environments/variables.md
+      - Understand: environments/understand.md
+      - "Tutorial: Create environments with source control": environments/create-environments.md
+    - Source control:
+      - /source-control/index.md
+      - Understand: /source-control/understand.md
+      - Set up: /source-control/setup.md
+      - Use: /source-control/using.md
+    - Variables: /variables.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

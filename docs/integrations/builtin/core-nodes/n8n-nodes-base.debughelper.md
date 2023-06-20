@@ -15,23 +15,23 @@ The Debug Helper node can be used to trigger different error types or generate r
 
 * Do Nothing
 * Throw Error
-  * NodeApiError
-  * NodeOperationError
-  * Error
+  - NodeApiError
+  - NodeOperationError
+  - Error
 * Out Of Memory
 * Generate Random Data
-  * Address
-  * Coordinates
-  * Credit Card
-  * Email
-  * IPv4
-  * IPv6
-  * MAC
-  * NanoIds
-  * URL
-  * User Data
-  * UUID
-  * Version
+  - Address
+  - Coordinates
+  - Credit Card
+  - Email
+  - IPv4
+  - IPv6
+  - MAC
+  - NanoIds
+  - URL
+  - User Data
+  - UUID
+  - Version
 
 ## Related resources
 

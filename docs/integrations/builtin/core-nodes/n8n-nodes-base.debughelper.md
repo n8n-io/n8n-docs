@@ -5,7 +5,7 @@ description: Documentation for the Debug Helper node in n8n, a workflow automati
 
 # Debug Helper
 
-The Debug Helper node can be used to trigger different error types or generate random datasets to help you test your n8n workflows.
+The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
 
 
 !!! note "Examples and templates"

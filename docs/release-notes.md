@@ -19,6 +19,27 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.234.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-06-22
+
+This release contains new features, new nodes, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Debug Helper
+
+The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
+
+[Debug Helper node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.debughelper/).
+
+</div>
+
 ## n8n@0.233.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.0...n8n@0.233.1){:target=_blank .external-link} for this version.<br />

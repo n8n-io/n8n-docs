@@ -32,7 +32,12 @@ Create a [Salesforce](https://www.salesforce.com/) account.
 11. On the ***New Connected App*** page, click on the ***Continue*** button.
 12. In the 'API (Enable OAuth Settings)' section of the page, click on the ***Click to reveal*** button to reveal the consumer secret.
 13. Copy the displayed ***Consumer Key*** and the ***Consumer Secret*** and use these with your Salesforce OAuth2 API credentials in n8n.
-14. In the n8n credentials window select your ***Environment Type***, where Production or Sandbox.
+14. In the n8n credentials window enter your ***Base URL***.
+??? example "Examples"
+    * https://login.my.salesforce.com
+    * https://my-domain.sandbox.my.salesforce.com
+    * https://my-domain.my.salesforce.com
+    * https://test.my.salesforce.com
 15. Click on the circle button in the OAuth section to connect a Salesforce account to n8n.
 16. Click on the ***Save*** button to save your credentials.
 

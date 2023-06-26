@@ -61,3 +61,11 @@ Or created ordered lists with numbers:
 ```
 
 For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
+
+## Make images full width
+
+You can force images to be 100% width of the sticky note by appending `#full-width` to the filename:
+
+```markdown
+![Source example](https://<IMAGE-URL>/<IMAGE-NAME>.png#full-width)
+```

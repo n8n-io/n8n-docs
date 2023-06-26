@@ -26,6 +26,6 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 
 Refer to [LoneScales documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} for more information about the service.
 
-n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.lonescaletrigger/).
+n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger/).
 	
 View [example workflows and related content](https://n8n.io/integrations/lonescaletrigger/){:target=_blank .external-link} on n8n's website.

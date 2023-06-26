@@ -270,6 +270,7 @@ nav:
         - integrations/builtin/credentials/copper.md
         - integrations/builtin/credentials/cortex.md
         - integrations/builtin/credentials/cratedb.md
+        - integrations/builtin/credentials/crowddev.md
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/demio.md

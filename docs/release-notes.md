@@ -19,10 +19,41 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.234.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-06-22
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This release contains new features, new nodes, node enhancements, and bug fixes.
+
+!!! warning "Database Migration"
+    Please note that this version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change does not break anything using the older numeric IDs.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### Debug Helper
+
+The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
+
+[Debug Helper node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.debughelper/).
+
+</div>
+
 ## n8n@0.233.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.0...n8n@0.233.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-19
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 This is a bug fix release.
 
@@ -33,8 +64,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.232.0...n8n@0.233.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-14
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 
@@ -58,8 +87,7 @@ This release includes a new trigger node for Postgres, which allows you to liste
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.231.2...n8n@0.231.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-17
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 
 This is a bug fix release.

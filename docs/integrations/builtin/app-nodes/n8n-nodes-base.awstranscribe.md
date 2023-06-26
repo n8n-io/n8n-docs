@@ -29,8 +29,9 @@ On this page, you'll find a list of operations the AWS Transcribe node supports 
 ## Example Usage
 ⁶
 This workflow allows you to create transcription jobs for all your audio and video files stored in AWS S3. You can also find the [workflow](https://n8n.io/workflows/1111) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/buil           5tin/core-nodes/n8n-nodes-base.start/)
-- [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awsS3/)
+
+- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
+- [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3/)
 - [AWS Transcribe]()
 
 The final workflow should look like the following image.

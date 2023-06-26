@@ -29,9 +29,11 @@ A setup like this helps you make changes to workflows without breaking workflows
 In n8n, an environment comprises two parts, an n8n instance and a Git branch:
 
 * The n8n instance is where you build and run workflows.
-* The Git branch stores copies of the workflows, as well as [tags](/workflows/tags/) and [variable](/environments/variables/) names.
+* The Git branch stores copies of the workflows, as well as tags, and variable and credential names.
 
 You connect your n8n instance to a Git repository. You can save workflows, tags, and variables to a branch, and load workflows, tags, and variable names from it.
+
+[TODO: modify this as they might have different models]
 
 To copy work between environments, you need to create a pull request and merge in your Git provider. For example, if you have development, test, and production branches, each linked to their own instance, you need to merge the development branch into test to make the work from the development instance available on the test instance. Refer to [Using | Copy work between environments](/source-control/using#copy-work-between-environments) for more information, including steps to partially automate the process.
 

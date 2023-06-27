@@ -5,18 +5,18 @@ description: How to get changes from one environment into another.
 
 # Copy work between environments
 
-Do copy work between environments, you need to do a pull request in your Git provider. You can't copy work directly between environments in n8n. 
+If you have multiple Git branches, you need to do a pull request in your Git provider to copy work between environments. You can't copy work directly between environments in n8n. 
 
 A common pattern is:
 
 1. Do work in your developments instance.
-1. Push the work to the dev branch in Git.
-1. Create a pull request to merge your dev branch into your production branch.
-1. In your production n8n instannce, pull the changes.
+1. Push the work to the development branch in Git.
+1. Create a pull request to merge your development branch into your production branch.
+1. In your production n8n instance, pull the changes.
 
 ## Automatically send changes to n8n
 
-You can automate parts of the process of copying work, using the `/source-control/pull` API endpoint. Call the API once the changes are merged:
+You can automate parts of the process of copying work, using the `/source-control/pull` API endpoint. Call the API after merging the changes:
 
 ```curl
 curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \

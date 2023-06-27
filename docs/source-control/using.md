@@ -7,7 +7,7 @@ description: How to use source control in n8n.
 
 If your n8n instance [connects to a Git repository](/source-control/setup/), you need to keep your work in sync with Git.
 
-This document assumes some familiarity with Git concepts and terminology. Refer to [Understand source control in n8n](/source-control/understand/) for an introduction to how n8n works with Git.
+This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control/git/) for an introduction to how n8n works with Git.
 
 
 ## Fetch other people's work
@@ -34,11 +34,7 @@ To push work to Git:
 
 	--8<-- "_snippets/environments/push-pull-menu-state.md"
 
-1. In the **Commit and push changes** modal, select what you want to push.
-
-	!!! note "Variables"
-		n8n syncs variable names, but not variable values. Refer to [Credentials and variable values](#credentials-and-variable-values) for more information and workarounds.
-
+1. In the **Commit and push changes** modal, select which workflows you want to push. n8n automatically pushes tags, and variable and credential names.
 1. Enter a commit message. This should be a one sentence description of the changes you're making.
 1. Select **Commit and Push**. n8n sends the work to Git, and displays a success message on completion.
 

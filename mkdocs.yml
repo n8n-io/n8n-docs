@@ -208,14 +208,15 @@ nav:
         - Okta Workforce Identity SAML setup: user-management/saml/okta.md
         - Troubleshooting: user-management/saml/troubleshooting.md
         - Manage users with SAML: user-management/saml/managing.md
-    - Create environments with source control:
+    - Environments:
       - environments/index.md
       - Understand: environments/understand.md
       - "Tutorial: Create environments with source control": environments/create-environments.md
       - Copy work between environments: environments/copy-work.md
     - Source control:
       - source-control/index.md
-      - Understand: source-control/understand.md
+      - Patterns: source-control/patterns.md
+      - Git and n8n: source-control/git.md
       - Set up: source-control/setup.md
       - Use: source-control/using.md
     - Variables: variables.md

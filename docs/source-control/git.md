@@ -1,56 +1,19 @@
 ---
-title: Understand source control in n8n
-description: Understand the concepts behind source control in n8n.
+title: Git and n8n
+description: Git concepts and limitations in n8n.
 ---
 
-# Understand source control in n8n
+# Git and n8n
+
+n8n uses Git to provide source control. To use this feature, it helps to have some knowledge of basic Git concepts. n8n doesn't implement all Git functionality: you shouldn't view n8n's source control as full version control.
 
 
 !!! note "New to Git and source control?"
-	If you're new to Git, don't panic. You don't need to learn Git to use n8n. This document explains the concepts you need. However, you do need some Git knowledge to set up the environments, and to copy work between environments, as this happens in your Git provider.
+	If you're new to Git, don't panic. You don't need to learn Git to use n8n. This document explains the concepts you need. However, you do need some Git knowledge to set up the source control, as this involves work in your Git provider.
 
 !!! note "Familiar with Git and source control?"
-	If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process (unless you do this outside n8n in your Git provider). Read the [Environments in n8n](#environments-in-n8n) section to understand how n8n uses Git to support environments.
+	If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process (unless you do this outside n8n in your Git provider).
 
-## Source control patterns
-
-The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
-
-[TODO: more decision making help]
-
-### Multiple instances, multiple branches
-
-This pattern involves having multiple n8n instances, each one linked to its own branch. 
-
-This is the setup to use if you want different n8n instances for testing and production.
-
-[TODO: note that this is one possible multi-env setup, and main advantage is PR and safety]
-
-![Diagram](/_images/source-control/vc-multi-multi.png)
-
-### Multiple instances, one branch
-
-Use this pattern if you want the same workflows, tags, and variables everywhere, but want to use them in different n8n instances. 
-
-[TODO: note this can also be used for test/prod type setups, but NOTE RISK]
-
-This is useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
-
-![Diagram](/_images/source-control/vc-multi-one.png)
-
-### One instance, multiple branches
-
-The instance owner can change which Git branch connects to the instance. The full setup in this case is likely to be a [Multiple instances, multiple branches](#multiple-instances-multiple-branches) pattern, but with one instance switching between branches.
-
-This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users. In this case, 
-
-![Diagram](/_images/source-control/vc-one-multi.png)
-
-### One instance, one branch
-
-This is the simplest pattern.
-
-![Diagram](/_images/source-control/vc-one-one.png)
 
 ## Git: Key terms and concepts
 
@@ -82,3 +45,5 @@ n8n uses three key Git processes:
 	!!! warning "Pulling overwrites your work"
 		If you have made changes to a workflow in n8n, you must push the changes to Git before pulling. When you pull, it overwrites any changes you've made if they aren't stored in Git.
 * **Commit**: a commit in n8n is a single occurrence of pushing work to Git. 
+
+

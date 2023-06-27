@@ -14,13 +14,19 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 
---8<-- "_snippets/environments/push-pull-menu-state.md"
+--8<-- "_snippets/source-control/push-pull-menu-state.md"
 
 n8n may display a warning that:
 
 > Some remote changes are going to override some of your local changes. Are you sure you want to continue?
 
-Select **Pull and override** if you want to override your local work with the content in Git.
+Select **Pull and override** to override your local work with the content in Git.
+
+[TODO: who owns workflows on pull?]
+
+### Workflow owner may change
+
+When you pull from Git to an n8n instance, the workflow owner may change. If the same owner is available on both instances, the owner remains the same. If the original owner isn't on the new instance, n8n sets the instance owner as the workflow owner.
 
 
 ## Send your work to Git
@@ -32,7 +38,7 @@ To push work to Git:
 
 1. Select **Push** <span class="inline-image">![Push icon](/_images/source-control/push-icon.png)</span> in the main menu.
 
-	--8<-- "_snippets/environments/push-pull-menu-state.md"
+	--8<-- "_snippets/source-control/push-pull-menu-state.md"
 
 1. In the **Commit and push changes** modal, select which workflows you want to push. n8n automatically pushes tags, and variable and credential names.
 1. Enter a commit message. This should be a one sentence description of the changes you're making.

@@ -3,7 +3,7 @@ title: Copy work between environments
 description: How to get changes from one environment into another.
 ---
 
-# Copy work between environments
+# Copy work between multi-branch environments
 
 If you have multiple Git branches, you need to do a pull request in your Git provider to copy work between environments. You can't copy work directly between environments in n8n. 
 

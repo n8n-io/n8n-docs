@@ -15,6 +15,8 @@ theme:
     - announce.dismiss
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
+    - content.tabs.link
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
     - navigation.footer
@@ -71,6 +73,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite

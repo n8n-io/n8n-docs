@@ -36,6 +36,6 @@ n8n doesn't sync credentials and variable values with Git. You must set up the c
 How you copy work between environments depends on your branch and n8n instance configuration:
 
 * Multiple instances, one branch: you can push from one instance to the Git branch, then pull the work to another instance.
-* Multiple instances, multiple branches: you need to create a pull request and merge in your Git provider. For example, if you have development, test, and production branches, each linked to their own instance, you need to merge the development branch into test to make the work from the development instance available on the test instance. Refer to [Copy work between environments](/environments/copy-work/) for more information, including steps to partially automate the process.
+* Multiple instances, multiple branches: you need to create a pull request and merge in your Git provider. For example, if you have development, test, and production branches, each linked to their own instance, you need to merge the development branch into test to make the work from the development instance available on the test instance. Refer to [Copy work between multi-branch environments](/environments/copy-work/) for more information, including steps to partially automate the process.
 
 Refer to [Source control](/source-control/) to learn more about linking your n8n instance to Git, or follow the [Tutorial: Create environments with source control](/environments/create-environments/) to set up your environments using one of n8n's recommended configurations.

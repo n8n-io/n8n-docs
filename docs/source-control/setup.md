@@ -24,14 +24,9 @@ To help decide what branches you need for your use case, refer to [Understand so
 
 ## Step 2: Configure Git in n8n
 
-1. In n8n, go to **Settings** > **Source Control**.
-1. Enter the details for your Git repository:
-	1. **Git repository URL**: the SSH URL for your repository.
-	1. **Commit author name**: the username for the Git account that owns the repository.
-	1. **Commit author email**: the email address for the Git account that owns the repository.
-1. Copy the SSH key.
+--8<-- "_snippets/source-control/configure-git-in-n8n.md"
 
-## Step 3: Set up Git access
+## Step 3: Set up a deploy key
 
 Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. 
 

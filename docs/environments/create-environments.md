@@ -73,24 +73,51 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 === "Multi-branch"
 
-   1. In **Settings** > **Source Control** in n8n, select **Connect**. n8n connects to your Git repository.
-   1. Under **Instance settings**, choose which branch you want to use for the current n8n instance. Connect the production branch to the production instance, and the development branch to the development instance.
-   1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
-   1. Select **Save settings**.
+    1. In **Settings** > **Source Control** in n8n, select **Connect**. n8n connects to your Git repository.
+    1. Under **Instance settings**, choose which branch you want to use for the current n8n instance. Connect the production branch to the production instance, and the development branch to the development instance.
+    1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
+    1. Select **Save settings**.
 
 === "Single-branch"
 
-   1. In **Settings** > **Source Control** in n8n, select **Connect**. 
-	 1. Under **Instance settings**, select the main branch.
-   1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
-   1. Select **Save settings**.
+    1. In **Settings** > **Source Control** in n8n, select **Connect**. 
+	  1. Under **Instance settings**, select the main branch.
+    1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
+    1. Select **Save settings**.
 
 ## Push work from development
 
-In your development instance, create some workflows
+In your development instance, create a few workflows, tags, variables, and credentials.
+
+--8<-- "_snippets/source-control/push.md"
 
 ## Pull work to production
 
+Your work is now in GitHub. If you're using a multi-branch setup, it's on the development branch. If you chose the single-branch setup, it's on main.
+
+=== "Multi-branch"
+
+    1. In GitHub, create a pull request to merge development into production.
+    1. Merge the pull request.
+    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
+
+=== "Single-branch"
+
+    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
+
+--8<-- "_snippets/source-control/push-pull-menu-state.md"
+
 ### Optional: Use a GitHub Action to automate pulls
 
+If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/) to automatically pull every time you push new work to your production or main branch.
+
+--8<-- "_snippets/environments/github-action.md"
+
+
 ## Next steps
+
+Learn more about:
+
+* [Environments in n8n](/environments/understand/) and [Git and n8n](/source-control/git/)
+* [Source control patterns](/source-control/patterns/)
+* Reusable [Variables](/variables/) and [Managing variables using the API](/source-control/using#manage-variables-using-the-api) when using source control.

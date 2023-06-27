@@ -87,6 +87,8 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 ## Push work from development
 
+In your development instance, create some workflows
+
 ## Pull work to production
 
 ### Optional: Use a GitHub Action to automate pulls

@@ -1,19 +1,19 @@
 ---
-title: Crowd Dev credentials
-description: Documentation for the Crowd Dev credentials. Use these credentials to authenticate Crowd Dev in n8n, a workflow automation platform.
+title: crowd.dev credentials
+description: Documentation for the crowd.dev credentials. Use these credentials to authenticate crowd.dev in n8n, a workflow automation platform.
 ---
 
-# Crowd Dev credentials
+# crowd.dev credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Crowd Dev](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev/)
-* [Crowd Dev Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/)
+* [crowd.dev](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev/)
+* [crowd.dev Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/)
 
 ## Prerequisites
 
-A working instance of Crowd Dev
+A working instance of crowd.dev
 
 ## Using API Token
 	
-Refer to the [Crowd Dev documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} to get your access token and tenant ID.
+Refer to the [crowd.dev documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} to get your access token and tenant ID.

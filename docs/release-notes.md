@@ -24,6 +24,9 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-22
 
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
 !!! warning "Database Migration"
@@ -48,8 +51,9 @@ The Debug Helper node can be used to trigger different error types or generate r
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.0...n8n@0.233.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-19
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 This is a bug fix release.
 
@@ -83,8 +87,6 @@ This release includes a new trigger node for Postgres, which allows you to liste
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.231.2...n8n@0.231.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-17
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 
 

@@ -22,9 +22,7 @@ n8n may display a warning that:
 
 Select **Pull and override** to override your local work with the content in Git.
 
-[TODO: who owns workflows on pull?]
-
-### Workflow owner may change
+### Workflow owner may change on pull
 
 When you pull from Git to an n8n instance, the workflow owner may change. If the same owner is available on both instances, the owner remains the same. If the original owner isn't on the new instance, n8n sets the instance owner as the workflow owner.
 
@@ -38,7 +36,7 @@ When you pull from Git to an n8n instance, the workflow owner may change. If the
 
 ## Credentials and variable values
 
-n8n doesn't sync credentials and variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
+n8n doesn't sync credential and variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
 
 !!! note "Coming soon: credential support with secret managers"
 	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
@@ -55,7 +53,7 @@ Managing variables using the API has several advantages:
 * You can automatically update variable values using a CI (continuous integration) tool. 
 * You may also be able to protect the values. 
 
-For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link}, then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:targry=_blank .external-link}.
+For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link}, then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:target=_blank .external-link}.
 
 To manage variables using an API call, make a `POST` request to `/source-control/pull`:
 

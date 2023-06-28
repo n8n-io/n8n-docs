@@ -20,7 +20,7 @@ For a new setup:
 1. Create a new repository for use with n8n. 
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
-To help decide what branches you need for your use case, refer to [Understand source control in n8n | Source control patterns](/source-control/understand#source-control-patterns).
+To help decide what branches you need for your use case, refer to [Source control patterns](/source-control/patterns/).
 
 ## Step 2: Configure Git in n8n
 

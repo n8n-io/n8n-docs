@@ -120,4 +120,4 @@ Learn more about:
 
 * [Environments in n8n](/environments/understand/) and [Git and n8n](/source-control/git/)
 * [Source control patterns](/source-control/patterns/)
-* Reusable [Variables](/variables/) and [Managing variables using the API](/source-control/using#manage-variables-using-the-api) when using source control.
+* Reusable [Variables](/variables/) and [Managing variables using the API](/source-control/using/#manage-variables-using-the-api) when using source control.

@@ -7,6 +7,9 @@ description: Link n8n to your Git provider.
 
 Link a Git repository to an n8n instance and configure your source control.
 
+!!! note "Environments"
+	The main use case for source control is creating environments. Refer to [Environments](/environments/) for more information on creating environments in n8n, including recommended configurations.
+
 ## Prerequisites
 
 To use source control with n8n, you need a Git repository that allows SSH access. 

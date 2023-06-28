@@ -9,6 +9,9 @@ If your n8n instance [connects to a Git repository](/source-control/setup/), you
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control/git/) for an introduction to how n8n works with Git.
 
+!!! note "Environments"
+	The main use case for source control is creating environments. Refer to [Environments](/environments/) for more information on creating environments in n8n, including recommended configurations.
+
 
 ## Fetch other people's work
 

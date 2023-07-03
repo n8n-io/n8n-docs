@@ -231,6 +231,7 @@ nav:
         - Security: privacy-security/security.md
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
+    - Enterprise license key: enterprise-key.md
     - Release notes: release-notes.md
     - v1.0 preview: 1-0-preview.md
     - Keyboard shortcuts: keyboard-shortcuts.md

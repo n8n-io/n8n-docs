@@ -75,14 +75,14 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
     1. In **Settings** > **Source Control** in n8n, select **Connect**. n8n connects to your Git repository.
     1. Under **Instance settings**, choose which branch you want to use for the current n8n instance. Connect the production branch to the production instance, and the development branch to the development instance.
-    1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
+    1. Production instance only: select **Protected instance** to prevent users editing workflows in this instance.
     1. Select **Save settings**.
 
 === "Single-branch"
 
     1. In **Settings** > **Source Control** in n8n, select **Connect**. 
 	  1. Under **Instance settings**, select the main branch.
-    1. Production instance only: select **Read-only instance** to prevent users editing workflows in this instance.
+    1. Production instance only: select **Protected instance** to prevent users editing workflows in this instance.
     1. Select **Save settings**.
 
 ## Push work from development

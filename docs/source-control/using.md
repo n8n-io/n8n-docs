@@ -16,7 +16,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 ## Fetch other people's work
 
 !!! note "Restricted to instance owners"
-	Ordinary users can't send work to Git.
+	Ordinary users can't fetch work from Git.
 
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 

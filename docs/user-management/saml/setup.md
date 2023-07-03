@@ -54,4 +54,15 @@ Documentation links for common IdPs.
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/r/en-us/pingone/pingone_p1sso_start){:target=_blank .external-link} |
 
 
+## IdP-specific guidance
 
+This section contains notes on IdP-specific quirks and tips.
+
+### Azure
+
+The Azure metadata XML is a combination of the SAML 2.0 definition and the WS-Federation definition. This means you can't use the **App Federation Metadata Url** to automatically load the XML. Instead:
+
+1. Download the **Federation Metadata XML**.
+2. Open the file in your text editor.
+3. Remove the `RoleDescriptor` sections. Anything with the `fed:` namespace is part of the WS-Federation definition.
+4. Paste the edited XML into **Identity Provider Settings** in n8n's SSO settings.

@@ -34,6 +34,9 @@ The instance owner can change which Git branch connects to the instance. The ful
 
 This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users.
 
+!!! note "No cleanup"
+	n8n doesn't clean up the existing contents of an instance when changing branches. So switching branches in this pattern results in all the workflows from each branch being in your instance.
+
 ![Diagram](/_images/source-control/vc-one-multi.png)
 
 ## One instance, one branch

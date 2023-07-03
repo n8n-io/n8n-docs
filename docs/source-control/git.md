@@ -42,8 +42,10 @@ n8n uses three key Git processes:
 
 * **Push**: send work from your instance to Git. This saves a copy of your workflows, tags, and variables, to Git. You can choose which of these you want to save.
 * **Pull**: get the workflows, tags, and variables from Git and load it into n8n. 
+
 	!!! warning "Pulling overwrites your work"
 		If you have made changes to a workflow in n8n, you must push the changes to Git before pulling. When you pull, it overwrites any changes you've made if they aren't stored in Git.
+		
 * **Commit**: a commit in n8n is a single occurrence of pushing work to Git. 
 
 

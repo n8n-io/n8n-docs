@@ -42,7 +42,7 @@ The steps depend on your Git provider. Help links for common providers:
 
 1. In **Settings** > **Source Control** in n8n, select **Connect**. n8n connects to your Git repository.
 1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
-1. **Optional**: select **Read-only instance** to prevent users editing workflows in this instance. This is useful for protecting production instances.
+1. **Optional**: select **Protected instance** to prevent users editing workflows in this instance. This is useful for protecting production instances.
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps indicate to users which instance they're in.
 1. Select **Save settings**.
 

@@ -15,15 +15,14 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 ## Fetch other people's work
 
+!!! note "Restricted to instance owners"
+	Ordinary users can't send work to Git.
+
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 
 --8<-- "_snippets/source-control/push-pull-menu-state.md"
 
-n8n may display a warning that:
-
-> Some remote changes are going to override some of your local changes. Are you sure you want to continue?
-
-Select **Pull and override** to override your local work with the content in Git.
+n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
 
 ### Workflow owner may change on pull
 

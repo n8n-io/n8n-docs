@@ -1,9 +1,9 @@
 ---
-title: Source control patterns
+title: Branch patterns
 description: Understand the different relationships between n8n instances and Git branches that are possible with source control.
 ---
 
-# Source control patterns
+# Branch patterns
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 

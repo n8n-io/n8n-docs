@@ -1,9 +1,9 @@
 ---
-title: Understand environments in n8n
+title: Environments in n8n
 description: Understand the concepts behind environments in n8n.
 ---
 
-# Understand environments in n8n
+# Environments in n8n
 
 n8n has built its environments feature on top of Git, a version control software. This document helps you understand:
 

@@ -9,6 +9,8 @@ If your n8n instance connects to a Git repository, you need to keep your work in
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control-environments/understand/git/) for an introduction to how n8n works with Git.
 
+--8<-- "_snippets/source-control-environments/one-direction.md"
+
 ## Fetch other people's work
 
 !!! note "Restricted to instance owners"

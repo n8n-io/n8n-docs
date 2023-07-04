@@ -7,6 +7,8 @@ description: Understand the different relationships between n8n instances and Gi
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
+--8<-- "_snippets/source-control-environments/one-direction.md"
+
 ## Multiple instances, multiple branches
 
 This pattern involves having multiple n8n instances, each one linked to its own branch. 

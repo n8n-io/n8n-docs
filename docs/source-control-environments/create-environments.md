@@ -18,6 +18,8 @@ n8n has built its environments feature on top of Git, a version control software
 
 Before setting up source control and environments, you need to plan your environments, and how they relate to Git branches. n8n supports different [Branch patterns](/source-control-environments/understand/patterns/). For environments, you need to choose between two patterns: multi-instance, multi-branch, or multi-instance, single-branch. This tutorial covers both patterns.
 
+--8<-- "_snippets/source-control-environments/one-direction.md"
+
 ### Multiple instances, multiple branches
 
 ![Diagram](/_images/source-control-environments/vc-multi-multi.png)

@@ -36,4 +36,13 @@ When you pull from Git to an n8n instance, the workflow owner may change. If the
 
 ## What gets committed
 
+n8n commits the following to Git:
+
+* Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
+* Credential stubs (ID, name, type)
+* Variable stubs (ID and name)
+
 You can programmatically [Manage variables](/source-control-environments/using/manage-variables/) using the n8n API.
+
+!!! note "Coming soon: credential support with secret managers"
+	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.

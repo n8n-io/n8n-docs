@@ -1,16 +1,11 @@
 ---
-title: Credential and variable values
+title: Manage variables
 description: Manage variable values in n8n using the API and source control.
 ---
 
 # Manage variables
 
-n8n doesn't sync credential and variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
-
-[TODO: cut mention of creds here]
-
-!!! note "Coming soon: credential support with secret managers"
-	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
+n8n doesn't sync variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
 
 ## Manage variables using the API
 

@@ -15,6 +15,8 @@ This pattern involves having multiple n8n instances, each one linked to its own 
 
 You can use this pattern for environments. For example, create two n8n instances, development and production. Link them to their own branches. Push work from your development instance to its branch, do a pull request to move work to the production branch, then pull to the production instance.
 
+--8<-- "_snippets/source-control-environments/multi-instance-multi-branch-pros-cons.md"
+
 ![Diagram](/_images/source-control-environments/vc-multi-multi.png)
 
 ## Multiple instances, one branch
@@ -24,6 +26,8 @@ Use this pattern if you want the same workflows, tags, and variables everywhere,
 You can use this pattern for environments. For example, create two n8n instances, development and production. Link them both to the same branch. Push work from development, and pull it into production.
 
 This pattern is also useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
+
+--8<-- "_snippets/source-control-environments/multi-instance-one-branch-pros-cons.md"
 
 ![Diagram](/_images/source-control-environments/vc-multi-one.png)
 

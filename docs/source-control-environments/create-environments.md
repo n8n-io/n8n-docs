@@ -24,18 +24,14 @@ Before setting up source control and environments, you need to plan your environ
 
 ![Diagram](/_images/source-control-environments/vc-multi-multi.png)
 
-This pattern has one large advantage: an added safety layer to prevent changes getting into your production environment by mistake. You have to do a pull request in GitHub to copy work between environments.
-
-The disadvantage is that it requires more manual steps to copy work between environments.
+--8<-- "_snippets/source-control-environments/multi-instance-multi-branch-pros-cons.md"
 
 
 ### Multiple instances, one branch
 
 ![Diagram](/_images/source-control-environments/vc-multi-one.png)
 
-The advantage of this pattern is that work is instantly available to other environments when you push from one instance.
-
-The disadvantage is that if you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be very careful to never push work that you don't want in production.
+--8<-- "_snippets/source-control-environments/multi-instance-one-branch-pros-cons.md"
 
 ## Set up your repository
 

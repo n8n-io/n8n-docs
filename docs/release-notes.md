@@ -24,7 +24,13 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-28
 
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 This release contains new features, new nodes, node enhancements, and bug fixes.
+
+!!! warning "Unstable version"
+		This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -38,17 +44,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-22
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+This release contains new features, new nodes, node enhancements, and bug fixes.	
 
+!!! warning "Unstable version"
+		This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.	
 
-This release contains new features, new nodes, node enhancements, and bug fixes.
+!!! warning "Irreversible database migration"
+    This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
 
-!!! warning "Can't roll back"
-		If you upgrade to 0.234.0, you can't roll back to an earlier version.
-
-!!! warning "Database Migration"
-    Please note that this version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
+    If you upgrade to 0.234.0, you can't roll back to an earlier version.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -69,7 +73,8 @@ The Debug Helper node can be used to trigger different error types or generate r
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.0...n8n@0.233.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-19
 
-
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 

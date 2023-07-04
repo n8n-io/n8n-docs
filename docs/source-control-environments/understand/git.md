@@ -15,7 +15,7 @@ n8n uses Git to provide source control. To use this feature, it helps to have so
 	If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider.
 
 
-This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control/setup/) should have some familiarity with Git and with their Git hosting provider.
+This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control-environments/setup/) should have some familiarity with Git and with their Git hosting provider.
 
 !!! note "This is a very brief introduction"
 	Git is a complex topic. This section provides a very brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
@@ -28,7 +28,7 @@ This page introduces the Git concepts and terminology used in n8n. It doesn't co
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When they finish their work, their branch is merged back into the main branch.
 
-![Diagram](/_images/source-control/simple-git-branch.png)
+![Diagram](/_images/source-control-environments/simple-git-branch.png)
 
 ## Local and remote: Moving work between your machine and a Git provider
 

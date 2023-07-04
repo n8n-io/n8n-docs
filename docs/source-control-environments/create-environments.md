@@ -11,16 +11,16 @@ This tutorial walks through the process of setting up environments end-to-end. Y
 
 n8n has built its environments feature on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
 
-* [Understand environments in n8n](/environments/understand/): the purpose of environments, and how they work in n8n. 
-* [Git and n8n](/source-control/git/): Git concepts and source control in n8n.
+* [Environments in n8n](/source-control-environments/understand/environments/): the purpose of environments, and how they work in n8n. 
+* [Git and n8n](/source-control-environments/understand/git/): Git concepts and source control in n8n.
 
 ## Choose your source control pattern
 
-Before setting up source control and environments, you need to plan your environments, and how they relate to Git branches. n8n supports different [Source control patterns](/source-control/patterns/). For environments, you need to choose between two patterns: multi-instance, multi-branch, or multi-instance, single-branch. This tutorial covers both patterns.
+Before setting up source control and environments, you need to plan your environments, and how they relate to Git branches. n8n supports different [Branch patterns](/source-control-environments/understand/patterns/). For environments, you need to choose between two patterns: multi-instance, multi-branch, or multi-instance, single-branch. This tutorial covers both patterns.
 
 ### Multiple instances, multiple branches
 
-![Diagram](/_images/source-control/vc-multi-multi.png)
+![Diagram](/_images/source-control-environments/vc-multi-multi.png)
 
 This pattern has one large advantage: an added safety layer to prevent changes getting into your production environment by mistake. You have to do a pull request in GitHub to copy work between environments.
 
@@ -29,7 +29,7 @@ The disadvantage is that it requires more manual steps to copy work between envi
 
 ### Multiple instances, one branch
 
-![Diagram](/_images/source-control/vc-multi-one.png)
+![Diagram](/_images/source-control-environments/vc-multi-one.png)
 
 The advantage of this pattern is that work is instantly available to other environments when you push from one instance.
 
@@ -97,11 +97,11 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
     1. In GitHub, create a pull request to merge development into production.
     1. Merge the pull request.
-    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
+    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png)</span> in the main menu.
 
 === "Single-branch"
 
-    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
+    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png)</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
@@ -116,6 +116,6 @@ If you want to avoid logging in to your production instance to pull, you can use
 
 Learn more about:
 
-* [Environments in n8n](/environments/understand/) and [Git and n8n](/source-control/git/)
-* [Source control patterns](/source-control/patterns/)
-* Reusable [Variables](/variables/) and [Managing variables using the API](/source-control/using/#manage-variables-using-the-api) when using source control.
+* [Environments in n8n](/source-control-environments/understand//environments/) and [Git and n8n](/source-control-environments/understand/git/)
+* [Source control patterns](/source-control-environments/understand/patterns/)
+* Reusable [Variables](/variables/) and [Managing variables using the API](/source-control-environments/using/manage-variables/) when using source control.

@@ -1,6 +1,6 @@
 To push work to Git:
 
-1. Select **Push** <span class="inline-image">![Push icon](/_images/source-control/push-icon.png)</span> in the main menu.
+1. Select **Push** <span class="inline-image">![Push icon](/_images/source-control-environments/push-icon.png)</span> in the main menu.
 
 	--8<-- "_snippets/source-control/push-pull-menu-state.md"
 

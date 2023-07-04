@@ -7,9 +7,6 @@ description: Link n8n to your Git provider.
 
 Link a Git repository to an n8n instance and configure your source control.
 
-!!! note "Environments"
-	The main use case for source control is creating environments. Refer to [Environments](/environments/) for more information on creating environments in n8n, including recommended configurations.
-
 ## Prerequisites
 
 To use source control with n8n, you need a Git repository that allows SSH access. 
@@ -23,7 +20,7 @@ For a new setup:
 1. Create a new repository for use with n8n. 
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
-To help decide what branches you need for your use case, refer to [Source control patterns](/source-control/patterns/).
+To help decide what branches you need for your use case, refer to [Branch patterns](/source-control-environments/understand/patterns/).
 
 ## Step 2: Configure Git in n8n
 
@@ -43,6 +40,6 @@ The steps depend on your Git provider. Help links for common providers:
 1. In **Settings** > **Source Control** in n8n, select **Connect**. n8n connects to your Git repository.
 1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
 1. **Optional**: select **Protected instance** to prevent users editing workflows in this instance. This is useful for protecting production instances.
-1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps indicate to users which instance they're in.
+1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.
 

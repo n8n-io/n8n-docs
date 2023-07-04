@@ -7,16 +7,13 @@ description: Understand the different relationships between n8n instances and Gi
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
-!!! note "Environments"
-	The main use case for source control is creating environments. Refer to [Environments](/environments/) for more information on creating environments in n8n, including recommended configurations. You should use either the multiple instance/multiple branch or multiple instance/single branch pattern.
-
 ## Multiple instances, multiple branches
 
 This pattern involves having multiple n8n instances, each one linked to its own branch. 
 
 You can use this pattern for environments. For example, create two n8n instances, development and production. Link them to their own branches. Push work from your development instance to its branch, do a pull request to move work to the production branch, then pull to the production instance.
 
-![Diagram](/_images/source-control/vc-multi-multi.png)
+![Diagram](/_images/source-control-environments/vc-multi-multi.png)
 
 ## Multiple instances, one branch
 
@@ -26,7 +23,7 @@ You can use this pattern for environments. For example, create two n8n instances
 
 This pattern is also useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
 
-![Diagram](/_images/source-control/vc-multi-one.png)
+![Diagram](/_images/source-control-environments/vc-multi-one.png)
 
 ## One instance, multiple branches
 
@@ -35,12 +32,12 @@ The instance owner can change which Git branch connects to the instance. The ful
 This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users.
 
 !!! note "No cleanup"
-	n8n doesn't clean up the existing contents of an instance when changing branches. So switching branches in this pattern results in all the workflows from each branch being in your instance.
+	n8n doesn't clean up the existing contents of an instance when changing branches. Switching branches in this pattern results in all the workflows from each branch being in your instance.
 
-![Diagram](/_images/source-control/vc-one-multi.png)
+![Diagram](/_images/source-control-environments/vc-one-multi.png)
 
 ## One instance, one branch
 
 This is the simplest pattern.
 
-![Diagram](/_images/source-control/vc-one-one.png)
+![Diagram](/_images/source-control-environments/vc-one-one.png)

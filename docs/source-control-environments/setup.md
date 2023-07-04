@@ -27,7 +27,7 @@ To help decide what branches you need for your use case, refer to [Source contro
 
 ## Step 2: Configure Git in n8n
 
---8<-- "_snippets/source-control/configure-git-in-n8n.md"
+--8<-- "_snippets/source-control-environments/configure-git-in-n8n.md"
 
 ## Step 3: Set up a deploy key
 

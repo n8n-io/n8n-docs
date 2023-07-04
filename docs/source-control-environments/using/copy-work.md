@@ -40,5 +40,5 @@ curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
 
 This means you can use a GitHub Action or GitLab CI/CD to automatically pull changes to the production instance on merge.
 
---8<-- "_snippets/environments/github-action.md"
+--8<-- "_snippets/source-control-environments/github-action.md"
 

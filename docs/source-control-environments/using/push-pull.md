@@ -13,7 +13,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 
---8<-- "_snippets/source-control/push-pull-menu-state.md"
+--8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
 n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
 
@@ -27,4 +27,4 @@ When you pull from Git to an n8n instance, the workflow owner may change. If the
 !!! note "Restricted to instance owners"
 	Ordinary users can't send work to Git.
 
---8<-- "_snippets/source-control/push.md"
+--8<-- "_snippets/source-control-environments/push.md"

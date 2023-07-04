@@ -5,9 +5,7 @@ description: How to use n8n's source control feature to create environments.
 
 # Tutorial: Create environments with source control
 
-!!! info "Feature availability"
-	* Source control is available on Enterprise plans.
-	* You need access to the n8n instance owner account to set up source control, and to push work to Git. All users can pull.
+--8<-- "_snippets/source-control-environments/feature-availability.md"
 
 This tutorial walks through the process of setting up environments end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
 
@@ -63,7 +61,7 @@ Create two n8n instances, one for development, one for production.
 
 ### Configure Git in n8n
 
---8<-- "_snippets/source-control/configure-git-in-n8n.md"
+--8<-- "_snippets/source-control-environments/configure-git-in-n8n.md"
 
 ### Set up a deploy key
 
@@ -89,7 +87,7 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 In your development instance, create a few workflows, tags, variables, and credentials.
 
---8<-- "_snippets/source-control/push.md"
+--8<-- "_snippets/source-control-environments/push.md"
 
 ## Pull work to production
 
@@ -105,13 +103,13 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
     In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control/pull-icon.png)</span> in the main menu.
 
---8<-- "_snippets/source-control/push-pull-menu-state.md"
+--8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
 ### Optional: Use a GitHub Action to automate pulls
 
 If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/) to automatically pull every time you push new work to your production or main branch.
 
---8<-- "_snippets/environments/github-action.md"
+--8<-- "_snippets/source-control-environments/github-action.md"
 
 
 ## Next steps

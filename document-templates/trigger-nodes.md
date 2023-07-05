@@ -27,11 +27,12 @@ Match the brand name exactly. For example, GitHub NOT Github
 -->
 # _Name_ trigger
 
-_Briefly summarize the node. For example:_ 
+<!-- Briefly summarize the node. For example:_
 
-_The _Name_ trigger node allows you to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, which includes . . ._
+The _Name_ trigger node allows you to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
+-->
 
-_On this page, you'll find a list of events the _Name_ trigger node can respond to, and links to more resources._
+On this page, you'll find a list of events the _Name_ trigger node can respond to, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).

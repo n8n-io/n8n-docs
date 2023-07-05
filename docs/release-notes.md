@@ -19,6 +19,34 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.236.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.235.0...n8n@0.236.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-05
+
+This release contains new nodes, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### crowd.dev
+
+This release includes a [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} node and crowd.dev trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
+
+[crowd.dev node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.crowddev/).
+
+</div>
+
+### Contributors
+
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}  
+[Romeo Balta](https://github.com/romeobalta){:target=_blank .external-link}  
+[ZergRael](https://github.com/ZergRael){:target=_blank .external-link}  
+
 ## n8n@0.234.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.234.1){:target=_blank .external-link} for this version.<br />

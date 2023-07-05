@@ -253,6 +253,7 @@ nav:
         - integrations/builtin/credentials/bitwarden.md
         - integrations/builtin/credentials/box.md
         - integrations/builtin/credentials/brandfetch.md
+        - integrations/builtin/credentials/brevo.md
         - integrations/builtin/credentials/bubble.md
         - integrations/builtin/credentials/cal.md
         - integrations/builtin/credentials/calendly.md
@@ -411,7 +412,6 @@ nav:
         - integrations/builtin/credentials/segment.md
         - integrations/builtin/credentials/sendemail.md
         - integrations/builtin/credentials/sendgrid.md
-        - integrations/builtin/credentials/sendinblue.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md
         - integrations/builtin/credentials/servicenow.md

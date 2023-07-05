@@ -7,7 +7,7 @@ description: Documentation for the crowd.dev trigger node in n8n, a workflow aut
 
 The crowd.dev trigger node allows you to respond to events in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, which includes new activities and new members.
 
-_On this page, you'll find a list of events the crowd.dev trigger node can respond to, and links to more resources._
+On this page, you'll find a list of events the crowd.dev trigger node can respond to, and links to more resources.
 
 !!! note "Credentials"
 	You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).

@@ -1,3 +1,7 @@
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/integrations/builtin/credentials/sendinblue/   /integrations/builtin/credentials/brevo/
+
 /hosting/logging/   /hosting/logging-monitoring/logging/
 /code-examples/console-log/   /code-examples/javascript-functions/console-log/
 
@@ -618,10 +622,10 @@
 /nodes/n8n-nodes-base.segment/		/integrations/builtin/app-nodes/n8n-nodes-base.segment/
 /nodes/n8n-nodes-base.sendGrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
 /nodes/n8n-nodes-base.sendgrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
-/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
-/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
 /nodes/n8n-nodes-base.sendy/		/integrations/builtin/app-nodes/n8n-nodes-base.sendy/
 /nodes/n8n-nodes-base.sentryIo/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/
 /nodes/n8n-nodes-base.sentryio/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/

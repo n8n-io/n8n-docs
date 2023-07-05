@@ -36,7 +36,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} node and crowd.dev trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
 
-[crowd.dev node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.crowddev/).
+[crowd.dev node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev/).
 
 </div>
 

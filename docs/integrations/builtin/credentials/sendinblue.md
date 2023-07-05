@@ -1,19 +1,19 @@
 ---
-title: Sendinblue credentials
-description: Documentation for Sendinblue credentials. Use these credentials to authenticate Sendinblue in n8n, a workflow automation platform.
+title: Brevo credentials
+description: Documentation for Brevo credentials. Use these credentials to authenticate Brevo in n8n, a workflow automation platform.
 ---
 
-# Sendinblue credentials
+# Brevo credentials
 
-You can use these credentials to authenticate the following nodes with Sendinblue:
+You can use these credentials to authenticate the following nodes with Brevo:
 
-* [Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/)
-* [Sendinblue trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/)
+* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo/)
+* [Brevo trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
 
 ## API key
 
-Sendinblue uses API keys for authorization/
+Brevo uses API keys for authorization/
 
-1. Create a Sendinblue account.
-2. Create a new API key to use with n8n. Refer to the [Sendinblue documentation](https://developers.sendinblue.com/docs){:target=_blank .external-class} for detailed guidance on creating a key.
-3. In n8n's **Sendinblue account** page, paste your API key into the **API key** field.
+1. Create a Brevo account.
+2. Create a new API key to use with n8n. Refer to the [Brevo documentation](https://developers.brevo.com/docs){:target=_blank .external-class} for detailed guidance on creating a key.
+3. In n8n's **Brevo account** page, paste your API key into the **API key** field.

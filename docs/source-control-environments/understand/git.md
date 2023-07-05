@@ -48,4 +48,4 @@ n8n uses three key Git processes:
 		
 * **Commit**: a commit in n8n is a single occurrence of pushing work to Git. In n8n, commit and push happen at the same time.
 
-
+Refer to [Push and pull](/source-control-environments/using/push-pull/) for detailed information about how n8n interacts with Git.

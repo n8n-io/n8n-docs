@@ -8,5 +8,5 @@ description: Understand how source control and environments work in n8n.
 --8<-- "_snippets/source-control-environments/feature-availability.md"
 
 * [Environments in n8n](/source-control-environments/understand/environments/): The purpose of environments, and how they work in n8n.
-* [Git and n8n](/source-control-environments/understand/git/): How n8n uses Git. 
+* [Git in n8n](/source-control-environments/understand/git/): How n8n uses Git. 
 * [Branch patterns](/source-control-environments/understand/patterns/): The possible relationships between n8n instances and Git branches.

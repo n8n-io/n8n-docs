@@ -223,7 +223,7 @@ df_date:
         default: week
         options:  *df_durationUnit
     returns: Date
-    description: Transform a Date to the start of the given time period. Returns either a JavaScript Date or Luxon Date, depending on input.
+    description: Transforms a Date to the start of the given time period. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: endOfMonth
     returns: Date
     description: Transforms a Date to the end of the month.

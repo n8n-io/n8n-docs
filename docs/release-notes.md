@@ -19,13 +19,53 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 --8<-- "_snippets/update-n8n.md"
 
+## n8n@0.236.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.235.0...n8n@0.236.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-05
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This release contains new nodes, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### New nodes
+
+<div class="n8n-new-features" markdown>
+
+#### crowd.dev
+
+This release includes a [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} node and crowd.dev trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
+
+[crowd.dev node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev/).
+
+</div>
+
+### Contributors
+
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}  
+[Romeo Balta](https://github.com/romeobalta){:target=_blank .external-link}  
+[ZergRael](https://github.com/ZergRael){:target=_blank .external-link}  
+
+## n8n@0.234.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.234.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-05
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@0.235.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-28
-
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
@@ -47,7 +87,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234
 This release contains new features, new nodes, node enhancements, and bug fixes.	
 
 !!! warning "Unstable version"
-		This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.	
+		This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
 
 !!! warning "Irreversible database migration"
     This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
@@ -72,9 +112,6 @@ The Debug Helper node can be used to trigger different error types or generate r
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.0...n8n@0.233.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-06-19
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 

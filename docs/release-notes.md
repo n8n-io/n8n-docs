@@ -429,7 +429,7 @@ This is a bug fix release.
 * Editor: Settings sidebar should disconnect from push when navigating away.
 * Notion Node: Update credential test to not require user permissions.
 
---8<-- "_snippets/update-n8n.md"
+
 
 ## n8n@0.225.0
 
@@ -512,7 +512,6 @@ This is a bug fix release.
 
 [Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}
 
---8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.224.1
 
@@ -616,7 +615,7 @@ This release contains new features and bug fixes.
 * LinkedIn Node: Update the version of the API.
 * Redis Node: Fix issue with hash set not working as expected.
 
---8<-- "_snippets/update-n8n.md"
+
 
 ## n8n@0.222.3
 
@@ -739,7 +738,6 @@ This release introduces the [Filter](/integrations/builtin/core-nodes/n8n-nodes-
 
 [Manish Dhanwal](https://github.com/ManishDhanwal07){:target=_blank .external-link}
 
---8<-- "_snippets/update-n8n.md"
 
 ## n8n@0.221.3
 
@@ -803,7 +801,7 @@ This release adds a node for [QuickChart](https://quickchart.io/){:target=_blank
 * HTTP Request Node: fix AWS credentials to automatically deconstruct the URL.
 * Split In Batches Node: roll back changes in v1 and create v2.
 
---8<-- "_snippets/update-n8n.md"
+
 
 
 ## n8n@0.220.1
@@ -844,8 +842,6 @@ This release adds schema view to the node output panel, and includes node enhanc
 * Editor: properly handle mapping of dragged expression if it contains hyphen.
 * Metabase Node: fix issue with question results not correctly being returned.
 
---8<-- "_snippets/update-n8n.md"
-
 
 
 ## n8n@0.219.1
@@ -854,9 +850,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.219.0...n8n@0.219
 **Release date:** 2023-03-10
 
 This is a bug fix release. It resolves an issue with the HTTP Request node by removing the streaming response.
-
---8<-- "_snippets/update-n8n.md"
-
 
 
 ## n8n@0.219.0
@@ -898,10 +891,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.218.0...n8n@0.219
 
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
 
---8<-- "_snippets/update-n8n.md"
-
-
-
 
 
 ## n8n@0.218.0
@@ -938,10 +927,6 @@ This release contains node enhancements, bug fixes, and new features that lay gr
 * Show Execute Workflow node in the nodes panel.
 * Show RabbitMQ node in the nodes panel.
 * Stop showing mapping hint after mapping.
-
---8<-- "_snippets/update-n8n.md"
-
-
 
 
 
@@ -1021,10 +1006,6 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
---8<-- "_snippets/update-n8n.md"
-
-
-
 
 
 ## n8n@0.216.3
@@ -1033,10 +1014,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.216.2...n8n@0.216
 **Release date:** 2023-03-09
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-
 
 
 
@@ -1061,10 +1038,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215
 **Release date:** 2023-03-14
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-
 
 
 
@@ -1093,12 +1066,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214
 **Release date:** 2023-03-14
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
-
---8<-- "_snippets/update-n8n.md"
-
-
-
-
 
 
 ## n8n@0.214.4
@@ -1172,9 +1139,6 @@ This release contains new features, node enhancements, and bug fixes.
 
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
 
---8<-- "_snippets/update-n8n.md"
-
-
 
 
 
@@ -1184,8 +1148,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.1...n8n@0.215
 **Release date:** 2023-02-14
 
 This is a bug fix release. It solves an issue that was causing webhooks to be removed when they shouldn't be.
-
-
 
 
 

@@ -15,6 +15,8 @@ theme:
     - announce.dismiss
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
+    - content.tabs.link
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
     - navigation.footer
@@ -71,6 +73,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -208,9 +212,21 @@ nav:
         - Okta Workforce Identity SAML setup: user-management/saml/okta.md
         - Troubleshooting: user-management/saml/troubleshooting.md
         - Manage users with SAML: user-management/saml/managing.md
-    - Environments:
-      - environments/index.md
-      - Variables: environments/variables.md
+    - Source control and environments:
+      - source-control-environments/index.md
+      - Understand:
+        - source-control-environments/understand/index.md
+        - Environments: source-control-environments/understand/environments.md
+        - Git in n8n: source-control-environments/understand/git.md
+        - Branch patterns: source-control-environments/understand/patterns.md
+      - Set up: source-control-environments/setup.md
+      - Using:
+        - source-control-environments/using/index.md
+        - Push and pull: source-control-environments/using/push-pull.md
+        - Copy work between environments: source-control-environments/using/copy-work.md
+        - Manage variables: source-control-environments/using/manage-variables.md
+      - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
+    - Variables: variables.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

@@ -1,8 +1,12 @@
+
+/environments/variables/   /variables/
+
 /1-0-migration-checklist/   /1-0-preview/
 
 /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
 /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
 /integrations/builtin/credentials/sendinblue/   /integrations/builtin/credentials/brevo/
+
 
 /hosting/logging/   /hosting/logging-monitoring/logging/
 /code-examples/console-log/   /code-examples/javascript-functions/console-log/

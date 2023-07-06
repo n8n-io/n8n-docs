@@ -315,7 +315,7 @@ df_date:
         default: minute
         options:  *df_durationUnit
     returns: Date
-    description: Adds a given time period from a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
+    description: Adds a given time period to a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
 df_array:
   - funcName: average
     returns: Number

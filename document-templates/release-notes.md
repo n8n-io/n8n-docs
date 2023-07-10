@@ -65,7 +65,5 @@ _Description of new feature. Link to new node doc._
 
 _List external contributors. Do not use a bulleted list here._
 
-<!-- Include the "how to update" snippet. Remove it from any previous versions. -->
---8<-- "_snippets/update-n8n.md"
 
 

@@ -24,7 +24,7 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-link}. All version numbers are in the format `major.minor.patch`.
 
 * MAJOR version when making incompatible changes which potentially require user action.
-* Minor version: a version that introduces new features, but retains backwards compatibility.
+* MINOR version when adding functionality in a backward-compatible manner.
 * Patch version: contains backwards compatible bug fixes or small improvements. No new features.
 
 ## n8n@0.236.0

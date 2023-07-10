@@ -25,6 +25,8 @@ From n8n 1.0 onwards, releases will follow the pattern MAJOR.MINOR.PATCH. Versio
 
 Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code-examples/javascript-functions/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
+[PR #4295](https://github.com/n8n-io/n8n/pull/4295){:target=_blank .external link}, [PR #6209](https://github.com/n8n-io/n8n/pull/6209){:target=_blank .external link}
+
 ### Execution order
 
 n8n 1.0 introduces a new execution order for multi-branch workflows:

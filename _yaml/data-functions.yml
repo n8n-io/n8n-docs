@@ -223,7 +223,7 @@ df_date:
         default: week
         options:  *df_durationUnit
     returns: Date
-    description: Transform a Date to the start of the given time period.
+    description: Transforms a Date to the start of the given time period. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: endOfMonth
     returns: Date
     description: Transforms a Date to the end of the month.
@@ -237,7 +237,7 @@ df_date:
         default: week
         options:  *df_durationUnit
     returns: Number
-    description: Extracts the part defined in datePart from a Date.
+    description: Extracts the part defined in datePart from a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: format
     args:
       - argName: fmt
@@ -299,7 +299,7 @@ df_date:
         default: minute
         options:  *df_durationUnit
     returns: Date
-    description: Subtracts a given time period from a Date.
+    description: Subtracts a given time period from a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: plus
     args:
       - argName: n
@@ -315,7 +315,7 @@ df_date:
         default: minute
         options:  *df_durationUnit
     returns: Date
-    description: Adds a given time period from a Date.
+    description: Adds a given time period to a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
 df_array:
   - funcName: average
     returns: Number

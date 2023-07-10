@@ -20,7 +20,7 @@ This is the default mode. When using `main` mode, all executions will run in the
 | Benefits | Disadvantages |
 | :------- | :------------ |
 | **Minimal latency** | Can't take advantage of multiple CPUs. Single process can result in a bottleneck. |
-| **Resource efficiency**: only one CPU required. | Reduced stability, one crashed executions causes all others to fail. |
+| **Resource efficiency**: only one CPU required. | Reduced stability, one crashed execution causes all others to fail. |
 
 ### Own
 

@@ -15,6 +15,13 @@ Refer to the main [User management](/user-management/) guide for more informatio
 * [Account types](/user-management/account-types/)
 * [Best practices](/user-management/best-practices/)
 
+For LDAP setup information, refer to [LDAP](/user-management/ldap/).
+
+For SAML setup information, refer to [SAML](/user-management/saml/).
+
+!!! note "Basic auth and JWT"
+	n8n removed support for basic auth and JWT in version 1.0.
+
 ## Setup
 
 There are three stages to set up user management in n8n:
@@ -61,10 +68,10 @@ If your n8n instance is already running, you need to restart it to enable the ne
     If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.com/blog/what-is-an-smtp-server/) offers a short introduction, while [Wikipedia's Simple Mail Transfer Protocol article](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) provides more detailed technical background.
 
 
-### Step two: in-app setup
+### Step two: In-app setup
 
 --8<-- "_snippets/user-management/in-app-setup.md"
 
-### Step three: invite users
+### Step three: Invite users
 
 --8<-- "_snippets/user-management/invite-users.md"

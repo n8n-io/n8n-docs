@@ -25,7 +25,7 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 
 * MAJOR version when making incompatible changes which potentially require user action.
 * MINOR version when adding functionality in a backward-compatible manner.
-* Patch version: contains backwards compatible bug fixes or small improvements. No new features.
+* PATCH version when making backward-compatible bug fixes.
 
 ## n8n@0.236.0
 

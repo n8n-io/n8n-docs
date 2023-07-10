@@ -114,6 +114,18 @@ _Array of strings_ | _Required_
 
 Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, us `input: ['main']`.
 
+### forceInputNodeExecution
+
+_Boolean_ | _Optional_
+
+When building a multi-input node, you can choose to force all preceeding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
+
+### requiredInputs
+
+_Array of strings_ | _Optional_
+
+Used for multi-input nodes. Specify inputs that must have data (their branches must run) before the node can execute.
+
 ### outputs
 
 _Array of strings_ | _Required_  

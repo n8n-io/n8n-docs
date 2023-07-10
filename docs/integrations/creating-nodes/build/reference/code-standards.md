@@ -108,4 +108,4 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 
 This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
 
-Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the deprecated `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the removed `this.helpers.request`.

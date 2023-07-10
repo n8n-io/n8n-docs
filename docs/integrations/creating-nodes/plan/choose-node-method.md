@@ -104,10 +104,10 @@ export class FriendGrid implements INodeType {
             data,
             ],
         },
-        uri: `https://api.sendgrid.com/v3/marketing/contacts`,
+        url: `https://api.sendgrid.com/v3/marketing/contacts`,
         json: true,
       };
-      responseData = await this.helpers.request(options);
+      responseData = await this.helpers.httpRequest(options);
       }
     }
     // Map data to n8n data

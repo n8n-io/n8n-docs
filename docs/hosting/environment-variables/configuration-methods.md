@@ -165,7 +165,7 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ### Execute all workflows in the same process
 
 !!! warning "Deprecated"
-	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 0.227.0. They will be removed in a future release. Main mode is now the default, so this step is not needed for version 0.227.0 and above.
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
 	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.

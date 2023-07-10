@@ -13,9 +13,22 @@ Set the n8n mode using the following [environment variables](/hosting/environmen
 
 There are two options available when selecting how n8n handles execution processes: `own` and `main`.
 
+### Main
+
+This is the default mode. When using `main` mode, all executions will run in the main n8n process. This mode has the following benefits and disadvantages:
+
+| Benefits | Disadvantages |
+| :------- | :------------ |
+| **Minimal latency** | Can't take advantage of multiple CPUs. Single process can result in a bottleneck. |
+| **Resource efficiency**: only one CPU required. | Reduced stability, one crashed execution causes all others to fail. |
+
 ### Own
 
-This is the default setting in n8n. In `own` mode, each execution runs in its own, newly instantiated process (one execution equals one running process). Running in this mode has the following benefits and disadvantages:
+!!! warning "Deprecated"
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
+	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+
+In `own` mode, each execution runs in its own, newly instantiated process (one execution equals one running process). Running in this mode has the following benefits and disadvantages:
 
 | Benefits | Disadvantages |
 | :------- | :------------ |
@@ -25,15 +38,6 @@ This is the default setting in n8n. In `own` mode, each execution runs in its ow
 n8n recommends this mode for running CPU intensive tasks to ensure processes don't block each other.
 
 As `own` also reloads nodes on each execution, it's also the best mode for developing custom nodes.
-
-### Main
-
-When using `main` mode, all executions will run in the main n8n process. This mode has the following benefits and disadvantages:
-
-| Benefits | Disadvantages |
-| :------- | :------------ |
-| **Minimal latency** | Can't take advantage of multiple CPUs. Single process can result in a bottleneck. |
-| **Resource efficiency**: only one CPU required. | Reduced stability, one crashed executions causes all others to fail. |
 
 ## Executions mode
 

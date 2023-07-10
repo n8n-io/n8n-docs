@@ -1,4 +1,4 @@
-The Code node allows you to write custom JavaScript and run it as a step in your workflow.
+The Code node allows you to write custom JavaScript or Python and run it as a step in your workflow.
 
 !!! note "Function and Function Item nodes"
 	The Code node replaces the Function and Function Item nodes from version 0.198.0 onwards. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md){:target=_blank .external-link} and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md){:target=_blank .external-link}.
@@ -14,6 +14,9 @@ There are two modes:
 * **Run Once for All Items**: this is the default. When your workflow runs, the code in the code node executes once, regardless of how many input items there are.
 * **Run Once for Each Item**: choose this if you want your code to run for every input item.
 
+## JavaScript
+
+The Code node supports Node.js.
 
 ### Supported JavaScript features
 
@@ -25,6 +28,21 @@ The Code node supports:
 ### External libraries
 
 If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node) guide.
+
+## Python
+
+n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/){:target=_blank .external-link}, which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external-link}. n8n downloads the package automatically the first time you use it.
+
+!!! note "Slower than JavaScript"
+	The Code node takes longer to process Python than JavaScript. This is due to the additional compilation steps.
+
+### File system and HTTP requests
+
+You can't access the file system or make HTTP requests using Python. Use the following nodes instead:
+
+* [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) 
+* [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/)
+* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Coding in n8n
 

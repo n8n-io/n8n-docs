@@ -142,6 +142,7 @@ nav:
     - Flow logic:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Looping: flow-logic/looping.md
       - Error handling:
         - flow-logic/error-handling/index.md

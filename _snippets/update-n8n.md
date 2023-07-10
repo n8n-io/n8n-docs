@@ -1,4 +1,4 @@
-### How to update n8n
+## How to update n8n
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 

@@ -21,19 +21,49 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 ## Semantic versioning in n8n
 
-n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-link}. All version numbers are in the format `major.minor.patch`.
+n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-link}. All version numbers are in the format `MAJOR.MINOR.PATCH`. Version numbers increment as follows:
 
 * MAJOR version when making incompatible changes which potentially require user action.
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
+
+## n8n@1.0.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-05
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+This is n8n's version one release.
+
+For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### Python support
+
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code-examples/javascript-functions/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+
+</div>
+
+### Contributors
+
+[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}
+
 
 ## n8n@0.236.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.235.0...n8n@0.236.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-05
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This release contains new nodes, node enhancements, and bug fixes.
 
@@ -62,9 +92,6 @@ This release includes a [crowd.dev](https://www.crowd.dev/){:target=_blank .exte
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.234.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-05
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 
@@ -1006,6 +1033,10 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
+<<<<<<< HEAD
+=======
+--8<-- "_snippets/update-n8n.md"
+>>>>>>> main
 
 
 ## n8n@0.216.3
@@ -1029,9 +1060,6 @@ This is a bug fix release.
 Core: don't remove empty output connections arrays in PurgeInvalidWorkflowConnections migration.
 
 
-
-
-
 ## n8n@0.215.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215.4){:target=_blank .external-link} for this version.<br />
@@ -1039,6 +1067,10 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
+<<<<<<< HEAD
+=======
+--8<-- "_snippets/update-n8n.md"
+>>>>>>> main
 
 
 ## n8n@0.215.3
@@ -1057,9 +1089,6 @@ This is a bug fix release. It contains an important security fix.
 * Core: the user update endpoint should only allow updating email, first name, and last name.
 
 
-
-
-
 ## n8n@0.214.5
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214.5){:target=_blank .external-link} for this version.<br />
@@ -1067,6 +1096,11 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
+<<<<<<< HEAD
+=======
+--8<-- "_snippets/update-n8n.md"
+
+>>>>>>> main
 
 ## n8n@0.214.4
 

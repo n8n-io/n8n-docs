@@ -105,9 +105,9 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
 
 
-## Try it out: a step by step example
+## Try it out: A step by step example
 
-Create a simple workflow with some example input data to try out the Merge node.
+Create a workflow with some example input data to try out the Merge node.
 
 ### Set up sample data using the Code nodes
 
@@ -160,7 +160,7 @@ Add the Merge node. Connect the first Code node to **Input 1**, and the second C
 
 The final workflow should look like the following image.
 
-![Simple merge workflow with two Code nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
+![Merge workflow with two Code nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
 
 Now try different options in **Mode** to see how it affects the output data.
 
@@ -213,7 +213,7 @@ Output in table view:
 ![Merge by Multiplex mode output](/_images/integrations/builtin/core-nodes/merge/multiplex-mode.png)
 
 
-## Try it out: load a workflow
+## Try it out: Load a workflow
 
 n8n provides an example workflow that demonstrates key Merge node concepts.
 

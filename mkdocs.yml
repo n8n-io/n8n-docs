@@ -142,6 +142,7 @@ nav:
     - Flow logic:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Looping: flow-logic/looping.md
       - Error handling:
         - flow-logic/error-handling/index.md
@@ -236,7 +237,7 @@ nav:
         - What you can do: privacy-security/what-you-can-do.md
     - Enterprise license key: enterprise-key.md
     - Release notes: release-notes.md
-    - v1.0 preview: 1-0-preview.md
+    - v1.0 migration guide: 1-0-migration-checklist.md
     - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md

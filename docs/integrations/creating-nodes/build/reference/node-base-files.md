@@ -122,9 +122,9 @@ When building a multi-input node, you can choose to force all preceeding nodes o
 
 ### requiredInputs
 
-_Array of strings_ | _Optional_
+_Array of integers_ | _Optional_
 
-Used for multi-input nodes. Specify inputs that must have data (their branches must run) before the node can execute.
+Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
 
 ### outputs
 

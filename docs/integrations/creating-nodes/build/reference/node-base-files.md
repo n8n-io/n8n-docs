@@ -108,29 +108,30 @@ The object can include:
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
 * `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
 
+### forceInputNodeExecution
+
+_Boolean_ | _Optional_
+
+When building a multi-input node, you can choose to force all preceding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
+
 ### inputs
 
 _Array of strings_ | _Required_
 
 Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, us `input: ['main']`.
 
-### forceInputNodeExecution
-
-_Boolean_ | _Optional_
-
-When building a multi-input node, you can choose to force all preceeding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
-
-### requiredInputs
-
-_Array of integers_ | _Optional_
-
-Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
 
 ### outputs
 
 _Array of strings_ | _Required_  
 
 Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, us `output: ['main']`.
+
+### requiredInputs
+
+_Integer_ or _Array_ | _Optional_
+
+Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
 
 ### credentials
 
@@ -322,7 +323,7 @@ include postReceive actions, including ability to dynamically disable - see DOC-
 
 ### version
 
-_Number_ or _array_ | Optional
+_Number_ or _Array_ | Optional
 
 If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
@@ -377,7 +378,7 @@ For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packag
 
 ### version
 
-_Number_ or _array_ | _Optional_
+_Number_ or _Array_ | _Optional_
 
 Use `version` when using the light versioning approach.
 

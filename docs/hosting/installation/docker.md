@@ -33,8 +33,7 @@ You can then access n8n by opening:
 
 ## Using alternate databases
 
-By default n8n uses SQLite to save credentials, past executions and workflows.
-n8n also supports PostgresDB, MySQL and MariaDB, configurable via
+By default n8n uses SQLite to save credentials, past executions and workflows. n8n also supports PostgresDB configurable using
 environment variables as detailed below.
 
 It's important to still persist data in the `/home/node/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
@@ -70,7 +69,7 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 ### MySQL
 
 !!! warning "Deprecated"
-	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0. Support will be removed in version 1.0.
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
 
 	n8n recommends using PostgreSQL. 
 

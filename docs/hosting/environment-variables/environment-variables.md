@@ -21,10 +21,17 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb`, `mysqldb`, `postgresdb` | `sqlite` | The database to use. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb` (deprecated), `mysqldb` (deprecated), `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
 
 ### MySQL
+
+!!! warning "Deprecated"
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+
+	n8n recommends using PostgreSQL. 
+
+	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

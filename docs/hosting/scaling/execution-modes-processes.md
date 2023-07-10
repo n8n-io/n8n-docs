@@ -25,7 +25,7 @@ This is the default mode. When using `main` mode, all executions will run in the
 ### Own
 
 !!! warning "Deprecated"
-	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 0.227.0 and above.
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
 	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 In `own` mode, each execution runs in its own, newly instantiated process (one execution equals one running process). Running in this mode has the following benefits and disadvantages:

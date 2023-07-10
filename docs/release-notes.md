@@ -44,6 +44,10 @@ Although JavaScript remains the default language, you can now also select Python
 
 </div>
 
+### Contributors
+
+[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}
+
 
 ## n8n@0.236.0
 

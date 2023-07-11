@@ -106,7 +106,7 @@ n8n export:workflow --id=<ID> --output=file.json
 Export all workflows to a specific directory in a single file:
 
 ```bash
-n8n export:workflow --all --output=backups/latest/
+n8n export:workflow --all --output=backups/latest/file.json
 ```
 
 Export all the workflows to a specific directory using the `--backup` flag (details above):
@@ -132,7 +132,7 @@ n8n export:credentials --id=<ID> --output=file.json
 Export all credentials to a specific directory in a single file:
 
 ```bash
-n8n export:credentials --all --output=backups/latest/
+n8n export:credentials --all --output=backups/latest/file.json
 ```
 
 Export all the credentials to a specific directory using the `--backup` flag (details above):

@@ -204,7 +204,6 @@ nav:
       - Cloud setup: user-management/cloud-setup.md
       - Manage users: user-management/manage-users.md
       - Account types: user-management/account-types.md
-      - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
       - LDAP: user-management/ldap.md
       - SAML: 

@@ -11,7 +11,6 @@ This document describes how to configure your n8n instance to support user manag
 Refer to the main [User management](/user-management/) guide for more information about usage, including:
 
 * [Managing users](/user-management/manage-users/)
-* [Skipping user management](/user-management/skip-disable/)
 * [Account types](/user-management/account-types/)
 * [Best practices](/user-management/best-practices/)
 
@@ -19,7 +18,7 @@ For LDAP setup information, refer to [LDAP](/user-management/ldap/).
 
 For SAML setup information, refer to [SAML](/user-management/saml/).
 
-!!! note "Basic auth and JWT"
+!!! note "Basic auth and JWT removed"
 	n8n removed support for basic auth and JWT in version 1.0.
 
 ## Setup

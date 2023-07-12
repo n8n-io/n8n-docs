@@ -4,13 +4,9 @@
 
 ## Authentication
 
-You can secure n8n using Basic Authentication by setting the following environment variables:
+You can secure n8n by setting up [User management](/user-management/), n8n's built-in authentication feature.
 
-```sh
-export N8N_BASIC_AUTH_ACTIVE=true
-export N8N_BASIC_AUTH_USER=<USER>
-export N8N_BASIC_AUTH_PASSWORD=<PASSWORD>
-``` 
+n8n supports [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/).
 
 ### Credential overwrites
 

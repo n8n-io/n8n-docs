@@ -22,9 +22,7 @@ This opens the **Create New App** page on Heroku. Set a name for the project, an
 
 ### Configure environment variables
 
-[TODO: clarify this section based on https://github.com/n8n-io/n8n-heroku/pull/8]
-
-Heroku pre-fills the configuration options defined in the `setup` > `config` section of the `heroku.yml` file, which also sets default values for the environment variables n8n uses.
+Heroku pre-fills the configuration options defined in the `env` section of the `app.json` file, which also sets default values for the environment variables n8n uses.
 
 You can change any of these values to suit your needs. You must change the following values:
 
@@ -56,8 +54,6 @@ Heroku doesn't allow Docker-based applications to define an exposed port with th
 	[Read this guide](https://devcenter.heroku.com/articles/container-registry-and-runtime#unsupported-dockerfile-commands){:target="_blank" .external-link} for more details on the limitations of using Docker with Heroku.
 
 ### Configuring Heroku
-
-[TODO: clarify this section based on https://github.com/n8n-io/n8n-heroku/pull/8]
 
 The `heroku.yml` file defines the application you want to create on Heroku. It consists of two sections:
 

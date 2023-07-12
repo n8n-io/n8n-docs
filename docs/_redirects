@@ -1,4 +1,8 @@
 
+/hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
+/hosting/authentication/jwt/   /hosting/user-management-self-hosted/
+/hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/
+
 /environments/variables/   /variables/
 
 /1-0-preview/   /1-0-migration-checklist/

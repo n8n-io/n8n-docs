@@ -24,9 +24,7 @@ In Docker you can use the `-e` flag from the command line:
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -e N8N_BASIC_AUTH_ACTIVE="true" \
- -e N8N_BASIC_AUTH_USER="<user>" \
- -e N8N_BASIC_AUTH_PASSWORD="<password>" \
+ -e N8N_TEMPLATES_ENABLED="false" \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -99,9 +97,7 @@ For example:
 ```yaml
 n8n:
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=<user>
-      - N8N_BASIC_AUTH_PASSWORD=<password>
+      - N8N_TEMPLATES_ENABLED=false
 ```
 
 ### Keeping sensitive data in separate files
@@ -127,16 +123,7 @@ The following environment variables support file input:
 - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
 - `DB_POSTGRESDB_USER_FILE`
 - `DB_POSTGRESDB_SCHEMA_FILE`
-- `N8N_BASIC_AUTH_PASSWORD_FILE`
-- `N8N_BASIC_AUTH_USER_FILE`
-- `N8N_BASIC_AUTH_HASH_FILE`
-- `N8N_JWT_AUTH_HEADER_FILE`
-- `N8N_JWKS_URI_FILE`
-- `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
-- `N8N_JWT_ISSUER_FILE`
-- `N8N_JWT_NAMESPACE_FILE`
-- `N8N_JWT_ALLOWED_TENANT_FILE`
-- `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
+
 
 ## Examples
 

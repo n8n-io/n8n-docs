@@ -11,7 +11,7 @@ This document describes how to configure your n8n instance to support user manag
 Refer to the main [User management](/user-management/) guide for more information about usage, including:
 
 * [Managing users](/user-management/manage-users/)
-* [Skipping or disabling user management](/user-management/skip-disable/)
+* [Skipping user management](/user-management/skip-disable/)
 * [Account types](/user-management/account-types/)
 * [Best practices](/user-management/best-practices/)
 

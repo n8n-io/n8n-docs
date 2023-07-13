@@ -39,6 +39,20 @@ This is a bug fix release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+## n8n@1.0.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.1...n8n@1.0.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-05
+
+This is a bug fix release.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+### Contributors
+
+[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}
+
 ## n8n@1.0.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1){:target=_blank .external-link} for this version.<br />

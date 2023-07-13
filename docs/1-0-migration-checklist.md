@@ -43,7 +43,7 @@ Your existing workflows will use the legacy order, while new workflows will exec
 
 ### MySQL and MariaDB
 
-n8n will remove support for MySQL and MariaDB as storage backends in a future version of n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to migrate to PostgreSQL for better compatibility and long-term support.
+n8n will remove support for MySQL and MariaDB as storage backends in a future version of n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
 
 [PR #6189](https://github.com/n8n-io/n8n/pull/6189){:target=_blank .external link}
 
@@ -128,7 +128,9 @@ As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration op
 1. Create a full backup of n8n.
 2. n8n recommends updating to the latest n8n 0.x release before updating to n8n 1.x. This will allow you to pinpoint any potential issues to the correct release. Once you have verified that n8n 0.x starts up without any issues, proceed to the next step.
 3. Carefully read the [Deprecations](#deprecations) and [Breaking Changes](#breaking-changes) sections above to assess how they may affect your setup.
-4. Update to n8n 1.0. If using Docker, pull the `latest` Docker image, which corresponds to the n8n 1.0 release as of July 24, 2023.
+4. Update to n8n 1.0:
+	* During beta (before July 24th 2023): If using Docker, pull the `next` Docker image.
+	* After July 24th 2023: If using Docker, pull the `latest` Docker image.
 5. If you encounter any issues, redeploy the previous n8n version and restore the backup.
 
 ## Reporting issues

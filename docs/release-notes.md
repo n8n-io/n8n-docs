@@ -1058,10 +1058,7 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
-<<<<<<< HEAD
-=======
 --8<-- "_snippets/update-n8n.md"
->>>>>>> main
 
 
 ## n8n@0.216.3
@@ -1092,10 +1089,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
-<<<<<<< HEAD
-=======
 --8<-- "_snippets/update-n8n.md"
->>>>>>> main
 
 
 ## n8n@0.215.3
@@ -1121,11 +1115,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
-<<<<<<< HEAD
-=======
 --8<-- "_snippets/update-n8n.md"
 
->>>>>>> main
 
 ## n8n@0.214.4
 

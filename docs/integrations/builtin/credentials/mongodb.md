@@ -21,7 +21,7 @@ For formatting details for **Connection String**, refer to [Connection String UR
 
 ## Connecting to MongoDB Atlas
 
-You need to configureyour MongoDB database, then add n8n-specific settings.
+You need to configure your MongoDB database, then configure your n8n credential.
 
 ### MongoDB Atlas settings
 

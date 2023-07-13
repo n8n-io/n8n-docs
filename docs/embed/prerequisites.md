@@ -7,7 +7,7 @@ The requirements provided here are an example based on n8n Cloud and are for ill
 | Component | Sizing | Supported |
 | :-------- | :----- | :-------- |
 | CPU/vCPU  | Minimum 10 CPU cycles, scaling as needed | Any public or private cloud |
-| Database  | 512 MB - 4 GB SSD | SQLite, PostgreSQL, MySQL, MariaDB |
+| Database  | 512 MB - 4 GB SSD | SQLite or PostgreSQL |
 | Memory    | 320 MB - 2 GB | |
 
 ## CPU considerations
@@ -22,7 +22,7 @@ A core feature of n8n is the flexibility to choose a database. All the supported
 
 n8n recommends that every n8n instance have a dedicated database. This helps to prevent dependencies and potential performance degradation. If it isn't possible to provide a dedicated database for every n8n instance, n8n recommends making use of Postgres's schema feature.
 
-For Postgres, MySQL, and MariaDB, the database must already exist on the DB-instance. The database user for the n8n process needs to have full permissions on all tables that they're using or creating. n8n creates and maintains the database schema.
+For Postgres, the database must already exist on the DB-instance. The database user for the n8n process needs to have full permissions on all tables that they're using or creating. n8n creates and maintains the database schema.
 
 ### Best practices
 

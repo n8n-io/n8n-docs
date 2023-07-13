@@ -21,10 +21,17 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb`, `mysqldb`, `postgresdb` | `sqlite` | The database to use. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb` (deprecated), `mysqldb` (deprecated), `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
 
 ### MySQL
+
+!!! warning "Deprecated"
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+
+	n8n recommends using PostgreSQL. 
+
+	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -101,7 +108,6 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.|
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
 | `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ |
 | `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ |
@@ -112,6 +118,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
+
 
 ## Endpoints
 
@@ -146,7 +153,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `own` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
+| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `main` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that users can set for an individual workflow. |
@@ -219,19 +226,8 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_AUTH_EXCLUDE_ENDPOINTS` | String | - | Exclude endpoints from authentication checks. Provide multiple endpoints as a colon-seperated list ("`:`"). The endpoints must not start with a forward slash ("`/`"). |
-| `N8N_BASIC_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate basic auth for editor and REST-API access. |
-| `N8N_BASIC_AUTH_USER`<br>/`_FILE` | String | - | The name of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_PASSWORD`<br>/`_FILE` | String | - | The password of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_HASH`<br>/`_FILE` | Boolean | `false` | Whether to hash the basic authentication password. |
 | `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the Code node (false) or not (true). |
-| `N8N_JWT_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate JWT authentication for editor and REST-API access. |
-| `N8N_JWT_AUTH_HEADER`<br>/`_FILE` | String | - | The request header containing a signed JWT. |
-| `N8N_JWT_AUTH_HEADER_VALUE_PREFIX`<br>/`_FILE` | String | - | Optional. The request header value prefix to strip. |
-| `N8N_JWKS_URI`<br>/`_FILE` | String | - | The URI to fetch JWK Set for JWT authentication. |
-| `N8N_JWT_ISSUER`<br>/`_FILE` | String | - | Optional. The expected JWT issuer. |
-| `N8N_JWT_NAMESPACE`<br>/`_FILE` | String | - | Optional. The expected JWT namespace. |
-| `N8N_JWT_ALLOWED_TENANT`<br>/`_FILE` | String | - | Optional. The allowed JWT tenant. |
-| `N8N_JWT_ALLOWED_TENANT_KEY`<br>/`_FILE` | String | - | Optional. The JWT tenant key name to inspect within the JWT namespace. |
+
 
 ## Timezone and localization
 

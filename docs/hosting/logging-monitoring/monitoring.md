@@ -16,8 +16,6 @@ Access the endpoint:
 <your-instance-url>/healthz
 ```
 
-!!! info "Feature availability"
-	The `/healthz` endpoint isn't available on n8n Cloud Starter plans.
 
 ## metrics
 

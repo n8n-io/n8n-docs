@@ -102,9 +102,6 @@ services:
       - traefik.http.middlewares.n8n.headers.STSPreload=true
       - traefik.http.routers.n8n.middlewares=n8n@docker
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER
-      - N8N_BASIC_AUTH_PASSWORD
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
@@ -115,7 +112,7 @@ services:
       - ${DATA_FOLDER}/.n8n:/home/node/.n8n
 ```
 
-If you are planning on reading/writing local files with n8n (for example, by using the [*Write Binary File* node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+If you are planning on reading/writing local files with n8n (for example, by using the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
       - /local-files:/files
@@ -146,12 +143,6 @@ SUBDOMAIN=n8n
 # DOMAIN_NAME and SUBDOMAIN combined decide where n8n will be reachable from
 # above example would result in: https://n8n.example.com
 
-# The user name to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_USER=user
-
-# The password to use for authentication - IMPORTANT ALWAYS CHANGE!
-N8N_BASIC_AUTH_PASSWORD=password
-
 # Optional timezone to set which gets used by Cron-Node by default
 # If not set New York time will be used
 GENERIC_TIMEZONE=Europe/Berlin
@@ -160,7 +151,6 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=user@example.com
 ```
 
-**Note:** If you want to use special characters in the password, use quotes. For example, `N8N_BASIC_AUTH_PASSWORD="p@s$w0rd"`
 
 ### 7. Create data folder
 

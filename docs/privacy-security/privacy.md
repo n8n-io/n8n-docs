@@ -75,7 +75,6 @@ n8n collects selected usage and performance data to help diagnose problems and i
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
         - [Execution variables](/hosting/environment-variables/environment-variables/#executions)
-        - N8N_BASIC_AUTH_ACTIVE
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address

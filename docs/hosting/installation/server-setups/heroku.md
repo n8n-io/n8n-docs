@@ -22,11 +22,10 @@ This opens the **Create New App** page on Heroku. Set a name for the project, an
 
 ### Configure environment variables
 
-Heroku pre-fills the configuration options defined in the `setup` > `config` section of the `Dockerfile`, which also sets default values for the environment variables n8n uses.
+Heroku pre-fills the configuration options defined in the `env` section of the `app.json` file, which also sets default values for the environment variables n8n uses.
 
 You can change any of these values to suit your needs. You must change the following values:
 
-- **N8N_BASIC_AUTH_USER** and **N8N_BASIC_AUTH_PASSWORD**, which define the admin user account details.
 - **N8N_ENCRYPTION_KEY**, which n8n uses to [encrypt user account details](/hosting/configuration/#encryption-key) before saving to the database.
 - **WEBHOOK_URL** should match the application name you create to ensure that webhooks have the correct URL.
 

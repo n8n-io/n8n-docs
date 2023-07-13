@@ -24,9 +24,7 @@ In Docker you can use the `-e` flag from the command line:
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -e N8N_BASIC_AUTH_ACTIVE="true" \
- -e N8N_BASIC_AUTH_USER="<user>" \
- -e N8N_BASIC_AUTH_PASSWORD="<password>" \
+ -e N8N_TEMPLATES_ENABLED="false" \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -99,9 +97,7 @@ For example:
 ```yaml
 n8n:
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=<user>
-      - N8N_BASIC_AUTH_PASSWORD=<password>
+      - N8N_TEMPLATES_ENABLED=false
 ```
 
 ### Keeping sensitive data in separate files
@@ -127,16 +123,7 @@ The following environment variables support file input:
 - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
 - `DB_POSTGRESDB_USER_FILE`
 - `DB_POSTGRESDB_SCHEMA_FILE`
-- `N8N_BASIC_AUTH_PASSWORD_FILE`
-- `N8N_BASIC_AUTH_USER_FILE`
-- `N8N_BASIC_AUTH_HASH_FILE`
-- `N8N_JWT_AUTH_HEADER_FILE`
-- `N8N_JWKS_URI_FILE`
-- `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
-- `N8N_JWT_ISSUER_FILE`
-- `N8N_JWT_NAMESPACE_FILE`
-- `N8N_JWT_ALLOWED_TENANT_FILE`
-- `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
+
 
 ## Examples
 
@@ -165,7 +152,7 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ### Execute all workflows in the same process
 
 !!! warning "Deprecated"
-	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 0.227.0. They will be removed in a future release. Main mode is now the default, so this step is not needed for version 0.227.0 and above.
+	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
 	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
@@ -244,16 +231,12 @@ export N8N_USER_FOLDER=/home/jim/n8n
 
 ### Webhook URL
 
-n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally
-on port 5678 but is exposed to the web using the reverse proxy on port 443. In
-that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
+n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally on port 5678 but is exposed to the web using the reverse proxy on port 443. In that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
 
 ```bash
 export WEBHOOK_URL=https://n8n.example.com/
 ```
 
-!!! warning "WEBHOOK_TUNNEL_URL is deprecated"
-	n8n renamed `WEBHOOK_TUNNEL_URL` to `WEBHOOK_URL` in version 0.227.0. `WEBHOOK_TUNNEL_URL` is deprecated, and will be removed entirely in a future release. Use `WEBHOOK_URL` instead.
 
 ### Prometheus
 

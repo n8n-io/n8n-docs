@@ -49,7 +49,3 @@ However, as long as your sub-workflow does the heavy lifting for each batch and 
 ### Increase old memory
 
 This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it is often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
-
-## Avoid the n8n instance crashing when a workflow crashes
-
-This applies to self-hosting n8n. To avoid the entire n8n instance crashing when a workflow runs out of memory, you can run n8n in own mode rather than main mode. Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more information.

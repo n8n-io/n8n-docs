@@ -27,11 +27,11 @@ Match the brand name exactly. For example, GitHub NOT Github
 -->
 # _Name_
 
-_Briefly summarize the node. For example:_ 
+<!-- Briefly summarize the node. For example:
 
-_The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures._
+The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
 
-_On this page, you'll find a list of operations the _Name_ node supports, and links to more resources._
+On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).

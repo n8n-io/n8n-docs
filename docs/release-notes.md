@@ -29,7 +29,7 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 
 ## n8n@0.236.2
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.236.2...n8n@0.236.2){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.236.1...n8n@0.236.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-14
 
 !!! note "Latest version"

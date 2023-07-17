@@ -11,7 +11,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 * Python 3.8 or above
 * Pip
-* We recommend using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
+* n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
 
 ### Steps
@@ -32,8 +32,10 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 Rely on the preview builds on pull requests, or use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
 
+Fork the repository, then:
+
 ```
-git clone https://github.com/n8n-io/n8n-docs.git
+git clone https://github.com/<your-username>/n8n-docs.git
 cd n8n-docs
 pip install -r requirements.txt
 pip install mkdocs-material
@@ -47,19 +49,19 @@ mkdocs serve
 
 ## Contributing
 
-Please read our [CONTRIBUTING](CONTRIBUTING.md) guide.
+Please read the [CONTRIBUTING](CONTRIBUTING.md) guide.
 
-You can find [style guidance](https://github.com/n8n-io/n8n-docs/wiki/Styles) in our wiki.
+You can find [style guidance](https://github.com/n8n-io/n8n-docs/wiki/Styles) in the wiki.
 
 
 ## Support
 
-If you have problems or questions, head to our forum, and we will try to help you as soon as possible: https://community.n8n.io
+If you have problems or questions, head to n8n's forum: https://community.n8n.io
 
 
 ## License
 
 n8n-docs is [fair-code](http://faircode.io) licensed under the [**Sustainable Use License**](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
 
-Additional information about license can be found in the [License documentation](https://docs.n8n.io/reference/license/).
+More information about the license is available in the [License documentation](https://docs.n8n.io/reference/license/).
 

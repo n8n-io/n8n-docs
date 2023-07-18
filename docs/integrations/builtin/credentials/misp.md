@@ -1,6 +1,7 @@
 ---
 title: MISP credentials
 description: Documentation for MISP credentials. Use these credentials to authenticate MISP in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # MISP credentials

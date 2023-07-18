@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Heroku
 
 This hosting guide shows you how to self-host n8n on Heroku. It uses:

@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Supported databases
 
 By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB.

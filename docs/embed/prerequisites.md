@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Prerequisites
 
 --8<-- "_snippets/embed-license.md"

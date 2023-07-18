@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # `$execution`
 
 ## `$execution.id`

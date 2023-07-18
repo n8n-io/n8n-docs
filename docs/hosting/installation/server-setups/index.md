@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Server setups
 
 Self-host with Docker Compose:

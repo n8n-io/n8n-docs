@@ -1,6 +1,7 @@
 ---
 title: Mailgun
 description: Documentation for the Mailgun node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Mailgun

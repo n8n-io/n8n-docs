@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Troubleshooting and errors
 
 ## Error: Missing packages

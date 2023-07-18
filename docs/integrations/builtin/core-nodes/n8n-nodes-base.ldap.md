@@ -1,6 +1,7 @@
 ---
 title: LDAP - n8n Documentation
 description: Documentation for the LDAP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # LDAP

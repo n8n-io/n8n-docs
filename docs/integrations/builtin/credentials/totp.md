@@ -1,6 +1,7 @@
 ---
 title: TOTP credentials
 description: Documentation for TOTP credentials. Use these credentials to authenticate TOTP in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # TOTP credentials

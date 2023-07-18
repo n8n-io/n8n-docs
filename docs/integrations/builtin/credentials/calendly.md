@@ -1,6 +1,7 @@
 ---
 title: Calendly credentials
 description: Documentation for Calendly credentials. Use these credentials to authenticate Calendly in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Calendly credentials

@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Courses
 
 If you've found your way here, it means you're serious about your interest in automation. Maybe you're tired of manually entering data into the same spreadsheet every day, of clicking through a series of tabs and buttons for that one piece of information you need, of managing tens of different tools and systems.

@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Installation
 
 --8<-- "_snippets/self-hosting/warning.md"

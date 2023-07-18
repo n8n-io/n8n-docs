@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Using community nodes
 
 To use community nodes, you first need to [install](/integrations/community-nodes/installation/) them.

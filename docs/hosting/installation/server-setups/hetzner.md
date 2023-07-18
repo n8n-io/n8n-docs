@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Hetzner cloud
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:

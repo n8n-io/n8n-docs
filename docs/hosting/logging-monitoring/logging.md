@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Logging in n8n
 
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.

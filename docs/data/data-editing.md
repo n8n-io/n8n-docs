@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Data editing
 
 n8n allows you to edit [pinned data](/data/data-pinning/). This means you can check different scenarios without setting up each scenario and sending the relevant data from your external system. It makes it easier to test edge cases.

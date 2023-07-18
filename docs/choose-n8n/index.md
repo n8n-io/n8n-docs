@@ -1,5 +1,6 @@
 ---
 description: Choose between our Cloud service, or self-hosting options. Learn more about licenses and n8n payment plans.
+contentType: overview
 ---
 
 # Choose your n8n

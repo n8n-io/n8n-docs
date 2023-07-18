@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Design your node's user interface
 
 Most nodes are a GUI (graphical user interface) representation of an API. Designing the interface means finding a user-friendly way to represent API endpoints and parameters. Directly translating an entire API into form fields in a node may not result in a good user experience.

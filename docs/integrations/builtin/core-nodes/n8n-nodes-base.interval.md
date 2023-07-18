@@ -1,6 +1,7 @@
 ---
 title: Interval
 description: Documentation for the Interval node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Interval

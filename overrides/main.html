@@ -20,6 +20,10 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-K86VCV3');</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- Plausible analytics -->
+	<script defer {% if page.meta and page.meta.contentType %}content-type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.js"></script>
+
 {% endblock %}
 
 {% block announce %}

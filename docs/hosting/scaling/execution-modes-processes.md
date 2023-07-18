@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Execution modes and processes
 
 There are several different modes in which you can configure n8n to operate when executing workflows. These settings become more important as you increase the number, and complexity, of your automation workflows. Ensuring you set n8n to run in the most beneficial mode is also crucial when you begin to scale n8n to handle large workloads.

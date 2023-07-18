@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Isolating n8n
 
 By default, a self-hosted n8n instance sends data to n8n's servers. This allows n8n to send users notifications about available updates, allows access to workflow templates, and provides n8n with diagnostic information. 

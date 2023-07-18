@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Node file structure
 
 Following best practices and standards in your node structure makes your node easier to maintain. It's helpful if other people need to work with the code.

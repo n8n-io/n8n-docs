@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Understanding the data structure
 
 In this chapter, you will learn about the data structure of n8n and how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/){:target="_blank"} to transform data and simulate node outputs.

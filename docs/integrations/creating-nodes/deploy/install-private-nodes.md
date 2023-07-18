@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Install private nodes
 
 You can build your own nodes and install them in your n8n instance without publishing them on npm. This is useful for nodes that you create for internal use only at your company.

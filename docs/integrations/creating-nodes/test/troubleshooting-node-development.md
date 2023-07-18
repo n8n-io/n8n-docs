@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Troubleshooting
 
 ## Credentials

@@ -1,5 +1,6 @@
 ---
 description: Authenticating with the services you're connecting to.
+contentType: overview
 ---
 
 # Credentials

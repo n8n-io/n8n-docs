@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Manage users
 
 The **Settings** > **Users** page shows all users, including ones with pending invitations.

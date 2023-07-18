@@ -1,6 +1,7 @@
 ---
 title:  - n8n Documentation
 description: Documentation for . Use these credentials to authenticate Copper in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 

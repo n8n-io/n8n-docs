@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Workflow templates
 
 --8<-- "_snippets/embed-license.md"

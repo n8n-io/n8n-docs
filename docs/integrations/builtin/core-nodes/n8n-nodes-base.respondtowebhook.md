@@ -1,6 +1,7 @@
 ---
 title: Respond to Webhook
 description: Documentation for the Respond to Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Respond to Webhook

@@ -1,6 +1,7 @@
 ---
 title: SecurityScorecard credentials
 description: Documentation for SecurityScorecard credentials. Use these credentials to authenticate SecurityScorecard in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # SecurityScorecard credentials

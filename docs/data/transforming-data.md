@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Transforming data
 
 n8n uses a predefined [data structure](/data/data-structure/) that allows all nodes to process incoming data correctly.

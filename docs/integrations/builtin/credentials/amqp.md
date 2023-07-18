@@ -1,6 +1,7 @@
 ---
 title: AMQP credentials
 description: Documentation for AMQP credentials. Use these credentials to authenticate AMQP in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # AMQP credentials

@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Code standards
 
 Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/).

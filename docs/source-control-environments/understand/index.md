@@ -1,6 +1,7 @@
 ---
 title: Understand source control and environments
 description: Understand how source control and environments work in n8n.
+contentType: overview
 ---
 
 # Understand source control and environments

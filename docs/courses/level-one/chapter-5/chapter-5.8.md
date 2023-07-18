@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 8. Activating and Examining the Workflow
 
 In this step of the workflow you will learn how to activate your workflow and change the default workflow settings.

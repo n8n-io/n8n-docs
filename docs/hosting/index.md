@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Self-hosting n8n
 
 

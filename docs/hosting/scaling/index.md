@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Scaling n8n
 
 When running n8n at scale, with a large number of users, workflows, or executions, you need to change your n8n configuration to ensure good performance.

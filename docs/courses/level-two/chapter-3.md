@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Merging and splitting data
 
 In this chapter, you will learn how to merge and split data, and in what cases it might be useful to perform these operations.

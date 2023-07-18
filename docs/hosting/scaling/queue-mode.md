@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Queue mode
 
 n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.

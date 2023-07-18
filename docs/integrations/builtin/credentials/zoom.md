@@ -1,6 +1,7 @@
 ---
 title: Zoom credentials
 description: Documentation for Zoom credentials. Use these credentials to authenticate Zoom in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Zoom credentials

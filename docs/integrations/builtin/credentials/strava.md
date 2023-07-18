@@ -1,6 +1,7 @@
 ---
 title: Strava credentials
 description: Documentation for Strava credentials. Use these credentials to authenticate Strava in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Strava credentials

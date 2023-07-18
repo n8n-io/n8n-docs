@@ -1,6 +1,7 @@
 ---
 title: Clearbit credentials
 description: Documentation for Clearbit credentials. Use these credentials to authenticate Clearbit in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Clearbit credentials

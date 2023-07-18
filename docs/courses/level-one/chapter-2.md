@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Building a Mini-workflow
 
 In this lesson, you will build a small workflow that gets 10 articles about automation from Hacker News. The workflow consists of four steps:

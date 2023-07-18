@@ -1,6 +1,7 @@
 ---
 title: Source control and environments
 description: Overview of source control and environments in n8n
+contentType: overview
 ---
 
 # Source control and environments

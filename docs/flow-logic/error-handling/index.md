@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Error handling
 
 This section provides information on workflow errors in n8n.

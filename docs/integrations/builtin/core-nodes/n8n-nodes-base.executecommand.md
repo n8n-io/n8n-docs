@@ -1,6 +1,7 @@
 ---
 title: Execute Command
 description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Execute Command

@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Automating a business workflow
 
 Remember [our friend Nathan](/courses/level-one/chapter-3){:target="_blank" .external}?

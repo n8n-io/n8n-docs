@@ -1,3 +1,7 @@
+---
+contentType:
+---
+
 # Node user interface elements
 
 n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.

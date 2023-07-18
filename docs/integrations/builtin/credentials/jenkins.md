@@ -1,6 +1,7 @@
 ---
 title: Jenkins credentials
 description: Documentation for Jenkins credentials. Use these credentials to authenticate Jenkins in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Jenkins credentials

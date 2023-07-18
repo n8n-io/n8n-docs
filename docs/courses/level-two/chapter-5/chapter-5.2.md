@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Workflow 2 – Generating reports
 
 In this workflow, you will merge data from different sources, transform binary data, generate files, and send notifications about them. The final workflow should look like this:

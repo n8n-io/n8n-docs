@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: reference
 ---
 
 # HTTP request helper for node builders

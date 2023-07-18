@@ -1,6 +1,7 @@
 ---
 title: n8n Desktop app
 description: The n8n Desktop app has been deprecated. This page explains why, and suggests alternatives.
+contentType: howto
 ---
 
 # Desktop (removed)

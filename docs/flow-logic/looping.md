@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Looping in n8n

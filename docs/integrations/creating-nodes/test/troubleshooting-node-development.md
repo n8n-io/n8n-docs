@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Troubleshooting

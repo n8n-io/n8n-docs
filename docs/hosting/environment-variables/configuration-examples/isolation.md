@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Isolating n8n

@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: reference
 ---
 
 # Node codex files

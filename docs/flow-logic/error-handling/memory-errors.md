@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: explanation
 ---
 
 # Memory-related errors

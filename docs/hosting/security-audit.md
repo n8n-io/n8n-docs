@@ -1,5 +1,6 @@
 ---
 description: "Run a security audit on your n8n instance."
+contentType: howto
 ---
 
 # Security audit

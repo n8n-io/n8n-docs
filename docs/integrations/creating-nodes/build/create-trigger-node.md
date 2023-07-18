@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: tutorial
 ---
 
 # Creating Your First Trigger Node

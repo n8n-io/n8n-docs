@@ -1,5 +1,6 @@
 ---
 description: Using LDAP with n8n.
+contentType: howto
 ---
 
 # Lightweight Directory Access Protocol (LDAP)

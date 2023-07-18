@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Item linking in the Code node

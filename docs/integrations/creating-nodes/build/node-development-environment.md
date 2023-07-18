@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Set up your development environment

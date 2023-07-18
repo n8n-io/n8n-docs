@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: howto
 ---
 
 # Install, upgrade, and downgrade community nodes

@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: explanation
 ---
 
 # Choose your node building approach

@@ -1,5 +1,6 @@
 ---
 description: The n8n faircode license.
+contentType: explanation
 ---
 
 # Faircode license

@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: explanation
 ---
 
 # Custom API operations

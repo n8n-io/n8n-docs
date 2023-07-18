@@ -1,5 +1,6 @@
 ---
 description: CLI commands available in n8n.
+contentType: reference
 ---
 
 # CLI commands for n8n

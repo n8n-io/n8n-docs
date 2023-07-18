@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: explanation
 ---
 
 # Risks when using community nodes

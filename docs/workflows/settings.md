@@ -1,5 +1,6 @@
 ---
 description: Manage settings for an individual workflow.
+contentType: howto
 ---
 
 # Workflow settings

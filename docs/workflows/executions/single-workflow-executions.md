@@ -1,5 +1,6 @@
 ---
 description: View and filter all executions for the workflow currently open on the canvas.
+contentType: howto
 ---
 
 # Workflow-level executions list

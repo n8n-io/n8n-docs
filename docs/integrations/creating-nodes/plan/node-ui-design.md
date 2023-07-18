@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: reference
 ---
 
 # Design your node's user interface

@@ -1,6 +1,7 @@
 ---
 title: Push and pull
 description: Send work to Git, and fetch work from Git to your instance.
+contentType: howto
 ---
 
 # Push and pull

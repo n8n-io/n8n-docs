@@ -1,5 +1,6 @@
 ---
 description: Export and import workflows
+contentType: howto
 ---
 
 # Export and import workflows

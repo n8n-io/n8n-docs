@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: explanation
 ---
 
 # n8n community node blocklist

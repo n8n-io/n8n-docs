@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: reference
 ---
 
 # Code standards

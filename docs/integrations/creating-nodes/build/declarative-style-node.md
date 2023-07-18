@@ -1,5 +1,5 @@
 ---
-contentType:
+contentType: tutorial
 ---
 
 # Build a declarative-style node

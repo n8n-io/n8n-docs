@@ -21,8 +21,29 @@
 	})(window,document,'script','dataLayer','GTM-K86VCV3');</script>
 	<!-- End Google Tag Manager -->
 
+	<script>
+
+
+	</script>
+
 	<!-- Plausible analytics -->
-	<script defer {% if page.meta and page.meta.contentType %}content-type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.js"></script>
+	<script defer {% if page.meta and page.meta.contentType %}content-type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.pageview-props.tagged-events.js"></script>
+	
+	<script>
+		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
+		console.log(window.plausible);
+		document.addEventListener("DOMContentLoaded", function () {
+			/* Set up search tracking */
+			if (document.forms.search) {
+				console.log("in search");
+				var query = document.forms.search.query;
+				query.addEventListener("blur", function() {
+					console.log("in event");
+					if (this.value) { plausible("search", { props: { search_term: this.value } })};
+				})
+			}
+		});
+	</script>
 
 {% endblock %}
 
@@ -35,7 +56,7 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K86VCV3"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
 
 {{ super() }}
 

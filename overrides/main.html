@@ -31,14 +31,11 @@
 	
 	<script>
 		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
-		console.log(window.plausible);
 		document.addEventListener("DOMContentLoaded", function () {
 			/* Set up search tracking */
 			if (document.forms.search) {
-				console.log("in search");
 				var query = document.forms.search.query;
 				query.addEventListener("blur", function() {
-					console.log("in event");
 					if (this.value) { plausible("search", { props: { search_term: this.value } })};
 				})
 			}

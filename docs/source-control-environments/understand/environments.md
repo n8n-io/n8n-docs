@@ -1,6 +1,7 @@
 ---
 title: Environments in n8n
 description: Understand the concepts behind environments in n8n.
+contentType: explanation
 ---
 
 # Environments in n8n

@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Install, upgrade, and downgrade community nodes
 
 !!! note "Limited to n8n instance owners"

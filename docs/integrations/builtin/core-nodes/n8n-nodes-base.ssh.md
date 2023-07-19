@@ -1,6 +1,7 @@
 ---
 title: SSH
 description: Documentation for the SSH node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # SSH

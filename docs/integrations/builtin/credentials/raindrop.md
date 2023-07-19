@@ -1,6 +1,7 @@
 ---
 title: Raindrop credentials
 description: Documentation for Raindrop credentials. Use these credentials to authenticate Raindrop in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Raindrop credentials

@@ -1,6 +1,7 @@
 ---
 title: One Simple API credentials
 description: Documentation for One Simple API credentials. Use these credentials to authenticate One Simple API in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # One Simple API credentials

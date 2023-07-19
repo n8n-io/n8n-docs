@@ -1,5 +1,6 @@
 ---
 description: Variables allow you to store and reuse values in n8n workflows. 
+contentType: howto
 ---
 
 # Variables

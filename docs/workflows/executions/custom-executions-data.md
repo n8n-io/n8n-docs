@@ -1,5 +1,6 @@
 ---
 description: Add custom data to your workflow executions using the Code node. You can then filter executions by this data.
+contentType: howto
 ---
 
 # Custom executions data

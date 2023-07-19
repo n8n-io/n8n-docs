@@ -1,6 +1,7 @@
 ---
 title: sms77 credentials
 description: Documentation for sms77 credentials. Use these credentials to authenticate sms77 in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # sms77 credentials

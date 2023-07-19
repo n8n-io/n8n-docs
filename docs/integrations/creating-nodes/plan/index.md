@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Plan a node
 
 This section provides guidance on designing your node, including key technical decisions such as choosing your node building style.

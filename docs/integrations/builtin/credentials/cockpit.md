@@ -1,6 +1,7 @@
 ---
 title: Cockpit credentials
 description: Documentation for Cockpit credentials. Use these credentials to authenticate Cockpit in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Cockpit credentials

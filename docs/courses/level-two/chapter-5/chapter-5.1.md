@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Workflow 1 – Merging data
 
 The company's customer data is stored in Airtable. It contains information about the customers' ID, country, email, and join date, but lacks data about their respective region and subregion. You need to fill in these last two fields in order to create the reports for regional sales.

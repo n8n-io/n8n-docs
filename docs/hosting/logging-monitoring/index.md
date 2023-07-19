@@ -1,5 +1,6 @@
 ---
 description: Logging and monitoring for your self-hosted n8n instance.
+contentType: overview
 ---
 
 # Logging and monitoring

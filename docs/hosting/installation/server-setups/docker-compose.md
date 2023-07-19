@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Docker-Compose
 
 If you have already installed Docker and Docker-Compose, then you can start with step 4.

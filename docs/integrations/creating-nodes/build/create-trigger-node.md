@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Creating Your First Trigger Node
 
 This tutorial walks through building a trigger node.

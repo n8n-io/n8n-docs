@@ -1,5 +1,6 @@
 ---
 description: Understand the n8n database structure
+contentType: explanation
 ---
 
 # Database structure

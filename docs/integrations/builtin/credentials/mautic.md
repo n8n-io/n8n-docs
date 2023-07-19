@@ -1,6 +1,7 @@
 ---
 title: Mautic credentials
 description: Documentation for Mautic credentials. Use these credentials to authenticate Mautic in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Mautic credentials

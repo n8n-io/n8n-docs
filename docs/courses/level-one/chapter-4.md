@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Designing the Workflow
 
 Now that we have an idea of what Nathan wants to automate, let's enumerate the steps he needs to take to achieve this:

@@ -1,5 +1,6 @@
 ---
 description: Quickstart covering key concepts in n8n.
+contentType: tutorial
 ---
 
 # A slightly longer introduction

@@ -1,6 +1,7 @@
 ---
 title: Google Tasks
 description: Documentation for the Google Tasks node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Google Tasks

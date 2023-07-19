@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Choose your node building approach
 
 n8n has two node-building styles, declarative and programmatic. 

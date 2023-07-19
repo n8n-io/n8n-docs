@@ -1,6 +1,7 @@
 ---
 title: Brevo credentials
 description: Documentation for Brevo credentials. Use these credentials to authenticate Brevo in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Brevo credentials

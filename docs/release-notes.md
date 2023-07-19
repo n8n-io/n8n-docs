@@ -7,6 +7,7 @@ tags:
   - changelog
 hide:
   - tags
+contentType: reference
 ---
 
 # Release notes

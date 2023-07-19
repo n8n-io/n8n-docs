@@ -7,6 +7,7 @@ tags:
   - payment processor
 hide:
   - tags
+contentType: explanation
 ---
 
 

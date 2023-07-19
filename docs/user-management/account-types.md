@@ -1,5 +1,6 @@
 ---
 description: n8n account types
+contentType: reference
 ---
 
 # Account types

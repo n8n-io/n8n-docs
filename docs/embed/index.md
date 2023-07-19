@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Introduction
 
 n8n Embed is part of n8n's paid offering. Using Embed, you can white label n8n, or incorporate it in your software as part of your commercial product.

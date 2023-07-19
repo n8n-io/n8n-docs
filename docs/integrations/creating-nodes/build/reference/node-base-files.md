@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Node base file
 
 The node base file contains the core code of your node. All nodes must have a base file. The contents of this file are different depending on whether you're building a declarative-style or programmatic-style node. For guidance on which style to use, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).

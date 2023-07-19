@@ -1,6 +1,7 @@
 ---
 title: Google Service Account
 description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Google: Service Account

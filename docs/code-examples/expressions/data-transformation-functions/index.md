@@ -1,6 +1,7 @@
 ---
 title: Data transformation functions
 description: Introduction to data transformation functions for expressions.
+contentType: overview
 ---
 
 # Data transformation functions

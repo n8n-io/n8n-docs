@@ -1,6 +1,7 @@
 ---
 title: crowd.dev credentials
 description: Documentation for the crowd.dev credentials. Use these credentials to authenticate crowd.dev in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # crowd.dev credentials

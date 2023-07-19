@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Memory-related errors
 
 n8n doesn't restrict the amount of data each node can fetch and process. While this gives you freedom, it can lead to errors when workflow executions require more memory than available. This page explains how to identify and avoid these errors.

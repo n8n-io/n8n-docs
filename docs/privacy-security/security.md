@@ -1,5 +1,6 @@
 ---
 description: n8n's security policies
+contentType: explanation
 ---
 
 # Security

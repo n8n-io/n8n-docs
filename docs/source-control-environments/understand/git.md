@@ -1,6 +1,7 @@
 ---
 title: Git and n8n
 description: Git concepts and limitations in n8n.
+contentType: explanation
 ---
 
 # Git and n8n

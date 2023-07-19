@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Security Assertion Markup Language (SAML)
 
 !!! info "Feature availability"

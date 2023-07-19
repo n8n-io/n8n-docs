@@ -1,6 +1,7 @@
 ---
 title: LDAP credentials - n8n Documentation
 description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # LDAP credentials

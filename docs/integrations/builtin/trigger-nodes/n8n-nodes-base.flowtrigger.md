@@ -1,6 +1,7 @@
 ---
 title: Flow trigger
 description: Documentation for the Flow trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Flow trigger

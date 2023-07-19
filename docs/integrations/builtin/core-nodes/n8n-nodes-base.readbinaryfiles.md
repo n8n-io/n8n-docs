@@ -1,6 +1,7 @@
 ---
 title: Read Binary Files
 description: Documentation for the Read Binary Files node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Read Binary Files

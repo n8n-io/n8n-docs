@@ -1,5 +1,6 @@
 ---
 description: Built-in methods and variables you can use in expressions and code in n8n.
+contentType: reference
 ---
 
 # Built-in methods and variables

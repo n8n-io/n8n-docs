@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Execution data
 
 

@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Docker Installation
 
 [Docker](https://www.docker.com/){:target=_blank .external-link} offers the following advantages:

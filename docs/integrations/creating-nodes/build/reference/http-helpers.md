@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # HTTP request helper for node builders
 
 n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.

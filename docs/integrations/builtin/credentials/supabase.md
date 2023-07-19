@@ -1,6 +1,7 @@
 ---
 title: Supabase credentials
 description: Documentation for Supabase credentials. Use these credentials to authenticate Supabase in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Supabase credentials

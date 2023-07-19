@@ -1,5 +1,6 @@
 ---
 description: n8n performance and resource consumption benchmarking.
+contentType: explanation
 ---
 
 # Performance and benchmarking

@@ -1,6 +1,7 @@
 ---
 title: Set up source control
 description: Link n8n to your Git provider.
+contentType: howto
 ---
 
 # Set up source control

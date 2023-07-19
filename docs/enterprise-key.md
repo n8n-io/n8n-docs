@@ -1,6 +1,7 @@
 ---
 title: Enterprise key
 description: How to use your enterprise license key.
+contentType: howto
 ---
 
 # Enterprise license key

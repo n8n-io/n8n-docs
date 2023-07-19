@@ -1,6 +1,7 @@
 ---
 title: Error trigger
 description: Documentation for the Error trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Error trigger

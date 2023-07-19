@@ -1,5 +1,6 @@
 ---
 description: Configuration variables for self-hosted n8n.
+contentType: reference
 ---
 
 # Configuration environment variables

@@ -1,5 +1,6 @@
 ---
 description: Use workflow templates
+contentType: howto
 ---
 
 # Workflow templates

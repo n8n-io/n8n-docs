@@ -1,5 +1,6 @@
 ---
 description: User management in n8n
+contentType: overview
 ---
 
 # User management

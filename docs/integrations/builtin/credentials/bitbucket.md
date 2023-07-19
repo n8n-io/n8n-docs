@@ -1,6 +1,7 @@
 ---
 title: Bitbucket credentials
 description: Documentation for Bitbucket credentials. Use these credentials to authenticate Bitbucket in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Bitbucket credentials

@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # White labelling
 
 --8<-- "_snippets/embed-license.md"

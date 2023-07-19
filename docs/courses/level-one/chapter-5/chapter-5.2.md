@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 2. Inserting Data into Airtable
 
 In this step of the workflow you will learn how to insert the data received via the HTTP Request node into Airtable using the *Airtable* node.

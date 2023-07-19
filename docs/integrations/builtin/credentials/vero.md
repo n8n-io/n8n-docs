@@ -1,6 +1,7 @@
 ---
 title: Vero credentials
 description: Documentation for Vero credentials. Use these credentials to authenticate Vero in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Vero credentials

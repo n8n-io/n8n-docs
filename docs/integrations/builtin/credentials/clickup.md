@@ -1,6 +1,7 @@
 ---
 title: ClickUp credentials
 description: Documentation for ClickUp credentials. Use these credentials to authenticate ClickUp in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # ClickUp credentials

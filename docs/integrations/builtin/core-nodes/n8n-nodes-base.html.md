@@ -1,6 +1,7 @@
 ---
 title: HTML
 description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # HTML

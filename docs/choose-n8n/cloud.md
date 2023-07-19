@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # n8n Cloud
 
 n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it provides added benefits such as:

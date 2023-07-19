@@ -1,6 +1,7 @@
 ---
 title: Mailjet credentials
 description: Documentation for Mailjet credentials. Use these credentials to authenticate Mailjet in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Mailjet credentials

@@ -1,6 +1,7 @@
 ---
 title: Zulip credentials
 description: Documentation for Zulip credentials. Use these credentials to authenticate Zulip in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Zulip credentials

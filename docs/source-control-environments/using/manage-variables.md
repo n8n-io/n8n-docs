@@ -1,6 +1,7 @@
 ---
 title: Manage variables
 description: Manage variable values in n8n using the API and source control.
+contentType: howto
 ---
 
 # Manage variables

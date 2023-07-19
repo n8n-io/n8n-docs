@@ -1,6 +1,7 @@
 ---
 title: Twitter credentials
 description: Documentation for Twitter credentials. Use these credentials to authenticate Twitter in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Twitter credentials

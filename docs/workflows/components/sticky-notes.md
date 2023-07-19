@@ -1,5 +1,6 @@
 ---
 description: Annotate your workflows using sticky notes.
+contentType: howto
 ---
 
 # Sticky Notes

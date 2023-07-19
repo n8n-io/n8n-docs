@@ -1,6 +1,7 @@
 ---
 title: Mailgun credentials
 description: Documentation for Mailgun credentials. Use these credentials to authenticate Mailgun in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Mailgun credentials

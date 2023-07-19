@@ -1,4 +1,5 @@
 ---
+contentType: overview
 hide:
   - path
 ---

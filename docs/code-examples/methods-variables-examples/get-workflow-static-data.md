@@ -4,6 +4,7 @@ tags:
   - global variables
 hide:
   - tags
+contentType: reference
 ---
 
 # `$getWorkflowStaticData(type)`

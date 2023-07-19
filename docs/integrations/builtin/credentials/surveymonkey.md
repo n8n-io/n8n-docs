@@ -1,6 +1,7 @@
 ---
 title: SurveyMonkey credentials
 description: Documentation for SurveyMonkey credentials. Use these credentials to authenticate SurveyMonkey in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # SurveyMonkey credentials

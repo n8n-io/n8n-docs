@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on DigitalOcean
 
 This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses:

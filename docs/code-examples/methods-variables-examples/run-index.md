@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # `$runIndex`
 
 Contains the index of the current run of the node.

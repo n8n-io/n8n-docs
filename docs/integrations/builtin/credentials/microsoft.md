@@ -16,6 +16,8 @@ You can use these credentials to authenticate the following nodes with Microsoft
 - [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/)
 - [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/)
 
+--8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
+
 ## Prerequisites
 
 Create a [Microsoft Azure](https://azure.microsoft.com/) account.

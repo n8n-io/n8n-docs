@@ -29,18 +29,7 @@
 	<!-- Plausible analytics -->
 	<script defer {% if page.meta and page.meta.contentType %}content-type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.pageview-props.tagged-events.js"></script>
 	
-	<script>
-		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
-		document.addEventListener("DOMContentLoaded", function () {
-			/* Set up search tracking */
-			if (document.forms.search) {
-				var query = document.forms.search.query;
-				query.addEventListener("blur", function() {
-					if (this.value) { plausible("search", { props: { search_term: this.value } })};
-				})
-			}
-		});
-	</script>
+
 
 {% endblock %}
 

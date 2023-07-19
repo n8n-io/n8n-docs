@@ -8,6 +8,8 @@ contentType: integration
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
+--8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
+
 ## Set up OAuth
 
 You need a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link} for these steps.

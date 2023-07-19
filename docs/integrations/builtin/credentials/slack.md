@@ -10,6 +10,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)
 
+--8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
+
 ## Prerequisites
 
 Create a [Slack](https://slack.com/) account.

@@ -73,7 +73,6 @@ n8n takes care to keep self-hosted data anonymous and avoids collecting sensitiv
     - The first time a workflow loads data from an external source
     - The first successful production (non-manual) workflow execution
 - The domain of webhook calls, if specified (excluding subdomain).
-- When a user creates a [variable](/environments/variables/)
 - Details on how the UI is used (for example, navigation, nodes panel searches)
 - Diagnostic information:
     - n8n version
@@ -121,7 +120,9 @@ See [configuration](/hosting/configuration/) for more info on how to set environ
 
 ### Data collection in n8n Cloud
 
-In n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings expose the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
+n8n Cloud collects everything listed in [Data collection in self-hosted n8n](#data-collection-in-self-hosted-n8n).
+
+Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
 
 ### Documentation telemetry
 

@@ -121,9 +121,7 @@ See [configuration](/hosting/configuration/) for more info on how to set environ
 
 ### Data collection in n8n Cloud
 
-In n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to record user activity. All recordings are deleted after 21 days.
-
-The recordings expose all data apart from credential values.
+In n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings expose the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
 
 ### Documentation telemetry
 

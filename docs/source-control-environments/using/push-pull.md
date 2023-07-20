@@ -53,36 +53,38 @@ You can programmatically [Manage variables](/source-control-environments/using/m
 
 ## Merge behaviors and conflicts
 
-n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. Merge conflicts can occur for workflows.
+n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
 
 ### Workflows
 
-You can get merge conflicts with workflows if:
+You have to explicitly tell n8n what to do about workflows when pushing or pulling. The Git repository acts as the source of truth.
 
-* Two instances push to the same branch.
-* People make changes directly in the Git repository.
+When pulling, you might get warned that your local copy of a workflow differs from Git, and if you accept, your local copy would be overridden. Be careful not to lose relevant changes when pulling.
 
-n8n doesn't automatically merge workflows. If it detects a conflict, n8n warns you. You can then decide whether to proceed. On pushing, you can choose not to include the workflow with the conflict. On pull, you can choose to overwrite your local changes, or to cancel and push your local changes before pulling again.
+When you push, your local workflow will override what's in Git, so make sure that you have the most up to date version or you risk overriding recent changes.
 
-To avoid merge conflicts:
+To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it is safe to pull.
+
+To avoid losing data:
 
 * Design your source control setup so that workflows flow in one direction. For example, make edits on a development instance, push to Git, then pull to production. Don't make edits on the production instance and push them.
 * Don't push all workflows. Select the ones you need.
 * Be cautious about manually editing files in the Git repository.
 
-### Credentials and variables
+### Credentials, variables and workflow tags
 
 Credentials and variables can't have merge issues, as n8n chooses the version to keep.
 
 On pull:
 
-* If the variable or credential doesn't exist, n8n creates it.
-* If the variable or credential already exists, n8n doesn't update it, unless:
+* If the tag, variable or credential doesn't exist, n8n creates it.
+* If the tag, variable or credential already exists, n8n doesn't update it, unless:
 	* You set the value of a variable using the API or externally. The new value overwrites any existing value.
 	* The credential name has changed. n8n uses the version in Git.
+	* The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
 
 On push:
 
-* n8n overwrites the entire variables file.
+* n8n overwrites the entire variables and tags files.
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
 

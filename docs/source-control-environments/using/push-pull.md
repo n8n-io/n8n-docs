@@ -53,17 +53,17 @@ You can programmatically [Manage variables](/source-control-environments/using/m
 
 ## Merge behaviors and conflicts
 
-n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n cannot detect conflicts on workflows. Read more below.
+n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
 
 ### Workflows
 
-You have to explicitly tell n8n what to do about workflows when pushing or pulling. The git repository acts as the source of truth.
+You have to explicitly tell n8n what to do about workflows when pushing or pulling. The Git repository acts as the source of truth.
 
-When pulling, you might get warned that your local copy of a workflow differs from git, and if you accept, your local copy would be overriden. Be careful not to lose relevant changes when pulling.
+When pulling, you might get warned that your local copy of a workflow differs from Git, and if you accept, your local copy would be overridden. Be careful not to lose relevant changes when pulling.
 
-When it comes to pushing, your local workflow will override what's in git, so make sure that you have the most up to date version or you risk overriding recent changes.
+When you push, your local workflow will override what's in Git, so make sure that you have the most up to date version or you risk overriding recent changes.
 
-In order to prevent the issue described above, you should always immediately push your changes to a workflow once you are done working on it. Then it should be safe to pull.
+To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it is safe to pull.
 
 To avoid losing data:
 
@@ -81,7 +81,7 @@ On pull:
 * If the tag, variable or credential already exists, n8n doesn't update it, unless:
 	* You set the value of a variable using the API or externally. The new value overwrites any existing value.
 	* The credential name has changed. n8n uses the version in Git.
-	* The name of a tag was changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
+	* The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
 
 On push:
 

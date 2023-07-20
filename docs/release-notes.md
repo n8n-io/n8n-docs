@@ -28,6 +28,23 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.0.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.3...n8n@1.0.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-19
+
+This is a bug fix release.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}  
+[noctarius aka Christoph Engelbert](https://github.com/noctarius){:target=_blank .external-link}
+
 ## n8n@0.236.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.236.2...n8n@0.236.3){:target=_blank .external-link} for this version.<br />
@@ -101,8 +118,6 @@ This is a bug fix release.
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-05
-
-
 
 !!! warning "Breaking changes"
     Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).

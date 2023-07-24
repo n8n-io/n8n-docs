@@ -227,6 +227,7 @@ nav:
         - Manage variables: source-control-environments/using/manage-variables.md
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
     - Variables: variables.md
+    - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

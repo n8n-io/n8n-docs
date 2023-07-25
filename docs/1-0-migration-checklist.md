@@ -68,6 +68,8 @@ If permission errors appear in your n8n container logs when starting n8n, you ma
 docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8nio/base:16 -R node:node /home/node/.n8n
 ```
 
+We have also removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images. 
+
 [PR #6365](https://github.com/n8n-io/n8n/pull/6365){:target=_blank .external link}
 
 ### Workflow failures due to expression errors

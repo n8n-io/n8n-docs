@@ -44,6 +44,18 @@ export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 n8n start
 ```
 
+### Required permissions
+
+n8n needs to create and modify the schemas of the tables it uses.
+
+Recommended permissions:
+
+```sql
+CREATE DATABASE n8n-db;
+CREATE USER n8n-user WITH PASSWORD 'random-password';
+GRANT ALL PRIVILEGES ON DATABASE n8n-db TO n8n-user;
+```
+
 ### TLS
 
 You can choose between these configurations:

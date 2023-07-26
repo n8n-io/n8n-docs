@@ -33,10 +33,24 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-26
 
-This release contains bug fixes and node enhancements.
+This release contains new features, bug fixes, and node enhancements.
 
 !!! warning "Breaking changes"
     Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### Source control and environments
+
+This release introduces source control and environments for enterprise users.
+
+n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
+
+Refer to [Source control and environments](/source-control-environments/) to learn more about the features and set up your environments.
+
+</div>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

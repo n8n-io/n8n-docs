@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes with Xero.
 
 ## Prerequisites
 
-Create a [Xero](https://www.xero.com/) account.
+Create a [Xero](https://www.xero.com/){:target=_blank .external-link} account.
 
 ## Using OAuth
 

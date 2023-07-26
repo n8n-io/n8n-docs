@@ -63,7 +63,7 @@ When pulling, you might get warned that your local copy of a workflow differs fr
 
 When you push, your local workflow will override what's in Git, so make sure that you have the most up to date version or you risk overriding recent changes.
 
-To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it is safe to pull.
+To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it's safe to pull.
 
 To avoid losing data:
 

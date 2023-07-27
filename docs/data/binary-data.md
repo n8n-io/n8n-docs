@@ -3,7 +3,7 @@ title: Binary data
 description: Understand and use binary data in n8n.
 contentType: overview
 tags:
-	- binary data
+  - binary data
 hide:
   - tags
 ---

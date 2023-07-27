@@ -3,4 +3,4 @@
 
 
 	Current `latest`: 1.0.5   
-	Current `next`: 1.0.5
+	Current `next`: 1.1.1

@@ -164,6 +164,7 @@ nav:
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
+      - Binary data: data/binary-data.md
     - Code in n8n:
       - code-examples/index.md
       - Built in methods and variables reference: code-examples/methods-variables-reference.md

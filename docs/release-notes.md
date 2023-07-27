@@ -30,8 +30,8 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 
 ## n8n@1.1.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-07-26
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-27
 
 This is a bug fix release.
 
@@ -42,7 +42,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ## n8n@1.1.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-26
 
 This release contains new features, bug fixes, and node enhancements.

@@ -87,7 +87,7 @@ This change makes [User Management](/user-management/) mandatory and removes sup
 ### Directory for installing custom nodes
 
 n8n will no longer load custom nodes from its global `node_modules` directory. Instead, you must install (or link) them to `~/.n8n/custom` (or a directory defined by `CUSTOM_EXTENSION_ENV`). Custom nodes that are npm packages will be located in `~/.n8n/nodes`.
-If you have a custom nodes that were linked using `npm link` into the global `node_modules` directory, You'd need to link the again, but into `~/.n8n/nodes` instead.
+If you have a custom nodes that were linked using `npm link` into the global `node_modules` directory, You'd need to link them again, but into `~/.n8n/nodes` instead.
 
 [PR #6396](https://github.com/n8n-io/n8n/pull/6396){:target=_blank .external link}
 

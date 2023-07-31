@@ -255,9 +255,11 @@ nav:
         - integrations/builtin/credentials/affinity.md
         - integrations/builtin/credentials/agilecrm.md
         - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
+        - integrations/builtin/credentials/auth0management.md
         - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
@@ -274,8 +276,12 @@ nav:
         - integrations/builtin/credentials/bubble.md
         - integrations/builtin/credentials/cal.md
         - integrations/builtin/credentials/calendly.md
+        - integrations/builtin/credentials/carbonblack.md
         - integrations/builtin/credentials/chargebee.md
         - integrations/builtin/credentials/circleci.md
+        - integrations/builtin/credentials/ciscomeraki.md
+        - integrations/builtin/credentials/ciscosecureendpoint.md
+        - integrations/builtin/credentials/ciscoumbrella.md
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/citrixadc.md
         - integrations/builtin/credentials/clearbit.md
@@ -290,6 +296,7 @@ nav:
         - integrations/builtin/credentials/cortex.md
         - integrations/builtin/credentials/cratedb.md
         - integrations/builtin/credentials/crowddev.md
+        - integrations/builtin/credentials/crowdstrike.md
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/demio.md
@@ -306,6 +313,7 @@ nav:
         - integrations/builtin/credentials/emelia.md
         - integrations/builtin/credentials/erpnext.md
         - integrations/builtin/credentials/eventbrite.md
+        - integrations/builtin/credentials/f5bigip.md
         - integrations/builtin/credentials/facebookapp.md
         - integrations/builtin/credentials/facebookgraph.md
         - integrations/builtin/credentials/figma.md
@@ -313,6 +321,7 @@ nav:
         - integrations/builtin/credentials/flow.md
         - integrations/builtin/credentials/formiotrigger.md
         - integrations/builtin/credentials/formstacktrigger.md
+        - integrations/builtin/credentials/fortigate.md
         - integrations/builtin/credentials/freshdesk.md
         - integrations/builtin/credentials/freshservice.md
         - integrations/builtin/credentials/freshworkscrm.md
@@ -341,7 +350,9 @@ nav:
         - integrations/builtin/credentials/hubspot.md
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
+        - integrations/builtin/credentials/hybridanalysis.md
         - integrations/builtin/credentials/imap.md
+        - integrations/builtin/credentials/impervawaf.md
         - integrations/builtin/credentials/intercom.md
         - integrations/builtin/credentials/invoiceninja.md
         - integrations/builtin/credentials/iterable.md
@@ -350,6 +361,7 @@ nav:
         - integrations/builtin/credentials/jotform.md
         - integrations/builtin/credentials/kafka.md
         - integrations/builtin/credentials/keap.md
+        - integrations/builtin/credentials/kibana.md
         - integrations/builtin/credentials/kitemaker.md
         - integrations/builtin/credentials/kobotoolbox.md
         - integrations/builtin/credentials/ldap.md
@@ -374,9 +386,11 @@ nav:
         - integrations/builtin/credentials/messagebird.md
         - integrations/builtin/credentials/metabase.md
         - integrations/builtin/credentials/microsoft.md
+        - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/misp.md
+        - integrations/builtin/credentials/mist.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
@@ -391,9 +405,11 @@ nav:
         - integrations/builtin/credentials/notion.md
         - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
+        - integrations/builtin/credentials/okta.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md
+        - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md
@@ -412,11 +428,14 @@ nav:
         - integrations/builtin/credentials/pushbullet.md
         - integrations/builtin/credentials/pushcut.md
         - integrations/builtin/credentials/pushover.md
+        - integrations/builtin/credentials/qradar.md
+        - integrations/builtin/credentials/qualys.md
         - integrations/builtin/credentials/questdb.md
         - integrations/builtin/credentials/quickbase.md
         - integrations/builtin/credentials/quickbooks.md
         - integrations/builtin/credentials/rabbitmq.md
         - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/recordedfuture.md
         - integrations/builtin/credentials/reddit.md
         - integrations/builtin/credentials/redis.md
         - integrations/builtin/credentials/rocketchat.md
@@ -427,12 +446,14 @@ nav:
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
+        - integrations/builtin/credentials/sekoia.md
         - integrations/builtin/credentials/sendemail.md
         - integrations/builtin/credentials/sendgrid.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md
         - integrations/builtin/credentials/servicenow.md
         - integrations/builtin/credentials/shopify.md
+        - integrations/builtin/credentials/shuffler.md
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
         - integrations/builtin/credentials/sms77.md
@@ -458,6 +479,7 @@ nav:
         - integrations/builtin/credentials/toggl.md
         - integrations/builtin/credentials/totp.md
         - integrations/builtin/credentials/travisci.md
+        - integrations/builtin/credentials/trellixepo.md
         - integrations/builtin/credentials/trello.md
         - integrations/builtin/credentials/twake.md
         - integrations/builtin/credentials/twilio.md
@@ -472,6 +494,7 @@ nav:
         - integrations/builtin/credentials/venafitlsprotectcloud.md
         - integrations/builtin/credentials/venafitlsprotectdatacenter.md
         - integrations/builtin/credentials/vero.md
+        - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/wekan.md
@@ -487,6 +510,7 @@ nav:
         - integrations/builtin/credentials/zendesk.md
         - integrations/builtin/credentials/zoho.md
         - integrations/builtin/credentials/zoom.md
+        - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:

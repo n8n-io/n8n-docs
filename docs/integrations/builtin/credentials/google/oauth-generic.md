@@ -8,7 +8,6 @@ contentType: integration
 
 This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations/).
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
 
 ## Prerequisites
 

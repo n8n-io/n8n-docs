@@ -8,7 +8,6 @@ contentType: integration
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
 
 ## Set up OAuth
 

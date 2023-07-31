@@ -12,7 +12,6 @@ This section contains:
 * [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic/): create an OAuth2 credential for use with [custom operations](/integrations/custom-operations/).
 * [Service Account](/integrations/builtin/credentials/google/service-account/): create a Service Account credential.
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-promo-experiment.md"
 
 ## OAuth2 and Service Account
 

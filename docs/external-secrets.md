@@ -11,24 +11,24 @@ contentType: howto
 	* n8n supports Infisical and HashiCorp Vault. 
 	* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
 
-You can use an external secrets vault to manage credentials for n8n.
+You can use an external secrets store to manage credentials for n8n.
 
-## Connect n8n to your secrets vault
+## Connect n8n to your secrets store
 
 1. In n8n, go to **Settings** > **External Secrets**.
-1. Select your vault provider.
+1. Select your store provider.
 1. Enter the credentials for your provider:
 	* Infisical: provide a **Service Token**. Refer to Infisical's [Service token](https://infisical.com/docs/documentation/platform/token){:target=_blank .external-link} documentation for information on getting your token. If you self-host Infisical, enter the **Site URL**.
 
 	!!! note "Infisical environment"
-		Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments.
+		Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments. n8n only support service tokens that have access to a single environment.
 
 	* HashiCorp Vault: provide the **Base URL** for your vault instance, and select your **Authentication Method**. Enter your authentication details. If you're using a token, refer to HashiCorp's [Token management](https://developer.hashicorp.com/vault/tutorials/tokens/token-management){:target=_blank .external-link} documentation for information on getting your token.
 
 
 ## Use secrets in n8n credentials
 
-To use a secret from your vault in an n8n credential:
+To use a secret from your store in an n8n credential:
 
 1. Create a new credential, or open an existing one.
 1. On the field where you want to use a secret:
@@ -38,7 +38,7 @@ To use a secret from your vault in an n8n credential:
 	```js
 	{{ $secrets.<vault-name>.<secret-name> }}
 	```
-	`<vault-name>` is either `hashicorp` or `infisical`. Replace `<secret-name>` with the name as it appears in your vault.
+	`<vault-name>` is either `vault` (for HashiCorp) or `infisical`. Replace `<secret-name>` with the name as it appears in your vault.
 
 ## Use external secrets with n8n environments
 

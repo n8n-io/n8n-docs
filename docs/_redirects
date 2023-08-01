@@ -53,7 +53,7 @@
 /hosting/updating/npm/   /choose-n8n/npm/
 /hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
-/hosting/security/   /hosting/authentication/
+/hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
 /hosting/configuration/   /hosting/environment-variables/configuration-methods/
 

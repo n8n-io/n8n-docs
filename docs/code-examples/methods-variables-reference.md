@@ -95,5 +95,5 @@ n8n provides these methods to make it easier to perform common tasks in expressi
 | ------ | ----------- | :---------------------: |
 | `$evaluateExpression` | Evaluates a string as an expression | :white_check_mark: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | :white_check_mark: |
-| `$vars` | Contains the [Variables](/environments/variables/) available in the active environment. | :white_check_mark: |
+| `$vars` | Contains the [Variables](/variables/) available in the active environment. | :white_check_mark: |
 

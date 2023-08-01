@@ -28,13 +28,77 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.1.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-27
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.1.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-26
+
+This release contains new features, bug fixes, and node enhancements.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### Source control and environments
+
+This release introduces source control and environments for enterprise users.
+
+n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
+
+Refer to [Source control and environments](/source-control-environments/) to learn more about the features and set up your environments.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Adrián Martínez](https://github.com/adrian-martinez-vdshop){:target=_blank .external-link}  
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}  
+[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}  
+[Sandra Ashipala](https://github.com/sandramsc){:target=_blank .external-link}  
+[ZergRael](https://github.com/ZergRael){:target=_blank .external-link}  
+
+## n8n@1.0.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.4...n8n@1.0.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-07-24
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+
+This is a bug fix release.
+
+!!! warning "Breaking changes"
+    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.0.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.3...n8n@1.0.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-19
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 
@@ -53,8 +117,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.236.2...n8n@0.236.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-18
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This is a bug fix release.
 
@@ -548,7 +610,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225
 
 <div class="n8n-new-features" markdown>
 
-This release introduces [Variables](/environments/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/environments/) in n8n.
+This release introduces [Variables](/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/source-control-environments/) in n8n.
 
 </div>
 

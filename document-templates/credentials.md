@@ -36,6 +36,15 @@ You can use these credentials to authenticate the following nodes:
 
 _Include info on services they need to sign up for_
 
+## Related resources
+
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
+Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+
+
+<!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
+View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+
 
 ## Using _Auth method_
 	

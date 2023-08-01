@@ -1,20 +1,19 @@
 ---
-title: _Name_ credentials
-description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
+title: CrowdStrike credentials
+description: Documentation for the CrowdStrike credentials. Use these credentials to authenticate CrowdStrike in n8n, a workflow automation platform.
 ---
 
-# _Name_ credentials
+# CrowdStrike credentials
 
 You can use these credentials to authenticate when using the HTTP Request node to make a [Custom API call](/integrations/custom-operations/).
 
-## Prerequisites
+## Authentication methods 
 
-_Include info on services they need to sign up for_
+n8n supports CrowdStrike authentication using OAuth2.
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [CrowdStrike's documentation](https://www.tines.com/blog/getting-connected-to-the-crowdstrike-api){:target=_blank .external-link} for more information about the service.
 
 
 <!-- 

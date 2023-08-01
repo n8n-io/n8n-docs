@@ -9,7 +9,7 @@ You can use these credentials to authenticate when using the HTTP Request node t
 
 ## Authentication methods
 
-n8n support Zscaler ZIA authentication with admin credentials and an API key.
+n8n supports Zscaler ZIA authentication with admin credentials and an API key.
 
 ## Related resources
 

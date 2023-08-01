@@ -1,20 +1,19 @@
 ---
-title: _Name_ credentials
-description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
+title: Trellix ePO credentials
+description: Documentation for the Trellix ePO credentials. Use these credentials to authenticate Trellix ePO in n8n, a workflow automation platform.
 ---
 
-# _Name_ credentials
+# Trellix ePO credentials
 
 You can use these credentials to authenticate when using the HTTP Request node to make a [Custom API call](/integrations/custom-operations/).
 
-## Prerequisites
+## Authentication methods
 
-_Include info on services they need to sign up for_
+n8n supports username and password authentication for Trellix ePO.
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [Trellix ePO's documentation](https://docs.trellix.com/bundle/epolicy-orchestrator-web-api-reference-guide/page/GUID-D87A6839-AED2-47B0-BE93-5BF83F710278.html){:target=_blank .external-link} for more information about the service.
 
 
 <!-- 

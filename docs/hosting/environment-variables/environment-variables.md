@@ -105,7 +105,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## User management and SMTP
 
-Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
+Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

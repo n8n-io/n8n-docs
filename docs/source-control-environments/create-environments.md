@@ -115,6 +115,6 @@ If you want to avoid logging in to your production instance to pull, you can use
 
 Learn more about:
 
-* [Environments in n8n](/source-control-environments/understand//environments/) and [Git and n8n](/source-control-environments/understand/git/)
+* [Environments in n8n](/source-control-environments/understand/environments/) and [Git and n8n](/source-control-environments/understand/git/)
 * [Source control patterns](/source-control-environments/understand/patterns/)
 * Reusable [Variables](/variables/) and [Managing variables using the API](/source-control-environments/using/manage-variables/) when using source control.

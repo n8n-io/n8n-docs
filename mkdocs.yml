@@ -11,8 +11,6 @@ theme:
   palette:
       scheme: light
   features:
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/?h=anno#mark-as-read
-    - announce.dismiss
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs

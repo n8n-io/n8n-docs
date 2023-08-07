@@ -1,4 +1,6 @@
 ---
+title: Flow logic
+description: How to represent logic in n8n workflows.
 contentType: overview
 ---
 
@@ -7,3 +9,7 @@ contentType: overview
 n8n allows you to represent complex logic in your workflows.
 
 [TODO: add section TOC]
+
+## Related sections
+
+* Understand [Data](/data/) in n8n, including [Data structure](/data/data-structure/) and [Data flow within nodes](/data/data-flow-nodes/).

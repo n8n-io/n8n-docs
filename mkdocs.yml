@@ -154,6 +154,7 @@ nav:
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
+      - Data flow within nodes: data/data-flow-nodes.md
       - Transforming data: data/transforming-data.md
       - Process data using code: data/code.md
       - Data mapping: 

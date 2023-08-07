@@ -140,8 +140,7 @@ nav:
       - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
       - flow-logic/index.md
-      - Data flow within nodes: flow-logic/data-flow-nodes.md
-      - Splitting: flow-logic/splitting.md
+      - Splitting with conditionals: flow-logic/splitting.md
       - Merging: flow-logic/merging.md
       - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Looping: flow-logic/looping.md

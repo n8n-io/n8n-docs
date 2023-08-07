@@ -1,6 +1,7 @@
 ---
 title: No Operation, do nothing
 description: Documentation for the No Operation, do nothing node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # No Operation, do nothing

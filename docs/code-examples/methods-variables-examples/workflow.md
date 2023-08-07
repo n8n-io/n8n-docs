@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # `$workflow`
 
 Gives information about the current workflow.

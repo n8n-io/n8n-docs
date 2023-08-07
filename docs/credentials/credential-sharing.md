@@ -1,5 +1,6 @@
 ---
 description: Share credentials within an organization.
+contentType: howto
 ---
 
 # Credential sharing

@@ -1,5 +1,6 @@
 ---
 description: Find your workflow ID.
+contentType: howto
 ---
 
 # Find your workflow ID

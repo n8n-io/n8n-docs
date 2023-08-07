@@ -1,6 +1,7 @@
 ---
 title: Emelia credentials
 description: Documentation for Emelia credentials. Use these credentials to authenticate Emelia in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Emelia credentials

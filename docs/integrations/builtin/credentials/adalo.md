@@ -1,6 +1,7 @@
 ---
 title: Adalo credentials
 description: Documentation for Adalo credentials. Use these credentials to authenticate Adalo in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Adalo credentials

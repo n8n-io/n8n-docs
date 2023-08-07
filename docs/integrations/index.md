@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Integrations
 
 In n8n, integrations are called nodes.

@@ -1,6 +1,7 @@
 ---
 title: Set up SAML
 description: Generic setup instructions for using SAML SSO with n8n.
+contentType: howto
 ---
 
 # Set up SAML
@@ -19,8 +20,9 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 1. Make a note of the n8n **Redirect URL** and **Entity ID**.
 	1. **Optional**: if your IdP allows you to set up SAML from imported metadata, navigate to the **Entity ID** URL and save the XML. 
 1. Set up SAML with your IdP (identity provider). You need the redirect URL and entity ID. You may also need an email address and name for the IdP user.
-1. After completing setup in your IdP, download the metadata XML from your IdP.
-1. In n8n, copy the raw XML into **Identity Provider Settings**.
+1. After completing setup in your IdP, load the metadata XML into n8n. You can use a metadata URL or raw XML:
+	1. **Metadata URL**: Copy the metadata URL from your IdP into the **Identity Provider Settings** field in n8n.
+	1. **Raw XML**: Download the metadata XML from your IdP, toggle **Identiy Provider Settings** to **XML**, then copy the raw XML into **Identity Provider Settings**.
 1. Select **Save settings**.
 1. Select **Test settings** to check your SAML setup is working.
 1. Set SAML 2.0 to **Activated**.
@@ -52,7 +54,16 @@ Documentation links for common IdPs.
 | Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/) |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/r/en-us/pingone/pingone_p1sso_start){:target=_blank .external-link} |
 
-## Deleting users
 
-If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](/user-management/manage-users/) for guidance on deleting users.
+## IdP-specific guidance
 
+This section contains notes on IdP-specific quirks and tips.
+
+### Azure
+
+The Azure metadata XML is a combination of the SAML 2.0 definition and the WS-Federation definition. This means you can't use the **App Federation Metadata Url** to automatically load the XML. Instead:
+
+1. Download the **Federation Metadata XML**.
+2. Open the file in your text editor.
+3. Remove the `RoleDescriptor` sections. Anything with the `fed:` namespace is part of the WS-Federation definition.
+4. Paste the edited XML into **Identity Provider Settings** in n8n's SSO settings.

@@ -1,6 +1,7 @@
 ---
 title: Rename Keys
 description: Documentation for the Rename Keys node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Rename Keys

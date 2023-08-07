@@ -1,6 +1,10 @@
+---
+contentType: tutorial
+---
+
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 

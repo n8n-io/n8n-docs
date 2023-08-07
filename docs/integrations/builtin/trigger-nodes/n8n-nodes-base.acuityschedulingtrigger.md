@@ -1,6 +1,7 @@
 ---
 title: Acuity Scheduling trigger
 description: Documentation for the Acuity Scheduling trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Acuity Scheduling trigger

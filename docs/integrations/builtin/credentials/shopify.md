@@ -1,6 +1,7 @@
 ---
 title: Shopify credentials
 description: Documentation for Shopify credentials. Use these credentials to authenticate Shopify in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Shopify credentials

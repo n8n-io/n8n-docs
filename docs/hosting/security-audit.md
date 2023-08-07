@@ -1,5 +1,6 @@
 ---
 description: "Run a security audit on your n8n instance."
+contentType: howto
 ---
 
 # Security audit
@@ -21,7 +22,7 @@ Make a `POST` call to the `/audit` endpoint. You must authenticate as the instan
 
 ### n8n node
 
-Add the [n8n node](/integrations/builtin/core/n8n-nodes-base.n8n/) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
+Add the [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
 
 ## Report contents
 

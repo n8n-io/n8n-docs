@@ -1,6 +1,7 @@
 ---
 title: monday.com credentials
 description: Documentation for monday.com credentials. Use these credentials to authenticate monday.com in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # monday.com credentials

@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Test your knowledge
 
 Congratulations, you finished the n8n Course Level 2!

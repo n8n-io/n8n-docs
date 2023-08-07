@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
@@ -219,7 +223,6 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos',
 				},
 			},
 		},
@@ -238,6 +241,11 @@ Add the following to the `properties` array, after the `resource` object:
 		{name: 'Perseverance', value: 'perseverance'},
 		{name: 'Spirit', value: 'spirit'},
 	],
+	routing: {
+		request: {
+			url: '=/mars-photos/api/v1/rovers/{{$value}}/photos',
+		},
+	},
 	default: 'curiosity',
 	displayOptions: {
 		show: {
@@ -453,6 +461,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [SendInBlue node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SendInBlue){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
 

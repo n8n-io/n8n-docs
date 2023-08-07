@@ -1,6 +1,7 @@
 ---
 title: Activation trigger
 description: Documentation for the Activation trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Activation trigger

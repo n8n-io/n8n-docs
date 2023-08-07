@@ -1,5 +1,6 @@
 ---
 description: Configuration variables for self-hosted n8n.
+contentType: reference
 ---
 
 # Configuration environment variables
@@ -21,10 +22,17 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb`, `mysqldb`, `postgresdb` | `sqlite` | The database to use. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb` (deprecated), `mysqldb` (deprecated), `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
 
 ### MySQL
+
+!!! warning "Deprecated"
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+
+	n8n recommends using PostgreSQL. 
+
+	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -77,12 +85,13 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_VERSION_NOTIFICATIONS_ENABLED` | Boolean | `true` | When enabled, n8n sends notifications of new versions and security updates. |
 | `N8N_VERSION_NOTIFICATIONS_ENDPOINT` | String | `https://api.n8n.io/versions/` | The endpoint to retrieve where version information. |
 | `N8N_VERSION_NOTIFICATIONS_INFO_URL` | String | `https://docs.n8n.io/getting-started/installation/updating.html` | The URL displayed in the New Versions panel for additional information. |
-| `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/privacy-security/data-collection/) with n8n |
+| `N8N_DIAGNOSTICS_ENABLED` | Boolean | `true` | Whether to share selected, anonymous [telemetry](/privacy-security/privacy/) with n8n |
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | String | `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io` | Telemetry configuration for the frontend. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the backend. |
 | `N8N_PUSH_BACKEND` | String | `sse` | Choose whether the n8n backend uses server-sent events (`sse`) or WebSockets (`websocket`) to send changes to the UI. |
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
+| `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
 
 ## Binary data
 
@@ -96,11 +105,10 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## User management and SMTP
 
-Refer to [User management](/hosting/authentication/user-management-self-hosted/) for more information on setting up user management and emails.
+Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_USER_MANAGEMENT_DISABLED` | Boolean | `false` | Set to `true` to disable the [user management](/hosting/authentication/user-management-self-hosted/) feature. Note that n8n ignores this environment variable if you have already set up an owner account.|
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
 | `N8N_SMTP_HOST` | String | - | _your_SMTP_server_name_ |
 | `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ |
@@ -111,6 +119,7 @@ Refer to [User management](/hosting/authentication/user-management-self-hosted/)
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
+
 
 ## Endpoints
 
@@ -208,6 +217,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis version 6 or above). Don't define it for Redis < 6 compatibility |
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
+| `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
 | `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
@@ -218,19 +228,8 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_AUTH_EXCLUDE_ENDPOINTS` | String | - | Exclude endpoints from authentication checks. Provide multiple endpoints as a colon-seperated list ("`:`"). The endpoints must not start with a forward slash ("`/`"). |
-| `N8N_BASIC_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate basic auth for editor and REST-API access. |
-| `N8N_BASIC_AUTH_USER`<br>/`_FILE` | String | - | The name of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_PASSWORD`<br>/`_FILE` | String | - | The password of the n8n user for basic authentication. |
-| `N8N_BASIC_AUTH_HASH`<br>/`_FILE` | Boolean | `false` | Whether to hash the basic authentication password. |
 | `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the Code node (false) or not (true). |
-| `N8N_JWT_AUTH_ACTIVE` | Boolean | `false` | Whether n8n should activate JWT authentication for editor and REST-API access. |
-| `N8N_JWT_AUTH_HEADER`<br>/`_FILE` | String | - | The request header containing a signed JWT. |
-| `N8N_JWT_AUTH_HEADER_VALUE_PREFIX`<br>/`_FILE` | String | - | Optional. The request header value prefix to strip. |
-| `N8N_JWKS_URI`<br>/`_FILE` | String | - | The URI to fetch JWK Set for JWT authentication. |
-| `N8N_JWT_ISSUER`<br>/`_FILE` | String | - | Optional. The expected JWT issuer. |
-| `N8N_JWT_NAMESPACE`<br>/`_FILE` | String | - | Optional. The expected JWT namespace. |
-| `N8N_JWT_ALLOWED_TENANT`<br>/`_FILE` | String | - | Optional. The allowed JWT tenant. |
-| `N8N_JWT_ALLOWED_TENANT_KEY`<br>/`_FILE` | String | - | Optional. The JWT tenant key name to inspect within the JWT namespace. |
+
 
 ## Timezone and localization
 

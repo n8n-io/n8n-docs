@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Error workflows
 
 For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. 

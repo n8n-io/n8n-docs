@@ -1,5 +1,6 @@
 ---
 description: Share workflows between users.
+contentType: howto
 ---
 
 # Workflow sharing

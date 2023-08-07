@@ -1,6 +1,7 @@
 ---
 title: Okta Workforce Identity SAML setup
 description: Use Okta Workforce Identity with n8n.
+contentType: tutorial
 ---
 
 # Okta Workforce Identity SAML setup

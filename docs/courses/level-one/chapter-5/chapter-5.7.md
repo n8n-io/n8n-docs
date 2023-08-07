@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 7. Scheduling the Workflow
 
 In this step of the workflow you will learn how to schedule your workflow so that it runs automatically at a set time/interval using the Cron node.

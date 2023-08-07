@@ -1,5 +1,6 @@
 ---
 description: View and filter all executions for all workflows.
+contentType: howto
 ---
 
 # All executions list

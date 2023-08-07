@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Node types: Trigger and Action
 
 There are two node types you can build for n8n: app nodes and trigger nodes.

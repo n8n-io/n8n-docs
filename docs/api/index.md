@@ -1,5 +1,6 @@
 ---
 description: n8n's public REST API
+contentType: overview
 ---
 
 # n8n public REST API

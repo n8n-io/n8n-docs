@@ -1,6 +1,7 @@
 ---
 title: Clockify credentials
 description: Documentation for Clockify credentials. Use these credentials to authenticate Clockify in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Clockify credentials

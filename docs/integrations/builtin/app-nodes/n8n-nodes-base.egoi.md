@@ -1,6 +1,7 @@
 ---
 title: E-goi
 description: Documentation for the E-goi node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # E-goi

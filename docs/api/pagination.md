@@ -1,5 +1,6 @@
 ---
 description: Pagination in n8n's public REST API.
+contentType: howto
 ---
 
 # API pagination

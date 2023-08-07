@@ -1,6 +1,7 @@
 ---
 title: Mattermost credentials
 description: Documentation for Mattermost credentials. Use these credentials to authenticate Mattermost in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Mattermost credentials

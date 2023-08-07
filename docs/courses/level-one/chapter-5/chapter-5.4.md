@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 4. Setting Values for Processing Orders
 
 In this step of the workflow you will learn how to select and set data before transferring it to Airtable using the *Set* node.

@@ -1,6 +1,7 @@
 ---
 title: AWS Lambda
 description: Documentation for the AWS Lambda node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # AWS Lambda

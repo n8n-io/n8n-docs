@@ -1,6 +1,7 @@
 ---
 title: Privacy and security
 description: Privacy and security at n8n
+contentType: overview
 ---
 
 # Privacy and security

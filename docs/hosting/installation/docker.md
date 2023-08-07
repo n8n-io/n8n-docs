@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Docker Installation
 
 [Docker](https://www.docker.com/){:target=_blank .external-link} offers the following advantages:
@@ -10,7 +14,7 @@
 
 Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.
 
-!!! note "Linux Users "
+!!! note "Linux Users"
     Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
 
 
@@ -33,17 +37,15 @@ You can then access n8n by opening:
 
 ## Using alternate databases
 
-By default n8n uses SQLite to save credentials, past executions and workflows.
-n8n also supports PostgresDB, MySQL and MariaDB, configurable via
-environment variables as detailed below.
+By default n8n uses SQLite to save credentials, past executions and workflows. n8n also supports PostgresDB configurable using environment variables as detailed below.
 
-It's important to still persist data in the `/root/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
+It's important to still persist data in the `/home/node/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
 
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 !!! note "Keep in mind"
-    Persisting the `/root/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
+    Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
 
 ### PostgresDB
 
@@ -70,7 +72,7 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 ### MySQL
 
 !!! warning "Deprecated"
-	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0. Support will be removed in version 1.0.
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
 
 	n8n recommends using PostgreSQL. 
 
@@ -120,29 +122,29 @@ From your Docker Desktop, navigate to the **Images** tab and select **Pull** fro
 You can also use the command line to pull the latest, or a specific version:
 
 ```sh
-// Pull latest (stable) version
+# Pull latest (stable) version
 docker pull docker.n8n.io/n8nio/n8n
 
-// Pull specific version
+# Pull specific version
 docker pull docker.n8n.io/n8nio/n8n:0.220.1
 
-// Pull next (unstable) version
+# Pull next (unstable) version
 docker pull docker.n8n.io/n8nio/n8n:next
 ```
 
 Stop the container and start it again. You can also use the command line:
 
 ```sh
-// Get the container ID
+# Get the container ID
 docker ps -a
 
-// Stop the container with ID container_id
+# Stop the container with ID container_id
 docker stop [container_id]
 
-// Remove the container with ID container_id
+# Remove the container with ID container_id
 docker rm [container_id]
 
-// Start the container
+# Start the container
 docker run --name=[container_name] [options] -d docker.n8n.io/n8nio/n8n
 ```
 
@@ -151,13 +153,13 @@ docker run --name=[container_name] [options] -d docker.n8n.io/n8nio/n8n
 If you've running n8n using a Docker Compose file, follow the below mentioned steps to update n8n.
 
 ```sh
-// Pull latest version
+# Pull latest version
 docker compose pull
 
-// Stop and remove older version
+# Stop and remove older version
 docker compose down
 
-// Start the container
+# Start the container
 docker compose up -d
 ```
 

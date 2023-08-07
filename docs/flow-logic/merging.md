@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Merging items
 
 You can merge items together in your workflows. There are three main use cases for merging items:

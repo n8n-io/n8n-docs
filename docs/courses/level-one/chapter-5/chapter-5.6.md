@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 6. Notifying the Team
 
 In this step of the workflow you will learn how to send messages to a Discord channel using the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/){:target="_blank" .external}.
@@ -11,10 +15,8 @@ Now that you have a calculated summary of the booked orders, you need to notify 
 In your workflow, add a Discord node connected to the Code node. In the Discord node window, configure the parameters:
 
 - *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
-- *Text (Expression):* This week we have `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{$node["HTTP Request"].parameter["headerParameters"]["parameter"][0]["value"]}}`
+- *Text (Expression):* This week we have `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
 
-
-<figure><img src="/_images/courses/level-one/chapter-two/Discord-node.png" alt="Discord node expression" style="width:100%"><figcaption align = "center"><i>Discord node expression</i></figcaption></figure>
 
 Now execute the Discord node. If all works well, your message should appear in the Discord channel #course-level-1.
 

@@ -1,6 +1,7 @@
 ---
 title: SeaTable credentials
 description: Documentation for SeaTable credentials. Use these credentials to authenticate SeaTable in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # SeaTable credentials

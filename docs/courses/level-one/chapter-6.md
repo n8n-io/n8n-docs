@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Exporting and importing workflows
 
 In this chapter you will learn how to export and import workflows.

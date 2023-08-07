@@ -1,5 +1,6 @@
 ---
 description: How to use console.log()
+contentType: howto
 ---
 
 # Using console.log in the Code node

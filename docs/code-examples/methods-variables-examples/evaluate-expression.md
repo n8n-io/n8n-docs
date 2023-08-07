@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # `$evaluateExpression(expression: string, itemIndex?: number)`
 
 Evaluates a given string as expression.

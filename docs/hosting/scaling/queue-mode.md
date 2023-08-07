@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Queue mode
 
 n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.
@@ -34,7 +38,7 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 ### Set executions mode
 
 !!! note "Database considerations"
-    We recommend using a database like MySQL or Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database is not recommended.
+    n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 
 Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
 

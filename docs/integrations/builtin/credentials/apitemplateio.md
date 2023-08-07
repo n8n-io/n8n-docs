@@ -1,6 +1,7 @@
 ---
 title: APITemplate.io credentials
 description: Documentation for APITemplate.io credentials. Use these credentials to authenticate APITemplate.io in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # APITemplate.io credentials

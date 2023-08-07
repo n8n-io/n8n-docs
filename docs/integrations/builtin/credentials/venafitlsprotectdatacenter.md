@@ -1,6 +1,7 @@
 ---
 title: Venafi TLS Protect Datacenter credentials
 description: Documentation for Venafi TLS Protect Datacenter credentials. Use these credentials to authenticate Venafi TLS Protect Datacenter in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Venafi TLS Protect Datacenter credentials

@@ -1,6 +1,7 @@
 ---
 title: Zendesk credentials
 description: Documentation for Zendesk credentials. Use these credentials to authenticate Zendesk in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Zendesk credentials

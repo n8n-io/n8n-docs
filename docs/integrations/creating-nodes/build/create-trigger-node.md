@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Creating Your First Trigger Node
 
 This tutorial walks through building a trigger node.
@@ -442,7 +446,7 @@ async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.
 5. Stop the current n8n process by pressing `ctrl + c` in the terminal where you are running n8n.
 6. Run the project using a tunnel by entering `./packages/cli/bin/n8n start --tunnel` in the terminal. Access the n8n Editor UI at [localhost:5678](http://localhost:5678/workflow).
-7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](integrations/builtin/credentials/autopilot/).
+7. Enter the API key in the credentials. Instructions to find the API Key can be found [here](/integrations/builtin/credentials/autopilot/).
 8. Go to the workflow editor, save your workflow, and execute the node.
 
 ![Executed node](/_images/integrations/creating-nodes/executed-node.png)
@@ -465,5 +469,5 @@ Since our server is running locally, we need a tool that lets us proxy all reque
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [SendInBlue node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SendInBlue){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).

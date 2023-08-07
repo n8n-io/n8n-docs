@@ -1,6 +1,7 @@
 ---
 title: Calendly trigger
 description: Documentation for the Calendly trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Calendly trigger

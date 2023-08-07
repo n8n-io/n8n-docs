@@ -1,6 +1,7 @@
 ---
 title: Eventbrite credentials
 description: Documentation for Eventbrite credentials. Use these credentials to authenticate Eventbrite in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Eventbrite credentials

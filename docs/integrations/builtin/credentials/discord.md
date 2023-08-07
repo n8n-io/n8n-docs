@@ -1,6 +1,7 @@
 ---
 title: Discord credentials
 description: Documentation for Discord credentials. Use these credentials to authenticate Discord in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Discord credentials

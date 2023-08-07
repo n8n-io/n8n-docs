@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # n8n Cloud
 
 n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it provides added benefits such as:
@@ -39,4 +43,5 @@ Outbound traffic may currently appear to originate from any of:
 * 20.79.72.36
 * 20.113.47.122
 * 20.218.202.73
+* 20.79.232.36
 

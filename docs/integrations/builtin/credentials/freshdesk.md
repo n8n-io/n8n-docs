@@ -1,6 +1,7 @@
 ---
 title: Freshdesk credentials
 description: Documentation for Freshdesk credentials. Use these credentials to authenticate Freshdesk in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Freshdesk credentials

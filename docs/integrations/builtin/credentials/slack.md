@@ -1,6 +1,7 @@
 ---
 title: Slack credentials
 description: Documentation for Slack credentials. Use these credentials to authenticate Slack in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Slack credentials
@@ -8,6 +9,7 @@ description: Documentation for Slack credentials. Use these credentials to authe
 You can use these credentials to authenticate the following nodes:
 
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)
+
 
 ## Prerequisites
 

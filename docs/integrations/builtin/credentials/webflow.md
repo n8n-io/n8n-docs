@@ -1,6 +1,7 @@
 ---
 title: Webflow credentials
 description: Documentation for Webflow credentials. Use these credentials to authenticate Webflow in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Webflow credentials

@@ -13,8 +13,8 @@ You can find more info on working with the docs project in the README: https://g
 -->
 
 ---
-title: <node-name> - n8n Documentation
-description: Documentation for the <node-name> node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: _Name_
+description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
 <!-- 
@@ -26,12 +26,11 @@ Local File trigger
 
 _Briefly summarize the functionality._
 
-
 !!! note "Credentials"
-    You can find authentication information for this node _here (link to credentials doc)_.
+    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name's_ integrations](){:target=_blank .external-link} list.
+	For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
 
 ## Operations
 
@@ -41,7 +40,7 @@ _Briefly summarize the functionality._
 ## Related resources
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-View [example workflows and related content](){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
 
 
 

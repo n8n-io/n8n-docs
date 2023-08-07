@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Level two: Introduction
 
 Welcome to the **n8n Course Level 2**!

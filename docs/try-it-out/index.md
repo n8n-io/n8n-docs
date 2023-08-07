@@ -1,5 +1,6 @@
 ---
 description: The n8n quickstarts.
+contentType: overview
 ---
 
 # Try it out

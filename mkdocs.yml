@@ -203,6 +203,7 @@ nav:
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Using console.log: code-examples/javascript-functions/console-log.md
+      - Generate code with ChatGPT: code-examples/ai-code.md
     - User management:
       - user-management/index.md
       - Cloud setup: user-management/cloud-setup.md

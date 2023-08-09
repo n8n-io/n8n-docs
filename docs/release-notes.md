@@ -28,6 +28,52 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.1.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.1...n8n@1.1.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-08-09
+
+This release contains new features, node enhancements, bug fixes, and performance improvements.
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### Credential support for SecOps services
+
+This release introduces support for setting up credentials in n8n for the following services:
+
+* [AlienVault](/integrations/builtin/credentials/alienvault/)
+* [Auth0 Management](/integrations/builtin/credentials/auth0management/)
+* [Carbon Black API](/integrations/builtin/credentials/carbonblack/)
+* [Cisco Meraki API](/integrations/builtin/credentials/ciscomeraki/)
+* [Cisco Secure Endpoint](/integrations/builtin/credentials/ciscosecureendpoint/)
+* [Cisco Umbrella API](/integrations/builtin/credentials/ciscoumbrella/)
+* [CrowdStrike](/integrations/builtin/credentials/crowdstrike/)
+* [F5 Big-IP](/integrations/builtin/credentials/f5bigip/)
+* [Fortinet FortiGate](/integrations/builtin/credentials/fortigate/)
+* [Hybrid Analysis](/integrations/builtin/credentials/hybridanalysis/)
+* [Imperva WAF](/integrations/builtin/credentials/impervawaf/)
+* [Kibana](/integrations/builtin/credentials/kibana/)
+* [Microsoft Entra ID](/integrations/builtin/credentials/microsoftentra/)
+* [Mist](/integrations/builtin/credentials/mist/)
+* [Okta](/integrations/builtin/credentials/okta/)
+* [OpenCTI](/integrations/builtin/credentials/opencti/)
+* [QRadar](/integrations/builtin/credentials/qradar/)
+* [Qualys](/integrations/builtin/credentials/qualys/)
+* [Recorded Future](/integrations/builtin/credentials/recordedfuture/)
+* [Sekoia](/integrations/builtin/credentials/sekoia/)
+* [Shuffler](/integrations/builtin/credentials/shuffler/)
+* [Trellix ePO](/integrations/builtin/credentials/trellixepo/)
+* [VirusTotal](/integrations/builtin/credentials/virustotal/)
+* [Zscaler ZIA](/integrations/builtin/credentials/zscalerzia/)
+
+This makes it easier to do [Custom operations](/integrations/custom-operations/) with these services, using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.1.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){:target=_blank .external-link} for this version.<br />

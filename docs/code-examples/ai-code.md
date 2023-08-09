@@ -43,6 +43,10 @@ And some n8n-specific guidance:
 * Declare interactions between nodes: if your logic involves data from multiple nodes, specify how they should interact. "Merge the output of 'Node A' with 'Node B' based on the 'userID' property". if you prefer data to come from certain nodes or to ignore others, be clear: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
 * Ensure the output is compatible with n8n. Refer to [Data structure](/data/data-structure/) for more information on the data structure n8n requires.
 
+### Example prompts
+
+[TODO: add Nik's examples, and an example of prompt referencing complex input data]
+
 ### Related resources
 
 * Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link}, which includes example prompts.

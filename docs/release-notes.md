@@ -28,12 +28,27 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.1.2
+## n8n@1.2.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.1...n8n@1.1.2){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.2.0...n8n@1.2.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-08-09
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.2.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.1...n8n@1.2.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-08-09
 
 This release contains new features, node enhancements, bug fixes, and performance improvements.
+
+!!! note "Upgrade directly to 1.2.1"
+	When upgrading, skip this release and go directly to 1.2.1.
 
 ### Highlights
 

@@ -22,7 +22,7 @@ During the trial phase there are no usage limits. If n8n makes the feature perma
 
 The ChatGPT implementation in n8n has the following limitations:
 
-* Only writes code that manipulates data from the n8n workflow. You can't ask it to pull in data from other sources.
+* The AI writes code that manipulates data from the n8n workflow. You can't ask it to pull in data from other sources.
 * Doesn't work with large incoming data schemas.
 * May have issues if there are a lot of nodes before the code node.
 

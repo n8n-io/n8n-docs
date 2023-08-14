@@ -16,13 +16,15 @@ contentType: explanation
 
 ## Usage limits
 
-During the trial phase there are no usage limits. If n8n makes the feature permanent, there will be usage limits as part of your pricing tier.
+During the trial phase there are no usage limits. If n8n makes the feature permanent, there may be usage limits as part of your pricing tier.
 
 ## Feature limits
 
 The ChatGPT implementation in n8n has the following limitations:
 
 * The AI writes code that manipulates data from the n8n workflow. You can't ask it to pull in data from other sources.
+* The AI doesn't know your data, just the schema, so you need to tell it things like how to find the data you want to extract, or how to check for null.
+* Nodes before the Code node must execute and deliver data to the Code node before you run your AI query.
 * Doesn't work with large incoming data schemas.
 * May have issues if there are a lot of nodes before the code node.
 
@@ -47,7 +49,7 @@ And some n8n-specific guidance:
 
 ### Example prompts
 
-These examples show a range of possible prompts and tasks. They also demonstrate some of the instances where the AI is likely to return accurate code, and some where you'll need to edit.
+These examples show a range of possible prompts and tasks.
 
 #### Example 1: Find a piece of data inside a second dataset
 
@@ -81,7 +83,7 @@ In the **Join items** Code node, enter this prompt:
 
 > Return a single line of text that has all usernames listed with a comma. Each username should be enquoted with a double quotation mark.
 
-Take a look at the code the AI generates. You may need to edit it to ensure the data it returns matches n8n's [data structure](/data/data-structure/).
+Take a look at the code the AI generates.
 
 This is the JavaScript you need:
 
@@ -100,7 +102,7 @@ In the **Summarize** Code node, enter this prompt:
 
 > Create a markdown text for Slack that summarizes how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. Also, list the five top submissions by vote in that message. Use <link|message> as markdown for links.
 
-Take a look at the code the AI generates. You'll probably need to edit this example to get it to work as intended.
+Take a look at the code the AI generates.
 
 This is the JavaScript you need:
 

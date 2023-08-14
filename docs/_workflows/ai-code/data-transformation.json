@@ -14,7 +14,7 @@
     },
     {
       "parameters": {
-        "jsCode": "return [\n{\n\"user_id\":\n\"53043\",\n\"username\":\n\"stevenn8n\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"72955\",\n\"username\":\n\"otoqitest\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"73022\",\n\"username\":\n\"muflih\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"73026\",\n\"username\":\n\"hkhjk\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"73028\",\n\"username\":\n\"nvmui\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"73031\",\n\"username\":\n\"ba144220\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"73032\",\n\"username\":\n\"tebe19\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"68765\",\n\"username\":\n\"wren\",\n\"date\":\n\"2023-08-09\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"70810\",\n\"username\":\n\"smrtr\",\n\"date\":\n\"2023-08-09\",\n\"variant\":\n\"variant\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"72435\",\n\"username\":\n\"socialdraft\",\n\"date\":\n\"2023-08-09\",\n\"variant\":\n\"variant\",\n\"data_exec_success\":\n\"FALSE\"\n}\n]"
+        "jsCode": "return [\n{\n\"user_id\":\n\"0001\",\n\"username\":\n\"nathan\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"0002\",\n\"username\":\n\"natalie\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"0003\",\n\"username\":\n\"nadia\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"naomi\",\n\"username\":\n\"hkhjk\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"0005\",\n\"username\":\n\"nolan\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n}\n]"
       },
       "id": "08e4d878-01ab-4f01-ab27-84ef5afbf581",
       "name": "Code",
@@ -26,9 +26,7 @@
       ]
     },
     {
-      "parameters": {
-        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
-      },
+      "parameters": {},
       "id": "57a9330b-9e46-42a6-b432-681e906de93a",
       "name": "Join items",
       "type": "n8n-nodes-base.code",
@@ -62,18 +60,13 @@
           }
         ]
       ]
-    },
-    "Join items": {
-      "main": [
-        []
-      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "e90ee562-2afe-4700-9275-354bb57b39b8",
+  "versionId": "d7409102-d3af-4ddf-bead-2df008554458",
   "id": "B4K5I5pN4nqu85ac",
   "meta": {
     "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"

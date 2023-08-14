@@ -7,7 +7,7 @@ contentType: explanation
 # Generate code with ChatGPT
 
 !!! info "Experimental feature with limited availability"
-	Available on n8n Cloud from version [TODO].  
+	Available on n8n Cloud from version [TODO]. Not available on self-hosted.  
 	Python isn't supported.
 
 ## Use AI in the Code node
@@ -45,10 +45,6 @@ And some n8n-specific guidance:
 * Declare interactions between nodes: if your logic involves data from multiple nodes, specify how they should interact. "Merge the output of 'Node A' with 'Node B' based on the 'userID' property". if you prefer data to come from certain nodes or to ignore others, be clear: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
 * Ensure the output is compatible with n8n. Refer to [Data structure](/data/data-structure/) for more information on the data structure n8n requires.
 
-### Related resources
-
-* Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link}, which includes example prompts.
-
 ### Example prompts
 
 These examples show a range of possible prompts and tasks. They also demonstrate some of the instances where the AI is likely to return accurate code, and some where you'll need to edit.
@@ -59,9 +55,7 @@ To try the example yourself, [download the example workflow](/_workflows/ai-code
 
 In the third Code node, enter this prompt:
 
-```
-The data in "Mock Slack" represents a user in Slack. It always contains only one item. The data in "Mock Notion" represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
-```
+> The data in "Mock Slack" represents a user in Slack. It always contains only one item. The data in "Mock Notion" represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
 
 Take a look at the code the AI generates.
 
@@ -85,9 +79,7 @@ To try the example yourself, [download the example workflow](/_workflows/ai-code
 
 In the **Join items** Code node, enter this prompt:
 
-```
-Return a single line of text that has all usernames listed with a comma. Each username should be enquoted with a double quotation mark.
-```
+> Return a single line of text that has all usernames listed with a comma. Each username should be enquoted with a double quotation mark.
 
 Take a look at the code the AI generates. You may need to edit it to ensure the data it returns matches n8n's [data structure](/data/data-structure/).
 
@@ -106,9 +98,7 @@ To try the example yourself, [download the example workflow](/_workflows/ai-code
 
 In the **Summarize** Code node, enter this prompt:
 
-```
-Create a markdown text for Slack that summarizes how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. Also, list the five top submissions by vote in that message. Use <link|message> as markdown for links
-```
+> Create a markdown text for Slack that summarizes how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. Also, list the five top submissions by vote in that message. Use <link|message> as markdown for links.
 
 Take a look at the code the AI generates. You'll probably need to edit this example to get it to work as intended.
 
@@ -159,7 +149,38 @@ return [{ json: { slackMessage } }];
 
 <!-- vale on -->
 
-## Reference incoming node data explicitly
+### Reference incoming node data explicitly
+
+If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
+
+!["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](/_images/code-examples/ai-code/reference-data-dot-notation.png)
+
+To try the example yourself, [download the example workflow](/_workflows/ai-code/reference-incoming-data-explicitly.json) and import it into n8n.
+
+In the second Code node, enter this prompt:
+
+> The data in "Mock data" represents a list of people. For each person, return a new item containing personal_info.first_name and work_info.job_title.
+
+This is the JavaScript you need:
+
+```js
+const items = $input.all();
+const newItems = items.map((item) => {
+  const firstName = item.json.personal_info.first_name;
+  const jobTitle = item.json.work_info.job_title;
+  return {
+    json: {
+      firstName,
+      jobTitle,
+    },
+  };
+});
+return newItems;
+```
+
+### Related resources
+
+Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link}, which includes example prompts.
 
 
 

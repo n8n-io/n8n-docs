@@ -28,6 +28,8 @@ The ChatGPT implementation in n8n has the following limitations:
 
 ## Writing good prompts
 
+<!-- vale off -->
+
 Writing good prompts increases the chance of getting useful code back.
 
 Some general tips:
@@ -43,14 +45,124 @@ And some n8n-specific guidance:
 * Declare interactions between nodes: if your logic involves data from multiple nodes, specify how they should interact. "Merge the output of 'Node A' with 'Node B' based on the 'userID' property". if you prefer data to come from certain nodes or to ignore others, be clear: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
 * Ensure the output is compatible with n8n. Refer to [Data structure](/data/data-structure/) for more information on the data structure n8n requires.
 
-### Example prompts
-
-[TODO: add Nik's examples, and an example of prompt referencing complex input data]
-
 ### Related resources
 
 * Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link}, which includes example prompts.
 
+### Example prompts
+
+These examples show a range of possible prompts and tasks. They also demonstrate some of the instances where the AI is likely to return accurate code, and some where you'll need to edit.
+
+#### Example 1: Find a piece of data inside a second dataset
+
+To try the example yourself, [download the example workflow](/_workflows/ai-code/find-a-piece-of-data.json) and import it into n8n.
+
+In the third Code node, enter this prompt:
+
+```
+The data in "Mock Slack" represents a user in Slack. It always contains only one item. The data in "Mock Notion" represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
+```
+
+Take a look at the code the AI generates.
+
+This is the JavaScript you need:
+
+```js
+const slackUser = $("Mock Slack").all()[0];
+const notionUsers = $input.all();
+const slackUserEmail = slackUser.json.email;
+
+const notionUser = notionUsers.find(
+  (user) => user.json.person && user.json.person.email === slackUserEmail
+);
+
+return notionUser ? [{ json: { notionId: notionUser.json.id } }] : [];
+```
+
+#### Example 2: Data transformation
+
+To try the example yourself, [download the example workflow](/_workflows/ai-code/data-transformation.json) and import it into n8n.
+
+In the **Join items** Code node, enter this prompt:
+
+```
+Return a single line of text that has all usernames listed with a comma. Each username should be enquoted with a double quotation mark.
+```
+
+Take a look at the code the AI generates. You may need to edit it to ensure the data it returns matches n8n's [data structure](/data/data-structure/).
+
+This is the JavaScript you need:
+
+```js
+const items = $input.all();
+const usernames = items.map((item) => `"${item.json.username}"`);
+const result = usernames.join(", ");
+return [{ json: { usernames: result } }];
+```
+
+#### Example 3: Summarize data and create a Slack message
+
+To try the example yourself, [download the example workflow](/_workflows/ai-code/summarize-data.json) and import it into n8n.
+
+In the **Summarize** Code node, enter this prompt:
+
+```
+Create a markdown text for Slack that summarizes how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. Also, list the five top submissions by vote in that message. Use <link|message> as markdown for links
+```
+
+Take a look at the code the AI generates. You'll probably need to edit this example to get it to work as intended.
+
+This is the JavaScript you need:
+
+```js
+const submissions = $input.all();
+
+// Count the number of ideas, features, and bugs
+let ideaCount = 0;
+let featureCount = 0;
+let bugCount = 0;
+
+submissions.forEach((submission) => {
+  switch (submission.json.property_type[0]) {
+    case "Idea":
+      ideaCount++;
+      break;
+    case "Feature":
+      featureCount++;
+      break;
+    case "Bug":
+      bugCount++;
+      break;
+  }
+});
+
+// Sort submissions by votes and take the top 5
+const topSubmissions = submissions
+  .sort((a, b) => b.json.property_votes - a.json.property_votes)
+  .slice(0, 5);
+
+let topSubmissionText = "";
+topSubmissions.forEach((submission) => {
+  topSubmissionText += `<${submission.json.url}|${submission.json.name}> with ${submission.json.property_votes} votes\n`;
+});
+
+// Construct the Slack message
+const slackMessage = `*Summary of Submissions*\n
+Ideas: ${ideaCount}\n
+Features: ${featureCount}\n
+Bugs: ${bugCount}\n
+Top 5 Submissions:\n
+${topSubmissionText}`;
+
+return [{ json: { slackMessage } }];
+```
+
+<!-- vale on -->
+
+## Reference incoming node data explicitly
+
+
+
 ## Fixing the code
 
-The AI-generated code may work immediately, but you may have to edit it. You need to be aware of n8n's [Data structure](/data/data-structure/). You may also find n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) useful.
+The AI-generated code may work without any changes, but you may have to edit it. You need to be aware of n8n's [Data structure](/data/data-structure/). You may also find n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) useful.

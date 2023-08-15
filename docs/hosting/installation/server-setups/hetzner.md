@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Hetzner cloud
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
@@ -32,7 +36,7 @@ The rest of this guide requires you to log in to the server using a terminal wit
 The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
 
 ```shell
-apt get update
+apt update && apt -y upgrade
 apt install docker-compose-plugin
 ```
 

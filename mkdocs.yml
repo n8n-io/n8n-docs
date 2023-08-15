@@ -1,4 +1,4 @@
-site_name: n8n Documentation
+site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
 theme:
@@ -6,15 +6,18 @@ theme:
   custom_dir: overrides
   favicon: _images/favicon.ico
   font: false
-  language: en
+  language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
       scheme: light
   features:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
+    - content.tabs.link
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
@@ -68,6 +71,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -107,8 +112,8 @@ nav:
     - Choose your n8n:
       - choose-n8n/index.md
       - Set up Cloud: choose-n8n/cloud.md
-      - Install Desktop: choose-n8n/desktop-app.md
       - Faircode license: choose-n8n/faircode-license.md
+      - Desktop (removed): choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md
@@ -135,6 +140,7 @@ nav:
     - Flow logic:
       - flow-logic/index.md
       - Merging: flow-logic/merging.md
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Looping: flow-logic/looping.md
       - Error handling:
         - flow-logic/error-handling/index.md
@@ -156,6 +162,7 @@ nav:
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
+      - Binary data: data/binary-data.md
     - Code in n8n:
       - code-examples/index.md
       - Built in methods and variables reference: code-examples/methods-variables-reference.md
@@ -167,6 +174,7 @@ nav:
         - (node-name).item: code-examples/methods-variables-examples/node.md
         - (node-name).all: code-examples/methods-variables-examples/all.md
         - runIndex: code-examples/methods-variables-examples/run-index.md
+        - vars: code-examples/methods-variables-examples/vars.md
         - workflow: code-examples/methods-variables-examples/workflow.md
       - Expressions:
         - code-examples/expressions/index.md
@@ -195,10 +203,30 @@ nav:
       - Cloud setup: user-management/cloud-setup.md
       - Manage users: user-management/manage-users.md
       - Account types: user-management/account-types.md
-      - Skip or disable: user-management/skip-disable.md
       - Best practices: user-management/best-practices.md
       - 2FA: user-management/two-factor-auth.md
       - LDAP: user-management/ldap.md
+      - SAML: 
+        - user-management/saml/index.md
+        - Set up SAML: user-management/saml/setup.md
+        - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+        - Troubleshooting: user-management/saml/troubleshooting.md
+        - Manage users with SAML: user-management/saml/managing.md
+    - Source control and environments:
+      - source-control-environments/index.md
+      - Understand:
+        - source-control-environments/understand/index.md
+        - Environments: source-control-environments/understand/environments.md
+        - Git in n8n: source-control-environments/understand/git.md
+        - Branch patterns: source-control-environments/understand/patterns.md
+      - Set up: source-control-environments/setup.md
+      - Using:
+        - source-control-environments/using/index.md
+        - Push and pull: source-control-environments/using/push-pull.md
+        - Copy work between environments: source-control-environments/using/copy-work.md
+        - Manage variables: source-control-environments/using/manage-variables.md
+      - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
+    - Variables: variables.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md
@@ -206,15 +234,17 @@ nav:
         - Security: privacy-security/security.md
         - Incident response: privacy-security/incident-response.md
         - What you can do: privacy-security/what-you-can-do.md
+    - Enterprise license key: enterprise-key.md
     - Release notes: release-notes.md
+    - v1.0 migration guide: 1-0-migration-checklist.md
     - Keyboard shortcuts: keyboard-shortcuts.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
       - integrations/builtin/index.md
       - Core nodes: integrations/builtin/core-nodes/
-      - App nodes: integrations/builtin/app-nodes/
-      - Trigger nodes: integrations/builtin/trigger-nodes/
+      - Actions: integrations/builtin/app-nodes/
+      - Triggers: integrations/builtin/trigger-nodes/
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -224,9 +254,11 @@ nav:
         - integrations/builtin/credentials/affinity.md
         - integrations/builtin/credentials/agilecrm.md
         - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
+        - integrations/builtin/credentials/auth0management.md
         - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
@@ -239,11 +271,16 @@ nav:
         - integrations/builtin/credentials/bitwarden.md
         - integrations/builtin/credentials/box.md
         - integrations/builtin/credentials/brandfetch.md
+        - integrations/builtin/credentials/brevo.md
         - integrations/builtin/credentials/bubble.md
         - integrations/builtin/credentials/cal.md
         - integrations/builtin/credentials/calendly.md
+        - integrations/builtin/credentials/carbonblack.md
         - integrations/builtin/credentials/chargebee.md
         - integrations/builtin/credentials/circleci.md
+        - integrations/builtin/credentials/ciscomeraki.md
+        - integrations/builtin/credentials/ciscosecureendpoint.md
+        - integrations/builtin/credentials/ciscoumbrella.md
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/citrixadc.md
         - integrations/builtin/credentials/clearbit.md
@@ -257,6 +294,8 @@ nav:
         - integrations/builtin/credentials/copper.md
         - integrations/builtin/credentials/cortex.md
         - integrations/builtin/credentials/cratedb.md
+        - integrations/builtin/credentials/crowddev.md
+        - integrations/builtin/credentials/crowdstrike.md
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/demio.md
@@ -273,6 +312,7 @@ nav:
         - integrations/builtin/credentials/emelia.md
         - integrations/builtin/credentials/erpnext.md
         - integrations/builtin/credentials/eventbrite.md
+        - integrations/builtin/credentials/f5bigip.md
         - integrations/builtin/credentials/facebookapp.md
         - integrations/builtin/credentials/facebookgraph.md
         - integrations/builtin/credentials/figma.md
@@ -280,6 +320,7 @@ nav:
         - integrations/builtin/credentials/flow.md
         - integrations/builtin/credentials/formiotrigger.md
         - integrations/builtin/credentials/formstacktrigger.md
+        - integrations/builtin/credentials/fortigate.md
         - integrations/builtin/credentials/freshdesk.md
         - integrations/builtin/credentials/freshservice.md
         - integrations/builtin/credentials/freshworkscrm.md
@@ -308,7 +349,9 @@ nav:
         - integrations/builtin/credentials/hubspot.md
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
+        - integrations/builtin/credentials/hybridanalysis.md
         - integrations/builtin/credentials/imap.md
+        - integrations/builtin/credentials/impervawaf.md
         - integrations/builtin/credentials/intercom.md
         - integrations/builtin/credentials/invoiceninja.md
         - integrations/builtin/credentials/iterable.md
@@ -317,13 +360,16 @@ nav:
         - integrations/builtin/credentials/jotform.md
         - integrations/builtin/credentials/kafka.md
         - integrations/builtin/credentials/keap.md
+        - integrations/builtin/credentials/kibana.md
         - integrations/builtin/credentials/kitemaker.md
         - integrations/builtin/credentials/kobotoolbox.md
+        - integrations/builtin/credentials/ldap.md
         - integrations/builtin/credentials/lemlist.md
         - integrations/builtin/credentials/line.md
         - integrations/builtin/credentials/linear.md
         - integrations/builtin/credentials/lingvanex.md
         - integrations/builtin/credentials/linkedin.md
+        - integrations/builtin/credentials/lonescale.md
         - integrations/builtin/credentials/magento2.md
         - integrations/builtin/credentials/mailcheck.md
         - integrations/builtin/credentials/mailchimp.md
@@ -339,9 +385,11 @@ nav:
         - integrations/builtin/credentials/messagebird.md
         - integrations/builtin/credentials/metabase.md
         - integrations/builtin/credentials/microsoft.md
+        - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/misp.md
+        - integrations/builtin/credentials/mist.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
@@ -354,10 +402,13 @@ nav:
         - integrations/builtin/credentials/nextcloud.md
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
+        - integrations/builtin/credentials/okta.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md
+        - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md
@@ -376,11 +427,14 @@ nav:
         - integrations/builtin/credentials/pushbullet.md
         - integrations/builtin/credentials/pushcut.md
         - integrations/builtin/credentials/pushover.md
+        - integrations/builtin/credentials/qradar.md
+        - integrations/builtin/credentials/qualys.md
         - integrations/builtin/credentials/questdb.md
         - integrations/builtin/credentials/quickbase.md
         - integrations/builtin/credentials/quickbooks.md
         - integrations/builtin/credentials/rabbitmq.md
         - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/recordedfuture.md
         - integrations/builtin/credentials/reddit.md
         - integrations/builtin/credentials/redis.md
         - integrations/builtin/credentials/rocketchat.md
@@ -391,13 +445,14 @@ nav:
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
+        - integrations/builtin/credentials/sekoia.md
         - integrations/builtin/credentials/sendemail.md
         - integrations/builtin/credentials/sendgrid.md
-        - integrations/builtin/credentials/sendinblue.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md
         - integrations/builtin/credentials/servicenow.md
         - integrations/builtin/credentials/shopify.md
+        - integrations/builtin/credentials/shuffler.md
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
         - integrations/builtin/credentials/sms77.md
@@ -421,7 +476,9 @@ nav:
         - integrations/builtin/credentials/timescaledb.md
         - integrations/builtin/credentials/todoist.md
         - integrations/builtin/credentials/toggl.md
+        - integrations/builtin/credentials/totp.md
         - integrations/builtin/credentials/travisci.md
+        - integrations/builtin/credentials/trellixepo.md
         - integrations/builtin/credentials/trello.md
         - integrations/builtin/credentials/twake.md
         - integrations/builtin/credentials/twilio.md
@@ -436,6 +493,7 @@ nav:
         - integrations/builtin/credentials/venafitlsprotectcloud.md
         - integrations/builtin/credentials/venafitlsprotectdatacenter.md
         - integrations/builtin/credentials/vero.md
+        - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/wekan.md
@@ -451,6 +509,7 @@ nav:
         - integrations/builtin/credentials/zendesk.md
         - integrations/builtin/credentials/zoho.md
         - integrations/builtin/credentials/zoom.md
+        - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
@@ -465,6 +524,7 @@ nav:
       - integrations/creating-nodes/index.md
       - Plan your node:
         - integrations/creating-nodes/plan/index.md
+        - Choose a node type: integrations/creating-nodes/plan/node-types.md
         - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
         - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
@@ -516,13 +576,12 @@ nav:
         - hosting/environment-variables/configuration-examples/index.md
         - Isolating n8n: hosting/environment-variables/configuration-examples/isolation.md
     - Supported databases and settings: hosting/supported-databases-settings.md
-    - Authentication:
-      - hosting/authentication/index.md
-      - User management: hosting/authentication/user-management-self-hosted.md
-      - Basic auth: hosting/authentication/basic-auth.md
-      - JWT: hosting/authentication/jwt.md
+    - User management: hosting/user-management-self-hosted.md
     - Security audit: hosting/security-audit.md
-    - Logging: hosting/logging.md
+    - Logging and monitoring:
+      - hosting/logging-monitoring/index.md
+      - Logging: hosting/logging-monitoring/logging.md
+      - Monitoring: hosting/logging-monitoring/monitoring.md
     - Scaling:
       - hosting/scaling/index.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md

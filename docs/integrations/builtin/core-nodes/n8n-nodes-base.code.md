@@ -1,6 +1,7 @@
 ---
 title: Code
 description: Documentation for the Code node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Code

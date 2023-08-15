@@ -1,6 +1,7 @@
 ---
 title: Monica CRM
 description: Documentation for the Monica CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Monica CRM

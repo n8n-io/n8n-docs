@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 3. Filtering Orders
 
 In this step of the workflow you will learn how to filter data using conditional logic and how to use expressions in nodes using the *IF* node.

@@ -1,3 +1,7 @@
+---
+contentType: overview
+---
+
 # Self-hosting n8n
 
 
@@ -19,7 +23,7 @@
 
 	Choose and set up user authentication for your n8n instance.
 
-	[:octicons-arrow-right-24: Authentication](/hosting/authentication/)
+	[:octicons-arrow-right-24: Authentication](/hosting/user-management/)
 
 - __Scaling__
 

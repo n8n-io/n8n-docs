@@ -1,6 +1,7 @@
 ---
 title: Ghost credentials
 description: Documentation for Ghost credentials. Use these credentials to authenticate Ghost in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Ghost credentials

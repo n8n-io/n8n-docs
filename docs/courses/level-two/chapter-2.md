@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Processing different data types
 
 In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/components/nodes/).
@@ -278,9 +282,9 @@ To read or write a binary file, you need to write the path (location) of the fil
 
 !!! warning "Naming the right path"
 
-	The file path looks slightly different on n8n cloud compared to desktop or self-hosted:
+	The file path looks slightly different on n8n cloud compared to self-hosted:
 
-	- n8n desktop and self-hosted: `./Documents/my_file.json`
+	- Self-hosted: `./Documents/my_file.json`
 	- n8n cloud: `/home/node/.n8n/my_file.json`
 
 

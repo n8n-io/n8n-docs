@@ -1,6 +1,7 @@
 ---
 title: Notion credentials
 description: Documentation for Notion credentials. Use these credentials to authenticate Notion in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Notion credentials
@@ -20,6 +21,13 @@ Notion provides access using API keys. To get and use the API key, you need:
 ## Get your API key
 
 Follow Step 1 in the [Notion integration guide](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} to create your integration and get your Notion integration token (API key).
+
+On the **Capabilities** screen, enable the following:
+
+* Read content
+* Update content
+* Insert content
+* Read user information without email addresses
 
 You can then enter the API key in n8n, in your Notion credential.
 

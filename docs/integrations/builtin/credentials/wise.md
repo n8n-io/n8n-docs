@@ -1,6 +1,7 @@
 ---
 title: Wise credentials
 description: Documentation for Wise credentials. Use these credentials to authenticate Wise in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Wise credentials

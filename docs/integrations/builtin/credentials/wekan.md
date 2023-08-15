@@ -1,6 +1,7 @@
 ---
 title: Wekan credentials
 description: Documentation for Wekan credentials. Use these credentials to authenticate Wekan in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Wekan credentials

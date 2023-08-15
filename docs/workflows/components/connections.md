@@ -1,5 +1,6 @@
 ---
 description: A connection establishes a link between nodes to route data through the workflow. 
+contentType: howto
 ---
 
 # Connections

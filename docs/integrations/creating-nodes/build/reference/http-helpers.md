@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # HTTP request helper for node builders
 
 n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
@@ -79,15 +83,11 @@ For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blo
 
 ## Deprecation of the previous helper
 
-The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. Now deprecated.
+The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. This was removed in version 1.
 
 To minimize incompatibility, n8n made a transparent conversion to another library called `axios`.
 
 If you are having issues, please report them in the [Community Forums](https://community.n8n.io/){:target=_blank .external-link} or on [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}.
-
-Also, you can temporarily enable n8n to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
-
-**Please note:** This behavior is permanent. n8n will remove the `request-promise` library entirely in the future.
 
 ## Migration guide to the new helper
 

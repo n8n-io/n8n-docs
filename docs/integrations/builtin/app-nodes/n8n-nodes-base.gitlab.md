@@ -1,6 +1,7 @@
 ---
 title: GitLab
 description: Documentation for the GitLab node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # GitLab
@@ -16,7 +17,7 @@ On this page, you'll find a list of operations the GitLab node supports and link
     For usage examples and templates to help you get started, take a look at n8n's [GitLab integrations](https://n8n.io/integrations/gitlab/){:target="_blank" .external-link} list.
 
 
-## Basic Operations
+## Operations
 
 * File
 	* Create
@@ -42,26 +43,13 @@ On this page, you'll find a list of operations the GitLab node supports and link
 * User
     * Returns the repositories of a user
 
-## Example Usage
 
-This workflow allows you to get the details of a GitLab repository. You can also find the [workflow](https://n8n.io/workflows/465) on the website. This example usage workflow uses the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [GitLab]()
+## Related resources
 
-The final workflow should look like the following image.
 
-![A workflow with the GitLab node](/_images/integrations/builtin/app-nodes/gitlab/workflow.png)
+Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} for more information about the service.
 
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. GitLab node
-
-1. First of all, you'll have to enter credentials for the GitLab node. You can find out how to do that [here](/integrations/builtin/credentials/gitlab/).
-2. Select the 'Repository' option from the *Resource* dropdown list.
-3. Select the 'Get' option under the *Operation* field.
-4. Enter the project owner in the *Project Owner* field.
-5. Enter the project name in the *Project Name* field.
-6. Click on *Execute Node* to run the workflow.
+n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/).
+	
+View [example workflows and related content](https://n8n.io/integrations/gitlab/){:target=_blank .external-link} on n8n's website.
 

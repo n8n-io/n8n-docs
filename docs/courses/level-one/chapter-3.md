@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Automating a (Real-world) Use Case
 
 Meet Nathan 🙋. Nathan works as an Analytics Manager at ABCorp. His job is to support the ABCorp team with reporting and analytics. Being a true jack of all trades, he also handles several miscellaneous initiatives.

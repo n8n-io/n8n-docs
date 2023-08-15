@@ -1,4 +1,18 @@
 
+/hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
+/hosting/authentication/jwt/   /hosting/user-management-self-hosted/
+/hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/
+
+/environments/variables/   /variables/
+
+/1-0-preview/   /1-0-migration-checklist/
+
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/integrations/builtin/credentials/sendinblue/   /integrations/builtin/credentials/brevo/
+
+
+/hosting/logging/   /hosting/logging-monitoring/logging/
 /code-examples/console-log/   /code-examples/javascript-functions/console-log/
 
 /reference/   /
@@ -30,16 +44,16 @@
 
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /choose-n8n/cloud/
-/hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /choose-n8n/cloud/
-/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/desktop/   /choose-n8n/
 /hosting/updating/npm/   /choose-n8n/npm/
 /hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
-/hosting/security/   /hosting/authentication/
+/hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
 /hosting/configuration/   /hosting/environment-variables/configuration-methods/
 
@@ -618,10 +632,10 @@
 /nodes/n8n-nodes-base.segment/		/integrations/builtin/app-nodes/n8n-nodes-base.segment/
 /nodes/n8n-nodes-base.sendGrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
 /nodes/n8n-nodes-base.sendgrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
-/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
-/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
 /nodes/n8n-nodes-base.sendy/		/integrations/builtin/app-nodes/n8n-nodes-base.sendy/
 /nodes/n8n-nodes-base.sentryIo/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/
 /nodes/n8n-nodes-base.sentryio/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/
@@ -742,3 +756,8 @@
 # Old redirects
 
 /reference/changelog.html   /reference/release-notes/
+
+# Send in Blue Rebrand
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/ /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/integrations/builtin/credentials/sendinblue/ /integrations/builtin/credentials/brevo/

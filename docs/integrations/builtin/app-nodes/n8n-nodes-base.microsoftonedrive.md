@@ -1,6 +1,7 @@
 ---
 title: Microsoft OneDrive
 description: Documentation for the Microsoft OneDrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Microsoft OneDrive

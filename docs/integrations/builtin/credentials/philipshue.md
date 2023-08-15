@@ -1,6 +1,7 @@
 ---
 title: Philips Hue credentials
 description: Documentation for Philips Hue credentials. Use these credentials to authenticate Philips Hue in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Philips Hue credentials

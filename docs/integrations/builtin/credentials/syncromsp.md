@@ -1,6 +1,7 @@
 ---
 title: SyncroMSP credentials
 description: Documentation for SyncroMSP credentials. Use these credentials to authenticate SyncroMSP in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # SyncroMSP credentials

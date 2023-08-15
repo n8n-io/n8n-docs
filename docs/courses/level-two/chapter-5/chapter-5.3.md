@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Workflow 3 – Monitoring workflow errors
 
 To accomplish this task, you have to create an Error workflow that monitors the main workflow.

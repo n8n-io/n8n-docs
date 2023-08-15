@@ -1,6 +1,7 @@
 ---
 title: Form.io trigger
 description: Documentation for the Form.io trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Form.io trigger

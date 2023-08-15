@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Workflow management in Embed
 
 --8<-- "_snippets/embed-license.md"

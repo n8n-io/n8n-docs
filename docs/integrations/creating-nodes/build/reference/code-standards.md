@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Code standards
 
 Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/).
@@ -108,4 +112,4 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 
 This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
 
-Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the deprecated `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the removed `this.helpers.request`.

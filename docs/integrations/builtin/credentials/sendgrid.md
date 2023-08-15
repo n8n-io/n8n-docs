@@ -1,6 +1,7 @@
 ---
 title: SendGrid credentials
 description: Documentation for SendGrid credentials. Use these credentials to authenticate SendGrid in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # SendGrid credentials

@@ -1,6 +1,7 @@
 ---
 title: ProfitWell credentials
 description: Documentation for ProfitWell credentials. Use these credentials to authenticate ProfitWell in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # ProfitWell credentials

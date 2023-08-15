@@ -1,4 +1,8 @@
-# App nodes library
+---
+contentType: overview
+---
 
-This section provides information about n8n's app nodes.
+# Actions library
+
+This section provides information about n8n's Actions.
 

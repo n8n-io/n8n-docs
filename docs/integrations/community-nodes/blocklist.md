@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # n8n community node blocklist
 
 n8n maintains a blocklist of community nodes. You can't install any node on this list.

@@ -1,6 +1,7 @@
 ---
 title: UptimeRobot credentials
 description: Documentation for UptimeRobot credentials. Use these credentials to authenticate UptimeRobot in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # UptimeRobot credentials

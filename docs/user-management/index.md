@@ -1,12 +1,9 @@
 ---
 description: User management in n8n
+contentType: overview
 ---
 
 # User management
-
-!!! info "Feature availability"		
-		* Available on self-hosted and selected Cloud plans. Refer to [Cloud Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
-		* Not available on Desktop.
 
 User management in n8n allows you to invite people to work in your n8n instance. It includes:
 
@@ -19,6 +16,6 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 ## Setup guides
 
-This section contains most usage information for user management, and the [Cloud setup guide](/user-management/cloud-setup/). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](/hosting/authentication/user-management-self-hosted/).
+This section contains most usage information for user management, and the [Cloud setup guide](/user-management/cloud-setup/). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](/hosting/user-management-self-hosted/).
 
-This section includes a guide to configuring [LDAP](/user-management/ldap/) in n8n.
+This section includes a guides to configuring [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/) in n8n.

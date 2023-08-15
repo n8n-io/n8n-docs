@@ -1,5 +1,6 @@
 ---
 description: Create, run, and activate workflows.
+contentType: howto
 ---
 
 # Create a workflow

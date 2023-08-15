@@ -1,6 +1,7 @@
 ---
 title: Matrix credentials
 description: Documentation for Matrix credentials. Use these credentials to authenticate Matrix in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Matrix credentials

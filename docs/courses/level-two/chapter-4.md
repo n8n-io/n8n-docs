@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Dealing with errors in workflows
 
 Sometimes it can happen that you're building a nice workflow, but when you try to execute it, it fails. There are many reasons why workflows executions may fail (some more or less mysterious), for example when a node is not configured correctly or a third-party service that you're trying to connect to is not working properly.

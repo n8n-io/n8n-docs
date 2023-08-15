@@ -1,6 +1,7 @@
 ---
 title: Toggl credentials
 description: Documentation for Toggl credentials. Use these credentials to authenticate Toggl in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Toggl credentials

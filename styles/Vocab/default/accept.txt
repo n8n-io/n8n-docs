@@ -1,5 +1,6 @@
 Adalo
 Asana
+Authentik
 Axios
 backend
 Beeminder
@@ -18,6 +19,7 @@ Firestore
 GIMP
 Hetzner
 invalid
+Keycloak
 kubectl
 Kafka
 Lemlist
@@ -31,6 +33,7 @@ namespace
 Nodelinter
 npm
 npx
+Okta
 onboarding
 Pipedrive
 Postbin

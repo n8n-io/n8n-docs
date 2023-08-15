@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Azure
 
 This hosting guide shows you how to self-host n8n on Azure. It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
@@ -103,9 +107,7 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
 
-- **Start**: 320mb RAM, 10 millicore CPU burstable
-- **Pro**: 640mb RAM, 20 millicore CPU burstable
-- **Power**: 1280mb RAM, 80 millicore CPU burstable
+--8<-- "_snippets/self-hosting/installation/suggested-pod-resources.md"
 
 ### Environment variables
 

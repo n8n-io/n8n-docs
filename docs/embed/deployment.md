@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Deployment
 
 --8<-- "_snippets/embed-license.md"

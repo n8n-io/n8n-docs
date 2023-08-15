@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Get the binary data buffer
 
 The binary data buffer contains all the binary file data processed by a workflow. You need to access it if you want to perform operations on the binary data, such as:

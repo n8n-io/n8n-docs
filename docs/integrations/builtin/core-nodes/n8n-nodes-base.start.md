@@ -1,6 +1,7 @@
 ---
 title: Start
 description: Documentation for the Start node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 # Start

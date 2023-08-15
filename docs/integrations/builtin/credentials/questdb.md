@@ -1,6 +1,7 @@
 ---
 title: QuestDB credentials
 description: Documentation for QuestDB credentials. Use these credentials to authenticate QuestDB in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # QuestDB credentials

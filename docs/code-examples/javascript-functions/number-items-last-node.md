@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Get number of items returned by the last node
 
 Depending on your use-case, you might want to get the number of items returned by the last node. Use the following snippet in the Code node.

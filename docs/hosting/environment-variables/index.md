@@ -1,5 +1,6 @@
 ---
 description: Guidance on configuring n8n with environment variables.
+contentType: overview
 ---
 
 # Environment variables

@@ -1,6 +1,7 @@
 ---
 title: Cloudflare credentials
 description: Documentation for Cloudflare credentials. Use these credentials to authenticate Cloudflare in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Cloudflare credentials

@@ -1,6 +1,7 @@
 ---
 title: Venafi TLS Protect Cloud credentials
 description: Documentation for Venafi TLS Protect Cloud credentials. Use these credentials to authenticate Venafi TLS Protect Cloud in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Venafi TLS Protect Cloud credentials

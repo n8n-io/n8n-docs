@@ -1,6 +1,7 @@
 ---
 title: PayPal credentials
 description: Documentation for PayPal credentials. Use these credentials to authenticate PayPal in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # PayPal credentials

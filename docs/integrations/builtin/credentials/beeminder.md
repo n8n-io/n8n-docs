@@ -1,6 +1,7 @@
 ---
 title: Beeminder credentials
 description: Documentation for Beeminder credentials. Use these credentials to authenticate Beeminder in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Beeminder credentials

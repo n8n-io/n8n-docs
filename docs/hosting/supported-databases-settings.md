@@ -1,6 +1,10 @@
+---
+contentType: reference
+---
+
 # Supported databases
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. However, n8n also supports PostgresDB and MySQL.
+By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB.
 
 ## Shared settings
 
@@ -19,7 +23,7 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_USER` (default: 'root')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
- - `DB_POSTGRESDB_SSL_CA` (default: undefined): Path to the server's CA certificate used to validate the connection (opportunistic encryption is not supported)
+ - `DB_POSTGRESDB_SSL_CA` (default: undefined): Path to the server's CA certificate used to validate the connection (opportunistic encryption isn't supported)
  - `DB_POSTGRESDB_SSL_CERT` (default: undefined): Path to the client's TLS certificate
  - `DB_POSTGRESDB_SSL_KEY` (default: undefined): Path to the client's private key corresponding to the certificate
  - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true): If TLS connections that fail validation should be rejected
@@ -40,6 +44,18 @@ export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 n8n start
 ```
 
+### Required permissions
+
+n8n needs to create and modify the schemas of the tables it uses.
+
+Recommended permissions:
+
+```sql
+CREATE DATABASE n8n-db;
+CREATE USER n8n-user WITH PASSWORD 'random-password';
+GRANT ALL PRIVILEGES ON DATABASE n8n-db TO n8n-user;
+```
+
 ### TLS
 
 You can choose between these configurations:
@@ -49,6 +65,13 @@ You can choose between these configurations:
 - Declaring `_{CERT,KEY}` and the above: Use the certificate and key for client TLS authentication
 
 ## MySQL / MariaDB
+
+!!! warning "Deprecated"
+	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+
+	n8n recommends using PostgreSQL. 
+
+	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
 
 To use MySQL or MariaDB, provide the following environment variables:
 
@@ -81,7 +104,7 @@ The database file is located at:
 
 ## Other databases
 
-n8n officially supports SQLite, PostgresDB, and MySQL. 
+n8n officially supports SQLite and PostgresDB. 
 
 n8n internally uses [TypeORM](https://typeorm.io){:target=_blank .external-link}, so adding support for the following databases
 should be possible:

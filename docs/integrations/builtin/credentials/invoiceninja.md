@@ -1,6 +1,7 @@
 ---
 title: Invoice Ninja credentials
 description: Documentation for Invoice Ninja credentials. Use these credentials to authenticate Invoice Ninja in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Invoice Ninja credentials

@@ -1,5 +1,6 @@
 ---
 description: n8n performance and resource consumption benchmarking.
+contentType: explanation
 ---
 
 # Performance and benchmarking
@@ -47,10 +48,10 @@ Setup:
 - Hardware: seven ECS c5a.4xlarge instances (8GB RAM each)
 - n8n setup: two webhook instances, four worker instances, one database instance (MySQL), one main instance running n8n and Redis
 - Workflow: Webhook trigger node, Set node
+- Multi-instance setups use [Queue mode](/hosting/scaling/queue-mode/)
 
 <figure markdown>
   ![Graph showing n8n response times by requests per second](/_images/hosting/scaling/benchmarking-multi-instance-500-2500.png)
   <figcaption>This graph shows the percentage of requests to the webhook trigger node getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.</figcaption>
 </figure>
-
 

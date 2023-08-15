@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # `$("<node-name>").item`
 
 !!! info "Not avaialble in Code node"

@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 5. Calculating Booked Orders
 
 In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the *Code* node.

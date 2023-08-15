@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Item linking errors
 
 n8n displays errors related to data mapping when there are problems tracing an item's linked parent items back through the workflow.

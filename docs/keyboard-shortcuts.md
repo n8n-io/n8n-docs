@@ -7,6 +7,7 @@ tags:
 description: Keyboard shortcuts available in n8n.
 hide:
   - tags
+contentType: reference
 ---
 
 # Keyboard shortcuts and controls

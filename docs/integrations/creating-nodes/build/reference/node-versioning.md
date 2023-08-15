@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Node versioning
 
 n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version.

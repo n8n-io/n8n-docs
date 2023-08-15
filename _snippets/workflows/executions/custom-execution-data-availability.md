@@ -1,7 +1,7 @@
 !!! info "Feature availability"		
 	Custom executions data is available on:
 
-	* Cloud: Start, Pro, and Power
-	* Self-Hosted: Team and Enterprise
+	* Cloud: Pro, Enterprise
+	* Self-Hosted: Enterprise
 
 	Available in version 0.222.0 and above.

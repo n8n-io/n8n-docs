@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # 1. Getting Data From the Data Warehouse
 
 In this part of the workflow you will learn how to get data by making HTTP requests using the *HTTP Request* node.

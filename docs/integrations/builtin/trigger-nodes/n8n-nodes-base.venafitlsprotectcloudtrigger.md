@@ -1,6 +1,7 @@
 ---
 title: Venafi TLS Protect Cloud trigger
 description: Documentation for the Venafi TLS Protect Cloud trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Venafi TLS Protect Cloud trigger

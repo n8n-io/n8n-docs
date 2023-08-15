@@ -1,5 +1,6 @@
 ---
 description: Use code in your n8n workflows, and view other developer resources.
+contentType: overview
 ---
 
 # Code in n8n

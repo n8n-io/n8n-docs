@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Date and time with Luxon
 
 [Luxon](https://github.com/moment/luxon/) is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon). 

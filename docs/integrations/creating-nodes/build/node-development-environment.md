@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Set up your development environment
 
 This document lists the essential dependencies for developing a node, as well as guidance on setting up your editor.

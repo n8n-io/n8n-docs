@@ -1,6 +1,7 @@
 ---
 title: Microsoft credentials
 description: Documentation for Microsoft credentials. Use these credentials to authenticate Microsoft in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Microsoft credentials
@@ -14,6 +15,7 @@ You can use these credentials to authenticate the following nodes with Microsoft
 - [Microsoft Outlook](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/)
 - [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/)
 - [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/)
+
 
 ## Prerequisites
 

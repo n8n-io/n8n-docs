@@ -1,13 +1,11 @@
 ---
-title: 
+title: If
 description: Documentation for the  node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 tags:
   - if
   - if node
 hide:
   - tags
-search:
-  boost: 5
 ---
 
 # If

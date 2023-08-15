@@ -7,6 +7,7 @@ tags:
   - payment processor
 hide:
   - tags
+contentType: explanation
 ---
 
 
@@ -16,11 +17,11 @@ This page describes n8n's data privacy practices.
 
 ## GDPR
 
-### Data protection addendum
+### Data processing agreement
 
-For Cloud versions of n8n, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Addendum](https://n8n.io/legal/#data){:target=_blank .external-link} as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms){:target=_blank .external-link}.
+For Cloud versions of n8n, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Agreement](https://n8n.io/legal/#data){:target=_blank .external-link} as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms){:target=_blank .external-link}.
 
-The n8n Data Protection Addendum includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en){:target=_blank .external-link}. These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
+The n8n Data Processing Agreement includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en){:target=_blank .external-link}. These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
 
 You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subprocessors){:target=_blank .external-link}.
 
@@ -48,11 +49,17 @@ Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=
 
 
 
-## Data collection
+## Data collection 
 
-n8n collects selected usage and performance data to help diagnose problems and improve the platform. n8n takes care to keep this data anonymous and to avoid collecting sensitive data. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy){:target=_blank .external-link}.
+n8n collects selected usage and performance data to help diagnose problems and improve the platform. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy){:target=_blank .external-link}.
 
-### What n8n collects
+The data gathered is different in self-hosted n8n and n8n Cloud.
+
+### Data collection in self-hosted n8n
+
+n8n takes care to keep self-hosted data anonymous and avoids collecting sensitive data. 
+
+#### What n8n collects
 
 - Error codes and messages of failed executions (excluding any payload data, and not for custom nodes)
 - Error reports for app crashes and API issues
@@ -60,26 +67,25 @@ n8n collects selected usage and performance data to help diagnose problems and i
 - From node parameters:
     - The 'resource' and 'operation' that a node is set to (if applicable)
     - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
-- Data around workflow executions:
-		- Status
-		- The user ID of the user who ran the execution
-		- The first time a workflow loads data from an external source
-		- The first successful production (non-manual) workflow execution
+- Data around workflow executions:  
+    - Status
+    - The user ID of the user who ran the execution
+    - The first time a workflow loads data from an external source
+    - The first successful production (non-manual) workflow execution
 - The domain of webhook calls, if specified (excluding subdomain).
 - Details on how the UI is used (for example, navigation, nodes panel searches)
-- Diagnostic information
+- Diagnostic information:
     - n8n version
     - Selected settings:
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
         - [Execution variables](/hosting/environment-variables/environment-variables/#executions)
-        - N8N_BASIC_AUTH_ACTIVE
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address
 
-### What n8n doesn't collect
+#### What n8n doesn't collect
 
 n8n doesn't collect private or sensitive information, such as:
 
@@ -90,11 +96,11 @@ n8n doesn't collect private or sensitive information, such as:
 - Sensitive settings (for example, endpoints, ports, DB connections, username/password)
 - Error payloads
 
-### How collection works
+#### How collection works
 
 Most data is sent to n8n as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
 
-### Opting out of telemetry
+#### Opting out of telemetry
 
 Telemetry collection is enabled by default. To disable it you can configure the following environment variables.
 
@@ -112,9 +118,15 @@ export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 
 See [configuration](/hosting/configuration/) for more info on how to set environment variables.
 
+### Data collection in n8n Cloud
+
+n8n Cloud collects everything listed in [Data collection in self-hosted n8n](#data-collection-in-self-hosted-n8n).
+
+Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
+
 ### Documentation telemetry
 
-n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better.
 
 [Change cookie settings](#__consent){ .md-button }
 

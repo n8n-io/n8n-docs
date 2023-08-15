@@ -7,7 +7,8 @@ contentType: explanation
 # Generate code with ChatGPT
 
 !!! info "Experimental feature with limited availability"
-	Available on n8n Cloud from version [TODO]. Not available on self-hosted.  
+	As an experimental feature, n8n is gradually rolling this out on Cloud from version [TODO]. If you don't see the feature when you first upgrade to [TODO], please be patient: it's coming soon.  
+	Not available on self-hosted.  
 	Python isn't supported.
 
 ## Use AI in the Code node
@@ -100,7 +101,7 @@ To try the example yourself, [download the example workflow](/_workflows/ai-code
 
 In the **Summarize** Code node, enter this prompt:
 
-> Create a markdown text for Slack that summarizes how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. Also, list the five top submissions by vote in that message. Use <link|message> as markdown for links.
+> Create a markdown text for Slack that counts how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. A feature has the property "Feature", a bug has the property "Bug" and an idea has the property "Bug". Also, list the five top submissions by vote in that message. Use "<url|text>" as markdown for links.
 
 Take a look at the code the AI generates.
 

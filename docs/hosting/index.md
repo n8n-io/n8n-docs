@@ -4,6 +4,7 @@ contentType: overview
 
 # Self-hosting n8n
 
+This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions. Refer to [TODO: confirm link] [Self-hosted plans](https://plans.n8n.io/){:target=_blank .external-link} for information on pricing and features.
 
 <div class="grid-cards-vertical cards" markdown>
 

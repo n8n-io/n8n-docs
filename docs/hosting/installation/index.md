@@ -6,6 +6,8 @@ contentType: overview
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+This sections provides guides to install n8n for self-hosting. You can use these guides for both the Enterprise and Community editions. Refer to [TODO: confirm link] [Self-hosted plans](https://plans.n8n.io/){:target=_blank .external-link} for information on pricing and features.
+
 ## Installation guides for n8n
 
 * [npm](/hosting/installation/npm/)

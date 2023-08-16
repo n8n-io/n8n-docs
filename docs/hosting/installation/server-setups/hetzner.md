@@ -58,10 +58,9 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the server) copies the three folders you created to Docker containers to make them available to Docker. The three folders are:
+The host operating system (the server) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
 
 - `caddy_config`: Holds the Caddy configuration files.
-- `caddy_data`: A cache folder for Caddy.
 - `local_files`: A folder for files you upload or add using n8n.
 
 ### Create Docker volume
@@ -70,6 +69,12 @@ To persist the Caddy cache between restarts and speed up start times, create [a 
 
 ```shell
 docker volume create caddy_data
+```
+
+We will also do this to create a Docker volume for the n8n data:
+
+```shell
+sudo docker volume create n8n_data
 ```
 
 ## Set up DNS

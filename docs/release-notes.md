@@ -28,6 +28,32 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.3.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.2.2...n8n@1.3.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-08-16
+
+This release contains new features and bug fixes.
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### Trial feature: AI support in the Code node
+
+This release introduces limited support for using AI to generate code in the Code node. Initially this feature is only available on Cloud, and will gradually be rolled out, starting with about 20% of users.
+
+Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](/code-examples/ai-code/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Ian Gallagher](https://github.com/craSH){:target=_blank .external-link}  
+[Xavier Calland](https://github.com/xavier-calland){:target=_blank .external-link}
+
 ## n8n@1.2.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.2.1...n8n@1.2.2){:target=_blank .external-link} for this version.<br />

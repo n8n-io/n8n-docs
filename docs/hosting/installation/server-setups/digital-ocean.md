@@ -65,18 +65,23 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the DigitalOcean Droplet) copies the three folders you created to Docker containers to make them available to Docker. The three folders are:
+The host operating system (the DigitalOcean Droplet) copies the two folders you created to Docker containers to make them available to Docker. The three folders are:
 
 - `caddy_config`: Holds the Caddy configuration files.
-- `caddy_data`: A cache folder for Caddy.
 - `local_files`: A folder for files you upload or add using n8n.
 
-### Create Docker volume
+### Create Docker volumes
 
 To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
 
 ```shell
 sudo docker volume create caddy_data
+```
+
+We also do this to create a Docker volume for the n8n data:
+
+```shell
+sudo docker volume create n8n_data
 ```
 
 ## Set up DNS

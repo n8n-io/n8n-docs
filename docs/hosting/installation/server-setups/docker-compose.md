@@ -115,8 +115,8 @@ You will now be able to write files to the `/files` directory in n8n and they wi
 Create a `.env` file and change it accordingly.
 
 ```bash
-# Replace <directory-path> with the path where you created folders earlier
-DATA_FOLDER=/<directory-path>/caddy-data
+# Replace <directory-path> with the path you will keep your Caddyfile in
+DATA_FOLDER=/<directory-path>
 
 # The top level domain to serve from
 DOMAIN_NAME=example.com

@@ -197,6 +197,10 @@ n8n will only be reachable using `https` and not using `http`.
 !!! warning "Secure your n8n instance"
     Make sure that you [set up authentication](/hosting/user-management/) your n8n instance.
 
+## Updating
+
+--8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
+
 ## Next steps
 
 --8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

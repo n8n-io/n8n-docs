@@ -159,6 +159,10 @@ You can stop n8n and Caddy with the following command:
 sudo docker compose stop
 ```
 
+## Updating
+
+--8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
+
 ## Next steps
 
 --8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

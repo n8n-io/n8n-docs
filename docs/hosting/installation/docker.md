@@ -157,18 +157,7 @@ docker run --name=[container_name] [options] -d docker.n8n.io/n8nio/n8n
 
 ### Docker Compose
 
-If you've running n8n using a Docker Compose file, follow the below mentioned steps to update n8n.
-
-```sh
-# Pull latest version
-docker compose pull
-
-# Stop and remove older version
-docker compose down
-
-# Start the container
-docker compose up -d
-```
+--8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
 
 ## Further reading
 

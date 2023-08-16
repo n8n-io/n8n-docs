@@ -27,10 +27,12 @@ Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/)
 From your terminal, run:
 
 ```sh
-docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n
+docker volume create n8n-data
+
+docker run -it --rm --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-This command will download all required n8n images and start your container, exposed on port `5678`. To save your work between container restarts, it also mounts a local directory, `.n8n`, to persist your data locally.
+This command will download all required n8n images and start your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n-data`, to persist your data locally.
 
 You can then access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
@@ -52,6 +54,8 @@ startup. In this case, existing credentials saved with a different encryption ke
 To use n8n with Postgres, provide the corresponding [configuration](/hosting/configuration/):
 
 ```sh
+docker volume create n8n-data
+
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -62,9 +66,8 @@ docker run -it --rm \
  -e DB_POSTGRESDB_USER=<POSTGRES_USER> \
  -e DB_POSTGRESDB_SCHEMA=<POSTGRES_SCHEMA> \
  -e DB_POSTGRESDB_PASSWORD=<POSTGRES_PASSWORD> \
- -v ~/.n8n:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n \
- n8n start
+ -v n8n-data:/home/node/.n8n \
+ docker.n8n.io/n8nio/n8n
 ```
 
 A complete `docker-compose` file for Postgres can be found [here](https://github.com/n8n-io/n8n/blob/master/docker/compose/withPostgres/).
@@ -81,6 +84,8 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 To use n8n with MySQL, provide the corresponding [configuration](/hosting/configuration/):
 
 ```sh
+docker volume create n8n-data
+
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -90,9 +95,8 @@ docker run -it --rm \
  -e DB_MYSQLDB_PORT=<MYSQLDB_PORT> \
  -e DB_MYSQLDB_USER=<MYSQLDB_USER> \
  -e DB_MYSQLDB_PASSWORD=<MYSQLDB_PASSWORD> \
- -v ~/.n8n:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n \
- n8n start
+ -v n8n-data:/home/node/.n8n \
+ docker.n8n.io/n8nio/n8n
 ```
 
 ## Setting timezone
@@ -105,11 +109,14 @@ some scripts and commands return like `$ date`. The system timezone can be set v
 Example using the same timezone for both:
 
 ```sh
+docker volume create n8n-data
+
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
  -e GENERIC_TIMEZONE="Europe/Berlin" \
  -e TZ="Europe/Berlin" \
+ -v n8n-data:/home/node/.n8n \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -171,13 +178,15 @@ More information about Docker setup can be found in the README file of the [Dock
 
 Start n8n with `--tunnel` by running:
 
-```bash
+```sh
+docker volume create n8n-data
+
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -v ~/.n8n:/home/node/.n8n \
- n8nio/n8n \
- n8n start --tunnel
+ -v n8n-data:/home/node/.n8n \
+ docker.n8n.io/n8nio/n8n \
+ start --tunnel
 ```
 
 ## Next steps

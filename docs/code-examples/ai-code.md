@@ -58,7 +58,7 @@ To try the example yourself, [download the example workflow](/_workflows/ai-code
 
 In the third Code node, enter this prompt:
 
-> The data in "Mock Slack" represents a user in Slack. It always contains only one item. The data in "Mock Notion" represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
+> The slack data contains only one item. The input data represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
 
 Take a look at the code the AI generates.
 

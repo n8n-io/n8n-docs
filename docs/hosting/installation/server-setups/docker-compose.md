@@ -82,7 +82,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ${DATA_FOLDER}/letsencrypt:/letsencrypt
+      - traefik_data:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
@@ -113,7 +113,13 @@ services:
       - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
-      - ${DATA_FOLDER}/.n8n:/home/node/.n8n
+      - n8n_data/.n8n:/home/node/.n8n
+
+	volumes:
+		n8n_data:
+			external: true
+		traefik_data:
+			external: true
 ```
 
 If you are planning on reading/writing local files with n8n (for example, by using the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
@@ -135,9 +141,6 @@ You will now be able to write files to the `/files` directory in n8n and they wi
 Create an `.env` file and change it accordingly.
 
 ```bash
-# Folder where data should be saved
-DATA_FOLDER=/root/n8n/
-
 # The top level domain to serve from
 DOMAIN_NAME=example.com
 
@@ -156,17 +159,18 @@ SSL_EMAIL=user@example.com
 ```
 
 
-### 7. Create data folder
+### 7. Create the Docker volumes
 
-Create the folder which is defined as `DATA_FOLDER`. In the example
-above, it is `/root/n8n/`.
+Create the Docker volume which is defined as `n8n_data`, In this volume, the database file from SQLite as well as the encryption key will be saved.
 
-In that folder, the database file from SQLite as well as the encryption key will be saved.
-
-The folder can be created like this:
-
+```sh
+docker volume create n8n_data
 ```
-mkdir /root/n8n/
+
+We will also create a volume for the Traefik data which will store the SSL/TLS certificate, This is defined as `traefik_data`.
+
+```sh
+docker volume create traefik_data
 ```
 
 ### 8. Start Docker Compose

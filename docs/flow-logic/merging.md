@@ -2,11 +2,23 @@
 contentType: explanation
 ---
 
-# Merging items
+# Merging data streams
 
-You can merge items together in your workflows. There are three main use cases for merging items:
+Merging data from different branches or nodes uses the [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) node. To merge data from multiple node executions, use the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
 
-* **Merge items of a single execution**: You can merge all incoming items into a single item using the Item Lists node. Please note that since you are merging different items into a single item the next node in the workflow will now process just that single item.
-* **Merge items returned by different nodes**: If you want to merge items returned by different nodes, use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/).
-* **Merge items of different executions**: You can also merge items that get returned in different executions. Refer to this [workflow](https://n8n.io/workflows/1160) to learn how:
-    ![Merge multiple executions](/_images/flow-logic/merging/multiple_merge.png)
+!!! note "Compare data streams"
+	The[Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/) node also merges data streams. Refer to [Comparing data streams](/flow-logic/comparing/) for more information.
+
+
+## Merge data from different branches
+
+## Merge data from different nodes
+
+## Merge data from multiple node executions
+
+Use the Code node to merge data from multiple node executions. This is useful in some [Looping](/flow-logic/looping/) scenarios.
+
+!!! note "Node executions and workflow executions"
+	This section describes merging data from multiple node executions. This is when a node executes multiple times during a single workflow execution. 
+
+[Example workflow](https://n8n.io/workflows/1160-merge-data-for-multiple-executions/){:target=_blank .external-link}

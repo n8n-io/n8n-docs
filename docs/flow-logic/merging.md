@@ -12,6 +12,8 @@ Merging data from different branches or nodes uses the [Merge](/integrations/bui
 
 ## Merge data from different branches
 
+https://n8n.io/workflows/1747-joining-different-datasets/
+
 ## Merge data from different nodes
 
 ## Merge data from multiple node executions

@@ -7,7 +7,7 @@ description: How to copy execution data into your current workflow in order to d
 # Debug executions
 
 !!! info "Feature availability"
-	 Available on Enterprise plans.
+	 Available on Self-Hosted Enterprise, Cloud Pro, and Cloud Enterprise plans. [TODO: confirm]
 
 You can load data from a previous execution into your current workflow. This allows you to examine and debug data from failed executions.
 

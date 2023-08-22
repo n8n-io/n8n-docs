@@ -1,0 +1,25 @@
+---
+contentType: howto
+title: Debug executions
+description: How to copy execution data into your current workflow in order to debug previous executions.
+---
+
+# Debug executions
+
+!!! info "Feature availability"
+	 Available on Enterprise plans.
+
+You can load data from a previous execution into your current workflow. This allows you to examine and debug data from failed executions.
+
+## Load data
+
+To load data from a previous execution:
+
+1. In your workflow, select the **Executions** tab to view the **Executions** list.
+1. Select the execution you want to debug. n8n displays options depending on whether the workflow was successful or failed:
+	* For failed executions: select **Debug in editor**.
+	* For successful executions: select **Copy to editor**.
+1. n8n copies the execution data into your current workflow, and [pins the data](/data/data-pinning/) in the first node in the workflow.
+
+!!! note "Check which executions you save"
+	The executions available on the **Executions** list depends on your [Workflow settings](/workflows/settings/).

@@ -127,6 +127,7 @@ nav:
         - Workflow-level executions: workflows/executions/single-workflow-executions.md
         - All executions: workflows/executions/all-executions.md
         - Custom executions data: workflows/executions/custom-executions-data.md
+        - Debug executions: workflows/executions/debug.md
       - Tags: workflows/tags.md
       - Export and import: workflows/export-import.md
       - Templates: workflows/templates.md

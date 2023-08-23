@@ -9,7 +9,7 @@ contentType: howto
 !!! info "Feature availability"
 	* External secrets are available on Enterprise Self-hosted and Cloud plans.
 	* n8n supports Infisical and HashiCorp Vault. 
-	* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
+	* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link} or [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
 
 You can use an external secrets store to manage credentials for n8n.
 

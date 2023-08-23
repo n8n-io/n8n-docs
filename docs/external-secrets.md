@@ -16,7 +16,7 @@ You can use an external secrets store to manage credentials for n8n.
 ## Connect n8n to your secrets store
 
 !!! note "Secret names"
-	Your secret names can't contain spaces, hyphens, or other special characters. n8n supports secret names containing alphanumeric characters (a-z, `A-Z, and 0-9), and underscores.
+	Your secret names can't contain spaces, hyphens, or other special characters. n8n supports secret names containing alphanumeric characters (a-z, A-Z, and 0-9), and underscores.
 
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Select **Set Up** for your store provider.
@@ -34,7 +34,7 @@ You can use an external secrets store to manage credentials for n8n.
 			Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments. n8n only support service tokens that have access to a single environment.
 
 		!!! note "Infisical folders"
-		 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}
+		 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
 
 1. **Save** your configuration.
 1. Enable the provider using the **Disabled / Enabled** toggle.

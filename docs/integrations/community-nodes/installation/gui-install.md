@@ -2,10 +2,10 @@
 contentType: howto
 ---
 
-# Install, upgrade, and downgrade community nodes
+# Install community nodes in the n8n app
 
 !!! note "Limited to n8n instance owners"
-    Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management. If you haven't set up user management, the instance owner is the default user.
+    Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
 
 ## Install a community node
 

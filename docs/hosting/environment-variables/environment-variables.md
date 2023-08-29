@@ -1,6 +1,10 @@
 ---
-description: Configuration variables for self-hosted n8n.
+description: Configuration environment variables for self-hosted n8n.
 contentType: reference
+tags:
+  - environment variables
+hide:
+  - tags
 ---
 
 # Configuration environment variables

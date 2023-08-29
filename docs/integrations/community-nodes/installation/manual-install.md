@@ -31,7 +31,7 @@ Install the node:
 ```sh
 npm i n8n-nodes-nodeName
 ```
-The restart n8n.
+Then restart n8n.
 
 ## Uninstall a community node
 

@@ -198,12 +198,14 @@ nav:
         - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
         - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
         - Using console.log: code-examples/javascript-functions/console-log.md
+      - Generate code with ChatGPT: code-examples/ai-code.md
     - User management:
       - user-management/index.md
       - Cloud setup: user-management/cloud-setup.md
       - Manage users: user-management/manage-users.md
       - Account types: user-management/account-types.md
       - Best practices: user-management/best-practices.md
+      - 2FA: user-management/two-factor-auth.md
       - LDAP: user-management/ldap.md
       - SAML: 
         - user-management/saml/index.md
@@ -513,7 +515,10 @@ nav:
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - integrations/community-nodes/index.md
-      - Installation and management: integrations/community-nodes/installation.md
+      - Installation and management: 
+        - integrations/community-nodes/installation/index.md
+        - GUI installation: integrations/community-nodes/installation/gui-install.md
+        - Manual installation: integrations/community-nodes/installation/manual-install.md
       - Risks: integrations/community-nodes/risks.md
       - Blocklist: integrations/community-nodes/blocklist.md
       - Using community nodes: integrations/community-nodes/usage.md

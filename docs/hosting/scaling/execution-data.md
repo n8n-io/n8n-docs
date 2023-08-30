@@ -14,6 +14,9 @@ To do this, configure the corresponding [environment variables](/hosting/environ
 
 ## Reduce saved data
 
+!!! note "Configuration at workflow level"
+    You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
+
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 
 ```sh
@@ -57,11 +60,6 @@ n8n:
 
 
 ## Enable data pruning
-
-
-!!! note "Configuration at workflow level"
-    You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
-
 
 You can enable data pruning to automatically delete executions after a given time period. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
 

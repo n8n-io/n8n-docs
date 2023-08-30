@@ -32,7 +32,7 @@ For a detailed explanation of the license, refer to [Faircode license](/choose-n
 n8n offers the following free options:
 
 * A free trial of Cloud
-* A free community version for self-hosted users
+* A free self-hosted community edition for self-hosted users
 
 ## Paid versions
 

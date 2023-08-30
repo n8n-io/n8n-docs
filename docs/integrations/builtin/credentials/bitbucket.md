@@ -13,9 +13,10 @@ You can use these credentials to authenticate the following nodes with Bitbucket
 
 ## Prerequisites
 
-Create an [Bitbucket](https://www.Bitbucket.com/) account.
+Create a [Bitbucket](https://www.Bitbucket.com/){:target=_blank .external-link} account.
 
-## Using Username and Password
+## Using Username and App Password
 
-Use the username and application password.
+- The username is visible in **Personal settings > Account settings** (Bitbucket profile settings)
+- You can create an App password in **Personal settings > App passwords**
 

@@ -94,7 +94,7 @@ Start worker processes by running the following command from the root directory:
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n n8n worker
+docker run --entrypoint /bin/sh --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n -c "/usr/local/bin/n8n worker"
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.

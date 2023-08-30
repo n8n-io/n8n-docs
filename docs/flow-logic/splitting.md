@@ -1,5 +1,6 @@
 ---
 description: Split workflows into multiple paths using If and Switch
+contentType: howto
 ---
 
 # Splitting workflows with conditional nodes

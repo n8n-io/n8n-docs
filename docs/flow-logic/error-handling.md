@@ -1,5 +1,6 @@
 ---
 contentType: howto
+description: How to handle execution errors.
 ---
 
 # Error handling

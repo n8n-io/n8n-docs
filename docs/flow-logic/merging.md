@@ -1,5 +1,5 @@
 ---
-contentType: explanation
+contentType: howto
 ---
 
 # Merging data streams

@@ -172,12 +172,7 @@ More information about Docker setup can be found in the README file of the [Dock
 Start n8n with `--tunnel` by running:
 
 ```bash
-docker run -it --rm \
- --name n8n \
- -p 5678:5678 \
- -v ~/.n8n:/home/node/.n8n \
- n8nio/n8n \
- n8n start --tunnel
+docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n start --tunnel
 ```
 
 ## Next steps

@@ -1,7 +1,7 @@
 ---
 tags:
-  - static data
-  - global variables
+  - "static data"
+  - "global variables"
 hide:
   - tags
 contentType: reference

@@ -33,10 +33,11 @@
 		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
 		document.addEventListener("DOMContentLoaded", function () {
 			/* Set up search tracking */
-			if (document.forms.search) {
-				var query = document.forms.search.query;
-				query.addEventListener("blur", function() {
-					if (this.value) { plausible("search", { props: { search_term: this.value } })};
+			if (document.forms.search) {				
+				//var query = document.forms.search.query;		
+				document.forms.search.addEventListener("click", function() {
+					plausible("search");
+					//if (this.value && this.value.length > 3) { plausible("search", { props: { search_term: this.value } })};
 				})
 			}
 		});

@@ -1,6 +1,10 @@
 ---
-description: Configuration variables for self-hosted n8n.
+description: Configuration environment variables for self-hosted n8n.
 contentType: reference
+tags:
+  - environment variables
+hide:
+  - tags
 ---
 
 # Configuration environment variables
@@ -103,7 +107,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem. |
 | `N8N_PERSISTED_BINARY_DATA_TTL` | Number | `1440` | Time to live (in minutes) for persisted data. |
 
-## User management and SMTP
+## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
 
@@ -119,6 +123,7 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
+| `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
 
 
 ## Endpoints

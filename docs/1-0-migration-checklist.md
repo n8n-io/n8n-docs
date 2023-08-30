@@ -76,7 +76,7 @@ We have removed the Debian and RHEL images. If you were using these you need to 
 
 #### Entrypoint change
 
-The entrypoint for the container has changed and you no longer need to specify the n8n command, If you were previously running `n8n worker --concurrency=5` it would now be `worker --concurrency=5`
+The entrypoint for the container has changed and you no longer need to specify the n8n command. If you were previously running `n8n worker --concurrency=5` it's now `worker --concurrency=5`
 
 [PR #6365](https://github.com/n8n-io/n8n/pull/6365){:target=_blank .external link}
 

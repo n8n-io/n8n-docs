@@ -9,6 +9,8 @@ You can call one workflow from another workflow. This allows you to build modula
 
 ## Set up and use a sub-workflow
 
+This section walks through setting up both the parent workflow and sub-workflow.
+
 ### Create the sub-workflow
 
 1. Create a new workflow.
@@ -19,6 +21,7 @@ You can call one workflow from another workflow. This allows you to build modula
 	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
 1. Add the **Execute Workflow Trigger** node.
 1. Add other nodes as needed to build your sub-workflow functionality.
+1. Save the sub-workflow.
 
 ### Call the sub-workflow
 
@@ -28,5 +31,7 @@ You can call one workflow from another workflow. This allows you to build modula
 
 	!!! note "Find your workflow ID"
 		Your sub-workflow's ID is the alphanumeric string at the end of its URL.
+1. Save your workflow.
 
-[TODO: resume once unstuck on building the example - possible new ID issue?]
+When your workflow executes, it will send data to the sub-workflow, and run it.
+

@@ -149,7 +149,7 @@ Create a `Caddyfile` in the `DATA_FOLDER` path you set in the `.env` file. Make 
 
 ### 7. Create the Docker volumes
 
-Create the Docker volume which is defined as `n8n_data`, In this volume, the database file from SQLite as well as the encryption key will be saved.
+Create the Docker volume that is defined as `n8n_data`. n8n will save the database file from SQLite and the encryption key in this volume.
 
 ```sh
 docker volume create n8n_data

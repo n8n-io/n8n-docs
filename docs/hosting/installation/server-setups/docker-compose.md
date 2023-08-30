@@ -137,7 +137,7 @@ SSL_EMAIL=user@example.com
 
 ### 7. Create a Caddyfile
 
-Create a `Caddyfile` in the `DATA_FOLDER` path you set in the `.env` file, Make sure you replace `<subdomain>` and `<domain_name>` with the same values you set in the `.env` file.
+Create a `Caddyfile` in the `DATA_FOLDER` path you set in the `.env` file. Make sure you replace `<subdomain>` and `<domain_name>` with the same values you set in the `.env` file.
 
 ```
 <subdomain>.<domain_name> {

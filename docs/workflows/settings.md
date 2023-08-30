@@ -11,7 +11,7 @@ To open the settings:
 
 1. Open your workflow.
 2. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png)</span> menu.
-3. Select **Settings**. n8n opens the ** Workflow settings** modal.
+3. Select **Settings**. n8n opens the **Workflow settings** modal.
 
 
 The following settings are available:

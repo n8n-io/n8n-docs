@@ -71,7 +71,7 @@ To persist the Caddy cache between restarts and speed up start times, create [a 
 docker volume create caddy_data
 ```
 
-We will also do this to create a Docker volume for the n8n data:
+Create a Docker volume for the n8n data:
 
 ```shell
 sudo docker volume create n8n_data

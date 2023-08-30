@@ -146,10 +146,7 @@ nav:
       - Looping: flow-logic/looping.md
       - Waiting: flow-logic/waiting.md
       - Sub-workflows: flow-logic/subworkflows.md
-      - Error handling:
-        - flow-logic/error-handling/index.md
-        - Error workflows: flow-logic/error-handling/error-workflows.md
-        - Memory-related errors: flow-logic/error-handling/memory-errors.md
+      - Error handling: flow-logic/error-handling.md        
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
@@ -598,6 +595,7 @@ nav:
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md

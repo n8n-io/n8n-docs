@@ -1,4 +1,7 @@
 
+/flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/
+/flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/
+
 /hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
 /hosting/authentication/jwt/   /hosting/user-management-self-hosted/
 /hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/

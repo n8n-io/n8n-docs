@@ -4,29 +4,27 @@ contentType: howto
 
 # Looping in n8n
 
-Looping enables you to repeatedly perform the same actions, stopping only after a set number of repetitions (e.g. fetch the 10 most recent items) or when a specific condition is met (e.g. no new items exist).
-
-Looping is useful when you want to process multiple similar items, for example sending a message to every contact in your address book. In n8n this repetitive processing is handled automatically, meaning you do not need to specifically build loops into your workflows. There are some [special cases](#node-exceptions) where this isn't true.
+Looping is useful when you want to process multiple items or perform an action repeatedly, such as sending a message to every contact in your address book. n8n handles this repetitive processing automatically, meaning you don't need to specifically build loops into your workflows. There are [some nodes](#node-exceptions) where this isn't true.
 
 ## Using loops in n8n
 
-n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point (or a single row in the output table of a node).
-
-The following image shows the output from the [Customer Datastore](/integrations/builtin/app-nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) node, where each row is an individual item.
+n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
 
 ![The Customer Datastore node](/_images/flow-logic/looping/customer_datastore_node.png)
 
-**Nodes usually run once for each item**. For example, if you want to send the name and notes of the customers as a message on [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/), connect the Slack node to the Customer Datastore node, configure the parameters, and execute the node. You will receive 5 messages — one for each item.
+Nodes usually run once for each item. For example, if you wanted to send the name and notes of the customers in the Customer Datastore node as a message on Slack, you would:
+
+1. Connect the Slack node to the Customer Datastore node.
+2. Configure the parameters.
+3. Execute the node. 
+
+You would receive five messages: one for each item.
 
 This is how you can process multiple items without having to explicitly connect nodes in a loop.
 
-!!! note "Keep in mind"
-    Your data must be in the proper structure for n8n to process it as described here. See [Transforming Data](/data/transforming-data/) to learn more.
-
-
 ### Executing nodes once
 
-For situations where you do not want a node to process all received items, for example sending a Slack message only to the first customer, you can do so by toggling the **Execute Once** parameter in the *Settings* tab of that node.
+For situations where you don't want a node to process all received items, for example sending a Slack message only to the first customer, you can do so by toggling the **Execute Once** parameter in the *Settings* tab of that node.
 
 This setting is helpful when the incoming data contains multiple items and you want to only process the first one. Using the [Customer Datastore](/integrations/builtin/app-nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/) and [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) example from above, it would look like the following:
 
@@ -66,7 +64,7 @@ Here is an [example workflow](https://n8n.io/workflows/1130) that implements a l
 
 You should use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you only want to process a specific group of returned items.
 
-**Note**: The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it is not necessary to add an IF node to stop the loop.
+**Note**: The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 
 ## Node exceptions
 

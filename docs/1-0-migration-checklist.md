@@ -60,6 +60,8 @@ Note that executions start much faster in `main` mode than in `own` mode. Howeve
 
 ### Docker
 
+#### Permissions change
+
 When using Docker-based deployments, the n8n process is now run by the user `node` instead of `root`. This change increases security. 
 
 If permission errors appear in your n8n container logs when starting n8n, you may need to update the permissions by executing the following command on the Docker host:
@@ -68,7 +70,13 @@ If permission errors appear in your n8n container logs when starting n8n, you ma
 docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8nio/base:16 -R node:node /home/node/.n8n
 ```
 
-We have also removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images. 
+#### Image removal
+
+We have removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images. 
+
+#### Entrypoint change
+
+The entrypoint for the container has changed and you no longer need to specify the n8n command, If you were previously running `n8n worker --concurrency=5` it would now be `worker --concurrency=5`
 
 [PR #6365](https://github.com/n8n-io/n8n/pull/6365){:target=_blank .external link}
 

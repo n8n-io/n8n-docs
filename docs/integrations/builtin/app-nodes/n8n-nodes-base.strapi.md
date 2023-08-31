@@ -17,10 +17,6 @@ On this page, you'll find a list of operations the Strapi node supports and link
     For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
 
 
-!!! warning "Strapi Version 4"
-    The Strapi node supports Strapi version 3. Some of its operations won't work with Strapi version 4.
-
-
 ## Operations
 
 * Entry

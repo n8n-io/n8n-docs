@@ -15,7 +15,35 @@ You can use these credentials to authenticate the following nodes with Airtable.
 
 Create an [Airtable](https://airtable.com/) account.
 
+## Using Access Token
+
+1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
+2. Under the ***Personal access tokens*** section, click on the ***Create new token*** button.
+3. Create a new Access Token by selecting the following scopes: *data.records:read*, *data.records:write*, *schema.bases:read* and adding the base you want to work on (or all the bases).
+4. Copy the token displayed in the dialog.
+5. In the n8n Airtable credentials dialog select the ***Access Token*** connection.
+6. Paste the token in the **Access Token** field.
+7. Click on the ***Save*** button to create the credentials.
+
+## Using OAuth 2
+
+1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
+2. Under the ***OAuth integrations*** section, click on the ***Register new OAuth integration*** button.
+3. Provide a name for your OAuth integration.
+4. In the n8n Airtable credentials dialog select the ***OAuth 2*** connection, copy the ***OAuth Redirect URL*** and paste it in the ***OAuth redirect URL*** field in the Airtable Developer Hub.
+5. In Airtable, click on ***Register integration***.
+6. In the following page copy the ***Client ID*** and paste it into the ***Client ID*** parameter in the n8n Airtable credentials dialog.
+7. Click on ***Generate client secret*** and paste the secret into the ***Client Secret*** parameter in the n8n Airtable credentials dialog.
+8. Select the following scopes: *data.records:read*, *data.records:write*, *schema.bases:read* and click on ***Save changes*** at the bottom.
+9. In the n8n Airtable credentials dialog click on ***Connect my account***.
+10. Follow the instruction in the dialog and select the the base you want to work on (or to all the bases).
+11. Click ok ***Grant access*** in the dialog to complete the connection.
+
+
 ## Using API Key
+
+!!! note "API Key deprecation"
+    API Keys will be deprecated by the end of January 2024, see [this article](https://support.airtable.com/docs/airtable-api-key-deprecation-notice) for more details. We recommend to use Personal Access Token instead.
 
 1. Open your Airtable [dashboard](https://airtable.com/).
 2. Click on the user icon on the top right and select 'Account' from the dropdown list.

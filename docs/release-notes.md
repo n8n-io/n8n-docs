@@ -28,6 +28,45 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.5.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.4.1...n8n@1.5.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-08-31
+
+This release contains new features, node enhancements, and bug fixes.
+
+### Highlights
+
+<div class="n8n-new-features" markdown>
+
+#### External secrets storage for credentials
+
+Enterprise-tier accounts can now use external secrets vaults to manage credentials in n8n. This allows you to store credential information securely outside your n8n instance. n8n supports Infisical and HashiCorp Vault.
+
+Refer to [External secrets](/external-secrets/) for guidance on enabling and using this feature.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Two-factor authentication
+
+n8n now supports two-factor authentication (2FA) for self-hosted instances. We're working on bringing support to Cloud. Refer to [Two-factor authentication](/user-management/two-factor-auth/) for guidance on enabling and using it.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Debug executions
+
+Users on a paid n8n plan can now load data from previous executions into their current workflow. This is useful when debugging a failed execution.
+
+Refer to [Debug executions](/workflows/executions/debug/) for guidance on using this feature.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.4.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.4.0...n8n@1.4.1){:target=_blank .external-link} for this version.<br />

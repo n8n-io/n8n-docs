@@ -61,13 +61,6 @@ Example file:
  "generic": {
   "timezone": "Europe/Berlin"
  },
- "security": {
-  "basicAuth": {
-   "active": true,
-   "user": "frank",
-   "password": "some-secure-password"
-  }
- },
  "nodes": {
   "exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
  }

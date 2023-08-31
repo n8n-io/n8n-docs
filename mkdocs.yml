@@ -127,6 +127,7 @@ nav:
         - Workflow-level executions: workflows/executions/single-workflow-executions.md
         - All executions: workflows/executions/all-executions.md
         - Custom executions data: workflows/executions/custom-executions-data.md
+        - Debug executions: workflows/executions/debug.md
       - Tags: workflows/tags.md
       - Export and import: workflows/export-import.md
       - Templates: workflows/templates.md
@@ -228,6 +229,7 @@ nav:
         - Manage variables: source-control-environments/using/manage-variables.md
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
     - Variables: variables.md
+    - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
     - Privacy and security:
         - privacy-security/index.md

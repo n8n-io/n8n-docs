@@ -1,15 +1,15 @@
 ---
 contentType: howto
-title: Debug executions
+title: Debug and re-run past executions
 description: How to copy execution data into your current workflow in order to debug previous executions.
 ---
 
-# Debug executions
+# Debug and re-run past executions
 
 !!! info "Feature availability"
 	 Available on Self-Hosted Enterprise, Cloud Pro, and Cloud Enterprise plans.
 
-You can load data from a previous execution into your current workflow. This allows you to examine and debug data from failed executions.
+You can load data from a previous execution into your current workflow. This is useful for debugging data from failed production executions: you can see a failed execution, make changes to your workflow to fix it, then re-run it with the previous execution data.
 
 ## Load data
 

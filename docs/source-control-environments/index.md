@@ -22,3 +22,8 @@ In this section:
 	* [Copy work between environments](/source-control-environments/using/copy-work/): How to copy work between different n8n instances.
 	* [Manage variables](/source-control-environments/using/manage-variables/): Manage variable values using the n8n API and source control.
 * [Tutorial: Create environments with source control](/source-control-environments/create-environments/): An end-to-end tutorial, setting up environments using n8n's recommended configurations.
+
+Related sections:
+
+* [Variables](/variables/): reusable values.
+* [External secrets](/external-secrets/): manage credentials with an external secrets vault.

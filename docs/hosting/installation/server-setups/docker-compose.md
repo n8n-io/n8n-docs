@@ -63,22 +63,48 @@ Create a `docker-compose.yml` file. Paste the following in the file:
 version: "3.7"
 
 services:
-  caddy:
-    image: caddy:latest
-    restart: unless-stopped
+  traefik:
+    image: "traefik"
+    restart: always
+    command:
+      - "--api=true"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
+      - "--certificatesresolvers.mytlschallenge.acme.email=${SSL_EMAIL}"
+      - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - caddy_data:/data
-      - ${DATA_FOLDER}:/config
-      - ${DATA_FOLDER}/Caddyfile:/etc/caddy/Caddyfile
+      - traefik_data:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
     image: docker.n8n.io/n8nio/n8n
     restart: always
     ports:
       - "127.0.0.1:5678:5678"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.n8n.rule=Host(`${SUBDOMAIN}.${DOMAIN_NAME}`)
+      - traefik.http.routers.n8n.tls=true
+      - traefik.http.routers.n8n.entrypoints=web,websecure
+      - traefik.http.routers.n8n.tls.certresolver=mytlschallenge
+      - traefik.http.middlewares.n8n.headers.SSLRedirect=true
+      - traefik.http.middlewares.n8n.headers.STSSeconds=315360000
+      - traefik.http.middlewares.n8n.headers.browserXSSFilter=true
+      - traefik.http.middlewares.n8n.headers.contentTypeNosniff=true
+      - traefik.http.middlewares.n8n.headers.forceSTSHeader=true
+      - traefik.http.middlewares.n8n.headers.SSLHost=${DOMAIN_NAME}
+      - traefik.http.middlewares.n8n.headers.STSIncludeSubdomains=true
+      - traefik.http.middlewares.n8n.headers.STSPreload=true
+      - traefik.http.routers.n8n.middlewares=n8n@docker
     environment:
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
       - N8N_PORT=5678
@@ -87,19 +113,19 @@ services:
       - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
-      - n8n_data/.n8n:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
 
-	volumes:
+  volumes:
+    traefik_data:
+      external: true
 		n8n_data:
-			external: true
-		caddy_data:
 			external: true
 ```
 
 If you are planning on reading/writing local files with n8n (for example, by using the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
-      - /root/local-files:/files
+      - /local-files:/files
 ```
 
 If you are running n8n as a non-root user, add this under `volumes` for the n8n service:
@@ -108,16 +134,13 @@ If you are running n8n as a non-root user, add this under `volumes` for the n8n 
       - /home/<YOUR USERNAME>/n8n-local-files:/files
 ```
 
-You will now be able to write files to the `/files` directory in n8n and they will appear on your server in either `/root/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
+You will now be able to write files to the `/files` directory in n8n and they will appear on your server in either `/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
 
 ### 6. Create `.env` file
 
-Create a `.env` file and change it accordingly.
+Create an `.env` file and change it accordingly.
 
 ```bash
-# Replace <directory-path> with the path to the directory containing your Caddyfile
-DATA_FOLDER=/<directory-path>
-
 # The top level domain to serve from
 DOMAIN_NAME=example.com
 
@@ -135,19 +158,7 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=user@example.com
 ```
 
-### 7. Create a Caddyfile
-
-Create a `Caddyfile` in the `DATA_FOLDER` path you set in the `.env` file. Make sure you replace `<subdomain>` and `<domain_name>` with the same values you set in the `.env` file.
-
-```
-<subdomain>.<domain_name> {
-    reverse_proxy n8n:5678 {
-      flush_interval -1
-    }
-}
-```
-
-### 7. Create the Docker volumes
+### 7. Create data folder
 
 Create the Docker volume that is defined as `n8n_data`. n8n will save the database file from SQLite and the encryption key in this volume.
 
@@ -155,10 +166,11 @@ Create the Docker volume that is defined as `n8n_data`. n8n will save the databa
 docker volume create n8n_data
 ```
 
-We will also create a volume for the Caddy data, This is defined as `caddy_data`.
+Create a volume for the Caddy data, This is defined as `traefik_data`.
+
 
 ```sh
-docker volume create caddy_data
+docker volume create traefik_data
 ```
 
 ### 8. Start Docker Compose
@@ -184,10 +196,6 @@ n8n will only be reachable using `https` and not using `http`.
 
 !!! warning "Secure your n8n instance"
     Make sure that you [set up authentication](/hosting/user-management/) your n8n instance.
-
-## Updating
-
---8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
 
 ## Next steps
 

@@ -38,3 +38,6 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 2. On the execution you want to retry, select **Retry execution** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png)</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"
 
+## Load data from previous executions into your current workflow
+
+You can load data from a previous workflow back into the canvas. Refer to [Debug executions](/workflows/executions/debug/) for more information.

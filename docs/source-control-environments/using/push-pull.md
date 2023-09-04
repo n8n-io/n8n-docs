@@ -88,3 +88,5 @@ On push:
 * n8n overwrites the entire variables and tags files.
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
 
+!!! note "Manage credentials with an external secrets vault"
+	If you need different credentials on different n8n environments, use [External secrets](/external-secrets/).

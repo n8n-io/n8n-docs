@@ -10,25 +10,17 @@ You can use these credentials to authenticate the following nodes with Strapi.
 
 - [Strapi](/integrations/builtin/app-nodes/n8n-nodes-base.strapi/)
 
-## Prerequisites
+## Supported authentication methods
 
-Install [Strapi](https://strapi.io/documentation/v3.x/getting-started/installation.html) on your server.
+You can choose whether to authenticate with username and password, or with API token.
 
-## Using API
+[API tokens](https://docs.strapi.io/dev-docs/configurations/api-tokens){:target=_blank .external-link} provides information about getting your Strapi API token.
 
-1. Access your Strapi Admin dashboard.
-2. Click on ***Settings*** in the left sidebar.
-3. Click on ***Roles*** under the ***USERS & PERMISSIONS PLUGIN*** section.
-4. Click on the pencil icon next to the role you want to edit.
-5. In the ***Permissions*** section, give the required permissions.
-6. Click on the ***Save*** button.
-7. Click on ***Users*** in the left sidebar.
-8. Click on the ***+ Add New user*** button.
-9. Enter the required information.
-10. Click on ***ON*** for the ***Confirmed*** field.
-11. Select the role that you set the permissions for in the previous steps from the ***Role*** dropdown list.
-12. Click on the ***Save*** button.
-13. Use this email, password, and the URL of your Strapi instance with your Strapi node credentials in n8n.
+To use a username and password, you need to understand Strapi's [Users & Permissions plugin](https://docs.strapi.io/user-docs/plugins/strapi-plugins#-users--permissions-plugin){:target=_blank .external-link}.
 
-![Getting Strapi credentials](/_images/integrations/builtin/credentials/strapi/using-api.gif)
+## Related resources
+
+Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest){:target=_blank .external-link} for more information about the service. 
+
+
 

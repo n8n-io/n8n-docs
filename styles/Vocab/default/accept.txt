@@ -21,6 +21,7 @@ Firestore
 GIMP
 Hetzner
 invalid
+Infisical
 Keycloak
 kubectl
 Kafka
@@ -47,6 +48,7 @@ Serverless
 serverless
 Shopify
 shopify
+Strapi
 There are
 Tooltip
 tooltip

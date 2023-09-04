@@ -13,6 +13,8 @@ contentType: howto
 
 You can use an external secrets store to manage credentials for n8n.
 
+n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/) in one central place.
+
 ## Connect n8n to your secrets store
 
 !!! note "Secret names"

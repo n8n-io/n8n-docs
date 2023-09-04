@@ -20,8 +20,22 @@ This section walks through setting up both the parent workflow and sub-workflow.
 
 	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
 1. Add the **Execute Workflow Trigger** node.
-1. Add other nodes as needed to build your sub-workflow functionality.
+1. Add other nodes as needed to build your sub-workflow functionality.		
 1. Save the sub-workflow.
+
+!!! note "Sub-workflow mustn't contain errors"
+	If there are errors in the sub-workflow, the parent workflow can't trigger it.  
+
+!!! note "Load data into sub-workflow before building"
+	This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
+
+	If you want to load data into your subworkflow to use while building it:
+
+	1. Create the subworkflow and add the **Execute Workflow Trigger**. 
+	1. In the subworkflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
+	1. Skip ahead to setting up the parent workflow, and run it.
+	1. Follow the steps to [load data from previous executions](/workflows/executions/debug/).
+	You'll now have example data pinned in the trigger node, which allows you to work with real data when configuring the rest of the workflow.
 
 ### Call the sub-workflow
 
@@ -31,6 +45,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
 
 	!!! note "Find your workflow ID"
 		Your sub-workflow's ID is the alphanumeric string at the end of its URL.
+		
 1. Save your workflow.
 
 When your workflow executes, it will send data to the sub-workflow, and run it.

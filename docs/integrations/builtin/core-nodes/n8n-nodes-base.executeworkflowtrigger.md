@@ -13,5 +13,15 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 * Reuse a workflow: for example, you could have multiple workflows pulling and processing data from different sources, then have all those workflows call a single workflow that generates a report.
 * Break large workflows into smaller components.
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [Execute Workflow trigger integrations](https://n8n.io/integrations/execute-workflow-trigger/){:target=_blank .external-link} page.
+
+## Usage
+
 This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node.
 
+Refer to [Sub-workflows](/flow-logic/subworkflows/) for more information about chaining multiple workflows.
+
+## How data passes between workflows
+
+--8<-- "_snippets/flow-logic/subworkflow-data-flow.md"

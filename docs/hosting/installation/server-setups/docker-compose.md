@@ -115,23 +115,23 @@ services:
     volumes:
       - n8n_data:/home/node/.n8n
 
-  volumes:
-    traefik_data:
-      external: true
-		n8n_data:
-			external: true
+volumes:
+  traefik_data:
+    external: true
+  n8n_data:
+    external: true
 ```
 
 If you are planning on reading/writing local files with n8n (for example, by using the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
-      - /local-files:/files
+- /local-files:/files
 ```
 
 If you are running n8n as a non-root user, add this under `volumes` for the n8n service:
 
 ```yaml
-      - /home/<YOUR USERNAME>/n8n-local-files:/files
+- /home/<YOUR USERNAME>/n8n-local-files:/files
 ```
 
 You will now be able to write files to the `/files` directory in n8n and they will appear on your server in either `/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
@@ -163,14 +163,14 @@ SSL_EMAIL=user@example.com
 Create the Docker volume that is defined as `n8n_data`. n8n will save the database file from SQLite and the encryption key in this volume.
 
 ```sh
-docker volume create n8n_data
+sudo docker volume create n8n_data
 ```
 
 Create a volume for the Traefik data, This is defined as `traefik_data`.
 
 
 ```sh
-docker volume create traefik_data
+sudo docker volume create traefik_data
 ```
 
 ### 8. Start Docker Compose

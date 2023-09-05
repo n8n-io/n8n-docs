@@ -66,4 +66,4 @@ For example, you have two n8n instances, one for development and one for product
 
 ### Infisical version changes
 
-Infisical version upgrades can introduce problems connecting to n8n. If your Infisical connection stops working, check if there was a recent version change. If so, report the issue to help@n8n.com.
+Infisical version upgrades can introduce problems connecting to n8n. If your Infisical connection stops working, check if there was a recent version change. If so, report the issue to help@n8n.io.

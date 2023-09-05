@@ -234,7 +234,7 @@ n8n user-management:reset
 
 ### Disable MFA for a user
 
-If a user has lost their recovery codes you can disable MFA for a user with the command below, The user will then be able to log back in to set up MFA again.
+If a user loses their recovery codes you can disable MFA for a user with this command. The user will then be able to log back in to set up MFA again.
 
 ```sh
 n8n mfa:disable --email=johndoe@example.com

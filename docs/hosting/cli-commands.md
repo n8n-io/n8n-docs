@@ -232,6 +232,22 @@ Use this if you forget your password, and don't have SMTP set up to do password 
 n8n user-management:reset
 ```
 
+### Disable MFA for a user
+
+If a user has lost their recovery codes you can disable MFA for a user with the command below, The user will then be able to log back in to set up MFA again.
+
+```sh
+n8n mfa:disable --email=johndoe@example.com
+```
+
+### Disable LDAP
+
+You can reset the LDAP settings using the command below.
+
+```sh
+n8n ldap:reset
+```
+
 ## Security audit
 
 You can run a [security audit](/hosting/security-audit/) on your n8n instance, to detect common security issues.

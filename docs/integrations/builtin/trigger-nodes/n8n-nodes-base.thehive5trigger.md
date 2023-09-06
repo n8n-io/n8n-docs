@@ -1,19 +1,22 @@
 ---
-title: TheHive trigger
-description: Documentation for the TheHive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: TheHive5 trigger
+description: Documentation for the TheHive5 trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 
-# TheHive trigger
+# TheHive5 trigger
 
-On this page, you'll find a list of events the TheHive trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the TheHive5 trigger node can respond to, and links to more resources.
 
 !!! note "TheHive and TheHive 5"
-	n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
+	n8n provides two nodes for TheHive. Use this node (TheHive5 trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
 
+<!--
 
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
+    For usage examples and templates to help you get started, take a look at n8n's [TheHive trigger integrations](https://n8n.io/integrations/thehive5-trigger/){:target="_blank" .external-link} list.
+
+-->
 
 ## Events
 
@@ -25,7 +28,7 @@ On this page, you'll find a list of events the TheHive trigger node can respond 
 	* Created
 	* Deleted
 	* Updated
-* Log
+* Comment
 	* Created
 	* Deleted
 	* Updated
@@ -33,21 +36,28 @@ On this page, you'll find a list of events the TheHive trigger node can respond 
 	* Created
 	* Deleted
 	* Updated
+* Page
+	* Created
+	* Deleted
+	* Updated
 * Task
+	* Created
+	* Deleted
+	* Updated
+* Task log
 	* Created
 	* Deleted
 	* Updated
 
 ## Related resources
 
-n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/).
+n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/).
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.
+-->
 
-Refer to TheHive's documentation for more information about the service:
-
-* [Version 3](http://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
-* [Version 4](http://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
+Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.
 
 
 ## Configure a webhook in TheHive

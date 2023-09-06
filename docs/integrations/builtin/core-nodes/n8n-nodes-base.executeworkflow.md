@@ -12,7 +12,7 @@ Use the Execute Workflow node to run a different workflow on the host machine th
 	For usage examples and templates to help you get started, refer to n8n's [Execute Workflow integrations](https://n8n.io/integrations/execute-workflow/){:target=_blank .external-link} page.
 
 
-## Usage
+## Properties
 
 The Execute Workflow node has two properties:
 
@@ -23,7 +23,11 @@ The Execute Workflow node has two properties:
 	- URL
 - **Workflow**: This field contains information about the workflow, such as the workflow ID, URL, or a file.
 
-Refer to [Sub-workflows](/flow-logic/subworkflows/) for more information about chaining multiple workflows.
+## Set up and use a sub-workflow
+
+This section walks through setting up both the parent workflow and sub-workflow.
+
+--8<-- "_snippets/flow-logic/subworkflow-usage.md"
 
 ## Find a workflow ID
 

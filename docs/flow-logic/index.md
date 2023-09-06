@@ -8,8 +8,10 @@ contentType: overview
 
 n8n allows you to represent complex logic in your workflows.
 
-[TODO: add section TOC]
+[[% import "_macros/section-toc.html" as sectionToc %]]
+
+[[ sectionToc.sectionToc(page) ]]
 
 ## Related sections
 
-* Understand [Data](/data/) in n8n, including [Data structure](/data/data-structure/) and [Data flow within nodes](/data/data-flow-nodes/).
+Understand [Data](/data/) in n8n, including [Data structure](/data/data-structure/) and [Data flow within nodes](/data/data-flow-nodes/).

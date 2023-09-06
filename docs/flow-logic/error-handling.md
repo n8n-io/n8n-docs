@@ -15,7 +15,7 @@ When designing your flow logic, it's a good practice to consider potential error
 
 ## Create and set an error workflow
 
-For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. 
+For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/).
 
 You can use the same error workflow for multiple workflows.
 

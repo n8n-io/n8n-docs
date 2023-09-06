@@ -13,5 +13,7 @@ Compare these workflows:
 
 This is the power of splitting and conditional nodes in n8n.
 
+Refer to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) documentation for usage details.
+
 !!! note "Switch option limits"
 	Switch can handle a maximum of four output options.

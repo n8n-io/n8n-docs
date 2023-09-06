@@ -36,6 +36,9 @@ Use the Switch node to route a workflow conditionally based on comparison operat
 
 **Fallback Output**: choose how to route the workflow when none of the conditions match.
 
+!!! note "Switch option limits"
+	Switch can handle a maximum of four output options.
+
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/switch/){:target=_blank .external-link} on n8n's website.

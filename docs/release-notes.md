@@ -28,6 +28,27 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.6.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.5.1...n8n@1.6.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-09-06
+
+This release contains bug fixes, new features, and node enhancements.
+
+<div class="n8n-new-features" markdown>
+
+#### TheHive 5
+
+This release introduces support for TheHive API version 5. This uses a new node and credentials:
+
+* [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
+* [TheHive 5 trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
+* [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/)
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.5.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.5.0...n8n@1.5.1){:target=_blank .external-link} for this version.<br />

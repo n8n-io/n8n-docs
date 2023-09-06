@@ -23,6 +23,6 @@ The following settings are available:
 * **Save failed production executions**: whether n8n should save failed executions for active workflows.
 * **Save successful production executions**: whether n8n should save successful executions for active workflows.
 * **Save manual executions**: whether n8n should save executions for workflows started by the user in the editor.
-* **Save execution progress**: whether n8n should save execution data for each node. If set to **Yes**, the workflow resumes from where it stopped in case of an error. This might increase latency.
+* **Save execution progress**: whether n8n should save execution data for each node. If set to **Save**, the workflow resumes from where it stopped in case of an error. This might increase latency.
 * **Timeout Workflow**: toggle to enable setting a duration after which n8n should cancel the current workflow execution.
 	* **Timeout After**: Set the time in hours, minutes, and seconds after which the workflow should timeout. For n8n Cloud users n8n enforces a maximum available timeout for each plan.

@@ -1,17 +1,17 @@
 ---
-title: TheHive5
+title: TheHive 5
 description: Documentation for the TheHive5 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 
-# TheHive5
+# TheHive 5
 
-The TheHive5 node allows you to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
+The TheHive 5 node allows you to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
 
 On this page, you'll find a list of operations the TheHive node supports and links to more resources.
 
 !!! note "TheHive and TheHive 5"
-	n8n provides two nodes for TheHive. Use this node (TheHive5) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/).
+	n8n provides two nodes for TheHive. Use this node (TheHive 5) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/).
 
 !!! note "Credentials"
     Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5/) for guidance on setting up authentication. 

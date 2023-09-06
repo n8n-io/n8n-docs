@@ -1,15 +1,15 @@
 ---
-title: TheHive5 trigger
-description: Documentation for the TheHive5 trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: TheHive 5 trigger
+description: Documentation for the TheHive 5 trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 
-# TheHive5 trigger
+# TheHive 5 trigger
 
 On this page, you'll find a list of events the TheHive5 trigger node can respond to, and links to more resources.
 
 !!! note "TheHive and TheHive 5"
-	n8n provides two nodes for TheHive. Use this node (TheHive5 trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
+	n8n provides two nodes for TheHive. Use this node (TheHive 5 trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
 
 <!--
 
@@ -51,7 +51,7 @@ On this page, you'll find a list of events the TheHive5 trigger node can respond
 
 ## Related resources
 
-n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/).
+n8n provides an app node for TheHive 5. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/).
 
 <!--
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.

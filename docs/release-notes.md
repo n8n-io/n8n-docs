@@ -41,9 +41,9 @@ This release contains bug fixes, new features, and node enhancements.
 
 This release introduces support for TheHive API version 5. This uses a new node and credentials:
 
-* [TheHive5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
-* [TheHive5 trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
-* [TheHive5 credentials](/integrations/builtin/credentials/thehive5/)
+* [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
+* [TheHive 5 trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
+* [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/)
 
 </div>
 

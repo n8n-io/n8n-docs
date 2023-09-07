@@ -38,4 +38,4 @@ Refer to this [example workflow](https://n8n.io/workflows/1160-merge-data-for-mu
 
 The [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/) node compares data streams before merging them. It outputs up to four different branches.
 
-Refer to this [example workflow](){:target=_blank .external-link} for a basic example. [TODO link pending upload by Polina]
+Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-with-the-compare-datasets-node/){:target=_blank .external-link} for an example.

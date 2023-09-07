@@ -8,7 +8,6 @@ In n8n, integrations are called nodes.
 
 Nodes are the building blocks of workflows in n8n. They're an entry point for retrieving data, a function to process data, or an exit for sending data. The data process includes filtering, recomposing, and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create both simple and complex workflows.
 
-
 ## Built-in nodes
 
 n8n includes a collection of built-in integrations. Refer to [Built-in nodes](/integrations/builtin/) for documentation on all of n8n's built-in nodes.
@@ -17,9 +16,11 @@ n8n includes a collection of built-in integrations. Refer to [Built-in nodes](/i
 
 In addition to using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](/integrations/community-nodes/) for more information.
 
-## Credential-only nodes
+## Credential-only nodes and custom operations
 
 --8<-- "_snippets/integrations/credential-only-intro.md"
+
+Refer to [Custom operations](/integrations/custom-operations/) for more information.
 
 ## Generic integrations
 

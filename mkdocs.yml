@@ -96,7 +96,10 @@ markdown_extensions:
   - toc:
       permalink: "#"
 plugins:
-  - info
+  # You need the info plugin for bug reports to Material theme
+  # But DO NOT ENABLE IT NORMALLY
+  # It causes Netlify builds to fail
+  # - info
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav

@@ -476,6 +476,7 @@ nav:
         - integrations/builtin/credentials/tapfiliate.md
         - integrations/builtin/credentials/telegram.md
         - integrations/builtin/credentials/thehive.md
+        - integrations/builtin/credentials/thehive5.md
         - integrations/builtin/credentials/timescaledb.md
         - integrations/builtin/credentials/todoist.md
         - integrations/builtin/credentials/toggl.md

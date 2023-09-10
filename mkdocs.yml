@@ -582,9 +582,9 @@ nav:
       - Current node input: code/builtin/current-node-input.md
       - Output of other nodes: code/builtin/output-other-nodes.md
       - Date and time: code/builtin/date-time.md
+      - JMESPath: code/builtin/jmespath.md
       - n8n metadata: code/builtin/n8n-metadata.md
       - Convenience methods: code/builtin/convenience.md
-      - Advanced: code/builtin/advanced.md
       - Data transformation functions: 
         - code/builtin/data-transformation-functions/index.md
         - Arrays: code/builtin/data-transformation-functions/arrays.md

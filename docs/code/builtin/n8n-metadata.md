@@ -11,6 +11,7 @@ This includes:
 
 * Access to n8n environment variables for self-hosted n8n.
 * Metadata about workflows, executions, and nodes.
+* Information about instance [Variables](/variables/) and [External secrets](/external-secrets/).
 
 Note that some methods and variables aren't available in the Code node.
 
@@ -27,6 +28,8 @@ Note that some methods and variables aren't available in the Code node.
 | `$prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 | `$prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 | `$runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). | :white_check_mark: |
+| `$secrets` | Contains information about your [External secrets](/external-secrets/) setup. | :white_check_mark: |
+| `$vars` | Contains the [Variables](/variables/) available in the active environment. | :white_check_mark: |
 | `$workflow.active` | Whether the workflow is active (true) or not (false). | :white_check_mark: |
 | `$workflow.id` | The workflow ID. | :white_check_mark: |
 | `$workflow.name` | The workflow name. | :white_check_mark: |

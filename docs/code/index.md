@@ -15,7 +15,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions to transform [data](/data/) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) and [Data transformation functions](/code-examples/expressions/data-transformation-functions/).
+	Use expressions to transform [data](/data/) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/) and [Data transformation functions](/code/builtin/data-transformation-functions/).
 
 	[:octicons-arrow-right-24: Expressions](/code-examples/expressions/)
 
@@ -23,7 +23,7 @@ There are two places in your workflows where you can use code:
 
 	The Code node allows you to add JavaScript to your workflow.
 
-	[:octicons-arrow-right-24: Code node](/code-examples/javascript-functions/code-node/)
+	[:octicons-arrow-right-24: Code node](/code/code-node/)
 
 </div>
 
@@ -35,7 +35,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __Write a backend__
 
-	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code-examples/javascript-functions/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
+	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
 
 	This allows you to do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
 

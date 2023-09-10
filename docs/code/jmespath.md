@@ -1,4 +1,6 @@
 ---
+title: Query JSON with JMESPath
+description: n8n supports the JMESPath library, to simplify working with JSON formatted data.
 contentType: howto
 ---
 
@@ -8,7 +10,7 @@ contentType: howto
 
 ## The `$jmespath()` method
 
-n8n provides a custom method, `$jmespath()`, for use in expressions. It allows you to perform a search on a JSON object using the JMESPath query language.
+n8n provides a custom method, `$jmespath()`. It allows you to perform a search on a JSON object using the JMESPath query language.
 
 The basic syntax is: 
 
@@ -18,7 +20,7 @@ $jmespath(object, searchString)
 ```
 
 
-To help understand what the method does, here is the equivalent JavaScript. Note that you must use the custom method, not the JavaScript approach, because expressions must be single-line:
+To help understand what the method does, here is the equivalent longer JavaScript:
 
 
 ```js
@@ -26,8 +28,11 @@ var jmespath = require('jmespath');
 jmespath.search(object, searchString);
 ```
 
+!!! note "Expressions must be single-line"
+	The longer code example doesn't work in Expressions, as they must be single-line.
 
-`object` is a JSON object, such as the output of a previous node. `searchString` is an expression written in the JMESPath query language. The [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) provides a list of supported expressions, while their [Tutorial](https://jmespath.org/tutorial.html) and [Examples](https://jmespath.org/examples.html) provide interactive examples.
+
+`object` is a JSON object, such as the output of a previous node. `searchString` is an expression written in the JMESPath query language. The [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification){:target=_blank .external-link} provides a list of supported expressions, while their [Tutorial](https://jmespath.org/tutorial.html) and [Examples](https://jmespath.org/examples.html){:target=_blank .external-link} provide interactive examples.
 
 !!! warning "Search parameter order"
     The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification){:target=_blank .external-link} follow the pattern `search(searchString, object)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/){:target=_blank .external-link}, which n8n uses, supports `search(object, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
@@ -39,9 +44,9 @@ This section provides examples for some common operations. More examples, and de
 
 ### Apply a JMESPath expression to a collection of elements with projections
 
-From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections):
+From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections){:target=_blank .external-link}:
 
-> Projections are one of the key features of JMESPath. It allows you to apply an expression to a collection of elements. There are five kinds of projections:
+> Projections are one of the key features of JMESPath. It allows you to apply an expression to a collection of elements. JMESPath supports five kinds of projections:
 > 
 > * List Projections
 > * Slice Projections
@@ -49,7 +54,7 @@ From the [JMESPath projections documentation](https://jmespath.org/tutorial.html
 > * Flatten Projections
 > * Filter Projections
 
-The following example shows basic usage of list, slice, and object projections. Refer to the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections) for detailed explanations of each projection type, and more examples.
+The following example shows basic usage of list, slice, and object projections. Refer to the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections){:target=_blank .external-link} for detailed explanations of each projection type, and more examples.
 
 Given this JSON from a webhook node:
 
@@ -95,31 +100,76 @@ Given this JSON from a webhook node:
 ```
 
 
-Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections) of all the people's first names:
+Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of all the people's first names:
 
+=== "Expressions"
 
-```js
-{{$jmespath($json.body.people, "[*].first" )}}
-// Returns ["James", "Jacob", "Jayden"]
+	```js
+	{{$jmespath($json.body.people, "[*].first" )}}
+	// Returns ["James", "Jacob", "Jayden"]
+	```
+
+=== "Code node"
+
+	```js
+	$jmespath($json.body.people, "[*].first" )
+	/* Returns:
+	[
+		{
+			"firstNames": [
+				"James",
+				"Jacob",
+				"Jayden"
+			]
+		}
+	]
+	*/
 ```
 
+Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of the first names:
 
-Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections) of the first names:
+=== "Expressions"
 
+	```js
+	{{$jmespath($json.body.people, "[:2].first")}}
+	// Returns ["James", "Jacob"]
+	```
 
-```js
-{{$jmespath($json.body.people, "[:2].first")}}
-// Returns ["James", "Jacob"]
+=== "Code node"
+	```js
+	$jmespath($json.body.people, "[:2].first")
+	/* Returns:
+	[
+		{
+			"firstNames": [
+				"James",
+				"Jacob",
+				"Jayden"
+			]
+		}
+	]
+	*/
+	```
+
+Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections){:target=_blank .external-link}:
+
+=== "Expressions"
+
+	```js
+	{{$jmespath($json.body.dogs, "*.age")}}
+	// Returns [7,5]
+	```
+
+=== "Code node"
+	```js
+	$jmespath($json.body.dogs, "*.age")
+	/* Returns:
+	[
+			7,
+			5
+	]
+	*/
 ```
-
-Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections):
-
-
-```js
-{{$jmespath($json.body.dogs, "*.age")}}
-// Returns [7,5]
-```
-
 
 ### Select multiple elements and create a new list or object
 
@@ -171,13 +221,40 @@ Given this JSON from a webhook node:
 
 Use multiselect list to get the first and last names and create new lists containing both names:
 
-[[% raw %]]
-```js
-{{$jmespath($json.body.people, "[].[first, last]")}}
-// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
-```
-[[% endraw %]]
+=== "Expressions"
 
+	[[% raw %]]
+	```js
+	{{$jmespath($json.body.people, "[].[first, last]")}}
+	// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
+	```
+	[[% endraw %]]
+
+=== "Code node"
+
+	```js
+	$jmespath($json.body.people, "[].[first, last]")
+	/* Returns:
+	[
+		{
+			"fullNames": [
+				[
+					"James",
+					"Green"
+				],
+				[
+					"Jacob",
+					"Jones"
+				],
+				[
+					"Jayden",
+					"Smith"
+				]
+			]
+		}
+	]
+	*/
+	```
 
 ### An alternative to arrow functions
 

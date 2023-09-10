@@ -13,11 +13,11 @@ Data transformation functions are helper functions to make data transformation e
 
 For a list of available functions, refer to the page for your data type:
 
-* [Arrays](/code-examples/expressions/data-transformation-functions/arrays/)
-* [Dates](/code-examples/expressions/data-transformation-functions/dates/)
-* [Numbers](/code-examples/expressions/data-transformation-functions/numbers/)
-* [Objects](/code-examples/expressions/data-transformation-functions/objects/)
-* [Strings](/code-examples/expressions/data-transformation-functions/strings/)
+* [Arrays](/code/builtin/data-transformation-functions/arrays/)
+* [Dates](/code/builtin/data-transformation-functions/dates/)
+* [Numbers](/code/builtin/data-transformation-functions/numbers/)
+* [Objects](/code/builtin/data-transformation-functions/objects/)
+* [Strings](/code/builtin/data-transformation-functions/strings/)
 
 ## Usage
 

@@ -18,7 +18,14 @@
 /code-examples/javascript-functions/luxon/   /code/luxon/
 /code-examples/expressions/jmespath/   /code/jmespath/
 /code-examples/javascript-functions/jmespath/   /code/jmespath/
-/code-examples/methods-variables-examples/*   /code/cookbook/builtin/:splat
+/code-examples/methods-variables-examples/all/   /code/cookbook/builtin/all/
+/code-examples/methods-variables-examples/execution/   /code/cookbook/builtin/execution/
+/code-examples/methods-variables-examples/get-workflow-static-data/   /code/cookbook/builtin/get-workflow-static-data/
+/code-examples/methods-variables-examples/vars/   /code/cookbook/builtin/vars/
+/code-examples/methods-variables-examples/evaluate-expression/   /code/builtin/advanced/
+/code-examples/methods-variables-examples/node/   /code/builtin/output-other-nodes/
+/code-examples/methods-variables-examples/run-index/   /code/builtin/n8n-metadata/
+/code-examples/methods-variables-examples/workflow/   /code/builtin/n8n-metadata/
 
 
 ###

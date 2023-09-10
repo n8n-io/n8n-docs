@@ -4,3 +4,14 @@ contentType: overview
 ---
 
 # Expressions cookbook
+
+This section contains examples and recipes for tasks you can do with expressions.
+
+[[% import "_macros/section-toc.html" as sectionToc %]]
+
+[[ sectionToc.sectionToc(page) ]]
+
+## Related resources
+
+* [Built-in methods and variables reference](/code/builtin/)
+* [Understand expressions](/code/understand-expressions/)

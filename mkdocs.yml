@@ -573,7 +573,7 @@ nav:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
     - CLI commands: hosting/cli-commands.md
-  - Coding in n8n:
+  - Code in n8n:
     - code/index.md
     - Understand expressions: code/understand-expressions.md
     - Code node: code/code-node.md
@@ -599,14 +599,10 @@ nav:
       - code/cookbook/index.md
       - Built-in methods and variables examples:
         - code/cookbook/builtin/index.md
-        - evaluateExpression: code/cookbook/builtin/evaluate-expression.md
         - execution: code/cookbook/builtin/execution.md
         - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-        - (node-name).item: code/cookbook/builtin/node.md
         - (node-name).all: code/cookbook/builtin/all.md
-        - runIndex: code/cookbook/builtin/run-index.md
         - vars: code/cookbook/builtin/vars.md
-        - workflow: code/cookbook/builtin/workflow.md
       - Expressions:
         - code/cookbook/expressions/index.md
         - Check incoming data: code/cookbook/expressions/check-incoming-data.md

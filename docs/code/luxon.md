@@ -4,7 +4,9 @@ contentType: howto
 
 # Date and time with Luxon
 
-[Luxon](https://github.com/moment/luxon/) is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon). 
+[Luxon](https://github.com/moment/luxon/){:target=_blank .external-link} is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon){:target=_blank .external-link}. 
+
+n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
 
 ## Variables
 

@@ -10,13 +10,16 @@
 /code-examples/javascript-functions/console-log/   /code/cookbook/code-node/console-log/
 /code-examples/ai-code/   /code/ai-code/
 /code-examples/expressions/check-incoming-data/   /code/cookbook/expressions/check-incoming-data/
+/code-examples/expressions/   /code/understand-expressions/
 /code-examples/expressions/understand-expressions/   /code/understand-expressions/
+/code-examples/javascript-functions/   /code/code-node/
 /code-examples/javascript-functions/code-node/   /code/code-node/
 /code-examples/expressions/luxon/   /code/luxon/
 /code-examples/javascript-functions/luxon/   /code/luxon/
 /code-examples/expressions/jmespath/   /code/jmespath/
 /code-examples/javascript-functions/jmespath/   /code/jmespath/
 /code-examples/methods-variables-examples/*   /code/cookbook/builtin/:splat
+
 
 ###
 

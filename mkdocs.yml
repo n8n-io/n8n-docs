@@ -579,13 +579,19 @@ nav:
     - Code node: code/code-node.md
     - Built in methods and variables: 
       - code/builtin/index.md
+      - Current node input: code/builtin/current-node-input.md
+      - Output of other nodes: code/builtin/output-other-nodes.md
+      - Date and time: code/builtin/date-time.md
+      - n8n metadata: code/builtin/n8n-metadata.md
+      - Convenience methods: code/builtin/convenience.md
+      - Advanced: code/builtin/advanced.md
       - Data transformation functions: 
-        - code-examples/expressions/data-transformation-functions/index.md
-        - Arrays: code-examples/expressions/data-transformation-functions/arrays.md
-        - Dates: code-examples/expressions/data-transformation-functions/dates.md
-        - Numbers: code-examples/expressions/data-transformation-functions/numbers.md
-        - Objects: code-examples/expressions/data-transformation-functions/objects.md
-        - Strings: code-examples/expressions/data-transformation-functions/strings.md
+        - code/builtin/data-transformation-functions/index.md
+        - Arrays: code/builtin/data-transformation-functions/arrays.md
+        - Dates: code/builtin/data-transformation-functions/dates.md
+        - Numbers: code/builtin/data-transformation-functions/numbers.md
+        - Objects: code/builtin/data-transformation-functions/objects.md
+        - Strings: code/builtin/data-transformation-functions/strings.md
     - Handling dates: code/luxon.md  
     - Query JSON with JMESPath: code/jmespath.md
     - Generate code with ChatGPT: code/ai-code.md
@@ -593,14 +599,14 @@ nav:
       - code/cookbook/index.md
       - Built-in methods and variables examples:
         - code/cookbook/builtin/index.md
-        - evaluateExpression: code-examples/cookbook/builtin/evaluate-expression.md
-        - execution: code-examples/cookbook/builtin/execution.md
-        - getWorkflowStaticData: code-examples/cookbook/builtin/get-workflow-static-data.md
-        - (node-name).item: code-examples/cookbook/builtin/node.md
-        - (node-name).all: code-examples/cookbook/builtin/all.md
-        - runIndex: code-examples/cookbook/builtin/run-index.md
-        - vars: code-examples/cookbook/builtin/vars.md
-        - workflow: code-examples/cookbook/builtin/workflow.md
+        - evaluateExpression: code/cookbook/builtin/evaluate-expression.md
+        - execution: code/cookbook/builtin/execution.md
+        - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+        - (node-name).item: code/cookbook/builtin/node.md
+        - (node-name).all: code/cookbook/builtin/all.md
+        - runIndex: code/cookbook/builtin/run-index.md
+        - vars: code/cookbook/builtin/vars.md
+        - workflow: code/cookbook/builtin/workflow.md
       - Expressions:
         - code/cookbook/expressions/index.md
         - Check incoming data: code/cookbook/expressions/check-incoming-data.md

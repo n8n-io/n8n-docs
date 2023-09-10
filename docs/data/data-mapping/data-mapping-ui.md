@@ -66,7 +66,7 @@ n8n displays it in table form like this:
 
 ## Map data in the expressions editor
 
-These examples show how to access linked items in the expressions editor. Refer to [expressions](/code-examples/expressions/) for more information on expressions, including built in variables and methods.
+These examples show how to access linked items in the expressions editor. Refer to [expressions](/code/understand-expressions/) for more information on expressions, including built in variables and methods.
 
 ### Access the linked item in a previous node's output
 

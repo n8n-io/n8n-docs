@@ -9,7 +9,7 @@ contentType: integration
 The *Respond to Webhook* node can be used in workflows with a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node. It allows controlling the response to incoming webhooks. In the Webhook node, the **Using 'Respond to Webhook' node** option would need to be selected in the **Response** dropdown for the *Respond to Webhook* node to work.
 
 !!! note "Expressions"
-    When using [expressions](/code-examples/expressions/), the *Respond to Webhook* node will only run for the first item in the input data
+    When using [expressions](/code/understand-expressions/), the *Respond to Webhook* node will only run for the first item in the input data
 
 
 ## Node reference

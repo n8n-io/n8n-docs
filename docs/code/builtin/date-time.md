@@ -5,7 +5,7 @@ contentType: reference
 
 # Built-in date and time methods
 
-Methods for working with date and time. Note that some methods and variables aren't available in the Code node.
+Methods for working with date and time. Some methods and variables aren't available in the Code node.
 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |

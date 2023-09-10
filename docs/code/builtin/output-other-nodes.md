@@ -5,7 +5,7 @@ contentType: reference
 
 # Output of other nodes
 
-Methods for working with the output of other nodes. Note that some methods and variables aren't available in the Code node.
+Methods for working with the output of other nodes. Some methods and variables aren't available in the Code node.
 
 ## Output of other nodes
 

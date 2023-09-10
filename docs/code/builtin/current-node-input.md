@@ -5,7 +5,7 @@ contentType: reference
 
 # Current node input
 
-Methods for working with the input of the current node. Note that some methods and variables aren't available in the Code node.
+Methods for working with the input of the current node. Some methods and variables aren't available in the Code node.
 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |

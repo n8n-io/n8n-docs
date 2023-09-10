@@ -2,7 +2,7 @@
 contentType: howto
 ---
 
-# Understand expressions
+# Expressions
 
 Expressions allow you to set node parameters dynamically based on data from:
 

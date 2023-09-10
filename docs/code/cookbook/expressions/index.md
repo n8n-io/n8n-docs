@@ -14,4 +14,4 @@ This section contains examples and recipes for tasks you can do with expressions
 ## Related resources
 
 * [Built-in methods and variables reference](/code/builtin/)
-* [Understand expressions](/code/understand-expressions/)
+* [Expressions](/code/expressions/)

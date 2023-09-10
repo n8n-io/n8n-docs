@@ -10,8 +10,8 @@
 /code-examples/javascript-functions/console-log/   /code/cookbook/code-node/console-log/
 /code-examples/ai-code/   /code/ai-code/
 /code-examples/expressions/check-incoming-data/   /code/cookbook/expressions/check-incoming-data/
-/code-examples/expressions/   /code/understand-expressions/
-/code-examples/expressions/understand-expressions/   /code/understand-expressions/
+/code-examples/expressions/   /code/expressions/
+/code-examples/expressions/expressions/   /code/expressions/
 /code-examples/javascript-functions/   /code/code-node/
 /code-examples/javascript-functions/code-node/   /code/code-node/
 /code-examples/expressions/luxon/   /code/luxon/
@@ -91,8 +91,8 @@
 
 # 2022 SEO audit
 
-/nodes/expressions/expressions.html   /code/understand-expressions/
-/nodes/expressions.html   /code/understand-expressions/
+/nodes/expressions/expressions.html   /code/expressions/
+/nodes/expressions.html   /code/expressions/
 /reference/configuration.html  /hosting/environment-variables/configuration-methods/
 /getting-started/installation/index.html   /hosting/options/
 /getting-started/create-your-first-workflow/    /try-it-out/

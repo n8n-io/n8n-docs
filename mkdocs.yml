@@ -575,7 +575,7 @@ nav:
     - CLI commands: hosting/cli-commands.md
   - Code in n8n:
     - code/index.md
-    - Understand expressions: code/understand-expressions.md
+    - Expressions: code/expressions.md
     - Code node: code/code-node.md
     - Built in methods and variables: 
       - code/builtin/index.md

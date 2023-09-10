@@ -13,5 +13,5 @@ n8n provides built-in methods and variables for working with data and accessing 
 ## Related resources
 
 * [Built-in methods and variables reference](/code/builtin/)
-* [Understand expressions](/code/understand-expressions/)
+* [Expressions](/code/expressions/)
 * [Code node](/code/code-node/)

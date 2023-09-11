@@ -211,7 +211,7 @@ df_number:
         default: "0"
         description: How many decimal places to round to.
     returns: Number
-    description: Returns the value of a number rounded to the nearest whole number.
+    description: Returns the value of a number rounded to the nearest whole number, unless a decimal place is specified.
 df_date:
   - funcName: beginningOf
     args:

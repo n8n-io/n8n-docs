@@ -282,10 +282,10 @@ To read or write a binary file, you need to write the path (location) of the fil
 
 !!! warning "Naming the right path"
 
-	The file path looks slightly different on n8n cloud compared to self-hosted:
+	The file path looks slightly different depending on how you are running n8n:
 
-	- Self-hosted: `./Documents/my_file.json`
-	- n8n cloud: `/home/node/.n8n/my_file.json`
+	- npm: `~/my_file.json`
+	- n8n cloud / Docker: `/tmp/my_file.json`
 
 
 ### Exercise
@@ -397,7 +397,7 @@ Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and mo
 			},
 			{
 				"parameters": {
-					"fileName": "/home/node/.n8n/poemist.json"
+					"fileName": "/tmp/poetrydb.json"
 				},
 				"name": "Write Binary File",
 				"type": "n8n-nodes-base.writeBinaryFile",

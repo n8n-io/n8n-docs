@@ -39,8 +39,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link}
-[MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
+[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link} 
+[MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link} 
 
 ## n8n@1.6.1
 

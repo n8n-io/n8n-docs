@@ -33,8 +33,6 @@ Stores the credentials used to authenticate with integrations.
 
 ### event_destinations
 
-Enterprise only.
-
 Contains the destination configurations for [Log streaming](/log-streaming/).
 
 ### execution_data

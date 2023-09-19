@@ -27,7 +27,11 @@ There are two places in your workflows where you can use code:
 
 </div>
 
-## Technical nodes
+## Other technical resources
+
+These are features that are relevant to technical users.
+
+### Technical nodes
 
 n8n provides core nodes, which simplify adding key functionality such as API requests, webhooks, scheduling, and file handling.
 
@@ -49,7 +53,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 </div>
 
-## Other developer resources
+### Other developer resources
 
 <div class="grid-cards-vertical cards" markdown>
 

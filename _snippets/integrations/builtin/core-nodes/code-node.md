@@ -40,9 +40,9 @@ n8n added Python support in version 1.0. It doesn't include a Python executable.
 !!! note "Slower than JavaScript"
 	The Code node takes longer to process Python than JavaScript. This is due to the additional compilation steps.
 
-### File system and HTTP requests
+## File system and HTTP requests
 
-You can't access the file system or make HTTP requests using Python. Use the following nodes instead:
+You can't access the file system or make HTTP requests. Use the following nodes instead:
 
 * [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) 
 * [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/)

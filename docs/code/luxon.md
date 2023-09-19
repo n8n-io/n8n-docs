@@ -39,6 +39,13 @@ Note that these variables can return different time formats when cast as a strin
 	// For example "Today's date is 1646834498755"
 	```
 
+## Date and time behavior in n8n
+
+Be aware of the following:
+
+* In a workflow, n8n converts dates and times to strings between nodes. Keep this in mind when doing arithmetic on dates and times from other nodes.
+* With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
+
 ## Setting the timezone in n8n
 
 Luxon uses the n8n timezone. This value is either:
@@ -46,13 +53,6 @@ Luxon uses the n8n timezone. This value is either:
 * Default: `America/New York`
 * A custom timezone for your n8n instance, set using the `GENERIC_TIMEZONE` environment variable.
 * A custom timezone for an individual workflow, configured in workflow settings.
-
-## Date and time behavior in n8n
-
-Be aware of the following:
-
-* In a workflow, n8n converts dates and times to strings between nodes. Keep this in mind when doing arithmetic on dates and times from other nodes.
-* With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
 
 ## Common tasks
 

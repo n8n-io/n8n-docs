@@ -73,4 +73,4 @@ Refer to [methods and variables](/code-examples/methods-variables-reference/) fo
 
 ## Use AI in the Code node
 
---8<-- "_snippets/code-examples/ai-how-to.md"
+--8<-- "_snippets/code/ai-how-to.md"

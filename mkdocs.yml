@@ -154,7 +154,7 @@ nav:
     - Flow logic:
       - flow-logic/index.md
       - Splitting with conditionals: flow-logic/splitting.md
-      - Merging: flow-logic/merging.md
+      - Merging data: flow-logic/merging.md
       - Looping: flow-logic/looping.md
       - Waiting: flow-logic/waiting.md
       - Sub-workflows: flow-logic/subworkflows.md

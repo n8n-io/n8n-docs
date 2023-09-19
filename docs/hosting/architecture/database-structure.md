@@ -21,11 +21,11 @@ These are the tables n8n creates during setup.
 
 ### auth_identity
 
-Stores details of external authentication providers when using [SAML](/user-management/saml/). [TODO - confirm]
+Stores details of external authentication providers when using [SAML](/user-management/saml/).
 
 ### auth_provider_sync_history
 
-Stores the history of a SAML connection. [TODO - confirm]
+Stores the history of a SAML connection.
 
 ### credentials_entity
 
@@ -39,7 +39,7 @@ Contains the destination configurations for [Log streaming](/log-streaming/).
 
 ### execution_data
 
-Links executions to workflow data. [TODO - confirm]
+Contains the workflow at time of running, and the execution data.
 
 ### execution_entity
 
@@ -47,7 +47,7 @@ Stores all saved workflow executions. Workflow settings can affect which executi
 
 ### execution_metadata
 
-Stores execution IDs.
+Stores [Custom executions data](/workflows/executions/custom-executions-data/).
 
 ### installed_nodes
 
@@ -91,7 +91,7 @@ Contains user data.
 
 ### variables
 
-Store [variables](/variables/). [TODO - confirm]
+Store [variables](/variables/).
 
 ### webhook_entity
 
@@ -103,11 +103,11 @@ Your n8n instance's saved workflows.
 
 ### workflow_history
 
-Store previous versions of workflows. [TODO - confirm]
+Store previous versions of workflows.
 
 ### workflow_statistics
 
-[TODO]
+Counts workflow IDs and their status.
 
 ### workflows_tags
 

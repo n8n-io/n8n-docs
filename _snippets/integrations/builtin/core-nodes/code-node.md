@@ -70,3 +70,7 @@ n8n includes built-in methods and variables. These provide support for:
 Refer to [methods and variables](/code-examples/methods-variables-reference/) for more information.
 
 
+
+## Use AI in the Code node
+
+--8<-- "_snippets/code-examples/ai-how-to.md"

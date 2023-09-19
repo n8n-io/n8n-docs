@@ -6,8 +6,7 @@ contentType: howto
 # Credential sharing
 
 !!! info "Feature availability"
-		* Available on some Cloud plans, and paid self-hosted plans.
-		* Requires [User management](/user-management/).
+		Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
 

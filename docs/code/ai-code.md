@@ -1,10 +1,10 @@
 ---
-title: Generate code with ChatGPT
+title: AI coding with ChatGPT
 description: Use ChatGPT to generate code in the Code node.
 contentType: explanation
 ---
 
-# Generate code with ChatGPT
+# AI coding with ChatGPT
 
 !!! info "Experimental feature with limited availability"
 	As an experimental feature, n8n is gradually rolling this out on Cloud from version 1.3.0. If you don't see the feature when you first upgrade to 1.3.0, please be patient: it's coming soon.  
@@ -13,7 +13,7 @@ contentType: explanation
 
 ## Use AI in the Code node
 
---8<-- "_snippets/code-examples/ai-how-to.md"
+--8<-- "_snippets/code/ai-how-to.md"
 
 ## Usage limits
 
@@ -44,7 +44,7 @@ Some general tips:
 
 And some n8n-specific guidance:
 
-* Think about the input data: make sure ChatGPT knows which pieces of the data you want to access, and what the incoming data represents. You may need to tell ChatGPT about the availability of n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/).
+* Think about the input data: make sure ChatGPT knows which pieces of the data you want to access, and what the incoming data represents. You may need to tell ChatGPT about the availability of n8n's [Built-in methods and variables](/code/builtin/).
 * Declare interactions between nodes: if your logic involves data from multiple nodes, specify how they should interact. "Merge the output of 'Node A' with 'Node B' based on the 'userID' property". if you prefer data to come from certain nodes or to ignore others, be clear: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
 * Ensure the output is compatible with n8n. Refer to [Data structure](/data/data-structure/) for more information on the data structure n8n requires.
 
@@ -156,7 +156,7 @@ return [{ json: { slackMessage } }];
 
 If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
 
-!["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](/_images/code-examples/ai-code/reference-data-dot-notation.png)
+!["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](/_images/code/ai-code/reference-data-dot-notation.png)
 
 To try the example yourself, [download the example workflow](/_workflows/ai-code/reference-incoming-data-explicitly.json) and import it into n8n.
 
@@ -189,4 +189,4 @@ Pluralsight offer a short guide on [How to use ChatGPT to write code](https://ww
 
 ## Fixing the code
 
-The AI-generated code may work without any changes, but you may have to edit it. You need to be aware of n8n's [Data structure](/data/data-structure/). You may also find n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/) useful.
+The AI-generated code may work without any changes, but you may have to edit it. You need to be aware of n8n's [Data structure](/data/data-structure/). You may also find n8n's [Built-in methods and variables](/code/builtin/) useful.

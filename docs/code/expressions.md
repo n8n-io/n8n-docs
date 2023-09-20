@@ -2,7 +2,7 @@
 contentType: howto
 ---
 
-# Understand expressions
+# Expressions
 
 Expressions allow you to set node parameters dynamically based on data from:
 
@@ -12,7 +12,7 @@ Expressions allow you to set node parameters dynamically based on data from:
 
 You can execute JavaScript within an expression. 
 
-n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) and [data transformation functions](/code-examples/expressions/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with [custom methods and variables](/code/builtin/) and [data transformation functions](/code/builtin/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
 
 n8n supports two libraries:
 

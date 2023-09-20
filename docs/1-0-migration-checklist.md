@@ -24,7 +24,7 @@ From n8n 1.0 onwards, releases will follow the pattern MAJOR.MINOR.PATCH. Versio
 
 ### Python support in the Code node
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code-examples/javascript-functions/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 [PR #4295](https://github.com/n8n-io/n8n/pull/4295){:target=_blank .external link}, [PR #6209](https://github.com/n8n-io/n8n/pull/6209){:target=_blank .external link}
 
@@ -111,7 +111,7 @@ n8n provides various transformation functions that operate on dates. These funct
 
 To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/){:target=_blank .external link}.
 
-For more information about date transformation functions, please refer to the [official documentation](/code-examples/expressions/data-transformation-functions/dates/).
+For more information about date transformation functions, please refer to the [official documentation](/code/builtin/data-transformation-functions/dates/).
 
 [PR #6435](https://github.com/n8n-io/n8n/pull/6435){:target=_blank .external link}
 

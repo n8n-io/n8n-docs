@@ -76,7 +76,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
     This generates a date in the correct format, seven days before the current date.
 
     !!! note "Date and time in n8n"
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code-examples/expressions/luxon/). 
+        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/luxon/). 
 
 7. Close the **Edit Expression** modal to return to the NASA node.
 8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.

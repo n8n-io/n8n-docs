@@ -37,7 +37,7 @@ It covers everything from setup to usage and development. It is a work in progre
 
     See an overview of n8n's developer resources.
 
-    [:octicons-arrow-right-24: Code in n8n](/code-examples/)    
+    [:octicons-arrow-right-24: Code in n8n](/code/)    
 </div>
 
 ## About n8n

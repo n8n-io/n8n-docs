@@ -594,7 +594,7 @@ nav:
         - Strings: code/builtin/data-transformation-functions/strings.md
     - Handling dates: code/luxon.md  
     - Query JSON with JMESPath: code/jmespath.md
-    - AI coding with ChatGPT: code/ai-code.md
+    - AI coding: code/ai-code.md
     - Cookbook:
       - code/cookbook/index.md
       - Built-in methods and variables examples:

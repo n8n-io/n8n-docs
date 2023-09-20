@@ -237,6 +237,12 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `N8N_AUTH_EXCLUDE_ENDPOINTS` | String | - | Exclude endpoints from authentication checks. Provide multiple endpoints as a colon-seperated list ("`:`"). The endpoints must not start with a forward slash ("`/`"). |
 | `N8N_BLOCK_ENV_ACCESS_IN_NODE` | Boolean | `false` | Whether to allow users to access environment variables in expressions and the Code node (false) or not (true). |
 
+## Source control
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](/source-control-environments/setup/). |
+
 
 ## Timezone and localization
 

@@ -6,6 +6,8 @@ hide:
 
 # Welcome
 
+[TODO: a change!]
+
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](http://faircode.io) licensed node-based workflow automation tool.
 
 It covers everything from setup to usage and development. It is a work in progress and all [contributions](/contributing/) are welcome.

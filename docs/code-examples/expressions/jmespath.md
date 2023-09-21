@@ -181,8 +181,6 @@ Use multiselect list to get the first and last names and create new lists contai
 
 ### An alternative to arrow functions
 
-You can't use arrow functions in expressions. This means you can't easily do things like looking for an item with a specific key.
-
 For example, generate some input data by returning the below code from the Code node:
 
 ```js
@@ -217,19 +215,6 @@ return[
 ```
 
 You could do a search like "find the item with the name Lenovo and tell me their category ID."
-
-A standard JavaScript arrow function doesn't work:
-
-```js
-/* 
-This expression searches for an item with a key "Lenovo"
-in the output of the Code node
-It doesn't work in the expressions editor 
-*/
-{{ $("Code").all().filter((item) => item.json.name === 'Lenovo') }}
-```
-
-JMESPath provides a way round this:
 
 ```js
 {{ $jmespath($("Code").all(), "[?json.name=='Lenovo'].json.category_id") }}

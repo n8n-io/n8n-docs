@@ -12,12 +12,12 @@ Expressions allow you to set node parameters dynamically based on data from:
 
 You can execute JavaScript within an expression. 
 
-n8n uses the [riot-tmpl](https://github.com/riot/tmpl) templating language, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) and [data transformation functions](/code-examples/expressions/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) and [data transformation functions](/code-examples/expressions/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
 
 n8n supports two libraries:
 
-- [Luxon](https://github.com/moment/luxon/), for working with data and time.
-- [JMESPath](https://jmespath.org/), for querying JSON.
+- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with data and time.
+- [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
 
 !!! note "Data in n8n"
 	When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/) for more information on working with data in your workflows.

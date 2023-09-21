@@ -204,6 +204,16 @@ nav:
     - Variables: variables.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
+    - LangChain:
+        - langchain/index.md
+        - How to access this feature: langchain/access-langchain.md
+        - AI and LangChain learning resources: langchain/learning-resources.md
+        - Langchain in n8n:
+          - langchain/ai-n8n/index.md
+          - AI nodes: langchain/ai-n8n/nodes-list.md
+          - How n8n represents LangChain concepts: langchain/ai-n8n/concepts.md
+        - Examples: 
+          - langchain/examples/index.md
     - Privacy and security:
         - privacy-security/index.md
         - Privacy: privacy-security/privacy.md
@@ -232,6 +242,7 @@ nav:
         - integrations/builtin/credentials/airtable.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
+        - integrations/builtin/credentials/anthropicai.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
         - integrations/builtin/credentials/auth0management.md
@@ -265,6 +276,7 @@ nav:
         - integrations/builtin/credentials/cloudflare.md
         - integrations/builtin/credentials/cockpit.md
         - integrations/builtin/credentials/coda.md
+        - integrations/builtin/credentials/cohere.md
         - integrations/builtin/credentials/contentful.md
         - integrations/builtin/credentials/convertkit.md
         - integrations/builtin/credentials/copper.md
@@ -323,6 +335,7 @@ nav:
         - integrations/builtin/credentials/homeassistant.md
         - integrations/builtin/credentials/httprequest.md
         - integrations/builtin/credentials/hubspot.md
+        - integrations/builtin/credentials/huggingface.md
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
         - integrations/builtin/credentials/hybridanalysis.md
@@ -370,6 +383,7 @@ nav:
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
         - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/motorhead.md
         - integrations/builtin/credentials/mqtt.md
         - integrations/builtin/credentials/msg91.md
         - integrations/builtin/credentials/mysql.md
@@ -381,6 +395,7 @@ nav:
         - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/okta.md
+        - integrations/builtin/credentials/ollama.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md
@@ -395,6 +410,7 @@ nav:
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
         - integrations/builtin/credentials/pipedrive.md
+        - integrations/builtin/credentials/pinecone.md
         - integrations/builtin/credentials/plivo.md
         - integrations/builtin/credentials/postgres.md
         - integrations/builtin/credentials/posthog.md
@@ -426,6 +442,7 @@ nav:
         - integrations/builtin/credentials/sendgrid.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md
+        - integrations/builtin/credentials/serp.md
         - integrations/builtin/credentials/servicenow.md
         - integrations/builtin/credentials/shopify.md
         - integrations/builtin/credentials/shuffler.md
@@ -439,7 +456,7 @@ nav:
         - integrations/builtin/credentials/ssh.md
         - integrations/builtin/credentials/stackby.md
         - integrations/builtin/credentials/storyblok.md
-        - integrations/builtin/credentials/strapi.md
+        - integrations/builtin/credentials/str.md
         - integrations/builtin/credentials/strava.md
         - integrations/builtin/credentials/stripe.md
         - integrations/builtin/credentials/supabase.md
@@ -476,14 +493,17 @@ nav:
         - integrations/builtin/credentials/wekan.md
         - integrations/builtin/credentials/whatsapp.md
         - integrations/builtin/credentials/wise.md
+        - integrations/builtin/credentials/wolframalpha.md
         - integrations/builtin/credentials/woocommerce.md
         - integrations/builtin/credentials/wordpress.md
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
         - integrations/builtin/credentials/zammad.md
         - integrations/builtin/credentials/zendesk.md
+        - integrations/builtin/credentials/zep.md
         - integrations/builtin/credentials/zoho.md
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md

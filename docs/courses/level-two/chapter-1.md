@@ -135,7 +135,7 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 ## Referencing node data with the Code node
 
-Just like you can use [expressions](/code-examples/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code-examples/methods-variables-reference/) in the Code node.
+Just like you can use [expressions](/code/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/) in the Code node.
 
 ### Exercise
 

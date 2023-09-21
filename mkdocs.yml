@@ -173,42 +173,6 @@ nav:
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
       - Binary data: data/binary-data.md
-    - Code in n8n:
-      - code-examples/index.md
-      - Built in methods and variables reference: code-examples/methods-variables-reference.md
-      - Built-in methods and variables examples: 
-        - code-examples/methods-variables-examples/index.md
-        - evaluateExpression: code-examples/methods-variables-examples/evaluate-expression.md
-        - execution: code-examples/methods-variables-examples/execution.md
-        - getWorkflowStaticData: code-examples/methods-variables-examples/get-workflow-static-data.md
-        - (node-name).item: code-examples/methods-variables-examples/node.md
-        - (node-name).all: code-examples/methods-variables-examples/all.md
-        - runIndex: code-examples/methods-variables-examples/run-index.md
-        - vars: code-examples/methods-variables-examples/vars.md
-        - workflow: code-examples/methods-variables-examples/workflow.md
-      - Expressions:
-        - code-examples/expressions/index.md
-        - Understand expressions: code-examples/expressions/understand-expressions.md
-        - Date and time with Luxon: code-examples/expressions/luxon.md
-        - JSON with JMESPath: code-examples/expressions/jmespath.md
-        - Check incoming data: code-examples/expressions/check-incoming-data.md
-        - Data transformation functions: 
-          - code-examples/expressions/data-transformation-functions/index.md
-          - Arrays: code-examples/expressions/data-transformation-functions/arrays.md
-          - Dates: code-examples/expressions/data-transformation-functions/dates.md
-          - Numbers: code-examples/expressions/data-transformation-functions/numbers.md
-          - Objects: code-examples/expressions/data-transformation-functions/objects.md
-          - Strings: code-examples/expressions/data-transformation-functions/strings.md
-      - JavaScript:
-        - code-examples/javascript-functions/index.md
-        - Code node: code-examples/javascript-functions/code-node.md
-        - Date and time with Luxon: code-examples/javascript-functions/luxon.md
-        - JSON with JMESPath: code-examples/javascript-functions/jmespath.md
-        - Get number of items returned by last node: code-examples/javascript-functions/number-items-last-node.md
-        - Split binary file data into individual items: code-examples/javascript-functions/split-binary-file-data.md
-        - Get the binary data buffer: code-examples/javascript-functions/get-binary-data-buffer.md
-        - Using console.log: code-examples/javascript-functions/console-log.md
-      - Generate code with ChatGPT: code-examples/ai-code.md
     - User management:
       - user-management/index.md
       - Cloud setup: user-management/cloud-setup.md
@@ -609,6 +573,45 @@ nav:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
     - CLI commands: hosting/cli-commands.md
+  - Code in n8n:
+    - code/index.md
+    - Expressions: code/expressions.md
+    - Code node: code/code-node.md
+    - Built in methods and variables: 
+      - code/builtin/index.md
+      - Current node input: code/builtin/current-node-input.md
+      - Output of other nodes: code/builtin/output-other-nodes.md
+      - Date and time: code/builtin/date-time.md
+      - JMESPath: code/builtin/jmespath.md
+      - n8n metadata: code/builtin/n8n-metadata.md
+      - Convenience methods: code/builtin/convenience.md
+      - Data transformation functions: 
+        - code/builtin/data-transformation-functions/index.md
+        - Arrays: code/builtin/data-transformation-functions/arrays.md
+        - Dates: code/builtin/data-transformation-functions/dates.md
+        - Numbers: code/builtin/data-transformation-functions/numbers.md
+        - Objects: code/builtin/data-transformation-functions/objects.md
+        - Strings: code/builtin/data-transformation-functions/strings.md
+    - Handling dates: code/luxon.md  
+    - Query JSON with JMESPath: code/jmespath.md
+    - AI coding: code/ai-code.md
+    - Cookbook:
+      - code/cookbook/index.md
+      - Built-in methods and variables examples:
+        - code/cookbook/builtin/index.md
+        - execution: code/cookbook/builtin/execution.md
+        - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+        - (node-name).all: code/cookbook/builtin/all.md
+        - vars: code/cookbook/builtin/vars.md
+      - Expressions:
+        - code/cookbook/expressions/index.md
+        - Check incoming data: code/cookbook/expressions/check-incoming-data.md
+      - Code node:
+        - code/cookbook/code-node/index.md
+        - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
+        - Split binary file data into individual items: code/cookbook/code-node/split-binary-file-data.md
+        - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
+        - Using console.log: code/cookbook/code-node/console-log.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

@@ -25,7 +25,7 @@ View [example workflows and related content](https://n8n.io/integrations/html/){
 
 ## Generate HTML template
 
-Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code-examples/) in the template, including n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/)
+Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/)
 
 You can include:
 

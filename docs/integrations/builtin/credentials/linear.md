@@ -13,11 +13,17 @@ You can use these credentials to authenticate the following nodes with Linear.
 
 ## Prerequisites
 
-Create a [Linear](https://linear.app/) account.
+Create a [Linear](https://linear.app/){:target=_blank .external-link} account.
 
-## Using the Linear API
+## Using OAuth
+1. Open the [Linear API settings](https://linear.app/settings/api){:target=_blank .external-link}.
+2. Click on the **Create new** button under **OAuth Applications**.
+3. Fill out the fields as required.
+4. Copy the **Client ID** and **Client Secret** into the the credentials screen in n8n. 
+ 
+## Using an API Key
 
-1. Open the [Linear API settings](https://linear.app/settings/api).
+1. Open the [Linear API settings](https://linear.app/settings/api){:target=_blank .external-link}.
 2. Click on the **Create key** button.
 3. Copy the key into **API Key** field of the credentials screen in n8n.
 

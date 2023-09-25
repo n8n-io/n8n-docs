@@ -1,20 +1,18 @@
 ---
-title: _Name_ credentials
-description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
+title: Anthropic credentials
+description: Documentation for the Anthropic credentials. Use these credentials to authenticate Anthropic in n8n, a workflow automation platform.
 ---
 
-# _Name_ credentials
+# Anthropic credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* _List of apps_
-* _That use these credentials_
+* [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatanthropic/)
 
 ## Prerequisites
 
-_Include info on services they need to sign up for_
+You need to request access to Claude from Anthropic, and generate an API key.
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api){:target=_blank .external-link} for more information about the service.

@@ -10,7 +10,7 @@ The Retrieval QA Chain node allows you to answer a query based on document conte
 On this page, you'll find a list of operations the Retrieval QA Chain node supports, and links to more resources.
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain's integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 	
 ## Query
 This is the prompt that the model will use.

@@ -209,8 +209,6 @@ nav:
         - Access LangChain in n8n: langchain/access-langchain.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain in n8n: langchain/langchain-n8n.md
-        - Examples: 
-          - langchain/examples/index.md
     - Privacy and security:
         - privacy-security/index.md
         - Privacy: privacy-security/privacy.md

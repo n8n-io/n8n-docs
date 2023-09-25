@@ -1,1 +1,1 @@
-View the [LangChain Overview](/langchain)
+View n8n's [LangChain ](/langchain/) documentation.

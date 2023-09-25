@@ -13,11 +13,15 @@ description: How to get the n8n version that includes LangChain
 
 Try out LangChain in n8n by fetching the Docker image:
 
+[TODO: change branch name]
+
 ```sh
 docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n:PR-6998-ai-tool-creation
 ```
 
 If using data volumes:
+
+[TODO: change branch name]
 
 ```sh
 docker volume create n8n_data

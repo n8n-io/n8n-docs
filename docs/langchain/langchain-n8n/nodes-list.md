@@ -9,6 +9,7 @@ description: Which n8n nodes relate to LangChain.
 These are the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
 [TODO: this list is very incomplete. Check in with Jan on Friday latest for the definitive list]
+[TODO: this list structure probably needs to change as the UI will likely change before release]
 
 ## Trigger nodes
 
@@ -23,7 +24,7 @@ These are the LangChain-focused nodes in n8n. You can use any n8n node in a work
 * [Ollama](/integrations/builtin/credentials/ollama/)
 * [Pinecone](/integrations/builtin/credentials/pinecone/)
 * [Serp](/integrations/builtin/credentials/serp/)
-* [WolframAlpha](/integrations/builtin/credentials/wolframalpha/)
+* [Wolfram|Alpha](/integrations/builtin/credentials/wolframalpha/)
 * [Xata](/integrations/builtin/credentials/xata/)
 * [Zep](/integrations/builtin/credentials/zep/)
 
@@ -57,15 +58,21 @@ Each root node can have one or more sub-nodes attached to it.
 
 #### Document loaders
 
+Document loaders add data to your chain.
+
 * [Binary Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentbinaryinputloader/)
 * [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentgithubloader/)
 * [JSON Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentjsoninputloader/)
 
 #### Embeddings
 
+> Embeddings capture the "relatedness" of text, images, video, or other types of information. ([source](https://supabase.com/docs/guides/ai/concepts){:target=_blank .external-link})
+
 [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.embeddingsopenai/)
 
 #### Language models
+
+AI models are programs that analyze datasets. They're the key element of working with AI.
 
 * [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatanthropic/)
 * [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatollama/)
@@ -73,7 +80,7 @@ Each root node can have one or more sub-nodes attached to it.
 * [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmcohere/)
 * [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmhuggingfaceinference/)
 * [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmollama/)
-* [Open AI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmopenai/)
+* [OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmopenai/)
 
 #### Memory
 
@@ -91,6 +98,8 @@ Each root node can have one or more sub-nodes attached to it.
 * [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparserstructured/)
 
 #### Retrievers
+
+Retrievers are the interface used to fetch
 
 [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.retrievervectorstore/)
 
@@ -110,6 +119,8 @@ Each root node can have one or more sub-nodes attached to it.
 * [Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolworkflow/)
 
 #### Vector stores
+
+Vectore stores are also known as vector databases. In AI, they're used for indexing
 
 * [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.inmemoryvectorstore/)
 * [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorepineconeinsert/)

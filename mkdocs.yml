@@ -210,7 +210,7 @@ nav:
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain in n8n:
           - langchain/langchain-n8n/index.md
-          - AI nodes: langchain/langchain-n8n/nodes-list.md
+          - LangChain nodes: langchain/langchain-n8n/nodes-list.md
           - How n8n represents LangChain concepts: langchain/langchain-n8n/concepts.md
         - Examples: 
           - langchain/examples/index.md
@@ -508,13 +508,10 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
-      - Cluster nodes:
+      - Cluster nodes: 
         - integrations/builtin/cluster-nodes/index.md
-        - Root nodes:
-          - integrations/builtin/cluster-nodes/root-nodes/index.md
-        - Sub-nodes: 
-          - integrations/builtin/cluster-nodes/sub-nodes/index.md
-        - Credentials: integrations/builtin/cluster-nodes/credentials/
+        - Root nodes: integrations/builtin/cluster-nodes/root-nodes/
+        - Sub-nodes: integrations/builtin/cluster-nodes/sub-nodes/
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - integrations/community-nodes/index.md

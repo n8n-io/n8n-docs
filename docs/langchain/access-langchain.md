@@ -29,7 +29,7 @@ Refer to [Installation | Docker](/hosting/installation/docker/) for more informa
 
 ## Cloud
 
-Go to [Try AI](app.n8n.cloud/try-ai){:target=_blank .external-link}.
+Go to [Try AI](https://app.n8n.cloud/try-ai){:target=_blank .external-link}.
 
 You need to create a new account. This is separate to your existing n8n Cloud account.
 

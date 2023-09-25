@@ -1,0 +1,1 @@
+Cluster nodes are node groups that work together to provide functionality in an n8n workflow. Instead of using a single node, you use a root node and one or more sub-nodes. This allows extensive configuration of node functionality.

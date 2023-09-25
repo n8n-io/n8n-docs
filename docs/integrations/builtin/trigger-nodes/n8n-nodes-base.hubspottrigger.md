@@ -38,6 +38,10 @@ contentType: integration
 	* Created
 	* Deleted
 	* Property changed
+* Ticket
+	* Created
+	* Deleted
+	* Property changed 
 
 ## Related resources
 

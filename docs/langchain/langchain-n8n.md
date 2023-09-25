@@ -1,12 +1,14 @@
 ---
-contentType: overview
-title: LangChain nodes
-description: Which n8n nodes relate to LangChain.
+contentType: explanation
+title: LangChain in n8n
+description: How LangChain concepts map to n8n, and which n8n nodes to use.
 ---
 
-# LangChain nodes
+# LangChain in n8n
 
-These are the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
+This page explains how LangChain concepts and features map to n8n nodes.
+
+This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
 [TODO: this list is very incomplete. Check in with Jan on Friday latest for the definitive list]
 [TODO: this list structure probably needs to change as the UI will likely change before release]

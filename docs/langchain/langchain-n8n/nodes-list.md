@@ -8,6 +8,8 @@ description: Which n8n nodes relate to LangChain.
 
 These are the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
+[TODO: this list is very incomplete. Check in with Jan on Friday latest for the definitive list]
+
 ## Trigger nodes
 
 [On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-base.manualchattrigger/)

@@ -10,7 +10,9 @@ The LLM chain node allows you to set the prompt that the model will use along wi
 On this page, you'll find a list of operations the LLM Chain node supports, and links to more resources.
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Langchain examples](/langchain/examples/) page.
+	For usage examples and templates to help you get started, refer to n8n's [LangChain's integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+	
+## Node parameters
 
 ## Prompt
 This is the prompt that the model will use.
@@ -28,6 +30,6 @@ There are two modes:
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/chainLlm/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

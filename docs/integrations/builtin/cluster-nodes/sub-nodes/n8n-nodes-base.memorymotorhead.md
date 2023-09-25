@@ -15,7 +15,7 @@ On this page, you'll find a list of operations the _Name_ node supports, and lin
     You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
+	For usage examples and templates to help you get started, refer to n8n's [LangChain's integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
@@ -24,6 +24,6 @@ On this page, you'll find a list of operations the _Name_ node supports, and lin
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.

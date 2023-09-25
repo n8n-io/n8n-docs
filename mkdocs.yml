@@ -209,9 +209,9 @@ nav:
         - How to access this feature: langchain/access-langchain.md
         - AI and LangChain learning resources: langchain/learning-resources.md
         - Langchain in n8n:
-          - langchain/ai-n8n/index.md
-          - AI nodes: langchain/ai-n8n/nodes-list.md
-          - How n8n represents LangChain concepts: langchain/ai-n8n/concepts.md
+          - langchain/langchain-n8n/index.md
+          - AI nodes: langchain/langchain-n8n/nodes-list.md
+          - How n8n represents LangChain concepts: langchain/langchain-n8n/concepts.md
         - Examples: 
           - langchain/examples/index.md
     - Privacy and security:

@@ -38,3 +38,11 @@ Go to [Try AI](app.n8n.cloud/try-ai){:target=_blank .external-link}.
 You need to create a new account. This is separate to your existing n8n Cloud account.
 
 n8n offers a 14-day free trial to try AI.
+
+## Send feedback, join the conversation, and get help
+
+Send feedback to ai@n8n.io.
+
+Workshops and discussion of LangChain in n8n are on [Discord](https://discord.gg/bAt54txhHg){:target=_blank .external-link}. Join to share your projects and discuss ideas with the community.
+
+Support is available on the [forum](https://community.n8n.io/){:target=_blank .external-link}.

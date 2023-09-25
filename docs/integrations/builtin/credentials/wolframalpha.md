@@ -18,3 +18,5 @@ _Include info on services they need to sign up for_
 
 <!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

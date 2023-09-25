@@ -14,14 +14,14 @@ On this page, you'll find a list of operations the LLM Chain node supports, and 
 	
 ## Node parameters
 
-## Prompt
+### Prompt
 This is the prompt that the model will use.
 
 ```
 Tell me a joke about {{ $json.input }}
 ```
 	
-## Choose a mode
+### Choose a mode
 
 There are two modes:
 

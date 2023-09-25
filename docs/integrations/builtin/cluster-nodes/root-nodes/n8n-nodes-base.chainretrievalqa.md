@@ -12,14 +12,17 @@ On this page, you'll find a list of operations the Retrieval QA Chain node suppo
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 	
-## Query
+## Node parameters
+
+### Query
+
 This is the prompt that the model will use.
 
 ```
 What can you tell me about {{ $json.input }}
 ```
 	
-## Choose a mode
+### Choose a mode
 
 There are two modes:
 

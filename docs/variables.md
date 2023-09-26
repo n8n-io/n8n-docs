@@ -21,7 +21,7 @@ Variables allow you to store and reuse values in n8n workflows.
 To create a new variable:
 
 1. On the **Variables** page, select **Add Variable**.
-3. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 255 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
+3. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 220 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
 4. Select **Save**. The variable is now available for use in all workflows in the n8n instance.
 
 ## Edit and delete variables

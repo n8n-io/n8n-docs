@@ -13,9 +13,7 @@ n8n provides nodes for building with LangChain.
 
 * [Access LangChain in n8n](/langchain/access-langchain/): how to get the n8n version that includes LangChain.
 * [Learning resources](/langchain/learning-resources/): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.
-* [LangChain in n8n](/langchain/langchain-n8n/): how n8n represents LangChain concepts and features.
-	* [Concepts](/langchain/langchain-n8n/concepts/)
-	* [Nodes list](/langchain/langchain-n8n/nodes-list/)
+* [LangChain concepts and features in n8n](/langchain/langchain-n8n/): how n8n represents LangChain concepts and features.
 
 ## Related resources
 

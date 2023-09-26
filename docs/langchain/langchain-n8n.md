@@ -125,7 +125,7 @@ Retrievers are the interface used to fetch
 
 #### Vector stores
 
-Vectore stores are also known as vector databases. In AI, they're used for indexing
+Vector stores are also known as vector databases. In AI, they're used for indexing
 
 * [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.inmemoryvectorstore/)
 * [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorepineconeinsert/)

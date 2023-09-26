@@ -226,6 +226,10 @@ nav:
       - Core nodes: integrations/builtin/core-nodes/
       - Actions: integrations/builtin/app-nodes/
       - Triggers: integrations/builtin/trigger-nodes/
+      - Cluster nodes: 
+        - integrations/builtin/cluster-nodes/index.md
+        - Root nodes: integrations/builtin/cluster-nodes/root-nodes/
+        - Sub-nodes: integrations/builtin/cluster-nodes/sub-nodes/
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -503,10 +507,6 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
-      - Cluster nodes: 
-        - integrations/builtin/cluster-nodes/index.md
-        - Root nodes: integrations/builtin/cluster-nodes/root-nodes/
-        - Sub-nodes: integrations/builtin/cluster-nodes/sub-nodes/
     - Custom API actions for existing nodes: integrations/custom-operations.md
     - Community nodes:
       - integrations/community-nodes/index.md

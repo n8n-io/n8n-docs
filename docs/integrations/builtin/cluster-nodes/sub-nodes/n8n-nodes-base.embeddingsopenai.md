@@ -10,7 +10,7 @@ The Embeddings OpenAI node allows you to generate embeddings for a given text.
 On this page, you'll find a list of operations the Embeddings OpenAI node supports, and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.

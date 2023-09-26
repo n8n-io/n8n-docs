@@ -1,10 +1,10 @@
 ---
 contentType: explanation
-title: LangChain concepts and features in n8n
+title: LangChain concepts in n8n
 description: How LangChain concepts map to n8n, and which n8n nodes to use.
 ---
 
-# LangChain concepts and features in n8n
+# LangChain concepts in n8n
 
 This page explains how LangChain concepts and features map to n8n nodes.
 

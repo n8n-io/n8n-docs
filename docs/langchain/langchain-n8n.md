@@ -1,10 +1,10 @@
 ---
 contentType: explanation
-title: LangChain in n8n
+title: LangChain concepts and features in n8n
 description: How LangChain concepts map to n8n, and which n8n nodes to use.
 ---
 
-# LangChain in n8n
+# LangChain concepts and features in n8n
 
 This page explains how LangChain concepts and features map to n8n nodes.
 
@@ -12,6 +12,9 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 [TODO: this list is very incomplete. Check in with Jan on Friday latest for the definitive list]
 [TODO: this list structure probably needs to change as the UI will likely change before release]
+
+!!! note "n8n implements LangChain"
+	This feature is n8n's implementation of LangChain. This means that n8n's nodes support what LangChain supports. Some of the services listed may have additional functionality, but if it isn't supported by LangChain, it also isn't supported by n8n. [TODO: rephrase this it's horrible]
 
 ## Trigger nodes
 

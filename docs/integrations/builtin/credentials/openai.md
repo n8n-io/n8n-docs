@@ -9,9 +9,9 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with OpenAI.
 
 - [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/)
-- [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatopenai)
-- [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.embeddingsopenai)
-- [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmopenai)
+- [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai)
+- [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai)
+- [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai)
 
 You need an OpenAI account. OpenAI uses API keys. Refer to their [Authentication documentation](https://beta.openai.com/docs/api-reference/authentication){:target=_blank .external-link} for guidance on getting your API key.
 

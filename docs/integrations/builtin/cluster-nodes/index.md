@@ -8,6 +8,7 @@ description: Understand cluster nodes in n8n, and browse the cluster nodes libra
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
 
+
 ## Root nodes
 
 Each cluster starts with one root node.

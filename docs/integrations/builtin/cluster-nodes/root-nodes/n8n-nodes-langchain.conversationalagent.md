@@ -5,7 +5,9 @@ description: Documentation for the Conversational Agent node in n8n, a workflow 
 
 # Conversational Agent
 
-Use this agent with the [On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/) node to interact with chat models. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+This agent is optimised for conversation, allowing it to chat with the user.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
 On this page, you'll find the node parameters for the Conversational Agent node, and links to more resources.
 

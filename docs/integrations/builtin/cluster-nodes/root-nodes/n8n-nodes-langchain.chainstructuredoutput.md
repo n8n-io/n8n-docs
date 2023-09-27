@@ -15,7 +15,7 @@ On this page, you'll find the node parameters for the Structured Output Chain no
 -->
 
 !!! note "Requires OpenAI functions"
-	This chain depends on OpenAI functions. You must connect the OpenAI model.
+	This chain depends on OpenAI functions. You must connect a supported OpenAI model.
 	
 ## Node parameters
 

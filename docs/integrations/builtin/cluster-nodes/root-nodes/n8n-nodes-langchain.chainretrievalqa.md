@@ -32,4 +32,7 @@ There are two modes:
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+
+Refer to [LangChain's documentation on Retrieval QA](https://js.langchain.com/docs/modules/chains/popular/vector_db_qa){:target=_blank .external-link} for more information about the service.
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

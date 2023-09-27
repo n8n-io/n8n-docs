@@ -24,4 +24,6 @@ On this page, you'll find a list of operations the GitHub Document Loader node s
 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

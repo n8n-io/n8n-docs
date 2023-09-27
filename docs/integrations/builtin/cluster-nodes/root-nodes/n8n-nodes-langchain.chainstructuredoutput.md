@@ -9,8 +9,10 @@ The Structured Output Chain node allows you to use OpenAI functions to output ob
 
 On this page, you'll find the node parameters for the Structured Output Chain node, and links to more resources.
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 
 !!! note "Requires OpenAI functions"
 	This chain depends on OpenAI functions. You must connect the OpenAI model.
@@ -94,7 +96,9 @@ Gives this result:
 
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChain's documentation on Structured Output with OpenAI functions](https://js.langchain.com/docs/modules/chains/popular/structured_output){:target=_blank .external-link} for more information about the service.
 

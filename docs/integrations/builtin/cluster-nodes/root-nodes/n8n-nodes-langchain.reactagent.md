@@ -1,28 +1,34 @@
 ---
-title: _Name_
-description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: ReAct Agent
+description: Documentation for the ReAct Agent node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# _Name_
+# ReAct Agent
 
-<!-- Briefly summarize the node. For example:
+The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and action) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
 
-The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
-
-On this page, you'll find the node parameters for the _Name_ node, and links to more resources.
-
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+On this page, you'll find the node parameters for the ReAct Agent node, and links to more resources.
 
 <!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 -->
+
+!!! note "No memory"
+	The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts, or simulate an ongoing conversation.
 	
 ## Node parameters
 
-* _Bullet list_
-* _Of available operations_.
+### Mode
+
+Choose whether to run the chain once, or for every input item. Select either:
+
+* Run Once for All Items
+* Run Once for Each Item
+
+### Text
+
+The input from the chat. This is the user's query, also known as the prompt.
 
 ## Related resources
 

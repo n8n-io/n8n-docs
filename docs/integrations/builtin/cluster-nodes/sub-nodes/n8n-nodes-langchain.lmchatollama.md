@@ -7,7 +7,7 @@ description: Documentation for the Chat Ollama node in n8n, a workflow automatio
 
 The Chat Ollama node allows you use local Llama 2 models with conversational agents.
 
-On this page, you'll find the node parameters for the  Chat Ollama node, and links to more resources.
+On this page, you'll find the node parameters for the Chat Ollama node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).

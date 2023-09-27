@@ -7,7 +7,7 @@ description: Documentation for the OpenAI node in n8n, a workflow automation pla
 
 The OpenAI node allows you to use OpenAI's models.
 
-On this page, you'll find the node parameters for the  OpenAI node, and links to more resources.
+On this page, you'll find the node parameters for the OpenAI node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).

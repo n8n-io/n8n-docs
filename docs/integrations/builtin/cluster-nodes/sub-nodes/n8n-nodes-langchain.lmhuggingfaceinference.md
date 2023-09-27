@@ -7,7 +7,7 @@ description: Documentation for the Hugging Face Inference node in n8n, a workflo
 
 The Hugging Face Inference node allows you to use Hugging Face's models.
 
-On this page, you'll find the node parameters for the  Hugging Face Inference node, and links to more resources.
+On this page, you'll find the node parameters for the Hugging Face Inference node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface/).

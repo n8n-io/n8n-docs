@@ -35,6 +35,13 @@ You need to create a new account. This is separate to your existing n8n Cloud ac
 
 n8n offers a 14-day free trial to try AI.
 
+## Browse the LangChain nodes
+
+1. Create a new workflow.
+1. Select **Add node** <span class="inline-image">![Add node icon](/_images/common-icons/nodes-panel.png)</span> to open the nodes panel. 
+1. Select **Advanced AI Nodes (LangChain)
+1. Explore the options. Refer to [LangChain concepts in n8n](/langchain/langchain-n8n/) for a list of available nodes, and how they relate to LangChain functionality.
+
 ## Send feedback, join the conversation, and get help
 
 Send feedback to ai@n8n.io.

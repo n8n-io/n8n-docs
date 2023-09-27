@@ -10,7 +10,7 @@ The Embeddings Google PaLM node allows you to generate embeddings for a given te
 On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/googlepalm/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/google/googlepalm/).
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.

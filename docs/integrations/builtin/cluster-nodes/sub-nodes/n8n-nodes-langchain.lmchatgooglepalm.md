@@ -30,6 +30,6 @@ On this page, you'll find the node parameters for the Google PaLM Chat Model nod
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 -->
 
-Refer to [LangChains's Google PaLM documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/google_palm){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Google PaLM documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/google_palm){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

@@ -11,6 +11,7 @@ This section contains:
 * [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service/): create an OAuth2 credential for a specific service node, such as the Gmail node.
 * [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic/): create an OAuth2 credential for use with [custom operations](/integrations/custom-operations/).
 * [Service Account](/integrations/builtin/credentials/google/service-account/): create a Service Account credential.
+* [Google PaLM](/integrations/builtin/credentials/google/googlepalm/): get your API key to work with Google PaLM nodes.
 
 
 ## OAuth2 and Service Account

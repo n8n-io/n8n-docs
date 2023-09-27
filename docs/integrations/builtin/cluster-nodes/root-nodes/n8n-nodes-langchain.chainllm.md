@@ -15,7 +15,8 @@ On this page, you'll find a list of operations the LLM Chain node supports, and 
 ## Node parameters
 
 ### Prompt
-This is the prompt that the model will use.
+
+This is the prompt that the model uses. For example:
 
 ```
 Tell me a joke about {{ $json.input }}
@@ -31,5 +32,7 @@ There are two modes:
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+
+Refer to [LangChain's documentation on LLM chains](https://js.langchain.com/docs/modules/chains/foundational/llm_chain){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

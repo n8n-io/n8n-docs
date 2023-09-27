@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes with GitHub.
 
 - [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/)
 - [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/)
-
+- [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader)
 
 ## Prerequisites
 

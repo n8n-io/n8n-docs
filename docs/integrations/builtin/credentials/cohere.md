@@ -7,7 +7,7 @@ description: Documentation for the Cohere credentials. Use these credentials to 
 
 You can use these credentials to authenticate the following nodes:
 
-* [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmcohere/)
+* [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere/)
 
 ## Prerequisites
 

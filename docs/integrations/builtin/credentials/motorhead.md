@@ -7,7 +7,7 @@ description: Documentation for the Motorhead credentials. Use these credentials 
 
 You can use these credentials to authenticate the following nodes:
 
-* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorymotorhead/)
+* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead/)
 
 ## Prerequisites
 

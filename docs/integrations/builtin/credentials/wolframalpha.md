@@ -7,7 +7,7 @@ description: Documentation for the Wolfram|Alpha credentials. Use these credenti
 
 You can use these credentials to authenticate the following nodes:
 
-* [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolwolframalpha/)
+* [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha/)
 
 ## Prerequisites
 

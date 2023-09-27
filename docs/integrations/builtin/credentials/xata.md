@@ -7,7 +7,7 @@ description: Documentation for the Xata credentials. Use these credentials to au
 
 You can use these credentials to authenticate the following nodes:
 
-* [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryxata/)
+* [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata/)
 
 ## Prerequisites
 

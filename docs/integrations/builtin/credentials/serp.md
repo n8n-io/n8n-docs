@@ -7,7 +7,7 @@ description: Documentation for the Serp credentials. Use these credentials to au
 
 You can use these credentials to authenticate the following nodes:
 
-* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolserp/)
+* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserp/)
 
 ## Prerequisites
 

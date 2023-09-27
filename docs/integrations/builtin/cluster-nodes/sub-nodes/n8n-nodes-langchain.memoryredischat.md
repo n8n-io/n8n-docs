@@ -24,6 +24,6 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 
-Refer to [LangChains's Redis Chat Memory documentation](https://js.langchain.com/docs/modules/memory/integrations/redis){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Redis Chat Memory documentation](https://js.langchain.com/docs/modules/memory/integrations/redis){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

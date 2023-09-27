@@ -9,8 +9,10 @@ The Window Buffer Memory node allows you to persist chat history in your workflo
 
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 	
 ## Node parameters
 
@@ -19,7 +21,9 @@ On this page, you'll find a list of operations the Window Buffer Memory node sup
 
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChain's Buffer Window Memory documentation](https://js.langchain.com/docs/modules/memory/how_to/buffer_window_memory){:target=_blank .external-link} for more information about the service.
 

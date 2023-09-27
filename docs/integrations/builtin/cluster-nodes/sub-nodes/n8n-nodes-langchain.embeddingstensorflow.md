@@ -9,12 +9,16 @@ The Embeddings TensorFlow node allows you to generate embeddings for a given tex
 
 On this page, you'll find the node parameters for the Embeddings TensorFlow node, and links to more resources.
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 	
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChains's TensorFlow embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/tensorflow){:target=_blank .external-link} for more information about the service.
 

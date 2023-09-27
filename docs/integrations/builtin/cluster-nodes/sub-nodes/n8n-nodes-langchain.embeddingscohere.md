@@ -12,8 +12,10 @@ On this page, you'll find the node parameters for the Embeddings Cohere node, an
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 	
 ## Node parameters
 
@@ -24,7 +26,9 @@ On this page, you'll find the node parameters for the Embeddings Cohere node, an
 
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/cohere){:target=_blank .external-link} for more information about the service.
 

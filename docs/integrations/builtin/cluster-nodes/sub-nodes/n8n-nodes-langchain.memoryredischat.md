@@ -12,8 +12,10 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 	
 ## Node parameters
 
@@ -22,7 +24,9 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChain's Redis Chat Memory documentation](https://js.langchain.com/docs/modules/memory/integrations/redis){:target=_blank .external-link} for more information about the service.
 

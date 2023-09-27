@@ -9,12 +9,11 @@ The Auto-fixing Output Parser node wraps another output parser, if the first one
 
 On this page, you'll find the node parameters for the Auto-fixing Output Parser node, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
-
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChain's Auto-fixing parser documentation](https://js.langchain.com/docs/modules/model_io/output_parsers/output_fixing_parser){:target=_blank .external-link} for more information about the service.
 

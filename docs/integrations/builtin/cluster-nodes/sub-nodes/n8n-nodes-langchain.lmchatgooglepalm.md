@@ -12,8 +12,10 @@ On this page, you'll find the node parameters for the Google PaLM Chat Model nod
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/google/googlepalm/).
 
+<!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
+-->
 	
 ## Node parameters
 
@@ -24,7 +26,9 @@ On this page, you'll find the node parameters for the Google PaLM Chat Model nod
 
 ## Related resources
 
+<!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
+-->
 
 Refer to [LangChains's Google PaLM documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/google_palm){:target=_blank .external-link} for more information about the service.
 

@@ -7,7 +7,7 @@ description: Documentation for the Chat Anthropic node in n8n, a workflow automa
 
 The Chat Anthropic node allows you to use Anthropic's Claude family of chat models with conversational agents.
 
-On this page, you'll find a list of operations the Chat Anthropic node supports, and links to more resources.
+On this page, you'll find the node parameters for the Chat Anthropic node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/chatanthropic/).

@@ -41,20 +41,33 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 Each cluster starts with one root node.
 
+#### Chains
+
+A chain is a series of LLMs, and related tools, linked together to support functionality that can't be provided by a single LLM alone.
+
+Available nodes:
+
+* [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainllm/)
+* [Structured Output Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainstructuredoutput/)
+* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainsummarization/)
+* [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainvectorstoreqa/)
+
+Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/chains/){:target=_blank .external-link}.
+
 #### Agents
+
+> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://js.langchain.com/docs/modules/agents/)
+
+Available nodes:
 
 * [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.conversationalagent/)
 * [OpenAI Functions Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.openaifunctionsagent/)
 * [ReAct Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.reactagent/)
 * [SQL Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.sqlagent/)
 
-#### Chains
+Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
 
-* [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainllm/)
-* [Retrieval QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainretrievalqa/)
-* [Structured Output Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainstructuredoutput/)
-* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainsummarization/)
-* [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainvectorstoreqa/)
+
 
 
 ### Sub-nodes
@@ -63,21 +76,21 @@ Each root node can have one or more sub-nodes attached to it.
 
 #### Document loaders
 
-Document loaders add data to your chain.
+Document loaders add data to your chain as documents. The data source can be a file or web service.
+
+Available nodes:
 
 * [Binary Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentbinaryinputloader/)
 * [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentgithubloader/)
 * [JSON Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentjsoninputloader/)
 
-#### Embeddings
-
-> Embeddings capture the "relatedness" of text, images, video, or other types of information. ([source](https://supabase.com/docs/guides/ai/concepts){:target=_blank .external-link})
-
-[Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.embeddingsopenai/)
+Learn more about [Document loaders in LangChain](https://js.langchain.com/docs/modules/data_connection/document_loaders/){:target=_blank .external-link}.
 
 #### Language models
 
-AI models are programs that analyze datasets. They're the key element of working with AI.
+LLMs (large language models) are programs that analyze datasets. They're the key element of working with AI.
+
+Available nodes:
 
 * [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatanthropic/)
 * [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatollama/)
@@ -87,7 +100,13 @@ AI models are programs that analyze datasets. They're the key element of working
 * [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmollama/)
 * [OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmopenai/)
 
+Learn more about [Language models in LangChain](https://js.langchain.com/docs/modules/model_io/models/){:target=_blank .external-link}.
+
 #### Memory
+
+Memory retains information about previous queries in a series of queries. For example, when a user interacts with a chat model, it's useful if your application can remember and call on the full conversation, not just the most recent query entered by the user.
+
+Available nodes:
 
 * [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorychatretriever/)
 * [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorymotorhead/)
@@ -96,25 +115,35 @@ AI models are programs that analyze datasets. They're the key element of working
 * [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryxata/)
 * [Zep](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryzep/)
 
+Learn more about [Memory in LangChain](https://js.langchain.com/docs/modules/memory/){:target=_blank .external-link}.
+
 #### Output parsers
+
+Output parsers take the text generated by an LLM and format it to match the structure you require.
+
+Available nodes:
 
 * [Auto-fixing Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparserautofixing/)
 * [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparseritemlist/)
 * [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparserstructured/)
 
-#### Retrievers
-
-Retrievers are the interface used to fetch
-
-[Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.retrievervectorstore/)
+Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/modules/model_io/output_parsers/){:target=_blank .external-link}.
 
 #### Text splitters
+
+Text splitters break down data (documents), making it easier for the LLM to process the information and return accurate results.
+
+Available nodes:
 
 * [Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplittercharactertextsplitter/)
 * [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplitterrecursivecharactertextsplitter/)
 * [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplittertokensplitter/)
 
+n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/api/text_splitter/){:target=_blank .external-link}.
+
 #### Tools
+
+Utility tools.
 
 * [Calculator](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolcalculator/)
 * [Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolcode/)
@@ -123,9 +152,20 @@ Retrievers are the interface used to fetch
 * [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolwolframalpha/)
 * [Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolworkflow/)
 
+#### Embeddings
+
+> Embeddings capture the "relatedness" of text, images, video, or other types of information. ([source](https://supabase.com/docs/guides/ai/concepts){:target=_blank .external-link})
+
+Available nodes:
+
+[Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.embeddingsopenai/)
+
+Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
+
+
 #### Vector stores
 
-Vector stores are also known as vector databases. In AI, they're used for indexing
+Vector stores store embedded data, and perform vector searches on it.
 
 * [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.inmemoryvectorstore/)
 * [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorepineconeinsert/)
@@ -134,3 +174,5 @@ Vector stores are also known as vector databases. In AI, they're used for indexi
 * [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstoresupabaseload/)
 * [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorezepinsert/)
 * [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorezepload/)
+
+Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.

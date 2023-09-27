@@ -7,7 +7,7 @@ description: Documentation for the Chat OpenAI node in n8n, a workflow automatio
 
 The Chat OpenAI node allows you to use OpenAI's chat models with conversational agents.
 
-On this page, you'll find a list of operations the Chat OpenAI node supports, and links to more resources.
+On this page, you'll find the node parameters for the Chat OpenAI node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).

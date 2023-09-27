@@ -9,7 +9,7 @@ description: Documentation for the _Name_ node in n8n, a workflow automation pla
 
 The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
 
-On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
+On this page, you'll find the node parameters for the _Name_ node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).

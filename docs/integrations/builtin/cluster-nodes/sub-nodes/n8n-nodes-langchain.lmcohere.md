@@ -7,7 +7,7 @@ description: Documentation for the Cohere node in n8n, a workflow automation pla
 
 The Cohere node allows you to use Cohere's models.
 
-On this page, you'll find a list of operations the Cohere node supports, and links to more resources.
+On this page, you'll find the node parameters for the Cohere node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).

@@ -7,7 +7,7 @@ description: Documentation for the GitHub Document Loader node in n8n, a workflo
 
 The GitHub Document Loader node allows you to load data from GitHub for vector stores or summarization.
 
-On this page, you'll find a list of operations the GitHub Document Loader node supports, and links to more resources.
+On this page, you'll find the node parameters for the  GitHub Document Loader node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/github/). This node doesn't support OAuth for authentication.

@@ -1,31 +1,31 @@
 ---
-title: _Name_
-description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Structured Output Chain
+description: Documentation for the Structured Output Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# _Name_
+# Structured Output Chain
 
-<!-- Briefly summarize the node. For example:
 
-The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
 
-On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
+The Structured Output Chain node allows you to use OpenAI functions to output objects that match a given format for any given input.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+On this page, you'll find the node parameters for the  Structured Output Chain node, and links to more resources.
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
-* _Bullet list_
-* _Of available operations_.
+### Prompt
+
+### Input Text
+
+### JSON Schema
 
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's documentation on Structured Output with OpenAI functions](https://js.langchain.com/docs/modules/chains/popular/structured_output){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

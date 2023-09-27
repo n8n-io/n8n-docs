@@ -7,7 +7,7 @@ description: Documentation for the Embeddings OpenAI node in n8n, a workflow aut
 
 The Embeddings OpenAI node allows you to generate embeddings for a given text.
 
-On this page, you'll find a list of operations the Embeddings OpenAI node supports, and links to more resources.
+On this page, you'll find the node parameters for the  Embeddings OpenAI node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).

@@ -7,7 +7,7 @@ description: Documentation for the LLM Chain node in n8n, a workflow automation 
 
 The LLM chain node allows you to set the prompt that the model will use along with setting an optional parser for the response.
 
-On this page, you'll find a list of operations the LLM Chain node supports, and links to more resources.
+On this page, you'll find the node parameters for the  LLM Chain node, and links to more resources.
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.

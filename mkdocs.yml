@@ -557,7 +557,7 @@ nav:
         - Isolating n8n: hosting/environment-variables/configuration-examples/isolation.md
     - Supported databases and settings: hosting/supported-databases-settings.md
     - User management: hosting/user-management-self-hosted.md
-    - External storage: hosting/external-storage/index.md
+    - External storage: hosting/external-storage.md
     - Security audit: hosting/security-audit.md
     - Logging and monitoring:
       - hosting/logging-monitoring/index.md

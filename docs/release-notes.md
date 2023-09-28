@@ -31,7 +31,7 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 ## n8n@1.9.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-09-25
+**Release date:** 2023-09-28
 
 This release contains new features, performance improvements, and bug fixes.
 

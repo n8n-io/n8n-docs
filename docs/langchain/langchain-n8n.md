@@ -180,3 +180,11 @@ Vector stores store embedded data, and perform vector searches on it.
 * [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorezepload/)
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
+
+#### Retrievers [TODO: verify section & section position]
+
+[TODO: add exact node name when known]
+* [context compression](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression/)
+* [multi](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery/)
+* [workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievern8nworkflow/)
+* [similarity](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieversimilarityccoretreshold/)

@@ -1,0 +1,2 @@
+!!! note "In version 1.9.0 we updated our templating language for expressions"
+    Should you run into any issues working with expressions on 1.9.0, we recommend switching back N8N_EXPRESSION_EVALUATOR to tmpl and reporting this issue on our [forums](https://community.n8n.io/) so we can review and fix.

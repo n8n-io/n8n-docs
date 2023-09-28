@@ -45,16 +45,6 @@ This releases replaces RiotTmpl, the templating language used in expressions, wi
 
 </div>
 
-<div class="n8n-new-features" markdown>
-
-#### External storage for binary data
-
-n8n can externally store binary data produced by workflow executions. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data. In the future, n8n will support external storage for other kinds of data in addition to binary data.
-
-This feature is available on Enterprise plans. Refer to [External storage](/hosting/external-storage/) for more information.
-
-</div>
-
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.8.2

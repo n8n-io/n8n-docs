@@ -1,18 +1,13 @@
 ---
-title: _Name_
-description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Code Tool
+description: Documentation for the Code Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# _Name_
+# Code Tool
 
-<!-- Briefly summarize the node. For example:
+The Code Tool node allows you to write code that an agent can run.
 
-The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
-
-On this page, you'll find the node parameters for the _Name_ node, and links to more resources.
-
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+On this page, you'll find the node parameters for the Code Tool node, and links to more resources.
 
 <!--
 !!! note "Examples and templates"
@@ -21,8 +16,23 @@ On this page, you'll find the node parameters for the _Name_ node, and links to 
 	
 ## Node parameters
 
-* _Bullet list_
-* _Of available operations_.
+### Name
+
+Give your custom code a name. It can't contain whitespace.
+
+### Description
+
+Give your custom code a description. This tells the agent when to use this tool. For example:
+
+> Call this tool to get a random color. The input should be a string with comma separated names of colors to exclude.
+
+### Language
+
+You can use JavaScript or Python.
+
+### JavaScript / Python box
+
+Write the code here.
 
 ## Related resources
 
@@ -30,6 +40,6 @@ On this page, you'll find the node parameters for the _Name_ node, and links to 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 -->
 
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+--8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

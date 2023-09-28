@@ -28,6 +28,17 @@ Options:
 
 The query to run on the data.
 
+### Options
+
+Use the options to refine the agent's behavior.
+
+* Ignored Tables
+* Include Sample Rows
+* Included Tables
+* Prefix Prompt
+* Suffix Prompt
+* Top K
+
 ## Related resources
 
 <!--

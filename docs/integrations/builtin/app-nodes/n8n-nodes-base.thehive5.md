@@ -16,10 +16,9 @@ On this page, you'll find a list of operations the TheHive node supports and lin
 !!! note "Credentials"
     Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5/) for guidance on setting up authentication. 
 
-<!--
 !!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive5/){:target="_blank" .external-link} list.
--->
+    For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive-5/){:target="_blank" .external-link} list.
+
 
 ## Operations
 

@@ -39,7 +39,7 @@ This must match the name of the output property in the workflow you're calling.
 
 ### Workflow Values
 
-[TODO: confirm with Jan]
+Set values to pass to the workflow you're calling.
 
 ## Related resources
 

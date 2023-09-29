@@ -5,7 +5,7 @@ description: Documentation for the SQL Agent node in n8n, a workflow automation 
 
 # SQL Agent
 
-The SQL Agent uses an SQL database as a data source. The agent builds an SQL query based on the natural language query in the prompt.
+The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
 
 On this page, you'll find the node parameters for the SQL Agent node, and links to more resources.
 

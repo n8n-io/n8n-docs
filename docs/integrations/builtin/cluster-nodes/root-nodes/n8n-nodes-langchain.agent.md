@@ -14,8 +14,6 @@ On this page, you'll find the node parameters for the Agent node, and links to m
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
 -->
 
-
-
 ## Conversational Agent Parameters
 
 This agent is optimised for conversation allowing it to chat with the user.
@@ -76,6 +74,8 @@ The input from the chat. This is the user's query, also known as the prompt.
 
 The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
 
+!!! note "Postgres and MySQL Agents"
+    If you are using Postgres or MySQL this doesn't support the tunnel options you can set in the credential.
 
 ### Data Source
 

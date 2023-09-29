@@ -18,7 +18,7 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 ## Trigger nodes
 
-[On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-base.manualchattrigger/)
+[On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/)
 
 ## Credentials
 
@@ -47,10 +47,10 @@ A chain is a series of LLMs, and related tools, linked together to support funct
 
 Available nodes:
 
-* [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainllm/)
-* [Structured Output Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainstructuredoutput/)
-* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainsummarization/)
-* [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainvectorstoreqa/)
+* [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/)
+* [Structured Output Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainstructuredoutput/)
+* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization/)
+* [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainvectorstoreqa/)
 
 Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/chains/){:target=_blank .external-link}.
 
@@ -60,10 +60,10 @@ Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/cha
 
 Available nodes:
 
-* [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.conversationalagent/)
-* [OpenAI Functions Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.openaifunctionsagent/)
-* [ReAct Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.reactagent/)
-* [SQL Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.sqlagent/)
+* [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.conversationalagent/)
+* [OpenAI Functions Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.openaifunctionsagent/)
+* [ReAct Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.reactagent/)
+* [SQL Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sqlagent/)
 
 Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
 
@@ -78,9 +78,9 @@ Document loaders add data to your chain as documents. The data source can be a f
 
 Available nodes:
 
-* [Binary Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentbinaryinputloader/)
-* [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentgithubloader/)
-* [JSON Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.documentjsoninputloader/)
+* [Binary Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/)
+* [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader/)
+* [JSON Input Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/)
 
 Learn more about [Document loaders in LangChain](https://js.langchain.com/docs/modules/data_connection/document_loaders/){:target=_blank .external-link}.
 
@@ -90,15 +90,15 @@ LLMs (large language models) are programs that analyze datasets. They're the key
 
 Available nodes:
 
-* [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatanthropic/)
-* [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatollama/)
-* [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmchatopenai/)
-* [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmcohere/)
+* [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+* [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/)
+* [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere/)
 * [Google PaLM Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/)
 * [Google PaLM Language Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/)
-* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmhuggingfaceinference/)
-* [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmollama/)
-* [OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.lmopenai/)
+* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmhuggingfaceinference/)
+* [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
+* [OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/)
 
 Learn more about [Language models in LangChain](https://js.langchain.com/docs/modules/model_io/models/){:target=_blank .external-link}.
 
@@ -108,12 +108,12 @@ Memory retains information about previous queries in a series of queries. For ex
 
 Available nodes:
 
-* [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorychatretriever/)
-* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorymotorhead/)
-* [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryredischat/)
-* [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memorybufferwindow/)
-* [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryxata/)
-* [Zep](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.memoryzep/)
+* [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/)
+* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead/)
+* [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat/)
+* [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/)
+* [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata/)
+* [Zep](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep/)
 
 Learn more about [Memory in LangChain](https://js.langchain.com/docs/modules/memory/){:target=_blank .external-link}.
 
@@ -123,9 +123,9 @@ Output parsers take the text generated by an LLM and format it to match the stru
 
 Available nodes:
 
-* [Auto-fixing Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparserautofixing/)
-* [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparseritemlist/)
-* [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.outputparserstructured/)
+* [Auto-fixing Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing/)
+* [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist/)
+* [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
 Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/modules/model_io/output_parsers/){:target=_blank .external-link}.
 
@@ -135,9 +135,9 @@ Text splitters break down data (documents), making it easier for the LLM to proc
 
 Available nodes:
 
-* [Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplittercharactertextsplitter/)
-* [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplitterrecursivecharactertextsplitter/)
-* [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.textsplittertokensplitter/)
+* [Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittercharactertextsplitter/)
+* [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter/)
+* [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter/)
 
 n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/api/text_splitter/){:target=_blank .external-link}.
 
@@ -145,12 +145,12 @@ n8n's text splitter nodes implements parts of [LangChain's text_splitter API](ht
 
 Utility tools.
 
-* [Calculator](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolcalculator/)
-* [Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolcode/)
-* [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolserp/)
-* [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolwikipedia/)
-* [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolwolframalpha/)
-* [Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.toolworkflow/)
+* [Calculator](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator/)
+* [Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/)
+* [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserp/)
+* [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia/)
+* [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha/)
+* [Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/)
 
 #### Embeddings
 
@@ -161,7 +161,7 @@ Available nodes:
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere/)
 * [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm/)
 * [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference/)
-* [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.embeddingsopenai/)
+* [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai/)
 * [Embeddings TensorFlow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingstensorflow/)
 
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
@@ -171,13 +171,13 @@ Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/mo
 
 Vector stores store embedded data, and perform vector searches on it.
 
-* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.inmemoryvectorstore/)
-* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorepineconeinsert/)
-* [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorepineconeload/)
-* [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstoresupabaseinsert/)
-* [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstoresupabaseload/)
-* [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorezepinsert/)
-* [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-base.vectorstorezepload/)
+* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.inmemoryvectorstore/)
+* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
+* [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/)
+* [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)
+* [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/)
+* [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/)
+* [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/)
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
 

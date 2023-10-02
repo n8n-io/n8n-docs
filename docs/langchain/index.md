@@ -25,4 +25,11 @@ This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/): groups 
 
 ### Chatbot widget
 
-n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link}.
+n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} for usage information.
+
+n8n provides code snippets for the chatbot, pre-populated with your settings:
+
+1. Add the Manual Chat Trigger to your workflow.
+1. Select **Chat**.
+1. Select **More info** in the help text:
+	> Add chat to external applications using the n8n chat package. More info

@@ -99,7 +99,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## Binary data
 
-By default, n8n uses the server filesystem to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
+By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

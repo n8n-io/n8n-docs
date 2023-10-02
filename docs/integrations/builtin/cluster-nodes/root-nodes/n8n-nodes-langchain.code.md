@@ -22,23 +22,27 @@ You must create the connectors for this node.
 
 Add your custom code.
 
-* **Execute**: code that uses the main node input and output connections. You must create these connections in **Inputs** and **Outputs**.
-* **SupplyData**: code that uses an output other than the main connector.
+* **Execute**: like n8n's Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
+* **SupplyData**: for fetching data into the workflow from an external source. This uses an output other than the main connector.
+
+You can't load built-in or external modules in this node. [TODO confirm]
 
 ### Inputs
 
-Choose the input types. The main input is the normal connector found in all n8n workflows.
+Choose the input types. 
+
+The main input is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** is required.
 
 ### Outputs
 
+Choose the input types. 
 
+The main output is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** is required.
 
 ## Related resources
 
 <!--
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 -->
-
-
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

@@ -1,13 +1,13 @@
 ---
-title: Ollama
-description: Documentation for the Ollama node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Ollama Model
+description: Documentation for the Ollama Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Ollama
+# Ollama Model
 
-The Ollama node allows you use local Llama 2 models.
+The Ollama Model node allows you use local Llama 2 models.
 
-On this page, you'll find the node parameters for the Ollama node, and links to more resources.
+On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).

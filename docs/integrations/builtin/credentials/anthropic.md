@@ -7,7 +7,7 @@ description: Documentation for the Anthropic credentials. Use these credentials 
 
 You can use these credentials to authenticate the following nodes:
 
-* [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+* [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
 
 ## Prerequisites
 

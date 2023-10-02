@@ -10,13 +10,9 @@ This page explains how LangChain concepts and features map to n8n nodes.
 
 This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
-[TODO: this list is very incomplete. Check in with Jan on Friday latest for the definitive list]
-[TODO: this list structure probably needs to change as the UI will likely change before release]
-[TODO: the agent section needs some love as we only have one agent node now]
-
 
 !!! note "n8n implements LangChain JS"
-	This feature is n8n's implementation of [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link}. This means that n8n's nodes support what LangChain supports. Some of the services listed may have additional functionality, but if it isn't supported by LangChain, it also isn't supported by n8n. [TODO: rephrase this it's horrible]
+	This feature is n8n's implementation of [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link}.
 
 ## Trigger nodes
 
@@ -24,7 +20,7 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 ## Credentials
 
-* [Anthropic AI](/integrations/builtin/credentials/anthropicai/)
+* [Anthropic	](/integrations/builtin/credentials/anthropic/)
 * [Cohere](/integrations/builtin/credentials/cohere/)
 * [Hugging Face](/integrations/builtin/credentials/huggingface/)
 * [Motorhead](/integrations/builtin/credentials/motorhead/)
@@ -49,9 +45,9 @@ A chain is a series of LLMs, and related tools, linked together to support funct
 
 Available nodes:
 
-* [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/)
+* [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/)
+* [Retrieval Q&A Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/)
 * [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization/)
-* [Q&A Chain from Retrieved Documents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/)
 
 Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/chains/){:target=_blank .external-link}.
 
@@ -64,6 +60,12 @@ Available nodes:
 * [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 
 Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
+
+#### Miscellaneous
+
+Utility nodes.
+
+[LangChain Code](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code/): import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
 
 ### Sub-nodes
 
@@ -87,15 +89,15 @@ LLMs (large language models) are programs that analyze datasets. They're the key
 
 Available nodes:
 
-* [Chat Anthropic](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
-* [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/)
-* [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
-* [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere/)
+* [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+* [Cohere Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere/)
 * [Google PaLM Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/)
 * [Google PaLM Language Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/)
-* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmhuggingfaceinference/)
-* [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
-* [OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/)
+* [Hugging Face Inference Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmhuggingfaceinference/)
+* [Ollama Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/)
+* [Ollama Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
+* [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [OpenAI Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/)
 
 Learn more about [Language models in LangChain](https://js.langchain.com/docs/modules/model_io/models/){:target=_blank .external-link}.
 
@@ -105,7 +107,6 @@ Memory retains information about previous queries in a series of queries. For ex
 
 Available nodes:
 
-* [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/)
 * [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead/)
 * [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat/)
 * [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/)
@@ -187,5 +188,10 @@ Vector stores store embedded data, and perform vector searches on it.
 * [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/)
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
+
+#### Miscellaneous
+
+* [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/)
+
 
 

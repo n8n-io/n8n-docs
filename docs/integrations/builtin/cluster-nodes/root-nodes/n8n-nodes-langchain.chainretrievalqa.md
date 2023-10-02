@@ -1,13 +1,13 @@
 ---
-title: Q&A Chain from Retrieved Documents
-description: Documentation for the Q&A Chain from Retrieved Documents node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Retrieval Q&A Chain
+description: Documentation for the Retrieval Q&A Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Q&A Chain from Retrieved Documents
+# Retrieval Q&A Chain [TODO: confirm final name]
 
-The Q&A Chain from Retrieved Documents node allows you to use a vector store as a retriever.
+The Retrieval Q&A Chain node allows you to use a vector store as a retriever.
 
-On this page, you'll find the node parameters for the Q&A Chain from Retrieved Documents node, and links to more resources.
+On this page, you'll find the node parameters for the Retrieval Q&A Chain node, and links to more resources.
 
 <!--
 !!! note "Examples and templates"

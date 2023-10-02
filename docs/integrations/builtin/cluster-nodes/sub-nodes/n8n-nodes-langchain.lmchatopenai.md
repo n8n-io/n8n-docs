@@ -1,13 +1,13 @@
 ---
-title: Chat OpenAI
-description: Documentation for the Chat OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: OpenAI Chat Model
+description: Documentation for the OpenAI Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Chat OpenAI
+# OpenAI Chat Model
 
-The Chat OpenAI node allows you to use OpenAI's chat models with conversational agents.
+The OpenAI Chat Model node allows you to use OpenAI's chat models with conversational agents.
 
-On this page, you'll find the node parameters for the Chat OpenAI node, and links to more resources.
+On this page, you'll find the node parameters for the OpenAI Chat Model node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
@@ -30,6 +30,6 @@ On this page, you'll find the node parameters for the Chat OpenAI node, and link
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 -->
 
-Refer to [LangChains's Chat OpenAI documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/openai){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/openai){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

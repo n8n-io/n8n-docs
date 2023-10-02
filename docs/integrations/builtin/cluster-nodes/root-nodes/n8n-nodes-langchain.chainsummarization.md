@@ -16,13 +16,6 @@ On this page, you'll find the node parameters for the Summarization Chain node, 
 	
 ## Node parameters
 
-### Mode
-
-Choose whether to run the chain once, or for every input item. Select either:
-
-* Run Once for All Items
-* Run Once for Each Item
-
 ### Type
 
 The type of summarization to run.
@@ -31,7 +24,10 @@ The type of summarization to run.
 * Refine ([Refine](https://js.langchain.com/docs/modules/chains/document/refine){:target=_blank .external-link} in the LangChain documentation)
 * Stuff ([Stuff](https://js.langchain.com/docs/modules/chains/document/stuff){:target=_blank .external-link} in the LangChain documentation)
 
-Refer to 
+### Options
+
+* **Combine Map Prompt**: write a prompt to guide the agent when combining summaries..
+* **Prompt**: write a prompt to guide the agent when generating individual summaries.
 
 ## Related resources
 

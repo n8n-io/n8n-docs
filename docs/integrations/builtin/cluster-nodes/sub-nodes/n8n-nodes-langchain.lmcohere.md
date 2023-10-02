@@ -1,16 +1,16 @@
 ---
-title: Cohere
-description: Documentation for the Cohere node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Cohere Model
+description: Documentation for the Cohere Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Cohere
+# Cohere Model
 
-The Cohere node allows you to use Cohere's models.
+The Cohere Model node allows you to use Cohere Model's models.
 
-On this page, you'll find the node parameters for the Cohere node, and links to more resources.
+On this page, you'll find the node parameters for the Cohere Model node, and links to more resources.
 
 !!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
+    You can find authentication information for this node [here](/integrations/builtin/credentials/Cohere Model/).
 
 <!--
 !!! note "Examples and templates"

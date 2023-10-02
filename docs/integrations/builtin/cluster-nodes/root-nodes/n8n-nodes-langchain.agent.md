@@ -41,6 +41,8 @@ The OpenAI Functions Agent node allows you to use an [OpenAI functions model](ht
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
+You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
+
 ### Mode
 
 Choose whether to run the chain once, or for every input item. Select either:

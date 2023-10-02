@@ -48,7 +48,6 @@ A chain is a series of LLMs, and related tools, linked together to support funct
 Available nodes:
 
 * [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainllm/)
-* [Structured Output Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainstructuredoutput/)
 * [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainsummarization/)
 * [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-base.chainvectorstoreqa/)
 

@@ -1,18 +1,13 @@
 ---
-title: _Name_
-description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Workflow Retriever
+description: Documentation for the Workflow Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# _Name_
+# Workflow Retriever
 
-<!-- Briefly summarize the node. For example:
+The Workflow Retriever node allows you to retrieve data from an n8n workflow for use in a Retrieval QA Chain or another Retriever node.
 
-The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
-
-On this page, you'll find the node parameters for the _Name_ node, and links to more resources.
-
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+On this page, you'll find the node parameters for the Workflow Retriever node, and links to more resources.
 
 <!--
 !!! note "Examples and templates"
@@ -21,8 +16,8 @@ On this page, you'll find the node parameters for the _Name_ node, and links to 
 	
 ## Node parameters
 
-* _Bullet list_
-* _Of available operations_.
+* Source
+* Workflow ID
 
 ## Related resources
 
@@ -30,6 +25,6 @@ On this page, you'll find the node parameters for the _Name_ node, and links to 
 View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
 -->
 
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/modules/data_connection/retrievers/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

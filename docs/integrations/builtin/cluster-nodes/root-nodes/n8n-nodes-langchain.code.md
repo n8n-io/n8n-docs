@@ -9,6 +9,9 @@ The LangChain Code node allows you to import LangChain. This means if there is f
 
 On this page, you'll find the node parameters for the LangChain Code node, and links to more resources.
 
+!!! note "Not available on Cloud"
+	This node is only available on self-hosted n8n.
+
 <!--
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.

@@ -17,5 +17,12 @@ n8n's LangChain nodes allow you to build AI-powered functionality within your wo
 
 ## Related resources
 
+Related documentation and tools.
+
+### Node types
+
 This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/) nodes that work together.
 
+### Chatbot widget
+
+n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link}.

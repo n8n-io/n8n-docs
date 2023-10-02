@@ -51,7 +51,7 @@ Available nodes:
 
 * [LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/)
 * [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization/)
-* [Vector Store QA Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainvectorstoreqa/)
+* [Q&A Chain from Retrieved Documents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/)
 
 Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/chains/){:target=_blank .external-link}.
 
@@ -126,6 +126,16 @@ Available nodes:
 
 Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/modules/model_io/output_parsers/){:target=_blank .external-link}.
 
+#### Retrievers
+
+
+* [Contextual Compression Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression/)
+* [MultiQuery Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery/)
+* [similarity](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieversimilarityccoretreshold/) [TODO: check if in]
+* [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore/)
+* [Workflow Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievern8nworkflow/)
+
+
 #### Text splitters
 
 Text splitters break down data (documents), making it easier for the LLM to process the information and return accurate results.
@@ -178,10 +188,4 @@ Vector stores store embedded data, and perform vector searches on it.
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
 
-#### Retrievers [TODO: verify section & section position]
 
-[TODO: add exact node name when known]
-* [context compression](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression/)
-* [multi](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery/)
-* [workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievern8nworkflow/)
-* [similarity](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieversimilarityccoretreshold/)

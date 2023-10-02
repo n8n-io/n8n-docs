@@ -4,6 +4,8 @@ contentType: howto
 
 # Expressions
 
+--8<-- "_snippets/code/tournament-notes.md"
+
 Expressions allow you to set node parameters dynamically based on data from:
 
 - Previous nodes

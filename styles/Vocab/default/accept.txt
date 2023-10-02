@@ -2,6 +2,7 @@ Adalo
 Asana
 Authentik
 Axios
+Backblaze
 backend
 Beeminder
 Boolean

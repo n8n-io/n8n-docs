@@ -99,12 +99,15 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## Binary data
 
+By default, n8n uses the server filesystem to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
+
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_AVAILABLE_BINARY_DATA_MODES` | String | `filesystem` | A comma separated list of available binary data modes. |
 | `N8N_BINARY_DATA_STORAGE_PATH` | String | `N8N_USE_FOLDER/binaryData` | The path where n8n stores binary data. |
 | `N8N_BINARY_DATA_TTL` | Number | `60` | Time to live (in minutes) for binary data of unsaved executions. |
-| `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem. |
+| `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem, or `s3` to AWS S3. |
+
 
 ## User management SMTP, and two-factor authentication
 
@@ -199,6 +202,19 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | How many event log files to keep. |
 | `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one is started. |
 | `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
+
+## External data storage
+
+Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_EXTERNAL_STORAGE_S3_HOST` | String | - | Host of the n8n bucket in S3-compatible external storage. For example, `s3.us-east-1.amazonaws.com` |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME` | String | - | Name of the n8n bucket in S3-compatible external storage. |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` | String | - | Region of the n8n bucket in S3-compatible external storage. For example, `us-east-1`|
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY` | String | - | Access key in S3-compatible external storage |
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET` | String | - | Access secret in S3-compatible external storage. |
+
 
 ## Nodes
 

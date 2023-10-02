@@ -1,5 +1,5 @@
 ---
-description: External storage for your n8n instance.
+description: External storage of binary data for your n8n instance.
 contentType: howTo
 ---
 
@@ -7,20 +7,22 @@ contentType: howTo
 
 !!! info "Feature availability"
 	* Available on Self-hosted Enterprise plans
-	* If you want access to this feature on Cloud Enterprise, contact us
+	* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 
-n8n can externally store binary data produced by workflow executions. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data. In future, n8n will support external storage for other kinds of data in addition to binary data.
+n8n can store binary data produced by workflow executions externally. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data. 
+
+n8n will introduce external storage for other data types in the future.
 
 ## Storing n8n's binary data in S3
 
-n8n can use [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) as an external store for binary data produced by workflow executions. Other S3-compatible services like Cloudflare R2 and Backblaze B2 may work, but are not officially supported.
+n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target=_blank .external-link} as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
 
 !!! info "Enterprise-tier feature"
     You will need an [Enterprise license key](/enterprise-key/) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
 
 ### Setup
 
-First, create and configure a bucket following the [official AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). You can use the following policy, replacing `<bucket-name>` with the name of the bucket you created.
+Create and configure a bucket following the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html){:target=_blank .external-link}. You can use the following policy, replacing `<bucket-name>` with the name of the bucket you created:
 
 ```json
 {
@@ -36,7 +38,7 @@ First, create and configure a bucket following the [official AWS documentation](
 }
 ```
 
-Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You will need to set them in n8n's environment.
+Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
 
 ```sh
 export N8N_EXTERNAL_STORAGE_S3_HOST=... # example: s3.us-east-1.amazonaws.com
@@ -47,26 +49,28 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 ```
 
 !!! note "No region"
-    If your provider does not require a region, e.g. Cloudflare, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
+    If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`. 
 
-Finally, instruct n8n to store binary data in S3 and start the server.
+Tell n8n to store binary data in S3:
 
 ```sh
 export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,s3
 export N8N_DEFAULT_BINARY_DATA_MODE=s3
 ```
 
+Restart the server to load the new configuration.
+
 ### Usage
 
-Once S3 is enabled, any new binary data will be written to, and read from, the S3 bucket. Binary data will be written to your S3 bucket in this format:
+After you enable S3, n8n writes and reads any new binary data to and from the S3 bucket. n8n writes binary data to your S3 bucket in this format:
 
 ```
 workflows/{workflowId}/executions/{executionId}/binary_data/{binaryFileId}
 ```
 
-Older binary data that was stored in the filesystem will continue to be read from the filesystem, if `filesystem` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES`.
+n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
 
-If you store binary data in S3 and later switch to filesystem mode, the instance will continue to read any data that was stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
+If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
 
 !!! note "Binary data pruning"
-    At this time, binary data pruning is based on the active binary data mode. For example, if your instance stored data in S3 and was later switched to filesystem mode, only binary data in the filesystem will be pruned. This may change in future.
+    Binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future.

@@ -246,7 +246,7 @@ nav:
         - integrations/builtin/credentials/airtable.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
-        - integrations/builtin/credentials/anthropicai.md
+        - integrations/builtin/credentials/anthropic.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
         - integrations/builtin/credentials/auth0management.md

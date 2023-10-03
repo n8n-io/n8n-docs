@@ -20,12 +20,6 @@ This agent is optimised for conversation allowing it to chat with the user.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
-### Mode
-
-Choose whether to run the chain once, or for every input item. Select either:
-
-* Run Once for All Items
-* Run Once for Each Item
 
 ### Text
 
@@ -43,12 +37,6 @@ The OpenAI Functions Agent node allows you to use an [OpenAI functions model](ht
 
 You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
 
-### Mode
-
-Choose whether to run the chain once, or for every input item. Select either:
-
-* Run Once for All Items
-* Run Once for Each Item
 
 ### Text
 
@@ -61,12 +49,6 @@ The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_bl
 !!! note "No memory"
 	The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts, or simulate an ongoing conversation.
 
-### Mode
-
-Choose whether to run the chain once, or for every input item. Select either:
-
-* Run Once for All Items
-* Run Once for Each Item
 
 ### Text
 

@@ -3,7 +3,7 @@ title: Retrieval Q&A Chain
 description: Documentation for the Retrieval Q&A Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Retrieval Q&A Chain [TODO: confirm final name]
+# Retrieval Q&A Chain
 
 The Retrieval Q&A Chain node allows you to use a vector store as a retriever.
 

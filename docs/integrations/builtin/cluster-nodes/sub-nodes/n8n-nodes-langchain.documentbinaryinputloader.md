@@ -28,7 +28,7 @@ On this page, you'll find a list of parameters the Binary Input Loader node supp
 
 ## Node reference
 
---8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

@@ -12,10 +12,8 @@ On this page, you'll find the node parameters for the LangChain Code node, and l
 !!! note "Not available on Cloud"
 	This node is only available on self-hosted n8n.
 
-<!--
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
--->
+	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
@@ -44,8 +42,6 @@ The main output is the normal connector found in all n8n workflows. If you have 
 
 ## Related resources
 
-<!--
-View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
--->
+View [example workflows and related content](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

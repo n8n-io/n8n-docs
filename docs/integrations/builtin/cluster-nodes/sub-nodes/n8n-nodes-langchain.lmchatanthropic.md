@@ -12,10 +12,8 @@ On this page, you'll find the node parameters for the Anthropic Chat Model node,
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
 
-<!--
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
--->
+	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
@@ -29,9 +27,7 @@ On this page, you'll find the node parameters for the Anthropic Chat Model node,
 
 ## Related resources
 
-<!--
-View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
--->
+View [example workflows and related content](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/anthropic){:target=_blank .external-link} for more information about the service.
 

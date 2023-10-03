@@ -9,10 +9,8 @@ The Structured Output Parser node allows you to return fields based on a JSON Sc
 
 On this page, you'll find the node parameters for the Structured Output Parser node, and links to more resources.
 
-<!--
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
--->
+	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/structured-output-parser/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
@@ -24,9 +22,7 @@ On this page, you'll find the node parameters for the Structured Output Parser n
 
 ## Related resources
 
-<!--
-View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
--->
+View [example workflows and related content](https://n8n.io/integrations/structured-output-parser/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's structured output parser documentation](https://js.langchain.com/docs/modules/model_io/output_parsers/structured){:target=_blank .external-link} for more information about the service.
 

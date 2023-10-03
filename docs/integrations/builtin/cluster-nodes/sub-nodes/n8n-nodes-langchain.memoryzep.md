@@ -12,10 +12,8 @@ On this page, you'll find a list of operations the Zep node supports, and links 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
 
-<!--
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain/){:target=_blank .external-link} page.
--->
+	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/zep/){:target=_blank .external-link} page.
 	
 ## Node parameters
 
@@ -27,9 +25,7 @@ On this page, you'll find a list of operations the Zep node supports, and links 
 
 ## Related resources
 
-<!--
-View [example workflows and related content](https://n8n.io/integrations/langchain/){:target=_blank .external-link} on n8n's website.
--->
+View [example workflows and related content](https://n8n.io/integrations/zep/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/modules/memory/integrations/zep_memory){:target=_blank .external-link} for more information about the service.
 

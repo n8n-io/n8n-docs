@@ -38,7 +38,7 @@ You can access the tool input using `query`. For example, to take the input stri
 
 ```js
 let myString = query;
-return myString.lowerCase();
+return myString.toLowerCase();
 ```
 
 ## Node reference

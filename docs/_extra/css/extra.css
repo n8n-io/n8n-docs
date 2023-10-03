@@ -199,15 +199,15 @@
 		content: "beta";
 		font-size: 0.5rem;
 		height: auto;		
-		padding: 0.1rem;
+		padding: 0.1rem 0.2rem;
 		-webkit-mask-image: none;
 		width: auto;
 	}
   
 
-	.md-status--beta::after:hover {
-		background-color: #EA4B71;
-	}
+	.md-status:hover:after {
+    background-color: var(--color-background-dark);
+  } 
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{
 	box-shadow: none;

@@ -41,6 +41,10 @@ This must match the name of the output property in the workflow you're calling.
 
 Set values to pass to the workflow you're calling.
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

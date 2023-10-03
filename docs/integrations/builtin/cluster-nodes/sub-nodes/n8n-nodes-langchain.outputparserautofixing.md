@@ -9,6 +9,10 @@ The Auto-fixing Output Parser node wraps another output parser, if the first one
 
 On this page, you'll find the node parameters for the Auto-fixing Output Parser node, and links to more resources.
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

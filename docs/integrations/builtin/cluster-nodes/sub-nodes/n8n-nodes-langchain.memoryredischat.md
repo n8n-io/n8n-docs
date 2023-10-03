@@ -22,6 +22,10 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 * Session Key
 * Session Time To Live
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

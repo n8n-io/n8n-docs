@@ -18,6 +18,10 @@ On this page, you'll find a list of operations the Memory Chat Retriever node su
 
 * Simplify Output
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

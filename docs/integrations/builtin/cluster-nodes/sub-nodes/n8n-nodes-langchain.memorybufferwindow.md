@@ -19,6 +19,10 @@ On this page, you'll find a list of operations the Window Buffer Memory node sup
 * Session Key
 * Context Window Length
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

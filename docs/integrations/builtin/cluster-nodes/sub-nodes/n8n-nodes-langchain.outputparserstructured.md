@@ -18,6 +18,10 @@ On this page, you'll find the node parameters for the Structured Output Parser n
 
 * JSON Schema
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

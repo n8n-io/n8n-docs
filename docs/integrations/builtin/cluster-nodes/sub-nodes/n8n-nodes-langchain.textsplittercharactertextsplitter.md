@@ -20,6 +20,10 @@ On this page, you'll find the node parameters for the Character Text Splitter no
 * Chunk Size
 * Chunk Overlap
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

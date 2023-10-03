@@ -19,6 +19,10 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 * Source
 * Workflow ID
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

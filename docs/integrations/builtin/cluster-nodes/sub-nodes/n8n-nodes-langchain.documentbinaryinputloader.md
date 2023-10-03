@@ -26,6 +26,10 @@ On this page, you'll find a list of parameters the Binary Input Loader node supp
 * Binary Data Key
 * Pointers
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

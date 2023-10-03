@@ -24,6 +24,10 @@ On this page, you'll find the node parameters for the Embeddings Cohere node, an
 	* Embed-English-Light-v2.0(1024 Dimensions)
 	* Embed-Multilingual-v2.0(768 Dimensions)
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

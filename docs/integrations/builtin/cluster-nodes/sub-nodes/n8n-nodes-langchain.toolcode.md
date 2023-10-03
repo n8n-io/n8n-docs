@@ -34,6 +34,10 @@ You can use JavaScript or Python.
 
 Write the code here.
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

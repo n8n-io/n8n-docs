@@ -21,6 +21,10 @@ On this page, you'll find a list of operations the Zep node supports, and links 
 
 * Session ID
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

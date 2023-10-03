@@ -25,6 +25,10 @@ On this page, you'll find the node parameters for the Ollama Chat Model node, an
 	* Llama2 70B
 	* Llama2 Uncensored
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

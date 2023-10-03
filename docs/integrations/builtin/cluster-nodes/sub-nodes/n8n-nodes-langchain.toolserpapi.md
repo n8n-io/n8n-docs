@@ -27,6 +27,10 @@ On this page, you'll find the node parameters for the SerpAPI node, and links to
 * Google Domain
 * Language
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

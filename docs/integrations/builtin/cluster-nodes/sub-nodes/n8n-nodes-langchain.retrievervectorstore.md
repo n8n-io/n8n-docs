@@ -18,6 +18,10 @@ On this page, you'll find the node parameters for the Vector Store Retriever nod
 
 * Top K
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

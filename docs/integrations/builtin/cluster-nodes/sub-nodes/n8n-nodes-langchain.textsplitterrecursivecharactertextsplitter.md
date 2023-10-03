@@ -19,6 +19,10 @@ On this page, you'll find the node parameters for the Recursive Character Text S
 * Chunk Size
 * Chunk Overlap
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

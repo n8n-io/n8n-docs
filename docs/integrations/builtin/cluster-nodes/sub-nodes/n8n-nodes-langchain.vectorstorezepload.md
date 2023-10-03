@@ -21,6 +21,10 @@ On this page, you'll find the node parameters for the Zep: Load node, and links 
 
 * Collection Name
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

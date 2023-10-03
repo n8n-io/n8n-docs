@@ -23,6 +23,10 @@ On this page, you'll find the node parameters for the Anthropic Chat Model node,
 	* Claude
 	* Claude Instant
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

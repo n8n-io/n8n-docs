@@ -22,6 +22,10 @@ On this page, you'll find the node parameters for the GitHub Document Loader nod
 * Repository Link
 * Branch
 
+## Node reference
+
+--8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Related resources
 
 <!--

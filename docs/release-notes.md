@@ -28,13 +28,65 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.9.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-09-28
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This release contains new features, performance improvements, and bug fixes.
+
+--8<-- "_snippets/code/tournament-notes.md"
+
+<div class="n8n-new-features" markdown>
+
+#### Tournament
+
+This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.8.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.1...n8n@1.8.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-09-25
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.8.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.0...n8n@1.8.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-09-21
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.8.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.7.1...n8n@1.8.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-09-20
+
+This release contains node enhancements and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.7.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.7.0...n8n@1.7.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-09-14
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This release contains bug fixes.
 
@@ -58,12 +110,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.6.0...n8n@1.6.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-09-06
-
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-
-
-
 
 
 This is a bug fix release.
@@ -208,7 +254,7 @@ This release contains new features and bug fixes.
 
 This release introduces limited support for using AI to generate code in the Code node. Initially this feature is only available on Cloud, and will gradually be rolled out, starting with about 20% of users.
 
-Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](/code-examples/ai-code/).
+Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](/code/ai-code/).
 
 </div>
 
@@ -447,7 +493,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code-examples/javascript-functions/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 
@@ -1687,7 +1733,7 @@ This release includes an overhaul of the Slack node, adding new operations and a
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.213.0...n8n@0.214.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-02-03
 
-This release contains new features, node enhancements, and bug fixes. The expressions editor now supports autocomplete for some [built in data transformation functions](/code-examples/expressions/data-transformation-functions/). The new features also include two of interest to node builders: a way to allow users to drag and drop data keys, and the new HTML editor component.
+This release contains new features, node enhancements, and bug fixes. The expressions editor now supports autocomplete for some [built in data transformation functions](/code/builtin/data-transformation-functions/). The new features also include two of interest to node builders: a way to allow users to drag and drop data keys, and the new HTML editor component.
 
 !!! warning "Breaking changes"
     Please note that this version contains a breaking change to Luxon. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02140){:target=_blank .external-link}.
@@ -1698,7 +1744,7 @@ This release contains new features, node enhancements, and bug fixes. The expres
 
 #### Autocomplete in the Extension editor
 
-[Data transformation functions](/code-examples/expressions/data-transformation-functions/) now have autocomplete support in the Expression editor.
+[Data transformation functions](/code/builtin/data-transformation-functions/) now have autocomplete support in the Expression editor.
 
 </div>
 
@@ -1980,7 +2026,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210
 
 #### Typeahead for expressions
 
-When using [expressions](/code-examples/expressions/), n8n will now offer you suggestions as you type.
+When using [expressions](/code/expressions/), n8n will now offer you suggestions as you type.
 
 !["Animated GIF showing typeahead in action"](/_images/reference/release-notes/0.210.2-expressions-type-ahead.gif)
 
@@ -2914,7 +2960,7 @@ Introducing improved support for item linking (paired items). Item linking is a 
 
 #### Overhauled built-in variables
 
-n8n's [built-in methods and variables](/code-examples/methods-variables-reference/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
+n8n's [built-in methods and variables](/code/builtin/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
 
 </div>
 
@@ -4164,7 +4210,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 ### Bug fixes
 
-**core**: Luxon now applies the correct timezone. Refer to [Luxon](/code-examples/expressions/luxon/) for more information.<br>
+**core**: Luxon now applies the correct timezone. Refer to [Luxon](/code/luxon/) for more information.<br>
 **core**: fixed an issue with localization that was preventing i18n files from loading.<br>
 [Action Network Node:](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/) Fix a pagination issue and add credentials test.
 

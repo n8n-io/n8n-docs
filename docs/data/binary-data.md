@@ -43,12 +43,12 @@ You can trigger a workflow based on changes to a local file using the [Local Fil
 
 ### Code
 
-You can use the [Code node](/code-examples/javascript-functions/code-node/) to manipulate binary data in your workflows.
+You can use the [Code node](/code/code-node/) to manipulate binary data in your workflows.
 
 Some examples:
 
-* [Get the binary data buffer](/code-examples/javascript-functions/get-binary-data-buffer/): get the binary data available in your workflow.
-* [Split binary data into individual items](/code-examples/javascript-functions/split-binary-file-data/): if you receive more than one binary file from a node, you can split the binary data into individual items.
+* [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer/): get the binary data available in your workflow.
+* [Split binary data into individual items](/code/cookbook/code-node/split-binary-file-data/): if you receive more than one binary file from a node, you can split the binary data into individual items.
 
 ## Configure binary data mode when self-hosting
 

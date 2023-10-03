@@ -1,6 +1,38 @@
 
+
 /flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/
 /flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/
+
+# Code into own tab
+
+/code-examples/ /code/
+/code-examples/methods-variables-reference/   /code/builtin/
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat
+/code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/
+/code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/
+/code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/
+/code-examples/javascript-functions/console-log/   /code/cookbook/code-node/console-log/
+/code-examples/ai-code/   /code/ai-code/
+/code-examples/expressions/check-incoming-data/   /code/cookbook/expressions/check-incoming-data/
+/code-examples/expressions/   /code/expressions/
+/code-examples/expressions/expressions/   /code/expressions/
+/code-examples/javascript-functions/   /code/code-node/
+/code-examples/javascript-functions/code-node/   /code/code-node/
+/code-examples/expressions/luxon/   /code/luxon/
+/code-examples/javascript-functions/luxon/   /code/luxon/
+/code-examples/expressions/jmespath/   /code/jmespath/
+/code-examples/javascript-functions/jmespath/   /code/jmespath/
+/code-examples/methods-variables-examples/all/   /code/cookbook/builtin/all/
+/code-examples/methods-variables-examples/execution/   /code/cookbook/builtin/execution/
+/code-examples/methods-variables-examples/get-workflow-static-data/   /code/cookbook/builtin/get-workflow-static-data/
+/code-examples/methods-variables-examples/vars/   /code/cookbook/builtin/vars/
+/code-examples/methods-variables-examples/evaluate-expression/   /code/builtin/advanced/
+/code-examples/methods-variables-examples/node/   /code/builtin/output-other-nodes/
+/code-examples/methods-variables-examples/run-index/   /code/builtin/n8n-metadata/
+/code-examples/methods-variables-examples/workflow/   /code/builtin/n8n-metadata/
+
+
+
 
 /hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
 /hosting/authentication/jwt/   /hosting/user-management-self-hosted/
@@ -16,7 +48,7 @@
 
 
 /hosting/logging/   /hosting/logging-monitoring/logging/
-/code-examples/console-log/   /code-examples/javascript-functions/console-log/
+/code-examples/console-log/   /code/cookbook/code-node/console-log/
 
 /reference/   /
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
@@ -63,8 +95,8 @@
 
 # 2022 SEO audit
 
-/nodes/expressions/expressions.html   /code-examples/expressions/
-/nodes/expressions.html   /code-examples/expressions/
+/nodes/expressions/expressions.html   /code/expressions/
+/nodes/expressions.html   /code/expressions/
 /reference/configuration.html  /hosting/environment-variables/configuration-methods/
 /getting-started/installation/index.html   /hosting/options/
 /getting-started/create-your-first-workflow/    /try-it-out/
@@ -96,10 +128,10 @@
 
 # methods / vars / paired items
 
-/code-examples/expressions/methods/   /code-examples/methods-variables-reference/
-/code-examples/expressions/variables/   /code-examples/methods-variables-reference/
-/code-examples/javascript-functions/methods/   /code-examples/methods-variables-reference/
-/code-examples/javascript-functions/variables/   /code-examples/methods-variables-reference/
+/code-examples/expressions/methods/   /code/builtin/
+/code-examples/expressions/variables/   /code/builtin/
+/code-examples/javascript-functions/methods/   /code/builtin/
+/code-examples/javascript-functions/variables/  /code/builtin/
 /data/data-mapping/   /data/data-mapping/data-mapping-ui/
 
 # Editor UI
@@ -181,9 +213,6 @@
 /nodes/creating-nodes/node-linter.html      /integrations/creating-nodes/code/node-linter/
 /nodes/creating-nodes/node-review-checklist.html     /integrations/creating-nodes/code/review-checklist/
 /nodes/creating-nodes/troubleshooting.html     /integrations/creating-nodes/code/troubleshooting-node-development/
-
-
-/nodes/expressions/* /code-examples/expressions/:splat
 
 /nodes/node-basics/ /integrations/
 /nodes/creating-nodes/		/integrations/creating-nodes/

@@ -28,7 +28,7 @@ Add your custom code.
 * **Execute**: like n8n's Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
 * **SupplyData**: for fetching data into the workflow from an external source. This uses an output other than the main connector.
 
-You can't load built-in or external modules in this node. [TODO confirm]
+By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](/hosting/environment-variables/configuration-methods/).
 
 ### Inputs
 

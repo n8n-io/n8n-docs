@@ -34,6 +34,13 @@ You can use JavaScript or Python.
 
 Write the code here.
 
+You can access the tool input using `query`. For example, to take the input string and lowercase it:
+
+```js
+let myString = query;
+return myString.lowerCase();
+```
+
 ## Node reference
 
 --8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"

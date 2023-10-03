@@ -31,13 +31,19 @@ For situations where you don't want a node to process all received items, for ex
 
 n8n typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. Refer to [Node exceptions](#node-exceptions) for a list of nodes that don't automatically iterate over all incoming items.
 
+### Loop until a condition is met
+
 To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Add an [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. 
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
 ![Editor UI view of sample workflow](/_images/flow-logic/looping/example_workflow.png)
 
-Use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
+### Loop until all items are processed
+
+Use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
+
+You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
 
 The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 

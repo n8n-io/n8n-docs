@@ -2,6 +2,7 @@
 contentType: overview
 title: LangChain
 description: Use n8n to build with LangChain
+status: beta
 ---
 
 # LangChain
@@ -10,6 +11,9 @@ With n8n's LangChain nodes you can build AI-powered functionality within your wo
 
 !!! info "Feature availability"
 	This feature is available on Cloud and self-hosted n8n, at all pricing tiers. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image. Refer to [Access LangChain in n8n](/langchain/access-langchain/) for more information.
+
+!!! note "Beta feature"
+	This feature is in beta. Send feedback to ai@n8n.io.
 
 * [Access LangChain in n8n](/langchain/access-langchain/): how to get the n8n version that includes LangChain.
 * [Learning resources](/langchain/learning-resources/): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.

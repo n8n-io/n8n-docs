@@ -48,6 +48,9 @@ extra:
       We use cookies and other tracking technologies to improve your browsing experience, 
       to analyze our website traffic, assist our marketing efforts and to understand where 
       our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+  # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
+  status:
+    beta: This feature is in beta
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css

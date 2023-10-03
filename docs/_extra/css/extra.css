@@ -191,7 +191,23 @@
   .md-content__inner {
   padding-top: 0;
   }
+
+	.md-status--beta::after {
+		background-color: var(--color-background-dark);
+		border-radius: 0.2rem;
+		color: white;
+		content: "beta";
+		font-size: 0.5rem;
+		height: auto;		
+		padding: 0.1rem;
+		-webkit-mask-image: none;
+		width: auto;
+	}
   
+
+	.md-status--beta::after:hover {
+		background-color: #EA4B71;
+	}
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{
 	box-shadow: none;

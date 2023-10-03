@@ -96,6 +96,10 @@ markdown_extensions:
   - toc:
       permalink: "#"
 plugins:
+  # You need the info plugin for bug reports to Material theme
+  # But DO NOT ENABLE IT NORMALLY
+  # It causes Netlify builds to fail
+  # - info
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
@@ -149,16 +153,17 @@ nav:
       - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
       - flow-logic/index.md
-      - Merging: flow-logic/merging.md
-      - Execution order in multi-branch workflows: flow-logic/execution-order.md
+      - Splitting with conditionals: flow-logic/splitting.md
+      - Merging data: flow-logic/merging.md
       - Looping: flow-logic/looping.md
-      - Error handling:
-        - flow-logic/error-handling/index.md
-        - Error workflows: flow-logic/error-handling/error-workflows.md
-        - Memory-related errors: flow-logic/error-handling/memory-errors.md
+      - Waiting: flow-logic/waiting.md
+      - Sub-workflows: flow-logic/subworkflows.md
+      - Error handling: flow-logic/error-handling.md    
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md    
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
+      - Data flow within nodes: data/data-flow-nodes.md
       - Transforming data: data/transforming-data.md
       - Process data using code: data/code.md
       - Data mapping: 
@@ -589,6 +594,7 @@ nav:
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md

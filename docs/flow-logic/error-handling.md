@@ -1,14 +1,23 @@
 ---
 contentType: howto
+description: How to handle execution errors.
 ---
 
-# Error workflows
+# Error handling
 
-For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. 
+When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
 
-You can use the same error workflow for multiple workflows.
+!!! note "Investigating errors"
+	To investigate failed executions, you can:
+
+	* Review your [Executions](/workflows/executions/), for a [single workflow](/workflows/executions/single-workflow-executions/) or [all workflows you have access to](/workflows/executions/all-executions/). You can [load data from previous execution](TODO) into your current workflow.
+	* Enable [Log streaming](/log-streaming/).
 
 ## Create and set an error workflow
+
+For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/).
+
+You can use the same error workflow for multiple workflows.
 
 --8<-- "_snippets/flow-logic/create-set-error-workflow.md"
 

@@ -206,7 +206,7 @@
   
 
 	.md-status:hover:after {
-    background-color: var(	--color-text-base);
+    background-color: var(--color-text-base);
   } 
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{

@@ -12,7 +12,7 @@ On this page, you'll find the node parameters for the Agent node, and links to m
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
 
-## Conversational Agent Parameters
+## Conversational Agent parameters
 
 This agent is optimised for conversation allowing it to chat with the user.
 
@@ -27,7 +27,7 @@ The input from the chat. This is the user's query, also known as the prompt.
 
 Send a message to the agent before the conversation starts. Use this to guide the agent's decision-making.
 
-## OpenAI Functions Agent Parameters
+## OpenAI Functions Agent parameters
 
 The OpenAI Functions Agent node allows you to use an [OpenAI functions model](https://platform.openai.com/docs/guides/gpt/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
@@ -40,7 +40,7 @@ You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nod
 
 The input from the chat. This is the user's query, also known as the prompt.
 
-## React Agent Parameters
+## React Agent parameters
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and action) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
 
@@ -52,7 +52,7 @@ The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_bl
 
 The input from the chat. This is the user's query, also known as the prompt.
 
-## SQL Agent Parameters
+## SQL Agent parameters
 
 The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
 

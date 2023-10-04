@@ -15,7 +15,7 @@ On this page, you'll find information on how to use the Manual Chat Trigger, and
 
 ## Usage
 
-Use this node to start a workflow with a chat session. This node is part of the LangChain feature. You can use it with the [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.conversationalagent/).
+Use this node to start a workflow with a chat session. This node is part of the LangChain feature. You can use it with the [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
 
 After adding the Manual Chat Trigger to your workflow, n8n displays the **Chat** button. Use this instead of **Execute Workflow** to test your workflow.
 

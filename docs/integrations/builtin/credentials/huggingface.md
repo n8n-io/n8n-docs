@@ -7,7 +7,7 @@ description: Documentation for the Hugging Face credentials. Use these credentia
 
 You can use these credentials to authenticate the following nodes:
 
-* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.huggingfaceinference/)
+* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmhuggingfaceinference/)
 * [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference/)
 
 

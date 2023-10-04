@@ -154,7 +154,7 @@ Utility tools.
 
 * [Calculator](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator/)
 * [Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/)
-* [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserp/)
+* [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi/)
 * [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia/)
 * [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha/)
 * [Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/)
@@ -178,7 +178,7 @@ Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/mo
 
 Vector stores store embedded data, and perform vector searches on it.
 
-* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.inmemoryvectorstore/)
+* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
 * [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
 * [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/)
 * [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)

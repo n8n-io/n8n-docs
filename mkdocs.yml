@@ -464,7 +464,7 @@ nav:
         - integrations/builtin/credentials/ssh.md
         - integrations/builtin/credentials/stackby.md
         - integrations/builtin/credentials/storyblok.md
-        - integrations/builtin/credentials/str.md
+        - integrations/builtin/credentials/strapi.md
         - integrations/builtin/credentials/strava.md
         - integrations/builtin/credentials/stripe.md
         - integrations/builtin/credentials/supabase.md

@@ -35,6 +35,9 @@ You need to create a new account. This is separate to your existing n8n Cloud ac
 
 n8n offers a 14-day free trial to try AI.
 
+!!! note "Existing n8n users can't reuse email address"
+	If you have an existing n8n Cloud account, you must use a different email address when signing up for the AI trial.
+
 ## Browse the LangChain nodes
 
 1. Create a new workflow.

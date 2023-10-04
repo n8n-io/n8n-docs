@@ -7,7 +7,7 @@ description: How to get the n8n version that includes LangChain
 # Access LangChain in n8n
 
 !!! info "Feature availability"
-	This feature is available on Cloud and self-hosted n8n, at all pricing tiers. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image.
+	This feature is available on Cloud and self-hosted n8n. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image.
 
 ## Self-hosted
 

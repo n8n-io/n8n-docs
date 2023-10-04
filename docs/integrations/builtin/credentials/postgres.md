@@ -9,6 +9,10 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with Postgres.
 
 - [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/)
+- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+
+!!! note "Agent node users"
+    The Agent node doesn't support tunnels
 
 ## Prerequisites
 

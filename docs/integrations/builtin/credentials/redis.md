@@ -9,6 +9,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with Redis.
 
 - [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/)
+- [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat/)
 
 ## Prerequisites
 

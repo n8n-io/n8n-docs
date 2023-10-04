@@ -59,7 +59,7 @@ n8n:
 
 You can enable data pruning to automatically delete finished executions after a given time period. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
 
-You can choose to prune finished executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records. This can help with database performance issues, especially if you use SQLite. This number is however not exact. Old executions that have not finished yet don't get deleted, even if they otherwise would be subject to deletion.
+You can choose to prune finished executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records. This can help with database performance issues, especially if you use SQLite. The database size can still exceed the limit you set: old executions that haven't finished running don't get deleted, even if they would otherwise be subject to deletion.
 
 ```sh
 # npm

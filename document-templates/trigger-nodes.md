@@ -38,7 +38,7 @@ On this page, you'll find a list of events the _Name_ trigger node can respond t
     You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
+	For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
 
 ## Events
 

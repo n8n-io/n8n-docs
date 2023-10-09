@@ -1,20 +1,22 @@
 ---
-title: Set
-description: Documentation for the Set node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Edit Fields (Set)
+description: Documentation for the Edit Fields node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
 ---
 
-# Set
+# Edit Fields (Set)
 
-The Set node allows you to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
+The Edit Fields node allows you to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
 !!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Set integrations](https://n8n.io/integrations/set/){:target=_blank .external-link} page.
+	For usage examples and templates to help you get started, refer to n8n's [Edit Fields integrations](https://n8n.io/integrations/set/){:target=_blank .external-link} page.
+
+
 
 
 ## Node parameters
 
-The are the settings and options available in the Set node.
+The are the settings and options available in the Edit Fields node.
 
 ### Mode
 
@@ -30,7 +32,7 @@ Customize the behavior of the node.
 
 #### Include Binary Data
 
-If the input data includes binary data, choose whether to include it in the Set node's output data.
+If the input data includes binary data, choose whether to include it in the Edit Fields node's output data.
 
 #### Ignore Type Conversion Errors
 

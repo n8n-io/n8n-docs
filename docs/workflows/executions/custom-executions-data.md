@@ -5,11 +5,15 @@ contentType: howto
 
 # Custom executions data
 
-You can set custom data on your workflow using the Code node. n8n records this with each execution. You can then use this data when filtering the executions list.
+You can set custom data on your workflow using the Code node or the [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
 
 --8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
-## Set custom executions data
+## Set and access custom data using the Code node
+
+This section describes how to set and access data using the Code node. Refer to [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
+
+### Set custom executions data
 
 Set a single piece of extra data:
 
@@ -30,14 +34,14 @@ There are limitations:
 * `value` has a maximum length of 255 characters
 * n8n supports a maximum of 10 items of custom data
 
-## Access the custom data object during execution
+### Access the custom data object during execution
 
 You can retrieve the custom data object, or a specific value in it, during an execution:
 
 ```js
 // Access the current state of the object during the execution
-const customData = $execution.customData.getAll()
+const customData = $execution.customData.getAll();
 
 // Access a specific value set during this execution
-const customData = $execution.customData.get("key")
+const customData = $execution.customData.get("key");
 ```

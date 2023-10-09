@@ -5,10 +5,6 @@ contentType: howto
 
 # Workflow sharing
 
-!!! info "Feature availability"
-		* Workflow sharing is available on paid Cloud and self-hosted plans.
-		* It requires [user management](/user-management/) enabled.
-
 Workflow sharing allows you to share workflows between users of the same n8n instance.
 
 ## Share a workflow

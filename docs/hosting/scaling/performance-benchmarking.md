@@ -30,7 +30,7 @@ Setup:
 
 - Hardware: ECS c5a.large instance (4GB RAM)
 - n8n setup: Single n8n instance (running in main mode, with Postgres database)
-- Workflow: Webhook trigger node, Set node
+- Workflow: Webhook trigger node, Edit Fields node
 
 <figure markdown>
   ![Graph showing n8n response times by requests per second](/_images/hosting/scaling/benchmarking-single-instance-100-250.png)
@@ -47,7 +47,7 @@ Setup:
 
 - Hardware: seven ECS c5a.4xlarge instances (8GB RAM each)
 - n8n setup: two webhook instances, four worker instances, one database instance (MySQL), one main instance running n8n and Redis
-- Workflow: Webhook trigger node, Set node
+- Workflow: Webhook trigger node, Edit Fields node
 - Multi-instance setups use [Queue mode](/hosting/scaling/queue-mode/)
 
 <figure markdown>

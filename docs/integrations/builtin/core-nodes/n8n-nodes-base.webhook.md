@@ -175,13 +175,13 @@ By default, the response format is JSON or an array. To send a response of type 
 2. Select **Response Data** > **First Entry JSON**.
 3. Select **Add Option** > **Property Name**.
 4. Enter the name of the property that contains the response. This defaults to `data`.
-5. Connect a Set node to the Webhook node.
-6. In the Set node, select **Add Value** > **String**.
+5. Connect an Edit Fields node to the Webhook node.
+6. In the Edit Fields node, select **Add Value** > **String**.
 7. Enter the name of the property in the **Name** field. The name should match the property name from step 4.
 8. Enter the string value in the **Value** field.
 9. Toggle **Keep Only Set** to on (green).
 
-When you call the Webhook, it sends the string response from the Set node.
+When you call the Webhook, it sends the string response from the Edit Fields node.
 
 
 

@@ -28,21 +28,21 @@ The default error data received by the Error Trigger is:
 ```json
 [
 	{
-	"execution": {
-		"id": "231",
-		"url": "https://n8n.example.com/execution/231",
-		"retryOf": "34",
-		"error": {
-		"message": "Example Error Message",
-		"stack": "Stacktrace"
+		"execution": {
+			"id": "231",
+			"url": "https://n8n.example.com/execution/231",
+			"retryOf": "34",
+			"error": {
+				"message": "Example Error Message",
+				"stack": "Stacktrace"
+			},
+			"lastNodeExecuted": "Node With Error",
+			"mode": "manual"
 		},
-		"lastNodeExecuted": "Node With Error",
-		"mode": "manual"
-	},
-	"workflow": {
-		"id": "1",
-		"name": "Example Workflow"
-	}
+		"workflow": {
+			"id": "1",
+			"name": "Example Workflow"
+		}
 	}
 ]
 

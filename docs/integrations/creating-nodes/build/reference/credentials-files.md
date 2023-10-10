@@ -31,23 +31,23 @@ export class ExampleNode implements ICredentialType {
 	displayName = 'Example Node API';
 	documentationUrl = '';
 	properties: INodeProperties[] = [
-	{
-		displayName: 'API Key',
-		name: 'apiKey',
-		type: 'string',
-		default: '',
-	},
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			default: '',
+		},
 	];
 	authenticate = {
-	type: 'generic',
-	properties: {
+		type: 'generic',
+		properties: {
       // Can be body, header, or qs
-		qs: {
+			qs: {
         // Use the value from `apiKey` above
-		'api_key': '={{$credentials.apiKey}}'
-		}
+				'api_key': '={{$credentials.apiKey}}'
+			}
 
-	},
+		},
 	} as IAuthenticateGeneric;
   test: ICredentialTestRequest = {
     request: {

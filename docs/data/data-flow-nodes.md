@@ -14,10 +14,10 @@ For example, this input will create two cards. One named `test1` the other one n
 ```json
 [
 	{
-	name-input-value: "test1"
+		name-input-value: "test1"
 	},
 	{
-	name-input-value: "test2"
+		name-input-value: "test2"
 	}
 ]
 ```

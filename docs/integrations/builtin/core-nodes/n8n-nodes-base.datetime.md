@@ -13,9 +13,9 @@ The Date & Time node manipulates date and time data and convert it to different 
 
 !!! note "Timezone settings"
     The node uses either the timezone of the n8n instance, or the workflow settings timezone. On n8n Cloud, the default timezone is GMT. On self-hosted n8n, the default is America/New_York, unless you've configured the instance to use a different default.
-	
+		
     Refer to [Workflow settings](/workflows/settings/) for more information on configuring timezones for individual workflows.
-	
+		
     Refer to [Configuration methods | Timezone](/hosting/environment-variables/configuration-methods/#timezone) for information on configuring your self-hosted instance timezone.
 
 

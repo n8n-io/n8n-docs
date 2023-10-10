@@ -115,13 +115,13 @@ Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections)
 	$jmespath($json.body.people, "[*].first" )
 	/* Returns:
 	[
-	{
-		"firstNames": [
-		"James",
-		"Jacob",
-		"Jayden"
-		]
-	}
+		{
+			"firstNames": [
+				"James",
+				"Jacob",
+				"Jayden"
+			]
+		}
 	]
 	*/
 ```
@@ -140,13 +140,13 @@ Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:ta
 	$jmespath($json.body.people, "[:2].first")
 	/* Returns:
 	[
-	{
-		"firstNames": [
-		"James",
-		"Jacob",
-		"Jayden"
-		]
-	}
+		{
+			"firstNames": [
+				"James",
+				"Jacob",
+				"Jayden"
+			]
+		}
 	]
 	*/
 	```
@@ -165,8 +165,8 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 	$jmespath($json.body.dogs, "*.age")
 	/* Returns:
 	[
-		7,
-		5
+			7,
+			5
 	]
 	*/
 ```
@@ -236,22 +236,22 @@ Use multiselect list to get the first and last names and create new lists contai
 	$jmespath($json.body.people, "[].[first, last]")
 	/* Returns:
 	[
-	{
-		"fullNames": [
-		[
-			"James",
-			"Green"
-		],
-		[
-			"Jacob",
-			"Jones"
-		],
-		[
-			"Jayden",
-			"Smith"
-		]
-		]
-	}
+		{
+			"fullNames": [
+				[
+					"James",
+					"Green"
+				],
+				[
+					"Jacob",
+					"Jones"
+				],
+				[
+					"Jayden",
+					"Smith"
+				]
+			]
+		}
 	]
 	*/
 	```

@@ -35,10 +35,10 @@ Clone the repository and navigate into the directory:
 
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate){:target=_blank .external-link} from the template repository.
 2. Clone your new repository:
-	```shell
-	git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
-	cd n8n-nodes-friendgrid
-	```
+		```shell
+		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
+		cd n8n-nodes-friendgrid
+		```
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -102,15 +102,15 @@ import {
 The node must export an interface that implements `INodeType`. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 !!! note "Class names and file names"
-	Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
+		Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
 
 ```typescript
 export class FriendGrid implements INodeType {
 	description: INodeTypeDescription = {
-	// Basic node details will go here
-	properties: [
-		// Resources and operations will go here
-	],
+		// Basic node details will go here
+		properties: [
+			// Resources and operations will go here
+		],
 	};
 	// The execute method will go here
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -136,8 +136,8 @@ inputs: ['main'],
 outputs: ['main'],
 credentials: [
 	{
-	name: 'friendGridApi',
-	required: true,
+		name: 'friendGridApi',
+		required: true,
 	},
 ],
 ```
@@ -154,10 +154,10 @@ The resource object defines the API resource that the node uses. In this tutoria
 	name: 'resource',
 	type: 'options',
 	options: [
-	{
-		name: 'Contact',
-		value: 'contact',
-	},
+		{
+			name: 'Contact',
+			value: 'contact',
+		},
 	],
 	default: 'contact',
 	noDataExpression: true,
@@ -180,19 +180,19 @@ Add the following to the `properties` array, after the `resource` object:
 	name: 'operation',
 	type: 'options',
 	displayOptions: {
-	show: {
-		resource: [
-		'contact',
-		],
-	},
+		show: {
+			resource: [
+				'contact',
+			],
+		},
 	},
 	options: [
-	{
-		name: 'Create',
-		value: 'create',
-		description: 'Create a contact',
-		action: 'Create a contact',
-	},
+		{
+			name: 'Create',
+			value: 'create',
+			description: 'Create a contact',
+			action: 'Create a contact',
+		},
 	],
 	default: 'create',
 	noDataExpression: true,
@@ -203,14 +203,14 @@ Add the following to the `properties` array, after the `resource` object:
 	type: 'string',
 	required: true,
 	displayOptions: {
-	show: {
-		operation: [
-		'create',
-		],
-		resource: [
-		'contact',
-		],
-	},
+		show: {
+			operation: [
+				'create',
+			],
+			resource: [
+				'contact',
+			],
+		},
 	},
 	default:'',
 	placeholder: 'name@email.com',
@@ -234,28 +234,28 @@ For this tutorial, you'll add two additional fields, to allow users to enter the
 	placeholder: 'Add Field',
 	default: {},
 	displayOptions: {
-	show: {
-		resource: [
-		'contact',
-		],
-		operation: [
-		'create',
-		],
-	},
+		show: {
+			resource: [
+				'contact',
+			],
+			operation: [
+				'create',
+			],
+		},
 	},
 	options: [
-	{
-		displayName: 'First Name',
-		name: 'firstName',
-		type: 'string',
-		default: '',
-	},
-	{
-		displayName: 'Last Name',
-		name: 'lastName',
-		type: 'string',
-		default: '',
-	},
+		{
+			displayName: 'First Name',
+			name: 'firstName',
+			type: 'string',
+			default: '',
+		},
+		{
+			displayName: 'Last Name',
+			name: 'lastName',
+			type: 'string',
+			default: '',
+		},
 	],
 },
 ```
@@ -279,34 +279,34 @@ const operation = this.getNodeParameter('operation', 0) as string;
 // For each item, make an API call to create a contact
 for (let i = 0; i < items.length; i++) {
 	if (resource === 'contact') {
-	if (operation === 'create') {
-		// Get email input
-		const email = this.getNodeParameter('email', i) as string;
-		// Get additional fields input
-		const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
-		const data: IDataObject = {
-		email,
-		};
+		if (operation === 'create') {
+			// Get email input
+			const email = this.getNodeParameter('email', i) as string;
+			// Get additional fields input
+			const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
+			const data: IDataObject = {
+				email,
+			};
 
-		Object.assign(data, additionalFields);
+			Object.assign(data, additionalFields);
 
-		// Make HTTP request according to https://sendgrid.com/docs/api-reference/
-		const options: OptionsWithUri = {
-		headers: {
-			'Accept': 'application/json',
-		},
-		method: 'PUT',
-		body: {
-			contacts: [
-			data,
-			],
-		},
-		uri: `https://api.sendgrid.com/v3/marketing/contacts`,
-		json: true,
-		};
-		responseData = await this.helpers.requestWithAuthentication.call(this, 'friendGridApi', options);
-		returnData.push(responseData);
-	}
+			// Make HTTP request according to https://sendgrid.com/docs/api-reference/
+			const options: OptionsWithUri = {
+				headers: {
+					'Accept': 'application/json',
+				},
+				method: 'PUT',
+				body: {
+					contacts: [
+						data,
+					],
+				},
+				uri: `https://api.sendgrid.com/v3/marketing/contacts`,
+				json: true,
+			};
+			responseData = await this.helpers.requestWithAuthentication.call(this, 'friendGridApi', options);
+			returnData.push(responseData);
+		}
 	}
 }
 // Map data to n8n data structure
@@ -351,28 +351,28 @@ export class FriendGridApi implements ICredentialType {
 	name = 'friendGridApi';
 	displayName = 'FriendGrid API';
 	properties: INodeProperties[] = [
-	{
-		displayName: 'API Key',
-		name: 'apiKey',
-		type: 'string',
-		default: '',
-	},
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string',
+			default: '',
+		},
 	];
 
 	authenticate: IAuthenticateGeneric = {
-	type: 'generic',
-	properties: {
-		headers: {
-		Authorization: '=Bearer {{$credentials.apiKey}}',
+		type: 'generic',
+		properties: {
+			headers: {
+				Authorization: '=Bearer {{$credentials.apiKey}}',
+			},
 		},
-	},
 	};
 
 	test: ICredentialTestRequest = {
-	request: {
-		baseURL: 'https://api.sendgrid.com/v3',
-		url: '/marketing/contacts',
-	},
+		request: {
+			baseURL: 'https://api.sendgrid.com/v3',
+			url: '/marketing/contacts',
+		},
 	};
 }
 
@@ -392,19 +392,19 @@ Add the following code to the JSON file:
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
-	"Miscellaneous"
+		"Miscellaneous"
 	],
 	"resources": {
-	"credentialDocumentation": [
-		{
-		"url": ""
-		}
-	],
-	"primaryDocumentation": [
-		{
-		"url": ""
-		}
-	]
+		"credentialDocumentation": [
+			{
+				"url": ""
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": ""
+			}
+		]
 	}
 }
 ```
@@ -423,43 +423,43 @@ Your npm package details are in the `package.json` at the root of the project. I
 	"version": "0.1.0",
 	"description": "n8n node to create contacts in SendGrid",
 	"keywords": [
-	// This keyword is required for community nodes
-	"n8n-community-node-package"
+		// This keyword is required for community nodes
+		"n8n-community-node-package"
 	],
 	"license": "MIT",
 	"homepage": "https://n8n.io",
 	"author": {
-	"name": "Test",
-	"email": "test@example.com"
+		"name": "Test",
+		"email": "test@example.com"
 	},
 	"repository": {
-	"type": "git",
-	// Change the git remote to your own repository
-	// Add the new URL here
-	"url": "git+<your-repo-url>"
+		"type": "git",
+		// Change the git remote to your own repository
+		// Add the new URL here
+		"url": "git+<your-repo-url>"
 	},
 	"main": "index.js",
 	"scripts": {
-	// don't change
+		// don't change
 	},
 	"files": [
-	"dist"
+		"dist"
 	],
 	// Link the credentials and node
 	"n8n": {
-	"n8nNodesApiVersion": 1,
-	"credentials": [
-		"dist/credentials/FriendGridApi.credentials.js"
-	],
-	"nodes": [
-		"dist/nodes/FriendGrid/FriendGrid.node.js"
-	]
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/FriendGridApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/FriendGrid/FriendGrid.node.js"
+		]
 	},
 	"devDependencies": {
-	// don't change
+		// don't change
 	},
 	"dependencies": {
-	// don't change
+		// don't change
 	}
 }
 ```

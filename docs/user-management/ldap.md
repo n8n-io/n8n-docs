@@ -5,9 +5,9 @@ contentType: howto
 
 # Lightweight Directory Access Protocol (LDAP)
 
-!!! info "Feature availability"
-	* Available on Self-hosted Enterprise and Cloud Enterprise plans.
-	* You need access to the n8n instance owner account.
+!!! info "Feature availability"		
+		* Available on Self-hosted Enterprise and Cloud Enterprise plans.
+		* You need access to the n8n instance owner account.
 
 This page tells you how to enable LDAP in n8n. It assumes you're familiar with LDAP, and have an existing LDAP server set up.
 

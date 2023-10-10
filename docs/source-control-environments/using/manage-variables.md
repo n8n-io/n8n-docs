@@ -31,8 +31,8 @@ To manage variables using an API call, make a `POST` request to `/source-control
 	--data '{
 	"force": true,
 	"variables": { 
-		"key1": "value1",
-		"key2": "value2"
+			"key1": "value1",
+			"key2": "value2"
 	}
 	}
 	'

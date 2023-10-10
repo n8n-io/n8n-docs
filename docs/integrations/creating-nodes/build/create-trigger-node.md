@@ -79,25 +79,25 @@ export class AutofriendTrigger implements INodeType {
 	   subtitle: '={{$parameter["event"]}}',
 	   description: 'Handle Autofriend events via webhooks',
 	   defaults: {
-	   name: 'Autofriend Trigger',
-	   color: '#6ad7b9',
+		   name: 'Autofriend Trigger',
+		   color: '#6ad7b9',
 	   },
 	   inputs: [],
 	   outputs: ['main'],
 	   credentials: [],
 	   webhooks: [
-	   {
-		   name: 'default',
-		   httpMethod: 'POST',
-		   responseMode: 'onReceived',
-		   path: 'webhook',
-	   },
+		   {
+			   name: 'default',
+			   httpMethod: 'POST',
+			   responseMode: 'onReceived',
+			   path: 'webhook',
+		   },
 	   ],
 	   properties: [],
    };
    async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 	   return {
-	   workflowData: [],
+		   workflowData: [],
 	   };
    }
 }
@@ -170,34 +170,34 @@ Let's make the Node Editor View ask for these parameters:
 	required: true,
 	default: '',
 	options: [
-	{
-		name: 'Contact Added',
-		value: 'contactAdded',
-	},
-	{
-		name: 'Contact Added To List',
-		value: 'contactAddedToList',
-	},
-	{
-		name: 'Contact Entered Segment',
-		value: 'contactEnteredSegment',
-	},
-	{
-		name: 'Contact Left Segment',
-		value: 'contactLeftSegment',
-	},
-	{
-		name: 'Contact Removed From List',
-		value: 'contactRemovedFromList',
-	},
-	{
-		name: 'Contact Unsubscribed',
-		value: 'contactUnsubscribed',
-	},
-	{
-		name: 'Contact Updated',
-		value: 'contactUpdated',
-	},
+		{
+			name: 'Contact Added',
+			value: 'contactAdded',
+		},
+		{
+			name: 'Contact Added To List',
+			value: 'contactAddedToList',
+		},
+		{
+			name: 'Contact Entered Segment',
+			value: 'contactEnteredSegment',
+		},
+		{
+			name: 'Contact Left Segment',
+			value: 'contactLeftSegment',
+		},
+		{
+			name: 'Contact Removed From List',
+			value: 'contactRemovedFromList',
+		},
+		{
+			name: 'Contact Unsubscribed',
+			value: 'contactUnsubscribed',
+		},
+		{
+			name: 'Contact Updated',
+			value: 'contactUpdated',
+		},
 	],
 },
 ```
@@ -236,12 +236,12 @@ export class AutofriendApi implements ICredentialType {
 	name = 'autofriendApi';
 	displayName = 'Autofriend API';
 	properties = [
-	{
-		displayName: 'API Key',
-		name: 'apiKey',
-		type: 'string' as NodePropertyTypes,
-		default: '',
-	},
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string' as NodePropertyTypes,
+			default: '',
+		},
 	];
 }
 ```
@@ -254,8 +254,8 @@ export class AutofriendApi implements ICredentialType {
 ```typescript
  credentials: [
 	  {
-	  name: 'autofriendApi',
-	  required: true,
+		  name: 'autofriendApi',
+		  required: true,
 	  },
 ],
 ```
@@ -293,10 +293,10 @@ For example, for a Trigger node with the following `webhooks` property, n8n will
 ```typescript
 webhooks: [
 	{
-	name: 'default',
-	httpMethod: 'POST',
-	responseMethod: 'onReceived',
-	path: 'webhook',
+		name: 'default',
+		httpMethod: 'POST',
+		responseMethod: 'onReceived',
+		path: 'webhook',
 	},
 ]
 ```
@@ -359,31 +359,31 @@ export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFun
 	const endpoint = 'https://api2.autopilothq.com/v1';
 
 	const options: OptionsWithUri = {
-	headers: {
-		'Content-Type': 'application/json',
-		autopilotapikey: apiKey,
-	},
-	method,
-	body,
-	qs: query,
-	uri: uri || `${endpoint}${resource}`,
-	json: true,
+		headers: {
+			'Content-Type': 'application/json',
+			autopilotapikey: apiKey,
+		},
+		method,
+		body,
+		qs: query,
+		uri: uri || `${endpoint}${resource}`,
+		json: true,
 	};
 	if (!Object.keys(body).length) {
-	delete options.body;
+		delete options.body;
 	}
 	if (!Object.keys(query).length) {
-	delete options.qs;
+		delete options.qs;
 	}
 
 	try {
-	return await this.helpers.request!(options);
+		return await this.helpers.request!(options);
 	} catch (error) {
-	if (error.response) {
-		const errorMessage = error.response.body.message || error.response.body.description || error.message;
-		throw new Error(`Autopilot error response [${error.statusCode}]: ${errorMessage}`);
-	}
-	throw error;
+		if (error.response) {
+			const errorMessage = error.response.body.message || error.response.body.description || error.message;
+			throw new Error(`Autopilot error response [${error.statusCode}]: ${errorMessage}`);
+		}
+		throw error;
 	}
 }
 ```
@@ -394,41 +394,41 @@ export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFun
 // @ts-ignore
 webhookMethods = {
 	default: {
-	async checkExists(this: IHookFunctions): Promise<boolean> {
-		const webhookData = this.getWorkflowStaticData('node');
-		const webhookUrl = this.getNodeWebhookUrl('default');
-		const event = this.getNodeParameter('event') as string;
-		const { hooks: webhooks } = await autofriendApiRequest.call(this, 'GET', '/hooks');
-		for (const webhook of webhooks) {
-		if (webhook.target_url === webhookUrl && webhook.event === snakeCase(event)) {
+		async checkExists(this: IHookFunctions): Promise<boolean> {
+			const webhookData = this.getWorkflowStaticData('node');
+			const webhookUrl = this.getNodeWebhookUrl('default');
+			const event = this.getNodeParameter('event') as string;
+			const { hooks: webhooks } = await autofriendApiRequest.call(this, 'GET', '/hooks');
+			for (const webhook of webhooks) {
+				if (webhook.target_url === webhookUrl && webhook.event === snakeCase(event)) {
+					webhookData.webhookId = webhook.hook_id;
+					return true;
+				}
+			}
+			return false;
+		},
+		async create(this: IHookFunctions): Promise<boolean> {
+			const webhookUrl = this.getNodeWebhookUrl('default');
+			const webhookData = this.getWorkflowStaticData('node');
+			const event = this.getNodeParameter('event') as string;
+			const body: IDataObject = {
+				event: snakeCase(event),
+				target_url: webhookUrl,
+			};
+			const webhook = await autofriendApiRequest.call(this, 'POST', '/hook', body);
 			webhookData.webhookId = webhook.hook_id;
 			return true;
-		}
-		}
-		return false;
-	},
-	async create(this: IHookFunctions): Promise<boolean> {
-		const webhookUrl = this.getNodeWebhookUrl('default');
-		const webhookData = this.getWorkflowStaticData('node');
-		const event = this.getNodeParameter('event') as string;
-		const body: IDataObject = {
-		event: snakeCase(event),
-		target_url: webhookUrl,
-		};
-		const webhook = await autofriendApiRequest.call(this, 'POST', '/hook', body);
-		webhookData.webhookId = webhook.hook_id;
-		return true;
-	},
-	async delete(this: IHookFunctions): Promise<boolean> {
-		const webhookData = this.getWorkflowStaticData('node');
-		try {
-		await autofriendApiRequest.call(this, 'DELETE', `/hook/${webhookData.webhookId}`);
-		} catch (error) {
-		return false;
-		}
-		delete webhookData.webhookId;
-		return true;
-	},
+		},
+		async delete(this: IHookFunctions): Promise<boolean> {
+			const webhookData = this.getWorkflowStaticData('node');
+			try {
+				await autofriendApiRequest.call(this, 'DELETE', `/hook/${webhookData.webhookId}`);
+			} catch (error) {
+				return false;
+			}
+			delete webhookData.webhookId;
+			return true;
+		},
 	},
 };
 }
@@ -438,9 +438,9 @@ webhookMethods = {
 async webhook(this: IWebhookFunctions): Promise<IWebhookResponseData> {
 	const req = this.getRequestObject();
 	return {
-	workflowData: [
-		this.helpers.returnJsonArray(req.body),
-	],
+		workflowData: [
+			this.helpers.returnJsonArray(req.body),
+		],
 };
 ```
 4. In the same file, uncomment the code snippet on the top to import `autoFriendApiRequest` and `snakeCase`.

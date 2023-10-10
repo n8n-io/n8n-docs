@@ -15,11 +15,11 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 ```js
 [
 	{
-	"json": {
-		. . . 
-	},
-	// The index of the input item that generated this output item
-	"pairedItem": 0
+		"json": {
+			. . . 
+		},
+		// The index of the input item that generated this output item
+		"pairedItem": 0
 	}
 ]
 ```
@@ -64,7 +64,7 @@ for(let i=0; i<items.length; i++){
     "json":
       {
         "name": items[i].json.name,
-		"aBrandNewField": "New data for item " + i
+				"aBrandNewField": "New data for item " + i
       }
     }
   )
@@ -85,7 +85,7 @@ for(let i=0; i<items.length; i++){
       "json":
         {
           "name": items[i].json.name,
-			"aBrandNewField": "New data for item " + i
+					"aBrandNewField": "New data for item " + i
         },
       "pairedItem": i
     }    

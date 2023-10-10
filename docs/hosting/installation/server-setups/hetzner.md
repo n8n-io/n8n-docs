@@ -22,10 +22,10 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 You can change most of the settings to suit your needs, but as this guide uses Docker to run the application, under the **Image** section, select "Docker CE" from the **APPS** tab.
 
 !!! note "Type"
-	When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
+		When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
 
 !!! note "SSH keys"
-	Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+		Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 
 ## Log in to your server
 

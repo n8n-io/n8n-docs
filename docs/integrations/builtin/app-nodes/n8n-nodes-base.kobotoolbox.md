@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the KoBo Toolbox node supports an
 * Form
     * Get
     * Get Many
-	* Redeploy
+		* Redeploy
 * Hook
     * Get
     * Get Many

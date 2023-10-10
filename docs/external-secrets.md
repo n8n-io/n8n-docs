@@ -24,19 +24,19 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 1. Select **Set Up** for your store provider.
 1. Enter the credentials for your provider:
 	* HashiCorp Vault: provide the **Vault URL** for your vault instance, and select your **Authentication Method**.  Enter your authentication details. Optionally provide a namespace.
-	- Refer to the HashiCorp documentation for your authentication method:
-		[Token auth method](https://developer.hashicorp.com/vault/docs/auth/token){:target=_blank .external-link}  
-		[AppRole auth method](https://developer.hashicorp.com/vault/docs/auth/approle){:target=_blank .external-link}  
-		[Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass){:target=_blank .external-link}  
-	- If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces){:target=_blank .external-link} for more information on HashiCorp Vault namespaces.
+		- Refer to the HashiCorp documentation for your authentication method:
+				[Token auth method](https://developer.hashicorp.com/vault/docs/auth/token){:target=_blank .external-link}  
+				[AppRole auth method](https://developer.hashicorp.com/vault/docs/auth/approle){:target=_blank .external-link}  
+				[Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass){:target=_blank .external-link}  
+		- If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces){:target=_blank .external-link} for more information on HashiCorp Vault namespaces.
 
 	* Infisical: provide a **Service Token**. Refer to Infisical's [Service token](https://infisical.com/docs/documentation/platform/token){:target=_blank .external-link} documentation for information on getting your token. If you self-host Infisical, enter the **Site URL**.
 
-	!!! note "Infisical environment"
-		Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments. n8n only support service tokens that have access to a single environment.
+		!!! note "Infisical environment"
+			Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments. n8n only support service tokens that have access to a single environment.
 
-	!!! note "Infisical folders"
-	 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
+		!!! note "Infisical folders"
+		 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
 
 1. **Save** your configuration.
 1. Enable the provider using the **Disabled / Enabled** toggle.

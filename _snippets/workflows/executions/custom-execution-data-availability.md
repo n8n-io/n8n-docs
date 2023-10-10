@@ -1,4 +1,4 @@
-!!! info "Feature availability"	
+!!! info "Feature availability"		
 	Custom executions data is available on:
 
 	* Cloud: Pro, Enterprise

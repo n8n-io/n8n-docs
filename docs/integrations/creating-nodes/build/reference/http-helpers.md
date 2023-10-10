@@ -36,21 +36,21 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 	qs?: object;
 	arrayFormat?: 'indices' | 'brackets' | 'repeat' | 'comma';
 	auth?: {
-	username: string,
-	password: string,
+		username: string,
+		password: string,
 	};
 	disableFollowRedirect?: boolean;
 	encoding?: 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream';
 	skipSslCertificateValidation?: boolean;
 	returnFullResponse?: boolean;
 	proxy?: {
-	host: string;
-	port: string | number;
-	auth?: {
-		username: string;
-		password: string;
-	},
-	protocol?: string;
+		host: string;
+		port: string | number;
+		auth?: {
+			username: string;
+			password: string;
+		},
+		protocol?: string;
 	};
 	timeout?: number;
 	json?: boolean;

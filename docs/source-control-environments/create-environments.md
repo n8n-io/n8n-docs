@@ -44,15 +44,15 @@ Once you've chosen your pattern, you need to set up your GitHub repository.
 	    * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.
 	    * Create the new repository with a README so you can immediately create branches. 
     1. Create one branch named `production` and another named `development`. Refer to [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository){:target=_blank .external-link} for guidance.
-		
+			
 
 === "Single-branch"
 
     [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}. 
 
       * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.  
-      * Create the new repository with a README. This creates the `main` branch, which you'll connect to. 	
-	
+      * Create the new repository with a README. This creates the `main` branch, which you'll connect to. 		
+		
 
 ## Connect your n8n instances to your repository
 

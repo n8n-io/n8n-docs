@@ -5,11 +5,11 @@ description: How to enable 2FA for your n8n account
 # Two-factor authentication (2FA)
 
 !!! info "Feature availability"		
-		* You need access to the n8n instance owner account.
-		* Available on self-hosted n8n.
-		* Coming soon to n8n Cloud.
+	* You need access to the n8n instance owner account.
+	* Available on self-hosted n8n.
+	* Coming soon to n8n Cloud.
 
-Twofactor authentication (2FA) adds a second authentication method on top of username and password. This increases account security. n8n supports 2FA using an authenticator app.
+Two-factor authentication (2FA) adds a second authentication method on top of username and password. This increases account security. n8n supports 2FA using an authenticator app.
 
 ## Enable 2FA
 

@@ -102,7 +102,7 @@ import {
 The node must export an interface that implements `INodeType`. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 !!! note "Class names and file names"
-		Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
+	Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
 
 ```typescript
 export class FriendGrid implements INodeType {

@@ -149,6 +149,7 @@ nav:
       - Templates: workflows/templates.md
       - Sharing: workflows/sharing.md
       - Settings: workflows/settings.md
+      - Workflow history: workflows/history.md
       - Workflow ID: workflows/workflow-id.md
     - Manage credentials:
       - credentials/index.md

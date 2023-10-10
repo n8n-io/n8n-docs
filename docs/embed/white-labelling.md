@@ -98,14 +98,14 @@ If your logo assets require different sizing or placement you can customize SCSS
 	cursor: default;
 
 	&:hover, &:global(.is-active):hover {
-		background-color: initial !important;
+	background-color: initial !important;
 	}
 
 	* { vertical-align: middle; }
 	.icon {
-		height: 18px;
-		position: relative;
-		left: 6px;
+	height: 18px;
+	position: relative;
+	left: 6px;
 	}
 
 }

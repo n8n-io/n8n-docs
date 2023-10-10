@@ -105,7 +105,7 @@
   }
 
 	.md-footer {
-		border-top: 1px solid var(--color-background-dark);
+	border-top: 1px solid var(--color-background-dark);
 	}
   
   .md-typeset {
@@ -193,15 +193,15 @@
   }
 
 	.md-status--beta::after {
-		background-color: var(--color-text-base);
-		border-radius: 0.2rem;
-		color: white;
-		content: "beta";
-		font-size: 0.5rem;
-		height: auto;		
-		padding: 0.1rem 0.2rem;
-		-webkit-mask-image: none;
-		width: auto;
+	background-color: var(--color-text-base);
+	border-radius: 0.2rem;
+	color: white;
+	content: "beta";
+	font-size: 0.5rem;
+	height: auto;	
+	padding: 0.1rem 0.2rem;
+	-webkit-mask-image: none;
+	width: auto;
 	}
   
 

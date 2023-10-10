@@ -72,11 +72,11 @@ Example file:
 
 	```json
 	{
-		"endpoints": {
-			"metrics": {
-				"enable": true
-			}
+	"endpoints": {
+		"metrics": {
+		"enable": true
 		}
+	}
 	}
 	```
 

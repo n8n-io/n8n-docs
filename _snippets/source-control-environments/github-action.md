@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PULL
-				# Use GitHub secrets to protect sensitive information
+		# Use GitHub secrets to protect sensitive information
         run: >
           curl --location '${{ secrets.INSTANCE_URL }}/version-control/pull' --header
           'Content-Type: application/json' --header 'X-N8N-API-KEY: ${{ secrets.INSTANCE_API_KEY }}'

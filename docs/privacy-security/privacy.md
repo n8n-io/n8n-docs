@@ -26,7 +26,7 @@ The n8n Data Processing Agreement includes the [Standard Contractual Clauses (S
 You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subprocessors){:target=_blank .external-link}.
 
 !!! note "Self-hosted n8n"
-		For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
+	For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
 
 ### Submitting a GDPR deletion request
 

@@ -37,16 +37,16 @@ The final workflow looks like this:
 3. Copy this code into the Code node:
 	```js
 	return [
-		{
-			json: {
-				url: 'https://medium.com/feed/n8n-io',
-			}
-		},
-		{
-			json: {
-				url: 'https://dev.to/feed/n8n',
-			}
+	{
+		json: {
+		url: 'https://medium.com/feed/n8n-io',
 		}
+	},
+	{
+		json: {
+		url: 'https://dev.to/feed/n8n',
+		}
+	}
 	];
 	```
 4. Add the SplitInBatches node.

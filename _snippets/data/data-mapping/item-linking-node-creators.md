@@ -14,20 +14,20 @@ If you need to handle item linking manually, do this by setting `pairedItem` on 
 newItem = {
 	"json": { . . . },
 	"pairedItem": {
-		"item": item.pairedItem,
-		// Optional: choose the input to use
-		// Set this if your node combines multiple inputs
-		"input": 0
+	"item": item.pairedItem,
+	// Optional: choose the input to use
+	// Set this if your node combines multiple inputs
+	"input": 0
 };
 
 // Or set the index manually
 newItem = {
-		"json": { . . . }
-		"pairedItem": {
-			"item": i,
-			// Optional: choose the input to use
-			// Set this if your node combines multiple inputs
-			"input": 0
-		},
+	"json": { . . . }
+	"pairedItem": {
+		"item": i,
+		// Optional: choose the input to use
+		// Set this if your node combines multiple inputs
+		"input": 0
+	},
 };
 ```

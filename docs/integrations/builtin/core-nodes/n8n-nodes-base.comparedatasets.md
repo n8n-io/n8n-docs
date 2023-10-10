@@ -41,51 +41,51 @@ For example, if you compare the two datasets below using **person.language** as 
 ```json
 	// Input 1
 	[
+	{
+		"person":
 		{
-			"person":
-			{
-				"name":	"Stefan",
-				"language":	"de"
-			}
-		},
-		{
-			"person":
-			{
-				"name":	"Jim",
-				"language":	"en"
-			}
-		},
-		{
-			"person":
-			{
-				"name":	"Hans",
-				"language":	"de"
-			}
+		"name":	"Stefan",
+		"language":	"de"
 		}
+	},
+	{
+		"person":
+		{
+		"name":	"Jim",
+		"language":	"en"
+		}
+	},
+	{
+		"person":
+		{
+		"name":	"Hans",
+		"language":	"de"
+		}
+	}
 	]
 	// Input 2
-		[
+	[
+	{
+		"person":
 		{
-			"person":
-			{
-				"name":	"Sara",
-				"language":	"de"
-			}
-		},
-		{
-			"person":
-			{
-				"name":	"Jane",
-				"language":	"en"
-			}
-		},
-		{
-			"person":
-			{
-				"name":	"Harriet",
-				"language":	"de"
-			}
+		"name":	"Sara",
+		"language":	"de"
 		}
+	},
+	{
+		"person":
+		{
+		"name":	"Jane",
+		"language":	"en"
+		}
+	},
+	{
+		"person":
+		{
+		"name":	"Harriet",
+		"language":	"de"
+		}
+	}
 	]
 ```
 
@@ -105,45 +105,45 @@ For example, given these two datasets:
 ```json
 	// Input 1
 	[
-		{
-			"fruit": {
-				"type": "apple",
-				"color": "red"
-			}
-		},
-				{
-			"fruit": {
-				"type": "apple",
-				"color": "red"
-			}
-		},
-				{
-			"fruit": {
-				"type": "banana",
-				"color": "yellow"
-			}
+	{
+		"fruit": {
+		"type": "apple",
+		"color": "red"
 		}
+	},
+		{
+		"fruit": {
+		"type": "apple",
+		"color": "red"
+		}
+	},
+		{
+		"fruit": {
+		"type": "banana",
+		"color": "yellow"
+		}
+	}
 	]
 	// Input 2
 	[
-		{
-			"fruit": {
-				"type": "apple",
-				"color": "red"
-			}
-		},
-				{
-			"fruit": {
-				"type": "apple",
-				"color": "red"
-			}
-		},
-				{
-			"fruit": {
-				"type": "banana",
-				"color": "yellow"
-			}
+	{
+		"fruit": {
+		"type": "apple",
+		"color": "red"
 		}
+	},
+		{
+		"fruit": {
+		"type": "apple",
+		"color": "red"
+		}
+	},
+		{
+		"fruit": {
+		"type": "banana",
+		"color": "yellow"
+		}
+	}
 	]
 ```
 

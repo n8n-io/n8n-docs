@@ -21,8 +21,8 @@ The data that moves along from node to node in your workflow must be in a format
 
 	```json
 	{
-		name: 'Michelangelo',
-		color: 'blue',
+	name: 'Michelangelo',
+	color: 'blue',
 	}
 	```
 
@@ -30,22 +30,22 @@ The data that moves along from node to node in your workflow must be in a format
 
 	```javascript
 	var turtles = [
-		{
-			name: 'Michelangelo',
-			color: 'orange',
-		},
-		{
-			name: 'Donatello',
-			color: 'purple',
-		},
-		{
-			name: 'Raphael',
-			color: 'red',
-		},
-		{
-			name: 'Leonardo',
-			color: 'blue',
-		}
+	{
+		name: 'Michelangelo',
+		color: 'orange',
+	},
+	{
+		name: 'Donatello',
+		color: 'purple',
+	},
+	{
+		name: 'Raphael',
+		color: 'red',
+	},
+	{
+		name: 'Leonardo',
+		color: 'blue',
+	}
 	];
 	```
 
@@ -67,9 +67,9 @@ Now that you are familiar with the n8n data structure, you can use it to create 
 ```javascript
 return [
 	{
-		json: {
-			apple: 'beets',
-		}
+	json: {
+		apple: 'beets',
+	}
 	}
 ];
 ```
@@ -103,28 +103,28 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 	In the Code node, in the JavaScript Code field you have to write the following code:
 
 	```js
-		var myContacts = [
-			{
-				json: {
-					name: 'Alice',
-					email: {
-						personal: 'alice@home.com',
-						work: 'alice@wonderland.org'
-					},
-				}
+	var myContacts = [
+		{
+		json: {
+			name: 'Alice',
+			email: {
+			personal: 'alice@home.com',
+			work: 'alice@wonderland.org'
 			},
-			{
-				json: {
-					name: 'Bob',
-					email: {
-						personal: 'bob@mail.com',
-						work: 'contact@thebuilder.com'
-						},
-				}
+		}
+		},
+		{
+		json: {
+			name: 'Bob',
+			email: {
+			personal: 'bob@mail.com',
+			work: 'contact@thebuilder.com'
 			},
-		];
+		}
+		},
+	];
 
-		return myContacts;
+	return myContacts;
 	```
 
 	When you execute the Code node, the result should look like this:
@@ -145,9 +145,9 @@ Let's build on the previous exercise, in which you used the Code node to create 
 	In the Code node, in the JavaScript Code field you have to write the following code:
 
 
-		let items = $input.all();
-		items[0].json.workEmail = items[0].json.email['work'];
-		return items;
+	let items = $input.all();
+	items[0].json.workEmail = items[0].json.email['work'];
+	return items;
 
 
 	When you execute the Code node, the result should look like this:
@@ -173,9 +173,9 @@ There are several ways to transform data for the purposes mentioned above:
 
 	```js
 	return $input.all().map(item => {
-		return {
-			json: item
-		}
+	return {
+		json: item
+	}
 	});
 	```
 
@@ -208,11 +208,11 @@ Use the HTTP Request node to make a GET request to the Poetry DB API `https://po
 	To transform the data with the Code node, connect this node to the *HTTP Request node* and write the following code in the JavaScript Code field:
 
 	```js
-		return items[0].json.body.map(item => {
-			return {
-				json: item
-			}
-		});
+	return items[0].json.body.map(item => {
+		return {
+		json: item
+		}
+	});
 	```
 
 	To transform the data with the Item Lists node, connect this node to the *HTTP Request node* and set the following parameters:

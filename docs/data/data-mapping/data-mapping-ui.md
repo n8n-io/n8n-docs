@@ -29,8 +29,8 @@ Data mapping maps the key path, and loads the key's value into the field. For ex
 ```js
 [
 	{
-		"fruit": "apples",
-		"color": "green"
+	"fruit": "apples",
+	"color": "green"
 	}
 ]
 ```

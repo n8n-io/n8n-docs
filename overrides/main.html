@@ -34,17 +34,17 @@
 	<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.pageview-props.js"></script>
 	
 	<script>
-		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
-		document.addEventListener("DOMContentLoaded", function () {
-			/* Set up search tracking */
-			if (document.forms.search) {				
-				//var query = document.forms.search.query;		
-				document.forms.search.addEventListener("click", function() {
-					plausible("search");
-					//if (this.value && this.value.length > 3) { plausible("search", { props: { search_term: this.value } })};
-				})
-			}
-		});
+	window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
+	document.addEventListener("DOMContentLoaded", function () {
+		/* Set up search tracking */
+		if (document.forms.search) {		
+		//var query = document.forms.search.query;	
+		document.forms.search.addEventListener("click", function() {
+			plausible("search");
+			//if (this.value && this.value.length > 3) { plausible("search", { props: { search_term: this.value } })};
+		})
+		}
+	});
 	</script>
 
 {% endblock %}

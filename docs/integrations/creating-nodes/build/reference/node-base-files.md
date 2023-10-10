@@ -30,10 +30,10 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 export class ExampleNode implements INodeType {
 	description: INodeTypeDescription = {
-		// Basic node details here
-		properties: [
-			// Resources and operations here
-		]
+	// Basic node details here
+	properties: [
+		// Resources and operations here
+	]
 	};
 }
 ```
@@ -234,38 +234,38 @@ _Object_ | _Optional_
 ```js
 methods : {
 	loadOptions: {
-		routing: {
-			request: {
-				url: '/webhook/example-option-parameters',
-				method: 'GET',
-			},
-			output: {
-				postReceive: [
-					{
-						// When the returned data is nested under another property
-						// Specify that property key
-						type: 'rootProperty',
-						properties: {
-							property: 'responseData',
-						},
-					},
-					{
-						type: 'setKeyValue',
-						properties: {
-							name: '={{$responseItem.key}} ({{$responseItem.value}})',
-							value: '={{$responseItem.value}}',
-						},
-					},
-					{
-						// If incoming data is an array of objects, sort alphabetically by key
-						type: 'sort',
-						properties: {
-							key: 'name',
-						},
-					},
-				],
-			},
+	routing: {
+		request: {
+		url: '/webhook/example-option-parameters',
+		method: 'GET',
 		},
+		output: {
+		postReceive: [
+			{
+			// When the returned data is nested under another property
+			// Specify that property key
+			type: 'rootProperty',
+			properties: {
+				property: 'responseData',
+			},
+			},
+			{
+			type: 'setKeyValue',
+			properties: {
+				name: '={{$responseItem.key}} ({{$responseItem.value}})',
+				value: '={{$responseItem.value}}',
+			},
+			},
+			{
+			// If incoming data is an array of objects, sort alphabetically by key
+			type: 'sort',
+			properties: {
+				key: 'name',
+			},
+			},
+		],
+		},
+	},
 	}
 },
 ```
@@ -282,13 +282,13 @@ The code example below comes from the [Declarative-style tutorial](/integrations
 description: INodeTypeDescription = {
   // Other node info here
   requestDefaults: {
-			baseURL: 'https://api.nasa.gov',
-			url: '',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
+		baseURL: 'https://api.nasa.gov',
+		url: '',
+		headers: {
+		Accept: 'application/json',
+		'Content-Type': 'application/json',
 		},
+	},
     properties: [
       // Resources here
       {
@@ -354,29 +354,29 @@ For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packag
 
 ```js
 	methods = {
-		loadOptions: {
-			// Get all the labels and display them
-			async getLabels(
-				this: ILoadOptionsFunctions,
-			): Promise<INodePropertyOptions[]> {
-				const returnData: INodePropertyOptions[] = [];
-				const labels = await googleApiRequestAllItems.call(
-					this,
-					'labels',
-					'GET',
-					'/gmail/v1/users/me/labels',
-				);
-				for (const label of labels) {
-					const labelName = label.name;
-					const labelId = label.id;
-					returnData.push({
-						name: labelName,
-						value: labelId,
-					});
-				}
-				return returnData;
-			},
+	loadOptions: {
+		// Get all the labels and display them
+		async getLabels(
+		this: ILoadOptionsFunctions,
+		): Promise<INodePropertyOptions[]> {
+		const returnData: INodePropertyOptions[] = [];
+		const labels = await googleApiRequestAllItems.call(
+			this,
+			'labels',
+			'GET',
+			'/gmail/v1/users/me/labels',
+		);
+		for (const label of labels) {
+			const labelName = label.name;
+			const labelId = label.id;
+			returnData.push({
+			name: labelName,
+			value: labelId,
+			});
+		}
+		return returnData;
 		},
+	},
 	};
 ```
 

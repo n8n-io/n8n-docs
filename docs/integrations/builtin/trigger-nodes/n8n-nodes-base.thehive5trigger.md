@@ -64,14 +64,14 @@ To configure the webhook for your TheHive instance:
 2. Add the following lines to the application.conf file. This is TheHive configuration file.
 	```
 	notification.webhook.endpoints = [
-		{
-			name: WEBHOOK_NAME
-			url: WEBHOOK_URL
-			version: 0
-			wsConfig: {}
-			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
-			excludedTheHiveOrganisations: []
-		}
+	{
+		name: WEBHOOK_NAME
+		url: WEBHOOK_URL
+		version: 0
+		wsConfig: {}
+		includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
+		excludedTheHiveOrganisations: []
+	}
 	]
 	```
 3. Replace `WEBHOOK_URL` with the URL you copied in the previous step.
@@ -80,12 +80,12 @@ To configure the webhook for your TheHive instance:
 	```sh
 	curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/json' THEHIVE_URL/api/config/organisation/notification -d '
 	{
-		"value": [
-			{
-			"delegate": false,
-			"trigger": { "name": "AnyEvent"},
-			"notifier": { "name": "webhook", "endpoint": "WEBHOOK_NAME" }
-			}
-		]
+	"value": [
+		{
+		"delegate": false,
+		"trigger": { "name": "AnyEvent"},
+		"notifier": { "name": "webhook", "endpoint": "WEBHOOK_NAME" }
+		}
+	]
 	}'
 	```

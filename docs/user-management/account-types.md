@@ -12,7 +12,7 @@ There are two account types, owner and member. The account type affects the user
     * Add and remove users
     * See all workflows
     * Delete tags
-		* See all credentials (but not the sensitive information)
+	* See all credentials (but not the sensitive information)
 * Members: these are normal n8n users.
   Members can:
     * See all workflow tags, create new tags, and assign tags to their workflows. Members can't delete tags.

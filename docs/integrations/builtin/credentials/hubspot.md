@@ -59,7 +59,7 @@ Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} acco
         * forms,
         * tickets,
 
-		!!! note "Exact scope needed"
+	!!! note "Exact scope needed"
 	    	If you grant access to more or less scopes than listed above, this can cause an issue with the authentication step.
 
 10. Select **Save** to save your settings in HubSpot.

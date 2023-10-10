@@ -52,52 +52,52 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 	```json
 	{
-		"nodes": [
-			{
-				"parameters": {},
-				"name": "Error Trigger",
-				"type": "n8n-nodes-base.errorTrigger",
-				"typeVersion": 1,
-				"position": [
-					720,
-					-380
-				]
-			},
-			{
-				"parameters": {
-					"channel": "channelname",
-					"text": "=This workflow {{$node[\"Error Trigger\"].json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$node[\"Error Trigger\"].json[\"execution\"][\"url\"]}}",
-					"attachments": [],
-					"otherOptions": {}
-				},
-				"name": "Slack",
-				"type": "n8n-nodes-base.slack",
-				"position": [
-					900,
-					-380
-				],
-				"typeVersion": 1,
-				"credentials": {
-					"slackApi": {
-						"id": "17",
-						"name": "slack_credentials"
-					}
-				}
-			}
+	"nodes": [
+		{
+		"parameters": {},
+		"name": "Error Trigger",
+		"type": "n8n-nodes-base.errorTrigger",
+		"typeVersion": 1,
+		"position": [
+			720,
+			-380
+		]
+		},
+		{
+		"parameters": {
+			"channel": "channelname",
+			"text": "=This workflow {{$node[\"Error Trigger\"].json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$node[\"Error Trigger\"].json[\"execution\"][\"url\"]}}",
+			"attachments": [],
+			"otherOptions": {}
+		},
+		"name": "Slack",
+		"type": "n8n-nodes-base.slack",
+		"position": [
+			900,
+			-380
 		],
-		"connections": {
-			"Error Trigger": {
-				"main": [
-					[
-						{
-							"node": "Slack",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
+		"typeVersion": 1,
+		"credentials": {
+			"slackApi": {
+			"id": "17",
+			"name": "slack_credentials"
 			}
 		}
+		}
+	],
+	"connections": {
+		"Error Trigger": {
+		"main": [
+			[
+			{
+				"node": "Slack",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		}
+	}
 	}
 	```
 

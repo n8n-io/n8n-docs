@@ -19,14 +19,14 @@ Basic configuration:
 	default: 'n8n',
 	description: 'The name of the user',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -44,19 +44,19 @@ String field for inputting passwords:
 	type: 'string',
 	required: true,
 	typeOptions: {
-		password: true,
+	password: true,
 	},
 	default: '',
 	description: `User's password`,
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -73,19 +73,19 @@ String field with more than one row:
 	type: 'string',
 	required: true,
 	typeOptions: {
-		rows: 4,
+	rows: 4,
 	},
 	default: '',
 	description: 'Description',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -114,21 +114,21 @@ Basic configuration:
 	type: 'number',
 	required: true,
 	typeOptions: {
-		maxValue: 10,
-		minValue: 0,
-		numberStepSize: 1,
+	maxValue: 10,
+	minValue: 0,
+	numberStepSize: 1,
 	},
 	default: 10,
 	description: 'Your current age',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -144,19 +144,19 @@ Number field with decimal points:
 	type: 'number',
 	required: true,
 	typeOptions: {
-		numberPrecision: 2,
+	numberPrecision: 2,
 	},
 	default: 10.00,
 	description: 'Your current amount',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -175,36 +175,36 @@ Use the `collection` type when you need to display optional fields.
 	placeholder: 'Add Field',
 	default: {},
 	options: [
+	{
+		displayName: 'Type',
+		name: 'type',
+		type: 'options',
+		options: [
 		{
-			displayName: 'Type',
-			name: 'type',
-			type: 'options',
-			options: [
-				{
-					name: 'Automated',
-					value: 'automated',
-				},
-				{
-					name: 'Past',
-					value: 'past',
-				},
-				{
-					name: 'Upcoming',
-					value: 'upcoming',
-				},
-			],
-			default: '',
+			name: 'Automated',
+			value: 'automated',
 		},
+		{
+			name: 'Past',
+			value: 'past',
+		},
+		{
+			name: 'Upcoming',
+			value: 'upcoming',
+		},
+		],
+		default: '',
+	},
 	],
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -224,14 +224,14 @@ The `dateTime` type provides a date picker.
 	default: '',
 	description: 'The date and time when the file was last modified',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -252,14 +252,14 @@ The `boolean` type adds a toggle for entering true or false.
 	default: true, // Initial state of the toggle
 	description: 'Whether to wait for the image or not',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -277,14 +277,14 @@ The `color` type provides a color selector.
 	type: 'color',
 	default: '', // Initially selected color
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -301,26 +301,26 @@ The `options` type adds an options list. Users can select a single value.
 	name: 'resource',
 	type: 'options',
 	options: [
-		{
-			name: 'Image',
-			value: 'image',
-		},
-		{
-			name: 'Template',
-			value: 'template',
-		},
+	{
+		name: 'Image',
+		value: 'image',
+	},
+	{
+		name: 'Template',
+		value: 'template',
+	},
 	],
 	default: 'image', // The initially selected option
 	description: 'Resource to consume',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -337,26 +337,26 @@ The `multiOptions` type adds an options list. Users can select more than one val
 	name: 'events',
 	type: 'multiOptions',
 	options: [
-		{
-			name: 'Plan Created',
-			value: 'planCreated',
-		},
-		{
-			name: 'Plan Deleted',
-			value: 'planDeleted',
-		},
+	{
+		name: 'Plan Created',
+		value: 'planCreated',
+	},
+	{
+		name: 'Plan Deleted',
+		value: 'planDeleted',
+	},
 	],
 	default: [], // Initially selected options
 	description: 'The events to be monitored',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -376,39 +376,39 @@ Use the `fixedCollection` type to group fields that are semantically related.
 	type: 'fixedCollection',
 	default: '',
 	typeOptions: {
-		multipleValues: true,
+	multipleValues: true,
 	},
 	description: '',
 	options: [
+	{
+		name: 'metadataValues',
+		displayName: 'Metadata',
+		values: [
 		{
-			name: 'metadataValues',
-			displayName: 'Metadata',
-			values: [
-				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
-					default: 'Name of the metadata key to add.',
-				},
-				{
-					displayName: 'Value',
-					name: 'value',
-					type: 'string',
-					default: '',
-					description: 'Value to set for the metadata key.',
-				},
-			],
+			displayName: 'Name',
+			name: 'name',
+			type: 'string',
+			default: 'Name of the metadata key to add.',
 		},
+		{
+			displayName: 'Value',
+			name: 'value',
+			type: 'string',
+			default: '',
+			description: 'Value to set for the metadata key.',
+		},
+		],
+	},
 	],
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -425,14 +425,14 @@ Use the `fixedCollection` type to group fields that are semantically related.
 	default: '',
 	description: '',
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -476,68 +476,68 @@ Example:
 	default: '',
 	description: 'Get a card'
 	modes: [
-		{
-			displayName: 'ID',
-			name: 'id',
-			type: 'string',
-			hint: 'Enter an ID',
-			validation: [
-				{
-					type: 'regex',
-					properties: {
-						regex: '^[0-9]'
-						errorMessage: 'The ID must start with a number'
-					},	
-				},
-			],
-			placeholder: '12example',
-			// How to use the ID in API call
-			url: '=http://api-base-url.com/?id={{$value}}'
-		},
-		displayName: 'URL',
-		name: 'url',
+	{
+		displayName: 'ID',
+		name: 'id',
 		type: 'string',
-		hint: 'Enter a URL',
+		hint: 'Enter an ID',
 		validation: [
-			{
-				type: 'regex',
-					properties: {
-						regex: '^http'
-						errorMessage: 'Invalid URL'
-					},	
-			},
-		],
-		placeholder: 'https://example.com/card/12example/',
-		// How to get the ID from the URL
-		extractValue: {
+		{
 			type: 'regex',
-			regex: 'example\.com\/card\/([0-9]*.*)\/'
+			properties: {
+			regex: '^[0-9]'
+			errorMessage: 'The ID must start with a number'
+			},	
 		},
-		displayName: 'List',
-		name: 'list',
-		type: 'list',
-		typeOptions: {
-			// You must always provide a search method
-			// Write this method within the methods object in your base file
-			// The method must populate the list, and handle searching if searchable: true
-			searchListMethod: 'searchMethod'
-			// If you want users to be able to search the list
-			searchable: true,
-			// Set to true if you want to force users to search
-			// When true, users can't browse the list
-			// Or false if users can browse a list
-			searchFilterRequired: true
-		}
+		],
+		placeholder: '12example',
+		// How to use the ID in API call
+		url: '=http://api-base-url.com/?id={{$value}}'
+	},
+	displayName: 'URL',
+	name: 'url',
+	type: 'string',
+	hint: 'Enter a URL',
+	validation: [
+		{
+		type: 'regex',
+			properties: {
+			regex: '^http'
+			errorMessage: 'Invalid URL'
+			},	
+		},
+	],
+	placeholder: 'https://example.com/card/12example/',
+	// How to get the ID from the URL
+	extractValue: {
+		type: 'regex',
+		regex: 'example\.com\/card\/([0-9]*.*)\/'
+	},
+	displayName: 'List',
+	name: 'list',
+	type: 'list',
+	typeOptions: {
+		// You must always provide a search method
+		// Write this method within the methods object in your base file
+		// The method must populate the list, and handle searching if searchable: true
+		searchListMethod: 'searchMethod'
+		// If you want users to be able to search the list
+		searchable: true,
+		// Set to true if you want to force users to search
+		// When true, users can't browse the list
+		// Or false if users can browse a list
+		searchFilterRequired: true
+	}
 	],
 	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
+	show: {
+		resource: [
+		// comma-separated list of resource names
+		],
+		operation: [
+		// comma-separated list of operation names
+		]
+	}
 	},
 }
 ```
@@ -558,7 +558,7 @@ The HTML editor allows users to create HTML templates in their workflows. The ed
 	name: 'html', // The name used to reference the element UI within the code
 	type: 'string',
 	typeOptions: {
-		editor: 'htmlEditor',
+	editor: 'htmlEditor',
 	},
 	default: placeholder, // Loads n8n's placeholder HTML template
 	noDataExpression: true, // Prevent using an expression for the field
@@ -583,31 +583,31 @@ If your node performs insert, update, or upsert operations, you need to send dat
 	name: 'columns', // The name used to reference the element UI within the code
 	type: 'resourceMapper', // The UI element type
 	default: {
-		// mappingMode can be defined in the component (mappingMode: 'defineBelow')
-		// or you can attempt automatic mapping (mappingMode: 'autoMapInputData')
-		mappingMode: 'defineBelow',
-		// Important: always set default value to null
-		value: null,
+	// mappingMode can be defined in the component (mappingMode: 'defineBelow')
+	// or you can attempt automatic mapping (mappingMode: 'autoMapInputData')
+	mappingMode: 'defineBelow',
+	// Important: always set default value to null
+	value: null,
 	},
 	required: true,
 	// See "Resource mapper type options interface" below for the full typeOptions specification
 	typeOptions: {
-		resourceMapper: {
-			resourceMapperMethod: 'getMappingColumns',
-			mode: 'update',
-			fieldWords: {
-				singular: 'column',
-				plural: 'columns',
-			},
-			addAllFields: true, 
-			multiKeyMatch: true,
-			supportAutoMap: true,
-			matchingFieldsLabels: {
-				title: 'Custom matching columns title',
-				description: 'Help text for custom matching columns',
-				hint: 'Below-field hint for custom matching columns',
-			},
+	resourceMapper: {
+		resourceMapperMethod: 'getMappingColumns',
+		mode: 'update',
+		fieldWords: {
+		singular: 'column',
+		plural: 'columns',
 		},
+		addAllFields: true, 
+		multiKeyMatch: true,
+		supportAutoMap: true,
+		matchingFieldsLabels: {
+		title: 'Custom matching columns title',
+		description: 'Help text for custom matching columns',
+		hint: 'Below-field hint for custom matching columns',
+		},
+	},
 	},
 },
 ```
@@ -646,9 +646,9 @@ export interface ResourceMapperTypeOptions {
 	supportAutoMap?: boolean;
 	// Custom labels for the matching columns selector
 	matchingFieldsLabels?: {
-		title?: string;
-		description?: string;
-		hint?: string;
+	title?: string;
+	description?: string;
+	hint?: string;
 	};
 }
 ```

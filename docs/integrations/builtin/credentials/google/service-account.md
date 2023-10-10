@@ -25,10 +25,10 @@ Using service accounts is more complex than OAuth2. Before you begin:
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
 
 	!!! note "Generic and specific credentials"
-		If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+	If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
 
-		* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-		* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
+	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
+	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
 
 2. Note the **Private Key** from the node credential modal. You'll need this in the next section.
 
@@ -39,12 +39,12 @@ In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank 
 1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
 
 	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-api-services-credentials.png)
+	![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-api-services-credentials.png)
 
 2. Select **+ CREATE CREDENTIALS > Service account**.
 
 	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
+	![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
 
 3. Enter a name in **Service account name**, and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
 4. Select **CREATE AND CONTINUE**.
@@ -54,7 +54,7 @@ In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank 
 8. Select **ADD KEY > Create new key**.
 
 	??? Details "View screenshot"
-		![Create a new key](/_images/integrations/builtin/credentials/google/service-account-create-key.png)
+	![Create a new key](/_images/integrations/builtin/credentials/google/service-account-create-key.png)
 
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
 10. Enable each Google service API that you want to use:

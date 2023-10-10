@@ -34,10 +34,10 @@ Clone the repository and navigate into the directory:
 
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository:
-		```shell
-		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
-		cd n8n-nodes-nasa-pics
-		```
+	```shell
+	git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
+	cd n8n-nodes-nasa-pics
+	```
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -88,15 +88,15 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 !!! note "Class names and file names"
-		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
+	Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 
 ```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
-		// Basic node details will go here
-		properties: [
-		// Resources and operations will go here
-		]
+	// Basic node details will go here
+	properties: [
+	// Resources and operations will go here
+	]
 	};
 }
 ```
@@ -120,15 +120,15 @@ inputs: ['main'],
 outputs: ['main'],
 credentials: [
 	{
-		name: 'NasaPicsApi',
-		required: true,
+	name: 'NasaPicsApi',
+	required: true,
 	},
 ],
 requestDefaults: {
 	baseURL: 'https://api.nasa.gov',
 	headers: {
-		Accept: 'application/json',
-		'Content-Type': 'application/json',
+	Accept: 'application/json',
+	'Content-Type': 'application/json',
 	},
 },
 ```
@@ -142,21 +142,21 @@ The resource object defines the API resource that the node uses. In this tutoria
 ```typescript
 properties: [
 	{
-		displayName: 'Resource',
-		name: 'resource',
-		type: 'options',
-		noDataExpression: true,
-		options: [
-			{
-				name: 'Astronomy Picture of the Day',
-				value: 'astronomyPictureOfTheDay',
-			},
-			{
-				name: 'Mars Rover Photos',
-				value: 'marsRoverPhotos',
-			},
-		],
-		default: 'astronomyPictureOfTheDay',
+	displayName: 'Resource',
+	name: 'resource',
+	type: 'options',
+	noDataExpression: true,
+	options: [
+		{
+		name: 'Astronomy Picture of the Day',
+		value: 'astronomyPictureOfTheDay',
+		},
+		{
+		name: 'Mars Rover Photos',
+		value: 'marsRoverPhotos',
+		},
+	],
+	default: 'astronomyPictureOfTheDay',
 	},
 	// Operations will go here
 
@@ -180,25 +180,25 @@ Add the following to the `properties` array, after the `resource` object:
 	type: 'options',
 	noDataExpression: true,
 	displayOptions: {
-		show: {
-			resource: [
-				'astronomyPictureOfTheDay',
-			],
-		},
+	show: {
+		resource: [
+		'astronomyPictureOfTheDay',
+		],
+	},
 	},
 	options: [
-		{
-			name: 'Get',
-			value: 'get',
-			action: 'Get the APOD',
-			description: 'Get the Astronomy Picture of the day',
-			routing: {
-				request: {
-					method: 'GET',
-					url: '/planetary/apod',
-				},
-			},
+	{
+		name: 'Get',
+		value: 'get',
+		action: 'Get the APOD',
+		description: 'Get the Astronomy Picture of the day',
+		routing: {
+		request: {
+			method: 'GET',
+			url: '/planetary/apod',
 		},
+		},
+	},
 	],
 	default: 'get',
 },
@@ -208,24 +208,24 @@ Add the following to the `properties` array, after the `resource` object:
 	type: 'options',
 	noDataExpression: true,
 	displayOptions: {
-		show: {
-			resource: [
-				'marsRoverPhotos',
-			],
-		},
+	show: {
+		resource: [
+		'marsRoverPhotos',
+		],
+	},
 	},
 	options: [
-		{
-			name: 'Get',
-			value: 'get',
-			action: 'Get Mars Rover photos',
-			description: 'Get photos from the Mars Rover',
-			routing: {
-				request: {
-					method: 'GET',
-				},
-			},
+	{
+		name: 'Get',
+		value: 'get',
+		action: 'Get Mars Rover photos',
+		description: 'Get photos from the Mars Rover',
+		routing: {
+		request: {
+			method: 'GET',
 		},
+		},
+	},
 	],
 	default: 'get',
 },
@@ -236,23 +236,23 @@ Add the following to the `properties` array, after the `resource` object:
 	name: 'roverName',
 	type: 'options',
 	options: [
-		{name: 'Curiosity', value: 'curiosity'},
-		{name: 'Opportunity', value: 'opportunity'},
-		{name: 'Perseverance', value: 'perseverance'},
-		{name: 'Spirit', value: 'spirit'},
+	{name: 'Curiosity', value: 'curiosity'},
+	{name: 'Opportunity', value: 'opportunity'},
+	{name: 'Perseverance', value: 'perseverance'},
+	{name: 'Spirit', value: 'spirit'},
 	],
 	routing: {
-		request: {
-			url: '=/mars-photos/api/v1/rovers/{{$value}}/photos',
-		},
+	request: {
+		url: '=/mars-photos/api/v1/rovers/{{$value}}/photos',
+	},
 	},
 	default: 'curiosity',
 	displayOptions: {
-		show: {
-			resource: [
-				'marsRoverPhotos',
-			],
-		},
+	show: {
+		resource: [
+		'marsRoverPhotos',
+		],
+	},
 	},
 },
 {
@@ -263,19 +263,19 @@ Add the following to the `properties` array, after the `resource` object:
 	type: 'dateTime',
 	default:'',
 	displayOptions: {
-		show: {
-			resource: [
-				'marsRoverPhotos',
-			],
-		},
+	show: {
+		resource: [
+		'marsRoverPhotos',
+		],
+	},
 	},
 	routing: {
-		request: {
-			// You've already set up the URL. qs appends the value of the field as a query string
-			qs: {
-				earth_date: '={{ new Date($value).toISOString().substr(0,10) }}',
-			},
+	request: {
+		// You've already set up the URL. qs appends the value of the field as a query string
+		qs: {
+		earth_date: '={{ new Date($value).toISOString().substr(0,10) }}',
 		},
+	},
 	},
 },
 // Optional/additional fields will go here
@@ -299,31 +299,31 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 	default: {},
 	placeholder: 'Add Field',
 	displayOptions: {
-		show: {
-			resource: [
-				'astronomyPictureOfTheDay',
-			],
-			operation: [
-				'get',
-			],
-		},
+	show: {
+		resource: [
+		'astronomyPictureOfTheDay',
+		],
+		operation: [
+		'get',
+		],
+	},
 	},
 	options: [
-		{
-			displayName: 'Date',
-			name: 'apodDate',
-			type: 'dateTime',
-			default: '',
-			routing: {
-				request: {
-					// You've already set up the URL. qs appends the value of the field as a query string
-					qs: {
-						date: '={{ new Date($value).toISOString().substr(0,10) }}',
-					},
-				},
+	{
+		displayName: 'Date',
+		name: 'apodDate',
+		type: 'dateTime',
+		default: '',
+		routing: {
+		request: {
+			// You've already set up the URL. qs appends the value of the field as a query string
+			qs: {
+			date: '={{ new Date($value).toISOString().substr(0,10) }}',
 			},
 		},
-	],									
+		},
+	},
+	],					
 }
 ```
 
@@ -348,20 +348,20 @@ export class NasaPicsApi implements ICredentialType {
 	// Replace with your own docs links when building your own nodes
 	documentationUrl = 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
 	properties: INodeProperties[] = [
-		{
-			displayName: 'API Key',
-			name: 'apiKey',
-			type: 'string',
-			default: '',
-		},
+	{
+		displayName: 'API Key',
+		name: 'apiKey',
+		type: 'string',
+		default: '',
+	},
 	];
 	authenticate = {
-		type: 'generic',
-		properties: {
-			qs: {
-				'api_key': '={{$credentials.apiKey}}'
-			}
-		},
+	type: 'generic',
+	properties: {
+		qs: {
+		'api_key': '={{$credentials.apiKey}}'
+		}
+	},
 	} as IAuthenticateGeneric;
 }
 ```
@@ -381,19 +381,19 @@ Add the following code to the JSON file:
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
-		"Miscellaneous"
+	"Miscellaneous"
 	],
 	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": ""
-			}
-		],
-		"primaryDocumentation": [
-			{
-				"url": ""
-			}
-		]
+	"credentialDocumentation": [
+		{
+		"url": ""
+		}
+	],
+	"primaryDocumentation": [
+		{
+		"url": ""
+		}
+	]
 	}
 }
 ```
@@ -411,43 +411,43 @@ Your npm package details are in the `package.json` at the root of the project. I
 	"version": "0.1.0",
 	"description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
 	"keywords": [
-		// This keyword is required for community nodes
-		"n8n-community-node-package"
+	// This keyword is required for community nodes
+	"n8n-community-node-package"
 	],
 	"license": "MIT",
 	"homepage": "https://n8n.io",
 	"author": {
-		"name": "Test",
-		"email": "test@example.com"
+	"name": "Test",
+	"email": "test@example.com"
 	},
 	"repository": {
-		"type": "git",
-		// Change the git remote to your own repository
-		// Add the new URL here
-		"url": "git+<your-repo-url>"
+	"type": "git",
+	// Change the git remote to your own repository
+	// Add the new URL here
+	"url": "git+<your-repo-url>"
 	},
 	"main": "index.js",
 	"scripts": {
-		// don't change
+	// don't change
 	},
 	"files": [
-		"dist"
+	"dist"
 	],
 	// Link the credentials and node
 	"n8n": {
-		"n8nNodesApiVersion": 1,
-		"credentials": [
-			"dist/credentials/NasaPicsApi.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/NasaPics/NasaPics.node.js"
-		]
+	"n8nNodesApiVersion": 1,
+	"credentials": [
+		"dist/credentials/NasaPicsApi.credentials.js"
+	],
+	"nodes": [
+		"dist/nodes/NasaPics/NasaPics.node.js"
+	]
 	},
 	"devDependencies": {
-		// don't change
+	// don't change
 	},
 	"dependencies": {
-		// don't change
+	// don't change
 	}
 }
 ```

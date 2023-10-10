@@ -18,11 +18,11 @@ Merging data can involve:
 
 !!! note "One-way vs. two-way sync"
 
-		In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
+	In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
 
-		In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
+	In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
-		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+	[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
 In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
 
@@ -104,79 +104,79 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 
 	```json
 	{
-		"nodes": [
-			{
-				"parameters": {
-					"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/n8n',\n    }\n  }\n];"
-				},
-				"name": "Code",
-				"type": "n8n-nodes-base.code",
-				"position": [
-					480,
-					1880
-				],
-				"typeVersion": 1
-			},
-			{
-				"parameters": {
-					"url": "={{$node[\"SplitInBatches\"].json[\"url\"]}}"
-				},
-				"name": "RSS Feed Read",
-				"type": "n8n-nodes-base.rssFeedRead",
-				"position": [
-					880,
-					1880
-				],
-				"typeVersion": 1
-			},
-			{
-				"parameters": {
-					"batchSize": 1,
-					"options": {}
-				},
-				"name": "SplitInBatches",
-				"type": "n8n-nodes-base.splitInBatches",
-				"position": [
-					680,
-					1880
-				],
-				"typeVersion": 1
-			}
+	"nodes": [
+		{
+		"parameters": {
+			"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/n8n',\n    }\n  }\n];"
+		},
+		"name": "Code",
+		"type": "n8n-nodes-base.code",
+		"position": [
+			480,
+			1880
 		],
-		"connections": {
-			"Code": {
-				"main": [
-					[
-						{
-							"node": "SplitInBatches",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"RSS Feed Read": {
-				"main": [
-					[
-						{
-							"node": "SplitInBatches",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"SplitInBatches": {
-				"main": [
-					[
-						{
-							"node": "RSS Feed Read",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			}
+		"typeVersion": 1
+		},
+		{
+		"parameters": {
+			"url": "={{$node[\"SplitInBatches\"].json[\"url\"]}}"
+		},
+		"name": "RSS Feed Read",
+		"type": "n8n-nodes-base.rssFeedRead",
+		"position": [
+			880,
+			1880
+		],
+		"typeVersion": 1
+		},
+		{
+		"parameters": {
+			"batchSize": 1,
+			"options": {}
+		},
+		"name": "SplitInBatches",
+		"type": "n8n-nodes-base.splitInBatches",
+		"position": [
+			680,
+			1880
+		],
+		"typeVersion": 1
 		}
+	],
+	"connections": {
+		"Code": {
+		"main": [
+			[
+			{
+				"node": "SplitInBatches",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"RSS Feed Read": {
+		"main": [
+			[
+			{
+				"node": "SplitInBatches",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"SplitInBatches": {
+		"main": [
+			[
+			{
+				"node": "RSS Feed Read",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		}
+	}
 	}
 	```

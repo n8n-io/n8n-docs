@@ -6,7 +6,7 @@ contentType: howto
 # Set up user management on n8n Cloud
 
 !!! info "Feature availability"		
-		* Available on paid self-hosted and selected Cloud plans. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
+	Available on paid self-hosted and selected Cloud plans. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
 
 To access user management, upgrade to version 0.195.0 or newer.
 

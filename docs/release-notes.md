@@ -594,7 +594,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
 !!! warning "Unstable version"
-		This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
+	This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -611,7 +611,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234
 This release contains new features, new nodes, node enhancements, and bug fixes.	
 
 !!! warning "Unstable version"
-		This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
+	This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
 
 !!! warning "Irreversible database migration"
     This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
@@ -2021,7 +2021,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 **Release date:** 2023-01-13
 
 !!! warning "Don't use this version"
-		Upgrade directly to 0.211.1.
+	Upgrade directly to 0.211.1.
 
 ### New features
 

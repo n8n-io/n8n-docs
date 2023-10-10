@@ -13,6 +13,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 * Pip
 * n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
+* The repo includes a `.editorconfig` file. Make sure your local editor settings **do not override** these settings. The tab settings can affect how content displays.
 
 ### Steps
 

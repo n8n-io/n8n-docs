@@ -1,4 +1,7 @@
 Adalo
+Agent
+agent
+Airtable
 Asana
 Authentik
 Axios
@@ -11,6 +14,7 @@ Caddy
 Citrix
 Clockify
 Cron
+Datastore
 Dockerfile
 eksctl
 Enum

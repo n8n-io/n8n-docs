@@ -48,6 +48,9 @@ extra:
       We use cookies and other tracking technologies to improve your browsing experience, 
       to analyze our website traffic, assist our marketing efforts and to understand where 
       our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+  # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
+  status:
+    beta: This feature is in beta
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -96,6 +99,10 @@ markdown_extensions:
   - toc:
       permalink: "#"
 plugins:
+  # You need the info plugin for bug reports to Material theme
+  # But DO NOT ENABLE IT NORMALLY
+  # It causes Netlify builds to fail
+  # - info
   - search
   # https://github.com/oprypin/mkdocs-literate-nav
   - literate-nav
@@ -149,16 +156,17 @@ nav:
       - Credential sharing: credentials/credential-sharing.md
     - Flow logic:
       - flow-logic/index.md
-      - Merging: flow-logic/merging.md
-      - Execution order in multi-branch workflows: flow-logic/execution-order.md
+      - Splitting with conditionals: flow-logic/splitting.md
+      - Merging data: flow-logic/merging.md
       - Looping: flow-logic/looping.md
-      - Error handling:
-        - flow-logic/error-handling/index.md
-        - Error workflows: flow-logic/error-handling/error-workflows.md
-        - Memory-related errors: flow-logic/error-handling/memory-errors.md
+      - Waiting: flow-logic/waiting.md
+      - Sub-workflows: flow-logic/subworkflows.md
+      - Error handling: flow-logic/error-handling.md    
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md    
     - Data:
       - data/index.md
       - Data structure: data/data-structure.md
+      - Data flow within nodes: data/data-flow-nodes.md
       - Transforming data: data/transforming-data.md
       - Process data using code: data/code.md
       - Data mapping: 
@@ -204,6 +212,11 @@ nav:
     - Variables: variables.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
+    - LangChain:
+        - langchain/index.md
+        - Access LangChain in n8n: langchain/access-langchain.md
+        - LangChain learning resources: langchain/learning-resources.md
+        - Langchain concepts in n8n: langchain/langchain-n8n.md
     - Privacy and security:
         - privacy-security/index.md
         - Privacy: privacy-security/privacy.md
@@ -221,6 +234,10 @@ nav:
       - Core nodes: integrations/builtin/core-nodes/
       - Actions: integrations/builtin/app-nodes/
       - Triggers: integrations/builtin/trigger-nodes/
+      - Cluster nodes: 
+        - integrations/builtin/cluster-nodes/index.md
+        - Root nodes: integrations/builtin/cluster-nodes/root-nodes/
+        - Sub-nodes: integrations/builtin/cluster-nodes/sub-nodes/
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -232,6 +249,7 @@ nav:
         - integrations/builtin/credentials/airtable.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
+        - integrations/builtin/credentials/anthropic.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
         - integrations/builtin/credentials/auth0management.md
@@ -265,6 +283,7 @@ nav:
         - integrations/builtin/credentials/cloudflare.md
         - integrations/builtin/credentials/cockpit.md
         - integrations/builtin/credentials/coda.md
+        - integrations/builtin/credentials/cohere.md
         - integrations/builtin/credentials/contentful.md
         - integrations/builtin/credentials/convertkit.md
         - integrations/builtin/credentials/copper.md
@@ -311,6 +330,7 @@ nav:
           - integrations/builtin/credentials/google/oauth-single-service.md
           - integrations/builtin/credentials/google/oauth-generic.md
           - integrations/builtin/credentials/google/service-account.md
+          - integrations/builtin/credentials/google/googlepalm.md
         - integrations/builtin/credentials/gotify.md
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md
@@ -323,6 +343,7 @@ nav:
         - integrations/builtin/credentials/homeassistant.md
         - integrations/builtin/credentials/httprequest.md
         - integrations/builtin/credentials/hubspot.md
+        - integrations/builtin/credentials/huggingface.md
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
         - integrations/builtin/credentials/hybridanalysis.md
@@ -370,6 +391,7 @@ nav:
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
         - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/motorhead.md
         - integrations/builtin/credentials/mqtt.md
         - integrations/builtin/credentials/msg91.md
         - integrations/builtin/credentials/mysql.md
@@ -381,6 +403,7 @@ nav:
         - integrations/builtin/credentials/npm.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/okta.md
+        - integrations/builtin/credentials/ollama.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md
@@ -394,6 +417,7 @@ nav:
         - integrations/builtin/credentials/peekalink.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
+        - integrations/builtin/credentials/pinecone.md
         - integrations/builtin/credentials/pipedrive.md
         - integrations/builtin/credentials/plivo.md
         - integrations/builtin/credentials/postgres.md
@@ -426,6 +450,7 @@ nav:
         - integrations/builtin/credentials/sendgrid.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md
+        - integrations/builtin/credentials/serp.md
         - integrations/builtin/credentials/servicenow.md
         - integrations/builtin/credentials/shopify.md
         - integrations/builtin/credentials/shuffler.md
@@ -476,14 +501,17 @@ nav:
         - integrations/builtin/credentials/wekan.md
         - integrations/builtin/credentials/whatsapp.md
         - integrations/builtin/credentials/wise.md
+        - integrations/builtin/credentials/wolframalpha.md
         - integrations/builtin/credentials/woocommerce.md
         - integrations/builtin/credentials/wordpress.md
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
         - integrations/builtin/credentials/zammad.md
         - integrations/builtin/credentials/zendesk.md
+        - integrations/builtin/credentials/zep.md
         - integrations/builtin/credentials/zoho.md
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
@@ -570,6 +598,7 @@ nav:
       - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
     - Architecture:
       - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md

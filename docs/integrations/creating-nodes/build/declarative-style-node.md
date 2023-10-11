@@ -88,7 +88,7 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
 !!! note "Class names and file names"
-		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
+	Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 
 ```typescript
 export class NasaPics implements INodeType {

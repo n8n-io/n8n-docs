@@ -1,0 +1,1 @@
+You can use this agent with the [On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.

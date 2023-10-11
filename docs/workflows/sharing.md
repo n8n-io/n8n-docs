@@ -5,10 +5,6 @@ contentType: howto
 
 # Workflow sharing
 
-!!! info "Feature availability"
-		* Workflow sharing is available on paid Cloud and self-hosted plans.
-		* It requires [user management](/user-management/) enabled.
-
 Workflow sharing allows you to share workflows between users of the same n8n instance.
 
 ## Share a workflow
@@ -35,7 +31,7 @@ There are two workflow roles: owner and editor. The owner is the user who create
 You can't change the workflow owner, except when deleting the user.
 
 !!! note "Credentials"
-		Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
+	Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
 
 ### Permissions
 

@@ -7,7 +7,7 @@ contentType: howto
 # External secrets
 
 !!! info "Feature availability"
-	* External secrets are available on Enterprise Self-hosted and Cloud plans.
+	* External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 	* n8n supports Infisical and HashiCorp Vault. 
 	* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
 

@@ -60,7 +60,7 @@ You can require authentication for any service calling your webhook URL.
 * [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the specified header parameter. For example, use this method when you want to authenticate using an API key or an access token.
 		
 	!!! note  Credential data can vary
-			The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
+	The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
 		
 
 ### HTTP Method
@@ -175,13 +175,13 @@ By default, the response format is JSON or an array. To send a response of type 
 2. Select **Response Data** > **First Entry JSON**.
 3. Select **Add Option** > **Property Name**.
 4. Enter the name of the property that contains the response. This defaults to `data`.
-5. Connect a Set node to the Webhook node.
-6. In the Set node, select **Add Value** > **String**.
+5. Connect an Edit Fields node to the Webhook node.
+6. In the Edit Fields node, select **Add Value** > **String**.
 7. Enter the name of the property in the **Name** field. The name should match the property name from step 4.
 8. Enter the string value in the **Value** field.
 9. Toggle **Keep Only Set** to on (green).
 
-When you call the Webhook, it sends the string response from the Set node.
+When you call the Webhook, it sends the string response from the Edit Fields node.
 
 
 

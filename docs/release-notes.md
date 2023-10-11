@@ -28,13 +28,82 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.10.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.10.0...n8n@1.10.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-10-11
+
+!!! note "Next version"
+	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.9.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.9.2...n8n@1.9.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-10-10
+
+!!! note "Latest version"
+	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.9.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.9.1...n8n@1.9.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-10-09
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.10.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.9.1...n8n@1.10.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-10-05
+
+
+
+This release contains bug fixes and preparatory work for new features.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.9.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.9.0...n8n@1.9.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-10-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## LangChain in n8n (beta)  
+
+**Release date**: 2023-10-04
+
+This release introduces support for building with LangChain in n8n. 
+
+With n8n's LangChain nodes you can build AI-powered functionality within your workflows. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and so on. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
+
+Read more:
+
+* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/langchain/access-langchain/) to try it out. Self-hosted and Cloud options are available.
+* Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/langchain/langchain-n8n/).
+* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* If you want to take a look at the code, it's available on the [ai-beta](https://github.com/n8n-io/n8n/tree/ai-beta){:target=_blank .external-link} in the n8n repository. Note that it may move in the future.
+
+
 ## n8n@1.9.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-09-28
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This release contains new features, performance improvements, and bug fixes.
 
@@ -55,8 +124,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.1...n8n@1.8.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-09-25
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+
 
 
 This release contains bug fixes.
@@ -548,7 +616,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
 !!! warning "Unstable version"
-		This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
+	This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -565,7 +633,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234
 This release contains new features, new nodes, node enhancements, and bug fixes.	
 
 !!! warning "Unstable version"
-		This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
+	This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
 
 !!! warning "Irreversible database migration"
     This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
@@ -1975,7 +2043,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211
 **Release date:** 2023-01-13
 
 !!! warning "Don't use this version"
-		Upgrade directly to 0.211.1.
+	Upgrade directly to 0.211.1.
 
 ### New features
 

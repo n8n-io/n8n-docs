@@ -105,9 +105,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 | :------- | :---- | :------- | :---------- |
 | `N8N_AVAILABLE_BINARY_DATA_MODES` | String | `filesystem` | A comma separated list of available binary data modes. |
 | `N8N_BINARY_DATA_STORAGE_PATH` | String | `N8N_USE_FOLDER/binaryData` | The path where n8n stores binary data. |
-| `N8N_BINARY_DATA_TTL` | Number | `60` | Time to live (in minutes) for binary data of unsaved executions. |
 | `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem, or `s3` to AWS S3. |
-
 
 ## User management SMTP, and two-factor authentication
 
@@ -173,7 +171,6 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS` | Boolean | `false` | Whether to save data of executions when started manually. |
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `false` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
-| `EXECUTIONS_DATA_PRUNE_TIMEOUT` | Number | `3600` | The timeout (in seconds) after n8n prunes execution data. |
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `0` (no limit) | Maximum number of executions to keep in the database. |
 
 ## Logs

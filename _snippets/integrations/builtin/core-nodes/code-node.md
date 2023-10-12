@@ -29,9 +29,6 @@ The Code node supports:
 
 If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node) guide.
 
-### Use AI in the Code node
-
---8<-- "_snippets/code-examples/ai-how-to.md"
 
 ## Python
 

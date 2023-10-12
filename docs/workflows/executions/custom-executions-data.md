@@ -17,15 +17,25 @@ This section describes how to set and access data using the Code node. Refer to 
 
 Set a single piece of extra data:
 
-```js
-$execution.customData.set("key", "value");
-```
+=== "JavaScript"
+	```js
+	$execution.customData.set("key", "value");
+	```
+=== "Python"
+	```python
+	_execution.customData.set("key", "value");
+	```
 
 Set all extra data. This overwrites the whole custom data object for this execution:
 
-```js
-$execution.customData.setAll({"key1": "value1", "key2": "value2"})
-```
+=== "JavaScript"
+	```js
+	$execution.customData.setAll({"key1": "value1", "key2": "value2"})
+	```
+=== "Python"
+	```python
+	_execution.customData.setAll({"key1": "value1", "key2": "value2"})
+	```
 
 There are limitations:
 
@@ -38,10 +48,19 @@ There are limitations:
 
 You can retrieve the custom data object, or a specific value in it, during an execution:
 
-```js
-// Access the current state of the object during the execution
-const customData = $execution.customData.getAll();
+=== "JavaScript"
+	```js
+	// Access the current state of the object during the execution
+	const customData = $execution.customData.getAll();
 
-// Access a specific value set during this execution
-const customData = $execution.customData.get("key");
-```
+	// Access a specific value set during this execution
+	const customData = $execution.customData.get("key");
+	```
+=== "Python"
+	```python
+	# Access the current state of the object during the execution
+	customData = _execution.customData.getAll();
+
+	# Access a specific value set during this execution
+	customData = _execution.customData.get("key");
+	```

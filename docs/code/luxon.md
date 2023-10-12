@@ -8,16 +8,23 @@ contentType: howto
 
 n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
 
+!!! note "Python support"
+	Luxon is a JavaScript library. The two convenience [variables](#variables) created by n8n are available when using Python in the Code node, but their functionality is limited:
+	
+	* You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`. 
+	
+	* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-Luxon), isn't available for Python users.
+
 ## Variables
 
 n8n uses Luxon to provide two custom variables:
 
-- `$now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
-- `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
+- `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
+- `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
 
 Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	``` js
 	{{$now}}
@@ -28,15 +35,24 @@ Note that these variables can return different time formats when cast as a strin
 	// For example "Today's date is 1646834498755"
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	``` js
 	$now
 	// n8n displays <ISO formatted timestamp>
 	// For example 2022-03-09T14:00:25.058+00:00
-	"Today's date is " + $now
+	let rightNow = "Today's date is " + $now
 	// n8n displays "Today's date is <unix timestamp>"
 	// For example "Today's date is 1646834498755"
+	```
+=== "Code node (Python)"
+	``` python
+	_now
+	# n8n displays <ISO formatted timestamp>
+	# For example 2022-03-09T14:00:25.058+00:00
+	rightNow = "Today's date is " + str(_now)
+	# n8n displays "Today's date is <unix timestamp>"
+	# For example "Today's date is 1646834498755"
 	```
 
 ## Date and time behavior in n8n
@@ -58,6 +74,7 @@ Luxon uses the n8n timezone. This value is either:
 
 This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon){:target="_blank" .external-link}.
 
+
 ### Convert date string to Luxon
 
 You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
@@ -69,17 +86,19 @@ You can convert date strings and other date formats to a Luxon DateTime object. 
 
 Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 string. For example:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{DateTime.fromISO('2019-06-23T00:00:00.00')}}
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
-	let luxonDateTime = DateTime.fromISO('2019-06-23T00:00:00.00')'
+	let luxonDateTime = DateTime.fromISO('2019-06-23T00:00:00.00')
 	```
+
+
 Luxon's API documentation has more information on [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso){:target="_blank" .external-link}.
 
 Luxon provides functions to handle conversions for a range of formats. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
@@ -90,13 +109,13 @@ Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-
 
 For example, you have n8n's founding date, 23rd June 2019, formatted as '23-06-2019'. You want to turn this into a Luxon object:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")}}
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
 	let newFormat = DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")
@@ -108,7 +127,7 @@ When using ad-hoc parsing, note Luxon's warning about [Limitations](https://mome
 
 Get a number of days before or after today. 
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	For example, you want to set a field to always show the date seven days before the current date.
 
@@ -123,7 +142,7 @@ Get a number of days before or after today.
 
 	This example uses n8n's custom variable `$today` for convenience. It's the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	For example, you want a variable containing the date seven days before the current date.
 
@@ -150,13 +169,13 @@ For example, you want the field containing the date to be formatted as DD/MM/YYY
 
 This expression gets the date seven days before today, and converts it to the DD/MM/YYYY format.
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{$today.minus({days: 7}).toLocaleString()}}
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
 	let readableSevenDaysAgo = $today.minus({days: 7}).toLocaleString()
@@ -164,7 +183,7 @@ This expression gets the date seven days before today, and converts it to the DD
 
 You can alter the format. For example:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{$today.minus({days: 7}).toLocaleString({month: 'long', day: 'numeric', year: 'numeric'})}}
@@ -172,7 +191,7 @@ You can alter the format. For example:
 
 	On 23rd June 2019, this returns "16 June 2019".
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
 	let readableSevenDaysAgo = $today.minus({days: 7}).toLocaleString({month: 'long', day: 'numeric', year: 'numeric'})
@@ -189,7 +208,7 @@ To get the time between two dates, use Luxon's diffs feature. This subtracts one
 
 For example, get the number of months between two dates:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{DateTime.fromISO('2019-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()}}
@@ -197,7 +216,7 @@ For example, get the number of months between two dates:
 
 	This returns `[Object: {"months":1}]`.
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
 	let monthsBetweenDates = DateTime.fromISO('2019-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()
@@ -213,7 +232,7 @@ This example brings together several Luxon features, uses JMESPath, and does som
 
 The scenario: you want a countdown to 25th December. Every day, it should tell you the number of days remaining to Christmas. You don't want to update it for next year - it needs to seamlessly work for every year.
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{"There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!"}}
@@ -234,7 +253,7 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 	* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
 	* `}}`: indicates the end of the expression.
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
 	let daysToChristmas = "There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!";

@@ -37,9 +37,11 @@ This release contains new features and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-### External
+### External storage for binary files
 
-This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/external-storage/).
+
+If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 
 </div>
 

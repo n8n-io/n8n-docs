@@ -13,6 +13,9 @@ This includes:
 * Metadata about workflows, executions, and nodes.
 * Information about instance [Variables](/variables/) and [External secrets](/external-secrets/).
 
+!!! note "Python support"
+	You can use Python in the Code node. It isn't available in expressions.
+
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
@@ -33,21 +36,20 @@ This includes:
 	| `$workflow.id` | The workflow ID. | :white_check_mark: |
 	| `$workflow.name` | The workflow name. | :white_check_mark: |
 === "Python"
-	| Method | Description | Available in Code node? |
-	| ------ | ----------- | :-------------------------: |
-	| `_env` | Contains n8n instance configuration [environment variables](/hosting/environment-variables/environment-variables/). | :white_check_mark: |
-	| `_execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information. | :white_check_mark: | 
-	| `_execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
-	| `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
-	| `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/). | :white_check_mark: |
-	| `_getWorkflowStaticData(type)` | View an [example](/code/cookbook/builtin/get-workflow-static-data/). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. | :white_check_mark: |
-	| `_itemIndex` | The index of an item in a list of items. | :x: |
-	| `_prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `_prevNode` always uses the first input connector. | :white_check_mark: |
-	| `_prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `_prevNode` always uses the first input connector. | :white_check_mark: |
-	| `_prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `_prevNode` always uses the first input connector. | :white_check_mark: |
-	| `_runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). | :white_check_mark: |
-	| `_secrets` | Contains information about your [External secrets](/external-secrets/) setup. | :white_check_mark: |
-	| `_vars` | Contains the [Variables](/variables/) available in the active environment. | :white_check_mark: |
-	| `_workflow.active` | Whether the workflow is active (true) or not (false). | :white_check_mark: |
-	| `_workflow.id` | The workflow ID. | :white_check_mark: |
-	| `_workflow.name` | The workflow name. | :white_check_mark: |
+	| Method | Description |
+	| ------ | ----------- |
+	| `_env` | Contains n8n instance configuration [environment variables](/hosting/environment-variables/environment-variables/). |
+	| `_execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information. | 
+	| `_execution.id` | The unique ID of the current workflow execution. | 
+	| `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | 
+	| `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/). |
+	| `_getWorkflowStaticData(type)` | View an [example](/code/cookbook/builtin/get-workflow-static-data/). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. |
+	| `_prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `_prevNode` always uses the first input connector. | 
+	| `_prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `_prevNode` always uses the first input connector. | 
+	| `_prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `_prevNode` always uses the first input connector. |
+	| `_runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). |
+	| `_secrets` | Contains information about your [External secrets](/external-secrets/) setup. | 
+	| `_vars` | Contains the [Variables](/variables/) available in the active environment. | 
+	| `_workflow.active` | Whether the workflow is active (true) or not (false). |
+	| `_workflow.id` | The workflow ID. | 
+	| `_workflow.name` | The workflow name. |

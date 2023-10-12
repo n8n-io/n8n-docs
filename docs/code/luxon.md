@@ -12,8 +12,8 @@ n8n passes dates between nodes as strings, so you need to parse them. Luxon make
 
 n8n uses Luxon to provide two custom variables:
 
-- `$now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
-- `$today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
+- `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
+- `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
 
 Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
 
@@ -28,15 +28,25 @@ Note that these variables can return different time formats when cast as a strin
 	// For example "Today's date is 1646834498755"
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	``` js
 	$now
 	// n8n displays <ISO formatted timestamp>
 	// For example 2022-03-09T14:00:25.058+00:00
-	"Today's date is " + $now
+	let rightNow = "Today's date is " + $now
 	// n8n displays "Today's date is <unix timestamp>"
 	// For example "Today's date is 1646834498755"
+	```
+=== "Code node (Python)"
+	``` python
+	_now
+	# n8n displays <ISO formatted timestamp>
+	# For example 2022-03-09T14:00:25.058+00:00
+	rightNow = "Today's date is " + str(_now)
+	print(rightNow)
+	# n8n displays "Today's date is <unix timestamp>"
+	# For example "Today's date is 1646834498755"
 	```
 
 ## Date and time behavior in n8n

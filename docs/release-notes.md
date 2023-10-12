@@ -40,7 +40,7 @@ This release contains new features and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-### External storage for binary files
+#### External storage for binary files
 
 Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/external-storage/).
 

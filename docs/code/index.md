@@ -7,7 +7,7 @@ contentType: overview
 
 n8n is a low-code tool. This means you can do a lot without code, then add code when needed.
 
-## JavaScript in your workflows
+## Code in your workflows
 
 There are two places in your workflows where you can use code:
 
@@ -21,11 +21,12 @@ There are two places in your workflows where you can use code:
 
 - __Code node__
 
-	The Code node allows you to add JavaScript to your workflow.
+	The Code node allows you to add JavaScript or Python to your workflow.
 
 	[:octicons-arrow-right-24: Code node](/code/code-node/)
 
 </div>
+
 
 ## Other technical resources
 

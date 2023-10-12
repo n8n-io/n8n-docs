@@ -8,16 +8,21 @@ contentType: howto
 
 [JMESPath](https://jmespath.org/){:target=_blank .external-link} is a query language for JSON, allowing you to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
 
-## The `$jmespath()` method
 
-n8n provides a custom method, `$jmespath()`. It allows you to perform a search on a JSON object using the JMESPath query language.
+## The `jmespath()` method
+
+n8n provides a custom method, `jmespath()`. It allows you to perform a search on a JSON object using the JMESPath query language.
 
 The basic syntax is: 
 
-
-```js
-$jmespath(object, searchString)
-```
+=== "JavaScript"
+	```js
+	$jmespath(object, searchString)
+	```
+=== "Python"
+	```python
+	_jmespath(object, searchString)
+	```
 
 
 To help understand what the method does, here is the equivalent longer JavaScript:
@@ -41,6 +46,8 @@ jmespath.search(object, searchString);
 ## Common tasks
 
 This section provides examples for some common operations. More examples, and detailed guidance, are available in [JMESPath's own documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
+
+When trying out these examples, you need to set the Code node **Mode** to **Run Once for Each Item**.
 
 ### Apply a JMESPath expression to a collection of elements with projections
 
@@ -102,17 +109,18 @@ Given this JSON from a webhook node:
 
 Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of all the people's first names:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{$jmespath($json.body.people, "[*].first" )}}
 	// Returns ["James", "Jacob", "Jayden"]
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
-	$jmespath($json.body.people, "[*].first" )
+	let firstNames = $jmespath($json.body.people, "[*].first" )
+	return {firstNames};
 	/* Returns:
 	[
 		{
@@ -124,20 +132,38 @@ Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections)
 		}
 	]
 	*/
-```
+	```
+=== "Code node (Python)"
+	```python
+	firstNames = _jmespath(_json.body.people, "[*].first" )
+	return {"firstNames":firstNames}
+	"""
+	Returns:
+	[
+	 	{
+			"firstNames": [
+				"James",
+				"Jacob",
+				"Jayden"
+			]
+		}
+	]
+	"""
+	```
 
 Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of the first names:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{$jmespath($json.body.people, "[:2].first")}}
 	// Returns ["James", "Jacob"]
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 	```js
-	$jmespath($json.body.people, "[:2].first")
+	let firstTwoNames = $jmespath($json.body.people, "[:2].first");
+	return {firstTwoNames};
 	/* Returns:
 	[
 		{
@@ -150,26 +176,63 @@ Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:ta
 	]
 	*/
 	```
+=== "Code node (Python)"
+	```python
+	firstTwoNames = _jmespath(_json.body.people, "[:2].first" )
+	return {"firstTwoNames":firstTwoNames}
+	"""
+	Returns:
+	[
+  		{
+			"firstTwoNames": [
+			"James",
+			"Jacob"
+			]
+		}
+	]
+	"""
+	```
 
 Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections){:target=_blank .external-link}:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	```js
 	{{$jmespath($json.body.dogs, "*.age")}}
 	// Returns [7,5]
 	```
 
-=== "Code node"
+=== "Code node (JavaScript)"
 	```js
-	$jmespath($json.body.dogs, "*.age")
+	let dogsAges = $jmespath($json.body.dogs, "*.age");
+	return {dogsAges};
 	/* Returns:
 	[
-			7,
-			5
+		{
+			"dogsAges": [
+				7,
+				5
+			]
+		}
 	]
 	*/
-```
+	```
+=== "Code node (Python)"
+	```python
+	dogsAges = _jmespath(_json.body.dogs, "*.age")
+	return {"dogsAges": dogsAges}
+	"""
+	Returns:
+	[
+		{
+			"dogsAges": [
+				7,
+				5
+			]
+		}
+	]
+	"""
+	```
 
 ### Select multiple elements and create a new list or object
 
@@ -221,7 +284,7 @@ Given this JSON from a webhook node:
 
 Use multiselect list to get the first and last names and create new lists containing both names:
 
-=== "Expressions"
+=== "Expressions (JavaScript)"
 
 	[[% raw %]]
 	```js
@@ -230,14 +293,15 @@ Use multiselect list to get the first and last names and create new lists contai
 	```
 	[[% endraw %]]
 
-=== "Code node"
+=== "Code node (JavaScript)"
 
 	```js
-	$jmespath($json.body.people, "[].[first, last]")
+	let newList = $jmespath($json.body.people, "[].[first, last]");
+	return {newList};
 	/* Returns:
 	[
 		{
-			"fullNames": [
+			"newList": [
 				[
 					"James",
 					"Green"
@@ -255,8 +319,34 @@ Use multiselect list to get the first and last names and create new lists contai
 	]
 	*/
 	```
+=== "Code node (Python)"
+	```python
+	newList = _jmespath(_json.body.people, "[].[first, last]")
+	return {"newList":newList}
+	"""
+	Returns:
+	[
+		{
+			"newList": [
+				[
+					"James",
+					"Green"
+				],
+				[
+					"Jacob",
+					"Jones"
+				],
+				[
+					"Jayden",
+					"Smith"
+				]
+			]
+		}
+	]
+	"""
+	```
 
-### An alternative to arrow functions
+### An alternative to arrow functions in expressions
 
 For example, generate some input data by returning the below code from the Code node:
 

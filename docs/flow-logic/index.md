@@ -22,7 +22,7 @@ When building your logic, you'll use n8n's [Core nodes](/integrations/builtin/co
 
 * Splitting: [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) and [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch/).
 * Merging: [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/), [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/), and [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
-* Looping: [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) and [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/).
+* Looping: [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) and [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/).
 * Waiting: [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/).
 * Creating sub-workflows: [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) and [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/).
 * Error handling: [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/) and [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/).

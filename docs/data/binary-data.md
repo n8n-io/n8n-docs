@@ -24,7 +24,7 @@ There are three key nodes dedicated to handling binary data:
 
 * [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/): load a file from the host machine running n8n.
 * [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/): write a file to the host machine running n8n.
-* [Move Binary Data](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/): transform data between JSON and binary formats.
+* [Convert to/from binary data](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/): transform data between JSON and binary formats.
 
 There are nodes for working with specific file types:
 

@@ -29,6 +29,12 @@ The Code node supports:
 
 If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node) guide.
 
+### Built-in methods and variables
+
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/) for more information.
+
+The syntax to use the built-in methods and variables is `$variableName` or `$methodName()`. Type `$` in the Code node or expressions editor to see a list of suggested methods and variables.
+
 
 ## Python
 
@@ -36,6 +42,12 @@ n8n added Python support in version 1.0. It doesn't include a Python executable.
 
 !!! note "Slower than JavaScript"
 	The Code node takes longer to process Python than JavaScript. This is due to the additional compilation steps.
+
+### Built-in methods and variables
+
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/) for more information.
+
+The syntax to use the built-in methods and variables is `_variableName` or `_methodName()`. Type `_` in the Code node to see a list of suggested methods and variables.
 
 ## File system and HTTP requests
 

@@ -79,11 +79,11 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Split in Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
-!!! warning "Execution of Split in Batches node"
+!!! warning "Execution of Loop Over Items node"
 
-	The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it is not necessary to add an IF node to stop the loop.
+	The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it is not necessary to add an IF node to stop the loop.
 
 
 ### Exercise
@@ -91,8 +91,8 @@ If you need to process large incoming data, execute the Code node multiple times
 Build a workflow that reads the RSS feed from Medium and dev.to. The workflow should consist of three nodes:
 
 - A Code node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`)
-- A Split In Batches node with `Batch Size: 1`, that takes in the inputs from the Code node and RSS node and iterates over the items.
-- An RSS Read node that gets the URL of the Medium RSS feed, passed as an expression: `{{$node["SplitInBatches"].json["url"]}}`. The RSS Read node is one of the exception nodes which processes only the first item it receives, so the Split in Batches node is necessary for iterating over multiple items.
+- A Loop Over Items node with `Batch Size: 1`, that takes in the inputs from the Code node and RSS node and iterates over the items.
+- An RSS Read node that gets the URL of the Medium RSS feed, passed as an expression: `{{$node["SplitInBatches"].json["url"]}}`. The RSS Read node is one of the exception nodes which processes only the first item it receives, so the Loop Over Items node is necessary for iterating over multiple items.
 
 ??? note "Show me the solution"
 

@@ -58,6 +58,14 @@ If you're using n8n Cloud and are interested in this feature, please [contact n8
 
 </div>
 
+<div class="n8n-new-features" markdown>
+
+#### Item Lists node supports binary data
+
+The Item Lists node now supports splitting and concatenating binary data inputs. This means you no longer need to use code to split a collection of files into multiple items.
+
+</div>
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.10.1

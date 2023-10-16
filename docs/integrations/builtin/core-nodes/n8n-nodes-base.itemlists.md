@@ -35,6 +35,7 @@ When using the Split Out Items operation, configure the following parameters and
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
 		* **Destination Field Name**: optionally set the field name under which to put the new split contents.
+		* **Include Binary**: include binary data from the input in the new output.
 
 ### Concatenate Items
 
@@ -49,6 +50,7 @@ When using the Concatenate Items operation, configure the following parameters a
 	* **Output Field Name**: displayed when you enable **Rename Field**. The field name for the aggregated output data.
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
+		* **Include Binaries**: include binary data from the input in the new output.
 * If you choose **All Item Data**, you can then set:
 	* **Put Output in Field**: the name of the output field.
 	* **Include**: choose from **All fields**, **Specified Fields**, or **All Fields Except**.

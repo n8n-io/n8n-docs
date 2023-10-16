@@ -637,7 +637,6 @@ nav:
       - Code node:
         - code/cookbook/code-node/index.md
         - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-        - Split binary file data into individual items: code/cookbook/code-node/split-binary-file-data.md
         - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
         - Using console.log: code/cookbook/code-node/console-log.md
   - API:

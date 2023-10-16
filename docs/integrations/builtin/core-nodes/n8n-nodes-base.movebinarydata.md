@@ -1,79 +1,49 @@
 ---
-title: Move Binary Data
-description: Documentation for the Move Binary Data node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Convert to/from binary data
+description: Documentation for the Convert to/from binary data node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
 ---
 
-# Move Binary Data
+# Convert to/from binary data
 
-The Move Binary Data node is useful to move data between binary and JSON properties.
+The Convert to/from binary data node is useful to move data between binary and JSON properties.
 
-!!! note "Hint"
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [Convert to/from binary data integrations](https://n8n.io/integrations/move-binary-data/){:target=_blank .external-link} page.
+
+!!! note "CSV to JSON"
     If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) node.
 
 
-## Node Reference
+## Node reference
 
-- ***Mode:*** This field specifies from where and to the data should be moved.
-    - Binary to JSON
-    - JSON to Binary
-- ***Set all Data:*** If set to active, all JSON data is replaced with the data retrieved from binary key. If it is not set to active, the data will be written to a single key. This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-- ***Source Key:*** The name of the binary key to get data from. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.currentKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-- ***Destination Key:*** The name the JSON key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-- ***Convert all Data:*** If set to active all JSON data will be converted to binary. If it is not set to active only the data with one key will be converted. This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
-- ***Destination Key:*** The name of the binary key to copy data to. It is also possible to define deep keys by using dot-notation. For example, "level1.level2.newKey". This field is displayed when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
+The node provides the following parameters:
 
-- ***Options***
-    - ***Keep Source:*** Keep the source key. By default it gets deleted.
-    - ***Encoding:*** Set the encoding of the data stream.
-    - The following are the options when 'Binary to JSON' is selected from the ***Mode*** dropdown list.
-        - ***JSON Parse:*** Run JSON parse on the data to get proper object data. This field is displayed when ***Set all Data*** is set to 'false'.
-        - ***Keep As Base64:*** Keeps the binary data as base64 string. This field is displayed when ***Set all Data*** is set to 'false'.
-        - ***Strip BOM:*** Strip the byte order mark (BOM) from the string. This field is displayed when ***Encoding*** is selected.
-    - The following are the options when 'JSON to Binary' is selected from the ***Mode*** dropdown list.
-        - ***Add BOM:*** Add the byte order mark (BOM) to the string. This field is displayed when ***Encoding*** is selected.
-        - ***File Name:*** The file name to set.
-        - ***Mime Type:*** The mime-type to set. By default the JSON mime-type will be set.
-        - ***Use Raw Data:*** Use data as is and do not stringify it.
-        - ***Data is Base64:*** Keeps the binary data as base64 string. This field is displayed when ***Convert all Data*** is set to 'false'.
+- **Mode**: choose the conversion type.
+    - **Binary to JSON**
+    - **JSON to Binary**
+- **Set All Data**: available for **Binary to JSON** mode. If active, n8n replaces all JSON data with the data retrieved from the binary key. If it's not active, n8n writes the data to a single JSON key. 
+- **Source Key**: available for **Binary to JSON** mode. The name of the binary key to get data from. You can use dot notation in keys. For example, `level1.level2.currentKey`. 
+- **Destination Key**: available for **Binary to JSON** mode. The name of the JSON key to copy data to. You can use dot notation in keys. For example, `level1.level2.newKey`. 
+- **Convert All Data**: available for **JSON to Binary** mode. If active n8n converts all JSON data to binary. If it's not active, n8n only converts the data specified in **Source Key**. 
+	- **Source Key**: available if **Convert All Data** is inactive. The name of the JSON key to get data from. You can use dot notation in keys. For example, `level1.level2.currentKey`. 
+- **Destination Key**: available for **JSON to Binary** mode. The name of the key to copy data to. You can use dot notation in keys. For example, `level1.level2.newKey`. 
 
+### Options
 
-## Example Usage
+- **Keep Source**: keep the source key. By default n8n deletes it.
+- **Encoding**: set the encoding of the data stream.
 
-This workflow allows you to store the JSON data received from the [CocktailDB API](https://www.thecocktaildb.com/) to your machine. You can also find the [workflow](https://n8n.io/workflows/652) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [Write Binary Data](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/)
+The following options are available in **Binary to JSON** mode:
 
-The final workflow should look like the following image.
+- **JSON Parse**: run JSON parse on the data to get proper object data. This field is displayed when **Set All Data** is inactive.
+- **Keep As Base64**: keeps the binary data as base64 string. This field is displayed when **Set All Data** is inactive.
+- **Strip BOM**: strip the byte order mark (BOM) from the string. This field is displayed when **Encoding** is selected.
 
-![A workflow with the Move Binary Data node](/_images/integrations/builtin/core-nodes/movebinarydata/workflow.png)
+The following options are available in **JSON to Binary** mode:
 
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-
-### 2. HTTP Request node (GET)
-
-1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
-2. Click on ***Execute Node*** to run the node.
-
-![Get random cocktail data from CocktailDB API using the HTTP Request node](/_images/integrations/builtin/core-nodes/movebinarydata/httprequest_node.png)
-
-
-### 3. Move Binary Data node (JSON to Binary)
-
-1. Select 'JSON to Binary' from the ***Mode*** dropdown list.
-2. Click on ***Execute Node*** to run the node.
-
-![Convert JSON to binary using the Move Binary Data node](/_images/integrations/builtin/core-nodes/movebinarydata/movebinarydata_node.png)
-
-
-### 4. Write Binary File node
-
-1. Enter the file name in the ***File Name*** field.
-2. Click on ***Execute Node*** to run the node.
-
-![Writing a file to the disk using the Write Binary File node](/_images/integrations/builtin/core-nodes/movebinarydata/writebinaryfile_node.png)
-
+- **Add BOM**: add the byte order mark (BOM) to the string. This field is displayed when **Encoding** is selected.
+- **File Name**: the file name to set.
+- **Mime Type**: the MIME type to set. By default the JSON mime-type will be set.
+- **Use Raw Data**: use data as is and don't stringify it.
+- **Data is Base64**: keeps the binary data as base64 string. This field is displayed when **Convert all Data** is inactive.

@@ -16,12 +16,13 @@ Use the Execute Workflow node to run a different workflow on the host machine th
 
 The Execute Workflow node has two properties:
 
-- **Source**: This field specifies from where to get the workflow's information.
+- **Source**: this field specifies from where to get the workflow's information.
 	- Database
 	- Local File
 	- Parameter
 	- URL
-- **Workflow**: This field contains information about the workflow, such as the workflow ID, URL, or a file.
+- **Workflow**: this field contains information about the workflow, such as the workflow ID, URL, or a file.
+- **Mode**: choose whether to **Run once with all items** or **Run once for each item**. Selecting **Run once for each item** makes the node execute for every input item in turn.
 
 ## Set up and use a sub-workflow
 

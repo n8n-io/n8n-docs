@@ -169,9 +169,9 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `EXECUTIONS_DATA_SAVE_ON_SUCCESS` | Enum string: `all`, `none` | `all` | Whether n8n saves execution data on success. |
 | `EXECUTIONS_DATA_SAVE_ON_PROGRESS` | Boolean | `false` | Whether to save progress for each node executed (true) or not (false). |
 | `EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS` | Boolean | `false` | Whether to save data of executions when started manually. |
-| `EXECUTIONS_DATA_PRUNE` | Boolean | `false` | Whether to delete data of past executions on a rolling basis. |
+| `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
-| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `0` (no limit) | Maximum number of executions to keep in the database. |
+| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
 
 ## Logs
 

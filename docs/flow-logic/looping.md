@@ -56,7 +56,6 @@ Nodes and operations where you need to design a loop into your workflow:
 * [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda/):
 	* Get All: for the Table and View resources, this operation executes once.
 * [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
-* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node executes only once by default.
 * [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node processes all the items based on the entered code snippet.
 * [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/):
 	* Get All: for the Collection and Document resources, this operation executes only once.

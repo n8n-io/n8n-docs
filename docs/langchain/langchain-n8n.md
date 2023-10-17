@@ -16,7 +16,7 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 ## Trigger nodes
 
-[On new manual Chat Message](/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/)
+[On new manual Chat Message](/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/)
 
 ## Credentials
 

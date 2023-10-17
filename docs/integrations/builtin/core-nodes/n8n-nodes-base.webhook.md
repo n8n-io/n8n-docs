@@ -49,7 +49,7 @@ The Webhook node has two URLs: test URL and production URL. n8n displays the URL
 ![Screenshot of the webhook URLs](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
 
 * **Test**: n8n registers a test webhook when you select **Listen for event** or **Execute workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
-* **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Execution** tab in the workflow, then select the workflow execution you want to view.
+* **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 
 ### Authentication

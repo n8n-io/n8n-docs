@@ -18,7 +18,9 @@ You can test your node as you build it by running it in a local n8n instance.
   ```
 
     !!! note "Check your directory"
-        Make sure you run `npm link <node-name>` in the nodes directory within your n8n installation. This is probably something like `~/.n8n/custom/`
+        Make sure you run `npm link <node-name>` in the nodes directory within your n8n installation. This can be: 
+        * `~/.n8n/custom/`
+        * `~/.n8n/<your-custom-name>`: if your n8n installation set a different name using `N8N_CUSTOM_EXTENSIONS`.
  
 4. Start n8n:
   ```

@@ -1,6 +1,8 @@
 ---
 description: Methods for working with the output of other nodes.
 contentType: reference
+hide:
+  - toc
 ---
 
 # Output of other nodes

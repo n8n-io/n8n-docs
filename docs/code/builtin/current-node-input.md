@@ -1,6 +1,8 @@
 ---
 description: Methods for working with the input of the current node.
 contentType: reference
+hide:
+  - toc
 ---
 
 # Current node input

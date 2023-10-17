@@ -27,7 +27,8 @@ This operation is useful if your data contains a list of items, for example a li
 
 When using the Split Out Items operation, configure the following parameters and options:
 
-* **Field to Split Out**: the field containing the list you want to separate out into individual items. Must be plain text and not an expression.
+* **Field to Split Out**: the field containing the list you want to separate out into individual items.
+	* If working with binary data inputs, use `$binary` in an expression to set the field to split out.
 * **Include**: select if  you want n8n to keep any other fields from the input data with each new individual item. You can select:
     * **No Other Fields**
     * **All Other Fields**

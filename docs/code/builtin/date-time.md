@@ -1,6 +1,8 @@
 ---
 description: Methods for working with date and time.
 contentType: reference
+hide:
+  - toc
 ---
 
 # Built-in date and time methods

@@ -69,8 +69,8 @@ markdown_extensions:
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true

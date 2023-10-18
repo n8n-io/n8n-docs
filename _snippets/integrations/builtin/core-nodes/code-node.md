@@ -2,6 +2,7 @@ The Code node allows you to write custom JavaScript or Python and run it as a st
 
 !!! note "Coding in n8n"
 	This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/) section. It includes:
+ 
 	 * Reference documentation on [Built-in methods and variables](/code/builtin/)
 	 * Guidance on [Handling dates](/code/luxon/) and [Querying JSON](/code/jmespath/)
 	 * A growing collection of examples in the [Cookbook](/code/cookbook/)

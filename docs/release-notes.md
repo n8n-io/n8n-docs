@@ -39,7 +39,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### Form trigger node
 
-This releases introduces a new node, the [n8n Form Trigger](). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
+This releases introduces a new node, the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
 
 </div>
 

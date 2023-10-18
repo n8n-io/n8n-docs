@@ -10,6 +10,9 @@ The binary data buffer contains all the binary file data processed by a workflow
 * Using the data in calculations: for example, calculating a hash value based on it.
 * Complex HTTP requests: for example, combining file upload with sending other data formats.
 
+!!! note "Not available in Python"
+	`getBinaryDataBuffer()` isn't supported when using Python.
+
 You can access the buffer using n8n's `getBinaryDataBuffer()` function:
 
 

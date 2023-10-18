@@ -41,7 +41,7 @@ contentType: integration
 * Ticket
 	* Created
 	* Deleted
-	* Property Changed
+	* Property changed 
 
 ## Related resources
 

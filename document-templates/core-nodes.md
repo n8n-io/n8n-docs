@@ -22,7 +22,7 @@ The title should be the name of the node. Add "trigger" if it's a core trigger n
 Item Lists
 Local File trigger
 -->
-# <Name>
+# _Name_
 
 _Briefly summarize the functionality._
 

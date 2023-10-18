@@ -7,7 +7,7 @@ hide:
 contentType: reference
 ---
 
-# `$getWorkflowStaticData(type)`
+# `getWorkflowStaticData(type)`
 
 This gives access to the static workflow data.
 
@@ -26,34 +26,64 @@ same in the whole workflow. Every node in the workflow can access it. The node s
 
 Example with global data:
 
-```javascript
-// Get the global workflow static data
-const workflowStaticData = $getWorkflowStaticData('global');
+=== "JavaScript"
+	```javascript
+	// Get the global workflow static data
+	const workflowStaticData = $getWorkflowStaticData('global');
 
-// Access its data
-const lastExecution = workflowStaticData.lastExecution;
+	// Access its data
+	const lastExecution = workflowStaticData.lastExecution;
 
-// Update its data
-workflowStaticData.lastExecution = new Date().getTime();
+	// Update its data
+	workflowStaticData.lastExecution = new Date().getTime();
 
-// Delete data
-delete workflowStaticData.lastExecution;
-```
+	// Delete data
+	delete workflowStaticData.lastExecution;
+	```
+=== "Python"
+	```python
+	# Get the global workflow static data
+	workflowStaticData = _getWorkflowStaticData('global')
+
+	# Access its data
+	lastExecution = workflowStaticData.lastExecution
+
+	# Update its data
+	workflowStaticData.lastExecution = new Date().getTime()
+
+	# Delete data
+	delete workflowStaticData.lastExecution
+	```
 
 Example with node data:
 
-```js
-// Get the static data of the node
-const nodeStaticData = $getWorkflowStaticData('node');
+=== "JavaScript"
+	```js
+	// Get the static data of the node
+	const nodeStaticData = $getWorkflowStaticData('node');
 
-// Access its data
-const lastExecution = nodeStaticData.lastExecution;
+	// Access its data
+	const lastExecution = nodeStaticData.lastExecution;
 
-// Update its data
-nodeStaticData.lastExecution = new Date().getTime();
+	// Update its data
+	nodeStaticData.lastExecution = new Date().getTime();
 
-// Delete data
-delete nodeStaticData.lastExecution;
-```
+	// Delete data
+	delete nodeStaticData.lastExecution;
+	```
+=== "Python"
+	```python
+	# Get the static data of the node
+	nodeStaticData = _getWorkflowStaticData('node')
+
+	# Access its data
+	lastExecution = nodeStaticData.lastExecution
+
+	# Update its data
+	nodeStaticData.lastExecution = new Date().getTime()
+
+	# Delete data
+	delete nodeStaticData.lastExecution
+	```
 
 

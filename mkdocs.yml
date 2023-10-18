@@ -638,7 +638,7 @@ nav:
         - code/cookbook/code-node/index.md
         - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
         - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
-        - Using console.log: code/cookbook/code-node/console-log.md
+        - Output to the browser console: code/cookbook/code-node/console-log.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

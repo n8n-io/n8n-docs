@@ -2,35 +2,65 @@
 contentType: howto
 ---
 
-# Get number of items returned by the last node
+# Get number of items returned by the previous node
 
-Depending on your use-case, you might want to get the number of items returned by the last node. Use the following snippet in the Code node.
+To get the number of items returned by the previous node:
 
-```js
-if (Object.keys(items[0].json).length === 0) {
-  return [
-     {
-       json: {
-         results: 0,
-       }
-      }
-  ]
-}
-return [
-  {
-    json: {
-      results: items.length,
-    }
-  }
-];
-```
+=== "JavaScript"
 
-The output will then be similar to the following.
+	```js
+	if (Object.keys(items[0].json).length === 0) {
+	return [
+		{
+			json: {
+				results: 0,
+			}
+		}
+	]
+	}
+	return [
+		{
+			json: {
+				results: items.length,
+			}
+		}
+	];
+	```
 
-```js
-[
-  {
-    "results": 8
-  }
-]
-```
+	The output will be similar to the following.
+
+	```json
+	[
+		{
+			"results": 8
+		}
+	]
+	```
+=== "Python"
+	```python
+	if len(items[0].json) == 0:
+		return [
+			{
+				"json": {
+					"results": 0,
+				}
+			}
+		]
+	else:
+		return [
+			{
+				"json": {
+					"results": items.length,
+				}
+			}
+		]
+	```
+	The output will be similar to the following.
+
+	```json
+	[
+		{
+			"results": 8
+		}
+	]
+	```

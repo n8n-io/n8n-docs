@@ -14,6 +14,7 @@ contentType: integration
 
 ## Events
 
+- Event Cancelled
 - Event Created
 - Event Ended
 - Event Started

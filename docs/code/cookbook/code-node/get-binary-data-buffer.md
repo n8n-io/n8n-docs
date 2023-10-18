@@ -12,6 +12,7 @@ The binary data buffer contains all the binary file data processed by a workflow
 
 You can access the buffer using n8n's `getBinaryDataBuffer()` function:
 
+
 ```js
 /* 
 * itemIndex: number. The index of the item in the input data.
@@ -27,5 +28,6 @@ For example:
 let binaryDataBufferItem = await this.helpers.getBinaryDataBuffer(0, 'data');
 // Returns the data in the binary buffer for the first input item
 ```
+
 
 You should always use the `getBinaryDataBuffer()` function, and avoid using older methods of directly accessing the buffer, such as targeting it with expressions like `items[0].binary.data.data`.

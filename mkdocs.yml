@@ -69,11 +69,15 @@ markdown_extensions:
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.inlinehilite
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences:
       # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
@@ -83,14 +87,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
-  - pymdownx.tabbed:
-      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
-  - pymdownx.inlinehilite
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
-  - pymdownx.snippets
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
   - pymdownx.tabbed:
       alternate_style: true
@@ -639,7 +637,6 @@ nav:
       - Code node:
         - code/cookbook/code-node/index.md
         - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-        - Split binary file data into individual items: code/cookbook/code-node/split-binary-file-data.md
         - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
         - Output to the browser console: code/cookbook/code-node/console-log.md
   - API:

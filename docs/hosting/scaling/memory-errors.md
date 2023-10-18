@@ -46,7 +46,7 @@ This approach is more complex and means re-building the workflows causing the is
 * Avoid manual executions when processing larger amounts of data.
 * Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
 
-Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two additional nodes: the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node to start the sub-workflow.
+Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two additional nodes: the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node to start the sub-workflow.
 
 However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a very small result set to the main workflow, the memory consumption is significantly reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
 

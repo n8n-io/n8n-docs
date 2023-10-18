@@ -41,11 +41,11 @@ Here is an [example workflow](https://n8n.io/workflows/1130) that implements a l
 
 ### Loop until all items are processed
 
-Use the [Split In Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
+Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
 
 You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
 
-The Split In Batches node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
+The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 
 ## Node exceptions
 
@@ -56,7 +56,6 @@ Nodes and operations where you need to design a loop into your workflow:
 * [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda/):
 	* Get All: for the Table and View resources, this operation executes once.
 * [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
-* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node executes only once by default.
 * [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node processes all the items based on the entered code snippet.
 * [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/):
 	* Get All: for the Collection and Document resources, this operation executes only once.

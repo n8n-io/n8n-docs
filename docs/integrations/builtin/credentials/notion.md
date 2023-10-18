@@ -13,14 +13,14 @@ You can use these credentials to authenticate the following nodes with Notion.
 
 ## Prerequisites
 
-Notion provides access using API keys. To get and use the API key, you need:
+Notion provides access using internal integration tokens. To get and use the token, you need:
 
 * A [Notion](https://notion.so){:target=_blank .external-link} account, with admin level access.
 * A [Notion integration](https://developers.notion.com/docs/getting-started){:target=_blank .external-link}.
 
-## Get your API key
+## Get your token
 
-Follow Step 1 in the [Notion integration guide](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} to create your integration and get your Notion integration token (API key).
+Follow Step 1 in the [Notion integration guide](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} to create your integration and get your Notion integration token.
 
 On the **Capabilities** screen, enable the following:
 
@@ -29,5 +29,5 @@ On the **Capabilities** screen, enable the following:
 * Insert content
 * Read user information without email addresses
 
-You can then enter the API key in n8n, in your Notion credential.
+You can then enter the token in n8n, in your Notion credential.
 

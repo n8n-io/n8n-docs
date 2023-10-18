@@ -1,6 +1,8 @@
 ---
 description: Methods for working with the input of the current node.
 contentType: reference
+hide:
+  - toc
 ---
 
 # Current node input
@@ -20,7 +22,7 @@ Methods for working with the input of the current node. Some methods and variabl
 	| `$input.last()` | Last input item in current node. | :white_check_mark: |
 	| `$input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on.  | :white_check_mark: |
 	| `$json` | Shorthand for `$input.item.json`. Incoming JSON data from a node. Refer to [Data structure](/data/data-structure/) for information on item structure. | :white_check_mark: (when running once for each item) |
-	| `$input.context.noItemsLeft` | Boolean. Only available when working with the Split in Batches node. Provides information about what's happening in the node, allowing you to see if the node is still processing items. | :white_check_mark: |
+	| `$input.context.noItemsLeft` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node, allowing you to see if the node is still processing items. | :white_check_mark: |
 === "Python"
 	| Method | Description | 
 	| ------ | ----------- | 
@@ -30,4 +32,4 @@ Methods for working with the input of the current node. Some methods and variabl
 	| `_input.last()` | Last input item in current node. | 
 	| `_input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on.  | 
 	| `_json` | Shorthand for `_input.item.json`. Incoming JSON data from a node. Refer to [Data structure](/data/data-structure/) for information on item structure. Available when you set **Mode** to **Run Once for Each Item**. | 
-	| `_input.context.noItemsLeft` | Boolean. Only available when working with the Split in Batches node. Provides information about what's happening in the node, allowing you to see if the node is still processing items. | 
+	| `_input.context.noItemsLeft` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node, allowing you to see if the node is still processing items. | 

@@ -65,9 +65,9 @@ View [example workflows and related content](https://n8n.io/integrations/telegra
 
 The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users){:target=_blank .external-link} of sending only 30 messages per second. Follow these steps to send more than 30 messages:
 
-1. Split In Batches node: Use the [Split in Batches](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to get at most 30 chat IDs from your database.
-2. Telegram node: Connect the Telegram node with the Split In Batches node. Use the **Expression Editor** to select the Chat IDs from the Split in Batches node.
-3. Code node: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Split In Batches node.
+1. Loop Over Items node: Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to get at most 30 chat IDs from your database.
+2. Telegram node: Connect the Telegram node with the Loop Over Items node. Use the **Expression Editor** to select the Chat IDs from the Loop Over Items node.
+3. Code node: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
 
 You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .external-link}.
 

@@ -62,7 +62,7 @@ The third part of the workflow consists of seven nodes:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow2_3.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 3 – Generating files for total sales</i></figcaption></figure>
 
-1. Use the [Split In Batches node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external} to split data from the Item Lists node into batches of 5.
+1. Use the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external} to split data from the Item Lists node into batches of 5.
 2. Use the [Set node](/integrations/builtin/core-nodes/n8n-nodes-base.set/){:target="_blank" .external} to set four values, referenced with expressions from the previous node: `customerEmail`, `customerRegion`, `customerSince`, and `orderPrice`.
 3. Use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/){:target="_blank" .external} to change the date format of the field `customerSince` to the format MM/DD/YYYY.
 4. Use the [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external} to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.

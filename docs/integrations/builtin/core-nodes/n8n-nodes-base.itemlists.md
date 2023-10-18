@@ -27,7 +27,8 @@ This operation is useful if your data contains a list of items, for example a li
 
 When using the Split Out Items operation, configure the following parameters and options:
 
-* **Field to Split Out**: the field containing the list you want to separate out into individual items. Must be plain text and not an expression.
+* **Field to Split Out**: the field containing the list you want to separate out into individual items.
+	* If working with binary data inputs, use `$binary` in an expression to set the field to split out.
 * **Include**: select if  you want n8n to keep any other fields from the input data with each new individual item. You can select:
     * **No Other Fields**
     * **All Other Fields**
@@ -35,6 +36,7 @@ When using the Split Out Items operation, configure the following parameters and
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
 		* **Destination Field Name**: optionally set the field name under which to put the new split contents.
+		* **Include Binary**: include binary data from the input in the new output.
 
 ### Concatenate Items
 
@@ -49,6 +51,7 @@ When using the Concatenate Items operation, configure the following parameters a
 	* **Output Field Name**: displayed when you enable **Rename Field**. The field name for the aggregated output data.
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
+		* **Include Binaries**: include binary data from the input in the new output.
 * If you choose **All Item Data**, you can then set:
 	* **Put Output in Field**: the name of the output field.
 	* **Include**: choose from **All fields**, **Specified Fields**, or **All Fields Except**.

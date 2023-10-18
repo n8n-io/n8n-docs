@@ -38,10 +38,7 @@ _Briefly summarize the functionality._
 
 
 
-## Related resources
 
-<!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
 
 
 

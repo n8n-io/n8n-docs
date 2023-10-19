@@ -41,4 +41,5 @@ n8n has two paid versions:
 * n8n Cloud: choose from a range of paid plans to suit your usage and feature needs.
 * Self-hosted: there are both free and paid versions of self-hosted.
 
-For details of the plans, refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} on the n8n website.
+For details of the Cloud plans and contact details for Enterprise Self-hosted, refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} on the n8n website.
+

@@ -65,6 +65,7 @@ Nodes and operations where you need to design a loop into your workflow:
 	* Read: this operation executes only once for the `Sheet` resource.
 	* Update: this operation updates multiple rows if they're in the same range. It doesn't iterate through additional ranges.
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
+* [Iterable](/integrations/builtin/app-nodes/n8n-nodes-base.iterable/) handles list operations in a single request, using the list ID defined for the first item. To address different lists in a single execution, you must create a loop with a batch size of 1.
 * [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) doesn't natively handle looping, so if you want the node to process all incoming items you must create a loop.
 * [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) executes `Find` once, regardless of the number of incoming items.
 * [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).

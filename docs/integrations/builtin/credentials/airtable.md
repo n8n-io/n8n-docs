@@ -36,7 +36,7 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 7. Click on **Generate client secret** and paste the secret into the **Client Secret** parameter in the n8n Airtable credentials dialog.
 8. Select the following scopes: *data.records:read*, *data.records:write*, *schema.bases:read* and click on **Save changes** at the bottom.
 9. In the n8n Airtable credentials dialog click on **Connect my account**.
-10. Follow the instruction in the dialog and select the the base you want to work on (or to all the bases).
+10. Follow the instruction in the dialog and select the base you want to work on (or to all the bases).
 11. Click ok **Grant access** in the dialog to complete the connection.
 
 

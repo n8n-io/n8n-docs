@@ -629,6 +629,7 @@ nav:
         - code/cookbook/builtin/index.md
         - execution: code/cookbook/builtin/execution.md
         - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+        - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
         - (node-name).all: code/cookbook/builtin/all.md
         - vars: code/cookbook/builtin/vars.md
       - Expressions:

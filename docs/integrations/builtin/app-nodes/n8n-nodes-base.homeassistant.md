@@ -17,7 +17,7 @@ On this page, you'll find a list of operations the Home Assistant node supports 
     For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link} list.
 
 
-## Basic operations
+## Operations
 
 * Camera Proxy
     * Get the camera screenshot
@@ -40,26 +40,10 @@ On this page, you'll find a list of operations the Home Assistant node supports 
 * Template
     * Create a template
 
-## Example
+## Related resources
 
-This workflow allows you to retrieve your current Home Assistant configuration details. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Home Assistant]()
 
-The final workflow should look like the following image.
+View [example workflows and related content](https://n8n.io/integrations/home-assistant/){:target=_blank .external-link} on n8n's website.
 
-![A workflow with the Home Assistant node](/_images/integrations/builtin/app-nodes/homeassistant/workflow.png)
 
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Home Assistant node
-
-1. First select your credentials for the Home Assistant node. You can find out how to create credentials [here](/integrations/builtin/credentials/homeassistant/).
-2. From the **Resource** dropdown select **Config**.
-3. From the **Operation** dropdown select **Get**.
-4. Click on **Execute Node** to run the workflow.
-
-![The Home Assistant node](/_images/integrations/builtin/app-nodes/homeassistant/home_assistant_node.png)
-
+Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} for more information about the service.

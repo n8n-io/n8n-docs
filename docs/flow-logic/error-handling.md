@@ -23,36 +23,7 @@ You can use the same error workflow for multiple workflows.
 
 ## Error data
 
-The default error data received by the Error Trigger is:
-
-```json
-[
-	{
-		"execution": {
-			"id": "231",
-			"url": "https://n8n.example.com/execution/231",
-			"retryOf": "34",
-			"error": {
-				"message": "Example Error Message",
-				"stack": "Stacktrace"
-			},
-			"lastNodeExecuted": "Node With Error",
-			"mode": "manual"
-		},
-		"workflow": {
-			"id": "1",
-			"name": "Example Workflow"
-		}
-	}
-]
-
-```
-
-All information is always present, except:
-
-- `execution.id`: requires the execution to be saved in the database.
-- `execution.url`: requires the execution to be saved in the database.
-- `execution.retryOf`: only present when the execution is a retry of a failed execution.
+--8<-- "_snippets/integrations/builtin/core-nodes/error-trigger/error-data.md"
 
 ## Cause a workflow execution failure using Stop And Error
 

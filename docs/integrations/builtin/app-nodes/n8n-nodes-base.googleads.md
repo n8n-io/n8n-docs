@@ -17,9 +17,14 @@ On this page, you'll find a list of operations the Google Ads node supports and 
     For usage examples and templates to help you get started, take a look at n8n's [Google Ads integrations](https://n8n.io/integrations/google-ads/){:target="_blank" .external-link} list.
 
 
-## Basic operations
+## Operations
 
 * Campaign
   * Get all campaigns
   * Get a campaign
 
+## Related resources
+
+View [example workflows and related content](https://n8n.io/integrations/google-ads/){:target=_blank .external-link} on n8n's website.
+
+Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.

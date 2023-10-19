@@ -25,5 +25,5 @@ In this section:
 
 Related sections:
 
-* [Variables](/variables/): reusable values.
+* [Variables](/code/variables/): reusable values.
 * [External secrets](/external-secrets/): manage credentials with an external secrets vault.

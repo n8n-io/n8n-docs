@@ -1044,7 +1044,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225
 
 <div class="n8n-new-features" markdown>
 
-This release introduces [Variables](/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/source-control-environments/) in n8n.
+This release introduces [Variables](/code/variables/). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](/source-control-environments/) in n8n.
 
 </div>
 

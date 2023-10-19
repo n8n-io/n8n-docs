@@ -1,9 +1,9 @@
 ---
-description: Variables allow you to store and reuse values in n8n workflows. 
+description: Custom variables allow you to store and reuse values in n8n workflows. 
 contentType: howto
 ---
 
-# Variables
+# Custom variables
 
 !!! info "Feature availability"
 	* Available on Self-hosted Enterprise and Pro Cloud plans.
@@ -11,7 +11,7 @@ contentType: howto
 
 	Available in version 0.225.0 and above.
 
-Variables allow you to store and reuse values in n8n workflows. 
+Custom variables allow you to store and reuse values in n8n workflows. 
 
 !!! warning "Variables are shared"
 	When you create a variable, it's available to everyone on your n8n instance.

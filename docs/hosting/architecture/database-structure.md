@@ -89,7 +89,7 @@ Contains user data.
 
 ### variables
 
-Store [variables](/variables/).
+Store [variables](/code/variables/).
 
 ### webhook_entity
 

@@ -1,3 +1,4 @@
+/variables/   /code/variables/
 /integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/
 
 /flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/

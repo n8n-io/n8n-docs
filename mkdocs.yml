@@ -207,7 +207,6 @@ nav:
         - Copy work between environments: source-control-environments/using/copy-work.md
         - Manage variables: source-control-environments/using/manage-variables.md
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
-    - Variables: variables.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
     - LangChain:
@@ -620,6 +619,7 @@ nav:
         - Numbers: code/builtin/data-transformation-functions/numbers.md
         - Objects: code/builtin/data-transformation-functions/objects.md
         - Strings: code/builtin/data-transformation-functions/strings.md
+    - Create custom variables: code/variables.md
     - Handling dates: code/luxon.md  
     - Query JSON with JMESPath: code/jmespath.md
     - AI coding: code/ai-code.md

@@ -9,7 +9,7 @@ contentType: reference
 	* Available on Self-hosted Enterprise and Pro and Enterprise Cloud plans.
 	* You need access to the n8n instance owner account to create variables.
 
-`vars` contains all [Variables](/variables/) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.
+`vars` contains all [Variables](/code/variables/) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.
 
 === "JavaScript"
 	```js

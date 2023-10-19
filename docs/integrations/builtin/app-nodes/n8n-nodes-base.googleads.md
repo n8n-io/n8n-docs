@@ -4,7 +4,7 @@ description: Documentation for the Google Ads node in n8n, a workflow automation
 contentType: integration
 ---
 
-# Google Ads
+# Google Ads node
 
 The Google Ads node allows you to automate work in Google Ads, and integrate Google Ads with other applications. n8n has built-in support for a wide range of Google Ads features, including getting campaigns. 
 

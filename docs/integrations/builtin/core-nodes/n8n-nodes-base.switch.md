@@ -43,7 +43,7 @@ Use the Switch node to route a workflow conditionally based on comparison operat
 
 View [example workflows and related content](https://n8n.io/integrations/switch/){:target=_blank .external-link} on n8n's website.
 
-Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex login in n8n.
+Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex logic in n8n.
 
 
 

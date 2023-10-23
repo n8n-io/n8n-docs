@@ -6,8 +6,6 @@ contentType: tutorial
 
 In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in n8n.
 
-
-
 ## Getting started
 
 First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank" .external}, choose the option that best suits your skills and needs.
@@ -24,7 +22,7 @@ Next, you'll learn how to navigate the Editor UI.
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/){:target="_blank" .external} represents the web interface where you build [workflows](/workflows/workflows/){:target="_blank" .external}. Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
+The [Editor UI](/editor-ui/) represents the web interface where you build [workflows](/workflows/workflows/). Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
 
 ### Left-side panel
 

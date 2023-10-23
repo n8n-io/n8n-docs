@@ -38,7 +38,7 @@ Create and configure a bucket following the [AWS documentation](https://docs.aws
 }
 ```
 
-Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a TTL is required unless you would like to preserve binary data indefinitely.
+Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a lifecycle configuration is required unless you would like to preserve binary data indefinitely.
 
 Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
 

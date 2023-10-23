@@ -53,6 +53,8 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 | `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`.| Optional |
 | `N8N_SMTP_USER` | string | _your_SMTP_username_ | Optional |
 | `N8N_SMTP_PASS` | string | _your_SMTP_password_ | Optional |
+| `N8N_SMTP_OAUTH_SERVICE_CLIENT` | string | _your_OAuth_service_client_ | Optional |
+| `N8N_SMTP_OAUTH_PRIVATE_KEY` | string | _your_OAuth_private_key_ | Optional |
 | `N8N_SMTP_SENDER` | string | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ | Required |
 | `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |

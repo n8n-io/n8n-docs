@@ -118,6 +118,8 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_SMTP_PORT` | Number | - | _your_SMTP_server_port_ |
 | `N8N_SMTP_USER` | String | - | _your_SMTP_username_ |
 | `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ |
+| `N8N_SMTP_OAUTH_SERVICE_CLIENT` | String | - | If using 2LO with a service account this is your client ID |
+| `N8N_SMTP_OAUTH_PRIVATE_KEY` | String | - | If using 2LO with a service account this is your private key |
 | `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ |
 | `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |

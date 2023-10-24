@@ -17,12 +17,11 @@ Merging data can involve:
 - Synchronizing data between multiple systems. For example, removing duplicate data, or updating data in one system when it changes in another.
 
 !!! note "One-way vs. two-way sync"
+    In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
 
-		In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
-
-		In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
-
-		[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+    In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
+ 
+    [This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 
 In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
 

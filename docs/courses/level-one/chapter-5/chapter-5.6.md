@@ -20,7 +20,7 @@ In your workflow, add a Discord node connected to the Code node. In the Discord 
 
 Now execute the Discord node. If all works well, your message should appear in the Discord channel #course-level-1.
 
-<figure><img src="/_images/courses/level-one/chapter-two/Discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
 
 ## What's next?
 

@@ -15,7 +15,7 @@ In your workflow, add the Schedule trigger node, and configure its parameters:
 * _Minute:_ 0
 * _Weekday:_ Monday
 
-<figure><img src="/_images/courses/level-one/chapter-two/Cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/cron-node.png" alt="Cron node" style="width:100%"><figcaption align = "center"><i>Cron node</i></figcaption></figure>
 
 !!! warning "Keep in mind"
     To ensure accurate scheduling with the Cron node, be sure the timezone is set correctly for your n8n instance (or the workflow).

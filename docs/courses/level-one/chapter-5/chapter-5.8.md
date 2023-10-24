@@ -10,7 +10,7 @@ Activating a workflow means that it will run automatically every time a trigger 
 
 To activate your workflow toggle the *Active* button on the top right corner of the Editor UI. Nathan's workflow will now be executed automatically every Monday at 9 am.
 
-<figure><img src="/_images/courses/level-one/chapter-two/Activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
 
 **Workflow Executions**
 
@@ -18,7 +18,7 @@ An execution represents a completed run of a workflow, from the first to the las
 
 To see the execution log, in your Editor UI click on *Executions* in the left panel. This will open the *Workflow Executions* window.
 
-<figure><img src="/_images/courses/level-one/chapter-two/Execution-list.png" alt="Workflow Execution List" style="width:100%"><figcaption align = "center"><i>Workflow Execution List</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/execution-list.png" alt="Workflow Execution List" style="width:100%"><figcaption align = "center"><i>Workflow Execution List</i></figcaption></figure>
 
 The *Workflow Executions* window displays a table with the following information:
 
@@ -37,7 +37,7 @@ The information displayed here depends on what workflows and executions you set 
 
 You can customize your workflows and executions, or overwrite some of the global default settings in *Workflow Settings*. These settings are located in the left panel of the Editor UI, under the *Workflows* section.
 
-<figure><img src="/_images/courses/level-one/chapter-two/Workflow-setting.png" alt="Workflow Settings" style="width:100%"><figcaption align = "center"><i>Workflow Settings</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/workflow-setting.png" alt="Workflow Settings" style="width:100%"><figcaption align = "center"><i>Workflow Settings</i></figcaption></figure>
 
 In the *Workflow Settings* window you can configure the following settings:
 

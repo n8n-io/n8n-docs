@@ -25,7 +25,7 @@ Though it's not possible to directly export the data, the data warehouse has a c
 
 Now, in your Editor UI, add an *HTTP Request node* like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
 
-<figure><img src="/_images/courses/level-one/chapter-two/HTTP-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/http-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
 In the left panel, select:
 
@@ -52,13 +52,13 @@ In the *Connection* tab, fill in the two fields:
 
 Click on the *Save* button in the top right corner to save your credentials. Your *Credentials Connection* window should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/HTTP-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/http-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
 
 Now click the *Save* button in the bottom right corner of the window.
 
 In the *HTTP Request node* window, click the *Execute Node* button. The result of the HTTP request should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/HTTP-Request-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/http-request-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
 
 This view should be familiar to you from the [Hacker News mini-workflow](/courses/level-one/chapter-2/). This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with 5 features:
 

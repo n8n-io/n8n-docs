@@ -16,7 +16,7 @@ First of all, you need to get n8n. There are different [ways to set up n8n](/hos
 
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-one/Editor-UI.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
 Next, you'll learn how to navigate the Editor UI.
 
@@ -49,7 +49,7 @@ The top bar of the Editor UI contains the following information:
 - *Save* button that saves the current workflow.
 - *Toggle* button that activates or deactivates the current workflow. By default, workflows are deactivated.
 
-<figure><img src="/_images/courses/level-one/chapter-one/Editor-UI-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/editor-ui-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 
 ### Canvas
 
@@ -61,7 +61,7 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 - A button with a note icon inside. This button adds a [sticky note](/workflows/sticky-notes){:target="_blank" .external} to the canvas.
 - A square with a green play icon inside. This is the *Start node*. You will learn more about nodes in the [next section](#nodes).
 
-<figure><img src="/_images/courses/level-one/chapter-one/Workflow-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/workflow-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 
 !!! note "Moving the canvas"
     You can move the workflow canvas around in two ways:
@@ -104,7 +104,7 @@ You can find all available nodes in the nodes panel on the right side of the Edi
 - Click the gray dot on the right side of an existing node on the canvas (the node to which you want to add another one) and pull the connection line to the right.
 - Click the Tab key on your keyboard.
 
-<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/Nodes-panel.png" alt="Nodes panel" style="width:50%"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
+<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/nodes-panel.png" alt="Nodes panel" style="width:50%"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 
 In the nodes panel, notice that the nodes are grouped in three tabs: All, Regular, and Trigger. In addition, nodes are also grouped by their functionality domain (like Analytics or Sales). This makes it easier to find the nodes you need.
 

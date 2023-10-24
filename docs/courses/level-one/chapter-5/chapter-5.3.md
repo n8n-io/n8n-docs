@@ -25,7 +25,7 @@ To select this value, click the **Expression** tab on the right side of the Valu
         An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the IF node references the data output by the HTTP Request node.
 
 
-    <figure><img src="/_images/courses/level-one/chapter-two/If-node-expression-editor.png" alt="Expression Editor in the IF node" style="width:100%"><figcaption align = "center"><i>Expression Editor in the IF node</i></figcaption></figure>
+    <figure><img src="/_images/courses/level-one/chapter-two/if-node-expression-editor.png" alt="Expression Editor in the IF node" style="width:100%"><figcaption align = "center"><i>Expression Editor in the IF node</i></figcaption></figure>
 
 - *Operation:* equal
 - *Value 2:* processing
@@ -36,13 +36,13 @@ To select this value, click the **Expression** tab on the right side of the Valu
 
 Now execute the IF node and have a look at the resulting data, which should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/If-node.png" alt="IF node" style="width:100%"><figcaption align = "center"><i>IF node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/if-node.png" alt="IF node" style="width:100%"><figcaption align = "center"><i>IF node</i></figcaption></figure>
 
 Next, we want to insert this data into Airtable. You already know how to do this from the previous chapter where we inserted all data into the *orders* table.
 
 At this stage, your workflow should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/Workflow-with-If-node.png" alt="Workflow with the IF node" style="width:100%"><figcaption align = "center"><i>Workflow with the IF node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/workflow-with-if-node.png" alt="Workflow with the IF node" style="width:100%"><figcaption align = "center"><i>Workflow with the IF node</i></figcaption></figure>
 
 ## What's next?
 

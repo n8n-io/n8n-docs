@@ -77,7 +77,7 @@ Notice the format in which we return the results of the calculation:
 
 Now execute the node and you should see the following results:
 
-<figure><img src="/_images/courses/level-one/chapter-two/Function-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-two/function-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
 
 ## What's next?
 

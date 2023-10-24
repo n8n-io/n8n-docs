@@ -40,7 +40,7 @@ Additional fields are options that you can add to certain nodes to make your req
 
 The configuration of the parameters for the *Hacker News node* should now look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-one/Hacker-news-params.png" alt="Hacker News node parameters" style="width:100%"><figcaption align = "center"><i>Hacker News node parameters</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/hacker-news-params.png" alt="Hacker News node parameters" style="width:100%"><figcaption align = "center"><i>Hacker News node parameters</i></figcaption></figure>
 
 ### Settings
 
@@ -55,7 +55,7 @@ This option will display the description note under the node in the Editor UI.
 
 The configuration of the settings for the *Hacker News node* looks like this:
 
-<figure><img src="/_images/courses/level-one/chapter-one/Hacker-news-settings.png" alt="Hacker News node renaming" style="width:100%"><figcaption align = "center"><i>Hacker News node renaming</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/hacker-news-settings.png" alt="Hacker News node renaming" style="width:100%"><figcaption align = "center"><i>Hacker News node renaming</i></figcaption></figure>
 
 
 !!! note "Renaming a node"
@@ -64,7 +64,7 @@ The configuration of the settings for the *Hacker News node* looks like this:
     - Select the node you want to rename and at the same time press the F2 key on your keyboard.
     - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click *Rename* to save the node under the new name.
 
-	<figure><img src="/_images/courses/level-one/chapter-one/Renaming-node-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-one/chapter-one/renaming-node-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 
 
 ## 3. Save the workflow
@@ -81,7 +81,7 @@ There are two ways in which you can save a workflow:
 
 Click on the *Execute Node* button in the top right corner of the node window. You should see 10 results in *Table* view.
 
-<figure><img src="/_images/courses/level-one/chapter-one/Hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/hacker-news-table.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
 ## Node executions
 
@@ -91,7 +91,7 @@ Click on the *Execute Node* button in the top right corner of the node window. Y
 
 If a node executed successfully a small green circle with a number inside will appear on top of the node.
 
-<figure><img src="/_images/courses/level-one/chapter-one/Hacker-news-success.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/hacker-news-success.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
 
 If the parameters are configured correctly and everything works fine, the requested data will be displayed in the node window in *Table* and *JSON* format. You can switch between these views by selecting the one you want from the *JSON|Table* button at the top of the node window.
 
@@ -99,7 +99,7 @@ If the parameters are configured correctly and everything works fine, the reques
     The *Table* view is the default. It displays the requested data in a table, where the rows are the records and the columns are the available attributes of those records.
 
 
-<figure><img src="/_images/courses/level-one/chapter-one/Hacker-news-json.png" alt="Results in JSON view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in JSON view for the Hacker News node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/hacker-news-json.png" alt="Results in JSON view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in JSON view for the Hacker News node</i></figcaption></figure>
 
 The node window displays more information about the node execution:
 
@@ -113,7 +113,7 @@ This field displays the number of items (records) that are returned by the node 
 !!! warning "Error in nodes"
     A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
 
-<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/Error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
+<figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 
 
 ## Summary

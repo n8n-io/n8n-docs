@@ -33,7 +33,7 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httpRequestNode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
 	Connect an HTML node to the HTTP Request node and configure the former's parameters:
 
@@ -49,7 +49,7 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlExtractNode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
 	</details>
 
 
@@ -68,9 +68,9 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlNode_json.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – JSON View</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_json.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – JSON View</i></figcaption></figure>
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlNode_table.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
 
 	To transform data the other way around, select the mode **XML to JSON**.
 
@@ -101,7 +101,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. The workflow looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_dateTime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
 	To check the configuration of each node, you can copy the JSON code of this workflow and paste it in your Editor UI.
 
@@ -296,11 +296,11 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 	In the HTTP Request node, you should see the PDF file in JSON, Table, and Binary view, like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binaryData_httpRequest_file.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
 	When you convert the PDF from binary to JSON with base64 encoding using the *Move Binary Data node*, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binaryData_moveData_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Move Binary Data node (Binary to JSON) with base64 encoding</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Move Binary Data node (Binary to JSON) with base64 encoding</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 
@@ -363,7 +363,7 @@ Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and mo
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binaryData.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 

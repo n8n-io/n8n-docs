@@ -15,12 +15,12 @@ When one of your workflows fails, it's helpful to check the execution log by cli
 
 To investigate a specific workflow from the list, click on the folder icon on the row of the respective workflow.
 
-<figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowExecutions.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow Executions window</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow Executions window</i></figcaption></figure>
 
 
 This will open the workflow in read-only mode, where you can see the execution of each node. This representation can help you identify at what point the workflow ran into issues.
 
-<figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowExecutions_readonly.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow execution view</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions_readonly.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow execution view</i></figcaption></figure>
 
 ## Catching erroring workflows
 
@@ -46,7 +46,7 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_errorTriggerNode_workflow.png" alt="" style="width:100%"><figcaption align = "center"><i>Error workflow</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_errortriggernode_workflow.png" alt="" style="width:100%"><figcaption align = "center"><i>Error workflow</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 
@@ -118,4 +118,4 @@ The Stop and Error node can only be added as the last node in a workflow.
 	Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
 
 
-	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopAndError.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>

@@ -37,7 +37,7 @@ In n8n, you can merge data from two different nodes using the [Merge node](/inte
 
 Notice that three of these modes require a key (Merge By Key, Keep Key Matches, Remove Key Matches). This key represents a common property between the two data sources, based on which the data can be merged. In the Merge node, they are called `Property Input 1` and `Property Input 2`.
 
-<figure><img src="/_images/courses/level-two/chapter-three/explanation_mergePropertyInput.png" alt="" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
 
 !!! warning "Property Input in dot notation"
 
@@ -98,7 +98,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-three/exercise_splitInBatches.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for getting RSS feeds from two blogs</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_splitinbatches.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for getting RSS feeds from two blogs</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 

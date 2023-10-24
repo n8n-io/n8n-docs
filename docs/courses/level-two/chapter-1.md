@@ -76,13 +76,13 @@ return [
 
 For example, the array of objects representing the Ninja turtles would look like this in the Code node:
 
-<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_notNested.png" alt="" style="width:100%"><figcaption align = "center"><i>Array of objects in the Code node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_notnested.png" alt="" style="width:100%"><figcaption align = "center"><i>Array of objects in the Code node</i></figcaption></figure>
 
 !!! warning "JSON objects"
 
 	Notice that this array of objects contains an extra key: `json`. n8n expects you to wrap each object in an array in another object, with the key `json`.
 
-	<figure><img src="/_images/courses/level-two/chapter-one/explanation_dataStructure.png" alt="" style="width:100%"><figcaption align = "center"><i>Illustration of data structure in n8n</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-one/explanation_datastructure.png" alt="" style="width:100%"><figcaption align = "center"><i>Illustration of data structure in n8n</i></figcaption></figure>
 
 	It's good practice to pass the data in the right structure used by n8n. But don't worry if you forget to add the `json` key to an item, n8n (version 0.166.0 and above) adds it automatically.
 

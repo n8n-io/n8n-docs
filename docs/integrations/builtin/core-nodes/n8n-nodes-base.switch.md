@@ -6,7 +6,7 @@ contentType: integration
 
 # Switch
 
-Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node, but supports up to four conditional routes.
+Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node, but supports multiple output routes.
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [Switch integrations](https://n8n.io/integrations/switch/){:target=_blank .external-link} page.
@@ -36,8 +36,6 @@ Use the Switch node to route a workflow conditionally based on comparison operat
 
 **Fallback Output**: choose how to route the workflow when none of the conditions match.
 
-!!! note "Switch option limits"
-	Switch can handle a maximum of four output options.
 
 ## Related resources
 

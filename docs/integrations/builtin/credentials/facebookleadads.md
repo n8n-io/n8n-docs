@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-This integration uses OAuth.
+This integration uses OAuth. Follow the [Facebook Lead Ads's documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} to set up your client ID and secret.
 
 ## Related resources
 

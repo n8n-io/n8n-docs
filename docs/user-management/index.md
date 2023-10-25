@@ -18,4 +18,4 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 This section contains most usage information for user management, and the [Cloud setup guide](/user-management/cloud-setup/). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](/hosting/user-management-self-hosted/).
 
-This section includes a guides to configuring [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/) in n8n.
+This section includes guides to configuring [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/) in n8n.

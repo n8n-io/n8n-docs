@@ -184,6 +184,7 @@ nav:
       - Cloud setup: user-management/cloud-setup.md
       - Manage users: user-management/manage-users.md
       - Account types: user-management/account-types.md
+      - Cloud admin dashboard: user-management/cloud-admin-dashboard.md
       - Best practices: user-management/best-practices.md
       - 2FA: user-management/two-factor-auth.md
       - LDAP: user-management/ldap.md

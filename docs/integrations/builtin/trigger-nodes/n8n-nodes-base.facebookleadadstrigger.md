@@ -24,7 +24,7 @@ On this page, you'll find a list of events the Facebook Lead Ads trigger node ca
 
 View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
 
-Refer to [Facebook Lead Ads's documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for details about their API.
+Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for details about their API.
 
 
 

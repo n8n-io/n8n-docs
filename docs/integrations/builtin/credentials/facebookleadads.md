@@ -15,7 +15,7 @@ This integration uses OAuth. Follow the [Facebook Lead Ads's documentation](http
 
 ## Related resources
 
-Refer to [Facebook Lead Ads's documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for more information about the service.
+Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for more information about the service.
 
 View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
 

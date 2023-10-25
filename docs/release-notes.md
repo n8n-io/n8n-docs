@@ -53,6 +53,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.12.2...n8n@1.13.0
 
 This release contains new features, feature enhancements, and bug fixes.
 
+!!! note "Upgrade directly to 1.14.0"
+	This release failed to publish to npm. Upgrade directly to 1.14.0.
+
 <div class="n8n-new-features" markdown>
 
 #### RSS Feed trigger node

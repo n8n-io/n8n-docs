@@ -307,6 +307,7 @@ nav:
         - integrations/builtin/credentials/f5bigip.md
         - integrations/builtin/credentials/facebookapp.md
         - integrations/builtin/credentials/facebookgraph.md
+        - integrations/builtin/credentials/facebookleadads.md
         - integrations/builtin/credentials/figma.md
         - integrations/builtin/credentials/filemaker.md
         - integrations/builtin/credentials/flow.md

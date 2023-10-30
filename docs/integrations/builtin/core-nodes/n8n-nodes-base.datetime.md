@@ -11,12 +11,7 @@ The Date & Time node manipulates date and time data and convert it to different 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [Date & Time integrations](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} list.
 
-!!! note "Timezone settings"
-    The node uses either the timezone of the n8n instance, or the workflow settings timezone. On n8n Cloud, the default timezone is GMT. On self-hosted n8n, the default is America/New_York, unless you've configured the instance to use a different default.
-		
-    Refer to [Workflow settings](/workflows/settings/) for more information on configuring timezones for individual workflows.
-		
-    Refer to [Configuration methods | Timezone](/hosting/environment-variables/configuration-methods/#timezone) for information on configuring your self-hosted instance timezone.
+--8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
 
 ## Operations

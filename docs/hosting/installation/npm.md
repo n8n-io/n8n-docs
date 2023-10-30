@@ -66,7 +66,7 @@ npm update -g n8n
 To install the `next` version:
 
 ```bash
-npm update -g n8n@next
+npm install -g n8n@next
 ```
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"

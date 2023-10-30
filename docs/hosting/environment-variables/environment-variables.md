@@ -250,7 +250,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `30000` | How long (in ms) is the lease period for a worker to work on a message. |
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `15000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
-| `QUEUE_WORKER_MAX_STALLED_COUNT` | Number | `1` | Max amount of times a stalled job will be re-processed. |
+| `QUEUE_WORKER_MAX_STALLED_COUNT` | Number | `1` | Maximum amount of times a stalled job will be re-processed. |
 
 ## Security
 

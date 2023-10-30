@@ -25,11 +25,12 @@ You can use [Predefined credential types](/integrations/custom-operations/#prede
 The following generic authentication methods are available:
 
 * Basic Auth
+* Custom Auth
 * Digest Auth
 * Header Auth
-* OAuth1
-* OAuth2
-* None
+* OAuth1 API
+* OAuth2 API
+* Query Auth
 
 You can learn more about HTTP authentication [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#see_also){:target=_blank .external-link}.
 

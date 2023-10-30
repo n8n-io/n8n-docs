@@ -184,7 +184,6 @@ nav:
       - Cloud setup: user-management/cloud-setup.md
       - Manage users: user-management/manage-users.md
       - Account types: user-management/account-types.md
-      - Cloud admin dashboard: user-management/cloud-admin-dashboard.md
       - Best practices: user-management/best-practices.md
       - 2FA: user-management/two-factor-auth.md
       - LDAP: user-management/ldap.md
@@ -215,6 +214,7 @@ nav:
         - Access LangChain in n8n: langchain/access-langchain.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain concepts in n8n: langchain/langchain-n8n.md
+    - Cloud admin dashboard: cloud-admin-dashboard.md
     - Privacy and security:
         - privacy-security/index.md
         - Privacy: privacy-security/privacy.md

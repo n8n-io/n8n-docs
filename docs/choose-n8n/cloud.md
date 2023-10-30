@@ -16,20 +16,6 @@ n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it p
 !!! note "Russia and Belarus"
     n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
 
-## Update your Cloud version
-
-To updated your n8n Cloud instance navigate to your Dashboard:
-
-![Admin Dashboard](/_images/choose-n8n/cloud/dashboard.png)
-
-1. Click the **Settings** button or switch to the **Manage** tab.
-2. From **Instance Settings**, use the **n8n version** dropdown to select your desired release version: Latest Stable, Beta, or Latest Beta.
-
-    ![Manage Tab](/_images/choose-n8n/cloud/manage_version.png)
-
-3. Click **Save Changes** to restart your n8n instance and perform the update. A confirmation modal will appear and the **Instance Status** will reflect the update in progress.
-
-    ![Instance Status](/_images/choose-n8n/cloud/instance_status.png)
 
 
 ## Cloud IP addresses

@@ -31,7 +31,7 @@ Refer to [Installation | Docker](/hosting/installation/docker/) for more informa
 
 You need to create a new account. This is separate to your existing n8n Cloud account. n8n offers a 14-day free trial to try AI.
 
-1. Go to [Register](https://stage-app.n8n.cloud/register){:target=_blank .external-link}.
+1. Go to [Register](https://app.n8n.cloud/try-ai){:target=_blank .external-link}.
 2. Enter your details, then select **Try for free**.
 3. n8n prompts you to choose your n8n flavor. Select **n8n with LangChain**, then select **Continue**.
 

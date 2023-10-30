@@ -246,6 +246,10 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
+| `QUEUE_WORKER_LOCK_DURATION` | Number | `30000` | How long (in ms) is the lease period for a worker to work on a message. |
+| `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `15000` | How frequently (in ms) should a worker renew the lease time. |
+| `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
+| `QUEUE_WORKER_MAX_STALLED_COUNT` | Number | `1` | Maximum amount of times a stalled job will be re-processed. |
 
 ## Security
 

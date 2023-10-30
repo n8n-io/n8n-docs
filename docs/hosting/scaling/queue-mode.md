@@ -164,23 +164,6 @@ export N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 
 When disabling the webhook process in the main process, run the main process and don't add it to the load balancer's webhook pool.
 
-## Avoiding downtime
-
-When it comes to startup and shutdown, n8n will stop all currently executing workflows, disconnect from sources, and deregister webhooks that might have been registered with third-party services. All this happens inside the main process.
-
-A new configuration has been added to n8n that allows it to skip deregistering of webhooks during the shutdown. Whenever n8n starts back, this configuration will check for existing webhooks. If a webhook exists, it will not be registered again.
-
-Trigger nodes that do not use HTTP requests will still suffer marginal downtime during the update process.
-
-The setting that controls this behavior is `endpoint.skipWebhoooksDeregistrationOnShutdown`. It defaults to `false` but can be changed:
-
-```bash
-export N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
-```
-
-!!! warning "Keep in mind"
-    Do not use this procedure for blue/green installations, where you have two n8n instances running simultaneously, but only one is receiving active traffic. If you run two or more main processes simultaneously, the currently active instance gets notified of activation and deactivation of workflows. This can potentially cause duplication of work or even skipping workflows entirely.
-
 ## Configure worker concurrency
 
 You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10` but can be changed:

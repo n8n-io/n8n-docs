@@ -151,7 +151,6 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_ENDPOINT_WEBHOOK_WAIT` | String | `webhook-waiting` | The path used for waiting-webhook endpoint. |
 | `WEBHOOK_URL` | String | - | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/environment-variables/configuration-methods/#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | Boolean | `false` | Disable production webhooks from main process. This helps ensure no HTTP traffic load to main process when using webhook-specific processes. |
-| `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` | Boolean | `false` | Only de-register webhooks on external services when workflows are deactivated. |
 
 ## External hooks
 

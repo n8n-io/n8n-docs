@@ -14,10 +14,7 @@ The next step in Nathan's workflow is to calculate two values from the booked or
 To calculate data and add more functionality to your workflows you can use the **Code node**, which lets you write custom JavaScript code.
 
 !!! warning "Code node modes"
-    The **Code node** has two operational *Modes* that change the way it processes data. The *Run Once for All Items* mode allows you to accumulate data from all items on the input list. The *Run Once for Each Item* is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about the difference between the Function and Function Item nodes [here](/data/code/){:target="_blank" .external}.
-
-
-Before going into the setup of the Code node, you should first learn the [data structure](/data/data-structure/){:target="_blank" .external} of n8n. This is important if you want to:
+    The **Code node** has two operational *Modes* that change the way it processes data. The *Run Once for All Items* mode allows you to accumulate data from all items on the input list. The *Run Once for Each Item* is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/){:target="_blank" .external}.
 
 - Create your own node.
 - Write custom expressions.
@@ -55,7 +52,8 @@ In n8n, the data that is passed between nodes is an array of objects with the fo
 
 Now let's see how to implement this.
 
-In your workflow, add a *Code* node connected to the false branch of the *IF* node. In the *Code* node window paste the following code in the JavaScript Code box:
+- In your workflow, add a *Code* node connected to the false branch of the *IF* node. 
+- In the *Code* node window paste the following code in the JavaScript Code box:
 
 ```javascript
 let items = $input.all();
@@ -77,7 +75,7 @@ Notice the format in which we return the results of the calculation:
 
 Now execute the node and you should see the following results:
 
-<figure><img src="/_images/courses/level-one/chapter-two/function-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
 
 ## What's next?
 

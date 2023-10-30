@@ -36,12 +36,6 @@ _Briefly summarize the functionality._
 ## Node parameters
 
 
-
-
-
-
-
-
 <!-- 
 Add any other sections here. 
 You should include: quirks, pain points, complex topics that trip people up

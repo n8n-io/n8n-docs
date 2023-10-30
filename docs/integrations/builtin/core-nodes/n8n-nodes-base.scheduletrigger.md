@@ -8,6 +8,8 @@ contentType: integration
 
 Use the Schedule trigger node run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
+!!! note "Examples and templates"
+	For usage examples and templates to help you get started, refer to n8n's [Schedule Trigger integrations](https://n8n.io/integrations/schedule-trigger/){:target=_blank .external-link} page.
 
 !!! note "You must activate the workflow" 
 	If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 

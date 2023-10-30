@@ -125,7 +125,7 @@ nav:
       - A longer introduction: try-it-out/longer-introduction.md
     - Choose your n8n:
       - choose-n8n/index.md
-      - Set up Cloud: choose-n8n/cloud.md
+      - Cloud: choose-n8n/cloud.md
       - Faircode license: choose-n8n/faircode-license.md
       - Desktop (removed): choose-n8n/desktop-app.md
     - Understand workflows:

@@ -1,3 +1,10 @@
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezepinsert/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemoryinsert/
+
+
+
 /variables/   /code/variables/
 /integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/
 

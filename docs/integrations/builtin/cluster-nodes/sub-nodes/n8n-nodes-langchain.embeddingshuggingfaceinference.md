@@ -21,7 +21,7 @@ On this page, you'll find the node parameters for the Embeddings HuggingFace Inf
 
 ## Node reference
 
---8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

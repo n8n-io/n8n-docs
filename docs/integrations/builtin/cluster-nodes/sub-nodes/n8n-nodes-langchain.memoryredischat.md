@@ -22,7 +22,7 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 
 ## Node reference
 
---8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

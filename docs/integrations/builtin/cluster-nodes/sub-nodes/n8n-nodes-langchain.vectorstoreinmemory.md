@@ -14,7 +14,7 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 
 ## Node reference
 
---8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
 ## Related resources
 

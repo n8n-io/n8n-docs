@@ -12,7 +12,7 @@ The Wikipedia node is a tool that allows an agent to search and return informati
 
 ## Node reference
 
---8<-- "_snippets/integrations/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 
